@@ -5,6 +5,7 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 
@@ -56,12 +57,12 @@ struct CRTTISystem : IRTTISystem
 {
     static CRTTISystem* Get();
 
-    Unk425 types;
-    Unk425 typeByIds;
-    Unk425 typeIds;
-    Unk425 funcs;
-    Unk425 unkC8;
-    Unk425 unkF8;
+    HashMap<uint64_t, CRTTIType*> types;
+    HashMap<void*, void*> typeByIds;
+    HashMap<void*, void*> typeIds;
+    HashMap<void*, void*> funcs;
+    HashMap<void*, void*> unkC8;
+    HashMap<void*, void*> unkF8;
     int64_t unk128;
     DynArray<void*> unk130;
     DynArray<void*> unk140;
@@ -71,7 +72,7 @@ struct CRTTISystem : IRTTISystem
     int64_t unk168;
     int32_t unk170;
     int32_t unk174;
-    Unk425 unk178;
+    HashMap<void*, void*> unk178;
     int64_t unk1A8;
     DynArray<void*> unk1B0;
     DynArray<void*> unk1C0;

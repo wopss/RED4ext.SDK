@@ -8,14 +8,19 @@ namespace RED4ext
 template<typename T>
 struct DynArray
 {
-    T operator[](uint32_t aIndex)
+    T operator[](uint32_t aIndex) const
     {
         return entries[aIndex];
     }
 
-    T* entries;
-    uint32_t capacity;
-    uint32_t size;
+    T& operator[](uint32_t aIndex)
+    {
+        return entries[aIndex];
+    }
+
+    T*       entries;   // 00
+    uint32_t capacity;  // 08
+    uint32_t size;      // 0C
 };
 
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);

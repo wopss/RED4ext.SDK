@@ -3,6 +3,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/IMemoryAllocator.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
@@ -46,7 +47,7 @@ struct IRTTIType
     virtual void sub_50() = 0;
     virtual void sub_58() = 0;
     virtual void sub_60() = 0;
-    virtual bool GetDebugString(void* instance, CString& out) = 0;
+    virtual bool GetDebugString(void* aInstance, CString& aOut) = 0;
     virtual void sub_70() = 0;
     virtual void sub_78() = 0;
     virtual void sub_80() = 0;
@@ -219,17 +220,16 @@ struct CClass : CRTTIType
     int64_t unk90;
     int32_t unk98;
     int32_t unk9C;
-    Unk425 unkA0;
-    Unk425 unkD0;
-    int64_t unk100;
-    int32_t unk108;
-    int32_t unk10C;
+    HashMap<uint64_t, CBaseFunction*> unkA0;
+    int64_t unkD0;
+    int64_t unkD8;
+    HashMap<uint64_t, CRTTIType*> unkE0;
     int64_t unk110;
-    DynArray<void*> unk118;
+    DynArray<CProperty*> unk118; // Same as 0x28
     DynArray<void*> unk128;
-    DynArray<void*> unk138;
+    DynArray<CProperty*> unk138; // Only RT_Class types?
     DynArray<void*> unk148;
-    DynArray<void*> unk158;
+    DynArray<CProperty*> unk158; // Scripted props?
     DynArray<void*> unk168;
     int64_t unk178;
     DynArray<void*> unk180;
@@ -245,6 +245,8 @@ RED4EXT_ASSERT_OFFSET(CClass, parent, 0x10);
 RED4EXT_ASSERT_OFFSET(CClass, name, 0x18);
 RED4EXT_ASSERT_OFFSET(CClass, funcs, 0x48);
 RED4EXT_ASSERT_OFFSET(CClass, staticFuncs, 0x58);
+RED4EXT_ASSERT_OFFSET(CClass, unkA0, 0xA0);
+RED4EXT_ASSERT_OFFSET(CClass, unkE0, 0xE0);
 
 struct DataBufferType : CRTTIType
 {
