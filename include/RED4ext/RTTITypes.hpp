@@ -46,7 +46,7 @@ struct IRTTIType
     virtual void sub_50() = 0;
     virtual void sub_58() = 0;
     virtual void sub_60() = 0;
-    virtual void sub_68() = 0;
+    virtual bool GetDebugString(void* instance, CString& out) = 0;
     virtual void sub_70() = 0;
     virtual void sub_78() = 0;
     virtual void sub_80() = 0;
@@ -293,6 +293,61 @@ struct RuntimeEntityRefType : CRTTIType
 };
 
 RED4EXT_ASSERT_SIZE(RuntimeEntityRefType, 0x10);
+
+struct CEnum : CRTTIType
+{
+    uint64_t hash;                // 10
+    uint64_t unk18;               // 18
+    uint8_t size;                 // 20 - Size in bytes the instance will use
+    uint8_t flags;                // 21
+    uint16_t unk22;               // 22
+    uint32_t unk24;               // 24
+    DynArray<uint64_t> hashList;  // 28
+    DynArray<uint64_t> valueList; // 38
+    DynArray<uint64_t> unk48;     // 48
+    DynArray<uint64_t> unk58;     // 58
+};
+RED4EXT_ASSERT_SIZE(CEnum, 0x68);
+RED4EXT_ASSERT_OFFSET(CEnum, hashList, 0x28);
+
+struct CBitfield : CRTTIType
+{
+    uint64_t hash;         // 10
+    uint64_t unk18;        // 18
+    uint8_t size;          // 20 - Size in bytes the instance will use
+    uint8_t flags;         // 21
+    uint16_t unk22;        // 22
+    uint32_t unk24;        // 24
+    uintptr_t unk28;       // 28
+    uint64_t bitNames[64]; // 30
+};
+RED4EXT_ASSERT_SIZE(CBitfield, 0x230);
+RED4EXT_ASSERT_OFFSET(CBitfield, bitNames, 0x30);
+
+struct CArray : CRTTIType
+{
+public:
+    virtual CRTTIType* GetInnerType() = 0;                                              // C0
+    virtual bool Unk_C8() = 0;                                                          // C8 ret 1
+    virtual uint32_t GetLength(void* aInstance) = 0;                                    // D0
+    virtual int32_t Unk_D8() = 0;                                                       // D8 ret -1
+    virtual void* GetElement(void* aInstance, uint32_t aIndex) = 0;                     // E0
+    virtual void* GetValuePointer(void* aInstance, uint32_t aIndex) = 0;                // E8 Same func at 0xE0 ?
+    virtual int32_t InsertElement(void* aInstance, int32_t aIndex, void* aElement) = 0; // F0
+    virtual bool RemoveElement(void* aInstance, int32_t aIndex) = 0;                    // F8
+    virtual bool Unk_100(void* aInstance, int32_t aIndex) = 0;                          // 100
+    virtual bool Grow(void* aInstance, uint32_t aSize) = 0;                             // 108
+
+    CRTTIType* innerType; // 10
+    uint64_t nameHash;    // 18
+    CRTTIType** parent;   // 20
+    uintptr_t unk28;      // 28
+    uintptr_t unk30;      // 30
+    uintptr_t unk38;      // 38
+};
+RED4EXT_ASSERT_SIZE(CArray, 0x40);
+RED4EXT_ASSERT_OFFSET(CArray, parent, 0x20);
+
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
