@@ -85,5 +85,5 @@ RED4EXT_ASSERT_SIZE(CRTTISystem, 0x228);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/RTTISystem-impl.hpp>
+#include <RED4ext/RTTISystem-inl.hpp>
 #endif

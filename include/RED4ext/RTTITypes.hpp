@@ -353,5 +353,5 @@ RED4EXT_ASSERT_OFFSET(CArray, parent, 0x20);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/RTTITypes-impl.hpp>
+#include <RED4ext/RTTITypes-inl.hpp>
 #endif

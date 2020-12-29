@@ -71,5 +71,5 @@ RED4EXT_ASSERT_OFFSET(CScriptedFunction, parent, 0x80);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Scripting/Functions-impl.hpp>
+#include <RED4ext/Scripting/Functions-inl.hpp>
 #endif

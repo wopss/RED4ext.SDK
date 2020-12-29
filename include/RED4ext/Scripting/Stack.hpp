@@ -86,5 +86,5 @@ RED4EXT_ASSERT_OFFSET(CStack, result, 0x40);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Scripting/Stack-impl.hpp>
+#include <RED4ext/Scripting/Stack-inl.hpp>
 #endif

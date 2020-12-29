@@ -39,5 +39,5 @@ bool ExecuteGlobalFunction(CName aFunc, void* aOut, Args&&... aArgs)
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Scripting/Utils-impl.hpp>
+#include <RED4ext/Scripting/Utils-inl.hpp>
 #endif
