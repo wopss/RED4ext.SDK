@@ -9,7 +9,7 @@
 
 RED4EXT_INLINE RED4ext::CStackType::CStackType(IRTTIType* aType, void* aValue)
     : type(aType)
-    , value(aValue)
+    , value{aValue}
 {
 }
 
