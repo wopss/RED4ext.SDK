@@ -11,6 +11,11 @@ struct CName
 
     const char* ToString();
 
+    inline operator bool() const
+    {
+        return hash != 0;
+    }
+
     uint64_t hash;
 };
 } // namespace RED4ext

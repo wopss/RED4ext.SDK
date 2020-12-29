@@ -35,19 +35,19 @@ struct IRTTIType
 {
     virtual ~IRTTIType() = 0;
 
-    virtual void GetName(CName& aOut) = 0;
-    virtual uint32_t GetSize() = 0;
-    virtual uint32_t GetAlignment() = 0;
-    virtual ERTTIType GetType() = 0;
-    virtual void GetTypeName(CString& aOut) = 0;
-    virtual void GetName2(CName& aOut) = 0;
-    virtual void Init(void* aMemory) = 0;
-    virtual void Destroy(void* aMemory) = 0;
+    virtual void GetName(CName& aOut) const = 0;
+    virtual uint32_t GetSize() const = 0;
+    virtual uint32_t GetAlignment() const = 0;
+    virtual ERTTIType GetType() const = 0;
+    virtual void GetTypeName(CString& aOut) const = 0;
+    virtual void GetName2(CName& aOut) const = 0;
+    virtual void Init(void* aMemory) const = 0;
+    virtual void Destroy(void* aMemory) const = 0;
     virtual void sub_48() = 0;
     virtual void sub_50() = 0;
     virtual void sub_58() = 0;
     virtual void sub_60() = 0;
-    virtual bool GetDebugString(void* aInstance, CString& aOut) = 0;
+    virtual bool GetDebugString(void* aInstance, CString& aOut) const = 0;
     virtual void sub_70() = 0;
     virtual void sub_78() = 0;
     virtual void sub_80() = 0;
@@ -57,7 +57,7 @@ struct IRTTIType
     virtual void sub_A0() = 0;
     virtual void sub_A8() = 0;
     virtual void sub_B0() = 0;
-    virtual IMemoryAllocator* GetAllocator() = 0;
+    virtual IMemoryAllocator* GetAllocator() const = 0;
 };
 
 RED4EXT_ASSERT_SIZE(IRTTIType, 0x8);

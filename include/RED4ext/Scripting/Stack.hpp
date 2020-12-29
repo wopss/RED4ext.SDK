@@ -50,9 +50,9 @@ struct CStackType
 struct IStack
 {
     virtual ~IStack() = default;
-    virtual void* GetResultAddr() = 0;
-    virtual int64_t sub_10() = 0;
-    virtual void sub_18(int64_t a2) = 0;
+    virtual void* GetResultAddr() { return nullptr; };
+    virtual int64_t sub_10() { return 0; };
+    virtual void sub_18(int64_t a2) {};
 };
 
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
@@ -70,11 +70,9 @@ RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
 
 struct CStack : CBaseStack
 {
-    CStack() = delete;
+    CStack(IScriptable* aScriptable = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
+           CStackType* aResult = nullptr, int64_t a6 = 0);
     ~CStack();
-
-    static CStack* Construct(IScriptable* aScriptable = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
-                             CStackType* aResult = nullptr, int64_t a6 = 0);
 
     CStackType* args;
     uint32_t argsCount;
