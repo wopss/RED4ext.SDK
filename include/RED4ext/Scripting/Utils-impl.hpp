@@ -4,8 +4,6 @@
 #include <RED4ext/Scripting/Utils.hpp>
 #endif
 
-#include <memory>
-
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
@@ -38,9 +36,9 @@ bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction* aFunc, void* 
         }
     }
 
-    auto stack = std::make_unique<CStack*>(CStack::Construct(aParent, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
-                                                             aOut && aFunc->returnType ? &result : nullptr));
-    return aFunc->Execute(*stack);
+    CStack stack(aParent, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
+                                                             aOut && aFunc->returnType ? &result : nullptr);
+    return aFunc->Execute(&stack);
 }
 
 bool RED4ext::ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs)
