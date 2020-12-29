@@ -4,8 +4,10 @@
 
 #ifdef RED4EXT_STATIC_LIB
 #undef RED4EXT_HEADER_ONLY
+#define RED4EXT_INLINE
 #else
 #define RED4EXT_HEADER_ONLY
+#define RED4EXT_INLINE inline
 #endif
 
 #ifndef RED4EXT_ASSERT_SIZE

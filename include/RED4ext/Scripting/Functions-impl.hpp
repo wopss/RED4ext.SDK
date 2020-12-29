@@ -7,7 +7,7 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/REDfunc.hpp>
 
-bool RED4ext::CBaseFunction::Execute(CStack* aStack)
+RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
 {
     using func_t = bool (*)(CBaseFunction*, CStack*);
     static REDfunc<func_t> func(Addresses::CBaseFunction_Execute);

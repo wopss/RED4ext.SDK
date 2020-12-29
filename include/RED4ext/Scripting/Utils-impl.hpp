@@ -7,7 +7,8 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
-bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction* aFunc, void* aOut, std::vector<CStackType> aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction* aFunc, void* aOut,
+                                             std::vector<CStackType> aArgs)
 {
     CStackType result;
     if (aOut && aFunc->returnType)
@@ -37,11 +38,11 @@ bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction* aFunc, void* 
     }
 
     CStack stack(aParent, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
-                                                             aOut && aFunc->returnType ? &result : nullptr);
+                 aOut && aFunc->returnType ? &result : nullptr);
     return aFunc->Execute(&stack);
 }
 
-bool RED4ext::ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs)
 {
     auto rtti = CRTTISystem::Get();
     auto type = rtti->GetClass(aParent);
@@ -70,7 +71,8 @@ bool RED4ext::ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vecto
     return ExecuteFunction(instance, func, aOut, aArgs);
 }
 
-bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, std::vector<CStackType> aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut,
+                                                   std::vector<CStackType> aArgs)
 {
     auto rtti = CRTTISystem::Get();
     auto func = rtti->GetFunction(aFunc);
@@ -99,7 +101,7 @@ bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, std
     return ExecuteFunction(instance, func, aOut, aArgs);
 }
 
-bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, std::vector<CStackType> aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, std::vector<CStackType> aArgs)
 {
     return ExecuteGlobalFunction("cpPlayerSystem", aFunc, aOut, aArgs);
 }
