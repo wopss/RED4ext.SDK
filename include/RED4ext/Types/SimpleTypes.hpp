@@ -35,9 +35,24 @@ RED4EXT_ASSERT_SIZE(CRUIDRef, 0x8);
 
 struct TweakDBID
 {
-    int64_t unk0;
+#pragma pack(push, 1)
+    uint32_t name;  // 00 CRC32
+    uint8_t length; // 04
+    uint16_t unk05; // 05
+    uint8_t unk07;  // 07
+#pragma pack(pop)
 };
 RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
+
+struct ItemID
+{
+    TweakDBID tdbid;   // 00
+    uint32_t rngSeed;  // 08
+    uint16_t unk0C;    // 0C
+    uint8_t unk0E;     // 0E
+    uint8_t pad0F;     // 0F
+};
+RED4EXT_ASSERT_SIZE(ItemID, 0x10);
 
 struct EditorObjectID
 {
@@ -72,7 +87,7 @@ struct SharedDataBuffer
 };
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
-struct serializationDeferredDataBufferType
+struct serializationDeferredDataBuffer
 {
     int64_t unk0;
     int64_t unk8;
@@ -85,7 +100,7 @@ struct serializationDeferredDataBufferType
     int64_t unk48;
     int64_t unk50;
 };
-RED4EXT_ASSERT_SIZE(serializationDeferredDataBufferType, 0x58);
+RED4EXT_ASSERT_SIZE(serializationDeferredDataBuffer, 0x58);
 
 struct gamedataLocKeyWrapper
 {

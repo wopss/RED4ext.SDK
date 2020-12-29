@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
@@ -26,16 +27,15 @@ namespace RED4ext
  *      int8_t unk60;
  *  };
  *
- * Maybe this should have the name 'CStack', but I am not entierly sure how to call '*Stack', so until a better name is
+ * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
-
 struct CStackType
 {
     CStackType(IRTTIType* aType = nullptr, void* aValue = nullptr);
 
     IRTTIType* type;
-    void* value;
+    InstanceType value;
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
 

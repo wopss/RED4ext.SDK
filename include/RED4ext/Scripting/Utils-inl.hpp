@@ -14,7 +14,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction
     if (aOut && aFunc->returnType)
     {
         result.type = aFunc->returnType->type;
-        result.value = aOut;
+        result.value.ptr = aOut;
     }
 
     // If the arguments are not supplied or are too many, don't call the function, it will result in a crash or
