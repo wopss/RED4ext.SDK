@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cstdint>
-#include <RED4ext/Common.hpp>
 
 namespace RED4ext
 {
@@ -43,6 +41,5 @@ struct ISerializable
     int64_t unk20;
     int64_t unk28;
 };
-
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext

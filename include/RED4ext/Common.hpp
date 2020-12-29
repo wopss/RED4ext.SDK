@@ -10,6 +10,10 @@
 #define RED4EXT_INLINE inline
 #endif
 
+#ifndef RED4EXT_ASSERT_ESCAPE
+#define RED4EXT_ASSERT_ESCAPE(...) __VA_ARGS__
+#endif
+
 #ifndef RED4EXT_ASSERT_SIZE
 #define RED4EXT_ASSERT_SIZE(cls, size)                                                                                 \
     static_assert(sizeof(cls) == size, #cls " size does not match the expected size (" #size ") ")

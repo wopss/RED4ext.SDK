@@ -16,7 +16,6 @@ struct CProperty
     uint32_t flags;
     int64_t unk28;
 };
-
 RED4EXT_ASSERT_SIZE(CProperty, 0x30);
 RED4EXT_ASSERT_OFFSET(CProperty, type, 0x0);
 RED4EXT_ASSERT_OFFSET(CProperty, name, 0x8);

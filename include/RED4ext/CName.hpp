@@ -19,7 +19,6 @@ struct CName
 
     uint64_t hash;
 };
-
 RED4EXT_ASSERT_SIZE(CName, 0x8);
 } // namespace RED4ext
 

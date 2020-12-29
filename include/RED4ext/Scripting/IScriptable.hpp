@@ -17,6 +17,5 @@ struct IScriptable : ISerializable
     int64_t unk30;
     int64_t unk38;
 };
-
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);
 } // namespace RED4ext

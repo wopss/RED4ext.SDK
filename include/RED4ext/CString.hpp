@@ -33,7 +33,6 @@ private:
     uint32_t length;
     uint64_t capacity;
 };
-
 RED4EXT_ASSERT_SIZE(CString, 0x20);
 } // namespace RED4ext
 

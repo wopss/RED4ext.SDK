@@ -1,8 +1,9 @@
 #pragma once
 
-#include <RED4ext/Common.hpp>
 #include <cstdint>
 #include <functional>
+
+#include <RED4ext/Common.hpp>
 
 namespace RED4ext
 {
@@ -23,7 +24,7 @@ struct HashMapBase
     {
         uint32_t index = 0;
         uint32_t count = 0;
-        while (1)
+        while (true)
         {
             uint32_t idx = indexTable[index++];
             if (index >= capacity)
@@ -80,13 +81,12 @@ struct HashMapBase
     uint32_t unk28;       // 20
     uint32_t unk2C;       // 24
 };
-static_assert(sizeof(HashMapBase<uint64_t, void*>) == 0x28);
+RED4EXT_ASSERT_SIZE(RED4EXT_ASSERT_ESCAPE(HashMapBase<uint64_t, void*>), 0x28);
 
 template<typename K, typename T>
 struct HashMap : HashMapBase<K, T>
 {
     virtual ~HashMap(){}; // Empty impl to indicate there's a vtable
 };
-static_assert(sizeof(HashMap<uint64_t, void*>) == 0x30);
-
+RED4EXT_ASSERT_SIZE(RED4EXT_ASSERT_ESCAPE(HashMap<uint64_t, void*>), 0x30);
 } // namespace RED4ext

@@ -32,20 +32,12 @@ namespace RED4ext
 
 struct CStackType
 {
-    CStackType(IRTTIType* aType, void* aValue)
-        : type(aType)
-        , value(aValue)
-    {
-    }
-
-    CStackType()
-        : CStackType(nullptr, nullptr)
-    {
-    }
+    CStackType(IRTTIType* aType = nullptr, void* aValue = nullptr);
 
     IRTTIType* type;
     void* value;
 };
+RED4EXT_ASSERT_SIZE(CStackType, 0x10);
 
 struct IStack
 {
@@ -54,7 +46,6 @@ struct IStack
     virtual int64_t sub_10() { return 0; };
     virtual void sub_18(int64_t a2) {};
 };
-
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
 
 struct CBaseStack : IStack
@@ -72,7 +63,7 @@ struct CStack : CBaseStack
 {
     CStack(IScriptable* aScriptable = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
            CStackType* aResult = nullptr, int64_t a6 = 0);
-    ~CStack();
+    ~CStack() = default;
 
     CStackType* args;
     uint32_t argsCount;

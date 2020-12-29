@@ -12,7 +12,6 @@ struct CDateTime
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(CDateTime, 0x8);
 
 struct CGUID
@@ -20,28 +19,24 @@ struct CGUID
     int64_t unk0;
     int64_t unk8;
 };
-
 RED4EXT_ASSERT_SIZE(CGUID, 0x10);
 
 struct CRUID
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(CRUID, 0x8);
 
 struct CRUIDRef
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(CRUIDRef, 0x8);
 
 struct TweakDBID
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 
 struct EditorObjectID
@@ -51,7 +46,6 @@ struct EditorObjectID
     int64_t unk10;
     int64_t unk18;
 };
-
 RED4EXT_ASSERT_SIZE(EditorObjectID, 0x20);
 
 struct Variant
@@ -60,7 +54,6 @@ struct Variant
     int64_t unk8;
     int64_t unk10;
 };
-
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
 struct DataBuffer
@@ -71,14 +64,12 @@ struct DataBuffer
     Unk530 unk10;
     int64_t unk20;
 };
-
 RED4EXT_ASSERT_SIZE(DataBuffer, 0x28);
 
 struct SharedDataBuffer
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
 struct serializationDeferredDataBufferType
@@ -94,14 +85,12 @@ struct serializationDeferredDataBufferType
     int64_t unk48;
     int64_t unk50;
 };
-
 RED4EXT_ASSERT_SIZE(serializationDeferredDataBufferType, 0x58);
 
 struct gamedataLocKeyWrapper
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(gamedataLocKeyWrapper, 0x8);
 
 struct LocalizationString
@@ -109,27 +98,23 @@ struct LocalizationString
     int64_t unk0;
     CString unk8;
 };
-
 RED4EXT_ASSERT_SIZE(LocalizationString, 0x28);
 
 struct MessageResourcePath
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(MessageResourcePath, 0x8);
 
 struct NodeRef
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(NodeRef, 0x8);
 
 struct RuntimeEntityRef
 {
     int64_t unk0;
 };
-
 RED4EXT_ASSERT_SIZE(RuntimeEntityRef, 0x8);
 } // namespace RED4ext

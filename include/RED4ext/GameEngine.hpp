@@ -60,7 +60,6 @@ struct CBaseEngine
     UnkC0* unkC0;
     int8_t unkC8[0x158];
 };
-
 RED4EXT_ASSERT_SIZE(CBaseEngine, 0x220);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, unkC0, 0xC0);
 
@@ -68,7 +67,6 @@ struct BaseGameEngine : CBaseEngine
 {
     int8_t unk220[0x18];
 };
-
 RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x238);
 RED4EXT_ASSERT_OFFSET(BaseGameEngine, unk220, 0x220);
 
@@ -94,7 +92,6 @@ struct CGameEngine : BaseGameEngine
     CGameFramework* framework;
     int8_t unk268[0x30];
 };
-
 RED4EXT_ASSERT_SIZE(CGameEngine, 0x298);
 RED4EXT_ASSERT_OFFSET(CGameEngine, unk238, 0x238);
 RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x260);

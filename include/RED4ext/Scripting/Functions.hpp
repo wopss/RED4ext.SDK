@@ -1,9 +1,5 @@
 #pragma once
 
-#include <cstdint>
-
-#include <RED4ext/CName.hpp>
-#include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
 
@@ -21,7 +17,6 @@ struct IFunction
     virtual uint32_t GetFuncIndex() = 0;
     virtual void sub_20() = 0;
 };
-
 RED4EXT_ASSERT_SIZE(IFunction, 0x8);
 
 struct CBaseFunction : IFunction
@@ -38,7 +33,6 @@ struct CBaseFunction : IFunction
     uint32_t flags;
     uint32_t unk7C;
 };
-
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0x80);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, name, 0x8);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0x78);
@@ -47,7 +41,6 @@ struct CGlobalFunction : CBaseFunction
 {
     uint32_t index; // The registration index.
 };
-
 RED4EXT_ASSERT_SIZE(CGlobalFunction, 0x88);
 RED4EXT_ASSERT_OFFSET(CGlobalFunction, index, 0x80);
 
@@ -56,7 +49,6 @@ struct CClassFunction : CBaseFunction
     CClass* parent;
     uint32_t index; // The registration index.
 };
-
 RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
 RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
 RED4EXT_ASSERT_OFFSET(CClassFunction, index, 0x88);
@@ -65,7 +57,6 @@ struct CScriptedFunction : CBaseFunction
 {
     CClass* parent;
 };
-
 RED4EXT_ASSERT_SIZE(CScriptedFunction, 0x88);
 RED4EXT_ASSERT_OFFSET(CScriptedFunction, parent, 0x80);
 } // namespace RED4ext

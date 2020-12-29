@@ -22,7 +22,6 @@ struct DynArray
     uint32_t capacity;  // 08
     uint32_t size;      // 0C
 };
-
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
 RED4EXT_ASSERT_OFFSET(DynArray<void*>, capacity, 0x8);
 RED4EXT_ASSERT_OFFSET(DynArray<void*>, size, 0xC);

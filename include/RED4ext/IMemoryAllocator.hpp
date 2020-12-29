@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <RED4ext/Common.hpp>
 
 namespace RED4ext
 {
@@ -14,4 +15,5 @@ struct IMemoryAllocator
     virtual void sub_28(void* aMemory) = 0;
     virtual uint32_t GetId() = 0;
 };
+RED4EXT_ASSERT_SIZE(IMemoryAllocator, 0x8);
 } // namespace RED4ext

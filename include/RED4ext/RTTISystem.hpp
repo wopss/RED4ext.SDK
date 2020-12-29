@@ -50,7 +50,6 @@ struct IRTTISystem
 
     virtual ~IRTTISystem() = 0;
 };
-
 RED4EXT_ASSERT_SIZE(IRTTISystem, 0x8);
 
 struct CRTTISystem : IRTTISystem
@@ -80,7 +79,6 @@ struct CRTTISystem : IRTTISystem
     uint8_t unk1F8;
     CRITICAL_SECTION unk200;
 };
-
 RED4EXT_ASSERT_SIZE(CRTTISystem, 0x228);
 } // namespace RED4ext
 

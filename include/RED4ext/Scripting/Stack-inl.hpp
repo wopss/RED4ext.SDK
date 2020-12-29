@@ -7,6 +7,12 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/REDfunc.hpp>
 
+RED4EXT_INLINE RED4ext::CStackType::CStackType(IRTTIType* aType, void* aValue)
+    : type(aType)
+    , value(aValue)
+{
+}
+
 RED4EXT_INLINE RED4ext::CStack::CStack(IScriptable* aScriptable, CStackType* aArgs, uint32_t aArgsCount,
                                        CStackType* aResult, int64_t a6)
 {
@@ -14,8 +20,4 @@ RED4EXT_INLINE RED4ext::CStack::CStack(IScriptable* aScriptable, CStackType* aAr
     static REDfunc<func_t> func(Addresses::CStack_ctor);
 
     func(this, aScriptable, aArgs, aArgsCount, aResult, a6);
-}
-
-RED4EXT_INLINE RED4ext::CStack::~CStack()
-{
 }
