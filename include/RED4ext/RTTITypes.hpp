@@ -124,8 +124,8 @@ struct CClass : CRTTIType
     CName name2;
     DynArray<CProperty*> props;
     DynArray<CProperty*> overriddenProps;
-    DynArray<CBaseFunction*> funcs;
-    DynArray<CBaseFunction*> staticFuncs;
+    DynArray<CClassFunction*> funcs;
+    DynArray<CClassFunction*> staticFuncs;
     uint32_t size; // The size of the real class that can be constructed.
     int32_t unk6C;
     uint32_t flags;
@@ -136,7 +136,7 @@ struct CClass : CRTTIType
     int64_t unk90;
     int32_t unk98;
     int32_t unk9C;
-    HashMap<uint64_t, CBaseFunction*> unkA0;
+    HashMap<uint64_t, CClassFunction*> unkA0;
     int64_t unkD0;
     int64_t unkD8;
     HashMap<uint64_t, CRTTIType*> unkE0;
