@@ -59,7 +59,7 @@ struct CRTTISystem : IRTTISystem
     HashMap<uint64_t, CRTTIType*> types;
     HashMap<void*, void*> typeByIds;
     HashMap<void*, void*> typeIds;
-    HashMap<void*, void*> funcs;
+    HashMap<uint64_t, CGlobalFunction*> funcs;
     HashMap<void*, void*> unkC8;
     HashMap<void*, void*> unkF8;
     int64_t unk128;
