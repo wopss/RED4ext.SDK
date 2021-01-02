@@ -23,8 +23,8 @@ struct CBaseFunction : IFunction
 {
     bool Execute(CStack* aStack);
 
-    CName name;
-    CName name2;
+    CName fullName;
+    CName shortName;
     CProperty* returnType;
     int64_t unk20;
     DynArray<CProperty*> params;
@@ -34,7 +34,7 @@ struct CBaseFunction : IFunction
     uint32_t unk7C;
 };
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0x80);
-RED4EXT_ASSERT_OFFSET(CBaseFunction, name, 0x8);
+RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x8);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0x78);
 
 struct CGlobalFunction : CBaseFunction
