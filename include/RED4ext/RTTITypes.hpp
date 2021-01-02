@@ -165,16 +165,16 @@ RED4EXT_ASSERT_OFFSET(CClass, unkE0, 0xE0);
 
 struct CEnum : CRTTIType
 {
-    CName hash;                // 10
-    CName unk18;               // 18
-    uint8_t size;              // 20 - Size in bytes the instance will use
-    uint8_t flags;             // 21
-    uint16_t unk22;            // 22
-    uint32_t unk24;            // 24
-    DynArray<CName> hashList;  // 28
-    DynArray<CName> valueList; // 38
-    DynArray<CName> unk48;     // 48
-    DynArray<CName> unk58;     // 58
+    CName hash;                   // 10
+    CName unk18;                  // 18
+    uint8_t size;                 // 20 - Size in bytes the instance will use
+    uint8_t flags;                // 21
+    uint16_t unk22;               // 22
+    uint32_t unk24;               // 24
+    DynArray<CName> hashList;     // 28
+    DynArray<uint64_t> valueList; // 38
+    DynArray<CName> unk48;        // 48
+    DynArray<uint64_t> unk58;     // 58
 };
 RED4EXT_ASSERT_SIZE(CEnum, 0x68);
 RED4EXT_ASSERT_OFFSET(CEnum, hashList, 0x28);
