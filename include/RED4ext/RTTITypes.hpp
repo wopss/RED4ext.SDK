@@ -5,6 +5,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/IMemoryAllocator.hpp>
+#include <RED4ext/RTTITypeFlags.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Unks.hpp>
@@ -123,12 +124,12 @@ struct CClass : CRTTIType
     CName name;
     CName name2;
     DynArray<CProperty*> props;
-    DynArray<CProperty*> overriddenProps;
+    DynArray<CProperty*> unk38;
     DynArray<CClassFunction*> funcs;
     DynArray<CClassFunction*> staticFuncs;
     uint32_t size; // The size of the real class that can be constructed.
     int32_t unk6C;
-    uint32_t flags;
+    ClassFlags flags;
     uint32_t alignment;
     int64_t unk78;
     int64_t unk80;
