@@ -30,28 +30,28 @@ struct CProperty
     Flags flags;
 
     template<typename T>
-    bool IsEqual(InstanceType aInstance, const T aValue)
+    bool IsEqual(ScriptInstance aInstance, const T aValue)
     {
         auto currValue = GetValuePtr<T>(aInstance);
         return type->IsEqual({currValue}, {&aValue});
     }
 
     template<typename T>
-    void SetValue(InstanceType aInstance, const T aValue) const
+    void SetValue(ScriptInstance aInstance, const T aValue) const
     {
         auto prevValue = GetValuePtr<T>(aInstance);
         type->Assign({prevValue}, {&aValue});
     }
 
     template<typename T>
-    T GetValue(InstanceType aInstance) const
+    T GetValue(ScriptInstance aInstance) const
     {
         return *GetValuePtr<T>(aInstance);
     }
 
 private:
     template<typename T>
-    T* GetValuePtr(InstanceType aInstance) const
+    T* GetValuePtr(ScriptInstance aInstance) const
     {
         void* holder = aInstance.ptr;
         if (flags.b21)

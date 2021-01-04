@@ -44,11 +44,11 @@ struct IRTTIType
     virtual void GetName2(CName& aOut) const = 0;
     virtual void Init(void* aMemory) const = 0;
     virtual void Destroy(void* aMemory) const = 0;
-    virtual bool IsEqual(const InstanceType aLhs, const InstanceType aRhs) = 0;
-    virtual void Assign(InstanceType aLhs, const InstanceType aRhs) = 0;
-    virtual void sub_58(InstanceType aLhs, const InstanceType aRhs) = 0; // This usually call "Assign".
+    virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0;
+    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;
+    virtual void sub_58(ScriptInstance aLhs, const ScriptInstance aRhs) = 0; // This usually call "Assign".
     virtual void sub_60() = 0;
-    virtual bool GetDebugString(InstanceType aInstance, CString& aOut) const = 0;
+    virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;
     virtual void sub_70() = 0;
     virtual void sub_78() = 0;
     virtual void sub_80() = 0;
@@ -73,14 +73,14 @@ struct CArray : CRTTIType
 public:
     virtual CRTTIType* GetInnerType() = 0;                                             // C0
     virtual bool sub_C8() = 0;                                                         // C8 ret 1
-    virtual uint32_t GetLength(InstanceType aInstance) = 0;                            // D0
+    virtual uint32_t GetLength(ScriptInstance aInstance) = 0;                            // D0
     virtual int32_t sub_D8() = 0;                                                      // D8 ret -1
-    virtual InstanceType GetElement(InstanceType aInstance, uint32_t aIndex) = 0;      // E0
-    virtual InstanceType GetValuePointer(InstanceType aInstance, uint32_t aIndex) = 0; // E8 Same func at 0xE0 ?
-    virtual int32_t InsertElement(InstanceType aInstance, int32_t aIndex, InstanceType aElement) = 0; // F0
-    virtual bool RemoveElement(InstanceType aInstance, int32_t aIndex) = 0;                           // F8
-    virtual bool sub_100(InstanceType aInstance, int32_t aIndex) = 0;                                 // 100
-    virtual bool Grow(InstanceType aInstance, uint32_t aSize) = 0;                                    // 108
+    virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) = 0;      // E0
+    virtual ScriptInstance GetValuePointer(ScriptInstance aInstance, uint32_t aIndex) = 0; // E8 Same func at 0xE0 ?
+    virtual int32_t InsertElement(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
+    virtual bool RemoveElement(ScriptInstance aInstance, int32_t aIndex) = 0;                           // F8
+    virtual bool sub_100(ScriptInstance aInstance, int32_t aIndex) = 0;                                 // 100
+    virtual bool Grow(ScriptInstance aInstance, uint32_t aSize) = 0;                                    // 108
 
     CRTTIType* innerType; // 10
     CName name;           // 18

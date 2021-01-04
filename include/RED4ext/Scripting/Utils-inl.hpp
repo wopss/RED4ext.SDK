@@ -7,7 +7,7 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(InstanceType aInstance, CBaseFunction* aFunc, void* aOut,
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
                                              std::vector<CStackType> aArgs)
 {
     CStackType result;
