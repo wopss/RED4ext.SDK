@@ -32,7 +32,7 @@ namespace RED4ext
  */
 struct CStackType
 {
-    CStackType(IRTTIType* aType = nullptr, void* aValue = nullptr);
+    CStackType(IRTTIType* aType = nullptr, InstanceType aValue = {nullptr});
 
     IRTTIType* type;
     InstanceType value;
@@ -61,7 +61,7 @@ RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
 
 struct CStack : CBaseStack
 {
-    CStack(IScriptable* aScriptable = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
+    CStack(InstanceType aInstance = {nullptr}, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
            CStackType* aResult = nullptr, int64_t a6 = 0);
     ~CStack() = default;
 

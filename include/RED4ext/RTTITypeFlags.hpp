@@ -4,18 +4,19 @@
 
 namespace RED4ext
 {
-enum class ClassFlags : uint32_t
+struct ClassFlags
 {
-    None = 0,
-    IsAbstract = 1 << 0,
-    IsNative = 1 << 1,
-    Unk2 = 1 << 2,
-    Unk3 = 1 << 3,
-    IsStruct = 1 << 4,
-    Unk5 = 1 << 5,
-    IsImportOnly = 1 << 6,
-    IsPrivate = 1 << 7,
-    IsProtected = 1 << 8,
-    IsTestOnly = 1 << 9,
+    uint32_t None : 1;
+    uint32_t isAbstract : 1;
+    uint32_t b2 : 1;
+    uint32_t b3 : 1;
+    uint32_t isStruct : 1;
+    uint32_t b5 : 1;
+    uint32_t isImportOnly : 1;
+    uint32_t isPrivate : 1;
+    uint32_t isProtected : 1;
+    uint32_t isTestOnly : 1;
+    uint32_t b10 : 22;
 };
+RED4EXT_ASSERT_SIZE(ClassFlags, 0x4);
 } // namespace RED4ext

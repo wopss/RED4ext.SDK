@@ -4,10 +4,11 @@
 
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
+#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
-bool ExecuteFunction(IScriptable* aParent, CBaseFunction* aFunc, void* aOut, std::vector<CStackType> aArgs);
+bool ExecuteFunction(InstanceType aInstance, CBaseFunction* aFunc, void* aOut, std::vector<CStackType> aArgs);
 bool ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs);
 
 bool ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, std::vector<CStackType> aArgs);

@@ -15,7 +15,16 @@ struct CProperty
     CName group;
     CClass* parent;
     uint32_t valueOffset;
-    uint64_t flags;
+
+    struct Flags
+    {
+        uint64_t b0 : 9;
+        uint64_t isOut : 1;
+        uint64_t isOptional : 1;
+        uint64_t b12 : 53;
+    };
+
+    Flags flags;
 
     template<typename T>
     bool IsEqual(void* aInstance, const T aValue)
@@ -51,6 +60,7 @@ private:
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);
     }
 };
+RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 RED4EXT_ASSERT_SIZE(CProperty, 0x30);
 RED4EXT_ASSERT_OFFSET(CProperty, type, 0x0);
 RED4EXT_ASSERT_OFFSET(CProperty, name, 0x8);

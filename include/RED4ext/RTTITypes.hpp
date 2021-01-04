@@ -8,6 +8,7 @@
 #include <RED4ext/RTTITypeFlags.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Types/InstanceType.hpp>
 #include <RED4ext/Unks.hpp>
 
 namespace RED4ext
@@ -48,15 +49,15 @@ struct IRTTIType
     virtual void Assign(void* aLhs, const void* aRhs) = 0;
     virtual void sub_58(void* aLhs, const void* aRhs) = 0; // This usually call "Assign".
     virtual void sub_60() = 0;
-    virtual bool GetDebugString(void* aInstance, CString& aOut) const = 0;
+    virtual bool GetDebugString(InstanceType aInstance, CString& aOut) const = 0;
     virtual void sub_70() = 0;
     virtual void sub_78() = 0;
     virtual void sub_80() = 0;
     virtual void sub_88() = 0;
-    virtual void sub_90() = 0;
-    virtual void sub_98() = 0;
+    virtual bool Unk_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;
+    virtual bool Unk_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0;
     virtual void sub_A0() = 0;
-    virtual void sub_A8() = 0;
+    virtual bool HasProperties() = 0;
     virtual void sub_B0() = 0;
     virtual IMemoryAllocator* GetAllocator() const = 0;
 };
@@ -73,14 +74,14 @@ struct CArray : CRTTIType
 public:
     virtual CRTTIType* GetInnerType() = 0;                                              // C0
     virtual bool sub_C8() = 0;                                                          // C8 ret 1
-    virtual uint32_t GetLength(void* aInstance) = 0;                                    // D0
+    virtual uint32_t GetLength(InstanceType aInstance) = 0;                             // D0
     virtual int32_t sub_D8() = 0;                                                       // D8 ret -1
-    virtual void* GetElement(void* aInstance, uint32_t aIndex) = 0;                     // E0
-    virtual void* GetValuePointer(void* aInstance, uint32_t aIndex) = 0;                // E8 Same func at 0xE0 ?
-    virtual int32_t InsertElement(void* aInstance, int32_t aIndex, void* aElement) = 0; // F0
-    virtual bool RemoveElement(void* aInstance, int32_t aIndex) = 0;                    // F8
-    virtual bool sub_100(void* aInstance, int32_t aIndex) = 0;                          // 100
-    virtual bool Grow(void* aInstance, uint32_t aSize) = 0;                             // 108
+    virtual InstanceType GetElement(InstanceType aInstance, uint32_t aIndex) = 0;       // E0
+    virtual InstanceType GetValuePointer(InstanceType aInstance, uint32_t aIndex) = 0;  // E8 Same func at 0xE0 ?
+    virtual int32_t InsertElement(InstanceType aInstance, int32_t aIndex, InstanceType aElement) = 0; // F0
+    virtual bool RemoveElement(InstanceType aInstance, int32_t aIndex) = 0;                    // F8
+    virtual bool sub_100(InstanceType aInstance, int32_t aIndex) = 0;                          // 100
+    virtual bool Grow(InstanceType aInstance, uint32_t aSize) = 0;                             // 108
 
     CRTTIType* innerType; // 10
     CName name;           // 18
