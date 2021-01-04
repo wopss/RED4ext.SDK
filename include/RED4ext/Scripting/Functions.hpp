@@ -21,14 +21,15 @@ RED4EXT_ASSERT_SIZE(IFunction, 0x8);
 
 struct CBaseFunction : IFunction
 {
-    bool Execute(CStack* aStack);
-
     struct Flags
     {
         uint32_t isNative : 1;
         uint32_t isStatic : 1;
         uint32_t b2 : 30;
     };
+    RED4EXT_ASSERT_SIZE(CBaseFunction::Flags, 0x4);
+
+    bool Execute(CStack* aStack);
 
     CName fullName;
     CName shortName;
@@ -41,7 +42,7 @@ struct CBaseFunction : IFunction
     uint32_t unk7C;
 };
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0x80);
-RED4EXT_ASSERT_SIZE(CBaseFunction::Flags, 0x4);
+
 RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x8);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0x78);
 

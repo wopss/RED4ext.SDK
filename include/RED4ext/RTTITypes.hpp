@@ -44,9 +44,9 @@ struct IRTTIType
     virtual void GetName2(CName& aOut) const = 0;
     virtual void Init(void* aMemory) const = 0;
     virtual void Destroy(void* aMemory) const = 0;
-    virtual bool IsEqual(const void* aLhs, const void* aRhs) = 0;
-    virtual void Assign(void* aLhs, const void* aRhs) = 0;
-    virtual void sub_58(void* aLhs, const void* aRhs) = 0; // This usually call "Assign".
+    virtual bool IsEqual(const InstanceType aLhs, const InstanceType aRhs) = 0;
+    virtual void Assign(InstanceType aLhs, const InstanceType aRhs) = 0;
+    virtual void sub_58(InstanceType aLhs, const InstanceType aRhs) = 0; // This usually call "Assign".
     virtual void sub_60() = 0;
     virtual bool GetDebugString(InstanceType aInstance, CString& aOut) const = 0;
     virtual void sub_70() = 0;
@@ -71,16 +71,16 @@ RED4EXT_ASSERT_SIZE(CRTTIType, 0x10);
 struct CArray : CRTTIType
 {
 public:
-    virtual CRTTIType* GetInnerType() = 0;                                              // C0
-    virtual bool sub_C8() = 0;                                                          // C8 ret 1
-    virtual uint32_t GetLength(InstanceType aInstance) = 0;                             // D0
-    virtual int32_t sub_D8() = 0;                                                       // D8 ret -1
-    virtual InstanceType GetElement(InstanceType aInstance, uint32_t aIndex) = 0;       // E0
-    virtual InstanceType GetValuePointer(InstanceType aInstance, uint32_t aIndex) = 0;  // E8 Same func at 0xE0 ?
+    virtual CRTTIType* GetInnerType() = 0;                                             // C0
+    virtual bool sub_C8() = 0;                                                         // C8 ret 1
+    virtual uint32_t GetLength(InstanceType aInstance) = 0;                            // D0
+    virtual int32_t sub_D8() = 0;                                                      // D8 ret -1
+    virtual InstanceType GetElement(InstanceType aInstance, uint32_t aIndex) = 0;      // E0
+    virtual InstanceType GetValuePointer(InstanceType aInstance, uint32_t aIndex) = 0; // E8 Same func at 0xE0 ?
     virtual int32_t InsertElement(InstanceType aInstance, int32_t aIndex, InstanceType aElement) = 0; // F0
-    virtual bool RemoveElement(InstanceType aInstance, int32_t aIndex) = 0;                    // F8
-    virtual bool sub_100(InstanceType aInstance, int32_t aIndex) = 0;                          // 100
-    virtual bool Grow(InstanceType aInstance, uint32_t aSize) = 0;                             // 108
+    virtual bool RemoveElement(InstanceType aInstance, int32_t aIndex) = 0;                           // F8
+    virtual bool sub_100(InstanceType aInstance, int32_t aIndex) = 0;                                 // 100
+    virtual bool Grow(InstanceType aInstance, uint32_t aSize) = 0;                                    // 108
 
     CRTTIType* innerType; // 10
     CName name;           // 18
@@ -115,13 +115,6 @@ struct CClass : CRTTIType
     virtual void DestroyCls(IScriptable* aMemory) = 0;
     virtual void sub_E8() = 0;
 
-    IScriptable* AllocInstance();
-
-    bool IsA(IRTTIType* aType);
-
-    CProperty* GetProperty(CName aName);
-    CClassFunction* GetFunction(CName aName);
-
     struct Flags
     {
         uint32_t isAbstract : 1;
@@ -136,6 +129,14 @@ struct CClass : CRTTIType
         uint32_t isTestOnly : 1;
         uint32_t b10 : 22;
     };
+    RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
+
+    IScriptable* AllocInstance();
+
+    bool IsA(IRTTIType* aType);
+
+    CProperty* GetProperty(CName aName);
+    CClassFunction* GetFunction(CName aName);
 
     CClass* parent;
     CName name;
@@ -173,7 +174,6 @@ struct CClass : CRTTIType
     int8_t unk298;
     int8_t unk299;
 };
-RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
 RED4EXT_ASSERT_SIZE(CClass, 0x2A0);
 RED4EXT_ASSERT_OFFSET(CClass, parent, 0x10);
 RED4EXT_ASSERT_OFFSET(CClass, name, 0x18);

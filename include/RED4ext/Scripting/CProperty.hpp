@@ -10,22 +10,22 @@ struct CClass;
 
 struct CProperty
 {
-    IRTTIType* type;
-    CName name;
-    CName group;
-    CClass* parent;
-    uint32_t valueOffset;
-
     struct Flags
     {
         uint64_t b0 : 9;
         uint64_t isOut : 1;
         uint64_t isOptional : 1;
-        uint64_t b12 : 9;
+        uint64_t b12 : 10;
         uint64_t b21 : 1;
-        uint64_t b22 : 43;
+        uint64_t b22 : 42;
     };
+    RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 
+    IRTTIType* type;
+    CName name;
+    CName group;
+    CClass* parent;
+    uint32_t valueOffset;
     Flags flags;
 
     template<typename T>
@@ -62,7 +62,6 @@ private:
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);
     }
 };
-RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 RED4EXT_ASSERT_SIZE(CProperty, 0x30);
 RED4EXT_ASSERT_OFFSET(CProperty, type, 0x0);
 RED4EXT_ASSERT_OFFSET(CProperty, name, 0x8);
