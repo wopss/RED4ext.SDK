@@ -2,6 +2,7 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
@@ -29,33 +30,33 @@ struct CProperty
     Flags flags;
 
     template<typename T>
-    bool IsEqual(void* aInstance, const T aValue)
+    bool IsEqual(InstanceType aInstance, const T aValue)
     {
         auto currValue = GetValuePtr<T>(aInstance);
-        return type->IsEqual(currValue, &aValue);
+        return type->IsEqual({currValue}, {&aValue});
     }
 
     template<typename T>
-    void SetValue(void* aInstance, const T aValue) const
+    void SetValue(InstanceType aInstance, const T aValue) const
     {
         auto prevValue = GetValuePtr<T>(aInstance);
-        type->Assign(prevValue, &aValue);
+        type->Assign({prevValue}, {&aValue});
     }
 
     template<typename T>
-    T GetValue(void* aInstance) const
+    T GetValue(InstanceType aInstance) const
     {
         return *GetValuePtr<T>(aInstance);
     }
 
 private:
     template<typename T>
-    T* GetValuePtr(void* aInstance) const
+    T* GetValuePtr(InstanceType aInstance) const
     {
-        void* holder = aInstance;
+        void* holder = aInstance.ptr;
         if (flags.b21)
         {
-            auto scriptable = static_cast<IScriptable*>(aInstance);
+            auto scriptable = static_cast<IScriptable*>(aInstance.ptr);
             holder = scriptable->GetValueHolder();
         }
 
