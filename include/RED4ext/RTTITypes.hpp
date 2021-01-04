@@ -44,9 +44,9 @@ struct IRTTIType
     virtual void GetName2(CName& aOut) const = 0;
     virtual void Init(void* aMemory) const = 0;
     virtual void Destroy(void* aMemory) const = 0;
-    virtual void sub_48() = 0;
-    virtual void sub_50() = 0;
-    virtual void sub_58() = 0;
+    virtual bool IsEqual(const void* aLhs, const void* aRhs) = 0;
+    virtual void Assign(void* aLhs, const void* aRhs) = 0;
+    virtual void sub_58(void* aLhs, const void* aRhs) = 0; // This usually call "Assign".
     virtual void sub_60() = 0;
     virtual bool GetDebugString(void* aInstance, CString& aOut) const = 0;
     virtual void sub_70() = 0;
@@ -118,6 +118,8 @@ struct CClass : CRTTIType
     IScriptable* AllocInstance();
 
     bool IsA(IRTTIType* aType);
+
+    CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aName);
 
     CClass* parent;
