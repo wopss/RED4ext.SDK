@@ -11,14 +11,15 @@ struct CProperty
 {
     IRTTIType* type;
     CName name;
-    CName unk10;
+    CName group;
     CClass* parent;
-    uint32_t flags;
-    int64_t unk28;
+    uint32_t valueOffset;
+    uint64_t flags;
 };
 RED4EXT_ASSERT_SIZE(CProperty, 0x30);
 RED4EXT_ASSERT_OFFSET(CProperty, type, 0x0);
 RED4EXT_ASSERT_OFFSET(CProperty, name, 0x8);
 RED4EXT_ASSERT_OFFSET(CProperty, parent, 0x18);
-RED4EXT_ASSERT_OFFSET(CProperty, flags, 0x20);
+RED4EXT_ASSERT_OFFSET(CProperty, valueOffset, 0x20);
+RED4EXT_ASSERT_OFFSET(CProperty, flags, 0x28);
 } // namespace RED4ext
