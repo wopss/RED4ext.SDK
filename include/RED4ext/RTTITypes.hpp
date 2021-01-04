@@ -124,8 +124,8 @@ struct CClass : CRTTIType
 
     struct Flags
     {
-        uint32_t None : 1;
         uint32_t isAbstract : 1;
+        uint32_t isNative : 1;
         uint32_t b2 : 1;
         uint32_t b3 : 1;
         uint32_t isStruct : 1;
