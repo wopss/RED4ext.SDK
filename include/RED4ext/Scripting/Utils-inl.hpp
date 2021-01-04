@@ -7,7 +7,7 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction* aFunc, void* aOut,
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(InstanceType aInstance, CBaseFunction* aFunc, void* aOut,
                                              std::vector<CStackType> aArgs)
 {
     CStackType result;
@@ -37,7 +37,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(IScriptable* aParent, CBaseFunction
         }
     }
 
-    CStack stack(aParent, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
+    CStack stack(aInstance, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
                  aOut && aFunc->returnType ? &result : nullptr);
     return aFunc->Execute(&stack);
 }
@@ -67,7 +67,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aParent, CName aFunc, void* a
     auto game = engine->framework->gameInstance;
 
     // I think we should increment some ref here, but didn't really check into it.
-    auto instance = static_cast<IScriptable*>(game->GetInstance(type));
+    auto instance = game->GetInstance(type);
     return ExecuteFunction(instance, func, aOut, aArgs);
 }
 
@@ -97,7 +97,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, 
     auto game = engine->framework->gameInstance;
 
     // I think we should increment some ref here, but didn't really check into it.
-    auto instance = static_cast<IScriptable*>(game->GetInstance(type));
+    auto instance = game->GetInstance(type);
     return ExecuteFunction(instance, func, aOut, aArgs);
 }
 

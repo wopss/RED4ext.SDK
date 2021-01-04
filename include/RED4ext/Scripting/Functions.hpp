@@ -21,6 +21,14 @@ RED4EXT_ASSERT_SIZE(IFunction, 0x8);
 
 struct CBaseFunction : IFunction
 {
+    struct Flags
+    {
+        uint32_t isNative : 1;
+        uint32_t isStatic : 1;
+        uint32_t b2 : 30;
+    };
+    RED4EXT_ASSERT_SIZE(CBaseFunction::Flags, 0x4);
+
     bool Execute(CStack* aStack);
 
     CName fullName;
@@ -30,10 +38,11 @@ struct CBaseFunction : IFunction
     DynArray<CProperty*> params;
     DynArray<CProperty*> localVars;
     int8_t unk48[0x30];
-    uint32_t flags;
+    Flags flags;
     uint32_t unk7C;
 };
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0x80);
+
 RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x8);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0x78);
 

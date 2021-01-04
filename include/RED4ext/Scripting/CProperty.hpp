@@ -10,12 +10,23 @@ struct CClass;
 
 struct CProperty
 {
+    struct Flags
+    {
+        uint64_t b0 : 9;
+        uint64_t isOut : 1;
+        uint64_t isOptional : 1;
+        uint64_t b12 : 10;
+        uint64_t b21 : 1;
+        uint64_t b22 : 42;
+    };
+    RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
+
     IRTTIType* type;
     CName name;
     CName group;
     CClass* parent;
     uint32_t valueOffset;
-    uint64_t flags;
+    Flags flags;
 
     template<typename T>
     bool IsEqual(void* aInstance, const T aValue)
@@ -42,7 +53,7 @@ private:
     T* GetValuePtr(void* aInstance) const
     {
         void* holder = aInstance;
-        if (flags & 0x200000)
+        if (flags.b21)
         {
             auto scriptable = static_cast<IScriptable*>(aInstance);
             holder = scriptable->GetValueHolder();

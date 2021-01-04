@@ -9,6 +9,7 @@ template<typename T> struct Handle;
 template<typename T> struct WeakHandle;
 template<typename T> struct DynArray;
 struct CString;
+struct ISerializable;
 struct IScriptable;
 struct TweakDBID;
 struct ItemID;
@@ -27,6 +28,7 @@ union InstanceType
     CString*                        str;
     TweakDBID*                      tdbid;
     ItemID*                         itemid;
+    ISerializable*                  serializable;
     IScriptable*                    scriptable;
     Handle<IScriptable>*            ref;
     WeakHandle<IScriptable>*        wref;
