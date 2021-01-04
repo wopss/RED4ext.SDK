@@ -5,7 +5,6 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/IMemoryAllocator.hpp>
-#include <RED4ext/RTTITypeFlags.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
@@ -123,6 +122,21 @@ struct CClass : CRTTIType
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aName);
 
+    struct Flags
+    {
+        uint32_t None : 1;
+        uint32_t isAbstract : 1;
+        uint32_t b2 : 1;
+        uint32_t b3 : 1;
+        uint32_t isStruct : 1;
+        uint32_t b5 : 1;
+        uint32_t isImportOnly : 1;
+        uint32_t isPrivate : 1;
+        uint32_t isProtected : 1;
+        uint32_t isTestOnly : 1;
+        uint32_t b10 : 22;
+    };
+
     CClass* parent;
     CName name;
     CName name2;
@@ -132,7 +146,7 @@ struct CClass : CRTTIType
     DynArray<CClassFunction*> staticFuncs;
     uint32_t size; // The size of the real class that can be constructed.
     int32_t unk6C;
-    ClassFlags flags;
+    Flags flags;
     uint32_t alignment;
     int64_t unk78;
     int64_t unk80;
@@ -159,6 +173,7 @@ struct CClass : CRTTIType
     int8_t unk298;
     int8_t unk299;
 };
+RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
 RED4EXT_ASSERT_SIZE(CClass, 0x2A0);
 RED4EXT_ASSERT_OFFSET(CClass, parent, 0x10);
 RED4EXT_ASSERT_OFFSET(CClass, name, 0x18);

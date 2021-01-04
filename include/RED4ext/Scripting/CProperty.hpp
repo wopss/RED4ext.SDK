@@ -21,7 +21,9 @@ struct CProperty
         uint64_t b0 : 9;
         uint64_t isOut : 1;
         uint64_t isOptional : 1;
-        uint64_t b12 : 53;
+        uint64_t b12 : 9;
+        uint64_t b21 : 1;
+        uint64_t b22 : 43;
     };
 
     Flags flags;
@@ -51,7 +53,7 @@ private:
     T* GetValuePtr(void* aInstance) const
     {
         void* holder = aInstance;
-        if (flags & 0x200000)
+        if (flags.b21)
         {
             auto scriptable = static_cast<IScriptable*>(aInstance);
             holder = scriptable->GetValueHolder();
