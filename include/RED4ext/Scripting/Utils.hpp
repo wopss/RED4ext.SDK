@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-bool ExecuteFunction(InstanceType aInstance, CBaseFunction* aFunc, void* aOut, std::vector<CStackType> aArgs);
+bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, std::vector<CStackType> aArgs);
 bool ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs);
 
 bool ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, std::vector<CStackType> aArgs);
