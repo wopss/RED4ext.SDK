@@ -56,8 +56,7 @@ private:
         void* holder = aInstance.ptr;
         if (flags.b21)
         {
-            auto scriptable = static_cast<IScriptable*>(aInstance.ptr);
-            holder = scriptable->GetValueHolder();
+            holder = aInstance.scriptable->GetValueHolder();
         }
 
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);

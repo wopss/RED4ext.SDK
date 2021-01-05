@@ -3,10 +3,6 @@
 #include <RED4ext/Common.hpp>
 #include <cstdint>
 
-#define RED4EXT_DECLARE_TYPE(type, name)                                                                               \
-    const type* const_##name##;                                                                                        \
-    type* name;
-
 namespace RED4ext
 {
 template<typename T>

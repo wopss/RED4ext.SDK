@@ -23,3 +23,9 @@
 #define RED4EXT_ASSERT_OFFSET(cls, mbr, offset)                                                                        \
     static_assert(offsetof(cls, mbr) == offset, #cls "::" #mbr " is not on the expected offset (" #offset ")")
 #endif
+
+#ifndef RED4EXT_DECLARE_TYPE
+#define RED4EXT_DECLARE_TYPE(type, name)                                                                               \
+    const type* const_##name##;                                                                                        \
+    type* name;
+#endif
