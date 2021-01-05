@@ -30,17 +30,17 @@ struct CProperty
     Flags flags;
 
     template<typename T>
-    bool IsEqual(ScriptInstance aInstance, const T aValue)
+    bool IsEqual(ScriptInstance aInstance, T aValue)
     {
         auto currValue = GetValuePtr<T>(aInstance);
-        return type->IsEqual({currValue}, {&aValue});
+        return type->IsEqual(currValue, &aValue);
     }
 
     template<typename T>
-    void SetValue(ScriptInstance aInstance, const T aValue) const
+    void SetValue(ScriptInstance aInstance, T aValue) const
     {
         auto prevValue = GetValuePtr<T>(aInstance);
-        type->Assign({prevValue}, {&aValue});
+        type->Assign(prevValue, &aValue);
     }
 
     template<typename T>
@@ -53,10 +53,11 @@ private:
     template<typename T>
     T* GetValuePtr(ScriptInstance aInstance) const
     {
-        void* holder = aInstance.ptr;
+        void* holder = aInstance;
         if (flags.b21)
         {
-            holder = aInstance.scriptable->GetValueHolder();
+            auto scriptable = static_cast<IScriptable*>(aInstance);
+            holder = scriptable->GetValueHolder();
         }
 
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);

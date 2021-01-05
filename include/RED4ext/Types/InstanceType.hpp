@@ -1,23 +1,20 @@
 #pragma once
 
-#include <RED4ext/Common.hpp>
 #include <cstdint>
+
+#include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Types/Handle.hpp>
 
 namespace RED4ext
 {
-template<typename T>
-struct Handle;
-template<typename T>
-struct WeakHandle;
-template<typename T>
-struct DynArray;
 struct CString;
 struct ISerializable;
 struct IScriptable;
 struct TweakDBID;
 struct ItemID;
 
-union ScriptInstance
+union ScriptInstanceUnion
 {
     RED4EXT_DECLARE_TYPE(void, ptr);
     RED4EXT_DECLARE_TYPE(uint8_t, u8);
@@ -38,6 +35,7 @@ union ScriptInstance
     RED4EXT_DECLARE_TYPE(DynArray<void*>, array);
     RED4EXT_DECLARE_TYPE(DynArray<Handle<IScriptable>>, array_ref);
 };
-RED4EXT_ASSERT_SIZE(ScriptInstance, 0x8);
+RED4EXT_ASSERT_SIZE(ScriptInstanceUnion, 0x8);
 
+using ScriptInstance = void*;
 } // namespace RED4ext
