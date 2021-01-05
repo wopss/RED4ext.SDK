@@ -23,8 +23,8 @@ struct CBaseFunction : IFunction
 {
     struct Flags
     {
-        uint32_t isNative : 1;
-        uint32_t isStatic : 1;
+        uint32_t isNative : 1; // 01
+        uint32_t isStatic : 1; // 02
         uint32_t b2 : 30;
     };
     RED4EXT_ASSERT_SIZE(CBaseFunction::Flags, 0x4);

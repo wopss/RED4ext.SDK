@@ -71,16 +71,16 @@ RED4EXT_ASSERT_SIZE(CRTTIType, 0x10);
 struct CArray : CRTTIType
 {
 public:
-    virtual CRTTIType* GetInnerType() = 0;                                             // C0
-    virtual bool sub_C8() = 0;                                                         // C8 ret 1
-    virtual uint32_t GetLength(ScriptInstance aInstance) = 0;                            // D0
-    virtual int32_t sub_D8() = 0;                                                      // D8 ret -1
+    virtual CRTTIType* GetInnerType() = 0;                                                 // C0
+    virtual bool sub_C8() = 0;                                                             // C8 ret 1
+    virtual uint32_t GetLength(ScriptInstance aInstance) = 0;                              // D0
+    virtual int32_t sub_D8() = 0;                                                          // D8 ret -1
     virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) = 0;      // E0
     virtual ScriptInstance GetValuePointer(ScriptInstance aInstance, uint32_t aIndex) = 0; // E8 Same func at 0xE0 ?
     virtual int32_t InsertElement(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
-    virtual bool RemoveElement(ScriptInstance aInstance, int32_t aIndex) = 0;                           // F8
-    virtual bool sub_100(ScriptInstance aInstance, int32_t aIndex) = 0;                                 // 100
-    virtual bool Grow(ScriptInstance aInstance, uint32_t aSize) = 0;                                    // 108
+    virtual bool RemoveElement(ScriptInstance aInstance, int32_t aIndex) = 0;                             // F8
+    virtual bool sub_100(ScriptInstance aInstance, int32_t aIndex) = 0;                                   // 100
+    virtual bool Grow(ScriptInstance aInstance, uint32_t aSize) = 0;                                      // 108
 
     CRTTIType* innerType; // 10
     CName name;           // 18
@@ -117,16 +117,16 @@ struct CClass : CRTTIType
 
     struct Flags
     {
-        uint32_t isAbstract : 1;
-        uint32_t isNative : 1;
-        uint32_t b2 : 1;
-        uint32_t b3 : 1;
-        uint32_t isStruct : 1;
-        uint32_t b5 : 1;
-        uint32_t isImportOnly : 1;
-        uint32_t isPrivate : 1;
-        uint32_t isProtected : 1;
-        uint32_t isTestOnly : 1;
+        uint32_t isAbstract : 1;   // 00
+        uint32_t isNative : 1;     // 01
+        uint32_t b2 : 1;           // 02
+        uint32_t b3 : 1;           // 03
+        uint32_t isStruct : 1;     // 04
+        uint32_t b5 : 1;           // 05
+        uint32_t isImportOnly : 1; // 06
+        uint32_t isPrivate : 1;    // 07
+        uint32_t isProtected : 1;  // 08
+        uint32_t isTestOnly : 1;   // 09
         uint32_t b10 : 22;
     };
     RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);

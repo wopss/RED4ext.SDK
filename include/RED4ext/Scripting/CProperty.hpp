@@ -13,19 +13,19 @@ struct CProperty
 {
     struct Flags
     {
-        uint64_t b0 : 9;
-        uint64_t isOut : 1;
-        uint64_t isOptional : 1;
+        uint64_t b0 : 10;
+        uint64_t isOut : 1;      // 0A
+        uint64_t isOptional : 1; // 0B
         uint64_t b12 : 4;
-        uint64_t isPrivate : 1;
-        uint64_t isProtected : 1;
-        uint64_t isPublic : 1;
+        uint64_t isPrivate : 1;   // 10
+        uint64_t isProtected : 1; // 11
+        uint64_t isPublic : 1;    // 12
         uint64_t b19 : 2;
         uint64_t b21 : 1;
         uint64_t b22 : 5;
-        uint64_t isHandle : 1;
-        uint64_t isPersistent : 1;
-        uint64_t b29 : 36;
+        uint64_t isHandle : 1;     // 1B
+        uint64_t isPersistent : 1; // 1C
+        uint64_t b29 : 35;
     };
     RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 
