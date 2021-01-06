@@ -4,7 +4,7 @@ You can contribuite to RED4ext.SDK with issues, ideas and PRs. Simply filling is
 
 ## Content guidelines
 
-The issue tracker is exclusively for filling and discussing bugs and featurerequests, it is not for scripting support (e.g. `How do I get X handler?`, `How can I call X function?`, etc.). For any other kind of discussion use [discussions](/discussions).
+The issue tracker is exclusively for filling and discussing bugs and featurerequests, it is not for scripting support (e.g. `How do I get X handler?`, `How can I call X function?`, etc.). For any other kind of discussion use [discussions](https://github.com/WopsS/RED4ext.SDK/discussions).
 
 ### Reporting a bug or requesting a feature
 
