@@ -29,3 +29,7 @@
     const type* const_##name##;                                                                                        \
     type* name;
 #endif
+
+#ifndef RED4EXT_C_EXPORT
+#define RED4EXT_C_EXPORT extern "C" __declspec(dllexport)
+#endif

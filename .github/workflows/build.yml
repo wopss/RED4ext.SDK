@@ -19,14 +19,14 @@ jobs:
       - name: Add MSBuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
 
-      - name: Generate project
+      - name: Generate projects
         run: |
           cd premake
-          ./generate_project.bat
+          ./generate_projects.bat
 
       - name: Build
         run: |
-          cd premake/project
+          cd premake/projects
           MSBuild.exe RED4ext.SDK.sln -v:minimal -m -property:Configuration=${{ matrix.config }}
 
       - name: Upload artifacts
