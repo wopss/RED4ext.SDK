@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
@@ -38,6 +40,8 @@ struct CStackType
     ScriptInstance value;
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
+
+using StackArgs_t = std::vector<CStackType>;
 
 struct IStack
 {
