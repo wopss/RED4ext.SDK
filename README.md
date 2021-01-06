@@ -26,9 +26,9 @@ Add the [header files](/include) and the [source files](/src) to your project, d
 
 1. Download and install [Visual Studio 2019 Community Edition](https://www.visualstudio.com/) or a higher version.
 2. Clone this repository.
-3. Go to the `premake` directory and run `generate_project.bat`.
-4. Open the solution (`RED4ext.SDK.sln`) located in `project` directory.
-5. Build the project.
+3. Go to the `premake` directory and run `generate_projects.bat`.
+4. Open the solution (`RED4ext.SDK.sln`) located in `projects` directory.
+5. Build the projects.
 
 ## Contributing
 
