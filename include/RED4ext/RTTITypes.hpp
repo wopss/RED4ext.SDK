@@ -4,14 +4,15 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
-#include <RED4ext/IMemoryAllocator.hpp>
-#include <RED4ext/Scripting/Functions.hpp>
-#include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 #include <RED4ext/Unks.hpp>
 
 namespace RED4ext
 {
+struct IMemoryAllocator;
+struct CProperty;
+struct CClassFunction;
+
 enum class ERTTIType : uint8_t
 {
     Name = 0,
