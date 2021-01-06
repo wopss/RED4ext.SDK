@@ -10,11 +10,16 @@ struct CName
     CName(uint64_t aHash = 0);
     CName(const char* aName);
 
+    bool operator==(const CName& acRhs) const noexcept
+    {
+        return hash == acRhs.hash;
+    }
+
     const char* ToString();
 
-    inline operator bool() const
+    bool IsEmpty() const noexcept
     {
-        return hash != 0;
+        return hash == 0;
     }
 
     uint64_t hash;
