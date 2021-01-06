@@ -14,10 +14,10 @@ struct CProperty
 {
     struct Flags
     {
-        uint64_t b0 : 10;
+        uint64_t b0 : 9;
         uint64_t isOut : 1;      // 0A
         uint64_t isOptional : 1; // 0B
-        uint64_t b12 : 4;
+        uint64_t b12 : 5;
         uint64_t isPrivate : 1;   // 10
         uint64_t isProtected : 1; // 11
         uint64_t isPublic : 1;    // 12
