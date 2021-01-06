@@ -10,14 +10,20 @@ using namespace std::chrono_literals;
  */
 RED4EXT_C_EXPORT void OnUpdate()
 {
-    static auto lastTime = std::chrono::steady_clock::now();
-    static auto lastCrouch = std::chrono::steady_clock::now();
+    static auto last = std::chrono::steady_clock::now();
     auto now = std::chrono::steady_clock::now();
 
+    auto diff = now - last;
+    if (diff < 1min)
+    {
+        return;
+    }
+
+    last = now;
+
     /*
-     * Every minute access the property of 'GameTime' instance.
+     * Access the property of 'GameTime' instance.
      */
-    if ((now - lastTime) >= 1min)
     {
         auto rtti = RED4ext::CRTTISystem::Get();
         auto gameTimeCls = rtti->GetClass("GameTime");
@@ -36,14 +42,11 @@ RED4EXT_C_EXPORT void OnUpdate()
 
         seconds = secondsProp->GetValue<uint32_t>(&gameTime);
         std::cout << "Seconds=" << seconds;
-
-        lastTime = now;
     }
 
     /*
-     * Every 1.5 minutes check if the player is crouched.
+     * Check if the player is crouched.
      */
-    if ((now - lastCrouch) >= 3min)
     {
         auto rtti = RED4ext::CRTTISystem::Get();
         auto engine = RED4ext::CGameEngine::Get();
@@ -60,7 +63,5 @@ RED4EXT_C_EXPORT void OnUpdate()
 
             std::cout << "inCourch=" << std::boolalpha << value;
         }
-
-        lastCrouch = now;
     }
 }
