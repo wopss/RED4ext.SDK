@@ -3,6 +3,7 @@ project("RED4ext.AccessingProperties")
 
     kind("SharedLib")
     language("C++")
+    dependson({ "RED4ext.SDK" })
 
     includedirs(
     {

@@ -3,6 +3,7 @@ project("RED4ext.ExecuteFunctions")
 
     kind("SharedLib")
     language("C++")
+    dependson({ "RED4ext.SDK" })
 
     includedirs(
     {
