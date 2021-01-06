@@ -30,6 +30,11 @@ struct Handle
         return instance;
     }
 
+    inline operator bool() const
+    {
+        return instance;
+    }
+
     T*   instance = nullptr;
     Ref* refCount = nullptr;
 };
