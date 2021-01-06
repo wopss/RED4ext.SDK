@@ -4,17 +4,15 @@
 
 namespace RED4ext
 {
-struct IScriptable;
-
-struct Ref
-{
-    uint32_t strongRef;
-    uint32_t weakRef;
-};
-
 template<typename T>
 struct Handle
 {
+    struct RefCount
+    {
+        uint32_t strongRefs;
+        uint32_t weakRefs;
+    };
+
     inline operator T*() const
     {
         return instance;
@@ -35,8 +33,8 @@ struct Handle
         return instance;
     }
 
-    T*   instance = nullptr;
-    Ref* refCount = nullptr;
+    T* instance = nullptr;
+    RefCount* refCount = nullptr;
 };
 
 template<typename T>

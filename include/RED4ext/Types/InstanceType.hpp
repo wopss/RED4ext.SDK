@@ -4,7 +4,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/Types/Handle.hpp>
+#include <RED4ext/Handle.hpp>
 
 namespace RED4ext
 {

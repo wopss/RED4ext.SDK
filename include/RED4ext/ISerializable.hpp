@@ -1,7 +1,9 @@
 #pragma once
 
 #include <cstdint>
+
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Handle.hpp>
 
 namespace RED4ext
 {
@@ -37,8 +39,7 @@ struct ISerializable
     virtual void sub_C0() = 0;
     virtual void sub_C8() = 0;
 
-    int64_t unk8;
-    int64_t unk10;
+    Handle<ISerializable> ref;
     int64_t unk18;
     int64_t unk20;
     int64_t unk28;
