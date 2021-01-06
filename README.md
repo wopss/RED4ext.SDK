@@ -1,6 +1,16 @@
 # RED4ext.SDK
 
-A library to create mods for REDengine 4 ([Cyberpunk 2077](https://www.cyberpunk.net)), independently of [RED4ext](https://github.com/WopsS/RED4ext).
+A library to create mods for REDengine 4 ([Cyberpunk 2077](https://www.cyberpunk.net)).
+
+## What is this library?
+
+RED4ext.SDK is a library that extends REDengine 4. It will allow modders to add new features, modify the game behavior, add new
+scripting functions or call existing ones in your own mods.
+
+This library is similar to:
+
+* [Script Hook V](http://dev-c.com/GTAV/scripthookv)
+* [Skyrim Script Extender](https://skse.silverlock.org/)
 
 ## Usage
 
@@ -19,3 +29,9 @@ Add the [header files](/include) and the [source files](/src) to your project, d
 3. Go to the `premake` directory and run `generate_project.bat`.
 4. Open the solution (`RED4ext.SDK.sln`) located in `project` directory.
 5. Build the project.
+
+## Contributing
+
+Do you want to contribute? Community feedback and contributions are highly appreciated!
+
+**For general rules and guidelines see [CONTRIBUTING.md](/CONTRIBUTING.md).**
