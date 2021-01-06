@@ -64,4 +64,51 @@ RED4EXT_C_EXPORT void OnUpdate()
             std::cout << "inCourch=" << std::boolalpha << value;
         }
     }
+
+    /*
+     * Get the UI system.
+     */
+    {
+        auto rtti = RED4ext::CRTTISystem::Get();
+        auto engine = RED4ext::CGameEngine::Get();
+        auto gameInstance = engine->framework->gameInstance;
+
+        RED4ext::Handle<uintptr_t> uiManager;
+        RED4ext::ExecuteFunction("ScriptGameInstance", "GetUISystem", &uiManager, &gameInstance);
+    }
+
+    /*
+     * A more complex example of how to access properties.
+     */
+    {
+        auto rtti = RED4ext::CRTTISystem::Get();
+        auto engine = RED4ext::CGameEngine::Get();
+        auto gameInstance = engine->framework->gameInstance;
+
+        RED4ext::Handle<RED4ext::IScriptable> handle;
+        RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
+
+        if (handle)
+        {
+            auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
+            auto getHudManagerFunc = playerPuppetCls->GetFunction("GetHudManager");
+
+            RED4ext::Handle<RED4ext::IScriptable> hudManager;
+            RED4ext::ExecuteFunction(handle, getHudManagerFunc, &hudManager, {});
+
+            auto hudManagerCls = rtti->GetClass("HUDManager");
+
+            auto activeModeProp = hudManagerCls->GetProperty("activeMode");
+            auto activeMode = activeModeProp->GetValue<int32_t>(hudManager);
+
+            auto stateProp = hudManagerCls->GetProperty("state");
+            auto state = stateProp->GetValue<int32_t>(hudManager);
+
+            auto uiScannerVisibleProp = hudManagerCls->GetProperty("uiScannerVisible");
+            auto uiScannerVisible = uiScannerVisibleProp->GetValue<bool>(hudManager);
+
+            std::cout << std::boolalpha << "activeMode=" << activeMode << " state=" << state
+                      << " uiScannerVisible=" << uiScannerVisible;
+        }
+    }
 }
