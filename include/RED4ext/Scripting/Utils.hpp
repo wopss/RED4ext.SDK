@@ -1,32 +1,61 @@
 #pragma once
 
-#include <vector>
-
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
-bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, std::vector<CStackType> aArgs);
-bool ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs);
+bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
 
-bool ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, std::vector<CStackType> aArgs);
-bool ExecuteGlobalFunction(CName aFunc, void* aOut, std::vector<CStackType> aArgs);
+bool ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
+bool ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs);
+bool ExecuteFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs);
+
+bool ExecuteGlobalFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs);
+bool ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs);
+bool ExecuteGlobalFunction(CName aFunc, void* aOut, StackArgs_t aArgs);
 
 template<typename... Args>
-bool ExecuteFunction(CName aParent, CName aFunc, void* aOut, Args&&... aArgs)
+bool ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, Args&&... aArgs)
 {
-    std::vector<CStackType> args;
+    StackArgs_t args;
     ((args.emplace_back(nullptr, &aArgs)), ...);
 
-    return ExecuteFunction(aParent, aFunc, aOut, args);
+    return ExecuteFunction(aContext, aFunc, aOut, args);
+}
+
+template<typename... Args>
+bool ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, Args&&... aArgs)
+{
+    StackArgs_t args;
+    ((args.emplace_back(nullptr, &aArgs)), ...);
+
+    return ExecuteFunction(aContext, aFunc, aOut, args);
+}
+
+template<typename... Args>
+bool ExecuteFunction(CName aContext, CName aFunc, void* aOut, Args&&... aArgs)
+{
+    StackArgs_t args;
+    ((args.emplace_back(nullptr, &aArgs)), ...);
+
+    return ExecuteFunction(aContext, aFunc, aOut, args);
+}
+
+template<typename... Args>
+bool ExecuteGlobalFunction(CClass* aContext, CName aFunc, void* aOut, Args&&... aArgs)
+{
+    StackArgs_t args;
+    ((args.emplace_back(nullptr, &aArgs)), ...);
+
+    return ExecuteGlobalFunction(aContext, aFunc, aOut, args);
 }
 
 template<typename... Args>
 bool ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, Args&&... aArgs)
 {
-    std::vector<CStackType> args;
+    StackArgs_t args;
     ((args.emplace_back(nullptr, &aArgs)), ...);
 
     return ExecuteGlobalFunction(aContext, aFunc, aOut, args);

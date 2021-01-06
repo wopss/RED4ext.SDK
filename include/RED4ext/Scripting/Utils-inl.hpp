@@ -8,20 +8,13 @@
 #include <RED4ext/RTTISystem.hpp>
 
 RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
-                                             std::vector<CStackType> aArgs)
+                                             StackArgs_t aArgs)
 {
     CStackType result;
     if (aOut && aFunc->returnType)
     {
         result.type = aFunc->returnType->type;
         result.value = aOut;
-    }
-
-    // If the arguments are not supplied or are too many, don't call the function, it will result in a crash or
-    // undefined behavior.
-    if (aArgs.size() != aFunc->params.size)
-    {
-        return false;
     }
 
     // Set the arguments types here. This is done here so that we don't have to copy the code for finding a function
@@ -42,37 +35,40 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
     return aFunc->Execute(&stack);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aParent, CName aFunc, void* aOut, std::vector<CStackType> aArgs)
+bool RED4ext::ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs)
 {
-    auto rtti = CRTTISystem::Get();
-    auto type = rtti->GetClass(aParent);
-    if (!type)
-    {
-        return false;
-    }
+    auto engine = CGameEngine::Get();
+    auto game = engine->framework->gameInstance;
 
-    static auto scriptable = rtti->GetClass("IScriptable");
-    if (!type->IsA(scriptable))
-    {
-        return false;
-    }
+    // I think we should increment some ref here, but didn't really check into it.
+    auto instance = game->GetInstance(aContext);
+    return ExecuteFunction(instance, aFunc, aOut, aArgs);
+}
 
-    auto func = type->GetFunction(aFunc);
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+{
+    auto func = aContext->GetFunction(aFunc);
     if (!func)
     {
         return false;
     }
 
-    auto engine = CGameEngine::Get();
-    auto game = engine->framework->gameInstance;
-
-    // I think we should increment some ref here, but didn't really check into it.
-    auto instance = game->GetInstance(type);
-    return ExecuteFunction(instance, func, aOut, aArgs);
+    return ExecuteFunction(aContext, func, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut,
-                                                   std::vector<CStackType> aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+{
+    auto rtti = CRTTISystem::Get();
+    auto type = rtti->GetClass(aContext);
+    if (!type)
+    {
+        return false;
+    }
+
+    return ExecuteFunction(type, aFunc, aOut, aArgs);
+}
+
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
 {
     auto rtti = CRTTISystem::Get();
     auto func = rtti->GetFunction(aFunc);
@@ -81,27 +77,22 @@ RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, 
         return false;
     }
 
+    return ExecuteFunction(aContext, func, aOut, aArgs);
+}
+
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+{
+    auto rtti = CRTTISystem::Get();
     auto type = rtti->GetClass(aContext);
     if (!type)
     {
         return false;
     }
 
-    static auto scriptable = rtti->GetClass("IScriptable");
-    if (!type->IsA(scriptable))
-    {
-        return false;
-    }
-
-    auto engine = CGameEngine::Get();
-    auto game = engine->framework->gameInstance;
-
-    // I think we should increment some ref here, but didn't really check into it.
-    auto instance = game->GetInstance(type);
-    return ExecuteFunction(instance, func, aOut, aArgs);
+    return ExecuteGlobalFunction(type, aFunc, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, std::vector<CStackType> aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, StackArgs_t aArgs)
 {
     return ExecuteGlobalFunction("cpPlayerSystem", aFunc, aOut, aArgs);
 }
