@@ -1,9 +1,11 @@
 #pragma once
 
+#include <type_traits>
+
 #include <RED4ext/CName.hpp>
+#include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
-#include <RED4ext/RTTITypes.hpp>
 
 namespace RED4ext
 {
@@ -41,6 +43,12 @@ struct CProperty
     bool IsEqual(ScriptInstance aInstance, T aValue)
     {
         auto currValue = GetValuePtr<T>(aInstance);
+
+        if constexpr (std::is_pointer_v<T>)
+        {
+            return type->IsEqual(currValue, aValue);
+        }
+
         return type->IsEqual(currValue, &aValue);
     }
 
@@ -48,7 +56,15 @@ struct CProperty
     void SetValue(ScriptInstance aInstance, T aValue) const
     {
         auto prevValue = GetValuePtr<T>(aInstance);
-        type->Assign(prevValue, &aValue);
+
+        if constexpr (std::is_pointer_v<T>)
+        {
+            type->Assign(prevValue, aValue);
+        }
+        else
+        {
+            type->Assign(prevValue, &aValue);
+        }
     }
 
     template<typename T>
