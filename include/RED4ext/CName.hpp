@@ -7,20 +7,19 @@ namespace RED4ext
 {
 struct CName
 {
-    CName(uint64_t aHash = 0);
-    CName(const char* aName);
+    CName(uint64_t aHash = 0) noexcept;
+    CName(const char* aName) noexcept;
 
-    bool operator==(const CName& acRhs) const noexcept
-    {
-        return hash == acRhs.hash;
-    }
+    operator uint64_t() const noexcept;
+
+    bool operator==(const CName& aRhs) const noexcept;
+    bool operator!=(const CName& aRhs) const noexcept;
+
+    bool operator==(const uint64_t aRhs) const noexcept;
+    bool operator!=(const uint64_t aRhs) const noexcept;
 
     const char* ToString();
-
-    bool IsEmpty() const noexcept
-    {
-        return hash == 0;
-    }
+    bool IsEmpty() const noexcept;
 
     uint64_t hash;
 };
