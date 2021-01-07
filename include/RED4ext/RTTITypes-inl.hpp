@@ -10,7 +10,7 @@
 RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CClass::AllocInstance()
 {
     using func_t = IScriptable* (*)(CClass*, uint32_t, bool);
-    static REDfunc<func_t> func(Addresses::CClass_GetFunction);
+    static REDfunc<func_t> func(Addresses::CClass_AllocInstance);
     return func(this, GetSize(), 0);
 }
 
