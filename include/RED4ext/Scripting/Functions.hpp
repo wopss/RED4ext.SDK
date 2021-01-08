@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/IMemoryAllocator.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
 
 namespace RED4ext
@@ -10,7 +11,7 @@ struct CStack;
 
 struct IFunction
 {
-    virtual void sub_0() = 0;
+    virtual IMemoryAllocator* GetAllocator() = 0;
     virtual ~IFunction() = 0;
 
     virtual CClass* GetParent() = 0;
