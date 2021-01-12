@@ -16,7 +16,7 @@ struct IFunction
 
     virtual CClass* GetParent() = 0;
     virtual uint32_t GetFuncIndex() = 0;
-    virtual void sub_20() = 0;
+    virtual void sub_20() = 0; // Returns an object, vf obj+0x20 is the function to invoke only used if static func
 };
 RED4EXT_ASSERT_SIZE(IFunction, 0x8);
 

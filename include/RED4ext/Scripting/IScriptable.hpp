@@ -13,6 +13,8 @@ struct IScriptable : ISerializable
     virtual void sub_F0() = 0;
     virtual void sub_F8() = 0;
     virtual void sub_100() = 0;
+    virtual void sub_108() = 0;
+    virtual void sub_110() = 0;
 
     void* GetValueHolder();
 
