@@ -1,5 +1,7 @@
 #pragma once
 
+#include <windows.h>
+#include <type_traits>
 #include <cstdint>
 
 namespace RED4ext
