@@ -229,6 +229,11 @@ public:
         return instance;
     }
 
+    inline operator T*() const
+    {
+        return instance;
+    }
+
     T* get() const noexcept
     {
         return instance;
