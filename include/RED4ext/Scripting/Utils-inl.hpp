@@ -7,7 +7,7 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(IScriptable* aInstance, CBaseFunction* aFunc, void* aOut,
                                              StackArgs_t aArgs)
 {
     CStackType result;
@@ -40,7 +40,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CBaseFunction* aF
     auto engine = CGameEngine::Get();
     auto game = engine->framework->gameInstance;
 
-    Handle<IScriptable> instance(static_cast<IScriptable*>(game->GetInstance(aContext)));
+    Handle<IScriptable> instance(game->GetInstance(aContext));
     return ExecuteFunction(instance, aFunc, aOut, aArgs);
 }
 

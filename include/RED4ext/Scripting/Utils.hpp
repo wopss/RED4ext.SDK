@@ -6,7 +6,7 @@
 
 namespace RED4ext
 {
-bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
+bool ExecuteFunction(IScriptable* aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
 
 bool ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
 bool ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs);

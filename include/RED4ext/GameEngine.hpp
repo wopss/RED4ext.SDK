@@ -77,7 +77,7 @@ struct CGameEngine : BaseGameEngine
         struct GameInstance
         {
             virtual ~GameInstance() = 0;
-            virtual ScriptInstance GetInstance(const IRTTIType* aType) = 0;
+            virtual IScriptable* GetInstance(const IRTTIType* aType) = 0;
         };
 
         RED4EXT_ASSERT_SIZE(GameInstance, 0x8);
