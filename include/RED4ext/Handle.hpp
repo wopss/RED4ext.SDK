@@ -194,9 +194,11 @@ public:
     }
 
 protected:
+    friend class WeakHandle<T>;
+
     [[nodiscard]] bool TryConstructFromWeak(const WeakHandle<T>& aOther) noexcept
     {
-        if (aOther.refCount && aOther.refCount->incref_nz())
+        if (aOther.refCount && aOther.refCount->IncRefIfNotZero())
         {
             instance = aOther.instance;
             refCount = aOther.refCount;
