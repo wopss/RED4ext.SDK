@@ -88,14 +88,16 @@ try:
         file.write('/*\n')
         file.write(' * This file is generated. DO NOT modify it!\n')
         file.write(' *\n')
-        file.write(' * If you want to add a pattern, add it in the script located in "project_root/scripts" and run it again.\n')
+        file.write(' * Add new patterns in "patterns.py" file located in "project_root/scripts" and run "find_patterns.py".\n')
+        file.write(' * The new file should be located in "idb_path/Addresses.hpp".\n')
         file.write(' */\n')
-        file.write('\n')
         file.write('#include <cstdint>\n')
         file.write('\n')
         file.write(f'// Addresses for Cyberpunk 2077, version {version.decode()}.\n')
         file.write('namespace RED4ext::Addresses\n')
         file.write('{\n')
+        file.write(f'constexpr uintptr_t ImageBase = 0x{ida_nalt.get_imagebase():X};\n')
+        file.write('\n')
 
         for group in groups:
             if group.name:
@@ -117,7 +119,7 @@ try:
                     if ptr.name:
                         file.write('_')
 
-                file.write(f'{ptr.name} = 0x{addr:X} - 0x{ida_nalt.get_imagebase():X}; ')
+                file.write(f'{ptr.name} = 0x{addr:X} - ImageBase; ')
                 file.write(f'// {ptr.pattern}, expected: {ptr.expected}, index: {ptr.index}, offset: {ptr.offset}\n')
 
             for func in group.functions:
@@ -129,7 +131,7 @@ try:
                 if not func.name:
                     func.name = f'sub_{addr:X}'
 
-                file.write(f'constexpr uintptr_t {group.name}_{func.name} = 0x{addr:X} - 0x{ida_nalt.get_imagebase():X}; ')
+                file.write(f'constexpr uintptr_t {group.name}_{func.name} = 0x{addr:X} - ImageBase; ')
                 file.write(f'// {func.pattern}, expected: {func.expected}, index: {func.index}\n')
 
             if group.name:
