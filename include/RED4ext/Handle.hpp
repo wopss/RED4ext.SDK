@@ -1,318 +1,333 @@
 #pragma once
 
-#include <windows.h>
 #include <type_traits>
 #include <cstdint>
+#include <Windows.h>
+
+#include <RED4ext/Addresses.hpp>
+#include <RED4ext/REDfunc.hpp>
 
 namespace RED4ext
 {
 
+template<typename T>
+class WeakHandle;
+
 struct RefCnt
 {
-    volatile uint32_t strongRef;
-    volatile uint32_t weakRef;
+    volatile uint32_t strongRefs;
+    volatile uint32_t weakRefs;
 
-    bool incref_nz()
+    void IncRef()
     {
-        uint32_t uses = strongRef;
+        InterlockedIncrement(&strongRefs);
+    }
+
+    // Returns true if the strong refs count has been successfully incremented.
+    bool IncRefIfNotZero()
+    {
+        uint32_t uses = strongRefs;
         while (uses != 0)
         {
-            const uint32_t old_uses = InterlockedCompareExchange(&strongRef, uses + 1, uses);
+            const uint32_t old_uses = InterlockedCompareExchange(&strongRefs, uses + 1, uses);
             if (old_uses == uses)
                 return true;
             uses = old_uses;
         }
         return false;
     }
+
+    // Returns true if the strong refs count reached zero.
+    bool DecRef()
+    {
+        return InterlockedExchangeAdd(&strongRefs, -1) == 1;
+    }
+
+    void IncWeakRef()
+    {
+        InterlockedIncrement(&weakRefs);
+    }
 };
 
-template<typename T>
-class Handle;
-
-template<typename T>
-class WeakHandle;
-
-
-struct IScriptable;
-// todo: enable_if IScriptable is base of T
-
-template<typename T>
 class HandleBase
 {
 protected:
-    constexpr HandleBase() noexcept = default;
-    ~HandleBase() = default;
+    constexpr HandleBase() noexcept
+        : instance(nullptr)
+        , refCount(nullptr)
+    {
+    }
 
 public:
     HandleBase(const HandleBase&) = delete;
+
+    ~HandleBase() = default;
+
+
     HandleBase& operator=(const HandleBase&) = delete;
 
-    [[nodiscard]] uint32_t use_count() const noexcept
+
+    [[nodiscard]] uint32_t GetUseCount() const noexcept
     {
-        return refCount ? refCount->strongRef : 0;
+        return refCount ? refCount->strongRefs : 0;
     }
 
 protected:
-    void do_swap(HandleBase& other) noexcept
+    void DoSwap(HandleBase& aOther) noexcept
     {
-        std::swap(instance, other.instance);
-        std::swap(refCount, other.refCount);
+        std::swap(instance, aOther.instance);
+        std::swap(refCount, aOther.refCount);
     }
 
-    void decref() noexcept
+    void MoveConstructFrom(HandleBase&& aRhs) noexcept
     {
-        // looks like enable_shared_from_this functions:
-        static REDfunc<uint8_t (*)(HandleBase*)> esft_uk0_fn(Addresses::Handle_shared_from_this_uk0);
-        static REDfunc<void (*)(HandleBase*)> esft_uk1_fn(Addresses::Handle_shared_from_this_uk1);
-
-        if (refCount && InterlockedExchangeAdd(&refCount->strongRef, -1) == 1)
-        {
-            // there is a single weak ref common to all strong refs
-            decwref();
-            if (esft_uk0_fn(this))
-            {
-                esft_uk1_fn(this);
-                // only for safety
-                instance = nullptr;
-                refCount = nullptr;
-            }
-        }
+        instance = aRhs.instance;
+        refCount = aRhs.refCount;
+        aRhs.instance = nullptr;
+        aRhs.refCount = nullptr;
     }
 
-    void incref() const noexcept
+    // This is here and not in RefCnt because the function we use expects a pointer to a Handle.
+    void DecWeakRef()
     {
+        // This function also deallocates RefCnt when weakRefs reaches 0.
+        static REDfunc<void (*)(HandleBase*)> decWeakRefFn(Addresses::Handle_DecWeakRef);
+
         if (refCount)
         {
-            InterlockedIncrement(&refCount->strongRef);
+            decWeakRefFn(this);
         }
     }
 
-    void decwref()
-    {
-        // decrement RefCnt->weakRef and deallocates RefCnt when weakRef == 0
-        static REDfunc<void (*)(HandleBase*)> decwref_fn(Addresses::Handle_decwref);
-
-        if (refCount) // decwref_fn tests it too
-        {
-            decwref_fn(this);
-        }
-    }
-
-    void incwref() const noexcept
-    {
-        if (refCount)
-        {
-            InterlockedIncrement(&refCount->weakRef);
-        }
-    }
-
-    bool incref_nz() noexcept
-    {
-        return refCount ? refCount->incref_nz() : false;
-    }
-
-    void move_construct_from(HandleBase&& rhs) noexcept
-    {
-        instance = rhs.instance;
-        refCount = rhs.refCount;
-        rhs.instance = nullptr;
-        rhs.refCount = nullptr;
-    }
-
-    void weakly_construct_from(const HandleBase& other) noexcept
-    {
-        instance = other.instance;
-        refCount = other.refCount;
-        incwref();
-    }
-
-    template <typename T>
-    friend class WeakHandle;
-
-    bool try_construct_from_weak(const WeakHandle<T>& other) noexcept
-    {
-        if (other.refCount && other.refCount->incref_nz())
-        {
-            instance = other.instance;
-            refCount = other.refCount;
-            return true;
-        }
-        return false;
-    }
-
-// letting this public for debugging purposes
 public:
-    T* instance = nullptr;
-    RefCnt* refCount = nullptr;
+    void* instance;
+    RefCnt* refCount;
 };
 
 
 template<typename T>
 class Handle
-    : public HandleBase<T>
+    : public HandleBase
 {
 public:
     constexpr Handle() noexcept = default;
+
     constexpr Handle(nullptr_t) noexcept
     {
     }
 
-    ~Handle()
+    Handle(T* aPtr)
     {
-        decref();
+        static REDfunc<Handle* (*)(Handle*, T*)> ctorFn(Addresses::Handle_ctor);
+        ctorFn(this, aPtr);
     }
 
-    explicit Handle(T* ptr)
+    Handle(const Handle& aOther) noexcept
     {
-        // todo: if T isn't IScriptable it hasn't enable_shared_from_this
-        //       but we may be able to provide a pointer to a fake empty object first
-        //       since the shared_from_this part seems to be skipped if *(uint64_t*)((char*)ptr + 0x16) == 0
-        //       although it seems the destructor calls instance's methods that could break
-
-        static REDfunc<Handle* (*)(Handle*, T*)> ctor_fn(Addresses::Handle_ctor_shared_from_this);
-        ctor_fn(this, ptr);
+        aOther.IncRef();
+        instance = aOther.instance;
+        refCount = aOther.refCount;
     }
 
-    Handle(const Handle& other) noexcept
+    Handle(Handle&& aRhs) noexcept
     {
-        other.incref();
-        instance = other.instance;
-        refCount = other.refCount;
+        MoveConstructFrom(std::move(aRhs));
     }
 
-    Handle(Handle&& rhs) noexcept
+    Handle(const WeakHandle<T>& aOther)
     {
-        this->move_construct_from(std::move(rhs));
-    }
-
-    Handle& operator=(const Handle& rhs) noexcept
-    {
-        Handle(rhs).swap(*this);
-        return *this;
-    }
-
-    Handle& operator=(Handle&& rhs) noexcept
-    {
-        Handle(std::move(rhs)).swap(*this);
-        return *this;
-    }
-
-    explicit Handle(const WeakHandle<T>& other)
-    {
-        if (!try_construct_from_weak(other))
+        if (!TryConstructFromWeak(aOther))
             throw std::bad_weak_ptr();
     }
 
-    void swap(Handle& other) noexcept
+    ~Handle()
     {
-        do_swap(other);
+        DecRef();
     }
 
-    void reset() noexcept
+
+    Handle& operator=(const Handle& aRhs) noexcept
     {
-        Handle().swap(*this);
+        Handle(aRhs).swap(*this);
+        return *this;
     }
 
-    void reset(T* ptr)
+    Handle& operator=(Handle&& aRhs) noexcept
     {
-        Handle(instance).swap(*this);
+        Handle(std::move(aRhs)).swap(*this);
+        return *this;
     }
 
-    template<typename U = T, std::enable_if_t<!std::is_void_v<U>, int> = 0>
+    template<typename U = T, typename = std::enable_if_t<!std::is_void_v<U>>>
     [[nodiscard]] inline U& operator*() const
     {
-        return *instance;
+        return *GetPtr();
     }
 
     [[nodiscard]] inline T* operator->() const
     {
-        return instance;
+        return GetPtr();
     }
 
-    inline operator T*() const
+    [[nodiscard]] inline operator T*() const
     {
-        return instance;
-    }
-
-    T* get() const noexcept
-    {
-        return instance;
+        return GetPtr();
     }
 
     explicit operator bool() const noexcept
     {
-        return get() != nullptr;
+        return GetPtr() != nullptr;
+    }
+
+
+    void Swap(Handle& aOther) noexcept
+    {
+        DoSwap(aOther);
+    }
+
+    void Reset() noexcept
+    {
+        Handle().swap(*this);
+    }
+
+    void Reset(T* aPtr)
+    {
+        Handle(aPtr).Swap(*this);
+    }
+
+    [[nodiscard]] T* GetPtr() const noexcept
+    {
+        return reinterpret_cast<T*>(instance);
+    }
+
+protected:
+    [[nodiscard]] bool TryConstructFromWeak(const WeakHandle<T>& aOther) noexcept
+    {
+        if (aOther.refCount && aOther.refCount->incref_nz())
+        {
+            instance = aOther.instance;
+            refCount = aOther.refCount;
+            return true;
+        }
+        return false;
+    }
+
+    void IncRef() const noexcept
+    {
+        if (refCount)
+        {
+            refCount->IncRef();
+        }
+    }
+
+    [[nodiscard]] bool IncRefIfNotZero() noexcept
+    {
+        return refCount ? refCount->IncRefIfNotZero() : false;
+    }
+
+    void DecRef() noexcept
+    {
+        static REDfunc<bool (*)(HandleBase*)> sub0Fn(Addresses::Handle_sub_0);
+        static REDfunc<void (*)(HandleBase*)> sub1Fn(Addresses::Handle_sub_1);
+
+        if (refCount && refCount->DecRef())
+        {
+            DecWeakRef();
+            if (sub0Fn(this))
+            {
+                sub1Fn(this);
+                instance = nullptr;
+                refCount = nullptr;
+            }
+        }
     }
 };
 
-
 template<typename T>
-class WeakHandle : public HandleBase<T>
+class WeakHandle
+    : public HandleBase
 {
 public:
     constexpr WeakHandle() noexcept = default;
 
+    WeakHandle(const WeakHandle& aOther) noexcept
+    {
+        WeaklyConstructFrom(aOther);
+    }
+
+    WeakHandle(const Handle<T>& aOther) noexcept
+    {
+        WeaklyConstructFrom(aOther);
+    }
+
+    WeakHandle(WeakHandle&& aOther) noexcept
+    {
+        MoveConstructFrom(std::move(aOther));
+    }
+
     ~WeakHandle() noexcept
     {
-        decwref();
+        DecWeakRef();
     }
 
-    WeakHandle(const WeakHandle& other) noexcept
-    {
-        weakly_construct_from(other);
-    }
 
-    WeakHandle(const Handle<T>& other) noexcept
+    WeakHandle& operator=(const WeakHandle& aRhs) noexcept
     {
-        weakly_construct_from(other);
-    }
-
-    WeakHandle(WeakHandle&& other) noexcept
-    {
-        move_construct_from(std::move(other));
-    }
-
-    WeakHandle& operator=(const WeakHandle& rhs) noexcept
-    {
-        WeakHandle(rhs).swap(*this);
+        WeakHandle(aRhs).swap(*this);
         return *this;
     }
 
-    WeakHandle& operator=(WeakHandle&& rhs) noexcept
+    WeakHandle& operator=(WeakHandle&& aRhs) noexcept
     {
-        WeakHandle(std::move(rhs)).swap(*this);
+        WeakHandle(std::move(aRhs)).Swap(*this);
         return *this;
     }
 
-    WeakHandle& operator=(const Handle<T>& rhs) noexcept
+    WeakHandle& operator=(const Handle<T>& aRhs) noexcept
     {
-        WeakHandle(rhs).swap(*this);
+        WeakHandle(aRhs).Swap(*this);
         return *this;
     }
+
 
     void reset() noexcept
     {
-        WeakHandle().swap(*this);
+        WeakHandle().Swap(*this);
     }
 
-    void swap(WeakHandle& other) noexcept
+    void Swap(WeakHandle& aOther) noexcept
     {
-        do_swap(other);
+        DoSwap(aOther);
     }
 
-    [[nodiscard]] bool expired() const noexcept
+    [[nodiscard]] bool Expired() const noexcept
     {
-        return use_count() == 0;
+        return GetUseCount() == 0;
     }
 
-    [[nodiscard]] Handle<T> lock() const noexcept
+    [[nodiscard]] Handle<T> Lock() const noexcept
     {
         Handle<T> ret;
-        (void)ret.try_construct_from_weak(*this);
+        std::ignore = ret.TryConstructFromWeak(*this);
         return ret;
     }
-};
 
+protected:
+    void WeaklyConstructFrom(const HandleBase& aOther) noexcept
+    {
+        instance = aOther.instance;
+        refCount = aOther.refCount;
+        IncWeakRef();
+    }
+
+    void IncWeakRef() const noexcept
+    {
+        if (refCount)
+        {
+            refCount->IncWeakRef();
+        }
+    }
+};
 
 RED4EXT_ASSERT_SIZE(Handle<void>, 0x10);
 RED4EXT_ASSERT_SIZE(WeakHandle<void>, 0x10);
