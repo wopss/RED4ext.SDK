@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
@@ -22,7 +22,7 @@ namespace RED4ext
  *      int64_t unk28;
  *      int64_t unk30;
  *      int64_t unk38;
- *      IScriptable *scriptable;
+ *      ScriptInstance context;
  *      int64_t unk48;
  *      int16_t unk50;
  *      int64_t unk58;
@@ -34,7 +34,7 @@ namespace RED4ext
  */
 struct CStackType
 {
-    CStackType(IRTTIType* aType = nullptr, ScriptInstance aValue = {nullptr});
+    CStackType(IRTTIType* aType = nullptr, ScriptInstance aValue = nullptr);
 
     IRTTIType* type;
     ScriptInstance value;
@@ -56,8 +56,8 @@ struct CBaseStack : IStack
 {
     int64_t unk8;
     int64_t unk10;
-    IScriptable* scriptable18;
-    IScriptable* scriptable20;
+    ScriptInstance context18;
+    ScriptInstance context20;
     int64_t unk28;
 };
 
@@ -65,7 +65,7 @@ RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
 
 struct CStack : CBaseStack
 {
-    CStack(ScriptInstance aInstance = {nullptr}, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
+    CStack(ScriptInstance aContext = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
            CStackType* aResult = nullptr, int64_t a6 = 0);
     ~CStack() = default;
 
