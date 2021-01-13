@@ -173,6 +173,31 @@ public:
         return GetPtr() != nullptr;
     }
 
+    void IncRef() const noexcept
+    {
+        if (refCount)
+        {
+            refCount->IncRef();
+        }
+    }
+
+    void DecRef() noexcept
+    {
+        static REDfunc<bool (*)(HandleBase*)> sub_0(Addresses::Handle_sub_0);
+        static REDfunc<void (*)(HandleBase*)> sub_1(Addresses::Handle_sub_1);
+
+        if (refCount && refCount->DecRef())
+        {
+            DecWeakRef();
+            if (sub_0(this))
+            {
+                sub_1(this);
+                instance = nullptr;
+                refCount = nullptr;
+            }
+        }
+    }
+
     void Swap(Handle& aOther) noexcept
     {
         DoSwap(aOther);
@@ -205,34 +230,9 @@ protected:
         return false;
     }
 
-    void IncRef() const noexcept
-    {
-        if (refCount)
-        {
-            refCount->IncRef();
-        }
-    }
-
     [[nodiscard]] bool IncRefIfNotZero() noexcept
     {
         return refCount ? refCount->IncRefIfNotZero() : false;
-    }
-
-    void DecRef() noexcept
-    {
-        static REDfunc<bool (*)(HandleBase*)> sub_0(Addresses::Handle_sub_0);
-        static REDfunc<void (*)(HandleBase*)> sub_1(Addresses::Handle_sub_1);
-
-        if (refCount && refCount->DecRef())
-        {
-            DecWeakRef();
-            if (sub_0(this))
-            {
-                sub_1(this);
-                instance = nullptr;
-                refCount = nullptr;
-            }
-        }
     }
 };
 
