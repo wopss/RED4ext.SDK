@@ -1,7 +1,8 @@
 #pragma once
 
-#include <type_traits>
 #include <cstdint>
+#include <type_traits>
+
 #include <Windows.h>
 
 #include <RED4ext/Addresses.hpp>
@@ -9,7 +10,6 @@
 
 namespace RED4ext
 {
-
 template<typename T>
 class WeakHandle;
 
@@ -29,11 +29,13 @@ struct RefCnt
         uint32_t uses = strongRefs;
         while (uses != 0)
         {
-            const uint32_t old_uses = InterlockedCompareExchange(&strongRefs, uses + 1, uses);
-            if (old_uses == uses)
+            const uint32_t oldUses = InterlockedCompareExchange(&strongRefs, uses + 1, uses);
+            if (oldUses == uses)
                 return true;
-            uses = old_uses;
+
+            uses = oldUses;
         }
+
         return false;
     }
 
@@ -51,6 +53,21 @@ struct RefCnt
 
 class HandleBase
 {
+public:
+    HandleBase(const HandleBase&) = delete;
+
+    ~HandleBase() = default;
+
+    HandleBase& operator=(const HandleBase&) = delete;
+
+    [[nodiscard]] uint32_t GetUseCount() const noexcept
+    {
+        return refCount ? refCount->strongRefs : 0;
+    }
+
+    void* instance;
+    RefCnt* refCount;
+
 protected:
     constexpr HandleBase() noexcept
         : instance(nullptr)
@@ -58,21 +75,6 @@ protected:
     {
     }
 
-public:
-    HandleBase(const HandleBase&) = delete;
-
-    ~HandleBase() = default;
-
-
-    HandleBase& operator=(const HandleBase&) = delete;
-
-
-    [[nodiscard]] uint32_t GetUseCount() const noexcept
-    {
-        return refCount ? refCount->strongRefs : 0;
-    }
-
-protected:
     void DoSwap(HandleBase& aOther) noexcept
     {
         std::swap(instance, aOther.instance);
@@ -98,28 +100,21 @@ protected:
             decWeakRefFn(this);
         }
     }
-
-public:
-    void* instance;
-    RefCnt* refCount;
 };
 
-
 template<typename T>
-class Handle
-    : public HandleBase
+class Handle : public HandleBase
 {
 public:
     constexpr Handle() noexcept = default;
-
-    constexpr Handle(nullptr_t) noexcept
+    constexpr Handle(std::nullptr_t) noexcept
     {
     }
 
-    Handle(T* aPtr)
+    explicit Handle(T* aPtr)
     {
-        static REDfunc<Handle* (*)(Handle*, T*)> ctorFn(Addresses::Handle_ctor);
-        ctorFn(this, aPtr);
+        static REDfunc<Handle* (*)(Handle*, T*)> ctor(Addresses::Handle_ctor);
+        ctor(this, aPtr);
     }
 
     Handle(const Handle& aOther) noexcept
@@ -144,7 +139,6 @@ public:
     {
         DecRef();
     }
-
 
     Handle& operator=(const Handle& aRhs) noexcept
     {
@@ -178,7 +172,6 @@ public:
     {
         return GetPtr() != nullptr;
     }
-
 
     void Swap(Handle& aOther) noexcept
     {
@@ -227,15 +220,15 @@ protected:
 
     void DecRef() noexcept
     {
-        static REDfunc<bool (*)(HandleBase*)> sub0Fn(Addresses::Handle_sub_0);
-        static REDfunc<void (*)(HandleBase*)> sub1Fn(Addresses::Handle_sub_1);
+        static REDfunc<bool (*)(HandleBase*)> sub_0(Addresses::Handle_sub_0);
+        static REDfunc<void (*)(HandleBase*)> sub_1(Addresses::Handle_sub_1);
 
         if (refCount && refCount->DecRef())
         {
             DecWeakRef();
-            if (sub0Fn(this))
+            if (sub_0(this))
             {
-                sub1Fn(this);
+                sub_1(this);
                 instance = nullptr;
                 refCount = nullptr;
             }
@@ -244,8 +237,7 @@ protected:
 };
 
 template<typename T>
-class WeakHandle
-    : public HandleBase
+class WeakHandle : public HandleBase
 {
 public:
     constexpr WeakHandle() noexcept = default;
@@ -270,7 +262,6 @@ public:
         DecWeakRef();
     }
 
-
     WeakHandle& operator=(const WeakHandle& aRhs) noexcept
     {
         WeakHandle(aRhs).swap(*this);
@@ -289,8 +280,7 @@ public:
         return *this;
     }
 
-
-    void reset() noexcept
+    void Reset() noexcept
     {
         WeakHandle().Swap(*this);
     }
@@ -328,9 +318,6 @@ protected:
         }
     }
 };
-
 RED4EXT_ASSERT_SIZE(Handle<void>, 0x10);
 RED4EXT_ASSERT_SIZE(WeakHandle<void>, 0x10);
-
 } // namespace RED4ext
-
