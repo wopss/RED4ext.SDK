@@ -180,3 +180,7 @@ struct CGameuiCharacterCustomizationOptionImpl : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CGameuiCharacterCustomizationOptionImpl, 0x60);
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/CharacterCustomization-inl.hpp>
+#endif
