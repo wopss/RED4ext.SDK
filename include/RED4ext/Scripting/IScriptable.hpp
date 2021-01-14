@@ -20,7 +20,7 @@ struct IScriptable : ISerializable
     void* GetValueHolder();
 
     template <typename ReturnT, typename... Args>
-    ReturnT ExecuteMethod(CName aFunc, Args&&... aArgs)
+    ReturnT ExecuteFunction(CName aFunc, Args&&... aArgs)
     {
         ReturnT ret {};
         StackArgs_t args;
@@ -31,7 +31,7 @@ struct IScriptable : ISerializable
     }
 
     template<typename... Args>
-    void ExecuteMethod(CName aFunc, Args&&... aArgs)
+    void ExecuteFunction(CName aFunc, Args&&... aArgs)
     {
         StackArgs_t args;
         ((args.emplace_back(nullptr, &aArgs)), ...);
