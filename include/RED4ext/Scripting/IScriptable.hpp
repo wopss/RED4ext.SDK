@@ -36,7 +36,7 @@ struct IScriptable : ISerializable
             return std::nullopt;
         }
     
-        return std::optional<ReturnT>{ret};
+        return std::make_optional<ReturnT>(ret);
     }
 
     template<typename ReturnT = void, typename... Args, typename = std::enable_if_t<std::is_same_v<ReturnT, void>>>
