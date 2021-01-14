@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/ISerializable.hpp>
+#include <RED4ext/CName.hpp>
 
 namespace RED4ext
 {
@@ -15,8 +16,28 @@ struct IScriptable : ISerializable
 
     void* GetValueHolder();
 
-    int64_t unk30;
-    int64_t unk38;
+    template <typename ReturnT, typename... Args>
+    ReturnT ExecuteMethod(CName aFunc, Args&&... aArgs)
+    {
+        ReturnT ret {};
+        StackArgs_t args;
+        ((args.emplace_back(nullptr, &aArgs)), ...);
+        CClass* cls = scriptCls ? scriptCls : static_cast<CClass*>(GetType());
+        ExecuteFunction(this, cls->GetFunction(aFunc), &ret, args);
+        return ret;
+    }
+
+    template<typename... Args>
+    void ExecuteMethod(CName aFunc, Args&&... aArgs)
+    {
+        StackArgs_t args;
+        ((args.emplace_back(nullptr, &aArgs)), ...);
+        CClass* cls = scriptCls ? scriptCls : static_cast<CClass*>(GetType());
+        ExecuteFunction(this, cls->GetFunction(aFunc), nullptr, args);
+    }
+
+    CClass* scriptCls;
+    void* unk38;
 };
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);
 } // namespace RED4ext
