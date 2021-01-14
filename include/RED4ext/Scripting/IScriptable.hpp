@@ -4,6 +4,7 @@
 
 namespace RED4ext
 {
+struct CClass;
 struct IScriptable : ISerializable
 {
     virtual void sub_D8() = 0;
@@ -17,8 +18,13 @@ struct IScriptable : ISerializable
 
     void* GetValueHolder();
 
-    int64_t unk30;
-    int64_t unk38;
+    CClass* GetType()
+    {
+        return classType ? classType : reinterpret_cast<CClass*>(GetNativeType());
+    }
+
+    CClass* classType;
+    void* propertyBlock;
 };
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);
 } // namespace RED4ext

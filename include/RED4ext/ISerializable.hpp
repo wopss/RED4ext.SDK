@@ -12,7 +12,7 @@ struct IRTTIType;
 
 struct ISerializable
 {
-    virtual IRTTIType* GetType() = 0;
+    virtual IRTTIType* GetNativeType() = 0;
     virtual IRTTIType* GetParentType() = 0;
     virtual IMemoryAllocator* GetAllocator() = 0;
     virtual ~ISerializable() = 0;
@@ -41,7 +41,7 @@ struct ISerializable
     virtual void sub_C8() = 0;
     virtual void sub_D0() = 0;
 
-    Handle<ISerializable> ref;
+    WeakHandle<ISerializable> ref;
     int64_t unk18;
     int64_t unk20;
     int64_t unk28;
