@@ -56,10 +56,10 @@ struct CRTTISystem : IRTTISystem
 {
     static CRTTISystem* Get();
 
-    HashMap<uint64_t, CRTTIType*> types;
+    HashMap<CName, IRTTIType*> types;
     HashMap<void*, void*> typeByIds;
     HashMap<void*, void*> typeIds;
-    HashMap<uint64_t, CGlobalFunction*> funcs;
+    HashMap<CName, CGlobalFunction*> funcs;
     HashMap<void*, void*> unkC8;
     HashMap<void*, void*> unkF8;
     int64_t unk128;

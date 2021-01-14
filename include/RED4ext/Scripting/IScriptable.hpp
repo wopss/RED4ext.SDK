@@ -5,9 +5,7 @@
 
 namespace RED4ext
 {
-
 struct CClass;
-
 struct IScriptable : ISerializable
 {
     virtual void sub_D8() = 0;
@@ -16,8 +14,15 @@ struct IScriptable : ISerializable
     virtual void sub_F0() = 0;
     virtual void sub_F8() = 0;
     virtual void sub_100() = 0;
+    virtual void sub_108() = 0;
+    virtual void sub_110() = 0;
 
     void* GetValueHolder();
+
+    CClass* GetType()
+    {
+        return classType ? classType : reinterpret_cast<CClass*>(GetNativeType());
+    }
 
     template <typename ReturnT, typename... Args>
     ReturnT ExecuteFunction(CName aFunc, Args&&... aArgs)
@@ -25,7 +30,7 @@ struct IScriptable : ISerializable
         ReturnT ret {};
         StackArgs_t args;
         ((args.emplace_back(nullptr, &aArgs)), ...);
-        CClass* cls = scriptCls ? scriptCls : static_cast<CClass*>(GetType());
+        CClass* cls = GetType();
         ExecuteFunction(this, cls->GetFunction(aFunc), &ret, args);
         return ret;
     }
@@ -35,12 +40,12 @@ struct IScriptable : ISerializable
     {
         StackArgs_t args;
         ((args.emplace_back(nullptr, &aArgs)), ...);
-        CClass* cls = scriptCls ? scriptCls : static_cast<CClass*>(GetType());
+        CClass* cls = GetType();
         ExecuteFunction(this, cls->GetFunction(aFunc), nullptr, args);
     }
 
-    CClass* scriptCls;
-    void* unk38;
+    CClass* classType;   // 30
+    void* propertyBlock; // 38
 };
 
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);

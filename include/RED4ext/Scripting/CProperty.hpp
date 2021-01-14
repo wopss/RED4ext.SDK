@@ -17,8 +17,8 @@ struct CProperty
     struct Flags
     {
         uint64_t b0 : 9;
-        uint64_t isOut : 1;      // 0A
-        uint64_t isOptional : 1; // 0B
+        uint64_t isOut : 1;      // 09
+        uint64_t isOptional : 1; // 0A
         uint64_t b12 : 5;
         uint64_t isPrivate : 1;   // 10
         uint64_t isProtected : 1; // 11
@@ -28,7 +28,7 @@ struct CProperty
         uint64_t b22 : 5;
         uint64_t isHandle : 1;     // 1B
         uint64_t isPersistent : 1; // 1C
-        uint64_t b29 : 35;
+        uint64_t b29 : 34;
     };
     RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 
