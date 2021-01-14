@@ -5,6 +5,9 @@
 
 namespace RED4ext
 {
+
+struct CClass;
+
 struct IScriptable : ISerializable
 {
     virtual void sub_D8() = 0;
@@ -39,6 +42,7 @@ struct IScriptable : ISerializable
     CClass* scriptCls;
     void* unk38;
 };
+
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);
 } // namespace RED4ext
 
