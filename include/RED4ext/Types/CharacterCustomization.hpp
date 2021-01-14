@@ -1,6 +1,6 @@
 #pragma once
 
-#include <stdint.h>
+#include <cstdint>
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>

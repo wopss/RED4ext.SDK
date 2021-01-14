@@ -23,8 +23,8 @@ struct IScriptable : ISerializable
         return classType ? classType : reinterpret_cast<CClass*>(GetNativeType());
     }
 
-    CClass* classType;
-    void* propertyBlock;
+    CClass* classType;   // 30
+    void* propertyBlock; // 38
 };
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);
 } // namespace RED4ext
