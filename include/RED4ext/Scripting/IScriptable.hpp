@@ -66,7 +66,7 @@ protected:
 
         StackArgs_t args;
         ((args.emplace_back(nullptr, &aArgs)), ...);
-        return ::RED4ext::ExecuteFunction((void*)this, func, (void*)ret, args);
+        return ::RED4ext::ExecuteFunction(static_cast<void*>(this), func, ret, args);
     }
 };
 
