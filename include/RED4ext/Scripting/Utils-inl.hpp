@@ -11,8 +11,13 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
                                              StackArgs_t aArgs)
 {
     CStackType result;
-    if (aOut && aFunc->returnType)
+    if (aFunc->returnType)
     {
+        if (!aOut)
+        {
+            return false;
+        }
+
         result.type = aFunc->returnType->type;
         result.value = aOut;
     }
@@ -31,7 +36,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
     }
 
     CStack stack(aInstance, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
-                 aOut && aFunc->returnType ? &result : nullptr);
+                 aFunc->returnType ? &result : nullptr);
     return aFunc->Execute(&stack);
 }
 
