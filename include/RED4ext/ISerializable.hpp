@@ -4,6 +4,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/IMemoryAllocator.hpp>
 
 namespace RED4ext
 {
@@ -13,7 +14,7 @@ struct ISerializable
 {
     virtual IRTTIType* GetType() = 0;
     virtual IRTTIType* GetParentType() = 0;
-    virtual void sub_10() = 0;
+    virtual IMemoryAllocator* GetAllocator() = 0;
     virtual ~ISerializable() = 0;
 
     virtual void sub_20() = 0;
@@ -38,6 +39,7 @@ struct ISerializable
     virtual void sub_B8() = 0;
     virtual void sub_C0() = 0;
     virtual void sub_C8() = 0;
+    virtual void sub_D0() = 0;
 
     Handle<ISerializable> ref;
     int64_t unk18;

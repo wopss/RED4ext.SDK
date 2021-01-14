@@ -6,7 +6,6 @@ namespace RED4ext
 {
 struct IScriptable : ISerializable
 {
-    virtual void sub_D0() = 0;
     virtual void sub_D8() = 0;
     virtual void sub_E0() = 0;
     virtual void sub_E8() = 0;
