@@ -28,20 +28,44 @@ struct IScriptable : ISerializable
     ReturnT ExecuteFunction(CName aFunc, Args&&... aArgs)
     {
         ReturnT ret {};
+       
+        CClass* cls = GetType();
+        if (!cls)
+        {
+            return ret;
+        }
+
+        auto func = cls->GetFunction(aFunc);
+        if (!func)
+        {
+            return ret;
+        }
+
         StackArgs_t args;
         ((args.emplace_back(nullptr, &aArgs)), ...);
-        CClass* cls = GetType();
-        ExecuteFunction(this, cls->GetFunction(aFunc), &ret, args);
+        ExecuteFunction(this, func, &ret, args);
+
         return ret;
     }
 
     template<typename... Args>
     void ExecuteFunction(CName aFunc, Args&&... aArgs)
     {
+        CClass* cls = GetType();
+        if (!cls)
+        {
+            return;
+        }
+
+        auto func = cls->GetFunction(aFunc);
+        if (!func)
+        {
+            return;
+        }
+
         StackArgs_t args;
         ((args.emplace_back(nullptr, &aArgs)), ...);
-        CClass* cls = GetType();
-        ExecuteFunction(this, cls->GetFunction(aFunc), nullptr, args);
+        ExecuteFunction(this, func, nullptr, args);
     }
 
     CClass* classType;   // 30
