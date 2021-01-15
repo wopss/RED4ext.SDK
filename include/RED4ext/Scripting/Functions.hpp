@@ -1,13 +1,14 @@
 #pragma once
 
+#include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/IMemoryAllocator.hpp>
-#include <RED4ext/Scripting/CProperty.hpp>
 
 namespace RED4ext
 {
 struct CClass;
 struct CStack;
+struct CProperty;
+struct IMemoryAllocator;
 
 struct IFunction
 {

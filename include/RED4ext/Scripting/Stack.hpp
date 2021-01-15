@@ -1,8 +1,6 @@
 #pragma once
 
 #include <vector>
-
-#include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
@@ -32,6 +30,8 @@ namespace RED4ext
  * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
+struct IRTTIType;
+
 struct CStackType
 {
     CStackType(IRTTIType* aType = nullptr, ScriptInstance aValue = nullptr);

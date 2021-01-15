@@ -6,6 +6,7 @@
 
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
+#include <RED4ext/Scripting/CProperty.hpp>
 
 RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
                                              StackArgs_t aArgs)

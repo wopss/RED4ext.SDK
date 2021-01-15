@@ -5,6 +5,7 @@
 #endif
 
 #include <RED4ext/RTTISystem.hpp>
+#include <RED4ext/Scripting/CProperty.hpp>
 
 #include <fstream>
 #include <numeric>
