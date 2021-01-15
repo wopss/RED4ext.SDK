@@ -5,6 +5,7 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
+#include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/REDfunc.hpp>
 
 RED4EXT_INLINE void* RED4ext::IScriptable::GetValueHolder()
