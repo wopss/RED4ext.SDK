@@ -13,7 +13,7 @@ struct IRTTIType;
 struct CProperty;
 } // namespace RED4ext
 
-namespace GameReflection
+namespace RED4ext::GameReflection
 {
 using GetPrefix = std::function<std::string(const std::string&)>;
 using NameTransformer = std::function<std::string(RED4ext::IRTTIType*)>;
@@ -66,4 +66,4 @@ std::string TypeToString(RED4ext::IRTTIType* aType, NameTransformer aNameTransfo
 
 void Dump(std::filesystem::path aFilePath, bool aVerbose = false);
 
-} // namespace GameReflection
+} // namespace RED4ext::GameReflection

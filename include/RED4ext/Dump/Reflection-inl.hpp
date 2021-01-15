@@ -13,7 +13,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace GameReflection
+namespace RED4ext::GameReflection
 {
 RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose)
 {
@@ -611,4 +611,4 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     o << "} // namespace RED4ext" << std::endl;
 }
 
-} // namespace GameReflection
+} // namespace RED4ext::GameReflection
