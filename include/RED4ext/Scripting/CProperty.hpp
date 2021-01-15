@@ -70,7 +70,14 @@ struct CProperty
     template<typename T>
     T GetValue(ScriptInstance aInstance) const
     {
-        return *GetValuePtr<T>(aInstance);
+        if constexpr (std::is_pointer_v<T>)
+        {
+            return GetValuePtr<std::remove_pointer_t<T>>(aInstance);
+        }
+        else
+        {
+            return *GetValuePtr<T>(aInstance);
+        }
     }
 
 private:

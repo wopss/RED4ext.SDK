@@ -85,13 +85,39 @@ public:
 
     CRTTIType* innerType; // 10
     CName name;           // 18
-    CRTTIType** parent;   // 20
+    CRTTIType* parent;    // 20
     uintptr_t unk28;      // 28
     uintptr_t unk30;      // 30
     uintptr_t unk38;      // 38
 };
 RED4EXT_ASSERT_SIZE(CArray, 0x40);
 RED4EXT_ASSERT_OFFSET(CArray, parent, 0x20);
+
+struct CHandle : CRTTIType
+{
+    virtual CRTTIType* GetInnerType() = 0;             // C0
+    virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
+    virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
+    virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8
+
+    CRTTIType* innerType; // 10
+    CName name;           // 18
+    CName unk20;          // 20
+};
+RED4EXT_ASSERT_SIZE(CHandle, 0x28);
+
+struct CWeakHandle : CRTTIType
+{
+    virtual CRTTIType* GetInnerType() = 0;             // C0
+    virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
+    virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
+    virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8 - Empty impl
+
+    CRTTIType* innerType; // 10
+    CName name;           // 18
+    CName unk20;          // 20
+};
+RED4EXT_ASSERT_SIZE(CWeakHandle, 0x28);
 
 struct CBitfield : CRTTIType
 {
