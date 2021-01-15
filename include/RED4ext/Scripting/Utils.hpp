@@ -6,6 +6,8 @@
 
 namespace RED4ext
 {
+struct CBaseFunction;
+
 bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
 
 bool ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);

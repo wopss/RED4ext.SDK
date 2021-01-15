@@ -3,11 +3,14 @@
 
 #include <RED4ext/ISerializable.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/Scripting/Utils.hpp>
+#include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
-struct CClass;
+struct CBaseFunction;
 struct IScriptable : ISerializable
 {
     virtual void sub_D8() = 0;
