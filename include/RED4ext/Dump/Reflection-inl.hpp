@@ -57,7 +57,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose)
 
                     if (!classType->flags.isAbstract)
                     {
-                        for (auto i = 0; i < classType->unk118.size; ++i)
+                        for (uint32_t i = 0; i < classType->unk118.size; ++i)
                         {
                             auto prop = classType->unk118.entries[i];
                             if (!prop->flags.b21)
@@ -590,8 +590,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
     if (properties.size())
     {
-        uint32_t lastOffset = properties[0].offset;
-        uint32_t lastSize = 0;
+        size_t lastOffset = properties[0].offset;
+        size_t lastSize = 0;
 
         for (auto prop : properties)
         {
@@ -599,8 +599,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
             int64_t byteGap = static_cast<int64_t>(prop.offset) - static_cast<int64_t>(lastOffset + lastSize);
             if (byteGap > 0)
             {
-                uint32_t gapStart = lastOffset + lastSize;
-                uint32_t gapEnd = prop.offset;
+                size_t gapStart = lastOffset + lastSize;
+                size_t gapEnd = prop.offset;
 
                 o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart
                   << "[0x" << gapEnd << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
@@ -637,8 +637,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
         auto& back = properties.back();
         if (back.offset + back.size < size) // Pad remainder of class based on the last property
         {
-            uint32_t gapStart = back.offset + back.size;
-            uint32_t gapEnd = size;
+            size_t gapStart = back.offset + back.size;
+            size_t gapEnd = size;
 
             o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart
               << "[0x" << gapEnd << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
@@ -648,7 +648,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     }
     else if (size - parentSize > 0) // Pad the whole class
     {
-        uint32_t gapStart = parentSize;
+        size_t gapStart = parentSize;
         o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart << "[0x"
           << size << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
 

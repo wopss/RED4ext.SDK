@@ -161,7 +161,7 @@ struct StaticArray
 {
     T entries[MAX_LEN + 1];
 };
-RED4EXT_ASSERT_SIZE(StaticArray<uint32_t, 10>, 0x2C);
+static_assert(sizeof(StaticArray<uint32_t, 10>) == 0x2C);
 
 template<typename T, uint32_t MAX_LEN>
 using NativeArray = std::array<T, MAX_LEN>;
