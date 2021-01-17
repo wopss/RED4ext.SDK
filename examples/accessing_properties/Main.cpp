@@ -73,7 +73,7 @@ RED4EXT_C_EXPORT void OnUpdate()
         auto engine = RED4ext::CGameEngine::Get();
         auto gameInstance = engine->framework->gameInstance;
 
-        RED4ext::Handle<uintptr_t> uiManager;
+        RED4ext::Handle<RED4ext::IScriptable> uiManager;
         RED4ext::ExecuteFunction("ScriptGameInstance", "GetUISystem", &uiManager, &gameInstance);
     }
 
