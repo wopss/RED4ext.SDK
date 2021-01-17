@@ -285,10 +285,25 @@ RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(RED4ext::IRTTIType* aType
         mDirect.emplace(aType);
         break;
     }
+    case RED4ext::ERTTIType::ResourceAsyncReference:
+    {
+        mIndirect.emplace(static_cast<RED4ext::CResourceAsyncReference*>(aType)->innerType);
+        mDirect.emplace(aType);
+        break;
+    }
+    case RED4ext::ERTTIType::LegacySingleChannelCurve:
+    {
+        // Curves usually contain primitives
+        Accumulate(static_cast<RED4ext::CLegacySingleChannelCurve*>(aType)->curveType);
+        mDirect.emplace(aType);
+        break;
+    }
     case RED4ext::ERTTIType::Array:
+    case RED4ext::ERTTIType::NativeArray:
+    case RED4ext::ERTTIType::StaticArray:
     {
         // Arrays may contain Handles or Direct refs to other types
-        Accumulate(static_cast<RED4ext::CArray*>(aType)->GetInnerType());
+        Accumulate(static_cast<RED4ext::CArrayBase*>(aType)->GetInnerType());
         mDirect.emplace(aType);
         break;
     }
@@ -354,6 +369,11 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
             aFd.includes.emplace("Handle");
             break;
         }
+        case RED4ext::ERTTIType::StaticArray:
+        case RED4ext::ERTTIType::NativeArray:
+        case RED4ext::ERTTIType::ResourceReference:
+        case RED4ext::ERTTIType::ResourceAsyncReference:
+        case RED4ext::ERTTIType::LegacySingleChannelCurve:
         case RED4ext::ERTTIType::Simple:
         {
             aFd.includes.emplace("SimpleTypes");
@@ -415,6 +435,41 @@ RED4EXT_INLINE std::string TypeToString(RED4ext::IRTTIType* aType, NameTransform
             "DynArray<" + TypeToString(static_cast<RED4ext::CArray*>(aType)->GetInnerType(), aNameTransformer) + ">";
         break;
     }
+    case RED4ext::ERTTIType::ResourceAsyncReference:
+    {
+        typeName = "RaRef<" +
+                   TypeToString(static_cast<RED4ext::CResourceAsyncReference*>(aType)->innerType, aNameTransformer) +
+                   ">";
+        break;
+    }
+    case RED4ext::ERTTIType::ResourceReference:
+    {
+        typeName =
+            "Ref<" + TypeToString(static_cast<RED4ext::CResourceReference*>(aType)->innerType, aNameTransformer) + ">";
+        break;
+    }
+    case RED4ext::ERTTIType::LegacySingleChannelCurve:
+    {
+        typeName = "CurveData<" +
+                   TypeToString(static_cast<RED4ext::CLegacySingleChannelCurve*>(aType)->curveType, aNameTransformer) +
+                   ">";
+        break;
+    }
+    case RED4ext::ERTTIType::StaticArray:
+    {
+        auto staticArray = static_cast<RED4ext::CStaticArray*>(aType);
+
+        typeName = "StaticArray<" + TypeToString(staticArray->GetInnerType(), aNameTransformer) + ", " +
+                   std::to_string(staticArray->GetMaxLength()) + ">";
+        break;
+    }
+    case RED4ext::ERTTIType::NativeArray:
+    {
+        auto nativeArray = static_cast<RED4ext::CNativeArray*>(aType);
+        typeName = "NativeArray<" + TypeToString(nativeArray->GetInnerType(), aNameTransformer) + ", " +
+                   std::to_string(nativeArray->GetMaxLength()) + ">";
+        break;
+    }
 
     case RED4ext::ERTTIType::Name:
     case RED4ext::ERTTIType::Fundamental:
@@ -439,12 +494,7 @@ RED4EXT_INLINE std::string TypeToString(RED4ext::IRTTIType* aType, NameTransform
         return typeName;
     }
 
-        // case RED4ext::ERTTIType::StaticArray:
-        // case RED4ext::ERTTIType::NativeArray:
         // case RED4ext::ERTTIType::Pointer:
-        // case RED4ext::ERTTIType::ResourceReference:
-        // case RED4ext::ERTTIType::ResourceAsyncReference:
-        // case RED4ext::ERTTIType::LegacySingleChannelCurve:
         // case RED4ext::ERTTIType::ScriptReference:
 
     default:
@@ -458,9 +508,13 @@ RED4EXT_INLINE std::string TypeToString(RED4ext::IRTTIType* aType, NameTransform
         RED4ext::CName trueName;
         aType->GetName(trueName);
 
+        uint32_t size = aType->GetSize();
+        RED4ext::CString tName;
+        aType->GetTypeName(tName);
+
         // We don't have this type supported yet but we can put some bytes in as placeholder as we know its size
-        typeName =
-            "std::array<uint8_t, " + std::to_string(aType->GetSize()) + ">/* UNHANDLED: " + trueName.ToString() + "*/";
+        typeName = "std::array<uint8_t, " + std::to_string(size) + ">/* UNHANDLED: " + trueName.ToString() + " (" +
+                   tName.c_str() + ") */";
     }
 
     return typeName;
@@ -475,6 +529,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     std::ofstream o(aFilePath);
 
     o << "#pragma once" << std::endl << std::endl;
+
+    o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
 
     o << "#include <cstdint>" << std::endl;
     o << "#include <RED4ext/Common.hpp>" << std::endl;
@@ -539,6 +595,19 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
         for (auto prop : properties)
         {
+            // Fix gap between two properties
+            int64_t byteGap = static_cast<int64_t>(prop.offset) - static_cast<int64_t>(lastOffset + lastSize);
+            if (byteGap > 0)
+            {
+                uint32_t gapStart = lastOffset + lastSize;
+                uint32_t gapEnd = prop.offset;
+
+                o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart
+                  << "[0x" << gapEnd << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
+
+                o.unsetf(std::ios::hex | std::ios::uppercase);
+            }
+
             o << "    " << prop.typeQualified << " ";
 
             // Some properties have C++ invalid names for unknown reasons, we will convert to something valid
@@ -561,18 +630,6 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
             o.unsetf(std::ios::hex | std::ios::uppercase);
 
-            // Fix gap between two properties (This doesn't seem to occur. Maybe code is wrong?)
-            int64_t byteGap = static_cast<int64_t>(lastOffset + lastSize) - static_cast<int64_t>(prop.offset);
-            if (byteGap > 0)
-            {
-                uint32_t gapStart = lastOffset + lastSize;
-
-                o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart
-                  << "[0x" << byteGap << "]; // " << gapStart << std::endl;
-
-                o.unsetf(std::ios::hex | std::ios::uppercase);
-            }
-
             lastOffset = prop.offset;
             lastSize = prop.size;
         }
@@ -581,9 +638,10 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
         if (back.offset + back.size < size) // Pad remainder of class based on the last property
         {
             uint32_t gapStart = back.offset + back.size;
-            int64_t byteGap = size - (back.offset + back.size);
+            uint32_t gapEnd = size;
+
             o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart
-              << "[0x" << byteGap << "]; // " << gapStart << std::endl;
+              << "[0x" << gapEnd << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
 
             o.unsetf(std::ios::hex | std::ios::uppercase);
         }
@@ -591,9 +649,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     else if (size - parentSize > 0) // Pad the whole class
     {
         uint32_t gapStart = parentSize;
-        int64_t byteGap = size - parentSize;
         o << "    uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << gapStart << "[0x"
-          << byteGap << "]; // " << gapStart << std::endl;
+          << size << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
 
         o.unsetf(std::ios::hex | std::ios::uppercase);
     }

@@ -39,12 +39,27 @@ struct ISerializable
     virtual void sub_B8() = 0;
     virtual void sub_C0() = 0;
     virtual void sub_C8() = 0;
-    virtual void sub_D0() = 0;
+    virtual bool sub_D0() = 0;
 
     WeakHandle<ISerializable> ref;
     int64_t unk18;
     int64_t unk20;
     int64_t unk28;
 };
+
+template<typename T, typename = std::enable_if_t<std::is_base_of_v<ISerializable, T>>>
+bool IsHandleEmpty(Handle<T>& handle)
+{
+    return handle->sub_D0();
+}
+
+template<typename T, typename = std::enable_if_t<std::is_base_of_v<ISerializable, T>>>
+void DeleteHandle(Handle<T>& handle)
+{
+    auto alloc = handle->GetAllocator();
+    handle->~T();
+    alloc->Free(handle);
+}
+
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext

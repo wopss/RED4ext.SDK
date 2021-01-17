@@ -105,6 +105,19 @@ protected:
 };
 
 template<typename T>
+bool IsHandleEmpty(T)
+{
+    static_assert(false, "IsHandleEmpty only works for Handle of types inheriting from ISerializable");
+    return false;
+}
+
+template<typename T>
+void DeleteHandle(T)
+{
+    static_assert(false, "DeleteHandle only works for Handle of types inheriting from ISerializable");
+}
+
+template<typename T>
 class Handle : public HandleBase
 {
 public:
@@ -224,15 +237,12 @@ protected:
 
     void DecRef() noexcept
     {
-        static REDfunc<bool (*)(HandleBase*)> sub_0(Addresses::Handle_sub_0);
-        static REDfunc<void (*)(HandleBase*)> sub_1(Addresses::Handle_sub_1);
-
         if (refCount && refCount->DecRef())
         {
             DecWeakRef();
-            if (sub_0(this))
+            if (IsHandleEmpty(*this))
             {
-                sub_1(this);
+                DeleteHandle(*this);
                 instance = nullptr;
                 refCount = nullptr;
             }
