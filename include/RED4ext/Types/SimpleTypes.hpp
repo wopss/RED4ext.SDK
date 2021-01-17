@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <array>
 
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
@@ -132,4 +133,50 @@ struct RuntimeEntityRef
     int64_t unk0;
 };
 RED4EXT_ASSERT_SIZE(RuntimeEntityRef, 0x8);
+
+template<typename T>
+struct ResourceAsyncReference
+{
+    T* ref; // 00
+};
+RED4EXT_ASSERT_SIZE(ResourceAsyncReference<void>, 0x8);
+
+template<typename T>
+using RaRef = ResourceAsyncReference<T>;
+
+template<typename T>
+struct ResourceReference
+{
+    T* ref; // 00
+    uintptr_t unk08; // 08
+    uintptr_t unk10; // 10
+};
+RED4EXT_ASSERT_SIZE(ResourceReference<void>, 0x18);
+
+template<typename T>
+using Ref = ResourceReference<T>;
+
+template<typename T, uint32_t MAX_LEN>
+struct StaticArray
+{
+    T entries[MAX_LEN + 1];
+};
+static_assert(sizeof(StaticArray<uint32_t, 10>) == 0x2C);
+
+template<typename T, uint32_t MAX_LEN>
+using NativeArray = std::array<T, MAX_LEN>;
+
+template<typename T>
+struct CurveData
+{
+    uint64_t unk00; // 00
+    uint64_t unk08; // 08
+    uint64_t unk10; // 10
+    uint64_t unk18; // 18
+    uint64_t unk20; // 20
+    uint64_t unk28; // 28
+    uint64_t unk30; // 30
+};
+RED4EXT_ASSERT_SIZE(CurveData<float>, 0x38);
+
 } // namespace RED4ext

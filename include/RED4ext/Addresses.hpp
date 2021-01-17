@@ -48,8 +48,6 @@ constexpr uintptr_t CString_dtor = 0x1401B70D0 - ImageBase; // 40 53 48 83 EC 20
 #pragma region Handle
 constexpr uintptr_t Handle_ctor = 0x14021D1B0 - ImageBase; // 48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 60 33 ED, expected: 1, index: 0
 constexpr uintptr_t Handle_DecWeakRef = 0x1401C0FF0 - ImageBase; // 40 53 48 83 EC 30 48 8B D9 48 8B 49 08 48 85 C9 74 43 B8 FF FF FF FF, expected: 1, index: 0
-constexpr uintptr_t Handle_sub_0 = 0x14021D440 - ImageBase; // 48 8B 09 48 8B 01 48 FF A0 D0 00 00 00 CC, expected: 1, index: 0
-constexpr uintptr_t Handle_sub_1 = 0x14021D3E0 - ImageBase; // 40 57 48 83 EC 30 48 8B 39 48 85 FF 74 3D 48 8B 07, expected: 1, index: 0
 #pragma endregion
 
 #pragma region IScriptable

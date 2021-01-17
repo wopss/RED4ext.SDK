@@ -35,31 +35,31 @@ enum class ERTTIType : uint8_t
 
 struct IRTTIType
 {
-    virtual ~IRTTIType() = 0;
+    virtual ~IRTTIType() = 0; // 00
 
-    virtual void GetName(CName& aOut) const = 0;
-    virtual uint32_t GetSize() const = 0;
-    virtual uint32_t GetAlignment() const = 0;
-    virtual ERTTIType GetType() const = 0;
-    virtual void GetTypeName(CString& aOut) const = 0;
-    virtual void GetName2(CName& aOut) const = 0;
-    virtual void Init(void* aMemory) const = 0;
-    virtual void Destroy(void* aMemory) const = 0;
-    virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0;
-    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;
-    virtual void sub_58(ScriptInstance aLhs, const ScriptInstance aRhs) = 0; // This usually call "Assign".
-    virtual void sub_60() = 0;
-    virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;
-    virtual void sub_70() = 0;
-    virtual void sub_78() = 0;
-    virtual void sub_80() = 0;
-    virtual void sub_88() = 0;
-    virtual bool Unk_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;
-    virtual bool Unk_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0;
-    virtual void sub_A0() = 0;
-    virtual bool HasProperties() = 0;
-    virtual void sub_B0() = 0;
-    virtual IMemoryAllocator* GetAllocator() const = 0;
+    virtual void GetName(CName& aOut) const = 0;                                    // 08
+    virtual uint32_t GetSize() const = 0;                                           // 10
+    virtual uint32_t GetAlignment() const = 0;                                      // 18
+    virtual ERTTIType GetType() const = 0;                                          // 20
+    virtual void GetTypeName(CString& aOut) const = 0;                              // 28
+    virtual void GetName2(CName& aOut) const = 0;                                   // 30
+    virtual void Init(void* aMemory) const = 0;                                     // 38
+    virtual void Destroy(void* aMemory) const = 0;                                  // 40
+    virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0; // 48
+    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;        // 50
+    virtual void sub_58(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;        // 58 This usually call "Assign".
+    virtual void sub_60() = 0;                                                      // 60
+    virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0; // 68
+    virtual void sub_70() = 0;                                                      // 70
+    virtual void sub_78() = 0;                                                      // 78
+    virtual void sub_80() = 0;                                                      // 80
+    virtual void sub_88() = 0;                                                      // 88
+    virtual bool Unk_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;               // 90
+    virtual bool Unk_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0; // 98
+    virtual void sub_A0() = 0;                                                                             // A0
+    virtual bool sub_A8() = 0;                                                                             // A8
+    virtual void sub_B0() = 0;                                                                             // B0
+    virtual IMemoryAllocator* GetAllocator() const = 0;                                                    // B8
 };
 RED4EXT_ASSERT_SIZE(IRTTIType, 0x8);
 
@@ -69,20 +69,22 @@ struct CRTTIType : IRTTIType
 };
 RED4EXT_ASSERT_SIZE(CRTTIType, 0x10);
 
-struct CArray : CRTTIType
+struct CArrayBase : CRTTIType
 {
-public:
     virtual CRTTIType* GetInnerType() = 0;                                                 // C0
     virtual bool sub_C8() = 0;                                                             // C8 ret 1
     virtual uint32_t GetLength(ScriptInstance aInstance) = 0;                              // D0
-    virtual int32_t sub_D8() = 0;                                                          // D8 ret -1
+    virtual int32_t GetMaxLength() = 0;                                                    // D8 ret -1
     virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) = 0;      // E0
     virtual ScriptInstance GetValuePointer(ScriptInstance aInstance, uint32_t aIndex) = 0; // E8 Same func at 0xE0 ?
-    virtual int32_t InsertElement(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
-    virtual bool RemoveElement(ScriptInstance aInstance, int32_t aIndex) = 0;                             // F8
-    virtual bool sub_100(ScriptInstance aInstance, int32_t aIndex) = 0;                                   // 100
-    virtual bool Grow(ScriptInstance aInstance, uint32_t aSize) = 0;                                      // 108
+    virtual int32_t sub_F0(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
+    virtual bool sub_F8(ScriptInstance aInstance, int32_t aIndex) = 0;                             // F8
+    virtual bool sub_100(ScriptInstance aInstance, int32_t aIndex) = 0;                            // 100
+    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) = 0;                             // 108
+};
 
+struct CArray : CArrayBase
+{
     CRTTIType* innerType; // 10
     CName name;           // 18
     CRTTIType* parent;    // 20
@@ -92,6 +94,26 @@ public:
 };
 RED4EXT_ASSERT_SIZE(CArray, 0x40);
 RED4EXT_ASSERT_OFFSET(CArray, parent, 0x20);
+
+struct CStaticArray : CArrayBase
+{
+    CRTTIType* innerType; // 10
+    int32_t size;         // 18
+    uint32_t pad1C;       // 1C
+    CName name;           // 20
+    CName unk28;          // 28
+};
+RED4EXT_ASSERT_SIZE(CStaticArray, 0x30);
+
+struct CNativeArray : CArrayBase
+{
+    CRTTIType* innerType; // 10
+    int32_t size;         // 18
+    uint32_t pad1C;       // 1C
+    CName name;           // 20
+    CName unk28;          // 28
+};
+RED4EXT_ASSERT_SIZE(CNativeArray, 0x30);
 
 struct CHandle : CRTTIType
 {
@@ -118,6 +140,39 @@ struct CWeakHandle : CRTTIType
     CName unk20;          // 20
 };
 RED4EXT_ASSERT_SIZE(CWeakHandle, 0x28);
+
+struct CResourceAsyncReference : CRTTIType
+{
+    CName name;           // 10
+    CName unk18;          // 18
+    CRTTIType* innerType; // 20
+};
+RED4EXT_ASSERT_SIZE(CResourceAsyncReference, 0x28);
+
+struct CResourceReference : CRTTIType
+{
+    CName name;           // 10
+    CName unk18;          // 18
+    CRTTIType* innerType; // 20
+};
+RED4EXT_ASSERT_SIZE(CResourceReference, 0x28);
+
+struct CLegacySingleChannelCurve : CRTTIType
+{
+    CName name;           // 10
+    uint64_t unk18;       // 18
+    uint64_t unk20;       // 20
+    uint64_t unk28;       // 28
+    uint8_t unk30;        // 30
+    uint8_t unk31;        // 31
+    uint16_t pad32;       // 32
+    uint32_t pad34;       // 34
+    CRTTIType* curveType; // 38
+    uint16_t unk40;       // 40
+    uint16_t pad42;       // 42
+    uint32_t pad44;       // 44
+};
+RED4EXT_ASSERT_SIZE(CLegacySingleChannelCurve, 0x48);
 
 struct CBitfield : CRTTIType
 {
