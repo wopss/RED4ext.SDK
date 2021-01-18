@@ -1,11 +1,11 @@
 #pragma once
 #include <optional>
 
-#include <RED4ext/ISerializable.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/ISerializable.hpp>
 #include <RED4ext/RTTITypes.hpp>
-#include <RED4ext/Scripting/Utils.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
+#include <RED4ext/Scripting/Utils.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
@@ -13,14 +13,14 @@ namespace RED4ext
 struct CBaseFunction;
 struct IScriptable : ISerializable
 {
-    virtual void sub_D8() = 0;
-    virtual void sub_E0() = 0;
-    virtual void sub_E8() = 0;
-    virtual void sub_F0() = 0;
-    virtual void sub_F8() = 0;
-    virtual void sub_100() = 0;
-    virtual void sub_108() = 0;
-    virtual void sub_110() = 0;
+    virtual void sub_D8() = 0;  // D8
+    virtual void sub_E0() = 0;  // E0
+    virtual void sub_E8() = 0;  // E8
+    virtual void sub_F0() = 0;  // F0
+    virtual void sub_F8() = 0;  // F8
+    virtual void sub_100() = 0; // 100
+    virtual void sub_108() = 0; // 108
+    virtual void sub_110() = 0; // 110
 
     void* GetValueHolder();
 
@@ -38,7 +38,7 @@ struct IScriptable : ISerializable
         {
             return std::nullopt;
         }
-    
+
         return std::make_optional<ReturnT>(ret);
     }
 
@@ -48,8 +48,8 @@ struct IScriptable : ISerializable
         return ExecuteFunctionImpl<void>(aFunc, nullptr, std::forward<Args>(aArgs)...);
     }
 
-    CClass* classType;   // 30
-    void* propertyBlock; // 38
+    CClass* classType; // 30
+    void* valueHolder; // 38
 
 protected:
     template<typename ReturnType, typename... Args>

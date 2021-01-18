@@ -21,7 +21,7 @@ struct CName
     const char* ToString();
     bool IsEmpty() const noexcept;
 
-    uint64_t hash;
+    uint64_t hash; // 00
 };
 RED4EXT_ASSERT_SIZE(CName, 0x8);
 } // namespace RED4ext

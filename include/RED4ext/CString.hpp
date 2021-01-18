@@ -27,11 +27,11 @@ private:
     {
         char* ptr;
         char str[0x14];
-    } text;
+    } text; // 00
 #pragma pack(pop)
 
-    uint32_t length;
-    uint64_t capacity;
+    uint32_t length;   // 14
+    uint64_t capacity; // 18
 };
 RED4EXT_ASSERT_SIZE(CString, 0x20);
 } // namespace RED4ext

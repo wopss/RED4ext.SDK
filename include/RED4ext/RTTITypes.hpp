@@ -220,41 +220,41 @@ struct CClass : CRTTIType
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aName);
 
-    CClass* parent;
-    CName name;
-    CName name2;
-    DynArray<CProperty*> props;
-    DynArray<CProperty*> unk38;
-    DynArray<CClassFunction*> funcs;
-    DynArray<CClassFunction*> staticFuncs;
-    uint32_t size; // The size of the real class that can be constructed.
-    int32_t unk6C;
-    Flags flags;
-    uint32_t alignment;
-    int64_t unk78;
-    int64_t unk80;
-    int64_t unk88;
-    int64_t unk90;
-    int32_t unk98;
-    int32_t unk9C;
-    HashMap<uint64_t, CClassFunction*> unkA0;
-    int64_t unkD0;
-    int64_t unkD8;
-    HashMap<uint64_t, CRTTIType*> unkE0;
-    int64_t unk110;
-    DynArray<CProperty*> unk118; // Same as 0x28
-    DynArray<void*> unk128;
-    DynArray<CProperty*> unk138; // Only RT_Class types?
-    DynArray<void*> unk148;
-    DynArray<CProperty*> unk158; // Scripted props?
-    DynArray<void*> unk168;
-    int64_t unk178;
-    DynArray<void*> unk180;
-    int8_t unk190[256];
-    int16_t unk290;
-    int32_t unk294;
-    int8_t unk298;
-    int8_t unk299;
+    CClass* parent;                           // 10
+    CName name;                               // 18
+    CName name2;                              // 20
+    DynArray<CProperty*> props;               // 28
+    DynArray<CProperty*> unk38;               // 38
+    DynArray<CClassFunction*> funcs;          // 48
+    DynArray<CClassFunction*> staticFuncs;    // 58
+    uint32_t size;                            // 68 The size of the real class that can be constructed.
+    int32_t holderSize;                       // 6C
+    Flags flags;                              // 70
+    uint32_t alignment;                       // 74
+    int64_t unk78;                            // 78
+    int64_t unk80;                            // 80
+    int64_t unk88;                            // 88
+    int64_t unk90;                            // 90
+    int32_t unk98;                            // 98
+    int32_t unk9C;                            // 9C
+    HashMap<uint64_t, CClassFunction*> unkA0; // A0
+    int64_t unkD0;                            // D0
+    int64_t unkD8;                            // D8
+    HashMap<uint64_t, CRTTIType*> unkE0;      // E0
+    int64_t unk110;                           // 110
+    DynArray<CProperty*> unk118;              // 118 More entries than 0x28, will contain native props
+    DynArray<void*> unk128;                   // 128
+    DynArray<CProperty*> unk138;              // 138 Only RT_Class types?
+    DynArray<void*> unk148;                   // 148
+    DynArray<CProperty*> unk158;              // 158 Scripted props?
+    DynArray<void*> unk168;                   // 168
+    int64_t unk178;                           // 178
+    DynArray<void*> unk180;                   // 180
+    int8_t unk190[256];                       // 190
+    int16_t unk290;                           // 290
+    int32_t unk294;                           // 294
+    int8_t unk298;                            // 298
+    int8_t unk299;                            // 299
 };
 RED4EXT_ASSERT_SIZE(CClass, 0x2A0);
 RED4EXT_ASSERT_OFFSET(CClass, parent, 0x10);

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <cstdint>
 #include <array>
+#include <cstdint>
 
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
@@ -11,26 +11,26 @@ namespace RED4ext
 {
 struct CDateTime
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(CDateTime, 0x8);
 
 struct CGUID
 {
-    int64_t unk0;
-    int64_t unk8;
+    int64_t unk00; // 00
+    int64_t unk08; // 08
 };
 RED4EXT_ASSERT_SIZE(CGUID, 0x10);
 
 struct CRUID
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(CRUID, 0x8);
 
 struct CRUIDRef
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(CRUIDRef, 0x8);
 
@@ -47,90 +47,90 @@ RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 
 struct ItemID
 {
-    TweakDBID tdbid;   // 00
-    uint32_t rngSeed;  // 08
-    uint16_t unk0C;    // 0C
-    uint8_t unk0E;     // 0E
-    uint8_t pad0F;     // 0F
+    TweakDBID tdbid;  // 00
+    uint32_t rngSeed; // 08
+    uint16_t unk0C;   // 0C
+    uint8_t unk0E;    // 0E
+    uint8_t pad0F;    // 0F
 };
 RED4EXT_ASSERT_SIZE(ItemID, 0x10);
 
 struct EditorObjectID
 {
-    int64_t unk0;
-    int64_t unk8;
-    int64_t unk10;
-    int64_t unk18;
+    int64_t unk00; // 00
+    int64_t unk08; // 08
+    int64_t unk10; // 10
+    int64_t unk18; // 18
 };
 RED4EXT_ASSERT_SIZE(EditorObjectID, 0x20);
 
 struct Variant
 {
-    int64_t unk0;
-    int64_t unk8;
-    int64_t unk10;
+    int64_t unk00; // 00
+    int64_t unk08; // 08
+    int64_t unk10; // 10
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
 struct DataBuffer
 {
-    int64_t unk0;
-    int32_t unk8;
-    int32_t unkC;
-    Unk530 unk10;
-    int64_t unk20;
+    int64_t unk00; // 00
+    int32_t unk08; // 08
+    int32_t unk0C; // 0C
+    Unk530 unk10;  // 10
+    int64_t unk20; // 20
 };
 RED4EXT_ASSERT_SIZE(DataBuffer, 0x28);
 
 struct SharedDataBuffer
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
 struct serializationDeferredDataBuffer
 {
-    int64_t unk0;
-    int64_t unk8;
-    int64_t unk10;
-    int64_t unk18;
-    Unk530 unk20;
-    int64_t unk30;
-    int8_t unk38;
-    int64_t unk40;
-    int64_t unk48;
-    int64_t unk50;
+    int64_t unk00; // 00
+    int64_t unk08; // 08
+    int64_t unk10; // 10
+    int64_t unk18; // 18
+    Unk530 unk20;  // 20
+    int64_t unk30; // 30
+    int8_t unk38;  // 38
+    int64_t unk40; // 40
+    int64_t unk48; // 48
+    int64_t unk50; // 50
 };
 RED4EXT_ASSERT_SIZE(serializationDeferredDataBuffer, 0x58);
 
 struct gamedataLocKeyWrapper
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(gamedataLocKeyWrapper, 0x8);
 
 struct LocalizationString
 {
-    int64_t unk0;
-    CString unk8;
+    int64_t unk00; // 00
+    CString unk08; // 08
 };
 RED4EXT_ASSERT_SIZE(LocalizationString, 0x28);
 
 struct MessageResourcePath
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(MessageResourcePath, 0x8);
 
 struct NodeRef
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(NodeRef, 0x8);
 
 struct RuntimeEntityRef
 {
-    int64_t unk0;
+    int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(RuntimeEntityRef, 0x8);
 
@@ -147,7 +147,7 @@ using RaRef = ResourceAsyncReference<T>;
 template<typename T>
 struct ResourceReference
 {
-    T* ref; // 00
+    T* ref;          // 00
     uintptr_t unk08; // 08
     uintptr_t unk10; // 10
 };
@@ -159,7 +159,7 @@ using Ref = ResourceReference<T>;
 template<typename T, uint32_t MAX_LEN>
 struct StaticArray
 {
-    T entries[MAX_LEN + 1];
+    T entries[MAX_LEN + 1]; // 00
 };
 static_assert(sizeof(StaticArray<uint32_t, 10>) == 0x2C);
 
