@@ -16,28 +16,28 @@ struct CProperty
 {
     struct Flags
     {
-        uint64_t b0 : 9;
-        uint64_t isOut : 1;      // 09
-        uint64_t isOptional : 1; // 0A
-        uint64_t b12 : 5;
-        uint64_t isPrivate : 1;   // 10
-        uint64_t isProtected : 1; // 11
-        uint64_t isPublic : 1;    // 12
-        uint64_t b19 : 2;
-        uint64_t b21 : 1;
-        uint64_t b22 : 5;
+        uint64_t b0 : 9;           // 00
+        uint64_t isOut : 1;        // 09
+        uint64_t isOptional : 1;   // 0A
+        uint64_t b12 : 5;          // 0B
+        uint64_t isPrivate : 1;    // 10
+        uint64_t isProtected : 1;  // 11
+        uint64_t isPublic : 1;     // 12
+        uint64_t b19 : 2;          // 13
+        uint64_t b21 : 1;          // 15 - When true, acquire value from holder (isScripted?)
+        uint64_t b22 : 5;          // 16
         uint64_t isHandle : 1;     // 1B
         uint64_t isPersistent : 1; // 1C
         uint64_t b29 : 34;
     };
     RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 
-    IRTTIType* type;
-    CName name;
-    CName group;
-    CClass* parent;
-    uint32_t valueOffset;
-    Flags flags;
+    IRTTIType* type;      // 00
+    CName name;           // 08
+    CName group;          // 10
+    CClass* parent;       // 18
+    uint32_t valueOffset; // 20
+    Flags flags;          // 28
 
     template<typename T>
     bool IsEqual(ScriptInstance aInstance, T aValue)

@@ -70,18 +70,35 @@ struct BaseGameEngine : CBaseEngine
 RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x238);
 RED4EXT_ASSERT_OFFSET(BaseGameEngine, unk220, 0x220);
 
+struct GameInstance
+{
+    virtual ~GameInstance() = 0;
+    virtual IScriptable* GetInstance(const IRTTIType* type) = 0;
+    virtual void Unk_10() = 0;
+    virtual void Unk_18() = 0;
+    virtual void Unk_20() = 0;
+    virtual void Unk_28() = 0;
+    virtual void Unk_30() = 0;
+    virtual void Unk_38() = 0;
+    virtual void Unk_40() = 0;
+    virtual void Unk_48() = 0;
+    virtual void Unk_50() = 0;
+    virtual void Unk_58() = 0;
+    virtual void Unk_60() = 0;
+    virtual void Unk_68() = 0;
+
+    HashMapBase<IRTTIType*, Handle<IScriptable>> unk08; // 08
+    uintptr_t unk30;                                    // 30
+    DynArray<Handle<IScriptable>> unk38;                // 38
+    HashMapBase<uintptr_t, void*> unk40;                // 40
+    uintptr_t unk70[(0x138 - 0x70) >> 3];               // 70
+};
+RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
+
 struct CGameEngine : BaseGameEngine
 {
     struct CGameFramework
     {
-        struct GameInstance
-        {
-            virtual ~GameInstance() = 0;
-            virtual IScriptable* GetInstance(const IRTTIType* aType) = 0;
-        };
-
-        RED4EXT_ASSERT_SIZE(GameInstance, 0x8);
-
         int8_t unk0[0x10];
         GameInstance* gameInstance;
     };

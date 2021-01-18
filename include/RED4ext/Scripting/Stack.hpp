@@ -1,7 +1,7 @@
 #pragma once
 
-#include <vector>
 #include <RED4ext/Types/InstanceType.hpp>
+#include <vector>
 
 namespace RED4ext
 {
@@ -36,8 +36,8 @@ struct CStackType
 {
     CStackType(IRTTIType* aType = nullptr, ScriptInstance aValue = nullptr);
 
-    IRTTIType* type;
-    ScriptInstance value;
+    IRTTIType* type;      // 00
+    ScriptInstance value; // 08
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
 
@@ -45,20 +45,20 @@ using StackArgs_t = std::vector<CStackType>;
 
 struct IStack
 {
-    virtual ~IStack() = default;
-    virtual void* GetResultAddr() { return nullptr; };
-    virtual int64_t sub_10() { return 0; };
-    virtual void sub_18(int64_t a2) {};
+    virtual ~IStack() = default;                       // 00
+    virtual void* GetResultAddr() { return nullptr; }; // 08
+    virtual int64_t sub_10() { return 0; };            // 10
+    virtual void sub_18(int64_t a2){};                 // 18
 };
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
 
 struct CBaseStack : IStack
 {
-    int64_t unk8;
-    int64_t unk10;
-    ScriptInstance context18;
-    ScriptInstance context20;
-    int64_t unk28;
+    int64_t unk08;            // 08
+    int64_t unk10;            // 10
+    ScriptInstance context18; // 18
+    ScriptInstance context20; // 20
+    int64_t unk28;            // 28
 };
 
 RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
@@ -69,9 +69,9 @@ struct CStack : CBaseStack
            CStackType* aResult = nullptr, int64_t a6 = 0);
     ~CStack() = default;
 
-    CStackType* args;
-    uint32_t argsCount;
-    CStackType* result;
+    CStackType* args;   // 30
+    uint32_t argsCount; // 38
+    CStackType* result; // 40
 };
 
 RED4EXT_ASSERT_SIZE(CStack, 0x48);

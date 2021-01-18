@@ -7,6 +7,7 @@
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
 
+#include <array>
 #include <fstream>
 #include <numeric>
 #include <stack>
@@ -15,7 +16,7 @@
 
 namespace RED4ext::GameReflection
 {
-RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose)
+RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPropertyHolders)
 {
     auto rttiSystem = RED4ext::CRTTISystem::Get();
     auto* scriptable = rttiSystem->GetClass("IScriptable");
@@ -46,7 +47,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose)
 
     // First pass gather all properties and descriptors
     rttiSystem->types.for_each(
-        [&descriptorMap, GetPrefix, &prefixHierarchy](RED4ext::CName n, RED4ext::IRTTIType*& type) {
+        [&descriptorMap, GetPrefix, &prefixHierarchy, aPropertyHolders](RED4ext::CName n, RED4ext::IRTTIType*& type) {
             if (type->GetType() == RED4ext::ERTTIType::Class)
             {
                 auto classType = static_cast<RED4ext::CClass*>(type);
@@ -63,6 +64,10 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose)
                             if (!prop->flags.b21)
                             {
                                 builder.mPropertyMap.emplace(prop->valueOffset, prop);
+                            }
+                            else if (aPropertyHolders)
+                            {
+                                builder.mHolderPropertyMap.emplace(prop->valueOffset, prop);
                             }
                         }
                     }
@@ -260,6 +265,14 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose)
             desc.second.Accumulate(prop.second->type);
         }
 
+        if (aPropertyHolders)
+        {
+            for (auto& prop : desc.second.mHolderPropertyMap)
+            {
+                desc.second.Accumulate(prop.second->type);
+            }
+        }
+
         ClassFileDescriptor fileDescriptor;
         desc.second.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, fileToPath);
         fileDescriptor.EmitFile(filePath);
@@ -389,20 +402,27 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         aFd.fwdDeclarations.emplace(aQualifiedTransformer(ind));
     }
 
-    for (auto& prop : mPropertyMap)
+    std::array<
+        std::tuple<std::map<uint64_t, RED4ext::CProperty*>*, std::vector<ClassFileDescriptor::PropertyDescriptor>*>, 2>
+        props = {make_tuple(&mPropertyMap, &aFd.properties), make_tuple(&mHolderPropertyMap, &aFd.holderProperties)};
+
+    for (auto propList : props)
     {
-        std::string propTypeName = TypeToString(prop.second->type, aNameTransformer);
-        std::string propTypeNameQualified = TypeToString(prop.second->type, aQualifiedTransformer);
-        std::string propName = prop.second->name.ToString();
+        for (auto& prop : *std::get<0>(propList))
+        {
+            std::string propTypeName = TypeToString(prop.second->type, aNameTransformer);
+            std::string propTypeNameQualified = TypeToString(prop.second->type, aQualifiedTransformer);
+            std::string propName = prop.second->name.ToString();
 
-        // Filter invalid characters, WHY are some like this?
-        bool isValid =
-            !propName.empty() && propName.find_first_of(' ') == std::string::npos &&
-            propName.find_first_of('-') == std::string::npos && propName.find_first_of('\'') == std::string::npos &&
-            propName.find_first_of('(') == std::string::npos && propName.find_first_of(')') == std::string::npos;
+            // Filter invalid characters, WHY are some like this?
+            bool isValid =
+                !propName.empty() && propName.find_first_of(' ') == std::string::npos &&
+                propName.find_first_of('-') == std::string::npos && propName.find_first_of('\'') == std::string::npos &&
+                propName.find_first_of('(') == std::string::npos && propName.find_first_of(')') == std::string::npos;
 
-        aFd.properties.push_back(
-            {propTypeName, propTypeNameQualified, propName, isValid, prop.first, prop.second->type->GetSize()});
+            std::get<1>(propList)->push_back(
+                {propTypeName, propTypeNameQualified, propName, isValid, prop.first, prop.second->type->GetSize()});
+        }
     }
 }
 
@@ -587,6 +607,58 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     o << "{" << std::endl;
 
     o << "    constexpr CName NAME = FNV1a(\"" << trueName << "\");" << std::endl << std::endl;
+
+    if (holderProperties.size())
+    {
+        o << "    struct PropertyHolder" << std::endl;
+        o << "    {" << std::endl;
+
+        size_t lastOffset = 0;
+        size_t lastSize = 0;
+
+        for (auto prop : holderProperties)
+        {
+            // Fix gap between two properties
+            int64_t byteGap = static_cast<int64_t>(prop.offset) - static_cast<int64_t>(lastOffset + lastSize);
+            if (byteGap > 0)
+            {
+                size_t gapStart = lastOffset + lastSize;
+                size_t gapEnd = prop.offset;
+
+                o << "        uint8_t unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase
+                  << gapStart << "[0x" << gapEnd << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
+
+                o.unsetf(std::ios::hex | std::ios::uppercase);
+            }
+
+            o << "        " << prop.typeQualified << " ";
+
+            // Some properties have C++ invalid names for unknown reasons, we will convert to something valid
+            // and then print the original name in the comment
+            if (prop.isNameValid)
+            {
+                o << prop.name;
+            }
+            else
+            {
+                o << "unk" << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << prop.offset;
+            }
+
+            o << "; // " << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << prop.offset;
+            if (!prop.isNameValid)
+            {
+                o << " -- " << prop.name;
+            }
+            o << std::endl;
+
+            o.unsetf(std::ios::hex | std::ios::uppercase);
+
+            lastOffset = prop.offset;
+            lastSize = prop.size;
+        }
+
+        o << "    };" << std::endl << std::endl;
+    }
 
     if (properties.size())
     {

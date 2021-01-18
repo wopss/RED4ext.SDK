@@ -45,6 +45,7 @@ struct ClassFileDescriptor
     };
 
     std::vector<PropertyDescriptor> properties;
+    std::vector<PropertyDescriptor> holderProperties;
 
     void EmitFile(std::filesystem::path aFilePath);
 };
@@ -55,6 +56,7 @@ struct ClassDependencyBuilder
     std::unordered_set<RED4ext::IRTTIType*> mDirect;
     std::unordered_set<RED4ext::IRTTIType*> mIndirect;
     std::map<uint64_t, RED4ext::CProperty*> mPropertyMap;
+    std::map<uint64_t, RED4ext::CProperty*> mHolderPropertyMap;
 
     void Accumulate(RED4ext::IRTTIType* type);
 
@@ -64,6 +66,6 @@ struct ClassDependencyBuilder
 
 std::string TypeToString(RED4ext::IRTTIType* aType, NameTransformer aNameTransformer);
 
-void Dump(std::filesystem::path aFilePath, bool aVerbose = false);
+void Dump(std::filesystem::path aFilePath, bool aVerbose = false, bool aPropertyHolders = false);
 
 } // namespace RED4ext::GameReflection
