@@ -71,12 +71,13 @@ RED4EXT_ASSERT_SIZE(CRTTIType, 0x10);
 
 struct CArrayBase : CRTTIType
 {
-    virtual CRTTIType* GetInnerType() = 0;                                                 // C0
-    virtual bool sub_C8() = 0;                                                             // C8 ret 1
-    virtual uint32_t GetLength(ScriptInstance aInstance) = 0;                              // D0
-    virtual int32_t GetMaxLength() = 0;                                                    // D8 ret -1
-    virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) = 0;      // E0
-    virtual ScriptInstance GetValuePointer(ScriptInstance aInstance, uint32_t aIndex) = 0; // E8 Same func at 0xE0 ?
+    virtual CRTTIType* GetInnerType() const = 0;                                            // C0
+    virtual bool sub_C8() = 0;                                                              // C8 ret 1
+    virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
+    virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
+    virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) const = 0; // E0
+    virtual ScriptInstance GetValuePointer(ScriptInstance aInstance,
+                                           uint32_t aIndex) const = 0; // E8 Same func at 0xE0 ?
     virtual int32_t sub_F0(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
     virtual bool sub_F8(ScriptInstance aInstance, int32_t aIndex) = 0;                             // F8
     virtual bool sub_100(ScriptInstance aInstance, int32_t aIndex) = 0;                            // 100
@@ -117,7 +118,7 @@ RED4EXT_ASSERT_SIZE(CNativeArray, 0x30);
 
 struct CHandle : CRTTIType
 {
-    virtual CRTTIType* GetInnerType() = 0;             // C0
+    virtual CRTTIType* GetInnerType() const = 0;       // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8
@@ -130,7 +131,7 @@ RED4EXT_ASSERT_SIZE(CHandle, 0x28);
 
 struct CWeakHandle : CRTTIType
 {
-    virtual CRTTIType* GetInnerType() = 0;             // C0
+    virtual CRTTIType* GetInnerType() const = 0;       // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8 - Empty impl
@@ -182,7 +183,7 @@ struct CBitfield : CRTTIType
     uint8_t flags;      // 21
     uint16_t unk22;     // 22
     uint32_t unk24;     // 24
-    uintptr_t unk28;    // 28
+    uint64_t validBits; // 28
     CName bitNames[64]; // 30
 };
 RED4EXT_ASSERT_SIZE(CBitfield, 0x230);
@@ -215,7 +216,7 @@ struct CClass : CRTTIType
 
     IScriptable* AllocInstance();
 
-    bool IsA(IRTTIType* aType);
+    bool IsA(const IRTTIType* aType) const;
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aName);

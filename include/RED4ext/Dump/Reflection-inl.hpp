@@ -10,20 +10,21 @@
 #include <array>
 #include <fstream>
 #include <numeric>
+#include <regex>
 #include <stack>
 #include <string>
 #include <unordered_map>
 
 namespace RED4ext::GameReflection
 {
-RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPropertyHolders)
+RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aExtendedPath, bool aPropertyHolders)
 {
     auto rttiSystem = RED4ext::CRTTISystem::Get();
     auto* scriptable = rttiSystem->GetClass("IScriptable");
     auto* serializable = rttiSystem->GetClass("ISerializable");
     auto* redEvent = rttiSystem->GetClass("redEvent");
 
-    std::unordered_map<RED4ext::CClass*, ClassDependencyBuilder> descriptorMap;
+    std::unordered_map<const RED4ext::CClass*, ClassDependencyBuilder> descriptorMap;
 
     // Collect all the prefixes so we can determine nesting
     std::unordered_map<std::string, std::vector<std::string>> prefixHierarchy;
@@ -31,6 +32,13 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
     // Trim the preceeding lower-case suffix, this seems to be either a namespace or directory, or both
     auto GetPrefix = [](const std::string& input) -> std::string {
         size_t i = 0;
+
+        // Special case for AI
+        if (input.size() >= 2 && input[0] == 'A' && input[1] == 'I')
+        {
+            i = 2;
+        }
+
         for (; i < input.size(); ++i)
         {
             if (isupper(input[i]))
@@ -50,7 +58,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
         [&descriptorMap, GetPrefix, &prefixHierarchy, aPropertyHolders](RED4ext::CName n, RED4ext::IRTTIType*& type) {
             if (type->GetType() == RED4ext::ERTTIType::Class)
             {
-                auto classType = static_cast<RED4ext::CClass*>(type);
+                auto classType = static_cast<const RED4ext::CClass*>(type);
                 if (classType->flags.isNative)
                 {
                     ClassDependencyBuilder builder;
@@ -122,8 +130,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
     // Second pass traverse parents to move properties into parent class if it happened to be abstract
     for (auto& desc : descriptorMap)
     {
-        std::stack<RED4ext::CClass*> stack;
-        RED4ext::CClass* parent = desc.first->parent;
+        std::stack<const RED4ext::CClass*> stack;
+        const RED4ext::CClass* parent = desc.first->parent;
         while (parent)
         {
             stack.push(parent);
@@ -156,8 +164,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
         }
     }
 
-    auto fileToPath = [aVerbose, redEvent, scriptable, serializable, GetPrefix,
-                       &prefixHierarchy](RED4ext::IRTTIType* type) -> std::string {
+    auto fileToPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
+                       &prefixHierarchy](const RED4ext::IRTTIType* type) -> std::string {
         RED4ext::CName name;
         type->GetName(name);
 
@@ -177,11 +185,11 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
         }
 
         // Additional categorization
-        if (aVerbose)
+        if (aExtendedPath)
         {
             if (type->GetType() == RED4ext::ERTTIType::Class)
             {
-                auto* pClass = static_cast<RED4ext::CClass*>(type);
+                auto* pClass = static_cast<const RED4ext::CClass*>(type);
                 if (pClass->IsA(redEvent))
                 {
                     return pathPrefix + "event/";
@@ -209,11 +217,11 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
             }
         }
 
-        return pathPrefix;
+        return "Types/generated/" + pathPrefix;
     };
 
     // Remove the prefix from the class
-    auto SanitizeType = [GetPrefix](RED4ext::IRTTIType* type) -> std::string {
+    auto SanitizeType = [GetPrefix](const RED4ext::IRTTIType* type) -> std::string {
         RED4ext::CName name;
         type->GetName(name);
         std::string fullName = name.ToString();
@@ -240,7 +248,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
     };
 
     // Combine the namespace and sanitized name
-    auto QualifiedType = [GetNamespace, GetPrefix, &prefixHierarchy](RED4ext::IRTTIType* type) -> std::string {
+    auto QualifiedType = [GetNamespace, GetPrefix, &prefixHierarchy](const RED4ext::IRTTIType* type) -> std::string {
         RED4ext::CName name;
         type->GetName(name);
 
@@ -252,7 +260,28 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
         return ns.empty() ? stripped : ns + "::" + stripped;
     };
 
+    FixedTypeMapping fixedMapping = {{"ISerializable", "ISerializable"},
+                                     {"IScriptable", "Scripting/IScriptable"},
+                                     {"gameuiCharacterCustomizationSystem", "Types/CharacterCustomization"},
+                                     {"gameItemID", "Types/SimpleTypes"}};
+
+    std::regex invalidChars(INVALID_CHARACTERS);
+    std::regex invalidKeywords(INVALID_KEYWORDS);
+    NameSantizer nameSanitizer = [invalidChars, invalidKeywords](const std::string& input,
+                                                                 bool& modify) -> std::string {
+        modify = std::regex_search(input, invalidChars) || std::regex_search(input, invalidKeywords);
+        std::string output = std::regex_replace(std::regex_replace(input, invalidChars, "_"), invalidKeywords, "$&_");
+        if (!input.empty() && isdigit(input[0])) // Starting with a number is invalid, prefix it
+        {
+            output = "_" + output;
+            modify = true;
+        }
+        return output;
+    };
+
     // Third pass crawl dependencies, then build the File Descriptor to dump out
+    std::set<std::string> includeCollector;
+
     for (auto& desc : descriptorMap)
     {
         if (desc.second.pType->parent)
@@ -273,41 +302,86 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aPr
             }
         }
 
-        ClassFileDescriptor fileDescriptor;
-        desc.second.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, fileToPath);
-        fileDescriptor.EmitFile(filePath);
+        // Don't emit files for the fixed mappings
+        RED4ext::CName className;
+        desc.first->GetName(className);
 
-        // TODO: Accumulate and emit Bitfield and Enum files too
+        auto it = fixedMapping.find(className);
+        if (it != fixedMapping.end())
+        {
+            continue;
+        }
+
+        ClassFileDescriptor fileDescriptor;
+        desc.second.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, fileToPath, fixedMapping, aVerbose);
+
+        for (auto& dep : desc.second.mDirect)
+        {
+            switch (dep->GetType())
+            {
+            case RED4ext::ERTTIType::Enum:
+            {
+                EnumFileDescriptor enumFd(static_cast<const RED4ext::CEnum*>(dep), SanitizeType, QualifiedType,
+                                          fileToPath);
+                enumFd.EmitFile(filePath, nameSanitizer);
+                break;
+            }
+            case RED4ext::ERTTIType::BitField:
+            {
+                BitfieldFileDescriptor bfFd(static_cast<const RED4ext::CBitfield*>(dep), SanitizeType, QualifiedType,
+                                            fileToPath);
+                bfFd.EmitFile(filePath, nameSanitizer);
+                break;
+            }
+            default:
+                break;
+            }
+        }
+
+        for (auto& inc : fileDescriptor.includes)
+        {
+            includeCollector.emplace(inc);
+        }
+
+        fileDescriptor.EmitFile(filePath, nameSanitizer);
     }
+
+    EmitBulkGenerated(filePath, includeCollector);
 }
 
-RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(RED4ext::IRTTIType* aType)
+RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(const RED4ext::IRTTIType* aType)
 {
     switch (aType->GetType())
     {
     case RED4ext::ERTTIType::WeakHandle:
     {
-        mIndirect.emplace(static_cast<RED4ext::CWeakHandle*>(aType)->GetInnerType());
+        mIndirect.emplace(static_cast<const RED4ext::CWeakHandle*>(aType)->GetInnerType());
         mDirect.emplace(aType);
         break;
     }
     case RED4ext::ERTTIType::Handle:
     {
         // Handles are indirect references to the object they carry
-        mIndirect.emplace(static_cast<RED4ext::CHandle*>(aType)->GetInnerType());
+        mIndirect.emplace(static_cast<const RED4ext::CHandle*>(aType)->GetInnerType());
         mDirect.emplace(aType);
         break;
     }
     case RED4ext::ERTTIType::ResourceAsyncReference:
     {
-        mIndirect.emplace(static_cast<RED4ext::CResourceAsyncReference*>(aType)->innerType);
+        mIndirect.emplace(static_cast<const RED4ext::CResourceAsyncReference*>(aType)->innerType);
+        mDirect.emplace(aType);
+        break;
+    }
+    case RED4ext::ERTTIType::ResourceReference:
+    {
+        mIndirect.emplace(static_cast<const RED4ext::CResourceReference*>(aType)->innerType);
         mDirect.emplace(aType);
         break;
     }
     case RED4ext::ERTTIType::LegacySingleChannelCurve:
     {
         // Curves usually contain primitives
-        Accumulate(static_cast<RED4ext::CLegacySingleChannelCurve*>(aType)->curveType);
+        Accumulate(static_cast<const RED4ext::CLegacySingleChannelCurve*>(aType)->curveType);
         mDirect.emplace(aType);
         break;
     }
@@ -316,7 +390,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(RED4ext::IRTTIType* aType
     case RED4ext::ERTTIType::StaticArray:
     {
         // Arrays may contain Handles or Direct refs to other types
-        Accumulate(static_cast<RED4ext::CArrayBase*>(aType)->GetInnerType());
+        Accumulate(static_cast<const RED4ext::CArrayBase*>(aType)->GetInnerType());
         mDirect.emplace(aType);
         break;
     }
@@ -334,15 +408,313 @@ RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(RED4ext::IRTTIType* aType
     }
 }
 
+RED4EXT_INLINE EnumFileDescriptor::EnumFileDescriptor(const RED4ext::CEnum* pEnum, NameTransformer aNameTransformer,
+                                                      NameTransformer aQualifiedTransformer, DescriptorPath aTypeToPath)
+{
+    RED4ext::CName enumName;
+    pEnum->GetName(enumName);
+
+    name = aNameTransformer(pEnum);
+    nameQualified = aQualifiedTransformer(pEnum);
+    trueName = enumName.ToString();
+    directory = aTypeToPath(pEnum);
+
+    auto aliasName = RED4ext::CRTTISystem::Get()->nativeToScript.Get(enumName);
+    if (aliasName)
+    {
+        alias = aliasName->ToString();
+    }
+
+    size = pEnum->GetSize();
+
+    for (uint32_t i = 0; i < pEnum->hashList.size; ++i)
+    {
+        enumMap[pEnum->valueList[i]] = pEnum->hashList[i].ToString();
+    }
+
+    for (uint32_t i = 0; i < pEnum->unk48.size; ++i)
+    {
+        enumAlias[pEnum->unk48[i].ToString()] = pEnum->unk58[i];
+    }
+}
+
+RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer)
+{
+    aFilePath /= directory;
+    std::filesystem::create_directories(aFilePath);
+    aFilePath /= name + ".hpp";
+
+    std::ofstream o(aFilePath);
+
+    o << "#pragma once" << std::endl << std::endl;
+
+    o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
+
+    o << "#include <cstdint>" << std::endl;
+
+    o << "namespace RED4ext" << std::endl;
+    o << "{" << std::endl;
+
+    auto nsIndex = nameQualified.find_last_of("::");
+    if (nsIndex != std::string::npos)
+    {
+        auto ns = nameQualified.substr(0, nsIndex - 1);
+        o << "namespace " << ns << " { " << std::endl;
+        o << "enum class " << name;
+    }
+    else
+    {
+        o << "enum class " << nameQualified;
+    }
+
+    o << " : ";
+
+    switch (size)
+    {
+    case sizeof(uint8_t):
+    {
+        o << "uint8_t";
+        break;
+    }
+    case sizeof(uint16_t):
+    {
+        o << "uint16_t";
+        break;
+    }
+    case sizeof(uint32_t):
+    {
+        o << "uint32_t";
+        break;
+    }
+    case sizeof(uint64_t):
+    {
+        o << "uint64_t";
+        break;
+    }
+    default:
+        break;
+    }
+
+    o << std::endl;
+    o << "{" << std::endl;
+
+    for (auto ev : enumMap)
+    {
+        bool isModified = false;
+        o << "    " << aSanitizer(ev.second, isModified) << " = ";
+
+        switch (size)
+        {
+        case sizeof(uint8_t):
+        {
+            o << static_cast<uint32_t>(static_cast<uint8_t>(ev.first));
+            break;
+        }
+        case sizeof(uint16_t):
+        {
+            o << static_cast<uint16_t>(ev.first);
+            break;
+        }
+        case sizeof(uint32_t):
+        {
+            o << static_cast<uint32_t>(ev.first);
+            break;
+        }
+        case sizeof(uint64_t):
+        {
+            o << static_cast<uint64_t>(ev.first);
+            break;
+        }
+        default:
+            break;
+        }
+
+        o << ",";
+
+        if (isModified)
+        {
+            o << " // " << ev.second;
+        }
+
+        o << std::endl;
+    }
+
+    for (auto eAlias : enumAlias)
+    {
+        bool isLeftModified = false;
+        bool isRightModified = false;
+        o << "    " << aSanitizer(eAlias.first, isLeftModified) << " = "
+          << aSanitizer(enumMap[eAlias.second], isRightModified);
+        o << ",";
+
+        if (isLeftModified || isRightModified)
+        {
+            o << " // " << eAlias.first << " = " << enumMap[eAlias.second];
+        }
+
+        o << std::endl;
+    }
+
+    o << "};" << std::endl;
+
+    if (nsIndex != std::string::npos)
+    {
+        auto ns = nameQualified.substr(0, nsIndex - 1);
+        o << "} // namespace " << ns << std::endl;
+    }
+
+    if (!alias.empty() && alias != trueName)
+    {
+        o << "using " << alias << " = " << nameQualified << ";" << std::endl;
+    }
+
+    o << "} // namespace RED4ext" << std::endl;
+}
+
+RED4EXT_INLINE BitfieldFileDescriptor::BitfieldFileDescriptor(const RED4ext::CBitfield* pBitfield,
+                                                              NameTransformer aNameTransformer,
+                                                              NameTransformer aQualifiedTransformer,
+                                                              DescriptorPath aTypeToPath)
+{
+    RED4ext::CName bitfieldName;
+    pBitfield->GetName(bitfieldName);
+
+    name = aNameTransformer(pBitfield);
+    nameQualified = aQualifiedTransformer(pBitfield);
+    trueName = bitfieldName.ToString();
+    directory = aTypeToPath(pBitfield);
+
+    auto aliasName = RED4ext::CRTTISystem::Get()->nativeToScript.Get(bitfieldName);
+    if (aliasName)
+    {
+        alias = aliasName->ToString();
+    }
+
+    size = pBitfield->GetSize();
+
+    uint64_t validBits = pBitfield->validBits;
+    uint32_t i = 0;
+    while (i < size * 8)
+    {
+        if (validBits & 1)
+        {
+            bitNames.push_back(pBitfield->bitNames[i].ToString());
+        }
+        else
+        {
+            bitNames.push_back("b" + std::to_string(i));
+        }
+
+        validBits >>= 1;
+        ++i;
+    }
+}
+
+RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer)
+{
+    aFilePath /= directory;
+    std::filesystem::create_directories(aFilePath);
+    aFilePath /= name + ".hpp";
+
+    std::ofstream o(aFilePath);
+
+    o << "#pragma once" << std::endl << std::endl;
+
+    o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
+
+    o << "#include <cstdint>" << std::endl;
+
+    o << "namespace RED4ext" << std::endl;
+    o << "{" << std::endl;
+
+    auto nsIndex = nameQualified.find_last_of("::");
+    if (nsIndex != std::string::npos)
+    {
+        auto ns = nameQualified.substr(0, nsIndex - 1);
+        o << "namespace " << ns << " { " << std::endl;
+        o << "struct " << name;
+    }
+    else
+    {
+        o << "struct " << nameQualified;
+    }
+
+    o << std::endl;
+    o << "{" << std::endl;
+
+    uint32_t i = 0;
+    for (auto& bitName : bitNames)
+    {
+        o << "    ";
+        switch (size)
+        {
+        case sizeof(uint8_t):
+        {
+            o << "uint8_t";
+            break;
+        }
+        case sizeof(uint16_t):
+        {
+            o << "uint16_t";
+            break;
+        }
+        case sizeof(uint32_t):
+        {
+            o << "uint32_t";
+            break;
+        }
+        case sizeof(uint64_t):
+        {
+            o << "uint64_t";
+            break;
+        }
+        default:
+            break;
+        }
+
+        bool isModified = false;
+        o << " " << aSanitizer(bitName, isModified) << " : 1; // " << i++;
+        if (isModified)
+        {
+            o << " " << bitName;
+        }
+        o << std::endl;
+    }
+
+    o << "};" << std::endl;
+
+    o << "RED4EXT_ASSERT_SIZE(" << name << ", 0x" << std::hex << std::uppercase << size << ");" << std::endl;
+
+    if (nsIndex != std::string::npos)
+    {
+        auto ns = nameQualified.substr(0, nsIndex - 1);
+        o << "} // namespace " << ns << std::endl;
+    }
+
+    if (!alias.empty() && alias != trueName)
+    {
+        o << "using " << alias << " = " << nameQualified << ";" << std::endl;
+    }
+
+    o << "} // namespace RED4ext" << std::endl;
+}
+
 RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                                                              NameTransformer aQualifiedTransformer,
-                                                             DescriptorPath aTypeToPath)
+                                                             DescriptorPath aTypeToPath,
+                                                             const FixedTypeMapping& aFixedMapping, bool aVerbose)
 {
     RED4ext::CName name;
     pType->GetName(name);
 
     aFd.name = aNameTransformer(pType);
     aFd.nameQualified = aQualifiedTransformer(pType);
+
+    auto aliasName = RED4ext::CRTTISystem::Get()->nativeToScript.Get(name);
+    if (aliasName)
+    {
+        aFd.alias = aliasName->ToString();
+    }
 
     aFd.trueName = name.ToString();
     aFd.size = pType->GetSize();
@@ -363,7 +735,19 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         case RED4ext::ERTTIType::BitField:
         case RED4ext::ERTTIType::Class:
         {
-            aFd.includes.emplace(aTypeToPath(dir) + aNameTransformer(dir));
+            RED4ext::CName includeName;
+            dir->GetName(includeName);
+
+            // Redirect dependencies if they are part of the fixed mappings
+            auto it = aFixedMapping.find(includeName);
+            if (it != aFixedMapping.end())
+            {
+                aFd.includes.emplace(it->second);
+            }
+            else
+            {
+                aFd.includes.emplace(aTypeToPath(dir) + aNameTransformer(dir));
+            }
             break;
         }
         case RED4ext::ERTTIType::Array:
@@ -389,7 +773,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         case RED4ext::ERTTIType::LegacySingleChannelCurve:
         case RED4ext::ERTTIType::Simple:
         {
-            aFd.includes.emplace("SimpleTypes");
+            aFd.includes.emplace("Types/SimpleTypes");
             break;
         }
         default:
@@ -402,91 +786,102 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         aFd.fwdDeclarations.emplace(aQualifiedTransformer(ind));
     }
 
-    std::array<
-        std::tuple<std::map<uint64_t, RED4ext::CProperty*>*, std::vector<ClassFileDescriptor::PropertyDescriptor>*>, 2>
+    std::array<std::tuple<std::map<uint64_t, const RED4ext::CProperty*>*,
+                          std::vector<ClassFileDescriptor::PropertyDescriptor>*>,
+               2>
         props = {make_tuple(&mPropertyMap, &aFd.properties), make_tuple(&mHolderPropertyMap, &aFd.holderProperties)};
 
     for (auto propList : props)
     {
         for (auto& prop : *std::get<0>(propList))
         {
-            std::string propTypeName = TypeToString(prop.second->type, aNameTransformer);
-            std::string propTypeNameQualified = TypeToString(prop.second->type, aQualifiedTransformer);
+            std::string propTypeName = TypeToString(prop.second->type, aNameTransformer, aVerbose);
+            std::string propTypeNameQualified = TypeToString(prop.second->type, aQualifiedTransformer, aVerbose);
             std::string propName = prop.second->name.ToString();
 
-            // Filter invalid characters, WHY are some like this?
-            bool isValid =
-                !propName.empty() && propName.find_first_of(' ') == std::string::npos &&
-                propName.find_first_of('-') == std::string::npos && propName.find_first_of('\'') == std::string::npos &&
-                propName.find_first_of('(') == std::string::npos && propName.find_first_of(')') == std::string::npos;
-
             std::get<1>(propList)->push_back(
-                {propTypeName, propTypeNameQualified, propName, isValid, prop.first, prop.second->type->GetSize()});
+                {propTypeName, propTypeNameQualified, propName, prop.first, prop.second->type->GetSize()});
         }
     }
 }
 
-RED4EXT_INLINE std::string TypeToString(RED4ext::IRTTIType* aType, NameTransformer aNameTransformer)
+RED4EXT_INLINE std::string TypeToString(const RED4ext::IRTTIType* aType, NameTransformer aNameTransformer,
+                                        bool aVerbose)
 {
     // Handle some simple type conversions and fundamentals
     static std::unordered_map<std::string, std::string> s_typeMap = {
         {"Int8", "int8_t"},   {"Int16", "int16_t"},   {"Int32", "int32_t"},   {"Int64", "int64_t"},
         {"Uint8", "uint8_t"}, {"Uint16", "uint16_t"}, {"Uint32", "uint32_t"}, {"Uint64", "uint64_t"},
-        {"Float", "float"},   {"Bool", "bool"},       {"String", "CString"},  {"gameItemID", "ItemID"}};
+        {"Float", "float"},   {"Bool", "bool"},       {"String", "CString"},  {"gameItemID", "ItemID"},
+        {"Double", "double"}};
 
     std::string typeName;
+
     switch (aType->GetType())
     {
     case RED4ext::ERTTIType::WeakHandle:
     {
-        typeName = "WeakHandle<" +
-                   TypeToString(static_cast<RED4ext::CWeakHandle*>(aType)->GetInnerType(), aNameTransformer) + ">";
+        typeName =
+            "WeakHandle<" +
+            TypeToString(static_cast<const RED4ext::CWeakHandle*>(aType)->GetInnerType(), aNameTransformer, aVerbose) +
+            ">";
         break;
     }
     case RED4ext::ERTTIType::Handle:
     {
         typeName =
-            "Handle<" + TypeToString(static_cast<RED4ext::CHandle*>(aType)->GetInnerType(), aNameTransformer) + ">";
+            "Handle<" +
+            TypeToString(static_cast<const RED4ext::CHandle*>(aType)->GetInnerType(), aNameTransformer, aVerbose) + ">";
         break;
     }
     case RED4ext::ERTTIType::Array:
     {
         typeName =
-            "DynArray<" + TypeToString(static_cast<RED4ext::CArray*>(aType)->GetInnerType(), aNameTransformer) + ">";
+            "DynArray<" +
+            TypeToString(static_cast<const RED4ext::CArray*>(aType)->GetInnerType(), aNameTransformer, aVerbose) + ">";
         break;
     }
     case RED4ext::ERTTIType::ResourceAsyncReference:
     {
         typeName = "RaRef<" +
-                   TypeToString(static_cast<RED4ext::CResourceAsyncReference*>(aType)->innerType, aNameTransformer) +
+                   TypeToString(static_cast<const RED4ext::CResourceAsyncReference*>(aType)->innerType,
+                                aNameTransformer, aVerbose) +
                    ">";
         break;
     }
     case RED4ext::ERTTIType::ResourceReference:
     {
-        typeName =
-            "Ref<" + TypeToString(static_cast<RED4ext::CResourceReference*>(aType)->innerType, aNameTransformer) + ">";
+        typeName = "Ref<" +
+                   TypeToString(static_cast<const RED4ext::CResourceReference*>(aType)->innerType, aNameTransformer,
+                                aVerbose) +
+                   ">";
         break;
     }
     case RED4ext::ERTTIType::LegacySingleChannelCurve:
     {
         typeName = "CurveData<" +
-                   TypeToString(static_cast<RED4ext::CLegacySingleChannelCurve*>(aType)->curveType, aNameTransformer) +
+                   TypeToString(static_cast<const RED4ext::CLegacySingleChannelCurve*>(aType)->curveType,
+                                aNameTransformer, aVerbose) +
                    ">";
         break;
     }
     case RED4ext::ERTTIType::StaticArray:
     {
-        auto staticArray = static_cast<RED4ext::CStaticArray*>(aType);
+        if (aType->GetAlignment() >= sizeof(void*))
+        {
+            typeName = "alignas(" + std::to_string(aType->GetAlignment()) + ") ";
+        }
 
-        typeName = "StaticArray<" + TypeToString(staticArray->GetInnerType(), aNameTransformer) + ", " +
-                   std::to_string(staticArray->GetMaxLength()) + ">";
+        auto staticArray = static_cast<const RED4ext::CStaticArray*>(aType);
+
+        typeName += "StaticArray<" + TypeToString(staticArray->GetInnerType(), aNameTransformer, aVerbose) + ", " +
+                    std::to_string(staticArray->GetMaxLength()) + ">";
         break;
     }
     case RED4ext::ERTTIType::NativeArray:
     {
-        auto nativeArray = static_cast<RED4ext::CNativeArray*>(aType);
-        typeName = "NativeArray<" + TypeToString(nativeArray->GetInnerType(), aNameTransformer) + ", " +
+        auto nativeArray = static_cast<const RED4ext::CNativeArray*>(aType);
+        typeName = "NativeArray<" + TypeToString(nativeArray->GetInnerType(), aNameTransformer, aVerbose) + ", " +
                    std::to_string(nativeArray->GetMaxLength()) + ">";
         break;
     }
@@ -510,13 +905,9 @@ RED4EXT_INLINE std::string TypeToString(RED4ext::IRTTIType* aType, NameTransform
         {
             typeName = aNameTransformer(aType);
         }
-
-        return typeName;
     }
-
         // case RED4ext::ERTTIType::Pointer:
         // case RED4ext::ERTTIType::ScriptReference:
-
     default:
     {
         break;
@@ -537,10 +928,16 @@ RED4EXT_INLINE std::string TypeToString(RED4ext::IRTTIType* aType, NameTransform
                    tName.c_str() + ") */";
     }
 
+    if (aVerbose)
+    {
+        typeName += " /* align(" + std::to_string(aType->GetAlignment()) + ") size(" +
+                    std::to_string(aType->GetSize()) + ") */";
+    }
+
     return typeName;
 }
 
-RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePath)
+RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer)
 {
     aFilePath /= directory;
     std::filesystem::create_directories(aFilePath);
@@ -606,7 +1003,16 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     o << std::endl;
     o << "{" << std::endl;
 
-    o << "    constexpr CName NAME = FNV1a(\"" << trueName << "\");" << std::endl << std::endl;
+    o << "    static constexpr const char* NAME = \"" << trueName << "\";" << std::endl;
+    if (!alias.empty())
+    {
+        o << "    static constexpr const char* ALIAS = \"" << alias << "\";" << std::endl;
+    }
+    else
+    {
+        o << "    static constexpr const char* ALIAS = NAME;" << std::endl;
+    }
+    o << std::endl;
 
     if (holderProperties.size())
     {
@@ -633,11 +1039,16 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
             o << "        " << prop.typeQualified << " ";
 
+            bool isSanitized = false;
+            std::string propName = aSanitizer(prop.name, isSanitized);
+
+            bool isValid = !prop.name.empty();
+
             // Some properties have C++ invalid names for unknown reasons, we will convert to something valid
             // and then print the original name in the comment
-            if (prop.isNameValid)
+            if (isValid)
             {
-                o << prop.name;
+                o << propName;
             }
             else
             {
@@ -645,7 +1056,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
             }
 
             o << "; // " << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << prop.offset;
-            if (!prop.isNameValid)
+            if (!isValid || isSanitized)
             {
                 o << " -- " << prop.name;
             }
@@ -662,7 +1073,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
     if (properties.size())
     {
-        size_t lastOffset = properties[0].offset;
+        size_t lastOffset = parentSize;
         size_t lastSize = 0;
 
         for (auto prop : properties)
@@ -682,11 +1093,16 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
             o << "    " << prop.typeQualified << " ";
 
+            bool isSanitized = false;
+            std::string propName = aSanitizer(prop.name, isSanitized);
+
+            bool isValid = !prop.name.empty();
+
             // Some properties have C++ invalid names for unknown reasons, we will convert to something valid
             // and then print the original name in the comment
-            if (prop.isNameValid)
+            if (isValid)
             {
-                o << prop.name;
+                o << propName;
             }
             else
             {
@@ -694,7 +1110,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
             }
 
             o << "; // " << std::hex << std::setw(2) << std::setfill('0') << std::uppercase << prop.offset;
-            if (!prop.isNameValid)
+            if (!isValid || isSanitized)
             {
                 o << " -- " << prop.name;
             }
@@ -737,7 +1153,25 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
         o << "} // namespace " << ns << std::endl;
     }
 
+    if (!alias.empty() && alias != trueName)
+    {
+        o << "using " << alias << " = " << nameQualified << ";" << std::endl;
+    }
+
     o << "} // namespace RED4ext" << std::endl;
+}
+
+void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::string>& aIncludes)
+{
+    std::filesystem::create_directories(aFilePath);
+    aFilePath /= "Generated.cpp";
+
+    std::ofstream o(aFilePath);
+
+    for (auto& inc : aIncludes)
+    {
+        o << "#include <RED4ext/" << inc << ".hpp>" << std::endl;
+    }
 }
 
 } // namespace RED4ext::GameReflection

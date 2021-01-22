@@ -1,7 +1,7 @@
 #pragma once
 
-#include <cstdint>
 #include <Windows.h>
+#include <cstdint>
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
@@ -56,28 +56,24 @@ struct CRTTISystem : IRTTISystem
 {
     static CRTTISystem* Get();
 
-    HashMap<CName, IRTTIType*> types;
-    HashMap<void*, void*> typeByIds;
-    HashMap<void*, void*> typeIds;
-    HashMap<CName, CGlobalFunction*> funcs;
-    HashMap<void*, void*> unkC8;
-    HashMap<void*, void*> unkF8;
-    int64_t unk128;
-    DynArray<void*> unk130;
-    DynArray<void*> unk140;
-    int64_t unk150;
-    int64_t unk158;
-    int64_t unk160;
-    int64_t unk168;
-    int32_t unk170;
-    int32_t unk174;
-    HashMap<void*, void*> unk178;
-    int64_t unk1A8;
-    DynArray<void*> unk1B0;
-    DynArray<void*> unk1C0;
-    CRITICAL_SECTION unk1D0;
-    uint8_t unk1F8;
-    CRITICAL_SECTION unk200;
+    uint64_t unk08;                          // 08
+    HashMapBase<CName, IRTTIType*> types;    // 10
+    HashMap<uint64_t, IRTTIType*> typeByIds; // 38
+    HashMap<CName, uint64_t> typeIds;        // 68
+    HashMap<CName, CGlobalFunction*> funcs;  // 98
+    HashMap<CName, CBaseFunction*> unkC8;    // C8
+    HashMap<CName, CName> unkF8;             // F8
+    int64_t unk128;                          // 128
+    DynArray<void*> unk130;                  // 130
+    DynArray<void*> unk140;                  // 140
+    HashMapBase<CName, CName> scriptToNative; // 150
+    HashMap<CName, CName> nativeToScript;    // 178
+    int64_t unk1A8;                          // 1A8
+    DynArray<void*> unk1B0;                  // 1B0
+    DynArray<void*> unk1C0;                  // 1C0
+    CRITICAL_SECTION unk1D0;                 // 1D0
+    uint8_t unk1F8;                          // 1F8
+    CRITICAL_SECTION unk200;                 // 200
 };
 RED4EXT_ASSERT_SIZE(CRTTISystem, 0x228);
 } // namespace RED4ext

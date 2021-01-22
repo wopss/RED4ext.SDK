@@ -12,13 +12,15 @@ struct CName
 
     operator uint64_t() const noexcept;
 
+    size_t operator()(const CName& aName) const;
+
     bool operator==(const CName& aRhs) const noexcept;
     bool operator!=(const CName& aRhs) const noexcept;
 
     bool operator==(const uint64_t aRhs) const noexcept;
     bool operator!=(const uint64_t aRhs) const noexcept;
 
-    const char* ToString();
+    const char* ToString() const;
     bool IsEmpty() const noexcept;
 
     uint64_t hash; // 00

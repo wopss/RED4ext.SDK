@@ -6,9 +6,9 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
-#include <RED4ext/Handle.hpp>
 
 namespace RED4ext
 {
@@ -19,12 +19,16 @@ struct CScnSceneSystem;
 struct CScriptedPuppet;
 struct CEntMorphTargetManagerComponent;
 struct CGameuiCharacterCreationPuppetPreviewGameController;
+struct CGameuiCharacterCustomizationInfo;
 struct CGameuiCharacterCustomizationOptionImpl;
 struct CGameuiCharacterCustomizationAction;
 struct CGameuiIndexedAppearanceDefinition;
+struct CGameuiICharacterCustomizationComponent;
+struct CGameuiPreviewGameController;
 
 struct CGameuiCharacterCustomizationSystem : IScriptable
 {
+    virtual void sub_110() = 0;
     virtual void sub_118() = 0;
     virtual void sub_120() = 0;
     virtual void sub_128() = 0;
@@ -50,15 +54,18 @@ struct CGameuiCharacterCustomizationSystem : IScriptable
     virtual void sub_1C8() = 0;
     virtual void sub_1D0() = 0;
     virtual void sub_1D8() = 0;
-    virtual void LoadGenderCustomizationData(void* unk1, bool isMale, void* unk3) = 0; // Load Gender Customization data
+    virtual void LoadGenderCustomizationData(Handle<CScriptedPuppet>& puppet, bool isMale,
+                                             Handle<CGameuiPreviewGameController>& ccPuppetPreviewGameController) = 0;
     virtual void sub_1E8() = 0;
-    virtual void sub_1F0() = 0;
-    virtual void sub_1F8() = 0;
-    virtual void sub_200() = 0;
+    virtual void GetBodyOptions(const CName& presetName,
+                                DynArray<Handle<CGameuiCharacterCustomizationInfo>>& options) = 0;
+    virtual void GetHeadOptions(const CName& presetName,
+                                DynArray<Handle<CGameuiCharacterCustomizationInfo>>& options) = 0;
+    virtual void GetArmsOptions(const CName& presetName,
+                                DynArray<Handle<CGameuiCharacterCustomizationInfo>>& options) = 0;
     virtual void sub_208() = 0;
     virtual void sub_210() = 0;
-    virtual void ApplyChangeToOption(const Handle<CGameuiCharacterCustomizationOptionImpl>& option,
-                                     uint32_t newIndex) = 0;
+    virtual void ApplyChangeToOption(Handle<CGameuiCharacterCustomizationInfo>& option, int32_t newIndex) = 0;
     virtual void sub_220() = 0;
     virtual void sub_228() = 0;
     virtual void sub_230() = 0;
@@ -68,58 +75,57 @@ struct CGameuiCharacterCustomizationSystem : IScriptable
     virtual void sub_250() = 0;
     virtual void sub_258() = 0;
 
-    uintptr_t unk40;                                               // 40
-    CWorldRuntimeSystemEntityAppearanceChanger* appearanceChanger; // 48
-    uintptr_t unk50;                                               // 50
-    CGameuiCharacterCustomizationState* customizationState;        // 58
-    uintptr_t unk60;                                               // 60
-    uintptr_t unk68;                                               // 68
-    CGameuiCharacterCustomizationInfoResource* unk70;              // 70
-    uintptr_t unk78;                                               // 78
-    uintptr_t unk80;                                               // 80
-    uintptr_t unk88;                                               // 88
-    DynArray<void*> unk90;                                         // 90
-    uintptr_t unkA0;                                               // A0
-    DynArray<void*> unkA8;                                         // A8
-    DynArray<void*> unkB8;                                         // B8
-    uintptr_t unkC8;                                               // C8
-    DynArray<void*> unkD0;                                         // D0
-    CScriptedPuppet* unkE0;                                        // E0
-    uintptr_t unkE8;                                               // E8
-    CEntMorphTargetManagerComponent* unkF0;                        // F0
-    uintptr_t unkF8;                                               // F8
-    DynArray<void*> unk100;                                        // 100
-    uintptr_t unk110;                                              // 110
-    DynArray<uint64_t> unk118;                                     // 118 - Array of hashes?
-    DynArray<void*> unk128;                                        // 128
-    DynArray<void*> unk138;                                        // 138
-    DynArray<void*> unk148;                                        // 148
-    HashMapBase<uint64_t, uint64_t> unk158;                        // 158
-    uintptr_t unk180[(0x1B8 - 0x180) >> 3];
-    DynArray<void*> unk1B8;                                                 // 1B8
-    DynArray<void*> unk1C8;                                                 // 1C8
-    uintptr_t unk1D8;                                                       // 1D8
-    uintptr_t unk1E0;                                                       // 1E0
-    uintptr_t unk1E8;                                                       // 1E8
-    uintptr_t unk1F0;                                                       // 1F0
-    CGameuiCharacterCreationPuppetPreviewGameController* previewController; // 1F8
-    uintptr_t unk200;                                                       // 200
-    uintptr_t unk208;                                                       // 208
-    uintptr_t unk210;                                                       // 210
-    uintptr_t unk218;                                                       // 218
-    uintptr_t unk220;                                                       // 220
-    uintptr_t unk228;                                                       // 228
-    uintptr_t unk230;                                                       // 230
-    DynArray<void*> unk238;                                                 // 238
-    uintptr_t unk248;                                                       // 248
-    uintptr_t unk250;                                                       // 250
-    uintptr_t unk258;                                                       // 258
-    DynArray<void*> unk260;                                                 // 260
-    uintptr_t unk270;                                                       // 270
-    uintptr_t unk278;                                                       // 278
-    CScnSceneSystem* scnSceneSystem;                                        // 280
-    uintptr_t unk288[(0x2B8 - 0x288) >> 3];
-    DynArray<Handle<IScriptable>> controllers; // 2B8 - Genital controllers?
+    uintptr_t unk40;                                                               // 40
+    CWorldRuntimeSystemEntityAppearanceChanger* appearanceChanger;                 // 48
+    uintptr_t unk50;                                                               // 50
+    Handle<CGameuiCharacterCustomizationState> customizationState;                 // 58
+    uintptr_t unk68;                                                               // 68 - SpinLock
+    Handle<CGameuiCharacterCustomizationInfoResource> resource;                    // 70
+    uintptr_t unk80;                                                               // 80
+    uintptr_t unk88;                                                               // 88
+    DynArray<Handle<CGameuiCharacterCustomizationInfo>> headOptions;               // 90
+    CName unkA0;                                                                   // A0
+    DynArray<CName> unkA8;                                                         // A8
+    DynArray<Handle<CGameuiCharacterCustomizationInfo>> armsOptions;               // B8
+    CName unkC8;                                                                   // C8
+    DynArray<CName> unkD0;                                                         // D0
+    Handle<CScriptedPuppet> unkE0;                                                 // E0
+    Handle<CEntMorphTargetManagerComponent> unkF0;                                 // F0
+    DynArray<Handle<CGameuiCharacterCustomizationInfo>> bodyOptions;               // 100
+    uintptr_t unk110;                                                              // 110
+    DynArray<CName> unk118;                                                        // 118
+    DynArray<void*> unk128;                                                        // 128
+    DynArray<void*> unk138;                                                        // 138
+    DynArray<void*> unk148;                                                        // 148
+    HashMapBase<uint64_t, uint64_t> unk158;                                        // 158
+    uintptr_t unk180[(0x1B8 - 0x180) >> 3];                                        // 180
+    DynArray<void*> unk1B8;                                                        // 1B8
+    DynArray<void*> unk1C8;                                                        // 1C8
+    uintptr_t unk1D8;                                                              // 1D8
+    uintptr_t unk1E0;                                                              // 1E0
+    uintptr_t unk1E8;                                                              // 1E8
+    uintptr_t unk1F0;                                                              // 1F0
+    Handle<CGameuiCharacterCreationPuppetPreviewGameController> previewController; // 1F8
+    uintptr_t unk208;                                                              // 208
+    uintptr_t unk210;                                                              // 210
+    uintptr_t unk218;                                                              // 218
+    Handle<CGameuiCharacterCustomizationInfo> optionToChange;                      // 220
+    int32_t newIndex;                                                              // 230
+    uint32_t unk234;                                                               // 234
+    DynArray<void*> unk238;                                                        // 238
+    uintptr_t unk248;                                                              // 248
+    uintptr_t unk250;                                                              // 250
+    uintptr_t unk258;                                                              // 258
+    DynArray<void*> unk260;                                                        // 260
+    uintptr_t unk270;                                                              // 270
+    CName unk278;                                                                  // 278
+    CScnSceneSystem* scnSceneSystem;                                               // 280
+    WeakHandle<CGameuiCharacterCustomizationSystem> unk290;                        // 290
+    uintptr_t unk298;                                                              // 298
+    uintptr_t unk2A0;                                                              // 2A0
+    uintptr_t unk2A8;                                                              // 2A8
+    uintptr_t unk2B0;                                                              // 2B0
+    DynArray<Handle<CGameuiICharacterCustomizationComponent>> controllers;         // 2B8 - Genital controllers?
 };
 RED4EXT_ASSERT_OFFSET(CGameuiCharacterCustomizationSystem, appearanceChanger, 0x48);
 RED4EXT_ASSERT_OFFSET(CGameuiCharacterCustomizationSystem, unk158, 0x158);
@@ -166,10 +172,10 @@ struct CGameuiSwitcherInfo : CGameuiCharacterCustomizationInfo
 
 struct CGameuiCharacterCustomizationOptionImpl : IScriptable
 {
-    virtual void GetGameuiMorphInfo(Handle<CGameuiMorphInfo>& unk1) = 0;           // 118
-    virtual void GetGameuiAppearanceInfo(Handle<CGameuiAppearanceInfo>& unk1) = 0; // 120
-    virtual void GetGameuiSwitcherInfo(Handle<CGameuiSwitcherInfo>& unk1) = 0;     // 128
-    virtual void Unk_130(int32_t unk1) = 0;
+    virtual void GetMorphInfo(Handle<CGameuiMorphInfo>& info) = 0;           // 110
+    virtual void GetAppearanceInfo(Handle<CGameuiAppearanceInfo>& info) = 0; // 118
+    virtual void GetSwitcherInfo(Handle<CGameuiSwitcherInfo>& info) = 0;     // 120
+    virtual void SetCurrentIndex(int32_t curIndex) = 0;                      // 128
 
     Handle<CGameuiCharacterCustomizationInfo> info; // 40
     uint32_t bodyPart;                              // 50 - Enum
