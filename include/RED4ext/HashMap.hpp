@@ -4,89 +4,126 @@
 #include <functional>
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/IMemoryAllocator.hpp>
+#include <RED4ext/REDhash.hpp>
 
 namespace RED4ext
 {
-template<typename K, typename T>
-struct HashMapBase
-{
-    static const uint32_t INVALID_INDEX = -1;
-
-    struct Node
+#pragma region HashMapHash
+    template<typename T, typename enable = void /* for enable_if specialization */>
+    struct HashMapHash
     {
-        uint32_t next;  // 00
-        uint32_t index; // 04
-        K key;          // 08
-        T value;        // 10
+        uint32_t operator()(const T& aKey) const noexcept
+        {
+            // You can pass your own hasher as the 3rd template argument to the HashMap
+            // Or you can make a specialized version of this class
+
+            static_assert(false, "Please define a HashMapHash<T> specialization for your key type.");
+        }
     };
 
-    void for_each(std::function<void(const K, T&)> aFunctor)
+    template<typename T>
+    struct HashMapHash<T, std::enable_if_t<std::is_convertible_v<T, uint32_t>>>
     {
-        uint32_t index = 0;
-        uint32_t count = 0;
-        while (true)
-        {
-            uint32_t idx = indexTable[index++];
-            if (index >= capacity)
-            {
-                break;
-            }
+        // Let's give this a try :)
 
-            while (idx != INVALID_INDEX)
+        uint32_t operator()(const T& aKey) const noexcept
+        {
+            return static_cast<uint32_t>(aKey);
+        }
+    };
+
+    template<typename T>
+    struct HashMapHash<T, std::enable_if_t<std::is_pointer_v<T>>>
+    {
+        // Used in TweakDB, probably the same for all pointer keys
+
+        uint32_t operator()(const T& aKey) const noexcept
+        {
+            return FNV1a32(reinterpret_cast<const uint8_t*>(&aKey), sizeof(void*));
+        }
+    };
+#pragma endregion
+
+    template<typename K, typename T, typename Hasher = HashMapHash<K>>
+    struct HashMap
+    {
+        static const uint32_t INVALID_INDEX = -1;
+
+        struct Node
+        {
+            uint32_t next;  // 00
+            uint32_t index; // 04
+            K key;          // 08
+            T value;        // 10
+        };
+
+        void for_each(std::function<void(const K&, T&)> aFunctor) const
+        {
+            uint32_t index = 0;
+            uint32_t count = 0;
+            while (true)
             {
-                Node* node = reinterpret_cast<Node*>(nodes + idx * stride);
-                if (!node)
+                uint32_t idx = indexTable[index++];
+                if (index >= capacity)
                 {
                     break;
                 }
 
-                aFunctor(node->key, node->value);
+                while (idx != INVALID_INDEX)
+                {
+                    Node* node = reinterpret_cast<Node*>(nodes + idx * stride);
+                    if (!node)
+                    {
+                        break;
+                    }
+
+                    aFunctor(node->key, node->value);
+
+                    idx = node->next;
+                }
+            }
+        }
+
+        T* Get(const K& aKey) const
+        {
+            Node* found = nullptr;
+            uint32_t hashedKey = Hasher{}(aKey);
+            uint32_t idx = indexTable[hashedKey % capacity];
+            while (idx != INVALID_INDEX)
+            {
+                Node* node = reinterpret_cast<Node*>(nodes + idx * stride);
+                if (node->index == hashedKey && node->key == aKey)
+                {
+                    found = node;
+                    break;
+                }
 
                 idx = node->next;
             }
-        }
-    }
 
-    // TODO: Support other hashing methods, this assumes FNV1a64, GameInstance uses CRC32
-    T* Get(const K aKey) const
-    {
-        Node* found = nullptr;
-        uint32_t idx = indexTable[static_cast<uint32_t>(aKey) % capacity];
-        while (idx != INVALID_INDEX)
-        {
-            Node* node = reinterpret_cast<Node*>(nodes + idx * stride);
-            if (node->index == static_cast<uint32_t>(aKey) && node->key == aKey)
+            if (found)
             {
-                found = node;
-                break;
+                return &found->value;
             }
 
-            idx = node->next;
+            return nullptr;
         }
 
-        if (found)
+        IMemoryAllocator* GetAllocator() const
         {
-            return &found->value;
+            return reinterpret_cast<IMemoryAllocator*>(&allocator);
         }
 
-        return nullptr;
-    }
-
-    uint32_t* indexTable; // 00
-    uint32_t size;        // 08
-    uint32_t capacity;    // 0C
-    uintptr_t nodes;      // 10
-    uint32_t unk20;       // 18
-    uint32_t stride;      // 1C - sizeof(Node)
-    uint32_t unk28;       // 20
-    uint32_t unk2C;       // 24
-};
-RED4EXT_ASSERT_SIZE(RED4EXT_ASSERT_ESCAPE(HashMapBase<uint64_t, void*>), 0x28);
-
-template<typename K, typename T>
-struct HashMap : HashMapBase<K, T>
-{
-    virtual ~HashMap(){}; // Empty impl to indicate there's a vtable
-};
-RED4EXT_ASSERT_SIZE(RED4EXT_ASSERT_ESCAPE(HashMap<uint64_t, void*>), 0x30);
+        uint32_t* indexTable;   // 00
+        uint32_t size;          // 08
+        uint32_t capacity;      // 0C
+        uintptr_t nodes;        // 10
+        uint32_t unk18;         // 18
+        uint32_t stride;        // 1C - sizeof(Node)
+        uint32_t unk20;         // 20
+        uint32_t unk24;         // 24
+        uintptr_t allocator;    // 28
+    };
+    RED4EXT_ASSERT_SIZE(RED4EXT_ASSERT_ESCAPE(HashMap<uint64_t, void*>), 0x30);    
 } // namespace RED4ext
