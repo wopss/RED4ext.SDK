@@ -88,7 +88,7 @@ struct SharedDataBuffer
 };
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
-struct serializationDeferredDataBuffer
+struct DeferredDataBuffer
 {
     int64_t unk00; // 00
     int64_t unk08; // 08
@@ -101,7 +101,7 @@ struct serializationDeferredDataBuffer
     int64_t unk48; // 48
     int64_t unk50; // 50
 };
-RED4EXT_ASSERT_SIZE(serializationDeferredDataBuffer, 0x58);
+RED4EXT_ASSERT_SIZE(DeferredDataBuffer, 0x58);
 
 struct gamedataLocKeyWrapper
 {
@@ -159,9 +159,10 @@ using Ref = ResourceReference<T>;
 template<typename T, uint32_t MAX_LEN>
 struct StaticArray
 {
-    T entries[MAX_LEN + 1]; // 00
+    T entries[MAX_LEN]; // 00
+    uint32_t pad; // Wtf is this?
 };
-static_assert(sizeof(StaticArray<uint32_t, 10>) == 0x2C);
+static_assert(sizeof(StaticArray<std::array<uint8_t,5>, 32>) == 164); // StaticArray<GpuWrapApiVertexPackingPackingElement, 32>
 
 template<typename T, uint32_t MAX_LEN>
 using NativeArray = std::array<T, MAX_LEN>;

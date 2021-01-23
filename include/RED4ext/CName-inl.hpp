@@ -44,9 +44,9 @@ RED4EXT_INLINE bool RED4ext::CName::operator!=(const uint64_t aRhs) const noexce
     return hash != aRhs;
 }
 
-RED4EXT_INLINE const char* RED4ext::CName::ToString()
+RED4EXT_INLINE const char* RED4ext::CName::ToString() const
 {
-    static REDfunc<char* (*)(uint64_t&)> func(Addresses::CNamePool_Get);
+    static REDfunc<char* (*)(const uint64_t&)> func(Addresses::CNamePool_Get);
     auto result = func(hash);
     if (result)
     {
@@ -59,4 +59,9 @@ RED4EXT_INLINE const char* RED4ext::CName::ToString()
 RED4EXT_INLINE bool RED4ext::CName::IsEmpty() const noexcept
 {
     return hash == 0;
+}
+
+RED4EXT_INLINE size_t RED4ext::CName::operator()(const CName& aName) const
+{
+    return aName.hash;
 }

@@ -65,8 +65,6 @@ def get_groups() -> List[Group]:
         
         Group(name='Handle', functions=[
             Item(name='ctor', pattern='48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 60 33 ED', expected=1, index=0),
-            Item(name='DecWeakRef', pattern='40 53 48 83 EC 30 48 8B D9 48 8B 49 08 48 85 C9 74 43 B8 FF FF FF FF', expected=1, index=0),
-            Item(name='sub_0', pattern='48 8B 09 48 8B 01 48 FF A0 D0 00 00 00 CC', expected=1, index=0),
-            Item(name='sub_1', pattern='40 57 48 83 EC 30 48 8B 39 48 85 FF 74 3D 48 8B 07', expected=1, index=0)
+            Item(name='DecWeakRef', pattern='40 53 48 83 EC 30 48 8B D9 48 8B 49 08 48 85 C9 74 43 B8 FF FF FF FF', expected=1, index=0)
         ])
     ]
