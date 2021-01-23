@@ -65,7 +65,7 @@ struct TweakDB
         Debug           = 1 << 3
     };
 
-    SharedMutex mutex00;                                                    // 00 - used with values, valuesBuffer*, 
+    SharedMutex mutex00;                                                    // 00 - used with values and valuesBuffer*
     SharedMutex mutex01;                                                    // 01 - used with recordsByID, recordsByType, packageIDs, packageValues, groups and groupFlags
     void* unk08;                                                            // 08 - class - 264 bytes - has DynArray<GroupFlagCName> and DynArray<FlagVal-1byte>
     void* unk10;                                                            // 10 - class - 208 bytes

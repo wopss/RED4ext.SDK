@@ -1,4 +1,5 @@
 #pragma once
+#include <shared_mutex>
 
 #ifdef RED4EXT_STATIC_LIB
 #include <RED4ext/Types/TweakDB.hpp>
@@ -9,7 +10,10 @@
 
 RED4EXT_INLINE RED4ext::TweakDB::TweakVal* RED4ext::TweakDB::GetTweakVal(TweakDBID aDBID)
 {
-    if (!aDBID.IsValid()) return nullptr;
+    std::shared_lock<SharedMutex> _(mutex00);
+
+    if (!aDBID.IsValid())
+        return nullptr;
 
     // force get offset for now. i don't know if the game sets offset to 0 or leaves it uninitialized..
     if (true || aDBID.tdb_offset[0] == 0 && aDBID.tdb_offset[1] == 0 && aDBID.tdb_offset[2] == 0)
