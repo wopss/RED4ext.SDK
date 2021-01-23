@@ -6,7 +6,7 @@
 
 RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock()
 {
-    return _InterlockedCompareExchange8(&state, -1, 0) == -1;
+    return _InterlockedCompareExchange8(&state, -1, 0) == 0;
 };
 
 RED4EXT_INLINE void RED4ext::SharedMutex::lock()
@@ -36,8 +36,7 @@ RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock_shared()
     int32_t currentState = state;
     if (currentState != -1)
     {
-        int32_t expectedNewState = currentState + 1;
-        return _InterlockedCompareExchange8(&state, expectedNewState, currentState) == expectedNewState;
+        return _InterlockedCompareExchange8(&state, currentState + 1, currentState) == currentState;
     }
     return false;
 };
