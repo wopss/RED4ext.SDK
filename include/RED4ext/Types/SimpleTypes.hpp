@@ -40,11 +40,22 @@ RED4EXT_ASSERT_SIZE(CRUIDRef, 0x8);
 struct TweakDBID
 {
 #pragma pack(push, 1)
-    uint32_t name;  // 00 CRC32
-    uint8_t length; // 04
-    uint16_t unk05; // 05
-    uint8_t unk07;  // 07
+    union
+    {
+        uint64_t value = 0;
+        struct
+        {
+            uint32_t name_hash;     // 00 CRC32
+            uint8_t name_length;    // 04
+            uint8_t tdb_offset[3];  // 05
+        };
+    };
 #pragma pack(pop)
+
+    operator uint64_t() const noexcept;
+    bool operator==(const TweakDBID& aDBID) const noexcept;
+    bool IsValid() const noexcept;
+    uint32_t ToTDBOffset() const noexcept;
 };
 RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 
@@ -192,4 +203,9 @@ struct ScriptRef
     CName hash;             // 20
 };
 RED4EXT_ASSERT_SIZE(ScriptRef<void>, 0x28);
+
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Types/SimpleTypes-inl.hpp>
+#endif
