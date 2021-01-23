@@ -99,6 +99,9 @@ struct TweakDB
         return reinterpret_cast<T*>(stackType.value);
     }
 
+    Handle<IScriptable>* GetRecord(TweakDBID aDBID);
+    DynArray<Handle<IScriptable>>* GetRecordsByType(IRTTIType* apType);
+    DynArray<TweakDBID>* GetPackage(TweakDBID aDBID);
     TweakVal* GetTweakVal(TweakDBID aDBID);
     static TweakDB* Get();
 };

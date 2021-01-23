@@ -8,6 +8,31 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/REDptr.hpp>
 
+RED4EXT_INLINE RED4ext::Handle<RED4ext::IScriptable>* RED4ext::TweakDB::GetRecord(TweakDBID aDBID)
+{
+    std::shared_lock<SharedMutex> _(mutex01);
+
+    return recordsByID.Get(aDBID);
+}
+
+RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>>* RED4ext::TweakDB::GetRecordsByType(IRTTIType* apType)
+{
+    std::shared_lock<SharedMutex> _(mutex01);
+
+    return recordsByType.Get(apType);
+}
+
+RED4EXT_INLINE RED4ext::DynArray<RED4ext::TweakDBID>* RED4ext::TweakDB::GetPackage(TweakDBID aDBID)
+{
+    std::shared_lock<SharedMutex> _(mutex01);
+
+    for (uint32_t i = 0; i != packageIDs.size; ++i)
+    {
+        if (packageIDs[i] == aDBID)
+            return &packageValues[i];
+    }
+}
+
 RED4EXT_INLINE RED4ext::TweakDB::TweakVal* RED4ext::TweakDB::GetTweakVal(TweakDBID aDBID)
 {
     std::shared_lock<SharedMutex> _(mutex00);
