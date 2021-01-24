@@ -41,7 +41,7 @@ RED4EXT_INLINE RED4ext::TweakDB::TweakVal* RED4ext::TweakDB::GetTweakVal(TweakDB
         return nullptr;
 
     // force get offset for now. i don't know if the game sets offset to 0 or leaves it uninitialized..
-    if (true || aDBID.tdb_offset[0] == 0 && aDBID.tdb_offset[1] == 0 && aDBID.tdb_offset[2] == 0)
+    if (true || aDBID.tdbOffset[0] == 0 && aDBID.tdbOffset[1] == 0 && aDBID.tdbOffset[2] == 0)
     {
         const auto it = std::find(values.begin(), values.end(), aDBID);
         return it == values.end() ? nullptr : reinterpret_cast<TweakVal*>(valuesBuffer + it->ToTDBOffset());

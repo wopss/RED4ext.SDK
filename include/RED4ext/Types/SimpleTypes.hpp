@@ -45,9 +45,9 @@ struct TweakDBID
         uint64_t value = 0;
         struct
         {
-            uint32_t name_hash;     // 00 CRC32
-            uint8_t name_length;    // 04
-            uint8_t tdb_offset[3];  // 05
+            uint32_t nameHash;      // 00 CRC32
+            uint8_t nameLength;     // 04
+            uint8_t tdbOffset[3];   // 05
         };
     };
 #pragma pack(pop)
