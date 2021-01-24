@@ -50,6 +50,14 @@ struct TweakDB
         virtual bool ToValueOffset_Int32(uint32_t* apValueOffset) = 0;
         virtual CStackType* GetValue(CStackType* apStackType) = 0;
 
+        template<typename T>
+        T* GetValue()
+        {
+            CStackType stackType;
+            GetValue(&stackType);
+            return reinterpret_cast<T*>(stackType.value);
+        }
+
         bool SetValue(CStackType& aStackType);
         void SetValue(void* apValue);
 
@@ -88,15 +96,13 @@ struct TweakDB
     uintptr_t valuesBufferEnd;                                              // 138
 
     template<typename T>
-    RED4EXT_INLINE T* GetVal(TweakDBID aDBID)
+    T* GetValue(TweakDBID aDBID)
     {
         auto* tweakVal = GetTweakVal(aDBID);
         if (tweakVal == nullptr)
             return nullptr;
-
-        CStackType stackType;
-        tweakVal->GetValue(&stackType);
-        return reinterpret_cast<T*>(stackType.value);
+        
+        return tweakVal->GetValue<T>();
     }
 
     Handle<IScriptable>* GetRecord(TweakDBID aDBID);
