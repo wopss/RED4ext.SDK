@@ -4,17 +4,17 @@
 #include <RED4ext/Types/SharedMutex.hpp>
 #endif
 
-RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock()
+RED4EXT_INLINE bool RED4ext::SharedMutex::TryLock()
 {
     return _InterlockedCompareExchange8(&state, -1, 0) == 0;
-};
+}
 
-RED4EXT_INLINE void RED4ext::SharedMutex::lock()
+RED4EXT_INLINE void RED4ext::SharedMutex::Lock()
 {
     int32_t loopCount = 0;
     while (true)
     {
-        if (try_lock())
+        if (TryLock())
             break;
 
         // The following is not required but prefered
@@ -24,14 +24,14 @@ RED4EXT_INLINE void RED4ext::SharedMutex::lock()
         else if (!(loopCount & 511))
             SwitchToThread();
     }
-};
+}
 
-RED4EXT_INLINE void RED4ext::SharedMutex::unlock()
+RED4EXT_INLINE void RED4ext::SharedMutex::Unlock()
 {
     state = 0;
-};
+}
 
-RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock_shared()
+RED4EXT_INLINE bool RED4ext::SharedMutex::TryLockShared()
 {
     int32_t currentState = state;
     if (currentState != -1)
@@ -39,14 +39,14 @@ RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock_shared()
         return _InterlockedCompareExchange8(&state, currentState + 1, currentState) == currentState;
     }
     return false;
-};
+}
 
-RED4EXT_INLINE void RED4ext::SharedMutex::lock_shared()
+RED4EXT_INLINE void RED4ext::SharedMutex::LockShared()
 {
     int32_t loopCount = 0;
     while (true)
     {
-        if (try_lock_shared())
+        if (TryLockShared())
             break;
 
         // The following is not required but prefered
@@ -56,9 +56,43 @@ RED4EXT_INLINE void RED4ext::SharedMutex::lock_shared()
         else if (!(loopCount & 511))
             SwitchToThread();
     }
-};
+}
+
+RED4EXT_INLINE void RED4ext::SharedMutex::UnlockShared()
+{
+    _InterlockedExchangeAdd8(&state, -1);
+}
+
+// --------------------------------------------
+// -- support for lock_guard and shared_lock --
+// --------------------------------------------
+
+RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock()
+{
+    return TryLock();
+}
+
+RED4EXT_INLINE void RED4ext::SharedMutex::lock()
+{
+    Lock();
+}
+
+RED4EXT_INLINE void RED4ext::SharedMutex::unlock()
+{
+    Unlock();
+}
+
+RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock_shared()
+{
+    return TryLockShared();
+}
+
+RED4EXT_INLINE void RED4ext::SharedMutex::lock_shared()
+{
+    LockShared();
+}
 
 RED4EXT_INLINE void RED4ext::SharedMutex::unlock_shared()
 {
-    _InterlockedExchangeAdd8(&state, -1);
-};
+    UnlockShared();
+}

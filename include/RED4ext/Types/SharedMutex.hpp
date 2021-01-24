@@ -14,6 +14,18 @@ struct SharedMutex
     // + : read
     volatile char state;
 
+    bool TryLock();
+    void Lock();
+    void Unlock();
+
+    bool TryLockShared();
+    void LockShared();
+    void UnlockShared();
+
+    // --------------------------------------------
+    // -- support for lock_guard and shared_lock --
+    // --------------------------------------------
+
     bool try_lock();
     void lock();
     void unlock();
