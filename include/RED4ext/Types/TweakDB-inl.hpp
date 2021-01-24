@@ -15,11 +15,11 @@ RED4EXT_INLINE RED4ext::Handle<RED4ext::IScriptable>* RED4ext::TweakDB::GetRecor
     return recordsByID.Get(aDBID);
 }
 
-RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>>* RED4ext::TweakDB::GetRecordsByType(IRTTIType* apType)
+RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>>* RED4ext::TweakDB::GetRecordsByType(IRTTIType* aType)
 {
     std::shared_lock<SharedMutex> _(mutex01);
 
-    return recordsByType.Get(apType);
+    return recordsByType.Get(aType);
 }
 
 RED4EXT_INLINE RED4ext::DynArray<RED4ext::TweakDBID>* RED4ext::TweakDB::GetPackage(TweakDBID aDBID)
@@ -73,10 +73,10 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TweakVal::SetValue(RED4ext::CStackType& aS
     return true;
 }
 
-RED4EXT_INLINE void RED4ext::TweakDB::TweakVal::SetValue(void* apValue)
+RED4EXT_INLINE void RED4ext::TweakDB::TweakVal::SetValue(void* aValue)
 {
     CStackType stackType;
     stackType.type = nullptr;
-    stackType.value = apValue;
+    stackType.value = aValue;
     SetValue(stackType);
 }
