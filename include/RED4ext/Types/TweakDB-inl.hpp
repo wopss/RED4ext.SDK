@@ -31,6 +31,8 @@ RED4EXT_INLINE RED4ext::DynArray<RED4ext::TweakDBID>* RED4ext::TweakDB::GetPacka
         if (packageIDs[i] == aDBID)
             return &packageValues[i];
     }
+
+    return nullptr;
 }
 
 RED4EXT_INLINE RED4ext::TweakDB::TweakVal* RED4ext::TweakDB::GetTweakVal(TweakDBID aDBID)
