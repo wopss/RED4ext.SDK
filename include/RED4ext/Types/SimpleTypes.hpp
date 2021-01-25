@@ -4,11 +4,14 @@
 #include <cstdint>
 
 #include <RED4ext/CString.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Unks.hpp>
 
 namespace RED4ext
 {
+struct IRTTIType;
+
 struct CDateTime
 {
     int64_t unk00; // 00
@@ -37,11 +40,22 @@ RED4EXT_ASSERT_SIZE(CRUIDRef, 0x8);
 struct TweakDBID
 {
 #pragma pack(push, 1)
-    uint32_t name;  // 00 CRC32
-    uint8_t length; // 04
-    uint16_t unk05; // 05
-    uint8_t unk07;  // 07
+    union
+    {
+        uint64_t value = 0;
+        struct
+        {
+            uint32_t nameHash;      // 00 CRC32
+            uint8_t nameLength;     // 04
+            uint8_t tdbOffset[3];   // 05
+        };
+    };
 #pragma pack(pop)
+
+    operator uint64_t() const noexcept;
+    bool operator==(const TweakDBID& aDBID) const noexcept;
+    bool IsValid() const noexcept;
+    uint32_t ToTDBOffset() const noexcept;
 };
 RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 
@@ -180,4 +194,18 @@ struct CurveData
 };
 RED4EXT_ASSERT_SIZE(CurveData<float>, 0x38);
 
+template<typename T>
+struct ScriptRef
+{
+    uint8_t unk00[0x10];    // 00
+    IRTTIType* innerType;   // 10
+    T* ref;                 // 18
+    CName hash;             // 20
+};
+RED4EXT_ASSERT_SIZE(ScriptRef<void>, 0x28);
+
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Types/SimpleTypes-inl.hpp>
+#endif

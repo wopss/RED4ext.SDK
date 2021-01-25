@@ -238,11 +238,11 @@ struct CClass : CRTTIType
     int64_t unk90;                            // 90
     int32_t unk98;                            // 98
     int32_t unk9C;                            // 9C
-    HashMap<uint64_t, CClassFunction*> unkA0; // A0
-    int64_t unkD0;                            // D0
+    int64_t unkA0;                            // A0
+    HashMap<uint64_t, CClassFunction*> unkA8; // A8
     int64_t unkD8;                            // D8
-    HashMap<uint64_t, CRTTIType*> unkE0;      // E0
-    int64_t unk110;                           // 110
+    int64_t unkE0;                            // E0
+    HashMap<uint64_t, CRTTIType*> unkE8;      // E8
     DynArray<CProperty*> unk118;              // 118 More entries than 0x28, will contain native props
     DynArray<void*> unk128;                   // 128
     DynArray<CProperty*> unk138;              // 138 Only RT_Class types?

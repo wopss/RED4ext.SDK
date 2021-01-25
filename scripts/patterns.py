@@ -66,5 +66,9 @@ def get_groups() -> List[Group]:
         Group(name='Handle', functions=[
             Item(name='ctor', pattern='48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 60 33 ED', expected=1, index=0),
             Item(name='DecWeakRef', pattern='40 53 48 83 EC 30 48 8B D9 48 8B 49 08 48 85 C9 74 43 B8 FF FF FF FF', expected=1, index=0)
+        ]),
+
+        Group(name='TweakDB', functions=[
+            Item(name='Get', pattern='48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00', expected=1, index=0)
         ])
     ]

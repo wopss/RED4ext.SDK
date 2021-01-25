@@ -97,8 +97,8 @@ struct CGameuiCharacterCustomizationSystem : IScriptable
     DynArray<void*> unk128;                                                        // 128
     DynArray<void*> unk138;                                                        // 138
     DynArray<void*> unk148;                                                        // 148
-    HashMapBase<uint64_t, uint64_t> unk158;                                        // 158
-    uintptr_t unk180[(0x1B8 - 0x180) >> 3];                                        // 180
+    HashMap<uint64_t, uint64_t> unk158;                                            // 158
+    uintptr_t unk188[(0x1B8 - 0x188) >> 3];                                        // 188
     DynArray<void*> unk1B8;                                                        // 1B8
     DynArray<void*> unk1C8;                                                        // 1C8
     uintptr_t unk1D8;                                                              // 1D8

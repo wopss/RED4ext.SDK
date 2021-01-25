@@ -57,18 +57,16 @@ struct CRTTISystem : IRTTISystem
     static CRTTISystem* Get();
 
     uint64_t unk08;                          // 08
-    HashMapBase<CName, IRTTIType*> types;    // 10
-    HashMap<uint64_t, IRTTIType*> typeByIds; // 38
-    HashMap<CName, uint64_t> typeIds;        // 68
-    HashMap<CName, CGlobalFunction*> funcs;  // 98
-    HashMap<CName, CBaseFunction*> unkC8;    // C8
-    HashMap<CName, CName> unkF8;             // F8
-    int64_t unk128;                          // 128
+    HashMap<CName, IRTTIType*> types;        // 10
+    HashMap<uint64_t, IRTTIType*> typeByIds; // 40
+    HashMap<CName, uint64_t> typeIds;        // 70
+    HashMap<CName, CGlobalFunction*> funcs;  // A0
+    HashMap<CName, CBaseFunction*> unkC8;    // D0
+    HashMap<CName, CName> unkF8;             // 100
     DynArray<void*> unk130;                  // 130
     DynArray<void*> unk140;                  // 140
-    HashMapBase<CName, CName> scriptToNative; // 150
-    HashMap<CName, CName> nativeToScript;    // 178
-    int64_t unk1A8;                          // 1A8
+    HashMap<CName, CName> scriptToNative;    // 150
+    HashMap<CName, CName> nativeToScript;    // 180
     DynArray<void*> unk1B0;                  // 1B0
     DynArray<void*> unk1C0;                  // 1C0
     CRITICAL_SECTION unk1D0;                 // 1D0

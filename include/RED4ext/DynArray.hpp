@@ -18,6 +18,46 @@ struct DynArray
         return entries[aIndex];
     }
 
+    T* Begin()
+    {
+        return entries;
+    }
+
+    const T* Begin() const
+    {
+        return entries;
+    }
+
+    T* begin()
+    {
+        return Begin();
+    }
+
+    const T* begin() const
+    {
+        return Begin();
+    }
+
+    T* End()
+    {
+        return entries + size;
+    }
+
+    const T* End() const
+    {
+        return entries + size;
+    }
+
+    T* end()
+    {
+        return End();
+    }
+
+    const T* end() const
+    {
+        return End();
+    }
+
     T*       entries;   // 00
     uint32_t capacity;  // 08
     uint32_t size;      // 0C
