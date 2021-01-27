@@ -6,6 +6,7 @@
 
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
+#include <RED4ext/REDhash.hpp>
 
 #include <array>
 #include <fstream>
@@ -30,18 +31,18 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     std::unordered_map<std::string, std::vector<std::string>> prefixHierarchy;
 
     // Trim the preceeding lower-case suffix, this seems to be either a namespace or directory, or both
-    auto GetPrefix = [](const std::string& input) -> std::string {
+    auto GetPrefix = [](const std::string& aInput) -> std::string {
         size_t i = 0;
 
         // Special case for AI
-        if (input.size() >= 2 && input[0] == 'A' && input[1] == 'I')
+        if (aInput.size() >= 2 && aInput[0] == 'A' && aInput[1] == 'I')
         {
             i = 2;
         }
 
-        for (; i < input.size(); ++i)
+        for (; i < aInput.size(); ++i)
         {
-            if (isupper(input[i]))
+            if (isupper(aInput[i]))
             {
                 break;
             }
@@ -50,15 +51,15 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         if (i == 0)
             return "";
 
-        return input.substr(0, i);
+        return aInput.substr(0, i);
     };
 
     // First pass gather all properties and descriptors
     rttiSystem->types.for_each(
-        [&descriptorMap, GetPrefix, &prefixHierarchy, aPropertyHolders](RED4ext::CName n, RED4ext::IRTTIType*& type) {
-            if (type->GetType() == RED4ext::ERTTIType::Class)
+        [&descriptorMap, GetPrefix, &prefixHierarchy, aPropertyHolders](RED4ext::CName aName, RED4ext::IRTTIType*& aType) {
+            if (aType->GetType() == RED4ext::ERTTIType::Class)
             {
-                auto classType = static_cast<const RED4ext::CClass*>(type);
+                auto classType = static_cast<const RED4ext::CClass*>(aType);
                 if (classType->flags.isNative)
                 {
                     ClassDependencyBuilder builder;
@@ -84,13 +85,13 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
                 }
             }
 
-            switch (type->GetType())
+            switch (aType->GetType())
             {
             case RED4ext::ERTTIType::Class:
             case RED4ext::ERTTIType::Enum:
             case RED4ext::ERTTIType::BitField:
             {
-                std::string prefix = GetPrefix(n.ToString());
+                std::string prefix = GetPrefix(aName.ToString());
                 if (!prefix.empty())
                 {
                     prefixHierarchy[prefix] = std::vector<std::string>();
@@ -103,24 +104,24 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         });
 
     // Build a mapped list of nested prefixes
-    for (auto& prefix : prefixHierarchy)
+    for (auto& [prefix,children] : prefixHierarchy)
     {
-        for (auto i = 0; i < prefix.first.size(); ++i)
+        for (auto i = 0; i < prefix.size(); ++i)
         {
-            auto testPrefix = prefix.first.substr(0, i + 1);
+            auto testPrefix = prefix.substr(0, i + 1);
 
             // Find a substring of ourselves somewhere else in the list
             auto it = prefixHierarchy.find(testPrefix);
             if (it != prefixHierarchy.end())
             {
-                prefix.second.push_back(testPrefix);
+                children.push_back(testPrefix);
             }
         }
 
-        for (auto it = prefix.second.rbegin(); it != prefix.second.rend(); ++it)
+        for (auto it = children.rbegin(); it != children.rend(); ++it)
         {
             auto next = it;
-            if (++next != prefix.second.rend())
+            if (++next != children.rend())
             {
                 *it = it->substr(next->size(), it->size() - next->size());
             }
@@ -128,18 +129,18 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     }
 
     // Second pass traverse parents to move properties into parent class if it happened to be abstract
-    for (auto& desc : descriptorMap)
+    for (auto& [classType,builder] : descriptorMap)
     {
         std::stack<const RED4ext::CClass*> stack;
-        const RED4ext::CClass* parent = desc.first->parent;
+        const RED4ext::CClass* parent = classType->parent;
         while (parent)
         {
             stack.push(parent);
             parent = parent->parent;
         }
 
-        auto it = desc.second.mPropertyMap.begin();
-        while (it != desc.second.mPropertyMap.end() && !stack.empty())
+        auto it = builder.mPropertyMap.begin();
+        while (it != builder.mPropertyMap.end() && !stack.empty())
         {
             auto parentClass = stack.top();
             if (it->first < parentClass->GetSize()) // Property offset fits within this parent class
@@ -149,13 +150,13 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
                 {
                     pit->second.mPropertyMap[it->first] = it->second;
 
-                    it = desc.second.mPropertyMap.erase(it);
+                    it = builder.mPropertyMap.erase(it);
                     continue;
                 }
             }
             else
             {
-                it = desc.second.mPropertyMap.begin();
+                it = builder.mPropertyMap.begin();
                 stack.pop();
                 continue;
             }
@@ -165,9 +166,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     }
 
     auto fileToPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
-                       &prefixHierarchy](const RED4ext::IRTTIType* type) -> std::string {
+                       &prefixHierarchy](const RED4ext::IRTTIType* aType) -> std::string {
         RED4ext::CName name;
-        type->GetName(name);
+        aType->GetName(name);
 
         std::string pathPrefix = GetPrefix(name.ToString());
         if (!pathPrefix.empty())
@@ -187,9 +188,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         // Additional categorization
         if (aExtendedPath)
         {
-            if (type->GetType() == RED4ext::ERTTIType::Class)
+            if (aType->GetType() == RED4ext::ERTTIType::Class)
             {
-                auto* pClass = static_cast<const RED4ext::CClass*>(type);
+                auto* pClass = static_cast<const RED4ext::CClass*>(aType);
                 if (pClass->IsA(redEvent))
                 {
                     return pathPrefix + "event/";
@@ -207,11 +208,11 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
                     return pathPrefix + "types/";
                 }
             }
-            else if (type->GetType() == RED4ext::ERTTIType::Enum)
+            else if (aType->GetType() == RED4ext::ERTTIType::Enum)
             {
                 return pathPrefix + "enum/";
             }
-            else if (type->GetType() == RED4ext::ERTTIType::BitField)
+            else if (aType->GetType() == RED4ext::ERTTIType::BitField)
             {
                 return pathPrefix + "bitfield/";
             }
@@ -221,20 +222,20 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     };
 
     // Remove the prefix from the class
-    auto SanitizeType = [GetPrefix](const RED4ext::IRTTIType* type) -> std::string {
+    auto SanitizeType = [GetPrefix](const RED4ext::IRTTIType* aType) -> std::string {
         RED4ext::CName name;
-        type->GetName(name);
+        aType->GetName(name);
         std::string fullName = name.ToString();
         auto prefix = GetPrefix(fullName);
         return fullName.substr(prefix.size(), fullName.size() - prefix.size());
     };
 
     // Convert the prefixes into a namespace
-    auto GetNamespace = [&prefixHierarchy](const std::string& prefix) -> std::string {
+    auto GetNamespace = [&prefixHierarchy](const std::string& aPrefix) -> std::string {
         std::string ns;
-        if (!prefix.empty())
+        if (!aPrefix.empty())
         {
-            auto it = prefixHierarchy.find(prefix);
+            auto it = prefixHierarchy.find(aPrefix);
             if (it != prefixHierarchy.end())
             {
                 ns = std::accumulate(it->second.begin(), it->second.end(), std::string(),
@@ -248,9 +249,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     };
 
     // Combine the namespace and sanitized name
-    auto QualifiedType = [GetNamespace, GetPrefix, &prefixHierarchy](const RED4ext::IRTTIType* type) -> std::string {
+    auto QualifiedType = [GetNamespace, GetPrefix, &prefixHierarchy](const RED4ext::IRTTIType* aType) -> std::string {
         RED4ext::CName name;
-        type->GetName(name);
+        aType->GetName(name);
 
         std::string fullName = name.ToString();
         auto prefix = GetPrefix(fullName);
@@ -282,29 +283,29 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     // Third pass crawl dependencies, then build the File Descriptor to dump out
     std::set<std::string> includeCollector;
 
-    for (auto& desc : descriptorMap)
+    for (auto& [classType,builder] : descriptorMap)
     {
-        if (desc.second.pType->parent)
+        if (builder.pType->parent)
         {
-            desc.second.Accumulate(desc.second.pType->parent);
+            builder.Accumulate(builder.pType->parent);
         }
 
-        for (auto& prop : desc.second.mPropertyMap)
+        for (auto& [hash, prop] : builder.mPropertyMap)
         {
-            desc.second.Accumulate(prop.second->type);
+            builder.Accumulate(prop->type);
         }
 
         if (aPropertyHolders)
         {
-            for (auto& prop : desc.second.mHolderPropertyMap)
+            for (auto& [hash, prop] : builder.mHolderPropertyMap)
             {
-                desc.second.Accumulate(prop.second->type);
+                builder.Accumulate(prop->type);
             }
         }
 
         // Don't emit files for the fixed mappings
         RED4ext::CName className;
-        desc.first->GetName(className);
+        classType->GetName(className);
 
         auto it = fixedMapping.find(className);
         if (it != fixedMapping.end())
@@ -313,9 +314,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         }
 
         ClassFileDescriptor fileDescriptor;
-        desc.second.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, fileToPath, fixedMapping, aVerbose);
+        builder.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, fileToPath, fixedMapping, aVerbose);
 
-        for (auto& dep : desc.second.mDirect)
+        for (auto& dep : builder.mDirect)
         {
             switch (dep->GetType())
             {

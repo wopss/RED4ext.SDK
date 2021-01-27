@@ -174,7 +174,7 @@ template<typename T, uint32_t MAX_LEN>
 struct StaticArray
 {
     T entries[MAX_LEN]; // 00
-    uint32_t pad; // Wtf is this?
+    uint32_t size;
 };
 static_assert(sizeof(StaticArray<std::array<uint8_t,5>, 32>) == 164); // StaticArray<GpuWrapApiVertexPackingPackingElement, 32>
 
