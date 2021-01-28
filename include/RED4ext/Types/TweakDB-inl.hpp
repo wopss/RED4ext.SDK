@@ -10,6 +10,7 @@
 
 RED4EXT_INLINE RED4ext::Handle<RED4ext::IScriptable>* RED4ext::TweakDB::GetRecord(TweakDBID aDBID)
 {
+    if (!aDBID.IsValid()) return nullptr;
     std::shared_lock<SharedMutex> _(mutex01);
 
     return recordsByID.Get(aDBID);
@@ -22,33 +23,32 @@ RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>>* RED4ext
     return recordsByType.Get(aType);
 }
 
-RED4EXT_INLINE RED4ext::DynArray<RED4ext::TweakDBID>* RED4ext::TweakDB::GetPackage(TweakDBID aDBID)
+RED4EXT_INLINE RED4ext::DynArray<RED4ext::TweakDBID>* RED4ext::TweakDB::Query(TweakDBID aDBID)
 {
+    if (!aDBID.IsValid()) return nullptr;
     std::shared_lock<SharedMutex> _(mutex01);
 
-    for (uint32_t i = 0; i != packageIDs.size; ++i)
+    for (uint32_t i = 0; i != queryIDs.size; ++i)
     {
-        if (packageIDs[i] == aDBID)
-            return &packageValues[i];
+        if (queryIDs[i] == aDBID)
+            return &queryValues[i];
     }
 
     return nullptr;
 }
 
-RED4EXT_INLINE RED4ext::TweakDB::TweakVal* RED4ext::TweakDB::GetTweakVal(TweakDBID aDBID)
+RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(TweakDBID aDBID)
 {
+    if (!aDBID.IsValid()) return nullptr;
     std::shared_lock<SharedMutex> _(mutex00);
-
-    if (!aDBID.IsValid())
-        return nullptr;
 
     // force get offset for now. i don't know if the game sets offset to 0 or leaves it uninitialized..
     if (true || aDBID.tdbOffset[0] == 0 && aDBID.tdbOffset[1] == 0 && aDBID.tdbOffset[2] == 0)
     {
-        const auto it = std::find(values.begin(), values.end(), aDBID);
-        return it == values.end() ? nullptr : reinterpret_cast<TweakVal*>(valuesBuffer + it->ToTDBOffset());
+        const auto it = std::find(flatIDs.begin(), flatIDs.end(), aDBID);
+        return it == flatIDs.end() ? nullptr : reinterpret_cast<FlatValue*>(flatValuesBuffer + it->ToTDBOffset());
     }
-    return reinterpret_cast<TweakVal*>(valuesBuffer + aDBID.ToTDBOffset());
+    return reinterpret_cast<FlatValue*>(flatValuesBuffer + aDBID.ToTDBOffset());
 }
 
 RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
@@ -58,7 +58,7 @@ RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
     return func();
 }
 
-RED4EXT_INLINE bool RED4ext::TweakDB::TweakVal::SetValue(RED4ext::CStackType& aStackType)
+RED4EXT_INLINE bool RED4ext::TweakDB::FlatValue::SetValue(RED4ext::CStackType& aStackType)
 {
     CStackType stackType;
     GetValue(&stackType);
@@ -73,7 +73,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TweakVal::SetValue(RED4ext::CStackType& aS
     return true;
 }
 
-RED4EXT_INLINE void RED4ext::TweakDB::TweakVal::SetValue(void* aValue)
+RED4EXT_INLINE void RED4ext::TweakDB::FlatValue::SetValue(void* aValue)
 {
     CStackType stackType;
     stackType.type = nullptr;
