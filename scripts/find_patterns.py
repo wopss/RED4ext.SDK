@@ -119,6 +119,8 @@ try:
                     if ptr.name:
                         file.write('_')
 
+                ptr.name = ptr.name.replace('::', '_')
+
                 file.write(f'{ptr.name} = 0x{addr:X} - ImageBase; ')
                 file.write(f'// {ptr.pattern}, expected: {ptr.expected}, index: {ptr.index}, offset: {ptr.offset}\n')
 
@@ -128,10 +130,17 @@ try:
                     file.write(f'#error Could not find pattern "{func.pattern}", expected: {func.expected}, index: {func.index}\n')
                     continue
 
+                file.write('constexpr uintptr_t ')
+
+                if group.name:
+                    file.write(f'{group.name}_')
+
                 if not func.name:
                     func.name = f'sub_{addr:X}'
 
-                file.write(f'constexpr uintptr_t {group.name}_{func.name} = 0x{addr:X} - ImageBase; ')
+                func.name = func.name.replace('::', '_')
+
+                file.write(f'{func.name} = 0x{addr:X} - ImageBase; ')
                 file.write(f'// {func.pattern}, expected: {func.expected}, index: {func.index}\n')
 
             if group.name:
