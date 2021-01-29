@@ -8,7 +8,7 @@
  */
 #include <cstdint>
 
-// Addresses for Cyberpunk 2077, version 1.1.
+// Addresses for Cyberpunk 2077, version 1.11.
 namespace RED4ext::Addresses
 {
 constexpr uintptr_t ImageBase = 0x140000000;
