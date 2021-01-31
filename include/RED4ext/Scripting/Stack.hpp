@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/Types/InstanceType.hpp>
 #include <vector>
+#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
@@ -9,28 +9,13 @@ namespace RED4ext
  * I named these classes '*Stack', but this might be wrong.
  *
  * Later down the call chain the game initalize another struct ('CStackFrame') that is passed to scripting functions, it
- * should look like the following:
- *  struct CStackFrame
- *  {
- *      char *code;
- *      int64_t unk8;
- *      int64_t unk10;
- *      int64_t unk18;
- *      int64_t unk20;
- *      int64_t unk28;
- *      int64_t unk30;
- *      int64_t unk38;
- *      ScriptInstance context;
- *      int64_t unk48;
- *      int16_t unk50;
- *      int64_t unk58;
- *      int8_t unk60;
- *  };
+ * should look like CStackFrame.
  *
  * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
 struct IRTTIType;
+struct IScriptable;
 
 struct CStackType
 {
@@ -45,10 +30,12 @@ using StackArgs_t = std::vector<CStackType>;
 
 struct IStack
 {
-    virtual ~IStack() = default;                       // 00
-    virtual void* GetResultAddr() { return nullptr; }; // 08
-    virtual int64_t sub_10() { return 0; };            // 10
-    virtual void sub_18(int64_t a2){};                 // 18
+    // clang-format off
+    virtual ~IStack() = default;                        // 00
+    virtual void* GetResultAddr() { return nullptr; };  // 08
+    virtual int64_t sub_10() { return 0; };             // 10
+    virtual void sub_18(int64_t a2){};                  // 18
+    // clang-format on
 };
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
 
@@ -78,6 +65,24 @@ RED4EXT_ASSERT_SIZE(CStack, 0x48);
 RED4EXT_ASSERT_OFFSET(CStack, args, 0x30);
 RED4EXT_ASSERT_OFFSET(CStack, argsCount, 0x38);
 RED4EXT_ASSERT_OFFSET(CStack, result, 0x40);
+
+struct CStackFrame
+{
+    char* code;           // 00
+    int64_t unk8;         // 08
+    int64_t unk10;        // 10
+    int64_t unk18;        // 18
+    int64_t unk20;        // 20
+    int64_t unk28;        // 28
+    int64_t unk30;        // 30
+    int64_t unk38;        // 38
+    IScriptable* context; // 40
+    int64_t unk48;        // 48
+    int16_t unk50;        // 50
+    int64_t unk58;        // 58
+    int8_t unk60;         // 60
+};
+RED4EXT_ASSERT_SIZE(CStackFrame, 0x68);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

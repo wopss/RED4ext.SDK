@@ -4,7 +4,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
-#include <RED4ext/IMemoryAllocator.hpp>
+#include <RED4ext/MemoryAllocators.hpp>
 
 namespace RED4ext
 {
