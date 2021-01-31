@@ -40,10 +40,10 @@ struct CBaseFunction : IFunction
     bool Execute(CStack* aStack);
 
     /*
-     * The following function might not be needed when scripts are released, I am not sure if they set the type of the
+     * The following two functions might not be needed when scripts are released, I am not sure if they set the type of the
      * function and the parameters if it is imported in scripts or at runtime, but I doubt it is at runtime when the
      * function is created. The game is releasing memory for "returnType", "params" and "localVars" when it tries to
-     * create the function read from "finalscripts", so I assume that defined functions in scripts take priority over
+     * create a function read from "finalscripts", so I assume that defined functions in scripts take priority over
      * manually set return type, params and local variables.
      */
     bool SetReturnType(CName aType);
