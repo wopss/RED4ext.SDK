@@ -40,8 +40,12 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::AddParam(CName aType, const char* aN
     flags.isOptional = aIsOptional;
 
     auto param = CProperty::Create(type, aName, nullptr, unk7C, nullptr, flags);
-    params.PushBack(param);
+    if (!param)
+    {
+        return false;
+    }
 
+    params.PushBack(param);
     return true;
 }
 
