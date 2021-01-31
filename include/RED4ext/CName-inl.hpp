@@ -4,9 +4,7 @@
 #include <RED4ext/CName.hpp>
 #endif
 
-#include <RED4ext/Addresses.hpp>
-#include <RED4ext/Common.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/CNamePool.hpp>
 #include <RED4ext/REDhash.hpp>
 
 RED4EXT_INLINE RED4ext::CName::CName(uint64_t aHash) noexcept
@@ -46,14 +44,7 @@ RED4EXT_INLINE bool RED4ext::CName::operator!=(const uint64_t aRhs) const noexce
 
 RED4EXT_INLINE const char* RED4ext::CName::ToString() const
 {
-    static REDfunc<char* (*)(const uint64_t&)> func(Addresses::CNamePool_Get);
-    auto result = func(hash);
-    if (result)
-    {
-        return result;
-    }
-
-    return "None";
+    return CNamePool::Get(*this);
 }
 
 RED4EXT_INLINE bool RED4ext::CName::IsEmpty() const noexcept

@@ -28,6 +28,9 @@ constexpr uintptr_t CGameEngine = 0x14402A748 - ImageBase; // 48 89 05 ? ? ? ? 4
 #pragma endregion
 
 #pragma region CNamePool
+constexpr uintptr_t CNamePool_AddCstr = 0x1401BC1B0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41 56, expected: 499, index: 2
+constexpr uintptr_t CNamePool_AddCString = 0x1401BC0D0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41 56, expected: 499, index: 1
+constexpr uintptr_t CNamePool_AddPair = 0x1401BC6E0 - ImageBase; // 48 83 EC 38 33 C0 48 89 54 24 20 48 85 D2, expected: 1, index: 0
 constexpr uintptr_t CNamePool_Get = 0x1401BC090 - ImageBase; // 48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8, expected: 1, index: 0
 #pragma endregion
 

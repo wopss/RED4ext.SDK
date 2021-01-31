@@ -1,6 +1,8 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+
+#include <RED4ext/CName.hpp>
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/RTTISystem.hpp>

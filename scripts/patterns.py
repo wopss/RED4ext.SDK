@@ -42,6 +42,9 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='CNamePool', functions=[
+            Item(name='AddCstr', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41 56', expected=499, index=2),
+            Item(name='AddCString', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41 56', expected=499, index=1),
+            Item(name='AddPair', pattern='48 83 EC 38 33 C0 48 89 54 24 20 48 85 D2'),
             Item(name='Get', pattern='48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8')
         ]),
 
