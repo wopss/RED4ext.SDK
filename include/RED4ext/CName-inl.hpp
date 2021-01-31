@@ -4,17 +4,15 @@
 #include <RED4ext/CName.hpp>
 #endif
 
-#include <RED4ext/Addresses.hpp>
-#include <RED4ext/Common.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/CNamePool.hpp>
 #include <RED4ext/REDhash.hpp>
 
-RED4EXT_INLINE RED4ext::CName::CName(uint64_t aHash) noexcept
+RED4EXT_INLINE constexpr RED4ext::CName::CName(uint64_t aHash) noexcept
     : hash(aHash)
 {
 }
 
-RED4EXT_INLINE RED4ext::CName::CName(const char* aName) noexcept
+RED4EXT_INLINE constexpr RED4ext::CName::CName(const char* aName) noexcept
     : CName(FNV1a(aName))
 {
 }
@@ -22,6 +20,29 @@ RED4EXT_INLINE RED4ext::CName::CName(const char* aName) noexcept
 RED4EXT_INLINE RED4ext::CName::operator uint64_t() const noexcept
 {
     return hash;
+}
+
+RED4EXT_INLINE size_t RED4ext::CName::operator()(const CName& aName) const
+{
+    return aName.hash;
+}
+
+RED4EXT_INLINE RED4ext::CName& RED4ext::CName::operator=(const uint64_t aRhs) noexcept
+{
+    hash = aRhs;
+    return *this;
+}
+
+RED4EXT_INLINE RED4ext::CName& RED4ext::CName::operator=(const char* aRhs) noexcept
+{
+    hash = FNV1a(aRhs);
+    return *this;
+}
+
+RED4EXT_INLINE RED4ext::CName& RED4ext::CName::operator=(const CName& aRhs) noexcept
+{
+    hash = aRhs.hash;
+    return *this;
 }
 
 RED4EXT_INLINE bool RED4ext::CName::operator==(const CName& aRhs) const noexcept
@@ -46,22 +67,10 @@ RED4EXT_INLINE bool RED4ext::CName::operator!=(const uint64_t aRhs) const noexce
 
 RED4EXT_INLINE const char* RED4ext::CName::ToString() const
 {
-    static REDfunc<char* (*)(const uint64_t&)> func(Addresses::CNamePool_Get);
-    auto result = func(hash);
-    if (result)
-    {
-        return result;
-    }
-
-    return "None";
+    return CNamePool::Get(*this);
 }
 
 RED4EXT_INLINE bool RED4ext::CName::IsEmpty() const noexcept
 {
     return hash == 0;
-}
-
-RED4EXT_INLINE size_t RED4ext::CName::operator()(const CName& aName) const
-{
-    return aName.hash;
 }

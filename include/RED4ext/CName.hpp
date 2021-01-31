@@ -7,12 +7,16 @@ namespace RED4ext
 {
 struct CName
 {
-    CName(uint64_t aHash = 0) noexcept;
-    CName(const char* aName) noexcept;
+    constexpr CName(uint64_t aHash = 0) noexcept;
+    constexpr CName(const char* aName) noexcept;
 
     operator uint64_t() const noexcept;
 
     size_t operator()(const CName& aName) const;
+
+    CName& operator=(const uint64_t aRhs) noexcept;
+    CName& operator=(const char* aRhs) noexcept;
+    CName& operator=(const CName& aRhs) noexcept;
 
     bool operator==(const CName& aRhs) const noexcept;
     bool operator!=(const CName& aRhs) const noexcept;

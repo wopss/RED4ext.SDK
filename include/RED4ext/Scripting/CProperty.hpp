@@ -16,10 +16,18 @@ struct CProperty
 {
     struct Flags
     {
-        uint64_t b0 : 9;           // 00
+        uint64_t b0 : 1;           // 00
+        uint64_t b1 : 1;           // 01
+        uint64_t b2 : 1;           // 02
+        uint64_t b3 : 1;           // 03
+        uint64_t b4 : 1;           // 04
+        uint64_t b5 : 1;           // 05
+        uint64_t b6 : 1;           // 06 - Is true when it is a return property, might be "isReturn".
+        uint64_t b7 : 1;           // 07
+        uint64_t b8 : 1;           // 08
         uint64_t isOut : 1;        // 09
         uint64_t isOptional : 1;   // 0A
-        uint64_t b12 : 5;          // 0B
+        uint64_t b11 : 5;          // 0B
         uint64_t isPrivate : 1;    // 10
         uint64_t isProtected : 1;  // 11
         uint64_t isPublic : 1;     // 12
@@ -31,6 +39,12 @@ struct CProperty
         uint64_t b29 : 34;
     };
     RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
+
+    CProperty(IRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
+              const char* aGroup = nullptr, Flags aFlags = {});
+
+    static CProperty* Create(IRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
+                             const char* aGroup = nullptr, Flags aFlags = {});
 
     IRTTIType* type;      // 00
     CName name;           // 08
@@ -101,3 +115,7 @@ RED4EXT_ASSERT_OFFSET(CProperty, parent, 0x18);
 RED4EXT_ASSERT_OFFSET(CProperty, valueOffset, 0x20);
 RED4EXT_ASSERT_OFFSET(CProperty, flags, 0x28);
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Scripting/CProperty-inl.hpp>
+#endif
