@@ -3,11 +3,15 @@
 #include <cstdint>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/ISerializable.hpp>
-#include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Handle.hpp>
+#include <RED4ext/HashMap.hpp>
 
 namespace RED4ext
 {
+struct IRTTIType;
+struct IScriptable;
+
 struct CBaseEngine
 {
     // https://github.com/yamashi/RED4ext/commit/2d30f32826276458f86da8b4c26940924044564d

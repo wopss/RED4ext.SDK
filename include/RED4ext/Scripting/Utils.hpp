@@ -1,12 +1,13 @@
 #pragma once
 
-#include <RED4ext/Scripting/Functions.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
 struct CBaseFunction;
+struct CClass;
 
 bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs);
 

@@ -5,12 +5,16 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
-#include <RED4ext/RTTITypes.hpp>
-#include <RED4ext/Scripting/Functions.hpp>
 
 namespace RED4ext
 {
+struct IRTTIType;
+struct CClass;
+struct CBaseFunction;
+struct CGlobalFunction;
+
 struct IRTTISystem
 {
     virtual IRTTIType* GetType(CName aName) = 0;
