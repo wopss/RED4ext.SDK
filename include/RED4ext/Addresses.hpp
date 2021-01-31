@@ -26,7 +26,6 @@ constexpr uintptr_t CBaseFunction_Execute = 0x140224A20 - ImageBase; // 48 89 5C
 constexpr uintptr_t CClass_AllocInstance = 0x1402125C0 - ImageBase; // 48 89 6C 24 18 56 48 83 EC 30 41 0F B6 E8, expected: 1, index: 0
 constexpr uintptr_t CClass_GetProperty = 0x140212FF0 - ImageBase; // 48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00, expected: 1, index: 0
 constexpr uintptr_t CClass_GetFunction = 0x140212D80 - ImageBase; // 4C 8B C9 48 85 C9 74 5E 49 8B 41 48, expected: 1, index: 0
-constexpr uintptr_t CClass_RegisterFunction = 0x14020E780 - ImageBase; // 48 89 54 24 10 48 83 EC 28 48 83 C1 48 48 8D 54 24 38, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CClassFunction

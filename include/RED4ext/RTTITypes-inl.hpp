@@ -46,7 +46,12 @@ RED4EXT_INLINE RED4ext::CClassFunction* RED4ext::CClass::GetFunction(CName aName
 
 RED4EXT_INLINE void RED4ext::CClass::RegisterFunction(CClassFunction* aFunc)
 {
-    using func_t = void (*)(CClass*, CClassFunction*);
-    static REDfunc<func_t> func(Addresses::CClass_RegisterFunction);
-    func(this, aFunc);
+    if (aFunc->flags.isStatic)
+    {
+        staticFuncs.PushBack(aFunc);
+    }
+    else
+    {
+        funcs.PushBack(aFunc);
+    }
 }

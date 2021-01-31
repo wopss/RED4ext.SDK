@@ -39,8 +39,7 @@ def get_groups() -> List[Group]:
         Group(name='CClass', functions=[
             Item(name='AllocInstance', pattern='48 89 6C 24 18 56 48 83 EC 30 41 0F B6 E8'),
             Item(name='GetProperty', pattern='48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00'),
-            Item(name='GetFunction', pattern='4C 8B C9 48 85 C9 74 5E 49 8B 41 48'),
-            Item(name='RegisterFunction', pattern='48 89 54 24 10 48 83 EC 28 48 83 C1 48 48 8D 54 24 38')
+            Item(name='GetFunction', pattern='4C 8B C9 48 85 C9 74 5E 49 8B 41 48')
         ]),
 
         Group(name='CClassFunction', functions=[
