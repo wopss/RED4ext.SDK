@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <shared_mutex>
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
@@ -8,6 +9,7 @@
 #include <RED4ext/Types/SharedMutex.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
 #include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 
 namespace RED4ext
@@ -70,15 +72,17 @@ struct TweakDB
         bool SetValue(CStackType& aStackType);
         void SetValue(void* aValue);
 
+        int32_t ToTDBOffset();
+
         // value here
     };
 
-    SharedMutex mutex00;                                                    // 00 - used with flatIDs and flatValuesBuffer*
+    SharedMutex mutex00;                                                    // 00 - used with flats and flatDataBuffer*
     SharedMutex mutex01;                                                    // 01 - used with recordsByID, recordsByType, queryIDs, queryValues, groupIDs and groupTags
     void* unk08;                                                            // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
     void* unk10;                                                            // 10 - class - 208 bytes
     bool unk18;                                                             // 18
-    DynArray<TweakDBID> flatIDs;                                            // 20
+    DynArray<TweakDBID> flats;                                              // 20
     uint64_t unk30;                                                         // 30
     HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                    // 38
     HashMap<IRTTIType*, DynArray<Handle<IScriptable>>> recordsByType;       // 68
@@ -91,30 +95,47 @@ struct TweakDB
     uint64_t unkE0;                                                         // E0
     HashMap<CName, FlatValue*> defaultValueByType;                          // E8
     DynArray<CString> unk118;                                               // 118 - empty - maybe not CString
-    uintptr_t flatValuesBuffer;                                             // 128
-    uint32_t flatValuesBufferSize;                                          // 130
-    uintptr_t flatValuesBufferEnd;                                          // 138
+    uintptr_t flatDataBuffer;                                               // 128
+    uint32_t flatDataBufferSize;                                            // 130
+    uintptr_t flatDataBufferEnd;                                            // 138
 
     template<typename T>
-    T* GetValue(TweakDBID aDBID)
+    T GetValue(TweakDBID aDBID)
     {
-        auto* flatValue = GetFlatValue(aDBID);
-        if (flatValue == nullptr)
-            return nullptr;
-        
-        return flatValue->GetValue<T>();
+        T value {};
+        TryGetValue(aDBID, value);
+        return std::move(value);
     }
 
-    Handle<IScriptable>* GetRecord(TweakDBID aDBID);
-    DynArray<Handle<IScriptable>>* GetRecordsByType(IRTTIType* aType);
-    DynArray<TweakDBID>* Query(TweakDBID aDBID);
+    template<typename T>
+    bool TryGetValue(TweakDBID aDBID, T& aValue)
+    {
+        std::shared_lock<SharedMutex> _(mutex00);
+
+        auto* flatValue = GetFlatValue(aDBID);
+        if (flatValue == nullptr)
+            return false;
+        
+        aValue = *flatValue->GetValue<T>();
+        return true;
+    }
+
+    Handle<IScriptable> GetRecord(TweakDBID aDBID);
+    bool TryGetRecord(TweakDBID aDBID, Handle<IScriptable>& aRecord);
+
+    DynArray<Handle<IScriptable>> GetRecordsByType(IRTTIType* aType);
+    bool TryGetRecordsByType(IRTTIType* aType, DynArray<Handle<IScriptable>>& aRecordsArray);
+
+    DynArray<TweakDBID> Query(TweakDBID aDBID);
+    bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
+
     FlatValue* GetFlatValue(TweakDBID aDBID);
     static TweakDB* Get();
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
 RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
-RED4EXT_ASSERT_OFFSET(TweakDB, flatIDs, 0x20);
-RED4EXT_ASSERT_OFFSET(TweakDB, flatValuesBufferEnd, 0x138);
+RED4EXT_ASSERT_OFFSET(TweakDB, flats, 0x20);
+RED4EXT_ASSERT_OFFSET(TweakDB, flatDataBufferEnd, 0x138);
 RED4EXT_ASSERT_SIZE(TweakDB, 0x140);
 }
 
