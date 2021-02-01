@@ -157,13 +157,13 @@ public:
 
     Handle& operator=(const Handle& aRhs) noexcept
     {
-        Handle(aRhs).swap(*this);
+        Handle(aRhs).Swap(*this);
         return *this;
     }
 
     Handle& operator=(Handle&& aRhs) noexcept
     {
-        Handle(std::move(aRhs)).swap(*this);
+        Handle(std::move(aRhs)).Swap(*this);
         return *this;
     }
 
