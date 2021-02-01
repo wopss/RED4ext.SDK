@@ -42,8 +42,7 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
     if (!aDBID.IsValid()) return nullptr;
     std::shared_lock<SharedMutex> _(mutex00);
 
-    // force get offset for now. i don't know if the game sets offset to 0 or leaves it uninitialized..
-    if (true || aDBID.tdbOffset[0] == 0 && aDBID.tdbOffset[1] == 0 && aDBID.tdbOffset[2] == 0)
+    if (aDBID.tdbOffset[0] == 0 && aDBID.tdbOffset[1] == 0 && aDBID.tdbOffset[2] == 0)
     {
         const auto it = std::find(flatIDs.begin(), flatIDs.end(), aDBID);
         return it == flatIDs.end() ? nullptr : reinterpret_cast<FlatValue*>(flatValuesBuffer + it->ToTDBOffset());
