@@ -130,6 +130,10 @@ struct TweakDB
     bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
 
     FlatValue* GetFlatValue(TweakDBID aDBID);
+    FlatValue* CreateFlatValue(IRTTIType* aType);
+    void SetFlatDataBuffer(uintptr_t start, uint32_t size);
+    void SetFlatDataBuffer(uintptr_t start, uintptr_t end, uint32_t size);
+
     static TweakDB* Get();
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);

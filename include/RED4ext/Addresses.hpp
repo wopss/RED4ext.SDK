@@ -80,5 +80,9 @@ constexpr uintptr_t IScriptable_GetValueHolder = 0x1401FDDD0 - ImageBase; // 40 
 
 #pragma region TweakDB
 constexpr uintptr_t TweakDB_Get = 0x140C01330 - ImageBase; // 48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140ED72EA - ImageBase; // 48 89 1D ? ? ? ? 41 89 BF 30 01 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140ED4620 - ImageBase; // 48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C, expected: 4, index: 0
+constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x14304BD60 - ImageBase; // 48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B, expected: 1, index: 0
+constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x14304BC80 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67, expected: 1, index: 0
 #pragma endregion
 } // namespace RED4ext::Addresses
