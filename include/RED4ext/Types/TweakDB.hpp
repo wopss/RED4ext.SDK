@@ -14,7 +14,15 @@
 
 namespace RED4ext
 {
-struct IScriptable;
+// Issues with current API:
+// 1. Reading from multiple threads is fine. Creating a new FlatValue is not. (writing to flatDataBuffer)
+//    Every FlatValue* (and GetValue) will be invalid if a thread grows the flatDataBuffer.
+//    Except if you don't free the old buffer, but that's an issue on its own
+//
+// 2. Flat values are pooled.
+//    An int (or any type) value of '1' exist only once in TweakDB::flatDataBuffer. Modifying it will affect all records using it.
+//    Implementing a value pool in here is pointless. the lib isn't a shared library. Pool won't be shared between multiple dlls that use the SDK
+//    Could abuse the alignment gaps in TweakDB to store custom data in the class.. like a pointer to the pool? >_>
 
 struct TweakDB
 {
@@ -69,7 +77,10 @@ struct TweakDB
             return reinterpret_cast<T*>(stackType.value);
         }
 
+        // [Warning] FlatValues are pooled.
         bool SetValue(CStackType& aStackType);
+
+        // [Warning] FlatValues are pooled.
         void SetValue(void* aValue);
 
         int32_t ToTDBOffset();
@@ -115,7 +126,7 @@ struct TweakDB
         auto* flatValue = GetFlatValue(aDBID);
         if (flatValue == nullptr)
             return false;
-        
+
         aValue = *flatValue->GetValue<T>();
         return true;
     }
@@ -129,9 +140,13 @@ struct TweakDB
     DynArray<TweakDBID> Query(TweakDBID aDBID);
     bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
 
+    // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);
+    // Multithreads may lead to undefined behavior
     FlatValue* CreateFlatValue(IRTTIType* aType);
+    // Multithreads may lead to undefined behavior
     void SetFlatDataBuffer(uintptr_t start, uint32_t size);
+    // Multithreads may lead to undefined behavior
     void SetFlatDataBuffer(uintptr_t start, uintptr_t end, uint32_t size);
 
     static TweakDB* Get();

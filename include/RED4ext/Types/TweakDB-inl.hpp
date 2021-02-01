@@ -1,5 +1,4 @@
 #pragma once
-#include <shared_mutex>
 
 #ifdef RED4EXT_STATIC_LIB
 #include <RED4ext/Types/TweakDB.hpp>
