@@ -76,7 +76,7 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
     if (!aDBID.IsValid()) return nullptr;
     std::shared_lock<SharedMutex> _(mutex00);
 
-    if (aDBID.tdbOffset[0] == 0 && aDBID.tdbOffset[1] == 0 && aDBID.tdbOffset[2] == 0)
+    if (!aDBID.HasTDBOffset())
     {
         const auto it = std::find(flats.begin(), flats.end(), aDBID);
         return it == flats.end() ? nullptr : reinterpret_cast<FlatValue*>(flatDataBuffer + it->ToTDBOffset());
