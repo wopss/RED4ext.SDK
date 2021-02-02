@@ -193,10 +193,10 @@ RED4EXT_INLINE void RED4ext::TweakDB::FlatValue::SetValue(void* aValue)
     SetValue(stackType);
 }
 
-RED4EXT_INLINE int32_t RED4ext::TweakDB::FlatValue::ToTDBOffset()
+RED4EXT_INLINE int32_t RED4ext::TweakDB::FlatValue::ToTDBOffset() const
 {
     static auto* pTDB = TweakDB::Get();
-    std::shared_lock<SharedMutex> _(pTDB->mutex00);
+    //std::shared_lock<SharedMutex> _(pTDB->mutex00);
 
     return static_cast<int32_t>((uintptr_t)this - pTDB->flatDataBuffer);
 }
