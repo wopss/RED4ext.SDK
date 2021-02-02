@@ -1,5 +1,6 @@
 #pragma once
 
+#include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/MemoryAllocators.hpp>
@@ -40,8 +41,8 @@ struct CBaseFunction : IFunction
     bool Execute(CStack* aStack);
 
     /*
-     * The following two functions might not be needed when scripts are released, I am not sure if they set the type of the
-     * function and the parameters if it is imported in scripts or at runtime, but I doubt it is at runtime when the
+     * The following two functions might not be needed when scripts are released, I am not sure if they set the type of
+     * the function and the parameters if it is imported in scripts or at runtime, but I doubt it is at runtime when the
      * function is created. The game is releasing memory for "returnType", "params" and "localVars" when it tries to
      * create a function read from "finalscripts", so I assume that defined functions in scripts take priority over
      * manually set return type, params and local variables.
