@@ -155,7 +155,6 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t start, uintptr
 {
     // Used by the game with TweakDBID::ToTDBOffset() and FlatValue::ToValueOffset_*()
     static uintptr_t pStaticFlatDataBuffer = Addresses::TweakDB_StaticFlatDataBuffer + 7 + *reinterpret_cast<int32_t*>(Addresses::TweakDB_StaticFlatDataBuffer + 3);
-    std::lock_guard<SharedMutex> _(mutex00);
 
     flatDataBuffer = start;
     flatDataBufferEnd = end;

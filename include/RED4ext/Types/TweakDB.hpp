@@ -144,12 +144,14 @@ struct TweakDB
     FlatValue* GetFlatValue(TweakDBID aDBID);
     // Multithreads may lead to undefined behavior
     FlatValue* CreateFlatValue(IRTTIType* aType);
+
+    static TweakDB* Get();
+
+private:
     // Multithreads may lead to undefined behavior
     void SetFlatDataBuffer(uintptr_t start, uint32_t size);
     // Multithreads may lead to undefined behavior
     void SetFlatDataBuffer(uintptr_t start, uintptr_t end, uint32_t size);
-
-    static TweakDB* Get();
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
 RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
