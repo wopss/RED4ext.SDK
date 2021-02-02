@@ -5,7 +5,6 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/REDfunc.hpp>
 

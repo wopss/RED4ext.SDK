@@ -2,6 +2,7 @@
 
 #include <RED4ext/Common.hpp>
 
+#include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/CString.hpp>
 #include <RED4ext/DynArray.hpp>

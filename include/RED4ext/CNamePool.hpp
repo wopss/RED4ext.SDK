@@ -1,10 +1,10 @@
 #pragma once
 
+#include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 
 namespace RED4ext
 {
-struct CName;
 struct CNamePool
 {
     static CName Add(const char* aText);
