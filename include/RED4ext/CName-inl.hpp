@@ -5,17 +5,6 @@
 #endif
 
 #include <RED4ext/CNamePool.hpp>
-#include <RED4ext/REDhash.hpp>
-
-RED4EXT_INLINE constexpr RED4ext::CName::CName(uint64_t aHash) noexcept
-    : hash(aHash)
-{
-}
-
-RED4EXT_INLINE constexpr RED4ext::CName::CName(const char* aName) noexcept
-    : CName(FNV1a(aName))
-{
-}
 
 RED4EXT_INLINE RED4ext::CName::operator uint64_t() const noexcept
 {

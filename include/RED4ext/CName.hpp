@@ -1,14 +1,23 @@
 #pragma once
 
 #include <cstdint>
+
 #include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
 
 namespace RED4ext
 {
 struct CName
 {
-    constexpr CName(uint64_t aHash = 0) noexcept;
-    constexpr CName(const char* aName) noexcept;
+    constexpr CName(uint64_t aHash = 0) noexcept
+        : hash(aHash)
+    {
+    }
+
+    constexpr CName(const char* aName) noexcept
+        : CName(FNV1a(aName))
+    {
+    }
 
     operator uint64_t() const noexcept;
 
