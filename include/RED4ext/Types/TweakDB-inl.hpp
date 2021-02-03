@@ -258,6 +258,8 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(co
             auto result = pRTTIAllocator->AllocAligned(newCapacity, 8);
             if (result.memory == nullptr)
                 return nullptr;
+            else if (result.size > 0x00FFFFFF)
+                result.size = 0x00FFFFFF;
 
             auto* oldFlatDataBuffer = reinterpret_cast<void*>(flatDataBuffer);
             memcpy(result.memory, oldFlatDataBuffer, currentSize);
