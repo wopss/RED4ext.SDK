@@ -61,15 +61,9 @@ struct IMemoryAllocator;
 
         void for_each(std::function<void(const K&, T&)> aFunctor) const
         {
-            uint32_t index = 0;
-            uint32_t count = 0;
-            while (true)
+            for (uint32_t index = 0; index != capacity; ++index)
             {
-                uint32_t idx = indexTable[index++];
-                if (index >= capacity)
-                {
-                    break;
-                }
+                uint32_t idx = indexTable[index];
 
                 while (idx != INVALID_INDEX)
                 {
