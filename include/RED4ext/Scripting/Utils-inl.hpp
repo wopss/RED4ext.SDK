@@ -6,7 +6,9 @@
 
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/RTTISystem.hpp>
+#include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
+#include <RED4ext/Scripting/Functions.hpp>
 
 RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
                                              StackArgs_t aArgs)
@@ -36,8 +38,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
         }
     }
 
-    CStack stack(aInstance, aArgs.data(), static_cast<uint32_t>(aArgs.size()),
-                 aFunc->returnType ? &result : nullptr);
+    CStack stack(aInstance, aArgs.data(), static_cast<uint32_t>(aArgs.size()), aFunc->returnType ? &result : nullptr);
     return aFunc->Execute(&stack);
 }
 

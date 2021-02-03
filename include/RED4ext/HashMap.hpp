@@ -4,11 +4,12 @@
 #include <functional>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/IMemoryAllocator.hpp>
 #include <RED4ext/REDhash.hpp>
 
 namespace RED4ext
 {
+struct IMemoryAllocator;
+
 #pragma region HashMapHash
     template<typename T, typename enable = void /* for enable_if specialization */>
     struct HashMapHash
@@ -110,7 +111,7 @@ namespace RED4ext
             return nullptr;
         }
 
-        IMemoryAllocator* GetAllocator() const
+        IMemoryAllocator* GetAllocator()
         {
             return reinterpret_cast<IMemoryAllocator*>(&allocator);
         }

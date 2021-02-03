@@ -12,6 +12,7 @@ namespace RED4ext
 struct IMemoryAllocator;
 struct CProperty;
 struct CClassFunction;
+struct CClassStaticFunction;
 
 enum class ERTTIType : uint8_t
 {
@@ -220,6 +221,8 @@ struct CClass : CRTTIType
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aName);
+
+    void RegisterFunction(CClassFunction* aFunc);
 
     CClass* parent;                           // 10
     CName name;                               // 18

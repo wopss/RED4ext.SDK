@@ -6,6 +6,7 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Scripting/Functions.hpp>
 
 RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CClass::AllocInstance()
 {
@@ -41,4 +42,16 @@ RED4EXT_INLINE RED4ext::CClassFunction* RED4ext::CClass::GetFunction(CName aName
     using func_t = CClassFunction* (*)(CClass*, CName);
     static REDfunc<func_t> func(Addresses::CClass_GetFunction);
     return func(this, aName);
+}
+
+RED4EXT_INLINE void RED4ext::CClass::RegisterFunction(CClassFunction* aFunc)
+{
+    if (aFunc->flags.isStatic)
+    {
+        staticFuncs.PushBack(aFunc);
+    }
+    else
+    {
+        funcs.PushBack(aFunc);
+    }
 }
