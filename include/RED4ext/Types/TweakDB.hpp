@@ -143,7 +143,7 @@ struct TweakDB
     // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);
     // Multithreads may lead to undefined behavior
-    FlatValue* CreateFlatValue(IRTTIType* aType);
+    FlatValue* CreateFlatValue(const CStackType& aStackType);
 
     static TweakDB* Get();
 

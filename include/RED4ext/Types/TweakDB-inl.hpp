@@ -91,18 +91,9 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
     return reinterpret_cast<FlatValue*>(flatDataBuffer + aDBID.ToTDBOffset());
 }
 
-RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(IRTTIType* aType)
+RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(const CStackType& aStackType)
 {
-    struct InitFlatValueParam2
-    {
-        IRTTIType* rttiType;
-        uint8_t value[sizeof(DynArray<void*>)] {}; // should be enough to zero-out any value type
-
-        InitFlatValueParam2(IRTTIType* aRTTIType)
-            : rttiType(aRTTIType)
-        { }
-    };
-    using InitFlatValue_t = FlatValue* (*)(TweakDB*, InitFlatValueParam2* a2);
+    using InitFlatValue_t = FlatValue* (*)(TweakDB*, const CStackType*);
     static REDfunc<InitFlatValue_t> InitFlatValue_ExceptInt32(Addresses::TweakDB_InitFlatValue_ExceptInt32);
     static auto* pRTTI = CRTTISystem::Get();
     static auto* pInt32RTTIType = pRTTI->GetType("Int32");
@@ -110,8 +101,8 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(IR
     static uintptr_t FlatInt32ValueVftable = GetAddressFromInstruction(Addresses::TweakDB_FlatInt32ValueVftable, 3);
     static uintptr_t FlatArrayInt32ValueVftable = GetAddressFromInstruction(Addresses::TweakDB_FlatArrayInt32ValueVftable, 3);
 
-    auto typeAlignment = aType->GetAlignment() - 1;
-    auto flatValueSize = 8 /* vftable */ + ((typeAlignment + aType->GetSize()) & ~typeAlignment);
+    auto typeAlignment = aStackType.type->GetAlignment() - 1;
+    auto flatValueSize = 8 /* vftable */ + ((typeAlignment + aStackType.type->GetSize()) & ~typeAlignment);
     auto flatDataBufferEnd_Aligned = (7 + flatDataBufferEnd) & ~7; // 8 aligned
 
     {
@@ -131,24 +122,23 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(IR
             return nullptr;
         }
 
-        if (aType == pInt32RTTIType)
+        if (aStackType.type == pInt32RTTIType)
         {
             *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatInt32ValueVftable;
-            *reinterpret_cast<uint32_t*>(flatDataBufferEnd_Aligned + 8) = 0;
+            *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned + 8) = *reinterpret_cast<uint32_t*>(aStackType.value);
             flatDataBufferEnd = flatDataBufferEnd_Aligned + 16;
             return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned);
         }
-        else if (aType == pArrayInt32RTTIType)
+        else if (aStackType.type == pArrayInt32RTTIType)
         {
             *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatArrayInt32ValueVftable;
-            pArrayInt32RTTIType->Init(reinterpret_cast<void*>(flatDataBufferEnd_Aligned + 8));
+            pArrayInt32RTTIType->Assign(reinterpret_cast<void*>(flatDataBufferEnd_Aligned + 8), aStackType.value);
             flatDataBufferEnd = flatDataBufferEnd_Aligned + 24;
             return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned);
         }
         else
         {
-            InitFlatValueParam2 param2(aType);
-            return InitFlatValue_ExceptInt32(this, &param2);
+            return InitFlatValue_ExceptInt32(this, &aStackType);
         }
     }
 }
