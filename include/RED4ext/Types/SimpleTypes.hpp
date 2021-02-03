@@ -2,6 +2,7 @@
 
 #include <array>
 #include <cstdint>
+#include <string_view>
 
 #include <RED4ext/CString.hpp>
 #include <RED4ext/CName.hpp>
@@ -45,17 +46,26 @@ struct TweakDBID
         uint64_t value = 0;
         struct
         {
-            uint32_t nameHash;      // 00 CRC32
-            uint8_t nameLength;     // 04
-            uint8_t tdbOffset[3];   // 05
+            uint32_t nameHash;          // 00 CRC32
+            uint8_t nameLength;         // 04
+            uint8_t tdbOffsetBE[3];     // 05 - Big Endian
         };
     };
 #pragma pack(pop)
 
-    operator uint64_t() const noexcept;
-    bool operator==(const TweakDBID& aDBID) const noexcept;
+    TweakDBID() noexcept = default;
+    TweakDBID(uint64_t aValue) noexcept;
+    TweakDBID(uint32_t aNameHash, uint8_t aNameLength) noexcept;
+    TweakDBID(const std::string_view aName) noexcept;
+    TweakDBID(const TweakDBID& aBase, const std::string_view aName) noexcept;
     bool IsValid() const noexcept;
-    uint32_t ToTDBOffset() const noexcept;
+    bool HasTDBOffset() const noexcept;
+    int32_t ToTDBOffset() const noexcept;
+
+    operator uint64_t() const noexcept;
+    TweakDBID& operator=(const std::string_view aName) noexcept;
+    TweakDBID operator+(const std::string_view aName) const noexcept;
+    bool operator==(const TweakDBID& aDBID) const noexcept;
 };
 RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 
