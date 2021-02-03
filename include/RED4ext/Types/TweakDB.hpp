@@ -24,6 +24,14 @@ namespace RED4ext
 //    Implementing a value pool in here is pointless. the lib isn't a shared library. Pool won't be shared between multiple dlls that use the SDK
 //    Could abuse the alignment gaps in TweakDB to store custom data in the class.. like a pointer to the pool? >_>
 
+struct gamedataTweakDBRecord : IScriptable
+{
+    virtual void sub_110() = 0; // 110
+    virtual uint32_t GetTweakBaseHash() = 0; // Murmur3
+    
+    TweakDBID recordID;
+};
+
 struct TweakDB
 {
     enum class GroupTag : int8_t
@@ -139,6 +147,11 @@ struct TweakDB
 
     DynArray<TweakDBID> Query(TweakDBID aDBID);
     bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
+
+    // [Experimental] Updates all the value offsets inside the record
+    bool UpdateRecord(TweakDBID aDBID);
+    // [Experimental] Updates all the value offsets inside the record
+    bool UpdateRecord(gamedataTweakDBRecord* aRecord);
 
     // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);

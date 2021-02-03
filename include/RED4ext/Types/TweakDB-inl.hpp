@@ -4,6 +4,8 @@
 #include <RED4ext/Types/TweakDB.hpp>
 #endif
 
+#include <cstdlib>
+
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/REDptr.hpp>
 #include <RED4ext/RTTISystem.hpp>
@@ -76,6 +78,121 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryQuery(TweakDBID aDBID, DynArray<TweakDB
     }
 
     return false;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(TweakDBID aDBID)
+{
+    auto* pRecordHandle = recordsByID.Get(aDBID);
+    if (pRecordHandle == nullptr) return false;
+    return UpdateRecord(reinterpret_cast<gamedataTweakDBRecord*>(pRecordHandle->GetPtr()));
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecord)
+{
+    // Calling RTTI->Init doesn't always get the flat values for the record.
+    // We're forced to call the function that's creating records in TweakDB.
+    // Meaning we have to pass our own TweakDB class. sorry -Sombra
+
+    using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID tweakDBID);
+    static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
+    static bool fakeTweakDBInitialized = false;
+    static TweakDB fakeTweakDB;
+
+    if (!fakeTweakDBInitialized)
+    {
+        // we only need recordsByID and recordsByType
+
+        struct FakeAllocator : IMemoryAllocator
+        {
+            virtual Result Alloc(uint32_t aSize)
+            {
+                return AllocAligned(aSize, 8);
+            }
+            virtual Result AllocAligned(uint32_t aSize, uint32_t aAlignment)
+            {
+                Result result;
+                result.memory = _aligned_malloc(aSize, aAlignment);
+                result.size = aSize;
+                return result;
+            }
+            virtual void sub_10()
+            { }
+            virtual void sub_18()
+            { }
+            virtual void Free(void* aMemory)
+            {
+                _aligned_free(aMemory);
+            }
+            virtual void sub_28(void* aMemory)
+            { };
+            virtual uint32_t GetId()
+            {
+                return 0;
+            };
+        };
+
+        static FakeAllocator fakeAllocator;
+        static auto initializeHashMap = [](void* aHashmap, const size_t aStride)
+        {
+            auto* pHashMap = reinterpret_cast<HashMap<int, int>*>(aHashmap);
+            pHashMap->indexTable = nullptr;
+            pHashMap->size = 0;
+            pHashMap->capacity = 0;
+            pHashMap->nodes = 0;
+            pHashMap->unk18 = 0;
+            pHashMap->stride = static_cast<int32_t>(aStride);
+            pHashMap->unk20 = -1;
+            pHashMap->unk24 = 0;
+            pHashMap->allocator = *reinterpret_cast<uintptr_t*>(&fakeAllocator); // vftable
+        };
+
+        fakeTweakDB.mutex00.state = 0;
+        fakeTweakDB.mutex01.state = 0;
+        initializeHashMap(&fakeTweakDB.recordsByID, sizeof(HashMap<TweakDBID, Handle<gamedataTweakDBRecord>>::Node));
+        initializeHashMap(&fakeTweakDB.recordsByType, sizeof(HashMap<IRTTIType*, DynArray<Handle<gamedataTweakDBRecord>>>::Node));
+
+        fakeTweakDBInitialized = true;
+    }
+
+    CreateTDBRecord(&fakeTweakDB, aRecord->GetTweakBaseHash(), aRecord->recordID);
+
+    bool updated = false;
+    if (fakeTweakDB.recordsByID.size != 0)
+    {
+        // Will only find 1 record
+        fakeTweakDB.recordsByID.for_each([&updated, aRecord](const TweakDBID&, Handle<IScriptable>& handle)
+            {
+                aRecord->GetNativeType()->Assign(aRecord, handle.instance);
+                DeleteHandle(handle);
+                updated = true;
+            });
+    }
+
+    // free the hashmaps in our fakeTweakDB
+    {
+        static auto clearHashmap = [](void* aHashmap)
+        {
+            auto* pHashMap = reinterpret_cast<HashMap<int, int>*>(aHashmap);
+            pHashMap->GetAllocator()->Free(reinterpret_cast<void*>(pHashMap->nodes));
+            pHashMap->indexTable = nullptr;
+            pHashMap->size = 0;
+            pHashMap->capacity = 0;
+            pHashMap->nodes = 0;
+            pHashMap->unk18 = 0;
+            pHashMap->unk20 = -1;
+            pHashMap->unk24 = 0;
+        };
+
+        fakeTweakDB.recordsByType.for_each([](const IRTTIType*, DynArray<Handle<IScriptable>>& array)
+            {
+                array.GetAllocator()->Free(array.entries);
+            });
+
+        clearHashmap(&fakeTweakDB.recordsByID);
+        clearHashmap(&fakeTweakDB.recordsByType);
+    }
+
+    return updated;
 }
 
 RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(TweakDBID aDBID)

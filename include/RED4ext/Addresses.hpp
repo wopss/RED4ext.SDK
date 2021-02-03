@@ -84,5 +84,6 @@ constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140ED72EA - ImageBase; // 4
 constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140ED4620 - ImageBase; // 48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C, expected: 4, index: 0
 constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140ED74CF - ImageBase; // 48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B, expected: 1, index: 0
 constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140ED7585 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67, expected: 1, index: 0
+constexpr uintptr_t TweakDB_CreateRecord = 0x140F6F190 - ImageBase; // 48 89 5C 24 08 4C 89 44 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
 #pragma endregion
 } // namespace RED4ext::Addresses
