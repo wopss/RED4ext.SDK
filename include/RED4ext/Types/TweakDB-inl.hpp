@@ -166,7 +166,7 @@ RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
     return func();
 }
 
-RED4EXT_INLINE bool RED4ext::TweakDB::FlatValue::SetValue(RED4ext::CStackType& aStackType)
+RED4EXT_INLINE bool RED4ext::TweakDB::FlatValue::SetValue(const RED4ext::CStackType& aStackType)
 {
     CStackType stackType;
     GetValue(&stackType);
@@ -181,7 +181,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::FlatValue::SetValue(RED4ext::CStackType& a
     return true;
 }
 
-RED4EXT_INLINE void RED4ext::TweakDB::FlatValue::SetValue(void* aValue)
+RED4EXT_INLINE void RED4ext::TweakDB::FlatValue::SetValue(ScriptInstance aValue)
 {
     CStackType stackType;
     stackType.type = nullptr;

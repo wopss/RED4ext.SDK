@@ -78,10 +78,10 @@ struct TweakDB
         }
 
         // [Warning] FlatValues are pooled.
-        bool SetValue(CStackType& aStackType);
+        bool SetValue(const CStackType& aStackType);
 
         // [Warning] FlatValues are pooled.
-        void SetValue(void* aValue);
+        void SetValue(ScriptInstance aValue);
 
         int32_t ToTDBOffset() const;
 
