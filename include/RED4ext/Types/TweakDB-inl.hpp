@@ -8,6 +8,13 @@
 #include <RED4ext/REDptr.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
+uintptr_t GetAddressFromInstruction(uintptr_t aRVAAddress, int32_t aAddressOffset)
+{
+    auto address = RED4ext::Addresses::ImageBase + aRVAAddress;
+    auto offset = *reinterpret_cast<int32_t*>(address + aAddressOffset);
+    return (address + aAddressOffset + 4) + offset;
+}
+
 RED4EXT_INLINE RED4ext::Handle<RED4ext::IScriptable> RED4ext::TweakDB::GetRecord(TweakDBID aDBID)
 {
     RED4ext::Handle<RED4ext::IScriptable> record;
@@ -100,8 +107,8 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(IR
     static auto* pRTTI = CRTTISystem::Get();
     static auto* pInt32RTTIType = pRTTI->GetType("Int32");
     static auto* pArrayInt32RTTIType = pRTTI->GetType("array:Int32");
-    static uintptr_t FlatInt32ValueVftable = Addresses::TweakDB_FlatInt32ValueVftable + 7 + *reinterpret_cast<int32_t*>(Addresses::TweakDB_FlatInt32ValueVftable + 3);
-    static uintptr_t FlatArrayInt32ValueVftable = Addresses::TweakDB_FlatArrayInt32ValueVftable + 7 + *reinterpret_cast<int32_t*>(Addresses::TweakDB_FlatArrayInt32ValueVftable + 3);
+    static uintptr_t FlatInt32ValueVftable = GetAddressFromInstruction(Addresses::TweakDB_FlatInt32ValueVftable, 3);
+    static uintptr_t FlatArrayInt32ValueVftable = GetAddressFromInstruction(Addresses::TweakDB_FlatArrayInt32ValueVftable, 3);
 
     auto typeAlignment = aType->GetAlignment() - 1;
     auto flatValueSize = 8 /* vftable */ + ((typeAlignment + aType->GetSize()) & ~typeAlignment);
@@ -154,7 +161,7 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t start, uint32_
 RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t start, uintptr_t end, uint32_t size)
 {
     // Used by the game with TweakDBID::ToTDBOffset() and FlatValue::ToValueOffset_*()
-    static uintptr_t pStaticFlatDataBuffer = Addresses::TweakDB_StaticFlatDataBuffer + 7 + *reinterpret_cast<int32_t*>(Addresses::TweakDB_StaticFlatDataBuffer + 3);
+    static uintptr_t pStaticFlatDataBuffer = GetAddressFromInstruction(Addresses::TweakDB_StaticFlatDataBuffer, 3);
 
     flatDataBuffer = start;
     flatDataBufferEnd = end;
