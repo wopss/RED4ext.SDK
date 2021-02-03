@@ -115,7 +115,7 @@ struct TweakDB
     HashMap<CName, FlatValue*> defaultValueByType;                          // E8
     DynArray<CString> unk118;                                               // 118 - empty - maybe not CString
     uintptr_t flatDataBuffer;                                               // 128
-    uint32_t flatDataBufferSize;                                            // 130
+    uint32_t flatDataBufferCapacity;                                            // 130
     uintptr_t flatDataBufferEnd;                                            // 138
 
     template<typename T>
@@ -162,9 +162,7 @@ struct TweakDB
 
 private:
     // Multithreads may lead to undefined behavior
-    void SetFlatDataBuffer(uintptr_t start, uint32_t size);
-    // Multithreads may lead to undefined behavior
-    void SetFlatDataBuffer(uintptr_t start, uintptr_t end, uint32_t size);
+    void SetFlatDataBuffer(uintptr_t buffer, uint32_t size, uint32_t capacity);
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
 RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
