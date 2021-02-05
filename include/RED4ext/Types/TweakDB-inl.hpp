@@ -93,7 +93,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     // We're forced to call the function that's creating records in TweakDB.
     // Meaning we have to pass our own TweakDB class. sorry -Sombra
 
-    using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID tweakDBID);
+    using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID aDBID);
     static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
     static bool fakeTweakDBInitialized = false;
     static TweakDB fakeTweakDB;
@@ -293,15 +293,15 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::CreateFlatValue(co
     }
 }
 
-RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t buffer, uint32_t size, uint32_t capacity)
+RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t aBuffer, uint32_t aSize, uint32_t aCapacity)
 {
     // Used by the game with TweakDBID::ToTDBOffset() and FlatValue::ToValueOffset_*()
     static uintptr_t pStaticFlatDataBuffer = GetAddressFromInstruction(Addresses::TweakDB_StaticFlatDataBuffer, 3);
 
-    flatDataBuffer = buffer;
-    flatDataBufferEnd = buffer + size;
-    flatDataBufferCapacity = size;
-    *reinterpret_cast<uintptr_t*>(pStaticFlatDataBuffer) = buffer;
+    flatDataBuffer = aBuffer;
+    flatDataBufferEnd = aBuffer + aSize;
+    flatDataBufferCapacity = aCapacity;
+    *reinterpret_cast<uintptr_t*>(pStaticFlatDataBuffer) = aBuffer;
 }
 
 RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
