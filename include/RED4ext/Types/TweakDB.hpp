@@ -162,7 +162,7 @@ struct TweakDB
 
 private:
     // Multithreads may lead to undefined behavior
-    void SetFlatDataBuffer(uintptr_t buffer, uint32_t size, uint32_t capacity);
+    void SetFlatDataBuffer(uintptr_t aBuffer, uint32_t aSize, uint32_t aCapacity);
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
 RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
