@@ -300,7 +300,7 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t buffer, uint32
 
     flatDataBuffer = buffer;
     flatDataBufferEnd = buffer + size;
-    flatDataBufferCapacity = size;
+    flatDataBufferCapacity = capacity;
     *reinterpret_cast<uintptr_t*>(pStaticFlatDataBuffer) = buffer;
 }
 
