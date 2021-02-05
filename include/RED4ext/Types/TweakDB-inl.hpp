@@ -12,7 +12,7 @@
 
 uintptr_t GetAddressFromInstruction(uintptr_t aRVAAddress, int32_t aAddressOffset)
 {
-    auto address = RED4ext::Addresses::ImageBase + aRVAAddress;
+    auto address = reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)) + aRVAAddress;
     auto offset = *reinterpret_cast<int32_t*>(address + aAddressOffset);
     return (address + aAddressOffset + 4) + offset;
 }
