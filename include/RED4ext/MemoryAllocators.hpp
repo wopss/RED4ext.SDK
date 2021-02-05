@@ -23,7 +23,7 @@ struct IMemoryAllocator
     virtual void sub_28(void* aMemory) = 0;
     virtual uint32_t GetId() = 0;
 
-    template<typename T, std::enable_if_t<!std::is_pointer_v<T>, T*> = 0>
+    template<typename T, std::enable_if_t<!std::is_pointer_v<T>, T*> = nullptr>
     [[nodiscard]] T* Alloc()
     {
         auto result = Alloc(sizeof(T));

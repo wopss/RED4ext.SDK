@@ -93,6 +93,11 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='TweakDB', functions=[
-            Item(name='Get', pattern='48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00')
+            Item(name='Get', pattern='48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00'),
+            Item(name='StaticFlatDataBuffer', pattern='48 89 1D ? ? ? ? 41 89 BF 30 01 00 00'),
+            Item(name='InitFlatValue_ExceptInt32', pattern='48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C', expected=4, index=0),
+            Item(name='FlatInt32ValueVftable', pattern='48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B'),
+            Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67'),
+            Item(name='CreateRecord', pattern='48 89 5C 24 08 4C 89 44 24 18 57 48 83 EC 30 8B C2'),
         ])
     ]

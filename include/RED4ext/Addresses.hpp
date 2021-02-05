@@ -8,18 +8,18 @@
  */
 #include <cstdint>
 
-// Addresses for Cyberpunk 2077, version 1.11.
+// Addresses for Cyberpunk 2077, version 1.12.
 namespace RED4ext::Addresses
 {
 constexpr uintptr_t ImageBase = 0x140000000;
 
 #pragma region Allocators
 constexpr uintptr_t Allocators_RTTI_Get = 0x1401BF840 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA D0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 369, index: 2
-constexpr uintptr_t Allocators_RTTIFunction_Get = 0x140225140 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA D0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 369, index: 14
+constexpr uintptr_t Allocators_RTTIFunction_Get = 0x140225120 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA D0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 369, index: 14
 #pragma endregion
 
 #pragma region CBaseFunction
-constexpr uintptr_t CBaseFunction_Execute = 0x140224A20 - ImageBase; // 48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA, expected: 1, index: 0
+constexpr uintptr_t CBaseFunction_Execute = 0x140224A00 - ImageBase; // 48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CClass
@@ -29,19 +29,19 @@ constexpr uintptr_t CClass_GetFunction = 0x140212D80 - ImageBase; // 4C 8B C9 48
 #pragma endregion
 
 #pragma region CClassFunction
-constexpr uintptr_t CClassFunction_ctor = 0x1402242A0 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0, expected: 3, index: 1
+constexpr uintptr_t CClassFunction_ctor = 0x140224280 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0, expected: 3, index: 1
 #pragma endregion
 
 #pragma region CClassStaticFunction
-constexpr uintptr_t CClassStaticFunction_ctor = 0x140224240 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0, expected: 3, index: 0
+constexpr uintptr_t CClassStaticFunction_ctor = 0x140224220 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0, expected: 3, index: 0
 #pragma endregion
 
 #pragma region CGameEngine
-constexpr uintptr_t CGameEngine = 0x14402A748 - ImageBase; // 48 89 05 ? ? ? ? 49 8D 9D 88 00 00 00 49 8B 07 4C 8B C3, expected: 1, index: 0, offset: 3
+constexpr uintptr_t CGameEngine = 0x14402A788 - ImageBase; // 48 89 05 ? ? ? ? 49 8D 9D 88 00 00 00 49 8B 07 4C 8B C3, expected: 1, index: 0, offset: 3
 #pragma endregion
 
 #pragma region CGlobalFunction
-constexpr uintptr_t CGlobalFunction_ctor = 0x1402241F0 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B D9, expected: 6, index: 0
+constexpr uintptr_t CGlobalFunction_ctor = 0x1402241D0 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B D9, expected: 6, index: 0
 #pragma endregion
 
 #pragma region CNamePool
@@ -52,11 +52,11 @@ constexpr uintptr_t CNamePool_Get = 0x1401BC090 - ImageBase; // 48 83 EC 38 48 8
 #pragma endregion
 
 #pragma region CRTTISystem
-constexpr uintptr_t CRTTISystem_Get = 0x140267480 - ImageBase; // 40 53 48 83 EC 20 65 48 8B 04 25 58 00 00 00 48 8D 1D ? ? ? ?, expected: 1, index: 0
+constexpr uintptr_t CRTTISystem_Get = 0x140267460 - ImageBase; // 40 53 48 83 EC 20 65 48 8B 04 25 58 00 00 00 48 8D 1D ? ? ? ?, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CStack
-constexpr uintptr_t CStack_ctor = 0x14026F8D0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8D 05 ? ? ? ? 48 C7 41 08 00 00 00 00, expected: 3, index: 1
+constexpr uintptr_t CStack_ctor = 0x14026F8B0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8D 05 ? ? ? ? 48 C7 41 08 00 00 00 00, expected: 3, index: 1
 #pragma endregion
 
 #pragma region CString
@@ -79,6 +79,11 @@ constexpr uintptr_t IScriptable_GetValueHolder = 0x1401FDDD0 - ImageBase; // 40 
 #pragma endregion
 
 #pragma region TweakDB
-constexpr uintptr_t TweakDB_Get = 0x140C01330 - ImageBase; // 48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_Get = 0x140C01310 - ImageBase; // 48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140ED72CA - ImageBase; // 48 89 1D ? ? ? ? 41 89 BF 30 01 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140ED4600 - ImageBase; // 48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C, expected: 4, index: 0
+constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140ED74AF - ImageBase; // 48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B, expected: 1, index: 0
+constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140ED7565 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67, expected: 1, index: 0
+constexpr uintptr_t TweakDB_CreateRecord = 0x140F6F170 - ImageBase; // 48 89 5C 24 08 4C 89 44 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
 #pragma endregion
 } // namespace RED4ext::Addresses

@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <shared_mutex>
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
@@ -8,11 +9,28 @@
 #include <RED4ext/Types/SharedMutex.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
 #include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 
 namespace RED4ext
 {
-struct IScriptable;
+// Issues with current API:
+// 1. Reading from multiple threads is fine. Creating a new FlatValue is not. (writing to flatDataBuffer)
+//    Every FlatValue* (and GetValue) will be invalid if a thread grows the flatDataBuffer.
+//    Except if you don't free the old buffer, but that's an issue on its own
+//
+// 2. Flat values are pooled.
+//    An int (or any type) value of '1' exist only once in TweakDB::flatDataBuffer. Modifying it will affect all records using it.
+//    Implementing a value pool in here is pointless. the lib isn't a shared library. Pool won't be shared between multiple dlls that use the SDK
+//    Could abuse the alignment gaps in TweakDB to store custom data in the class.. like a pointer to the pool? >_>
+
+struct gamedataTweakDBRecord : IScriptable
+{
+    virtual void sub_110() = 0; // 110
+    virtual uint32_t GetTweakBaseHash() = 0; // Murmur3
+    
+    TweakDBID recordID;
+};
 
 struct TweakDB
 {
@@ -31,54 +49,59 @@ struct TweakDB
         // those 3 bytes **ARE NOT** TweakDBID::Offset. tweak's offset point to this class and not the value.
 
         virtual ~FlatValue() = 0;
-        virtual bool ToValueOffset_array_TweakDBID(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_TweakDBID(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Quaternion(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Quaternion(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_EulerAngles(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_EulerAngles(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Vector3(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Vector3(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Vector2(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Vector2(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Color(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Color(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_raRef_CResource(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_raRef_CResource(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_CName(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_CName(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Bool(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Bool(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_String(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_String(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Float(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Float(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_array_Int32(uint32_t* aValueOffset) = 0;
-        virtual bool ToValueOffset_Int32(uint32_t* aValueOffset) = 0;
-        virtual CStackType* GetValue(CStackType* aStackType) = 0;
+        virtual bool ToValueOffset_array_TweakDBID(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_TweakDBID(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Quaternion(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Quaternion(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_EulerAngles(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_EulerAngles(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Vector3(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Vector3(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Vector2(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Vector2(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Color(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Color(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_raRef_CResource(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_raRef_CResource(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_CName(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_CName(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Bool(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Bool(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_String(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_String(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Float(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Float(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_array_Int32(uint32_t* aValueOffset) const = 0;
+        virtual bool ToValueOffset_Int32(uint32_t* aValueOffset) const = 0;
+        virtual CStackType* GetValue(CStackType* aStackType) const = 0;
 
         template<typename T>
-        T* GetValue()
+        T* GetValue() const
         {
             CStackType stackType;
             GetValue(&stackType);
             return reinterpret_cast<T*>(stackType.value);
         }
 
-        bool SetValue(CStackType& aStackType);
-        void SetValue(void* aValue);
+        // [Warning] FlatValues are pooled.
+        bool SetValue(const CStackType& aStackType);
+
+        // [Warning] FlatValues are pooled.
+        void SetValue(ScriptInstance aValue);
+
+        int32_t ToTDBOffset() const;
 
         // value here
     };
 
-    SharedMutex mutex00;                                                    // 00 - used with flatIDs and flatValuesBuffer*
+    SharedMutex mutex00;                                                    // 00 - used with flats and flatDataBuffer*
     SharedMutex mutex01;                                                    // 01 - used with recordsByID, recordsByType, queryIDs, queryValues, groupIDs and groupTags
     void* unk08;                                                            // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
     void* unk10;                                                            // 10 - class - 208 bytes
     bool unk18;                                                             // 18
-    DynArray<TweakDBID> flatIDs;                                            // 20
+    DynArray<TweakDBID> flats;                                              // 20
     uint64_t unk30;                                                         // 30
     HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                    // 38
     HashMap<IRTTIType*, DynArray<Handle<IScriptable>>> recordsByType;       // 68
@@ -91,30 +114,60 @@ struct TweakDB
     uint64_t unkE0;                                                         // E0
     HashMap<CName, FlatValue*> defaultValueByType;                          // E8
     DynArray<CString> unk118;                                               // 118 - empty - maybe not CString
-    uintptr_t flatValuesBuffer;                                             // 128
-    uint32_t flatValuesBufferSize;                                          // 130
-    uintptr_t flatValuesBufferEnd;                                          // 138
+    uintptr_t flatDataBuffer;                                               // 128
+    uint32_t flatDataBufferCapacity;                                            // 130
+    uintptr_t flatDataBufferEnd;                                            // 138
 
     template<typename T>
-    T* GetValue(TweakDBID aDBID)
+    T GetValue(TweakDBID aDBID)
     {
-        auto* flatValue = GetFlatValue(aDBID);
-        if (flatValue == nullptr)
-            return nullptr;
-        
-        return flatValue->GetValue<T>();
+        T value {};
+        TryGetValue(aDBID, value);
+        return std::move(value);
     }
 
-    Handle<IScriptable>* GetRecord(TweakDBID aDBID);
-    DynArray<Handle<IScriptable>>* GetRecordsByType(IRTTIType* aType);
-    DynArray<TweakDBID>* Query(TweakDBID aDBID);
+    template<typename T>
+    bool TryGetValue(TweakDBID aDBID, T& aValue)
+    {
+        std::shared_lock<SharedMutex> _(mutex00);
+
+        auto* flatValue = GetFlatValue(aDBID);
+        if (flatValue == nullptr)
+            return false;
+
+        aValue = *flatValue->GetValue<T>();
+        return true;
+    }
+
+    Handle<IScriptable> GetRecord(TweakDBID aDBID);
+    bool TryGetRecord(TweakDBID aDBID, Handle<IScriptable>& aRecord);
+
+    DynArray<Handle<IScriptable>> GetRecordsByType(IRTTIType* aType);
+    bool TryGetRecordsByType(IRTTIType* aType, DynArray<Handle<IScriptable>>& aRecordsArray);
+
+    DynArray<TweakDBID> Query(TweakDBID aDBID);
+    bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
+
+    // [Experimental] Updates all the value offsets inside the record
+    bool UpdateRecord(TweakDBID aDBID);
+    // [Experimental] Updates all the value offsets inside the record
+    bool UpdateRecord(gamedataTweakDBRecord* aRecord);
+
+    // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);
+    // Multithreads may lead to undefined behavior
+    FlatValue* CreateFlatValue(const CStackType& aStackType);
+
     static TweakDB* Get();
+
+private:
+    // Multithreads may lead to undefined behavior
+    void SetFlatDataBuffer(uintptr_t aBuffer, uint32_t aSize, uint32_t aCapacity);
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
 RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
-RED4EXT_ASSERT_OFFSET(TweakDB, flatIDs, 0x20);
-RED4EXT_ASSERT_OFFSET(TweakDB, flatValuesBufferEnd, 0x138);
+RED4EXT_ASSERT_OFFSET(TweakDB, flats, 0x20);
+RED4EXT_ASSERT_OFFSET(TweakDB, flatDataBufferEnd, 0x138);
 RED4EXT_ASSERT_SIZE(TweakDB, 0x140);
 }
 
