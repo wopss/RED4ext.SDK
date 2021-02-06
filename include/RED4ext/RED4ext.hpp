@@ -27,3 +27,7 @@
 #include <RED4ext/Types/SharedMutex.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
 #include <RED4ext/Types/TweakDB.hpp>
+
+#include <RED4ext/Api.hpp>
+#include <RED4ext/Api/Runtime.hpp>
+#include <RED4ext/Api/VersionInfo.hpp>
