@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Version.hpp>
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>

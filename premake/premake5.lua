@@ -6,6 +6,7 @@ premake.downloadModule = function(modname, versions)
 end
 
 red4ext = require("extensions/red4ext")
+red4ext.version.gen(0, 1, 0)
 
 workspace("RED4ext.SDK")
     location("projects")
