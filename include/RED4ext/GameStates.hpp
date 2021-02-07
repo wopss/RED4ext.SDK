@@ -6,15 +6,6 @@
 namespace RED4ext
 {
 struct CGameApplication;
-
-enum class EGameState
-{
-    Uninitialized = 0,
-    Initialized,
-    Ran,
-    Done,
-};
-
 struct IGameState
 {
     virtual ~IGameState() = 0;
