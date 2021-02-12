@@ -3,19 +3,22 @@
 #include <RED4ext/Api/v1/VersionInfo.hpp>
 
 /*
- * CD Projekt RED does not use semantic versioning in their game. It can be interpreted as semantic versioning because
- * patch 1.03 can be translated to the following major: 1, minor: 0, patch: 3.
+ * CD Projekt RED does use semantic versioning in their game for "PRODUCTVERSION", but the string one and patch notes do
+ * not respect the semantic version. It is interpreted as semantic versioning as following:
+ *  1.03 -> major: 1, minor: 0, patch: 3.
+ *  1.10 -> major: 1, minor: 1, patch: 0.
+ *  1.11 -> major: 1, minor: 1, patch: 1.
  *
- * To keep things consinstently we are going to use their own versioning for runtimes.
+ * To keep things consinstently we are going to use their own versioning for runtime defines.
  */
 
-#define RED4EXT_V1_RUNTIME_1_03 RED4EXT_V1_SEMVER(1, 03, 0)
-#define RED4EXT_V1_RUNTIME_1_04 RED4EXT_V1_SEMVER(1, 04, 0)
-#define RED4EXT_V1_RUNTIME_1_05 RED4EXT_V1_SEMVER(1, 05, 0)
-#define RED4EXT_V1_RUNTIME_1_06 RED4EXT_V1_SEMVER(1, 06, 0)
-#define RED4EXT_V1_RUNTIME_1_10 RED4EXT_V1_SEMVER(1, 10, 0)
-#define RED4EXT_V1_RUNTIME_1_11 RED4EXT_V1_SEMVER(1, 11, 0)
-#define RED4EXT_V1_RUNTIME_1_12 RED4EXT_V1_SEMVER(1, 12, 0)
+#define RED4EXT_V1_RUNTIME_1_03 RED4EXT_V1_SEMVER(1, 0, 3)
+#define RED4EXT_V1_RUNTIME_1_04 RED4EXT_V1_SEMVER(1, 0, 4)
+#define RED4EXT_V1_RUNTIME_1_05 RED4EXT_V1_SEMVER(1, 0, 5)
+#define RED4EXT_V1_RUNTIME_1_06 RED4EXT_V1_SEMVER(1, 0, 6)
+#define RED4EXT_V1_RUNTIME_1_10 RED4EXT_V1_SEMVER(1, 1, 0)
+#define RED4EXT_V1_RUNTIME_1_11 RED4EXT_V1_SEMVER(1, 1, 1)
+#define RED4EXT_V1_RUNTIME_1_12 RED4EXT_V1_SEMVER(1, 1, 2)
 
 /**
  * @brief Supports all game versions.
