@@ -1,0 +1,29 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Types/SimpleTypes.hpp>
+#include <RED4ext/Types/generated/ink/TextureAtlasMapper.hpp>
+#include <RED4ext/Types/generated/ink/TextureAtlasSlice.hpp>
+
+namespace RED4ext
+{
+struct CBitmapTexture;
+
+namespace ink { 
+struct TextureSlot
+{
+    static constexpr const char* NAME = "inkTextureSlot";
+    static constexpr const char* ALIAS = NAME;
+
+    RaRef<CBitmapTexture> texture; // 00
+    DynArray<ink::TextureAtlasMapper> parts; // 08
+    DynArray<ink::TextureAtlasSlice> slices; // 18
+};
+RED4EXT_ASSERT_SIZE(TextureSlot, 0x28);
+} // namespace ink
+} // namespace RED4ext

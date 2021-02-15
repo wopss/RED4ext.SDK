@@ -1,0 +1,22 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/game/EffectDurationModifier.hpp>
+
+namespace RED4ext
+{
+namespace game { 
+struct EffectDurationModifier_Scripted : game::EffectDurationModifier
+{
+    static constexpr const char* NAME = "gameEffectDurationModifier_Scripted";
+    static constexpr const char* ALIAS = "EffectDurationModifier_Scripted";
+
+};
+RED4EXT_ASSERT_SIZE(EffectDurationModifier_Scripted, 0x40);
+} // namespace game
+using EffectDurationModifier_Scripted = game::EffectDurationModifier_Scripted;
+} // namespace RED4ext

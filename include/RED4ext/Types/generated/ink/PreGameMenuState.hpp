@@ -1,0 +1,21 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/ink/IStateMachineState.hpp>
+
+namespace RED4ext
+{
+namespace ink { 
+struct PreGameMenuState : ink::IStateMachineState
+{
+    static constexpr const char* NAME = "inkPreGameMenuState";
+    static constexpr const char* ALIAS = NAME;
+
+};
+RED4EXT_ASSERT_SIZE(PreGameMenuState, 0x10);
+} // namespace ink
+} // namespace RED4ext

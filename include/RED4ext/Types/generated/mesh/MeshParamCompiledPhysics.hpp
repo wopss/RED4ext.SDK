@@ -1,0 +1,25 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Handle.hpp>
+#include <RED4ext/Types/generated/mesh/MeshParameter.hpp>
+
+namespace RED4ext
+{
+namespace physics { struct DeferredCollection; }
+
+namespace mesh { 
+struct MeshParamCompiledPhysics : mesh::MeshParameter
+{
+    static constexpr const char* NAME = "meshMeshParamCompiledPhysics";
+    static constexpr const char* ALIAS = NAME;
+
+    Handle<physics::DeferredCollection> collection; // 30
+};
+RED4EXT_ASSERT_SIZE(MeshParamCompiledPhysics, 0x40);
+} // namespace mesh
+} // namespace RED4ext

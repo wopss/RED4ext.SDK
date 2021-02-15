@@ -1,0 +1,31 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/ent/dismemberment/WoundTypeE.hpp>
+#include <RED4ext/Types/generated/physics/RagdollBodyPartE.hpp>
+#include <RED4ext/Types/generated/quest/ICharacterManagerCombat_NodeSubType.hpp>
+
+namespace RED4ext
+{
+namespace quest { 
+struct CharacterManagerCombat_Kill : quest::ICharacterManagerCombat_NodeSubType
+{
+    static constexpr const char* NAME = "questCharacterManagerCombat_Kill";
+    static constexpr const char* ALIAS = NAME;
+
+    bool noAnimation; // 70
+    bool noRagdoll; // 71
+    bool skipDefeatedState; // 72
+    bool doDismemberment; // 73
+    float dismembermentStrenght; // 74
+    physics::RagdollBodyPartE bodyPart; // 78
+    ent::dismemberment::WoundTypeE woundType; // 7C
+    uint8_t unk7E[0x80 - 0x7E]; // 7E
+};
+RED4EXT_ASSERT_SIZE(CharacterManagerCombat_Kill, 0x80);
+} // namespace quest
+} // namespace RED4ext

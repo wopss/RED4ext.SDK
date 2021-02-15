@@ -65,19 +65,16 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
                     ClassDependencyBuilder builder;
                     builder.pType = classType;
 
-                    if (!classType->flags.isAbstract)
+                    for (uint32_t i = 0; i < classType->unk118.size; ++i)
                     {
-                        for (uint32_t i = 0; i < classType->unk118.size; ++i)
+                        auto prop = classType->unk118.entries[i];
+                        if (!prop->flags.b21)
                         {
-                            auto prop = classType->unk118.entries[i];
-                            if (!prop->flags.b21)
-                            {
-                                builder.mPropertyMap.emplace(prop->valueOffset, prop);
-                            }
-                            else if (aPropertyHolders)
-                            {
-                                builder.mHolderPropertyMap.emplace(prop->valueOffset, prop);
-                            }
+                            builder.mPropertyMap.emplace(prop->valueOffset, prop);
+                        }
+                        else if (aPropertyHolders)
+                        {
+                            builder.mHolderPropertyMap.emplace(prop->valueOffset, prop);
                         }
                     }
 
@@ -264,6 +261,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     FixedTypeMapping fixedMapping = {{"ISerializable", "ISerializable"},
                                      {"IScriptable", "Scripting/IScriptable"},
                                      {"gameuiCharacterCustomizationSystem", "Types/CharacterCustomization"},
+                                     {"gameuiCharacterCustomizationOptionImpl", "Types/CharacterCustomizationOptionImpl"},
                                      {"gameItemID", "Types/SimpleTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
