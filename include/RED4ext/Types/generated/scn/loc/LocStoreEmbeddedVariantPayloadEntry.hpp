@@ -1,0 +1,24 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/SimpleTypes.hpp>
+#include <RED4ext/Types/generated/scn/loc/VariantId.hpp>
+
+namespace RED4ext
+{
+namespace scn::loc { 
+struct LocStoreEmbeddedVariantPayloadEntry
+{
+    static constexpr const char* NAME = "scnlocLocStoreEmbeddedVariantPayloadEntry";
+    static constexpr const char* ALIAS = NAME;
+
+    scn::loc::VariantId variantId; // 00
+    CString content; // 08
+};
+RED4EXT_ASSERT_SIZE(LocStoreEmbeddedVariantPayloadEntry, 0x28);
+} // namespace scn::loc
+} // namespace RED4ext

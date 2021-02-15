@@ -1,0 +1,23 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/EFreeVectorAxes.hpp>
+#include <RED4ext/Types/generated/IEvaluator.hpp>
+
+namespace RED4ext
+{
+struct IEvaluatorVector : IEvaluator
+{
+    static constexpr const char* NAME = "IEvaluatorVector";
+    static constexpr const char* ALIAS = NAME;
+
+    EFreeVectorAxes freeAxes; // 30
+    bool spill; // 34
+    uint8_t unk35[0x38 - 0x35]; // 35
+};
+RED4EXT_ASSERT_SIZE(IEvaluatorVector, 0x38);
+} // namespace RED4ext

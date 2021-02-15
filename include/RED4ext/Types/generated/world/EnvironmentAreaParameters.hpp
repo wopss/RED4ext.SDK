@@ -1,0 +1,25 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/CResource.hpp>
+#include <RED4ext/Types/generated/WorldRenderAreaSettings.hpp>
+
+namespace RED4ext
+{
+namespace world { 
+struct EnvironmentAreaParameters : CResource
+{
+    static constexpr const char* NAME = "worldEnvironmentAreaParameters";
+    static constexpr const char* ALIAS = NAME;
+
+    WorldRenderAreaSettings renderAreaSettings; // 40
+    bool resaved; // 50
+    uint8_t unk51[0x58 - 0x51]; // 51
+};
+RED4EXT_ASSERT_SIZE(EnvironmentAreaParameters, 0x58);
+} // namespace world
+} // namespace RED4ext

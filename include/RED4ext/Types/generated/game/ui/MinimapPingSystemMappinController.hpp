@@ -1,0 +1,24 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/game/ui/BaseMinimapMappinController.hpp>
+#include <RED4ext/Types/generated/ink/WidgetReference.hpp>
+
+namespace RED4ext
+{
+namespace game::ui { 
+struct MinimapPingSystemMappinController : game::ui::BaseMinimapMappinController
+{
+    static constexpr const char* NAME = "gameuiMinimapPingSystemMappinController";
+    static constexpr const char* ALIAS = "MinimapPingSystemMappinController";
+
+    ink::WidgetReference rootWidget; // 210
+};
+RED4EXT_ASSERT_SIZE(MinimapPingSystemMappinController, 0x228);
+} // namespace game::ui
+using MinimapPingSystemMappinController = game::ui::MinimapPingSystemMappinController;
+} // namespace RED4ext

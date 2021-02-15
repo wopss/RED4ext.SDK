@@ -1,0 +1,23 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/game/VisionModeSystemRevealIdentifier.hpp>
+#include <RED4ext/Types/generated/red/Event.hpp>
+
+namespace RED4ext
+{
+namespace game { 
+struct VisionRevealExpiredEvent : red::Event
+{
+    static constexpr const char* NAME = "gameVisionRevealExpiredEvent";
+    static constexpr const char* ALIAS = NAME;
+
+    game::VisionModeSystemRevealIdentifier revealId; // 40
+};
+RED4EXT_ASSERT_SIZE(VisionRevealExpiredEvent, 0x50);
+} // namespace game
+} // namespace RED4ext

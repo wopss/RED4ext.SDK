@@ -1,0 +1,25 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/effect/EffectParameterEvaluatorFloat.hpp>
+#include <RED4ext/Types/generated/effect/TrackItem.hpp>
+
+namespace RED4ext
+{
+namespace effect { 
+struct TrackItemEmissive : effect::TrackItem
+{
+    static constexpr const char* NAME = "effectTrackItemEmissive";
+    static constexpr const char* ALIAS = NAME;
+
+    effect::EffectParameterEvaluatorFloat brigtness; // 48
+    bool override; // 68
+    uint8_t unk69[0x70 - 0x69]; // 69
+};
+RED4EXT_ASSERT_SIZE(TrackItemEmissive, 0x70);
+} // namespace effect
+} // namespace RED4ext

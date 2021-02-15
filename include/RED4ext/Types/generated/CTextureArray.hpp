@@ -1,0 +1,30 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Handle.hpp>
+#include <RED4ext/Types/generated/ITexture.hpp>
+#include <RED4ext/Types/generated/STextureGroupSetup.hpp>
+#include <RED4ext/Types/generated/rend/RenderTextureResource.hpp>
+
+namespace RED4ext
+{
+struct IRenderResourceBlob;
+
+struct CTextureArray : ITexture
+{
+    static constexpr const char* NAME = "CTextureArray";
+    static constexpr const char* ALIAS = NAME;
+
+    uint8_t unk40[0x58 - 0x40]; // 40
+    STextureGroupSetup setup; // 58
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    Handle<IRenderResourceBlob> renderResourceBlob; // 70
+    uint8_t unk80[0x88 - 0x80]; // 80
+    rend::RenderTextureResource renderTextureResource; // 88
+};
+RED4EXT_ASSERT_SIZE(CTextureArray, 0x98);
+} // namespace RED4ext

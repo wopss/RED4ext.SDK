@@ -245,7 +245,7 @@ struct CClass : CRTTIType
     HashMap<uint64_t, CClassFunction*> unkA8; // A8
     int64_t unkD8;                            // D8
     int64_t unkE0;                            // E0
-    HashMap<uint64_t, CRTTIType*> unkE8;      // E8
+    HashMap<uint64_t, CProperty*> unkE8;      // E8
     DynArray<CProperty*> unk118;              // 118 More entries than 0x28, will contain native props
     DynArray<void*> unk128;                   // 128
     DynArray<CProperty*> unk138;              // 138 Only RT_Class types?

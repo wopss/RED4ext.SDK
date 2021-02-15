@@ -1,0 +1,24 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/Types/generated/game/ui/ICharacterCustomizationComponent.hpp>
+
+namespace RED4ext
+{
+namespace game::ui { 
+struct CharacterCustomizationPersonalLinkController : game::ui::ICharacterCustomizationComponent
+{
+    static constexpr const char* NAME = "gameuiCharacterCustomizationPersonalLinkController";
+    static constexpr const char* ALIAS = NAME;
+
+    CName simpleLinkGroup; // 98
+    uint8_t unkA0[0xB8 - 0xA0]; // A0
+};
+RED4EXT_ASSERT_SIZE(CharacterCustomizationPersonalLinkController, 0xB8);
+} // namespace game::ui
+} // namespace RED4ext

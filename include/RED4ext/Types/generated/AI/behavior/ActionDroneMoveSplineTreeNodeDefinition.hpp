@@ -1,0 +1,25 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Handle.hpp>
+#include <RED4ext/Types/generated/AI/behavior/ActionTreeNodeDefinition.hpp>
+
+namespace RED4ext
+{
+namespace AI { struct ArgumentMapping; }
+
+namespace AI::behavior { 
+struct ActionDroneMoveSplineTreeNodeDefinition : AI::behavior::ActionTreeNodeDefinition
+{
+    static constexpr const char* NAME = "AIbehaviorActionDroneMoveSplineTreeNodeDefinition";
+    static constexpr const char* ALIAS = NAME;
+
+    Handle<AI::ArgumentMapping> spline; // 40
+};
+RED4EXT_ASSERT_SIZE(ActionDroneMoveSplineTreeNodeDefinition, 0x50);
+} // namespace AI::behavior
+} // namespace RED4ext
