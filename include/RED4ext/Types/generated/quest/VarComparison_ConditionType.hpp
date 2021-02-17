@@ -1,0 +1,26 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/SimpleTypes.hpp>
+#include <RED4ext/Types/generated/EComparisonType.hpp>
+#include <RED4ext/Types/generated/quest/IFactsDBConditionType.hpp>
+
+namespace RED4ext
+{
+namespace quest { 
+struct VarComparison_ConditionType : quest::IFactsDBConditionType
+{
+    static constexpr const char* NAME = "questVarComparison_ConditionType";
+    static constexpr const char* ALIAS = NAME;
+
+    CString factName; // 38
+    int32_t value; // 58
+    EComparisonType comparisonType; // 5C
+};
+RED4EXT_ASSERT_SIZE(VarComparison_ConditionType, 0x60);
+} // namespace quest
+} // namespace RED4ext

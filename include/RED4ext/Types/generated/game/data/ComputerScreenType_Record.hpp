@@ -1,0 +1,22 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/game/data/DeviceScreenType_Record.hpp>
+
+namespace RED4ext
+{
+namespace game::data { 
+struct ComputerScreenType_Record : game::data::DeviceScreenType_Record
+{
+    static constexpr const char* NAME = "gamedataComputerScreenType_Record";
+    static constexpr const char* ALIAS = "ComputerScreenType_Record";
+
+};
+RED4EXT_ASSERT_SIZE(ComputerScreenType_Record, 0x58);
+} // namespace game::data
+using ComputerScreenType_Record = game::data::ComputerScreenType_Record;
+} // namespace RED4ext

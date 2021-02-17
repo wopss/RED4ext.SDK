@@ -1,0 +1,24 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Types/SimpleTypes.hpp>
+
+namespace RED4ext
+{
+namespace game::ui { 
+struct NewsFeedDataProvider : IScriptable
+{
+    static constexpr const char* NAME = "gameuiNewsFeedDataProvider";
+    static constexpr const char* ALIAS = NAME;
+
+    TweakDBID newsTitleTweak; // 40
+    TweakDBID randomNewsFeedPack; // 48
+};
+RED4EXT_ASSERT_SIZE(NewsFeedDataProvider, 0x50);
+} // namespace game::ui
+} // namespace RED4ext

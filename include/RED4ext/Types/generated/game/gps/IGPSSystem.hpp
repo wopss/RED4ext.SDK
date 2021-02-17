@@ -1,0 +1,22 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/game/IGameSystem.hpp>
+
+namespace RED4ext
+{
+namespace game::gps { 
+struct IGPSSystem : game::IGameSystem
+{
+    static constexpr const char* NAME = "gamegpsIGPSSystem";
+    static constexpr const char* ALIAS = "IGPSSystem";
+
+};
+RED4EXT_ASSERT_SIZE(IGPSSystem, 0x48);
+} // namespace game::gps
+using IGPSSystem = game::gps::IGPSSystem;
+} // namespace RED4ext

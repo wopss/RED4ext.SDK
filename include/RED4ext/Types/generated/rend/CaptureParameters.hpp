@@ -1,0 +1,48 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Types/SimpleTypes.hpp>
+#include <RED4ext/Types/generated/AbsolutePathSerializable.hpp>
+#include <RED4ext/Types/generated/EEnvManagerModifier.hpp>
+#include <RED4ext/Types/generated/ESaveFormat.hpp>
+#include <RED4ext/Types/generated/Point.hpp>
+#include <RED4ext/Types/generated/rend/CaptureContextType.hpp>
+#include <RED4ext/Types/generated/rend/ResolutionMultiplier.hpp>
+#include <RED4ext/Types/generated/rend/ScreenshotMode.hpp>
+
+namespace RED4ext
+{
+namespace rend { 
+struct CaptureParameters
+{
+    static constexpr const char* NAME = "rendCaptureParameters";
+    static constexpr const char* ALIAS = NAME;
+
+    rend::ScreenshotMode mode; // 00
+    uint8_t unk04[0x8 - 0x4]; // 4
+    CString outputDirectoryName; // 08
+    CString outputDirectoryNameSuffix; // 28
+    uint32_t initialFrameNumber; // 48
+    uint32_t outputDirectoryIndex; // 4C
+    uint32_t recordingFPS; // 50
+    Point customResolution; // 54
+    rend::ResolutionMultiplier resolutionMultiplier; // 5C
+    AbsolutePathSerializable outputPath; // 60
+    DynArray<EEnvManagerModifier> emmModes; // 80
+    float fovMultiplier; // 90
+    uint8_t unk94[0x98 - 0x94]; // 94
+    ESaveFormat saveFormat; // 98
+    rend::CaptureContextType captureContextType; // 9C
+    bool enable; // A0
+    bool videoRecordingMode; // A1
+    bool audioRecordingMode; // A2
+    uint8_t unkA3[0xA8 - 0xA3]; // A3
+};
+RED4EXT_ASSERT_SIZE(CaptureParameters, 0xA8);
+} // namespace rend
+} // namespace RED4ext

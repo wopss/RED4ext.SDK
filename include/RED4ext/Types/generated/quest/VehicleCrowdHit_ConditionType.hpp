@@ -1,0 +1,23 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/quest/IVehicleConditionType.hpp>
+
+namespace RED4ext
+{
+namespace quest { 
+struct VehicleCrowdHit_ConditionType : quest::IVehicleConditionType
+{
+    static constexpr const char* NAME = "questVehicleCrowdHit_ConditionType";
+    static constexpr const char* ALIAS = NAME;
+
+    bool lethal; // 38
+    uint8_t unk39[0x40 - 0x39]; // 39
+};
+RED4EXT_ASSERT_SIZE(VehicleCrowdHit_ConditionType, 0x40);
+} // namespace quest
+} // namespace RED4ext

@@ -1,0 +1,27 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/Types/SimpleTypes.hpp>
+#include <RED4ext/Types/generated/quest/ICharacterConditionType.hpp>
+
+namespace RED4ext
+{
+namespace quest { 
+struct CharacterWorkspot_ConditionType : quest::ICharacterConditionType
+{
+    static constexpr const char* NAME = "questCharacterWorkspot_ConditionType";
+    static constexpr const char* ALIAS = NAME;
+
+    NodeRef spotRef; // 78
+    CName animationName; // 80
+    bool waitForAnimEnd; // 88
+    uint8_t unk89[0x90 - 0x89]; // 89
+};
+RED4EXT_ASSERT_SIZE(CharacterWorkspot_ConditionType, 0x90);
+} // namespace quest
+} // namespace RED4ext

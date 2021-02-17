@@ -1,0 +1,27 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Handle.hpp>
+#include <RED4ext/Types/generated/ETextureAnimationMode.hpp>
+#include <RED4ext/Types/generated/IParticleModificator.hpp>
+
+namespace RED4ext
+{
+struct IEvaluatorFloat;
+
+struct CParticleModificatorTextureAnimation : IParticleModificator
+{
+    static constexpr const char* NAME = "CParticleModificatorTextureAnimation";
+    static constexpr const char* ALIAS = NAME;
+
+    Handle<IEvaluatorFloat> initialFrame; // 80
+    Handle<IEvaluatorFloat> animationSpeed; // 90
+    ETextureAnimationMode animationMode; // A0
+    uint8_t unkA4[0xA8 - 0xA4]; // A4
+};
+RED4EXT_ASSERT_SIZE(CParticleModificatorTextureAnimation, 0xA8);
+} // namespace RED4ext

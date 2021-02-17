@@ -1,0 +1,30 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Types/generated/game/ComponentPS.hpp>
+
+namespace RED4ext
+{
+namespace game { 
+struct VisionModeComponentPS : game::ComponentPS
+{
+    static constexpr const char* NAME = "gameVisionModeComponentPS";
+    static constexpr const char* ALIAS = NAME;
+
+    bool hideInDefaultMode; // 68
+    bool hideInFocusMode; // 69
+    bool inactive; // 6A
+    bool questInactive; // 6B
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    DynArray<CName> questForcedMeshes; // 70
+    DynArray<CName> questForcedModules; // 80
+};
+RED4EXT_ASSERT_SIZE(VisionModeComponentPS, 0x90);
+} // namespace game
+} // namespace RED4ext

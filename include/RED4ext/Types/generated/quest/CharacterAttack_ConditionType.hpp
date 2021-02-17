@@ -1,0 +1,25 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Types/generated/game/EntityReference.hpp>
+#include <RED4ext/Types/generated/quest/ICharacterConditionType.hpp>
+
+namespace RED4ext
+{
+namespace quest { 
+struct CharacterAttack_ConditionType : quest::ICharacterConditionType
+{
+    static constexpr const char* NAME = "questCharacterAttack_ConditionType";
+    static constexpr const char* ALIAS = NAME;
+
+    game::EntityReference targetRef; // 78
+    bool isTargetPlayer; // B0
+    uint8_t unkB1[0xB8 - 0xB1]; // B1
+};
+RED4EXT_ASSERT_SIZE(CharacterAttack_ConditionType, 0xB8);
+} // namespace quest
+} // namespace RED4ext
