@@ -20,6 +20,7 @@ constexpr uintptr_t Allocators_RTTIFunction_Get = 0x140225120 - ImageBase; // 48
 
 #pragma region CBaseFunction
 constexpr uintptr_t CBaseFunction_Execute = 0x140224A00 - ImageBase; // 48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA, expected: 1, index: 0
+constexpr uintptr_t CBaseFunction_InternalExecute = 0x140224DC0 - ImageBase; // 40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6 41 78 01, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CClass

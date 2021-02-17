@@ -33,7 +33,8 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='CBaseFunction', functions=[
-            Item(name='Execute', pattern='48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA')
+            Item(name='Execute', pattern='48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA'),
+            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6 41 78 01')
         ]),
 
         Group(name='CClass', functions=[
