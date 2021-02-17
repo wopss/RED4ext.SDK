@@ -33,7 +33,7 @@ struct IStack
     // clang-format off
     virtual ~IStack() = default;                        // 00
     virtual void* GetResultAddr() { return nullptr; };  // 08
-    virtual int64_t sub_10() { return 0; };             // 10
+    virtual IRTTIType* GetType() { return nullptr; };   // 10
     virtual void sub_18(int64_t a2){};                  // 18
     // clang-format on
 };
@@ -65,6 +65,20 @@ RED4EXT_ASSERT_SIZE(CStack, 0x48);
 RED4EXT_ASSERT_OFFSET(CStack, args, 0x30);
 RED4EXT_ASSERT_OFFSET(CStack, argsCount, 0x38);
 RED4EXT_ASSERT_OFFSET(CStack, result, 0x40);
+
+struct CScriptStack : CBaseStack
+{
+    ~CScriptStack() override = default;
+
+    uint8_t* args;          // 30
+    ScriptInstance value;   // 38
+    IRTTIType* type;        // 40
+};
+
+RED4EXT_ASSERT_SIZE(CScriptStack, 0x48);
+RED4EXT_ASSERT_OFFSET(CScriptStack, args, 0x30);
+RED4EXT_ASSERT_OFFSET(CScriptStack, value, 0x38);
+RED4EXT_ASSERT_OFFSET(CScriptStack, type, 0x40);
 
 struct CStackFrame
 {
