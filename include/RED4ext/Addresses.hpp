@@ -79,6 +79,10 @@ constexpr uintptr_t Handle_DecWeakRef = 0x1401C1020 - ImageBase; // 40 53 48 83 
 constexpr uintptr_t IScriptable_GetValueHolder = 0x1401FDDD0 - ImageBase; // 40 53 48 83 EC 20 48 83 79 38 00, expected: 4, index: 1
 #pragma endregion
 
+#pragma region OpcodeHandlers
+constexpr uintptr_t OpcodeHandlers_Get = 0x1401D3119 - ImageBase; // 4C 8D 15 ? ? ? ? 48 89 42 38 49 8B F8 48 8B 02 4C 8D 44 24 20 C7, expected: 5, index: 0
+#pragma endregion
+
 #pragma region TweakDB
 constexpr uintptr_t TweakDB_Get = 0x140C01310 - ImageBase; // 48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00, expected: 1, index: 0
 constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140ED72CA - ImageBase; // 48 89 1D ? ? ? ? 41 89 BF 30 01 00 00, expected: 1, index: 0
