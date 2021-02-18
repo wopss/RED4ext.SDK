@@ -119,9 +119,9 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
             { }
             virtual void sub_18()
             { }
-            virtual void Free(void* aMemory)
+            virtual void Free(Result* aMemory)
             {
-                _aligned_free(aMemory);
+                _aligned_free(aMemory->memory);
             }
             virtual void sub_28(void* aMemory)
             { };
@@ -164,8 +164,8 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
             {
                 aRecord->GetNativeType()->Assign(aRecord, handle.instance);
                 DeleteHandle(handle);
-                updated = true;
             });
+        updated = true;
     }
 
     // free the hashmaps in our fakeTweakDB
