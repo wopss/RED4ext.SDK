@@ -100,5 +100,9 @@ def get_groups() -> List[Group]:
             Item(name='FlatInt32ValueVftable', pattern='48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B'),
             Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67'),
             Item(name='CreateRecord', pattern='48 89 5C 24 08 4C 89 44 24 18 57 48 83 EC 30 8B C2'),
+        ]),
+
+        Group(name='OpcodeHandlers', functions=[
+            Item(name='Get', pattern='4C 8D 15 ? ? ? ? 48 89 42 38 49 8B F8 48 8B 02 4C 8D 44 24 20 C7', expected=5, index=0)
         ])
     ]
