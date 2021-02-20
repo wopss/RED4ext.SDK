@@ -91,6 +91,8 @@ struct TweakDB
         // [Warning] FlatValues are pooled.
         void SetValue(ScriptInstance aValue);
 
+        // Multithreads may lead to undefined behavior
+        // Doesn't/Can't lock mutex in here
         int32_t ToTDBOffset() const;
 
         // value here
@@ -115,7 +117,7 @@ struct TweakDB
     HashMap<CName, FlatValue*> defaultValueByType;                          // E8
     DynArray<CString> unk118;                                               // 118 - empty - maybe not CString
     uintptr_t flatDataBuffer;                                               // 128
-    uint32_t flatDataBufferCapacity;                                            // 130
+    uint32_t flatDataBufferCapacity;                                        // 130
     uintptr_t flatDataBufferEnd;                                            // 138
 
     template<typename T>
@@ -155,8 +157,8 @@ struct TweakDB
 
     // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);
-    // Multithreads may lead to undefined behavior
-    FlatValue* CreateFlatValue(const CStackType& aStackType);
+    // returns -1 on error, tdbOffset on success
+    int32_t CreateFlat(const CStackType& aStackType);
 
     static TweakDB* Get();
 
