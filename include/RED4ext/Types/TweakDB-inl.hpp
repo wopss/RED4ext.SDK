@@ -138,18 +138,13 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
             pHashMap->indexTable = nullptr;
             pHashMap->size = 0;
             pHashMap->capacity = 0;
-            pHashMap->nodes = 0;
-            pHashMap->unk18 = 0;
-            pHashMap->stride = static_cast<int32_t>(aStride);
-            pHashMap->unk20 = -1;
-            pHashMap->unk24 = 0;
             pHashMap->allocator = *reinterpret_cast<uintptr_t*>(&fakeAllocator); // vftable
         };
 
         fakeTweakDB.mutex00.state = 0;
         fakeTweakDB.mutex01.state = 0;
-        initializeHashMap(&fakeTweakDB.recordsByID, sizeof(HashMap<TweakDBID, Handle<gamedataTweakDBRecord>>::Node));
-        initializeHashMap(&fakeTweakDB.recordsByType, sizeof(HashMap<IRTTIType*, DynArray<Handle<gamedataTweakDBRecord>>>::Node));
+        initializeHashMap(&fakeTweakDB.recordsByID, sizeof(decltype(fakeTweakDB.recordsByID)::Node));
+        initializeHashMap(&fakeTweakDB.recordsByType, sizeof(decltype(fakeTweakDB.recordsByType)::Node));
 
         fakeTweakDBInitialized = true;
     }
@@ -168,28 +163,15 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         updated = true;
     }
 
-    // free the hashmaps in our fakeTweakDB
+    // clear the hashmaps in our fakeTweakDB
     {
-        static auto clearHashmap = [](void* aHashmap)
-        {
-            auto* pHashMap = reinterpret_cast<HashMap<int, int>*>(aHashmap);
-            pHashMap->GetAllocator()->Free(reinterpret_cast<void*>(pHashMap->nodes));
-            pHashMap->indexTable = nullptr;
-            pHashMap->size = 0;
-            pHashMap->capacity = 0;
-            pHashMap->nodes = 0;
-            pHashMap->unk18 = 0;
-            pHashMap->unk20 = -1;
-            pHashMap->unk24 = 0;
-        };
-
         fakeTweakDB.recordsByType.for_each([](const IRTTIType*, DynArray<Handle<IScriptable>>& array)
             {
                 array.GetAllocator()->Free(array.entries);
             });
 
-        clearHashmap(&fakeTweakDB.recordsByID);
-        clearHashmap(&fakeTweakDB.recordsByType);
+        fakeTweakDB.recordsByID.Clear();
+        fakeTweakDB.recordsByType.Clear();
     }
 
     return updated;
