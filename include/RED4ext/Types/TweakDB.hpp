@@ -27,7 +27,7 @@ namespace RED4ext
 struct gamedataTweakDBRecord : IScriptable
 {
     virtual void sub_110() = 0; // 110
-    virtual uint32_t GetTweakBaseHash() = 0; // Murmur3
+    virtual uint32_t GetTweakBaseHash() const = 0; // Murmur3
     
     TweakDBID recordID;
 };
@@ -148,15 +148,23 @@ struct TweakDB
     DynArray<TweakDBID> Query(TweakDBID aDBID);
     bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
 
-    // [Experimental] Updates all the value offsets inside the record
+    // Updates all the value offsets inside the record
     bool UpdateRecord(TweakDBID aDBID);
-    // [Experimental] Updates all the value offsets inside the record
+    // Updates all the value offsets inside the record
     bool UpdateRecord(gamedataTweakDBRecord* aRecord);
+
+    bool CreateRecord(TweakDBID aDBID, IRTTIType* aType);
+    bool CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash);
+    bool RemoveRecord(TweakDBID aDBID);
+
+    // TweakDBID must include tdbOffset
+    bool AddFlat(TweakDBID aDBID);
+    bool RemoveFlat(TweakDBID aDBID);
 
     // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);
     // returns -1 on error, tdbOffset on success
-    int32_t CreateFlat(const CStackType& aStackType);
+    int32_t CreateFlatValue(const CStackType& aStackType);
 
     static TweakDB* Get();
 

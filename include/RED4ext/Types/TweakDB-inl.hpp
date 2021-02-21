@@ -158,7 +158,6 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         fakeTweakDB.recordsByID.for_each([&updated, aRecord](const TweakDBID&, Handle<IScriptable>& handle)
             {
                 aRecord->GetNativeType()->Assign(aRecord, handle.instance);
-                DeleteHandle(handle);
             });
         updated = true;
     }
@@ -167,6 +166,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     {
         fakeTweakDB.recordsByType.for_each([](const IRTTIType*, DynArray<Handle<IScriptable>>& array)
             {
+                array.Clear();
                 array.GetAllocator()->Free(array.entries);
             });
 
@@ -175,6 +175,71 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     }
 
     return updated;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, IRTTIType* aType)
+{
+    std::shared_lock<SharedMutex> _(mutex01);
+
+    const auto* records = recordsByType.Get(aType);
+    if (records != nullptr && records->size != 0)
+    {
+        const Handle<IScriptable> record = (*records)[0];
+        const auto* tweakRecord = reinterpret_cast<gamedataTweakDBRecord*>(record.GetPtr());
+        return CreateRecord(aDBID, tweakRecord->GetTweakBaseHash());
+    }
+
+    return false;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash)
+{
+    using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID aDBID);
+    static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
+
+    // This will read all the flats based on 'base'
+    CreateTDBRecord(this, aTweakBaseHash, aDBID);
+
+    return true; // Assume all went well
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::AddFlat(TweakDBID aDBID)
+{
+    std::lock_guard<SharedMutex> _(mutex00);
+
+    const auto it = std::find(flats.begin(), flats.end(), aDBID);
+    if (it == flats.end())
+    {
+        flats.PushBack(aDBID);
+        return true;
+    }
+
+    return false;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::RemoveFlat(TweakDBID aDBID)
+{
+    std::lock_guard<SharedMutex> _(mutex00);
+
+    return flats.Remove(aDBID);
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::RemoveRecord(TweakDBID aDBID)
+{
+    Handle<IScriptable> record = GetRecord(aDBID);
+
+    DynArray<Handle<IScriptable>> records;
+    if (TryGetRecordsByType(record->GetNativeType(), records))
+    {
+        std::lock_guard<SharedMutex> _(mutex01);
+
+        if (recordsByID.Remove(aDBID))
+        {
+            return records.Remove(record);
+        }
+    }
+
+    return false;
 }
 
 RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(TweakDBID aDBID)
@@ -190,7 +255,7 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
     return reinterpret_cast<FlatValue*>(flatDataBuffer + aDBID.ToTDBOffset());
 }
 
-RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlat(const CStackType& aStackType)
+RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStackType)
 {
     using InitFlatValue_t = FlatValue* (*)(TweakDB*, const CStackType*);
     static REDfunc<InitFlatValue_t> InitFlatValue_ExceptInt32(Addresses::TweakDB_InitFlatValue_ExceptInt32);
