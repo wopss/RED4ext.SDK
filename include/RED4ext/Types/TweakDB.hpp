@@ -75,14 +75,12 @@ struct TweakDB
         virtual bool ToValueOffset_Float(uint32_t* aValueOffset) const = 0;
         virtual bool ToValueOffset_array_Int32(uint32_t* aValueOffset) const = 0;
         virtual bool ToValueOffset_Int32(uint32_t* aValueOffset) const = 0;
-        virtual CStackType* GetValue(CStackType* aStackType) const = 0;
+        virtual CStackType GetValue() const = 0;
 
         template<typename T>
         T* GetValue() const
         {
-            CStackType stackType;
-            GetValue(&stackType);
-            return reinterpret_cast<T*>(stackType.value);
+            return reinterpret_cast<T*>(GetValue().value);
         }
 
         // [Warning] FlatValues are pooled.

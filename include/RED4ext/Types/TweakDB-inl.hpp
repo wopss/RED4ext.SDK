@@ -295,8 +295,7 @@ RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
 
 RED4EXT_INLINE bool RED4ext::TweakDB::FlatValue::SetValue(const RED4ext::CStackType& aStackType)
 {
-    CStackType stackType;
-    GetValue(&stackType);
+    CStackType stackType = GetValue();
     if (aStackType.type != nullptr)
     {
         if (aStackType.type != stackType.type)
