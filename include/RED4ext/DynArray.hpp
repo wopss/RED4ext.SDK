@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <functional>
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
@@ -23,7 +24,18 @@ struct DynArray
         return entries[aIndex];
     }
 
-    void PushBack(T aItem)
+    void PushBack(const T& aItem)
+    {
+        EmplaceBack(std::forward<const T&>(aItem));
+    }
+
+    void PushBack(T&& aItem)
+    {
+        EmplaceBack(std::forward<T&&>(aItem));
+    }
+
+    template<class... TArgs>
+    void EmplaceBack(TArgs&&... aArgs)
     {
         auto newSize = size + 1;
         if (newSize > capacity)
@@ -32,7 +44,45 @@ struct DynArray
         }
 
         size = newSize;
-        entries[newSize - 1] = aItem;
+        new (&entries[newSize - 1]) T(std::forward<TArgs>(aArgs)...);
+    }
+
+    bool Remove(const T& aItem)
+    {
+        for (uint32_t i = 0; i != size; ++i)
+        {
+            if (aItem == entries[i])
+            {
+                return RemoveAt(i);
+            }
+        }
+
+        return false;
+    }
+
+    bool RemoveAt(uint32_t aIndex)
+    {
+        if (aIndex >= size)
+            return false;
+
+        entries[aIndex].~T();
+        if ((aIndex + 1) < size)
+        {
+            size_t entriesCount = size - (aIndex + 1);
+            std::memcpy(&entries[aIndex], &entries[aIndex + 1], entriesCount * sizeof(T));
+        }
+        --size;
+        return true;
+    }
+
+    void Clear()
+    {
+        for (uint32_t i = 0; i != size; ++i)
+        {
+            entries[i].~T();
+        }
+
+        size = 0;
     }
 
     IMemoryAllocator* GetAllocator()
