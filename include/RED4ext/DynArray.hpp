@@ -68,8 +68,10 @@ struct DynArray
         entries[aIndex].~T();
         if ((aIndex + 1) < size)
         {
+            // This should use std::move assignments if possible, but this is easier
+
             size_t entriesCount = size - (aIndex + 1);
-            std::memcpy(&entries[aIndex], &entries[aIndex + 1], entriesCount * sizeof(T));
+            std::memmove(&entries[aIndex], &entries[aIndex + 1], entriesCount * sizeof(T));
         }
         --size;
         return true;
