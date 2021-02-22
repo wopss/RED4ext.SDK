@@ -69,3 +69,8 @@ RED4EXT_INLINE bool RED4ext::TweakDBID::operator==(const TweakDBID& aDBID) const
 {
     return aDBID.nameHash == nameHash && aDBID.nameLength == nameLength;
 }
+
+RED4EXT_INLINE bool RED4ext::TweakDBID::operator!=(const TweakDBID& aDBID) const noexcept
+{
+    return !(aDBID == *this);
+}

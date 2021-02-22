@@ -66,6 +66,7 @@ struct TweakDBID
     TweakDBID& operator=(const std::string_view aName) noexcept;
     TweakDBID operator+(const std::string_view aName) const noexcept;
     bool operator==(const TweakDBID& aDBID) const noexcept;
+    bool operator!=(const TweakDBID& aDBID) const noexcept;
 };
 RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 

@@ -27,7 +27,7 @@ namespace RED4ext
 struct gamedataTweakDBRecord : IScriptable
 {
     virtual void sub_110() = 0; // 110
-    virtual uint32_t GetTweakBaseHash() = 0; // Murmur3
+    virtual uint32_t GetTweakBaseHash() const = 0; // Murmur3
     
     TweakDBID recordID;
 };
@@ -75,14 +75,12 @@ struct TweakDB
         virtual bool ToValueOffset_Float(uint32_t* aValueOffset) const = 0;
         virtual bool ToValueOffset_array_Int32(uint32_t* aValueOffset) const = 0;
         virtual bool ToValueOffset_Int32(uint32_t* aValueOffset) const = 0;
-        virtual CStackType* GetValue(CStackType* aStackType) const = 0;
+        virtual CStackType GetValue() const = 0;
 
         template<typename T>
         T* GetValue() const
         {
-            CStackType stackType;
-            GetValue(&stackType);
-            return reinterpret_cast<T*>(stackType.value);
+            return reinterpret_cast<T*>(GetValue().value);
         }
 
         // [Warning] FlatValues are pooled.
@@ -91,6 +89,8 @@ struct TweakDB
         // [Warning] FlatValues are pooled.
         void SetValue(ScriptInstance aValue);
 
+        // Multithreads may lead to undefined behavior
+        // Doesn't/Can't lock mutex in here
         int32_t ToTDBOffset() const;
 
         // value here
@@ -115,7 +115,7 @@ struct TweakDB
     HashMap<CName, FlatValue*> defaultValueByType;                          // E8
     DynArray<CString> unk118;                                               // 118 - empty - maybe not CString
     uintptr_t flatDataBuffer;                                               // 128
-    uint32_t flatDataBufferCapacity;                                            // 130
+    uint32_t flatDataBufferCapacity;                                        // 130
     uintptr_t flatDataBufferEnd;                                            // 138
 
     template<typename T>
@@ -148,15 +148,23 @@ struct TweakDB
     DynArray<TweakDBID> Query(TweakDBID aDBID);
     bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
 
-    // [Experimental] Updates all the value offsets inside the record
+    // Updates all the value offsets inside the record
     bool UpdateRecord(TweakDBID aDBID);
-    // [Experimental] Updates all the value offsets inside the record
+    // Updates all the value offsets inside the record
     bool UpdateRecord(gamedataTweakDBRecord* aRecord);
+
+    bool CreateRecord(TweakDBID aDBID, IRTTIType* aType);
+    bool CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash);
+    bool RemoveRecord(TweakDBID aDBID);
+
+    // TweakDBID must include tdbOffset
+    bool AddFlat(TweakDBID aDBID);
+    bool RemoveFlat(TweakDBID aDBID);
 
     // Multithreads may lead to undefined behavior
     FlatValue* GetFlatValue(TweakDBID aDBID);
-    // Multithreads may lead to undefined behavior
-    FlatValue* CreateFlatValue(const CStackType& aStackType);
+    // returns -1 on error, tdbOffset on success
+    int32_t CreateFlatValue(const CStackType& aStackType);
 
     static TweakDB* Get();
 
