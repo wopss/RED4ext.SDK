@@ -291,7 +291,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
                 return -1;
 
             uint32_t currentSize = static_cast<uint32_t>(flatDataBufferEnd - flatDataBuffer);
-            uint32_t newCapacity = flatDataBufferCapacity + (100 * (8 + sizeof(DynArray<int>)));
+            uint32_t newCapacity = flatDataBufferCapacity + (1000 * (8 + sizeof(DynArray<int>)));
             if (newCapacity > 0x00FFFFFF)
             {
                 newCapacity = 0x00FFFFFF;
@@ -316,7 +316,13 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
             // Race condition when freeing old buffer
             // Undefined behavior if the game is in the process of dereferencing the buffer
             // Mutex locking is useless. Game accesses the buffer via a static pointer
-            pRTTIAllocator->Free(oldFlatDataBuffer);
+            //pRTTIAllocator->Free(oldFlatDataBuffer);
+
+            // Delay freeing. Consumes more memory but less risky
+            static void* lastFlatDataBuffer = nullptr;
+            if (lastFlatDataBuffer != nullptr)
+                pRTTIAllocator->Free(lastFlatDataBuffer);
+            lastFlatDataBuffer = oldFlatDataBuffer;
         }
 
         if (aStackType.type == pInt32RTTIType)
