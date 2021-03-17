@@ -24,7 +24,20 @@ struct VersionInfo
 VersionInfo CreateVersion(uint8_t aMajor, uint16_t aMinor, uint32_t aPatch, uint32_t prereleaseType,
                           uint32_t prereleaseNumber);
 
+/**
+ * @brief Compare two pre-release versions.
+ * @param aLhs The lhs pre-release.
+ * @param aRhs The rhs pre-release.
+ * @return < 0 if lhs is lower than rhs, 0 if they are equal, > 0 if lhs is greater than lhs.
+ */
 int32_t ComparePrerelease(const RED4ext::v1::PrereleaseInfo& aLhs, const RED4ext::v1::PrereleaseInfo& aRhs);
+
+/**
+ * @brief Compare two versions.
+ * @param aLhs The lhs version.
+ * @param aRhs The rhs version.
+ * @return < 0 if lhs is lower than rhs, 0 if they are equal, > 0 if lhs is greater than lhs.
+ */
 int32_t CompareVersion(const RED4ext::v1::VersionInfo& aLhs, const RED4ext::v1::VersionInfo& aRhs);
 } // namespace RED4ext::v1
 
@@ -50,6 +63,7 @@ std::wstring to_wstring(const RED4ext::v1::VersionInfo& aVersion);
 #include <RED4ext/Api/v1/VersionInfo-inl.hpp>
 #endif
 
+#ifdef __cplusplus
 #pragma region PrereleaseInfo operators
 inline bool operator<(const RED4ext::v1::PrereleaseInfo& aLhs, const RED4ext::v1::PrereleaseInfo& aRhs)
 {
@@ -113,3 +127,4 @@ inline bool operator!=(const RED4ext::v1::VersionInfo& aLhs, const RED4ext::v1::
     return RED4ext::v1::CompareVersion(aLhs, aRhs) != 0;
 }
 #pragma endregion
+#endif

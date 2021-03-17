@@ -28,6 +28,10 @@
 #include <RED4ext/Types/SimpleTypes.hpp>
 #include <RED4ext/Types/TweakDB.hpp>
 
-#include <RED4ext/Api.hpp>
+#include <RED4ext/Api/IRED4ext.hpp>
+#include <RED4ext/Api/PluginHandle.hpp>
+#include <RED4ext/Api/PluginInfo.hpp>
 #include <RED4ext/Api/Runtime.hpp>
+#include <RED4ext/Api/Sdk.hpp>
+#include <RED4ext/Api/Version.hpp>
 #include <RED4ext/Api/VersionInfo.hpp>

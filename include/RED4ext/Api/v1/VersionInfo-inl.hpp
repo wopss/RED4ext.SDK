@@ -60,32 +60,32 @@ RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v1::VersionInfo& aVer
 
     if (aVersion.prerelease.type != RED4EXT_V1_PRERELEASE_TYPE_NONE)
     {
-        stream << "-";
+        stream << L"-";
         switch (aVersion.prerelease.type)
         {
         case RED4EXT_V1_PRERELEASE_TYPE_ALPHA:
         {
-            stream << "alpha";
+            stream << L"alpha";
             break;
         }
         case RED4EXT_V1_PRERELEASE_TYPE_BETA:
         {
-            stream << "beta";
+            stream << L"beta";
             break;
         }
         case RED4EXT_V1_PRERELEASE_TYPE_RC:
         {
-            stream << "rc";
+            stream << L"rc";
             break;
         }
         default:
         {
-            stream << "unknown";
+            stream << L"unknown";
             break;
         }
         }
 
-        stream << "." << aVersion.prerelease.number;
+        stream << L"." << aVersion.prerelease.number;
     }
 
     return stream.str();

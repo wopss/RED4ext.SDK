@@ -2,13 +2,6 @@
 
 #include <RED4ext/Api/v1/Runtime.hpp>
 
-/*
- * CD Projekt RED does not use semantic versioning in their game. It can be interpreted as semantic versioning because
- * patch 1.03 can be translated to the following major: 1, minor: 0, patch: 3.
- *
- * To keep things consinstently we are going to use their own versioning for runtimes.
- */
-
 #define RED4EXT_RUNTIME_1_03 RED4EXT_V1_RUNTIME_1_03
 #define RED4EXT_RUNTIME_1_04 RED4EXT_V1_RUNTIME_1_04
 #define RED4EXT_RUNTIME_1_05 RED4EXT_V1_RUNTIME_1_05
