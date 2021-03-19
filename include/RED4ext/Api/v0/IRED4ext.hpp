@@ -1,11 +1,11 @@
 #pragma once
 
 #include <RED4ext/Api/PluginHandle.hpp>
-#include <RED4ext/Api/v1/IHooking.hpp>
-#include <RED4ext/Api/v1/ITrampoline.hpp>
-#include <RED4ext/Api/v1/VersionInfo.hpp>
+#include <RED4ext/Api/v0/IHooking.hpp>
+#include <RED4ext/Api/v0/ITrampoline.hpp>
+#include <RED4ext/Api/v0/VersionInfo.hpp>
 
-namespace RED4ext::v1
+namespace RED4ext::v0
 {
 struct IRED4ext
 {
@@ -47,4 +47,4 @@ struct IRED4ext
      */
     const ITrampoline* (*GetTrampolineInterface)(void);
 };
-} // namespace RED4ext::v1
+} // namespace RED4ext::v0

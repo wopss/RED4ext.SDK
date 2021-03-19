@@ -1,8 +1,8 @@
 #pragma once
 
-#include <RED4ext/Api/v1/VersionInfo.hpp>
+#include <RED4ext/Api/v0/VersionInfo.hpp>
 
-namespace RED4ext::v1
+namespace RED4ext::v0
 {
 struct PluginInfo
 {
@@ -23,7 +23,7 @@ struct PluginInfo
 
     /**
      * @brief The supported game's version of the plugin.
-     * @note If you are using RED4ext only as a loader, use 'RED4EXT_V1_RUNTIME_INDEPENDENT'.
+     * @note If you are using RED4ext only as a loader, use 'RED4EXT_V0_RUNTIME_INDEPENDENT'.
      */
     VersionInfo runtime;
 
@@ -32,4 +32,4 @@ struct PluginInfo
      */
     VersionInfo sdk;
 };
-} // namespace RED4ext::v1
+} // namespace RED4ext::v0

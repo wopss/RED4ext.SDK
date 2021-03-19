@@ -1,12 +1,12 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/Api/v1/VersionInfo.hpp>
+#include <RED4ext/Api/v0/VersionInfo.hpp>
 #endif
 
 #include <sstream>
 
-RED4EXT_INLINE RED4ext::v1::VersionInfo RED4ext::v1::CreateVersion(uint8_t aMajor, uint16_t aMinor, uint32_t aPatch,
+RED4EXT_INLINE RED4ext::v0::VersionInfo RED4ext::v0::CreateVersion(uint8_t aMajor, uint16_t aMinor, uint32_t aPatch,
                                                                    uint32_t aPrereleaseType, uint32_t aPrereleaseNumber)
 {
     VersionInfo version;
@@ -19,8 +19,8 @@ RED4EXT_INLINE RED4ext::v1::VersionInfo RED4ext::v1::CreateVersion(uint8_t aMajo
     return version;
 }
 
-RED4EXT_INLINE int32_t RED4ext::v1::ComparePrerelease(const RED4ext::v1::PrereleaseInfo& aLhs,
-                                                      const RED4ext::v1::PrereleaseInfo& aRhs)
+RED4EXT_INLINE int32_t RED4ext::v0::ComparePrerelease(const RED4ext::v0::PrereleaseInfo& aLhs,
+                                                      const RED4ext::v0::PrereleaseInfo& aRhs)
 {
     if (aLhs.type != aRhs.type)
     {
@@ -34,8 +34,8 @@ RED4EXT_INLINE int32_t RED4ext::v1::ComparePrerelease(const RED4ext::v1::Prerele
     return 0;
 }
 
-RED4EXT_INLINE int32_t RED4ext::v1::CompareVersion(const RED4ext::v1::VersionInfo& aLhs,
-                                                   const RED4ext::v1::VersionInfo& aRhs)
+RED4EXT_INLINE int32_t RED4ext::v0::CompareVersion(const RED4ext::v0::VersionInfo& aLhs,
+                                                   const RED4ext::v0::VersionInfo& aRhs)
 {
     if (aLhs.major != aRhs.major)
     {
@@ -53,27 +53,27 @@ RED4EXT_INLINE int32_t RED4ext::v1::CompareVersion(const RED4ext::v1::VersionInf
     return ComparePrerelease(aLhs.prerelease, aRhs.prerelease);
 }
 
-RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v1::VersionInfo& aVersion)
+RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v0::VersionInfo& aVersion)
 {
     std::wstringstream stream;
     stream << aVersion.major << L"." << aVersion.minor << L"." << aVersion.patch;
 
-    if (aVersion.prerelease.type != RED4EXT_V1_PRERELEASE_TYPE_NONE)
+    if (aVersion.prerelease.type != RED4EXT_V0_PRERELEASE_TYPE_NONE)
     {
         stream << L"-";
         switch (aVersion.prerelease.type)
         {
-        case RED4EXT_V1_PRERELEASE_TYPE_ALPHA:
+        case RED4EXT_V0_PRERELEASE_TYPE_ALPHA:
         {
             stream << L"alpha";
             break;
         }
-        case RED4EXT_V1_PRERELEASE_TYPE_BETA:
+        case RED4EXT_V0_PRERELEASE_TYPE_BETA:
         {
             stream << L"beta";
             break;
         }
-        case RED4EXT_V1_PRERELEASE_TYPE_RC:
+        case RED4EXT_V0_PRERELEASE_TYPE_RC:
         {
             stream << L"rc";
             break;

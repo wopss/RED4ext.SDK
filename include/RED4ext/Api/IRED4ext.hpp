@@ -1,21 +1,21 @@
 #pragma once
 
-#include <RED4ext/Api/v1/IRED4ext.hpp>
+#include <RED4ext/Api/v0/IRED4ext.hpp>
 
 namespace RED4ext
 {
 /**
  * @brief The latest RED4ext interface.
  */
-using IRED4ext = v1::IRED4ext;
+using IRED4ext = v0::IRED4ext;
 
 /**
  * @brief The latest hooking interface.
  */
-using IHooking = v1::IHooking;
+using IHooking = v0::IHooking;
 
 /**
  * @brief The latest hooking interface.
  */
-using ITrampoline = v1::ITrampoline;
+using ITrampoline = v0::ITrampoline;
 } // namespace RED4ext

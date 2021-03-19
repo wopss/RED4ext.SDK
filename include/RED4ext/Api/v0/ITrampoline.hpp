@@ -2,7 +2,7 @@
 
 #include <RED4ext/Api/PluginHandle.hpp>
 
-namespace RED4ext::v1
+namespace RED4ext::v0
 {
 struct ITrampoline
 {
@@ -20,4 +20,4 @@ struct ITrampoline
      */
     void (*Free)(PluginHandle aHandle, void* aAddress);
 };
-} // namespace RED4ext::v1
+} // namespace RED4ext::v0

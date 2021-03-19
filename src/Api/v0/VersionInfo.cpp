@@ -2,4 +2,4 @@
 #error Please define 'RED4EXT_STATIC_LIB' to compile this file.
 #endif
 
-#include <RED4ext/Api/v1/VersionInfo-inl.hpp>
+#include <RED4ext/Api/v0/VersionInfo-inl.hpp>

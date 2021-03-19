@@ -2,7 +2,7 @@
 
 #include <RED4ext/Api/PluginHandle.hpp>
 
-namespace RED4ext::v1
+namespace RED4ext::v0
 {
 struct IHooking
 {
@@ -49,4 +49,4 @@ struct IHooking
     void* (*FindPattern)(uint8_t* aPattern, size_t aPatternSize, uint8_t aWildcard, size_t aExpectedMatches,
                          size_t aIndex);
 };
-} // namespace RED4ext::v1
+} // namespace RED4ext::v0
