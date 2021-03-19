@@ -33,3 +33,7 @@
 #ifndef RED4EXT_C_EXPORT
 #define RED4EXT_C_EXPORT extern "C" __declspec(dllexport)
 #endif
+
+#ifndef RED4EXT_CALL
+#define RED4EXT_CALL __fastcall
+#endif
