@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <cstdint>
 #include <functional>
-#include <type_traits>
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
@@ -13,13 +12,19 @@ namespace RED4ext
 {
 struct IMemoryAllocator;
 
-template<typename T>
-struct DynArray
+template<typename T, class Compare = std::less<T>, bool Unique = false>
+struct SortedArray
 {
-    DynArray(IMemoryAllocator* aAllocator = nullptr)
+    enum class Flags : int32_t
+    {
+        NotSorted = 1 << 0
+    };
+
+    SortedArray(IMemoryAllocator* aAllocator = nullptr)
         : entries(reinterpret_cast<T*>(aAllocator))
         , size(0)
         , capacity(0)
+        , flags(0)
     {
     }
 
@@ -33,54 +38,77 @@ struct DynArray
         return entries[aIndex];
     }
 
-    void PushBack(const T& aItem)
+    std::pair<T*, bool> Insert(const T& aItem)
     {
-        EmplaceBack(std::forward<const T&>(aItem));
+        return Emplace(std::forward<const T&>(aItem));
     }
 
-    void PushBack(T&& aItem)
+    std::pair<T*, bool> Insert(T&& aItem)
     {
-        EmplaceBack(std::forward<T&&>(aItem));
+        return Emplace(std::forward<T&&>(aItem));
+    }
+
+    std::pair<T*, bool> InsertOrAssign(const T& aItem)
+    {
+        std::pair<T*, bool> pair = Emplace(std::forward<const T&>(aItem));
+        if (!pair.second)
+        {
+            pair.first = aItem;
+        }
+        return pair;
+    }
+
+    std::pair<T*, bool> InsertOrAssign(T&& aItem)
+    {
+        std::pair<T*, bool> pair = Emplace(std::forward<T&&>(aItem));
+        if (!pair.second)
+        {
+            pair.first = std::move(aItem);
+        }
+        return pair;
+    }
+
+    T* Find(const T& aItem)
+    {
+        const auto it = LowerBound(aItem);
+        return it == end() || *it != aItem ? end() : it;
     }
 
     template<class... TArgs>
-    void EmplaceBack(TArgs&&... aArgs)
+    std::pair<T*, bool> Emplace(TArgs&&... aArgs)
     {
-        Emplace(end(), std::forward<TArgs>(aArgs)...);
-    }
-
-    template<class... TArgs>
-    void Emplace(T* aPosition, TArgs&&... aArgs)
-    {
-        uint32_t posIdx = aPosition - begin();
-        uint32_t newSize = size + 1;
+        auto newSize = size + 1;
         if (newSize > capacity)
         {
             Reserve(newSize);
         }
 
-        // If not at the end
-        if (posIdx != size)
+        T tmp(std::forward<TArgs>(aArgs)...);
+        T* it = LowerBound(tmp);
+        if (it != end())
         {
-            uint32_t entriesCount = size - posIdx;
-            MoveEntries(&entries[posIdx], &entries[posIdx + 1], entriesCount);
+            if (Unique && *it == tmp)
+            {
+                // Do nothing if the array is unique and already contains the item.
+                return {it, false};
+            }
+
+            uint32_t entriesCount = static_cast<uint32_t>(end() - it);
+            MoveEntries(it, it + 1, entriesCount);
         }
 
-        new (&entries[posIdx]) T(std::forward<TArgs>(aArgs)...);
+        *it = std::move(tmp);
         size = newSize;
+        return {it, true};
     }
 
     bool Remove(const T& aItem)
     {
-        for (uint32_t i = 0; i != size; ++i)
-        {
-            if (aItem == entries[i])
-            {
-                return RemoveAt(i);
-            }
-        }
+        const auto it = Find(aItem);
+        if (it == end())
+            return false;
 
-        return false;
+        return RemoveAt(static_cast<uint32_t>(it - Begin()));
     }
 
     bool RemoveAt(uint32_t aIndex)
@@ -96,6 +124,13 @@ struct DynArray
         }
         --size;
         return true;
+    }
+
+    void Sort()
+    {
+        std::sort(&entries[0], &entries[size], Compare{});
+
+        flags &= ~(int32_t)Flags::NotSorted;
     }
 
     void Clear()
@@ -114,7 +149,7 @@ struct DynArray
         constexpr uint32_t alignment = 8;
 
         auto capacity = CalculateGrowth(aCount);
-        using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
+        using func_t = void (*)(SortedArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
         static REDfunc<func_t> func(Addresses::DynArray_Realloc);
@@ -173,8 +208,19 @@ struct DynArray
     T* entries;        // 00
     uint32_t capacity; // 08
     uint32_t size;     // 0C
+    int32_t flags;     // 10
 
 private:
+    T* LowerBound(const T& aItem)
+    {
+        if ((flags & (int32_t)Flags::NotSorted) == (int32_t)Flags::NotSorted)
+        {
+            Sort();
+        }
+
+        return std::lower_bound(begin(), end(), aItem, Compare{});
+    }
+
     void MoveEntries(T* aSrc, T* aDst, uint32_t aCount)
     {
         if (aCount == 0 || aSrc == aDst)
@@ -204,7 +250,7 @@ private:
 
     uint32_t CalculateGrowth(uint32_t aNewSize)
     {
-        uint32_t geometric = capacity + (capacity / 2);
+        auto geometric = capacity + (capacity / 2);
         if (geometric < aNewSize)
         {
             return aNewSize;
@@ -213,7 +259,11 @@ private:
         return geometric;
     }
 };
-RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
-RED4EXT_ASSERT_OFFSET(DynArray<void*>, capacity, 0x8);
-RED4EXT_ASSERT_OFFSET(DynArray<void*>, size, 0xC);
+RED4EXT_ASSERT_SIZE(SortedArray<void*>, 0x18);
+RED4EXT_ASSERT_OFFSET(SortedArray<void*>, capacity, 0x8);
+RED4EXT_ASSERT_OFFSET(SortedArray<void*>, size, 0xC);
+RED4EXT_ASSERT_OFFSET(SortedArray<void*>, flags, 0x10);
+
+template<typename T, class Compare = std::less<T>>
+using SortedUniqueArray = SortedArray<T, Compare, true>;
 } // namespace RED4ext

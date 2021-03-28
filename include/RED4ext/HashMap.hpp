@@ -60,19 +60,19 @@ struct HashMap
 
     struct NodeList
     {
-        Node* nodes;        // 00
-        uint32_t capacity;  // 08
-        uint32_t stride;    // 0C - sizeof(Node)
-        uint32_t nextIdx;   // 10 - next available node index to write to
-        uint32_t size;      // 14
+        Node* nodes;       // 00
+        uint32_t capacity; // 08
+        uint32_t stride;   // 0C - sizeof(Node)
+        uint32_t nextIdx;  // 10 - next available node index to write to
+        uint32_t size;     // 14
 
         NodeList(Node* aNodes = nullptr, uint32_t aCapacity = 0)
+            : nodes(aNodes)
+            , capacity(aCapacity)
+            , stride(sizeof(Node))
+            , nextIdx(aNodes ? 0 : -1)
+            , size(0)
         {
-            nodes = aNodes;
-            capacity = aCapacity;
-            stride = sizeof(Node);
-            nextIdx = aNodes ? 0 : -1;
-            size = 0;
         }
 
         Node* GetNextAvailNode()
@@ -103,7 +103,21 @@ struct HashMap
         }
     };
 
+    HashMap(IMemoryAllocator* aAllocator = nullptr)
+        : indexTable(nullptr)
+        , size(0)
+        , capacity(0)
+    {
+        // vftable because IMemoryAllocator is abstract
+        allocator = aAllocator ? *reinterpret_cast<uintptr_t*>(aAllocator) : 0;
+    }
+
     void for_each(std::function<void(const K&, T&)> aFunctor) const
+    {
+        ForEach(aFunctor);
+    }
+
+    void ForEach(std::function<void(const K&, T&)> aFunctor) const
     {
         if (size == 0)
             return;
@@ -164,7 +178,7 @@ struct HashMap
 
                 node->next = nodeList.nextIdx;
                 nodeList.nextIdx = static_cast<uint32_t>(node - nodeList.nodes);
-                //--nodeList.size;
+                node->~Node();
                 --size;
                 return true;
             }
@@ -175,38 +189,38 @@ struct HashMap
         return false;
     }
 
-    std::pair<Node*, bool> Insert(const K& aKey, const T& aValue)
+    std::pair<T*, bool> Insert(const K& aKey, const T& aValue)
     {
         return Emplace(aKey, std::forward<const T&>(aValue));
     }
 
-    std::pair<Node*, bool> Insert(const K& aKey, T&& aValue)
+    std::pair<T*, bool> Insert(const K& aKey, T&& aValue)
     {
         return Emplace(aKey, std::forward<T&&>(aValue));
     }
 
-    std::pair<Node*, bool> InsertOrAssign(const K& aKey, const T& aValue)
+    std::pair<T*, bool> InsertOrAssign(const K& aKey, const T& aValue)
     {
-        std::pair<Node*, bool> pair = Emplace(aKey, aValue);
+        std::pair<T*, bool> pair = Emplace(aKey, std::forward<const T&>(aValue));
         if (!pair.second)
         {
-            pair.first->value = aValue;
+            pair.first = aValue;
         }
         return pair;
     }
 
-    std::pair<Node*, bool> InsertOrAssign(const K& aKey, T&& aValue)
+    std::pair<T*, bool> InsertOrAssign(const K& aKey, T&& aValue)
     {
-        std::pair<Node*, bool> pair = Emplace(aKey, std::forward<T&&>(aValue));
+        std::pair<T*, bool> pair = Emplace(aKey, std::forward<T&&>(aValue));
         if (!pair.second)
         {
-            pair.first->value = std::move(aValue);
+            pair.first = std::move(aValue);
         }
         return pair;
     }
 
     template<class... TArgs>
-    std::pair<Node*, bool> Emplace(const K& aKey, TArgs&&... aArgs)
+    std::pair<T*, bool> Emplace(const K& aKey, TArgs&&... aArgs)
     {
         uint32_t hashedKey = Hasher{}(aKey);
 
@@ -218,7 +232,7 @@ struct HashMap
                 Node* node = &nodeList.nodes[idx];
                 if (node->hashedKey == hashedKey && node->key == aKey)
                 {
-                    return { node, false };
+                    return {&node->value, false};
                 }
 
                 idx = node->next;
@@ -241,7 +255,7 @@ struct HashMap
         node->next = indexTable[hashedKey % capacity];
         indexTable[hashedKey % capacity] = static_cast<uint32_t>(node - nodeList.nodes);
         ++size;
-        return { node, true };
+        return {&node->value, true};
     }
 
     void Clear()
@@ -293,7 +307,7 @@ struct HashMap
 
                         Node* node = newNodeList.GetNextAvailNode();
                         node->hashedKey = hashedKey;
-                        new(&node->key) K(std::move(oldNode->key));
+                        new (&node->key) K(std::move(oldNode->key));
                         new (&node->value) T(std::move(oldNode->value));
                         node->next = newIndexTable[hashedKey % aSize];
                         newIndexTable[hashedKey % aSize] = static_cast<uint32_t>(node - newNodeList.nodes);
@@ -319,11 +333,11 @@ struct HashMap
         return reinterpret_cast<IMemoryAllocator*>(&allocator);
     }
 
-    uint32_t* indexTable;   // 00
-    uint32_t size;          // 08
-    uint32_t capacity;      // 0C
-    NodeList nodeList;      // 10
-    uintptr_t allocator;    // 28
+    uint32_t* indexTable; // 00
+    uint32_t size;        // 08
+    uint32_t capacity;    // 0C
+    NodeList nodeList;    // 10
+    uintptr_t allocator;  // 28
 };
 RED4EXT_ASSERT_SIZE(RED4EXT_ASSERT_ESCAPE(HashMap<uint64_t, void*>), 0x30);
 } // namespace RED4ext

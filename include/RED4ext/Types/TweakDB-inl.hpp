@@ -44,7 +44,8 @@ RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>> RED4ext:
     return std::move(records);
 }
 
-RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecordsByType(IRTTIType* aType, DynArray<Handle<IScriptable>>& aRecordsArray)
+RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecordsByType(IRTTIType* aType,
+                                                          DynArray<Handle<IScriptable>>& aRecordsArray)
 {
     std::shared_lock<SharedMutex> _(mutex01);
 
@@ -68,16 +69,12 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryQuery(TweakDBID aDBID, DynArray<TweakDB
     if (!aDBID.IsValid()) return false;
     std::shared_lock<SharedMutex> _(mutex01);
 
-    for (uint32_t i = 0; i != queryIDs.size; ++i)
-    {
-        if (queryIDs[i] == aDBID)
-        {
-            aArray = queryValues[i];
-            return true;
-        }
-    }
+    const auto* recordArray = queries.Get(aDBID);
+    if (recordArray == nullptr)
+        return false;
 
-    return false;
+    aArray = *recordArray;
+    return true;
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(TweakDBID aDBID)
@@ -100,8 +97,6 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
 
     if (!fakeTweakDBInitialized)
     {
-        // we only need recordsByID and recordsByType
-
         struct FakeAllocator : IMemoryAllocator
         {
             virtual Result Alloc(uint32_t aSize)
@@ -130,22 +125,11 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
                 return 0;
             };
         };
-
         static FakeAllocator fakeAllocator;
-        static auto initializeHashMap = [](void* aHashmap, const size_t aStride)
-        {
-            auto* pHashMap = reinterpret_cast<HashMap<int, int>*>(aHashmap);
-            pHashMap->indexTable = nullptr;
-            pHashMap->size = 0;
-            pHashMap->capacity = 0;
-            pHashMap->allocator = *reinterpret_cast<uintptr_t*>(&fakeAllocator); // vftable
-        };
 
-        fakeTweakDB.mutex00.state = 0;
-        fakeTweakDB.mutex01.state = 0;
-        initializeHashMap(&fakeTweakDB.recordsByID, sizeof(decltype(fakeTweakDB.recordsByID)::Node));
-        initializeHashMap(&fakeTweakDB.recordsByType, sizeof(decltype(fakeTweakDB.recordsByType)::Node));
-
+        // we only need recordsByID and recordsByType
+        fakeTweakDB.recordsByID = { &fakeAllocator };
+        fakeTweakDB.recordsByType = { &fakeAllocator };
         fakeTweakDBInitialized = true;
     }
 
@@ -155,7 +139,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     if (fakeTweakDB.recordsByID.size != 0)
     {
         // Will only find 1 record
-        fakeTweakDB.recordsByID.for_each([&updated, aRecord](const TweakDBID&, Handle<IScriptable>& handle)
+        fakeTweakDB.recordsByID.for_each([aRecord](const TweakDBID&, Handle<IScriptable>& handle)
             {
                 aRecord->GetNativeType()->Assign(aRecord, handle.instance);
             });
@@ -179,17 +163,19 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
 
 RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, IRTTIType* aType)
 {
-    std::shared_lock<SharedMutex> _(mutex01);
-
-    const auto* records = recordsByType.Get(aType);
-    if (records != nullptr && records->size != 0)
+    Handle<IScriptable> record;
     {
-        const Handle<IScriptable> record = (*records)[0];
-        const auto* tweakRecord = reinterpret_cast<gamedataTweakDBRecord*>(record.GetPtr());
-        return CreateRecord(aDBID, tweakRecord->GetTweakBaseHash());
+        std::shared_lock<SharedMutex> _(mutex01);
+
+        const auto* records = recordsByType.Get(aType);
+        if (records == nullptr || records->size == 0)
+            return false;
+
+        record = (*records)[0];
     }
 
-    return false;
+    const auto* tweakRecord = reinterpret_cast<gamedataTweakDBRecord*>(record.GetPtr());
+    return CreateRecord(aDBID, tweakRecord->GetTweakBaseHash());
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash)
@@ -197,24 +183,39 @@ RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, uint32_t aTw
     using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID aDBID);
     static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
 
+    if (!aDBID.IsValid())
+        return false;
+
+    if (GetRecord(aDBID))
+        return false; // Already exists
+
     // This will read all the flats based on 'base'
     CreateTDBRecord(this, aTweakBaseHash, aDBID);
 
     return true; // Assume all went well
 }
 
+RED4EXT_INLINE bool RED4ext::TweakDB::RemoveRecord(TweakDBID aDBID)
+{
+    Handle<IScriptable> record = GetRecord(aDBID);
+    if (!record)
+        return false;
+
+    std::lock_guard<SharedMutex> _(mutex01);
+    if (recordsByID.Remove(aDBID))
+    {
+        auto* records = recordsByType.Get(record->GetNativeType());
+        return records->Remove(record);
+    }
+
+    return false;
+}
+
 RED4EXT_INLINE bool RED4ext::TweakDB::AddFlat(TweakDBID aDBID)
 {
     std::lock_guard<SharedMutex> _(mutex00);
 
-    const auto it = std::find(flats.begin(), flats.end(), aDBID);
-    if (it == flats.end())
-    {
-        flats.PushBack(aDBID);
-        return true;
-    }
-
-    return false;
+    return flats.Insert(aDBID).second;
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::RemoveFlat(TweakDBID aDBID)
@@ -224,24 +225,6 @@ RED4EXT_INLINE bool RED4ext::TweakDB::RemoveFlat(TweakDBID aDBID)
     return flats.Remove(aDBID);
 }
 
-RED4EXT_INLINE bool RED4ext::TweakDB::RemoveRecord(TweakDBID aDBID)
-{
-    Handle<IScriptable> record = GetRecord(aDBID);
-
-    DynArray<Handle<IScriptable>> records;
-    if (TryGetRecordsByType(record->GetNativeType(), records))
-    {
-        std::lock_guard<SharedMutex> _(mutex01);
-
-        if (recordsByID.Remove(aDBID))
-        {
-            return records.Remove(record);
-        }
-    }
-
-    return false;
-}
-
 RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(TweakDBID aDBID)
 {
     if (!aDBID.IsValid()) return nullptr;
@@ -249,7 +232,7 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
 
     if (!aDBID.HasTDBOffset())
     {
-        const auto it = std::find(flats.begin(), flats.end(), aDBID);
+        const auto it = flats.Find(aDBID);
         return it == flats.end() ? nullptr : reinterpret_cast<FlatValue*>(flatDataBuffer + it->ToTDBOffset());
     }
     return reinterpret_cast<FlatValue*>(flatDataBuffer + aDBID.ToTDBOffset());
@@ -259,11 +242,10 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
 {
     using InitFlatValue_t = FlatValue* (*)(TweakDB*, const CStackType*);
     static REDfunc<InitFlatValue_t> InitFlatValue_ExceptInt32(Addresses::TweakDB_InitFlatValue_ExceptInt32);
-    static auto* pRTTI = CRTTISystem::Get();
-    static auto* pInt32RTTIType = pRTTI->GetType("Int32");
-    static auto* pArrayInt32RTTIType = pRTTI->GetType("array:Int32");
-    static uintptr_t FlatInt32ValueVftable = GetAddressFromInstruction(Addresses::TweakDB_FlatInt32ValueVftable, 3);
-    static uintptr_t FlatArrayInt32ValueVftable = GetAddressFromInstruction(Addresses::TweakDB_FlatArrayInt32ValueVftable, 3);
+    static auto FlatInt32Vftable = GetAddressFromInstruction(Addresses::TweakDB_FlatInt32ValueVftable, 3);
+    static auto FlatArrayInt32Vftable = GetAddressFromInstruction(Addresses::TweakDB_FlatArrayInt32ValueVftable, 3);
+    static auto* pInt32RTTIType = CRTTISystem::Get()->GetType("Int32");
+    static auto* pArrayInt32RTTIType = CRTTISystem::Get()->GetType("array:Int32");
 
     auto typeAlignment = aStackType.type->GetAlignment() - 1;
     auto flatValueSize = 8 /* vftable */ + ((typeAlignment + aStackType.type->GetSize()) & ~typeAlignment);
@@ -274,7 +256,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
 
         if (flatDataBufferEnd_Aligned + flatValueSize > flatDataBuffer + flatDataBufferCapacity)
         {
-            static auto* pRTTIAllocator = RTTIAllocator::Get();
+            auto* pRTTIAllocator = RTTIAllocator::Get();
 
             // TODO: use PoolGMPL_TDB_Data
             // [1.6-Steam] *out = sub_1401AAF80(qword_1437824D0 & 0xFFFFFFFFFFFFFFF8ui64, &out, size, alignment)
@@ -310,7 +292,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
 
             auto* oldFlatDataBuffer = reinterpret_cast<void*>(flatDataBuffer);
             memcpy(result.memory, oldFlatDataBuffer, currentSize);
-            SetFlatDataBuffer(reinterpret_cast<uintptr_t>(result.memory), currentSize, static_cast<uint32_t>(result.size));
+            SetFlatDataBuffer(result.memory, currentSize, static_cast<uint32_t>(result.size));
             flatDataBufferEnd_Aligned = (7 + flatDataBufferEnd) & ~7;
 
             // Race condition when freeing old buffer
@@ -327,14 +309,14 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
 
         if (aStackType.type == pInt32RTTIType)
         {
-            *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatInt32ValueVftable;
+            *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatInt32Vftable;
             *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned + 8) = *reinterpret_cast<uint32_t*>(aStackType.value);
             flatDataBufferEnd = flatDataBufferEnd_Aligned + 16;
             return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned)->ToTDBOffset();
         }
         else if (aStackType.type == pArrayInt32RTTIType)
         {
-            *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatArrayInt32ValueVftable;
+            *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatArrayInt32Vftable;
             pArrayInt32RTTIType->Assign(reinterpret_cast<void*>(flatDataBufferEnd_Aligned + 8), aStackType.value);
             flatDataBufferEnd = flatDataBufferEnd_Aligned + 24;
             return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned)->ToTDBOffset();
@@ -346,15 +328,23 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
     }
 }
 
-RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(uintptr_t aBuffer, uint32_t aSize, uint32_t aCapacity)
+RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(void* aBuffer, uint32_t aSize, uint32_t aCapacity)
 {
     // Used by the game with TweakDBID::ToTDBOffset() and FlatValue::ToValueOffset_*()
-    static uintptr_t pStaticFlatDataBuffer = GetAddressFromInstruction(Addresses::TweakDB_StaticFlatDataBuffer, 3);
+    static auto pStaticFlatDataBuffer = GetAddressFromInstruction(Addresses::TweakDB_StaticFlatDataBuffer, 3);
 
-    flatDataBuffer = aBuffer;
-    flatDataBufferEnd = aBuffer + aSize;
+    flatDataBuffer = reinterpret_cast<uintptr_t>(aBuffer);
+    flatDataBufferEnd = flatDataBuffer + aSize;
     flatDataBufferCapacity = aCapacity;
-    *reinterpret_cast<uintptr_t*>(pStaticFlatDataBuffer) = aBuffer;
+    *reinterpret_cast<void**>(pStaticFlatDataBuffer) = aBuffer;
+}
+
+RED4EXT_INLINE const RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetDefaultFlatValue(CName aTypeName)
+{
+    std::shared_lock<SharedMutex> _(mutex00);
+
+    FlatValue** flatValue = defaultValues.Get(aTypeName);
+    return flatValue ? *flatValue : nullptr;
 }
 
 RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
@@ -372,8 +362,6 @@ RED4EXT_INLINE bool RED4ext::TweakDB::FlatValue::SetValue(const RED4ext::CStackT
         if (aStackType.type != stackType.type)
             return false;
     }
-    // might lead to race conditions.
-    // doing mutex locking here is useless. game accesses "stackType.value" directly by offset into TweakDB::flatDataBuffer
     stackType.type->Assign(stackType.value, aStackType.value);
     return true;
 }
@@ -388,7 +376,5 @@ RED4EXT_INLINE void RED4ext::TweakDB::FlatValue::SetValue(ScriptInstance aValue)
 
 RED4EXT_INLINE int32_t RED4ext::TweakDB::FlatValue::ToTDBOffset() const
 {
-    static auto* pTDB = TweakDB::Get();
-
-    return static_cast<int32_t>((uintptr_t)this - pTDB->flatDataBuffer);
+    return static_cast<int32_t>((uintptr_t)this - TweakDB::Get()->flatDataBuffer);
 }
