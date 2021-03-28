@@ -4,6 +4,8 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/SortedArray.hpp>
+#include <RED4ext/Map.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Types/SharedMutex.hpp>
@@ -18,15 +20,16 @@ namespace RED4ext
 // 1. Reading from multiple threads is fine. Creating a new FlatValue is not. (writing to flatDataBuffer)
 //    Every FlatValue* (and GetValue) will be invalid if a thread grows the flatDataBuffer.
 //    Except if you don't free the old buffer, but that's an issue on its own
+//    Currently, freeing the buffer is delayed to avoid this issue
 //
 // 2. Flat values are pooled.
-//    An int (or any type) value of '1' exist only once in TweakDB::flatDataBuffer. Modifying it will affect all records using it.
-//    Implementing a value pool in here is pointless. the lib isn't a shared library. Pool won't be shared between multiple dlls that use the SDK
+//    An int (or any type) value of '1' exist only once in TweakDB::flatDataBuffer. Modifying it will affect all records
+//    Implementing a value pool here is pointless. the lib isn't a shared library. Pool won't be shared between dlls
 //    Could abuse the alignment gaps in TweakDB to store custom data in the class.. like a pointer to the pool? >_>
 
 struct gamedataTweakDBRecord : IScriptable
 {
-    virtual void sub_110() = 0; // 110
+    virtual void sub_110() = 0;
     virtual uint32_t GetTweakBaseHash() const = 0; // Murmur3
     
     TweakDBID recordID;
@@ -89,34 +92,26 @@ struct TweakDB
         // [Warning] FlatValues are pooled.
         void SetValue(ScriptInstance aValue);
 
-        // Multithreads may lead to undefined behavior
-        // Doesn't/Can't lock mutex in here
         int32_t ToTDBOffset() const;
 
         // value here
     };
 
-    SharedMutex mutex00;                                                    // 00 - used with flats and flatDataBuffer*
-    SharedMutex mutex01;                                                    // 01 - used with recordsByID, recordsByType, queryIDs, queryValues, groupIDs and groupTags
-    void* unk08;                                                            // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
-    void* unk10;                                                            // 10 - class - 208 bytes
-    bool unk18;                                                             // 18
-    DynArray<TweakDBID> flats;                                              // 20
-    uint64_t unk30;                                                         // 30
-    HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                    // 38
-    HashMap<IRTTIType*, DynArray<Handle<IScriptable>>> recordsByType;       // 68
-    DynArray<TweakDBID> queryIDs;                                           // 98
-    DynArray<DynArray<TweakDBID>> queryValues;                              // A8
-    uint32_t unkB8;                                                         // B8
-    uint32_t unkBC;                                                         // BC
-    DynArray<TweakDBID> groupIDs;                                           // C0
-    DynArray<GroupTag> groupTags;                                           // D0
-    uint64_t unkE0;                                                         // E0
-    HashMap<CName, FlatValue*> defaultValueByType;                          // E8
-    DynArray<CString> unk118;                                               // 118 - empty - maybe not CString
-    uintptr_t flatDataBuffer;                                               // 128
-    uint32_t flatDataBufferCapacity;                                        // 130
-    uintptr_t flatDataBufferEnd;                                            // 138
+    SharedMutex mutex00;                                                // 00 - used with flats, flatDataBuffer* and defaultValues
+    SharedMutex mutex01;                                                // 01 - used with recordsByID, recordsByType, queries and groups
+    void* unk08;                                                        // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
+    void* unk10;                                                        // 10 - class - 208 bytes
+    bool unk18;                                                         // 18
+    SortedUniqueArray<TweakDBID> flats;                                 // 20
+    HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                // 38
+    HashMap<IRTTIType*, DynArray<Handle<IScriptable>>> recordsByType;   // 68
+    Map<TweakDBID, DynArray<TweakDBID>> queries;                        // 98
+    Map<TweakDBID, GroupTag> groups;                                    // C0
+    HashMap<CName, FlatValue*> defaultValues;                           // E8
+    DynArray<CString> unk118;                                           // 118 - empty - maybe not CString
+    uintptr_t flatDataBuffer;                                           // 128
+    uint32_t flatDataBufferCapacity;                                    // 130
+    uintptr_t flatDataBufferEnd;                                        // 138
 
     template<typename T>
     T GetValue(TweakDBID aDBID)
@@ -166,11 +161,15 @@ struct TweakDB
     // returns -1 on error, tdbOffset on success
     int32_t CreateFlatValue(const CStackType& aStackType);
 
+    // Default values are lazily-created.
+    // This will return null if the game never needed the default value
+    const FlatValue* GetDefaultFlatValue(CName aTypeName);
+
     static TweakDB* Get();
 
 private:
     // Multithreads may lead to undefined behavior
-    void SetFlatDataBuffer(uintptr_t aBuffer, uint32_t aSize, uint32_t aCapacity);
+    void SetFlatDataBuffer(void* aBuffer, uint32_t aSize, uint32_t aCapacity);
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
 RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
