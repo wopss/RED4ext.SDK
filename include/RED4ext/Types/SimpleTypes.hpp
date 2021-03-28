@@ -58,13 +58,16 @@ struct TweakDBID
     TweakDBID(uint32_t aNameHash, uint8_t aNameLength) noexcept;
     TweakDBID(const std::string_view aName) noexcept;
     TweakDBID(const TweakDBID& aBase, const std::string_view aName) noexcept;
-    bool IsValid() const noexcept;
-    bool HasTDBOffset() const noexcept;
-    int32_t ToTDBOffset() const noexcept;
+    bool IsValid() const;
+    bool HasTDBOffset() const;
+    int32_t ToTDBOffset() const;
+    void SetTDBOffset(int32_t aTDBOffset);
 
     operator uint64_t() const noexcept;
     TweakDBID& operator=(const std::string_view aName) noexcept;
     TweakDBID operator+(const std::string_view aName) const noexcept;
+    bool operator<(const TweakDBID& aDBID) const noexcept;
+    bool operator>(const TweakDBID& aDBID) const noexcept;
     bool operator==(const TweakDBID& aDBID) const noexcept;
     bool operator!=(const TweakDBID& aDBID) const noexcept;
 };
