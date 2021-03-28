@@ -1,7 +1,9 @@
 #pragma once
 
+#include <algorithm>
 #include <cstdint>
 #include <functional>
+#include <type_traits>
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
@@ -14,7 +16,14 @@ struct IMemoryAllocator;
 template<typename T>
 struct DynArray
 {
-    T operator[](uint32_t aIndex) const
+    DynArray(IMemoryAllocator* aAllocator = nullptr)
+        : entries(reinterpret_cast<T*>(aAllocator))
+        , size(0)
+        , capacity(0)
+    {
+    }
+
+    const T& operator[](uint32_t aIndex) const
     {
         return entries[aIndex];
     }
@@ -37,14 +46,28 @@ struct DynArray
     template<class... TArgs>
     void EmplaceBack(TArgs&&... aArgs)
     {
-        auto newSize = size + 1;
+        Emplace(end(), std::forward<TArgs>(aArgs)...);
+    }
+
+    template<class... TArgs>
+    void Emplace(T* aPosition, TArgs&&... aArgs)
+    {
+        uint32_t posIdx = aPosition - begin();
+        uint32_t newSize = size + 1;
         if (newSize > capacity)
         {
-            Grow();
+            Reserve(newSize);
         }
 
+        // If not at the end
+        if (posIdx != size)
+        {
+            uint32_t entriesCount = size - posIdx;
+            MoveEntries(&entries[posIdx], &entries[posIdx + 1], entriesCount);
+        }
+
+        new (&entries[posIdx]) T(std::forward<TArgs>(aArgs)...);
         size = newSize;
-        new (&entries[newSize - 1]) T(std::forward<TArgs>(aArgs)...);
     }
 
     bool Remove(const T& aItem)
@@ -66,12 +89,10 @@ struct DynArray
             return false;
 
         entries[aIndex].~T();
-        if ((aIndex + 1) < size)
+        if ((aIndex + 1) != size) // If not at the end
         {
-            // This should use std::move assignments if possible, but this is easier
-
-            size_t entriesCount = size - (aIndex + 1);
-            std::memmove(&entries[aIndex], &entries[aIndex + 1], entriesCount * sizeof(T));
+            uint32_t entriesCount = size - (aIndex + 1);
+            MoveEntries(&entries[aIndex + 1], &entries[aIndex], entriesCount);
         }
         --size;
         return true;
@@ -85,6 +106,19 @@ struct DynArray
         }
 
         size = 0;
+    }
+
+    void Reserve(uint32_t aCount)
+    {
+        // Alignment seems to always be 8.
+        constexpr uint32_t alignment = 8;
+
+        auto capacity = CalculateGrowth(aCount);
+        using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
+                                void (*a5)(int64_t, int64_t, int64_t, int64_t));
+
+        static REDfunc<func_t> func(Addresses::DynArray_Realloc);
+        func(this, capacity, sizeof(T), alignment, nullptr);
     }
 
     IMemoryAllocator* GetAllocator()
@@ -141,23 +175,36 @@ struct DynArray
     uint32_t size;     // 0C
 
 private:
-    void Grow()
+    void MoveEntries(T* aSrc, T* aDst, uint32_t aCount)
     {
-        // Alignment seems to always be 8.
-        constexpr uint32_t alignment = 8;
+        if (aCount == 0 || aSrc == aDst)
+            return;
 
-        auto newSize = size + 1;
-        auto capacity = CalculateGrowth(newSize);
-        using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
-                                void (*a5)(int64_t, int64_t, int64_t, int64_t));
-
-        static REDfunc<func_t> func(Addresses::DynArray_Realloc);
-        func(this, capacity, sizeof(T), alignment, nullptr);
+        if constexpr (std::is_trivially_copyable_v<T>)
+        {
+            std::memmove(aDst, aSrc, aCount * sizeof(T));
+        }
+        else if (aSrc < aDst)
+        {
+            for (; aCount != 0; --aCount)
+            {
+                new (&aDst[aCount - 1]) T(std::move(aSrc[aCount - 1]));
+                aSrc[aCount - 1].~T();
+            }
+        }
+        else
+        {
+            for (uint32_t i = 0; i != aCount; ++i)
+            {
+                new (&aDst[i]) T(std::move(aSrc[i]));
+                aSrc[i].~T();
+            }
+        }
     }
 
     uint32_t CalculateGrowth(uint32_t aNewSize)
     {
-        auto geometric = capacity + (capacity / 2);
+        uint32_t geometric = capacity + (capacity / 2);
         if (geometric < aNewSize)
         {
             return aNewSize;
