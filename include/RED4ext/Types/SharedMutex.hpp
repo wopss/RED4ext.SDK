@@ -12,7 +12,7 @@ struct SharedMutex
     // -1 : write
     // 0 : free
     // + : read
-    volatile char state;
+    volatile char state = 0;
 
     bool TryLock();
     void Lock();
