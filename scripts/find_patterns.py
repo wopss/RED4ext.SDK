@@ -67,6 +67,9 @@ def find_function(pattern: str, expected: int = 1, index: int = 0) -> int:
 
 def find_ptr(pattern: str, expected: int = 1, index: int = 0, offset: int = 0) -> int:
     addr = find_pattern(pattern, expected, index)
+    if addr == ida_idaapi.BADADDR:
+        return addr
+
     disp = ida_bytes.get_dword(addr + offset)
 
     # Real address is: pattern_addr + offset + displacement + size_of_displacement.
