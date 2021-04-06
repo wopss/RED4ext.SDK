@@ -23,19 +23,19 @@ struct HitRepresentationComponent : ent::SlotComponent
     static constexpr const char* NAME = "gameHitRepresentationComponent";
     static constexpr const char* ALIAS = "HitRepresentationComponent";
 
-    uint8_t unk190[0x198 - 0x190]; // 190
-    RaRef<game::HitRepresentationResource> resource; // 198
-    uint8_t unk1A0[0x1B8 - 0x1A0]; // 1A0
-    DynArray<game::HitRepresentationOverride> appearanceOverrides; // 1B8
-    DynArray<game::HitShapeContainer> representations; // 1C8
-    uint8_t unk1D8[0x1F8 - 0x1D8]; // 1D8
-    CName physicsMaterial; // 1F8
-    bool useResourceData; // 200
-    uint8_t unk201[0x220 - 0x201]; // 201
-    game::HitShapeBVH bvhRoot; // 220
-    uint8_t unk2B0[0x340 - 0x2B0]; // 2B0
+    uint8_t unk1A0[0x1A8 - 0x1A0]; // 1A0
+    RaRef<game::HitRepresentationResource> resource; // 1A8
+    uint8_t unk1B0[0x1C8 - 0x1B0]; // 1B0
+    DynArray<game::HitRepresentationOverride> appearanceOverrides; // 1C8
+    DynArray<game::HitShapeContainer> representations; // 1D8
+    uint8_t unk1E8[0x208 - 0x1E8]; // 1E8
+    CName physicsMaterial; // 208
+    bool useResourceData; // 210
+    uint8_t unk211[0x230 - 0x211]; // 211
+    game::HitShapeBVH bvhRoot; // 230
+    uint8_t unk2C0[0x350 - 0x2C0]; // 2C0
 };
-RED4EXT_ASSERT_SIZE(HitRepresentationComponent, 0x340);
+RED4EXT_ASSERT_SIZE(HitRepresentationComponent, 0x350);
 } // namespace game
 using HitRepresentationComponent = game::HitRepresentationComponent;
 } // namespace RED4ext

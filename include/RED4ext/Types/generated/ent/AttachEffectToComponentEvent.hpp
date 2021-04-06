@@ -15,8 +15,7 @@ struct AttachEffectToComponentEvent : ent::AttachEffectEvent
     static constexpr const char* NAME = "entAttachEffectToComponentEvent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkB0[0xC0 - 0xB0]; // B0
 };
-RED4EXT_ASSERT_SIZE(AttachEffectToComponentEvent, 0xC0);
+RED4EXT_ASSERT_SIZE(AttachEffectToComponentEvent, 0xB0);
 } // namespace ent
 } // namespace RED4ext

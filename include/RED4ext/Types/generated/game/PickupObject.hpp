@@ -16,9 +16,9 @@ struct PickupObject : game::Object
     static constexpr const char* NAME = "gamePickupObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x250 - 0x230]; // 230
-    CName interactionTag; // 250
+    uint8_t unk228[0x248 - 0x228]; // 228
+    CName interactionTag; // 248
 };
-RED4EXT_ASSERT_SIZE(PickupObject, 0x258);
+RED4EXT_ASSERT_SIZE(PickupObject, 0x250);
 } // namespace game
 } // namespace RED4ext

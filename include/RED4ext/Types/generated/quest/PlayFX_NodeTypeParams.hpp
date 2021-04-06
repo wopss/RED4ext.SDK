@@ -16,15 +16,13 @@ struct PlayFX_NodeTypeParams
     static constexpr const char* NAME = "questPlayFX_NodeTypeParams";
     static constexpr const char* ALIAS = NAME;
 
-    bool play; // 00
-    uint8_t unk01[0x8 - 0x1]; // 1
-    game::EntityReference objectRef; // 08
-    bool isPlayer; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
-    CName effectName; // 48
-    uint32_t sequenceShift; // 50
-    uint8_t unk54[0x58 - 0x54]; // 54
+    game::EntityReference objectRef; // 00
+    CName effectName; // 38
+    uint32_t sequenceShift; // 40
+    bool isPlayer; // 44
+    bool play; // 45
+    uint8_t unk46[0x48 - 0x46]; // 46
 };
-RED4EXT_ASSERT_SIZE(PlayFX_NodeTypeParams, 0x58);
+RED4EXT_ASSERT_SIZE(PlayFX_NodeTypeParams, 0x48);
 } // namespace quest
 } // namespace RED4ext

@@ -14,7 +14,7 @@ struct CameraCustomData_ReflectionProbes : ICameraStorageCustomData
     static constexpr const char* NAME = "CameraCustomData_ReflectionProbes";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x48 - 0x18]; // 18
+    uint8_t unk18[0x50 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CameraCustomData_ReflectionProbes, 0x48);
+RED4EXT_ASSERT_SIZE(CameraCustomData_ReflectionProbes, 0x50);
 } // namespace RED4ext

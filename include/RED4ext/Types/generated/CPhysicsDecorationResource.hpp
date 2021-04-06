@@ -14,7 +14,7 @@ struct CPhysicsDecorationResource : CMesh
     static constexpr const char* NAME = "CPhysicsDecorationResource";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk210[0x220 - 0x210]; // 210
+    uint8_t unk220[0x230 - 0x220]; // 220
 };
-RED4EXT_ASSERT_SIZE(CPhysicsDecorationResource, 0x220);
+RED4EXT_ASSERT_SIZE(CPhysicsDecorationResource, 0x230);
 } // namespace RED4ext

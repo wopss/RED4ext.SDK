@@ -15,9 +15,9 @@ struct StealthMappin : game::mappins::RuntimeMappin
     static constexpr const char* NAME = "gamemappinsStealthMappin";
     static constexpr const char* ALIAS = "StealthMappin";
 
-    uint8_t unk108[0x300 - 0x108]; // 108
+    uint8_t unk108[0x310 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(StealthMappin, 0x300);
+RED4EXT_ASSERT_SIZE(StealthMappin, 0x310);
 } // namespace game::mappins
 using StealthMappin = game::mappins::StealthMappin;
 } // namespace RED4ext

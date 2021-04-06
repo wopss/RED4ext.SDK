@@ -16,8 +16,8 @@ struct LootSlotSingleQuery : game::LootSlot
     static constexpr const char* NAME = "gameLootSlotSingleQuery";
     static constexpr const char* ALIAS = NAME;
 
-    TweakDBID queryTDBID; // 288
+    TweakDBID queryTDBID; // 280
 };
-RED4EXT_ASSERT_SIZE(LootSlotSingleQuery, 0x290);
+RED4EXT_ASSERT_SIZE(LootSlotSingleQuery, 0x288);
 } // namespace game
 } // namespace RED4ext

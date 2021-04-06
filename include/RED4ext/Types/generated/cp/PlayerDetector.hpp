@@ -15,9 +15,9 @@ struct PlayerDetector : game::Object
     static constexpr const char* NAME = "cpPlayerDetector";
     static constexpr const char* ALIAS = NAME;
 
-    float range; // 230
-    uint8_t unk234[0x238 - 0x234]; // 234
+    float range; // 228
+    uint8_t unk22C[0x230 - 0x22C]; // 22C
 };
-RED4EXT_ASSERT_SIZE(PlayerDetector, 0x238);
+RED4EXT_ASSERT_SIZE(PlayerDetector, 0x230);
 } // namespace cp
 } // namespace RED4ext

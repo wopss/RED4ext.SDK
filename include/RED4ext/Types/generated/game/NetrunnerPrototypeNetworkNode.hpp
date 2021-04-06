@@ -15,11 +15,11 @@ struct NetrunnerPrototypeNetworkNode : game::Object
     static constexpr const char* NAME = "gameNetrunnerPrototypeNetworkNode";
     static constexpr const char* ALIAS = "NetrunnerPrototypeNetworkNode";
 
-    uint8_t unk230[0x240 - 0x230]; // 230
-    int8_t colorIndex; // 240
-    uint8_t unk241[0x248 - 0x241]; // 241
+    uint8_t unk228[0x238 - 0x228]; // 228
+    int8_t colorIndex; // 238
+    uint8_t unk239[0x240 - 0x239]; // 239
 };
-RED4EXT_ASSERT_SIZE(NetrunnerPrototypeNetworkNode, 0x248);
+RED4EXT_ASSERT_SIZE(NetrunnerPrototypeNetworkNode, 0x240);
 } // namespace game
 using NetrunnerPrototypeNetworkNode = game::NetrunnerPrototypeNetworkNode;
 } // namespace RED4ext

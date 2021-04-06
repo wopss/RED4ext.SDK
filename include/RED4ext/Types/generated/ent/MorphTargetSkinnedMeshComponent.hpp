@@ -30,13 +30,13 @@ struct MorphTargetSkinnedMeshComponent : ent::ISkinTargetComponent
     CName visibilityAnimationParam; // 2F0
     uint8_t unk2F8[0x308 - 0x2F8]; // 2F8
     red::TagList tags; // 308
-    uint8_t unk318[0x34C - 0x318]; // 318
-    bool castShadows; // 34C
-    bool acceptDismemberment; // 34D
-    bool HACK_isMaterialPriorityBumped; // 34E
-    bool castLocalShadows; // 34F
-    uint8_t unk350[0x360 - 0x350]; // 350
+    uint8_t unk318[0x35C - 0x318]; // 318
+    bool castShadows; // 35C
+    bool acceptDismemberment; // 35D
+    bool HACK_isMaterialPriorityBumped; // 35E
+    bool castLocalShadows; // 35F
+    uint8_t unk360[0x370 - 0x360]; // 360
 };
-RED4EXT_ASSERT_SIZE(MorphTargetSkinnedMeshComponent, 0x360);
+RED4EXT_ASSERT_SIZE(MorphTargetSkinnedMeshComponent, 0x370);
 } // namespace ent
 } // namespace RED4ext

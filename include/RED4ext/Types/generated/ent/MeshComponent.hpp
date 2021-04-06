@@ -37,9 +37,10 @@ struct MeshComponent : ent::IVisualComponent
     float motionBlurScale; // 1A4
     ent::MeshComponentLODMode LODMode; // 1A8
     uint8_t unk1A9[0x1AB - 0x1A9]; // 1A9
-    bool castShadows; // 1AB
-    bool castLocalShadows; // 1AC
-    uint8_t unk1AD[0x1C1 - 0x1AD]; // 1AD
+    uint8_t order; // 1AB
+    bool castShadows; // 1AC
+    bool castLocalShadows; // 1AD
+    uint8_t unk1AE[0x1C1 - 0x1AE]; // 1AE
     bool overrideMeshNavigationImpact; // 1C1
     NavGenNavigationSetting navigationImpact; // 1C2
     uint8_t unk1C4[0x1D0 - 0x1C4]; // 1C4

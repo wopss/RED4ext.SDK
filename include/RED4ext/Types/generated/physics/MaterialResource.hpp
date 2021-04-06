@@ -27,7 +27,7 @@ struct MaterialResource : CResource
     float density; // 60
     physics::MaterialFriction frictionMode; // 64
     physics::MaterialTags tags; // 68
-    uint8_t unk6B[0x70 - 0x6B]; // 6B
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
 RED4EXT_ASSERT_SIZE(MaterialResource, 0x70);
 } // namespace physics

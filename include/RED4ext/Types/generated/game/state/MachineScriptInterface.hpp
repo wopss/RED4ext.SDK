@@ -10,6 +10,7 @@
 
 namespace RED4ext
 {
+namespace game { struct IBlackboard; }
 namespace game { struct Object; }
 
 namespace game::state { 
@@ -20,8 +21,9 @@ struct MachineScriptInterface : IScriptable
 
     WeakHandle<game::Object> owner; // 40
     WeakHandle<game::Object> executionOwner; // 50
+    WeakHandle<game::IBlackboard> localBlackboard; // 60
 };
-RED4EXT_ASSERT_SIZE(MachineScriptInterface, 0x60);
+RED4EXT_ASSERT_SIZE(MachineScriptInterface, 0x70);
 } // namespace game::state
 using StateScriptInterface = game::state::MachineScriptInterface;
 } // namespace RED4ext

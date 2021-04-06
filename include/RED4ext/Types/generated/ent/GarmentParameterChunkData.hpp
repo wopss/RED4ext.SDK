@@ -16,8 +16,9 @@ struct GarmentParameterChunkData
     static constexpr const char* ALIAS = NAME;
 
     DynArray<uint8_t> morphOffsetScales; // 00
-    DynArray<uint16_t> visibleTriangleInds; // 10
+    uint64_t morphOffsetScalesHash; // 10
+    DynArray<uint16_t> visibleTriangleInds; // 18
 };
-RED4EXT_ASSERT_SIZE(GarmentParameterChunkData, 0x20);
+RED4EXT_ASSERT_SIZE(GarmentParameterChunkData, 0x28);
 } // namespace ent
 } // namespace RED4ext

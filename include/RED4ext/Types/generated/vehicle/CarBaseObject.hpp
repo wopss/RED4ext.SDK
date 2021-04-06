@@ -15,9 +15,9 @@ struct CarBaseObject : vehicle::WheeledBaseObject
     static constexpr const char* NAME = "vehicleCarBaseObject";
     static constexpr const char* ALIAS = "CarObject";
 
-    uint8_t unk910[0x960 - 0x910]; // 910
+    uint8_t unk920[0x970 - 0x920]; // 920
 };
-RED4EXT_ASSERT_SIZE(CarBaseObject, 0x960);
+RED4EXT_ASSERT_SIZE(CarBaseObject, 0x970);
 } // namespace vehicle
 using CarObject = vehicle::CarBaseObject;
 } // namespace RED4ext

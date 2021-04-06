@@ -14,8 +14,8 @@ struct ItemFactorySystemPool
     static constexpr const char* NAME = "gameItemFactorySystemPool";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x120 - 0x0]; // 0
+    uint8_t unk00[0x128 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(ItemFactorySystemPool, 0x120);
+RED4EXT_ASSERT_SIZE(ItemFactorySystemPool, 0x128);
 } // namespace game
 } // namespace RED4ext

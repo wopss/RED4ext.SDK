@@ -15,8 +15,8 @@ struct CombatQueriesSystem : game::ICombatQueriesSystem
     static constexpr const char* NAME = "gameCombatQueriesSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x1CB0 - 0x48]; // 48
+    uint8_t unk48[0x1DD0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CombatQueriesSystem, 0x1CB0);
+RED4EXT_ASSERT_SIZE(CombatQueriesSystem, 0x1DD0);
 } // namespace game
 } // namespace RED4ext

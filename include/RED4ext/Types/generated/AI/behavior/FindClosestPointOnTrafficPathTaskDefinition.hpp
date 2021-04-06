@@ -26,7 +26,8 @@ struct FindClosestPointOnTrafficPathTaskDefinition : AI::behavior::TaskDefinitio
     Handle<AI::ArgumentMapping> usePreviousPosition; // 88
     Handle<AI::ArgumentMapping> checkRoadIntersection; // 98
     Handle<AI::ArgumentMapping> joinTrafficSettings; // A8
+    Handle<AI::ArgumentMapping> workspotData; // B8
 };
-RED4EXT_ASSERT_SIZE(FindClosestPointOnTrafficPathTaskDefinition, 0xB8);
+RED4EXT_ASSERT_SIZE(FindClosestPointOnTrafficPathTaskDefinition, 0xC8);
 } // namespace AI::behavior
 } // namespace RED4ext

@@ -21,11 +21,11 @@ struct CCubeTexture : ITexture
 
     uint32_t size; // 40
     STextureGroupSetup setup; // 44
-    uint8_t unk58[0x68 - 0x58]; // 58
-    Handle<IRenderResourceBlob> renderResourceBlob; // 68
-    uint8_t unk78[0x80 - 0x78]; // 78
-    rend::RenderTextureResource renderTextureResource; // 80
-    uint8_t unk90[0xA0 - 0x90]; // 90
+    uint8_t unk54[0x60 - 0x54]; // 54
+    Handle<IRenderResourceBlob> renderResourceBlob; // 60
+    uint8_t unk70[0x78 - 0x70]; // 70
+    rend::RenderTextureResource renderTextureResource; // 78
+    uint8_t unk88[0x98 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(CCubeTexture, 0xA0);
+RED4EXT_ASSERT_SIZE(CCubeTexture, 0x98);
 } // namespace RED4ext

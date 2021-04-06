@@ -6,6 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/REDhash.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/Types/generated/scn/CameraAnimationLOD.hpp>
 #include <RED4ext/Types/generated/scn/RidTag.hpp>
 
 namespace RED4ext
@@ -20,7 +21,8 @@ struct CameraAnimationRid
 
     scn::RidTag tag; // 00
     Handle<anim::IAnimationBuffer> animation; // 10
+    scn::CameraAnimationLOD cameraAnimationLOD; // 20
 };
-RED4EXT_ASSERT_SIZE(CameraAnimationRid, 0x20);
+RED4EXT_ASSERT_SIZE(CameraAnimationRid, 0x130);
 } // namespace scn
 } // namespace RED4ext

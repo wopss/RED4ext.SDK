@@ -15,9 +15,9 @@ struct ObjectCarrySystem : game::IObjectCarrySystem
     static constexpr const char* NAME = "gameObjectCarrySystem";
     static constexpr const char* ALIAS = "ObjectCarrySystem";
 
-    uint8_t unk48[0x3A0 - 0x48]; // 48
+    uint8_t unk48[0x3C0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ObjectCarrySystem, 0x3A0);
+RED4EXT_ASSERT_SIZE(ObjectCarrySystem, 0x3C0);
 } // namespace game
 using ObjectCarrySystem = game::ObjectCarrySystem;
 } // namespace RED4ext

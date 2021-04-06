@@ -16,10 +16,10 @@ struct StaticParticleNodeInstance : world::INodeInstance
     static constexpr const char* NAME = "worldStaticParticleNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xE4 - 0x90]; // 90
-    RenderSceneLayerMask renderLayerMask; // E4
-    uint8_t unkE5[0xF0 - 0xE5]; // E5
+    uint8_t unk90[0xCC - 0x90]; // 90
+    RenderSceneLayerMask renderLayerMask; // CC
+    uint8_t unkCD[0xD0 - 0xCD]; // CD
 };
-RED4EXT_ASSERT_SIZE(StaticParticleNodeInstance, 0xF0);
+RED4EXT_ASSERT_SIZE(StaticParticleNodeInstance, 0xD0);
 } // namespace world
 } // namespace RED4ext

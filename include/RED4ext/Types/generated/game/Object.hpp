@@ -22,17 +22,17 @@ struct Object : ent::GameEntity
     static constexpr const char* NAME = "gameObject";
     static constexpr const char* ALIAS = "GameObject";
 
-    uint8_t unk160[0x168 - 0x160]; // 160
-    Handle<game::PersistentState> persistentState; // 168
-    LocalizationString displayName; // 178
-    LocalizationString displayDescription; // 1A0
-    CName audioResourceName; // 1C8
-    game::PlayerSocket playerSocket; // 1D0
-    float visibilityCheckDistance; // 1F8
-    uint8_t unk1FC[0x220 - 0x1FC]; // 1FC
-    red::TagList tags; // 220
+    uint8_t unk158[0x160 - 0x158]; // 158
+    Handle<game::PersistentState> persistentState; // 160
+    LocalizationString displayName; // 170
+    LocalizationString displayDescription; // 198
+    CName audioResourceName; // 1C0
+    game::PlayerSocket playerSocket; // 1C8
+    float visibilityCheckDistance; // 1F0
+    uint8_t unk1F4[0x218 - 0x1F4]; // 1F4
+    red::TagList tags; // 218
 };
-RED4EXT_ASSERT_SIZE(Object, 0x230);
+RED4EXT_ASSERT_SIZE(Object, 0x228);
 } // namespace game
 using GameObject = game::Object;
 } // namespace RED4ext

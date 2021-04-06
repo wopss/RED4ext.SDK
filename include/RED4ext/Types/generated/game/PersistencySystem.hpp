@@ -15,9 +15,9 @@ struct PersistencySystem : game::IPersistencySystem
     static constexpr const char* NAME = "gamePersistencySystem";
     static constexpr const char* ALIAS = "GamePersistencySystem";
 
-    uint8_t unk48[0x398 - 0x48]; // 48
+    uint8_t unk48[0x3A8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PersistencySystem, 0x398);
+RED4EXT_ASSERT_SIZE(PersistencySystem, 0x3A8);
 } // namespace game
 using GamePersistencySystem = game::PersistencySystem;
 } // namespace RED4ext

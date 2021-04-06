@@ -17,13 +17,13 @@ struct Entity : IScriptable
     static constexpr const char* NAME = "entEntity";
     static constexpr const char* ALIAS = "Entity";
 
-    uint8_t unk40[0x154 - 0x40]; // 40
-    ECustomCameraTarget customCameraTarget; // 154
-    uint8_t unk155[0x15B - 0x155]; // 155
-    RenderSceneLayerMask renderSceneLayerMask; // 15B
-    uint8_t unk15C[0x160 - 0x15C]; // 15C
+    uint8_t unk40[0x14C - 0x40]; // 40
+    ECustomCameraTarget customCameraTarget; // 14C
+    uint8_t unk14D[0x153 - 0x14D]; // 14D
+    RenderSceneLayerMask renderSceneLayerMask; // 153
+    uint8_t unk154[0x158 - 0x154]; // 154
 };
-RED4EXT_ASSERT_SIZE(Entity, 0x160);
+RED4EXT_ASSERT_SIZE(Entity, 0x158);
 } // namespace ent
 using Entity = ent::Entity;
 } // namespace RED4ext

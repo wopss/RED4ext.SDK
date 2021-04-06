@@ -16,10 +16,10 @@ struct LootObject : game::Object
     static constexpr const char* NAME = "gameLootObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x260 - 0x230]; // 230
-    TweakDBID lootID; // 260
-    uint8_t unk268[0x280 - 0x268]; // 268
+    uint8_t unk228[0x258 - 0x228]; // 228
+    TweakDBID lootID; // 258
+    uint8_t unk260[0x278 - 0x260]; // 260
 };
-RED4EXT_ASSERT_SIZE(LootObject, 0x280);
+RED4EXT_ASSERT_SIZE(LootObject, 0x278);
 } // namespace game
 } // namespace RED4ext
