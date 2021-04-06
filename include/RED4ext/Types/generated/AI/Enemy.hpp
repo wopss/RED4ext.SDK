@@ -15,8 +15,8 @@ struct Enemy : ISerializable
     static constexpr const char* NAME = "AIEnemy";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x100 - 0x30]; // 30
+    uint8_t unk30[0x130 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(Enemy, 0x100);
+RED4EXT_ASSERT_SIZE(Enemy, 0x130);
 } // namespace AI
 } // namespace RED4ext

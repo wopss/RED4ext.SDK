@@ -17,8 +17,8 @@ struct OccupantSlotComponent : ent::SlotComponent
     static constexpr const char* NAME = "gameOccupantSlotComponent";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<game::OccupantSlotData> slotData; // 190
+    DynArray<game::OccupantSlotData> slotData; // 1A0
 };
-RED4EXT_ASSERT_SIZE(OccupantSlotComponent, 0x1A0);
+RED4EXT_ASSERT_SIZE(OccupantSlotComponent, 0x1B0);
 } // namespace game
 } // namespace RED4ext

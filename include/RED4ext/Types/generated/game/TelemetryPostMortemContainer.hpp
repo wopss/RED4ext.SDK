@@ -18,6 +18,6 @@ struct TelemetryPostMortemContainer : ISerializable
 
     game::TelemetryPostMortem postMortem; // 30
 };
-RED4EXT_ASSERT_SIZE(TelemetryPostMortemContainer, 0x170);
+RED4EXT_ASSERT_SIZE(TelemetryPostMortemContainer, 0x1D0);
 } // namespace game
 } // namespace RED4ext

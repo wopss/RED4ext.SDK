@@ -15,8 +15,8 @@ struct RuntimeSystemDestruction : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemDestruction";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x700 - 0x48]; // 48
+    uint8_t unk48[0x780 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemDestruction, 0x700);
+RED4EXT_ASSERT_SIZE(RuntimeSystemDestruction, 0x780);
 } // namespace world
 } // namespace RED4ext

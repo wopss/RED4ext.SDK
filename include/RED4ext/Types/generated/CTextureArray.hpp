@@ -21,10 +21,9 @@ struct CTextureArray : ITexture
 
     uint8_t unk40[0x58 - 0x40]; // 40
     STextureGroupSetup setup; // 58
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
-    Handle<IRenderResourceBlob> renderResourceBlob; // 70
-    uint8_t unk80[0x88 - 0x80]; // 80
-    rend::RenderTextureResource renderTextureResource; // 88
+    Handle<IRenderResourceBlob> renderResourceBlob; // 68
+    uint8_t unk78[0x80 - 0x78]; // 78
+    rend::RenderTextureResource renderTextureResource; // 80
 };
-RED4EXT_ASSERT_SIZE(CTextureArray, 0x98);
+RED4EXT_ASSERT_SIZE(CTextureArray, 0x90);
 } // namespace RED4ext

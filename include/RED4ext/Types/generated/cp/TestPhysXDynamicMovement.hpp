@@ -15,8 +15,8 @@ struct TestPhysXDynamicMovement : game::Object
     static constexpr const char* NAME = "cpTestPhysXDynamicMovement";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x250 - 0x230]; // 230
+    uint8_t unk228[0x248 - 0x228]; // 228
 };
-RED4EXT_ASSERT_SIZE(TestPhysXDynamicMovement, 0x250);
+RED4EXT_ASSERT_SIZE(TestPhysXDynamicMovement, 0x248);
 } // namespace cp
 } // namespace RED4ext

@@ -22,9 +22,9 @@ struct CorpseComponent : ent::ISkinableComponent
     uint8_t unk130[0x160 - 0x130]; // 130
     Handle<physics::FilterData> filterData; // 160
     CName material; // 170
-    uint8_t unk178[0x1A0 - 0x178]; // 178
+    uint8_t unk178[0x180 - 0x178]; // 178
 };
-RED4EXT_ASSERT_SIZE(CorpseComponent, 0x1A0);
+RED4EXT_ASSERT_SIZE(CorpseComponent, 0x180);
 } // namespace ent
 using CorpseComponent = ent::CorpseComponent;
 } // namespace RED4ext

@@ -22,20 +22,20 @@ struct PhysicalDestructionComponent : ent::IVisualComponent
     static constexpr const char* NAME = "entPhysicalDestructionComponent";
     static constexpr const char* ALIAS = "PhysicalDestructionComponent";
 
-    uint8_t unk140[0x160 - 0x140]; // 140
-    physics::DestructionParams destructionParams; // 160
-    uint8_t unk1A4[0x1A8 - 0x1A4]; // 1A4
-    DynArray<physics::DestructionLevelData> destructionLevelData; // 1A8
-    uint8_t unk1B8[0x208 - 0x1B8]; // 1B8
-    RaRef<CMesh> mesh; // 208
-    uint8_t unk210[0x258 - 0x210]; // 210
-    CName audioMetadata; // 258
-    CName meshAppearance; // 260
-    uint8_t unk268[0x280 - 0x268]; // 268
-    float forceAutoHideDistance; // 280
-    uint8_t unk284[0x290 - 0x284]; // 284
+    uint8_t unk140[0x1E8 - 0x140]; // 140
+    physics::DestructionParams destructionParams; // 1E8
+    uint8_t unk22C[0x230 - 0x22C]; // 22C
+    DynArray<physics::DestructionLevelData> destructionLevelData; // 230
+    uint8_t unk240[0x290 - 0x240]; // 240
+    RaRef<CMesh> mesh; // 290
+    uint8_t unk298[0x2E0 - 0x298]; // 298
+    CName audioMetadata; // 2E0
+    CName meshAppearance; // 2E8
+    uint8_t unk2F0[0x308 - 0x2F0]; // 2F0
+    float forceAutoHideDistance; // 308
+    uint8_t unk30C[0x320 - 0x30C]; // 30C
 };
-RED4EXT_ASSERT_SIZE(PhysicalDestructionComponent, 0x290);
+RED4EXT_ASSERT_SIZE(PhysicalDestructionComponent, 0x320);
 } // namespace ent
 using PhysicalDestructionComponent = ent::PhysicalDestructionComponent;
 } // namespace RED4ext

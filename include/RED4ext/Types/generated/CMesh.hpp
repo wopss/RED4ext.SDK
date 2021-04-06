@@ -20,6 +20,7 @@
 namespace RED4ext
 {
 struct CMaterialInstance;
+struct CResource;
 struct IMaterial;
 struct IRenderResourceBlob;
 namespace mesh { struct MeshAppearance; }
@@ -49,12 +50,13 @@ struct CMesh : res::StreamedResource
     mesh::MeshMaterialBuffer localMaterialBuffer; // 110
     DynArray<Ref<IMaterial>> preloadExternalMaterials; // 1B0
     DynArray<Handle<IMaterial>> preloadLocalMaterialInstances; // 1C0
-    DynArray<Handle<mesh::MeshAppearance>> appearances; // 1D0
-    uint8_t unk1E0[0x1E8 - 0x1E0]; // 1E0
-    Handle<IRenderResourceBlob> renderResourceBlob; // 1E8
-    uint8_t unk1F8[0x201 - 0x1F8]; // 1F8
-    ERenderObjectType objectType; // 201
-    uint8_t unk202[0x210 - 0x202]; // 202
+    DynArray<Ref<CResource>> inplaceResources; // 1D0
+    DynArray<Handle<mesh::MeshAppearance>> appearances; // 1E0
+    uint8_t unk1F0[0x1F8 - 0x1F0]; // 1F0
+    Handle<IRenderResourceBlob> renderResourceBlob; // 1F8
+    uint8_t unk208[0x211 - 0x208]; // 208
+    ERenderObjectType objectType; // 211
+    uint8_t unk212[0x220 - 0x212]; // 212
 };
-RED4EXT_ASSERT_SIZE(CMesh, 0x210);
+RED4EXT_ASSERT_SIZE(CMesh, 0x220);
 } // namespace RED4ext

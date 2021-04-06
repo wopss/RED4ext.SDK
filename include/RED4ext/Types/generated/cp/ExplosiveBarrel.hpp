@@ -16,10 +16,10 @@ struct ExplosiveBarrel : game::DestructibleObject
     static constexpr const char* NAME = "cpExplosiveBarrel";
     static constexpr const char* ALIAS = NAME;
 
-    CName colliderComponentName; // 238
-    CName destructionComponentName; // 240
-    uint8_t unk248[0x260 - 0x248]; // 248
+    CName colliderComponentName; // 230
+    CName destructionComponentName; // 238
+    uint8_t unk240[0x258 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(ExplosiveBarrel, 0x260);
+RED4EXT_ASSERT_SIZE(ExplosiveBarrel, 0x258);
 } // namespace cp
 } // namespace RED4ext

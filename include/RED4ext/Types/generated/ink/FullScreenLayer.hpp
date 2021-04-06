@@ -16,6 +16,6 @@ struct FullScreenLayer : ink::Layer
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(FullScreenLayer, 0x150);
+RED4EXT_ASSERT_SIZE(FullScreenLayer, 0x148);
 } // namespace ink
 } // namespace RED4ext

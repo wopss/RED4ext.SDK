@@ -22,12 +22,12 @@ struct SplashScreenLoadingScreenLogicController : ink::ILoadingLogicController
     static constexpr const char* NAME = "inkSplashScreenLoadingScreenLogicController";
     static constexpr const char* ALIAS = "SplashScreenLoadingScreenLogicController";
 
-    RaRef<Bink> unk180; // 180 -- 
-    RaRef<Bink> unk188; // 188 -- 
-    RaRef<Bink> unk190; // 190 -- 
-    RaRef<Bink> unk198; // 198 -- 
-    RaRef<Bink> unk1A0; // 1A0 -- 
-    ink::LocalizedBink unk1A8; // 1A8 -- 
+    RaRef<Bink> logoTrainWBBink; // 180
+    RaRef<Bink> logoTrainNamcoBink; // 188
+    RaRef<Bink> logoTrainStadiaBink; // 190
+    RaRef<Bink> logoTrainNoRTXBink; // 198
+    RaRef<Bink> logoTrainRTXBink; // 1A0
+    ink::LocalizedBink introMessageBink; // 1A8
     RaRef<Bink> trailerBink; // 1C0
     ink::CompoundWidgetReference skipButtonPanel; // 1C8
     ink::VideoWidgetReference videoPlayer; // 1E0

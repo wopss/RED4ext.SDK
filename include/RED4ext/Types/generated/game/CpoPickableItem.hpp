@@ -16,10 +16,10 @@ struct CpoPickableItem : game::Object
     static constexpr const char* NAME = "gameCpoPickableItem";
     static constexpr const char* ALIAS = NAME;
 
-    TweakDBID itemIDToEquip; // 230
-    int32_t quickSlotID; // 238
-    uint8_t unk23C[0x240 - 0x23C]; // 23C
+    TweakDBID itemIDToEquip; // 228
+    int32_t quickSlotID; // 230
+    uint8_t unk234[0x238 - 0x234]; // 234
 };
-RED4EXT_ASSERT_SIZE(CpoPickableItem, 0x240);
+RED4EXT_ASSERT_SIZE(CpoPickableItem, 0x238);
 } // namespace game
 } // namespace RED4ext

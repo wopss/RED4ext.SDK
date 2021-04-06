@@ -15,8 +15,8 @@ struct RuntimeSystemTraffic : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemTraffic";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x9210 - 0x48]; // 48
+    uint8_t unk48[0x91F0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemTraffic, 0x9210);
+RED4EXT_ASSERT_SIZE(RuntimeSystemTraffic, 0x91F0);
 } // namespace world
 } // namespace RED4ext

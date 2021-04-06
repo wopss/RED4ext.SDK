@@ -16,6 +16,6 @@ struct VideoLayer : ink::FullScreenLayer
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(VideoLayer, 0x150);
+RED4EXT_ASSERT_SIZE(VideoLayer, 0x148);
 } // namespace ink
 } // namespace RED4ext

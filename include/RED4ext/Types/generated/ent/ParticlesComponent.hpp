@@ -22,10 +22,10 @@ struct ParticlesComponent : ent::IVisualComponent
     float autoHideRange; // 140
     float emissionRate; // 144
     Ref<CParticleSystem> particleSystem; // 148
-    uint8_t unk160[0x178 - 0x160]; // 160
-    RenderSceneLayerMask renderLayerMask; // 178
-    uint8_t unk179[0x190 - 0x179]; // 179
+    uint8_t unk160[0x168 - 0x160]; // 160
+    RenderSceneLayerMask renderLayerMask; // 168
+    uint8_t unk169[0x180 - 0x169]; // 169
 };
-RED4EXT_ASSERT_SIZE(ParticlesComponent, 0x190);
+RED4EXT_ASSERT_SIZE(ParticlesComponent, 0x180);
 } // namespace ent
 } // namespace RED4ext

@@ -18,9 +18,9 @@ struct AdvertTranslationController : game::ui::WidgetGameController
 
     uint8_t unkD0[0xD8 - 0xD0]; // D0
     ink::TextWidgetReference advertText; // D8
-    uint8_t unkF0[0x100 - 0xF0]; // F0
+    uint8_t unkF0[0x110 - 0xF0]; // F0
 };
-RED4EXT_ASSERT_SIZE(AdvertTranslationController, 0x100);
+RED4EXT_ASSERT_SIZE(AdvertTranslationController, 0x110);
 } // namespace game::ui
 using AdvertTranslationLogicController = game::ui::AdvertTranslationController;
 } // namespace RED4ext

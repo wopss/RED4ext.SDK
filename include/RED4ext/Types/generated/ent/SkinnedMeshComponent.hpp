@@ -28,11 +28,12 @@ struct SkinnedMeshComponent : ent::ISkinTargetComponent
     uint64_t chunkMask; // 248
     ent::MeshComponentLODMode LODMode; // 250
     uint8_t unk251[0x253 - 0x251]; // 251
-    bool useProxyMeshAsShadowMesh; // 253
-    bool castShadows; // 254
-    bool castLocalShadows; // 255
-    bool acceptDismemberment; // 256
-    uint8_t unk257[0x260 - 0x257]; // 257
+    uint8_t order; // 253
+    bool useProxyMeshAsShadowMesh; // 254
+    bool castShadows; // 255
+    bool castLocalShadows; // 256
+    bool acceptDismemberment; // 257
+    uint8_t unk258[0x260 - 0x258]; // 258
 };
 RED4EXT_ASSERT_SIZE(SkinnedMeshComponent, 0x260);
 } // namespace ent

@@ -15,8 +15,8 @@ struct DestructibleEntityProxyMeshNodeInstance : world::EntityProxyMeshNodeInsta
     static constexpr const char* NAME = "worldDestructibleEntityProxyMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk120[0x130 - 0x120]; // 120
+    uint8_t unk120[0x140 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(DestructibleEntityProxyMeshNodeInstance, 0x130);
+RED4EXT_ASSERT_SIZE(DestructibleEntityProxyMeshNodeInstance, 0x140);
 } // namespace world
 } // namespace RED4ext

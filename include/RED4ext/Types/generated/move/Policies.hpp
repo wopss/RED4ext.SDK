@@ -42,11 +42,12 @@ struct Policies : IScriptable
     Vector3 localTargetOffset; // FC
     float desiredDistance; // 108
     float minMovementDistance; // 10C
-    float toleranceRadius; // 110
-    float minFollowerDistance; // 114
-    float maxFollowerDistance; // 118
-    float strafingRotationOffset; // 11C
-    uint8_t unk120[0x140 - 0x120]; // 120
+    uint8_t unk110[0x114 - 0x110]; // 110
+    float toleranceRadius; // 114
+    float minFollowerDistance; // 118
+    float maxFollowerDistance; // 11C
+    float strafingRotationOffset; // 120
+    uint8_t unk124[0x140 - 0x124]; // 124
     move::MovementType movementType; // 140
     uint8_t unk144[0x14C - 0x144]; // 144
     move::CirclingDirection circlingDirection; // 14C

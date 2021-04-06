@@ -16,7 +16,7 @@ struct GameEntity : ent::Entity
     static constexpr const char* ALIAS = "GameEntity";
 
 };
-RED4EXT_ASSERT_SIZE(GameEntity, 0x160);
+RED4EXT_ASSERT_SIZE(GameEntity, 0x158);
 } // namespace ent
 using GameEntity = ent::GameEntity;
 } // namespace RED4ext

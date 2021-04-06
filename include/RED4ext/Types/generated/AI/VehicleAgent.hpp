@@ -16,6 +16,6 @@ struct VehicleAgent : AI::CAgent
     static constexpr const char* ALIAS = "AIVehicleAgent";
 
 };
-RED4EXT_ASSERT_SIZE(VehicleAgent, 0x920);
+RED4EXT_ASSERT_SIZE(VehicleAgent, 0xA10);
 } // namespace AI
 } // namespace RED4ext

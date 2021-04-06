@@ -17,15 +17,13 @@ struct NavigationTileData
     static constexpr const char* NAME = "worldNavigationTileData";
     static constexpr const char* ALIAS = NAME;
 
-    int32_t tileX; // 00
-    int32_t tileY; // 04
-    int32_t tileLayer; // 08
-    NavGenAgentSize agentSize; // 0C
-    DataBuffer tilesBuffer; // 10
-    world::OffMeshConnectionsData offMeshConnections; // 38
-    bool regenerable; // D8
-    uint8_t unkD9[0xE0 - 0xD9]; // D9
+    world::OffMeshConnectionsData offMeshConnections; // 00
+    DataBuffer tilesBuffer; // A0
+    int32_t tileX; // C8
+    int32_t tileY; // CC
+    NavGenAgentSize agentSize; // D0
+    uint8_t unkD4[0xD8 - 0xD4]; // D4
 };
-RED4EXT_ASSERT_SIZE(NavigationTileData, 0xE0);
+RED4EXT_ASSERT_SIZE(NavigationTileData, 0xD8);
 } // namespace world
 } // namespace RED4ext

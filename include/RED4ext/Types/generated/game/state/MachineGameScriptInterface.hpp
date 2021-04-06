@@ -15,9 +15,9 @@ struct MachineGameScriptInterface : game::state::MachineScriptInterface
     static constexpr const char* NAME = "gamestateMachineGameScriptInterface";
     static constexpr const char* ALIAS = "StateGameScriptInterface";
 
-    uint8_t unk60[0xA0 - 0x60]; // 60
+    uint8_t unk70[0xB0 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(MachineGameScriptInterface, 0xA0);
+RED4EXT_ASSERT_SIZE(MachineGameScriptInterface, 0xB0);
 } // namespace game::state
 using StateGameScriptInterface = game::state::MachineGameScriptInterface;
 } // namespace RED4ext

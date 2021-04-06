@@ -16,9 +16,10 @@ struct ApplyStatusEffectEvent : game::events::StatusEffectEvent
     static constexpr const char* NAME = "gameeventsApplyStatusEffectEvent";
     static constexpr const char* ALIAS = "ApplyStatusEffectEvent";
 
-    bool isNewApplication; // 60
-    uint8_t unk61[0x68 - 0x61]; // 61
-    ent::EntityID instigatorEntityID; // 68
+    ent::EntityID instigatorEntityID; // 60
+    bool isNewApplication; // 68
+    bool isAppliedOnSpawn; // 69
+    uint8_t unk6A[0x70 - 0x6A]; // 6A
 };
 RED4EXT_ASSERT_SIZE(ApplyStatusEffectEvent, 0x70);
 } // namespace game::events

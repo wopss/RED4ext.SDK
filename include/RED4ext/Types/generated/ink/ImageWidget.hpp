@@ -35,9 +35,9 @@ struct ImageWidget : ink::LeafWidget
     ink::Margin nineSliceScale; // 208
     ink::EHorizontalAlign tileHAlign; // 218
     ink::EVerticalAlign tileVAlign; // 219
-    uint8_t unk21A[0x300 - 0x21A]; // 21A
+    uint8_t unk21A[0x310 - 0x21A]; // 21A
 };
-RED4EXT_ASSERT_SIZE(ImageWidget, 0x300);
+RED4EXT_ASSERT_SIZE(ImageWidget, 0x310);
 } // namespace ink
 using inkImage = ink::ImageWidget;
 } // namespace RED4ext

@@ -16,6 +16,6 @@ struct StairsTrigger : game::Object
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(StairsTrigger, 0x230);
+RED4EXT_ASSERT_SIZE(StairsTrigger, 0x228);
 } // namespace cp
 } // namespace RED4ext

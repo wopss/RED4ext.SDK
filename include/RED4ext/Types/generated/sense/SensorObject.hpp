@@ -23,14 +23,14 @@ struct SensorObject : ISerializable
     game::data::SenseObjectType sensorObjectType; // 64
     uint8_t unk68[0x88 - 0x68]; // 68
     TweakDBID presetID; // 88
-    uint8_t unk90[0xF8 - 0x90]; // 90
-    float detectionFactor; // F8
-    float detectionDropFactor; // FC
-    float detectionCoolDownTime; // 100
-    float detectionPartCoolDownTime; // 104
-    uint8_t unk108[0xA60 - 0x108]; // 108
+    uint8_t unk90[0x100 - 0x90]; // 90
+    float detectionFactor; // 100
+    float detectionDropFactor; // 104
+    float detectionCoolDownTime; // 108
+    float detectionPartCoolDownTime; // 10C
+    uint8_t unk110[0xA70 - 0x110]; // 110
 };
-RED4EXT_ASSERT_SIZE(SensorObject, 0xA60);
+RED4EXT_ASSERT_SIZE(SensorObject, 0xA70);
 } // namespace sense
 using SensorObject = sense::SensorObject;
 } // namespace RED4ext

@@ -20,13 +20,16 @@ struct TelemetryPostMortem
     CString crashVisitId; // 00
     CString playthroughId; // 20
     CString crashVersion; // 40
-    CString timeCrash; // 60
-    game::TelemetryTrackedQuest trackedQuest; // 80
-    Vector3 location; // 128
-    float sessionLength; // 134
-    bool isOom; // 138
-    uint8_t unk139[0x140 - 0x139]; // 139
+    CString crashPatch; // 60
+    CString timeCrash; // 80
+    CString district; // A0
+    CString zoneType; // C0
+    game::TelemetryTrackedQuest trackedQuest; // E0
+    Vector3 location; // 188
+    float sessionLength; // 194
+    bool isOom; // 198
+    uint8_t unk199[0x1A0 - 0x199]; // 199
 };
-RED4EXT_ASSERT_SIZE(TelemetryPostMortem, 0x140);
+RED4EXT_ASSERT_SIZE(TelemetryPostMortem, 0x1A0);
 } // namespace game
 } // namespace RED4ext

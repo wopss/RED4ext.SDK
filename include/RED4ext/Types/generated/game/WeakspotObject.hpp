@@ -15,9 +15,9 @@ struct WeakspotObject : game::Object
     static constexpr const char* NAME = "gameWeakspotObject";
     static constexpr const char* ALIAS = "WeakspotObject";
 
-    uint8_t unk230[0x278 - 0x230]; // 230
+    uint8_t unk228[0x270 - 0x228]; // 228
 };
-RED4EXT_ASSERT_SIZE(WeakspotObject, 0x278);
+RED4EXT_ASSERT_SIZE(WeakspotObject, 0x270);
 } // namespace game
 using WeakspotObject = game::WeakspotObject;
 } // namespace RED4ext

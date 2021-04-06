@@ -15,8 +15,8 @@ struct Layer : ISerializable
     static constexpr const char* NAME = "inkLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x150 - 0x30]; // 30
+    uint8_t unk30[0x148 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(Layer, 0x150);
+RED4EXT_ASSERT_SIZE(Layer, 0x148);
 } // namespace ink
 } // namespace RED4ext
