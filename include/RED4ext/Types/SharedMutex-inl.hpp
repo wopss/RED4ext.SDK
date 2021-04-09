@@ -4,6 +4,11 @@
 #include <RED4ext/Types/SharedMutex.hpp>
 #endif
 
+#include <cstdint>
+#include <intrin.h>
+
+#include <Windows.h>
+
 RED4EXT_INLINE bool RED4ext::SharedMutex::TryLock()
 {
     return _InterlockedCompareExchange8(&state, -1, 0) == 0;
@@ -17,7 +22,6 @@ RED4EXT_INLINE void RED4ext::SharedMutex::Lock()
         if (TryLock())
             break;
 
-        // The following is not required but prefered
         ++loopCount;
         if (loopCount == 0x4000)
             loopCount = 0;
@@ -28,7 +32,7 @@ RED4EXT_INLINE void RED4ext::SharedMutex::Lock()
 
 RED4EXT_INLINE void RED4ext::SharedMutex::Unlock()
 {
-    state = 0;
+    InterlockedExchange8(&state, 0);
 }
 
 RED4EXT_INLINE bool RED4ext::SharedMutex::TryLockShared()
@@ -49,7 +53,6 @@ RED4EXT_INLINE void RED4ext::SharedMutex::LockShared()
         if (TryLockShared())
             break;
 
-        // The following is not required but prefered
         ++loopCount;
         if (loopCount == 0x4000)
             loopCount = 0;

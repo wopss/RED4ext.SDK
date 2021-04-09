@@ -1,8 +1,4 @@
 #pragma once
-#include <memory>
-
-#include <Windows.h>
-
 #include <RED4ext/Common.hpp>
 
 namespace RED4ext
@@ -34,6 +30,7 @@ struct SharedMutex
     void lock_shared();
     void unlock_shared();
 };
+RED4EXT_ASSERT_SIZE(SharedMutex, 1);
 }
 
 #ifdef RED4EXT_HEADER_ONLY
