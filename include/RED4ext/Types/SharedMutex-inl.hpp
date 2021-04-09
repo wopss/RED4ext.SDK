@@ -9,6 +9,11 @@
 
 #include <Windows.h>
 
+RED4EXT_INLINE RED4ext::SharedMutex::SharedMutex()
+    : state(0)
+{
+}
+
 RED4EXT_INLINE bool RED4ext::SharedMutex::TryLock()
 {
     return _InterlockedCompareExchange8(&state, -1, 0) == 0;

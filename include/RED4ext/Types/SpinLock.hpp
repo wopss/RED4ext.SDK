@@ -7,7 +7,13 @@ struct SpinLock
 {
     // 0 : free
     // 1 : locked
-    volatile char state = 0;
+    volatile char state;
+
+    SpinLock();
+    SpinLock(const SpinLock&) = delete;
+    SpinLock(SpinLock&&) = delete;
+    SpinLock& operator=(const SpinLock&) = delete;
+    SpinLock& operator=(SpinLock&&) = delete;
 
     bool TryLock();
     void Lock();

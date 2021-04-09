@@ -8,6 +8,11 @@
 
 #include <Windows.h>
 
+RED4EXT_INLINE RED4ext::SpinLock::SpinLock()
+    : state(0)
+{
+}
+
 RED4EXT_INLINE bool RED4ext::SpinLock::TryLock()
 {
     return InterlockedExchange8(&state, 1) == 0;

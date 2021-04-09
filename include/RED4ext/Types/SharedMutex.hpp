@@ -8,7 +8,13 @@ struct SharedMutex
     // -1 : write
     // 0 : free
     // + : read
-    volatile char state = 0;
+    volatile char state;
+
+    SharedMutex();
+    SharedMutex(const SharedMutex&) = delete;
+    SharedMutex(SharedMutex&&) = delete;
+    SharedMutex& operator=(const SharedMutex&) = delete;
+    SharedMutex& operator=(SharedMutex&&) = delete;
 
     bool TryLock();
     void Lock();
