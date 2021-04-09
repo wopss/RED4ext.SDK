@@ -50,22 +50,12 @@ struct SortedArray
 
     std::pair<T*, bool> InsertOrAssign(const T& aItem)
     {
-        std::pair<T*, bool> pair = Emplace(std::forward<const T&>(aItem));
-        if (!pair.second)
-        {
-            pair.first = aItem;
-        }
-        return pair;
+        return Emplace_INTERNAL(true, std::forward<const T&>(aItem));
     }
 
     std::pair<T*, bool> InsertOrAssign(T&& aItem)
     {
-        std::pair<T*, bool> pair = Emplace(std::forward<T&&>(aItem));
-        if (!pair.second)
-        {
-            pair.first = std::move(aItem);
-        }
-        return pair;
+        return Emplace_INTERNAL(true, std::forward<T&&>(aItem));
     }
 
     T* Find(const T& aItem)
@@ -77,29 +67,7 @@ struct SortedArray
     template<class... TArgs>
     std::pair<T*, bool> Emplace(TArgs&&... aArgs)
     {
-        auto newSize = size + 1;
-        if (newSize > capacity)
-        {
-            Reserve(newSize);
-        }
-
-        T tmp(std::forward<TArgs>(aArgs)...);
-        T* it = LowerBound(tmp);
-        if (it != end())
-        {
-            if (Unique && *it == tmp)
-            {
-                // Do nothing if the array is unique and already contains the item.
-                return {it, false};
-            }
-
-            uint32_t entriesCount = static_cast<uint32_t>(end() - it);
-            MoveEntries(it, it + 1, entriesCount);
-        }
-
-        *it = std::move(tmp);
-        size = newSize;
-        return {it, true};
+        return Emplace_INTERNAL(false, std::forward<TArgs>(aArgs)...);
     }
 
     bool Remove(const T& aItem)
@@ -148,7 +116,7 @@ struct SortedArray
         // Alignment seems to always be 8.
         constexpr uint32_t alignment = 8;
 
-        auto capacity = CalculateGrowth(aCount);
+        uint32_t capacity = CalculateGrowth(aCount);
         using func_t = void (*)(SortedArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
@@ -211,6 +179,38 @@ struct SortedArray
     int32_t flags;     // 10
 
 private:
+    template<class... TArgs>
+    std::pair<T*, bool> Emplace_INTERNAL(bool insertOrAssign, TArgs&&... aArgs)
+    {
+        uint32_t newSize = size + 1;
+        if (newSize > capacity)
+        {
+            Reserve(newSize);
+        }
+
+        T tmp(std::forward<TArgs>(aArgs)...);
+        T* it = LowerBound(tmp);
+        if (it != end())
+        {
+            if (Unique && *it == tmp)
+            {
+                if (insertOrAssign)
+                {
+                    *it = std::move(tmp);
+                }
+
+                return {it, false};
+            }
+
+            uint32_t entriesCount = static_cast<uint32_t>(end() - it);
+            MoveEntries(it, it + 1, entriesCount);
+        }
+
+        *it = std::move(tmp);
+        size = newSize;
+        return {it, true};
+    }
+
     T* LowerBound(const T& aItem)
     {
         if ((flags & (int32_t)Flags::NotSorted) == (int32_t)Flags::NotSorted)
