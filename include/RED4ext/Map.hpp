@@ -76,7 +76,7 @@ struct Map
         std::pair<T*, bool> pair = Emplace(std::forward<const K&>(aKey), std::forward<const T&>(aValue));
         if (!pair.second)
         {
-            pair.first = aValue;
+            *pair.first = aValue;
         }
         return pair;
     }
@@ -86,7 +86,7 @@ struct Map
         std::pair<T*, bool> pair = Emplace(std::forward<const K&>(aKey), std::forward<T&&>(aValue));
         if (!pair.second)
         {
-            pair.first = std::move(aValue);
+            *pair.first = std::move(aValue);
         }
         return pair;
     }

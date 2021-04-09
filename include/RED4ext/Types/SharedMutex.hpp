@@ -1,8 +1,4 @@
 #pragma once
-#include <memory>
-
-#include <Windows.h>
-
 #include <RED4ext/Common.hpp>
 
 namespace RED4ext
@@ -12,7 +8,13 @@ struct SharedMutex
     // -1 : write
     // 0 : free
     // + : read
-    volatile char state = 0;
+    volatile char state;
+
+    SharedMutex();
+    SharedMutex(const SharedMutex&) = delete;
+    SharedMutex(SharedMutex&&) = delete;
+    SharedMutex& operator=(const SharedMutex&) = delete;
+    SharedMutex& operator=(SharedMutex&&) = delete;
 
     bool TryLock();
     void Lock();
@@ -34,6 +36,7 @@ struct SharedMutex
     void lock_shared();
     void unlock_shared();
 };
+RED4EXT_ASSERT_SIZE(SharedMutex, 1);
 }
 
 #ifdef RED4EXT_HEADER_ONLY

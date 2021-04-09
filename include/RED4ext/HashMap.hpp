@@ -204,7 +204,7 @@ struct HashMap
         std::pair<T*, bool> pair = Emplace(aKey, std::forward<const T&>(aValue));
         if (!pair.second)
         {
-            pair.first = aValue;
+            *pair.first = aValue;
         }
         return pair;
     }
@@ -214,7 +214,7 @@ struct HashMap
         std::pair<T*, bool> pair = Emplace(aKey, std::forward<T&&>(aValue));
         if (!pair.second)
         {
-            pair.first = std::move(aValue);
+            *pair.first = std::move(aValue);
         }
         return pair;
     }
@@ -282,7 +282,7 @@ struct HashMap
         if (aSize <= capacity)
             return;
 
-        size_t requiredBytes = aSize * (sizeof(Node) + 4 /* *indexTable */);
+        uint32_t requiredBytes = aSize * (sizeof(Node) + 4 /* *indexTable */);
         auto allocResult = GetAllocator()->AllocAligned(requiredBytes, 8);
         memset(allocResult.memory, 0, allocResult.size);
         NodeList newNodeList(reinterpret_cast<Node*>(allocResult.memory), aSize);
