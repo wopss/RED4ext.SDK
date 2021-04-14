@@ -119,3 +119,7 @@ void Dump(std::filesystem::path aFilePath, bool aVerbose = false, bool aExtended
           bool aPropertyHolders = false);
 
 } // namespace RED4ext::GameReflection
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Dump/Reflection-inl.hpp>
+#endif
