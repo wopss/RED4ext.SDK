@@ -16,7 +16,7 @@ struct ICharacterConditionType : quest::IConditionType
     static constexpr const char* NAME = "questICharacterConditionType";
     static constexpr const char* ALIAS = NAME;
 
-    game::EntityReference objectRef; // 38
+    game::EntityReference puppetRef; // 38
     bool isPlayer; // 70
     uint8_t unk71[0x78 - 0x71]; // 71
 };

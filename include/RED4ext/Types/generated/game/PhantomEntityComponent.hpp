@@ -20,8 +20,8 @@ struct PhantomEntityComponent : ent::IComponent
     static constexpr const char* ALIAS = NAME;
 
     game::PhantomEntityParameters params; // 90
-    Handle<game::EffectComponentBinding> effectBinding; // B0
+    Handle<game::EffectComponentBinding> effectBinding; // C0
 };
-RED4EXT_ASSERT_SIZE(PhantomEntityComponent, 0xC0);
+RED4EXT_ASSERT_SIZE(PhantomEntityComponent, 0xD0);
 } // namespace game
 } // namespace RED4ext

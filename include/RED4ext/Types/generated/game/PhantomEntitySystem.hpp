@@ -15,8 +15,8 @@ struct PhantomEntitySystem : game::IPhantomEntitySystem
     static constexpr const char* NAME = "gamePhantomEntitySystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x3108 - 0x48]; // 48
+    uint8_t unk48[0x3120 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PhantomEntitySystem, 0x3108);
+RED4EXT_ASSERT_SIZE(PhantomEntitySystem, 0x3120);
 } // namespace game
 } // namespace RED4ext

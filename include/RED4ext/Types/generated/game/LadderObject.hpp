@@ -15,15 +15,17 @@ struct LadderObject : game::Object
     static constexpr const char* NAME = "gameLadderObject";
     static constexpr const char* ALIAS = NAME;
 
-    float heightOfBottomPart; // 228
-    float exitStepTop; // 22C
-    float verticalStepTop; // 230
-    float exitStepBottom; // 234
-    float verticalStepBottom; // 238
-    float exitStepJump; // 23C
-    float verticalStepJump; // 240
-    float enterOffset; // 244
+    uint8_t unk228[0x22C - 0x228]; // 228
+    float heightOfBottomPart; // 22C
+    float exitStepTop; // 230
+    float verticalStepTop; // 234
+    float exitStepBottom; // 238
+    float verticalStepBottom; // 23C
+    float exitStepJump; // 240
+    float verticalStepJump; // 244
+    float enterOffset; // 248
+    uint8_t unk24C[0x250 - 0x24C]; // 24C
 };
-RED4EXT_ASSERT_SIZE(LadderObject, 0x248);
+RED4EXT_ASSERT_SIZE(LadderObject, 0x250);
 } // namespace game
 } // namespace RED4ext

@@ -15,15 +15,17 @@ struct LadderComponent : ent::IComponent
     static constexpr const char* NAME = "gameLadderComponent";
     static constexpr const char* ALIAS = NAME;
 
-    float heightOfBottomPart; // 90
-    float exitStepTop; // 94
-    float verticalStepTop; // 98
-    float exitStepBottom; // 9C
-    float verticalStepBottom; // A0
-    float exitStepJump; // A4
-    float verticalStepJump; // A8
-    float enterOffset; // AC
+    uint8_t unk90[0x94 - 0x90]; // 90
+    float heightOfBottomPart; // 94
+    float exitStepTop; // 98
+    float verticalStepTop; // 9C
+    float exitStepBottom; // A0
+    float verticalStepBottom; // A4
+    float exitStepJump; // A8
+    float verticalStepJump; // AC
+    float enterOffset; // B0
+    uint8_t unkB4[0xB8 - 0xB4]; // B4
 };
-RED4EXT_ASSERT_SIZE(LadderComponent, 0xB0);
+RED4EXT_ASSERT_SIZE(LadderComponent, 0xB8);
 } // namespace game
 } // namespace RED4ext
