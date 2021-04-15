@@ -1,114 +1,140 @@
-#include <chrono>
 #include <iostream>
 
 #include <RED4ext/RED4ext.hpp>
 
-using namespace std::chrono_literals;
-
 /*
  * To run this plugin you need to load it with RED4ext (https://github.com/WopsS/RED4ext).
  */
-RED4EXT_C_EXPORT void OnUpdate()
+
+
+void PrintGameTime(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
-    static auto last = std::chrono::steady_clock::now();
-    auto now = std::chrono::steady_clock::now();
-
-    auto diff = now - last;
-    if (diff < 1min)
-    {
-        return;
-    }
-
-    last = now;
-
     /*
      * Access the property of 'GameTime' instance.
      */
-    {
-        auto rtti = RED4ext::CRTTISystem::Get();
-        auto gameTimeCls = rtti->GetClass("GameTime");
 
-        RED4ext::GameTime gameTime;
-        RED4ext::ExecuteFunction("gameTimeSystem", "GetGameTime", &gameTime);
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto gameTimeCls = rtti->GetClass("GameTime");
 
-        auto secondsProp = gameTimeCls->GetProperty("seconds");
-        auto seconds = secondsProp->GetValue<uint32_t>(&gameTime);
-        std::cout << "Seconds=" << seconds;
+    RED4ext::GameTime gameTime;
+    RED4ext::ExecuteFunction("gameTimeSystem", "GetGameTime", &gameTime);
 
-        seconds += RED4ext::GameTime::OneDay;
+    auto secondsProp = gameTimeCls->GetProperty("seconds");
+    auto seconds = secondsProp->GetValue<uint32_t>(&gameTime);
+    std::cout << "Seconds=" << seconds;
 
-        secondsProp->SetValue<uint32_t>(&gameTime, seconds);
-        std::cout << "Seconds=" << seconds;
+    seconds += RED4ext::GameTime::OneDay;
 
-        seconds = secondsProp->GetValue<uint32_t>(&gameTime);
-        std::cout << "Seconds=" << seconds;
-    }
+    secondsProp->SetValue<uint32_t>(&gameTime, seconds);
+    std::cout << "Seconds=" << seconds;
 
+    seconds = secondsProp->GetValue<uint32_t>(&gameTime);
+    std::cout << "Seconds=" << seconds;
+}
+
+void IsPlayerCrouched(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
+{
     /*
      * Check if the player is crouched.
      */
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto engine = RED4ext::CGameEngine::Get();
+    auto gameInstance = engine->framework->gameInstance;
+
+    RED4ext::Handle<RED4ext::IScriptable> handle;
+    RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
+
+    if (handle)
     {
-        auto rtti = RED4ext::CRTTISystem::Get();
-        auto engine = RED4ext::CGameEngine::Get();
-        auto gameInstance = engine->framework->gameInstance;
+        auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
+        auto inCrouch = playerPuppetCls->GetProperty("inCrouch");
+        auto value = inCrouch->GetValue<bool>(handle.instance);
 
-        RED4ext::Handle<RED4ext::IScriptable> handle;
-        RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
+        std::cout << "inCourch=" << std::boolalpha << value;
+    }
+}
 
-        if (handle)
-        {
-            auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
-            auto inCrouch = playerPuppetCls->GetProperty("inCrouch");
-            auto value = inCrouch->GetValue<bool>(handle.instance);
+void DoSomethingWithUISystem(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
+{
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto engine = RED4ext::CGameEngine::Get();
+    auto gameInstance = engine->framework->gameInstance;
 
-            std::cout << "inCourch=" << std::boolalpha << value;
-        }
+    RED4ext::Handle<RED4ext::IScriptable> uiManager;
+    RED4ext::ExecuteFunction("ScriptGameInstance", "GetUISystem", &uiManager, &gameInstance);
+}
+
+void PrintScannerStatus(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
+{
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto engine = RED4ext::CGameEngine::Get();
+    auto gameInstance = engine->framework->gameInstance;
+
+    RED4ext::Handle<RED4ext::IScriptable> handle;
+    RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
+
+    if (handle)
+    {
+        auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
+        auto getHudManagerFunc = playerPuppetCls->GetFunction("GetHudManager");
+
+        RED4ext::Handle<RED4ext::IScriptable> hudManager;
+        RED4ext::ExecuteFunction(handle, getHudManagerFunc, &hudManager, {});
+
+        auto hudManagerCls = rtti->GetClass("HUDManager");
+
+        auto activeModeProp = hudManagerCls->GetProperty("activeMode");
+        auto activeMode = activeModeProp->GetValue<int32_t>(hudManager);
+
+        auto stateProp = hudManagerCls->GetProperty("state");
+        auto state = stateProp->GetValue<int32_t>(hudManager);
+
+        auto uiScannerVisibleProp = hudManagerCls->GetProperty("uiScannerVisible");
+        auto uiScannerVisible = uiScannerVisibleProp->GetValue<bool>(hudManager);
+
+        std::cout << std::boolalpha << "activeMode=" << activeMode << " state=" << state
+                  << " uiScannerVisible=" << uiScannerVisible;
+    }
+}
+
+RED4EXT_C_EXPORT bool RED4EXT_CALL Load(RED4ext::PluginHandle aHandle, const RED4ext::IRED4ext* aInterface)
+{
+    auto rtti = RED4ext::CRTTISystem::Get();
+
+    {
+        auto func = RED4ext::CGlobalFunction::Create("PrintGameTime", "PrintGameTime", &PrintGameTime);
+        rtti->RegisterFunction(func);
     }
 
-    /*
-     * Get the UI system.
-     */
     {
-        auto rtti = RED4ext::CRTTISystem::Get();
-        auto engine = RED4ext::CGameEngine::Get();
-        auto gameInstance = engine->framework->gameInstance;
-
-        RED4ext::Handle<RED4ext::IScriptable> uiManager;
-        RED4ext::ExecuteFunction("ScriptGameInstance", "GetUISystem", &uiManager, &gameInstance);
+        auto func = RED4ext::CGlobalFunction::Create("IsPlayerCrouched", "IsPlayerCrouched", &IsPlayerCrouched);
+        rtti->RegisterFunction(func);
     }
 
-    /*
-     * A more complex example of how to access properties.
-     */
     {
-        auto rtti = RED4ext::CRTTISystem::Get();
-        auto engine = RED4ext::CGameEngine::Get();
-        auto gameInstance = engine->framework->gameInstance;
-
-        RED4ext::Handle<RED4ext::IScriptable> handle;
-        RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
-
-        if (handle)
-        {
-            auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
-            auto getHudManagerFunc = playerPuppetCls->GetFunction("GetHudManager");
-
-            RED4ext::Handle<RED4ext::IScriptable> hudManager;
-            RED4ext::ExecuteFunction(handle, getHudManagerFunc, &hudManager, {});
-
-            auto hudManagerCls = rtti->GetClass("HUDManager");
-
-            auto activeModeProp = hudManagerCls->GetProperty("activeMode");
-            auto activeMode = activeModeProp->GetValue<int32_t>(hudManager);
-
-            auto stateProp = hudManagerCls->GetProperty("state");
-            auto state = stateProp->GetValue<int32_t>(hudManager);
-
-            auto uiScannerVisibleProp = hudManagerCls->GetProperty("uiScannerVisible");
-            auto uiScannerVisible = uiScannerVisibleProp->GetValue<bool>(hudManager);
-
-            std::cout << std::boolalpha << "activeMode=" << activeMode << " state=" << state
-                      << " uiScannerVisible=" << uiScannerVisible;
-        }
+        auto func = RED4ext::CGlobalFunction::Create("DoSomethingWithUISystem", "DoSomethingWithUISystem",
+                                                     &DoSomethingWithUISystem);
+        rtti->RegisterFunction(func);
     }
+
+    {
+        auto func = RED4ext::CGlobalFunction::Create("PrintScannerStatus", "PrintScannerStatus", &PrintScannerStatus);
+        rtti->RegisterFunction(func);
+    }
+
+    return true;
+}
+
+RED4EXT_C_EXPORT void RED4EXT_CALL Query(RED4ext::PluginInfo* aInfo)
+{
+    aInfo->name = L"RED4ext.AccessingProperties";
+    aInfo->author = L"WopsS";
+    aInfo->version = RED4EXT_SEMVER(1, 0, 0);
+    aInfo->runtime = RED4EXT_RUNTIME_LATEST;
+    aInfo->sdk = RED4EXT_SDK_LATEST;
+}
+
+RED4EXT_C_EXPORT uint32_t RED4EXT_CALL Supports()
+{
+    return RED4EXT_API_VERSION_LATEST;
 }

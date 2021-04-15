@@ -3,6 +3,10 @@
 #include <RED4ext/RED4ext.hpp>
 
 /*
+ * To run this plugin you need to load it with RED4ext (https://github.com/WopsS/RED4ext).
+ */
+
+/*
  * Every scripting function must have the following parameters:
  *  RED4ext::IScriptable* aContext
  *  RED4ext::CStackFrame* aFrame
@@ -55,10 +59,7 @@ void MyStaticFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, 
     }
 }
 
-/*
- * To run this plugin you need to load it with RED4ext (https://github.com/WopsS/RED4ext).
- */
-RED4EXT_C_EXPORT void OnInitialization()
+RED4EXT_C_EXPORT bool RED4EXT_CALL Load(RED4ext::PluginHandle aHandle, const RED4ext::IRED4ext* aInterface)
 {
     auto rtti = RED4ext::CRTTISystem::Get();
 
@@ -80,4 +81,20 @@ RED4EXT_C_EXPORT void OnInitialization()
         playerPuppetCls->RegisterFunction(func);
         playerPuppetCls->RegisterFunction(staticFunc);
     }
+
+    return true;
+}
+
+RED4EXT_C_EXPORT void RED4EXT_CALL Query(RED4ext::PluginInfo* aInfo)
+{
+    aInfo->name = L"RED4ext.FunctionRegistration";
+    aInfo->author = L"WopsS";
+    aInfo->version = RED4EXT_SEMVER(1, 0, 0);
+    aInfo->runtime = RED4EXT_RUNTIME_LATEST;
+    aInfo->sdk = RED4EXT_SDK_LATEST;
+}
+
+RED4EXT_C_EXPORT uint32_t RED4EXT_CALL Supports()
+{
+    return RED4EXT_API_VERSION_LATEST;
 }
