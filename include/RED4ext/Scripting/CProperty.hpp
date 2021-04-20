@@ -2,9 +2,10 @@
 
 #include <type_traits>
 
+#include <RED4ext/Addresses.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/REDfunc.hpp>
 #include <RED4ext/RTTITypes.hpp>
-#include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
@@ -101,8 +102,12 @@ private:
         void* holder = aInstance;
         if (flags.b21)
         {
-            auto scriptable = static_cast<IScriptable*>(aInstance);
-            holder = scriptable->GetValueHolder();
+            /*auto scriptable = static_cast<IScriptable*>(aInstance);
+            holder = scriptable->GetValueHolder();*/
+
+            using func_t = void* (*)(ScriptInstance);
+            static REDfunc<func_t> func(Addresses::IScriptable_GetValueHolder);
+            holder = func(aInstance);
         }
 
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);
