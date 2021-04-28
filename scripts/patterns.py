@@ -52,7 +52,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='CGameEngine', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? 4D 8D 85 88 00 00 00 49 8B 07 48 8B D7', offset=3)
+            Item(pattern='48 89 05 ? ? ? ? ? 8D ? 88 00 00 00 49 8B', offset=3)
         ]),
 
         Group(name='CGlobalFunction', functions=[
