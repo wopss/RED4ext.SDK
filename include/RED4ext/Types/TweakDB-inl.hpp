@@ -92,46 +92,41 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
 
     using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID aDBID);
     static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
-    static bool fakeTweakDBInitialized = false;
-    static TweakDB fakeTweakDB;
 
-    if (!fakeTweakDBInitialized)
+    TweakDB fakeTweakDB;
+    struct FakeAllocator : IMemoryAllocator
     {
-        struct FakeAllocator : IMemoryAllocator
+        virtual Result Alloc(uint32_t aSize)
         {
-            virtual Result Alloc(uint32_t aSize)
-            {
-                return AllocAligned(aSize, 8);
-            }
-            virtual Result AllocAligned(uint32_t aSize, uint32_t aAlignment)
-            {
-                Result result;
-                result.memory = _aligned_malloc(aSize, aAlignment);
-                result.size = aSize;
-                return result;
-            }
-            virtual void sub_10()
-            { }
-            virtual void sub_18()
-            { }
-            virtual void Free(Result* aMemory)
-            {
-                _aligned_free(aMemory->memory);
-            }
-            virtual void sub_28(void* aMemory)
-            { };
-            virtual uint32_t GetId()
-            {
-                return 0;
-            };
+            return AllocAligned(aSize, 8);
+        }
+        virtual Result AllocAligned(uint32_t aSize, uint32_t aAlignment)
+        {
+            Result result;
+            result.memory = _aligned_malloc(aSize, aAlignment);
+            result.size = aSize;
+            return result;
+        }
+        virtual void sub_10()
+        { }
+        virtual void sub_18()
+        { }
+        virtual void Free(Result* aMemory)
+        {
+            _aligned_free(aMemory->memory);
+        }
+        virtual void sub_28(void* aMemory)
+        { };
+        virtual uint32_t GetId()
+        {
+            return 0;
         };
-        static FakeAllocator fakeAllocator;
+    };
+    static FakeAllocator fakeAllocator;
 
-        // we only need recordsByID and recordsByType
-        fakeTweakDB.recordsByID = { &fakeAllocator };
-        fakeTweakDB.recordsByType = { &fakeAllocator };
-        fakeTweakDBInitialized = true;
-    }
+    // we only need recordsByID and recordsByType
+    fakeTweakDB.recordsByID = { &fakeAllocator };
+    fakeTweakDB.recordsByType = { &fakeAllocator };
 
     CreateTDBRecord(&fakeTweakDB, aRecord->GetTweakBaseHash(), aRecord->recordID);
 
@@ -146,17 +141,16 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         updated = true;
     }
 
-    // clear the hashmaps in our fakeTweakDB
-    {
-        fakeTweakDB.recordsByType.for_each([](const IRTTIType*, DynArray<Handle<IScriptable>>& array)
-            {
-                array.Clear();
-                array.GetAllocator()->Free(array.entries);
-            });
+    fakeTweakDB.recordsByType.for_each([](const IRTTIType*, DynArray<Handle<IScriptable>>& array)
+        {
+            array.Clear();
+            array.GetAllocator()->Free(array.entries);
+        });
 
-        fakeTweakDB.recordsByID.Clear();
-        fakeTweakDB.recordsByType.Clear();
-    }
+    fakeTweakDB.recordsByID.Clear();
+    fakeTweakDB.recordsByID.GetAllocator()->Free(fakeTweakDB.recordsByID.nodeList.nodes);
+    fakeTweakDB.recordsByType.Clear();
+    fakeTweakDB.recordsByType.GetAllocator()->Free(fakeTweakDB.recordsByType.nodeList.nodes);
 
     return updated;
 }
