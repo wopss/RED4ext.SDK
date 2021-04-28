@@ -1167,6 +1167,11 @@ void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::stri
 
     std::ofstream o(aFilePath);
 
+    o << "#ifndef RED4EXT_STATIC_LIB" << std::endl;
+    o << "#error Please define 'RED4EXT_STATIC_LIB' to compile this file." << std::endl;
+    o << "#endif" << std::endl;
+    o << std::endl;
+
     for (auto& inc : aIncludes)
     {
         o << "#include <RED4ext/" << inc << ".hpp>" << std::endl;
