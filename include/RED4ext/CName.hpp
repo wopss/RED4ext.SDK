@@ -14,10 +14,7 @@ struct CName
     {
     }
 
-    constexpr CName(const char* aName) noexcept
-        : CName(FNV1a(aName))
-    {
-    }
+    CName(const char* aName) noexcept;
 
     operator uint64_t() const noexcept;
 
@@ -34,7 +31,16 @@ struct CName
     bool operator!=(const uint64_t aRhs) const noexcept;
 
     const char* ToString() const;
-    bool IsEmpty() const noexcept;
+
+    /**
+     * @brief Check if the name's hash is equal to 0 (None).
+     * @return True if name's hash is equal to 0, false otherwise.
+     *
+     * @remark 'None' is a special name in Cyberpunk and will always be 0 in CNamePool.
+     */
+    bool IsNone() const noexcept;
+
+    [[deprecated("Use 'IsNone()' instead.")]] bool IsEmpty() const noexcept;
 
     uint64_t hash; // 00
 };
