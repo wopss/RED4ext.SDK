@@ -7,11 +7,10 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/RTTITypes.hpp>
 
 namespace RED4ext
 {
-struct IRTTIType;
-struct CClass;
 struct CBaseFunction;
 struct CGlobalFunction;
 
@@ -43,7 +42,7 @@ struct IRTTISystem
     virtual void sub_B8() = 0;
     virtual void sub_C0() = 0;
     virtual void sub_C8() = 0;
-    virtual void sub_D0() = 0;
+    virtual void RegisterScriptedType(CName aName, CClass::Flags aFlags, CClass* aParent) = 0;
     virtual void sub_D8() = 0;
     virtual void sub_E0() = 0;
     virtual void sub_E8() = 0;
