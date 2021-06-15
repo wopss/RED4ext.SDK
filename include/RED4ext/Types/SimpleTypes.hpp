@@ -8,6 +8,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Unks.hpp>
+#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {
@@ -94,9 +95,25 @@ RED4EXT_ASSERT_SIZE(EditorObjectID, 0x20);
 
 struct Variant
 {
-    int64_t unk00; // 00
-    int64_t unk08; // 08
-    int64_t unk10; // 10
+    Variant() = default;
+
+    Variant(uint64_t aType, uint64_t aValue)
+        : type(aType)
+        , value(aValue)
+        , unknown(0)
+    {
+    }
+
+    Variant(IRTTIType* aType, ScriptInstance aValue)
+        : type(reinterpret_cast<std::uintptr_t>(aType))
+        , value(reinterpret_cast<std::uintptr_t>(aValue))
+        , unknown(0)
+    {
+    }
+
+    int64_t type;  // 00
+    int64_t value; // 08
+    int64_t unknown; // 10
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
