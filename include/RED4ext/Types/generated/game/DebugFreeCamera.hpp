@@ -15,8 +15,8 @@ struct DebugFreeCamera : game::Object
     static constexpr const char* NAME = "gameDebugFreeCamera";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk228[0x288 - 0x228]; // 228
+    uint8_t unk230[0x290 - 0x230]; // 230
 };
-RED4EXT_ASSERT_SIZE(DebugFreeCamera, 0x288);
+RED4EXT_ASSERT_SIZE(DebugFreeCamera, 0x290);
 } // namespace game
 } // namespace RED4ext

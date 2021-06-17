@@ -16,9 +16,9 @@ struct CpoArmouryItem : game::Object
     static constexpr const char* NAME = "gameCpoArmouryItem";
     static constexpr const char* ALIAS = NAME;
 
-    TweakDBID armouryItemID; // 228
-    uint8_t unk230[0x240 - 0x230]; // 230
+    TweakDBID armouryItemID; // 230
+    uint8_t unk238[0x248 - 0x238]; // 238
 };
-RED4EXT_ASSERT_SIZE(CpoArmouryItem, 0x240);
+RED4EXT_ASSERT_SIZE(CpoArmouryItem, 0x248);
 } // namespace game
 } // namespace RED4ext

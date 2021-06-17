@@ -19,8 +19,8 @@ struct CameraCurvesLibrary : ent::Entity
     static constexpr const char* NAME = "gameCameraCurvesLibrary";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<Ref<game::CameraCurveSet>> cameraCurves; // 158
+    DynArray<Ref<game::CameraCurveSet>> cameraCurves; // 160
 };
-RED4EXT_ASSERT_SIZE(CameraCurvesLibrary, 0x168);
+RED4EXT_ASSERT_SIZE(CameraCurvesLibrary, 0x170);
 } // namespace game
 } // namespace RED4ext

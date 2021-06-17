@@ -14,8 +14,8 @@ struct ChildEffectsMovingInCone_State
     static constexpr const char* NAME = "gameChildEffectsMovingInCone_State";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x48 - 0x0]; // 0
+    uint8_t unk00[0xA0 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(ChildEffectsMovingInCone_State, 0x48);
+RED4EXT_ASSERT_SIZE(ChildEffectsMovingInCone_State, 0xA0);
 } // namespace game
 } // namespace RED4ext

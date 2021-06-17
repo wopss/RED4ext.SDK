@@ -14,7 +14,7 @@ struct CGameEngine : BaseGameEngine
     static constexpr const char* NAME = "CGameEngine";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk268[0x2C8 - 0x268]; // 268
+    uint8_t unk268[0x2D0 - 0x268]; // 268
 };
-RED4EXT_ASSERT_SIZE(CGameEngine, 0x2C8);
+RED4EXT_ASSERT_SIZE(CGameEngine, 0x2D0);
 } // namespace RED4ext

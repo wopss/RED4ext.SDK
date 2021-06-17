@@ -15,15 +15,15 @@ struct FreeCamera : game::Object
     static constexpr const char* NAME = "gameFreeCamera";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk228[0x230 - 0x228]; // 228
-    float baseSpeed; // 230
-    float analogTurnRate; // 234
-    float mouseTurnRate; // 238
-    float activationBlendTime; // 23C
-    float deactivationBlendTime; // 240
-    bool usePhysicalCollision; // 244
-    uint8_t unk245[0x280 - 0x245]; // 245
+    uint8_t unk230[0x238 - 0x230]; // 230
+    float baseSpeed; // 238
+    float analogTurnRate; // 23C
+    float mouseTurnRate; // 240
+    float activationBlendTime; // 244
+    float deactivationBlendTime; // 248
+    bool usePhysicalCollision; // 24C
+    uint8_t unk24D[0x288 - 0x24D]; // 24D
 };
-RED4EXT_ASSERT_SIZE(FreeCamera, 0x280);
+RED4EXT_ASSERT_SIZE(FreeCamera, 0x288);
 } // namespace game
 } // namespace RED4ext

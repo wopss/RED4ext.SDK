@@ -19,12 +19,11 @@ struct FoliagePhysicalDestructionMapping : world::FoliageDestructionMapping
     static constexpr const char* NAME = "worldFoliagePhysicalDestructionMapping";
     static constexpr const char* ALIAS = NAME;
 
-    CName audioMetadata; // 60
-    physics::DestructionParams destructionParams; // 68
-    uint8_t unkAC[0xB0 - 0xAC]; // AC
-    DynArray<physics::DestructionLevelData> destructionLevelData; // B0
-    uint8_t unkC0[0xE8 - 0xC0]; // C0
+    CName audioMetadata; // 68
+    physics::DestructionParams destructionParams; // 70
+    uint8_t unkB4[0xB8 - 0xB4]; // B4
+    DynArray<physics::DestructionLevelData> destructionLevelData; // B8
 };
-RED4EXT_ASSERT_SIZE(FoliagePhysicalDestructionMapping, 0xE8);
+RED4EXT_ASSERT_SIZE(FoliagePhysicalDestructionMapping, 0xC8);
 } // namespace world
 } // namespace RED4ext

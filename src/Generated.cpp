@@ -1024,10 +1024,12 @@
 #include <RED4ext/Types/generated/game/EffectTriggerRotationType.hpp>
 #include <RED4ext/Types/generated/game/EffectVectorEvaluator.hpp>
 #include <RED4ext/Types/generated/game/Effector.hpp>
+#include <RED4ext/Types/generated/game/EntityAppearanceColorVariantsArray.hpp>
 #include <RED4ext/Types/generated/game/EntityReference.hpp>
 #include <RED4ext/Types/generated/game/EntityReferenceType.hpp>
 #include <RED4ext/Types/generated/game/EntitySpawnerEventType.hpp>
 #include <RED4ext/Types/generated/game/EntitySpawnerSlotData.hpp>
+#include <RED4ext/Types/generated/game/EntityToAppearancesAndColorVariantsMapEntry.hpp>
 #include <RED4ext/Types/generated/game/EnvironmentDamageReceiverShape.hpp>
 #include <RED4ext/Types/generated/game/EquipAnimationType.hpp>
 #include <RED4ext/Types/generated/game/EquipParam.hpp>
@@ -1156,6 +1158,7 @@
 #include <RED4ext/Types/generated/game/IStatusComboSystem.hpp>
 #include <RED4ext/Types/generated/game/IStatusEffectListener.hpp>
 #include <RED4ext/Types/generated/game/IStatusEffectSystem.hpp>
+#include <RED4ext/Types/generated/game/IStimuliSystem.hpp>
 #include <RED4ext/Types/generated/game/IStreamingMonitorSystem.hpp>
 #include <RED4ext/Types/generated/game/ISubtitleHandlerSystem.hpp>
 #include <RED4ext/Types/generated/game/ITargetingSystem.hpp>
@@ -1488,6 +1491,7 @@
 #include <RED4ext/Types/generated/game/data/StatType.hpp>
 #include <RED4ext/Types/generated/game/data/Stat_Record.hpp>
 #include <RED4ext/Types/generated/game/data/StatusEffect_Record.hpp>
+#include <RED4ext/Types/generated/game/data/StimPropagation.hpp>
 #include <RED4ext/Types/generated/game/data/StimType.hpp>
 #include <RED4ext/Types/generated/game/data/TriggerMode.hpp>
 #include <RED4ext/Types/generated/game/data/TweakDBRecord.hpp>

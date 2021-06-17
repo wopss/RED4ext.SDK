@@ -23,7 +23,8 @@ struct EffectAction_ChildEffectsMovingInCone : game::EffectPostAction
     float minEffectDuration; // 54
     float maxEffectDuration; // 58
     bool twoDimensional; // 5C
-    uint8_t unk5D[0x60 - 0x5D]; // 5D
+    bool smoothInterpolations; // 5D
+    uint8_t unk5E[0x60 - 0x5E]; // 5E
 };
 RED4EXT_ASSERT_SIZE(EffectAction_ChildEffectsMovingInCone, 0x60);
 } // namespace game

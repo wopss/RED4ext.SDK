@@ -36,8 +36,8 @@ struct EffectDefinition
     DynArray<Handle<game::EffectPostAction>> postActions; // 58
     DynArray<Handle<game::EffectAction>> noTargetsActions; // 68
     game::EffectSettings settings; // 78
-    game::EffectDebugSettings debugSettings; // 7C
+    game::EffectDebugSettings debugSettings; // 84
 };
-RED4EXT_ASSERT_SIZE(EffectDefinition, 0x88);
+RED4EXT_ASSERT_SIZE(EffectDefinition, 0x90);
 } // namespace game
 } // namespace RED4ext

@@ -5,7 +5,6 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/REDhash.hpp>
-#include <RED4ext/CName.hpp>
 #include <RED4ext/ISerializable.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
 
@@ -21,9 +20,8 @@ struct FoliageDestructionMapping : ISerializable
 
     RaRef<CMesh> baseMesh; // 30
     RaRef<CMesh> destructibleMesh; // 38
-    CName meshAppearance; // 40
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk40[0x68 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(FoliageDestructionMapping, 0x60);
+RED4EXT_ASSERT_SIZE(FoliageDestructionMapping, 0x68);
 } // namespace world
 } // namespace RED4ext

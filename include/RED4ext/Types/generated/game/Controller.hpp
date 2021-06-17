@@ -16,6 +16,6 @@ struct Controller : game::Object
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(Controller, 0x228);
+RED4EXT_ASSERT_SIZE(Controller, 0x230);
 } // namespace game
 } // namespace RED4ext

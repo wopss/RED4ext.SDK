@@ -18,7 +18,10 @@ struct EffectSettings
     bool synchronousProcessingForPlayer; // 01
     bool forceSynchronousProcessing; // 02
     bool tempExecuteOnlyOnce; // 03
+    float tickRate; // 04
+    bool useSimTimeForTick; // 08
+    uint8_t unk09[0xC - 0x9]; // 9
 };
-RED4EXT_ASSERT_SIZE(EffectSettings, 0x4);
+RED4EXT_ASSERT_SIZE(EffectSettings, 0xC);
 } // namespace game
 } // namespace RED4ext

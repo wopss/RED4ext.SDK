@@ -21,10 +21,10 @@ struct VehicleCurvesLibrary : ent::Entity
     static constexpr const char* NAME = "gameVehicleCurvesLibrary";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<Ref<game::VehicleCurveSet>> curves; // 158
-    DynArray<Ref<game::VehicleCommonCurveSet>> commonCurves; // 168
-    DynArray<Ref<vehicle::BikeCurveSet>> bikeCurves; // 178
+    DynArray<Ref<game::VehicleCurveSet>> curves; // 160
+    DynArray<Ref<game::VehicleCommonCurveSet>> commonCurves; // 170
+    DynArray<Ref<vehicle::BikeCurveSet>> bikeCurves; // 180
 };
-RED4EXT_ASSERT_SIZE(VehicleCurvesLibrary, 0x188);
+RED4EXT_ASSERT_SIZE(VehicleCurvesLibrary, 0x190);
 } // namespace game
 } // namespace RED4ext

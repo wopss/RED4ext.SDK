@@ -15,9 +15,9 @@ struct DeviceBase : game::Object
     static constexpr const char* NAME = "gameDeviceBase";
     static constexpr const char* ALIAS = "DeviceBase";
 
-    uint8_t unk228[0x230 - 0x228]; // 228
+    uint8_t unk230[0x238 - 0x230]; // 230
 };
-RED4EXT_ASSERT_SIZE(DeviceBase, 0x230);
+RED4EXT_ASSERT_SIZE(DeviceBase, 0x238);
 } // namespace game
 using DeviceBase = game::DeviceBase;
 } // namespace RED4ext

@@ -15,8 +15,8 @@ struct EntityPreview : ent::Entity
     static constexpr const char* NAME = "entEntityPreview";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk158[0x1B0 - 0x158]; // 158
+    uint8_t unk160[0x1B8 - 0x160]; // 160
 };
-RED4EXT_ASSERT_SIZE(EntityPreview, 0x1B0);
+RED4EXT_ASSERT_SIZE(EntityPreview, 0x1B8);
 } // namespace ent
 } // namespace RED4ext

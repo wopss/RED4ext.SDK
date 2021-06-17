@@ -19,16 +19,16 @@ struct Conveyor : game::Object
     static constexpr const char* NAME = "cpConveyor";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk228[0x290 - 0x228]; // 228
-    DynArray<cp::ConveyorLine> lines; // 290
-    CurveData<float> movementCurve; // 2A0
-    CName audioParameterLineActive; // 2D8
-    CName audioParameterLineCycle; // 2E0
-    CName audioParameterLineSpeed; // 2E8
-    float entityDistance; // 2F0
-    float entitySpawnOffset; // 2F4
-    uint8_t unk2F8[0x308 - 0x2F8]; // 2F8
+    uint8_t unk230[0x298 - 0x230]; // 230
+    DynArray<cp::ConveyorLine> lines; // 298
+    CurveData<float> movementCurve; // 2A8
+    CName audioParameterLineActive; // 2E0
+    CName audioParameterLineCycle; // 2E8
+    CName audioParameterLineSpeed; // 2F0
+    float entityDistance; // 2F8
+    float entitySpawnOffset; // 2FC
+    uint8_t unk300[0x310 - 0x300]; // 300
 };
-RED4EXT_ASSERT_SIZE(Conveyor, 0x308);
+RED4EXT_ASSERT_SIZE(Conveyor, 0x310);
 } // namespace cp
 } // namespace RED4ext

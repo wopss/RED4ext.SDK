@@ -22,14 +22,14 @@ struct FoliageBakedDestructionMapping : world::FoliageDestructionMapping
     static constexpr const char* NAME = "worldFoliageBakedDestructionMapping";
     static constexpr const char* ALIAS = NAME;
 
-    RaRef<world::Effect> destructionEffect; // 60
-    Handle<physics::FilterData> filterData; // 68
-    physics::FilterDataSource filterDataSource; // 78
-    uint8_t unk79[0x80 - 0x79]; // 79
-    CName audioMetadata; // 80
-    float numFrames; // 88
-    float frameRate; // 8C
+    RaRef<world::Effect> destructionEffect; // 68
+    Handle<physics::FilterData> filterData; // 70
+    physics::FilterDataSource filterDataSource; // 80
+    uint8_t unk81[0x88 - 0x81]; // 81
+    CName audioMetadata; // 88
+    float numFrames; // 90
+    float frameRate; // 94
 };
-RED4EXT_ASSERT_SIZE(FoliageBakedDestructionMapping, 0x90);
+RED4EXT_ASSERT_SIZE(FoliageBakedDestructionMapping, 0x98);
 } // namespace world
 } // namespace RED4ext

@@ -16,7 +16,6 @@ struct AreaVolume : game::Object
     static constexpr const char* NAME = "gameAreaVolume";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk228[0x230 - 0x228]; // 228
     game::AreaData areaData; // 230
     uint8_t unk260[0x270 - 0x260]; // 260
 };

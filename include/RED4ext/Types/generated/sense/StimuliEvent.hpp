@@ -7,11 +7,14 @@
 #include <RED4ext/REDhash.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Types/generated/Vector4.hpp>
+#include <RED4ext/Types/generated/game/data/StimPropagation.hpp>
+#include <RED4ext/Types/generated/game/data/StimType.hpp>
 #include <RED4ext/Types/generated/sense/BaseStimuliEvent.hpp>
 
 namespace RED4ext
 {
 namespace game { struct Object; }
+namespace game::data { struct Stim_Record; }
 namespace sense { struct StimuliData; }
 
 namespace sense { 
@@ -21,13 +24,15 @@ struct StimuliEvent : sense::BaseStimuliEvent
     static constexpr const char* ALIAS = "StimuliEvent";
 
     WeakHandle<game::Object> sourceObject; // 50
-    Vector4 sourcePosition; // 60
-    float radius; // 70
-    float detection; // 74
-    Handle<sense::StimuliData> data; // 78
-    uint8_t unk88[0x90 - 0x88]; // 88
+    WeakHandle<game::data::Stim_Record> stimRecord; // 60
+    Vector4 sourcePosition; // 70
+    float radius; // 80
+    float detection; // 84
+    game::data::StimType stimType; // 88
+    game::data::StimPropagation stimPropagation; // 8C
+    Handle<sense::StimuliData> data; // 90
 };
-RED4EXT_ASSERT_SIZE(StimuliEvent, 0x90);
+RED4EXT_ASSERT_SIZE(StimuliEvent, 0xA0);
 } // namespace sense
 using StimuliEvent = sense::StimuliEvent;
 } // namespace RED4ext

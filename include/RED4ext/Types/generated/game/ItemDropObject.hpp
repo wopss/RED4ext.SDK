@@ -15,8 +15,8 @@ struct ItemDropObject : game::LootObject
     static constexpr const char* NAME = "gameItemDropObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk278[0x2D0 - 0x278]; // 278
+    uint8_t unk280[0x2D8 - 0x280]; // 280
 };
-RED4EXT_ASSERT_SIZE(ItemDropObject, 0x2D0);
+RED4EXT_ASSERT_SIZE(ItemDropObject, 0x2D8);
 } // namespace game
 } // namespace RED4ext

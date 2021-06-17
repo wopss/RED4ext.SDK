@@ -15,9 +15,9 @@ struct TimeDilatable : game::Object
     static constexpr const char* NAME = "gameTimeDilatable";
     static constexpr const char* ALIAS = "TimeDilatable";
 
-    uint8_t unk228[0x2B0 - 0x228]; // 228
+    uint8_t unk230[0x2B8 - 0x230]; // 230
 };
-RED4EXT_ASSERT_SIZE(TimeDilatable, 0x2B0);
+RED4EXT_ASSERT_SIZE(TimeDilatable, 0x2B8);
 } // namespace game
 using TimeDilatable = game::TimeDilatable;
 } // namespace RED4ext

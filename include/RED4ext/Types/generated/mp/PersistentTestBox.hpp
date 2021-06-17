@@ -15,8 +15,8 @@ struct PersistentTestBox : game::Object
     static constexpr const char* NAME = "mpPersistentTestBox";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk228[0x238 - 0x228]; // 228
+    uint8_t unk230[0x240 - 0x230]; // 230
 };
-RED4EXT_ASSERT_SIZE(PersistentTestBox, 0x238);
+RED4EXT_ASSERT_SIZE(PersistentTestBox, 0x240);
 } // namespace mp
 } // namespace RED4ext

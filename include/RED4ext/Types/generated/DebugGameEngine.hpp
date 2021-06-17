@@ -14,7 +14,7 @@ struct DebugGameEngine : CGameEngine
     static constexpr const char* NAME = "DebugGameEngine";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk2C8[0x378 - 0x2C8]; // 2C8
+    uint8_t unk2D0[0x380 - 0x2D0]; // 2D0
 };
-RED4EXT_ASSERT_SIZE(DebugGameEngine, 0x378);
+RED4EXT_ASSERT_SIZE(DebugGameEngine, 0x380);
 } // namespace RED4ext

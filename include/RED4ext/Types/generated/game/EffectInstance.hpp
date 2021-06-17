@@ -15,9 +15,9 @@ struct EffectInstance : game::IEffect
     static constexpr const char* NAME = "gameEffectInstance";
     static constexpr const char* ALIAS = "EffectInstance";
 
-    uint8_t unk40[0x5AA0 - 0x40]; // 40
+    uint8_t unk40[0x5AB0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(EffectInstance, 0x5AA0);
+RED4EXT_ASSERT_SIZE(EffectInstance, 0x5AB0);
 } // namespace game
 using EffectInstance = game::EffectInstance;
 } // namespace RED4ext

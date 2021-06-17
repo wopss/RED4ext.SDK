@@ -16,8 +16,8 @@ struct LootSlotSingleItem : game::LootSlot
     static constexpr const char* NAME = "gameLootSlotSingleItem";
     static constexpr const char* ALIAS = NAME;
 
-    TweakDBID itemTDBID; // 280
+    TweakDBID itemTDBID; // 288
 };
-RED4EXT_ASSERT_SIZE(LootSlotSingleItem, 0x288);
+RED4EXT_ASSERT_SIZE(LootSlotSingleItem, 0x290);
 } // namespace game
 } // namespace RED4ext

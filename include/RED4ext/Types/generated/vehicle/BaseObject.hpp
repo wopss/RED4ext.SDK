@@ -18,7 +18,7 @@ struct BaseObject : game::Object
     static constexpr const char* NAME = "vehicleBaseObject";
     static constexpr const char* ALIAS = "VehicleObject";
 
-    uint8_t unk228[0x340 - 0x228]; // 228
+    uint8_t unk230[0x340 - 0x230]; // 230
     Ref<AI::Archetype> archetype; // 340
     uint8_t unk358[0x900 - 0x358]; // 358
 };

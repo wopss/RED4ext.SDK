@@ -16,8 +16,8 @@ struct PlayerDetector_PseudoDevice : game::Object
     static constexpr const char* NAME = "cpPlayerDetector_PseudoDevice";
     static constexpr const char* ALIAS = NAME;
 
-    NodeRef playerDetector; // 228
+    NodeRef playerDetector; // 230
 };
-RED4EXT_ASSERT_SIZE(PlayerDetector_PseudoDevice, 0x230);
+RED4EXT_ASSERT_SIZE(PlayerDetector_PseudoDevice, 0x238);
 } // namespace cp
 } // namespace RED4ext
