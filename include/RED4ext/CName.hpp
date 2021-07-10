@@ -14,21 +14,65 @@ struct CName
     {
     }
 
-    CName(const char* aName) noexcept;
+    constexpr CName(const char* aName) noexcept
+        : hash(0)
+    {
+        constexpr CName None = FNV1a("None");
 
-    operator uint64_t() const noexcept;
+        hash = FNV1a(aName);
+        if (hash == None)
+        {
+            hash = 0;
+        }
+    }
 
-    size_t operator()(const CName& aName) const;
+    constexpr operator uint64_t() const noexcept
+    {
+        return hash;
+    }
 
-    CName& operator=(const uint64_t aRhs) noexcept;
-    CName& operator=(const char* aRhs) noexcept;
-    CName& operator=(const CName& aRhs) noexcept;
+    constexpr size_t operator()(const CName& aName) const
+    {
+        return aName.hash;
+    }
 
-    bool operator==(const CName& aRhs) const noexcept;
-    bool operator!=(const CName& aRhs) const noexcept;
+    constexpr CName& operator=(const uint64_t aRhs) noexcept
+    {
+        hash = aRhs;
+        return *this;
+    }
 
-    bool operator==(const uint64_t aRhs) const noexcept;
-    bool operator!=(const uint64_t aRhs) const noexcept;
+    constexpr CName& operator=(const char* aRhs) noexcept
+    {
+        *this = CName(aRhs);
+        return *this;
+    }
+
+    constexpr CName& operator=(const CName& aRhs) noexcept
+    {
+        hash = aRhs.hash;
+        return *this;
+    }
+
+    constexpr bool operator==(const CName& aRhs) const noexcept
+    {
+        return hash == aRhs.hash;
+    }
+
+    constexpr bool operator!=(const CName& aRhs) const noexcept
+    {
+        return !(*this == aRhs);
+    }
+
+    constexpr bool operator==(const uint64_t aRhs) const noexcept
+    {
+        return hash == aRhs;
+    }
+
+    constexpr bool operator!=(const uint64_t aRhs) const noexcept
+    {
+        return hash != aRhs;
+    }
 
     const char* ToString() const;
 
@@ -38,9 +82,15 @@ struct CName
      *
      * @remark 'None' is a special name in Cyberpunk and will always be 0 in CNamePool.
      */
-    bool IsNone() const noexcept;
+    constexpr bool IsNone() const noexcept
+    {
+        return hash == 0;
+    }
 
-    [[deprecated("Use 'IsNone()' instead.")]] bool IsEmpty() const noexcept;
+    [[deprecated("Use 'IsNone()' instead.")]] constexpr bool IsEmpty() const noexcept
+    {
+        return IsNone();
+    }
 
     uint64_t hash; // 00
 };
