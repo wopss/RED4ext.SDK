@@ -93,7 +93,7 @@ struct GameInstance
 
     HashMap<IRTTIType*, Handle<IScriptable>> unk08; // 08
     DynArray<Handle<IScriptable>> unk38;            // 38
-    HashMap<uintptr_t, void*> unk40;                // 40
+    HashMap<IRTTIType*, void*> unk48;               // 48
     uintptr_t unk78[(0x138 - 0x78) >> 3];           // 78
 };
 RED4EXT_ASSERT_SIZE(GameInstance, 0x138);

@@ -10,6 +10,7 @@
 #include <RED4ext/Scripting/CProperty.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/OpcodeHandlers.hpp>
 
 RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
                                              StackArgs_t aArgs)
@@ -102,4 +103,12 @@ RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, 
 RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, StackArgs_t aArgs)
 {
     return ExecuteGlobalFunction("cpPlayerSystem", aFunc, aOut, aArgs);
+}
+
+RED4EXT_INLINE void RED4ext::GetParameter(RED4ext::CStackFrame* aFrame, void* aInstance)
+{
+    aFrame->unk30 = 0;
+    aFrame->unk38 = 0;
+    const auto opcode = *(aFrame->code++);
+    RED4ext::OpcodeHandlers::Run(opcode, aFrame->context, aFrame, aInstance, nullptr);
 }
