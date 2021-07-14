@@ -17,7 +17,7 @@ template<typename T>
 struct DynArray
 {
     DynArray(IMemoryAllocator* aAllocator = nullptr)
-        : entries(reinterpret_cast<T*>(aAllocator))
+        : entries(aAllocator ? *reinterpret_cast<T**>(aAllocator) : nullptr)
         , size(0)
         , capacity(0)
     {
@@ -123,9 +123,10 @@ struct DynArray
 
     IMemoryAllocator* GetAllocator()
     {
-        // This usually do some overflow checks, I don't think it is required to do that too, since the game does it at
-        // every insert.
-        return reinterpret_cast<IMemoryAllocator*>(&entries[capacity]);
+        if (capacity == 0)
+            return reinterpret_cast<IMemoryAllocator*>(&entries);
+        else
+            return reinterpret_cast<IMemoryAllocator*>(&entries[capacity]);
     }
 
 #pragma region Iterator
