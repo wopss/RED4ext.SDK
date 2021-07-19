@@ -6,7 +6,7 @@ namespace RED4ext
 {
 struct MemoryStream : BaseStream
 {
-    static void Init(MemoryStream* aThis, void* aBuffer, size_t aLength, size_t aPointer = 0);
+    static void Construct(MemoryStream* aThis, void* aBuffer, size_t aLength, size_t aPointer = 0);
 
     void* buffer;   // 20
     size_t length;  // 28
