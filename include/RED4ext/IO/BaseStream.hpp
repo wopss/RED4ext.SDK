@@ -17,7 +17,7 @@ struct BaseStream
 
     virtual bool ReadWrite(void* aBuffer, uint32_t aLength) = 0; // 10
     virtual LARGE_INTEGER GetPointerPosition() = 0;              // 18
-    virtual LARGE_INTEGER GetSize() = 0;                         // 20
+    virtual LARGE_INTEGER GetLength() = 0;                       // 20
     virtual bool Seek(LARGE_INTEGER aDistance) = 0;              // 28
     virtual bool Flush() = 0;                                    // 30
     virtual void sub_38();                                       // 38
