@@ -19,31 +19,6 @@ RED4EXT_INLINE RED4ext::IMemoryAllocator* RED4ext::BaseStream::GetAllocator()
     return RED4ext::EngineAllocator::Get();
 }
 
-RED4EXT_INLINE bool RED4ext::BaseStream::ReadWrite(void* aBuffer, uint32_t aLength)
-{
-    return false;
-}
-
-RED4EXT_INLINE LARGE_INTEGER RED4ext::BaseStream::GetPointerPosition()
-{
-    return {};
-}
-
-RED4EXT_INLINE LARGE_INTEGER RED4ext::BaseStream::GetLength()
-{
-    return {};
-}
-
-RED4EXT_INLINE bool RED4ext::BaseStream::Seek(LARGE_INTEGER aDistance)
-{
-    return false;
-}
-
-RED4EXT_INLINE bool RED4ext::BaseStream::Flush()
-{
-    return false;
-}
-
 RED4EXT_INLINE void RED4ext::BaseStream::sub_38()
 {
     flags &= ~0x80000;
