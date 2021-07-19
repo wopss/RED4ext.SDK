@@ -24,7 +24,7 @@ struct BaseStream
     virtual const char* GetFileName();                           // 40
 
     template<typename T>
-    inline bool ReadWrite(T* aBuffer)
+    inline bool ReadWriteEx(T* aBuffer)
     {
         return ReadWrite(aBuffer, sizeof(T));
     }

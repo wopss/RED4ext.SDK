@@ -8,8 +8,6 @@ struct MemoryStream : BaseStream
 {
     MemoryStream(void* aBuffer, LARGE_INTEGER aLength, LARGE_INTEGER aPointer = {0});
 
-    using BaseStream::ReadWrite;
-
     virtual bool ReadWrite(void* aBuffer, uint32_t aLength) override { return false; }
     virtual LARGE_INTEGER GetPointerPosition() override { return {}; }
     virtual LARGE_INTEGER GetLength() override { return {}; }
