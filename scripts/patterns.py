@@ -94,6 +94,10 @@ def get_groups() -> List[Group]:
             Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00', expected=4, index=1)
         ]),
 
+        Group(name='Streams', functions=[
+            Item(name='MemoryStream::ctor', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9', expected=3, index=1)
+        ]),
+
         Group(name='TweakDB', functions=[
             Item(name='Get', pattern='48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00'),
             Item(name='StaticFlatDataBuffer', pattern='48 89 1D ? ? ? ? 41 89 BF 30 01 00 00'),
