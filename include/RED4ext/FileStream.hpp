@@ -7,6 +7,15 @@ namespace RED4ext
 {
 struct BaseFileStream
 {
+    BaseFileStream(int32_t aFlags)
+        : flags(aFlags)
+        , unkC(0xC3)
+        , unk10(0)
+        , unk18(0)
+    {
+
+    }
+
     virtual IMemoryAllocator* GetAllocator() // 00
     {
         return EngineAllocator::Get();
