@@ -23,6 +23,12 @@ struct BaseStream
     virtual void sub_38();                                       // 38
     virtual const char* GetFileName();                           // 40
 
+    template<typename T>
+    inline bool ReadWrite(T* aBuffer)
+    {
+        return ReadWrite(aBuffer, sizeof(T));
+    }
+
     int32_t flags; // 08
     int32_t unkC;  // 0C
     int64_t unk10; // 10
