@@ -10,7 +10,7 @@
 namespace RED4ext
 {
 struct IMemoryAllocator;
-struct BaseFileStream;
+struct BaseStream;
 struct CProperty;
 struct CClassFunction;
 struct CClassStaticFunction;
@@ -50,7 +50,7 @@ struct IRTTIType
     virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                        // 48
     virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                               // 50
     virtual void Move(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                                 // 58
-    virtual void Unserialize(BaseFileStream* aStream, ScriptInstance aInstance, int64_t a3) = 0;           // 60
+    virtual void Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) = 0;               // 60
     virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;                        // 68
     virtual bool sub_70() = 0;                                                                             // 70
     virtual bool sub_78() = 0;                                                                             // 78
