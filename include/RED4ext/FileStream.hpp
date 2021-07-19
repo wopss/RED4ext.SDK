@@ -12,7 +12,7 @@ struct BaseFileStream
         return EngineAllocator::Get();
     }
 
-    virtual ~BaseFileStream() = 0; // 08
+    virtual ~BaseFileStream() = default; // 08
 
     virtual bool ReadWrite(void* aBuffer, uint32_t aLength) = 0; // 10
     virtual LARGE_INTEGER GetPointerPosition() = 0;              // 18
