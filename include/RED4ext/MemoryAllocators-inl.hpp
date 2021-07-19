@@ -7,6 +7,13 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/REDfunc.hpp>
 
+RED4EXT_INLINE RED4ext::EngineAllocator* RED4ext::EngineAllocator::Get()
+{
+    using func_t = EngineAllocator* (*)();
+    static REDfunc<func_t> func(Addresses::Allocators_Engine_Get);
+    return func();
+}
+
 RED4EXT_INLINE RED4ext::RTTIAllocator* RED4ext::RTTIAllocator::Get()
 {
     using func_t = RTTIAllocator* (*)();

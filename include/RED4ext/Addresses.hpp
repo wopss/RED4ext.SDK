@@ -14,6 +14,7 @@ namespace RED4ext::Addresses
 constexpr uintptr_t ImageBase = 0x140000000;
 
 #pragma region Allocators
+constexpr uintptr_t Allocators_Engine_Get = 0x1401BF930 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D B1 28 88 04, expected: 1, index: 0
 constexpr uintptr_t Allocators_RTTI_Get = 0x1401BE410 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 370, index: 2
 constexpr uintptr_t Allocators_RTTIFunction_Get = 0x140224CA0 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 370, index: 14
 #pragma endregion

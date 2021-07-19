@@ -10,6 +10,7 @@
 namespace RED4ext
 {
 struct IMemoryAllocator;
+struct BaseFileStream;
 struct CProperty;
 struct CClassFunction;
 struct CClassStaticFunction;
@@ -38,29 +39,29 @@ struct IRTTIType
 {
     virtual ~IRTTIType() = 0; // 00
 
-    virtual void GetName(CName& aOut) const = 0;                                                            // 08
-    virtual uint32_t GetSize() const = 0;                                                                   // 10
-    virtual uint32_t GetAlignment() const = 0;                                                              // 18
-    virtual ERTTIType GetType() const = 0;                                                                  // 20
-    virtual void GetTypeName(CString& aOut) const = 0;                                                      // 28
-    virtual void GetName2(CName& aOut) const = 0;                                                           // 30
-    virtual void Init(void* aMemory) const = 0;                                                             // 38
-    virtual void Destroy(void* aMemory) const = 0;                                                          // 40
-    virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                         // 48
-    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                                // 50
-    virtual void Move(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                                  // 58
-    virtual void sub_60() = 0;                                                                              // 60
-    virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;                         // 68
-    virtual bool sub_70() = 0;                                                                              // 70
-    virtual bool sub_78() = 0;                                                                              // 78
-    virtual void sub_80() = 0;                                                                              // 80
-    virtual void sub_88() = 0;                                                                              // 88
-    virtual bool Unk_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;                // 90
-    virtual bool Unk_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0;  // 98
-    virtual void sub_A0() = 0;                                                                              // A0
-    virtual bool sub_A8() = 0;                                                                              // A8
-    virtual void sub_B0() = 0;                                                                              // B0
-    virtual IMemoryAllocator* GetAllocator() const = 0;                                                     // B8
+    virtual void GetName(CName& aOut) const = 0;                                                           // 08
+    virtual uint32_t GetSize() const = 0;                                                                  // 10
+    virtual uint32_t GetAlignment() const = 0;                                                             // 18
+    virtual ERTTIType GetType() const = 0;                                                                 // 20
+    virtual void GetTypeName(CString& aOut) const = 0;                                                     // 28
+    virtual void GetName2(CName& aOut) const = 0;                                                          // 30
+    virtual void Init(void* aMemory) const = 0;                                                            // 38
+    virtual void Destroy(void* aMemory) const = 0;                                                         // 40
+    virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                        // 48
+    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                               // 50
+    virtual void Move(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                                 // 58
+    virtual void Unserialize(BaseFileStream* aStream, ScriptInstance aInstance, int64_t a3) = 0;           // 60
+    virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;                        // 68
+    virtual bool sub_70() = 0;                                                                             // 70
+    virtual bool sub_78() = 0;                                                                             // 78
+    virtual void sub_80() = 0;                                                                             // 80
+    virtual void sub_88() = 0;                                                                             // 88
+    virtual bool Unk_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;               // 90
+    virtual bool Unk_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0; // 98
+    virtual void sub_A0() = 0;                                                                             // A0
+    virtual bool sub_A8() = 0;                                                                             // A8
+    virtual void sub_B0() = 0;                                                                             // B0
+    virtual IMemoryAllocator* GetAllocator() const = 0;                                                    // B8
 };
 RED4EXT_ASSERT_SIZE(IRTTIType, 0x8);
 
@@ -72,22 +73,22 @@ RED4EXT_ASSERT_SIZE(CRTTIType, 0x10);
 
 struct CArrayBase : CRTTIType
 {
-    virtual CRTTIType* GetInnerType() const = 0;                                                    // C0
-    virtual bool sub_C8() = 0;                                                                      // C8 ret 1
-    virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                                 // D0
-    virtual int32_t GetMaxLength() const = 0;                                                       // D8 ret -1
-    virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) const = 0;         // E0
+    virtual CRTTIType* GetInnerType() const = 0;                                            // C0
+    virtual bool sub_C8() = 0;                                                              // C8 ret 1
+    virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
+    virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
+    virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) const = 0; // E0
     virtual ScriptInstance GetValuePointer(ScriptInstance aInstance,
-                                           uint32_t aIndex) const = 0;                              // E8 Same func at 0xE0 ?
-    virtual int32_t sub_F0(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0;  // F0
-    virtual bool RemoveAt(ScriptInstance aInstance, int32_t aIndex) = 0;                            // F8
+                                           uint32_t aIndex) const = 0; // E8 Same func at 0xE0 ?
+    virtual int32_t sub_F0(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
+    virtual bool RemoveAt(ScriptInstance aInstance, int32_t aIndex) = 0;                           // F8
     // [1, 2, 3]
     // RTTI->InsertAt(aIndex: 1);
     // [1, 2 (freed/destroyed), 2, 3]
     // InnerRTTI->Assign(RTTI->GetElement(aIndex: 1), newValue)
     // [1, newValue, 2, 3]
-    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) = 0;                            // 100
-    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) = 0;                              // 108
+    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) = 0; // 100
+    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) = 0;   // 108
 };
 
 struct CArray : CArrayBase

@@ -40,6 +40,12 @@ struct IMemoryAllocator
 };
 RED4EXT_ASSERT_SIZE(IMemoryAllocator, 0x8);
 
+struct EngineAllocator : IMemoryAllocator
+{
+    static EngineAllocator* Get();
+};
+RED4EXT_ASSERT_SIZE(EngineAllocator, 0x8);
+
 struct RTTIAllocator : IMemoryAllocator
 {
     static RTTIAllocator* Get();
