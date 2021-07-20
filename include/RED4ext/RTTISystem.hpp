@@ -16,42 +16,43 @@ struct CGlobalFunction;
 
 struct IRTTISystem
 {
-    virtual IRTTIType* GetType(CName aName) = 0;
-    virtual void GetTypeByAsyncId(uint32_t aAsyncId) = 0;
-    virtual CClass* GetClass(CName aName) = 0;
-    virtual IRTTIType* GetEnum(CName aName) = 0;
-    virtual IRTTIType* BitField(CName aName) = 0;
-    virtual void sub_28() = 0;
-    virtual CGlobalFunction* GetFunction(CName aName) = 0;
-    virtual void sub_38() = 0;
-    virtual void sub_40() = 0;
-    virtual void sub_48() = 0;
-    virtual void sub_50() = 0;
-    virtual void sub_58() = 0;
-    virtual void sub_60() = 0;
-    virtual void sub_68() = 0;
-    virtual void sub_70() = 0;
-    virtual void sub_78() = 0;
-    virtual bool RegisterType(IRTTIType* aType, uint32_t aAsyncId) = 0;
-    virtual void sub_88() = 0;
-    virtual void sub_90() = 0;
-    virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;
-    virtual void sub_A0() = 0;
-    virtual void sub_A8() = 0;
-    virtual void sub_B0() = 0;
-    virtual void sub_B8() = 0;
-    virtual void sub_C0() = 0;
-    virtual void sub_C8() = 0;
-    virtual void RegisterScriptedType(CName aName, CClass::Flags aFlags, CClass* aParent) = 0;
-    virtual void sub_D8() = 0;
-    virtual void sub_E0() = 0;
-    virtual void sub_E8() = 0;
-    virtual void sub_F0() = 0;
-    virtual void sub_F8() = 0;
-    virtual void sub_100() = 0;
-    virtual void sub_108() = 0;
+    virtual IRTTIType* GetType(CName aName) = 0;                                               // 00
+    virtual IRTTIType* GetTypeByAsyncId(uint32_t aAsyncId) = 0;                                // 08
+    virtual CClass* GetClass(CName aName) = 0;                                                 // 10
+    virtual CEnum* GetEnum(CName aName) = 0;                                                   // 18
+    virtual CBitfield* GetBitField(CName aName) = 0;                                           // 20
+    virtual void sub_28() = 0;                                                                 // 28
+    virtual CGlobalFunction* GetFunction(CName aName) = 0;                                     // 30
+    virtual void sub_38() = 0;                                                                 // 38
+    virtual void sub_40() = 0;                                                                 // 40
+    virtual void sub_48() = 0;                                                                 // 48
+    virtual void sub_50() = 0;                                                                 // 50
+    virtual void sub_58() = 0;                                                                 // 58
+    virtual void sub_60() = 0;                                                                 // 60
+    virtual void sub_68() = 0;                                                                 // 68
+    virtual void sub_70() = 0;                                                                 // 70
+    virtual void sub_78() = 0;                                                                 // 78
+    virtual bool RegisterType(IRTTIType* aType, uint32_t aAsyncId) = 0;                        // 80
+    virtual void sub_88() = 0;                                                                 // 88
+    virtual void sub_90() = 0;                                                                 // 90
+    virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                 // 98
+    virtual void sub_A0() = 0;                                                                 // A0
+    virtual void sub_A8() = 0;                                                                 // A8
+    virtual void sub_B0() = 0;                                                                 // B0
+    virtual void sub_B8() = 0;                                                                 // B8
+    virtual void sub_C0() = 0;                                                                 // C0
+    virtual void sub_C8() = 0;                                                                 // C8
+    virtual void RegisterScriptedType(CName aName, CClass::Flags aFlags, CClass* aParent) = 0; // D0
+    virtual void sub_D8() = 0;                                                                 // D8
+    virtual void sub_E0() = 0;                                                                 // E0
+    virtual void sub_E8() = 0;                                                                 // E8
+    virtual void RegisterScriptName(CName aNativeName, CName aScriptedName) = 0;               // F0
+    virtual void sub_F8() = 0;                                                                 // F8
+    virtual void sub_100() = 0;                                                                // 100
+    virtual CName ConvertNativeToScriptName(CName aNativeName) = 0;                            // 108
+    virtual void sub_110() = 0;                                                                // 110
 
-    virtual ~IRTTISystem() = 0;
+    virtual ~IRTTISystem() = 0; // 118
 };
 RED4EXT_ASSERT_SIZE(IRTTISystem, 0x8);
 
