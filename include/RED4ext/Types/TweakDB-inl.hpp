@@ -64,7 +64,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::AddQuery(TweakDBID aDBID, const DynArray<T
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedMutex> _(mutex01);
     return queries.Insert(aDBID, aArray).second;
 }
 
@@ -75,7 +75,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::ReplaceQuery(TweakDBID aDBID, const DynArr
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedMutex> _(mutex01);
     return queries.InsertOrAssign(aDBID, aArray).second;
 }
 
@@ -118,7 +118,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::AddGroupTag(TweakDBID aDBID, GroupTag aGro
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedMutex> _(mutex01);
     return groups.Insert(aDBID, aGroup).second;
 }
 
@@ -129,7 +129,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::ReplaceGroupTag(TweakDBID aDBID, GroupTag 
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedMutex> _(mutex01);
     return groups.InsertOrAssign(aDBID, aGroup).second;
 }
 
