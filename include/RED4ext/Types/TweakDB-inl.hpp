@@ -10,7 +10,7 @@
 #include <RED4ext/REDptr.hpp>
 #include <RED4ext/RTTISystem.hpp>
 
-uintptr_t GetAddressFromInstruction(uintptr_t aRVAAddress, int32_t aAddressOffset)
+RED4EXT_INLINE uintptr_t GetAddressFromInstruction(uintptr_t aRVAAddress, int32_t aAddressOffset)
 {
     auto address = reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)) + aRVAAddress;
     auto offset = *reinterpret_cast<int32_t*>(address + aAddressOffset);
@@ -57,6 +57,28 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecordsByType(IRTTIType* aType,
     return true;
 }
 
+RED4EXT_INLINE bool RED4ext::TweakDB::AddQuery(TweakDBID aDBID, const DynArray<TweakDBID>& aArray)
+{
+    if (!aDBID.IsValid())
+    {
+        return false;
+    }
+
+    std::lock_guard<SharedMutex> _(mutex00);
+    return queries.Insert(aDBID, aArray).second;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::ReplaceQuery(TweakDBID aDBID, const DynArray<TweakDBID>& aArray)
+{
+    if (!aDBID.IsValid())
+    {
+        return false;
+    }
+
+    std::lock_guard<SharedMutex> _(mutex00);
+    return queries.InsertOrAssign(aDBID, aArray).second;
+}
+
 RED4EXT_INLINE RED4ext::DynArray<RED4ext::TweakDBID> RED4ext::TweakDB::Query(TweakDBID aDBID)
 {
     RED4ext::DynArray<RED4ext::TweakDBID> array;
@@ -75,6 +97,52 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryQuery(TweakDBID aDBID, DynArray<TweakDB
 
     aArray = *recordArray;
     return true;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::HasQuery(TweakDBID aDBID)
+{
+    if (!aDBID.IsValid())
+    {
+        return false;
+    }
+
+    std::shared_lock<SharedMutex> _(mutex01);
+    const auto queriesArray = queries.Get(aDBID);
+    return queriesArray != nullptr;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::AddGroupTag(TweakDBID aDBID, GroupTag aGroup)
+{
+    if (!aDBID.IsValid())
+    {
+        return false;
+    }
+
+    std::lock_guard<SharedMutex> _(mutex00);
+    return groups.Insert(aDBID, aGroup).second;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::ReplaceGroupTag(TweakDBID aDBID, GroupTag aGroup)
+{
+    if (!aDBID.IsValid())
+    {
+        return false;
+    }
+
+    std::lock_guard<SharedMutex> _(mutex00);
+    return groups.InsertOrAssign(aDBID, aGroup).second;
+}
+
+RED4EXT_INLINE bool RED4ext::TweakDB::HasGroupTag(TweakDBID aDBID)
+{
+    if (!aDBID.IsValid())
+    {
+        return false;
+    }
+
+    std::shared_lock<SharedMutex> _(mutex01);
+    const auto group = groups.Get(aDBID);
+    return group != nullptr;
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(TweakDBID aDBID)

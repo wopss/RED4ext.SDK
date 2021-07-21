@@ -140,8 +140,16 @@ struct TweakDB
     DynArray<Handle<IScriptable>> GetRecordsByType(IRTTIType* aType);
     bool TryGetRecordsByType(IRTTIType* aType, DynArray<Handle<IScriptable>>& aRecordsArray);
 
+    bool AddQuery(TweakDBID aDBID, const DynArray<TweakDBID>& aArray);
+    bool ReplaceQuery(TweakDBID aDBID, const DynArray<TweakDBID>& aArray);
+
     DynArray<TweakDBID> Query(TweakDBID aDBID);
     bool TryQuery(TweakDBID aDBID, DynArray<TweakDBID>& aArray);
+    bool HasQuery(TweakDBID aDBID);
+
+    bool AddGroupTag(TweakDBID aDBID, GroupTag aGroup);
+    bool ReplaceGroupTag(TweakDBID aDBID, GroupTag aGroup);
+    bool HasGroupTag(TweakDBID aDBID);
 
     // Updates all the value offsets inside the record
     bool UpdateRecord(TweakDBID aDBID);
