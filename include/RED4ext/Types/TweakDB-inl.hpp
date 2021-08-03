@@ -327,10 +327,21 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(void* aBuffer, uint32_t 
     // Used by the game with TweakDBID::ToTDBOffset() and FlatValue::ToValueOffset_*()
     static auto pStaticFlatDataBuffer = GetAddressFromInstruction(Addresses::TweakDB_StaticFlatDataBuffer, 3);
 
+    uintptr_t oldFlatDataBuffer = flatDataBuffer;
     flatDataBuffer = reinterpret_cast<uintptr_t>(aBuffer);
     flatDataBufferEnd = flatDataBuffer + aSize;
     flatDataBufferCapacity = aCapacity;
     *reinterpret_cast<void**>(pStaticFlatDataBuffer) = aBuffer;
+
+    // assumes mutex00 is locked
+    // TweakDB was not meant to be modified at runtime
+    // defaultValues entries will have invalid tdbOffset if flatDataBuffer is changed
+    // hacky fix:
+    defaultValues.ForEach([this, oldFlatDataBuffer](const RED4ext::CName, RED4ext::TweakDB::FlatValue*& defaultFlatValue)
+        {
+            int32_t offset = (uintptr_t)defaultFlatValue - oldFlatDataBuffer;
+            defaultFlatValue = reinterpret_cast<RED4ext::TweakDB::FlatValue*>(flatDataBuffer + offset);
+        });
 }
 
 RED4EXT_INLINE const RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetDefaultFlatValue(CName aTypeName)
