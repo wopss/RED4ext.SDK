@@ -184,10 +184,17 @@ RED4EXT_ASSERT_SIZE(CLegacySingleChannelCurve, 0x48);
 
 struct CBitfield : CRTTIType
 {
+    struct Flags
+    {
+        uint8_t isScripted : 1; // 00
+        uint8_t b2 : 7;
+    };
+    RED4EXT_ASSERT_SIZE(CBitfield::Flags, 0x01);
+
     CName hash;         // 10
     CName unk18;        // 18
     uint8_t size;       // 20 - Size in bytes the instance will use
-    uint8_t flags;      // 21
+    Flags flags;        // 21
     uint16_t unk22;     // 22
     uint32_t unk24;     // 24
     uint64_t validBits; // 28
@@ -276,10 +283,17 @@ RED4EXT_ASSERT_OFFSET(CClass, unkE0, 0xE0);
 
 struct CEnum : CRTTIType
 {
+    struct Flags
+    {
+        uint8_t isScripted : 1;    // 00
+        uint8_t b2 : 7;
+    };
+    RED4EXT_ASSERT_SIZE(CEnum::Flags, 0x01);
+
     CName hash;                   // 10
     CName unk18;                  // 18
     uint8_t size;                 // 20 - Size in bytes the instance will use
-    uint8_t flags;                // 21
+    Flags flags;                  // 21
     uint16_t unk22;               // 22
     uint32_t unk24;               // 24
     DynArray<CName> hashList;     // 28
