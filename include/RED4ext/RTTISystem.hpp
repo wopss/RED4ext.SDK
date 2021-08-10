@@ -20,7 +20,7 @@ struct IRTTISystem
     virtual IRTTIType* GetTypeByAsyncId(uint32_t aAsyncId) = 0;                                // 08
     virtual CClass* GetClass(CName aName) = 0;                                                 // 10
     virtual CEnum* GetEnum(CName aName) = 0;                                                   // 18
-    virtual CBitfield* GetBitField(CName aName) = 0;                                           // 20
+    virtual CBitfield* GetBitfield(CName aName) = 0;                                           // 20
     virtual void sub_28() = 0;                                                                 // 28
     virtual CGlobalFunction* GetFunction(CName aName) = 0;                                     // 30
     virtual void sub_38() = 0;                                                                 // 38
@@ -29,7 +29,7 @@ struct IRTTISystem
     virtual void sub_50() = 0;                                                                 // 50
     virtual void GetClassFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;                // 58
     virtual void GetEnums(DynArray<CEnum*>& aEnums, bool aScriptedOnly = false) = 0;           // 60
-    virtual void GetBitFields(DynArray<CBitfield*>& aBitFields, bool aScriptedOnly = false) = 0; // 68
+    virtual void GetBitfields(DynArray<CBitfield*>& aBitfields, bool aScriptedOnly = false) = 0; // 68
     virtual void GetClasses(CClass* aIsAClass, DynArray<CClass*>& aClasses, bool aFilter(CClass*) = nullptr, bool aIncludeAbstract = false) = 0; // 70
     virtual void GetDerivedClasses(CClass* aBaseClass, DynArray<CClass*>& aClasses) = 0;       // 78
     virtual bool RegisterType(IRTTIType* aType, uint32_t aAsyncId) = 0;                        // 80
