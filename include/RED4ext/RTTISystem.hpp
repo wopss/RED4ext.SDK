@@ -24,14 +24,14 @@ struct IRTTISystem
     virtual void sub_28() = 0;                                                                 // 28
     virtual CGlobalFunction* GetFunction(CName aName) = 0;                                     // 30
     virtual void sub_38() = 0;                                                                 // 38
-    virtual void sub_40() = 0;                                                                 // 40
-    virtual void sub_48() = 0;                                                                 // 48
+    virtual void GetNativeTypes(DynArray<IRTTIType*> &aTypes) = 0;                             // 40
+    virtual void GetGlobalFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;               // 48
     virtual void sub_50() = 0;                                                                 // 50
-    virtual void sub_58() = 0;                                                                 // 58
-    virtual void sub_60() = 0;                                                                 // 60
-    virtual void sub_68() = 0;                                                                 // 68
-    virtual void sub_70() = 0;                                                                 // 70
-    virtual void sub_78() = 0;                                                                 // 78
+    virtual void GetClassFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;                // 58
+    virtual void GetEnums(DynArray<CEnum*>& aEnums, bool aScriptedOnly = false) = 0;           // 60
+    virtual void GetBitFields(DynArray<CBitfield*>& aBitFields, bool aScriptedOnly = false) = 0; // 68
+    virtual void GetClasses(CClass* aIsAClass, DynArray<CClass*>& aClasses, bool aFilter(CClass*) = nullptr, bool aIncludeAbstract = false) = 0; // 70
+    virtual void GetDerivedClasses(CClass* aBaseClass, DynArray<CClass*>& aClasses) = 0;       // 78
     virtual bool RegisterType(IRTTIType* aType, uint32_t aAsyncId) = 0;                        // 80
     virtual void sub_88() = 0;                                                                 // 88
     virtual void sub_90() = 0;                                                                 // 90
