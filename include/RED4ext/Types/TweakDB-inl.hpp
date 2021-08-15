@@ -324,16 +324,6 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
         {
             Memory::GMPL_TDB_DataAllocator allocator;
 
-            // TODO: use PoolGMPL_TDB_Data
-            // [1.6-Steam] *out = sub_1401AAF80(qword_1437824D0 & 0xFFFFFFFFFFFFFFF8ui64, &out, size, alignment)
-            // 0F 10 00 66 48 0F 7E C3 0F 11 45 9F 48 85 DB 75 11
-            // 140ED7458 mov rcx, cs:qword_1437824D0
-            // 140ED745F lea rdx, [rbp - 1]
-            // 140ED7463 and rcx, 0FFFFFFFFFFFFFFF8h
-            // 140ED7467 mov r9d, esi
-            // 140ED746A mov r8d, edi
-            // 140ED746D call sub_1401AAF80
-
             // max possible size
             if (flatDataBufferCapacity == 0x00FFFFFF)
                 return -1;
