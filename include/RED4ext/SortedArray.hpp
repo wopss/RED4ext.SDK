@@ -10,7 +10,10 @@
 
 namespace RED4ext
 {
-struct IMemoryAllocator;
+namespace Memory
+{
+struct IAllocator;
+}
 
 template<typename T, class Compare = std::less<T>, bool Unique = false>
 struct SortedArray
@@ -20,7 +23,7 @@ struct SortedArray
         NotSorted = 1 << 0
     };
 
-    SortedArray(IMemoryAllocator* aAllocator = nullptr)
+    SortedArray(Memory::IAllocator* aAllocator = nullptr)
         : entries(aAllocator ? *reinterpret_cast<T**>(aAllocator) : nullptr)
         , size(0)
         , capacity(0)
@@ -124,12 +127,12 @@ struct SortedArray
         func(this, capacity, sizeof(T), alignment, nullptr);
     }
 
-    IMemoryAllocator* GetAllocator()
+    Memory::IAllocator* GetAllocator()
     {
         if (capacity == 0)
-            return reinterpret_cast<IMemoryAllocator*>(&entries);
+            return reinterpret_cast<Memory::IAllocator*>(&entries);
         else
-            return reinterpret_cast<IMemoryAllocator*>(&entries[capacity]);
+            return reinterpret_cast<Memory::IAllocator*>(&entries[capacity]);
     }
 
 #pragma region Iterator

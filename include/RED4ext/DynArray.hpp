@@ -11,12 +11,15 @@
 
 namespace RED4ext
 {
-struct IMemoryAllocator;
+namespace Memory
+{
+struct IAllocator;
+}
 
 template<typename T>
 struct DynArray
 {
-    DynArray(IMemoryAllocator* aAllocator = nullptr)
+    DynArray(Memory::IAllocator* aAllocator = nullptr)
         : entries(aAllocator ? *reinterpret_cast<T**>(aAllocator) : nullptr)
         , size(0)
         , capacity(0)
@@ -121,12 +124,12 @@ struct DynArray
         func(this, capacity, sizeof(T), alignment, nullptr);
     }
 
-    IMemoryAllocator* GetAllocator()
+    Memory::IAllocator* GetAllocator()
     {
         if (capacity == 0)
-            return reinterpret_cast<IMemoryAllocator*>(&entries);
+            return reinterpret_cast<Memory::IAllocator*>(&entries);
         else
-            return reinterpret_cast<IMemoryAllocator*>(&entries[capacity]);
+            return reinterpret_cast<Memory::IAllocator*>(&entries[capacity]);
     }
 
 #pragma region Iterator

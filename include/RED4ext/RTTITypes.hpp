@@ -9,7 +9,6 @@
 
 namespace RED4ext
 {
-struct IMemoryAllocator;
 struct BaseStream;
 struct CProperty;
 struct CClassFunction;
@@ -61,7 +60,7 @@ struct IRTTIType
     virtual void sub_A0() = 0;                                                                             // A0
     virtual bool sub_A8() = 0;                                                                             // A8
     virtual void sub_B0() = 0;                                                                             // B0
-    virtual IMemoryAllocator* GetAllocator() const = 0;                                                    // B8
+    virtual Memory::IAllocator* GetAllocator() const = 0;                                                  // B8
 };
 RED4EXT_ASSERT_SIZE(IRTTIType, 0x8);
 

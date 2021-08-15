@@ -3,7 +3,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/MemoryAllocators.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 
 namespace RED4ext
 {
@@ -11,16 +11,15 @@ struct CClass;
 struct CStack;
 struct CStackFrame;
 struct CProperty;
-struct IMemoryAllocator;
 struct PoolRTTIFunctionAllocator;
 struct IScriptable;
 
 struct IFunction
 {
-    virtual IMemoryAllocator* GetAllocator() = 0; // 00
-    virtual ~IFunction() = 0;                     // 08
-    virtual CClass* GetParent() = 0;              // 10
-    virtual uint32_t GetRegIndex() = 0;           // 18
+    virtual Memory::IAllocator* GetAllocator() = 0; // 00
+    virtual ~IFunction() = 0;                       // 08
+    virtual CClass* GetParent() = 0;                // 10
+    virtual uint32_t GetRegIndex() = 0;             // 18
     virtual void sub_20() = 0; // 20 - Returns an object, vf obj+0x20 is the function to invoke only used if static func
 };
 RED4EXT_ASSERT_SIZE(IFunction, 0x8);
@@ -70,8 +69,8 @@ struct CGlobalFunction : CBaseFunction
     template<typename T>
     static CGlobalFunction* Create(const char* aFullName, const char* aShortName, ScriptingFunction_t<T> aFunc)
     {
-        auto allocator = RTTIFunctionAllocator::Get();
-        auto memory = allocator->Alloc<CGlobalFunction>();
+        Memory::RTTIFunctionAllocator allocator;
+        auto memory = allocator.Alloc<CGlobalFunction>();
         if (memory)
         {
             auto fullName = CNamePool::Add(aFullName);
@@ -96,8 +95,8 @@ struct CClassFunction : CBaseFunction
     static CClassFunction* Create(CClass* aParent, const char* aFullName, const char* aShortName,
                                   ScriptingFunction_t<T> aFunc, Flags aFlags = {})
     {
-        auto allocator = RTTIFunctionAllocator::Get();
-        auto memory = allocator->Alloc<CClassFunction>();
+        Memory::RTTIFunctionAllocator allocator;
+        auto memory = allocator.Alloc<CClassFunction>();
         if (memory)
         {
             auto fullName = CNamePool::Add(aFullName);
@@ -124,8 +123,8 @@ struct CClassStaticFunction : CClassFunction
     static CClassStaticFunction* Create(CClass* aParent, const char* aFullName, const char* aShortName,
                                         ScriptingFunction_t<T> aFunc, Flags aFlags = {})
     {
-        auto allocator = RTTIFunctionAllocator::Get();
-        auto memory = allocator->Alloc<CClassStaticFunction>();
+        Memory::RTTIFunctionAllocator allocator;
+        auto memory = allocator.Alloc<CClassStaticFunction>();
         if (memory)
         {
             auto fullName = CNamePool::Add(aFullName);

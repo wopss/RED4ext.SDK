@@ -10,7 +10,7 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
-#include <RED4ext/MemoryAllocators.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>
 #include <RED4ext/IO/MemoryStream.hpp>

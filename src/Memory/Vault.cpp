@@ -2,4 +2,4 @@
 #error Please define 'RED4EXT_STATIC_LIB' to compile this file.
 #endif
 
-#include <RED4ext/MemoryAllocators-inl.hpp>
+#include <RED4ext/Memory/Vault-inl.hpp>

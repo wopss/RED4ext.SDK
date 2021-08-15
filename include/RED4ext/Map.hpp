@@ -10,7 +10,10 @@
 
 namespace RED4ext
 {
-struct IMemoryAllocator;
+namespace Memory
+{
+struct IMemory;
+}
 
 template<typename K, typename T, class Compare = std::less<K>>
 struct Map
@@ -20,12 +23,12 @@ struct Map
         NotSorted = 1 << 0
     };
 
-    Map(IMemoryAllocator* aAllocator = nullptr)
+    Map(Memory::IAllocator* aAllocator = nullptr)
         : Map(aAllocator, aAllocator)
     {
     }
 
-    Map(IMemoryAllocator* aKeyAllocator, IMemoryAllocator* aValueAllocator)
+    Map(Memory::IAllocator* aKeyAllocator, Memory::IAllocator* aValueAllocator)
         : keys(aKeyAllocator)
         , values(aValueAllocator)
         , flags(0)

@@ -27,12 +27,6 @@ class Group:
 def get_groups() -> List[Group]:
     # Add new patterns here, please try to keep the groups ordering alphabetized.
     return [
-        Group(name='Allocators', functions=[
-            Item(name='Engine::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D B1 28 88 04', expected=1, index=0),
-            Item(name='RTTI::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=370, index=2),
-            Item(name='RTTIFunction::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=370, index=14)
-        ]),
-
         Group(name='CBaseFunction', functions=[
             Item(name='Execute', pattern='48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA'),
             Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6 41 78 01')
@@ -92,6 +86,17 @@ def get_groups() -> List[Group]:
 
         Group(name='IScriptable', functions=[
             Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00', expected=4, index=1)
+        ]),
+
+        Group(name='Memory', functions=[
+            Item(name='Vault::Get', pattern='48 8D 05 ? ? ? ? C3', expected=1221, index=4),
+            Item(name='Vault::Alloc', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 33 C0', expected=14, index=0),
+            Item(name='Vault::AllocAligned', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 33 C0', expected=3, index=0),
+            Item(name='Vault::Realloc', pattern='48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=421, index=0),
+            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 18 56 57 41 56 48 83 EC 40', expected=11, index=0),
+            Item(name='Vault::Free', pattern='48 89 5C 24 10 57 48 83 EC 20 4C 8B 81 00 C9 00 00', expected=1, index=0),
+            Item(name='Vault::Unk1', pattern='48 89 5C 24 08 57 48 83 EC 20 4C 8B 81 00 C9 00 00', expected=2, index=0),
+            Item(name='PoolStorage::OOM', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=1450, index=0)
         ]),
 
         Group(name='Streams', functions=[

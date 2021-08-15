@@ -162,30 +162,34 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
 
     TweakDB fakeTweakDB;
-    struct FakeAllocator : IMemoryAllocator
+    struct FakeAllocator : Memory::IAllocator
     {
-        virtual Result Alloc(uint32_t aSize)
+        virtual Memory::AllocationResult Alloc(uint32_t aSize) override
         {
             return AllocAligned(aSize, 8);
         }
-        virtual Result AllocAligned(uint32_t aSize, uint32_t aAlignment)
+        virtual Memory::AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) override
         {
-            Result result;
+            Memory::AllocationResult result;
             result.memory = _aligned_malloc(aSize, aAlignment);
             result.size = aSize;
             return result;
         }
-        virtual void sub_10()
-        { }
-        virtual void sub_18()
-        { }
-        virtual void Free(Result* aMemory)
+        virtual Memory::AllocationResult Realloc(Memory::AllocationResult& aAllocation, uint32_t aSize) override
         {
-            _aligned_free(aMemory->memory);
+            return {};
         }
-        virtual void sub_28(void* aMemory)
+        virtual Memory::AllocationResult ReallocAligned(Memory::AllocationResult& aAllocation, uint32_t aSize, uint32_t aAlignment) override
+        {
+            return {};
+        }
+        virtual void Free(Memory::AllocationResult& aAllocation) override
+        {
+            _aligned_free(aAllocation.memory);
+        }
+        virtual void sub_28(void* aMemory) override
         { };
-        virtual uint32_t GetId()
+        virtual const uint32_t GetHandle() const override
         {
             return 0;
         };
@@ -318,7 +322,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
 
         if (flatDataBufferEnd_Aligned + flatValueSize > flatDataBuffer + flatDataBufferCapacity)
         {
-            auto* pRTTIAllocator = RTTIAllocator::Get();
+            Memory::GMPL_TDB_DataAllocator allocator;
 
             // TODO: use PoolGMPL_TDB_Data
             // [1.6-Steam] *out = sub_1401AAF80(qword_1437824D0 & 0xFFFFFFFFFFFFFFF8ui64, &out, size, alignment)
@@ -346,7 +350,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
                 }
             }
 
-            auto result = pRTTIAllocator->AllocAligned(newCapacity, 8);
+            auto result = allocator.AllocAligned(newCapacity, 8);
             if (result.memory == nullptr)
                 return -1;
             else if (result.size > 0x00FFFFFF)
@@ -365,7 +369,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
             // Delay freeing. Consumes more memory but less risky
             static void* lastFlatDataBuffer = nullptr;
             if (lastFlatDataBuffer != nullptr)
-                pRTTIAllocator->Free(lastFlatDataBuffer);
+                allocator.Free(lastFlatDataBuffer);
             lastFlatDataBuffer = oldFlatDataBuffer;
         }
 

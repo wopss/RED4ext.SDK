@@ -4,7 +4,7 @@
 #include <functional>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/MemoryAllocators.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/REDhash.hpp>
 
 namespace RED4ext
@@ -103,7 +103,7 @@ struct HashMap
         }
     };
 
-    HashMap(IMemoryAllocator* aAllocator = nullptr)
+    HashMap(Memory::IAllocator* aAllocator = nullptr)
         : indexTable(nullptr)
         , size(0)
         , capacity(0)
@@ -328,9 +328,9 @@ struct HashMap
         nodeList = newNodeList;
     }
 
-    IMemoryAllocator* GetAllocator()
+    Memory::IAllocator* GetAllocator()
     {
-        return reinterpret_cast<IMemoryAllocator*>(&allocator);
+        return reinterpret_cast<Memory::IAllocator*>(&allocator);
     }
 
     uint32_t* indexTable; // 00

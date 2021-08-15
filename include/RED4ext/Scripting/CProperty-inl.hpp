@@ -31,9 +31,8 @@ RED4EXT_INLINE RED4ext::CProperty::CProperty(IRTTIType* aType, const char* aName
 RED4EXT_INLINE RED4ext::CProperty* RED4ext::CProperty::Create(IRTTIType* aType, const char* aName, CClass* aParent,
                                                               uint32_t aValueOffset, const char* aGroup, Flags aFlags)
 {
-    // Property are allocated using "PoolRTTIProperty", but DynArray is using "PoolRTTI".
-    auto allocator = RTTIAllocator::Get();
-    auto prop = allocator->Alloc<CProperty>();
+    Memory::RTTIPropertyAllocator allocator;
+    auto prop = allocator.Alloc<CProperty>();
     if (!prop)
     {
         return nullptr;
