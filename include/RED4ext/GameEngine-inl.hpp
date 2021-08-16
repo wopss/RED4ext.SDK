@@ -9,6 +9,6 @@
 
 RED4EXT_INLINE RED4ext::CGameEngine* RED4ext::CGameEngine::Get()
 {
-    static REDptr<CGameEngine*> ptr(Addresses::CGameEngine);
+    REDptr<CGameEngine*> ptr(Addresses::CGameEngine);
     return ptr;
 }

@@ -17,7 +17,7 @@ RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aInstance, CStackType* aAr
                                        CStackType* aResult, int64_t a6)
 {
     using func_t = CStack* (*)(CStack*, ScriptInstance, CStackType*, uint32_t, CStackType*, int64_t);
-    static REDfunc<func_t> func(Addresses::CStack_ctor);
+    REDfunc<func_t> func(Addresses::CStack_ctor);
 
     func(this, aInstance, aArgs, aArgsCount, aResult, a6);
 }

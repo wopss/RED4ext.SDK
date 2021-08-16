@@ -52,6 +52,6 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::AddParam(CName aType, const char* aN
 RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
 {
     using func_t = bool (*)(CBaseFunction*, CStack*);
-    static REDfunc<func_t> func(Addresses::CBaseFunction_Execute);
+    REDfunc<func_t> func(Addresses::CBaseFunction_Execute);
     return func(this, aStack);
 }

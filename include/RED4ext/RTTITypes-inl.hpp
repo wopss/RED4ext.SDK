@@ -11,7 +11,7 @@
 RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CClass::AllocInstance()
 {
     using func_t = IScriptable* (*)(CClass*, uint32_t, bool);
-    static REDfunc<func_t> func(Addresses::CClass_AllocInstance);
+    REDfunc<func_t> func(Addresses::CClass_AllocInstance);
     return func(this, GetSize(), 0);
 }
 
@@ -33,14 +33,14 @@ RED4EXT_INLINE bool RED4ext::CClass::IsA(const IRTTIType* aType) const
 RED4EXT_INLINE RED4ext::CProperty* RED4ext::CClass::GetProperty(CName aName)
 {
     using func_t = CProperty* (*)(CClass*, CName);
-    static REDfunc<func_t> func(Addresses::CClass_GetProperty);
+    REDfunc<func_t> func(Addresses::CClass_GetProperty);
     return func(this, aName);
 }
 
 RED4EXT_INLINE RED4ext::CClassFunction* RED4ext::CClass::GetFunction(CName aName)
 {
     using func_t = CClassFunction* (*)(CClass*, CName);
-    static REDfunc<func_t> func(Addresses::CClass_GetFunction);
+    REDfunc<func_t> func(Addresses::CClass_GetFunction);
     return func(this, aName);
 }
 

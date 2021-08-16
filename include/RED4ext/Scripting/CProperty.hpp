@@ -106,7 +106,7 @@ private:
             holder = scriptable->GetValueHolder();*/
 
             using func_t = void* (*)(ScriptInstance);
-            static REDfunc<func_t> func(Addresses::IScriptable_GetValueHolder);
+            REDfunc<func_t> func(Addresses::IScriptable_GetValueHolder);
             holder = func(aInstance);
         }
 

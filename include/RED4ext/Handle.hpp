@@ -95,7 +95,7 @@ protected:
     void DecWeakRef()
     {
         // This function also deallocates RefCnt when weakRefs reaches 0.
-        static REDfunc<void (*)(HandleBase*)> decWeakRefFn(Addresses::Handle_DecWeakRef);
+        REDfunc<void (*)(HandleBase*)> decWeakRefFn(Addresses::Handle_DecWeakRef);
 
         if (refCount)
         {
@@ -128,7 +128,7 @@ public:
 
     explicit Handle(T* aPtr)
     {
-        static REDfunc<Handle* (*)(Handle*, T*)> ctor(Addresses::Handle_ctor);
+        REDfunc<Handle* (*)(Handle*, T*)> ctor(Addresses::Handle_ctor);
         ctor(this, aPtr);
     }
 

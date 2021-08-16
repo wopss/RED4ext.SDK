@@ -77,7 +77,7 @@ struct CGlobalFunction : CBaseFunction
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t = CGlobalFunction* (*)(CGlobalFunction*, CName, CName, ScriptingFunction_t<T>);
-            static REDfunc<func_t> func(Addresses::CGlobalFunction_ctor);
+            REDfunc<func_t> func(Addresses::CGlobalFunction_ctor);
             func(memory, fullName, shortName, aFunc);
         }
 
@@ -103,7 +103,7 @@ struct CClassFunction : CBaseFunction
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t = CClassFunction* (*)(CClassFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            static REDfunc<func_t> func(Addresses::CClassFunction_ctor);
+            REDfunc<func_t> func(Addresses::CClassFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 
@@ -132,7 +132,7 @@ struct CClassStaticFunction : CClassFunction
 
             using func_t =
                 CClassStaticFunction* (*)(CClassStaticFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            static REDfunc<func_t> func(Addresses::CClassStaticFunction_ctor);
+            REDfunc<func_t> func(Addresses::CClassStaticFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 

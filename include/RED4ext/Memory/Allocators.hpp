@@ -177,7 +177,7 @@ private:
     inline void OOM(uint32_t aSize, uint32_t aAlignment)
     {
         using oom_t = AllocationResult (*)(PoolStorage*, uint32_t, uint32_t);
-        static REDfunc<oom_t> oom(Addresses::Memory_PoolStorage_OOM);
+        REDfunc<oom_t> oom(Addresses::Memory_PoolStorage_OOM);
 
         auto pool = T::Get();
         oom(pool->storage, aSize, aAlignment);

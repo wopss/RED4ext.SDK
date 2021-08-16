@@ -123,7 +123,7 @@ struct SortedArray
         using func_t = void (*)(SortedArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
-        static REDfunc<func_t> func(Addresses::DynArray_Realloc);
+        REDfunc<func_t> func(Addresses::DynArray_Realloc);
         func(this, capacity, sizeof(T), alignment, nullptr);
     }
 

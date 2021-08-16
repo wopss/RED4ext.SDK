@@ -16,25 +16,25 @@ RED4EXT_INLINE RED4ext::CString::CString()
 
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText)
 {
-    static REDfunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor);
+    REDfunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor);
     func(this, aText);
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const CString& aOther)
 {
-    static REDfunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
+    REDfunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
     func(this, aOther);
 }
 
 RED4EXT_INLINE RED4ext::CString::~CString()
 {
-    static REDfunc<CString* (*)(CString*)> func(Addresses::CString_dtor);
+    REDfunc<CString* (*)(CString*)> func(Addresses::CString_dtor);
     func(this);
 }
 
 RED4EXT_INLINE RED4ext::CString& RED4ext::CString::operator=(const CString& rhs)
 {
-    static REDfunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
+    REDfunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
     func(this, rhs);
     return *this;
 }
