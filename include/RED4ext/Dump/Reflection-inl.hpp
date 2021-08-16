@@ -949,7 +949,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
     o << "#include <cstdint>" << std::endl;
     o << "#include <RED4ext/Common.hpp>" << std::endl;
-    o << "#include <RED4ext/REDhash.hpp>" << std::endl;
+    // o << "#include <RED4ext/Hashing/FNV1a.hpp>" << std::endl;
 
     for (auto inc : includes)
     {
