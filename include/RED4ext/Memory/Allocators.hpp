@@ -2705,7 +2705,11 @@ struct GPUM_Buffer_MorphTargetsAllocator : Allocator<GPUM_Buffer_MorphTargets>
 };
 } // namespace Memory
 
-struct [[deprecated("Use 'Memory::IAllocator' instead.")]] IMemoryAllocator : Memory::IAllocator{};
+struct [[deprecated("Use 'Memory::IAllocator' instead.")]] IMemoryAllocator : Memory::IAllocator
+{
+    struct [[deprecated("Use 'Memory::AllocationResult' instead.")]] Result : Memory::AllocationResult{};
+};
+
 struct [[deprecated("Use 'Memory::EngineAllocator' instead.")]] EngineAllocator : Memory::EngineAllocator{};
 struct [[deprecated("Use 'Memory::RTTIAllocator' instead.")]] RTTIAllocator : Memory::RTTIAllocator{};
 struct [[deprecated("Use 'Memory::RTTIFunctionAllocator' instead.")]] RTTIFunctionAllocator
