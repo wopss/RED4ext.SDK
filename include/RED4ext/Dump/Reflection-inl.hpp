@@ -6,7 +6,6 @@
 
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
-#include <RED4ext/REDhash.hpp>
 
 #include <array>
 #include <fstream>
