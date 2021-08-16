@@ -736,7 +736,7 @@ struct RenderGraphAllocator : Allocator<PoolRenderGraph>
 {
 };
 
-struct FlowAllocatorAllocator : Allocator<PoolFlowAllocator>
+struct FlowAllocator : Allocator<PoolFlowAllocator>
 {
 };
 
@@ -2372,7 +2372,7 @@ struct PSOCacheAllocator : Allocator<PoolPSOCache>
 {
 };
 
-struct D3D12AllocatorAllocator : Allocator<PoolD3D12Allocator>
+struct D3D12Allocator : Allocator<PoolD3D12Allocator>
 {
 };
 
