@@ -1,9 +1,9 @@
 #pragma once
 
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Meta.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
-#include <RED4ext/Scripting/Meta.hpp>
 
 namespace RED4ext
 {

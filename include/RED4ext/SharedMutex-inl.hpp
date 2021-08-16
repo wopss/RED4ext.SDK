@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/Types/SharedMutex.hpp>
+#include <RED4ext/SharedMutex.hpp>
 #endif
 
 #include <cstdint>

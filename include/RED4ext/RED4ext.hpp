@@ -28,11 +28,12 @@
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Scripting/Utils.hpp>
 
+#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/TweakDB.hpp>
+
 #include <RED4ext/Types/GameTime.hpp>
 #include <RED4ext/Types/InstanceType.hpp>
-#include <RED4ext/Types/SharedMutex.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
-#include <RED4ext/Types/TweakDB.hpp>
 
 #include <RED4ext/Api/IRED4ext.hpp>
 #include <RED4ext/Api/PluginHandle.hpp>

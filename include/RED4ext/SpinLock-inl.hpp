@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/Types/SpinLock.hpp>
+#include <RED4ext/SpinLock.hpp>
 #endif
 
 #include <cstdint>

@@ -1,4 +1,5 @@
 #pragma once
+
 #include <RED4ext/Common.hpp>
 
 namespace RED4ext
@@ -28,8 +29,8 @@ struct SpinLock
     void unlock();
 };
 RED4EXT_ASSERT_SIZE(SpinLock, 1);
-}
+} // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Types/SpinLock-inl.hpp>
+#include <RED4ext/SpinLock-inl.hpp>
 #endif

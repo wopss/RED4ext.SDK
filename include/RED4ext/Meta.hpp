@@ -24,7 +24,3 @@ constexpr F ForEach(F&& f, Tuple&& t)
     return ForEachImpl(std::forward<Tuple>(t), std::forward<F>(f), std::make_index_sequence<std::tuple_size<std::remove_reference_t<Tuple>>::value>{});
 }
 } // namespace RED4ext::Meta
-
-#ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Scripting/Meta-inl.hpp>
-#endif

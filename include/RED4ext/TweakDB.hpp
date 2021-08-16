@@ -1,4 +1,5 @@
 #pragma once
+
 #include <cstdint>
 #include <shared_mutex>
 
@@ -8,7 +9,7 @@
 #include <RED4ext/Map.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Handle.hpp>
-#include <RED4ext/Types/SharedMutex.hpp>
+#include <RED4ext/SharedMutex.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
@@ -187,5 +188,5 @@ RED4EXT_ASSERT_SIZE(TweakDB, 0x140);
 }
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Types/TweakDB-inl.hpp>
+#include <RED4ext/TweakDB-inl.hpp>
 #endif

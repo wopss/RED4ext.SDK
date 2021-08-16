@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/Types/TweakDB.hpp>
+#include <RED4ext/TweakDB.hpp>
 #endif
 
 #include <cstdlib>
@@ -159,7 +159,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     // Meaning we have to pass our own TweakDB class. sorry -Sombra
 
     using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID aDBID);
-    static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
+    REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
 
     TweakDB fakeTweakDB;
     struct FakeAllocator : Memory::IAllocator
@@ -247,7 +247,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, IRTTIType* a
 RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash)
 {
     using CreateTDBRecord_t = void (*)(TweakDB*, uint32_t aBaseMurmur3, TweakDBID aDBID);
-    static REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
+    REDfunc<CreateTDBRecord_t> CreateTDBRecord(Addresses::TweakDB_CreateRecord);
 
     if (!aDBID.IsValid())
         return false;
@@ -307,7 +307,7 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
 RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStackType)
 {
     using InitFlatValue_t = FlatValue* (*)(TweakDB*, const CStackType*);
-    static REDfunc<InitFlatValue_t> InitFlatValue_ExceptInt32(Addresses::TweakDB_InitFlatValue_ExceptInt32);
+    REDfunc<InitFlatValue_t> InitFlatValue_ExceptInt32(Addresses::TweakDB_InitFlatValue_ExceptInt32);
     static auto FlatInt32Vftable = GetAddressFromInstruction(Addresses::TweakDB_FlatInt32ValueVftable, 3);
     static auto FlatArrayInt32Vftable = GetAddressFromInstruction(Addresses::TweakDB_FlatArrayInt32ValueVftable, 3);
     static auto* pInt32RTTIType = CRTTISystem::Get()->GetType("Int32");
@@ -417,7 +417,7 @@ RED4EXT_INLINE const RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetDefaultFl
 RED4EXT_INLINE RED4ext::TweakDB* RED4ext::TweakDB::Get()
 {
     using Get_t = TweakDB* (*)();
-    static REDfunc<Get_t> func(Addresses::TweakDB_Get);
+    REDfunc<Get_t> func(Addresses::TweakDB_Get);
     return func();
 }
 
