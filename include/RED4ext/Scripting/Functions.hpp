@@ -84,10 +84,10 @@ struct CGlobalFunction : CBaseFunction
         return memory;
     }
 
-    uint32_t index; // 80 - The registration index.
+    uint32_t regIndex; // 80
 };
 RED4EXT_ASSERT_SIZE(CGlobalFunction, 0x88);
-RED4EXT_ASSERT_OFFSET(CGlobalFunction, index, 0x80);
+RED4EXT_ASSERT_OFFSET(CGlobalFunction, regIndex, 0x80);
 
 struct CClassFunction : CBaseFunction
 {
@@ -110,12 +110,12 @@ struct CClassFunction : CBaseFunction
         return memory;
     }
 
-    CClass* parent; // 80
-    uint32_t index; // 88 - The registration index.
+    CClass* parent;    // 80
+    uint32_t regIndex; // 88
 };
 RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
 RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
-RED4EXT_ASSERT_OFFSET(CClassFunction, index, 0x88);
+RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0x88);
 
 struct CClassStaticFunction : CClassFunction
 {
@@ -141,7 +141,7 @@ struct CClassStaticFunction : CClassFunction
 };
 RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
 RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
-RED4EXT_ASSERT_OFFSET(CClassFunction, index, 0x88);
+RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0x88);
 
 struct CScriptedFunction : CBaseFunction
 {
