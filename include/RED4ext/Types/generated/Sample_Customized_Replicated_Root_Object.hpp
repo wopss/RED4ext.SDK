@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/Sample_Replicated_Root_Object.hpp>
 
 namespace RED4ext

@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Types/generated/audio/EntitySettings.hpp>
 #include <RED4ext/Types/generated/audio/LoopingSoundController.hpp>

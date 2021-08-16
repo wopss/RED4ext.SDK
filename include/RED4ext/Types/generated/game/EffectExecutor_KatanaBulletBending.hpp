@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Types/generated/game/EffectExecutor_KatanaBulletBendingEffectEntry.hpp>
 #include <RED4ext/Types/generated/game/EffectExecutor_Scripted.hpp>

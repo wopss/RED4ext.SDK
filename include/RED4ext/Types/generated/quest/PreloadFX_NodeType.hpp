@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Types/generated/quest/IFXManagerNodeType.hpp>
 #include <RED4ext/Types/generated/quest/PreloadFX_NodeTypeParams.hpp>

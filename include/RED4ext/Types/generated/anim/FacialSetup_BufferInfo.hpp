@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/anim/FacialSetup_OneSermoBufferInfo.hpp>
 #include <RED4ext/Types/generated/anim/FacialSetup_TracksMapping.hpp>
 

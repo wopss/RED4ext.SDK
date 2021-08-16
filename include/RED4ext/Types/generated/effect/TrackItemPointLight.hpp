@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/Color.hpp>
 #include <RED4ext/Types/generated/EEnvColorGroup.hpp>
 #include <RED4ext/Types/generated/Vector3.hpp>

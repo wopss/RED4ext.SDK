@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/Sample_Namespace_1_5Sample_Class_1_5_0.hpp>
 
 namespace RED4ext

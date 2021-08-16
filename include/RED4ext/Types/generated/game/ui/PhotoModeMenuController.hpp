@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/game/ui/SetPhotoModeKeyEnabledCallback.hpp>
 #include <RED4ext/Types/generated/game/ui/StickerImageCallback.hpp>
 #include <RED4ext/Types/generated/game/ui/WidgetGameController.hpp>

@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/ent/dismemberment/DangleInfo.hpp>
 #include <RED4ext/Types/generated/ent/dismemberment/MeshInfo.hpp>
 #include <RED4ext/Types/generated/ent/dismemberment/PlacementE.hpp>

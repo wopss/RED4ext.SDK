@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/scn/AdditionalSpeakers.hpp>
 #include <RED4ext/Types/generated/scn/DialogLineVisualStyle.hpp>
 #include <RED4ext/Types/generated/scn/DialogLineVoParams.hpp>

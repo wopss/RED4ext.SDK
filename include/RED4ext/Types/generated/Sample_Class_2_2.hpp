@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/Sample_Enum_As_Bitfield_2_2.hpp>
 
 namespace RED4ext

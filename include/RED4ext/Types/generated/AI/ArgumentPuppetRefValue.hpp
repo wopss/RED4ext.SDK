@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/AI/ArgumentDefinition.hpp>
 #include <RED4ext/Types/generated/AI/ArgumentType.hpp>
 #include <RED4ext/Types/generated/game/EntityReference.hpp>

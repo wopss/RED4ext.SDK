@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/game/EffectInputParameter_Float.hpp>
 #include <RED4ext/Types/generated/game/EffectObjectProvider_PhysicalRay.hpp>
 

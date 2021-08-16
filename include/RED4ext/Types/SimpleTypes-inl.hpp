@@ -4,7 +4,7 @@
 #include <RED4ext/Types/SimpleTypes.hpp>
 #endif
 
-#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Hashing/CRC.hpp>
 
 RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(uint64_t aValue) noexcept
     : value(aValue)

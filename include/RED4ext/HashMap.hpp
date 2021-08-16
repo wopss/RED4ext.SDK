@@ -4,8 +4,8 @@
 #include <functional>
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Hashing/FNV1a.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
-#include <RED4ext/REDhash.hpp>
 
 namespace RED4ext
 {

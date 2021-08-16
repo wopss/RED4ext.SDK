@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/GpuWrapApiVertexPackingEStreamType.hpp>
 #include <RED4ext/Types/generated/GpuWrapApiVertexPackingePackingType.hpp>
 #include <RED4ext/Types/generated/GpuWrapApiVertexPackingePackingUsage.hpp>

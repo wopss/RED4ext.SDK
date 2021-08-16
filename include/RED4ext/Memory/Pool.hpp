@@ -4,8 +4,8 @@
 #include <shared_mutex>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/SharedMutex.hpp>
+#include <RED4ext/Hashing/FNV1a.hpp>
 
 namespace RED4ext::Memory
 {

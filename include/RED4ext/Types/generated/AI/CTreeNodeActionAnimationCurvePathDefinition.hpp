@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/AI/CTreeNodeActionDefinition.hpp>
 #include <RED4ext/Types/generated/LibTreeDefBool.hpp>
 #include <RED4ext/Types/generated/LibTreeDefCName.hpp>

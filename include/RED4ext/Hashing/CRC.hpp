@@ -1,74 +1,9 @@
 #pragma once
 
 #include <cstdint>
-#include <cstring>
 
 namespace RED4ext
 {
-constexpr uint64_t FNV1a(const char* aText, uint64_t aSeed = 0xCBF29CE484222325)
-{
-    // constexpr uint64_t basis = 0xCBF29CE484222325;
-    constexpr uint64_t prime = 0x100000001b3;
-
-    uint64_t hash = aSeed;
-    while (aText && *aText)
-    {
-        hash ^= *aText;
-        hash *= prime;
-
-        aText++;
-    }
-
-    return hash;
-}
-
-constexpr uint32_t FNV1a32(const char* aText, uint32_t aSeed = 0x811C9DC5)
-{
-    // constexpr uint32_t basis = 0x811c9dc5;
-    constexpr uint32_t prime = 0x01000193;
-
-    uint32_t hash = aSeed;
-    while (aText && *aText)
-    {
-        hash ^= *aText;
-        hash *= prime;
-
-        aText++;
-    }
-
-    return hash;
-}
-
-constexpr uint32_t FNV1a32(const uint8_t* aData, const size_t aLen, uint32_t aSeed = 0x811C9DC5)
-{
-    // constexpr uint32_t basis = 0x811c9dc5;
-    constexpr uint32_t prime = 0x01000193;
-
-    uint32_t hash = aSeed;
-    for (size_t i = 0; i != aLen; ++i)
-    {
-        hash ^= aData[i];
-        hash *= prime;
-    }
-
-    return hash;
-}
-
-constexpr uint64_t FNV1a64(const uint8_t* aData, const size_t aLen, uint64_t aSeed = 0xCBF29CE484222325)
-{
-    // constexpr uint64_t basis = 0xCBF29CE484222325;
-    constexpr uint64_t prime = 0x100000001b3;
-
-    uint64_t hash = aSeed;
-    for (size_t i = 0; i != aLen; ++i)
-    {
-        hash ^= aData[i];
-        hash *= prime;
-    }
-
-    return hash;
-}
-
 static constexpr uint32_t CRC32Table[]{
     0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f, 0xe963a535, 0x9e6495a3, 0x0edb8832,
     0x79dcb8a4, 0xe0d5e91e, 0x97d2d988, 0x09b64c2b, 0x7eb17cbd, 0xe7b82d07, 0x90bf1d91, 0x1db71064, 0x6ab020f2,
@@ -122,54 +57,5 @@ constexpr uint32_t CRC32(const uint8_t* aData, const size_t aLen, const uint32_t
         crc = (crc >> 8) ^ CRC32Table[(crc & 0xff) ^ aData[i]];
     }
     return ~crc;
-}
-
-inline uint32_t Murmur3_32(const uint8_t* aKey, const size_t aLength, const uint32_t aSeed)
-{
-    auto rotl = [](uint32_t x, uint32_t r) { return (x << r) | (x >> (32 - r)); };
-
-    auto c1 = 0xCC9E2D51;
-    auto c2 = 0x1B873593;
-    auto r1 = 15;
-    auto r2 = 13;
-    auto m = 5;
-    auto n = 0xE6546B64;
-
-    auto hash = aSeed;
-    for (size_t i = aLength >> 2; i; i--)
-    {
-        uint32_t k;
-        memcpy(&k, aKey, sizeof(uint32_t));
-        aKey += sizeof(uint32_t);
-
-        k *= c1;
-        k = rotl(k, r1);
-        k *= c2;
-
-        hash ^= k;
-        hash = rotl(hash, r2);
-        hash = hash * m + n;
-    }
-
-    uint32_t k = 0;
-    for (size_t i = aLength & 3; i; i--)
-    {
-        k <<= 8;
-        k |= aKey[i - 1];
-    }
-
-    k *= c1;
-    k = rotl(k, r1);
-    k *= c2;
-    hash ^= k;
-
-    hash ^= aLength;
-    hash ^= hash >> 16;
-    hash *= 0x85EBCA6B;
-    hash ^= hash >> 13;
-    hash *= 0xC2B2AE35;
-    hash ^= hash >> 16;
-
-    return hash;
 }
 } // namespace RED4ext

@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/PSODescRasterizerModeCullMode.hpp>
 #include <RED4ext/Types/generated/PSODescRasterizerModeFrontFaceWinding.hpp>
 #include <RED4ext/Types/generated/PSODescRasterizerModeOffsetMode.hpp>

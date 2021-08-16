@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/ent/ReplicatedAnimFeaturesState.hpp>
 #include <RED4ext/Types/generated/ent/ReplicatedAnimWrapperVars.hpp>
 #include <RED4ext/Types/generated/ent/ReplicatedInputSetters.hpp>

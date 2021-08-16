@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Types/generated/quest/ETimeDilationOverride.hpp>
 #include <RED4ext/Types/generated/quest/TimeDilation_NodeTypeParam.hpp>

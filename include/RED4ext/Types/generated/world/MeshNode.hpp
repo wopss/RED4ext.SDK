@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Types/SimpleTypes.hpp>
 #include <RED4ext/Types/generated/RenderSceneLayerMask.hpp>

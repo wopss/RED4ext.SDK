@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/ColorBalance.hpp>
 #include <RED4ext/Types/generated/ColorGradingLutParams.hpp>
 #include <RED4ext/Types/generated/IAreaSettings.hpp>

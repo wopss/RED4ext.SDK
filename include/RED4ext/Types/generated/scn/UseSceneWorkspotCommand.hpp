@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/AI/BaseUseWorkspotCommand.hpp>
 #include <RED4ext/Types/generated/scn/NodeId.hpp>
 #include <RED4ext/Types/generated/scn/SceneInstanceId.hpp>

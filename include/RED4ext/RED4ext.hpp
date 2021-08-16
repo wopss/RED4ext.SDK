@@ -10,6 +10,9 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Hashing/CRC.hpp>
+#include <RED4ext/Hashing/FNV1a.hpp>
+#include <RED4ext/Hashing/Murmur3.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>

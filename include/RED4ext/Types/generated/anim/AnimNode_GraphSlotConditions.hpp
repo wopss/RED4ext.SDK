@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Types/generated/anim/AnimNode_GraphSlot.hpp>
 #include <RED4ext/Types/generated/anim/GraphSlotCondition.hpp>

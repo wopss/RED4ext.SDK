@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/CResource.hpp>
 #include <RED4ext/Types/generated/ink/LayerDefinitionCollection.hpp>
 #include <RED4ext/Types/generated/ink/PermanentLayerDefinitionCollection.hpp>

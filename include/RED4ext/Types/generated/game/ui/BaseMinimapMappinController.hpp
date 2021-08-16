@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Types/generated/game/ui/EIconOrientation.hpp>
 #include <RED4ext/Types/generated/game/ui/MappinBaseController.hpp>
 #include <RED4ext/Types/generated/ink/WidgetReference.hpp>

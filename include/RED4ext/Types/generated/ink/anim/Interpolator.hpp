@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Types/generated/ink/anim/InterpolationDirection.hpp>
 #include <RED4ext/Types/generated/ink/anim/InterpolationMode.hpp>
