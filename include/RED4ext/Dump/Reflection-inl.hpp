@@ -214,7 +214,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
             }
         }
 
-        return "Types/generated/" + pathPrefix;
+        return "Scripting/Natives/Generated/" + pathPrefix;
     };
 
     // Remove the prefix from the class
@@ -257,11 +257,12 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         return ns.empty() ? stripped : ns + "::" + stripped;
     };
 
-    FixedTypeMapping fixedMapping = {{"ISerializable", "ISerializable"},
-                                     {"IScriptable", "Scripting/IScriptable"},
-                                     {"gameuiCharacterCustomizationSystem", "Types/CharacterCustomization"},
-                                     {"gameuiCharacterCustomizationOptionImpl", "Types/CharacterCustomizationOptionImpl"},
-                                     {"gameItemID", "Types/SimpleTypes"}};
+    FixedTypeMapping fixedMapping = {
+        {"ISerializable", "ISerializable"},
+        {"IScriptable", "Scripting/IScriptable"},
+        {"gameuiCharacterCustomizationSystem", "Types/CharacterCustomization"},
+        {"gameuiCharacterCustomizationOptionImpl", "Types/CharacterCustomizationOptionImpl"},
+        {"gameItemID", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
     std::regex invalidKeywords(INVALID_KEYWORDS);
@@ -771,7 +772,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         case RED4ext::ERTTIType::LegacySingleChannelCurve:
         case RED4ext::ERTTIType::Simple:
         {
-            aFd.includes.emplace("Types/SimpleTypes");
+            aFd.includes.emplace("NativeTypes");
             break;
         }
         default:
@@ -1162,7 +1163,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::string>& aIncludes)
 {
     std::filesystem::create_directories(aFilePath);
-    aFilePath /= "Generated.cpp";
+    aFilePath = aFilePath / "Scripting" / "Natives.cpp";
 
     std::ofstream o(aFilePath);
 

@@ -4,9 +4,9 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/InstanceType.hpp>
 #include <RED4ext/REDfunc.hpp>
 #include <RED4ext/RTTITypes.hpp>
-#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext
 {

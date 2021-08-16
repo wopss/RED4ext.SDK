@@ -4,7 +4,7 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
-#include <RED4ext/Types/InstanceType.hpp>
+#include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Unks.hpp>
 
 namespace RED4ext

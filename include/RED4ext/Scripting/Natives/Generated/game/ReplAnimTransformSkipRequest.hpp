@@ -1,0 +1,24 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ReplAnimTransformRequestBase.hpp>
+
+namespace RED4ext
+{
+namespace game { 
+struct ReplAnimTransformSkipRequest : game::ReplAnimTransformRequestBase
+{
+    static constexpr const char* NAME = "gameReplAnimTransformSkipRequest";
+    static constexpr const char* ALIAS = NAME;
+
+    CName animName; // 18
+    float skipTime; // 20
+    uint8_t unk24[0x28 - 0x24]; // 24
+};
+RED4EXT_ASSERT_SIZE(ReplAnimTransformSkipRequest, 0x28);
+} // namespace game
+} // namespace RED4ext

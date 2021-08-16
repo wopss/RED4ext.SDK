@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <RED4ext/Types/InstanceType.hpp>
+#include <RED4ext/InstanceType.hpp>
 
 namespace RED4ext
 {
@@ -70,9 +70,9 @@ struct CScriptStack : CBaseStack
 {
     ~CScriptStack() override = default;
 
-    uint8_t* args;          // 30
-    ScriptInstance value;   // 38
-    IRTTIType* type;        // 40
+    uint8_t* args;        // 30
+    ScriptInstance value; // 38
+    IRTTIType* type;      // 40
 };
 
 RED4EXT_ASSERT_SIZE(CScriptStack, 0x48);

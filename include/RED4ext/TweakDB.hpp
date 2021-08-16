@@ -10,7 +10,7 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/SharedMutex.hpp>
-#include <RED4ext/Types/SimpleTypes.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Stack.hpp>

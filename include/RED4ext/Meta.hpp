@@ -1,8 +1,8 @@
 #pragma once
 
 #include <RED4ext/CName.hpp>
+#include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
-#include <RED4ext/Types/InstanceType.hpp>
 
 namespace RED4ext::Meta
 {
@@ -21,6 +21,7 @@ constexpr F ForEachImpl(Tuple&& t, F&& f, std::index_sequence<I...>)
 template<class Tuple, class F>
 constexpr F ForEach(F&& f, Tuple&& t)
 {
-    return ForEachImpl(std::forward<Tuple>(t), std::forward<F>(f), std::make_index_sequence<std::tuple_size<std::remove_reference_t<Tuple>>::value>{});
+    return ForEachImpl(std::forward<Tuple>(t), std::forward<F>(f),
+                       std::make_index_sequence<std::tuple_size<std::remove_reference_t<Tuple>>::value>{});
 }
 } // namespace RED4ext::Meta
