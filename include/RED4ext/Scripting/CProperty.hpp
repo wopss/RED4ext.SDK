@@ -5,7 +5,7 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/InstanceType.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 #include <RED4ext/RTTITypes.hpp>
 
 namespace RED4ext
@@ -106,7 +106,7 @@ private:
             holder = scriptable->GetValueHolder();*/
 
             using func_t = void* (*)(ScriptInstance);
-            REDfunc<func_t> func(Addresses::IScriptable_GetValueHolder);
+            RelocFunc<func_t> func(Addresses::IScriptable_GetValueHolder);
             holder = func(aInstance);
         }
 

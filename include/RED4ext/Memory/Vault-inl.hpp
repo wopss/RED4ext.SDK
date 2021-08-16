@@ -5,10 +5,10 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::Memory::Vault* RED4ext::Memory::Vault::Get()
 {
-    REDfunc<Vault* (*)()> func(Addresses::Memory_Vault_Get);
+    RelocFunc<Vault* (*)()> func(Addresses::Memory_Vault_Get);
     return func();
 }

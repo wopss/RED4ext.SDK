@@ -5,7 +5,7 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CString::CString()
     : text{}
@@ -16,25 +16,25 @@ RED4EXT_INLINE RED4ext::CString::CString()
 
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText)
 {
-    REDfunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor);
+    RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor);
     func(this, aText);
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const CString& aOther)
 {
-    REDfunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
+    RelocFunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
     func(this, aOther);
 }
 
 RED4EXT_INLINE RED4ext::CString::~CString()
 {
-    REDfunc<CString* (*)(CString*)> func(Addresses::CString_dtor);
+    RelocFunc<CString* (*)(CString*)> func(Addresses::CString_dtor);
     func(this);
 }
 
 RED4EXT_INLINE RED4ext::CString& RED4ext::CString::operator=(const CString& rhs)
 {
-    REDfunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
+    RelocFunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
     func(this, rhs);
     return *this;
 }

@@ -6,7 +6,7 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/CNamePool.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
 
@@ -52,6 +52,6 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::AddParam(CName aType, const char* aN
 RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
 {
     using func_t = bool (*)(CBaseFunction*, CStack*);
-    REDfunc<func_t> func(Addresses::CBaseFunction_Execute);
+    RelocFunc<func_t> func(Addresses::CBaseFunction_Execute);
     return func(this, aStack);
 }

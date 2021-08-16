@@ -6,7 +6,7 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
 {
@@ -123,7 +123,7 @@ struct SortedArray
         using func_t = void (*)(SortedArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
-        REDfunc<func_t> func(Addresses::DynArray_Realloc);
+        RelocFunc<func_t> func(Addresses::DynArray_Realloc);
         func(this, capacity, sizeof(T), alignment, nullptr);
     }
 

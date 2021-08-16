@@ -5,11 +5,11 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE void* RED4ext::IScriptable::GetValueHolder()
 {
     using func_t = void* (*)(IScriptable*);
-    REDfunc<func_t> func(Addresses::IScriptable_GetValueHolder);
+    RelocFunc<func_t> func(Addresses::IScriptable_GetValueHolder);
     return func(this);
 }

@@ -6,7 +6,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
 {
