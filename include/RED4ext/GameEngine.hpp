@@ -108,13 +108,13 @@ struct CGameEngine : BaseGameEngine
 
     static CGameEngine* Get();
 
-    int8_t unk238[0x290 - 0x238];
+    int8_t unk238[0x308 - 0x238];
     CGameFramework* framework;
-    int8_t unk298[0x30];
+    int8_t unk310[0x30];
 };
-RED4EXT_ASSERT_SIZE(CGameEngine, 0x2C8);
+RED4EXT_ASSERT_SIZE(CGameEngine, 0x340);
 RED4EXT_ASSERT_OFFSET(CGameEngine, unk238, 0x238);
-RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x290);
+RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x308);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
