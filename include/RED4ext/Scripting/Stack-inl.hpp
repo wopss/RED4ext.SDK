@@ -7,6 +7,17 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Relocation.hpp>
 
+RED4EXT_INLINE RED4ext::ScriptInstance RED4ext::CBaseStack::GetContext() const
+{
+    if (context18)
+        return context18;
+
+    if (unk28) // They also do some weird checks but let's assume it's not required
+        return context20;
+
+    return nullptr;
+}
+
 RED4EXT_INLINE RED4ext::CStackType::CStackType(IRTTIType* aType, ScriptInstance aValue)
     : type(aType)
     , value{aValue}
@@ -22,7 +33,7 @@ RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aInstance, CStackType* aAr
     func(this, aInstance, aArgs, aArgsCount, aResult, a6);
 }
 
-RED4EXT_INLINE RED4ext::CStackFrame::CStackFrame(IScriptable* aContext, char* aCode, void* aUnk)
+RED4EXT_INLINE RED4ext::CStackFrame::CStackFrame(ScriptInstance aContext, char* aCode, void* aUnk)
 {
     code = aCode;
     unk8 = 0;

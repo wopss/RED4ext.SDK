@@ -16,6 +16,7 @@ constexpr uintptr_t ImageBase = 0x140000000;
 #pragma region CBaseFunction
 constexpr uintptr_t CBaseFunction_Execute = 0x14022EA10 - ImageBase; // 48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6, expected: 1, index: 0
 constexpr uintptr_t CBaseFunction_InternalExecute = 0x14022EDE0 - ImageBase; // 40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6, expected: 1, index: 0
+constexpr uintptr_t CBaseFunction_Register = 0x14022E270 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0 44 8B 4C 24 58 48 8B DA 41 83 C9 01, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CClass

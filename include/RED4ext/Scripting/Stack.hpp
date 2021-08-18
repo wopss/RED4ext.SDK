@@ -35,14 +35,18 @@ struct IStack
     virtual void* GetResultAddr() { return nullptr; };  // 08
     virtual IRTTIType* GetType() { return nullptr; };   // 10
     virtual void sub_18(int64_t a2){};                  // 18
+    virtual void sub_20(){};                            // 20
+    virtual void GenerateCode(char* aCode){};           // 28
     // clang-format on
 };
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
 
 struct CBaseStack : IStack
 {
+    ScriptInstance GetContext() const;
+
     int64_t unk08;            // 08
-    int64_t unk10;            // 10
+    void* unk10;              // 10
     ScriptInstance context18; // 18
     ScriptInstance context20; // 20
     int64_t unk28;            // 28
@@ -83,7 +87,7 @@ RED4EXT_ASSERT_OFFSET(CScriptStack, type, 0x40);
 
 struct CStackFrame
 {
-    CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
+    CStackFrame(ScriptInstance aContext, char* aCode, void* aUnk = nullptr);
 
     char* code;           // 00
     int64_t unk8;         // 08
@@ -93,7 +97,7 @@ struct CStackFrame
     int64_t unk28;        // 28
     int64_t unk30;        // 30
     int64_t unk38;        // 38
-    IScriptable* context; // 40
+    ScriptInstance context; // 40
     int64_t unk48;        // 48
     int16_t unk50;        // 50
     int64_t unk58;        // 58
