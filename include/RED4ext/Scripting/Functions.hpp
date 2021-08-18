@@ -57,7 +57,7 @@ struct CBaseFunction : IFunction
     DynArray<CProperty*> localVars; // 38
     HashMap<void*, void*> unk48;    // 48
     int8_t unk78[48];               // 78
-    int32_t flags;                  // A8
+    Flags flags;                    // A8
     int32_t unkAC;                  // AC
 };
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0xB0);
