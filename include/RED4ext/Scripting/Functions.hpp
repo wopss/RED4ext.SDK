@@ -3,6 +3,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 
 namespace RED4ext
@@ -51,11 +52,11 @@ struct CBaseFunction : IFunction
 
     CName fullName;                 // 08
     CName shortName;                // 10
-    IRTTIType* returnType;          // 18
+    CProperty* returnType;          // 18
     int64_t unk20;                  // 20
     DynArray<CProperty*> params;    // 28
     DynArray<CProperty*> localVars; // 38
-    HashMap<void*, void*> unk48;    // 48
+    HashMap<uint64_t, void*> unk48; // 48
     int8_t unk78[48];               // 78
     Flags flags;                    // A8
     int32_t unkAC;                  // AC

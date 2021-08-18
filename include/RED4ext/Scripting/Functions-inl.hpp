@@ -39,7 +39,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::AddParam(CName aType, const char* aN
     flags.isOut = aIsOut;
     flags.isOptional = aIsOptional;
 
-    auto param = CProperty::Create(type, aName, nullptr, unk7C, nullptr, flags);
+    auto param = CProperty::Create(type, aName, nullptr, unkAC, nullptr, flags);
     if (!param)
     {
         return false;
