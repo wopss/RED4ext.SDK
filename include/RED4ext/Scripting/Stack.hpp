@@ -59,9 +59,10 @@ struct CStack : CBaseStack
     CStackType* args;   // 30
     uint32_t argsCount; // 38
     CStackType* result; // 40
+    uint8_t pad48[0x10]; 
 };
 
-RED4EXT_ASSERT_SIZE(CStack, 0x48);
+RED4EXT_ASSERT_SIZE(CStack, 0x58);
 RED4EXT_ASSERT_OFFSET(CStack, args, 0x30);
 RED4EXT_ASSERT_OFFSET(CStack, argsCount, 0x38);
 RED4EXT_ASSERT_OFFSET(CStack, result, 0x40);
