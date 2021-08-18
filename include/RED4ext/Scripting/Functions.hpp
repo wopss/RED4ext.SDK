@@ -75,6 +75,7 @@ private:
 
     using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, IRTTIType*);
 
+    bool Execute_(CStack* aStack);
     static Handler_t GetHandler(uint32_t aIndex);
     bool ExecuteNative(CStack* aStack, CStackFrame& aFrame);
 };
