@@ -21,3 +21,21 @@ RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aInstance, CStackType* aAr
 
     func(this, aInstance, aArgs, aArgsCount, aResult, a6);
 }
+
+RED4EXT_INLINE RED4ext::CStackFrame::CStackFrame(IScriptable* aContext, char* aCode, void* aUnk)
+{
+    code = aCode;
+    unk8 = 0;
+    unk10 = 0;
+    unk18 = 0;
+    unk20 = 0;
+    unk28 = std::bit_cast<int64_t>(aUnk);
+    unk30 = 0;
+    unk38 = 0;
+    context = aContext;
+    unk48 = 0;
+    unk50 = 0;
+    unk58 = 0;
+    paramFlags = 0;
+    currentParam = 0;
+}

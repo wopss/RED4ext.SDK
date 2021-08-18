@@ -83,6 +83,8 @@ RED4EXT_ASSERT_OFFSET(CScriptStack, type, 0x40);
 
 struct CStackFrame
 {
+    CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
+
     char* code;           // 00
     int64_t unk8;         // 08
     int64_t unk10;        // 10
