@@ -13,12 +13,6 @@ namespace RED4ext::Addresses
 {
 constexpr uintptr_t ImageBase = 0x140000000;
 
-#pragma region Allocators
-constexpr uintptr_t Allocators_Engine_Get = 0x1401D1C30 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 371, index: 4
-constexpr uintptr_t Allocators_RTTI_Get = 0x1401D0C80 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 371, index: 2
-constexpr uintptr_t Allocators_RTTIFunction_Get = 0x14022F1B0 - ImageBase; // 48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C, expected: 371, index: 14
-#pragma endregion
-
 #pragma region CBaseFunction
 constexpr uintptr_t CBaseFunction_Execute = 0x14022EA10 - ImageBase; // 48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6, expected: 1, index: 0
 constexpr uintptr_t CBaseFunction_InternalExecute = 0x14022EDE0 - ImageBase; // 40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6, expected: 1, index: 0
@@ -53,6 +47,11 @@ constexpr uintptr_t CNamePool_AddPair = 0x1401CDE80 - ImageBase; // 48 83 EC 38 
 constexpr uintptr_t CNamePool_Get = 0x1401CD9F0 - ImageBase; // 48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8, expected: 1, index: 0
 #pragma endregion
 
+#pragma region CRTTIScriptReferenceType
+constexpr uintptr_t CRTTIScriptReferenceType_ctor = 0x14023A340 - ImageBase; // 48 89 5C 24 18 57 48 83 EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 05 , expected: 1, index: 0
+constexpr uintptr_t CRTTIScriptReferenceType_Set = 0x14023B8A0 - ImageBase; // 48 89 5C 24 20 57 48 83  EC 20 4C 89 41 18 48 8B, expected: 1, index: 0
+#pragma endregion
+
 #pragma region CRTTISystem
 constexpr uintptr_t CRTTISystem_Get = 0x140271E80 - ImageBase; // 40 53 48 83 EC 20 65 48 8B 04 25 58 00 00 00 48 8D 1D ? ? ? ?, expected: 1, index: 0
 #pragma endregion
@@ -81,18 +80,18 @@ constexpr uintptr_t IScriptable_GetValueHolder = 0x140206540 - ImageBase; // 40 
 #pragma endregion
 
 #pragma region Memory
-constexpr uintptr_t Memory_Vault_Get = 0x1401AAC70 - ImageBase; // 48 8D 05 ? ? ? ? C3, expected: 1221, index: 4
-constexpr uintptr_t Memory_Vault_Alloc = 0x1401A9AA0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 33 C0, expected: 14, index: 0
-constexpr uintptr_t Memory_Vault_AllocAligned = 0x1401A9B80 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 33 C0, expected: 3, index: 0
-constexpr uintptr_t Memory_Vault_Realloc = 0x1401A9F50 - ImageBase; // 48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56, expected: 421, index: 0
-constexpr uintptr_t Memory_Vault_ReallocAligned = 0x1401AA230 - ImageBase; // 48 89 5C 24 18 56 57 41 56 48 83 EC 40, expected: 11, index: 0
-constexpr uintptr_t Memory_Vault_Free = 0x1401A9C90 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 4C 8B 81 00 C9 00 00, expected: 1, index: 0
-constexpr uintptr_t Memory_Vault_Unk1 = 0x1401A9D20 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 4C 8B 81 00 C9 00 00, expected: 2, index: 0
-constexpr uintptr_t Memory_PoolStorage_OOM = 0x1401AA700 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56, expected: 1450, index: 0
+constexpr uintptr_t Memory_Vault_Get = 0x1401BD520 - ImageBase; // 48 8D 05 ? ? ? ? C3, expected: 1238, index: 4
+constexpr uintptr_t Memory_Vault_Alloc = 0x1401BC320 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 33 C0, expected: 9, index: 0
+constexpr uintptr_t Memory_Vault_AllocAligned = 0x1401BC400 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 33 C0, expected: 3, index: 0
+constexpr uintptr_t Memory_Vault_Realloc = 0x1401BC7D0 - ImageBase; // 48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56, expected: 293, index: 0
+constexpr uintptr_t Memory_Vault_ReallocAligned = 0x1401BCAB0 - ImageBase; // 48 89 5C 24 18 56 57 41 56 48 83 EC 40, expected: 13, index: 0
+constexpr uintptr_t Memory_Vault_Free = 0x1401BC510 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 4C 8B 81 00 C9 00 00, expected: 1, index: 0
+constexpr uintptr_t Memory_Vault_Unk1 = 0x1401BC5A0 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 4C 8B 81 00 C9 00 00, expected: 2, index: 0
+constexpr uintptr_t Memory_PoolStorage_OOM = 0x1401BCFA0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56, expected: 1516, index: 0
 #pragma endregion
 
 #pragma region OpcodeHandlers
-constexpr uintptr_t OpcodeHandlers_Get = 0x1401E5660 - ImageBase; // 48 89 5C 24 08 57 48 83  EC 40 FE 42 62 4C 8D 15 ? ? ? ? 33 C0 48 C7  44 24 20 00 00 00 00, expected: 5, index: 0
+constexpr uintptr_t OpcodeHandlers_Get = 0x1401E566D - ImageBase; // 4C 8D 15 ? ? ? ? 33 C0 48 C7 44 24 20 00 00 00 00, expected: 11, index: 0
 #pragma endregion
 
 #pragma region Streams

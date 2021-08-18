@@ -8,7 +8,7 @@
 
 RED4EXT_INLINE RED4ext::OpcodeHandlers::Handler_t RED4ext::OpcodeHandlers::Get(uint8_t aOpcode)
 {
-    static uint8_t* pLocation = reinterpret_cast<uint8_t*>(Addresses::OpcodeHandlers_Get) + 0x10 + reinterpret_cast<uintptr_t>(GetModuleHandleA(nullptr));
+    static uint8_t* pLocation = reinterpret_cast<uint8_t*>(Addresses::OpcodeHandlers_Get) + 3 + reinterpret_cast<uintptr_t>(GetModuleHandleA(nullptr));
     static uintptr_t finalLocation = reinterpret_cast<uintptr_t>(pLocation) + 4 + *reinterpret_cast<uint32_t*>(pLocation);
     static auto* s_opcodes = reinterpret_cast<Handler_t*>(finalLocation);
 
