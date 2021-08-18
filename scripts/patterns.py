@@ -108,6 +108,6 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='OpcodeHandlers', functions=[
-            Item(name='Get', pattern='4C 8D 15 ? ? ? ? 48 89 42 38 49 8B F8 48 8B 02 4C 8D 44 24 20 C7', expected=5, index=0)
+            Item(name='Get', pattern='48 89 5C 24 08 57 48 83  EC 40 FE 42 62 4C 8D 15 ? ? ? ? 33 C0 48 C7  44 24 20 00 00 00 00', expected=5, index=0)
         ])
     ]
