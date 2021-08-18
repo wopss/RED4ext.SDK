@@ -49,16 +49,16 @@ struct CBaseFunction : IFunction
     bool SetReturnType(CName aType);
     bool AddParam(CName aType, const char* aName, bool aIsOut = false, bool aIsOptional = false);
 
-    CName fullName;              // 08
-    CName shortName;             // 10
-    int64_t unk18;               // 18
-    int64_t unk20;               // 20
-    DynArray<void*> unk28;       // 28
-    DynArray<void*> unk38;       // 38
-    HashMap<void*, void*> unk48; // 48
-    int8_t unk78[48];            // 78
-    int32_t flags;               // A8
-    int32_t unkAC;               // AC
+    CName fullName;                 // 08
+    CName shortName;                // 10
+    IRTTIType* returnType;          // 18
+    int64_t unk20;                  // 20
+    DynArray<CProperty*> params;    // 28
+    DynArray<CProperty*> localVars; // 38
+    HashMap<void*, void*> unk48;    // 48
+    int8_t unk78[48];               // 78
+    int32_t flags;                  // A8
+    int32_t unkAC;                  // AC
 };
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0xB0);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x8);
