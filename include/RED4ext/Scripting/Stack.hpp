@@ -99,7 +99,7 @@ struct CStackFrame
 
     bool IsCurrentParamSet() const
     {
-        return paramFlags & (1 << currentParam) != 0;
+        return (paramFlags & (1 << currentParam)) != 0;
     }
 };
 RED4EXT_ASSERT_SIZE(CStackFrame, 0x68);
