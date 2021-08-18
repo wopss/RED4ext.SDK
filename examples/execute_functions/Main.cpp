@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include <RED4ext/RED4ext.hpp>
+#include <RED4ext/Scripting/Natives/GameTime.hpp>
 
 /*
  * To run this plugin you need to load it with RED4ext (https://github.com/WopsS/RED4ext).

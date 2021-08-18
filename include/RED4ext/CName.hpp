@@ -3,7 +3,7 @@
 #include <cstdint>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/REDhash.hpp>
+#include <RED4ext/Hashing/FNV1a.hpp>
 
 namespace RED4ext
 {
@@ -17,9 +17,9 @@ struct CName
     constexpr CName(const char* aName) noexcept
         : hash(0)
     {
-        constexpr CName None = FNV1a("None");
+        constexpr CName None = FNV1a64("None");
 
-        hash = FNV1a(aName);
+        hash = FNV1a64(aName);
         if (hash == None)
         {
             hash = 0;

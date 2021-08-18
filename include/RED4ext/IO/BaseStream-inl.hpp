@@ -4,7 +4,7 @@
 #include <RED4ext/IO/BaseStream.hpp>
 #endif
 
-#include <RED4ext/MemoryAllocators.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 
 RED4EXT_INLINE RED4ext::BaseStream::BaseStream(int32_t aFlags)
     : flags(aFlags)
@@ -14,9 +14,10 @@ RED4EXT_INLINE RED4ext::BaseStream::BaseStream(int32_t aFlags)
 {
 }
 
-RED4EXT_INLINE RED4ext::IMemoryAllocator* RED4ext::BaseStream::GetAllocator()
+RED4EXT_INLINE RED4ext::Memory::EngineAllocator* RED4ext::BaseStream::GetAllocator()
 {
-    return RED4ext::EngineAllocator::Get();
+    static RED4ext::Memory::EngineAllocator allocator;
+    return &allocator;
 }
 
 RED4EXT_INLINE void RED4ext::BaseStream::sub_38()

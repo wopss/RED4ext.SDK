@@ -7,13 +7,17 @@
 
 namespace RED4ext
 {
-struct IMemoryAllocator;
+namespace Memory
+{
+struct EngineAllocator;
+}
+
 struct BaseStream
 {
     BaseStream(int32_t aFlags = 0);
 
-    virtual IMemoryAllocator* GetAllocator(); // 00
-    virtual ~BaseStream() = default;          // 08
+    virtual Memory::EngineAllocator* GetAllocator(); // 00
+    virtual ~BaseStream() = default;                 // 08
 
     virtual bool ReadWrite(void* aBuffer, uint32_t aLength) = 0; // 10
     virtual size_t GetPointerPosition() = 0;                     // 18

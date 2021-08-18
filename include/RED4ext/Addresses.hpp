@@ -80,6 +80,17 @@ constexpr uintptr_t Handle_DecWeakRef = 0x1401D2A40 - ImageBase; // 40 53 48 83 
 constexpr uintptr_t IScriptable_GetValueHolder = 0x140206540 - ImageBase; // 40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75, expected: 2, index: 1
 #pragma endregion
 
+#pragma region Memory
+constexpr uintptr_t Memory_Vault_Get = 0x1401AAC70 - ImageBase; // 48 8D 05 ? ? ? ? C3, expected: 1221, index: 4
+constexpr uintptr_t Memory_Vault_Alloc = 0x1401A9AA0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 33 C0, expected: 14, index: 0
+constexpr uintptr_t Memory_Vault_AllocAligned = 0x1401A9B80 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 33 C0, expected: 3, index: 0
+constexpr uintptr_t Memory_Vault_Realloc = 0x1401A9F50 - ImageBase; // 48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56, expected: 421, index: 0
+constexpr uintptr_t Memory_Vault_ReallocAligned = 0x1401AA230 - ImageBase; // 48 89 5C 24 18 56 57 41 56 48 83 EC 40, expected: 11, index: 0
+constexpr uintptr_t Memory_Vault_Free = 0x1401A9C90 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 4C 8B 81 00 C9 00 00, expected: 1, index: 0
+constexpr uintptr_t Memory_Vault_Unk1 = 0x1401A9D20 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 4C 8B 81 00 C9 00 00, expected: 2, index: 0
+constexpr uintptr_t Memory_PoolStorage_OOM = 0x1401AA700 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56, expected: 1450, index: 0
+#pragma endregion
+
 #pragma region OpcodeHandlers
 constexpr uintptr_t OpcodeHandlers_Get = 0x1401E5660 - ImageBase; // 48 89 5C 24 08 57 48 83  EC 40 FE 42 62 4C 8D 15 ? ? ? ? 33 C0 48 C7  44 24 20 00 00 00 00, expected: 5, index: 0
 #pragma endregion

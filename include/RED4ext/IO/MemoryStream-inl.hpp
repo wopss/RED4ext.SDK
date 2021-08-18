@@ -5,12 +5,12 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE void RED4ext::MemoryStream::Construct(MemoryStream* aThis, void* aBuffer, size_t aLength, size_t aPointer)
 {
     using func_t = MemoryStream* (*)(MemoryStream*, void*, size_t, size_t);
-    REDfunc<func_t> func(Addresses::Streams_MemoryStream_ctor);
+    RelocFunc<func_t> func(Addresses::Streams_MemoryStream_ctor);
 
     func(aThis, aBuffer, aLength, aPointer);
 }

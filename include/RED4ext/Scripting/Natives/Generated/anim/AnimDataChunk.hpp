@@ -1,0 +1,21 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/NativeTypes.hpp>
+
+namespace RED4ext
+{
+namespace anim { 
+struct AnimDataChunk
+{
+    static constexpr const char* NAME = "animAnimDataChunk";
+    static constexpr const char* ALIAS = NAME;
+
+    DeferredDataBuffer buffer; // 00
+};
+RED4EXT_ASSERT_SIZE(AnimDataChunk, 0x58);
+} // namespace anim
+} // namespace RED4ext
