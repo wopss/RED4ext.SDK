@@ -3,7 +3,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/MemoryAllocators.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 
 namespace RED4ext
 {
@@ -11,16 +11,15 @@ struct CClass;
 struct CStack;
 struct CStackFrame;
 struct CProperty;
-struct IMemoryAllocator;
 struct PoolRTTIFunctionAllocator;
 struct IScriptable;
 
 struct IFunction
 {
-    virtual IMemoryAllocator* GetAllocator() = 0; // 00
-    virtual ~IFunction() = 0;                     // 08
-    virtual CClass* GetParent() = 0;              // 10
-    virtual uint32_t GetRegIndex() = 0;           // 18
+    virtual Memory::IAllocator* GetAllocator() = 0; // 00
+    virtual ~IFunction() = 0;                       // 08
+    virtual CClass* GetParent() = 0;                // 10
+    virtual uint32_t GetRegIndex() = 0;             // 18
     virtual void sub_20() = 0; // 20 - Returns an object, vf obj+0x20 is the function to invoke only used if static func
 };
 RED4EXT_ASSERT_SIZE(IFunction, 0x8);
@@ -70,25 +69,25 @@ struct CGlobalFunction : CBaseFunction
     template<typename T>
     static CGlobalFunction* Create(const char* aFullName, const char* aShortName, ScriptingFunction_t<T> aFunc)
     {
-        auto allocator = RTTIFunctionAllocator::Get();
-        auto memory = allocator->Alloc<CGlobalFunction>();
+        Memory::RTTIFunctionAllocator allocator;
+        auto memory = allocator.Alloc<CGlobalFunction>();
         if (memory)
         {
             auto fullName = CNamePool::Add(aFullName);
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t = CGlobalFunction* (*)(CGlobalFunction*, CName, CName, ScriptingFunction_t<T>);
-            static REDfunc<func_t> func(Addresses::CGlobalFunction_ctor);
+            RelocFunc<func_t> func(Addresses::CGlobalFunction_ctor);
             func(memory, fullName, shortName, aFunc);
         }
 
         return memory;
     }
 
-    uint32_t index; // 80 - The registration index.
+    uint32_t regIndex; // 80
 };
 RED4EXT_ASSERT_SIZE(CGlobalFunction, 0x88);
-RED4EXT_ASSERT_OFFSET(CGlobalFunction, index, 0x80);
+RED4EXT_ASSERT_OFFSET(CGlobalFunction, regIndex, 0x80);
 
 struct CClassFunction : CBaseFunction
 {
@@ -96,27 +95,27 @@ struct CClassFunction : CBaseFunction
     static CClassFunction* Create(CClass* aParent, const char* aFullName, const char* aShortName,
                                   ScriptingFunction_t<T> aFunc, Flags aFlags = {})
     {
-        auto allocator = RTTIFunctionAllocator::Get();
-        auto memory = allocator->Alloc<CClassFunction>();
+        Memory::RTTIFunctionAllocator allocator;
+        auto memory = allocator.Alloc<CClassFunction>();
         if (memory)
         {
             auto fullName = CNamePool::Add(aFullName);
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t = CClassFunction* (*)(CClassFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            static REDfunc<func_t> func(Addresses::CClassFunction_ctor);
+            RelocFunc<func_t> func(Addresses::CClassFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 
         return memory;
     }
 
-    CClass* parent; // 80
-    uint32_t index; // 88 - The registration index.
+    CClass* parent;    // 80
+    uint32_t regIndex; // 88
 };
 RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
 RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
-RED4EXT_ASSERT_OFFSET(CClassFunction, index, 0x88);
+RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0x88);
 
 struct CClassStaticFunction : CClassFunction
 {
@@ -124,8 +123,8 @@ struct CClassStaticFunction : CClassFunction
     static CClassStaticFunction* Create(CClass* aParent, const char* aFullName, const char* aShortName,
                                         ScriptingFunction_t<T> aFunc, Flags aFlags = {})
     {
-        auto allocator = RTTIFunctionAllocator::Get();
-        auto memory = allocator->Alloc<CClassStaticFunction>();
+        Memory::RTTIFunctionAllocator allocator;
+        auto memory = allocator.Alloc<CClassStaticFunction>();
         if (memory)
         {
             auto fullName = CNamePool::Add(aFullName);
@@ -133,7 +132,7 @@ struct CClassStaticFunction : CClassFunction
 
             using func_t =
                 CClassStaticFunction* (*)(CClassStaticFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            static REDfunc<func_t> func(Addresses::CClassStaticFunction_ctor);
+            RelocFunc<func_t> func(Addresses::CClassStaticFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 
@@ -142,7 +141,7 @@ struct CClassStaticFunction : CClassFunction
 };
 RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
 RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
-RED4EXT_ASSERT_OFFSET(CClassFunction, index, 0x88);
+RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0x88);
 
 struct CScriptedFunction : CBaseFunction
 {

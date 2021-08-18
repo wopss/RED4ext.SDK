@@ -5,10 +5,10 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/REDptr.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CGameEngine* RED4ext::CGameEngine::Get()
 {
-    static REDptr<CGameEngine*> ptr(Addresses::CGameEngine);
+    RelocPtr<CGameEngine*> ptr(Addresses::CGameEngine);
     return ptr;
 }

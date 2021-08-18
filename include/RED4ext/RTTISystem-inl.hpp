@@ -5,11 +5,10 @@
 #endif
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/REDfunc.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CRTTISystem* RED4ext::CRTTISystem::Get()
 {
-    using Get_t = CRTTISystem* (*)();
-    static REDfunc<Get_t> func(Addresses::CRTTISystem_Get);
+    RelocFunc<CRTTISystem* (*)()> func(Addresses::CRTTISystem_Get);
     return func();
 }

@@ -10,7 +10,10 @@
 #include <RED4ext/GameEngine.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
-#include <RED4ext/MemoryAllocators.hpp>
+#include <RED4ext/Hashing/CRC.hpp>
+#include <RED4ext/Hashing/FNV1a.hpp>
+#include <RED4ext/Hashing/Murmur3.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>
 #include <RED4ext/IO/MemoryStream.hpp>
@@ -25,11 +28,11 @@
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Scripting/Utils.hpp>
 
-#include <RED4ext/Types/GameTime.hpp>
-#include <RED4ext/Types/InstanceType.hpp>
-#include <RED4ext/Types/SharedMutex.hpp>
-#include <RED4ext/Types/SimpleTypes.hpp>
-#include <RED4ext/Types/TweakDB.hpp>
+#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/TweakDB.hpp>
+
+#include <RED4ext/InstanceType.hpp>
+#include <RED4ext/NativeTypes.hpp>
 
 #include <RED4ext/Api/IRED4ext.hpp>
 #include <RED4ext/Api/PluginHandle.hpp>

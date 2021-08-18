@@ -1,0 +1,21 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+
+namespace RED4ext
+{
+struct EmitterDurationSettings
+{
+    static constexpr const char* NAME = "EmitterDurationSettings";
+    static constexpr const char* ALIAS = NAME;
+
+    float emitterDuration; // 00
+    float emitterDurationLow; // 04
+    bool useEmitterDurationRange; // 08
+    uint8_t unk09[0xC - 0x9]; // 9
+};
+RED4EXT_ASSERT_SIZE(EmitterDurationSettings, 0xC);
+} // namespace RED4ext

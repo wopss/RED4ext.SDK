@@ -20,7 +20,7 @@ struct IGameState
 struct CBaseInitializationState : IGameState
 {
     virtual void sub_30() = 0;
-    virtual CName* GetEngineName(CName& aOut, int64_t a3);
+    virtual CName GetEngineName(int64_t a3) = 0;
 };
 
 struct CInitializationState : IGameState
