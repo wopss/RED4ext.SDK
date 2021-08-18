@@ -94,7 +94,13 @@ struct CStackFrame
     int64_t unk48;        // 48
     int16_t unk50;        // 50
     int64_t unk58;        // 58
-    int8_t unk60;         // 60
+    uint16_t paramFlags;  // 60
+    uint8_t currentParam; // 62
+
+    bool IsCurrentParamSet() const
+    {
+        return paramFlags & (1 << currentParam) != 0;
+    }
 };
 RED4EXT_ASSERT_SIZE(CStackFrame, 0x68);
 } // namespace RED4ext

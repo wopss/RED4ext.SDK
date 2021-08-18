@@ -306,6 +306,24 @@ RED4EXT_ASSERT_SIZE(CRTTIPointerType, 0x28);
 
 struct CRTTIScriptReferenceType : CRTTIBaseType
 {
+    // No need for a destructor as it doesn't do anything
+    static CRTTIScriptReferenceType* New(void* aMemory, void* aUnknownArg = nullptr)
+    {
+        using func_t = void (*)(void*, void*);
+        RelocFunc<func_t> func(Addresses::CRTTIScriptReferenceType_ctor);
+        func(aMemory, aUnknownArg);
+
+        return (CRTTIScriptReferenceType*)aMemory;
+    }
+
+    template<class T>
+    void Set(CRTTIBaseType* aBaseType, const T* aValue)
+    {
+        using func_t = void (*)(CRTTIScriptReferenceType*, CRTTIBaseType*, const T*);
+        RelocFunc<func_t> func(Addresses::CRTTIScriptReferenceType_Set);
+        func(this, aBaseType, aValue);
+    }
+
     CRTTIBaseType* innerType; // 10
     int64_t unk18;            // 18
     CName name;               // 20

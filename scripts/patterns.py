@@ -114,5 +114,10 @@ def get_groups() -> List[Group]:
 
         Group(name='OpcodeHandlers', functions=[
             Item(name='Get', pattern='4C 8D 15 ? ? ? ? 33 C0 48 C7 44 24 20 00 00 00 00', expected=11, index=0)
+        ]),
+
+        Group(name='CRTTIScriptReferenceType', functions=[
+            Item(name='ctor', pattern='48 89 5C 24 18 57 48 83 EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 05 '),
+            Item(name='Set', pattern='48 89 5C 24 20 57 48 83  EC 20 4C 89 41 18 48 8B')
         ])
     ]
