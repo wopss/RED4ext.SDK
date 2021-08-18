@@ -26,16 +26,16 @@ class Group:
 
 def get_groups() -> List[Group]:
     # Add new patterns here, please try to keep the groups ordering alphabetized.
-    return [
+    return [ 
         Group(name='Allocators', functions=[
-            Item(name='Engine::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D B1 28 88 04', expected=1, index=0),
-            Item(name='RTTI::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=370, index=2),
-            Item(name='RTTIFunction::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=370, index=14)
+            Item(name='Engine::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=371, index=4),
+            Item(name='RTTI::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=371, index=2),
+            Item(name='RTTIFunction::Get', pattern='48 83 EC 28 65 48 8B 04 25 58 00 00 00 8B 0D ? ? ? ? BA A0 07 00 00 48 8B 0C C8 8B 04 0A 39 05 ? ? ? ? 7F 0C', expected=371, index=14)
         ]),
 
         Group(name='CBaseFunction', functions=[
-            Item(name='Execute', pattern='48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6 41 78 01 48 8B DA'),
-            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6 41 78 01')
+            Item(name='Execute', pattern='48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6'),
+            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6')
         ]),
 
         Group(name='CClass', functions=[
@@ -62,7 +62,7 @@ def get_groups() -> List[Group]:
 
         Group(name='CNamePool', functions=[
             Item(name='AddCstr', pattern='48 89 5C 24 08 57 48 83 EC 30 45 33 C0 48 8B F9'),
-            Item(name='AddCString', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41 56', expected=496, index=1),
+            Item(name='AddCString', pattern='48 89 5C 24 08 48 89 74  24 10 57 48 83 EC 20 48 8B F1 48 8B DA 48 8B CA E8 ? ? ? ? 48 8B CB 48 8B F8 E8'),
             Item(name='AddPair', pattern='48 83 EC 38 33 C0 48 89 54 24 20 48 85 D2'),
             Item(name='Get', pattern='48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8')
         ]),
@@ -91,7 +91,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='IScriptable', functions=[
-            Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00', expected=4, index=1)
+            Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75', expected=2, index=1)
         ]),
 
         Group(name='Streams', functions=[
@@ -104,7 +104,7 @@ def get_groups() -> List[Group]:
             Item(name='InitFlatValue_ExceptInt32', pattern='48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C', expected=4, index=0),
             Item(name='FlatInt32ValueVftable', pattern='48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B'),
             Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67', expected=2),
-            Item(name='CreateRecord', pattern='48 89 5C 24 08 4C 89 44 24 18 57 48 83 EC 30 8B C2'),
+            Item(name='CreateRecord', pattern='48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2'),
         ]),
 
         Group(name='OpcodeHandlers', functions=[
