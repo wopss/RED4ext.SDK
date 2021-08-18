@@ -89,14 +89,14 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='Memory', functions=[
-            Item(name='Vault::Get', pattern='48 8D 05 ? ? ? ? C3', expected=1221, index=4),
-            Item(name='Vault::Alloc', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 33 C0', expected=14, index=0),
+            Item(name='Vault::Get', pattern='48 8D 05 ? ? ? ? C3', expected=1238, index=4),
+            Item(name='Vault::Alloc', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 33 C0', expected=9, index=0),
             Item(name='Vault::AllocAligned', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 33 C0', expected=3, index=0),
-            Item(name='Vault::Realloc', pattern='48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=421, index=0),
-            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 18 56 57 41 56 48 83 EC 40', expected=11, index=0),
+            Item(name='Vault::Realloc', pattern='48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=293, index=0),
+            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 18 56 57 41 56 48 83 EC 40', expected=13, index=0),
             Item(name='Vault::Free', pattern='48 89 5C 24 10 57 48 83 EC 20 4C 8B 81 00 C9 00 00', expected=1, index=0),
             Item(name='Vault::Unk1', pattern='48 89 5C 24 08 57 48 83 EC 20 4C 8B 81 00 C9 00 00', expected=2, index=0),
-            Item(name='PoolStorage::OOM', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=1450, index=0)
+            Item(name='PoolStorage::OOM', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=1516, index=0)
         ]),
 
         Group(name='Streams', functions=[
@@ -113,6 +113,6 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='OpcodeHandlers', functions=[
-            Item(name='Get', pattern='4C 8D 15 ? ? ? ? 48 89 42 38 49 8B F8 48 8B 02 4C 8D 44 24 20 C7', expected=5, index=0)
+            Item(name='Get', pattern='4C 8D 15 ? ? ? ? 33 C0 48 C7 44 24 20 00 00 00 00', expected=11, index=0)
         ])
     ]
