@@ -49,20 +49,20 @@ struct CBaseFunction : IFunction
     bool SetReturnType(CName aType);
     bool AddParam(CName aType, const char* aName, bool aIsOut = false, bool aIsOptional = false);
 
-    CName fullName;                 // 08
-    CName shortName;                // 10
-    CProperty* returnType;          // 18
-    int64_t unk20;                  // 20
-    DynArray<CProperty*> params;    // 28
-    DynArray<CProperty*> localVars; // 38
-    int8_t unk48[0x30];             // 48
-    Flags flags;                    // 78
-    uint32_t unk7C;                 // 7C
+    CName fullName;              // 08
+    CName shortName;             // 10
+    int64_t unk18;               // 18
+    int64_t unk20;               // 20
+    DynArray<void*> unk28;       // 28
+    DynArray<void*> unk38;       // 38
+    HashMap<void*, void*> unk48; // 48
+    int8_t unk78[48];            // 78
+    int32_t flags;               // A8
+    int32_t unkAC;               // AC
 };
-RED4EXT_ASSERT_SIZE(CBaseFunction, 0x80);
-
+RED4EXT_ASSERT_SIZE(CBaseFunction, 0xB0);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x8);
-RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0x78);
+RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0xA8);
 
 struct CGlobalFunction : CBaseFunction
 {
@@ -84,10 +84,10 @@ struct CGlobalFunction : CBaseFunction
         return memory;
     }
 
-    uint32_t regIndex; // 80
+    uint32_t regIndex; // B0
 };
-RED4EXT_ASSERT_SIZE(CGlobalFunction, 0x88);
-RED4EXT_ASSERT_OFFSET(CGlobalFunction, regIndex, 0x80);
+RED4EXT_ASSERT_SIZE(CGlobalFunction, 0xB8);
+RED4EXT_ASSERT_OFFSET(CGlobalFunction, regIndex, 0xB0);
 
 struct CClassFunction : CBaseFunction
 {
@@ -110,12 +110,12 @@ struct CClassFunction : CBaseFunction
         return memory;
     }
 
-    CClass* parent;    // 80
-    uint32_t regIndex; // 88
+    CClass* parent;    // B0
+    uint32_t regIndex; // B8
 };
-RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
-RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
-RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0x88);
+RED4EXT_ASSERT_SIZE(CClassFunction, 0xC0);
+RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0xB0);
+RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0xB8);
 
 struct CClassStaticFunction : CClassFunction
 {
@@ -139,16 +139,14 @@ struct CClassStaticFunction : CClassFunction
         return memory;
     }
 };
-RED4EXT_ASSERT_SIZE(CClassFunction, 0x90);
-RED4EXT_ASSERT_OFFSET(CClassFunction, parent, 0x80);
-RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0x88);
+RED4EXT_ASSERT_SIZE(CClassStaticFunction, 0xC0);
 
 struct CScriptedFunction : CBaseFunction
 {
-    CClass* parent; // 80
+    CClass* parent; // B0
 };
-RED4EXT_ASSERT_SIZE(CScriptedFunction, 0x88);
-RED4EXT_ASSERT_OFFSET(CScriptedFunction, parent, 0x80);
+RED4EXT_ASSERT_SIZE(CScriptedFunction, 0xB8);
+RED4EXT_ASSERT_OFFSET(CScriptedFunction, parent, 0xB0);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
