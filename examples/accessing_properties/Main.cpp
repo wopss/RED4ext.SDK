@@ -2,11 +2,11 @@
 
 #include <RED4ext/RED4ext.hpp>
 #include <RED4ext/Scripting/Natives/GameTime.hpp>
+#include <RED4ext/Scripting/Natives/ScriptGameInstance.hpp>
 
 /*
  * To run this plugin you need to load it with RED4ext (https://github.com/WopsS/RED4ext).
  */
-
 
 void PrintGameTime(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
@@ -38,15 +38,13 @@ void IsPlayerCrouched(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFra
     /*
      * Check if the player is crouched.
      */
-    auto rtti = RED4ext::CRTTISystem::Get();
-    auto engine = RED4ext::CGameEngine::Get();
-    auto gameInstance = engine->framework->gameInstance;
-
+    RED4ext::ScriptGameInstance gameInstance;
     RED4ext::Handle<RED4ext::IScriptable> handle;
     RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
 
     if (handle)
     {
+        auto rtti = RED4ext::CRTTISystem::Get();
         auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
         auto inCrouch = playerPuppetCls->GetProperty("inCrouch");
         auto value = inCrouch->GetValue<bool>(handle.instance);
@@ -57,25 +55,20 @@ void IsPlayerCrouched(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFra
 
 void DoSomethingWithUISystem(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
-    auto rtti = RED4ext::CRTTISystem::Get();
-    auto engine = RED4ext::CGameEngine::Get();
-    auto gameInstance = engine->framework->gameInstance;
-
+    RED4ext::ScriptGameInstance gameInstance;
     RED4ext::Handle<RED4ext::IScriptable> uiManager;
     RED4ext::ExecuteFunction("ScriptGameInstance", "GetUISystem", &uiManager, &gameInstance);
 }
 
 void PrintScannerStatus(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
-    auto rtti = RED4ext::CRTTISystem::Get();
-    auto engine = RED4ext::CGameEngine::Get();
-    auto gameInstance = engine->framework->gameInstance;
-
+    RED4ext::ScriptGameInstance gameInstance;
     RED4ext::Handle<RED4ext::IScriptable> handle;
     RED4ext::ExecuteGlobalFunction("GetPlayer;GameInstance", &handle, gameInstance);
 
     if (handle)
     {
+        auto rtti = RED4ext::CRTTISystem::Get();
         auto playerPuppetCls = rtti->GetClass("PlayerPuppet");
         auto getHudManagerFunc = playerPuppetCls->GetFunction("GetHudManager");
 

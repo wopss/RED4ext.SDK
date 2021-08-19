@@ -258,8 +258,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     FixedTypeMapping fixedMapping = {
         {"ISerializable", "ISerializable"},
         {"IScriptable", "Scripting/IScriptable"},
-        {"gameuiCharacterCustomizationSystem", "Types/CharacterCustomization"},
-        {"gameuiCharacterCustomizationOptionImpl", "Types/CharacterCustomizationOptionImpl"},
+        {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
+        {"gameuiCharacterCustomizationSystem", "Scripting/Natives/CharacterCustomization"},
+        {"gameuiCharacterCustomizationOptionImpl", "Scripting/Natives/CharacterCustomizationOptionImpl"},
         {"gameItemID", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
