@@ -116,8 +116,8 @@ struct CClass : CBaseRTTIType
     virtual void sub_C0() = 0;
     virtual void sub_C8() = 0;
     virtual void sub_D0() = 0;
-    virtual void sub_D8() = 0;
-    virtual void sub_E0() = 0;
+    virtual void InitCls(IScriptable* aMemory) = 0;
+    virtual void DestroyCls(IScriptable* aMemory) = 0;
     virtual void sub_E8() = 0;
 
     struct Flags
