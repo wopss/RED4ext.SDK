@@ -26,7 +26,7 @@ RED4EXT_INLINE RED4ext::ScriptGameInstance::ScriptGameInstance(GameInstance* aIn
         if (compiledSize != nativeSize)
         {
             MessageBox(nullptr,
-                       TEXT("The compiled size do not match the native size for ScriptGameInstance. Check the game "
+                       TEXT("The compiled size do not match the native size of ScriptGameInstance.\nCheck the game "
                             "executable for the native size."),
                        TEXT("RED4ext.SDK"), MB_ICONWARNING | MB_OK);
             std::abort();
