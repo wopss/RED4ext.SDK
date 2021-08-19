@@ -15,7 +15,7 @@ RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CClass::AllocInstance()
     return func(this, GetSize(), 0);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::IsA(const IRTTIType* aType) const
+RED4EXT_INLINE bool RED4ext::CClass::IsA(const CBaseRTTIType* aType) const
 {
     if (this == aType)
     {

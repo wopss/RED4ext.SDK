@@ -16,15 +16,15 @@ struct CGlobalFunction;
 
 struct IRTTISystem
 {
-    virtual IRTTIType* GetType(CName aName) = 0;                                                 // 00
-    virtual IRTTIType* GetTypeByAsyncId(uint32_t aAsyncId) = 0;                                  // 08
+    virtual CBaseRTTIType* GetType(CName aName) = 0;                                             // 00
+    virtual CBaseRTTIType* GetTypeByAsyncId(uint32_t aAsyncId) = 0;                              // 08
     virtual CClass* GetClass(CName aName) = 0;                                                   // 10
     virtual CEnum* GetEnum(CName aName) = 0;                                                     // 18
     virtual CBitfield* GetBitfield(CName aName) = 0;                                             // 20
     virtual void sub_28() = 0;                                                                   // 28
     virtual CGlobalFunction* GetFunction(CName aName) = 0;                                       // 30
     virtual void sub_38() = 0;                                                                   // 38
-    virtual void GetNativeTypes(DynArray<IRTTIType*>& aTypes) = 0;                               // 40
+    virtual void GetNativeTypes(DynArray<CBaseRTTIType*>& aTypes) = 0;                           // 40
     virtual void GetGlobalFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;                 // 48
     virtual void sub_50() = 0;                                                                   // 50
     virtual void GetClassFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;                  // 58
@@ -33,7 +33,7 @@ struct IRTTISystem
     virtual void GetClasses(CClass* aIsAClass, DynArray<CClass*>& aClasses, bool (*aFilter)(CClass*) = nullptr,
                             bool aIncludeAbstract = false) = 0;                               // 70
     virtual void GetDerivedClasses(CClass* aBaseClass, DynArray<CClass*>& aClasses) = 0;      // 78
-    virtual void RegisterType(IRTTIType* aType, uint32_t aAsyncId) = 0;                       // 80
+    virtual void RegisterType(CBaseRTTIType* aType, uint32_t aAsyncId) = 0;                   // 80
     virtual void sub_88() = 0;                                                                // 88
     virtual void sub_90() = 0;                                                                // 90
     virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                // 98
@@ -68,23 +68,23 @@ struct CRTTISystem : IRTTISystem
 {
     static CRTTISystem* Get();
 
-    int32_t unk8;                                 // 08
-    HashMap<CName, IRTTIType*> types;             // 10
-    HashMap<uint64_t, IRTTIType*> typesByAsyncId; // 40
-    HashMap<CName, uint32_t> typeAsyncIds;        // 70
-    HashMap<CName, CGlobalFunction*> funcs;       // A0
-    HashMap<void*, void*> unkD0;                  // D0
-    HashMap<void*, void*> unkF8;                  // F8
-    DynArray<void*> unk130;                       // 130
-    DynArray<void*> unk140;                       // 140
-    HashMap<CName, CName> scriptToNative;         // 150
-    HashMap<CName, CName> nativeToScript;         // 180
-    DynArray<void*> unk1B0;                       // 1B0
-    DynArray<void*> unk1C0;                       // 1C0
-    DynArray<void*> unk1D0;                       // 1D0
-    CRITICAL_SECTION unk1E0;                      // 1E0
-    volatile int8_t typesLock;                    // 208
-    CRITICAL_SECTION unk210;                      // 210
+    int32_t unk8;                                     // 08
+    HashMap<CName, CBaseRTTIType*> types;             // 10
+    HashMap<uint64_t, CBaseRTTIType*> typesByAsyncId; // 40
+    HashMap<CName, uint32_t> typeAsyncIds;            // 70
+    HashMap<CName, CGlobalFunction*> funcs;           // A0
+    HashMap<void*, void*> unkD0;                      // D0
+    HashMap<void*, void*> unkF8;                      // F8
+    DynArray<void*> unk130;                           // 130
+    DynArray<void*> unk140;                           // 140
+    HashMap<CName, CName> scriptToNative;             // 150
+    HashMap<CName, CName> nativeToScript;             // 180
+    DynArray<void*> unk1B0;                           // 1B0
+    DynArray<void*> unk1C0;                           // 1C0
+    DynArray<void*> unk1D0;                           // 1D0
+    CRITICAL_SECTION unk1E0;                          // 1E0
+    volatile int8_t typesLock;                        // 208
+    CRITICAL_SECTION unk210;                          // 210
 };
 RED4EXT_ASSERT_SIZE(CRTTISystem, 0x238);
 RED4EXT_ASSERT_OFFSET(CRTTISystem, types, 0x10);

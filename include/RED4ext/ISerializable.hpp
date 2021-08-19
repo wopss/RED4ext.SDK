@@ -8,12 +8,12 @@
 
 namespace RED4ext
 {
-struct IRTTIType;
+struct CBaseRTTIType;
 
 struct ISerializable
 {
-    virtual IRTTIType* GetNativeType() = 0;         // 00
-    virtual IRTTIType* GetParentType() = 0;         // 08
+    virtual CBaseRTTIType* GetNativeType() = 0;     // 00
+    virtual CBaseRTTIType* GetParentType() = 0;     // 08
     virtual Memory::IAllocator* GetAllocator() = 0; // 10
     virtual ~ISerializable() = 0;                   // 18
     virtual void sub_20() = 0;                      // 20

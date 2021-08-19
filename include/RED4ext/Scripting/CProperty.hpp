@@ -5,14 +5,11 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/InstanceType.hpp>
-#include <RED4ext/Relocation.hpp>
 #include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
 {
-struct IRTTIType;
-struct CClass;
-
 struct CProperty
 {
     struct Flags
@@ -41,13 +38,13 @@ struct CProperty
     };
     RED4EXT_ASSERT_SIZE(CProperty::Flags, 0x8);
 
-    CProperty(IRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
+    CProperty(CBaseRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
               const char* aGroup = nullptr, Flags aFlags = {});
 
-    static CProperty* Create(IRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
-                             const char* aGroup = nullptr, Flags aFlags = {});
+    static CProperty* Create(CBaseRTTIType* aType, const char* aName, CClass* aParent = nullptr,
+                             uint32_t aValueOffset = 0, const char* aGroup = nullptr, Flags aFlags = {});
 
-    IRTTIType* type;      // 00
+    CBaseRTTIType* type;  // 00
     CName name;           // 08
     CName group;          // 10
     CClass* parent;       // 18

@@ -6,7 +6,7 @@
 
 #include <RED4ext/CNamePool.hpp>
 
-RED4EXT_INLINE RED4ext::CProperty::CProperty(IRTTIType* aType, const char* aName, CClass* aParent,
+RED4EXT_INLINE RED4ext::CProperty::CProperty(CBaseRTTIType* aType, const char* aName, CClass* aParent,
                                              uint32_t aValueOffset, const char* aGroup, Flags aFlags)
     : type(aType)
     , parent(aParent)
@@ -28,7 +28,7 @@ RED4EXT_INLINE RED4ext::CProperty::CProperty(IRTTIType* aType, const char* aName
     group = CNamePool::Add(aGroup);
 }
 
-RED4EXT_INLINE RED4ext::CProperty* RED4ext::CProperty::Create(IRTTIType* aType, const char* aName, CClass* aParent,
+RED4EXT_INLINE RED4ext::CProperty* RED4ext::CProperty::Create(CBaseRTTIType* aType, const char* aName, CClass* aParent,
                                                               uint32_t aValueOffset, const char* aGroup, Flags aFlags)
 {
     Memory::RTTIPropertyAllocator allocator;

@@ -5,15 +5,15 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/SortedArray.hpp>
-#include <RED4ext/Map.hpp>
-#include <RED4ext/HashMap.hpp>
 #include <RED4ext/Handle.hpp>
-#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/HashMap.hpp>
+#include <RED4ext/Map.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
+#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/SortedArray.hpp>
 
 namespace RED4ext
 {
@@ -32,7 +32,7 @@ struct gamedataTweakDBRecord : IScriptable
 {
     virtual void sub_110() = 0;
     virtual uint32_t GetTweakBaseHash() const = 0; // Murmur3
-    
+
     TweakDBID recordID;
 };
 
@@ -40,11 +40,11 @@ struct TweakDB
 {
     enum class GroupTag : int8_t
     {
-        None            = 0,
-        Abstract        = 1 << 0,
-        NotQueryable    = 1 << 1,
-        CPO             = 1 << 2,
-        Debug           = 1 << 3
+        None = 0,
+        Abstract = 1 << 0,
+        NotQueryable = 1 << 1,
+        CPO = 1 << 2,
+        Debug = 1 << 3
     };
 
     struct FlatValue
@@ -98,26 +98,26 @@ struct TweakDB
         // value here
     };
 
-    SharedMutex mutex00;                                                // 00 - used with flats, flatDataBuffer* and defaultValues
-    SharedMutex mutex01;                                                // 01 - used with recordsByID, recordsByType, queries and groups
-    void* unk08;                                                        // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
-    void* unk10;                                                        // 10 - class - 208 bytes
-    bool unk18;                                                         // 18
-    SortedUniqueArray<TweakDBID> flats;                                 // 20
-    HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                // 38
-    HashMap<IRTTIType*, DynArray<Handle<IScriptable>>> recordsByType;   // 68
-    Map<TweakDBID, DynArray<TweakDBID>> queries;                        // 98
-    Map<TweakDBID, GroupTag> groups;                                    // C0
-    HashMap<CName, FlatValue*> defaultValues;                           // E8
-    DynArray<CString> unk118;                                           // 118 - empty - maybe not CString
-    uintptr_t flatDataBuffer;                                           // 128
-    uint32_t flatDataBufferCapacity;                                    // 130
-    uintptr_t flatDataBufferEnd;                                        // 138
+    SharedMutex mutex00; // 00 - used with flats, flatDataBuffer* and defaultValues
+    SharedMutex mutex01; // 01 - used with recordsByID, recordsByType, queries and groups
+    void* unk08;         // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
+    void* unk10;         // 10 - class - 208 bytes
+    bool unk18;          // 18
+    SortedUniqueArray<TweakDBID> flats;                                   // 20
+    HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                  // 38
+    HashMap<CBaseRTTIType*, DynArray<Handle<IScriptable>>> recordsByType; // 68
+    Map<TweakDBID, DynArray<TweakDBID>> queries;                          // 98
+    Map<TweakDBID, GroupTag> groups;                                      // C0
+    HashMap<CName, FlatValue*> defaultValues;                             // E8
+    DynArray<CString> unk118;                                             // 118 - empty - maybe not CString
+    uintptr_t flatDataBuffer;                                             // 128
+    uint32_t flatDataBufferCapacity;                                      // 130
+    uintptr_t flatDataBufferEnd;                                          // 138
 
     template<typename T>
     T GetValue(TweakDBID aDBID)
     {
-        T value {};
+        T value{};
         TryGetValue(aDBID, value);
         return std::move(value);
     }
@@ -138,8 +138,8 @@ struct TweakDB
     Handle<IScriptable> GetRecord(TweakDBID aDBID);
     bool TryGetRecord(TweakDBID aDBID, Handle<IScriptable>& aRecord);
 
-    DynArray<Handle<IScriptable>> GetRecordsByType(IRTTIType* aType);
-    bool TryGetRecordsByType(IRTTIType* aType, DynArray<Handle<IScriptable>>& aRecordsArray);
+    DynArray<Handle<IScriptable>> GetRecordsByType(CBaseRTTIType* aType);
+    bool TryGetRecordsByType(CBaseRTTIType* aType, DynArray<Handle<IScriptable>>& aRecordsArray);
 
     bool AddQuery(TweakDBID aDBID, const DynArray<TweakDBID>& aArray);
     bool ReplaceQuery(TweakDBID aDBID, const DynArray<TweakDBID>& aArray);
@@ -157,7 +157,7 @@ struct TweakDB
     // Updates all the value offsets inside the record
     bool UpdateRecord(gamedataTweakDBRecord* aRecord);
 
-    bool CreateRecord(TweakDBID aDBID, IRTTIType* aType);
+    bool CreateRecord(TweakDBID aDBID, CBaseRTTIType* aType);
     bool CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash);
     bool RemoveRecord(TweakDBID aDBID);
 
@@ -185,7 +185,7 @@ RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
 RED4EXT_ASSERT_OFFSET(TweakDB, flats, 0x20);
 RED4EXT_ASSERT_OFFSET(TweakDB, flatDataBufferEnd, 0x138);
 RED4EXT_ASSERT_SIZE(TweakDB, 0x140);
-}
+} // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
 #include <RED4ext/TweakDB-inl.hpp>

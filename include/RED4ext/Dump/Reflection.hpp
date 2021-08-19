@@ -11,7 +11,7 @@
 namespace RED4ext
 {
 struct CClass;
-struct IRTTIType;
+struct CBaseRTTIType;
 struct CProperty;
 struct CEnum;
 struct CBitfield;
@@ -21,9 +21,9 @@ namespace RED4ext::GameReflection
 {
 using GetPrefix = std::function<std::string(const std::string&)>;
 using NameSantizer = std::function<std::string(const std::string&, bool&)>;
-using NameTransformer = std::function<std::string(const RED4ext::IRTTIType*)>;
-using DescriptorPath = std::function<std::string(const RED4ext::IRTTIType*)>;
-using NamespaceTransformer = std::function<std::vector<std::string>(const RED4ext::IRTTIType*)>;
+using NameTransformer = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
+using DescriptorPath = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
+using NamespaceTransformer = std::function<std::vector<std::string>(const RED4ext::CBaseRTTIType*)>;
 using FixedTypeMapping = std::unordered_map<RED4ext::CName, std::string, RED4ext::CName>;
 
 static constexpr const char* INVALID_CHARACTERS = R"(-|'|\(|\)|\]|\[|/|\.|\s|:)";
@@ -99,19 +99,19 @@ struct BitfieldFileDescriptor
 struct ClassDependencyBuilder
 {
     const RED4ext::CClass* pType;
-    std::unordered_set<const RED4ext::IRTTIType*> mDirect;
-    std::unordered_set<const RED4ext::IRTTIType*> mIndirect;
+    std::unordered_set<const RED4ext::CBaseRTTIType*> mDirect;
+    std::unordered_set<const RED4ext::CBaseRTTIType*> mIndirect;
     std::map<uint64_t, const RED4ext::CProperty*> mPropertyMap;
     std::map<uint64_t, const RED4ext::CProperty*> mHolderPropertyMap;
 
-    void Accumulate(const RED4ext::IRTTIType* type);
+    void Accumulate(const RED4ext::CBaseRTTIType* type);
 
     void ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                           NameTransformer aQualifiedTransformer, DescriptorPath aTypeToPath,
                           const FixedTypeMapping& aFixedMapping, bool aVerbose);
 };
 
-std::string TypeToString(const RED4ext::IRTTIType* aType, NameTransformer aNameTransformer, bool aVerbose = false);
+std::string TypeToString(const RED4ext::CBaseRTTIType* aType, NameTransformer aNameTransformer, bool aVerbose = false);
 
 void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::string>& aIncludes);
 

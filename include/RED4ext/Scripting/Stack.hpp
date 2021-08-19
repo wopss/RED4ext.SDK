@@ -1,7 +1,7 @@
 #pragma once
 
-#include <vector>
 #include <RED4ext/InstanceType.hpp>
+#include <vector>
 
 namespace RED4ext
 {
@@ -14,14 +14,14 @@ namespace RED4ext
  * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
-struct IRTTIType;
+struct CBaseRTTIType;
 struct IScriptable;
 
 struct CStackType
 {
-    CStackType(IRTTIType* aType = nullptr, ScriptInstance aValue = nullptr);
+    CStackType(CBaseRTTIType* aType = nullptr, ScriptInstance aValue = nullptr);
 
-    IRTTIType* type;      // 00
+    CBaseRTTIType* type;  // 00
     ScriptInstance value; // 08
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
@@ -31,10 +31,10 @@ using StackArgs_t = std::vector<CStackType>;
 struct IStack
 {
     // clang-format off
-    virtual ~IStack() = default;                        // 00
-    virtual void* GetResultAddr() { return nullptr; };  // 08
-    virtual IRTTIType* GetType() { return nullptr; };   // 10
-    virtual void sub_18(int64_t a2){};                  // 18
+    virtual ~IStack() = default;                            // 00
+    virtual void* GetResultAddr() { return nullptr; };      // 08
+    virtual CBaseRTTIType* GetType() { return nullptr; };   // 10
+    virtual void sub_18(int64_t a2){};                      // 18
     // clang-format on
 };
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
@@ -72,7 +72,7 @@ struct CScriptStack : CBaseStack
 
     uint8_t* args;        // 30
     ScriptInstance value; // 38
-    IRTTIType* type;      // 40
+    CBaseRTTIType* type;  // 40
 };
 
 RED4EXT_ASSERT_SIZE(CScriptStack, 0x48);

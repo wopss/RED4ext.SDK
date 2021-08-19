@@ -34,9 +34,9 @@ enum class ERTTIType : uint8_t
     ScriptReference = 15,
 };
 
-struct IRTTIType
+struct CBaseRTTIType
 {
-    virtual ~IRTTIType() = default; // 00
+    virtual ~CBaseRTTIType() = default; // 00
 
     virtual CName GetName() const = 0;                                                                     // 08
     virtual uint32_t GetSize() const = 0;                                                                  // 10
@@ -82,15 +82,12 @@ struct IRTTIType
         auto name = GetTypeName();
         aOut = name;
     }
-};
 
-struct CRTTIBaseType : IRTTIType
-{
     int64_t unk8;
 };
-RED4EXT_ASSERT_SIZE(CRTTIBaseType, 0x10);
+RED4EXT_ASSERT_SIZE(CBaseRTTIType, 0x10);
 
-struct CBitfield : CRTTIBaseType
+struct CBitfield : CBaseRTTIType
 {
     struct Flags
     {
@@ -114,13 +111,13 @@ RED4EXT_ASSERT_OFFSET(CBitfield, flags, 0x21);
 RED4EXT_ASSERT_OFFSET(CBitfield, validBits, 0x28);
 RED4EXT_ASSERT_OFFSET(CBitfield, bitNames, 0x30);
 
-struct CClass : CRTTIBaseType
+struct CClass : CBaseRTTIType
 {
     virtual void sub_C0() = 0;
     virtual void sub_C8() = 0;
     virtual void sub_D0() = 0;
-    virtual void InitCls(IScriptable* aMemory) = 0;
-    virtual void DestroyCls(IScriptable* aMemory) = 0;
+    virtual void sub_D8() = 0;
+    virtual void sub_E0() = 0;
     virtual void sub_E8() = 0;
 
     struct Flags
@@ -141,7 +138,7 @@ struct CClass : CRTTIBaseType
 
     IScriptable* AllocInstance();
 
-    bool IsA(const IRTTIType* aType) const;
+    bool IsA(const CBaseRTTIType* aType) const;
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aName);
@@ -189,7 +186,7 @@ RED4EXT_ASSERT_OFFSET(CClass, realSize, 0x68);
 RED4EXT_ASSERT_OFFSET(CClass, flags, 0x70);
 RED4EXT_ASSERT_OFFSET(CClass, alignment, 0x74);
 
-struct CEnum : CRTTIBaseType
+struct CEnum : CBaseRTTIType
 {
     struct Flags
     {
@@ -218,43 +215,43 @@ RED4EXT_ASSERT_OFFSET(CEnum, unk48, 0x48);
 RED4EXT_ASSERT_OFFSET(CEnum, unk58, 0x58);
 
 #pragma region Fundamentals
-using CFundamentalRTTITypeBool = CRTTIBaseType;
-using CFundamentalRTTITypeInt8 = CRTTIBaseType;
-using CFundamentalRTTITypeUint8 = CRTTIBaseType;
-using CFundamentalRTTITypeInt16 = CRTTIBaseType;
-using CFundamentalRTTITypeUint16 = CRTTIBaseType;
-using CFundamentalRTTITypeInt32 = CRTTIBaseType;
-using CFundamentalRTTITypeUint32 = CRTTIBaseType;
-using CFundamentalRTTITypeInt64 = CRTTIBaseType;
-using CFundamentalRTTITypeUint64 = CRTTIBaseType;
-using CFundamentalRTTITypeFloat = CRTTIBaseType;
-using CFundamentalRTTITypeDouble = CRTTIBaseType;
+using CFundamentalRTTITypeBool = CBaseRTTIType;
+using CFundamentalRTTITypeInt8 = CBaseRTTIType;
+using CFundamentalRTTITypeUint8 = CBaseRTTIType;
+using CFundamentalRTTITypeInt16 = CBaseRTTIType;
+using CFundamentalRTTITypeUint16 = CBaseRTTIType;
+using CFundamentalRTTITypeInt32 = CBaseRTTIType;
+using CFundamentalRTTITypeUint32 = CBaseRTTIType;
+using CFundamentalRTTITypeInt64 = CBaseRTTIType;
+using CFundamentalRTTITypeUint64 = CBaseRTTIType;
+using CFundamentalRTTITypeFloat = CBaseRTTIType;
+using CFundamentalRTTITypeDouble = CBaseRTTIType;
 #pragma endregion
 
 #pragma region Simples
-using CSimpleRTTITypeCName = CRTTIBaseType;
-using CSimpleRTTITypeString = CRTTIBaseType;
-using CSimpleRTTITypeLocalizationString = CRTTIBaseType;
-using CSimpleRTTITypeTweakDBID = CRTTIBaseType;
-using CSimpleRTTITypeDataBuffer = CRTTIBaseType;
-using CSimpleRTTITypeSerializationDeferredDataBuffer = CRTTIBaseType;
-using CSimpleRTTITypeSharedDataBuffer = CRTTIBaseType;
-using CSimpleRTTITypeVariant = CRTTIBaseType;
-using CSimpleRTTITypeCDateTime = CRTTIBaseType;
-using CSimpleRTTITypeCGUID = CRTTIBaseType;
-using CSimpleRTTITypeCRUID = CRTTIBaseType;
-using CSimpleRTTITypeCRUIDRef = CRTTIBaseType;
-using CSimpleRTTITypeEditorObjectID = CRTTIBaseType;
-using CSimpleRTTITypeGamedataLocKeyWrapper = CRTTIBaseType;
-using CSimpleRTTITypeMessageResourcePath = CRTTIBaseType;
-using CSimpleRTTITypeNodeRef = CRTTIBaseType;
-using CSimpleRTTITypeRuntimeEntityRef = CRTTIBaseType;
+using CSimpleRTTITypeCName = CBaseRTTIType;
+using CSimpleRTTITypeString = CBaseRTTIType;
+using CSimpleRTTITypeLocalizationString = CBaseRTTIType;
+using CSimpleRTTITypeTweakDBID = CBaseRTTIType;
+using CSimpleRTTITypeDataBuffer = CBaseRTTIType;
+using CSimpleRTTITypeSerializationDeferredDataBuffer = CBaseRTTIType;
+using CSimpleRTTITypeSharedDataBuffer = CBaseRTTIType;
+using CSimpleRTTITypeVariant = CBaseRTTIType;
+using CSimpleRTTITypeCDateTime = CBaseRTTIType;
+using CSimpleRTTITypeCGUID = CBaseRTTIType;
+using CSimpleRTTITypeCRUID = CBaseRTTIType;
+using CSimpleRTTITypeCRUIDRef = CBaseRTTIType;
+using CSimpleRTTITypeEditorObjectID = CBaseRTTIType;
+using CSimpleRTTITypeGamedataLocKeyWrapper = CBaseRTTIType;
+using CSimpleRTTITypeMessageResourcePath = CBaseRTTIType;
+using CSimpleRTTITypeNodeRef = CBaseRTTIType;
+using CSimpleRTTITypeRuntimeEntityRef = CBaseRTTIType;
 #pragma endregion
 
 #pragma region Arrays
-struct CRTTIBaseArrayType : CRTTIBaseType
+struct CRTTIBaseArrayType : CBaseRTTIType
 {
-    virtual CRTTIBaseType* GetInnerType() const = 0;                                        // C0
+    virtual CBaseRTTIType* GetInnerType() const = 0;                                        // C0
     virtual bool sub_C8() = 0;                                                              // C8 ret 1
     virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
     virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
@@ -274,9 +271,9 @@ struct CRTTIBaseArrayType : CRTTIBaseType
 
 struct CRTTIArrayType : CRTTIBaseArrayType
 {
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     CName name;               // 18
-    CRTTIBaseType* parent;    // 20
+    CBaseRTTIType* parent;    // 20
     uintptr_t unk28;          // 28
     uintptr_t unk30;          // 30
     uintptr_t unk38;          // 38
@@ -286,7 +283,7 @@ RED4EXT_ASSERT_OFFSET(CRTTIArrayType, parent, 0x20);
 
 struct CRTTIStaticArrayType : CRTTIBaseArrayType
 {
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     int32_t size;             // 18
     uint32_t pad1C;           // 1C
     CName name;               // 20
@@ -296,7 +293,7 @@ RED4EXT_ASSERT_SIZE(CRTTIStaticArrayType, 0x30);
 
 struct CRTTINativeArrayType : CRTTIBaseArrayType
 {
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     int32_t size;             // 18
     uint32_t pad1C;           // 1C
     CName name;               // 20
@@ -305,15 +302,15 @@ struct CRTTINativeArrayType : CRTTIBaseArrayType
 RED4EXT_ASSERT_SIZE(CRTTINativeArrayType, 0x30);
 #pragma endregion
 
-struct CRTTIPointerType : CRTTIBaseType
+struct CRTTIPointerType : CBaseRTTIType
 {
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     CName name;               // 18
     CName unk20;              // 20 - Has "script_ref:" prefix.
 };
 RED4EXT_ASSERT_SIZE(CRTTIPointerType, 0x28);
 
-struct CRTTIScriptReferenceType : CRTTIBaseType
+struct CRTTIScriptReferenceType : CBaseRTTIType
 {
     // No need for a destructor as it doesn't do anything
     static CRTTIScriptReferenceType* New(void* aMemory, void* aUnknownArg = nullptr)
@@ -326,62 +323,62 @@ struct CRTTIScriptReferenceType : CRTTIBaseType
     }
 
     template<class T>
-    void Set(CRTTIBaseType* aBaseType, const T* aValue)
+    void Set(CBaseRTTIType* aBaseType, const T* aValue)
     {
-        using func_t = void (*)(CRTTIScriptReferenceType*, CRTTIBaseType*, const T*);
+        using func_t = void (*)(CRTTIScriptReferenceType*, CBaseRTTIType*, const T*);
         RelocFunc<func_t> func(Addresses::CRTTIScriptReferenceType_Set);
         func(this, aBaseType, aValue);
     }
 
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     int64_t unk18;            // 18
     CName name;               // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIPointerType, 0x28);
 
-struct CRTTIHandleType : CRTTIBaseType
+struct CRTTIHandleType : CBaseRTTIType
 {
-    virtual CRTTIBaseType* GetInnerType() const = 0;   // C0
+    virtual CBaseRTTIType* GetInnerType() const = 0;   // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8
 
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     CName name;               // 18
     CName unk20;              // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIHandleType, 0x28);
 
-struct CRTTIWeakHandleType : CRTTIBaseType
+struct CRTTIWeakHandleType : CBaseRTTIType
 {
-    virtual CRTTIBaseType* GetInnerType() const = 0;   // C0
+    virtual CBaseRTTIType* GetInnerType() const = 0;   // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8 - Empty impl
 
-    CRTTIBaseType* innerType; // 10
+    CBaseRTTIType* innerType; // 10
     CName name;               // 18
     CName unk20;              // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIWeakHandleType, 0x28);
 
-struct CRTTIResourceReferenceType : CRTTIBaseType
+struct CRTTIResourceReferenceType : CBaseRTTIType
 {
     CName name;               // 10
     CName unk18;              // 18
-    CRTTIBaseType* innerType; // 20
+    CBaseRTTIType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceReferenceType, 0x28);
 
-struct CRTTIResourceAsyncReferenceType : CRTTIBaseType
+struct CRTTIResourceAsyncReferenceType : CBaseRTTIType
 {
     CName name;               // 10
     CName unk18;              // 18
-    CRTTIBaseType* innerType; // 20
+    CBaseRTTIType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceAsyncReferenceType, 0x28);
 
-struct CRTTILegacySingleChannelCurveType : CRTTIBaseType
+struct CRTTILegacySingleChannelCurveType : CBaseRTTIType
 {
     CName name;               // 10
     uint64_t unk18;           // 18
@@ -391,14 +388,16 @@ struct CRTTILegacySingleChannelCurveType : CRTTIBaseType
     uint8_t unk31;            // 31
     uint16_t pad32;           // 32
     uint32_t pad34;           // 34
-    CRTTIBaseType* curveType; // 38
+    CBaseRTTIType* curveType; // 38
     uint16_t unk40;           // 40
     uint16_t pad42;           // 42
     uint32_t pad44;           // 44
 };
 RED4EXT_ASSERT_SIZE(CRTTILegacySingleChannelCurveType, 0x48);
 
-struct [[deprecated("Use 'CRTTIBaseType' instead.")]] CRTTIType : CRTTIBaseType{};
+struct [[deprecated("Use 'CBaseRTTIType' instead.")]] IRTTIType : CBaseRTTIType{};
+struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIBaseType : CBaseRTTIType{};
+struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIType : CBaseRTTIType{};
 
 struct [[deprecated("Use 'CFundamentalRTTITypeBool' instead.")]] BoolType : CFundamentalRTTITypeBool{};
 struct [[deprecated("Use 'CFundamentalRTTITypeInt8' instead.")]] Int8Type : CFundamentalRTTITypeInt8{};

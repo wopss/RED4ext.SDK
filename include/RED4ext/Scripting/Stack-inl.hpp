@@ -7,7 +7,7 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Relocation.hpp>
 
-RED4EXT_INLINE RED4ext::CStackType::CStackType(IRTTIType* aType, ScriptInstance aValue)
+RED4EXT_INLINE RED4ext::CStackType::CStackType(CBaseRTTIType* aType, ScriptInstance aValue)
     : type(aType)
     , value{aValue}
 {
