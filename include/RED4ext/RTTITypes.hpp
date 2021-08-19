@@ -36,29 +36,29 @@ enum class ERTTIType : uint8_t
 
 struct IRTTIType
 {
-    virtual ~IRTTIType() = 0; // 00
+    virtual ~IRTTIType() = default; // 00
 
     virtual CName GetName() const = 0;                                                                     // 08
     virtual uint32_t GetSize() const = 0;                                                                  // 10
     virtual uint32_t GetAlignment() const = 0;                                                             // 18
     virtual ERTTIType GetType() const = 0;                                                                 // 20
     virtual CString GetTypeName() const = 0;                                                               // 28
-    virtual CName GetName2() const = 0;                                                                    // 30
-    virtual void Init(void* aMemory) const = 0;                                                            // 38
-    virtual void Destroy(void* aMemory) const = 0;                                                         // 40
-    virtual bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                        // 48
+    virtual CName GetComputedName() const = 0;                                                             // 30
+    virtual void Init(ScriptInstance aMemory) = 0;                                                         // 38
+    virtual void Destroy(ScriptInstance aMemory) = 0;                                                      // 40
+    virtual const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) const = 0;            // 48
     virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                               // 50
     virtual void Move(ScriptInstance aLhs, ScriptInstance aRhs) = 0;                                       // 58
     virtual void Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) = 0;               // 60
     virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;                        // 68
-    virtual bool sub_70() = 0;                                                                             // 70
-    virtual bool sub_78() = 0;                                                                             // 78
+    virtual void sub_70() = 0;                                                                             // 70
+    virtual void sub_78() = 0;                                                                             // 78
     virtual void sub_80() = 0;                                                                             // 80
     virtual void sub_88() = 0;                                                                             // 88
-    virtual bool Unk_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;               // 90
-    virtual bool Unk_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0; // 98
+    virtual bool sub_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;               // 90
+    virtual bool sub_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0; // 98
     virtual void sub_A0() = 0;                                                                             // A0
-    virtual bool sub_A8() = 0;                                                                             // A8
+    virtual void sub_A8() = 0;                                                                             // A8
     virtual void sub_B0() = 0;                                                                             // B0
     virtual Memory::IAllocator* GetAllocator() const = 0;                                                  // B8
 
@@ -67,9 +67,14 @@ struct IRTTIType
         aOut = GetName();
     }
 
-    inline void [[deprecated("Use 'GetName2()' instead.")]] GetName2(CName& aOut) const
+    inline CName [[deprecated("Use 'GetComputedName()' instead.")]] GetName2() const
     {
-        aOut = GetName2();
+        return GetComputedName();
+    }
+
+    inline void [[deprecated("Use 'GetComputedName()' instead.")]] GetName2(CName& aOut) const
+    {
+        aOut = GetComputedName();
     }
 
     inline void [[deprecated("Use 'GetTypeName()' instead.")]] GetTypeName(CString& aOut) const
@@ -78,7 +83,6 @@ struct IRTTIType
         aOut = name;
     }
 };
-RED4EXT_ASSERT_SIZE(IRTTIType, 0x8);
 
 struct CRTTIBaseType : IRTTIType
 {
@@ -95,16 +99,19 @@ struct CBitfield : CRTTIBaseType
     };
     RED4EXT_ASSERT_SIZE(CBitfield::Flags, 0x01);
 
-    CName hash;         // 10
-    CName unk18;        // 18
-    uint8_t size;       // 20 - Size in bytes the instance will use
+    CName name;         // 10
+    int64_t unk18;      // 18
+    uint8_t typeSize;   // 20
     Flags flags;        // 21
-    uint16_t unk22;     // 22
-    uint32_t unk24;     // 24
     uint64_t validBits; // 28
     CName bitNames[64]; // 30
 };
 RED4EXT_ASSERT_SIZE(CBitfield, 0x230);
+RED4EXT_ASSERT_OFFSET(CBitfield, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CBitfield, unk18, 0x18);
+RED4EXT_ASSERT_OFFSET(CBitfield, typeSize, 0x20);
+RED4EXT_ASSERT_OFFSET(CBitfield, flags, 0x21);
+RED4EXT_ASSERT_OFFSET(CBitfield, validBits, 0x28);
 RED4EXT_ASSERT_OFFSET(CBitfield, bitNames, 0x30);
 
 struct CClass : CRTTIBaseType
@@ -141,49 +148,46 @@ struct CClass : CRTTIBaseType
 
     void RegisterFunction(CClassFunction* aFunc);
 
-    CClass* parent;                           // 10
-    CName name;                               // 18
-    CName name2;                              // 20
-    DynArray<CProperty*> props;               // 28
-    DynArray<CProperty*> unk38;               // 38
-    DynArray<CClassFunction*> funcs;          // 48
-    DynArray<CClassFunction*> staticFuncs;    // 58
-    uint32_t size;                            // 68 - The size of the real class that can be constructed.
-    int32_t holderSize;                       // 6C
-    Flags flags;                              // 70
-    uint32_t alignment;                       // 74
-    int64_t unk78;                            // 78
-    int64_t unk80;                            // 80
-    int64_t unk88;                            // 88
-    int64_t unk90;                            // 90
-    int32_t unk98;                            // 98
-    int32_t unk9C;                            // 9C
-    int64_t unkA0;                            // A0
-    HashMap<uint64_t, CClassFunction*> unkA8; // A8
-    int64_t unkD8;                            // D8
-    int64_t unkE0;                            // E0
-    HashMap<uint64_t, CProperty*> unkE8;      // E8
-    DynArray<CProperty*> unk118;              // 118 - More entries than 0x28, will contain native props
-    DynArray<void*> unk128;                   // 128
-    DynArray<CProperty*> unk138;              // 138 - Only RT_Class types?
-    DynArray<void*> unk148;                   // 148
-    DynArray<CProperty*> unk158;              // 158 - Scripted props?
-    DynArray<void*> unk168;                   // 168
-    int64_t unk178;                           // 178
-    DynArray<void*> unk180;                   // 180
-    int8_t unk190[256];                       // 190
-    int16_t unk290;                           // 290
-    int32_t unk294;                           // 294
-    int8_t unk298;                            // 298
-    int8_t unk299;                            // 299
+    CClass* parent;                              // 10
+    CName name;                                  // 18
+    CName computedName;                          // 20
+    DynArray<CProperty*> props;                  // 28
+    DynArray<CProperty*> overriddenProps;        // 38
+    DynArray<CClassFunction*> funcs;             // 48
+    DynArray<CClassStaticFunction*> staticFuncs; // 58
+    uint32_t realSize;                           // 68
+    uint32_t holderSize;                         // 6C
+    Flags flags;                                 // 70
+    uint32_t alignment;                          // 74
+    HashMap<void*, void*> unk78;                 // 78
+    HashMap<void*, void*> unkA8;                 // A8
+    int64_t unkD8;                               // D8
+    int64_t unkE0;                               // E0
+    HashMap<uint64_t, CProperty*> unkE8;         // E8
+    DynArray<CProperty*> unk118;                 // 118 - More entries than 0x28, will contain native props
+    DynArray<void*> unk128;                      // 128
+    DynArray<CProperty*> unk138;                 // 138 - Only RT_Class types?
+    DynArray<void*> unk148;                      // 148
+    DynArray<CProperty*> unk158;                 // 158 - Scripted props?
+    DynArray<void*> unk168;                      // 168
+    int64_t unk178;                              // 178
+    HashMap<void*, void*> unk180;                // 180
+    DynArray<void*> unk1B0;                      // 1B0
+    int8_t unk1C0[256];                          // 1C0
+    int16_t unk2C0;                              // 2C0
+    int32_t unk2C4;                              // 2C4
+    int8_t unk2C8;                               // 2C8
+    int8_t unk2C9;                               // 2C9
 };
-RED4EXT_ASSERT_SIZE(CClass, 0x2A0);
+RED4EXT_ASSERT_SIZE(CClass, 0x2D0);
 RED4EXT_ASSERT_OFFSET(CClass, parent, 0x10);
 RED4EXT_ASSERT_OFFSET(CClass, name, 0x18);
+RED4EXT_ASSERT_OFFSET(CClass, props, 0x28);
+RED4EXT_ASSERT_OFFSET(CClass, overriddenProps, 0x38);
 RED4EXT_ASSERT_OFFSET(CClass, funcs, 0x48);
-RED4EXT_ASSERT_OFFSET(CClass, staticFuncs, 0x58);
-RED4EXT_ASSERT_OFFSET(CClass, unkA0, 0xA0);
-RED4EXT_ASSERT_OFFSET(CClass, unkE0, 0xE0);
+RED4EXT_ASSERT_OFFSET(CClass, realSize, 0x68);
+RED4EXT_ASSERT_OFFSET(CClass, flags, 0x70);
+RED4EXT_ASSERT_OFFSET(CClass, alignment, 0x74);
 
 struct CEnum : CRTTIBaseType
 {
@@ -194,19 +198,24 @@ struct CEnum : CRTTIBaseType
     };
     RED4EXT_ASSERT_SIZE(CEnum::Flags, 0x01);
 
-    CName hash;                   // 10
+    CName name;                   // 10
     CName unk18;                  // 18
-    uint8_t size;                 // 20 - Size in bytes the instance will use
+    uint8_t typeSize;             // 20
     Flags flags;                  // 21
-    uint16_t unk22;               // 22
-    uint32_t unk24;               // 24
     DynArray<CName> hashList;     // 28
     DynArray<uint64_t> valueList; // 38
     DynArray<CName> unk48;        // 48
     DynArray<uint64_t> unk58;     // 58
 };
 RED4EXT_ASSERT_SIZE(CEnum, 0x68);
+RED4EXT_ASSERT_OFFSET(CEnum, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CEnum, unk18, 0x18);
+RED4EXT_ASSERT_OFFSET(CEnum, typeSize, 0x20);
+RED4EXT_ASSERT_OFFSET(CEnum, flags, 0x21);
 RED4EXT_ASSERT_OFFSET(CEnum, hashList, 0x28);
+RED4EXT_ASSERT_OFFSET(CEnum, valueList, 0x38);
+RED4EXT_ASSERT_OFFSET(CEnum, unk48, 0x48);
+RED4EXT_ASSERT_OFFSET(CEnum, unk58, 0x58);
 
 #pragma region Fundamentals
 using CFundamentalRTTITypeBool = CRTTIBaseType;

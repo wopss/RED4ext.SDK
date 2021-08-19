@@ -48,7 +48,7 @@ RED4EXT_INLINE void RED4ext::CClass::RegisterFunction(CClassFunction* aFunc)
 {
     if (aFunc->flags.isStatic)
     {
-        staticFuncs.PushBack(aFunc);
+        staticFuncs.PushBack(static_cast<CClassStaticFunction*>(aFunc));
     }
     else
     {
