@@ -12,12 +12,11 @@ namespace game::ui {
 struct SetupGridSelectorForAttributeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetupGridSelectorForAttributeEvent";
-    static constexpr const char* ALIAS = "SetupGridSelectorForAttributeEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t attribute; // 40
     uint8_t unk44[0x60 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(SetupGridSelectorForAttributeEvent, 0x60);
 } // namespace game::ui
-using SetupGridSelectorForAttributeEvent = game::ui::SetupGridSelectorForAttributeEvent;
 } // namespace RED4ext

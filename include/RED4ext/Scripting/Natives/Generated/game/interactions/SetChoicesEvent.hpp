@@ -15,12 +15,11 @@ namespace game::interactions {
 struct SetChoicesEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsSetChoicesEvent";
-    static constexpr const char* ALIAS = "InteractionSetChoicesEvent";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<game::interactions::Choice> choices; // 40
     CName layer; // 50
 };
 RED4EXT_ASSERT_SIZE(SetChoicesEvent, 0x58);
 } // namespace game::interactions
-using InteractionSetChoicesEvent = game::interactions::SetChoicesEvent;
 } // namespace RED4ext

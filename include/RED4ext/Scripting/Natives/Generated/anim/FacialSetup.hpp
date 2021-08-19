@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
@@ -29,17 +28,14 @@ struct FacialSetup : CResource
     DataBuffer mainPosesData; // 718
     DataBuffer correctivePosesData; // 740
     uint8_t unk768[0x888 - 0x768]; // 768
-    DynArray<CName> faceCorrectiveNames; // 888
-    DynArray<CName> tongueCorrectiveNames; // 898
-    DynArray<CName> eyesCorrectiveNames; // 8A8
-    DynArray<uint16_t> usedTransformIndices; // 8B8
-    uint32_t version; // 8C8
-    uint8_t unk8CC[0x8D0 - 0x8CC]; // 8CC
-    Ref<anim::Rig> rig; // 8D0
-    Ref<anim::Rig> inputRig; // 8E8
-    bool useFemaleAnimSet; // 900
-    uint8_t unk901[0x908 - 0x901]; // 901
+    DynArray<uint16_t> usedTransformIndices; // 888
+    uint32_t version; // 898
+    uint8_t unk89C[0x8A0 - 0x89C]; // 89C
+    Ref<anim::Rig> rig; // 8A0
+    Ref<anim::Rig> inputRig; // 8B8
+    bool useFemaleAnimSet; // 8D0
+    uint8_t unk8D1[0x8D8 - 0x8D1]; // 8D1
 };
-RED4EXT_ASSERT_SIZE(FacialSetup, 0x908);
+RED4EXT_ASSERT_SIZE(FacialSetup, 0x8D8);
 } // namespace anim
 } // namespace RED4ext

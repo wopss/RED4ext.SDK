@@ -12,11 +12,10 @@ namespace game::data {
 struct AISquadDistanceRelationToSectorCheck_Record : game::data::AITicketCheck_Record
 {
     static constexpr const char* NAME = "gamedataAISquadDistanceRelationToSectorCheck_Record";
-    static constexpr const char* ALIAS = "AISquadDistanceRelationToSectorCheck_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(AISquadDistanceRelationToSectorCheck_Record, 0x60);
 } // namespace game::data
-using AISquadDistanceRelationToSectorCheck_Record = game::data::AISquadDistanceRelationToSectorCheck_Record;
 } // namespace RED4ext

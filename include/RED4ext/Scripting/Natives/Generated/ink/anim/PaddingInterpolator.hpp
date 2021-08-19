@@ -13,12 +13,11 @@ namespace ink::anim {
 struct PaddingInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimPaddingInterpolator";
-    static constexpr const char* ALIAS = "inkAnimPadding";
+    static constexpr const char* ALIAS = NAME;
 
     ink::Margin startValue; // 68
     ink::Margin endValue; // 78
 };
 RED4EXT_ASSERT_SIZE(PaddingInterpolator, 0x88);
 } // namespace ink::anim
-using inkAnimPadding = ink::anim::PaddingInterpolator;
 } // namespace RED4ext

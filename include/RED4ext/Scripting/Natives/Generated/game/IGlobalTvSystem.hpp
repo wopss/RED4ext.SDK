@@ -12,10 +12,9 @@ namespace game {
 struct IGlobalTvSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIGlobalTvSystem";
-    static constexpr const char* ALIAS = "IGlobalTvSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IGlobalTvSystem, 0x48);
 } // namespace game
-using IGlobalTvSystem = game::IGlobalTvSystem;
 } // namespace RED4ext

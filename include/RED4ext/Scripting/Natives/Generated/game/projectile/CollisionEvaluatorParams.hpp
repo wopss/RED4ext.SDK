@@ -17,7 +17,7 @@ namespace game::projectile {
 struct CollisionEvaluatorParams : IScriptable
 {
     static constexpr const char* NAME = "gameprojectileCollisionEvaluatorParams";
-    static constexpr const char* ALIAS = "CollisionEvaluatorParams";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> target; // 40
     bool isPiercableSurface; // 50
@@ -32,5 +32,4 @@ struct CollisionEvaluatorParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CollisionEvaluatorParams, 0x80);
 } // namespace game::projectile
-using CollisionEvaluatorParams = game::projectile::CollisionEvaluatorParams;
 } // namespace RED4ext

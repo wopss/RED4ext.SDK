@@ -13,5 +13,4 @@ enum class VehicleDoorState : uint32_t
     Detached = 2,
 };
 } // namespace vehicle
-using VehicleDoorState = vehicle::VehicleDoorState;
 } // namespace RED4ext

@@ -14,7 +14,7 @@ namespace game::ui {
 struct PanzerPlayerController : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerPlayerController";
-    static constexpr const char* ALIAS = "PanzerPlayerController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkC0[0xE0 - 0xC0]; // C0
     float bulletSpeed; // E0
@@ -29,5 +29,4 @@ struct PanzerPlayerController : game::ui::SideScrollerMiniGameDynObjectLogicAdva
 };
 RED4EXT_ASSERT_SIZE(PanzerPlayerController, 0x118);
 } // namespace game::ui
-using PanzerPlayerController = game::ui::PanzerPlayerController;
 } // namespace RED4ext

@@ -15,11 +15,10 @@ namespace game {
 struct NetrunnerPrototypeSpawnCompletedEvent : red::Event
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeSpawnCompletedEvent";
-    static constexpr const char* ALIAS = "NetrunnerPrototypeSpawnCompletedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> spawnedObject; // 40
 };
 RED4EXT_ASSERT_SIZE(NetrunnerPrototypeSpawnCompletedEvent, 0x50);
 } // namespace game
-using NetrunnerPrototypeSpawnCompletedEvent = game::NetrunnerPrototypeSpawnCompletedEvent;
 } // namespace RED4ext

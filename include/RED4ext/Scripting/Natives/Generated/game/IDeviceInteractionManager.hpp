@@ -12,10 +12,9 @@ namespace game {
 struct IDeviceInteractionManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIDeviceInteractionManager";
-    static constexpr const char* ALIAS = "IDeviceInteractionManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IDeviceInteractionManager, 0x48);
 } // namespace game
-using IDeviceInteractionManager = game::IDeviceInteractionManager;
 } // namespace RED4ext

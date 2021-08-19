@@ -13,5 +13,4 @@ enum class EquipmentSetType : uint32_t
     Cyberware = 2,
 };
 } // namespace game
-using EEquipmentSetType = game::EquipmentSetType;
 } // namespace RED4ext

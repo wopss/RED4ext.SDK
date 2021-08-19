@@ -12,11 +12,10 @@ namespace game {
 struct FxSystem : game::IFxSystem
 {
     static constexpr const char* NAME = "gameFxSystem";
-    static constexpr const char* ALIAS = "FxSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x88 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(FxSystem, 0x88);
 } // namespace game
-using FxSystem = game::FxSystem;
 } // namespace RED4ext

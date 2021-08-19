@@ -12,11 +12,10 @@ namespace game::data {
 struct PathSecurityCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataPathSecurityCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = "PathSecurityCoverSelectionParameters_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(PathSecurityCoverSelectionParameters_Record, 0x60);
 } // namespace game::data
-using PathSecurityCoverSelectionParameters_Record = game::data::PathSecurityCoverSelectionParameters_Record;
 } // namespace RED4ext

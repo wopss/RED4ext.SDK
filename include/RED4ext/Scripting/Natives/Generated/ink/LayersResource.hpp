@@ -20,6 +20,6 @@ struct LayersResource : CResource
     ink::LayerDefinitionCollection preGameLayerDefinitions; // 3B0
     ink::PermanentLayerDefinitionCollection permanentLayerDefinitions; // 720
 };
-RED4EXT_ASSERT_SIZE(LayersResource, 0x800);
+RED4EXT_ASSERT_SIZE(LayersResource, 0x868);
 } // namespace ink
 } // namespace RED4ext

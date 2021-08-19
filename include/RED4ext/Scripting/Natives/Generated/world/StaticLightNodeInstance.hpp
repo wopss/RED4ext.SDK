@@ -14,8 +14,8 @@ struct StaticLightNodeInstance : world::INodeInstance
     static constexpr const char* NAME = "worldStaticLightNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xE0 - 0x90]; // 90
+    uint8_t unk90[0xC0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(StaticLightNodeInstance, 0xE0);
+RED4EXT_ASSERT_SIZE(StaticLightNodeInstance, 0xC0);
 } // namespace world
 } // namespace RED4ext

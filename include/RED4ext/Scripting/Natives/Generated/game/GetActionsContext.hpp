@@ -20,7 +20,7 @@ namespace game {
 struct GetActionsContext
 {
     static constexpr const char* NAME = "gameGetActionsContext";
-    static constexpr const char* ALIAS = "GetActionsContext";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<game::device::Clearance> clearance; // 00
     ent::EntityID requestorID; // 10
@@ -35,5 +35,4 @@ struct GetActionsContext
 };
 RED4EXT_ASSERT_SIZE(GetActionsContext, 0x50);
 } // namespace game
-using GetActionsContext = game::GetActionsContext;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace game {
 struct JournalQuestPhase : game::JournalContainerEntry
 {
     static constexpr const char* NAME = "gameJournalQuestPhase";
-    static constexpr const char* ALIAS = "JournalQuestPhase";
+    static constexpr const char* ALIAS = NAME;
 
     NodeRef locationPrefabRef; // 78
 };
 RED4EXT_ASSERT_SIZE(JournalQuestPhase, 0x80);
 } // namespace game
-using JournalQuestPhase = game::JournalQuestPhase;
 } // namespace RED4ext

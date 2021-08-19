@@ -12,7 +12,7 @@ namespace game::interactions::vis {
 struct VisualizersInfo
 {
     static constexpr const char* NAME = "gameinteractionsvisVisualizersInfo";
-    static constexpr const char* ALIAS = "VisualizersInfo";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t activeVisId; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -20,5 +20,4 @@ struct VisualizersInfo
 };
 RED4EXT_ASSERT_SIZE(VisualizersInfo, 0x18);
 } // namespace game::interactions::vis
-using VisualizersInfo = game::interactions::vis::VisualizersInfo;
 } // namespace RED4ext

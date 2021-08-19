@@ -12,10 +12,9 @@ namespace game::data {
 struct ComputerScreenType_Record : game::data::DeviceScreenType_Record
 {
     static constexpr const char* NAME = "gamedataComputerScreenType_Record";
-    static constexpr const char* ALIAS = "ComputerScreenType_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ComputerScreenType_Record, 0x58);
 } // namespace game::data
-using ComputerScreenType_Record = game::data::ComputerScreenType_Record;
 } // namespace RED4ext

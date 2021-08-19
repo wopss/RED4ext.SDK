@@ -12,12 +12,11 @@ namespace game::state {
 struct MachineStateMachineIdentifier
 {
     static constexpr const char* NAME = "gamestateMachineStateMachineIdentifier";
-    static constexpr const char* ALIAS = "StateMachineIdentifier";
+    static constexpr const char* ALIAS = NAME;
 
     CName definitionName; // 00
     CName referenceName; // 08
 };
 RED4EXT_ASSERT_SIZE(MachineStateMachineIdentifier, 0x10);
 } // namespace game::state
-using StateMachineIdentifier = game::state::MachineStateMachineIdentifier;
 } // namespace RED4ext

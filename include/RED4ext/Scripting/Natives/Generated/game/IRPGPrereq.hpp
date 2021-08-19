@@ -12,10 +12,9 @@ namespace game {
 struct IRPGPrereq : game::IComparisonPrereq
 {
     static constexpr const char* NAME = "gameIRPGPrereq";
-    static constexpr const char* ALIAS = "IRPGPrereq";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IRPGPrereq, 0x48);
 } // namespace game
-using IRPGPrereq = game::IRPGPrereq;
 } // namespace RED4ext

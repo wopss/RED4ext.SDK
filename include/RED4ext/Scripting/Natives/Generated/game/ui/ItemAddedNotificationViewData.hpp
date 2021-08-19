@@ -14,7 +14,7 @@ namespace game::ui {
 struct ItemAddedNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiItemAddedNotificationViewData";
-    static constexpr const char* ALIAS = "ItemAddedNotificationViewData";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID itemID; // 90
     CName animation; // A0
@@ -22,5 +22,4 @@ struct ItemAddedNotificationViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(ItemAddedNotificationViewData, 0xB0);
 } // namespace game::ui
-using ItemAddedNotificationViewData = game::ui::ItemAddedNotificationViewData;
 } // namespace RED4ext

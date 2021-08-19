@@ -16,12 +16,11 @@ namespace game {
 struct JournalContainerEntry : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalContainerEntry";
-    static constexpr const char* ALIAS = "JournalContainerEntry";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk60[0x68 - 0x60]; // 60
     DynArray<Handle<game::JournalEntry>> entries; // 68
 };
 RED4EXT_ASSERT_SIZE(JournalContainerEntry, 0x78);
 } // namespace game
-using JournalContainerEntry = game::JournalContainerEntry;
 } // namespace RED4ext

@@ -15,11 +15,10 @@ namespace game::projectile {
 struct ForwardEventToProjectileEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileForwardEventToProjectileEvent";
-    static constexpr const char* ALIAS = "ForwardEventToProjectileEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<red::Event> eventToForward; // 40
 };
 RED4EXT_ASSERT_SIZE(ForwardEventToProjectileEvent, 0x50);
 } // namespace game::projectile
-using ForwardEventToProjectileEvent = game::projectile::ForwardEventToProjectileEvent;
 } // namespace RED4ext

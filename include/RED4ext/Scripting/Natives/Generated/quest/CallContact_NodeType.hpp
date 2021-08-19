@@ -26,7 +26,8 @@ struct CallContact_NodeType : quest::IPhoneManagerNodeType
     quest::PhoneCallMode mode; // 5C
     NodeRef prefabNodeRef; // 60
     bool applyPhoneRestriction; // 68
-    uint8_t unk69[0x70 - 0x69]; // 69
+    bool isRejectable; // 69
+    uint8_t unk6A[0x70 - 0x6A]; // 6A
 };
 RED4EXT_ASSERT_SIZE(CallContact_NodeType, 0x70);
 } // namespace quest

@@ -14,8 +14,8 @@ struct VehicleProxyBlendCamera : game::CameraComponent
     static constexpr const char* NAME = "vehicleVehicleProxyBlendCamera";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk290[0x2E0 - 0x290]; // 290
+    uint8_t unk2A0[0x300 - 0x2A0]; // 2A0
 };
-RED4EXT_ASSERT_SIZE(VehicleProxyBlendCamera, 0x2E0);
+RED4EXT_ASSERT_SIZE(VehicleProxyBlendCamera, 0x300);
 } // namespace vehicle
 } // namespace RED4ext

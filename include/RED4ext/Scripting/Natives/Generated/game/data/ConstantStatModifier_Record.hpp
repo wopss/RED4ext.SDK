@@ -12,11 +12,10 @@ namespace game::data {
 struct ConstantStatModifier_Record : game::data::StatModifier_Record
 {
     static constexpr const char* NAME = "gamedataConstantStatModifier_Record";
-    static constexpr const char* ALIAS = "ConstantStatModifier_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(ConstantStatModifier_Record, 0x58);
 } // namespace game::data
-using ConstantStatModifier_Record = game::data::ConstantStatModifier_Record;
 } // namespace RED4ext

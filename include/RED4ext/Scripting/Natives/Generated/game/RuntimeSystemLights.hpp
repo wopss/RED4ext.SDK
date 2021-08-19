@@ -14,8 +14,8 @@ struct RuntimeSystemLights : world::IRuntimeSystem
     static constexpr const char* NAME = "gameRuntimeSystemLights";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xA0 - 0x48]; // 48
+    uint8_t unk48[0xD8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemLights, 0xA0);
+RED4EXT_ASSERT_SIZE(RuntimeSystemLights, 0xD8);
 } // namespace game
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace ink { struct WidgetLibraryResource; }
 struct WorldWidgetComponent : IWorldWidgetComponent
 {
     static constexpr const char* NAME = "WorldWidgetComponent";
-    static constexpr const char* ALIAS = "WorldWidgetComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk2B0[0x2B8 - 0x2B0]; // 2B0
     Ref<ink::WidgetLibraryResource> cursorResource; // 2B8

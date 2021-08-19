@@ -14,7 +14,7 @@ namespace game {
 struct MovingPlatformTeleportTo : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformTeleportTo";
-    static constexpr const char* ALIAS = "TeleportTo";
+    static constexpr const char* ALIAS = NAME;
 
     NodeRef destinationNode; // 40
     uint8_t unk48[0x50 - 0x48]; // 48
@@ -22,5 +22,4 @@ struct MovingPlatformTeleportTo : red::Event
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformTeleportTo, 0x60);
 } // namespace game
-using TeleportTo = game::MovingPlatformTeleportTo;
 } // namespace RED4ext

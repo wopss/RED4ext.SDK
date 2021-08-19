@@ -12,10 +12,9 @@ namespace game {
 struct IInventoryManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIInventoryManager";
-    static constexpr const char* ALIAS = "IInventoryManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IInventoryManager, 0x48);
 } // namespace game
-using IInventoryManager = game::IInventoryManager;
 } // namespace RED4ext

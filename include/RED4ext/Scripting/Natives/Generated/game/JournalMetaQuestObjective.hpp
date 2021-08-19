@@ -13,7 +13,7 @@ namespace game {
 struct JournalMetaQuestObjective : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalMetaQuestObjective";
-    static constexpr const char* ALIAS = "JournalMetaQuestObjective";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString description; // 60
     uint32_t progressPercent; // 88
@@ -22,5 +22,4 @@ struct JournalMetaQuestObjective : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalMetaQuestObjective, 0x98);
 } // namespace game
-using JournalMetaQuestObjective = game::JournalMetaQuestObjective;
 } // namespace RED4ext

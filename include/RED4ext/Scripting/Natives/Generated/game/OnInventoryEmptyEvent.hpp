@@ -12,10 +12,9 @@ namespace game {
 struct OnInventoryEmptyEvent : red::Event
 {
     static constexpr const char* NAME = "gameOnInventoryEmptyEvent";
-    static constexpr const char* ALIAS = "OnInventoryEmptyEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(OnInventoryEmptyEvent, 0x40);
 } // namespace game
-using OnInventoryEmptyEvent = game::OnInventoryEmptyEvent;
 } // namespace RED4ext

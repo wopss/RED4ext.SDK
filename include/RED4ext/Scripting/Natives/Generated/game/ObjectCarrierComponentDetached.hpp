@@ -12,11 +12,10 @@ namespace game {
 struct ObjectCarrierComponentDetached : red::Event
 {
     static constexpr const char* NAME = "gameObjectCarrierComponentDetached";
-    static constexpr const char* ALIAS = "ObjectCarrierComponentDetached";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ObjectCarrierComponentDetached, 0x50);
 } // namespace game
-using ObjectCarrierComponentDetached = game::ObjectCarrierComponentDetached;
 } // namespace RED4ext

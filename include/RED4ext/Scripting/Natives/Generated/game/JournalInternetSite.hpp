@@ -18,7 +18,7 @@ namespace game {
 struct JournalInternetSite : game::JournalFileEntry
 {
     static constexpr const char* NAME = "gameJournalInternetSite";
-    static constexpr const char* ALIAS = "JournalInternetSite";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString shortName; // 90
     Handle<game::JournalPath> mainPagePath; // B8
@@ -29,5 +29,4 @@ struct JournalInternetSite : game::JournalFileEntry
 };
 RED4EXT_ASSERT_SIZE(JournalInternetSite, 0xE0);
 } // namespace game
-using JournalInternetSite = game::JournalInternetSite;
 } // namespace RED4ext

@@ -13,12 +13,11 @@ namespace ent {
 struct AnimInputSetterQuaternion : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimInputSetterQuaternion";
-    static constexpr const char* ALIAS = "AnimInputSetterQuaternion";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
     Quaternion value; // 50
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetterQuaternion, 0x60);
 } // namespace ent
-using AnimInputSetterQuaternion = ent::AnimInputSetterQuaternion;
 } // namespace RED4ext

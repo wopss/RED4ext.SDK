@@ -12,7 +12,7 @@ namespace game::ui {
 struct RoachRaceObstacle
 {
     static constexpr const char* NAME = "gameuiRoachRaceObstacle";
-    static constexpr const char* ALIAS = "RoachRaceObstacle";
+    static constexpr const char* ALIAS = NAME;
 
     float interval; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -20,5 +20,4 @@ struct RoachRaceObstacle
 };
 RED4EXT_ASSERT_SIZE(RoachRaceObstacle, 0x10);
 } // namespace game::ui
-using RoachRaceObstacle = game::ui::RoachRaceObstacle;
 } // namespace RED4ext

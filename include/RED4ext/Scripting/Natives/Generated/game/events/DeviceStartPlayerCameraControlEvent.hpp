@@ -16,7 +16,7 @@ namespace game::events {
 struct DeviceStartPlayerCameraControlEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsDeviceStartPlayerCameraControlEvent";
-    static constexpr const char* ALIAS = "DeviceStartPlayerCameraControlEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> playerController; // 40
     Vector4 initialRotation; // 50
@@ -27,5 +27,4 @@ struct DeviceStartPlayerCameraControlEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeviceStartPlayerCameraControlEvent, 0x70);
 } // namespace game::events
-using DeviceStartPlayerCameraControlEvent = game::events::DeviceStartPlayerCameraControlEvent;
 } // namespace RED4ext

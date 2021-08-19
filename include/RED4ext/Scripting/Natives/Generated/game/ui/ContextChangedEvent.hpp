@@ -13,12 +13,11 @@ namespace game::ui {
 struct ContextChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiContextChangedEvent";
-    static constexpr const char* ALIAS = "UIGameContextChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     game::ui::Context oldContext; // 40
     game::ui::Context newContext; // 44
 };
 RED4EXT_ASSERT_SIZE(ContextChangedEvent, 0x48);
 } // namespace game::ui
-using UIGameContextChangedEvent = game::ui::ContextChangedEvent;
 } // namespace RED4ext

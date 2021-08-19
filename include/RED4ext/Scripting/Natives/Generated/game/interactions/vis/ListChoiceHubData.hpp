@@ -19,7 +19,7 @@ namespace game::interactions::vis {
 struct ListChoiceHubData
 {
     static constexpr const char* NAME = "gameinteractionsvisListChoiceHubData";
-    static constexpr const char* ALIAS = "ListChoiceHubData";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t id; // 00
     game::interactions::vis::EVisualizerActivityState activityState; // 04
@@ -34,5 +34,4 @@ struct ListChoiceHubData
 };
 RED4EXT_ASSERT_SIZE(ListChoiceHubData, 0x58);
 } // namespace game::interactions::vis
-using ListChoiceHubData = game::interactions::vis::ListChoiceHubData;
 } // namespace RED4ext

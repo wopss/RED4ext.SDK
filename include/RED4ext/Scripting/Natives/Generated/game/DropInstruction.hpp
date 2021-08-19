@@ -12,12 +12,11 @@ namespace game {
 struct DropInstruction
 {
     static constexpr const char* NAME = "gameDropInstruction";
-    static constexpr const char* ALIAS = "DropInstruction";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID itemID; // 00
     int32_t quantity; // 10
 };
 RED4EXT_ASSERT_SIZE(DropInstruction, 0x14);
 } // namespace game
-using DropInstruction = game::DropInstruction;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace game::ui {
 struct ItemDataViewWrapper : game::ui::BaseItemDataSource
 {
     static constexpr const char* NAME = "gameuiItemDataViewWrapper";
-    static constexpr const char* ALIAS = "ItemDataView";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ItemDataViewWrapper, 0x48);
 } // namespace game::ui
-using ItemDataView = game::ui::ItemDataViewWrapper;
 } // namespace RED4ext

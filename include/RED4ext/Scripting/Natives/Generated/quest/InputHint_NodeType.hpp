@@ -20,7 +20,8 @@ struct InputHint_NodeType : quest::IUIManagerNodeType
     CName groupId; // 40
     CString localizedLabel; // 48
     bool show; // 68
-    uint8_t unk69[0x70 - 0x69]; // 69
+    uint8_t unk69[0x6C - 0x69]; // 69
+    int32_t queuePriority; // 6C
 };
 RED4EXT_ASSERT_SIZE(InputHint_NodeType, 0x70);
 } // namespace quest

@@ -12,7 +12,7 @@ namespace quest {
 struct LevelUpData
 {
     static constexpr const char* NAME = "questLevelUpData";
-    static constexpr const char* ALIAS = "LevelUpData";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t lvl; // 00
     game::data::ProficiencyType type; // 04
@@ -23,5 +23,4 @@ struct LevelUpData
 };
 RED4EXT_ASSERT_SIZE(LevelUpData, 0x14);
 } // namespace quest
-using LevelUpData = quest::LevelUpData;
 } // namespace RED4ext

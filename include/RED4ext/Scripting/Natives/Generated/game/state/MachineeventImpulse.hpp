@@ -13,12 +13,11 @@ namespace game::state {
 struct MachineeventImpulse : game::state::MachineeventBaseEvent
 {
     static constexpr const char* NAME = "gamestateMachineeventImpulse";
-    static constexpr const char* ALIAS = "PSMImpulse";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
     Vector4 impulse; // 50
 };
 RED4EXT_ASSERT_SIZE(MachineeventImpulse, 0x60);
 } // namespace game::state
-using PSMImpulse = game::state::MachineeventImpulse;
 } // namespace RED4ext

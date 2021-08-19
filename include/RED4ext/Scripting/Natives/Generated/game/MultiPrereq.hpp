@@ -17,7 +17,7 @@ namespace game {
 struct MultiPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameMultiPrereq";
-    static constexpr const char* ALIAS = "MultiPrereq";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<Handle<game::IPrereq>> nestedPrereqs; // 40
     game::AggregationType aggregationType; // 50
@@ -25,5 +25,4 @@ struct MultiPrereq : game::IPrereq
 };
 RED4EXT_ASSERT_SIZE(MultiPrereq, 0x58);
 } // namespace game
-using MultiPrereq = game::MultiPrereq;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct KeepCurrentCoverCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataKeepCurrentCoverCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = "KeepCurrentCoverCoverSelectionParameters_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(KeepCurrentCoverCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
-using KeepCurrentCoverCoverSelectionParameters_Record = game::data::KeepCurrentCoverCoverSelectionParameters_Record;
 } // namespace RED4ext

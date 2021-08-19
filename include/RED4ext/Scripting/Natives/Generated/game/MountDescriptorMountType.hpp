@@ -14,5 +14,4 @@ enum class MountDescriptorMountType : uint32_t
     MovingPlatform = 4,
 };
 } // namespace game
-using MountDescriptor_MountingType = game::MountDescriptorMountType;
 } // namespace RED4ext

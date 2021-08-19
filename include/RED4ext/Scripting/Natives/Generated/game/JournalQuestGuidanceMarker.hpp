@@ -14,7 +14,7 @@ namespace game {
 struct JournalQuestGuidanceMarker : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalQuestGuidanceMarker";
-    static constexpr const char* ALIAS = "JournalQuestGuidanceMarker";
+    static constexpr const char* ALIAS = NAME;
 
     NodeRef nodeRef; // 60
     game::QuestGuidanceMarkerPathfindingType pathfindingType; // 68
@@ -23,5 +23,4 @@ struct JournalQuestGuidanceMarker : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalQuestGuidanceMarker, 0x70);
 } // namespace game
-using JournalQuestGuidanceMarker = game::JournalQuestGuidanceMarker;
 } // namespace RED4ext

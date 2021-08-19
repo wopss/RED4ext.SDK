@@ -14,8 +14,8 @@ struct RuntimeSystemSmartObjects : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemSmartObjects";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x338 - 0x48]; // 48
+    uint8_t unk48[0x2F8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemSmartObjects, 0x338);
+RED4EXT_ASSERT_SIZE(RuntimeSystemSmartObjects, 0x2F8);
 } // namespace world
 } // namespace RED4ext

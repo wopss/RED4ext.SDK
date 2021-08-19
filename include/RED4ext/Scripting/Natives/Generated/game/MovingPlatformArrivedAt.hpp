@@ -13,7 +13,7 @@ namespace game {
 struct MovingPlatformArrivedAt : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformArrivedAt";
-    static constexpr const char* ALIAS = "ArrivedAt";
+    static constexpr const char* ALIAS = NAME;
 
     CName destinationName; // 40
     int32_t data; // 48
@@ -21,5 +21,4 @@ struct MovingPlatformArrivedAt : red::Event
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformArrivedAt, 0x50);
 } // namespace game
-using ArrivedAt = game::MovingPlatformArrivedAt;
 } // namespace RED4ext

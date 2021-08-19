@@ -12,10 +12,9 @@ namespace sense {
 struct OnExitShapeEvent : sense::VisibilityEvent
 {
     static constexpr const char* NAME = "senseOnExitShapeEvent";
-    static constexpr const char* ALIAS = "ExitShapeEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(OnExitShapeEvent, 0x68);
 } // namespace sense
-using ExitShapeEvent = sense::OnExitShapeEvent;
 } // namespace RED4ext

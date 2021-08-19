@@ -6,6 +6,8 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/NavGenNavigationSetting.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/ForcedLodDistance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/ISkinTargetComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/MeshComponentLODMode.hpp>
 
@@ -25,15 +27,19 @@ struct SkinnedMeshComponent : ent::ISkinTargetComponent
     CName renderingPlaneAnimationParam; // 238
     CName visibilityAnimationParam; // 240
     uint64_t chunkMask; // 248
-    ent::MeshComponentLODMode LODMode; // 250
-    uint8_t unk251[0x253 - 0x251]; // 251
-    uint8_t order; // 253
-    bool useProxyMeshAsShadowMesh; // 254
-    bool castShadows; // 255
-    bool castLocalShadows; // 256
-    bool acceptDismemberment; // 257
-    uint8_t unk258[0x260 - 0x258]; // 258
+    NavGenNavigationSetting navigationImpact; // 250
+    ent::MeshComponentLODMode LODMode; // 252
+    uint8_t unk253[0x255 - 0x253]; // 253
+    uint8_t order; // 255
+    bool useProxyMeshAsShadowMesh; // 256
+    bool castShadows; // 257
+    bool castLocalShadows; // 258
+    bool acceptDismemberment; // 259
+    bool overrideMeshNavigationImpact; // 25A
+    uint8_t unk25B[0x25D - 0x25B]; // 25B
+    ent::ForcedLodDistance forcedLodDistance; // 25D
+    uint8_t unk25E[0x270 - 0x25E]; // 25E
 };
-RED4EXT_ASSERT_SIZE(SkinnedMeshComponent, 0x260);
+RED4EXT_ASSERT_SIZE(SkinnedMeshComponent, 0x270);
 } // namespace ent
 } // namespace RED4ext

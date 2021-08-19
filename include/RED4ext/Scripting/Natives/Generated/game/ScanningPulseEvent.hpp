@@ -12,10 +12,9 @@ namespace game {
 struct ScanningPulseEvent : red::Event
 {
     static constexpr const char* NAME = "gameScanningPulseEvent";
-    static constexpr const char* ALIAS = "ScanningPulseEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ScanningPulseEvent, 0x40);
 } // namespace game
-using ScanningPulseEvent = game::ScanningPulseEvent;
 } // namespace RED4ext

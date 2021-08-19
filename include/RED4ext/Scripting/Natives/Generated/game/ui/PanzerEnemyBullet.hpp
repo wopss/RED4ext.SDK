@@ -12,10 +12,9 @@ namespace game::ui {
 struct PanzerEnemyBullet : game::ui::PanzerBullet
 {
     static constexpr const char* NAME = "gameuiPanzerEnemyBullet";
-    static constexpr const char* ALIAS = "PanzerEnemyBullet";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(PanzerEnemyBullet, 0xC0);
 } // namespace game::ui
-using PanzerEnemyBullet = game::ui::PanzerEnemyBullet;
 } // namespace RED4ext

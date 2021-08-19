@@ -12,11 +12,10 @@ namespace game::data {
 struct ItemArrayQuery_Record : game::data::ItemQuery_Record
 {
     static constexpr const char* NAME = "gamedataItemArrayQuery_Record";
-    static constexpr const char* ALIAS = "ItemArrayQuery_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(ItemArrayQuery_Record, 0x60);
 } // namespace game::data
-using ItemArrayQuery_Record = game::data::ItemArrayQuery_Record;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace anim {
 struct AnimFeature_DeviceCameraControlled : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_DeviceCameraControlled";
-    static constexpr const char* ALIAS = "AnimFeature_DeviceCameraControlled";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 currentRotation; // 40
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_DeviceCameraControlled, 0x50);
 } // namespace anim
-using AnimFeature_DeviceCameraControlled = anim::AnimFeature_DeviceCameraControlled;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct TutorialManager : quest::ITutorialManager
     static constexpr const char* NAME = "questTutorialManager";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x90 - 0x48]; // 48
+    uint8_t unk48[0xA0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(TutorialManager, 0x90);
+RED4EXT_ASSERT_SIZE(TutorialManager, 0xA0);
 } // namespace quest
 } // namespace RED4ext

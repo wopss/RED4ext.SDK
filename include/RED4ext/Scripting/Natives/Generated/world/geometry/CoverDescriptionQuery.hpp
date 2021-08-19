@@ -14,8 +14,8 @@ struct CoverDescriptionQuery : ISerializable
     static constexpr const char* NAME = "worldgeometryCoverDescriptionQuery";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x90 - 0x30]; // 30
+    uint8_t unk30[0x98 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(CoverDescriptionQuery, 0x90);
+RED4EXT_ASSERT_SIZE(CoverDescriptionQuery, 0x98);
 } // namespace world::geometry
 } // namespace RED4ext

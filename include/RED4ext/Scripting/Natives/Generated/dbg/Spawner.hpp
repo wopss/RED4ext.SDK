@@ -17,12 +17,12 @@ struct Spawner : game::Object
     static constexpr const char* NAME = "dbgSpawner";
     static constexpr const char* ALIAS = NAME;
 
-    CName appearance; // 230
-    TweakDBID objectRecordId; // 238
-    bool isActive; // 240
-    game::AlwaysSpawnedState alwaysSpawned; // 241
-    uint8_t unk242[0x248 - 0x242]; // 242
+    CName appearance; // 240
+    TweakDBID objectRecordId; // 248
+    bool isActive; // 250
+    game::AlwaysSpawnedState alwaysSpawned; // 251
+    uint8_t unk252[0x258 - 0x252]; // 252
 };
-RED4EXT_ASSERT_SIZE(Spawner, 0x248);
+RED4EXT_ASSERT_SIZE(Spawner, 0x258);
 } // namespace dbg
 } // namespace RED4ext

@@ -12,12 +12,11 @@ namespace game::audio::events {
 struct ToggleAimDownSightsEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsToggleAimDownSightsEvent";
-    static constexpr const char* ALIAS = "ToggleAimDownSightsEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool toggleOn; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(ToggleAimDownSightsEvent, 0x48);
 } // namespace game::audio::events
-using ToggleAimDownSightsEvent = game::audio::events::ToggleAimDownSightsEvent;
 } // namespace RED4ext

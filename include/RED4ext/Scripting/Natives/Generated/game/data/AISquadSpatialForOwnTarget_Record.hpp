@@ -12,11 +12,10 @@ namespace game::data {
 struct AISquadSpatialForOwnTarget_Record : game::data::AITicketFilter_Record
 {
     static constexpr const char* NAME = "gamedataAISquadSpatialForOwnTarget_Record";
-    static constexpr const char* ALIAS = "AISquadSpatialForOwnTarget_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk60[0x68 - 0x60]; // 60
 };
 RED4EXT_ASSERT_SIZE(AISquadSpatialForOwnTarget_Record, 0x68);
 } // namespace game::data
-using AISquadSpatialForOwnTarget_Record = game::data::AISquadSpatialForOwnTarget_Record;
 } // namespace RED4ext

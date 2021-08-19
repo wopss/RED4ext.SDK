@@ -12,11 +12,10 @@ namespace game::data {
 struct AbsoluteZLimiterCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataAbsoluteZLimiterCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = "AbsoluteZLimiterCoverSelectionParameters_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AbsoluteZLimiterCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
-using AbsoluteZLimiterCoverSelectionParameters_Record = game::data::AbsoluteZLimiterCoverSelectionParameters_Record;
 } // namespace RED4ext

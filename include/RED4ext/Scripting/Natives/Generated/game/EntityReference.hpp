@@ -15,7 +15,7 @@ namespace game {
 struct EntityReference
 {
     static constexpr const char* NAME = "gameEntityReference";
-    static constexpr const char* ALIAS = "EntityReference";
+    static constexpr const char* ALIAS = NAME;
 
     NodeRef reference; // 00
     DynArray<CName> names; // 08
@@ -27,5 +27,4 @@ struct EntityReference
 };
 RED4EXT_ASSERT_SIZE(EntityReference, 0x38);
 } // namespace game
-using EntityReference = game::EntityReference;
 } // namespace RED4ext

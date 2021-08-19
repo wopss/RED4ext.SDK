@@ -13,7 +13,7 @@ namespace game::ui {
 struct MinimapRemotePlayerMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapRemotePlayerMappinController";
-    static constexpr const char* ALIAS = "MinimapRemotePlayerMappinController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::WidgetReference rootWidget; // 210
     ink::WidgetReference shapeWidget; // 228
@@ -21,5 +21,4 @@ struct MinimapRemotePlayerMappinController : game::ui::BaseMinimapMappinControll
 };
 RED4EXT_ASSERT_SIZE(MinimapRemotePlayerMappinController, 0x258);
 } // namespace game::ui
-using MinimapRemotePlayerMappinController = game::ui::MinimapRemotePlayerMappinController;
 } // namespace RED4ext

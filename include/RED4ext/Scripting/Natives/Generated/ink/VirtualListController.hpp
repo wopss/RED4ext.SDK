@@ -16,11 +16,11 @@ struct VirtualListController : ink::VirtualCompoundController
     static constexpr const char* NAME = "inkVirtualListController";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<ink::WidgetLibraryReference> itemTemplates; // 180
-    uint8_t unk190[0x1C9 - 0x190]; // 190
-    bool cycleNavigation; // 1C9
-    uint8_t unk1CA[0x1D0 - 0x1CA]; // 1CA
+    DynArray<ink::WidgetLibraryReference> itemTemplates; // 1E0
+    uint8_t unk1F0[0x229 - 0x1F0]; // 1F0
+    bool cycleNavigation; // 229
+    uint8_t unk22A[0x250 - 0x22A]; // 22A
 };
-RED4EXT_ASSERT_SIZE(VirtualListController, 0x1D0);
+RED4EXT_ASSERT_SIZE(VirtualListController, 0x250);
 } // namespace ink
 } // namespace RED4ext

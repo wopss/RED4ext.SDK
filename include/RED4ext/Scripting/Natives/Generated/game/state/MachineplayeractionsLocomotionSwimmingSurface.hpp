@@ -14,8 +14,8 @@ struct MachineplayeractionsLocomotionSwimmingSurface : game::state::Machineplaye
     static constexpr const char* NAME = "gamestateMachineplayeractionsLocomotionSwimmingSurface";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk110[0x130 - 0x110]; // 110
+    uint8_t unk120[0x140 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionSwimmingSurface, 0x130);
+RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionSwimmingSurface, 0x140);
 } // namespace game::state
 } // namespace RED4ext

@@ -15,7 +15,7 @@ namespace game {
 struct SlotWeaponData
 {
     static constexpr const char* NAME = "gameSlotWeaponData";
-    static constexpr const char* ALIAS = "SlotWeaponData";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID weaponID; // 00
     int32_t ammoCurrent; // 10
@@ -31,5 +31,4 @@ struct SlotWeaponData
 };
 RED4EXT_ASSERT_SIZE(SlotWeaponData, 0x48);
 } // namespace game
-using SlotWeaponData = game::SlotWeaponData;
 } // namespace RED4ext

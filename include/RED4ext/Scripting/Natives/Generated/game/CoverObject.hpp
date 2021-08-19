@@ -15,17 +15,17 @@ struct CoverObject : game::Object
     static constexpr const char* NAME = "gameCoverObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x238 - 0x230]; // 230
-    anim::CoverState coverType; // 238
-    float fovDegrees; // 23C
-    float fovExposureDegrees; // 240
-    uint8_t unk244[0x24C - 0x244]; // 244
-    float slotRadius; // 24C
-    float hpMax; // 250
-    uint8_t unk254[0x258 - 0x254]; // 254
-    bool isDestructible; // 258
-    uint8_t unk259[0x260 - 0x259]; // 259
+    uint8_t unk240[0x248 - 0x240]; // 240
+    anim::CoverState coverType; // 248
+    float fovDegrees; // 24C
+    float fovExposureDegrees; // 250
+    uint8_t unk254[0x25C - 0x254]; // 254
+    float slotRadius; // 25C
+    float hpMax; // 260
+    uint8_t unk264[0x268 - 0x264]; // 264
+    bool isDestructible; // 268
+    uint8_t unk269[0x270 - 0x269]; // 269
 };
-RED4EXT_ASSERT_SIZE(CoverObject, 0x260);
+RED4EXT_ASSERT_SIZE(CoverObject, 0x270);
 } // namespace game
 } // namespace RED4ext

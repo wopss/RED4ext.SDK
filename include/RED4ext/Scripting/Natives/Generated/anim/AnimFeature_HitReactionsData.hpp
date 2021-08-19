@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_HitReactionsData : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_HitReactionsData";
-    static constexpr const char* ALIAS = "AnimFeature_HitReactionsData";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t hitIntensity; // 40
     int32_t hitSource; // 44
@@ -33,5 +33,4 @@ struct AnimFeature_HitReactionsData : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_HitReactionsData, 0x90);
 } // namespace anim
-using AnimFeature_HitReactionsData = anim::AnimFeature_HitReactionsData;
 } // namespace RED4ext

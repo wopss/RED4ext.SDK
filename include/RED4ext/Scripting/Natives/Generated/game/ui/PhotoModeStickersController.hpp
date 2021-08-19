@@ -27,8 +27,8 @@ struct PhotoModeStickersController : game::ui::WidgetGameController
     game::ui::StickerBackgroundCallback SetBackground; // 1B0
     uint8_t unk1E8[0x268 - 0x1E8]; // 1E8
     NodeRef backgroundPrefabRef; // 268
-    uint8_t unk270[0x298 - 0x270]; // 270
+    uint8_t unk270[0x2A0 - 0x270]; // 270
 };
-RED4EXT_ASSERT_SIZE(PhotoModeStickersController, 0x298);
+RED4EXT_ASSERT_SIZE(PhotoModeStickersController, 0x2A0);
 } // namespace game::ui
 } // namespace RED4ext

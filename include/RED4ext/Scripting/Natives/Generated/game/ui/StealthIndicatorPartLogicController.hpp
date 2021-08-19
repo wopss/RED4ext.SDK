@@ -12,10 +12,9 @@ namespace game::ui {
 struct StealthIndicatorPartLogicController : game::ui::BaseDirectionalIndicatorPartLogicController
 {
     static constexpr const char* NAME = "gameuiStealthIndicatorPartLogicController";
-    static constexpr const char* ALIAS = "StealthIndicatorPartLogicController";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(StealthIndicatorPartLogicController, 0xC0);
 } // namespace game::ui
-using StealthIndicatorPartLogicController = game::ui::StealthIndicatorPartLogicController;
 } // namespace RED4ext

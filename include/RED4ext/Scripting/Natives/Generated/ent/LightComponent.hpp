@@ -26,7 +26,7 @@ namespace ent {
 struct LightComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightComponent";
-    static constexpr const char* ALIAS = "LightComponent";
+    static constexpr const char* ALIAS = NAME;
 
     Color color; // 140
     float temperature; // 144
@@ -36,15 +36,15 @@ struct LightComponent : ent::IVisualComponent
     float rayTracingIntensityScale; // 154
     float EV; // 158
     ELightType type; // 15C
-    bool useInGI; // 160
-    bool useInEnvProbes; // 161
-    bool useInFog; // 162
-    bool useInTransparents; // 163
-    bool useInParticles; // 164
-    bool sceneDiffuse; // 165
-    bool sceneSpecular; // 166
-    bool directional; // 167
-    bool clampAttenuation; // 168
+    bool useInTransparents; // 160
+    bool useInParticles; // 161
+    bool sceneDiffuse; // 162
+    bool directional; // 163
+    bool clampAttenuation; // 164
+    uint8_t scaleGI; // 165
+    uint8_t scaleEnvProbes; // 166
+    uint8_t sceneSpecularScale; // 167
+    uint8_t scaleVolFog; // 168
     int8_t roughnessBias; // 169
     rend::LightChannel lightChannel; // 16A
     rend::LightGroup group; // 16C
@@ -74,11 +74,10 @@ struct LightComponent : ent::IVisualComponent
     float capsuleLength; // 1B0
     float areaRectSideA; // 1B4
     float areaRectSideB; // 1B8
-    uint8_t unk1BC[0x1C8 - 0x1BC]; // 1BC
-    RaRef<CIESDataResource> iesProfile; // 1C8
-    uint8_t unk1D0[0x200 - 0x1D0]; // 1D0
+    uint8_t unk1BC[0x1C0 - 0x1BC]; // 1BC
+    RaRef<CIESDataResource> iesProfile; // 1C0
+    uint8_t unk1C8[0x1F0 - 0x1C8]; // 1C8
 };
-RED4EXT_ASSERT_SIZE(LightComponent, 0x200);
+RED4EXT_ASSERT_SIZE(LightComponent, 0x1F0);
 } // namespace ent
-using LightComponent = ent::LightComponent;
 } // namespace RED4ext

@@ -15,6 +15,6 @@ struct HolocallCameraComponent : ent::RenderToTextureCameraComponent
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(HolocallCameraComponent, 0x970);
+RED4EXT_ASSERT_SIZE(HolocallCameraComponent, 0x980);
 } // namespace game::ui
 } // namespace RED4ext

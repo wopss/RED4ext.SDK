@@ -11,11 +11,10 @@ namespace game {
 struct DelayID
 {
     static constexpr const char* NAME = "gameDelayID";
-    static constexpr const char* ALIAS = "DelayID";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(DelayID, 0x8);
 } // namespace game
-using DelayID = game::DelayID;
 } // namespace RED4ext

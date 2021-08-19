@@ -15,7 +15,7 @@ namespace game::influence {
 struct ObstacleComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceObstacleComponent";
-    static constexpr const char* ALIAS = "InfluenceObstacleComponent";
+    static constexpr const char* ALIAS = NAME;
 
     Box customBoundingBox; // 120
     game::influence::EBoundingBoxType boundingBoxType; // 140
@@ -24,5 +24,4 @@ struct ObstacleComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(ObstacleComponent, 0x1F0);
 } // namespace game::influence
-using InfluenceObstacleComponent = game::influence::ObstacleComponent;
 } // namespace RED4ext

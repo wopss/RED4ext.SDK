@@ -12,11 +12,10 @@ namespace game::data {
 struct Substat_Record : game::data::Stat_Record
 {
     static constexpr const char* NAME = "gamedataSubstat_Record";
-    static constexpr const char* ALIAS = "Substat_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk70[0x78 - 0x70]; // 70
 };
 RED4EXT_ASSERT_SIZE(Substat_Record, 0x78);
 } // namespace game::data
-using Substat_Record = game::data::Substat_Record;
 } // namespace RED4ext

@@ -14,12 +14,11 @@ namespace game {
 struct NetrunnerPrototypeComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeComponent";
-    static constexpr const char* ALIAS = "NetrunnerPrototypeComponent";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<game::NetrunnerPrototypeStruct> structs; // 90
     uint8_t unkA0[0x118 - 0xA0]; // A0
 };
 RED4EXT_ASSERT_SIZE(NetrunnerPrototypeComponent, 0x118);
 } // namespace game
-using NetrunnerPrototypeComponent = game::NetrunnerPrototypeComponent;
 } // namespace RED4ext

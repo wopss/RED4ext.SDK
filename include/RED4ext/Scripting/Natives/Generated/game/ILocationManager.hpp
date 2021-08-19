@@ -12,10 +12,9 @@ namespace game {
 struct ILocationManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameILocationManager";
-    static constexpr const char* ALIAS = "ILocationManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ILocationManager, 0x48);
 } // namespace game
-using ILocationManager = game::ILocationManager;
 } // namespace RED4ext

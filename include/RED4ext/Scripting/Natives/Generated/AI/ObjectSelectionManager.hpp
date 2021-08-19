@@ -12,11 +12,10 @@ namespace AI {
 struct ObjectSelectionManager : AI::ObjectSelectionManagerInterface
 {
     static constexpr const char* NAME = "AIObjectSelectionManager";
-    static constexpr const char* ALIAS = "ObjectSelectionManager";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x60 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ObjectSelectionManager, 0x60);
 } // namespace AI
-using ObjectSelectionManager = AI::ObjectSelectionManager;
 } // namespace RED4ext

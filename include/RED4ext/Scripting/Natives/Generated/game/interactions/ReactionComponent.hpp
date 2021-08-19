@@ -14,7 +14,7 @@ namespace game::interactions {
 struct ReactionComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameinteractionsReactionComponent";
-    static constexpr const char* ALIAS = "ReactionComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk90[0xB8 - 0x90]; // 90
     DynArray<game::interactions::ReactionData> reactions; // B8
@@ -24,5 +24,4 @@ struct ReactionComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(ReactionComponent, 0xE8);
 } // namespace game::interactions
-using ReactionComponent = game::interactions::ReactionComponent;
 } // namespace RED4ext

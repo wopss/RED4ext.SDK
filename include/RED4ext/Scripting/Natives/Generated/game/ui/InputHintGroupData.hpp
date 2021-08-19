@@ -12,7 +12,7 @@ namespace game::ui {
 struct InputHintGroupData
 {
     static constexpr const char* NAME = "gameuiInputHintGroupData";
-    static constexpr const char* ALIAS = "InputHintGroupData";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID iconReference; // 00
     CString localizedTitle; // 08
@@ -22,5 +22,4 @@ struct InputHintGroupData
 };
 RED4EXT_ASSERT_SIZE(InputHintGroupData, 0x50);
 } // namespace game::ui
-using InputHintGroupData = game::ui::InputHintGroupData;
 } // namespace RED4ext

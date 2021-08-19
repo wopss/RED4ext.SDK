@@ -16,7 +16,7 @@ namespace game::ui {
 struct GenericNotificationData
 {
     static constexpr const char* NAME = "gameuiGenericNotificationData";
-    static constexpr const char* ALIAS = "gameuiGenericNotificationData";
+    static constexpr const char* ALIAS = NAME;
 
     float time; // 00
     uint8_t unk04[0x8 - 0x4]; // 4

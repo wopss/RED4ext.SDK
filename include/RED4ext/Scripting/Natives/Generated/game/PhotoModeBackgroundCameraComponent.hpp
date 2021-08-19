@@ -22,19 +22,19 @@ struct PhotoModeBackgroundCameraComponent : ent::BaseCameraComponent
     static constexpr const char* NAME = "gamePhotoModeBackgroundCameraComponent";
     static constexpr const char* ALIAS = NAME;
 
-    RaRef<DynamicTexture> dynamicTextureRes; // 1C0
-    uint8_t unk1C8[0x1E0 - 0x1C8]; // 1C8
-    CName virtualCameraName; // 1E0
-    Ref<world::EnvironmentAreaParameters> env; // 1E8
-    WorldRenderAreaSettings params; // 200
-    uint8_t unk210[0x8F0 - 0x210]; // 210
-    float streamingDistance; // 8F0
-    Color backgroundColor; // 8F4
-    float depthCutDistance; // 8F8
-    RenderSceneLayer renderSceneLayer; // 8FC
-    bool overrideBackgroundColor; // 8FD
-    uint8_t unk8FE[0x900 - 0x8FE]; // 8FE
+    RaRef<DynamicTexture> dynamicTextureRes; // 1D0
+    uint8_t unk1D8[0x1F0 - 0x1D8]; // 1D8
+    CName virtualCameraName; // 1F0
+    Ref<world::EnvironmentAreaParameters> env; // 1F8
+    WorldRenderAreaSettings params; // 210
+    uint8_t unk220[0x900 - 0x220]; // 220
+    float streamingDistance; // 900
+    Color backgroundColor; // 904
+    float depthCutDistance; // 908
+    RenderSceneLayer renderSceneLayer; // 90C
+    bool overrideBackgroundColor; // 90D
+    uint8_t unk90E[0x910 - 0x90E]; // 90E
 };
-RED4EXT_ASSERT_SIZE(PhotoModeBackgroundCameraComponent, 0x900);
+RED4EXT_ASSERT_SIZE(PhotoModeBackgroundCameraComponent, 0x910);
 } // namespace game
 } // namespace RED4ext

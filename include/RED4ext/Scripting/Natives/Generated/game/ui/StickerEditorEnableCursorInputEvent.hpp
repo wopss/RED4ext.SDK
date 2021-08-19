@@ -12,11 +12,10 @@ namespace game::ui {
 struct StickerEditorEnableCursorInputEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiStickerEditorEnableCursorInputEvent";
-    static constexpr const char* ALIAS = "StickerEditorEnableCursorInputEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(StickerEditorEnableCursorInputEvent, 0x48);
 } // namespace game::ui
-using StickerEditorEnableCursorInputEvent = game::ui::StickerEditorEnableCursorInputEvent;
 } // namespace RED4ext

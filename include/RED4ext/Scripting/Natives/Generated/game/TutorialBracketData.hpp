@@ -15,7 +15,7 @@ namespace game {
 struct TutorialBracketData
 {
     static constexpr const char* NAME = "gameTutorialBracketData";
-    static constexpr const char* ALIAS = "TutorialBracketData";
+    static constexpr const char* ALIAS = NAME;
 
     CName bracketID; // 00
     game::TutorialBracketType bracketType; // 08
@@ -26,5 +26,4 @@ struct TutorialBracketData
 };
 RED4EXT_ASSERT_SIZE(TutorialBracketData, 0x20);
 } // namespace game
-using TutorialBracketData = game::TutorialBracketData;
 } // namespace RED4ext

@@ -12,12 +12,11 @@ namespace game {
 struct TaggedEvent : red::Event
 {
     static constexpr const char* NAME = "gameTaggedEvent";
-    static constexpr const char* ALIAS = "TaggedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool state; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(TaggedEvent, 0x48);
 } // namespace game
-using TaggedEvent = game::TaggedEvent;
 } // namespace RED4ext

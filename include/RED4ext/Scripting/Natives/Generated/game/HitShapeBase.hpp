@@ -15,7 +15,7 @@ namespace game {
 struct HitShapeBase : game::IHitShape
 {
     static constexpr const char* NAME = "gameHitShapeBase";
-    static constexpr const char* ALIAS = "HitShapeBase";
+    static constexpr const char* ALIAS = NAME;
 
     Vector3 translation; // 30
     uint8_t unk3C[0x40 - 0x3C]; // 3C
@@ -24,5 +24,4 @@ struct HitShapeBase : game::IHitShape
 };
 RED4EXT_ASSERT_SIZE(HitShapeBase, 0x90);
 } // namespace game
-using HitShapeBase = game::HitShapeBase;
 } // namespace RED4ext

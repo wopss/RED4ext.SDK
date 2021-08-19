@@ -13,8 +13,8 @@ struct Audio
     static constexpr const char* NAME = "vehicleAudio";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x3F0 - 0x0]; // 0
+    uint8_t unk00[0x450 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(Audio, 0x3F0);
+RED4EXT_ASSERT_SIZE(Audio, 0x450);
 } // namespace vehicle
 } // namespace RED4ext

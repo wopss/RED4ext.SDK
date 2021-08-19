@@ -12,12 +12,11 @@ namespace anim {
 struct LookAtPartInfo
 {
     static constexpr const char* NAME = "animLookAtPartInfo";
-    static constexpr const char* ALIAS = "LookAtPartInfo";
+    static constexpr const char* ALIAS = NAME;
 
     CName partName; // 00
     CName defaultPositionBoneName; // 08
 };
 RED4EXT_ASSERT_SIZE(LookAtPartInfo, 0x10);
 } // namespace anim
-using LookAtPartInfo = anim::LookAtPartInfo;
 } // namespace RED4ext

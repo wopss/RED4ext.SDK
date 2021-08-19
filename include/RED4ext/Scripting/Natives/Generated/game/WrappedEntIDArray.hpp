@@ -13,11 +13,10 @@ namespace game {
 struct WrappedEntIDArray
 {
     static constexpr const char* NAME = "gameWrappedEntIDArray";
-    static constexpr const char* ALIAS = "WrappedEntIDArray";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<ent::EntityID> arr; // 00
 };
 RED4EXT_ASSERT_SIZE(WrappedEntIDArray, 0x10);
 } // namespace game
-using WrappedEntIDArray = game::WrappedEntIDArray;
 } // namespace RED4ext

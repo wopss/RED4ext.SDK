@@ -12,12 +12,11 @@ namespace game {
 struct EffectExecutor : game::EffectNode
 {
     static constexpr const char* NAME = "gameEffectExecutor";
-    static constexpr const char* ALIAS = "EffectExecutor";
+    static constexpr const char* ALIAS = NAME;
 
     bool usesHitCooldown; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor, 0x48);
 } // namespace game
-using EffectExecutor = game::EffectExecutor;
 } // namespace RED4ext

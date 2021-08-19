@@ -14,8 +14,8 @@ struct InterestingConversationsAreaNodeInstance : world::TriggerAreaNodeInstance
     static constexpr const char* NAME = "worldInterestingConversationsAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk100[0x170 - 0x100]; // 100
+    uint8_t unk100[0x190 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(InterestingConversationsAreaNodeInstance, 0x170);
+RED4EXT_ASSERT_SIZE(InterestingConversationsAreaNodeInstance, 0x190);
 } // namespace world
 } // namespace RED4ext

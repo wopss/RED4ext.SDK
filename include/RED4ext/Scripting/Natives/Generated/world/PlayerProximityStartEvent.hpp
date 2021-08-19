@@ -13,11 +13,10 @@ namespace world {
 struct PlayerProximityStartEvent : red::Event
 {
     static constexpr const char* NAME = "worldPlayerProximityStartEvent";
-    static constexpr const char* ALIAS = "PlayerProximityStartEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName profile; // 40
 };
 RED4EXT_ASSERT_SIZE(PlayerProximityStartEvent, 0x48);
 } // namespace world
-using PlayerProximityStartEvent = world::PlayerProximityStartEvent;
 } // namespace RED4ext

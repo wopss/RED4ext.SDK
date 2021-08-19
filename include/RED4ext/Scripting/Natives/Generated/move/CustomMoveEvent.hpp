@@ -12,12 +12,11 @@ namespace move {
 struct CustomMoveEvent : game::ActionEvent
 {
     static constexpr const char* NAME = "moveCustomMoveEvent";
-    static constexpr const char* ALIAS = "CustomMoveEvent";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t test; // 68
     uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
 RED4EXT_ASSERT_SIZE(CustomMoveEvent, 0x70);
 } // namespace move
-using CustomMoveEvent = move::CustomMoveEvent;
 } // namespace RED4ext

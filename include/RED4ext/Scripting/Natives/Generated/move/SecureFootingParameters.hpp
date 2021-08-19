@@ -12,7 +12,7 @@ namespace move {
 struct SecureFootingParameters
 {
     static constexpr const char* NAME = "moveSecureFootingParameters";
-    static constexpr const char* ALIAS = "SecureFootingParameters";
+    static constexpr const char* ALIAS = NAME;
 
     CName unsecureCollisionFilterName; // 00
     CName slopeCurveName; // 08
@@ -29,5 +29,4 @@ struct SecureFootingParameters
 };
 RED4EXT_ASSERT_SIZE(SecureFootingParameters, 0x38);
 } // namespace move
-using SecureFootingParameters = move::SecureFootingParameters;
 } // namespace RED4ext

@@ -15,7 +15,7 @@ namespace game::events {
 struct DamageReceivedEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsDamageReceivedEvent";
-    static constexpr const char* ALIAS = "gameDamageReceivedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<game::events::HitEvent> hitEvent; // 40
     float totalDamageReceived; // 50
@@ -23,5 +23,4 @@ struct DamageReceivedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DamageReceivedEvent, 0x58);
 } // namespace game::events
-using gameDamageReceivedEvent = game::events::DamageReceivedEvent;
 } // namespace RED4ext

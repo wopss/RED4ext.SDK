@@ -10,10 +10,9 @@ namespace RED4ext
 struct ScriptGameInstance
 {
     static constexpr const char* NAME = "ScriptGameInstance";
-    static constexpr const char* ALIAS = "GameInstance";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x8 - 0x0]; // 0
+    uint8_t unk00[0x18 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(ScriptGameInstance, 0x8);
-using GameInstance = ScriptGameInstance;
+RED4EXT_ASSERT_SIZE(ScriptGameInstance, 0x18);
 } // namespace RED4ext

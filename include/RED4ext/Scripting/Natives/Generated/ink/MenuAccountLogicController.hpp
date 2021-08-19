@@ -12,11 +12,10 @@ namespace ink {
 struct MenuAccountLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkMenuAccountLogicController";
-    static constexpr const char* ALIAS = "MenuAccountLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk68[0x88 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(MenuAccountLogicController, 0x88);
 } // namespace ink
-using MenuAccountLogicController = ink::MenuAccountLogicController;
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace ent {
 struct RagdollImpactEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollImpactEvent";
-    static constexpr const char* ALIAS = "RagdollImpactEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<ent::Entity> otherEntity; // 40
     bool triggeredSimulation; // 50
@@ -26,5 +26,4 @@ struct RagdollImpactEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RagdollImpactEvent, 0x68);
 } // namespace ent
-using RagdollImpactEvent = ent::RagdollImpactEvent;
 } // namespace RED4ext

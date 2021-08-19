@@ -18,10 +18,10 @@ struct GeometryCacheArtifact : CResource
     static constexpr const char* NAME = "physicsGeometryCacheArtifact";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<DeferredDataBuffer> bufferTable; // 40
-    DynArray<physics::CacheKey> entryKeys; // 50
-    DynArray<physics::CacheEntry> entryTable; // 60
+    DeferredDataBuffer buffer; // 40
+    DynArray<physics::CacheKey> entryKeys; // 98
+    DynArray<physics::CacheEntry> entryTable; // A8
 };
-RED4EXT_ASSERT_SIZE(GeometryCacheArtifact, 0x70);
+RED4EXT_ASSERT_SIZE(GeometryCacheArtifact, 0xB8);
 } // namespace physics
 } // namespace RED4ext

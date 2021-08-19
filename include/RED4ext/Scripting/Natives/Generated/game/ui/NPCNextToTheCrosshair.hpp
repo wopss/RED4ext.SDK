@@ -18,7 +18,7 @@ namespace game::ui {
 struct NPCNextToTheCrosshair
 {
     static constexpr const char* NAME = "gameuiNPCNextToTheCrosshair";
-    static constexpr const char* ALIAS = "NPCNextToTheCrosshair";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> npc; // 00
     CString name; // 10
@@ -39,5 +39,4 @@ struct NPCNextToTheCrosshair
 };
 RED4EXT_ASSERT_SIZE(NPCNextToTheCrosshair, 0x58);
 } // namespace game::ui
-using NPCNextToTheCrosshair = game::ui::NPCNextToTheCrosshair;
 } // namespace RED4ext

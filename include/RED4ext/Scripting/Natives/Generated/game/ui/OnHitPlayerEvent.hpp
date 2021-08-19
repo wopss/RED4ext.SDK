@@ -15,11 +15,10 @@ namespace game::ui {
 struct OnHitPlayerEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiOnHitPlayerEvent";
-    static constexpr const char* ALIAS = "HitPlayerEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<game::ui::MinigameState> gameState; // 40
 };
 RED4EXT_ASSERT_SIZE(OnHitPlayerEvent, 0x50);
 } // namespace game::ui
-using HitPlayerEvent = game::ui::OnHitPlayerEvent;
 } // namespace RED4ext

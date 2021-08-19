@@ -12,10 +12,9 @@ namespace game::data {
 struct TweakDBInterface : IScriptable
 {
     static constexpr const char* NAME = "gamedataTweakDBInterface";
-    static constexpr const char* ALIAS = "TweakDBInterface";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(TweakDBInterface, 0x40);
 } // namespace game::data
-using TweakDBInterface = game::data::TweakDBInterface;
 } // namespace RED4ext

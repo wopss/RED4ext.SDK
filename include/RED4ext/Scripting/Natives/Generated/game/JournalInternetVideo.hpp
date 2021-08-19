@@ -15,11 +15,10 @@ namespace game {
 struct JournalInternetVideo : game::JournalInternetBase
 {
     static constexpr const char* NAME = "gameJournalInternetVideo";
-    static constexpr const char* ALIAS = "JournalInternetVideo";
+    static constexpr const char* ALIAS = NAME;
 
     RaRef<Bink> videoResource; // 70
 };
 RED4EXT_ASSERT_SIZE(JournalInternetVideo, 0x78);
 } // namespace game
-using JournalInternetVideo = game::JournalInternetVideo;
 } // namespace RED4ext

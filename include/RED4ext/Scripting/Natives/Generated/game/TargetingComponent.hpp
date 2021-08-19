@@ -14,7 +14,7 @@ namespace game {
 struct TargetingComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameTargetingComponent";
-    static constexpr const char* ALIAS = "TargetingComponent";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<TweakDBID> aimAssistData; // 120
     uint8_t unk130[0x158 - 0x130]; // 130
@@ -25,5 +25,4 @@ struct TargetingComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(TargetingComponent, 0x160);
 } // namespace game
-using TargetingComponent = game::TargetingComponent;
 } // namespace RED4ext

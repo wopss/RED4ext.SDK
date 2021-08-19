@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_VehiclePassenger : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_VehiclePassenger";
-    static constexpr const char* ALIAS = "AnimFeature_VehiclePassenger";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 overallForceMS; // 40
     float turnSpeed; // 50
@@ -38,5 +38,4 @@ struct AnimFeature_VehiclePassenger : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_VehiclePassenger, 0x90);
 } // namespace anim
-using AnimFeature_VehiclePassenger = anim::AnimFeature_VehiclePassenger;
 } // namespace RED4ext

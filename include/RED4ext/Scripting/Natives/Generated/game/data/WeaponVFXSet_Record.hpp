@@ -12,11 +12,10 @@ namespace game::data {
 struct WeaponVFXSet_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWeaponVFXSet_Record";
-    static constexpr const char* ALIAS = "WeaponVFXSet_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(WeaponVFXSet_Record, 0x50);
 } // namespace game::data
-using WeaponVFXSet_Record = game::data::WeaponVFXSet_Record;
 } // namespace RED4ext

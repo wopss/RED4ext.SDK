@@ -12,10 +12,9 @@ namespace game::interactions {
 struct ChoiceCaptionPart : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsChoiceCaptionPart";
-    static constexpr const char* ALIAS = "InteractionChoiceCaptionPart";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ChoiceCaptionPart, 0x40);
 } // namespace game::interactions
-using InteractionChoiceCaptionPart = game::interactions::ChoiceCaptionPart;
 } // namespace RED4ext

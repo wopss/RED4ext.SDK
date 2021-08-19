@@ -16,7 +16,7 @@ namespace game {
 struct JournalQuestMapPinBase : game::JournalContainerEntry
 {
     static constexpr const char* NAME = "gameJournalQuestMapPinBase";
-    static constexpr const char* ALIAS = "JournalQuestMapPinBase";
+    static constexpr const char* ALIAS = NAME;
 
     CName slotName; // 78
     game::mappins::MappinData mappinData; // 80
@@ -27,5 +27,4 @@ struct JournalQuestMapPinBase : game::JournalContainerEntry
 };
 RED4EXT_ASSERT_SIZE(JournalQuestMapPinBase, 0x110);
 } // namespace game
-using JournalQuestMapPinBase = game::JournalQuestMapPinBase;
 } // namespace RED4ext

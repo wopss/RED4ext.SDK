@@ -13,11 +13,10 @@ namespace game::audio::events {
 struct NotifyItemUnequippedEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsNotifyItemUnequippedEvent";
-    static constexpr const char* ALIAS = "AudioNotifyItemUnequippedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName itemName; // 40
 };
 RED4EXT_ASSERT_SIZE(NotifyItemUnequippedEvent, 0x48);
 } // namespace game::audio::events
-using AudioNotifyItemUnequippedEvent = game::audio::events::NotifyItemUnequippedEvent;
 } // namespace RED4ext

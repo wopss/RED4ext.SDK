@@ -14,7 +14,7 @@ namespace anim {
 struct IKChainSettings
 {
     static constexpr const char* NAME = "animIKChainSettings";
-    static constexpr const char* ALIAS = "IKChainSettings";
+    static constexpr const char* ALIAS = NAME;
 
     CName chainName; // 00
     CName enableFloatTrack; // 08
@@ -24,5 +24,4 @@ struct IKChainSettings
 };
 RED4EXT_ASSERT_SIZE(IKChainSettings, 0x30);
 } // namespace anim
-using IKChainSettings = anim::IKChainSettings;
 } // namespace RED4ext

@@ -16,12 +16,11 @@ namespace AI::behavior {
 struct SuspiciousObjectEvent : red::Event
 {
     static constexpr const char* NAME = "AIbehaviorSuspiciousObjectEvent";
-    static constexpr const char* ALIAS = "SuspiciousObjectEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> target; // 40
     CName description; // 50
 };
 RED4EXT_ASSERT_SIZE(SuspiciousObjectEvent, 0x58);
 } // namespace AI::behavior
-using SuspiciousObjectEvent = AI::behavior::SuspiciousObjectEvent;
 } // namespace RED4ext

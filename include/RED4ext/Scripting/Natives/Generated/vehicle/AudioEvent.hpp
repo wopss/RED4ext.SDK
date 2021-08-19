@@ -13,12 +13,11 @@ namespace vehicle {
 struct AudioEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleAudioEvent";
-    static constexpr const char* ALIAS = "VehicleAudioEvent";
+    static constexpr const char* ALIAS = NAME;
 
     vehicle::AudioEventAction action; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(AudioEvent, 0x48);
 } // namespace vehicle
-using VehicleAudioEvent = vehicle::AudioEvent;
 } // namespace RED4ext

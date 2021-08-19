@@ -16,5 +16,4 @@ enum class GOGRewardsSystemErrors : uint32_t
     NotSignedInLauncher = 5,
 };
 } // namespace game
-using GOGRewardsSystemErrors = game::GOGRewardsSystemErrors;
 } // namespace RED4ext

@@ -15,7 +15,7 @@ namespace game {
 struct SEquipmentSet
 {
     static constexpr const char* NAME = "gameSEquipmentSet";
-    static constexpr const char* ALIAS = "SEquipmentSet";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<game::SItemInfo> setItems; // 00
     CName setName; // 10
@@ -24,5 +24,4 @@ struct SEquipmentSet
 };
 RED4EXT_ASSERT_SIZE(SEquipmentSet, 0x20);
 } // namespace game
-using SEquipmentSet = game::SEquipmentSet;
 } // namespace RED4ext

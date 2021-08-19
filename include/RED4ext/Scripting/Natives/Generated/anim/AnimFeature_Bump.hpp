@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_Bump : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_Bump";
-    static constexpr const char* ALIAS = "AnimFeature_Bump";
+    static constexpr const char* ALIAS = NAME;
 
     float direction; // 40
     float intensity; // 44
@@ -23,5 +23,4 @@ struct AnimFeature_Bump : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_Bump, 0x58);
 } // namespace anim
-using AnimFeature_Bump = anim::AnimFeature_Bump;
 } // namespace RED4ext

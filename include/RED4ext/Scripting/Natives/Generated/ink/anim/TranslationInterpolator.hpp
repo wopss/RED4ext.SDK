@@ -13,12 +13,11 @@ namespace ink::anim {
 struct TranslationInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimTranslationInterpolator";
-    static constexpr const char* ALIAS = "inkAnimTranslation";
+    static constexpr const char* ALIAS = NAME;
 
     Vector2 startValue; // 68
     Vector2 endValue; // 70
 };
 RED4EXT_ASSERT_SIZE(TranslationInterpolator, 0x78);
 } // namespace ink::anim
-using inkAnimTranslation = ink::anim::TranslationInterpolator;
 } // namespace RED4ext

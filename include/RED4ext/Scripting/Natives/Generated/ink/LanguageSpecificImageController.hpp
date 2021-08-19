@@ -18,7 +18,7 @@ namespace ink {
 struct LanguageSpecificImageController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkLanguageSpecificImageController";
-    static constexpr const char* ALIAS = "LanguageSpecificImageController";
+    static constexpr const char* ALIAS = NAME;
 
     RaRef<ink::TextureAtlas> textureAtlasForLanguage; // 68
     CName partNameForLanguage; // 70
@@ -28,5 +28,4 @@ struct LanguageSpecificImageController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(LanguageSpecificImageController, 0x98);
 } // namespace ink
-using LanguageSpecificImageController = ink::LanguageSpecificImageController;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game {
 struct PrereqState : IScriptable
 {
     static constexpr const char* NAME = "gamePrereqState";
-    static constexpr const char* ALIAS = "PrereqState";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0xC0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(PrereqState, 0xC0);
 } // namespace game
-using PrereqState = game::PrereqState;
 } // namespace RED4ext

@@ -19,27 +19,27 @@ struct LightComponent : ent::LightComponent
     static constexpr const char* NAME = "gameLightComponent";
     static constexpr const char* ALIAS = NAME;
 
-    bool emissiveOnly; // 200
-    bool turnOnByDefault; // 201
-    game::EMaterialZone materialZone; // 202
-    uint8_t unk203[0x208 - 0x203]; // 203
-    CName meshBrokenAppearance; // 208
-    float onStrength; // 210
-    float turnOnTime; // 214
-    CName turnOnCurve; // 218
-    float turnOffTime; // 220
+    bool emissiveOnly; // 1F0
+    bool turnOnByDefault; // 1F1
+    game::EMaterialZone materialZone; // 1F2
+    uint8_t unk1F3[0x1F8 - 0x1F3]; // 1F3
+    CName meshBrokenAppearance; // 1F8
+    float onStrength; // 200
+    float turnOnTime; // 204
+    CName turnOnCurve; // 208
+    float turnOffTime; // 210
+    uint8_t unk214[0x218 - 0x214]; // 214
+    CName turnOffCurve; // 218
+    float loopTime; // 220
     uint8_t unk224[0x228 - 0x224]; // 224
-    CName turnOffCurve; // 228
-    float loopTime; // 230
-    uint8_t unk234[0x238 - 0x234]; // 234
-    CName loopCurve; // 238
-    bool isDestructible; // 240
-    uint8_t unk241[0x248 - 0x241]; // 241
-    CName colliderName; // 248
-    CName colliderTag; // 250
-    RaRef<world::Effect> destructionEffect; // 258
-    uint8_t unk260[0x2F0 - 0x260]; // 260
+    CName loopCurve; // 228
+    bool isDestructible; // 230
+    uint8_t unk231[0x238 - 0x231]; // 231
+    CName colliderName; // 238
+    CName colliderTag; // 240
+    RaRef<world::Effect> destructionEffect; // 248
+    uint8_t unk250[0x2E0 - 0x250]; // 250
 };
-RED4EXT_ASSERT_SIZE(LightComponent, 0x2F0);
+RED4EXT_ASSERT_SIZE(LightComponent, 0x2E0);
 } // namespace game
 } // namespace RED4ext

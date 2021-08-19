@@ -12,10 +12,9 @@ namespace game {
 struct IMinimapSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIMinimapSystem";
-    static constexpr const char* ALIAS = "IMinimapSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IMinimapSystem, 0x48);
 } // namespace game
-using IMinimapSystem = game::IMinimapSystem;
 } // namespace RED4ext

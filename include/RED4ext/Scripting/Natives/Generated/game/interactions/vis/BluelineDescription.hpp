@@ -16,11 +16,10 @@ namespace game::interactions::vis {
 struct BluelineDescription : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsvisBluelineDescription";
-    static constexpr const char* ALIAS = "BluelineDescription";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<Handle<game::interactions::vis::BluelinePart>> parts; // 40
 };
 RED4EXT_ASSERT_SIZE(BluelineDescription, 0x50);
 } // namespace game::interactions::vis
-using BluelineDescription = game::interactions::vis::BluelineDescription;
 } // namespace RED4ext

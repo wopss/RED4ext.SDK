@@ -12,10 +12,9 @@ namespace game::targeting {
 struct SystemTargetFilter_ClosestOpaque : game::targeting::SystemTargetFilter_Closest
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilter_ClosestOpaque";
-    static constexpr const char* ALIAS = "TargetFilter_ClosestOpaque";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(SystemTargetFilter_ClosestOpaque, 0x80);
 } // namespace game::targeting
-using TargetFilter_ClosestOpaque = game::targeting::SystemTargetFilter_ClosestOpaque;
 } // namespace RED4ext

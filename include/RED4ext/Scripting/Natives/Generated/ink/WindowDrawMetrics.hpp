@@ -21,7 +21,8 @@ struct WindowDrawMetrics
     DynArray<uint32_t> textureTypeTotal; // 20
     DynArray<uint32_t> maxUsedTextureTypes; // 30
     DynArray<ink::SingleDrawMetric> drawMetrics; // 40
+    uint8_t unk50[0x68 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(WindowDrawMetrics, 0x50);
+RED4EXT_ASSERT_SIZE(WindowDrawMetrics, 0x68);
 } // namespace ink
 } // namespace RED4ext

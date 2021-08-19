@@ -13,7 +13,7 @@ namespace game::state {
 struct MachineStateSnapshot
 {
     static constexpr const char* NAME = "gamestateMachineStateSnapshot";
-    static constexpr const char* ALIAS = "StateSnapshot";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x10 - 0x0]; // 0
     CName stateMachineName; // 10
@@ -27,5 +27,4 @@ struct MachineStateSnapshot
 };
 RED4EXT_ASSERT_SIZE(MachineStateSnapshot, 0x48);
 } // namespace game::state
-using StateSnapshot = game::state::MachineStateSnapshot;
 } // namespace RED4ext

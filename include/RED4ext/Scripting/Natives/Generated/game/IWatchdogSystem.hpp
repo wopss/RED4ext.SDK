@@ -12,10 +12,9 @@ namespace game {
 struct IWatchdogSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIWatchdogSystem";
-    static constexpr const char* ALIAS = "IWatchdogSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IWatchdogSystem, 0x48);
 } // namespace game
-using IWatchdogSystem = game::IWatchdogSystem;
 } // namespace RED4ext

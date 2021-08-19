@@ -12,10 +12,9 @@ namespace game::data {
 struct Bounce_Record : game::data::ProjectileCollision_Record
 {
     static constexpr const char* NAME = "gamedataBounce_Record";
-    static constexpr const char* ALIAS = "Bounce_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(Bounce_Record, 0x58);
 } // namespace game::data
-using Bounce_Record = game::data::Bounce_Record;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace vehicle {
 struct CameraManagerFT : vehicle::CameraManager
 {
     static constexpr const char* NAME = "vehicleCameraManagerFT";
-    static constexpr const char* ALIAS = "VehicleCameraManagerFT";
+    static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(CameraManagerFT, 0x3A0);
+RED4EXT_ASSERT_SIZE(CameraManagerFT, 0x390);
 } // namespace vehicle
-using VehicleCameraManagerFT = vehicle::CameraManagerFT;
 } // namespace RED4ext

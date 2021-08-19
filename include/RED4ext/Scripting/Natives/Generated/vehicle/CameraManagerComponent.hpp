@@ -12,11 +12,10 @@ namespace vehicle {
 struct CameraManagerComponent : game::Component
 {
     static constexpr const char* NAME = "vehicleCameraManagerComponent";
-    static constexpr const char* ALIAS = "VehicleCameraManagerComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkA8[0xB8 - 0xA8]; // A8
 };
 RED4EXT_ASSERT_SIZE(CameraManagerComponent, 0xB8);
 } // namespace vehicle
-using VehicleCameraManagerComponent = vehicle::CameraManagerComponent;
 } // namespace RED4ext

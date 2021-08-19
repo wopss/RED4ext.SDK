@@ -12,11 +12,10 @@ namespace ink {
 struct TextInputWidget : ink::TextWidget
 {
     static constexpr const char* NAME = "inkTextInputWidget";
-    static constexpr const char* ALIAS = "inkTextInput";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk410[0x450 - 0x410]; // 410
+    uint8_t unk420[0x460 - 0x420]; // 420
 };
-RED4EXT_ASSERT_SIZE(TextInputWidget, 0x450);
+RED4EXT_ASSERT_SIZE(TextInputWidget, 0x460);
 } // namespace ink
-using inkTextInput = ink::TextInputWidget;
 } // namespace RED4ext

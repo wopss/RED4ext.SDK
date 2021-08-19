@@ -12,10 +12,9 @@ namespace ink {
 struct ScrollAreaWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkScrollAreaWidgetReference";
-    static constexpr const char* ALIAS = "inkScrollAreaRef";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ScrollAreaWidgetReference, 0x18);
 } // namespace ink
-using inkScrollAreaRef = ink::ScrollAreaWidgetReference;
 } // namespace RED4ext

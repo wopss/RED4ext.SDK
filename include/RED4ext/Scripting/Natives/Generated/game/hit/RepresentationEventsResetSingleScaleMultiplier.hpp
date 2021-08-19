@@ -13,11 +13,10 @@ namespace game::hit {
 struct RepresentationEventsResetSingleScaleMultiplier : red::Event
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsResetSingleScaleMultiplier";
-    static constexpr const char* ALIAS = "HitRepresentation_ResetSingleScaleMultiplier";
+    static constexpr const char* ALIAS = NAME;
 
     CName shapeName; // 40
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsResetSingleScaleMultiplier, 0x48);
 } // namespace game::hit
-using HitRepresentation_ResetSingleScaleMultiplier = game::hit::RepresentationEventsResetSingleScaleMultiplier;
 } // namespace RED4ext

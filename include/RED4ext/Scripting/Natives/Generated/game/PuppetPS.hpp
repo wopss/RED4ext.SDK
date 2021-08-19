@@ -13,7 +13,7 @@ namespace game {
 struct PuppetPS : game::ObjectPS
 {
     static constexpr const char* NAME = "gamePuppetPS";
-    static constexpr const char* ALIAS = "GamePuppetPS";
+    static constexpr const char* ALIAS = NAME;
 
     CName gender; // 68
     bool wasQuickHacked; // 70
@@ -24,5 +24,4 @@ struct PuppetPS : game::ObjectPS
 };
 RED4EXT_ASSERT_SIZE(PuppetPS, 0x78);
 } // namespace game
-using GamePuppetPS = game::PuppetPS;
 } // namespace RED4ext

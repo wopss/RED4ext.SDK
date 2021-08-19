@@ -12,11 +12,10 @@ namespace AI {
 struct SquadBase : ISerializable
 {
     static constexpr const char* NAME = "AISquadBase";
-    static constexpr const char* ALIAS = "SquadBase";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x110 - 0x30]; // 30
+    uint8_t unk30[0x148 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(SquadBase, 0x110);
+RED4EXT_ASSERT_SIZE(SquadBase, 0x148);
 } // namespace AI
-using SquadBase = AI::SquadBase;
 } // namespace RED4ext

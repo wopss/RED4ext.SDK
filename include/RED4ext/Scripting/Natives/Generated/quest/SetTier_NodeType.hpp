@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/GameplayTier.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/MotionConstrainedTierDataParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ISceneManagerNodeType.hpp>
 
 namespace RED4ext
@@ -20,7 +21,8 @@ struct SetTier_NodeType : quest::ISceneManagerNodeType
     bool useEnterAnim; // 3D
     bool useExitAnim; // 3E
     bool forceEmptyHands; // 3F
+    game::MotionConstrainedTierDataParams motionConstrainedTierDataParams; // 40
 };
-RED4EXT_ASSERT_SIZE(SetTier_NodeType, 0x40);
+RED4EXT_ASSERT_SIZE(SetTier_NodeType, 0x60);
 } // namespace quest
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace game::state {
 struct MachineeventRemoveOnDemandStateMachine : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventRemoveOnDemandStateMachine";
-    static constexpr const char* ALIAS = "PSMRemoveOnDemandStateMachine";
+    static constexpr const char* ALIAS = NAME;
 
     game::state::MachineStateMachineIdentifier stateMachineIdentifier; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineeventRemoveOnDemandStateMachine, 0x50);
 } // namespace game::state
-using PSMRemoveOnDemandStateMachine = game::state::MachineeventRemoveOnDemandStateMachine;
 } // namespace RED4ext

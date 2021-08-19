@@ -14,7 +14,7 @@ namespace game::device {
 struct Action : red::Event
 {
     static constexpr const char* NAME = "gamedeviceAction";
-    static constexpr const char* ALIAS = "DeviceAction";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x58 - 0x40]; // 40
     CName actionName; // 58
@@ -24,5 +24,4 @@ struct Action : red::Event
 };
 RED4EXT_ASSERT_SIZE(Action, 0x88);
 } // namespace game::device
-using DeviceAction = game::device::Action;
 } // namespace RED4ext

@@ -11,7 +11,7 @@ namespace AI {
 struct CombatSquadTacticRatio
 {
     static constexpr const char* NAME = "AICombatSquadTacticRatio";
-    static constexpr const char* ALIAS = "TacticRatio";
+    static constexpr const char* ALIAS = NAME;
 
     float ratioSum; // 00
     float reachSum; // 04
@@ -19,5 +19,4 @@ struct CombatSquadTacticRatio
 };
 RED4EXT_ASSERT_SIZE(CombatSquadTacticRatio, 0xC);
 } // namespace AI
-using TacticRatio = AI::CombatSquadTacticRatio;
 } // namespace RED4ext

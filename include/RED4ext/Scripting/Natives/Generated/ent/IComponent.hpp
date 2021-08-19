@@ -14,7 +14,7 @@ namespace ent {
 struct IComponent : IScriptable
 {
     static constexpr const char* NAME = "entIComponent";
-    static constexpr const char* ALIAS = "IComponent";
+    static constexpr const char* ALIAS = NAME;
 
     CName name; // 40
     uint8_t unk48[0x60 - 0x48]; // 48
@@ -26,5 +26,4 @@ struct IComponent : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IComponent, 0x90);
 } // namespace ent
-using IComponent = ent::IComponent;
 } // namespace RED4ext

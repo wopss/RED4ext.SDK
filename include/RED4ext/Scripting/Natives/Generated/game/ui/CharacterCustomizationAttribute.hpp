@@ -12,12 +12,11 @@ namespace game::ui {
 struct CharacterCustomizationAttribute
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationAttribute";
-    static constexpr const char* ALIAS = "CharacterCustomizationAttribute";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::StatType type; // 00
     uint32_t value; // 04
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationAttribute, 0x8);
 } // namespace game::ui
-using CharacterCustomizationAttribute = game::ui::CharacterCustomizationAttribute;
 } // namespace RED4ext

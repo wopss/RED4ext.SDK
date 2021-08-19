@@ -14,8 +14,8 @@ struct BendedMeshNodeInstance : world::INodeInstance
     static constexpr const char* NAME = "worldBendedMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xF0 - 0x90]; // 90
+    uint8_t unk90[0x100 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(BendedMeshNodeInstance, 0xF0);
+RED4EXT_ASSERT_SIZE(BendedMeshNodeInstance, 0x100);
 } // namespace world
 } // namespace RED4ext

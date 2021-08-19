@@ -12,11 +12,10 @@ namespace user {
 struct SettingsUserSettings : IScriptable
 {
     static constexpr const char* NAME = "userSettingsUserSettings";
-    static constexpr const char* ALIAS = "UserSettings";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(SettingsUserSettings, 0x50);
 } // namespace user
-using UserSettings = user::SettingsUserSettings;
 } // namespace RED4ext

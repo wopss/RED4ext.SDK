@@ -13,12 +13,11 @@ namespace game::ui {
 struct SideScrollerCheatCode
 {
     static constexpr const char* NAME = "gameuiSideScrollerCheatCode";
-    static constexpr const char* ALIAS = "SideScrollerCheatCodeAdvanced";
+    static constexpr const char* ALIAS = NAME;
 
     CName name; // 00
     DynArray<CName> keys; // 08
 };
 RED4EXT_ASSERT_SIZE(SideScrollerCheatCode, 0x18);
 } // namespace game::ui
-using SideScrollerCheatCodeAdvanced = game::ui::SideScrollerCheatCode;
 } // namespace RED4ext

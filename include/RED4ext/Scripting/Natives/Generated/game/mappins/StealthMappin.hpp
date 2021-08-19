@@ -12,11 +12,10 @@ namespace game::mappins {
 struct StealthMappin : game::mappins::RuntimeMappin
 {
     static constexpr const char* NAME = "gamemappinsStealthMappin";
-    static constexpr const char* ALIAS = "StealthMappin";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk108[0x310 - 0x108]; // 108
+    uint8_t unk108[0x360 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(StealthMappin, 0x310);
+RED4EXT_ASSERT_SIZE(StealthMappin, 0x360);
 } // namespace game::mappins
-using StealthMappin = game::mappins::StealthMappin;
 } // namespace RED4ext

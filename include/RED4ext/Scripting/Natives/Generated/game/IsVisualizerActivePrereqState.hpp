@@ -12,11 +12,10 @@ namespace game {
 struct IsVisualizerActivePrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameIsVisualizerActivePrereqState";
-    static constexpr const char* ALIAS = "IsVisualizerActivePrereqState";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkC0[0xC8 - 0xC0]; // C0
+    uint8_t unkC0[0xD0 - 0xC0]; // C0
 };
-RED4EXT_ASSERT_SIZE(IsVisualizerActivePrereqState, 0xC8);
+RED4EXT_ASSERT_SIZE(IsVisualizerActivePrereqState, 0xD0);
 } // namespace game
-using IsVisualizerActivePrereqState = game::IsVisualizerActivePrereqState;
 } // namespace RED4ext

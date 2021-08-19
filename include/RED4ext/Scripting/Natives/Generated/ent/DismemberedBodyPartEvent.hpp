@@ -14,11 +14,10 @@ namespace ent {
 struct DismemberedBodyPartEvent : red::Event
 {
     static constexpr const char* NAME = "entDismemberedBodyPartEvent";
-    static constexpr const char* ALIAS = "DismemberedBodyPartEvent";
+    static constexpr const char* ALIAS = NAME;
 
     alignas(8) StaticArray<CName, 32> bones; // 40
 };
 RED4EXT_ASSERT_SIZE(DismemberedBodyPartEvent, 0x148);
 } // namespace ent
-using DismemberedBodyPartEvent = ent::DismemberedBodyPartEvent;
 } // namespace RED4ext

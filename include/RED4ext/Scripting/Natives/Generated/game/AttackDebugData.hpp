@@ -13,7 +13,7 @@ namespace game {
 struct AttackDebugData
 {
     static constexpr const char* NAME = "gameAttackDebugData";
-    static constexpr const char* ALIAS = "AttackDebugData";
+    static constexpr const char* ALIAS = NAME;
 
     WorldTransform pointOfViewTransform; // 00
     Vector4 projectileHitplaneSpread; // 20
@@ -21,5 +21,4 @@ struct AttackDebugData
 };
 RED4EXT_ASSERT_SIZE(AttackDebugData, 0x40);
 } // namespace game
-using AttackDebugData = game::AttackDebugData;
 } // namespace RED4ext

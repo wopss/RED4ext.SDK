@@ -5,20 +5,18 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/Handle.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/StatModifierHandle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/StatType.hpp>
 
 namespace RED4ext
 {
-namespace game { struct StatModifierData; }
-
 namespace game { 
 struct StatData
 {
     static constexpr const char* NAME = "gameStatData";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<Handle<game::StatModifierData>> modifiers; // 00
+    DynArray<game::StatModifierHandle> modifiers; // 00
     uint8_t unk10[0x14 - 0x10]; // 10
     game::data::StatType statType; // 14
 };

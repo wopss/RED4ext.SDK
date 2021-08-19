@@ -12,7 +12,7 @@ namespace game::influence {
 struct ReservationAgent : game::influence::IAgent
 {
     static constexpr const char* NAME = "gameinfluenceReservationAgent";
-    static constexpr const char* ALIAS = "InfluenceReservationAgent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk08[0x44 - 0x8]; // 8
     float radius; // 44
@@ -20,5 +20,4 @@ struct ReservationAgent : game::influence::IAgent
 };
 RED4EXT_ASSERT_SIZE(ReservationAgent, 0x50);
 } // namespace game::influence
-using InfluenceReservationAgent = game::influence::ReservationAgent;
 } // namespace RED4ext

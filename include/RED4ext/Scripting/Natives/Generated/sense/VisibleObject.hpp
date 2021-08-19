@@ -14,7 +14,7 @@ namespace sense {
 struct VisibleObject : IScriptable
 {
     static constexpr const char* NAME = "senseVisibleObject";
-    static constexpr const char* ALIAS = "VisibleObject";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x68 - 0x40]; // 40
     CName description; // 68
@@ -22,9 +22,8 @@ struct VisibleObject : IScriptable
     float visibilityDistance; // 7C
     uint8_t unk80[0x8C - 0x80]; // 80
     game::data::SenseObjectType visibleObjectType; // 8C
-    uint8_t unk90[0xB0 - 0x90]; // 90
+    uint8_t unk90[0xC8 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(VisibleObject, 0xB0);
+RED4EXT_ASSERT_SIZE(VisibleObject, 0xC8);
 } // namespace sense
-using VisibleObject = sense::VisibleObject;
 } // namespace RED4ext

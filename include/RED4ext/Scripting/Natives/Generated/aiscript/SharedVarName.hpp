@@ -12,12 +12,11 @@ namespace aiscript {
 struct SharedVarName
 {
     static constexpr const char* NAME = "aiscriptSharedVarName";
-    static constexpr const char* ALIAS = "SharedVarName";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     LibTreeSharedVarReferenceName varName; // 08
 };
 RED4EXT_ASSERT_SIZE(SharedVarName, 0x10);
 } // namespace aiscript
-using SharedVarName = aiscript::SharedVarName;
 } // namespace RED4ext

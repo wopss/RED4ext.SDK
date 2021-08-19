@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_Ladder : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_Ladder";
-    static constexpr const char* ALIAS = "AnimFeature_Ladder";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t state; // 40
     int32_t transitionType; // 44
@@ -22,5 +22,4 @@ struct AnimFeature_Ladder : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_Ladder, 0x50);
 } // namespace anim
-using AnimFeature_Ladder = anim::AnimFeature_Ladder;
 } // namespace RED4ext

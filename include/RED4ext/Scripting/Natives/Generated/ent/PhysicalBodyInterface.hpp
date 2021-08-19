@@ -12,11 +12,10 @@ namespace ent {
 struct PhysicalBodyInterface : IScriptable
 {
     static constexpr const char* NAME = "entPhysicalBodyInterface";
-    static constexpr const char* ALIAS = "PhysicalBodyInterface";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(PhysicalBodyInterface, 0x48);
 } // namespace ent
-using PhysicalBodyInterface = ent::PhysicalBodyInterface;
 } // namespace RED4ext

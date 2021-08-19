@@ -21,7 +21,7 @@ namespace game::projectile {
 struct Component : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameprojectileComponent";
-    static constexpr const char* ALIAS = "ProjectileComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk120[0x749 - 0x120]; // 120
     bool deriveOwnerVelocity; // 749
@@ -49,5 +49,4 @@ struct Component : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(Component, 0x8A0);
 } // namespace game::projectile
-using ProjectileComponent = game::projectile::Component;
 } // namespace RED4ext

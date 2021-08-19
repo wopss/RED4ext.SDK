@@ -11,7 +11,7 @@ namespace game {
 struct IsQuickhackPanelOpenedPrereq
 {
     static constexpr const char* NAME = "gameIsQuickhackPanelOpenedPrereq";
-    static constexpr const char* ALIAS = "IsQuickhackPanelOpenedPrereq";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x40 - 0x0]; // 0
     bool inverted; // 40
@@ -19,5 +19,4 @@ struct IsQuickhackPanelOpenedPrereq
 };
 RED4EXT_ASSERT_SIZE(IsQuickhackPanelOpenedPrereq, 0x48);
 } // namespace game
-using IsQuickhackPanelOpenedPrereq = game::IsQuickhackPanelOpenedPrereq;
 } // namespace RED4ext

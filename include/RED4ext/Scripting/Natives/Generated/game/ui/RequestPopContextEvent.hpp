@@ -13,12 +13,11 @@ namespace game::ui {
 struct RequestPopContextEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiRequestPopContextEvent";
-    static constexpr const char* ALIAS = "PopUIGameContextEvent";
+    static constexpr const char* ALIAS = NAME;
 
     UIGameContext context; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(RequestPopContextEvent, 0x48);
 } // namespace game::ui
-using PopUIGameContextEvent = game::ui::RequestPopContextEvent;
 } // namespace RED4ext

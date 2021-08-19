@@ -14,8 +14,8 @@ struct StateMachine : ISerializable
     static constexpr const char* NAME = "inkStateMachine";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x158 - 0x30]; // 30
+    uint8_t unk30[0x168 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(StateMachine, 0x158);
+RED4EXT_ASSERT_SIZE(StateMachine, 0x168);
 } // namespace ink
 } // namespace RED4ext

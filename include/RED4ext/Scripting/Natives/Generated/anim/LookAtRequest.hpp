@@ -14,7 +14,7 @@ namespace anim {
 struct LookAtRequest
 {
     static constexpr const char* NAME = "animLookAtRequest";
-    static constexpr const char* ALIAS = "LookAtRequest";
+    static constexpr const char* ALIAS = NAME;
 
     float transitionSpeed; // 00
     bool hasOutTransition; // 04
@@ -33,5 +33,4 @@ struct LookAtRequest
 };
 RED4EXT_ASSERT_SIZE(LookAtRequest, 0x70);
 } // namespace anim
-using LookAtRequest = anim::LookAtRequest;
 } // namespace RED4ext

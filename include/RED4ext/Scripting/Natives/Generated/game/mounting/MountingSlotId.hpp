@@ -12,11 +12,10 @@ namespace game::mounting {
 struct MountingSlotId
 {
     static constexpr const char* NAME = "gamemountingMountingSlotId";
-    static constexpr const char* ALIAS = "MountingSlotId";
+    static constexpr const char* ALIAS = NAME;
 
     CName id; // 00
 };
 RED4EXT_ASSERT_SIZE(MountingSlotId, 0x8);
 } // namespace game::mounting
-using MountingSlotId = game::mounting::MountingSlotId;
 } // namespace RED4ext

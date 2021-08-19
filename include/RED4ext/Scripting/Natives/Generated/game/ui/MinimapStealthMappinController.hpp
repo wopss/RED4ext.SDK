@@ -13,11 +13,10 @@ namespace game::ui {
 struct MinimapStealthMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapStealthMappinController";
-    static constexpr const char* ALIAS = "MinimapStealthMappinController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::ImageWidgetReference visionConeWidget; // 210
 };
 RED4EXT_ASSERT_SIZE(MinimapStealthMappinController, 0x228);
 } // namespace game::ui
-using MinimapStealthMappinController = game::ui::MinimapStealthMappinController;
 } // namespace RED4ext

@@ -16,7 +16,7 @@ namespace game::interactions {
 struct ReactionEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsReactionEvent";
-    static constexpr const char* ALIAS = "ReactionEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName interactionType; // 40
     DynArray<game::EquipParam> interactionItems; // 48
@@ -25,5 +25,4 @@ struct ReactionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ReactionEvent, 0x60);
 } // namespace game::interactions
-using ReactionEvent = game::interactions::ReactionEvent;
 } // namespace RED4ext

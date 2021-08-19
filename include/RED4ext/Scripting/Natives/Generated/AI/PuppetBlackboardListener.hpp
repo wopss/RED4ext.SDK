@@ -14,8 +14,8 @@ struct PuppetBlackboardListener : ISerializable
     static constexpr const char* NAME = "AIPuppetBlackboardListener";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x50 - 0x30]; // 30
+    uint8_t unk30[0x58 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(PuppetBlackboardListener, 0x50);
+RED4EXT_ASSERT_SIZE(PuppetBlackboardListener, 0x58);
 } // namespace AI
 } // namespace RED4ext

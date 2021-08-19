@@ -12,7 +12,7 @@ namespace game {
 struct SetAsQuestImportantEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetAsQuestImportantEvent";
-    static constexpr const char* ALIAS = "SetAsQuestImportantEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool isImportant; // 40
     bool propagateToSlaves; // 41
@@ -20,5 +20,4 @@ struct SetAsQuestImportantEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetAsQuestImportantEvent, 0x48);
 } // namespace game
-using SetAsQuestImportantEvent = game::SetAsQuestImportantEvent;
 } // namespace RED4ext

@@ -16,7 +16,7 @@ namespace game {
 struct InventoryItemAbility
 {
     static constexpr const char* NAME = "gameInventoryItemAbility";
-    static constexpr const char* ALIAS = "InventoryItemAbility";
+    static constexpr const char* ALIAS = NAME;
 
     CName IconPath; // 00
     CString Title; // 08
@@ -25,5 +25,4 @@ struct InventoryItemAbility
 };
 RED4EXT_ASSERT_SIZE(InventoryItemAbility, 0x58);
 } // namespace game
-using InventoryItemAbility = game::InventoryItemAbility;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct TelemetryInventoryItem
 {
     static constexpr const char* NAME = "gameTelemetryInventoryItem";
-    static constexpr const char* ALIAS = "TelemetryInventoryItem";
+    static constexpr const char* ALIAS = NAME;
 
     CString friendlyName; // 00
     CString localizedName; // 20
@@ -28,5 +28,4 @@ struct TelemetryInventoryItem
 };
 RED4EXT_ASSERT_SIZE(TelemetryInventoryItem, 0x70);
 } // namespace game
-using TelemetryInventoryItem = game::TelemetryInventoryItem;
 } // namespace RED4ext

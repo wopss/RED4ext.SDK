@@ -13,10 +13,9 @@ struct CacheEntry
     static constexpr const char* NAME = "physicsCacheEntry";
     static constexpr const char* ALIAS = NAME;
 
-    uint32_t tableIndex; // 00
-    uint32_t entryOffset; // 04
-    uint32_t entrySize; // 08
+    uint32_t entryOffset; // 00
+    uint32_t entrySize; // 04
 };
-RED4EXT_ASSERT_SIZE(CacheEntry, 0xC);
+RED4EXT_ASSERT_SIZE(CacheEntry, 0x8);
 } // namespace physics
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace game {
 struct JournalCodexGroup : game::JournalContainerEntry
 {
     static constexpr const char* NAME = "gameJournalCodexGroup";
-    static constexpr const char* ALIAS = "JournalCodexGroup";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString groupName; // 78
 };
 RED4EXT_ASSERT_SIZE(JournalCodexGroup, 0xA0);
 } // namespace game
-using JournalCodexGroup = game::JournalCodexGroup;
 } // namespace RED4ext

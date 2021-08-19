@@ -12,11 +12,10 @@ namespace game {
 struct Muppet : game::PuppetBase
 {
     static constexpr const char* NAME = "gameMuppet";
-    static constexpr const char* ALIAS = "Muppet";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk2C0[0x3B0 - 0x2C0]; // 2C0
+    uint8_t unk2D0[0x3C0 - 0x2D0]; // 2D0
 };
-RED4EXT_ASSERT_SIZE(Muppet, 0x3B0);
+RED4EXT_ASSERT_SIZE(Muppet, 0x3C0);
 } // namespace game
-using Muppet = game::Muppet;
 } // namespace RED4ext

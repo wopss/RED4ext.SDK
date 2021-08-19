@@ -12,7 +12,7 @@ namespace game::ui {
 struct PhoneWaveformGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiPhoneWaveformGameController";
-    static constexpr const char* ALIAS = "PhoneWaveformGameController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkD0[0xE0 - 0xD0]; // D0
     int32_t measurementsCount; // E0
@@ -21,5 +21,4 @@ struct PhoneWaveformGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(PhoneWaveformGameController, 0xF0);
 } // namespace game::ui
-using PhoneWaveformGameController = game::ui::PhoneWaveformGameController;
 } // namespace RED4ext

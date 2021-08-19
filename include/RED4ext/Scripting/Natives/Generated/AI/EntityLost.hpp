@@ -15,7 +15,7 @@ namespace AI {
 struct EntityLost : AI::AIEvent
 {
     static constexpr const char* NAME = "AIEntityLost";
-    static constexpr const char* ALIAS = "EntityLost";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<ent::Entity> spotter; // 50
     WeakHandle<ent::Entity> spotted; // 60
@@ -24,5 +24,4 @@ struct EntityLost : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(EntityLost, 0x78);
 } // namespace AI
-using EntityLost = AI::EntityLost;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ namespace game {
 struct HitShapeContainer
 {
     static constexpr const char* NAME = "gameHitShapeContainer";
-    static constexpr const char* ALIAS = "HitShapeContainer";
+    static constexpr const char* ALIAS = NAME;
 
     CName name; // 00
     CName slotName; // 08
@@ -31,5 +31,4 @@ struct HitShapeContainer
 };
 RED4EXT_ASSERT_SIZE(HitShapeContainer, 0x48);
 } // namespace game
-using HitShapeContainer = game::HitShapeContainer;
 } // namespace RED4ext

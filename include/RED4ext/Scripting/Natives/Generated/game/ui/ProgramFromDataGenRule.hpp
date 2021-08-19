@@ -12,10 +12,9 @@ namespace game::ui {
 struct ProgramFromDataGenRule : game::ui::MinigameGenerationRule
 {
     static constexpr const char* NAME = "gameuiProgramFromDataGenRule";
-    static constexpr const char* ALIAS = "ProgramFromDataGenRule";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ProgramFromDataGenRule, 0x50);
 } // namespace game::ui
-using ProgramFromDataGenRule = game::ui::ProgramFromDataGenRule;
 } // namespace RED4ext

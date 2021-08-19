@@ -12,11 +12,10 @@ namespace game::data {
 struct FriendlyTargetAngleDistanceCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataFriendlyTargetAngleDistanceCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = "FriendlyTargetAngleDistanceCoverSelectionParameters_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(FriendlyTargetAngleDistanceCoverSelectionParameters_Record, 0x60);
 } // namespace game::data
-using FriendlyTargetAngleDistanceCoverSelectionParameters_Record = game::data::FriendlyTargetAngleDistanceCoverSelectionParameters_Record;
 } // namespace RED4ext

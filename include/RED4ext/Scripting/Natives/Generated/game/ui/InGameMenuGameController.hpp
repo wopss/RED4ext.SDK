@@ -17,10 +17,10 @@ struct InGameMenuGameController : game::ui::BaseMenuGameController
     static constexpr const char* NAME = "gameuiInGameMenuGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk130[0x138 - 0x130]; // 130
-    DynArray<game::ui::InGameMenuGameControllerItemSceneInfo> itemSceneInfos; // 138
-    DynArray<game::ui::InGameMenuGameControllerGarmentSwitchEffectController> garmentSwitchEffectControllers; // 148
+    uint8_t unk130[0x140 - 0x130]; // 130
+    DynArray<game::ui::InGameMenuGameControllerItemSceneInfo> itemSceneInfos; // 140
+    DynArray<game::ui::InGameMenuGameControllerGarmentSwitchEffectController> garmentSwitchEffectControllers; // 150
 };
-RED4EXT_ASSERT_SIZE(InGameMenuGameController, 0x158);
+RED4EXT_ASSERT_SIZE(InGameMenuGameController, 0x160);
 } // namespace game::ui
 } // namespace RED4ext

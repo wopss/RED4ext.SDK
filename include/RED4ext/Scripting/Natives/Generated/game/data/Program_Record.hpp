@@ -12,11 +12,10 @@ namespace game::data {
 struct Program_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataProgram_Record";
-    static constexpr const char* ALIAS = "Program_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(Program_Record, 0x58);
 } // namespace game::data
-using Program_Record = game::data::Program_Record;
 } // namespace RED4ext

@@ -17,11 +17,11 @@ struct CyberspaceUIObject : game::Object
     static constexpr const char* NAME = "gameuiCyberspaceUIObject";
     static constexpr const char* ALIAS = NAME;
 
-    CName slotName; // 230
-    CString caption; // 238
-    game::ui::CyberspaceElementType mappinType; // 258
-    uint8_t unk25C[0x270 - 0x25C]; // 25C
+    CName slotName; // 240
+    CString caption; // 248
+    game::ui::CyberspaceElementType mappinType; // 268
+    uint8_t unk26C[0x280 - 0x26C]; // 26C
 };
-RED4EXT_ASSERT_SIZE(CyberspaceUIObject, 0x270);
+RED4EXT_ASSERT_SIZE(CyberspaceUIObject, 0x280);
 } // namespace game::ui
 } // namespace RED4ext

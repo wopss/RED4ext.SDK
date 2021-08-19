@@ -13,7 +13,7 @@ namespace game {
 struct AttitudeAgent : game::Component
 {
     static constexpr const char* NAME = "gameAttitudeAgent";
-    static constexpr const char* ALIAS = "AttitudeAgent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkA8[0xC8 - 0xA8]; // A8
     CName baseAttitudeGroup; // C8
@@ -21,5 +21,4 @@ struct AttitudeAgent : game::Component
 };
 RED4EXT_ASSERT_SIZE(AttitudeAgent, 0xD8);
 } // namespace game
-using AttitudeAgent = game::AttitudeAgent;
 } // namespace RED4ext

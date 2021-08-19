@@ -12,12 +12,11 @@ namespace game {
 struct ActionScript : game::IObjectScriptBase
 {
     static constexpr const char* NAME = "gameActionScript";
-    static constexpr const char* ALIAS = "ActionScript";
+    static constexpr const char* ALIAS = NAME;
 
-    uint32_t actionFlags; // 60
-    uint8_t unk64[0x68 - 0x64]; // 64
+    uint32_t actionFlags; // 58
+    uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
-RED4EXT_ASSERT_SIZE(ActionScript, 0x68);
+RED4EXT_ASSERT_SIZE(ActionScript, 0x60);
 } // namespace game
-using ActionScript = game::ActionScript;
 } // namespace RED4ext

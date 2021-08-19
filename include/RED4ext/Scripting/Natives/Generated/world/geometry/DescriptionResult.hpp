@@ -16,7 +16,7 @@ namespace world::geometry {
 struct DescriptionResult : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryDescriptionResult";
-    static constexpr const char* ALIAS = "GeometryDescriptionResult";
+    static constexpr const char* ALIAS = NAME;
 
     world::geometry::HandIKDescriptionResult leftHandData; // 40
     world::geometry::HandIKDescriptionResult rightHandData; // 60
@@ -44,5 +44,4 @@ struct DescriptionResult : IScriptable
 };
 RED4EXT_ASSERT_SIZE(DescriptionResult, 0x130);
 } // namespace world::geometry
-using GeometryDescriptionResult = world::geometry::DescriptionResult;
 } // namespace RED4ext

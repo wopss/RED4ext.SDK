@@ -12,11 +12,10 @@ namespace game::data {
 struct AISubActionApplyTimeDilation_Record : game::data::AISubAction_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionApplyTimeDilation_Record";
-    static constexpr const char* ALIAS = "AISubActionApplyTimeDilation_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x60 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(AISubActionApplyTimeDilation_Record, 0x60);
 } // namespace game::data
-using AISubActionApplyTimeDilation_Record = game::data::AISubActionApplyTimeDilation_Record;
 } // namespace RED4ext

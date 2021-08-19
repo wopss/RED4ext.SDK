@@ -15,9 +15,9 @@ struct EntityPreviewGameObject : game::Object
     static constexpr const char* NAME = "gameuiEntityPreviewGameObject";
     static constexpr const char* ALIAS = NAME;
 
-    game::ui::EntityPreviewCameraSettings cameraSettings; // 230
-    uint8_t unk27C[0x2A8 - 0x27C]; // 27C
+    game::ui::EntityPreviewCameraSettings cameraSettings; // 240
+    uint8_t unk28C[0x2B8 - 0x28C]; // 28C
 };
-RED4EXT_ASSERT_SIZE(EntityPreviewGameObject, 0x2A8);
+RED4EXT_ASSERT_SIZE(EntityPreviewGameObject, 0x2B8);
 } // namespace game::ui
 } // namespace RED4ext

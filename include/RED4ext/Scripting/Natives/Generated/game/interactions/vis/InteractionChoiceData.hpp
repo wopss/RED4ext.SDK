@@ -17,7 +17,7 @@ namespace game::interactions::vis {
 struct InteractionChoiceData
 {
     static constexpr const char* NAME = "gameinteractionsvisInteractionChoiceData";
-    static constexpr const char* ALIAS = "InteractionChoiceData";
+    static constexpr const char* ALIAS = NAME;
 
     CName inputAction; // 00
     EInputKey rawInputKey; // 08
@@ -31,5 +31,4 @@ struct InteractionChoiceData
 };
 RED4EXT_ASSERT_SIZE(InteractionChoiceData, 0x58);
 } // namespace game::interactions::vis
-using InteractionChoiceData = game::interactions::vis::InteractionChoiceData;
 } // namespace RED4ext

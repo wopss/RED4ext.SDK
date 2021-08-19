@@ -15,7 +15,7 @@ namespace game::state {
 struct MachineActionParameterIScriptable
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterIScriptable";
-    static constexpr const char* ALIAS = "ActionParameterIScriptable";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     CName name; // 08
@@ -23,5 +23,4 @@ struct MachineActionParameterIScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterIScriptable, 0x20);
 } // namespace game::state
-using ActionParameterIScriptable = game::state::MachineActionParameterIScriptable;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace ent {
 struct StoppedMovingEvent : red::Event
 {
     static constexpr const char* NAME = "entStoppedMovingEvent";
-    static constexpr const char* ALIAS = "StoppedMovingEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(StoppedMovingEvent, 0x40);
 } // namespace ent
-using StoppedMovingEvent = ent::StoppedMovingEvent;
 } // namespace RED4ext

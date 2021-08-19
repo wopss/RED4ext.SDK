@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMLocomotionStates.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/PSMSwimming.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMTakedown.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMTimeDilation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMUpperBodyStates.hpp>
@@ -33,7 +34,9 @@ struct CharacterState_PlayerSubType : quest::ICharacterConditionSubType
     game::PSMVehicle vehicleState; // 54
     quest::EComparisonTypeEquality takedownStateComparisonType; // 58
     game::PSMTakedown takedownState; // 5C
+    quest::EComparisonTypeEquality swimmingStateComparisonType; // 60
+    game::PSMSwimming swimmingState; // 64
 };
-RED4EXT_ASSERT_SIZE(CharacterState_PlayerSubType, 0x60);
+RED4EXT_ASSERT_SIZE(CharacterState_PlayerSubType, 0x68);
 } // namespace quest
 } // namespace RED4ext

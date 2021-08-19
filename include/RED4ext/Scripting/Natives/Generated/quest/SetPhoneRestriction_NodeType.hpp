@@ -4,6 +4,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/IPhoneManagerNodeType.hpp>
 
 namespace RED4ext
@@ -15,8 +16,10 @@ struct SetPhoneRestriction_NodeType : quest::IPhoneManagerNodeType
     static constexpr const char* ALIAS = NAME;
 
     bool applyPhoneRestriction; // 38
-    uint8_t unk39[0x40 - 0x39]; // 39
+    bool forcedApply; // 39
+    uint8_t unk3A[0x40 - 0x3A]; // 3A
+    CName forcedApplySource; // 40
 };
-RED4EXT_ASSERT_SIZE(SetPhoneRestriction_NodeType, 0x40);
+RED4EXT_ASSERT_SIZE(SetPhoneRestriction_NodeType, 0x48);
 } // namespace quest
 } // namespace RED4ext

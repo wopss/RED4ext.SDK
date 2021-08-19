@@ -14,12 +14,11 @@ namespace game {
 struct HitRepresentationVisualTaggedOverride : ISerializable
 {
     static constexpr const char* NAME = "gameHitRepresentationVisualTaggedOverride";
-    static constexpr const char* ALIAS = "HitRepresentationVisualTaggedOverride";
+    static constexpr const char* ALIAS = NAME;
 
     game::HitShapeContainer represenationOverride; // 30
     red::TagList visualTags; // 78
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationVisualTaggedOverride, 0x88);
 } // namespace game
-using HitRepresentationVisualTaggedOverride = game::HitRepresentationVisualTaggedOverride;
 } // namespace RED4ext

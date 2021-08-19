@@ -17,7 +17,7 @@ namespace ink {
 struct MaskWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkMaskWidget";
-    static constexpr const char* ALIAS = "inkMask";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk1F0[0x1F8 - 0x1F0]; // 1F0
     float maskTransparency; // 1F8
@@ -31,5 +31,4 @@ struct MaskWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(MaskWidget, 0x270);
 } // namespace ink
-using inkMask = ink::MaskWidget;
 } // namespace RED4ext

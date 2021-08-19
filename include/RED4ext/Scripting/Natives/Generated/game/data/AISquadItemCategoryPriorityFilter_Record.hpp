@@ -12,11 +12,10 @@ namespace game::data {
 struct AISquadItemCategoryPriorityFilter_Record : game::data::AISquadItemPriorityFilter_Record
 {
     static constexpr const char* NAME = "gamedataAISquadItemCategoryPriorityFilter_Record";
-    static constexpr const char* ALIAS = "AISquadItemCategoryPriorityFilter_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk68[0x70 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(AISquadItemCategoryPriorityFilter_Record, 0x70);
 } // namespace game::data
-using AISquadItemCategoryPriorityFilter_Record = game::data::AISquadItemCategoryPriorityFilter_Record;
 } // namespace RED4ext

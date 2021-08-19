@@ -12,10 +12,9 @@ namespace game {
 struct WeakspotDestroyedEvent : red::Event
 {
     static constexpr const char* NAME = "gameWeakspotDestroyedEvent";
-    static constexpr const char* ALIAS = "WeakspotDestroyedEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(WeakspotDestroyedEvent, 0x40);
 } // namespace game
-using WeakspotDestroyedEvent = game::WeakspotDestroyedEvent;
 } // namespace RED4ext

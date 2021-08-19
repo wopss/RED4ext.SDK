@@ -12,7 +12,7 @@ namespace move {
 struct MovementParameters
 {
     static constexpr const char* NAME = "moveMovementParameters";
-    static constexpr const char* ALIAS = "MovementParameters";
+    static constexpr const char* ALIAS = NAME;
 
     move::MovementType type; // 00
     float maxSpeed; // 04
@@ -23,5 +23,4 @@ struct MovementParameters
 };
 RED4EXT_ASSERT_SIZE(MovementParameters, 0x1C);
 } // namespace move
-using MovementParameters = move::MovementParameters;
 } // namespace RED4ext

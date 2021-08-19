@@ -12,11 +12,10 @@ namespace game::data {
 struct VehicleFxWheelsDecalsMaterialSmear_Record : game::data::VehicleFxWheelsDecalsMaterial_Record
 {
     static constexpr const char* NAME = "gamedataVehicleFxWheelsDecalsMaterialSmear_Record";
-    static constexpr const char* ALIAS = "VehicleFxWheelsDecalsMaterialSmear_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(VehicleFxWheelsDecalsMaterialSmear_Record, 0x60);
 } // namespace game::data
-using VehicleFxWheelsDecalsMaterialSmear_Record = game::data::VehicleFxWheelsDecalsMaterialSmear_Record;
 } // namespace RED4ext

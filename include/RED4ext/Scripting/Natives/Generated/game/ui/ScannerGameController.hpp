@@ -13,7 +13,7 @@ namespace game::ui {
 struct ScannerGameController : game::ui::HUDGameController
 {
     static constexpr const char* NAME = "gameuiScannerGameController";
-    static constexpr const char* ALIAS = "scannerGameController";
+    static constexpr const char* ALIAS = NAME;
 
     ent::EntityID currentTarget; // E8
     bool scanLock; // F0
@@ -24,5 +24,4 @@ struct ScannerGameController : game::ui::HUDGameController
 };
 RED4EXT_ASSERT_SIZE(ScannerGameController, 0x100);
 } // namespace game::ui
-using scannerGameController = game::ui::ScannerGameController;
 } // namespace RED4ext

@@ -11,7 +11,7 @@
 
 namespace RED4ext
 {
-namespace game { struct StatModifierData; }
+namespace game { struct StatModifierData_Deprecated; }
 
 namespace game { 
 struct StatModifierSave
@@ -19,7 +19,7 @@ struct StatModifierSave
     static constexpr const char* NAME = "gameStatModifierSave";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<Handle<game::StatModifierData>> statModifierUnions; // 00
+    DynArray<Handle<game::StatModifierData_Deprecated>> statModifierUnions; // 00
     game::StatsObjectID statsObjectID; // 10
     TweakDBID recordID; // 20
     uint32_t seed; // 28

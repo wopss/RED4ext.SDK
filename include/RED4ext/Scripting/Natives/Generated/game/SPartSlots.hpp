@@ -14,7 +14,7 @@ namespace game {
 struct SPartSlots
 {
     static constexpr const char* NAME = "gameSPartSlots";
-    static constexpr const char* ALIAS = "SPartSlots";
+    static constexpr const char* ALIAS = NAME;
 
     game::ESlotState status; // 00
     ItemID installedPart; // 04
@@ -24,5 +24,4 @@ struct SPartSlots
 };
 RED4EXT_ASSERT_SIZE(SPartSlots, 0x70);
 } // namespace game
-using SPartSlots = game::SPartSlots;
 } // namespace RED4ext

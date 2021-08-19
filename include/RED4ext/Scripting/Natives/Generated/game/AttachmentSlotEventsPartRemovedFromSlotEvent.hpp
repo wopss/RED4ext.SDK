@@ -13,12 +13,11 @@ namespace game {
 struct AttachmentSlotEventsPartRemovedFromSlotEvent : red::Event
 {
     static constexpr const char* NAME = "gameAttachmentSlotEventsPartRemovedFromSlotEvent";
-    static constexpr const char* ALIAS = "PartRemovedFromSlotEvent";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID itemID; // 40
     ItemID removedPartID; // 50
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotEventsPartRemovedFromSlotEvent, 0x60);
 } // namespace game
-using PartRemovedFromSlotEvent = game::AttachmentSlotEventsPartRemovedFromSlotEvent;
 } // namespace RED4ext

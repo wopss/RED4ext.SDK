@@ -12,10 +12,9 @@ namespace sense {
 struct OnDetectedEvent : sense::VisibilityEvent
 {
     static constexpr const char* NAME = "senseOnDetectedEvent";
-    static constexpr const char* ALIAS = "OnDetectedEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(OnDetectedEvent, 0x68);
 } // namespace sense
-using OnDetectedEvent = sense::OnDetectedEvent;
 } // namespace RED4ext

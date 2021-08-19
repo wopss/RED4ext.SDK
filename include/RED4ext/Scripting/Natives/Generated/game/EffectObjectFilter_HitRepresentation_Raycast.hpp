@@ -15,7 +15,8 @@ struct EffectObjectFilter_HitRepresentation_Raycast : game::EffectObjectFilter_H
     static constexpr const char* ALIAS = NAME;
 
     bool isPreview; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
+    bool sendNearMissEvents; // 41
+    uint8_t unk42[0x48 - 0x42]; // 42
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_HitRepresentation_Raycast, 0x48);
 } // namespace game

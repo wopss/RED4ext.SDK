@@ -15,7 +15,7 @@ namespace game::ui {
 struct KillInfo
 {
     static constexpr const char* NAME = "gameuiKillInfo";
-    static constexpr const char* ALIAS = "KillInfo";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> killerEntity; // 00
     WeakHandle<game::Object> victimEntity; // 10
@@ -24,5 +24,4 @@ struct KillInfo
 };
 RED4EXT_ASSERT_SIZE(KillInfo, 0x28);
 } // namespace game::ui
-using KillInfo = game::ui::KillInfo;
 } // namespace RED4ext

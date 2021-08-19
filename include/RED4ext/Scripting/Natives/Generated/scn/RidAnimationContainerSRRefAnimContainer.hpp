@@ -16,9 +16,9 @@ struct RidAnimationContainerSRRefAnimContainer
     static constexpr const char* ALIAS = NAME;
 
     scn::RidAnimationSRRefId animation; // 00
-    scn::RidAnimationContainerSRRefAnimContainerContext context; // 10
-    uint8_t unk11[0x18 - 0x11]; // 11
+    scn::RidAnimationContainerSRRefAnimContainerContext context; // 04
+    uint8_t unk05[0x8 - 0x5]; // 5
 };
-RED4EXT_ASSERT_SIZE(RidAnimationContainerSRRefAnimContainer, 0x18);
+RED4EXT_ASSERT_SIZE(RidAnimationContainerSRRefAnimContainer, 0x8);
 } // namespace scn
 } // namespace RED4ext

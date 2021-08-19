@@ -12,10 +12,9 @@ namespace game::data {
 struct ReactionPresetCorpo_Record : game::data::ReactionPreset_Record
 {
     static constexpr const char* NAME = "gamedataReactionPresetCorpo_Record";
-    static constexpr const char* ALIAS = "ReactionPresetCorpo_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ReactionPresetCorpo_Record, 0x68);
 } // namespace game::data
-using ReactionPresetCorpo_Record = game::data::ReactionPresetCorpo_Record;
 } // namespace RED4ext

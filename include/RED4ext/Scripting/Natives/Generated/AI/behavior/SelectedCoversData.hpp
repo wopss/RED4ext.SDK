@@ -15,7 +15,7 @@ namespace AI::behavior {
 struct SelectedCoversData : IScriptable
 {
     static constexpr const char* NAME = "AIbehaviorSelectedCoversData";
-    static constexpr const char* ALIAS = "MultiSelectCovers";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<uint64_t> selectedCovers; // 40
     DynArray<game::data::AIRingType> coverRingTypes; // 50
@@ -24,5 +24,4 @@ struct SelectedCoversData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SelectedCoversData, 0x80);
 } // namespace AI::behavior
-using MultiSelectCovers = AI::behavior::SelectedCoversData;
 } // namespace RED4ext

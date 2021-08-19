@@ -12,10 +12,9 @@ namespace ink {
 struct VideoWidgetReference : ink::LeafWidgetReference
 {
     static constexpr const char* NAME = "inkVideoWidgetReference";
-    static constexpr const char* ALIAS = "inkVideoRef";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(VideoWidgetReference, 0x18);
 } // namespace ink
-using inkVideoRef = ink::VideoWidgetReference;
 } // namespace RED4ext

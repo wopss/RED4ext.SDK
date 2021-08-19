@@ -12,7 +12,7 @@ namespace game::weapon {
 struct AnimFeature_AimPlayer : anim::AnimFeature_BasicAim
 {
     static constexpr const char* NAME = "gameweaponAnimFeature_AimPlayer";
-    static constexpr const char* ALIAS = "AnimFeature_AimPlayer";
+    static constexpr const char* ALIAS = NAME;
 
     float zoomLevel; // 48
     float aimInTime; // 4C
@@ -21,5 +21,4 @@ struct AnimFeature_AimPlayer : anim::AnimFeature_BasicAim
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_AimPlayer, 0x58);
 } // namespace game::weapon
-using AnimFeature_AimPlayer = game::weapon::AnimFeature_AimPlayer;
 } // namespace RED4ext

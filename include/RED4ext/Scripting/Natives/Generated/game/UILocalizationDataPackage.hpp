@@ -17,7 +17,7 @@ namespace game {
 struct UILocalizationDataPackage : IScriptable
 {
     static constexpr const char* NAME = "gameUILocalizationDataPackage";
-    static constexpr const char* ALIAS = "UILocalizationDataPackage";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<float> floatValues; // 40
     DynArray<int32_t> intValues; // 50
@@ -30,5 +30,4 @@ struct UILocalizationDataPackage : IScriptable
 };
 RED4EXT_ASSERT_SIZE(UILocalizationDataPackage, 0xA8);
 } // namespace game
-using UILocalizationDataPackage = game::UILocalizationDataPackage;
 } // namespace RED4ext

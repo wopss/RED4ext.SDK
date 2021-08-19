@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_FPPCamera : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_FPPCamera";
-    static constexpr const char* ALIAS = "AnimFeature_FPPCamera";
+    static constexpr const char* ALIAS = NAME;
 
     float fov; // 40
     float deltaYaw; // 44
@@ -65,5 +65,4 @@ struct AnimFeature_FPPCamera : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_FPPCamera, 0x100);
 } // namespace anim
-using AnimFeature_FPPCamera = anim::AnimFeature_FPPCamera;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct ChoiceCaptionTagPart_Record : game::data::ChoiceCaptionPart_Record
 {
     static constexpr const char* NAME = "gamedataChoiceCaptionTagPart_Record";
-    static constexpr const char* ALIAS = "ChoiceCaptionTagPart_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(ChoiceCaptionTagPart_Record, 0x58);
 } // namespace game::data
-using ChoiceCaptionTagPart_Record = game::data::ChoiceCaptionTagPart_Record;
 } // namespace RED4ext

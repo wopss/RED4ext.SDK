@@ -14,7 +14,7 @@ namespace game::ui {
 struct SideScrollerMiniGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameController";
-    static constexpr const char* ALIAS = "MinigameController";
+    static constexpr const char* ALIAS = NAME;
 
     CName gameName; // D0
     uint8_t unkD8[0xF0 - 0xD8]; // D8
@@ -22,5 +22,4 @@ struct SideScrollerMiniGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(SideScrollerMiniGameController, 0x108);
 } // namespace game::ui
-using MinigameController = game::ui::SideScrollerMiniGameController;
 } // namespace RED4ext

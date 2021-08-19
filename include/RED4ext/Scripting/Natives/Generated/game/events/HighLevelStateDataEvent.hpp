@@ -14,7 +14,7 @@ namespace game::events {
 struct HighLevelStateDataEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsHighLevelStateDataEvent";
-    static constexpr const char* ALIAS = "gameHighLevelStateDataEvent";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::NPCHighLevelState currentHighLevelState; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -22,5 +22,4 @@ struct HighLevelStateDataEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HighLevelStateDataEvent, 0x50);
 } // namespace game::events
-using gameHighLevelStateDataEvent = game::events::HighLevelStateDataEvent;
 } // namespace RED4ext

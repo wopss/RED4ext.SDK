@@ -15,7 +15,7 @@ namespace game::ui {
 struct PanzerGameLogicController : game::ui::SideScrollerMiniGameLogicControllerAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerGameLogicController";
-    static constexpr const char* ALIAS = "PanzerGameLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk138[0x174 - 0x138]; // 138
     float gameOverDelay; // 174
@@ -54,5 +54,4 @@ struct PanzerGameLogicController : game::ui::SideScrollerMiniGameLogicController
 };
 RED4EXT_ASSERT_SIZE(PanzerGameLogicController, 0x278);
 } // namespace game::ui
-using PanzerGameLogicController = game::ui::PanzerGameLogicController;
 } // namespace RED4ext

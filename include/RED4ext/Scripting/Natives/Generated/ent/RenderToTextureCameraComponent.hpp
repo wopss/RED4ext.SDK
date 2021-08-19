@@ -24,28 +24,28 @@ struct RenderToTextureCameraComponent : ent::BaseCameraComponent
     static constexpr const char* NAME = "entRenderToTextureCameraComponent";
     static constexpr const char* ALIAS = NAME;
 
-    RaRef<DynamicTexture> dynamicTextureRes; // 1C0
-    uint8_t unk1C8[0x1D8 - 0x1C8]; // 1C8
-    Ref<DynamicTexture> depthDynamicTextureRes; // 1D8
-    Ref<DynamicTexture> albedoDynamicTextureRes; // 1F0
-    Ref<DynamicTexture> normalsDynamicTextureRes; // 208
-    Ref<DynamicTexture> particlesDynamicTextureRes; // 220
-    uint32_t resolutionWidth; // 238
-    uint32_t resolutionHeight; // 23C
-    CName virtualCameraName; // 240
-    Ref<world::EnvironmentAreaParameters> env; // 248
-    WorldRenderAreaSettings params; // 260
-    ent::RenderToTextureMode renderingMode; // 270
-    uint8_t unk271[0x950 - 0x271]; // 271
-    float streamingDistance; // 950
-    float aspectRatio; // 954
-    Color backgroundColor; // 958
-    float depthCutDistance; // 95C
-    RenderSceneLayer renderSceneLayer; // 960
-    bool overrideBackgroundColor; // 961
-    ent::RenderToTextureFeatures features; // 962
-    uint8_t unk969[0x970 - 0x969]; // 969
+    RaRef<DynamicTexture> dynamicTextureRes; // 1D0
+    uint8_t unk1D8[0x1E8 - 0x1D8]; // 1D8
+    Ref<DynamicTexture> depthDynamicTextureRes; // 1E8
+    Ref<DynamicTexture> albedoDynamicTextureRes; // 200
+    Ref<DynamicTexture> normalsDynamicTextureRes; // 218
+    Ref<DynamicTexture> particlesDynamicTextureRes; // 230
+    uint32_t resolutionWidth; // 248
+    uint32_t resolutionHeight; // 24C
+    CName virtualCameraName; // 250
+    Ref<world::EnvironmentAreaParameters> env; // 258
+    WorldRenderAreaSettings params; // 270
+    ent::RenderToTextureMode renderingMode; // 280
+    uint8_t unk281[0x960 - 0x281]; // 281
+    float streamingDistance; // 960
+    float aspectRatio; // 964
+    Color backgroundColor; // 968
+    float depthCutDistance; // 96C
+    RenderSceneLayer renderSceneLayer; // 970
+    bool overrideBackgroundColor; // 971
+    ent::RenderToTextureFeatures features; // 972
+    uint8_t unk979[0x980 - 0x979]; // 979
 };
-RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0x970);
+RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0x980);
 } // namespace ent
 } // namespace RED4ext

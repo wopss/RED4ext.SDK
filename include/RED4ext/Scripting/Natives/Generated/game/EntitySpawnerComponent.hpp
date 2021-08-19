@@ -14,12 +14,11 @@ namespace game {
 struct EntitySpawnerComponent : game::Component
 {
     static constexpr const char* NAME = "gameEntitySpawnerComponent";
-    static constexpr const char* ALIAS = "EntitySpawnerComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkA8[0x110 - 0xA8]; // A8
     DynArray<game::EntitySpawnerSlotData> slotDataArray; // 110
 };
 RED4EXT_ASSERT_SIZE(EntitySpawnerComponent, 0x120);
 } // namespace game
-using EntitySpawnerComponent = game::EntitySpawnerComponent;
 } // namespace RED4ext

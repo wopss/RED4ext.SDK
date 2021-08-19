@@ -12,10 +12,9 @@ namespace game::data::device_gameplay_role_ {
 struct Record : game::data::ScannableData_Record
 {
     static constexpr const char* NAME = "gamedatadevice_gameplay_role_Record";
-    static constexpr const char* ALIAS = "device_gameplay_role_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(Record, 0x58);
 } // namespace game::data::device_gameplay_role_
-using device_gameplay_role_Record = game::data::device_gameplay_role_::Record;
 } // namespace RED4ext

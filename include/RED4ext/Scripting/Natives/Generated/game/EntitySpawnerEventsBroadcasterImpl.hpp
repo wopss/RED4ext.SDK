@@ -12,11 +12,10 @@ namespace game {
 struct EntitySpawnerEventsBroadcasterImpl : game::IEntitySpawnerEventsBroadcaster
 {
     static constexpr const char* NAME = "gameEntitySpawnerEventsBroadcasterImpl";
-    static constexpr const char* ALIAS = "EntitySpawnerEventsBroadcaster";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x80 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(EntitySpawnerEventsBroadcasterImpl, 0x80);
 } // namespace game
-using EntitySpawnerEventsBroadcaster = game::EntitySpawnerEventsBroadcasterImpl;
 } // namespace RED4ext

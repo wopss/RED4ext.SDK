@@ -12,11 +12,10 @@ namespace game::ui {
 struct WorldMapFloorPlanController : game::ui::MinimapContainerController
 {
     static constexpr const char* NAME = "gameuiWorldMapFloorPlanController";
-    static constexpr const char* ALIAS = "WorldMapFloorPlanController";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk438[0x440 - 0x438]; // 438
+    uint8_t unk478[0x480 - 0x478]; // 478
 };
-RED4EXT_ASSERT_SIZE(WorldMapFloorPlanController, 0x440);
+RED4EXT_ASSERT_SIZE(WorldMapFloorPlanController, 0x480);
 } // namespace game::ui
-using WorldMapFloorPlanController = game::ui::WorldMapFloorPlanController;
 } // namespace RED4ext

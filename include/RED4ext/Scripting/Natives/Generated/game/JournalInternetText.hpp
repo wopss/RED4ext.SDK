@@ -13,11 +13,10 @@ namespace game {
 struct JournalInternetText : game::JournalInternetBase
 {
     static constexpr const char* NAME = "gameJournalInternetText";
-    static constexpr const char* ALIAS = "JournalInternetText";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString text; // 70
 };
 RED4EXT_ASSERT_SIZE(JournalInternetText, 0x98);
 } // namespace game
-using JournalInternetText = game::JournalInternetText;
 } // namespace RED4ext

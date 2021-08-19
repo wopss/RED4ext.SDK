@@ -14,7 +14,7 @@ namespace game::ui {
 struct GridCell
 {
     static constexpr const char* NAME = "gameuiGridCell";
-    static constexpr const char* ALIAS = "GridCell";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t rarityValue; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -24,5 +24,4 @@ struct GridCell
 };
 RED4EXT_ASSERT_SIZE(GridCell, 0x20);
 } // namespace game::ui
-using GridCell = game::ui::GridCell;
 } // namespace RED4ext

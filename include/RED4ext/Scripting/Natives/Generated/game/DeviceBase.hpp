@@ -12,11 +12,12 @@ namespace game {
 struct DeviceBase : game::Object
 {
     static constexpr const char* NAME = "gameDeviceBase";
-    static constexpr const char* ALIAS = "DeviceBase";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x238 - 0x230]; // 230
+    uint8_t unk240[0x245 - 0x240]; // 240
+    bool isLogicReady; // 245
+    uint8_t unk246[0x248 - 0x246]; // 246
 };
-RED4EXT_ASSERT_SIZE(DeviceBase, 0x238);
+RED4EXT_ASSERT_SIZE(DeviceBase, 0x248);
 } // namespace game
-using DeviceBase = game::DeviceBase;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct HandbrakeFrictionModifier_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataHandbrakeFrictionModifier_Record";
-    static constexpr const char* ALIAS = "HandbrakeFrictionModifier_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(HandbrakeFrictionModifier_Record, 0x60);
 } // namespace game::data
-using HandbrakeFrictionModifier_Record = game::data::HandbrakeFrictionModifier_Record;
 } // namespace RED4ext

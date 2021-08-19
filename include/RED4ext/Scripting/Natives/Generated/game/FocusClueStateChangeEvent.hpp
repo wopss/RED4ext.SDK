@@ -12,7 +12,7 @@ namespace game {
 struct FocusClueStateChangeEvent : red::Event
 {
     static constexpr const char* NAME = "gameFocusClueStateChangeEvent";
-    static constexpr const char* ALIAS = "FocusClueStateChangeEvent";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t clueIndex; // 40
     bool isEnabled; // 44
@@ -20,5 +20,4 @@ struct FocusClueStateChangeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(FocusClueStateChangeEvent, 0x48);
 } // namespace game
-using FocusClueStateChangeEvent = game::FocusClueStateChangeEvent;
 } // namespace RED4ext

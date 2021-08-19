@@ -12,11 +12,10 @@ namespace game::data {
 struct Regular_Record : game::data::ProjectileLaunch_Record
 {
     static constexpr const char* NAME = "gamedataRegular_Record";
-    static constexpr const char* ALIAS = "Regular_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(Regular_Record, 0x60);
 } // namespace game::data
-using Regular_Record = game::data::Regular_Record;
 } // namespace RED4ext

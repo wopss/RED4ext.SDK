@@ -12,10 +12,9 @@ namespace game::data {
 struct WorkspotStatusEffect_Record : game::data::StatusEffect_Record
 {
     static constexpr const char* NAME = "gamedataWorkspotStatusEffect_Record";
-    static constexpr const char* ALIAS = "WorkspotStatusEffect_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(WorkspotStatusEffect_Record, 0x88);
 } // namespace game::data
-using WorkspotStatusEffect_Record = game::data::WorkspotStatusEffect_Record;
 } // namespace RED4ext

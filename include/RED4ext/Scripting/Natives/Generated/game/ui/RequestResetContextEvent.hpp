@@ -12,10 +12,9 @@ namespace game::ui {
 struct RequestResetContextEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiRequestResetContextEvent";
-    static constexpr const char* ALIAS = "ResetUIGameContextEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(RequestResetContextEvent, 0x40);
 } // namespace game::ui
-using ResetUIGameContextEvent = game::ui::RequestResetContextEvent;
 } // namespace RED4ext

@@ -19,7 +19,7 @@ namespace ink {
 struct SplashScreenLoadingScreenLogicController : ink::ILoadingLogicController
 {
     static constexpr const char* NAME = "inkSplashScreenLoadingScreenLogicController";
-    static constexpr const char* ALIAS = "SplashScreenLoadingScreenLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     RaRef<Bink> logoTrainWBBink; // 180
     RaRef<Bink> logoTrainNamcoBink; // 188
@@ -41,5 +41,4 @@ struct SplashScreenLoadingScreenLogicController : ink::ILoadingLogicController
 };
 RED4EXT_ASSERT_SIZE(SplashScreenLoadingScreenLogicController, 0x288);
 } // namespace ink
-using SplashScreenLoadingScreenLogicController = ink::SplashScreenLoadingScreenLogicController;
 } // namespace RED4ext

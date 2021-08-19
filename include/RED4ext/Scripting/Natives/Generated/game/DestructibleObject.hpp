@@ -15,8 +15,8 @@ struct DestructibleObject : game::Object
     static constexpr const char* NAME = "gameDestructibleObject";
     static constexpr const char* ALIAS = NAME;
 
-    TweakDBID recordID; // 230
+    TweakDBID recordID; // 240
 };
-RED4EXT_ASSERT_SIZE(DestructibleObject, 0x238);
+RED4EXT_ASSERT_SIZE(DestructibleObject, 0x248);
 } // namespace game
 } // namespace RED4ext

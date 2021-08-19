@@ -12,11 +12,10 @@ namespace quest {
 struct QuestsSystem : quest::IQuestsSystem
 {
     static constexpr const char* NAME = "questQuestsSystem";
-    static constexpr const char* ALIAS = "QuestsSystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0x260 - 0x58]; // 58
+    uint8_t unk58[0x280 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(QuestsSystem, 0x260);
+RED4EXT_ASSERT_SIZE(QuestsSystem, 0x280);
 } // namespace quest
-using QuestsSystem = quest::QuestsSystem;
 } // namespace RED4ext

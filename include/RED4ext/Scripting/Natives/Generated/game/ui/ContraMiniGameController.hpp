@@ -12,10 +12,9 @@ namespace game::ui {
 struct ContraMiniGameController : game::ui::SideScrollerMiniGameControllerAdvanced
 {
     static constexpr const char* NAME = "gameuiContraMiniGameController";
-    static constexpr const char* ALIAS = "ContraMiniGameController";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ContraMiniGameController, 0x100);
 } // namespace game::ui
-using ContraMiniGameController = game::ui::ContraMiniGameController;
 } // namespace RED4ext

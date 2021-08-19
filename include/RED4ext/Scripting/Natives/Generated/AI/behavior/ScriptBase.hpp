@@ -12,10 +12,9 @@ namespace AI::behavior {
 struct ScriptBase : IScriptable
 {
     static constexpr const char* NAME = "AIbehaviorScriptBase";
-    static constexpr const char* ALIAS = "AIBehaviorScriptBase";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ScriptBase, 0x40);
 } // namespace AI::behavior
-using AIBehaviorScriptBase = AI::behavior::ScriptBase;
 } // namespace RED4ext

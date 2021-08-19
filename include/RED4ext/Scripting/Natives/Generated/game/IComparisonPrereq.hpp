@@ -13,12 +13,11 @@ namespace game {
 struct IComparisonPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameIComparisonPrereq";
-    static constexpr const char* ALIAS = "IComparisonPrereq";
+    static constexpr const char* ALIAS = NAME;
 
     game::ComparisonType comparisonType; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(IComparisonPrereq, 0x48);
 } // namespace game
-using IComparisonPrereq = game::IComparisonPrereq;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ struct SceneCustomData_RainMap : SceneCustomData_DistantShadowsCommon
     static constexpr const char* NAME = "SceneCustomData_RainMap";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk3E0[0x6DEC0 - 0x3E0]; // 3E0
+    uint8_t unk3E0[0x6E0C0 - 0x3E0]; // 3E0
 };
-RED4EXT_ASSERT_SIZE(SceneCustomData_RainMap, 0x6DEC0);
+RED4EXT_ASSERT_SIZE(SceneCustomData_RainMap, 0x6E0C0);
 } // namespace RED4ext

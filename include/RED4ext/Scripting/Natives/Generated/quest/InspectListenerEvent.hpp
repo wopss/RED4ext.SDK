@@ -15,7 +15,7 @@ namespace quest {
 struct InspectListenerEvent : red::Event
 {
     static constexpr const char* NAME = "questInspectListenerEvent";
-    static constexpr const char* ALIAS = "InspectListenerEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<quest::ObjectInspectListener> listener; // 40
     bool register_; // 50 -- register
@@ -23,5 +23,4 @@ struct InspectListenerEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(InspectListenerEvent, 0x58);
 } // namespace quest
-using InspectListenerEvent = quest::InspectListenerEvent;
 } // namespace RED4ext

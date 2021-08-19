@@ -13,7 +13,7 @@ namespace game::ui {
 struct PhotoModeOptionGridButtonData
 {
     static constexpr const char* NAME = "gameuiPhotoModeOptionGridButtonData";
-    static constexpr const char* ALIAS = "PhotoModeOptionGridButtonData";
+    static constexpr const char* ALIAS = NAME;
 
     CName imagePart; // 00
     red::ResourceReferenceScriptToken atlasResource; // 08
@@ -22,5 +22,4 @@ struct PhotoModeOptionGridButtonData
 };
 RED4EXT_ASSERT_SIZE(PhotoModeOptionGridButtonData, 0x18);
 } // namespace game::ui
-using PhotoModeOptionGridButtonData = game::ui::PhotoModeOptionGridButtonData;
 } // namespace RED4ext

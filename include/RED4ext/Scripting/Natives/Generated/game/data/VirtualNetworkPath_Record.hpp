@@ -12,11 +12,10 @@ namespace game::data {
 struct VirtualNetworkPath_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVirtualNetworkPath_Record";
-    static constexpr const char* ALIAS = "VirtualNetworkPath_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(VirtualNetworkPath_Record, 0x50);
 } // namespace game::data
-using VirtualNetworkPath_Record = game::data::VirtualNetworkPath_Record;
 } // namespace RED4ext

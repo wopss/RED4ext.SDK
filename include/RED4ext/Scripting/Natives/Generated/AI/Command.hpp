@@ -14,7 +14,7 @@ namespace AI {
 struct Command : IScriptable
 {
     static constexpr const char* NAME = "AICommand";
-    static constexpr const char* ALIAS = "NPCCommand";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
     uint32_t id; // 48
@@ -24,5 +24,4 @@ struct Command : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Command, 0x60);
 } // namespace AI
-using NPCCommand = AI::Command;
 } // namespace RED4ext

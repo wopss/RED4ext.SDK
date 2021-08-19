@@ -13,12 +13,11 @@ namespace game {
 struct ObjectCarrierComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameObjectCarrierComponent";
-    static constexpr const char* ALIAS = "ObjectCarrierComponent";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID objectToSpawn; // 90
     uint8_t unk98[0xA0 - 0x98]; // 98
 };
 RED4EXT_ASSERT_SIZE(ObjectCarrierComponent, 0xA0);
 } // namespace game
-using ObjectCarrierComponent = game::ObjectCarrierComponent;
 } // namespace RED4ext

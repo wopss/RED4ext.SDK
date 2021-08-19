@@ -14,8 +14,8 @@ struct Screenshot360CameraComponent : game::CameraComponent
     static constexpr const char* NAME = "gameScreenshot360CameraComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk290[0x2D0 - 0x290]; // 290
+    uint8_t unk2A0[0x2E0 - 0x2A0]; // 2A0
 };
-RED4EXT_ASSERT_SIZE(Screenshot360CameraComponent, 0x2D0);
+RED4EXT_ASSERT_SIZE(Screenshot360CameraComponent, 0x2E0);
 } // namespace game
 } // namespace RED4ext

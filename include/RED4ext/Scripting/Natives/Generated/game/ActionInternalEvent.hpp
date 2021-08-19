@@ -12,10 +12,9 @@ namespace game {
 struct ActionInternalEvent : IScriptable
 {
     static constexpr const char* NAME = "gameActionInternalEvent";
-    static constexpr const char* ALIAS = "ActionInternalEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ActionInternalEvent, 0x40);
 } // namespace game
-using ActionInternalEvent = game::ActionInternalEvent;
 } // namespace RED4ext

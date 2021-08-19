@@ -12,11 +12,10 @@ namespace AI {
 struct CoverSelectionSystem : AI::ICoverSelectionSystem
 {
     static constexpr const char* NAME = "AICoverSelectionSystem";
-    static constexpr const char* ALIAS = "CoverSelectionSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0xD8 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CoverSelectionSystem, 0xD8);
 } // namespace AI
-using CoverSelectionSystem = AI::CoverSelectionSystem;
 } // namespace RED4ext

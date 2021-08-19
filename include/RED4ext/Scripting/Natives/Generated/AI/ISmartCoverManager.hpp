@@ -12,10 +12,9 @@ namespace AI {
 struct ISmartCoverManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIISmartCoverManager";
-    static constexpr const char* ALIAS = "ICoverManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ISmartCoverManager, 0x48);
 } // namespace AI
-using ICoverManager = AI::ISmartCoverManager;
 } // namespace RED4ext

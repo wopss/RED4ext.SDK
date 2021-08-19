@@ -12,11 +12,10 @@ namespace game::data {
 struct CooldownType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCooldownType_Record";
-    static constexpr const char* ALIAS = "CooldownType_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CooldownType_Record, 0x50);
 } // namespace game::data
-using CooldownType_Record = game::data::CooldownType_Record;
 } // namespace RED4ext

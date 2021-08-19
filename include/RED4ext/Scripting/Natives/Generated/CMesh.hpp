@@ -55,7 +55,7 @@ struct CMesh : res::StreamedResource
     Handle<IRenderResourceBlob> renderResourceBlob; // 1F8
     uint8_t unk208[0x211 - 0x208]; // 208
     ERenderObjectType objectType; // 211
-    uint8_t unk212[0x220 - 0x212]; // 212
+    uint8_t unk212[0x230 - 0x212]; // 212
 };
-RED4EXT_ASSERT_SIZE(CMesh, 0x220);
+RED4EXT_ASSERT_SIZE(CMesh, 0x230);
 } // namespace RED4ext

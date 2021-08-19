@@ -12,11 +12,10 @@ namespace game::data {
 struct VisualTagsPrereq_Record : game::data::IPrereq_Record
 {
     static constexpr const char* NAME = "gamedataVisualTagsPrereq_Record";
-    static constexpr const char* ALIAS = "VisualTagsPrereq_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(VisualTagsPrereq_Record, 0x58);
 } // namespace game::data
-using VisualTagsPrereq_Record = game::data::VisualTagsPrereq_Record;
 } // namespace RED4ext

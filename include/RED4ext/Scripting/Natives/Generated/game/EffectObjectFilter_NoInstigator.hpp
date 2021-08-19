@@ -4,12 +4,12 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/EffectObjectSingleFilter.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/EffectObjectGroupFilter.hpp>
 
 namespace RED4ext
 {
 namespace game { 
-struct EffectObjectFilter_NoInstigator : game::EffectObjectSingleFilter
+struct EffectObjectFilter_NoInstigator : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_NoInstigator";
     static constexpr const char* ALIAS = NAME;

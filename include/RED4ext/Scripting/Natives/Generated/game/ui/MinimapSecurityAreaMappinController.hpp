@@ -16,7 +16,7 @@ namespace game::ui {
 struct MinimapSecurityAreaMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapSecurityAreaMappinController";
-    static constexpr const char* ALIAS = "MinimapSecurityAreaMappinController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk210[0x211 - 0x210]; // 210
     bool playerInArea; // 211
@@ -27,5 +27,4 @@ struct MinimapSecurityAreaMappinController : game::ui::BaseMinimapMappinControll
 };
 RED4EXT_ASSERT_SIZE(MinimapSecurityAreaMappinController, 0x250);
 } // namespace game::ui
-using MinimapSecurityAreaMappinController = game::ui::MinimapSecurityAreaMappinController;
 } // namespace RED4ext

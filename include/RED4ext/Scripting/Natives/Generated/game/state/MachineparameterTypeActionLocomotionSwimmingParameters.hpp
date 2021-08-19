@@ -12,11 +12,10 @@ namespace game::state {
 struct MachineparameterTypeActionLocomotionSwimmingParameters : game::state::MachineparameterTypeActionLocomotionParameters
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeActionLocomotionSwimmingParameters";
-    static constexpr const char* ALIAS = "LocomotionSwimmingParameters";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk90[0xA0 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeActionLocomotionSwimmingParameters, 0xA0);
 } // namespace game::state
-using LocomotionSwimmingParameters = game::state::MachineparameterTypeActionLocomotionSwimmingParameters;
 } // namespace RED4ext

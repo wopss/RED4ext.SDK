@@ -12,11 +12,10 @@ namespace game {
 struct ObjectCarrySystem : game::IObjectCarrySystem
 {
     static constexpr const char* NAME = "gameObjectCarrySystem";
-    static constexpr const char* ALIAS = "ObjectCarrySystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x3C0 - 0x48]; // 48
+    uint8_t unk48[0x3B8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ObjectCarrySystem, 0x3C0);
+RED4EXT_ASSERT_SIZE(ObjectCarrySystem, 0x3B8);
 } // namespace game
-using ObjectCarrySystem = game::ObjectCarrySystem;
 } // namespace RED4ext

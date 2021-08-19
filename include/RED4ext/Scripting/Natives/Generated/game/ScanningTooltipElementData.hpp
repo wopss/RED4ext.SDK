@@ -13,7 +13,7 @@ namespace game {
 struct ScanningTooltipElementData
 {
     static constexpr const char* NAME = "gameScanningTooltipElementData";
-    static constexpr const char* ALIAS = "ScanningTooltipElementData";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID recordID; // 00
     CName localizedName; // 08
@@ -21,5 +21,4 @@ struct ScanningTooltipElementData
 };
 RED4EXT_ASSERT_SIZE(ScanningTooltipElementData, 0x18);
 } // namespace game
-using ScanningTooltipElementData = game::ScanningTooltipElementData;
 } // namespace RED4ext

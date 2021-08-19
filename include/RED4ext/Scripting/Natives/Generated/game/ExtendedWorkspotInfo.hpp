@@ -12,7 +12,7 @@ namespace game {
 struct ExtendedWorkspotInfo : IScriptable
 {
     static constexpr const char* NAME = "gameExtendedWorkspotInfo";
-    static constexpr const char* ALIAS = "ExtendedWorkspotInfo";
+    static constexpr const char* ALIAS = NAME;
 
     bool isActive; // 40
     bool entering; // 41
@@ -24,5 +24,4 @@ struct ExtendedWorkspotInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ExtendedWorkspotInfo, 0x48);
 } // namespace game
-using ExtendedWorkspotInfo = game::ExtendedWorkspotInfo;
 } // namespace RED4ext

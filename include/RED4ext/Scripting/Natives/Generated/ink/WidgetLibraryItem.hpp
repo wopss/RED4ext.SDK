@@ -17,7 +17,8 @@ struct WidgetLibraryItem
 
     CName name; // 00
     SharedDataBuffer package; // 08
+    DataBuffer packageData; // 10
 };
-RED4EXT_ASSERT_SIZE(WidgetLibraryItem, 0x10);
+RED4EXT_ASSERT_SIZE(WidgetLibraryItem, 0x38);
 } // namespace ink
 } // namespace RED4ext

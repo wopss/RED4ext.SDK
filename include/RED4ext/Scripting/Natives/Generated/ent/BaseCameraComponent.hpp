@@ -13,21 +13,20 @@ namespace ent {
 struct BaseCameraComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entBaseCameraComponent";
-    static constexpr const char* ALIAS = "entCameraComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk120[0x128 - 0x120]; // 120
     float fov; // 128
-    uint8_t unk12C[0x144 - 0x12C]; // 12C
-    float zoom; // 144
-    uint8_t unk148[0x14C - 0x148]; // 148
-    float nearPlaneOverride; // 14C
-    float farPlaneOverride; // 150
-    float motionBlurScale; // 154
-    uint8_t unk158[0x15C - 0x158]; // 158
-    SWeaponPlaneParams weaponPlane; // 15C
-    uint8_t unk178[0x1C0 - 0x178]; // 178
+    uint8_t unk12C[0x15C - 0x12C]; // 12C
+    float zoom; // 15C
+    uint8_t unk160[0x164 - 0x160]; // 160
+    float nearPlaneOverride; // 164
+    float farPlaneOverride; // 168
+    float motionBlurScale; // 16C
+    uint8_t unk170[0x174 - 0x170]; // 170
+    SWeaponPlaneParams weaponPlane; // 174
+    uint8_t unk190[0x1D0 - 0x190]; // 190
 };
-RED4EXT_ASSERT_SIZE(BaseCameraComponent, 0x1C0);
+RED4EXT_ASSERT_SIZE(BaseCameraComponent, 0x1D0);
 } // namespace ent
-using entCameraComponent = ent::BaseCameraComponent;
 } // namespace RED4ext

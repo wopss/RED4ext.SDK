@@ -13,7 +13,7 @@ namespace game::interactions {
 struct CrosswalkEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsCrosswalkEvent";
-    static constexpr const char* ALIAS = "CrosswalkEvent";
+    static constexpr const char* ALIAS = NAME;
 
     world::TrafficLightColor trafficLightColor; // 40
     world::TrafficLightColor oldTrafficLightColor; // 44
@@ -22,5 +22,4 @@ struct CrosswalkEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CrosswalkEvent, 0x50);
 } // namespace game::interactions
-using CrosswalkEvent = game::interactions::CrosswalkEvent;
 } // namespace RED4ext

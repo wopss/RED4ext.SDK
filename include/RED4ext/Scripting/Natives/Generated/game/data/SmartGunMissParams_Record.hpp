@@ -12,11 +12,10 @@ namespace game::data {
 struct SmartGunMissParams_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSmartGunMissParams_Record";
-    static constexpr const char* ALIAS = "SmartGunMissParams_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x78 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SmartGunMissParams_Record, 0x78);
 } // namespace game::data
-using SmartGunMissParams_Record = game::data::SmartGunMissParams_Record;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game::smart {
 struct GunUISightParameters
 {
     static constexpr const char* NAME = "gamesmartGunUISightParameters";
-    static constexpr const char* ALIAS = "smartGunUISightParameters";
+    static constexpr const char* ALIAS = NAME;
 
     Vector2 center; // 00
     Vector2 targetableRegionSize; // 08
@@ -20,5 +20,4 @@ struct GunUISightParameters
 };
 RED4EXT_ASSERT_SIZE(GunUISightParameters, 0x18);
 } // namespace game::smart
-using smartGunUISightParameters = game::smart::GunUISightParameters;
 } // namespace RED4ext

@@ -24,8 +24,9 @@ struct CorpseParameter : ent::EntityParameter
     uint8_t unk34[0x38 - 0x34]; // 34
     DynArray<QsTransform> bakedPose; // 38
     DynArray<CName> bakedBoneNames; // 48
-    RaRef<anim::Rig> baseRig; // 58
+    DynArray<CRUID> forceLOD0Components; // 58
+    RaRef<anim::Rig> baseRig; // 68
 };
-RED4EXT_ASSERT_SIZE(CorpseParameter, 0x60);
+RED4EXT_ASSERT_SIZE(CorpseParameter, 0x70);
 } // namespace ent
 } // namespace RED4ext

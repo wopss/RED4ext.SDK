@@ -14,7 +14,7 @@ namespace game::mappins {
 struct MappinEntry
 {
     static constexpr const char* NAME = "gamemappinsMappinEntry";
-    static constexpr const char* ALIAS = "MappinEntry";
+    static constexpr const char* ALIAS = NAME;
 
     game::NewMappinID id; // 00
     CName type; // 08
@@ -22,5 +22,4 @@ struct MappinEntry
 };
 RED4EXT_ASSERT_SIZE(MappinEntry, 0x20);
 } // namespace game::mappins
-using MappinEntry = game::mappins::MappinEntry;
 } // namespace RED4ext

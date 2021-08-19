@@ -14,12 +14,11 @@ namespace ent {
 struct LookAtAddEvent : ent::AnimTargetAddEvent
 {
     static constexpr const char* NAME = "entLookAtAddEvent";
-    static constexpr const char* ALIAS = "LookAtAddEvent";
+    static constexpr const char* ALIAS = NAME;
 
     anim::LookAtRef outLookAtRef; // 58
     anim::LookAtRequest request; // 68
 };
 RED4EXT_ASSERT_SIZE(LookAtAddEvent, 0xD8);
 } // namespace ent
-using LookAtAddEvent = ent::LookAtAddEvent;
 } // namespace RED4ext

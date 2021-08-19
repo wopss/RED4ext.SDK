@@ -14,8 +14,8 @@ struct MachineState : graph::GraphNodeDefinition
     static constexpr const char* NAME = "gamestateMachineState";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x80 - 0x40]; // 40
+    uint8_t unk40[0x2D0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(MachineState, 0x80);
+RED4EXT_ASSERT_SIZE(MachineState, 0x2D0);
 } // namespace game::state
 } // namespace RED4ext

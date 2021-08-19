@@ -12,10 +12,9 @@ namespace game::data {
 struct MiniGame_AllSymbols_inline2_Record : game::data::MiniGame_SymbolsWithRarity_Record
 {
     static constexpr const char* NAME = "gamedataMiniGame_AllSymbols_inline2_Record";
-    static constexpr const char* ALIAS = "MiniGame_AllSymbols_inline2_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(MiniGame_AllSymbols_inline2_Record, 0x58);
 } // namespace game::data
-using MiniGame_AllSymbols_inline2_Record = game::data::MiniGame_AllSymbols_inline2_Record;
 } // namespace RED4ext

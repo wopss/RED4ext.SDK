@@ -16,7 +16,7 @@ namespace game {
 struct PlayerClimbInfo : IScriptable
 {
     static constexpr const char* NAME = "gamePlayerClimbInfo";
-    static constexpr const char* ALIAS = "PlayerClimbInfo";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<world::geometry::DescriptionResult> descResult; // 40
     Vector4 obstacleEnd; // 50
@@ -26,5 +26,4 @@ struct PlayerClimbInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PlayerClimbInfo, 0x70);
 } // namespace game
-using PlayerClimbInfo = game::PlayerClimbInfo;
 } // namespace RED4ext

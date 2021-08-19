@@ -12,11 +12,10 @@ namespace game::data {
 struct RadioStation_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataRadioStation_Record";
-    static constexpr const char* ALIAS = "RadioStation_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(RadioStation_Record, 0x58);
 } // namespace game::data
-using RadioStation_Record = game::data::RadioStation_Record;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace game::ui {
 struct TrackedMappinControllerCustomData : game::ui::MappinControllerCustomData
 {
     static constexpr const char* NAME = "gameuiTrackedMappinControllerCustomData";
-    static constexpr const char* ALIAS = "TrackedMappinControllerCustomData";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(TrackedMappinControllerCustomData, 0x40);
 } // namespace game::ui
-using TrackedMappinControllerCustomData = game::ui::TrackedMappinControllerCustomData;
 } // namespace RED4ext

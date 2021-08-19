@@ -8,6 +8,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/appearance/AlternateAppearanceEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/appearance/CensorshipEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/dismemberment/WoundsConfigSet.hpp>
 #include <RED4ext/Scripting/Natives/Generated/res/StreamedResource.hpp>
@@ -30,18 +31,22 @@ struct AppearanceResource : res::StreamedResource
     CName baseEntityType; // 48
     CName partType; // 50
     CName preset; // 58
-    int32_t proxyPolyCount; // 60
-    bool forceCompileProxy; // 64
-    uint8_t unk65[0x68 - 0x65]; // 65
-    RaRef<ent::EntityTemplate> baseEntity; // 68
-    DynArray<Handle<appearance::AppearanceDefinition>> appearances; // 70
-    DynArray<appearance::CensorshipEntry> censorshipMapping; // 80
-    RaRef<appearance::CookedAppearanceData> commonCookData; // 90
-    DynArray<Handle<ent::dismemberment::WoundResource>> Wounds; // 98
-    DynArray<Handle<ent::dismemberment::EffectResource>> DismEffects; // A8
-    ent::dismemberment::WoundsConfigSet DismWoundConfig; // B8
-    uint8_t unkC8[0xD0 - 0xC8]; // C8
+    CName alternateAppearanceSettingName; // 60
+    DynArray<CName> alternateAppearanceSuffixes; // 68
+    DynArray<appearance::AlternateAppearanceEntry> alternateAppearanceMapping; // 78
+    int32_t proxyPolyCount; // 88
+    bool forceCompileProxy; // 8C
+    bool generatePlayerBlockingCollisionForProxy; // 8D
+    uint8_t unk8E[0x90 - 0x8E]; // 8E
+    RaRef<ent::EntityTemplate> baseEntity; // 90
+    DynArray<Handle<appearance::AppearanceDefinition>> appearances; // 98
+    DynArray<appearance::CensorshipEntry> censorshipMapping; // A8
+    RaRef<appearance::CookedAppearanceData> commonCookData; // B8
+    DynArray<Handle<ent::dismemberment::WoundResource>> Wounds; // C0
+    DynArray<Handle<ent::dismemberment::EffectResource>> DismEffects; // D0
+    ent::dismemberment::WoundsConfigSet DismWoundConfig; // E0
+    uint8_t unkF0[0xF8 - 0xF0]; // F0
 };
-RED4EXT_ASSERT_SIZE(AppearanceResource, 0xD0);
+RED4EXT_ASSERT_SIZE(AppearanceResource, 0xF8);
 } // namespace appearance
 } // namespace RED4ext

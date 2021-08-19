@@ -12,10 +12,9 @@ namespace ink {
 struct UniformGridWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkUniformGridWidgetReference";
-    static constexpr const char* ALIAS = "inkUniformGridRef";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(UniformGridWidgetReference, 0x18);
 } // namespace ink
-using inkUniformGridRef = ink::UniformGridWidgetReference;
 } // namespace RED4ext

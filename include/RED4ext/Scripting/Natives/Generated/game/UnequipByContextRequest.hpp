@@ -13,12 +13,11 @@ namespace game {
 struct UnequipByContextRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameUnequipByContextRequest";
-    static constexpr const char* ALIAS = "UnequipByContextRequest";
+    static constexpr const char* ALIAS = NAME;
 
     game::ItemUnequipContexts itemUnequipContext; // 58
     uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
 RED4EXT_ASSERT_SIZE(UnequipByContextRequest, 0x60);
 } // namespace game
-using UnequipByContextRequest = game::UnequipByContextRequest;
 } // namespace RED4ext

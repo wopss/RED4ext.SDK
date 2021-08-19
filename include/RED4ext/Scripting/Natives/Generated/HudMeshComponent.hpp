@@ -13,7 +13,7 @@ struct HudMeshComponent : ent::MeshComponent
     static constexpr const char* NAME = "HudMeshComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk1D0[0x1F0 - 0x1D0]; // 1D0
+    uint8_t unk1E0[0x200 - 0x1E0]; // 1E0
 };
-RED4EXT_ASSERT_SIZE(HudMeshComponent, 0x1F0);
+RED4EXT_ASSERT_SIZE(HudMeshComponent, 0x200);
 } // namespace RED4ext

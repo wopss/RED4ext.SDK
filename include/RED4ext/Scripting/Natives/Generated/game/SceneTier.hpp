@@ -12,11 +12,10 @@ namespace game {
 struct SceneTier : sense::StimuliData
 {
     static constexpr const char* NAME = "gameSceneTier";
-    static constexpr const char* ALIAS = "SceneTier";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(SceneTier, 0x50);
 } // namespace game
-using SceneTier = game::SceneTier;
 } // namespace RED4ext

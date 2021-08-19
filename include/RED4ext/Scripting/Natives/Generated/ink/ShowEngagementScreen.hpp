@@ -12,12 +12,11 @@ namespace ink {
 struct ShowEngagementScreen : IScriptable
 {
     static constexpr const char* NAME = "inkShowEngagementScreen";
-    static constexpr const char* ALIAS = "ShowEngagementScreen";
+    static constexpr const char* ALIAS = NAME;
 
     bool show; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(ShowEngagementScreen, 0x48);
 } // namespace ink
-using ShowEngagementScreen = ink::ShowEngagementScreen;
 } // namespace RED4ext

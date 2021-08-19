@@ -14,8 +14,8 @@ struct MachineplayeractionsLocomotionWallRun : game::state::Machineplayeractions
     static constexpr const char* NAME = "gamestateMachineplayeractionsLocomotionWallRun";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk110[0x120 - 0x110]; // 110
+    uint8_t unk120[0x130 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionWallRun, 0x120);
+RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionWallRun, 0x130);
 } // namespace game::state
 } // namespace RED4ext

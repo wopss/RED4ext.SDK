@@ -12,11 +12,10 @@ namespace game::data {
 struct RandomNewsFeedBatch_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataRandomNewsFeedBatch_Record";
-    static constexpr const char* ALIAS = "RandomNewsFeedBatch_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(RandomNewsFeedBatch_Record, 0x50);
 } // namespace game::data
-using RandomNewsFeedBatch_Record = game::data::RandomNewsFeedBatch_Record;
 } // namespace RED4ext

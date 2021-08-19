@@ -22,17 +22,15 @@ struct CParticleSystem : res::StreamedResource
 
     DynArray<Handle<CParticleEmitter>> emitters; // 40
     Box boundingBox; // 50
-    bool forceDynamicBbox; // 70
-    uint8_t unk71[0x74 - 0x71]; // 71
-    float autoHideDistance; // 74
-    float autoHideRange; // 78
-    float lastLODFadeoutRange; // 7C
-    bool visibleThroughWalls; // 80
-    uint8_t unk81[0x84 - 0x81]; // 81
-    float prewarmingTime; // 84
-    ERenderingPlane renderingPlane; // 88
-    uint8_t unk8C[0x90 - 0x8C]; // 8C
-    Handle<ParticleDamage> particleDamage; // 90
+    float autoHideDistance; // 70
+    float autoHideRange; // 74
+    float lastLODFadeoutRange; // 78
+    bool visibleThroughWalls; // 7C
+    uint8_t unk7D[0x80 - 0x7D]; // 7D
+    float prewarmingTime; // 80
+    ERenderingPlane renderingPlane; // 84
+    Handle<ParticleDamage> particleDamage; // 88
+    uint8_t unk98[0xA0 - 0x98]; // 98
 };
 RED4EXT_ASSERT_SIZE(CParticleSystem, 0xA0);
 } // namespace RED4ext

@@ -15,11 +15,10 @@ namespace game::interactions {
 struct ChoiceCaptionIconPart : game::interactions::ChoiceCaptionPart
 {
     static constexpr const char* NAME = "gameinteractionsChoiceCaptionIconPart";
-    static constexpr const char* ALIAS = "InteractionChoiceCaptionIconPart";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::data::ChoiceCaptionIconPart_Record> iconRecord; // 40
 };
 RED4EXT_ASSERT_SIZE(ChoiceCaptionIconPart, 0x50);
 } // namespace game::interactions
-using InteractionChoiceCaptionIconPart = game::interactions::ChoiceCaptionIconPart;
 } // namespace RED4ext

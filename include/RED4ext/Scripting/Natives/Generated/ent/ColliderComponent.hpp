@@ -22,7 +22,7 @@ namespace ent {
 struct ColliderComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entColliderComponent";
-    static constexpr const char* ALIAS = "ColliderComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk120[0x138 - 0x120]; // 120
     DynArray<Handle<ent::ColliderComponentShape>> shapes; // 138
@@ -44,5 +44,4 @@ struct ColliderComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(ColliderComponent, 0x1E0);
 } // namespace ent
-using ColliderComponent = ent::ColliderComponent;
 } // namespace RED4ext

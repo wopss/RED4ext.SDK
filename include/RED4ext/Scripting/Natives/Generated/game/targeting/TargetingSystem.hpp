@@ -12,11 +12,10 @@ namespace game::targeting {
 struct TargetingSystem : game::ITargetingSystem
 {
     static constexpr const char* NAME = "gametargetingTargetingSystem";
-    static constexpr const char* ALIAS = "TargetingSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x4B0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(TargetingSystem, 0x4B0);
 } // namespace game::targeting
-using TargetingSystem = game::targeting::TargetingSystem;
 } // namespace RED4ext

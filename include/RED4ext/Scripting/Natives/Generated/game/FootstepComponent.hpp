@@ -14,7 +14,7 @@ namespace game {
 struct FootstepComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameFootstepComponent";
-    static constexpr const char* ALIAS = "FootstepComponent";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID tweakDBID; // 90
     CName leftFootSlot; // 98
@@ -23,5 +23,4 @@ struct FootstepComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(FootstepComponent, 0xB0);
 } // namespace game
-using FootstepComponent = game::FootstepComponent;
 } // namespace RED4ext

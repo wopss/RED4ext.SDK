@@ -12,11 +12,10 @@ namespace ink {
 struct DefaultLoadingScreenLogicController : ink::ILoadingLogicController
 {
     static constexpr const char* NAME = "inkDefaultLoadingScreenLogicController";
-    static constexpr const char* ALIAS = "DefaultLoadingScreenLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk180[0x190 - 0x180]; // 180
 };
 RED4EXT_ASSERT_SIZE(DefaultLoadingScreenLogicController, 0x190);
 } // namespace ink
-using DefaultLoadingScreenLogicController = ink::DefaultLoadingScreenLogicController;
 } // namespace RED4ext

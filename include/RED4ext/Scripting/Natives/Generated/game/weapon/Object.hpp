@@ -15,13 +15,12 @@ namespace game::weapon {
 struct Object : game::ItemObject
 {
     static constexpr const char* NAME = "gameweaponObject";
-    static constexpr const char* ALIAS = "WeaponObject";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk318[0x348 - 0x318]; // 318
-    Ref<game::EffectSet> effect; // 348
-    uint8_t unk360[0x500 - 0x360]; // 360
+    uint8_t unk328[0x358 - 0x328]; // 328
+    Ref<game::EffectSet> effect; // 358
+    uint8_t unk370[0x550 - 0x370]; // 370
 };
-RED4EXT_ASSERT_SIZE(Object, 0x500);
+RED4EXT_ASSERT_SIZE(Object, 0x550);
 } // namespace game::weapon
-using WeaponObject = game::weapon::Object;
 } // namespace RED4ext

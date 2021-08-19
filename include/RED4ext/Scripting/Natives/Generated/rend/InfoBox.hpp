@@ -12,11 +12,10 @@ namespace rend {
 struct InfoBox : IScriptable
 {
     static constexpr const char* NAME = "rendInfoBox";
-    static constexpr const char* ALIAS = "InfoBox";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x98 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(InfoBox, 0x98);
 } // namespace rend
-using InfoBox = rend::InfoBox;
 } // namespace RED4ext

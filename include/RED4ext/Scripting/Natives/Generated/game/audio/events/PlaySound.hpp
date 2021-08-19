@@ -13,7 +13,7 @@ namespace game::audio::events {
 struct PlaySound : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsPlaySound";
-    static constexpr const char* ALIAS = "SoundPlayEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName soundName; // 40
     CName emitterName; // 48
@@ -24,5 +24,4 @@ struct PlaySound : red::Event
 };
 RED4EXT_ASSERT_SIZE(PlaySound, 0x60);
 } // namespace game::audio::events
-using SoundPlayEvent = game::audio::events::PlaySound;
 } // namespace RED4ext

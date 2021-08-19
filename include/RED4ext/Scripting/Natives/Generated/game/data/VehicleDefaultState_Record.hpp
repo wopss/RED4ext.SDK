@@ -12,11 +12,10 @@ namespace game::data {
 struct VehicleDefaultState_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleDefaultState_Record";
-    static constexpr const char* ALIAS = "VehicleDefaultState_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x78 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(VehicleDefaultState_Record, 0x78);
 } // namespace game::data
-using VehicleDefaultState_Record = game::data::VehicleDefaultState_Record;
 } // namespace RED4ext

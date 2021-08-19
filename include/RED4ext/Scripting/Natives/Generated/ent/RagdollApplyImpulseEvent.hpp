@@ -13,7 +13,7 @@ namespace ent {
 struct RagdollApplyImpulseEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollApplyImpulseEvent";
-    static constexpr const char* ALIAS = "RagdollApplyImpulseEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 worldImpulsePos; // 40
     Vector4 worldImpulseValue; // 50
@@ -22,5 +22,4 @@ struct RagdollApplyImpulseEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RagdollApplyImpulseEvent, 0x70);
 } // namespace ent
-using RagdollApplyImpulseEvent = ent::RagdollApplyImpulseEvent;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace ent {
 struct AnimInputSetter : red::Event
 {
     static constexpr const char* NAME = "entAnimInputSetter";
-    static constexpr const char* ALIAS = "AnimInputSetter";
+    static constexpr const char* ALIAS = NAME;
 
     CName key; // 40
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetter, 0x48);
 } // namespace ent
-using AnimInputSetter = ent::AnimInputSetter;
 } // namespace RED4ext

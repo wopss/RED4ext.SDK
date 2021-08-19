@@ -12,11 +12,10 @@ namespace game::ui {
 struct HUDGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiHUDGameController";
-    static constexpr const char* ALIAS = "inkHUDGameController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkD0[0xE8 - 0xD0]; // D0
 };
 RED4EXT_ASSERT_SIZE(HUDGameController, 0xE8);
 } // namespace game::ui
-using inkHUDGameController = game::ui::HUDGameController;
 } // namespace RED4ext

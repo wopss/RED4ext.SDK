@@ -4,6 +4,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/VisionModeSystemRevealIdentifier.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
 
 namespace RED4ext
@@ -12,12 +13,12 @@ namespace game::events {
 struct RevealObjectEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsRevealObjectEvent";
-    static constexpr const char* ALIAS = "RevealObjectEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool reveal; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
+    game::VisionModeSystemRevealIdentifier reason; // 48
 };
-RED4EXT_ASSERT_SIZE(RevealObjectEvent, 0x48);
+RED4EXT_ASSERT_SIZE(RevealObjectEvent, 0x58);
 } // namespace game::events
-using RevealObjectEvent = game::events::RevealObjectEvent;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace game::state {
 struct MachineeventPostponedParameterCName : game::state::MachineeventPostponedParameterBase
 {
     static constexpr const char* NAME = "gamestateMachineeventPostponedParameterCName";
-    static constexpr const char* ALIAS = "PSMPostponedParameterCName";
+    static constexpr const char* ALIAS = NAME;
 
     CName value; // 50
 };
 RED4EXT_ASSERT_SIZE(MachineeventPostponedParameterCName, 0x58);
 } // namespace game::state
-using PSMPostponedParameterCName = game::state::MachineeventPostponedParameterCName;
 } // namespace RED4ext

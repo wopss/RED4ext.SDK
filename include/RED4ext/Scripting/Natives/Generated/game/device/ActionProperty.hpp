@@ -15,7 +15,7 @@ namespace game::device {
 struct ActionProperty : IScriptable
 {
     static constexpr const char* NAME = "gamedeviceActionProperty";
-    static constexpr const char* ALIAS = "DeviceActionProperty";
+    static constexpr const char* ALIAS = NAME;
 
     CName name; // 40
     CName typeName; // 48
@@ -27,5 +27,4 @@ struct ActionProperty : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ActionProperty, 0xA0);
 } // namespace game::device
-using DeviceActionProperty = game::device::ActionProperty;
 } // namespace RED4ext

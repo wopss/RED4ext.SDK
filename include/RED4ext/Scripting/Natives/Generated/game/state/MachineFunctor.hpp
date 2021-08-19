@@ -12,11 +12,10 @@ namespace game::state {
 struct MachineFunctor : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineFunctor";
-    static constexpr const char* ALIAS = "StateFunctor";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x60 - 0x40]; // 40
+    uint8_t unk40[0x68 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(MachineFunctor, 0x60);
+RED4EXT_ASSERT_SIZE(MachineFunctor, 0x68);
 } // namespace game::state
-using StateFunctor = game::state::MachineFunctor;
 } // namespace RED4ext

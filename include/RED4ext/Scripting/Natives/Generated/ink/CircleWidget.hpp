@@ -12,7 +12,7 @@ namespace ink {
 struct CircleWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkCircleWidget";
-    static constexpr const char* ALIAS = "inkCircle";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk220[0x224 - 0x220]; // 220
     uint32_t segmentsNumber; // 224
@@ -20,5 +20,4 @@ struct CircleWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(CircleWidget, 0x230);
 } // namespace ink
-using inkCircle = ink::CircleWidget;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace game::audio::events {
 struct DialogLine : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsDialogLine";
-    static constexpr const char* ALIAS = "DialogLineEvent";
+    static constexpr const char* ALIAS = NAME;
 
     audio::DialogLineEventData data; // 40
 };
 RED4EXT_ASSERT_SIZE(DialogLine, 0x68);
 } // namespace game::audio::events
-using DialogLineEvent = game::audio::events::DialogLine;
 } // namespace RED4ext

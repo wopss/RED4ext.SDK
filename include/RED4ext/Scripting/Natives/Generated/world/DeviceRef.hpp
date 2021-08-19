@@ -13,7 +13,7 @@ namespace world {
 struct DeviceRef
 {
     static constexpr const char* NAME = "worldDeviceRef";
-    static constexpr const char* ALIAS = "DeviceRef";
+    static constexpr const char* ALIAS = NAME;
 
     NodeRef nodeRef; // 00
     CName componentName; // 08
@@ -21,5 +21,4 @@ struct DeviceRef
 };
 RED4EXT_ASSERT_SIZE(DeviceRef, 0x18);
 } // namespace world
-using DeviceRef = world::DeviceRef;
 } // namespace RED4ext

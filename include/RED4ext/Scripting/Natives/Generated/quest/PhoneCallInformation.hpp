@@ -14,17 +14,17 @@ namespace quest {
 struct PhoneCallInformation
 {
     static constexpr const char* NAME = "questPhoneCallInformation";
-    static constexpr const char* ALIAS = "PhoneCallInformation";
+    static constexpr const char* ALIAS = NAME;
 
     quest::PhoneCallMode callMode; // 00
     bool isAudioCall; // 04
     uint8_t unk05[0x8 - 0x5]; // 5
     CName contactName; // 08
     bool isPlayerCalling; // 10
-    uint8_t unk11[0x14 - 0x11]; // 11
+    bool isPlayerTriggered; // 11
+    uint8_t unk12[0x14 - 0x12]; // 12
     quest::PhoneCallPhase callPhase; // 14
 };
 RED4EXT_ASSERT_SIZE(PhoneCallInformation, 0x18);
 } // namespace quest
-using PhoneCallInformation = quest::PhoneCallInformation;
 } // namespace RED4ext

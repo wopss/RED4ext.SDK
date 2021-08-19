@@ -12,11 +12,10 @@ namespace world {
 struct WeatherScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "worldWeatherScriptInterface";
-    static constexpr const char* ALIAS = "WeatherSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(WeatherScriptInterface, 0x50);
 } // namespace world
-using WeatherSystem = world::WeatherScriptInterface;
 } // namespace RED4ext

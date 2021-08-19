@@ -12,7 +12,7 @@ namespace game::state {
 struct MachineSnapshotResult
 {
     static constexpr const char* NAME = "gamestateMachineSnapshotResult";
-    static constexpr const char* ALIAS = "SnapshotResult";
+    static constexpr const char* ALIAS = NAME;
 
     game::state::MachineStateSnapshot snapshot; // 00
     bool valid; // 48
@@ -20,5 +20,4 @@ struct MachineSnapshotResult
 };
 RED4EXT_ASSERT_SIZE(MachineSnapshotResult, 0x50);
 } // namespace game::state
-using SnapshotResult = game::state::MachineSnapshotResult;
 } // namespace RED4ext

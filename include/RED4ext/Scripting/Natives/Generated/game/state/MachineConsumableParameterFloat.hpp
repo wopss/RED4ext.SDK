@@ -12,12 +12,11 @@ namespace game::state {
 struct MachineConsumableParameterFloat : game::state::MachineActionParameterFloat
 {
     static constexpr const char* NAME = "gamestateMachineConsumableParameterFloat";
-    static constexpr const char* ALIAS = "ConsumableParameterFloat";
+    static constexpr const char* ALIAS = NAME;
 
     bool consumed; // 18
     uint8_t unk19[0x20 - 0x19]; // 19
 };
 RED4EXT_ASSERT_SIZE(MachineConsumableParameterFloat, 0x20);
 } // namespace game::state
-using ConsumableParameterFloat = game::state::MachineConsumableParameterFloat;
 } // namespace RED4ext

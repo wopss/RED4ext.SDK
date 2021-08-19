@@ -12,11 +12,10 @@ namespace game::data {
 struct ProjectileLaunchMode_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataProjectileLaunchMode_Record";
-    static constexpr const char* ALIAS = "ProjectileLaunchMode_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ProjectileLaunchMode_Record, 0x58);
 } // namespace game::data
-using ProjectileLaunchMode_Record = game::data::ProjectileLaunchMode_Record;
 } // namespace RED4ext

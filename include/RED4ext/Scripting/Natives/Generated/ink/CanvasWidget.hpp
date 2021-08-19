@@ -12,10 +12,9 @@ namespace ink {
 struct CanvasWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkCanvasWidget";
-    static constexpr const char* ALIAS = "inkCanvas";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(CanvasWidget, 0x220);
 } // namespace ink
-using inkCanvas = ink::CanvasWidget;
 } // namespace RED4ext

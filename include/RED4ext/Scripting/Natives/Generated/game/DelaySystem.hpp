@@ -12,11 +12,10 @@ namespace game {
 struct DelaySystem : game::IDelaySystem
 {
     static constexpr const char* NAME = "gameDelaySystem";
-    static constexpr const char* ALIAS = "DelaySystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x53000 - 0x48]; // 48
+    uint8_t unk48[0x53080 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DelaySystem, 0x53000);
+RED4EXT_ASSERT_SIZE(DelaySystem, 0x53080);
 } // namespace game
-using DelaySystem = game::DelaySystem;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct LookAtPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataLookAtPreset_Record";
-    static constexpr const char* ALIAS = "LookAtPreset_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x78 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(LookAtPreset_Record, 0x78);
 } // namespace game::data
-using LookAtPreset_Record = game::data::LookAtPreset_Record;
 } // namespace RED4ext

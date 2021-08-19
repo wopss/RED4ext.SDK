@@ -15,14 +15,13 @@ namespace game::ui {
 struct InputHintController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiInputHintController";
-    static constexpr const char* ALIAS = "InputHintController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::WidgetLibraryReference inputDisplayLibRef; // 68
     ink::CompoundWidgetReference inputDisplayContainer; // 78
     ink::TextWidgetReference textWidgetRef; // 90
-    uint8_t unkA8[0xC0 - 0xA8]; // A8
+    uint8_t unkA8[0xC8 - 0xA8]; // A8
 };
-RED4EXT_ASSERT_SIZE(InputHintController, 0xC0);
+RED4EXT_ASSERT_SIZE(InputHintController, 0xC8);
 } // namespace game::ui
-using InputHintController = game::ui::InputHintController;
 } // namespace RED4ext

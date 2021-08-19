@@ -13,12 +13,11 @@ namespace sense {
 struct VisibleObjectSecondaryPositionEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibleObjectSecondaryPositionEvent";
-    static constexpr const char* ALIAS = "VisibleObjectSecondaryPositionEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Vector3 offset; // 40
     uint8_t unk4C[0x50 - 0x4C]; // 4C
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectSecondaryPositionEvent, 0x50);
 } // namespace sense
-using VisibleObjectSecondaryPositionEvent = sense::VisibleObjectSecondaryPositionEvent;
 } // namespace RED4ext

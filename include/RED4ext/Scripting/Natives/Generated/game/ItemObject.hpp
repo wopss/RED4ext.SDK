@@ -13,13 +13,12 @@ namespace game {
 struct ItemObject : game::TimeDilatable
 {
     static constexpr const char* NAME = "gameItemObject";
-    static constexpr const char* ALIAS = "ItemObject";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk2B8[0x310 - 0x2B8]; // 2B8
-    UpdateBucketEnum updateBucket; // 310
-    uint8_t unk311[0x318 - 0x311]; // 311
+    uint8_t unk2C8[0x320 - 0x2C8]; // 2C8
+    UpdateBucketEnum updateBucket; // 320
+    uint8_t unk321[0x328 - 0x321]; // 321
 };
-RED4EXT_ASSERT_SIZE(ItemObject, 0x318);
+RED4EXT_ASSERT_SIZE(ItemObject, 0x328);
 } // namespace game
-using ItemObject = game::ItemObject;
 } // namespace RED4ext

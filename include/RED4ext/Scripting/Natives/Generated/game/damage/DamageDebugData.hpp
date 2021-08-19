@@ -14,7 +14,7 @@ namespace game::damage {
 struct DamageDebugData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageDamageDebugData";
-    static constexpr const char* ALIAS = "DamageDebugData";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::StatPoolType statPoolType; // 40
     game::data::DamageType damageType; // 44
@@ -23,5 +23,4 @@ struct DamageDebugData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(DamageDebugData, 0x50);
 } // namespace game::damage
-using DamageDebugData = game::damage::DamageDebugData;
 } // namespace RED4ext

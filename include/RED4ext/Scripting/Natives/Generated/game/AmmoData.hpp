@@ -12,7 +12,7 @@ namespace game {
 struct AmmoData
 {
     static constexpr const char* NAME = "gameAmmoData";
-    static constexpr const char* ALIAS = "AmmoData";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID id; // 00
     int32_t available; // 10
@@ -20,5 +20,4 @@ struct AmmoData
 };
 RED4EXT_ASSERT_SIZE(AmmoData, 0x18);
 } // namespace game
-using AmmoData = game::AmmoData;
 } // namespace RED4ext

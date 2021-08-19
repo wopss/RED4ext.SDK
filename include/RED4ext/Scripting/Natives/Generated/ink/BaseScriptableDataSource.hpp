@@ -12,10 +12,9 @@ namespace ink {
 struct BaseScriptableDataSource : ink::AbstractDataSourceWrapper
 {
     static constexpr const char* NAME = "inkBaseScriptableDataSource";
-    static constexpr const char* ALIAS = "BaseScriptableDataSource";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(BaseScriptableDataSource, 0x48);
 } // namespace ink
-using BaseScriptableDataSource = ink::BaseScriptableDataSource;
 } // namespace RED4ext

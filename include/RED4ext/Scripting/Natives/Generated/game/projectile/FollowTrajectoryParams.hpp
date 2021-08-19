@@ -17,7 +17,7 @@ namespace game::projectile {
 struct FollowTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileFollowTrajectoryParams";
-    static constexpr const char* ALIAS = "FollowTrajectoryParams";
+    static constexpr const char* ALIAS = NAME;
 
     float startVel; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -29,5 +29,4 @@ struct FollowTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(FollowTrajectoryParams, 0x80);
 } // namespace game::projectile
-using FollowTrajectoryParams = game::projectile::FollowTrajectoryParams;
 } // namespace RED4ext

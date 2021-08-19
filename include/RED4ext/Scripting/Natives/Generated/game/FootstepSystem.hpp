@@ -12,11 +12,10 @@ namespace game {
 struct FootstepSystem : game::IFootstepSystem
 {
     static constexpr const char* NAME = "gameFootstepSystem";
-    static constexpr const char* ALIAS = "FootstepSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x78 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(FootstepSystem, 0x78);
 } // namespace game
-using FootstepSystem = game::FootstepSystem;
 } // namespace RED4ext

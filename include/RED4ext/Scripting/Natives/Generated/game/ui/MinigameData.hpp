@@ -17,7 +17,7 @@ namespace game::ui {
 struct MinigameData
 {
     static constexpr const char* NAME = "gameuiMinigameData";
-    static constexpr const char* ALIAS = "MinigameData";
+    static constexpr const char* ALIAS = NAME;
 
     float timeLimit; // 00
     float trapSpawnProbability; // 04
@@ -31,5 +31,4 @@ struct MinigameData
 };
 RED4EXT_ASSERT_SIZE(MinigameData, 0x48);
 } // namespace game::ui
-using MinigameData = game::ui::MinigameData;
 } // namespace RED4ext

@@ -24,7 +24,11 @@ struct StreamingTestSummary : ISerializable
     uint64_t bytesReadDuringDriving; // 68
     uint64_t bytesReadDuringCooldown; // 70
     uint64_t totalSeeksBytes; // 78
+    float minFps; // 80
+    float maxFps; // 84
+    float averageFps; // 88
+    uint8_t unk8C[0x90 - 0x8C]; // 8C
 };
-RED4EXT_ASSERT_SIZE(StreamingTestSummary, 0x80);
+RED4EXT_ASSERT_SIZE(StreamingTestSummary, 0x90);
 } // namespace world
 } // namespace RED4ext

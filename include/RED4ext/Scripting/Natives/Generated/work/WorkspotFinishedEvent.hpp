@@ -16,7 +16,7 @@ namespace work {
 struct WorkspotFinishedEvent : red::Event
 {
     static constexpr const char* NAME = "workWorkspotFinishedEvent";
-    static constexpr const char* ALIAS = "WorkspotFinishedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     world::GlobalNodeID nodeId; // 40
     DynArray<CName> tags; // 48
@@ -24,5 +24,4 @@ struct WorkspotFinishedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(WorkspotFinishedEvent, 0x60);
 } // namespace work
-using WorkspotFinishedEvent = work::WorkspotFinishedEvent;
 } // namespace RED4ext

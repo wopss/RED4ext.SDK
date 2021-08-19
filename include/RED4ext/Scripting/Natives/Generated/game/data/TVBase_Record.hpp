@@ -12,11 +12,10 @@ namespace game::data {
 struct TVBase_Record : game::data::Device_Record
 {
     static constexpr const char* NAME = "gamedataTVBase_Record";
-    static constexpr const char* ALIAS = "TVBase_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk68[0x70 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(TVBase_Record, 0x70);
 } // namespace game::data
-using TVBase_Record = game::data::TVBase_Record;
 } // namespace RED4ext

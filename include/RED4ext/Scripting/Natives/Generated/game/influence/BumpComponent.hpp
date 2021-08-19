@@ -14,21 +14,20 @@ namespace game::influence {
 struct BumpComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceBumpComponent";
-    static constexpr const char* ALIAS = "BumpComponent";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk120[0x3C0 - 0x120]; // 120
-    bool autoPlayBumpAnimation; // 3C0
-    bool isPlayerControlled; // 3C1
-    uint8_t unk3C2[0x3C4 - 0x3C2]; // 3C2
-    float movementSpreadDistance; // 3C4
-    float movementSpreadRadius; // 3C8
-    float distanceToReactBack; // 3CC
-    float distanceToReactFront; // 3D0
-    uint8_t unk3D4[0x3D8 - 0x3D4]; // 3D4
-    DynArray<game::influence::BumpReactionSetting> reactionSettings; // 3D8
-    uint8_t unk3E8[0x3F0 - 0x3E8]; // 3E8
+    uint8_t unk120[0x3D0 - 0x120]; // 120
+    bool autoPlayBumpAnimation; // 3D0
+    bool isPlayerControlled; // 3D1
+    uint8_t unk3D2[0x3D4 - 0x3D2]; // 3D2
+    float movementSpreadDistance; // 3D4
+    float movementSpreadRadius; // 3D8
+    float distanceToReactBack; // 3DC
+    float distanceToReactFront; // 3E0
+    uint8_t unk3E4[0x3E8 - 0x3E4]; // 3E4
+    DynArray<game::influence::BumpReactionSetting> reactionSettings; // 3E8
+    uint8_t unk3F8[0x400 - 0x3F8]; // 3F8
 };
-RED4EXT_ASSERT_SIZE(BumpComponent, 0x3F0);
+RED4EXT_ASSERT_SIZE(BumpComponent, 0x400);
 } // namespace game::influence
-using BumpComponent = game::influence::BumpComponent;
 } // namespace RED4ext

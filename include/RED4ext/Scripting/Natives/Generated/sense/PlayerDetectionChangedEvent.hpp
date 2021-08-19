@@ -12,12 +12,11 @@ namespace sense {
 struct PlayerDetectionChangedEvent : red::Event
 {
     static constexpr const char* NAME = "sensePlayerDetectionChangedEvent";
-    static constexpr const char* ALIAS = "PlayerDetectionChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     float oldDetectionValue; // 40
     float newDetectionValue; // 44
 };
 RED4EXT_ASSERT_SIZE(PlayerDetectionChangedEvent, 0x48);
 } // namespace sense
-using PlayerDetectionChangedEvent = sense::PlayerDetectionChangedEvent;
 } // namespace RED4ext

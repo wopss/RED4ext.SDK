@@ -12,10 +12,9 @@ namespace game::data {
 struct DeviceAreaAttack_Record : game::data::Attack_GameEffect_Record
 {
     static constexpr const char* NAME = "gamedataDeviceAreaAttack_Record";
-    static constexpr const char* ALIAS = "DeviceAreaAttack_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(DeviceAreaAttack_Record, 0x80);
+RED4EXT_ASSERT_SIZE(DeviceAreaAttack_Record, 0x88);
 } // namespace game::data
-using DeviceAreaAttack_Record = game::data::DeviceAreaAttack_Record;
 } // namespace RED4ext

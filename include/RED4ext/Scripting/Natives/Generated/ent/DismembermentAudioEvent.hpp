@@ -14,7 +14,7 @@ namespace ent {
 struct DismembermentAudioEvent : red::Event
 {
     static constexpr const char* NAME = "entDismembermentAudioEvent";
-    static constexpr const char* ALIAS = "DismembermentAudioEvent";
+    static constexpr const char* ALIAS = NAME;
 
     ent::AudioDismembermentPart bodyPart; // 40
     uint8_t unk44[0x50 - 0x44]; // 44
@@ -22,5 +22,4 @@ struct DismembermentAudioEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DismembermentAudioEvent, 0x60);
 } // namespace ent
-using DismembermentAudioEvent = ent::DismembermentAudioEvent;
 } // namespace RED4ext

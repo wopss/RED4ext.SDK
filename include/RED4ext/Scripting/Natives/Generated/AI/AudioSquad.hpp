@@ -15,6 +15,6 @@ struct AudioSquad : AI::SquadBase
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(AudioSquad, 0x110);
+RED4EXT_ASSERT_SIZE(AudioSquad, 0x148);
 } // namespace AI
 } // namespace RED4ext

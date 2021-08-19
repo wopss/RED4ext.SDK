@@ -14,7 +14,7 @@ namespace ink {
 struct GradientWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkGradientWidget";
-    static constexpr const char* ALIAS = "inkGradient";
+    static constexpr const char* ALIAS = NAME;
 
     ink::GradientMode gradientMode; // 220
     uint8_t unk221[0x224 - 0x221]; // 221
@@ -26,5 +26,4 @@ struct GradientWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(GradientWidget, 0x260);
 } // namespace ink
-using inkGradient = ink::GradientWidget;
 } // namespace RED4ext

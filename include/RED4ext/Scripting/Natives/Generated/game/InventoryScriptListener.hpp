@@ -12,11 +12,10 @@ namespace game {
 struct InventoryScriptListener : game::IInventoryListener
 {
     static constexpr const char* NAME = "gameInventoryScriptListener";
-    static constexpr const char* ALIAS = "InventoryScriptListener";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(InventoryScriptListener, 0x50);
 } // namespace game
-using InventoryScriptListener = game::InventoryScriptListener;
 } // namespace RED4ext

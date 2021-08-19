@@ -12,7 +12,7 @@ namespace game::ui {
 struct GenericNotificationGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiGenericNotificationGameController";
-    static constexpr const char* ALIAS = "gameuiGenericNotificationGameController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkD0[0x158 - 0xD0]; // D0
 };

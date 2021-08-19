@@ -15,7 +15,7 @@ namespace game::audio {
 struct SoundComponent : game::audio::SoundComponentBase
 {
     static constexpr const char* NAME = "gameaudioSoundComponent";
-    static constexpr const char* ALIAS = "soundComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk180[0x190 - 0x180]; // 180
     DynArray<game::audio::SoundComponentSubSystemWrapper> subSystems; // 190
@@ -27,5 +27,4 @@ struct SoundComponent : game::audio::SoundComponentBase
 };
 RED4EXT_ASSERT_SIZE(SoundComponent, 0x210);
 } // namespace game::audio
-using soundComponent = game::audio::SoundComponent;
 } // namespace RED4ext

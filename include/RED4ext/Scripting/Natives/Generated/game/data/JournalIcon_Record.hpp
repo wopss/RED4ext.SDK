@@ -12,10 +12,9 @@ namespace game::data {
 struct JournalIcon_Record : game::data::UIIcon_Record
 {
     static constexpr const char* NAME = "gamedataJournalIcon_Record";
-    static constexpr const char* ALIAS = "JournalIcon_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(JournalIcon_Record, 0x50);
 } // namespace game::data
-using JournalIcon_Record = game::data::JournalIcon_Record;
 } // namespace RED4ext

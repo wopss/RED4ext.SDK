@@ -14,8 +14,8 @@ struct QuestsContentSystem : quest::IQuestsContentSystem
     static constexpr const char* NAME = "questQuestsContentSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xF0 - 0x48]; // 48
+    uint8_t unk48[0xF8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(QuestsContentSystem, 0xF0);
+RED4EXT_ASSERT_SIZE(QuestsContentSystem, 0xF8);
 } // namespace quest
 } // namespace RED4ext

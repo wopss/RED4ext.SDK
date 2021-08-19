@@ -13,7 +13,7 @@ namespace ent {
 struct RagdollImpactPointData
 {
     static constexpr const char* NAME = "entRagdollImpactPointData";
-    static constexpr const char* ALIAS = "RagdollImpactPointData";
+    static constexpr const char* ALIAS = NAME;
 
     WorldPosition worldPosition; // 00
     uint8_t unk0C[0x10 - 0xC]; // C
@@ -30,5 +30,4 @@ struct RagdollImpactPointData
 };
 RED4EXT_ASSERT_SIZE(RagdollImpactPointData, 0x60);
 } // namespace ent
-using RagdollImpactPointData = ent::RagdollImpactPointData;
 } // namespace RED4ext

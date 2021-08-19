@@ -6,7 +6,6 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
@@ -15,17 +14,13 @@
 
 namespace RED4ext
 {
-namespace game { struct StatModifierData; }
-
 namespace game { 
 struct StatusEffect : game::StatusEffectBase
 {
     static constexpr const char* NAME = "gameStatusEffect";
-    static constexpr const char* ALIAS = "StatusEffect";
+    static constexpr const char* ALIAS = NAME;
 
-    DynArray<Handle<game::StatModifierData>> durationModifiers; // 48
-    DynArray<Handle<game::StatModifierData>> stackModifiers; // 58
-    DynArray<Handle<game::StatModifierData>> removeAllStacksWhenDurationEndsModifiers; // 68
+    uint8_t unk48[0x78 - 0x48]; // 48
     uint32_t maxStacks; // 78
     uint8_t unk7C[0x80 - 0x7C]; // 7C
     DynArray<game::SourceData> sourcesData; // 80
@@ -45,5 +40,4 @@ struct StatusEffect : game::StatusEffectBase
 };
 RED4EXT_ASSERT_SIZE(StatusEffect, 0xE0);
 } // namespace game
-using StatusEffect = game::StatusEffect;
 } // namespace RED4ext

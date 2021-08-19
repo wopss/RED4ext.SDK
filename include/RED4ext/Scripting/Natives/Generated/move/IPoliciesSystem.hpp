@@ -12,10 +12,9 @@ namespace move {
 struct IPoliciesSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "moveIPoliciesSystem";
-    static constexpr const char* ALIAS = "IMovePoliciesSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IPoliciesSystem, 0x48);
 } // namespace move
-using IMovePoliciesSystem = move::IPoliciesSystem;
 } // namespace RED4ext

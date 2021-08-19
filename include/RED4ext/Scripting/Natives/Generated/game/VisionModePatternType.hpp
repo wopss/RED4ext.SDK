@@ -12,5 +12,4 @@ enum class VisionModePatternType : uint32_t
     Netrunner = 1,
 };
 } // namespace game
-using VisionModePatternType = game::VisionModePatternType;
 } // namespace RED4ext

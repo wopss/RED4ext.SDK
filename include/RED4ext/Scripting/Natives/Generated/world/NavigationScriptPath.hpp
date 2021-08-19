@@ -14,11 +14,10 @@ namespace world {
 struct NavigationScriptPath : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptPath";
-    static constexpr const char* ALIAS = "NavigationPath";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<Vector4> path; // 40
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptPath, 0x50);
 } // namespace world
-using NavigationPath = world::NavigationScriptPath;
 } // namespace RED4ext

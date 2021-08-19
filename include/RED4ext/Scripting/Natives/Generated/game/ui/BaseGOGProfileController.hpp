@@ -12,11 +12,10 @@ namespace game::ui {
 struct BaseGOGProfileController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiBaseGOGProfileController";
-    static constexpr const char* ALIAS = "BaseGOGProfileController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkD0[0xF0 - 0xD0]; // D0
 };
 RED4EXT_ASSERT_SIZE(BaseGOGProfileController, 0xF0);
 } // namespace game::ui
-using BaseGOGProfileController = game::ui::BaseGOGProfileController;
 } // namespace RED4ext

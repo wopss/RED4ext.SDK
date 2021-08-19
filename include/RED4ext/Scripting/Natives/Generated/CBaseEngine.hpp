@@ -12,7 +12,7 @@ struct CBaseEngine
     static constexpr const char* NAME = "CBaseEngine";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x250 - 0x0]; // 0
+    uint8_t unk00[0x2C8 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(CBaseEngine, 0x250);
+RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2C8);
 } // namespace RED4ext

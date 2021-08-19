@@ -12,12 +12,11 @@ namespace game::device {
 struct Clearance : IScriptable
 {
     static constexpr const char* NAME = "gamedeviceClearance";
-    static constexpr const char* ALIAS = "Clearance";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t max; // 40
     int32_t min; // 44
 };
 RED4EXT_ASSERT_SIZE(Clearance, 0x48);
 } // namespace game::device
-using Clearance = game::device::Clearance;
 } // namespace RED4ext

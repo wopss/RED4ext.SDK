@@ -16,7 +16,7 @@ namespace game::ui {
 struct QuadRacerLogicController : game::ui::SideScrollerMiniGameLogicController
 {
     static constexpr const char* NAME = "gameuiQuadRacerLogicController";
-    static constexpr const char* ALIAS = "QuadRacerLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     float endgameDelay; // 118
     float roadWidth; // 11C
@@ -57,5 +57,4 @@ struct QuadRacerLogicController : game::ui::SideScrollerMiniGameLogicController
 };
 RED4EXT_ASSERT_SIZE(QuadRacerLogicController, 0x250);
 } // namespace game::ui
-using QuadRacerLogicController = game::ui::QuadRacerLogicController;
 } // namespace RED4ext

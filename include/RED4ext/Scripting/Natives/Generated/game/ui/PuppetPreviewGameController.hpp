@@ -13,12 +13,12 @@ namespace game::ui {
 struct PuppetPreviewGameController : game::ui::PreviewGameController
 {
     static constexpr const char* NAME = "gameuiPuppetPreviewGameController";
-    static constexpr const char* ALIAS = "inkPuppetPreviewGameController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkF8[0x140 - 0xF8]; // F8
     game::ui::PuppetPreviewCameraController cameraController; // 140
+    uint8_t unk1B0[0x1C0 - 0x1B0]; // 1B0
 };
-RED4EXT_ASSERT_SIZE(PuppetPreviewGameController, 0x1B0);
+RED4EXT_ASSERT_SIZE(PuppetPreviewGameController, 0x1C0);
 } // namespace game::ui
-using inkPuppetPreviewGameController = game::ui::PuppetPreviewGameController;
 } // namespace RED4ext

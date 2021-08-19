@@ -12,7 +12,7 @@ namespace game {
 struct SLastUsedWeapon
 {
     static constexpr const char* NAME = "gameSLastUsedWeapon";
-    static constexpr const char* ALIAS = "SLastUsedWeapon";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID lastUsedWeapon; // 00
     ItemID lastUsedRanged; // 10
@@ -21,5 +21,4 @@ struct SLastUsedWeapon
 };
 RED4EXT_ASSERT_SIZE(SLastUsedWeapon, 0x40);
 } // namespace game
-using SLastUsedWeapon = game::SLastUsedWeapon;
 } // namespace RED4ext

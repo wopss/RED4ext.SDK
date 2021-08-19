@@ -16,14 +16,15 @@ namespace work {
 struct WorkspotResourceComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "workWorkspotResourceComponent";
-    static constexpr const char* ALIAS = "WorkspotResourceComponent";
+    static constexpr const char* ALIAS = NAME;
 
-    Ref<work::WorkspotResource> resource; // 120
-    Ref<work::WorkspotResource> npcResource; // 138
-    Ref<work::WorkspotResource> deviceResource; // 150
-    CName syncSlotName; // 168
+    RaRef<work::WorkspotResource> workspotResource; // 120
+    uint8_t unk128[0x140 - 0x128]; // 128
+    Ref<work::WorkspotResource> npcWorkspotResourceSync; // 140
+    Ref<work::WorkspotResource> deviceWorkspotResourceSync; // 158
+    CName syncSlotName; // 170
+    uint8_t unk178[0x180 - 0x178]; // 178
 };
-RED4EXT_ASSERT_SIZE(WorkspotResourceComponent, 0x170);
+RED4EXT_ASSERT_SIZE(WorkspotResourceComponent, 0x180);
 } // namespace work
-using WorkspotResourceComponent = work::WorkspotResourceComponent;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace anim {
 struct AnimFeatureMarkUnstable : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeatureMarkUnstable";
-    static constexpr const char* ALIAS = "AnimFeatureMarkUnstable";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(AnimFeatureMarkUnstable, 0x40);
 } // namespace anim
-using AnimFeatureMarkUnstable = anim::AnimFeatureMarkUnstable;
 } // namespace RED4ext

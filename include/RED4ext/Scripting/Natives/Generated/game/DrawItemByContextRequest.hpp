@@ -14,12 +14,11 @@ namespace game {
 struct DrawItemByContextRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameDrawItemByContextRequest";
-    static constexpr const char* ALIAS = "DrawItemByContextRequest";
+    static constexpr const char* ALIAS = NAME;
 
     game::ItemEquipContexts itemEquipContext; // 58
     game::EquipAnimationType equipAnimationType; // 5C
 };
 RED4EXT_ASSERT_SIZE(DrawItemByContextRequest, 0x60);
 } // namespace game
-using DrawItemByContextRequest = game::DrawItemByContextRequest;
 } // namespace RED4ext

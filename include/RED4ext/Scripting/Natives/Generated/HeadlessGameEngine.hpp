@@ -13,7 +13,7 @@ struct HeadlessGameEngine : BaseGameEngine
     static constexpr const char* NAME = "HeadlessGameEngine";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk268[0x270 - 0x268]; // 268
+    uint8_t unk2E0[0x2E8 - 0x2E0]; // 2E0
 };
-RED4EXT_ASSERT_SIZE(HeadlessGameEngine, 0x270);
+RED4EXT_ASSERT_SIZE(HeadlessGameEngine, 0x2E8);
 } // namespace RED4ext

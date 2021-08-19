@@ -36,7 +36,9 @@ struct ReExportOptions
     CString rigs; // 148
     CString hjobTemplate; // 168
     CString bodyType; // 188
-    uint8_t unk1A8[0x1D0 - 0x1A8]; // 1A8
+    uint8_t unk1A8[0x1CB - 0x1A8]; // 1A8
+    bool generatePlayerBlockingCollision; // 1CB
+    uint8_t unk1CC[0x1D0 - 0x1CC]; // 1CC
     CString baseType; // 1D0
     uint8_t unk1F0[0x210 - 0x1F0]; // 1F0
     Box exportBounds; // 210

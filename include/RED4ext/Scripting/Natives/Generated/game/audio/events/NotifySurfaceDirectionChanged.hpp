@@ -13,12 +13,11 @@ namespace game::audio::events {
 struct NotifySurfaceDirectionChanged : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsNotifySurfaceDirectionChanged";
-    static constexpr const char* ALIAS = "NotifySurfaceDirectionChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     game::audio::events::SurfaceDirection surfaceDirection; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(NotifySurfaceDirectionChanged, 0x48);
 } // namespace game::audio::events
-using NotifySurfaceDirectionChangedEvent = game::audio::events::NotifySurfaceDirectionChanged;
 } // namespace RED4ext

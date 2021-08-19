@@ -12,11 +12,10 @@ namespace game::data {
 struct CrowdSlotMovementSettingsBase_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCrowdSlotMovementSettingsBase_Record";
-    static constexpr const char* ALIAS = "CrowdSlotMovementSettingsBase_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0xD8 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CrowdSlotMovementSettingsBase_Record, 0xD8);
 } // namespace game::data
-using CrowdSlotMovementSettingsBase_Record = game::data::CrowdSlotMovementSettingsBase_Record;
 } // namespace RED4ext

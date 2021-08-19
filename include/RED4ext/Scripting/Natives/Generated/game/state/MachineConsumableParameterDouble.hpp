@@ -12,12 +12,11 @@ namespace game::state {
 struct MachineConsumableParameterDouble : game::state::MachineActionParameterDouble
 {
     static constexpr const char* NAME = "gamestateMachineConsumableParameterDouble";
-    static constexpr const char* ALIAS = "ConsumableParameterDouble";
+    static constexpr const char* ALIAS = NAME;
 
     bool consumed; // 18
     uint8_t unk19[0x20 - 0x19]; // 19
 };
 RED4EXT_ASSERT_SIZE(MachineConsumableParameterDouble, 0x20);
 } // namespace game::state
-using ConsumableParameterDouble = game::state::MachineConsumableParameterDouble;
 } // namespace RED4ext

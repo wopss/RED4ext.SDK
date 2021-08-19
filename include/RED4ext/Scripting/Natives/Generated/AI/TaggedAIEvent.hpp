@@ -14,11 +14,10 @@ namespace AI {
 struct TaggedAIEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AITaggedAIEvent";
-    static constexpr const char* ALIAS = "TaggedAIEvent";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<CName> tags; // 50
 };
 RED4EXT_ASSERT_SIZE(TaggedAIEvent, 0x60);
 } // namespace AI
-using TaggedAIEvent = AI::TaggedAIEvent;
 } // namespace RED4ext

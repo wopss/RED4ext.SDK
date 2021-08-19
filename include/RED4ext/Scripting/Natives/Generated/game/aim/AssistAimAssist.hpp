@@ -13,8 +13,8 @@ struct AssistAimAssist
     static constexpr const char* NAME = "gameaimAssistAimAssist";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0xC60 - 0x0]; // 0
+    uint8_t unk00[0xC70 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(AssistAimAssist, 0xC60);
+RED4EXT_ASSERT_SIZE(AssistAimAssist, 0xC70);
 } // namespace game::aim
 } // namespace RED4ext

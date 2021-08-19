@@ -12,7 +12,7 @@ namespace game::ui {
 struct CharactersChain
 {
     static constexpr const char* NAME = "gameuiCharactersChain";
-    static constexpr const char* ALIAS = "CharactersChain";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<uint32_t> rarities; // 00
     uint32_t matchedValues; // 10
@@ -23,5 +23,4 @@ struct CharactersChain
 };
 RED4EXT_ASSERT_SIZE(CharactersChain, 0x20);
 } // namespace game::ui
-using CharactersChain = game::ui::CharactersChain;
 } // namespace RED4ext

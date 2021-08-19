@@ -12,11 +12,10 @@ namespace game {
 struct CAttitudeManager : game::IAttitudeManager
 {
     static constexpr const char* NAME = "gameCAttitudeManager";
-    static constexpr const char* ALIAS = "AttitudeSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x78608 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CAttitudeManager, 0x78608);
 } // namespace game
-using AttitudeSystem = game::CAttitudeManager;
 } // namespace RED4ext

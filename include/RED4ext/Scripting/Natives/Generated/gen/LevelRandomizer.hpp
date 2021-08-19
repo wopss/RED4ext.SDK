@@ -18,14 +18,14 @@ struct LevelRandomizer : game::Object
     static constexpr const char* NAME = "genLevelRandomizer";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<gen::LevelRandomizerEntry> entries; // 230
-    uint8_t unk240[0x2A8 - 0x240]; // 240
-    uint32_t seed; // 2A8
-    gen::LevelRandomizerDataSource dataSource; // 2AC
-    CName supervisorType; // 2B0
-    bool debugSpawnAll; // 2B8
-    uint8_t unk2B9[0x2C0 - 0x2B9]; // 2B9
+    DynArray<gen::LevelRandomizerEntry> entries; // 240
+    uint8_t unk250[0x2B8 - 0x250]; // 250
+    uint32_t seed; // 2B8
+    gen::LevelRandomizerDataSource dataSource; // 2BC
+    CName supervisorType; // 2C0
+    bool debugSpawnAll; // 2C8
+    uint8_t unk2C9[0x2D0 - 0x2C9]; // 2C9
 };
-RED4EXT_ASSERT_SIZE(LevelRandomizer, 0x2C0);
+RED4EXT_ASSERT_SIZE(LevelRandomizer, 0x2D0);
 } // namespace gen
 } // namespace RED4ext

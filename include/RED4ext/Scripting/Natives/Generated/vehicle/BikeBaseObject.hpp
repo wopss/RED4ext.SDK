@@ -12,10 +12,9 @@ namespace vehicle {
 struct BikeBaseObject : vehicle::WheeledBaseObject
 {
     static constexpr const char* NAME = "vehicleBikeBaseObject";
-    static constexpr const char* ALIAS = "BikeObject";
+    static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(BikeBaseObject, 0x920);
+RED4EXT_ASSERT_SIZE(BikeBaseObject, 0x930);
 } // namespace vehicle
-using BikeObject = vehicle::BikeBaseObject;
 } // namespace RED4ext

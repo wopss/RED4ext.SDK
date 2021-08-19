@@ -12,12 +12,11 @@ namespace game::ui {
 struct CurrencyUpdateNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiCurrencyUpdateNotificationViewData";
-    static constexpr const char* ALIAS = "CurrencyUpdateNotificationViewData";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t diff; // 90
     uint32_t total; // 94
 };
 RED4EXT_ASSERT_SIZE(CurrencyUpdateNotificationViewData, 0x98);
 } // namespace game::ui
-using CurrencyUpdateNotificationViewData = game::ui::CurrencyUpdateNotificationViewData;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::state {
 struct MachineeventDrawVaultDebug : game::state::MachineeventDrawClimbDebug
 {
     static constexpr const char* NAME = "gamestateMachineeventDrawVaultDebug";
-    static constexpr const char* ALIAS = "DrawVaultDebug";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x68 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(MachineeventDrawVaultDebug, 0x68);
 } // namespace game::state
-using DrawVaultDebug = game::state::MachineeventDrawVaultDebug;
 } // namespace RED4ext

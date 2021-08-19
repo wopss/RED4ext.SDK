@@ -13,12 +13,11 @@ namespace game {
 struct Damage : IScriptable
 {
     static constexpr const char* NAME = "gameDamage";
-    static constexpr const char* ALIAS = "Damage";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::DamageType damageType; // 40
     float value; // 44
 };
 RED4EXT_ASSERT_SIZE(Damage, 0x48);
 } // namespace game
-using Damage = game::Damage;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace world {
 struct MaraudersMapDevicesSink : IScriptable
 {
     static constexpr const char* NAME = "worldMaraudersMapDevicesSink";
-    static constexpr const char* ALIAS = "MaraudersMapDevicesSink";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x58 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(MaraudersMapDevicesSink, 0x58);
 } // namespace world
-using MaraudersMapDevicesSink = world::MaraudersMapDevicesSink;
 } // namespace RED4ext

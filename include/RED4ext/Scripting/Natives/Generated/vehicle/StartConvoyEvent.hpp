@@ -12,11 +12,10 @@ namespace vehicle {
 struct StartConvoyEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleStartConvoyEvent";
-    static constexpr const char* ALIAS = "VehicleStartConvoyEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(StartConvoyEvent, 0x48);
 } // namespace vehicle
-using VehicleStartConvoyEvent = vehicle::StartConvoyEvent;
 } // namespace RED4ext

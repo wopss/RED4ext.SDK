@@ -12,5 +12,4 @@ enum class TutorialBracketType : uint32_t
     CustomArea = 1,
 };
 } // namespace game
-using TutorialBracketType = game::TutorialBracketType;
 } // namespace RED4ext

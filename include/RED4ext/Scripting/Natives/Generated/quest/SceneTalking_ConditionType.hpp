@@ -8,6 +8,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EntityReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ISceneConditionType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/SceneVersionCheck.hpp>
 
 namespace RED4ext
 {
@@ -21,11 +22,13 @@ struct SceneTalking_ConditionType : quest::ISceneConditionType
 
     game::EntityReference GlobalEntityRef; // 38
     RaRef<scn::SceneResource> sceneFile; // 70
-    CName SectionName; // 78
-    CString ActorName; // 80
-    bool isInverted; // A0
-    uint8_t unkA1[0xA8 - 0xA1]; // A1
+    scn::SceneVersionCheck SceneVersion; // 78
+    uint8_t unk79[0x80 - 0x79]; // 79
+    CName SectionName; // 80
+    CString ActorName; // 88
+    bool isInverted; // A8
+    uint8_t unkA9[0xB0 - 0xA9]; // A9
 };
-RED4EXT_ASSERT_SIZE(SceneTalking_ConditionType, 0xA8);
+RED4EXT_ASSERT_SIZE(SceneTalking_ConditionType, 0xB0);
 } // namespace quest
 } // namespace RED4ext

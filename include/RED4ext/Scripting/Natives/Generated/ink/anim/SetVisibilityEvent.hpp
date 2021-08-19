@@ -12,12 +12,11 @@ namespace ink::anim {
 struct SetVisibilityEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimSetVisibilityEvent";
-    static constexpr const char* ALIAS = "inkAnimSetVisibilityEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool isVisible; // 48
     uint8_t unk49[0x50 - 0x49]; // 49
 };
 RED4EXT_ASSERT_SIZE(SetVisibilityEvent, 0x50);
 } // namespace ink::anim
-using inkAnimSetVisibilityEvent = ink::anim::SetVisibilityEvent;
 } // namespace RED4ext

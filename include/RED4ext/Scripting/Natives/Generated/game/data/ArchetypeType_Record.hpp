@@ -12,11 +12,10 @@ namespace game::data {
 struct ArchetypeType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataArchetypeType_Record";
-    static constexpr const char* ALIAS = "ArchetypeType_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ArchetypeType_Record, 0x58);
 } // namespace game::data
-using ArchetypeType_Record = game::data::ArchetypeType_Record;
 } // namespace RED4ext

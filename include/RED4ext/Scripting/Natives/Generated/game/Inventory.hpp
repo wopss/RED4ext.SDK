@@ -13,16 +13,15 @@ namespace game {
 struct Inventory : game::Component
 {
     static constexpr const char* NAME = "gameInventory";
-    static constexpr const char* ALIAS = "Inventory";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkA8[0xC0 - 0xA8]; // A8
-    game::SharedInventoryTag inventoryTag; // C0
-    bool noInitialization; // C4
-    uint8_t unkC5[0xC6 - 0xC5]; // C5
-    bool saveInventory; // C6
-    uint8_t unkC7[0x128 - 0xC7]; // C7
+    uint8_t unkA8[0xB0 - 0xA8]; // A8
+    game::SharedInventoryTag inventoryTag; // B0
+    bool noInitialization; // B4
+    uint8_t unkB5[0xB6 - 0xB5]; // B5
+    bool saveInventory; // B6
+    uint8_t unkB7[0x120 - 0xB7]; // B7
 };
-RED4EXT_ASSERT_SIZE(Inventory, 0x128);
+RED4EXT_ASSERT_SIZE(Inventory, 0x120);
 } // namespace game
-using Inventory = game::Inventory;
 } // namespace RED4ext

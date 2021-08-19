@@ -12,11 +12,10 @@ namespace game {
 struct JournalManager : game::IJournalManager
 {
     static constexpr const char* NAME = "gameJournalManager";
-    static constexpr const char* ALIAS = "JournalManager";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0x238 - 0x58]; // 58
+    uint8_t unk58[0x248 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(JournalManager, 0x238);
+RED4EXT_ASSERT_SIZE(JournalManager, 0x248);
 } // namespace game
-using JournalManager = game::JournalManager;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct VirtualWindow : ink::Window
     static constexpr const char* NAME = "inkVirtualWindow";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk260[0x470 - 0x260]; // 260
+    uint8_t unk260[0x560 - 0x260]; // 260
 };
-RED4EXT_ASSERT_SIZE(VirtualWindow, 0x470);
+RED4EXT_ASSERT_SIZE(VirtualWindow, 0x560);
 } // namespace ink
 } // namespace RED4ext

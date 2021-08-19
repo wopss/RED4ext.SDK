@@ -12,10 +12,9 @@ namespace game {
 struct ICooldownSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameICooldownSystem";
-    static constexpr const char* ALIAS = "ICooldownSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ICooldownSystem, 0x48);
 } // namespace game
-using ICooldownSystem = game::ICooldownSystem;
 } // namespace RED4ext

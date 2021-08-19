@@ -12,10 +12,9 @@ namespace ink {
 struct MaskWidgetReference : ink::LeafWidgetReference
 {
     static constexpr const char* NAME = "inkMaskWidgetReference";
-    static constexpr const char* ALIAS = "inkMaskRef";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(MaskWidgetReference, 0x18);
 } // namespace ink
-using inkMaskRef = ink::MaskWidgetReference;
 } // namespace RED4ext

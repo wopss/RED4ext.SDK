@@ -13,7 +13,7 @@ namespace sense {
 struct IShape : IScriptable
 {
     static constexpr const char* NAME = "senseIShape";
-    static constexpr const char* ALIAS = "ISenseShape";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x44 - 0x40]; // 40
     TweakDBID id; // 44
@@ -21,5 +21,4 @@ struct IShape : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IShape, 0x50);
 } // namespace sense
-using ISenseShape = sense::IShape;
 } // namespace RED4ext

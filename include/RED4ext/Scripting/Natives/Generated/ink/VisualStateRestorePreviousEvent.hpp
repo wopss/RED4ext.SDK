@@ -13,11 +13,10 @@ namespace ink {
 struct VisualStateRestorePreviousEvent : red::Event
 {
     static constexpr const char* NAME = "inkVisualStateRestorePreviousEvent";
-    static constexpr const char* ALIAS = "VisualStateRestorePreviousEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName visualState; // 40
 };
 RED4EXT_ASSERT_SIZE(VisualStateRestorePreviousEvent, 0x48);
 } // namespace ink
-using VisualStateRestorePreviousEvent = ink::VisualStateRestorePreviousEvent;
 } // namespace RED4ext

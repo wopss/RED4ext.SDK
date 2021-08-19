@@ -15,7 +15,7 @@ namespace vehicle {
 struct VehicleSlotsState : ISerializable
 {
     static constexpr const char* NAME = "vehicleVehicleSlotsState";
-    static constexpr const char* ALIAS = "VehicleSlotsState";
+    static constexpr const char* ALIAS = NAME;
 
     vehicle::VehicleDoorState vehicleDoorState; // 30
     vehicle::EVehicleWindowState vehicleWindowState; // 34
@@ -24,5 +24,4 @@ struct VehicleSlotsState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VehicleSlotsState, 0x40);
 } // namespace vehicle
-using VehicleSlotsState = vehicle::VehicleSlotsState;
 } // namespace RED4ext

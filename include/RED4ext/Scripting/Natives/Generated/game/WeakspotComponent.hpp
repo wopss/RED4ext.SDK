@@ -12,11 +12,10 @@ namespace game {
 struct WeakspotComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameWeakspotComponent";
-    static constexpr const char* ALIAS = "WeakspotComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk90[0xA0 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(WeakspotComponent, 0xA0);
 } // namespace game
-using WeakspotComponent = game::WeakspotComponent;
 } // namespace RED4ext

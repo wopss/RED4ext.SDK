@@ -12,11 +12,10 @@ namespace game::data {
 struct AISubActionInitialReaction_Record : game::data::AISubAction_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionInitialReaction_Record";
-    static constexpr const char* ALIAS = "AISubActionInitialReaction_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(AISubActionInitialReaction_Record, 0x50);
 } // namespace game::data
-using AISubActionInitialReaction_Record = game::data::AISubActionInitialReaction_Record;
 } // namespace RED4ext

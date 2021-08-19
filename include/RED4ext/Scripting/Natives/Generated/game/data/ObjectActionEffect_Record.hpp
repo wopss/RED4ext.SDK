@@ -12,11 +12,10 @@ namespace game::data {
 struct ObjectActionEffect_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataObjectActionEffect_Record";
-    static constexpr const char* ALIAS = "ObjectActionEffect_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ObjectActionEffect_Record, 0x58);
 } // namespace game::data
-using ObjectActionEffect_Record = game::data::ObjectActionEffect_Record;
 } // namespace RED4ext

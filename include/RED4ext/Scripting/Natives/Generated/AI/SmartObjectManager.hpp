@@ -12,11 +12,10 @@ namespace AI {
 struct SmartObjectManager : AI::ISmartObjectManager
 {
     static constexpr const char* NAME = "AISmartObjectManager";
-    static constexpr const char* ALIAS = "SmartObjectManager";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x128 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SmartObjectManager, 0x128);
 } // namespace AI
-using SmartObjectManager = AI::SmartObjectManager;
 } // namespace RED4ext

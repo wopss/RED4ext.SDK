@@ -22,7 +22,7 @@ namespace move {
 struct Policies : IScriptable
 {
     static constexpr const char* NAME = "movePolicies";
-    static constexpr const char* ALIAS = "MovePolicies";
+    static constexpr const char* ALIAS = NAME;
 
     Vector3 destination; // 40
     Vector3 destinationTangent; // 4C
@@ -56,11 +56,11 @@ struct Policies : IScriptable
     bool useDestReservation; // 153
     uint8_t unk154[0x155 - 0x154]; // 154
     bool inRestrictedArea; // 155
-    uint8_t unk156[0x160 - 0x156]; // 156
-    bool isSpline; // 160
-    uint8_t unk161[0x162 - 0x161]; // 161
-    bool startFromClosestPoint; // 162
-    uint8_t unk163[0x178 - 0x163]; // 163
+    uint8_t unk156[0x164 - 0x156]; // 156
+    bool isSpline; // 164
+    uint8_t unk165[0x166 - 0x165]; // 165
+    bool startFromClosestPoint; // 166
+    uint8_t unk167[0x178 - 0x167]; // 167
     bool ignoreNavigation; // 178
     bool useStart; // 179
     bool useStop; // 17A
@@ -73,5 +73,4 @@ struct Policies : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Policies, 0x220);
 } // namespace move
-using MovePolicies = move::Policies;
 } // namespace RED4ext

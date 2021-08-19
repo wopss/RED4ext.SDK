@@ -13,12 +13,11 @@ namespace game::hit {
 struct RepresentationEventsSetSingleScaleMultiplier_SingleShape : game::hit::RepresentationEventsSetSingleScaleMultiplier_AllShapes
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsSetSingleScaleMultiplier_SingleShape";
-    static constexpr const char* ALIAS = "HitRepresentation_SetSingleScaleMultiplier_SingleShape";
+    static constexpr const char* ALIAS = NAME;
 
     CName shapeName; // 50
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsSetSingleScaleMultiplier_SingleShape, 0x60);
 } // namespace game::hit
-using HitRepresentation_SetSingleScaleMultiplier_SingleShape = game::hit::RepresentationEventsSetSingleScaleMultiplier_SingleShape;
 } // namespace RED4ext

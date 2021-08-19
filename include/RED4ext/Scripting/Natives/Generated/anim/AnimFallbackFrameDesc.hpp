@@ -13,11 +13,9 @@ struct AnimFallbackFrameDesc
     static constexpr const char* NAME = "animAnimFallbackFrameDesc";
     static constexpr const char* ALIAS = NAME;
 
-    uint16_t rsion; // 00
-    uint16_t pe; // 02
-    uint16_t mPositions; // 04
-    uint16_t mRotations; // 06
+    uint16_t mPositions; // 00
+    uint16_t mRotations; // 02
 };
-RED4EXT_ASSERT_SIZE(AnimFallbackFrameDesc, 0x8);
+RED4EXT_ASSERT_SIZE(AnimFallbackFrameDesc, 0x4);
 } // namespace anim
 } // namespace RED4ext

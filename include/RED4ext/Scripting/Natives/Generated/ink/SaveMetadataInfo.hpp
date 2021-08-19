@@ -15,25 +15,25 @@ namespace ink {
 struct SaveMetadataInfo : IScriptable
 {
     static constexpr const char* NAME = "inkSaveMetadataInfo";
-    static constexpr const char* ALIAS = "SaveMetadataInfo";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t saveIndex; // 40
     uint32_t saveID; // 44
     CString internalName; // 48
     CString locationName; // 68
     CString trackedQuest; // 88
-    ink::LifePath lifePath; // A8
-    ink::SaveType saveType; // A9
-    uint8_t unkAA[0xB0 - 0xAA]; // AA
-    uint64_t timestamp; // B0
-    double playTime; // B8
-    double playthroughTime; // C0
-    uint64_t initialLoadingScreenID; // C8
-    double level; // D0
-    bool isValid; // D8
-    uint8_t unkD9[0xE0 - 0xD9]; // D9
+    CString gameVersion; // A8
+    ink::LifePath lifePath; // C8
+    ink::SaveType saveType; // C9
+    uint8_t unkCA[0xD0 - 0xCA]; // CA
+    uint64_t timestamp; // D0
+    double playTime; // D8
+    double playthroughTime; // E0
+    uint64_t initialLoadingScreenID; // E8
+    double level; // F0
+    bool isValid; // F8
+    uint8_t unkF9[0x100 - 0xF9]; // F9
 };
-RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0xE0);
+RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x100);
 } // namespace ink
-using SaveMetadataInfo = ink::SaveMetadataInfo;
 } // namespace RED4ext

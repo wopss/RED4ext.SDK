@@ -20,8 +20,10 @@ struct LODDefinition : ISerializable
     StaticArray<float, 4> cinematicDistanceLODs; // 58
     StaticArray<float, 4> vehicleDistanceLODs; // 6C
     StaticArray<float, 4> cinematicVehicleDistanceLODs; // 80
-    uint8_t unk94[0x98 - 0x94]; // 94
+    StaticArray<float, 4> vehicleInteriorDistanceLODs; // 94
+    StaticArray<float, 4> largeVehicleInteriorDistanceLODs; // A8
+    StaticArray<float, 4> consoleDistanceLODs; // BC
 };
-RED4EXT_ASSERT_SIZE(LODDefinition, 0x98);
+RED4EXT_ASSERT_SIZE(LODDefinition, 0xD0);
 } // namespace ent
 } // namespace RED4ext

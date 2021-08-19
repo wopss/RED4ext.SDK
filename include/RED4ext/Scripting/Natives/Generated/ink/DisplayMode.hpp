@@ -10,9 +10,10 @@ enum class DisplayMode : uint32_t
 {
     Invalid = 0,
     Basic = 1,
-    Bold = 2,
-    Header = 3,
-    Single = 4,
+    BasicTranslatable = 2,
+    Bold = 3,
+    Header = 4,
+    Single = 5,
 };
 } // namespace ink
 } // namespace RED4ext

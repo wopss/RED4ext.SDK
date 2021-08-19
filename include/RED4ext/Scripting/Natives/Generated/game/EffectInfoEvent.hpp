@@ -13,7 +13,7 @@ namespace game {
 struct EffectInfoEvent : red::Event
 {
     static constexpr const char* NAME = "gameEffectInfoEvent";
-    static constexpr const char* ALIAS = "EffectInfoEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CString tag; // 40
     uint32_t entitiesGathered; // 60
@@ -23,5 +23,4 @@ struct EffectInfoEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(EffectInfoEvent, 0x70);
 } // namespace game
-using EffectInfoEvent = game::EffectInfoEvent;
 } // namespace RED4ext

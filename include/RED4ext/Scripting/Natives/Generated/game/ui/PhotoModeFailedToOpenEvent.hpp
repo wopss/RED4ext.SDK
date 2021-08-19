@@ -12,10 +12,9 @@ namespace game::ui {
 struct PhotoModeFailedToOpenEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPhotoModeFailedToOpenEvent";
-    static constexpr const char* ALIAS = "PhotoModeFailedToOpenEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(PhotoModeFailedToOpenEvent, 0x40);
 } // namespace game::ui
-using PhotoModeFailedToOpenEvent = game::ui::PhotoModeFailedToOpenEvent;
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace vehicle {
 struct GarageComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "vehicleGarageComponentPS";
-    static constexpr const char* ALIAS = "GarageComponentPS";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<vehicle::GarageComponentVehicleData> spawnedVehiclesData; // 68
     DynArray<vehicle::GarageVehicleID> unlockedVehicles; // 78
@@ -29,5 +29,4 @@ struct GarageComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(GarageComponentPS, 0xF0);
 } // namespace vehicle
-using GarageComponentPS = vehicle::GarageComponentPS;
 } // namespace RED4ext

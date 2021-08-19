@@ -12,11 +12,10 @@ namespace game {
 struct NativeHudManager : game::ScriptableSystem
 {
     static constexpr const char* NAME = "gameNativeHudManager";
-    static constexpr const char* ALIAS = "NativeHudManager";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk2D8[0x348 - 0x2D8]; // 2D8
 };
 RED4EXT_ASSERT_SIZE(NativeHudManager, 0x348);
 } // namespace game
-using NativeHudManager = game::NativeHudManager;
 } // namespace RED4ext

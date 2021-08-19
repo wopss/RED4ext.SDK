@@ -14,7 +14,7 @@ namespace sense {
 struct SensorObject : ISerializable
 {
     static constexpr const char* NAME = "senseSensorObject";
-    static constexpr const char* ALIAS = "SensorObject";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk30[0x61 - 0x30]; // 30
     bool hearingEnabled; // 61
@@ -31,5 +31,4 @@ struct SensorObject : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SensorObject, 0xA70);
 } // namespace sense
-using SensorObject = sense::SensorObject;
 } // namespace RED4ext

@@ -11,11 +11,10 @@ namespace game {
 struct CustomRequestFilter
 {
     static constexpr const char* NAME = "gameCustomRequestFilter";
-    static constexpr const char* ALIAS = "CustomRequestFilter";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(CustomRequestFilter, 0x8);
 } // namespace game
-using CustomRequestFilter = game::CustomRequestFilter;
 } // namespace RED4ext

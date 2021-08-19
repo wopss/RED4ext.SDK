@@ -12,11 +12,10 @@ namespace game::data {
 struct PresetMapper_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataPresetMapper_Record";
-    static constexpr const char* ALIAS = "PresetMapper_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(PresetMapper_Record, 0x50);
 } // namespace game::data
-using PresetMapper_Record = game::data::PresetMapper_Record;
 } // namespace RED4ext

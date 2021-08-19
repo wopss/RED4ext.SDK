@@ -12,11 +12,10 @@ namespace game::data {
 struct AimAssistAimSnap_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAimAssistAimSnap_Record";
-    static constexpr const char* ALIAS = "AimAssistAimSnap_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x88 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(AimAssistAimSnap_Record, 0x88);
 } // namespace game::data
-using AimAssistAimSnap_Record = game::data::AimAssistAimSnap_Record;
 } // namespace RED4ext

@@ -18,5 +18,4 @@ enum class EVehicleDoor : uint32_t
     invalid = 7,
 };
 } // namespace vehicle
-using EVehicleDoor = vehicle::EVehicleDoor;
 } // namespace RED4ext

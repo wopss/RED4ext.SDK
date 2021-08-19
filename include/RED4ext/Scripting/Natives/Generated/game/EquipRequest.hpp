@@ -13,7 +13,7 @@ namespace game {
 struct EquipRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameEquipRequest";
-    static constexpr const char* ALIAS = "EquipRequest";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID itemID; // 58
     int32_t slotIndex; // 68
@@ -23,5 +23,4 @@ struct EquipRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(EquipRequest, 0x70);
 } // namespace game
-using EquipRequest = game::EquipRequest;
 } // namespace RED4ext

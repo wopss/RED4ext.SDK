@@ -12,13 +12,12 @@ namespace game {
 struct NetrunnerPrototypeNetworkNode : game::Object
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeNetworkNode";
-    static constexpr const char* ALIAS = "NetrunnerPrototypeNetworkNode";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x240 - 0x230]; // 230
-    int8_t colorIndex; // 240
-    uint8_t unk241[0x248 - 0x241]; // 241
+    uint8_t unk240[0x250 - 0x240]; // 240
+    int8_t colorIndex; // 250
+    uint8_t unk251[0x258 - 0x251]; // 251
 };
-RED4EXT_ASSERT_SIZE(NetrunnerPrototypeNetworkNode, 0x248);
+RED4EXT_ASSERT_SIZE(NetrunnerPrototypeNetworkNode, 0x258);
 } // namespace game
-using NetrunnerPrototypeNetworkNode = game::NetrunnerPrototypeNetworkNode;
 } // namespace RED4ext
