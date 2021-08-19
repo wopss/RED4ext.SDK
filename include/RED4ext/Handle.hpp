@@ -1,13 +1,13 @@
 #pragma once
 
 #include <cstdint>
-#include <type_traits>
 #include <memory>
 #include <tuple>
 
 #include <Windows.h>
 
 #include <RED4ext/Addresses.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
@@ -334,4 +334,13 @@ protected:
 };
 RED4EXT_ASSERT_SIZE(Handle<void>, 0x10);
 RED4EXT_ASSERT_SIZE(WeakHandle<void>, 0x10);
+
+template<typename T>
+struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, Handle<T>>>>
+{
+    uint32_t operator()(const T& aKey) const noexcept
+    {
+        return static_cast<uint32_t>(aKey);
+    }
+};
 } // namespace RED4ext

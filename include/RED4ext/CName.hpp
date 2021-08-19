@@ -3,6 +3,7 @@
 #include <cstdint>
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/Hashing/FNV1a.hpp>
 
 namespace RED4ext
@@ -95,6 +96,15 @@ struct CName
     uint64_t hash; // 00
 };
 RED4EXT_ASSERT_SIZE(CName, 0x8);
+
+template<typename T>
+struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, CName>>>
+{
+    uint32_t operator()(const T& aKey) const noexcept
+    {
+        return static_cast<uint32_t>(aKey) ^ ((aKey >> 32) & 0xFFFFFFFF);
+    }
+};
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

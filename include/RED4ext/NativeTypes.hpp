@@ -7,6 +7,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Unks.hpp>
 
@@ -236,6 +237,14 @@ struct ScriptRef
 };
 RED4EXT_ASSERT_SIZE(ScriptRef<void>, 0x28);
 
+template<typename T>
+struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, TweakDBID>>>
+{
+    uint32_t operator()(const T& aKey) const noexcept
+    {
+        return static_cast<uint32_t>(aKey);
+    }
+};
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
