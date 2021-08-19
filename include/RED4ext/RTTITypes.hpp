@@ -267,48 +267,58 @@ struct CRTTIBaseArrayType : CBaseRTTIType
     // [1, newValue, 2, 3]
     virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) = 0; // 100
     virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) = 0;   // 108
+
+    CBaseRTTIType* innerType; // 10
 };
+RED4EXT_ASSERT_SIZE(CRTTIBaseArrayType, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIBaseArrayType, innerType, 0x10);
 
 struct CRTTIArrayType : CRTTIBaseArrayType
 {
-    CBaseRTTIType* innerType; // 10
-    CName name;               // 18
-    CBaseRTTIType* parent;    // 20
-    uintptr_t unk28;          // 28
-    uintptr_t unk30;          // 30
-    uintptr_t unk38;          // 38
+    CName name;            // 18
+    CBaseRTTIType* parent; // 20
+    uintptr_t unk28;       // 28
+    uintptr_t unk30;       // 30
+    uintptr_t unk38;       // 38
 };
 RED4EXT_ASSERT_SIZE(CRTTIArrayType, 0x40);
 RED4EXT_ASSERT_OFFSET(CRTTIArrayType, parent, 0x20);
 
 struct CRTTIStaticArrayType : CRTTIBaseArrayType
 {
-    CBaseRTTIType* innerType; // 10
-    int32_t size;             // 18
-    uint32_t pad1C;           // 1C
-    CName name;               // 20
-    CName unk28;              // 28
+    int32_t size;       // 18
+    uint32_t pad1C;     // 1C
+    CName name;         // 20
+    CName computedName; // 28
 };
 RED4EXT_ASSERT_SIZE(CRTTIStaticArrayType, 0x30);
+RED4EXT_ASSERT_OFFSET(CRTTIStaticArrayType, size, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIStaticArrayType, name, 0x20);
+RED4EXT_ASSERT_OFFSET(CRTTIStaticArrayType, computedName, 0x28);
 
 struct CRTTINativeArrayType : CRTTIBaseArrayType
 {
-    CBaseRTTIType* innerType; // 10
-    int32_t size;             // 18
-    uint32_t pad1C;           // 1C
-    CName name;               // 20
-    CName unk28;              // 28
+    int32_t size;       // 18
+    uint32_t pad1C;     // 1C
+    CName name;         // 20
+    CName computedName; // 28
 };
 RED4EXT_ASSERT_SIZE(CRTTINativeArrayType, 0x30);
+RED4EXT_ASSERT_OFFSET(CRTTINativeArrayType, size, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTINativeArrayType, name, 0x20);
+RED4EXT_ASSERT_OFFSET(CRTTINativeArrayType, computedName, 0x28);
 #pragma endregion
 
 struct CRTTIPointerType : CBaseRTTIType
 {
     CBaseRTTIType* innerType; // 10
     CName name;               // 18
-    CName unk20;              // 20 - Has "script_ref:" prefix.
+    CName unk20;              // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIPointerType, 0x28);
+RED4EXT_ASSERT_OFFSET(CRTTIPointerType, innerType, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIPointerType, name, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIPointerType, unk20, 0x20);
 
 struct CRTTIScriptReferenceType : CBaseRTTIType
 {
@@ -334,7 +344,10 @@ struct CRTTIScriptReferenceType : CBaseRTTIType
     int64_t unk18;            // 18
     CName name;               // 20
 };
-RED4EXT_ASSERT_SIZE(CRTTIPointerType, 0x28);
+RED4EXT_ASSERT_SIZE(CRTTIScriptReferenceType, 0x28);
+RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, innerType, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, unk18, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, name, 0x20);
 
 struct CRTTIHandleType : CBaseRTTIType
 {
@@ -345,9 +358,12 @@ struct CRTTIHandleType : CBaseRTTIType
 
     CBaseRTTIType* innerType; // 10
     CName name;               // 18
-    CName unk20;              // 20
+    CName computedName;       // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIHandleType, 0x28);
+RED4EXT_ASSERT_OFFSET(CRTTIHandleType, innerType, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIHandleType, name, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIHandleType, computedName, 0x20);
 
 struct CRTTIWeakHandleType : CBaseRTTIType
 {
@@ -358,25 +374,34 @@ struct CRTTIWeakHandleType : CBaseRTTIType
 
     CBaseRTTIType* innerType; // 10
     CName name;               // 18
-    CName unk20;              // 20
+    CName computedName;       // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIWeakHandleType, 0x28);
+RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, innerType, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, name, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, computedName, 0x20);
 
 struct CRTTIResourceReferenceType : CBaseRTTIType
 {
     CName name;               // 10
-    CName unk18;              // 18
+    CName computedName;       // 18
     CBaseRTTIType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceReferenceType, 0x28);
+RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, computedName, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, innerType, 0x20);
 
 struct CRTTIResourceAsyncReferenceType : CBaseRTTIType
 {
     CName name;               // 10
-    CName unk18;              // 18
+    CName computedName;       // 18
     CBaseRTTIType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceAsyncReferenceType, 0x28);
+RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, computedName, 0x18);
+RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, innerType, 0x20);
 
 struct CRTTILegacySingleChannelCurveType : CBaseRTTIType
 {
@@ -394,6 +419,23 @@ struct CRTTILegacySingleChannelCurveType : CBaseRTTIType
     uint32_t pad44;           // 44
 };
 RED4EXT_ASSERT_SIZE(CRTTILegacySingleChannelCurveType, 0x48);
+RED4EXT_ASSERT_OFFSET(CRTTILegacySingleChannelCurveType, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTILegacySingleChannelCurveType, curveType, 0x38);
+
+struct CRTTIMultiChannelCurveType : CBaseRTTIType
+{
+    CName name;               // 10
+    CBaseRTTIType* curveType; // 18
+    int64_t unk20;            // 20
+    int64_t unk28;            // 28
+    int64_t unk30;            // 30
+    int64_t unk38;            // 38
+    int32_t unk40;            // 40
+    int16_t unk44;            // 44
+};
+RED4EXT_ASSERT_SIZE(CRTTIMultiChannelCurveType, 0x48);
+RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, curveType, 0x18);
 
 struct [[deprecated("Use 'CBaseRTTIType' instead.")]] IRTTIType : CBaseRTTIType{};
 struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIBaseType : CBaseRTTIType{};
