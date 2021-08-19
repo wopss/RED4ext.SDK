@@ -13,12 +13,11 @@ namespace game::ui {
 struct TutorialArea : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTutorialArea";
-    static constexpr const char* ALIAS = "TutorialArea";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk68[0x70 - 0x68]; // 68
     CName bracketID; // 70
 };
 RED4EXT_ASSERT_SIZE(TutorialArea, 0x78);
 } // namespace game::ui
-using TutorialArea = game::ui::TutorialArea;
 } // namespace RED4ext

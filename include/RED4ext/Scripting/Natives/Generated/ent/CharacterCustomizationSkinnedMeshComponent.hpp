@@ -15,8 +15,8 @@ struct CharacterCustomizationSkinnedMeshComponent : ent::SkinnedMeshComponent
     static constexpr const char* NAME = "entCharacterCustomizationSkinnedMeshComponent";
     static constexpr const char* ALIAS = NAME;
 
-    red::TagList tags; // 260
+    red::TagList tags; // 270
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationSkinnedMeshComponent, 0x270);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationSkinnedMeshComponent, 0x280);
 } // namespace ent
 } // namespace RED4ext

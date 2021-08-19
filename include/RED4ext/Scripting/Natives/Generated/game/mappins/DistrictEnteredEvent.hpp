@@ -13,7 +13,7 @@ namespace game::mappins {
 struct DistrictEnteredEvent : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gamemappinsDistrictEnteredEvent";
-    static constexpr const char* ALIAS = "DistrictEnteredEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool entered; // 48
     bool sendNewLocationNotification; // 49
@@ -23,5 +23,4 @@ struct DistrictEnteredEvent : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(DistrictEnteredEvent, 0x58);
 } // namespace game::mappins
-using DistrictEnteredEvent = game::mappins::DistrictEnteredEvent;
 } // namespace RED4ext

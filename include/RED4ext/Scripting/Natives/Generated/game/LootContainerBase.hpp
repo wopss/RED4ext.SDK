@@ -16,13 +16,14 @@ struct LootContainerBase : game::Object
     static constexpr const char* NAME = "gameLootContainerBase";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<TweakDBID> lootTables; // 230
-    bool useAreaLoot; // 240
-    uint8_t unk241[0x244 - 0x241]; // 241
-    TweakDBID contentAssignment; // 244
-    bool isIllegal; // 24C
-    uint8_t unk24D[0x250 - 0x24D]; // 24D
+    DynArray<TweakDBID> lootTables; // 240
+    bool useAreaLoot; // 250
+    uint8_t unk251[0x254 - 0x251]; // 251
+    TweakDBID contentAssignment; // 254
+    bool isIllegal; // 25C
+    bool wasLootInitalized; // 25D
+    uint8_t unk25E[0x260 - 0x25E]; // 25E
 };
-RED4EXT_ASSERT_SIZE(LootContainerBase, 0x250);
+RED4EXT_ASSERT_SIZE(LootContainerBase, 0x260);
 } // namespace game
 } // namespace RED4ext

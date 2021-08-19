@@ -13,12 +13,11 @@ namespace game {
 struct AttitudePrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameAttitudePrereq";
-    static constexpr const char* ALIAS = "AttitudePrereq";
+    static constexpr const char* ALIAS = NAME;
 
     EAIAttitude attitude; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(AttitudePrereq, 0x48);
 } // namespace game
-using AttitudePrereq = game::AttitudePrereq;
 } // namespace RED4ext

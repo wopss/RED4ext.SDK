@@ -16,7 +16,7 @@ namespace ink {
 struct QuadShapeWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkQuadShapeWidget";
-    static constexpr const char* ALIAS = "inkQuadShape";
+    static constexpr const char* ALIAS = NAME;
 
     RaRef<ink::TextureAtlas> textureAtlas; // 220
     CName texturePart; // 228
@@ -24,5 +24,4 @@ struct QuadShapeWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(QuadShapeWidget, 0x270);
 } // namespace ink
-using inkQuadShape = ink::QuadShapeWidget;
 } // namespace RED4ext

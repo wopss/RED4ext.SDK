@@ -55,7 +55,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
 
     // First pass gather all properties and descriptors
     rttiSystem->types.for_each([&descriptorMap, GetPrefix, &prefixHierarchy,
-                                aPropertyHolders](RED4ext::CName aName, RED4ext::IRTTIType*& aType) {
+                                aPropertyHolders](RED4ext::CName aName, RED4ext::CBaseRTTIType*& aType) {
         if (aType->GetType() == RED4ext::ERTTIType::Class)
         {
             auto classType = static_cast<const RED4ext::CClass*>(aType);
@@ -162,7 +162,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     }
 
     auto fileToPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
-                       &prefixHierarchy](const RED4ext::IRTTIType* aType) -> std::string {
+                       &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string {
         auto name = aType->GetName();
 
         std::string pathPrefix = GetPrefix(name.ToString());
@@ -217,7 +217,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     };
 
     // Remove the prefix from the class
-    auto SanitizeType = [GetPrefix](const RED4ext::IRTTIType* aType) -> std::string {
+    auto SanitizeType = [GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string {
         auto name = aType->GetName();
         std::string fullName = name.ToString();
         auto prefix = GetPrefix(fullName);
@@ -243,7 +243,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     };
 
     // Combine the namespace and sanitized name
-    auto QualifiedType = [GetNamespace, GetPrefix, &prefixHierarchy](const RED4ext::IRTTIType* aType) -> std::string {
+    auto QualifiedType = [GetNamespace, GetPrefix,
+                          &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string {
         auto name = aType->GetName();
 
         std::string fullName = name.ToString();
@@ -257,8 +258,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     FixedTypeMapping fixedMapping = {
         {"ISerializable", "ISerializable"},
         {"IScriptable", "Scripting/IScriptable"},
-        {"gameuiCharacterCustomizationSystem", "Types/CharacterCustomization"},
-        {"gameuiCharacterCustomizationOptionImpl", "Types/CharacterCustomizationOptionImpl"},
+        {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
+        {"gameuiCharacterCustomizationSystem", "Scripting/Natives/CharacterCustomization"},
+        {"gameuiCharacterCustomizationOptionImpl", "Scripting/Natives/CharacterCustomizationOptionImpl"},
         {"gameItemID", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
@@ -344,7 +346,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     EmitBulkGenerated(filePath, includeCollector);
 }
 
-RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(const RED4ext::IRTTIType* aType)
+RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(const RED4ext::CBaseRTTIType* aType)
 {
     switch (aType->GetType())
     {
@@ -796,7 +798,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
     }
 }
 
-RED4EXT_INLINE std::string TypeToString(const RED4ext::IRTTIType* aType, NameTransformer aNameTransformer,
+RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, NameTransformer aNameTransformer,
                                         bool aVerbose)
 {
     // Handle some simple type conversions and fundamentals

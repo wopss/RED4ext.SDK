@@ -52,9 +52,11 @@ struct ActorDef
     DynArray<scn::CinematicAnimSetSRRefId> cyberwareCinematicAnimSets; // 180
     DynArray<scn::DynamicAnimSetSRRefId> dynamicAnimSets; // 190
     scn::LipsyncAnimSetSRRefId lipsyncAnimSet; // 1A0
-    CString actorName; // 1B0
-    TweakDBID specCharacterRecordId; // 1D0
-    CName specAppearance; // 1D8
+    uint8_t unk1A4[0x1A8 - 0x1A4]; // 1A4
+    CString actorName; // 1A8
+    TweakDBID specCharacterRecordId; // 1C8
+    CName specAppearance; // 1D0
+    uint8_t unk1D8[0x1E0 - 0x1D8]; // 1D8
 };
 RED4EXT_ASSERT_SIZE(ActorDef, 0x1E0);
 } // namespace scn

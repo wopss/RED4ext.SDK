@@ -15,7 +15,7 @@ namespace game::interactions::vis {
 struct LootData
 {
     static constexpr const char* NAME = "gameinteractionsvisLootData";
-    static constexpr const char* ALIAS = "LootData";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x4 - 0x0]; // 0
     bool isActive; // 04
@@ -33,5 +33,4 @@ struct LootData
 };
 RED4EXT_ASSERT_SIZE(LootData, 0x60);
 } // namespace game::interactions::vis
-using LootData = game::interactions::vis::LootData;
 } // namespace RED4ext

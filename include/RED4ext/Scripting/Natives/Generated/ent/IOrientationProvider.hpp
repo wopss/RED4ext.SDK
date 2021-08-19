@@ -12,10 +12,9 @@ namespace ent {
 struct IOrientationProvider : IScriptable
 {
     static constexpr const char* NAME = "entIOrientationProvider";
-    static constexpr const char* ALIAS = "IOrientationProvider";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IOrientationProvider, 0x40);
 } // namespace ent
-using IOrientationProvider = ent::IOrientationProvider;
 } // namespace RED4ext

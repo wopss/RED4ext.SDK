@@ -15,11 +15,10 @@ namespace game::state {
 struct MachineparameterTypeRequestReload : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeRequestReload";
-    static constexpr const char* ALIAS = "parameterRequestReload";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::ItemObject> item; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeRequestReload, 0x50);
 } // namespace game::state
-using parameterRequestReload = game::state::MachineparameterTypeRequestReload;
 } // namespace RED4ext

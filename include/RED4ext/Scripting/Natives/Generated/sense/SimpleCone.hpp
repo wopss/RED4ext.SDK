@@ -13,7 +13,7 @@ namespace sense {
 struct SimpleCone : sense::IShape
 {
     static constexpr const char* NAME = "senseSimpleCone";
-    static constexpr const char* ALIAS = "SenseCone";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 position1; // 50
     Vector4 position2; // 60
@@ -23,5 +23,4 @@ struct SimpleCone : sense::IShape
 };
 RED4EXT_ASSERT_SIZE(SimpleCone, 0x80);
 } // namespace sense
-using SenseCone = sense::SimpleCone;
 } // namespace RED4ext

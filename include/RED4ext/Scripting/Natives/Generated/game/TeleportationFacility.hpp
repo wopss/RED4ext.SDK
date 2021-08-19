@@ -12,11 +12,10 @@ namespace game {
 struct TeleportationFacility : game::ITeleportationFacility
 {
     static constexpr const char* NAME = "gameTeleportationFacility";
-    static constexpr const char* ALIAS = "TeleportationFacility";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0xC90 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(TeleportationFacility, 0xC90);
 } // namespace game
-using TeleportationFacility = game::TeleportationFacility;
 } // namespace RED4ext

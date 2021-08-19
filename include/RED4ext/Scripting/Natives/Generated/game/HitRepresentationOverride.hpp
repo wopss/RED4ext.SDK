@@ -13,11 +13,10 @@ namespace game {
 struct HitRepresentationOverride : ISerializable
 {
     static constexpr const char* NAME = "gameHitRepresentationOverride";
-    static constexpr const char* ALIAS = "HitRepresentationOverride";
+    static constexpr const char* ALIAS = NAME;
 
     game::HitShapeContainer represenationOverride; // 30
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationOverride, 0x78);
 } // namespace game
-using HitRepresentationOverride = game::HitRepresentationOverride;
 } // namespace RED4ext

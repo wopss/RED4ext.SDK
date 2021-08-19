@@ -12,12 +12,11 @@ namespace game {
 struct SSlotActiveItems
 {
     static constexpr const char* NAME = "gameSSlotActiveItems";
-    static constexpr const char* ALIAS = "SSlotActiveItems";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID rightHandItem; // 00
     ItemID leftHandItem; // 10
 };
 RED4EXT_ASSERT_SIZE(SSlotActiveItems, 0x20);
 } // namespace game
-using SSlotActiveItems = game::SSlotActiveItems;
 } // namespace RED4ext

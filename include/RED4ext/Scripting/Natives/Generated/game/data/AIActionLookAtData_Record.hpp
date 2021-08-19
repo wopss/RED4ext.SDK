@@ -12,11 +12,10 @@ namespace game::data {
 struct AIActionLookAtData_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAIActionLookAtData_Record";
-    static constexpr const char* ALIAS = "AIActionLookAtData_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(AIActionLookAtData_Record, 0x58);
 } // namespace game::data
-using AIActionLookAtData_Record = game::data::AIActionLookAtData_Record;
 } // namespace RED4ext

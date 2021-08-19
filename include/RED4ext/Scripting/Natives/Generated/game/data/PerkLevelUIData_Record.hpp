@@ -12,11 +12,10 @@ namespace game::data {
 struct PerkLevelUIData_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataPerkLevelUIData_Record";
-    static constexpr const char* ALIAS = "PerkLevelUIData_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(PerkLevelUIData_Record, 0x58);
 } // namespace game::data
-using PerkLevelUIData_Record = game::data::PerkLevelUIData_Record;
 } // namespace RED4ext

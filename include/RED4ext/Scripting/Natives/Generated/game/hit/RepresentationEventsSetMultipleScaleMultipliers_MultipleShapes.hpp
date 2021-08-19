@@ -15,12 +15,11 @@ namespace game::hit {
 struct RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes : red::Event
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsSetMultipleScaleMultipliers_MultipleShapes";
-    static constexpr const char* ALIAS = "HitRepresentation_SetMultipleScaleMultipliers_MultipleShapes";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<Vector4> scaleMultipliers; // 40
     DynArray<CName> shapeNames; // 50
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes, 0x60);
 } // namespace game::hit
-using HitRepresentation_SetMultipleScaleMultipliers_MultipleShapes = game::hit::RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes;
 } // namespace RED4ext

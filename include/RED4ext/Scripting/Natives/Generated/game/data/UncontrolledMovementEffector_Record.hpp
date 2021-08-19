@@ -12,11 +12,10 @@ namespace game::data {
 struct UncontrolledMovementEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataUncontrolledMovementEffector_Record";
-    static constexpr const char* ALIAS = "UncontrolledMovementEffector_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk58[0x68 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(UncontrolledMovementEffector_Record, 0x68);
 } // namespace game::data
-using UncontrolledMovementEffector_Record = game::data::UncontrolledMovementEffector_Record;
 } // namespace RED4ext

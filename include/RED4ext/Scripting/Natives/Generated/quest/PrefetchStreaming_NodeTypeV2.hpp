@@ -16,9 +16,10 @@ struct PrefetchStreaming_NodeTypeV2 : quest::IWorldDataManagerNodeType
     static constexpr const char* ALIAS = NAME;
 
     NodeRef prefetchPositionRef; // 38
-    bool useStreamingOcclusion; // 40
-    uint8_t unk41[0x44 - 0x41]; // 41
-    float maxDistance; // 44
+    float maxDistance; // 40
+    bool useStreamingOcclusion; // 44
+    bool forceEnable; // 45
+    uint8_t unk46[0x48 - 0x46]; // 46
 };
 RED4EXT_ASSERT_SIZE(PrefetchStreaming_NodeTypeV2, 0x48);
 } // namespace quest

@@ -12,10 +12,9 @@ namespace game::ui {
 struct PanzerGameState : game::ui::SideScrollerMiniGameStateAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerGameState";
-    static constexpr const char* ALIAS = "PanzerGameState";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(PanzerGameState, 0xA0);
 } // namespace game::ui
-using PanzerGameState = game::ui::PanzerGameState;
 } // namespace RED4ext

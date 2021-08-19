@@ -13,11 +13,10 @@ namespace game {
 struct SetCameraParamsEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetCameraParamsEvent";
-    static constexpr const char* ALIAS = "SetCameraParamsEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName paramsName; // 40
 };
 RED4EXT_ASSERT_SIZE(SetCameraParamsEvent, 0x48);
 } // namespace game
-using SetCameraParamsEvent = game::SetCameraParamsEvent;
 } // namespace RED4ext

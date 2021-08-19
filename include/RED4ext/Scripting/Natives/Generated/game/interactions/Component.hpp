@@ -18,7 +18,7 @@ namespace game::interactions {
 struct Component : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinteractionsComponent";
-    static constexpr const char* ALIAS = "InteractionComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk120[0x148 - 0x120]; // 120
     Ref<game::interactions::InteractionDescriptorResource> definitionResource; // 148
@@ -30,5 +30,4 @@ struct Component : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(Component, 0x1D0);
 } // namespace game::interactions
-using InteractionComponent = game::interactions::Component;
 } // namespace RED4ext

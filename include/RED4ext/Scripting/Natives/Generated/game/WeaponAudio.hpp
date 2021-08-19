@@ -14,8 +14,8 @@ struct WeaponAudio : ISerializable
     static constexpr const char* NAME = "gameWeaponAudio";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x110 - 0x30]; // 30
+    uint8_t unk30[0x130 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(WeaponAudio, 0x110);
+RED4EXT_ASSERT_SIZE(WeaponAudio, 0x130);
 } // namespace game
 } // namespace RED4ext

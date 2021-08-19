@@ -15,11 +15,10 @@ namespace AI {
 struct EnemyPushedToSquad : AI::AIEvent
 {
     static constexpr const char* NAME = "AIEnemyPushedToSquad";
-    static constexpr const char* ALIAS = "EnemyPushedToSquad";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<ent::Entity> threat; // 50
 };
 RED4EXT_ASSERT_SIZE(EnemyPushedToSquad, 0x60);
 } // namespace AI
-using EnemyPushedToSquad = AI::EnemyPushedToSquad;
 } // namespace RED4ext

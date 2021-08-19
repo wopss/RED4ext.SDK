@@ -12,12 +12,11 @@ namespace game {
 struct SetScanningTimeEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetScanningTimeEvent";
-    static constexpr const char* ALIAS = "SetScanningTimeEvent";
+    static constexpr const char* ALIAS = NAME;
 
     float time; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(SetScanningTimeEvent, 0x48);
 } // namespace game
-using SetScanningTimeEvent = game::SetScanningTimeEvent;
 } // namespace RED4ext

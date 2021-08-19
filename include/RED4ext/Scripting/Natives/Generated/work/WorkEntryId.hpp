@@ -11,11 +11,10 @@ namespace work {
 struct WorkEntryId
 {
     static constexpr const char* NAME = "workWorkEntryId";
-    static constexpr const char* ALIAS = "WorkEntryId";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t id; // 00
 };
 RED4EXT_ASSERT_SIZE(WorkEntryId, 0x4);
 } // namespace work
-using WorkEntryId = work::WorkEntryId;
 } // namespace RED4ext

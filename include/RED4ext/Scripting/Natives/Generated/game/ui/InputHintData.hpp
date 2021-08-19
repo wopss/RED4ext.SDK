@@ -14,7 +14,7 @@ namespace game::ui {
 struct InputHintData
 {
     static constexpr const char* NAME = "gameuiInputHintData";
-    static constexpr const char* ALIAS = "InputHintData";
+    static constexpr const char* ALIAS = NAME;
 
     CName action; // 00
     CName source; // 08
@@ -30,5 +30,4 @@ struct InputHintData
 };
 RED4EXT_ASSERT_SIZE(InputHintData, 0x50);
 } // namespace game::ui
-using InputHintData = game::ui::InputHintData;
 } // namespace RED4ext

@@ -13,12 +13,11 @@ namespace game {
 struct JournalBriefingMapSection : game::JournalBriefingBaseSection
 {
     static constexpr const char* NAME = "gameJournalBriefingMapSection";
-    static constexpr const char* ALIAS = "JournalBriefingMapSection";
+    static constexpr const char* ALIAS = NAME;
 
     Vector3 mapLocation; // 60
     uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
 RED4EXT_ASSERT_SIZE(JournalBriefingMapSection, 0x70);
 } // namespace game
-using JournalBriefingMapSection = game::JournalBriefingMapSection;
 } // namespace RED4ext

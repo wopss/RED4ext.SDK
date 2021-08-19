@@ -12,10 +12,9 @@ namespace game {
 struct IClientEntitySpawnSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIClientEntitySpawnSystem";
-    static constexpr const char* ALIAS = "IClientEntitySpawnSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IClientEntitySpawnSystem, 0x48);
 } // namespace game
-using IClientEntitySpawnSystem = game::IClientEntitySpawnSystem;
 } // namespace RED4ext

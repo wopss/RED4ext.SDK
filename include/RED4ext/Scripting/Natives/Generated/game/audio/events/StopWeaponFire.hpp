@@ -12,10 +12,9 @@ namespace game::audio::events {
 struct StopWeaponFire : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsStopWeaponFire";
-    static constexpr const char* ALIAS = "StopWeaponFireSoundEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(StopWeaponFire, 0x40);
 } // namespace game::audio::events
-using StopWeaponFireSoundEvent = game::audio::events::StopWeaponFire;
 } // namespace RED4ext

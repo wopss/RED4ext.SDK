@@ -13,7 +13,7 @@ namespace game::mappins {
 struct PingSystemMappin : game::mappins::RuntimeMappin
 {
     static constexpr const char* NAME = "gamemappinsPingSystemMappin";
-    static constexpr const char* ALIAS = "PingSystemMappin";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk108[0x118 - 0x108]; // 108
     game::data::PingType pingType; // 118
@@ -21,5 +21,4 @@ struct PingSystemMappin : game::mappins::RuntimeMappin
 };
 RED4EXT_ASSERT_SIZE(PingSystemMappin, 0x120);
 } // namespace game::mappins
-using PingSystemMappin = game::mappins::PingSystemMappin;
 } // namespace RED4ext

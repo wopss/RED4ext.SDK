@@ -37,15 +37,15 @@ struct AdvertisementLightData
     float rayTracingIntensityScale; // 14
     float EV; // 18
     ELightType type; // 1C
-    bool useInGI; // 20
-    bool useInEnvProbes; // 21
-    bool useInFog; // 22
-    bool useInTransparents; // 23
-    bool useInParticles; // 24
-    bool sceneDiffuse; // 25
-    bool sceneSpecular; // 26
-    bool directional; // 27
-    bool clampAttenuation; // 28
+    bool useInTransparents; // 20
+    bool useInParticles; // 21
+    bool sceneDiffuse; // 22
+    bool directional; // 23
+    bool clampAttenuation; // 24
+    uint8_t scaleGI; // 25
+    uint8_t scaleEnvProbes; // 26
+    uint8_t sceneSpecularScale; // 27
+    uint8_t scaleVolFog; // 28
     int8_t roughnessBias; // 29
     rend::LightChannel lightChannel; // 2A
     rend::LightGroup group; // 2C
@@ -75,8 +75,9 @@ struct AdvertisementLightData
     float capsuleLength; // 70
     float areaRectSideA; // 74
     float areaRectSideB; // 78
-    uint8_t unk7C[0x88 - 0x7C]; // 7C
-    RaRef<CIESDataResource> iesProfile; // 88
+    uint8_t unk7C[0x80 - 0x7C]; // 7C
+    RaRef<CIESDataResource> iesProfile; // 80
+    uint8_t unk88[0x90 - 0x88]; // 88
     Transform transform; // 90
     bool isEnabled; // B0
     bool useAutoHideDistance; // B1

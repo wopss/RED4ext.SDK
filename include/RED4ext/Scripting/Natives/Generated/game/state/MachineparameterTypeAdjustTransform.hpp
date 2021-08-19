@@ -14,12 +14,11 @@ namespace game::state {
 struct MachineparameterTypeAdjustTransform : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeAdjustTransform";
-    static constexpr const char* ALIAS = "AdjustTransform";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 position; // 40
     Quaternion rotation; // 50
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeAdjustTransform, 0x60);
 } // namespace game::state
-using AdjustTransform = game::state::MachineparameterTypeAdjustTransform;
 } // namespace RED4ext

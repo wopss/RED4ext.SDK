@@ -12,11 +12,10 @@ namespace game::ui {
 struct WorldMappinsContainerController : game::ui::MappinsContainerController
 {
     static constexpr const char* NAME = "gameuiWorldMappinsContainerController";
-    static constexpr const char* ALIAS = "WorldMappinsContainerController";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk290[0x300 - 0x290]; // 290
+    uint8_t unk2C0[0x358 - 0x2C0]; // 2C0
 };
-RED4EXT_ASSERT_SIZE(WorldMappinsContainerController, 0x300);
+RED4EXT_ASSERT_SIZE(WorldMappinsContainerController, 0x358);
 } // namespace game::ui
-using WorldMappinsContainerController = game::ui::WorldMappinsContainerController;
 } // namespace RED4ext

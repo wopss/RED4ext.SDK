@@ -14,7 +14,7 @@ namespace game::ui {
 struct TarotCardAddedNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiTarotCardAddedNotificationViewData";
-    static constexpr const char* ALIAS = "TarotCardAddedNotificationViewData";
+    static constexpr const char* ALIAS = NAME;
 
     CName imagePart; // 90
     CString cardName; // 98
@@ -22,5 +22,4 @@ struct TarotCardAddedNotificationViewData : game::ui::GenericNotificationViewDat
 };
 RED4EXT_ASSERT_SIZE(TarotCardAddedNotificationViewData, 0xC0);
 } // namespace game::ui
-using TarotCardAddedNotificationViewData = game::ui::TarotCardAddedNotificationViewData;
 } // namespace RED4ext

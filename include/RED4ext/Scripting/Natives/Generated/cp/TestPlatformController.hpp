@@ -15,12 +15,12 @@ struct TestPlatformController : game::Object
     static constexpr const char* NAME = "cpTestPlatformController";
     static constexpr const char* ALIAS = NAME;
 
-    NodeRef platform; // 230
-    NodeRef pointA; // 238
-    NodeRef pointB; // 240
-    float speed; // 248
-    uint8_t unk24C[0x250 - 0x24C]; // 24C
+    NodeRef platform; // 240
+    NodeRef pointA; // 248
+    NodeRef pointB; // 250
+    float speed; // 258
+    uint8_t unk25C[0x260 - 0x25C]; // 25C
 };
-RED4EXT_ASSERT_SIZE(TestPlatformController, 0x250);
+RED4EXT_ASSERT_SIZE(TestPlatformController, 0x260);
 } // namespace cp
 } // namespace RED4ext

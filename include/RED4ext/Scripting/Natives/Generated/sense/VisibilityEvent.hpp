@@ -17,7 +17,7 @@ namespace sense {
 struct VisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibilityEvent";
-    static constexpr const char* ALIAS = "SenseVisibilityEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> target; // 40
     bool isVisible; // 50
@@ -27,5 +27,4 @@ struct VisibilityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisibilityEvent, 0x68);
 } // namespace sense
-using SenseVisibilityEvent = sense::VisibilityEvent;
 } // namespace RED4ext

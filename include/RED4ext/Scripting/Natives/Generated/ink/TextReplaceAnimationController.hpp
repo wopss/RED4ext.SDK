@@ -14,7 +14,7 @@ namespace ink {
 struct TextReplaceAnimationController : ink::TextAnimationController
 {
     static constexpr const char* NAME = "inkTextReplaceAnimationController";
-    static constexpr const char* ALIAS = "inkTextReplaceController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::TextReplaceAnimationControllerWidgetTextUsage widgetTextUsage; // E0
     uint8_t unkE1[0x108 - 0xE1]; // E1
@@ -26,5 +26,4 @@ struct TextReplaceAnimationController : ink::TextAnimationController
 };
 RED4EXT_ASSERT_SIZE(TextReplaceAnimationController, 0x1C0);
 } // namespace ink
-using inkTextReplaceController = ink::TextReplaceAnimationController;
 } // namespace RED4ext

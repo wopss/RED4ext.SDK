@@ -14,8 +14,8 @@ struct CableMeshNodeInstance : world::BendedMeshNodeInstance
     static constexpr const char* NAME = "worldCableMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkF0[0x110 - 0xF0]; // F0
+    uint8_t unk100[0x120 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(CableMeshNodeInstance, 0x110);
+RED4EXT_ASSERT_SIZE(CableMeshNodeInstance, 0x120);
 } // namespace world
 } // namespace RED4ext

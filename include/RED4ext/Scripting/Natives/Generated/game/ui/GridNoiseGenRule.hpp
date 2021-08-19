@@ -12,10 +12,9 @@ namespace game::ui {
 struct GridNoiseGenRule : game::ui::MinigameGenerationRule
 {
     static constexpr const char* NAME = "gameuiGridNoiseGenRule";
-    static constexpr const char* ALIAS = "GridNoiseGenRule";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(GridNoiseGenRule, 0x50);
 } // namespace game::ui
-using GridNoiseGenRule = game::ui::GridNoiseGenRule;
 } // namespace RED4ext

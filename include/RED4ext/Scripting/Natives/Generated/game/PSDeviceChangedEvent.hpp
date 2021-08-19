@@ -14,12 +14,11 @@ namespace game {
 struct PSDeviceChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gamePSDeviceChangedEvent";
-    static constexpr const char* ALIAS = "PSDeviceChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     game::PersistentID persistentID; // 40
     CName className; // 50
 };
 RED4EXT_ASSERT_SIZE(PSDeviceChangedEvent, 0x58);
 } // namespace game
-using PSDeviceChangedEvent = game::PSDeviceChangedEvent;
 } // namespace RED4ext

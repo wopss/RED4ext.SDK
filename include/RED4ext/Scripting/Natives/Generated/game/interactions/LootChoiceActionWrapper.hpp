@@ -13,7 +13,7 @@ namespace game::interactions {
 struct LootChoiceActionWrapper
 {
     static constexpr const char* NAME = "gameinteractionsLootChoiceActionWrapper";
-    static constexpr const char* ALIAS = "LootChoiceActionWrapper";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x1 - 0x0]; // 0
     bool removeItem; // 01
@@ -24,5 +24,4 @@ struct LootChoiceActionWrapper
 };
 RED4EXT_ASSERT_SIZE(LootChoiceActionWrapper, 0x20);
 } // namespace game::interactions
-using LootChoiceActionWrapper = game::interactions::LootChoiceActionWrapper;
 } // namespace RED4ext

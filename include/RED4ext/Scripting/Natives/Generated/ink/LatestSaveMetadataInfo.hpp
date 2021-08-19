@@ -14,17 +14,17 @@ namespace ink {
 struct LatestSaveMetadataInfo : IScriptable
 {
     static constexpr const char* NAME = "inkLatestSaveMetadataInfo";
-    static constexpr const char* ALIAS = "LatestSaveMetadataInfo";
+    static constexpr const char* ALIAS = NAME;
 
     CString locationName; // 40
     CString trackedQuest; // 60
-    ink::LifePath lifePath; // 80
-    uint8_t unk81[0x88 - 0x81]; // 81
-    double playTime; // 88
-    double playthroughTime; // 90
-    uint8_t unk98[0xA0 - 0x98]; // 98
+    CString gameVersion; // 80
+    ink::LifePath lifePath; // A0
+    uint8_t unkA1[0xA8 - 0xA1]; // A1
+    double playTime; // A8
+    double playthroughTime; // B0
+    uint64_t initialLoadingScreenID; // B8
 };
-RED4EXT_ASSERT_SIZE(LatestSaveMetadataInfo, 0xA0);
+RED4EXT_ASSERT_SIZE(LatestSaveMetadataInfo, 0xC0);
 } // namespace ink
-using LatestSaveMetadataInfo = ink::LatestSaveMetadataInfo;
 } // namespace RED4ext

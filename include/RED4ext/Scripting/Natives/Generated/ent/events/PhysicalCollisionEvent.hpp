@@ -16,7 +16,7 @@ namespace ent::events {
 struct PhysicalCollisionEvent : red::Event
 {
     static constexpr const char* NAME = "enteventsPhysicalCollisionEvent";
-    static constexpr const char* ALIAS = "PhysicalCollisionEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<IScriptable> myComponent; // 40
     WeakHandle<IScriptable> otherEntity; // 50
@@ -29,5 +29,4 @@ struct PhysicalCollisionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhysicalCollisionEvent, 0xB0);
 } // namespace ent::events
-using PhysicalCollisionEvent = ent::events::PhysicalCollisionEvent;
 } // namespace RED4ext

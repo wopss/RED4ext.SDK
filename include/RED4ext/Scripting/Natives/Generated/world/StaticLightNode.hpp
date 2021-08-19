@@ -36,15 +36,15 @@ struct StaticLightNode : world::Node
     float rayTracingIntensityScale; // 4C
     float EV; // 50
     ELightType type; // 54
-    bool useInGI; // 58
-    bool useInEnvProbes; // 59
-    bool useInFog; // 5A
-    bool useInTransparents; // 5B
-    bool useInParticles; // 5C
-    bool sceneDiffuse; // 5D
-    bool sceneSpecular; // 5E
-    bool directional; // 5F
-    bool clampAttenuation; // 60
+    bool useInTransparents; // 58
+    bool useInParticles; // 59
+    bool sceneDiffuse; // 5A
+    bool directional; // 5B
+    bool clampAttenuation; // 5C
+    uint8_t scaleGI; // 5D
+    uint8_t scaleEnvProbes; // 5E
+    uint8_t sceneSpecularScale; // 5F
+    uint8_t scaleVolFog; // 60
     int8_t roughnessBias; // 61
     rend::LightChannel lightChannel; // 62
     rend::LightGroup group; // 64
@@ -74,11 +74,11 @@ struct StaticLightNode : world::Node
     float capsuleLength; // A8
     float areaRectSideA; // AC
     float areaRectSideB; // B0
-    uint8_t unkB4[0xC0 - 0xB4]; // B4
-    RaRef<CIESDataResource> iesProfile; // C0
-    float autoHideDistance; // C8
-    uint8_t unkCC[0xD0 - 0xCC]; // CC
+    uint8_t unkB4[0xB8 - 0xB4]; // B4
+    RaRef<CIESDataResource> iesProfile; // B8
+    float autoHideDistance; // C0
+    uint8_t unkC4[0xC8 - 0xC4]; // C4
 };
-RED4EXT_ASSERT_SIZE(StaticLightNode, 0xD0);
+RED4EXT_ASSERT_SIZE(StaticLightNode, 0xC8);
 } // namespace world
 } // namespace RED4ext

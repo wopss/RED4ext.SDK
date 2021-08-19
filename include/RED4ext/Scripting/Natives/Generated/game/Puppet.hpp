@@ -14,8 +14,8 @@ struct Puppet : game::PuppetBase
     static constexpr const char* NAME = "gamePuppet";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk2C0[0x5F8 - 0x2C0]; // 2C0
+    uint8_t unk2D0[0x608 - 0x2D0]; // 2D0
 };
-RED4EXT_ASSERT_SIZE(Puppet, 0x5F8);
+RED4EXT_ASSERT_SIZE(Puppet, 0x608);
 } // namespace game
 } // namespace RED4ext

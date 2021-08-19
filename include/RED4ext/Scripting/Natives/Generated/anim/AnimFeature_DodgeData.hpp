@@ -12,12 +12,11 @@ namespace anim {
 struct AnimFeature_DodgeData : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_DodgeData";
-    static constexpr const char* ALIAS = "AnimFeature_DodgeData";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t dodgeType; // 40
     int32_t dodgeDirection; // 44
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_DodgeData, 0x48);
 } // namespace anim
-using AnimFeature_DodgeData = anim::AnimFeature_DodgeData;
 } // namespace RED4ext

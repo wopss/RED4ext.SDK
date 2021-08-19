@@ -12,11 +12,10 @@ namespace game {
 struct PrereqStateChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gamePrereqStateChangedEvent";
-    static constexpr const char* ALIAS = "PrereqStateChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(PrereqStateChangedEvent, 0x50);
 } // namespace game
-using PrereqStateChangedEvent = game::PrereqStateChangedEvent;
 } // namespace RED4ext

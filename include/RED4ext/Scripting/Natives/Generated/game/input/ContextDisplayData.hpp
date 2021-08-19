@@ -14,12 +14,11 @@ namespace game::input {
 struct ContextDisplayData
 {
     static constexpr const char* NAME = "gameinputContextDisplayData";
-    static constexpr const char* ALIAS = "ContextDisplayData";
+    static constexpr const char* ALIAS = NAME;
 
     CName name; // 00
     DynArray<game::input::ActionDisplayData> actions; // 08
 };
 RED4EXT_ASSERT_SIZE(ContextDisplayData, 0x18);
 } // namespace game::input
-using ContextDisplayData = game::input::ContextDisplayData;
 } // namespace RED4ext

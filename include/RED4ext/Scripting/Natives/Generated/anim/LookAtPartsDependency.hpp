@@ -13,7 +13,7 @@ namespace anim {
 struct LookAtPartsDependency
 {
     static constexpr const char* NAME = "animLookAtPartsDependency";
-    static constexpr const char* ALIAS = "LookAtPartsDependency";
+    static constexpr const char* ALIAS = NAME;
 
     CName masterPart; // 00
     CName slavePart; // 08
@@ -34,5 +34,4 @@ struct LookAtPartsDependency
 };
 RED4EXT_ASSERT_SIZE(LookAtPartsDependency, 0x118);
 } // namespace anim
-using LookAtPartsDependency = anim::LookAtPartsDependency;
 } // namespace RED4ext

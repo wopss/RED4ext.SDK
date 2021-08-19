@@ -12,11 +12,10 @@ namespace game::data {
 struct TacticLimiterCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataTacticLimiterCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = "TacticLimiterCoverSelectionParameters_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(TacticLimiterCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
-using TacticLimiterCoverSelectionParameters_Record = game::data::TacticLimiterCoverSelectionParameters_Record;
 } // namespace RED4ext

@@ -13,12 +13,11 @@ namespace game::state {
 struct MachineStateSnapshotsContainer
 {
     static constexpr const char* NAME = "gamestateMachineStateSnapshotsContainer";
-    static constexpr const char* ALIAS = "StateSnapshotsContainer";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     DynArray<game::state::MachineStateSnapshot> snapshot; // 08
 };
 RED4EXT_ASSERT_SIZE(MachineStateSnapshotsContainer, 0x18);
 } // namespace game::state
-using StateSnapshotsContainer = game::state::MachineStateSnapshotsContainer;
 } // namespace RED4ext

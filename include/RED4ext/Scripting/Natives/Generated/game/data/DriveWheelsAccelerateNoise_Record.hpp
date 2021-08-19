@@ -12,11 +12,10 @@ namespace game::data {
 struct DriveWheelsAccelerateNoise_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataDriveWheelsAccelerateNoise_Record";
-    static constexpr const char* ALIAS = "DriveWheelsAccelerateNoise_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x70 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(DriveWheelsAccelerateNoise_Record, 0x70);
 } // namespace game::data
-using DriveWheelsAccelerateNoise_Record = game::data::DriveWheelsAccelerateNoise_Record;
 } // namespace RED4ext

@@ -16,7 +16,7 @@ namespace ent {
 struct TriggerEvent : red::Event
 {
     static constexpr const char* NAME = "entTriggerEvent";
-    static constexpr const char* ALIAS = "TriggerEvent";
+    static constexpr const char* ALIAS = NAME;
 
     ent::EntityID triggerID; // 40
     CName componentName; // 48
@@ -28,5 +28,4 @@ struct TriggerEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TriggerEvent, 0x80);
 } // namespace ent
-using TriggerEvent = ent::TriggerEvent;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_MeleeSlotData : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_MeleeSlotData";
-    static constexpr const char* ALIAS = "AnimFeature_MeleeSlotData";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t attackType; // 40
     int32_t comboNumber; // 44
@@ -23,5 +23,4 @@ struct AnimFeature_MeleeSlotData : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_MeleeSlotData, 0x58);
 } // namespace anim
-using AnimFeature_MeleeSlotData = anim::AnimFeature_MeleeSlotData;
 } // namespace RED4ext

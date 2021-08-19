@@ -6,21 +6,20 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/input/ActionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/Choice.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/interactions/InteractionEvent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/interactions/InteractionBaseEvent.hpp>
 
 namespace RED4ext
 {
 namespace game::interactions { 
-struct ChoiceEvent : game::interactions::InteractionEvent
+struct ChoiceEvent : game::interactions::InteractionBaseEvent
 {
     static constexpr const char* NAME = "gameinteractionsChoiceEvent";
-    static constexpr const char* ALIAS = "InteractionChoiceEvent";
+    static constexpr const char* ALIAS = NAME;
 
-    game::interactions::Choice choice; // 70
-    game::input::ActionType actionType; // 110
-    uint8_t unk114[0x118 - 0x114]; // 114
+    game::interactions::Choice choice; // 68
+    game::input::ActionType actionType; // 108
+    uint8_t unk10C[0x110 - 0x10C]; // 10C
 };
-RED4EXT_ASSERT_SIZE(ChoiceEvent, 0x118);
+RED4EXT_ASSERT_SIZE(ChoiceEvent, 0x110);
 } // namespace game::interactions
-using InteractionChoiceEvent = game::interactions::ChoiceEvent;
 } // namespace RED4ext

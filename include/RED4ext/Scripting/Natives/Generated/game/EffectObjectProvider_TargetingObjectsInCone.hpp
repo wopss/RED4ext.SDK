@@ -20,11 +20,13 @@ struct EffectObjectProvider_TargetingObjectsInCone : game::EffectObjectProvider
     static constexpr const char* ALIAS = NAME;
 
     game::TargetSearchQuery searchQuery; // 40
-    EulerAngles searchAngles; // 70
-    uint32_t maxTargets; // 7C
-    Handle<physics::FilterData> filterData; // 80
-    uint8_t unk90[0xA0 - 0x90]; // 90
+    EulerAngles searchAngles; // 78
+    uint32_t maxTargets; // 84
+    bool usePlayerPosAndForward; // 88
+    uint8_t unk89[0x90 - 0x89]; // 89
+    Handle<physics::FilterData> filterData; // 90
+    uint8_t unkA0[0xB0 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_TargetingObjectsInCone, 0xA0);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_TargetingObjectsInCone, 0xB0);
 } // namespace game
 } // namespace RED4ext

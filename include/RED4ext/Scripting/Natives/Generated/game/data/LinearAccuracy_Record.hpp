@@ -12,11 +12,10 @@ namespace game::data {
 struct LinearAccuracy_Record : game::data::Accuracy_Record
 {
     static constexpr const char* NAME = "gamedataLinearAccuracy_Record";
-    static constexpr const char* ALIAS = "LinearAccuracy_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(LinearAccuracy_Record, 0x58);
 } // namespace game::data
-using LinearAccuracy_Record = game::data::LinearAccuracy_Record;
 } // namespace RED4ext

@@ -46,8 +46,9 @@ struct PlayerActorDef
     scn::FindNetworkPlayerParams findNetworkPlayerParams; // AC
     scn::FindEntityInContextParams findActorInContextParams; // B0
     scn::LipsyncAnimSetSRRefId lipsyncAnimSet; // D8
-    CString playerName; // E8
+    uint8_t unkDC[0xE0 - 0xDC]; // DC
+    CString playerName; // E0
 };
-RED4EXT_ASSERT_SIZE(PlayerActorDef, 0x108);
+RED4EXT_ASSERT_SIZE(PlayerActorDef, 0x100);
 } // namespace scn
 } // namespace RED4ext

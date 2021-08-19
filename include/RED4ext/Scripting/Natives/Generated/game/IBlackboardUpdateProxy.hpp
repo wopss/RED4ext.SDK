@@ -12,10 +12,9 @@ namespace game {
 struct IBlackboardUpdateProxy : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIBlackboardUpdateProxy";
-    static constexpr const char* ALIAS = "IBlackboardUpdateProxy";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IBlackboardUpdateProxy, 0x48);
 } // namespace game
-using IBlackboardUpdateProxy = game::IBlackboardUpdateProxy;
 } // namespace RED4ext

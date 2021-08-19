@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_EquipUnequipItem : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_EquipUnequipItem";
-    static constexpr const char* ALIAS = "AnimFeature_EquipUnequipItem";
+    static constexpr const char* ALIAS = NAME;
 
     float stateTransitionDuration; // 40
     int32_t itemState; // 44
@@ -22,5 +22,4 @@ struct AnimFeature_EquipUnequipItem : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_EquipUnequipItem, 0x50);
 } // namespace anim
-using AnimFeature_EquipUnequipItem = anim::AnimFeature_EquipUnequipItem;
 } // namespace RED4ext

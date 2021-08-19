@@ -12,10 +12,9 @@ namespace game::data {
 struct RegularGDM_Record : game::data::GrenadeDeliveryMethod_Record
 {
     static constexpr const char* NAME = "gamedataRegularGDM_Record";
-    static constexpr const char* ALIAS = "RegularGDM_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(RegularGDM_Record, 0x60);
 } // namespace game::data
-using RegularGDM_Record = game::data::RegularGDM_Record;
 } // namespace RED4ext

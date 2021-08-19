@@ -17,7 +17,7 @@ namespace game {
 struct JournalPhoneMessage : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalPhoneMessage";
-    static constexpr const char* ALIAS = "JournalPhoneMessage";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString text; // 60
     Handle<game::JournalPath> attachment; // 88
@@ -27,5 +27,4 @@ struct JournalPhoneMessage : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalPhoneMessage, 0xA8);
 } // namespace game
-using JournalPhoneMessage = game::JournalPhoneMessage;
 } // namespace RED4ext

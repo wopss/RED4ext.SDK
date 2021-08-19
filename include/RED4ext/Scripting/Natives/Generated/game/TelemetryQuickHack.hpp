@@ -13,7 +13,7 @@ namespace game {
 struct TelemetryQuickHack
 {
     static constexpr const char* NAME = "gameTelemetryQuickHack";
-    static constexpr const char* ALIAS = "TelemetryQuickHack";
+    static constexpr const char* ALIAS = NAME;
 
     CName actionName; // 00
     CString titleLocKey; // 08
@@ -24,5 +24,4 @@ struct TelemetryQuickHack
 };
 RED4EXT_ASSERT_SIZE(TelemetryQuickHack, 0x58);
 } // namespace game
-using TelemetryQuickHack = game::TelemetryQuickHack;
 } // namespace RED4ext

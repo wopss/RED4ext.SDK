@@ -15,14 +15,14 @@ struct GameplayLightComponent : ent::LightComponent
     static constexpr const char* NAME = "cpGameplayLightComponent";
     static constexpr const char* ALIAS = NAME;
 
-    bool reactToTime; // 200
-    uint8_t unk201[0x204 - 0x201]; // 201
-    GameTime begin; // 204
-    GameTime end; // 208
-    float probability; // 20C
-    GameTime delayRange; // 210
-    uint8_t unk214[0x220 - 0x214]; // 214
+    bool reactToTime; // 1F0
+    uint8_t unk1F1[0x1F4 - 0x1F1]; // 1F1
+    GameTime begin; // 1F4
+    GameTime end; // 1F8
+    float probability; // 1FC
+    GameTime delayRange; // 200
+    uint8_t unk204[0x210 - 0x204]; // 204
 };
-RED4EXT_ASSERT_SIZE(GameplayLightComponent, 0x220);
+RED4EXT_ASSERT_SIZE(GameplayLightComponent, 0x210);
 } // namespace cp
 } // namespace RED4ext

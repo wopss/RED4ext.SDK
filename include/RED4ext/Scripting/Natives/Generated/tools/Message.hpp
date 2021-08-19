@@ -7,6 +7,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/tools/MessageSeverity.hpp>
+#include <RED4ext/Scripting/Natives/Generated/tools/MessageVerbosity.hpp>
 
 namespace RED4ext
 {
@@ -24,7 +25,7 @@ struct Message
     uint8_t unk20[0x30 - 0x20]; // 20
     int64_t created; // 30
     tools::MessageSeverity severity; // 38
-    uint8_t unk3C[0x40 - 0x3C]; // 3C
+    tools::MessageVerbosity verbosity; // 3C
 };
 RED4EXT_ASSERT_SIZE(Message, 0x40);
 } // namespace tools

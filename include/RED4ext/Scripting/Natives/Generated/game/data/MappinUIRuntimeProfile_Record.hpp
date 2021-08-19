@@ -12,11 +12,10 @@ namespace game::data {
 struct MappinUIRuntimeProfile_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMappinUIRuntimeProfile_Record";
-    static constexpr const char* ALIAS = "MappinUIRuntimeProfile_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x98 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(MappinUIRuntimeProfile_Record, 0x98);
 } // namespace game::data
-using MappinUIRuntimeProfile_Record = game::data::MappinUIRuntimeProfile_Record;
 } // namespace RED4ext

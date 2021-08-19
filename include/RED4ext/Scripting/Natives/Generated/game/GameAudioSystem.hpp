@@ -12,11 +12,10 @@ namespace game {
 struct GameAudioSystem : game::IGameAudioSystem
 {
     static constexpr const char* NAME = "gameGameAudioSystem";
-    static constexpr const char* ALIAS = "AudioSystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x1E0 - 0x48]; // 48
+    uint8_t unk48[0x200 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GameAudioSystem, 0x1E0);
+RED4EXT_ASSERT_SIZE(GameAudioSystem, 0x200);
 } // namespace game
-using AudioSystem = game::GameAudioSystem;
 } // namespace RED4ext

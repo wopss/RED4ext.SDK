@@ -13,7 +13,7 @@ namespace ink {
 struct TextValueProgressAnimationController : ink::TextAnimationController
 {
     static constexpr const char* NAME = "inkTextValueProgressAnimationController";
-    static constexpr const char* ALIAS = "inkTextValueProgressController";
+    static constexpr const char* ALIAS = NAME;
 
     float baseValue; // E0
     float targetValue; // E4
@@ -24,5 +24,4 @@ struct TextValueProgressAnimationController : ink::TextAnimationController
 };
 RED4EXT_ASSERT_SIZE(TextValueProgressAnimationController, 0x138);
 } // namespace ink
-using inkTextValueProgressController = ink::TextValueProgressAnimationController;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game {
 struct SetupWorkspotActionEvent : sense::StimuliData
 {
     static constexpr const char* NAME = "gameSetupWorkspotActionEvent";
-    static constexpr const char* ALIAS = "SetupWorkspotActionEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x260 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(SetupWorkspotActionEvent, 0x260);
 } // namespace game
-using SetupWorkspotActionEvent = game::SetupWorkspotActionEvent;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct EntitySpawnerSlotData
 {
     static constexpr const char* NAME = "gameEntitySpawnerSlotData";
-    static constexpr const char* ALIAS = "EntitySpawnerSlotData";
+    static constexpr const char* ALIAS = NAME;
 
     CName slotName; // 00
     TweakDBID spawnableObject; // 08
@@ -21,5 +21,4 @@ struct EntitySpawnerSlotData
 };
 RED4EXT_ASSERT_SIZE(EntitySpawnerSlotData, 0x20);
 } // namespace game
-using EntitySpawnerSlotData = game::EntitySpawnerSlotData;
 } // namespace RED4ext

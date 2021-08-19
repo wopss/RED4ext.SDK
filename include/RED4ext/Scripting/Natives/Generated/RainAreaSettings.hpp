@@ -21,26 +21,21 @@ struct RainAreaSettings : IAreaSettings
     float heightRange; // 50
     float globalLightResponse; // 54
     CurveData<float> tiling; // 58
-    CurveData<float> speed; // 90
-    float roughnessShift; // C8
-    float roughnessClip; // CC
-    float roughnessExponent; // D0
-    float baseColorShift; // D4
-    float baseColorClip; // D8
-    float baseColorExponent; // DC
-    float porosityThreshold; // E0
-    float moistureAccumulationSpeed; // E4
-    float puddlesAccumulationSpeed; // E8
-    float moistureEvaporationSpeed; // EC
-    float puddlesEvaporationSpeed; // F0
-    uint8_t unkF4[0xF8 - 0xF4]; // F4
-    CurveData<float> rainIntensity; // F8
-    CurveData<float> rainOverride; // 130
-    CurveData<float> rainMoistureOverride; // 168
-    CurveData<float> rainPuddlesOverride; // 1A0
-    Ref<CBitmapTexture> rainleaksMask; // 1D8
-    Ref<CBitmapTexture> raindropsMask; // 1F0
-    Ref<CBitmapTexture> rainRipplesMask; // 208
+    float porosityThresholdStart; // 90
+    float porosityThresholdEnd; // 94
+    float glossinessFactor; // 98
+    float baseColorFactor; // 9C
+    float moistureAccumulationSpeed; // A0
+    float puddlesAccumulationSpeed; // A4
+    float moistureEvaporationSpeed; // A8
+    float puddlesEvaporationSpeed; // AC
+    CurveData<float> rainIntensity; // B0
+    CurveData<float> rainOverride; // E8
+    CurveData<float> rainMoistureOverride; // 120
+    CurveData<float> rainPuddlesOverride; // 158
+    Ref<CBitmapTexture> rainleaksMask; // 190
+    Ref<CBitmapTexture> raindropsMask; // 1A8
+    Ref<CBitmapTexture> rainRipplesMask; // 1C0
 };
-RED4EXT_ASSERT_SIZE(RainAreaSettings, 0x220);
+RED4EXT_ASSERT_SIZE(RainAreaSettings, 0x1D8);
 } // namespace RED4ext

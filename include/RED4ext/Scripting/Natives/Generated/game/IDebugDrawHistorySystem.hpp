@@ -12,11 +12,10 @@ namespace game {
 struct IDebugDrawHistorySystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIDebugDrawHistorySystem";
-    static constexpr const char* ALIAS = "IDebugDrawHistorySystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(IDebugDrawHistorySystem, 0x50);
 } // namespace game
-using IDebugDrawHistorySystem = game::IDebugDrawHistorySystem;
 } // namespace RED4ext

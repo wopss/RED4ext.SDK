@@ -12,10 +12,9 @@ namespace ink {
 struct ShapeWidgetReference : ink::LeafWidgetReference
 {
     static constexpr const char* NAME = "inkShapeWidgetReference";
-    static constexpr const char* ALIAS = "inkShapeRef";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ShapeWidgetReference, 0x18);
 } // namespace ink
-using inkShapeRef = ink::ShapeWidgetReference;
 } // namespace RED4ext

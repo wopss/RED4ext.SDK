@@ -12,7 +12,7 @@ namespace game::state {
 struct MachineparameterTypeActionLocomotionParameters : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeActionLocomotionParameters";
-    static constexpr const char* ALIAS = "LocomotionParameters";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x5D - 0x40]; // 40
     bool imperfectTurn; // 5D
@@ -29,5 +29,4 @@ struct MachineparameterTypeActionLocomotionParameters : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeActionLocomotionParameters, 0x90);
 } // namespace game::state
-using LocomotionParameters = game::state::MachineparameterTypeActionLocomotionParameters;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace AI {
 struct HumanComponent : AI::CAgent
 {
     static constexpr const char* NAME = "AIHumanComponent";
-    static constexpr const char* ALIAS = "AIHumanComponent";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID movementParamsRecord; // A10
     uint8_t unkA18[0xAC0 - 0xA18]; // A18

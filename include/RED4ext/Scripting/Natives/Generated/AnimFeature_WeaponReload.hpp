@@ -11,7 +11,7 @@ namespace RED4ext
 struct AnimFeature_WeaponReload : anim::AnimFeature
 {
     static constexpr const char* NAME = "AnimFeature_WeaponReload";
-    static constexpr const char* ALIAS = "AnimFeature_WeaponReload";
+    static constexpr const char* ALIAS = NAME;
 
     bool emptyReload; // 40
     uint8_t unk41[0x44 - 0x41]; // 41

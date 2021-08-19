@@ -13,11 +13,10 @@ namespace game::state {
 struct MachineeventBaseEvent : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventBaseEvent";
-    static constexpr const char* ALIAS = "PSMBaseEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName id; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineeventBaseEvent, 0x48);
 } // namespace game::state
-using PSMBaseEvent = game::state::MachineeventBaseEvent;
 } // namespace RED4ext

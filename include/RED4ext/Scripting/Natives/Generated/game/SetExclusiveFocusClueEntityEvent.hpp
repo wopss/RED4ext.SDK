@@ -12,12 +12,11 @@ namespace game {
 struct SetExclusiveFocusClueEntityEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetExclusiveFocusClueEntityEvent";
-    static constexpr const char* ALIAS = "SetExclusiveFocusClueEntityEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool isSetExclusive; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(SetExclusiveFocusClueEntityEvent, 0x48);
 } // namespace game
-using SetExclusiveFocusClueEntityEvent = game::SetExclusiveFocusClueEntityEvent;
 } // namespace RED4ext

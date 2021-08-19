@@ -15,9 +15,9 @@ struct AreaVolume : game::Object
     static constexpr const char* NAME = "gameAreaVolume";
     static constexpr const char* ALIAS = NAME;
 
-    game::AreaData areaData; // 230
-    uint8_t unk260[0x270 - 0x260]; // 260
+    game::AreaData areaData; // 240
+    uint8_t unk270[0x280 - 0x270]; // 270
 };
-RED4EXT_ASSERT_SIZE(AreaVolume, 0x270);
+RED4EXT_ASSERT_SIZE(AreaVolume, 0x280);
 } // namespace game
 } // namespace RED4ext

@@ -16,7 +16,7 @@ namespace AI {
 struct NPCCommandStateEvent : red::Event
 {
     static constexpr const char* NAME = "AINPCCommandStateEvent";
-    static constexpr const char* ALIAS = "AICommandStateEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<AI::Command> command; // 40
     AI::CommandState newState; // 50
@@ -24,5 +24,4 @@ struct NPCCommandStateEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(NPCCommandStateEvent, 0x58);
 } // namespace AI
-using AICommandStateEvent = AI::NPCCommandStateEvent;
 } // namespace RED4ext

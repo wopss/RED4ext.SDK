@@ -12,7 +12,7 @@ namespace ent {
 struct UncontrolledMovementStartEvent : red::Event
 {
     static constexpr const char* NAME = "entUncontrolledMovementStartEvent";
-    static constexpr const char* ALIAS = "UncontrolledMovementStartEvent";
+    static constexpr const char* ALIAS = NAME;
 
     float ragdollNoGroundThreshold; // 40
     bool ragdollOnCollision; // 44
@@ -20,5 +20,4 @@ struct UncontrolledMovementStartEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UncontrolledMovementStartEvent, 0x48);
 } // namespace ent
-using UncontrolledMovementStartEvent = ent::UncontrolledMovementStartEvent;
 } // namespace RED4ext

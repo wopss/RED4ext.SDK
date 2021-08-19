@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-struct IRTTIType;
+struct CBaseRTTIType;
 struct IScriptable;
 
 struct CBaseEngine
@@ -83,7 +83,7 @@ RED4EXT_ASSERT_OFFSET(BaseGameEngine, unk220, 0x220);
 struct GameInstance
 {
     virtual ~GameInstance() = 0;
-    virtual IScriptable* GetInstance(const IRTTIType* type) = 0;
+    virtual IScriptable* GetInstance(const CBaseRTTIType* aType) = 0;
     virtual void Unk_10() = 0;
     virtual void Unk_18() = 0;
     virtual void Unk_20() = 0;
@@ -97,10 +97,10 @@ struct GameInstance
     virtual void Unk_60() = 0;
     virtual void Unk_68() = 0;
 
-    HashMap<IRTTIType*, Handle<IScriptable>> unk08; // 08
-    DynArray<Handle<IScriptable>> unk38;            // 38
-    HashMap<IRTTIType*, IRTTIType*> unk48;          // 48
-    uintptr_t unk78[(0x138 - 0x78) >> 3];           // 78
+    HashMap<CBaseRTTIType*, Handle<IScriptable>> unk08; // 08
+    DynArray<Handle<IScriptable>> unk38;                // 38
+    HashMap<CBaseRTTIType*, CBaseRTTIType*> unk48;      // 48
+    uintptr_t unk78[(0x138 - 0x78) >> 3];               // 78
 };
 RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
 

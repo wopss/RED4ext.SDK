@@ -12,12 +12,11 @@ namespace ent {
 struct AnimInputSetterBool : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimInputSetterBool";
-    static constexpr const char* ALIAS = "AnimInputSetterBool";
+    static constexpr const char* ALIAS = NAME;
 
     bool value; // 48
     uint8_t unk49[0x50 - 0x49]; // 49
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetterBool, 0x50);
 } // namespace ent
-using AnimInputSetterBool = ent::AnimInputSetterBool;
 } // namespace RED4ext

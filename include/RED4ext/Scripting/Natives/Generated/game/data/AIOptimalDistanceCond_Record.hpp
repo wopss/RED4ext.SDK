@@ -12,11 +12,10 @@ namespace game::data {
 struct AIOptimalDistanceCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIOptimalDistanceCond_Record";
-    static constexpr const char* ALIAS = "AIOptimalDistanceCond_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x70 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AIOptimalDistanceCond_Record, 0x70);
 } // namespace game::data
-using AIOptimalDistanceCond_Record = game::data::AIOptimalDistanceCond_Record;
 } // namespace RED4ext

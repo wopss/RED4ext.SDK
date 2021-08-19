@@ -12,11 +12,10 @@ namespace game::data {
 struct MetaQuest_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMetaQuest_Record";
-    static constexpr const char* ALIAS = "MetaQuest_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(MetaQuest_Record, 0x58);
 } // namespace game::data
-using MetaQuest_Record = game::data::MetaQuest_Record;
 } // namespace RED4ext

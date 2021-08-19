@@ -17,7 +17,8 @@ struct EffectExecutor_NewEffect_RicochetScan : game::EffectExecutor_NewEffect
 
     Vector4 box; // 60
     bool isPreview; // 70
-    uint8_t unk71[0x80 - 0x71]; // 71
+    bool onlyForPlayer; // 71
+    uint8_t unk72[0x80 - 0x72]; // 72
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_NewEffect_RicochetScan, 0x80);
 } // namespace game

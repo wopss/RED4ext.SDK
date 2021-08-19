@@ -16,7 +16,7 @@ namespace ent {
 struct GameplayVOEvent : red::Event
 {
     static constexpr const char* NAME = "entGameplayVOEvent";
-    static constexpr const char* ALIAS = "SoundPlayVo";
+    static constexpr const char* ALIAS = NAME;
 
     CName voContext; // 40
     bool isQuest; // 48
@@ -36,5 +36,4 @@ struct GameplayVOEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(GameplayVOEvent, 0x70);
 } // namespace ent
-using SoundPlayVo = ent::GameplayVOEvent;
 } // namespace RED4ext

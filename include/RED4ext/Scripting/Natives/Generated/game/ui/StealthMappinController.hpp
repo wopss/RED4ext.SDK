@@ -12,10 +12,9 @@ namespace game::ui {
 struct StealthMappinController : game::ui::InteractionMappinController
 {
     static constexpr const char* NAME = "gameuiStealthMappinController";
-    static constexpr const char* ALIAS = "StealthMappinController";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(StealthMappinController, 0x2A0);
 } // namespace game::ui
-using StealthMappinController = game::ui::StealthMappinController;
 } // namespace RED4ext

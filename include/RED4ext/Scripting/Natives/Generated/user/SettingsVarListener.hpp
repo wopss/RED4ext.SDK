@@ -12,11 +12,10 @@ namespace user {
 struct SettingsVarListener : IScriptable
 {
     static constexpr const char* NAME = "userSettingsVarListener";
-    static constexpr const char* ALIAS = "ConfigVarListener";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x70 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(SettingsVarListener, 0x70);
 } // namespace user
-using ConfigVarListener = user::SettingsVarListener;
 } // namespace RED4ext

@@ -15,11 +15,10 @@ namespace game::events {
 struct CoverHitEvent : game::events::HitEvent
 {
     static constexpr const char* NAME = "gameeventsCoverHitEvent";
-    static constexpr const char* ALIAS = "gameCoverHitEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> cover; // E0
 };
 RED4EXT_ASSERT_SIZE(CoverHitEvent, 0xF0);
 } // namespace game::events
-using gameCoverHitEvent = game::events::CoverHitEvent;
 } // namespace RED4ext

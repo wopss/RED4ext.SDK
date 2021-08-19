@@ -12,10 +12,9 @@ namespace game::mappins {
 struct GrenadeMappin : game::mappins::RuntimeMappin
 {
     static constexpr const char* NAME = "gamemappinsGrenadeMappin";
-    static constexpr const char* ALIAS = "GrenadeMappin";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(GrenadeMappin, 0x108);
 } // namespace game::mappins
-using GrenadeMappin = game::mappins::GrenadeMappin;
 } // namespace RED4ext

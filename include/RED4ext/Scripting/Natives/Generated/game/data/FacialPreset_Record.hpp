@@ -12,11 +12,10 @@ namespace game::data {
 struct FacialPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataFacialPreset_Record";
-    static constexpr const char* ALIAS = "FacialPreset_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(FacialPreset_Record, 0x58);
 } // namespace game::data
-using FacialPreset_Record = game::data::FacialPreset_Record;
 } // namespace RED4ext

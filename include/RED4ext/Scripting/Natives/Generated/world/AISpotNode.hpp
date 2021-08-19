@@ -9,7 +9,6 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
-#include <RED4ext/Scripting/Natives/Generated/world/GlobalNodeID.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/SocketNode.hpp>
 
 namespace RED4ext
@@ -24,19 +23,18 @@ struct AISpotNode : world::SocketNode
     static constexpr const char* ALIAS = NAME;
 
     Handle<world::TrafficSpotDefinition> spotDef; // 38
-    world::GlobalNodeID nearTrafficSrc; // 48
-    Handle<AI::Spot> spot; // 50
-    DynArray<CName> markings; // 60
-    red::TagList crowdWhitelist; // 70
-    red::TagList crowdBlacklist; // 80
-    bool useCrowdWhitelist; // 90
-    bool useCrowdBlacklist; // 91
-    bool isWorkspotInfinite; // 92
-    bool isWorkspotStatic; // 93
-    bool disableBumps; // 94
-    uint8_t unk95[0x98 - 0x95]; // 95
-    NodeRef lookAtTarget; // 98
+    Handle<AI::Spot> spot; // 48
+    DynArray<CName> markings; // 58
+    red::TagList crowdWhitelist; // 68
+    red::TagList crowdBlacklist; // 78
+    bool useCrowdWhitelist; // 88
+    bool useCrowdBlacklist; // 89
+    bool isWorkspotInfinite; // 8A
+    bool isWorkspotStatic; // 8B
+    bool disableBumps; // 8C
+    uint8_t unk8D[0x90 - 0x8D]; // 8D
+    NodeRef lookAtTarget; // 90
 };
-RED4EXT_ASSERT_SIZE(AISpotNode, 0xA0);
+RED4EXT_ASSERT_SIZE(AISpotNode, 0x98);
 } // namespace world
 } // namespace RED4ext

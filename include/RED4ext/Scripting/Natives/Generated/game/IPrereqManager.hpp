@@ -12,10 +12,9 @@ namespace game {
 struct IPrereqManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPrereqManager";
-    static constexpr const char* ALIAS = "IPrereqManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IPrereqManager, 0x48);
 } // namespace game
-using IPrereqManager = game::IPrereqManager;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace AI::behavior {
 struct BehaviorBlackboard : IScriptable
 {
     static constexpr const char* NAME = "AIbehaviorBehaviorBlackboard";
-    static constexpr const char* ALIAS = "BehaviorBlackboard";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(BehaviorBlackboard, 0x40);
 } // namespace AI::behavior
-using BehaviorBlackboard = AI::behavior::BehaviorBlackboard;
 } // namespace RED4ext

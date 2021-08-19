@@ -12,10 +12,9 @@ namespace game {
 struct MovingPlatformBeforeArrivedAt : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformBeforeArrivedAt";
-    static constexpr const char* ALIAS = "BeforeArrivedAt";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformBeforeArrivedAt, 0x40);
 } // namespace game
-using BeforeArrivedAt = game::MovingPlatformBeforeArrivedAt;
 } // namespace RED4ext

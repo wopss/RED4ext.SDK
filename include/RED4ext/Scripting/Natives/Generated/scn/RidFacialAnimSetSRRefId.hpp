@@ -4,17 +4,17 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/scn/SRRefId.hpp>
 
 namespace RED4ext
 {
 namespace scn { 
-struct RidFacialAnimSetSRRefId : scn::SRRefId
+struct RidFacialAnimSetSRRefId
 {
     static constexpr const char* NAME = "scnRidFacialAnimSetSRRefId";
     static constexpr const char* ALIAS = NAME;
 
+    uint32_t id; // 00
 };
-RED4EXT_ASSERT_SIZE(RidFacialAnimSetSRRefId, 0x10);
+RED4EXT_ASSERT_SIZE(RidFacialAnimSetSRRefId, 0x4);
 } // namespace scn
 } // namespace RED4ext

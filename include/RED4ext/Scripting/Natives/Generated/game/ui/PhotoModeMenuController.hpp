@@ -20,8 +20,8 @@ struct PhotoModeMenuController : game::ui::WidgetGameController
     game::ui::SetPhotoModeKeyEnabledCallback SetAttributeOptionEnabled; // 250
     game::ui::SetPhotoModeKeyEnabledCallback SetCategoryEnabled; // 288
     game::ui::StickerImageCallback SetStickerImage; // 2C0
-    uint8_t unk2F8[0x318 - 0x2F8]; // 2F8
+    uint8_t unk2F8[0x320 - 0x2F8]; // 2F8
 };
-RED4EXT_ASSERT_SIZE(PhotoModeMenuController, 0x318);
+RED4EXT_ASSERT_SIZE(PhotoModeMenuController, 0x320);
 } // namespace game::ui
 } // namespace RED4ext

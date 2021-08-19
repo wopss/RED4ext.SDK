@@ -14,11 +14,10 @@ namespace game {
 struct TaggedSignalUserDataDefinition : game::SignalUserDataDefinition
 {
     static constexpr const char* NAME = "gameTaggedSignalUserDataDefinition";
-    static constexpr const char* ALIAS = "TaggedSignalUserDataDefinition";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<CName> tags; // 30
 };
 RED4EXT_ASSERT_SIZE(TaggedSignalUserDataDefinition, 0x40);
 } // namespace game
-using TaggedSignalUserDataDefinition = game::TaggedSignalUserDataDefinition;
 } // namespace RED4ext

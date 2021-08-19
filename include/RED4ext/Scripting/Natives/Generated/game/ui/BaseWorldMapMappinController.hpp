@@ -15,7 +15,7 @@ namespace game::ui {
 struct BaseWorldMapMappinController : game::ui::InteractionMappinController
 {
     static constexpr const char* NAME = "gameuiBaseWorldMapMappinController";
-    static constexpr const char* ALIAS = "BaseWorldMapMappinController";
+    static constexpr const char* ALIAS = NAME;
 
     bool selected; // 2A0
     bool inZoomLevel; // 2A1
@@ -33,5 +33,4 @@ struct BaseWorldMapMappinController : game::ui::InteractionMappinController
 };
 RED4EXT_ASSERT_SIZE(BaseWorldMapMappinController, 0x320);
 } // namespace game::ui
-using BaseWorldMapMappinController = game::ui::BaseWorldMapMappinController;
 } // namespace RED4ext

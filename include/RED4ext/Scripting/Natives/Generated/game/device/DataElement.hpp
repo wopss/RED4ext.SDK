@@ -18,7 +18,7 @@ namespace game::device {
 struct DataElement
 {
     static constexpr const char* NAME = "gamedeviceDataElement";
-    static constexpr const char* ALIAS = "DataElement";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<game::JournalPath> journalPath; // 00
     CName documentName; // 10
@@ -35,5 +35,4 @@ struct DataElement
 };
 RED4EXT_ASSERT_SIZE(DataElement, 0xB8);
 } // namespace game::device
-using DataElement = game::device::DataElement;
 } // namespace RED4ext

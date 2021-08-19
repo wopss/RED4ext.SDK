@@ -14,7 +14,7 @@ namespace game {
 struct PrereqCheckData
 {
     static constexpr const char* NAME = "gamePrereqCheckData";
-    static constexpr const char* ALIAS = "PrereqCheckData";
+    static constexpr const char* ALIAS = NAME;
 
     game::EPrerequisiteType prereqType; // 00
     EComparisonType comparisonType; // 04
@@ -24,5 +24,4 @@ struct PrereqCheckData
 };
 RED4EXT_ASSERT_SIZE(PrereqCheckData, 0x30);
 } // namespace game
-using PrereqCheckData = game::PrereqCheckData;
 } // namespace RED4ext

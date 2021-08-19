@@ -12,10 +12,9 @@ namespace game {
 struct JournalQuestSubObjective : game::JournalQuestObjectiveBase
 {
     static constexpr const char* NAME = "gameJournalQuestSubObjective";
-    static constexpr const char* ALIAS = "JournalQuestSubObjective";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(JournalQuestSubObjective, 0xD8);
 } // namespace game
-using JournalQuestSubObjective = game::JournalQuestSubObjective;
 } // namespace RED4ext

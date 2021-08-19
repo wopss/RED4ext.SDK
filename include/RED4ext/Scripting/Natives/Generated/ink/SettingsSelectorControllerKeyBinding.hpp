@@ -12,11 +12,10 @@ namespace ink {
 struct SettingsSelectorControllerKeyBinding : ink::SettingsSelectorController
 {
     static constexpr const char* NAME = "inkSettingsSelectorControllerKeyBinding";
-    static constexpr const char* ALIAS = "SettingsSelectorControllerKeyBinding";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkB8[0xD0 - 0xB8]; // B8
 };
 RED4EXT_ASSERT_SIZE(SettingsSelectorControllerKeyBinding, 0xD0);
 } // namespace ink
-using SettingsSelectorControllerKeyBinding = ink::SettingsSelectorControllerKeyBinding;
 } // namespace RED4ext

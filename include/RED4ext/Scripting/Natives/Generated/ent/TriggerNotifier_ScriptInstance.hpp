@@ -12,11 +12,10 @@ namespace ent {
 struct TriggerNotifier_ScriptInstance : world::ITriggerAreaNotiferInstance
 {
     static constexpr const char* NAME = "entTriggerNotifier_ScriptInstance";
-    static constexpr const char* ALIAS = "TriggerNotifier_ScriptInstance";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk58[0x68 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(TriggerNotifier_ScriptInstance, 0x68);
 } // namespace ent
-using TriggerNotifier_ScriptInstance = ent::TriggerNotifier_ScriptInstance;
 } // namespace RED4ext

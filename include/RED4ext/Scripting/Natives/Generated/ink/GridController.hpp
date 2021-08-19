@@ -18,15 +18,15 @@ struct GridController : ink::VirtualCompoundController
     static constexpr const char* NAME = "inkGridController";
     static constexpr const char* ALIAS = NAME;
 
-    uint32_t width; // 180
-    uint32_t height; // 184
-    Vector2 slotSize; // 188
-    uint8_t unk190[0x1A8 - 0x190]; // 190
-    DynArray<ink::GridItem> items; // 1A8
-    uint8_t unk1B8[0x1C8 - 0x1B8]; // 1B8
-    DynArray<ink::GridItemTemplate> itemTemplates; // 1C8
-    uint8_t unk1D8[0x1E8 - 0x1D8]; // 1D8
+    uint32_t width; // 1E0
+    uint32_t height; // 1E4
+    Vector2 slotSize; // 1E8
+    uint8_t unk1F0[0x208 - 0x1F0]; // 1F0
+    DynArray<ink::GridItem> items; // 208
+    uint8_t unk218[0x228 - 0x218]; // 218
+    DynArray<ink::GridItemTemplate> itemTemplates; // 228
+    uint8_t unk238[0x270 - 0x238]; // 238
 };
-RED4EXT_ASSERT_SIZE(GridController, 0x1E8);
+RED4EXT_ASSERT_SIZE(GridController, 0x270);
 } // namespace ink
 } // namespace RED4ext

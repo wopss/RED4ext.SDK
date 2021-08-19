@@ -13,7 +13,7 @@ namespace game {
 struct JournalQuestObjectiveBase : game::JournalContainerEntry
 {
     static constexpr const char* NAME = "gameJournalQuestObjectiveBase";
-    static constexpr const char* ALIAS = "JournalQuestObjectiveBase";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString description; // 78
     uint32_t counter; // A0
@@ -25,5 +25,4 @@ struct JournalQuestObjectiveBase : game::JournalContainerEntry
 };
 RED4EXT_ASSERT_SIZE(JournalQuestObjectiveBase, 0xD8);
 } // namespace game
-using JournalQuestObjectiveBase = game::JournalQuestObjectiveBase;
 } // namespace RED4ext

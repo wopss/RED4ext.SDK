@@ -12,10 +12,9 @@ namespace game::data {
 struct CPOItemCategoryBase_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCPOItemCategoryBase_Record";
-    static constexpr const char* ALIAS = "CPOItemCategoryBase_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(CPOItemCategoryBase_Record, 0x48);
 } // namespace game::data
-using CPOItemCategoryBase_Record = game::data::CPOItemCategoryBase_Record;
 } // namespace RED4ext

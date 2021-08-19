@@ -1,0 +1,23 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
+
+namespace RED4ext
+{
+namespace game { 
+struct NPCstubData
+{
+    static constexpr const char* NAME = "gameNPCstubData";
+    static constexpr const char* ALIAS = NAME;
+
+    ent::EntityID spawnerID; // 00
+    CName entryID; // 08
+};
+RED4EXT_ASSERT_SIZE(NPCstubData, 0x10);
+} // namespace game
+} // namespace RED4ext

@@ -15,6 +15,6 @@ struct Remains : game::Object
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(Remains, 0x230);
+RED4EXT_ASSERT_SIZE(Remains, 0x240);
 } // namespace game
 } // namespace RED4ext

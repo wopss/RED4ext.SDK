@@ -12,11 +12,10 @@ namespace AI {
 struct CombatAlley : IScriptable
 {
     static constexpr const char* NAME = "AICombatAlley";
-    static constexpr const char* ALIAS = "CombatAlley";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0xD0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(CombatAlley, 0xD0);
 } // namespace AI
-using CombatAlley = AI::CombatAlley;
 } // namespace RED4ext

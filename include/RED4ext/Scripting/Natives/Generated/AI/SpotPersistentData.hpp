@@ -4,7 +4,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/WorldTransform.hpp>
+#include <RED4ext/Scripting/Natives/Generated/WorldPosition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/GlobalNodeID.hpp>
 
 namespace RED4ext
@@ -15,11 +15,13 @@ struct SpotPersistentData
     static constexpr const char* NAME = "AISpotPersistentData";
     static constexpr const char* ALIAS = NAME;
 
-    WorldTransform worldTransform; // 00
-    world::GlobalNodeID globalNodeId; // 20
-    bool isEnabled; // 28
-    uint8_t unk29[0x30 - 0x29]; // 29
+    WorldPosition worldPosition; // 00
+    uint8_t unk0C[0x10 - 0xC]; // C
+    world::GlobalNodeID globalNodeId; // 10
+    float yaw; // 18
+    bool isEnabled; // 1C
+    uint8_t unk1D[0x20 - 0x1D]; // 1D
 };
-RED4EXT_ASSERT_SIZE(SpotPersistentData, 0x30);
+RED4EXT_ASSERT_SIZE(SpotPersistentData, 0x20);
 } // namespace AI
 } // namespace RED4ext

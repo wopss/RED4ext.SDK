@@ -12,7 +12,7 @@ namespace game {
 struct SEquipSlot
 {
     static constexpr const char* NAME = "gameSEquipSlot";
-    static constexpr const char* ALIAS = "SEquipSlot";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID itemID; // 00
     bool isLocked; // 10
@@ -20,5 +20,4 @@ struct SEquipSlot
 };
 RED4EXT_ASSERT_SIZE(SEquipSlot, 0x14);
 } // namespace game
-using SEquipSlot = game::SEquipSlot;
 } // namespace RED4ext

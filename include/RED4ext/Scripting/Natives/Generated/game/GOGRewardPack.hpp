@@ -14,7 +14,7 @@ namespace game {
 struct GOGRewardPack
 {
     static constexpr const char* NAME = "gameGOGRewardPack";
-    static constexpr const char* ALIAS = "GOGRewardPack";
+    static constexpr const char* ALIAS = NAME;
 
     CString id; // 00
     CString title; // 20
@@ -24,5 +24,4 @@ struct GOGRewardPack
 };
 RED4EXT_ASSERT_SIZE(GOGRewardPack, 0x78);
 } // namespace game
-using GOGRewardPack = game::GOGRewardPack;
 } // namespace RED4ext

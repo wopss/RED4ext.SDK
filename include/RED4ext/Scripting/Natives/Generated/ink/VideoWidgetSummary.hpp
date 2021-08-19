@@ -11,7 +11,7 @@ namespace ink {
 struct VideoWidgetSummary
 {
     static constexpr const char* NAME = "inkVideoWidgetSummary";
-    static constexpr const char* ALIAS = "VideoWidgetSummary";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t width; // 00
     uint32_t height; // 04
@@ -24,5 +24,4 @@ struct VideoWidgetSummary
 };
 RED4EXT_ASSERT_SIZE(VideoWidgetSummary, 0x20);
 } // namespace ink
-using VideoWidgetSummary = ink::VideoWidgetSummary;
 } // namespace RED4ext

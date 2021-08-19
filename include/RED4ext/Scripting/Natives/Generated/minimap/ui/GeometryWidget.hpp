@@ -17,11 +17,11 @@ struct GeometryWidget : ink::CanvasWidget
     static constexpr const char* NAME = "minimapuiGeometryWidget";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk220[0x260 - 0x220]; // 220
-    DynArray<ink::WidgetReference> widgetTemplates; // 260
-    uint8_t unk270[0x278 - 0x270]; // 270
-    minimap::ui::Settings settings; // 278
-    uint8_t unk280[0x380 - 0x280]; // 280
+    uint8_t unk220[0x258 - 0x220]; // 220
+    DynArray<ink::WidgetReference> widgetTemplates; // 258
+    uint8_t unk268[0x274 - 0x268]; // 268
+    minimap::ui::Settings settings; // 274
+    uint8_t unk27C[0x380 - 0x27C]; // 27C
 };
 RED4EXT_ASSERT_SIZE(GeometryWidget, 0x380);
 } // namespace minimap::ui

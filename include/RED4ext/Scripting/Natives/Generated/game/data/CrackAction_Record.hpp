@@ -12,11 +12,10 @@ namespace game::data {
 struct CrackAction_Record : game::data::ItemAction_Record
 {
     static constexpr const char* NAME = "gamedataCrackAction_Record";
-    static constexpr const char* ALIAS = "CrackAction_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk88[0x90 - 0x88]; // 88
 };
 RED4EXT_ASSERT_SIZE(CrackAction_Record, 0x90);
 } // namespace game::data
-using CrackAction_Record = game::data::CrackAction_Record;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace ent {
 struct WetnessComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entWetnessComponent";
-    static constexpr const char* ALIAS = "WetnessComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk90[0xF8 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(WetnessComponent, 0xF8);
 } // namespace ent
-using WetnessComponent = ent::WetnessComponent;
 } // namespace RED4ext

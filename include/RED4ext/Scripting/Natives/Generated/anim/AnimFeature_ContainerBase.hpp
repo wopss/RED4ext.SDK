@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_ContainerBase : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_ContainerBase";
-    static constexpr const char* ALIAS = "AnimFeature_Loot";
+    static constexpr const char* ALIAS = NAME;
 
     bool opened; // 40
     uint8_t unk41[0x44 - 0x41]; // 41
@@ -20,5 +20,4 @@ struct AnimFeature_ContainerBase : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_ContainerBase, 0x48);
 } // namespace anim
-using AnimFeature_Loot = anim::AnimFeature_ContainerBase;
 } // namespace RED4ext

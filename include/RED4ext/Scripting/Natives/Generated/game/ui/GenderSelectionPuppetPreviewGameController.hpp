@@ -12,11 +12,10 @@ namespace game::ui {
 struct GenderSelectionPuppetPreviewGameController : game::ui::PuppetPreviewGameController
 {
     static constexpr const char* NAME = "gameuiGenderSelectionPuppetPreviewGameController";
-    static constexpr const char* ALIAS = "inkGenderSelectionPuppetPreviewGameController";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk1B0[0x1B8 - 0x1B0]; // 1B0
+    uint8_t unk1C0[0x1C8 - 0x1C0]; // 1C0
 };
-RED4EXT_ASSERT_SIZE(GenderSelectionPuppetPreviewGameController, 0x1B8);
+RED4EXT_ASSERT_SIZE(GenderSelectionPuppetPreviewGameController, 0x1C8);
 } // namespace game::ui
-using inkGenderSelectionPuppetPreviewGameController = game::ui::GenderSelectionPuppetPreviewGameController;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct StimPriority_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataStimPriority_Record";
-    static constexpr const char* ALIAS = "StimPriority_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(StimPriority_Record, 0x58);
 } // namespace game::data
-using StimPriority_Record = game::data::StimPriority_Record;
 } // namespace RED4ext

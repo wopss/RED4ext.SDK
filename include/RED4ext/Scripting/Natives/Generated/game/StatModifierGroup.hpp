@@ -5,20 +5,18 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/StatModifierHandle.hpp>
 
 namespace RED4ext
 {
-namespace game { struct StatModifierData; }
-
 namespace game { 
 struct StatModifierGroup
 {
     static constexpr const char* NAME = "gameStatModifierGroup";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<Handle<game::StatModifierData>> statModifierArray; // 00
+    DynArray<game::StatModifierHandle> statModifierArray; // 00
     int32_t statModifiersLimit; // 10
     TweakDBID statModifiersLimitModifier; // 14
     uint8_t unk1C[0x1E - 0x1C]; // 1C

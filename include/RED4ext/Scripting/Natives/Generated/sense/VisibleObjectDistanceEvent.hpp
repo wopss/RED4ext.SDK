@@ -12,12 +12,11 @@ namespace sense {
 struct VisibleObjectDistanceEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibleObjectDistanceEvent";
-    static constexpr const char* ALIAS = "VisibleObjectDistanceEvent";
+    static constexpr const char* ALIAS = NAME;
 
     float distance; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectDistanceEvent, 0x48);
 } // namespace sense
-using VisibleObjectDistanceEvent = sense::VisibleObjectDistanceEvent;
 } // namespace RED4ext

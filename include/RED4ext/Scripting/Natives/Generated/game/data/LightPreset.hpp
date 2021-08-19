@@ -13,12 +13,11 @@ namespace game::data {
 struct LightPreset
 {
     static constexpr const char* NAME = "gamedataLightPreset";
-    static constexpr const char* ALIAS = "LightPreset";
+    static constexpr const char* ALIAS = NAME;
 
     CName lightSourcesName; // 00
     TweakDBID preset; // 08
 };
 RED4EXT_ASSERT_SIZE(LightPreset, 0x10);
 } // namespace game::data
-using LightPreset = game::data::LightPreset;
 } // namespace RED4ext

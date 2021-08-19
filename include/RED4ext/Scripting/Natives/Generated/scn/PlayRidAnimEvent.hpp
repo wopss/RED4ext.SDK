@@ -18,15 +18,14 @@ struct PlayRidAnimEvent : scn::PlayFPPControlAnimEvent
     static constexpr const char* ALIAS = NAME;
 
     uint32_t ridVersinon; // F8
-    uint8_t unkFC[0x100 - 0xFC]; // FC
-    scn::RidAnimationSRRefId animResRefId; // 100
-    scn::Marker animOriginMarker; // 110
-    scn::RidActorPlacement actorPlacement; // 170
-    bool actorHasCollision; // 174
-    uint8_t unk175[0x178 - 0x175]; // 175
-    float blendInTrajectoryBone; // 178
-    uint8_t unk17C[0x180 - 0x17C]; // 17C
+    scn::RidAnimationSRRefId animResRefId; // FC
+    scn::Marker animOriginMarker; // 100
+    scn::RidActorPlacement actorPlacement; // 160
+    bool actorHasCollision; // 164
+    uint8_t unk165[0x168 - 0x165]; // 165
+    float blendInTrajectoryBone; // 168
+    uint8_t unk16C[0x170 - 0x16C]; // 16C
 };
-RED4EXT_ASSERT_SIZE(PlayRidAnimEvent, 0x180);
+RED4EXT_ASSERT_SIZE(PlayRidAnimEvent, 0x170);
 } // namespace scn
 } // namespace RED4ext

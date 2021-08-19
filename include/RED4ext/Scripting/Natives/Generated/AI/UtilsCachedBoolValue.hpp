@@ -11,11 +11,10 @@ namespace AI {
 struct UtilsCachedBoolValue
 {
     static constexpr const char* NAME = "AIUtilsCachedBoolValue";
-    static constexpr const char* ALIAS = "CachedBoolValue";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x3 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(UtilsCachedBoolValue, 0x3);
 } // namespace AI
-using CachedBoolValue = AI::UtilsCachedBoolValue;
 } // namespace RED4ext

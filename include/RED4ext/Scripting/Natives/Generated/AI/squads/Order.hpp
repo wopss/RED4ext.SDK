@@ -12,7 +12,7 @@ namespace AI::squads {
 struct Order
 {
     static constexpr const char* NAME = "AIsquadsOrder";
-    static constexpr const char* ALIAS = "SquadOrder";
+    static constexpr const char* ALIAS = NAME;
 
     CName squadAction; // 00
     uint32_t state; // 08
@@ -20,5 +20,4 @@ struct Order
 };
 RED4EXT_ASSERT_SIZE(Order, 0x10);
 } // namespace AI::squads
-using SquadOrder = AI::squads::Order;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct GodModeData
 {
     static constexpr const char* NAME = "gameGodModeData";
-    static constexpr const char* ALIAS = "GodModeData";
+    static constexpr const char* ALIAS = NAME;
 
     game::GodModeType type; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -21,5 +21,4 @@ struct GodModeData
 };
 RED4EXT_ASSERT_SIZE(GodModeData, 0x10);
 } // namespace game
-using GodModeData = game::GodModeData;
 } // namespace RED4ext

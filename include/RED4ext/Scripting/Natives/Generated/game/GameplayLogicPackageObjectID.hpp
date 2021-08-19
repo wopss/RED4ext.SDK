@@ -11,11 +11,10 @@ namespace game {
 struct GameplayLogicPackageObjectID
 {
     static constexpr const char* NAME = "gameGameplayLogicPackageObjectID";
-    static constexpr const char* ALIAS = "GameplayLogicPackageObjectID";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(GameplayLogicPackageObjectID, 0x8);
 } // namespace game
-using GameplayLogicPackageObjectID = game::GameplayLogicPackageObjectID;
 } // namespace RED4ext

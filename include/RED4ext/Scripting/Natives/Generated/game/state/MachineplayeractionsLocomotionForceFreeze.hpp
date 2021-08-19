@@ -14,8 +14,8 @@ struct MachineplayeractionsLocomotionForceFreeze : game::state::Machineplayeract
     static constexpr const char* NAME = "gamestateMachineplayeractionsLocomotionForceFreeze";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk110[0x120 - 0x110]; // 110
+    uint8_t unk120[0x130 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionForceFreeze, 0x120);
+RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionForceFreeze, 0x130);
 } // namespace game::state
 } // namespace RED4ext

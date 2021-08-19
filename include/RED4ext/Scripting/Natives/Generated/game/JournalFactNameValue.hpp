@@ -12,7 +12,7 @@ namespace game {
 struct JournalFactNameValue
 {
     static constexpr const char* NAME = "gameJournalFactNameValue";
-    static constexpr const char* ALIAS = "JournalFactNameValue";
+    static constexpr const char* ALIAS = NAME;
 
     CName factName; // 00
     int32_t factValue; // 08
@@ -20,5 +20,4 @@ struct JournalFactNameValue
 };
 RED4EXT_ASSERT_SIZE(JournalFactNameValue, 0x10);
 } // namespace game
-using JournalFactNameValue = game::JournalFactNameValue;
 } // namespace RED4ext

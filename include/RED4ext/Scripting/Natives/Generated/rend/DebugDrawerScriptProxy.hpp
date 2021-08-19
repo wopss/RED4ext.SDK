@@ -11,11 +11,10 @@ namespace rend {
 struct DebugDrawerScriptProxy
 {
     static constexpr const char* NAME = "rendDebugDrawerScriptProxy";
-    static constexpr const char* ALIAS = "DebugDrawer";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(DebugDrawerScriptProxy, 0x8);
 } // namespace rend
-using DebugDrawer = rend::DebugDrawerScriptProxy;
 } // namespace RED4ext

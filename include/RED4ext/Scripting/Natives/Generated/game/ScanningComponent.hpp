@@ -15,7 +15,7 @@ namespace game {
 struct ScanningComponent : game::Component
 {
     static constexpr const char* NAME = "gameScanningComponent";
-    static constexpr const char* ALIAS = "ScanningComponent";
+    static constexpr const char* ALIAS = NAME;
 
     bool cpoEnableMultiplePlayersScanningModifier; // A8
     bool autoGenerateBoundingSphere; // A9
@@ -30,5 +30,4 @@ struct ScanningComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(ScanningComponent, 0x110);
 } // namespace game
-using ScanningComponent = game::ScanningComponent;
 } // namespace RED4ext

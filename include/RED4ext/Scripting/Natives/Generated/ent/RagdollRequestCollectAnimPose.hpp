@@ -12,10 +12,9 @@ namespace ent {
 struct RagdollRequestCollectAnimPose : red::Event
 {
     static constexpr const char* NAME = "entRagdollRequestCollectAnimPose";
-    static constexpr const char* ALIAS = "RagdollRequestCollectAnimPoseEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(RagdollRequestCollectAnimPose, 0x40);
 } // namespace ent
-using RagdollRequestCollectAnimPoseEvent = ent::RagdollRequestCollectAnimPose;
 } // namespace RED4ext

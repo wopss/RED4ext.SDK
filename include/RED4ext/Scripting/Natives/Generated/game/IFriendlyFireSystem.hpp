@@ -12,10 +12,9 @@ namespace game {
 struct IFriendlyFireSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIFriendlyFireSystem";
-    static constexpr const char* ALIAS = "IFriendlyFireSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IFriendlyFireSystem, 0x48);
 } // namespace game
-using IFriendlyFireSystem = game::IFriendlyFireSystem;
 } // namespace RED4ext

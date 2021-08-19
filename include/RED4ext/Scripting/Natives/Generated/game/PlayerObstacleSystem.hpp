@@ -12,11 +12,10 @@ namespace game {
 struct PlayerObstacleSystem : IScriptable
 {
     static constexpr const char* NAME = "gamePlayerObstacleSystem";
-    static constexpr const char* ALIAS = "PlayerObstacleSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x20E0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(PlayerObstacleSystem, 0x20E0);
 } // namespace game
-using PlayerObstacleSystem = game::PlayerObstacleSystem;
 } // namespace RED4ext

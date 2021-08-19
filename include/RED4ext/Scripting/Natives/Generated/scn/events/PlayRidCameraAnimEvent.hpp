@@ -22,13 +22,12 @@ struct PlayRidCameraAnimEvent : scn::SceneEvent
     NodeRef cameraRef; // 58
     scn::events::RidCameraPlacement cameraPlacement; // 60
     scn::events::PlayAnimEventData animData; // 64
-    uint8_t unk7C[0x80 - 0x7C]; // 7C
-    scn::RidCameraAnimationSRRefId animSRRefId; // 80
-    scn::Marker animOriginMarker; // 90
-    bool activateAsGameCamera; // F0
-    bool controlRenderToTextureState; // F1
-    uint8_t unkF2[0xF8 - 0xF2]; // F2
+    scn::RidCameraAnimationSRRefId animSRRefId; // 7C
+    scn::Marker animOriginMarker; // 80
+    bool activateAsGameCamera; // E0
+    bool controlRenderToTextureState; // E1
+    uint8_t unkE2[0xE8 - 0xE2]; // E2
 };
-RED4EXT_ASSERT_SIZE(PlayRidCameraAnimEvent, 0xF8);
+RED4EXT_ASSERT_SIZE(PlayRidCameraAnimEvent, 0xE8);
 } // namespace scn::events
 } // namespace RED4ext

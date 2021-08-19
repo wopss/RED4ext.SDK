@@ -11,7 +11,7 @@ namespace game {
 struct JournalRequestStateFilter
 {
     static constexpr const char* NAME = "gameJournalRequestStateFilter";
-    static constexpr const char* ALIAS = "JournalRequestStateFilter";
+    static constexpr const char* ALIAS = NAME;
 
     bool inactive; // 00
     bool active; // 01
@@ -20,5 +20,4 @@ struct JournalRequestStateFilter
 };
 RED4EXT_ASSERT_SIZE(JournalRequestStateFilter, 0x4);
 } // namespace game
-using JournalRequestStateFilter = game::JournalRequestStateFilter;
 } // namespace RED4ext

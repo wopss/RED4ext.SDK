@@ -12,10 +12,9 @@ namespace game {
 struct ScanningActionFinishedEvent : red::Event
 {
     static constexpr const char* NAME = "gameScanningActionFinishedEvent";
-    static constexpr const char* ALIAS = "ScanningActionFinishedEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ScanningActionFinishedEvent, 0x40);
 } // namespace game
-using ScanningActionFinishedEvent = game::ScanningActionFinishedEvent;
 } // namespace RED4ext

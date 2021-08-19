@@ -15,7 +15,7 @@ namespace game::ui {
 struct NarrativePlateData
 {
     static constexpr const char* NAME = "gameuiNarrativePlateData";
-    static constexpr const char* ALIAS = "NarrativePlateData";
+    static constexpr const char* ALIAS = NAME;
 
     CString text; // 00
     CString caption; // 20
@@ -23,5 +23,4 @@ struct NarrativePlateData
 };
 RED4EXT_ASSERT_SIZE(NarrativePlateData, 0x50);
 } // namespace game::ui
-using NarrativePlateData = game::ui::NarrativePlateData;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct PopupSettings
 {
     static constexpr const char* NAME = "gamePopupSettings";
-    static constexpr const char* ALIAS = "PopupSettings";
+    static constexpr const char* ALIAS = NAME;
 
     bool closeAtInput; // 00
     bool pauseGame; // 01
@@ -26,5 +26,4 @@ struct PopupSettings
 };
 RED4EXT_ASSERT_SIZE(PopupSettings, 0x1C);
 } // namespace game
-using PopupSettings = game::PopupSettings;
 } // namespace RED4ext

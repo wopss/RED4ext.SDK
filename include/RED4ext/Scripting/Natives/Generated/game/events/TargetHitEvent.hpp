@@ -12,11 +12,10 @@ namespace game::events {
 struct TargetHitEvent : game::events::HitEvent
 {
     static constexpr const char* NAME = "gameeventsTargetHitEvent";
-    static constexpr const char* ALIAS = "gameTargetHitEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkE0[0xF0 - 0xE0]; // E0
 };
 RED4EXT_ASSERT_SIZE(TargetHitEvent, 0xF0);
 } // namespace game::events
-using gameTargetHitEvent = game::events::TargetHitEvent;
 } // namespace RED4ext

@@ -12,12 +12,11 @@ namespace AI {
 struct AdjustableStreamingRangeTarget : game::Object
 {
     static constexpr const char* NAME = "AIAdjustableStreamingRangeTarget";
-    static constexpr const char* ALIAS = "AdjustableStreamingRangeTarget";
+    static constexpr const char* ALIAS = NAME;
 
-    float minStreamingDistance; // 230
-    uint8_t unk234[0x238 - 0x234]; // 234
+    float minStreamingDistance; // 240
+    uint8_t unk244[0x248 - 0x244]; // 244
 };
-RED4EXT_ASSERT_SIZE(AdjustableStreamingRangeTarget, 0x238);
+RED4EXT_ASSERT_SIZE(AdjustableStreamingRangeTarget, 0x248);
 } // namespace AI
-using AdjustableStreamingRangeTarget = AI::AdjustableStreamingRangeTarget;
 } // namespace RED4ext

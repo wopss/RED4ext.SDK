@@ -12,7 +12,7 @@ namespace game::weapon {
 struct AnimFeature_WeaponData : anim::AnimFeature
 {
     static constexpr const char* NAME = "gameweaponAnimFeature_WeaponData";
-    static constexpr const char* ALIAS = "AnimFeature_WeaponData";
+    static constexpr const char* ALIAS = NAME;
 
     float cycleTime; // 40
     float chargePercentage; // 44
@@ -25,5 +25,4 @@ struct AnimFeature_WeaponData : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_WeaponData, 0x58);
 } // namespace game::weapon
-using AnimFeature_WeaponData = game::weapon::AnimFeature_WeaponData;
 } // namespace RED4ext

@@ -14,7 +14,7 @@ namespace game {
 struct NetrunnerPrototypeSpawnRequestEvent : red::Event
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeSpawnRequestEvent";
-    static constexpr const char* ALIAS = "NetrunnerPrototypeSpawnRequestEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName whatToSpawn; // 40
     Vector3 whereToSpawn; // 48
@@ -24,5 +24,4 @@ struct NetrunnerPrototypeSpawnRequestEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(NetrunnerPrototypeSpawnRequestEvent, 0x68);
 } // namespace game
-using NetrunnerPrototypeSpawnRequestEvent = game::NetrunnerPrototypeSpawnRequestEvent;
 } // namespace RED4ext

@@ -15,6 +15,6 @@ struct MachineplayeractionsLocomotionAir : game::state::MachineplayeractionsLoco
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionAir, 0x140);
+RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionAir, 0x150);
 } // namespace game::state
 } // namespace RED4ext

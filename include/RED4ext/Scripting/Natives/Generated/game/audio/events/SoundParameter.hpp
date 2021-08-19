@@ -13,7 +13,7 @@ namespace game::audio::events {
 struct SoundParameter : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsSoundParameter";
-    static constexpr const char* ALIAS = "SoundParameterEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName parameterName; // 40
     float parameterValue; // 48
@@ -21,5 +21,4 @@ struct SoundParameter : red::Event
 };
 RED4EXT_ASSERT_SIZE(SoundParameter, 0x50);
 } // namespace game::audio::events
-using SoundParameterEvent = game::audio::events::SoundParameter;
 } // namespace RED4ext

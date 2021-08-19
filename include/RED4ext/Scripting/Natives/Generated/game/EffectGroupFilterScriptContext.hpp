@@ -12,12 +12,11 @@ namespace game {
 struct EffectGroupFilterScriptContext
 {
     static constexpr const char* NAME = "gameEffectGroupFilterScriptContext";
-    static constexpr const char* ALIAS = "EffectGroupFilterScriptContext";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     DynArray<int32_t> resultIndices; // 08
 };
 RED4EXT_ASSERT_SIZE(EffectGroupFilterScriptContext, 0x18);
 } // namespace game
-using EffectGroupFilterScriptContext = game::EffectGroupFilterScriptContext;
 } // namespace RED4ext

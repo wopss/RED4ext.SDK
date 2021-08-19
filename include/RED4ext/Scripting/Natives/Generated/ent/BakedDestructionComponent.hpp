@@ -17,30 +17,29 @@ namespace ent {
 struct BakedDestructionComponent : ent::PhysicalMeshComponent
 {
     static constexpr const char* NAME = "entBakedDestructionComponent";
-    static constexpr const char* ALIAS = "BakedDestructionComponent";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x250 - 0x230]; // 230
-    RaRef<world::Effect> destructionEffect; // 250
-    RaRef<CMesh> meshFractured; // 258
-    uint8_t unk260[0x280 - 0x260]; // 260
-    CName audioMetadata; // 280
-    CName meshFracturedAppearance; // 288
-    uint8_t unk290[0x2F8 - 0x290]; // 290
-    DataBuffer compiledBufferFractured; // 2F8
-    float damageThreshold; // 320
-    float damageEndurance; // 324
-    float impulseToDamage; // 328
-    float contactToDamage; // 32C
-    uint8_t unk330[0x338 - 0x330]; // 330
-    float numFrames; // 338
-    float frameRate; // 33C
-    bool playOnlyOnce; // 340
-    bool restartOnTrigger; // 341
-    bool disableCollidersOnTrigger; // 342
-    bool accumulateDamage; // 343
-    uint8_t unk344[0x350 - 0x344]; // 344
+    uint8_t unk240[0x260 - 0x240]; // 240
+    RaRef<world::Effect> destructionEffect; // 260
+    RaRef<CMesh> meshFractured; // 268
+    uint8_t unk270[0x290 - 0x270]; // 270
+    CName audioMetadata; // 290
+    CName meshFracturedAppearance; // 298
+    uint8_t unk2A0[0x318 - 0x2A0]; // 2A0
+    DataBuffer compiledBufferFractured; // 318
+    float damageThreshold; // 340
+    float damageEndurance; // 344
+    float impulseToDamage; // 348
+    float contactToDamage; // 34C
+    uint8_t unk350[0x358 - 0x350]; // 350
+    float numFrames; // 358
+    float frameRate; // 35C
+    bool playOnlyOnce; // 360
+    bool restartOnTrigger; // 361
+    bool disableCollidersOnTrigger; // 362
+    bool accumulateDamage; // 363
+    uint8_t unk364[0x370 - 0x364]; // 364
 };
-RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x350);
+RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x370);
 } // namespace ent
-using BakedDestructionComponent = ent::BakedDestructionComponent;
 } // namespace RED4ext

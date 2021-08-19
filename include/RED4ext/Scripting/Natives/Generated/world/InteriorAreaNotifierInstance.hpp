@@ -14,8 +14,8 @@ struct InteriorAreaNotifierInstance : world::ITriggerAreaNotiferInstance
     static constexpr const char* NAME = "worldInteriorAreaNotifierInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0xA0 - 0x58]; // 58
+    uint8_t unk58[0xB8 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(InteriorAreaNotifierInstance, 0xA0);
+RED4EXT_ASSERT_SIZE(InteriorAreaNotifierInstance, 0xB8);
 } // namespace world
 } // namespace RED4ext

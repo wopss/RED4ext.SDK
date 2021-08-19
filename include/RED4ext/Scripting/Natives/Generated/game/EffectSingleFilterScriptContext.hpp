@@ -11,11 +11,10 @@ namespace game {
 struct EffectSingleFilterScriptContext
 {
     static constexpr const char* NAME = "gameEffectSingleFilterScriptContext";
-    static constexpr const char* ALIAS = "EffectSingleFilterScriptContext";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(EffectSingleFilterScriptContext, 0x8);
 } // namespace game
-using EffectSingleFilterScriptContext = game::EffectSingleFilterScriptContext;
 } // namespace RED4ext

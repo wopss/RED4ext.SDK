@@ -12,7 +12,7 @@ namespace game {
 struct TutorialOverlayUserData : ink::UserData
 {
     static constexpr const char* NAME = "gameTutorialOverlayUserData";
-    static constexpr const char* ALIAS = "TutorialOverlayUserData";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t overlayId; // 40
     bool hideOnInput; // 44
@@ -20,5 +20,4 @@ struct TutorialOverlayUserData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayUserData, 0x48);
 } // namespace game
-using TutorialOverlayUserData = game::TutorialOverlayUserData;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace game {
 struct IActivityLogSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIActivityLogSystem";
-    static constexpr const char* ALIAS = "IActivityLogSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IActivityLogSystem, 0x48);
 } // namespace game
-using IActivityLogSystem = game::IActivityLogSystem;
 } // namespace RED4ext

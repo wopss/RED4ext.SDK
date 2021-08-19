@@ -14,12 +14,11 @@ namespace ink {
 struct WidgetReference
 {
     static constexpr const char* NAME = "inkWidgetReference";
-    static constexpr const char* ALIAS = "inkWidgetRef";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     WeakHandle<ink::Widget> widget; // 08
 };
 RED4EXT_ASSERT_SIZE(WidgetReference, 0x18);
 } // namespace ink
-using inkWidgetRef = ink::WidgetReference;
 } // namespace RED4ext

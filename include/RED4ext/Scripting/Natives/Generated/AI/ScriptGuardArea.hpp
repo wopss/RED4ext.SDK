@@ -11,11 +11,10 @@ namespace AI {
 struct ScriptGuardArea
 {
     static constexpr const char* NAME = "AIScriptGuardArea";
-    static constexpr const char* ALIAS = "RestrictMovementArea";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(ScriptGuardArea, 0x8);
 } // namespace AI
-using RestrictMovementArea = AI::ScriptGuardArea;
 } // namespace RED4ext

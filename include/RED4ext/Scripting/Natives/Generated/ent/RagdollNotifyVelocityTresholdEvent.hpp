@@ -13,11 +13,10 @@ namespace ent {
 struct RagdollNotifyVelocityTresholdEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollNotifyVelocityTresholdEvent";
-    static constexpr const char* ALIAS = "RagdollNotifyVelocityTresholdEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 velocity; // 40
 };
 RED4EXT_ASSERT_SIZE(RagdollNotifyVelocityTresholdEvent, 0x50);
 } // namespace ent
-using RagdollNotifyVelocityTresholdEvent = ent::RagdollNotifyVelocityTresholdEvent;
 } // namespace RED4ext

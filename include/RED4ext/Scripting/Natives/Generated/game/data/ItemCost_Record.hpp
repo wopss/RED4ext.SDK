@@ -12,11 +12,10 @@ namespace game::data {
 struct ItemCost_Record : game::data::ObjectActionCost_Record
 {
     static constexpr const char* NAME = "gamedataItemCost_Record";
-    static constexpr const char* ALIAS = "ItemCost_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(ItemCost_Record, 0x58);
 } // namespace game::data
-using ItemCost_Record = game::data::ItemCost_Record;
 } // namespace RED4ext

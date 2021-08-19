@@ -14,11 +14,10 @@ namespace ent {
 struct LocalizationStringComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entLocalizationStringComponent";
-    static constexpr const char* ALIAS = "LocalizationStringComponent";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<ent::LocalizationStringMapEntry> Strings; // 90
 };
 RED4EXT_ASSERT_SIZE(LocalizationStringComponent, 0xA0);
 } // namespace ent
-using LocalizationStringComponent = ent::LocalizationStringComponent;
 } // namespace RED4ext

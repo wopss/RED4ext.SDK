@@ -12,7 +12,7 @@
 
 namespace RED4ext
 {
-struct IRTTIType;
+struct CBaseRTTIType;
 
 struct CDateTime
 {
@@ -104,7 +104,7 @@ struct Variant
     {
     }
 
-    Variant(IRTTIType* aType, ScriptInstance aValue)
+    Variant(CBaseRTTIType* aType, ScriptInstance aValue)
         : type(reinterpret_cast<std::uintptr_t>(aType))
         , value(reinterpret_cast<std::uintptr_t>(aValue))
         , unknown(0)
@@ -229,10 +229,10 @@ RED4EXT_ASSERT_SIZE(CurveData<float>, 0x38);
 template<typename T>
 struct ScriptRef
 {
-    uint8_t unk00[0x10];  // 00
-    IRTTIType* innerType; // 10
-    T* ref;               // 18
-    CName hash;           // 20
+    uint8_t unk00[0x10];      // 00
+    CBaseRTTIType* innerType; // 10
+    T* ref;                   // 18
+    CName hash;               // 20
 };
 RED4EXT_ASSERT_SIZE(ScriptRef<void>, 0x28);
 

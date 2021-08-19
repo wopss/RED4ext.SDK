@@ -12,10 +12,9 @@ namespace game {
 struct IPhotoModeSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPhotoModeSystem";
-    static constexpr const char* ALIAS = "IPhotoModeSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IPhotoModeSystem, 0x48);
 } // namespace game
-using IPhotoModeSystem = game::IPhotoModeSystem;
 } // namespace RED4ext

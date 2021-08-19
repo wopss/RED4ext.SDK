@@ -12,11 +12,10 @@ namespace game::data {
 struct SpawnableObjectPriority_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSpawnableObjectPriority_Record";
-    static constexpr const char* ALIAS = "SpawnableObjectPriority_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SpawnableObjectPriority_Record, 0x58);
 } // namespace game::data
-using SpawnableObjectPriority_Record = game::data::SpawnableObjectPriority_Record;
 } // namespace RED4ext

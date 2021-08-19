@@ -14,7 +14,7 @@ namespace game::ui {
 struct HoldIndicatorGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiHoldIndicatorGameController";
-    static constexpr const char* ALIAS = "HoldIndicatorGameController";
+    static constexpr const char* ALIAS = NAME;
 
     game::ui::HoldIndicatorProgressCallback HoldProgress; // D0
     ink::EmptyCallback HoldStart; // 108
@@ -24,5 +24,4 @@ struct HoldIndicatorGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(HoldIndicatorGameController, 0x1D8);
 } // namespace game::ui
-using HoldIndicatorGameController = game::ui::HoldIndicatorGameController;
 } // namespace RED4ext

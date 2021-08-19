@@ -12,10 +12,9 @@ namespace work {
 struct IScriptedCondition : IScriptable
 {
     static constexpr const char* NAME = "workIScriptedCondition";
-    static constexpr const char* ALIAS = "WorkspotCondition";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IScriptedCondition, 0x40);
 } // namespace work
-using WorkspotCondition = work::IScriptedCondition;
 } // namespace RED4ext

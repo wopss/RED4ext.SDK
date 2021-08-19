@@ -12,7 +12,9 @@ enum class PSMUpperBodyStates : uint32_t
     SwitchItems = 1,
     SwitchCyberware = 2,
     Reload = 3,
-    Aim = 4,
+    TemporaryUnequip = 4,
+    ForceEmptyHands = 5,
+    Aim = 6,
     Any = 4294967295,
 };
 } // namespace game

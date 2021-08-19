@@ -12,10 +12,9 @@ namespace game::data {
 struct TerminalScreenType_Record : game::data::DeviceScreenType_Record
 {
     static constexpr const char* NAME = "gamedataTerminalScreenType_Record";
-    static constexpr const char* ALIAS = "TerminalScreenType_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(TerminalScreenType_Record, 0x58);
 } // namespace game::data
-using TerminalScreenType_Record = game::data::TerminalScreenType_Record;
 } // namespace RED4ext

@@ -13,12 +13,11 @@ namespace game::ui {
 struct RoachRaceChunkLayer
 {
     static constexpr const char* NAME = "gameuiRoachRaceChunkLayer";
-    static constexpr const char* ALIAS = "RoachRaceChunkLayer";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x10 - 0x0]; // 0
     DynArray<game::ui::RoachRaceChunk> chunks; // 10
 };
 RED4EXT_ASSERT_SIZE(RoachRaceChunkLayer, 0x20);
 } // namespace game::ui
-using RoachRaceChunkLayer = game::ui::RoachRaceChunkLayer;
 } // namespace RED4ext

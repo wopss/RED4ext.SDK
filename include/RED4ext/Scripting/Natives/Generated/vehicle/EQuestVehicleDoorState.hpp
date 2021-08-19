@@ -27,5 +27,4 @@ enum class EQuestVehicleDoorState : uint32_t
     Invalid = 16,
 };
 } // namespace vehicle
-using EQuestVehicleDoorState = vehicle::EQuestVehicleDoorState;
 } // namespace RED4ext

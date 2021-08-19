@@ -34,8 +34,13 @@ struct DirectorSystemSettings : audio::AudioMetadata
     float idleTimeBeforeAllowingOwMusicChange; // 88
     float drivingStreamingAmbientEmittersDistanceRolloff; // 8C
     float lowHealthStateMaxTime; // 90
-    uint8_t unk94[0xA8 - 0x94]; // 94
+    float lowGearMaxTrafficSpeed; // 94
+    float lowGearAccelerationThreshold; // 98
+    float mediumGearMaxTrafficSpeed; // 9C
+    float mediumGearAccelerationThreshold; // A0
+    float highGearAccelerationThreshold; // A4
+    uint8_t unkA8[0xB8 - 0xA8]; // A8
 };
-RED4EXT_ASSERT_SIZE(DirectorSystemSettings, 0xA8);
+RED4EXT_ASSERT_SIZE(DirectorSystemSettings, 0xB8);
 } // namespace audio
 } // namespace RED4ext

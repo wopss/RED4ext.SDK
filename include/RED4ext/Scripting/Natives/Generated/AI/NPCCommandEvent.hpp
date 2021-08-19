@@ -15,11 +15,10 @@ namespace AI {
 struct NPCCommandEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AINPCCommandEvent";
-    static constexpr const char* ALIAS = "AICommandEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<AI::Command> command; // 50
 };
 RED4EXT_ASSERT_SIZE(NPCCommandEvent, 0x60);
 } // namespace AI
-using AICommandEvent = AI::NPCCommandEvent;
 } // namespace RED4ext

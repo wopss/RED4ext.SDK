@@ -17,7 +17,7 @@ namespace game::ui {
 struct MappinUIProfile
 {
     static constexpr const char* NAME = "gameuiMappinUIProfile";
-    static constexpr const char* ALIAS = "MappinUIProfile";
+    static constexpr const char* ALIAS = NAME;
 
     red::ResourceReferenceScriptToken widgetResource; // 00
     CName widgetLibraryID; // 08
@@ -26,5 +26,4 @@ struct MappinUIProfile
 };
 RED4EXT_ASSERT_SIZE(MappinUIProfile, 0x30);
 } // namespace game::ui
-using MappinUIProfile = game::ui::MappinUIProfile;
 } // namespace RED4ext

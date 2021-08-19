@@ -15,6 +15,6 @@ struct DeviceNodeInstance : world::EntityNodeInstance
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(DeviceNodeInstance, 0xE0);
+RED4EXT_ASSERT_SIZE(DeviceNodeInstance, 0xF0);
 } // namespace world
 } // namespace RED4ext

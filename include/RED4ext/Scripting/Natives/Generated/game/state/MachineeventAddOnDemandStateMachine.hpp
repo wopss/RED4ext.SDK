@@ -17,7 +17,7 @@ namespace game::state {
 struct MachineeventAddOnDemandStateMachine : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventAddOnDemandStateMachine";
-    static constexpr const char* ALIAS = "PSMAddOnDemandStateMachine";
+    static constexpr const char* ALIAS = NAME;
 
     CName stateMachineName; // 40
     game::state::MachineStateMachineInstanceData instanceData; // 48
@@ -27,5 +27,4 @@ struct MachineeventAddOnDemandStateMachine : red::Event
 };
 RED4EXT_ASSERT_SIZE(MachineeventAddOnDemandStateMachine, 0x80);
 } // namespace game::state
-using PSMAddOnDemandStateMachine = game::state::MachineeventAddOnDemandStateMachine;
 } // namespace RED4ext

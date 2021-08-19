@@ -16,12 +16,11 @@ namespace game {
 struct JournalInternetImage : game::JournalInternetBase
 {
     static constexpr const char* NAME = "gameJournalInternetImage";
-    static constexpr const char* ALIAS = "JournalInternetImage";
+    static constexpr const char* ALIAS = NAME;
 
     RaRef<ink::TextureAtlas> textureAtlas; // 70
     CName texturePart; // 78
 };
 RED4EXT_ASSERT_SIZE(JournalInternetImage, 0x80);
 } // namespace game
-using JournalInternetImage = game::JournalInternetImage;
 } // namespace RED4ext

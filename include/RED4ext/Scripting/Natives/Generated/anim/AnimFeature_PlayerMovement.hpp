@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_PlayerMovement : anim::AnimFeature_Movement
 {
     static constexpr const char* NAME = "animAnimFeature_PlayerMovement";
-    static constexpr const char* ALIAS = "AnimFeature_PlayerMovement";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 facingDirection; // 70
     float standingTerrainAngle; // 80
@@ -24,5 +24,4 @@ struct AnimFeature_PlayerMovement : anim::AnimFeature_Movement
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_PlayerMovement, 0x90);
 } // namespace anim
-using AnimFeature_PlayerMovement = anim::AnimFeature_PlayerMovement;
 } // namespace RED4ext

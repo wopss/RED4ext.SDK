@@ -14,7 +14,7 @@ namespace ink {
 struct ListController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkListController";
-    static constexpr const char* ALIAS = "ListController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::ListControllerCallback ItemSelected; // 68
     ink::ListControllerCallback ItemActivated; // A0
@@ -26,5 +26,4 @@ struct ListController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ListController, 0x118);
 } // namespace ink
-using ListController = ink::ListController;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace ent {
 struct IKTargetRemoveEvent : red::Event
 {
     static constexpr const char* NAME = "entIKTargetRemoveEvent";
-    static constexpr const char* ALIAS = "IKTargetRemoveEvent";
+    static constexpr const char* ALIAS = NAME;
 
     anim::IKTargetRef ikTargetRef; // 40
 };
 RED4EXT_ASSERT_SIZE(IKTargetRemoveEvent, 0x50);
 } // namespace ent
-using IKTargetRemoveEvent = ent::IKTargetRemoveEvent;
 } // namespace RED4ext

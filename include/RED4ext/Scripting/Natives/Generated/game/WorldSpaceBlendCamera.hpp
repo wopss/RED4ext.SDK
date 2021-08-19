@@ -14,8 +14,8 @@ struct WorldSpaceBlendCamera : ent::BaseCameraComponent
     static constexpr const char* NAME = "gameWorldSpaceBlendCamera";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk1C0[0x230 - 0x1C0]; // 1C0
+    uint8_t unk1D0[0x240 - 0x1D0]; // 1D0
 };
-RED4EXT_ASSERT_SIZE(WorldSpaceBlendCamera, 0x230);
+RED4EXT_ASSERT_SIZE(WorldSpaceBlendCamera, 0x240);
 } // namespace game
 } // namespace RED4ext

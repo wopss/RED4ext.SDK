@@ -11,7 +11,7 @@ namespace game::ui {
 struct PlayerBioMonitor
 {
     static constexpr const char* NAME = "gameuiPlayerBioMonitor";
-    static constexpr const char* ALIAS = "PlayerBioMonitor";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t currentHealth; // 00
     int32_t maximumHealth; // 04
@@ -21,5 +21,4 @@ struct PlayerBioMonitor
 };
 RED4EXT_ASSERT_SIZE(PlayerBioMonitor, 0x14);
 } // namespace game::ui
-using PlayerBioMonitor = game::ui::PlayerBioMonitor;
 } // namespace RED4ext

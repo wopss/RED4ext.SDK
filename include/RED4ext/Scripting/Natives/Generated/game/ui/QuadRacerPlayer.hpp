@@ -14,7 +14,7 @@ namespace game::ui {
 struct QuadRacerPlayer : game::ui::SideScrollerMiniGamePlayerController
 {
     static constexpr const char* NAME = "gameuiQuadRacerPlayer";
-    static constexpr const char* ALIAS = "QuadRacerPlayer";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk78[0x90 - 0x78]; // 78
     CName leftTurnAtlasRegion; // 90
@@ -28,5 +28,4 @@ struct QuadRacerPlayer : game::ui::SideScrollerMiniGamePlayerController
 };
 RED4EXT_ASSERT_SIZE(QuadRacerPlayer, 0x120);
 } // namespace game::ui
-using QuadRacerPlayer = game::ui::QuadRacerPlayer;
 } // namespace RED4ext

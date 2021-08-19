@@ -12,10 +12,9 @@ namespace AI {
 struct IReactionSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "AIIReactionSystem";
-    static constexpr const char* ALIAS = "IReactionSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IReactionSystem, 0x48);
 } // namespace AI
-using IReactionSystem = AI::IReactionSystem;
 } // namespace RED4ext

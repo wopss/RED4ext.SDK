@@ -13,12 +13,11 @@ namespace game::ui {
 struct ContraPlatform : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiContraPlatform";
-    static constexpr const char* ALIAS = "ContraPlatform";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkC0[0xC8 - 0xC0]; // C0
     ink::ImageWidgetReference image; // C8
 };
 RED4EXT_ASSERT_SIZE(ContraPlatform, 0xE0);
 } // namespace game::ui
-using ContraPlatform = game::ui::ContraPlatform;
 } // namespace RED4ext

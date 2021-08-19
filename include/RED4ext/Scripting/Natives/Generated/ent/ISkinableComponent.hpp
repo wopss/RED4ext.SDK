@@ -12,11 +12,10 @@ namespace ent {
 struct ISkinableComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entISkinableComponent";
-    static constexpr const char* ALIAS = "ISkinableComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk120[0x130 - 0x120]; // 120
 };
 RED4EXT_ASSERT_SIZE(ISkinableComponent, 0x130);
 } // namespace ent
-using ISkinableComponent = ent::ISkinableComponent;
 } // namespace RED4ext

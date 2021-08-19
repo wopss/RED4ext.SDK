@@ -12,11 +12,10 @@ namespace AI {
 struct CommandsManager : AI::ICommandsManager
 {
     static constexpr const char* NAME = "AICommandsManager";
-    static constexpr const char* ALIAS = "CommandsManager";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CommandsManager, 0x58);
 } // namespace AI
-using CommandsManager = AI::CommandsManager;
 } // namespace RED4ext

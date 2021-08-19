@@ -16,7 +16,7 @@ namespace game::events {
 struct AttitudeChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsAttitudeChangedEvent";
-    static constexpr const char* ALIAS = "AttitudeChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::AttitudeAgent> otherAgent; // 40
     EAIAttitude attitude; // 50
@@ -24,5 +24,4 @@ struct AttitudeChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AttitudeChangedEvent, 0x58);
 } // namespace game::events
-using AttitudeChangedEvent = game::events::AttitudeChangedEvent;
 } // namespace RED4ext

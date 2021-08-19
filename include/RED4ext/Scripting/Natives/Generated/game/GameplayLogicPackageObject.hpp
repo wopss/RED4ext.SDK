@@ -12,11 +12,10 @@ namespace game {
 struct GameplayLogicPackageObject : IScriptable
 {
     static constexpr const char* NAME = "gameGameplayLogicPackageObject";
-    static constexpr const char* ALIAS = "GameplayLogicPackageObject";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x70 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(GameplayLogicPackageObject, 0x70);
 } // namespace game
-using GameplayLogicPackageObject = game::GameplayLogicPackageObject;
 } // namespace RED4ext

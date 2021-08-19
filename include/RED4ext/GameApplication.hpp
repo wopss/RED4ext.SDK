@@ -54,8 +54,9 @@ struct CGameApplication : CBaseGameApplication
         int8_t unk3;   // 03
         int32_t unk4;  // 04
         int64_t unk8;  // 08
-        int8_t unk10;  // 10
-        int16_t unk12; // 12
+        int32_t unk10; // 10
+        int8_t unk14;  // 14
+        int16_t unk16; // 16
         CString unk18; // 18
         CString unk38; // 38
         int64_t unk58; // 58

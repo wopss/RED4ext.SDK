@@ -12,11 +12,10 @@ namespace game::data {
 struct TemporalPrereq_Record : game::data::IPrereq_Record
 {
     static constexpr const char* NAME = "gamedataTemporalPrereq_Record";
-    static constexpr const char* ALIAS = "TemporalPrereq_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(TemporalPrereq_Record, 0x58);
 } // namespace game::data
-using TemporalPrereq_Record = game::data::TemporalPrereq_Record;
 } // namespace RED4ext

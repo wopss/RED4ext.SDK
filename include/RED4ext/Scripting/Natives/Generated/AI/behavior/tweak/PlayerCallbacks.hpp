@@ -13,8 +13,8 @@ struct PlayerCallbacks
     static constexpr const char* NAME = "AIbehaviortweakPlayerCallbacks";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x14 - 0x0]; // 0
+    uint8_t unk00[0x50 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(PlayerCallbacks, 0x14);
+RED4EXT_ASSERT_SIZE(PlayerCallbacks, 0x50);
 } // namespace AI::behavior::tweak
 } // namespace RED4ext

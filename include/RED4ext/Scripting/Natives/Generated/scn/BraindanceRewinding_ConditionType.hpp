@@ -7,6 +7,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/BraindanceSpeed.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/IBraindanceConditionType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/SceneVersionCheck.hpp>
 
 namespace RED4ext
 {
@@ -21,7 +22,9 @@ struct BraindanceRewinding_ConditionType : scn::IBraindanceConditionType
     scn::BraindanceSpeed speed; // 38
     uint8_t unk39[0x40 - 0x39]; // 39
     RaRef<scn::SceneResource> sceneFile; // 40
+    scn::SceneVersionCheck SceneVersion; // 48
+    uint8_t unk49[0x50 - 0x49]; // 49
 };
-RED4EXT_ASSERT_SIZE(BraindanceRewinding_ConditionType, 0x48);
+RED4EXT_ASSERT_SIZE(BraindanceRewinding_ConditionType, 0x50);
 } // namespace scn
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace game {
 struct SignalUserData : IScriptable
 {
     static constexpr const char* NAME = "gameSignalUserData";
-    static constexpr const char* ALIAS = "SignalUserData";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(SignalUserData, 0x40);
 } // namespace game
-using SignalUserData = game::SignalUserData;
 } // namespace RED4ext

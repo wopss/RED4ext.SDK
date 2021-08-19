@@ -12,10 +12,9 @@ namespace game::ui {
 struct MinimapQuestMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapQuestMappinController";
-    static constexpr const char* ALIAS = "MinimapQuestMappinController";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(MinimapQuestMappinController, 0x210);
 } // namespace game::ui
-using MinimapQuestMappinController = game::ui::MinimapQuestMappinController;
 } // namespace RED4ext

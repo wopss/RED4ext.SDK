@@ -12,12 +12,11 @@ namespace game {
 struct PlayerLevelBasedQuestRequestFilter : game::CustomRequestFilter
 {
     static constexpr const char* NAME = "gamePlayerLevelBasedQuestRequestFilter";
-    static constexpr const char* ALIAS = "PlayerLevelBasedQuestRequestFilter";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t percentMargin; // 08
     uint8_t unk0C[0x18 - 0xC]; // C
 };
 RED4EXT_ASSERT_SIZE(PlayerLevelBasedQuestRequestFilter, 0x18);
 } // namespace game
-using PlayerLevelBasedQuestRequestFilter = game::PlayerLevelBasedQuestRequestFilter;
 } // namespace RED4ext

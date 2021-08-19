@@ -14,8 +14,8 @@ struct EffectAttachmentComponent : ent::IComponent
     static constexpr const char* NAME = "entEffectAttachmentComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xD8 - 0x90]; // 90
+    uint8_t unk90[0xB0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(EffectAttachmentComponent, 0xD8);
+RED4EXT_ASSERT_SIZE(EffectAttachmentComponent, 0xB0);
 } // namespace ent
 } // namespace RED4ext

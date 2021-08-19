@@ -12,11 +12,10 @@ namespace game {
 struct SpatialQueriesSystem : game::ISpatialQueriesSystem
 {
     static constexpr const char* NAME = "gameSpatialQueriesSystem";
-    static constexpr const char* ALIAS = "SpatialQueriesSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x78 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SpatialQueriesSystem, 0x78);
 } // namespace game
-using SpatialQueriesSystem = game::SpatialQueriesSystem;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::ui {
 struct IconsNameResolver : IScriptable
 {
     static constexpr const char* NAME = "gameuiIconsNameResolver";
-    static constexpr const char* ALIAS = "IconsNameResolver";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x70 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(IconsNameResolver, 0x70);
 } // namespace game::ui
-using IconsNameResolver = game::ui::IconsNameResolver;
 } // namespace RED4ext

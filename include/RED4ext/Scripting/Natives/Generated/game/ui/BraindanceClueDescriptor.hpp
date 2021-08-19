@@ -14,7 +14,7 @@ namespace game::ui {
 struct BraindanceClueDescriptor
 {
     static constexpr const char* NAME = "gameuiBraindanceClueDescriptor";
-    static constexpr const char* ALIAS = "BraindanceClueDescriptor";
+    static constexpr const char* ALIAS = NAME;
 
     game::ui::EClueDescriptorMode mode; // 00
     float startTime; // 04
@@ -24,5 +24,4 @@ struct BraindanceClueDescriptor
 };
 RED4EXT_ASSERT_SIZE(BraindanceClueDescriptor, 0x18);
 } // namespace game::ui
-using BraindanceClueDescriptor = game::ui::BraindanceClueDescriptor;
 } // namespace RED4ext

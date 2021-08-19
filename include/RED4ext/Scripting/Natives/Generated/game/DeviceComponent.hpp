@@ -12,10 +12,9 @@ namespace game {
 struct DeviceComponent : game::Component
 {
     static constexpr const char* NAME = "gameDeviceComponent";
-    static constexpr const char* ALIAS = "DeviceComponent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(DeviceComponent, 0xA8);
 } // namespace game
-using DeviceComponent = game::DeviceComponent;
 } // namespace RED4ext

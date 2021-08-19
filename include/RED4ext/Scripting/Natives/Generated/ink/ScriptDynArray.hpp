@@ -12,11 +12,10 @@ namespace ink {
 struct ScriptDynArray : IScriptable
 {
     static constexpr const char* NAME = "inkScriptDynArray";
-    static constexpr const char* ALIAS = "inkArray";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x58 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ScriptDynArray, 0x58);
 } // namespace ink
-using inkArray = ink::ScriptDynArray;
 } // namespace RED4ext

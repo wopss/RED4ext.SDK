@@ -12,11 +12,10 @@ namespace game::data {
 struct WorldMapFilter_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWorldMapFilter_Record";
-    static constexpr const char* ALIAS = "WorldMapFilter_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(WorldMapFilter_Record, 0x58);
 } // namespace game::data
-using WorldMapFilter_Record = game::data::WorldMapFilter_Record;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace ent {
 struct AreaEnteredEvent : ent::TriggerEvent
 {
     static constexpr const char* NAME = "entAreaEnteredEvent";
-    static constexpr const char* ALIAS = "AreaEnteredEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(AreaEnteredEvent, 0x80);
 } // namespace ent
-using AreaEnteredEvent = ent::AreaEnteredEvent;
 } // namespace RED4ext

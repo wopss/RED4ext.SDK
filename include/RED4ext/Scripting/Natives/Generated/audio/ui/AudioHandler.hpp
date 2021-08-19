@@ -12,11 +12,10 @@ namespace audio::ui {
 struct AudioHandler : IScriptable
 {
     static constexpr const char* NAME = "audiouiAudioHandler";
-    static constexpr const char* ALIAS = "UIAudioHandler";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x60 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(AudioHandler, 0x60);
 } // namespace audio::ui
-using UIAudioHandler = audio::ui::AudioHandler;
 } // namespace RED4ext

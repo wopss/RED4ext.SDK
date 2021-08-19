@@ -17,7 +17,7 @@ namespace game {
 struct StimuliMergeInfo
 {
     static constexpr const char* NAME = "gameStimuliMergeInfo";
-    static constexpr const char* ALIAS = "StimuliMergeInfo";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 position; // 00
     WeakHandle<game::Object> instigator; // 10
@@ -28,5 +28,4 @@ struct StimuliMergeInfo
 };
 RED4EXT_ASSERT_SIZE(StimuliMergeInfo, 0x40);
 } // namespace game
-using StimuliMergeInfo = game::StimuliMergeInfo;
 } // namespace RED4ext

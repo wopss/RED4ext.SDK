@@ -13,11 +13,10 @@ namespace game::ui {
 struct MinimapPingSystemMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapPingSystemMappinController";
-    static constexpr const char* ALIAS = "MinimapPingSystemMappinController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::WidgetReference rootWidget; // 210
 };
 RED4EXT_ASSERT_SIZE(MinimapPingSystemMappinController, 0x228);
 } // namespace game::ui
-using MinimapPingSystemMappinController = game::ui::MinimapPingSystemMappinController;
 } // namespace RED4ext

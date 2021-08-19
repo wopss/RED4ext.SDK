@@ -12,7 +12,7 @@ namespace game::ui {
 struct PanzerBonus : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerBonus";
-    static constexpr const char* ALIAS = "PanzerBonus";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkC0[0xD0 - 0xC0]; // C0
     float fallingSpeed; // D0
@@ -20,5 +20,4 @@ struct PanzerBonus : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 };
 RED4EXT_ASSERT_SIZE(PanzerBonus, 0xD8);
 } // namespace game::ui
-using PanzerBonus = game::ui::PanzerBonus;
 } // namespace RED4ext

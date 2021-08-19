@@ -13,11 +13,10 @@ namespace sense {
 struct SimpleBox : sense::IShape
 {
     static constexpr const char* NAME = "senseSimpleBox";
-    static constexpr const char* ALIAS = "SenseBox";
+    static constexpr const char* ALIAS = NAME;
 
     Box box; // 50
 };
 RED4EXT_ASSERT_SIZE(SimpleBox, 0x70);
 } // namespace sense
-using SenseBox = sense::SimpleBox;
 } // namespace RED4ext

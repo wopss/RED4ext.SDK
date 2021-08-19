@@ -14,8 +14,8 @@ struct GarmentSkinnedMeshComponent : ent::SkinnedMeshComponent
     static constexpr const char* NAME = "entGarmentSkinnedMeshComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk260[0x2C0 - 0x260]; // 260
+    uint8_t unk270[0x2D0 - 0x270]; // 270
 };
-RED4EXT_ASSERT_SIZE(GarmentSkinnedMeshComponent, 0x2C0);
+RED4EXT_ASSERT_SIZE(GarmentSkinnedMeshComponent, 0x2D0);
 } // namespace ent
 } // namespace RED4ext

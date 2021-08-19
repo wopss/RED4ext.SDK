@@ -12,10 +12,9 @@ namespace game::ui {
 struct BackpackMainGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiBackpackMainGameController";
-    static constexpr const char* ALIAS = "BackpackMainGameController";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(BackpackMainGameController, 0xD0);
 } // namespace game::ui
-using BackpackMainGameController = game::ui::BackpackMainGameController;
 } // namespace RED4ext

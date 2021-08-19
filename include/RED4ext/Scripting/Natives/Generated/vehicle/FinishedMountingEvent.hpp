@@ -16,7 +16,7 @@ namespace vehicle {
 struct FinishedMountingEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleFinishedMountingEvent";
-    static constexpr const char* ALIAS = "VehicleFinishedMountingEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName slotID; // 40
     bool isMounting; // 48
@@ -25,5 +25,4 @@ struct FinishedMountingEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(FinishedMountingEvent, 0x60);
 } // namespace vehicle
-using VehicleFinishedMountingEvent = vehicle::FinishedMountingEvent;
 } // namespace RED4ext

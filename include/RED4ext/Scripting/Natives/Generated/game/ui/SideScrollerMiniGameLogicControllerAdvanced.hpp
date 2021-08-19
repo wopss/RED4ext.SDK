@@ -18,7 +18,7 @@ namespace game::ui {
 struct SideScrollerMiniGameLogicControllerAdvanced : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameLogicControllerAdvanced";
-    static constexpr const char* ALIAS = "MinigameLogicControllerAdvanced";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk68[0xB0 - 0x68]; // 68
     float baseSpeed; // B0
@@ -35,5 +35,4 @@ struct SideScrollerMiniGameLogicControllerAdvanced : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(SideScrollerMiniGameLogicControllerAdvanced, 0x138);
 } // namespace game::ui
-using MinigameLogicControllerAdvanced = game::ui::SideScrollerMiniGameLogicControllerAdvanced;
 } // namespace RED4ext

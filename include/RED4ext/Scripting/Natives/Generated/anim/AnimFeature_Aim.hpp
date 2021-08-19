@@ -13,12 +13,11 @@ namespace anim {
 struct AnimFeature_Aim : anim::AnimFeature_BasicAim
 {
     static constexpr const char* NAME = "animAnimFeature_Aim";
-    static constexpr const char* ALIAS = "AnimFeature_Aim";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
     Vector4 aimPoint; // 50
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_Aim, 0x60);
 } // namespace anim
-using AnimFeature_Aim = anim::AnimFeature_Aim;
 } // namespace RED4ext

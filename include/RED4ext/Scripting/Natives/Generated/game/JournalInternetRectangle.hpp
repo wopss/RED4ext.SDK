@@ -12,10 +12,9 @@ namespace game {
 struct JournalInternetRectangle : game::JournalInternetBase
 {
     static constexpr const char* NAME = "gameJournalInternetRectangle";
-    static constexpr const char* ALIAS = "JournalInternetRectangle";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(JournalInternetRectangle, 0x70);
 } // namespace game
-using JournalInternetRectangle = game::JournalInternetRectangle;
 } // namespace RED4ext

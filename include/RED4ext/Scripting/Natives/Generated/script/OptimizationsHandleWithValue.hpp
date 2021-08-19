@@ -14,7 +14,7 @@ namespace script {
 struct OptimizationsHandleWithValue
 {
     static constexpr const char* NAME = "scriptOptimizationsHandleWithValue";
-    static constexpr const char* ALIAS = "HandleWithValue";
+    static constexpr const char* ALIAS = NAME;
 
     float value; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -22,5 +22,4 @@ struct OptimizationsHandleWithValue
 };
 RED4EXT_ASSERT_SIZE(OptimizationsHandleWithValue, 0x18);
 } // namespace script
-using HandleWithValue = script::OptimizationsHandleWithValue;
 } // namespace RED4ext

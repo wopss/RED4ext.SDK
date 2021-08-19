@@ -12,10 +12,9 @@ namespace game {
 struct IDebugCheatsSystem : game::IReplicatedGameSystem
 {
     static constexpr const char* NAME = "gameIDebugCheatsSystem";
-    static constexpr const char* ALIAS = "IDebugCheatsSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IDebugCheatsSystem, 0x58);
 } // namespace game
-using IDebugCheatsSystem = game::IDebugCheatsSystem;
 } // namespace RED4ext

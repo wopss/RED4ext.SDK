@@ -50,8 +50,9 @@ struct CreditsController : game::ui::WidgetGameController
     CName headerLibraryID; // 278
     CName boldLibraryID; // 280
     CName basicLibraryID; // 288
-    uint8_t unk290[0x2D8 - 0x290]; // 290
+    CName basicTranslatableLibraryID; // 290
+    uint8_t unk298[0x318 - 0x298]; // 298
 };
-RED4EXT_ASSERT_SIZE(CreditsController, 0x2D8);
+RED4EXT_ASSERT_SIZE(CreditsController, 0x318);
 } // namespace game::ui
 } // namespace RED4ext

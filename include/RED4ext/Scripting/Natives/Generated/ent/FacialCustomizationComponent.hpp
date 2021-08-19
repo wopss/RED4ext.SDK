@@ -26,8 +26,8 @@ struct FacialCustomizationComponent : ent::IComponent
     uint32_t mouth; // FC
     uint32_t jaw; // 100
     uint32_t ears; // 104
-    uint8_t unk108[0x140 - 0x108]; // 108
+    uint8_t unk108[0x148 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(FacialCustomizationComponent, 0x140);
+RED4EXT_ASSERT_SIZE(FacialCustomizationComponent, 0x148);
 } // namespace ent
 } // namespace RED4ext

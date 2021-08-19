@@ -12,10 +12,9 @@ namespace game {
 struct EffectDurationModifier : IScriptable
 {
     static constexpr const char* NAME = "gameEffectDurationModifier";
-    static constexpr const char* ALIAS = "EffectDurationModifier";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(EffectDurationModifier, 0x40);
 } // namespace game
-using EffectDurationModifier = game::EffectDurationModifier;
 } // namespace RED4ext

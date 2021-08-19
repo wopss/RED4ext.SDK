@@ -12,11 +12,10 @@ namespace game::bb {
 struct ScriptDefinition : IScriptable
 {
     static constexpr const char* NAME = "gamebbScriptDefinition";
-    static constexpr const char* ALIAS = "BlackboardDefinition";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0xA0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ScriptDefinition, 0xA0);
 } // namespace game::bb
-using BlackboardDefinition = game::bb::ScriptDefinition;
 } // namespace RED4ext

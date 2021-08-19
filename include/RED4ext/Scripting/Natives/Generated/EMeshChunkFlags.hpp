@@ -16,7 +16,7 @@ struct EMeshChunkFlags
     uint16_t MCF_IsPrefabProxy : 1; // 6
     uint16_t b7 : 1; // 7
     uint16_t b8 : 1; // 8
-    uint16_t b9 : 1; // 9
+    uint16_t MCF_ConsoleLOD0 : 1; // 9
     uint16_t b10 : 1; // 10
     uint16_t b11 : 1; // 11
     uint16_t b12 : 1; // 12

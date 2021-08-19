@@ -12,12 +12,11 @@ namespace game {
 struct DeviceVisibilityChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameDeviceVisibilityChangedEvent";
-    static constexpr const char* ALIAS = "DeviceVisibilityChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t isVisible; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(DeviceVisibilityChangedEvent, 0x48);
 } // namespace game
-using DeviceVisibilityChangedEvent = game::DeviceVisibilityChangedEvent;
 } // namespace RED4ext

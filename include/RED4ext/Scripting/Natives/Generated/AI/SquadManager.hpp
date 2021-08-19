@@ -12,11 +12,10 @@ namespace AI {
 struct SquadManager : AI::ISquadManager
 {
     static constexpr const char* NAME = "AISquadManager";
-    static constexpr const char* ALIAS = "SquadManager";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk400[0x4C0 - 0x400]; // 400
+    uint8_t unk80[0x140 - 0x80]; // 80
 };
-RED4EXT_ASSERT_SIZE(SquadManager, 0x4C0);
+RED4EXT_ASSERT_SIZE(SquadManager, 0x140);
 } // namespace AI
-using SquadManager = AI::SquadManager;
 } // namespace RED4ext

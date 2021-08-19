@@ -12,7 +12,7 @@ namespace game::mappins {
 struct RemotePlayerMappin : game::mappins::RuntimeMappin
 {
     static constexpr const char* NAME = "gamemappinsRemotePlayerMappin";
-    static constexpr const char* ALIAS = "RemotePlayerMappin";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t vitals; // 108
     bool hasMissionData; // 10C
@@ -20,5 +20,4 @@ struct RemotePlayerMappin : game::mappins::RuntimeMappin
 };
 RED4EXT_ASSERT_SIZE(RemotePlayerMappin, 0x118);
 } // namespace game::mappins
-using RemotePlayerMappin = game::mappins::RemotePlayerMappin;
 } // namespace RED4ext

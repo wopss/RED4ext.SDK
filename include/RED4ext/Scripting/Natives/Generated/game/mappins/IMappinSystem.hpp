@@ -12,10 +12,9 @@ namespace game::mappins {
 struct IMappinSystem : game::IReplicatedGameSystem
 {
     static constexpr const char* NAME = "gamemappinsIMappinSystem";
-    static constexpr const char* ALIAS = "IMappinSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IMappinSystem, 0x58);
 } // namespace game::mappins
-using IMappinSystem = game::mappins::IMappinSystem;
 } // namespace RED4ext

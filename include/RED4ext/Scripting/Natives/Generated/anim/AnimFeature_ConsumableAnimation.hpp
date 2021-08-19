@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_ConsumableAnimation : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_ConsumableAnimation";
-    static constexpr const char* ALIAS = "AnimFeature_ConsumableAnimation";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t consumableType; // 40
     bool useConsumable; // 44
@@ -20,5 +20,4 @@ struct AnimFeature_ConsumableAnimation : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_ConsumableAnimation, 0x48);
 } // namespace anim
-using AnimFeature_ConsumableAnimation = anim::AnimFeature_ConsumableAnimation;
 } // namespace RED4ext

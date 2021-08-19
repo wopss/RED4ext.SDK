@@ -12,10 +12,9 @@ namespace game {
 struct IHitShape : ISerializable
 {
     static constexpr const char* NAME = "gameIHitShape";
-    static constexpr const char* ALIAS = "IHitShape";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IHitShape, 0x30);
 } // namespace game
-using IHitShape = game::IHitShape;
 } // namespace RED4ext

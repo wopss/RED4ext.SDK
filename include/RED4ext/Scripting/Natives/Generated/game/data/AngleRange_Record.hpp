@@ -12,11 +12,10 @@ namespace game::data {
 struct AngleRange_Record : game::data::SenseShape_Record
 {
     static constexpr const char* NAME = "gamedataAngleRange_Record";
-    static constexpr const char* ALIAS = "AngleRange_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AngleRange_Record, 0x60);
 } // namespace game::data
-using AngleRange_Record = game::data::AngleRange_Record;
 } // namespace RED4ext

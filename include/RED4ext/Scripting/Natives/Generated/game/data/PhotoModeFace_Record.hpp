@@ -12,11 +12,10 @@ namespace game::data {
 struct PhotoModeFace_Record : game::data::PhotoModeItem_Record
 {
     static constexpr const char* NAME = "gamedataPhotoModeFace_Record";
-    static constexpr const char* ALIAS = "PhotoModeFace_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(PhotoModeFace_Record, 0x58);
 } // namespace game::data
-using PhotoModeFace_Record = game::data::PhotoModeFace_Record;
 } // namespace RED4ext

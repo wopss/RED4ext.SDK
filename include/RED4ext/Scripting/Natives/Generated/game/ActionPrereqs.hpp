@@ -16,12 +16,11 @@ namespace game {
 struct ActionPrereqs
 {
     static constexpr const char* NAME = "gameActionPrereqs";
-    static constexpr const char* ALIAS = "ActionPrereqs";
+    static constexpr const char* ALIAS = NAME;
 
     CName actionName; // 00
     DynArray<Handle<game::IPrereq>> prereqs; // 08
 };
 RED4EXT_ASSERT_SIZE(ActionPrereqs, 0x18);
 } // namespace game
-using ActionPrereqs = game::ActionPrereqs;
 } // namespace RED4ext

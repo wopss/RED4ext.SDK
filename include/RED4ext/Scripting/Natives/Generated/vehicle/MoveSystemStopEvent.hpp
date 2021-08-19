@@ -12,10 +12,9 @@ namespace vehicle {
 struct MoveSystemStopEvent : game::ActionEvent
 {
     static constexpr const char* NAME = "vehicleMoveSystemStopEvent";
-    static constexpr const char* ALIAS = "MoveSystemStopEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(MoveSystemStopEvent, 0x68);
 } // namespace vehicle
-using MoveSystemStopEvent = vehicle::MoveSystemStopEvent;
 } // namespace RED4ext

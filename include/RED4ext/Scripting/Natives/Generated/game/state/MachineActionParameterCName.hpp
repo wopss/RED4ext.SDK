@@ -12,7 +12,7 @@ namespace game::state {
 struct MachineActionParameterCName
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterCName";
-    static constexpr const char* ALIAS = "ActionParameterCName";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     CName name; // 08
@@ -20,5 +20,4 @@ struct MachineActionParameterCName
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterCName, 0x18);
 } // namespace game::state
-using ActionParameterCName = game::state::MachineActionParameterCName;
 } // namespace RED4ext

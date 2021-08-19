@@ -12,11 +12,10 @@ namespace game::data {
 struct RecipeElement_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataRecipeElement_Record";
-    static constexpr const char* ALIAS = "RecipeElement_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(RecipeElement_Record, 0x50);
 } // namespace game::data
-using RecipeElement_Record = game::data::RecipeElement_Record;
 } // namespace RED4ext

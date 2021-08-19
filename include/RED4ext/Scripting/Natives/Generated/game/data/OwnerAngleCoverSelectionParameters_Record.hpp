@@ -12,11 +12,10 @@ namespace game::data {
 struct OwnerAngleCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataOwnerAngleCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = "OwnerAngleCoverSelectionParameters_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(OwnerAngleCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
-using OwnerAngleCoverSelectionParameters_Record = game::data::OwnerAngleCoverSelectionParameters_Record;
 } // namespace RED4ext

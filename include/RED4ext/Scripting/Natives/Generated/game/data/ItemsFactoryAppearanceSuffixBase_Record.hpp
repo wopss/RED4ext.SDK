@@ -12,11 +12,10 @@ namespace game::data {
 struct ItemsFactoryAppearanceSuffixBase_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataItemsFactoryAppearanceSuffixBase_Record";
-    static constexpr const char* ALIAS = "ItemsFactoryAppearanceSuffixBase_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ItemsFactoryAppearanceSuffixBase_Record, 0x58);
 } // namespace game::data
-using ItemsFactoryAppearanceSuffixBase_Record = game::data::ItemsFactoryAppearanceSuffixBase_Record;
 } // namespace RED4ext

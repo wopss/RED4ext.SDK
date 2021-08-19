@@ -14,7 +14,7 @@ namespace game {
 struct SEquipArea
 {
     static constexpr const char* NAME = "gameSEquipArea";
-    static constexpr const char* ALIAS = "SEquipArea";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::EquipmentArea areaType; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -24,5 +24,4 @@ struct SEquipArea
 };
 RED4EXT_ASSERT_SIZE(SEquipArea, 0x20);
 } // namespace game
-using SEquipArea = game::SEquipArea;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct TerrainMeshNodeInstance : world::INodeInstance
     static constexpr const char* NAME = "worldTerrainMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xE0 - 0x90]; // 90
+    uint8_t unk90[0xF0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(TerrainMeshNodeInstance, 0xE0);
+RED4EXT_ASSERT_SIZE(TerrainMeshNodeInstance, 0xF0);
 } // namespace world
 } // namespace RED4ext

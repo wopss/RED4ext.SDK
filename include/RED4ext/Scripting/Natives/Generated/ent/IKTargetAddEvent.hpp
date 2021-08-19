@@ -17,7 +17,7 @@ namespace ent {
 struct IKTargetAddEvent : ent::AnimTargetAddEvent
 {
     static constexpr const char* NAME = "entIKTargetAddEvent";
-    static constexpr const char* ALIAS = "IKTargetAddEvent";
+    static constexpr const char* ALIAS = NAME;
 
     anim::IKTargetRef outIKTargetRef; // 58
     Handle<ent::IOrientationProvider> orientationProvider; // 68
@@ -25,5 +25,4 @@ struct IKTargetAddEvent : ent::AnimTargetAddEvent
 };
 RED4EXT_ASSERT_SIZE(IKTargetAddEvent, 0x90);
 } // namespace ent
-using IKTargetAddEvent = ent::IKTargetAddEvent;
 } // namespace RED4ext

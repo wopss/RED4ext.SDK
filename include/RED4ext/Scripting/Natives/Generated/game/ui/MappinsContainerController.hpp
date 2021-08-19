@@ -18,21 +18,20 @@ namespace game::ui {
 struct MappinsContainerController : game::ui::ProjectedHUDGameController
 {
     static constexpr const char* NAME = "gameuiMappinsContainerController";
-    static constexpr const char* ALIAS = "MappinsContainerController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk138[0x150 - 0x138]; // 138
     ink::WidgetPath spawnContainerPath; // 150
     uint8_t unk160[0x170 - 0x160]; // 160
     ink::LinePatternWidgetReference gpsQuestPathWidget; // 170
     ink::LinePatternWidgetReference gpsPlayerTrackedPathWidget; // 188
-    uint8_t unk1A0[0x22C - 0x1A0]; // 1A0
-    game::PSMVision psmVision; // 22C
-    game::PSMCombat psmCombat; // 230
-    game::PSMZones psmZone; // 234
-    GameplayTier tier; // 238
-    uint8_t unk23C[0x290 - 0x23C]; // 23C
+    uint8_t unk1A0[0x260 - 0x1A0]; // 1A0
+    game::PSMVision psmVision; // 260
+    game::PSMCombat psmCombat; // 264
+    game::PSMZones psmZone; // 268
+    GameplayTier tier; // 26C
+    uint8_t unk270[0x2C0 - 0x270]; // 270
 };
-RED4EXT_ASSERT_SIZE(MappinsContainerController, 0x290);
+RED4EXT_ASSERT_SIZE(MappinsContainerController, 0x2C0);
 } // namespace game::ui
-using MappinsContainerController = game::ui::MappinsContainerController;
 } // namespace RED4ext

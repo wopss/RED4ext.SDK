@@ -16,12 +16,11 @@ namespace game {
 struct BlackboardChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameBlackboardChangedEvent";
-    static constexpr const char* ALIAS = "BlackboardChangedEvent";
+    static constexpr const char* ALIAS = NAME;
 
     Handle<game::bb::ScriptDefinition> definition; // 40
     game::bb::ScriptID id; // 50
 };
 RED4EXT_ASSERT_SIZE(BlackboardChangedEvent, 0x60);
 } // namespace game
-using BlackboardChangedEvent = game::BlackboardChangedEvent;
 } // namespace RED4ext

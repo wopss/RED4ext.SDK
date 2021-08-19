@@ -12,11 +12,10 @@ namespace move {
 struct PoliciesSystem : move::IPoliciesSystem
 {
     static constexpr const char* NAME = "movePoliciesSystem";
-    static constexpr const char* ALIAS = "MovePoliciesSystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x70 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PoliciesSystem, 0x70);
+RED4EXT_ASSERT_SIZE(PoliciesSystem, 0x68);
 } // namespace move
-using MovePoliciesSystem = move::PoliciesSystem;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct VendorData
 {
     static constexpr const char* NAME = "gameVendorData";
-    static constexpr const char* ALIAS = "VendorData";
+    static constexpr const char* ALIAS = NAME;
 
     CString vendorId; // 00
     ent::EntityID entityID; // 20
@@ -22,5 +22,4 @@ struct VendorData
 };
 RED4EXT_ASSERT_SIZE(VendorData, 0x30);
 } // namespace game
-using VendorData = game::VendorData;
 } // namespace RED4ext

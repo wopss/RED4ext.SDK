@@ -12,10 +12,9 @@ namespace game::data {
 struct RaceCheckpoint_Record : game::data::LCDScreen_Record
 {
     static constexpr const char* NAME = "gamedataRaceCheckpoint_Record";
-    static constexpr const char* ALIAS = "RaceCheckpoint_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(RaceCheckpoint_Record, 0x60);
 } // namespace game::data
-using RaceCheckpoint_Record = game::data::RaceCheckpoint_Record;
 } // namespace RED4ext

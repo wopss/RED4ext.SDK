@@ -15,8 +15,8 @@ struct LootSlotSingleAppearance : game::LootSlotSingleItem
     static constexpr const char* NAME = "gameLootSlotSingleAppearance";
     static constexpr const char* ALIAS = NAME;
 
-    CName lootAppearance; // 290
+    CName lootAppearance; // 2A0
 };
-RED4EXT_ASSERT_SIZE(LootSlotSingleAppearance, 0x298);
+RED4EXT_ASSERT_SIZE(LootSlotSingleAppearance, 0x2A8);
 } // namespace game
 } // namespace RED4ext

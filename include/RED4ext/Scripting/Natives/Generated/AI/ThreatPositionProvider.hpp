@@ -12,11 +12,10 @@ namespace AI {
 struct ThreatPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "AIThreatPositionProvider";
-    static constexpr const char* ALIAS = "ThreatPositionProvider";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0xA0 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(ThreatPositionProvider, 0xA0);
 } // namespace AI
-using ThreatPositionProvider = AI::ThreatPositionProvider;
 } // namespace RED4ext

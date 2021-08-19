@@ -13,7 +13,7 @@ namespace game {
 struct PrereqParams
 {
     static constexpr const char* NAME = "gamePrereqParams";
-    static constexpr const char* ALIAS = "PrereqParams";
+    static constexpr const char* ALIAS = NAME;
 
     game::StatsObjectID objectID; // 00
     game::StatsObjectID otherObjectID; // 10
@@ -21,5 +21,4 @@ struct PrereqParams
 };
 RED4EXT_ASSERT_SIZE(PrereqParams, 0x38);
 } // namespace game
-using PrereqParams = game::PrereqParams;
 } // namespace RED4ext

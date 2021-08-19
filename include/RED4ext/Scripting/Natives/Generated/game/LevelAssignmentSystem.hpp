@@ -12,11 +12,10 @@ namespace game {
 struct LevelAssignmentSystem : game::ILevelAssignmentSystem
 {
     static constexpr const char* NAME = "gameLevelAssignmentSystem";
-    static constexpr const char* ALIAS = "LevelAssignmentSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0xB0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(LevelAssignmentSystem, 0xB0);
 } // namespace game
-using LevelAssignmentSystem = game::LevelAssignmentSystem;
 } // namespace RED4ext

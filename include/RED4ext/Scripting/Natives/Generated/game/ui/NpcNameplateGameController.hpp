@@ -13,12 +13,11 @@ namespace game::ui {
 struct NpcNameplateGameController : game::ui::ProjectedHUDGameController
 {
     static constexpr const char* NAME = "gameuiNpcNameplateGameController";
-    static constexpr const char* ALIAS = "NpcNameplateGameController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk138[0x168 - 0x138]; // 138
     ink::WidgetReference projection; // 168
 };
 RED4EXT_ASSERT_SIZE(NpcNameplateGameController, 0x180);
 } // namespace game::ui
-using NpcNameplateGameController = game::ui::NpcNameplateGameController;
 } // namespace RED4ext

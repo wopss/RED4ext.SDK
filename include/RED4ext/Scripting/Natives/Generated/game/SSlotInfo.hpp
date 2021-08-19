@@ -14,7 +14,7 @@ namespace game {
 struct SSlotInfo
 {
     static constexpr const char* NAME = "gameSSlotInfo";
-    static constexpr const char* ALIAS = "SSlotInfo";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::EquipmentArea areaType; // 00
     TweakDBID equipSlot; // 04
@@ -23,5 +23,4 @@ struct SSlotInfo
 };
 RED4EXT_ASSERT_SIZE(SSlotInfo, 0x18);
 } // namespace game
-using SSlotInfo = game::SSlotInfo;
 } // namespace RED4ext

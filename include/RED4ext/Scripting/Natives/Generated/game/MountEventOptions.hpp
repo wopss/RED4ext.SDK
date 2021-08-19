@@ -12,12 +12,11 @@ namespace game {
 struct MountEventOptions : IScriptable
 {
     static constexpr const char* NAME = "gameMountEventOptions";
-    static constexpr const char* ALIAS = "MountEventOptions";
+    static constexpr const char* ALIAS = NAME;
 
     bool silentUnmount; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(MountEventOptions, 0x48);
 } // namespace game
-using MountEventOptions = game::MountEventOptions;
 } // namespace RED4ext

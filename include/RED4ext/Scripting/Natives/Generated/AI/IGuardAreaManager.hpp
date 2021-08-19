@@ -12,10 +12,9 @@ namespace AI {
 struct IGuardAreaManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIIGuardAreaManager";
-    static constexpr const char* ALIAS = "IRestrictMovementAreaManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IGuardAreaManager, 0x48);
 } // namespace AI
-using IRestrictMovementAreaManager = AI::IGuardAreaManager;
 } // namespace RED4ext

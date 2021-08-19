@@ -12,11 +12,10 @@ namespace game::mappins {
 struct QuestMappin : game::mappins::IMappin
 {
     static constexpr const char* NAME = "gamemappinsQuestMappin";
-    static constexpr const char* ALIAS = "QuestMappin";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk88[0x128 - 0x88]; // 88
 };
 RED4EXT_ASSERT_SIZE(QuestMappin, 0x128);
 } // namespace game::mappins
-using QuestMappin = game::mappins::QuestMappin;
 } // namespace RED4ext

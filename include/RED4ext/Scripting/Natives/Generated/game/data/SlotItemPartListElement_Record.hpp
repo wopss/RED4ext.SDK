@@ -12,11 +12,10 @@ namespace game::data {
 struct SlotItemPartListElement_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSlotItemPartListElement_Record";
-    static constexpr const char* ALIAS = "SlotItemPartListElement_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SlotItemPartListElement_Record, 0x58);
 } // namespace game::data
-using SlotItemPartListElement_Record = game::data::SlotItemPartListElement_Record;
 } // namespace RED4ext

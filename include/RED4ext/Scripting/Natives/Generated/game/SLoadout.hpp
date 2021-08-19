@@ -14,12 +14,11 @@ namespace game {
 struct SLoadout
 {
     static constexpr const char* NAME = "gameSLoadout";
-    static constexpr const char* ALIAS = "SLoadout";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<game::SEquipArea> equipAreas; // 00
     DynArray<game::SEquipmentSet> equipmentSets; // 10
 };
 RED4EXT_ASSERT_SIZE(SLoadout, 0x20);
 } // namespace game
-using SLoadout = game::SLoadout;
 } // namespace RED4ext

@@ -13,11 +13,10 @@ namespace game::ui {
 struct LogTutorialHintActionEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiLogTutorialHintActionEvent";
-    static constexpr const char* ALIAS = "LogTutorialHintActionEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName actionName; // 40
 };
 RED4EXT_ASSERT_SIZE(LogTutorialHintActionEvent, 0x48);
 } // namespace game::ui
-using LogTutorialHintActionEvent = game::ui::LogTutorialHintActionEvent;
 } // namespace RED4ext

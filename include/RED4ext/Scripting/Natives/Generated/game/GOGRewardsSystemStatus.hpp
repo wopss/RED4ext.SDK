@@ -16,5 +16,4 @@ enum class GOGRewardsSystemStatus : uint32_t
     Error = 5,
 };
 } // namespace game
-using GOGRewardsSystemStatus = game::GOGRewardsSystemStatus;
 } // namespace RED4ext

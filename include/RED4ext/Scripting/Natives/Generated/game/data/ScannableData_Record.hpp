@@ -12,11 +12,10 @@ namespace game::data {
 struct ScannableData_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataScannableData_Record";
-    static constexpr const char* ALIAS = "ScannableData_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ScannableData_Record, 0x58);
 } // namespace game::data
-using ScannableData_Record = game::data::ScannableData_Record;
 } // namespace RED4ext

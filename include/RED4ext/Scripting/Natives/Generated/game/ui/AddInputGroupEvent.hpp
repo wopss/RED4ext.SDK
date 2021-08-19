@@ -14,7 +14,7 @@ namespace game::ui {
 struct AddInputGroupEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiAddInputGroupEvent";
-    static constexpr const char* ALIAS = "AddInputGroupEvent";
+    static constexpr const char* ALIAS = NAME;
 
     game::ui::InputHintGroupData data; // 40
     CName groupId; // 90
@@ -22,5 +22,4 @@ struct AddInputGroupEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AddInputGroupEvent, 0xA0);
 } // namespace game::ui
-using AddInputGroupEvent = game::ui::AddInputGroupEvent;
 } // namespace RED4ext

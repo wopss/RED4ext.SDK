@@ -13,10 +13,8 @@ struct SRRefId
     static constexpr const char* NAME = "scnSRRefId";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x8 - 0x0]; // 0
-    uint32_t id; // 08
-    uint8_t unk0C[0x10 - 0xC]; // C
+    uint32_t id; // 00
 };
-RED4EXT_ASSERT_SIZE(SRRefId, 0x10);
+RED4EXT_ASSERT_SIZE(SRRefId, 0x4);
 } // namespace scn
 } // namespace RED4ext

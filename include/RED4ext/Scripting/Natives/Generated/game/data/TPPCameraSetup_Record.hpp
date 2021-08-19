@@ -12,11 +12,10 @@ namespace game::data {
 struct TPPCameraSetup_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataTPPCameraSetup_Record";
-    static constexpr const char* ALIAS = "TPPCameraSetup_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0xC0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(TPPCameraSetup_Record, 0xC0);
 } // namespace game::data
-using TPPCameraSetup_Record = game::data::TPPCameraSetup_Record;
 } // namespace RED4ext

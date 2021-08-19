@@ -14,7 +14,7 @@ namespace game::ui {
 struct WeaponRosterInfo
 {
     static constexpr const char* NAME = "gameuiWeaponRosterInfo";
-    static constexpr const char* ALIAS = "WeaponRosterInfo";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t ammoCurrent; // 00
     int32_t ammoMagazine; // 04
@@ -27,5 +27,4 @@ struct WeaponRosterInfo
 };
 RED4EXT_ASSERT_SIZE(WeaponRosterInfo, 0x38);
 } // namespace game::ui
-using WeaponRosterInfo = game::ui::WeaponRosterInfo;
 } // namespace RED4ext

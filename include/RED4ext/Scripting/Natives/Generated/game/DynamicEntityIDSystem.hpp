@@ -14,8 +14,8 @@ struct DynamicEntityIDSystem : game::IDynamicEntityIDSystem
     static constexpr const char* NAME = "gameDynamicEntityIDSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x110 - 0x48]; // 48
+    uint8_t unk48[0x140 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DynamicEntityIDSystem, 0x110);
+RED4EXT_ASSERT_SIZE(DynamicEntityIDSystem, 0x140);
 } // namespace game
 } // namespace RED4ext

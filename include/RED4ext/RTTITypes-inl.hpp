@@ -15,7 +15,7 @@ RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CClass::AllocInstance()
     return func(this, GetSize(), 0);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::IsA(const IRTTIType* aType) const
+RED4EXT_INLINE bool RED4ext::CClass::IsA(const CBaseRTTIType* aType) const
 {
     if (this == aType)
     {
@@ -48,7 +48,7 @@ RED4EXT_INLINE void RED4ext::CClass::RegisterFunction(CClassFunction* aFunc)
 {
     if (aFunc->flags.isStatic)
     {
-        staticFuncs.PushBack(aFunc);
+        staticFuncs.PushBack(static_cast<CClassStaticFunction*>(aFunc));
     }
     else
     {

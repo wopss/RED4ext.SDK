@@ -14,10 +14,10 @@ struct HUDVideoPlayerController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameuiHUDVideoPlayerController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE8[0x11C - 0xE8]; // E8
-    bool playOnHud; // 11C
-    uint8_t unk11D[0x120 - 0x11D]; // 11D
+    uint8_t unkE8[0x138 - 0xE8]; // E8
+    bool playOnHud; // 138
+    uint8_t unk139[0x140 - 0x139]; // 139
 };
-RED4EXT_ASSERT_SIZE(HUDVideoPlayerController, 0x120);
+RED4EXT_ASSERT_SIZE(HUDVideoPlayerController, 0x140);
 } // namespace game::ui
 } // namespace RED4ext

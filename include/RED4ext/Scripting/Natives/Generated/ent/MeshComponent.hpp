@@ -10,6 +10,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ERenderingPlane.hpp>
 #include <RED4ext/Scripting/Natives/Generated/NavGenNavigationSetting.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/ForcedLodDistance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IVisualComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/MeshComponentLODMode.hpp>
 
@@ -21,7 +22,7 @@ namespace ent {
 struct MeshComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entMeshComponent";
-    static constexpr const char* ALIAS = "MeshComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk140[0x150 - 0x140]; // 140
     RaRef<CMesh> mesh; // 150
@@ -39,12 +40,13 @@ struct MeshComponent : ent::IVisualComponent
     uint8_t order; // 1AB
     bool castShadows; // 1AC
     bool castLocalShadows; // 1AD
-    uint8_t unk1AE[0x1C1 - 0x1AE]; // 1AE
-    bool overrideMeshNavigationImpact; // 1C1
-    NavGenNavigationSetting navigationImpact; // 1C2
-    uint8_t unk1C4[0x1D0 - 0x1C4]; // 1C4
+    uint8_t unk1AE[0x1B0 - 0x1AE]; // 1AE
+    ent::ForcedLodDistance forcedLodDistance; // 1B0
+    uint8_t unk1B1[0x1D1 - 0x1B1]; // 1B1
+    bool overrideMeshNavigationImpact; // 1D1
+    NavGenNavigationSetting navigationImpact; // 1D2
+    uint8_t unk1D4[0x1E0 - 0x1D4]; // 1D4
 };
-RED4EXT_ASSERT_SIZE(MeshComponent, 0x1D0);
+RED4EXT_ASSERT_SIZE(MeshComponent, 0x1E0);
 } // namespace ent
-using MeshComponent = ent::MeshComponent;
 } // namespace RED4ext

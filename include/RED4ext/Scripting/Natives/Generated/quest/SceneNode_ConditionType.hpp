@@ -8,6 +8,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ISceneConditionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SceneConditionType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/SceneVersionCheck.hpp>
 
 namespace RED4ext
 {
@@ -20,9 +21,10 @@ struct SceneNode_ConditionType : quest::ISceneConditionType
     static constexpr const char* ALIAS = NAME;
 
     RaRef<scn::SceneResource> sceneFile; // 38
-    quest::SceneConditionType type; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
-    CName inputName; // 48
+    scn::SceneVersionCheck SceneVersion; // 40
+    quest::SceneConditionType type; // 41
+    uint8_t unk42[0x48 - 0x42]; // 42
+    CName ActorName; // 48
 };
 RED4EXT_ASSERT_SIZE(SceneNode_ConditionType, 0x50);
 } // namespace quest

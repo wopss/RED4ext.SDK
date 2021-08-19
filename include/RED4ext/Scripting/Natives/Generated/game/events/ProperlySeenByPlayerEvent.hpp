@@ -12,10 +12,9 @@ namespace game::events {
 struct ProperlySeenByPlayerEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsProperlySeenByPlayerEvent";
-    static constexpr const char* ALIAS = "gameProperlySeenByPlayerEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ProperlySeenByPlayerEvent, 0x40);
 } // namespace game::events
-using gameProperlySeenByPlayerEvent = game::events::ProperlySeenByPlayerEvent;
 } // namespace RED4ext

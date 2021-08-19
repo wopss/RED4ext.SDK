@@ -12,10 +12,9 @@ namespace gen {
 struct IRandomizationSupervisor : IScriptable
 {
     static constexpr const char* NAME = "genIRandomizationSupervisor";
-    static constexpr const char* ALIAS = "IRandomizationSupervisor";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IRandomizationSupervisor, 0x40);
 } // namespace gen
-using IRandomizationSupervisor = gen::IRandomizationSupervisor;
 } // namespace RED4ext

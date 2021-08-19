@@ -14,8 +14,8 @@ struct InstancedDestructibleMeshNodeInstance : world::MeshNodeInstance
     static constexpr const char* NAME = "worldInstancedDestructibleMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk100[0x200 - 0x100]; // 100
+    uint8_t unk100[0x220 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(InstancedDestructibleMeshNodeInstance, 0x200);
+RED4EXT_ASSERT_SIZE(InstancedDestructibleMeshNodeInstance, 0x220);
 } // namespace world
 } // namespace RED4ext

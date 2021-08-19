@@ -58,18 +58,17 @@ struct SceneResource : CResource
     DynArray<scn::ExecutionTag> executionTags; // 120
     DynArray<scn::ReferencePointDef> referencePoints; // 130
     DynArray<scn::InterruptionScenario> interruptionScenarios; // 140
-    uint8_t unk150[0x180 - 0x150]; // 150
-    scn::SRRefCollection resouresReferences; // 180
-    Handle<scn::SceneGraph> sceneGraph; // 260
-    scn::screenplay::Store screenplayStore; // 270
-    scn::loc::LocStoreEmbedded locStore; // 290
-    uint32_t version; // 2B0
-    uint8_t unk2B4[0x2B8 - 0x2B4]; // 2B4
-    scn::SceneSolutionHash sceneSolutionHash; // 2B8
-    scn::SceneCategoryTag sceneCategoryTag; // 2C0
-    uint8_t unk2C1[0x2C8 - 0x2C1]; // 2C1
-    scn::DebugSymbols debugSymbols; // 2C8
+    scn::SRRefCollection resouresReferences; // 150
+    Handle<scn::SceneGraph> sceneGraph; // 230
+    scn::screenplay::Store screenplayStore; // 240
+    scn::loc::LocStoreEmbedded locStore; // 260
+    uint32_t version; // 280
+    uint8_t unk284[0x288 - 0x284]; // 284
+    scn::SceneSolutionHash sceneSolutionHash; // 288
+    scn::SceneCategoryTag sceneCategoryTag; // 290
+    uint8_t unk291[0x298 - 0x291]; // 291
+    scn::DebugSymbols debugSymbols; // 298
 };
-RED4EXT_ASSERT_SIZE(SceneResource, 0x308);
+RED4EXT_ASSERT_SIZE(SceneResource, 0x2D8);
 } // namespace scn
 } // namespace RED4ext

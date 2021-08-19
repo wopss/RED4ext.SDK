@@ -18,7 +18,7 @@ namespace game::ui {
 struct WorldMapDistrictLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiWorldMapDistrictLogicController";
-    static constexpr const char* ALIAS = "WorldMapDistrictLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::data::District_Record> record; // 68
     game::data::District type; // 78
@@ -29,5 +29,4 @@ struct WorldMapDistrictLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(WorldMapDistrictLogicController, 0xB0);
 } // namespace game::ui
-using WorldMapDistrictLogicController = game::ui::WorldMapDistrictLogicController;
 } // namespace RED4ext

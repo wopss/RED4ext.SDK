@@ -13,12 +13,11 @@ namespace ink::anim {
 struct AnchorInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimAnchorInterpolator";
-    static constexpr const char* ALIAS = "inkAnimAnchor";
+    static constexpr const char* ALIAS = NAME;
 
     Vector2 startValue; // 68
     Vector2 endValue; // 70
 };
 RED4EXT_ASSERT_SIZE(AnchorInterpolator, 0x78);
 } // namespace ink::anim
-using inkAnimAnchor = ink::anim::AnchorInterpolator;
 } // namespace RED4ext

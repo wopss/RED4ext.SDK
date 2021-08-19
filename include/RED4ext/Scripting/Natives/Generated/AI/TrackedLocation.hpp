@@ -17,7 +17,7 @@ namespace AI {
 struct TrackedLocation
 {
     static constexpr const char* NAME = "AITrackedLocation";
-    static constexpr const char* ALIAS = "TrackedLocation";
+    static constexpr const char* ALIAS = NAME;
 
     AI::LocationInformation lastKnown; // 00
     AI::LocationInformation location; // 20
@@ -38,5 +38,4 @@ struct TrackedLocation
 };
 RED4EXT_ASSERT_SIZE(TrackedLocation, 0xD0);
 } // namespace AI
-using TrackedLocation = AI::TrackedLocation;
 } // namespace RED4ext

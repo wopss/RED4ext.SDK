@@ -12,10 +12,9 @@ namespace game::data {
 struct Clothing_Record : game::data::Item_Record
 {
     static constexpr const char* NAME = "gamedataClothing_Record";
-    static constexpr const char* ALIAS = "Clothing_Record";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(Clothing_Record, 0x130);
 } // namespace game::data
-using Clothing_Record = game::data::Clothing_Record;
 } // namespace RED4ext

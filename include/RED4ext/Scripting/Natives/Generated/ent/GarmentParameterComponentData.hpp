@@ -16,25 +16,32 @@ struct GarmentParameterComponentData
     static constexpr const char* NAME = "entGarmentParameterComponentData";
     static constexpr const char* ALIAS = NAME;
 
-    CRUID componentID; // 00
-    uint64_t meshGeometryHash; // 08
-    DynArray<ent::GarmentParameterChunkData> chunks; // 10
-    uint8_t unk20[0x28 - 0x20]; // 20
-    bool hideComponent; // 28
-    bool removeHiddenTriangles; // 29
-    uint8_t unk2A[0x2B - 0x2A]; // 2A
-    bool disableGarment; // 2B
-    bool mergeWithInnerLayer; // 2C
-    uint8_t unk2D[0x30 - 0x2D]; // 2D
-    float bendPowerMultiplier; // 30
-    float bendPowerOffset; // 34
-    float smoothingStrength; // 38
-    float smoothingThreshold; // 3C
-    float smoothingExponent; // 40
-    uint32_t smoothingNumNeighbours; // 44
-    float garmentBorderThreshold; // 48
-    uint8_t unk4C[0x58 - 0x4C]; // 4C
+    DataBuffer compiledTriangleIndsData; // 00
+    CRUID componentID; // 28
+    uint64_t meshGeometryHash; // 30
+    uint32_t chunksCount; // 38
+    uint8_t unk3C[0x40 - 0x3C]; // 3C
+    uint64_t visibleTrangleIndexBufferHash; // 40
+    DynArray<ent::GarmentParameterChunkData> chunks; // 48
+    uint8_t unk58[0x60 - 0x58]; // 58
+    bool hideComponent; // 60
+    bool removeHiddenTriangles; // 61
+    uint8_t unk62[0x63 - 0x62]; // 62
+    bool disableGarment; // 63
+    bool mergeWithInnerLayer; // 64
+    uint8_t unk65[0x68 - 0x65]; // 65
+    float bendPowerMultiplier; // 68
+    float bendPowerOffset; // 6C
+    float smoothingStrength; // 70
+    float smoothingThreshold; // 74
+    float smoothingExponent; // 78
+    uint32_t smoothingNumNeighbours; // 7C
+    float garmentBorderThreshold; // 80
+    uint8_t unk84[0x8C - 0x84]; // 84
+    uint32_t numIndices; // 8C
+    uint32_t numOffsets; // 90
+    uint8_t unk94[0x98 - 0x94]; // 94
 };
-RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0x58);
+RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0x98);
 } // namespace ent
 } // namespace RED4ext

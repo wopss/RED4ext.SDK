@@ -12,10 +12,9 @@ namespace game::audio::events {
 struct DropBodyBreathingEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsDropBodyBreathingEvent";
-    static constexpr const char* ALIAS = "DropBodyBreathingEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(DropBodyBreathingEvent, 0x40);
 } // namespace game::audio::events
-using DropBodyBreathingEvent = game::audio::events::DropBodyBreathingEvent;
 } // namespace RED4ext

@@ -4,11 +4,13 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/StimPropagation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/StimType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/sense/BaseStimuliEvent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/sense/StimInvestigateData.hpp>
 
 namespace RED4ext
 {
@@ -20,18 +22,21 @@ namespace sense {
 struct StimuliEvent : sense::BaseStimuliEvent
 {
     static constexpr const char* NAME = "senseStimuliEvent";
-    static constexpr const char* ALIAS = "StimuliEvent";
+    static constexpr const char* ALIAS = NAME;
 
-    WeakHandle<game::Object> sourceObject; // 50
-    WeakHandle<game::data::Stim_Record> stimRecord; // 60
-    Vector4 sourcePosition; // 70
-    float radius; // 80
-    float detection; // 84
-    game::data::StimType stimType; // 88
-    game::data::StimPropagation stimPropagation; // 8C
-    Handle<sense::StimuliData> data; // 90
+    sense::StimInvestigateData stimInvestigateData; // 50
+    WeakHandle<game::Object> sourceObject; // D0
+    WeakHandle<game::data::Stim_Record> stimRecord; // E0
+    DynArray<Vector4> movePositions; // F0
+    Vector4 sourcePosition; // 100
+    float radius; // 110
+    float detection; // 114
+    game::data::StimPropagation stimPropagation; // 118
+    uint8_t unk11C[0x120 - 0x11C]; // 11C
+    Handle<sense::StimuliData> data; // 120
+    game::data::StimType stimType; // 130
+    uint8_t unk134[0x140 - 0x134]; // 134
 };
-RED4EXT_ASSERT_SIZE(StimuliEvent, 0xA0);
+RED4EXT_ASSERT_SIZE(StimuliEvent, 0x140);
 } // namespace sense
-using StimuliEvent = sense::StimuliEvent;
 } // namespace RED4ext

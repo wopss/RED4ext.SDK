@@ -12,10 +12,9 @@ namespace game {
 struct EntityIDArrayPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameEntityIDArrayPrereq";
-    static constexpr const char* ALIAS = "EntityIDArrayPrereq";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(EntityIDArrayPrereq, 0x40);
 } // namespace game
-using EntityIDArrayPrereq = game::EntityIDArrayPrereq;
 } // namespace RED4ext

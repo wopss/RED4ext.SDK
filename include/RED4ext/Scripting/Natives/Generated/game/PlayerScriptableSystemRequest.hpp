@@ -15,11 +15,10 @@ namespace game {
 struct PlayerScriptableSystemRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gamePlayerScriptableSystemRequest";
-    static constexpr const char* ALIAS = "PlayerScriptableSystemRequest";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> owner; // 48
 };
 RED4EXT_ASSERT_SIZE(PlayerScriptableSystemRequest, 0x58);
 } // namespace game
-using PlayerScriptableSystemRequest = game::PlayerScriptableSystemRequest;
 } // namespace RED4ext

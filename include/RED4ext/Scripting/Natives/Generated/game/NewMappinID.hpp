@@ -11,11 +11,10 @@ namespace game {
 struct NewMappinID
 {
     static constexpr const char* NAME = "gameNewMappinID";
-    static constexpr const char* ALIAS = "NewMappinID";
+    static constexpr const char* ALIAS = NAME;
 
     uint64_t value; // 00
 };
 RED4EXT_ASSERT_SIZE(NewMappinID, 0x8);
 } // namespace game
-using NewMappinID = game::NewMappinID;
 } // namespace RED4ext

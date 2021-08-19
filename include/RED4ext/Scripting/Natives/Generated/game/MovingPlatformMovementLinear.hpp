@@ -12,10 +12,9 @@ namespace game {
 struct MovingPlatformMovementLinear : game::IMovingPlatformMovementPointToPoint
 {
     static constexpr const char* NAME = "gameMovingPlatformMovementLinear";
-    static constexpr const char* ALIAS = "MovingPlatformMovementLinear";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformMovementLinear, 0x80);
 } // namespace game
-using MovingPlatformMovementLinear = game::MovingPlatformMovementLinear;
 } // namespace RED4ext

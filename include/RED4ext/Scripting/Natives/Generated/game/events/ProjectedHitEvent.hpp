@@ -12,10 +12,9 @@ namespace game::events {
 struct ProjectedHitEvent : game::events::HitEvent
 {
     static constexpr const char* NAME = "gameeventsProjectedHitEvent";
-    static constexpr const char* ALIAS = "gameProjectedHitEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ProjectedHitEvent, 0xE0);
 } // namespace game::events
-using gameProjectedHitEvent = game::events::ProjectedHitEvent;
 } // namespace RED4ext

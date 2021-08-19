@@ -12,11 +12,10 @@ namespace game {
 struct StatsBundleHandler : IScriptable
 {
     static constexpr const char* NAME = "gameStatsBundleHandler";
-    static constexpr const char* ALIAS = "StatsBundleHandler";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(StatsBundleHandler, 0x50);
 } // namespace game
-using StatsBundleHandler = game::StatsBundleHandler;
 } // namespace RED4ext

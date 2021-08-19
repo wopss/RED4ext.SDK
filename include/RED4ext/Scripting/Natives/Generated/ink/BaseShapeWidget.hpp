@@ -14,7 +14,7 @@ namespace ink {
 struct BaseShapeWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkBaseShapeWidget";
-    static constexpr const char* ALIAS = "inkBaseShape";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk1F0[0x1F8 - 0x1F0]; // 1F0
     DynArray<Vector2> vertexList; // 1F8
@@ -22,5 +22,4 @@ struct BaseShapeWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(BaseShapeWidget, 0x220);
 } // namespace ink
-using inkBaseShape = ink::BaseShapeWidget;
 } // namespace RED4ext

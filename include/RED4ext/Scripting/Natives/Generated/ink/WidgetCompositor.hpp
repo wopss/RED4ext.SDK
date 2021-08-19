@@ -13,8 +13,8 @@ struct WidgetCompositor
     static constexpr const char* NAME = "inkWidgetCompositor";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0xF8 - 0x0]; // 0
+    uint8_t unk00[0x1B0 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(WidgetCompositor, 0xF8);
+RED4EXT_ASSERT_SIZE(WidgetCompositor, 0x1B0);
 } // namespace ink
 } // namespace RED4ext

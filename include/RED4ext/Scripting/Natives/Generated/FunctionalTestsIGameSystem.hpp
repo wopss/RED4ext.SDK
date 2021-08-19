@@ -11,9 +11,8 @@ namespace RED4ext
 struct FunctionalTestsIGameSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "FunctionalTestsIGameSystem";
-    static constexpr const char* ALIAS = "FunctionalTestsGameSystemInterface";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestsIGameSystem, 0x48);
-using FunctionalTestsGameSystemInterface = FunctionalTestsIGameSystem;
 } // namespace RED4ext

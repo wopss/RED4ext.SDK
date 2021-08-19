@@ -15,7 +15,7 @@ namespace game {
 struct ItemViewData
 {
     static constexpr const char* NAME = "gameItemViewData";
-    static constexpr const char* ALIAS = "ItemViewData";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID id; // 00
     CString itemName; // 10
@@ -32,5 +32,4 @@ struct ItemViewData
 };
 RED4EXT_ASSERT_SIZE(ItemViewData, 0xC0);
 } // namespace game
-using ItemViewData = game::ItemViewData;
 } // namespace RED4ext

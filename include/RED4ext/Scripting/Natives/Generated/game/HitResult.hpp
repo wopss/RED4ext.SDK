@@ -12,7 +12,7 @@ namespace game {
 struct HitResult
 {
     static constexpr const char* NAME = "gameHitResult";
-    static constexpr const char* ALIAS = "HitShapeResult";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 hitPositionEnter; // 00
     Vector4 hitPositionExit; // 10
@@ -21,5 +21,4 @@ struct HitResult
 };
 RED4EXT_ASSERT_SIZE(HitResult, 0x30);
 } // namespace game
-using HitShapeResult = game::HitResult;
 } // namespace RED4ext

@@ -12,10 +12,9 @@ namespace user {
 struct SettingsVarListString : user::SettingsVar
 {
     static constexpr const char* NAME = "userSettingsVarListString";
-    static constexpr const char* ALIAS = "ConfigVarListString";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(SettingsVarListString, 0x48);
 } // namespace user
-using ConfigVarListString = user::SettingsVarListString;
 } // namespace RED4ext

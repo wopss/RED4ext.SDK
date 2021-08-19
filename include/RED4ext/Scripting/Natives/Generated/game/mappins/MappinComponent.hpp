@@ -13,7 +13,7 @@ namespace game::mappins {
 struct MappinComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gamemappinsMappinComponent";
-    static constexpr const char* ALIAS = "MappinComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk120[0x128 - 0x120]; // 120
     game::mappins::MappinData data; // 128
@@ -21,5 +21,4 @@ struct MappinComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(MappinComponent, 0x1B0);
 } // namespace game::mappins
-using MappinComponent = game::mappins::MappinComponent;
 } // namespace RED4ext

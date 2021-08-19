@@ -17,19 +17,18 @@ namespace ent {
 struct PhysicalSkinnedMeshComponent : ent::SkinnedMeshComponent
 {
     static constexpr const char* NAME = "entPhysicalSkinnedMeshComponent";
-    static constexpr const char* ALIAS = "PhysicalSkinnedMeshComponent";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk260[0x298 - 0x260]; // 260
-    Handle<physics::FilterData> filterData; // 298
-    uint8_t unk2A8[0x2BC - 0x2A8]; // 2A8
-    physics::SimulationType simulationType; // 2BC
-    physics::FilterDataSource filterDataSource; // 2BD
-    bool startInactive; // 2BE
-    uint8_t unk2BF[0x2C0 - 0x2BF]; // 2BF
-    bool useResourceSimulationType; // 2C0
-    uint8_t unk2C1[0x2D0 - 0x2C1]; // 2C1
+    uint8_t unk270[0x2A8 - 0x270]; // 270
+    Handle<physics::FilterData> filterData; // 2A8
+    uint8_t unk2B8[0x2CC - 0x2B8]; // 2B8
+    physics::SimulationType simulationType; // 2CC
+    physics::FilterDataSource filterDataSource; // 2CD
+    bool startInactive; // 2CE
+    uint8_t unk2CF[0x2D0 - 0x2CF]; // 2CF
+    bool useResourceSimulationType; // 2D0
+    uint8_t unk2D1[0x2E0 - 0x2D1]; // 2D1
 };
-RED4EXT_ASSERT_SIZE(PhysicalSkinnedMeshComponent, 0x2D0);
+RED4EXT_ASSERT_SIZE(PhysicalSkinnedMeshComponent, 0x2E0);
 } // namespace ent
-using PhysicalSkinnedMeshComponent = ent::PhysicalSkinnedMeshComponent;
 } // namespace RED4ext

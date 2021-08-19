@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_Vault : anim::AnimFeature_Climb
 {
     static constexpr const char* NAME = "animAnimFeature_Vault";
-    static constexpr const char* ALIAS = "AnimFeature_Vault";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 landPosition; // A0
     float travellingTime; // B0
@@ -22,5 +22,4 @@ struct AnimFeature_Vault : anim::AnimFeature_Climb
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_Vault, 0xC0);
 } // namespace anim
-using AnimFeature_Vault = anim::AnimFeature_Vault;
 } // namespace RED4ext

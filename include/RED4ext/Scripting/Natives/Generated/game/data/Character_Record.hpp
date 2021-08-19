@@ -12,11 +12,10 @@ namespace game::data {
 struct Character_Record : game::data::SpawnableObject_Record
 {
     static constexpr const char* NAME = "gamedataCharacter_Record";
-    static constexpr const char* ALIAS = "Character_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk78[0x148 - 0x78]; // 78
 };
 RED4EXT_ASSERT_SIZE(Character_Record, 0x148);
 } // namespace game::data
-using Character_Record = game::data::Character_Record;
 } // namespace RED4ext

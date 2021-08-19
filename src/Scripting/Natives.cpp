@@ -52,6 +52,7 @@
 #include <RED4ext/Scripting/Natives/Generated/AI/IGuardAreaManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/INavigationSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/IReactionSystem.hpp>
+#include <RED4ext/Scripting/Natives/Generated/AI/ISafeAreaManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/ISmartCoverManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/ISmartObjectManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/ISquadManager.hpp>
@@ -91,6 +92,7 @@
 #include <RED4ext/Scripting/Natives/Generated/AI/TaggedAIEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/TargetTrackerManagerInterface.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/ThreatPositionProvider.hpp>
+#include <RED4ext/Scripting/Natives/Generated/AI/ThreatSaveData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/TrackedStatusType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/TreeArgumentsDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/VehicleCommand.hpp>
@@ -347,14 +349,6 @@
 #include <RED4ext/Scripting/Natives/Generated/STonemappingACESParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/SWeaponPlaneParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/SampleMapArrayElement.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Class_1_2_0.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Class_1_3_0.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Class_1_7_0.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Class_2_12_0.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Enum_As_Bitfield_2_2.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Enum_As_Bitfield_2_9.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Namespace_1_5Sample_Class_1_5_0.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Sample_Namespace_1_6_0Sample_Class_1_6_0.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Sample_Replicated_Enum.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Sample_Replicated_Root_Object.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Sample_Replicated_Struct.hpp>
@@ -610,6 +604,7 @@
 #include <RED4ext/Scripting/Natives/Generated/anim/compression/FrameratePreset.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/compression/QualityPreset.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/fss/BodyOfflineParams.hpp>
+#include <RED4ext/Scripting/Natives/Generated/appearance/AlternateAppearanceEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/appearance/AppearancePart.hpp>
 #include <RED4ext/Scripting/Natives/Generated/appearance/AppearancePartOverrides.hpp>
 #include <RED4ext/Scripting/Natives/Generated/appearance/CensorshipEntry.hpp>
@@ -821,6 +816,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ent/ExternalComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/Factory.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/FallbackSlot.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/ForcedLodDistance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/GameEntity.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/GarmentParameterChunkData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/GarmentParameterComponentData.hpp>
@@ -882,7 +878,6 @@
 #include <RED4ext/Scripting/Natives/Generated/ent/VertexAnimationMapperSource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/VertexAnimationMapperSourceType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/VisibilityParamSource.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ent/VisualControllerComponentForcedLodDistance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/VisualControllerDependency.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/VoicesetInputToBlock.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/dismemberment/AppearanceMatch.hpp>
@@ -1146,6 +1141,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/IRichPresenceSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ISaveSanitizationForbiddenAreaSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ISceneSystem.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/IScriptableSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IScriptableSystemsContainer.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IScriptsDebugOverlaySystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IShootingAccuracySystem.hpp>
@@ -1209,6 +1205,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/LootSlotState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MeshDef.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MessageSender.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/MotionConstrainedTierDataParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MountDescriptor.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MountDescriptorMountType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MountingObjectType.hpp>
@@ -1252,6 +1249,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/PSMBodyCarryingStyle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMCombat.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMLocomotionStates.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/PSMSwimming.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMTakedown.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMTimeDilation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMUpperBodyStates.hpp>
@@ -1302,7 +1300,6 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ScanningMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ScanningState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ScanningTooltipElementDef.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/SceneAnimationMotionActionParamsActionPlayDirection.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/SceneAnimationMotionActionParamsEasingType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/SceneAnimationMotionActionParamsMotionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/SceneAnimationMotionActionParamsPlacementMode.hpp>
@@ -1335,8 +1332,10 @@
 #include <RED4ext/Scripting/Natives/Generated/game/SpotSequenceCategory.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/SquadMemberDataEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/StatIDType.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/StatModifierData.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/StatModifierBase.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/StatModifierData_Deprecated.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/StatModifierDetailedData.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/StatModifierHandle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/StatModifierSave.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/StatModifierType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/StatObjectsRelation.hpp>
@@ -1446,6 +1445,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/data/EquipmentArea.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/EquipmentArea_Record.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/Gadget_Record.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/GrenadeDeliveryMethodType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/GrenadeDeliveryMethod_Record.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/GroupNodeGroupVariable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/GroupNodeGroupVariableDeriveInfo.hpp>
@@ -1551,11 +1551,12 @@
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/IManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/IPredicateType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/IShapeDefinition.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/interactions/InteractionBaseEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/InteractionDefinitionOverrider.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/interactions/InteractionEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/LayerData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/NodeDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/OrbID.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/interactions/PublisherBaseEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/ReactionData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/ReactionState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/vis/EVisualizerActivityState.hpp>
@@ -1854,6 +1855,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/IEffect.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/IIconAtlas.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/IIconAtlasManager.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/ILayerSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/ILoadingLogicController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/ILoadingScreenData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/ILoadingScreenPersistentData.hpp>
@@ -1861,6 +1863,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/IStreetNameSignLogicController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/IStreetSignWidgetComponentWrapper.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/ISystemRequestsHandler.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/IWaitingSignSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/IWidgetComponentWrapper.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/IWidgetController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/IWidgetLogicController.hpp>
@@ -1951,6 +1954,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/VirtualCompoundItemSelectControllerCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/VirtualListController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/VirtualUniformListController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/WaitingSignLayerDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WatermarksLayerDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/Widget.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetLayout.hpp>
@@ -2280,6 +2284,7 @@
 #include <RED4ext/Scripting/Natives/Generated/quest/SpawnManagerNodeType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SpawnedVehicleType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/StartEndNodeDefinition.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/Storage.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SwitchWeaponModes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/TeleportPuppetParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/TimeDilation_NodeTypeParam.hpp>
@@ -2394,6 +2399,7 @@
 #include <RED4ext/Scripting/Natives/Generated/scn/CheckDistractedReturnConditionParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/CheckFactInterruptConditionParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/CheckFactReturnConditionParams.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/CheckIntScenarioActiveReturnConditionParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/CheckPlayerCombatInterruptConditionParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/CheckPlayerCombatReturnConditionParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/CheckPlayerTargetEntityDistanceInterruptConditionParams.hpp>
@@ -2537,6 +2543,7 @@
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneSolutionHashHash.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneTime.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneVOInfo.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/SceneVersionCheck.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneWorkspotDataId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneWorkspotInstanceId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/ScenesVersionsChangedRecord.hpp>
@@ -2586,6 +2593,7 @@
 #include <RED4ext/Scripting/Natives/Generated/sense/BaseStimuliEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/sense/ISenseManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/sense/IShape.hpp>
+#include <RED4ext/Scripting/Natives/Generated/sense/StimInvestigateData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/sense/StimuliData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/sense/VisibilityEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/services/GameServices.hpp>
@@ -2608,6 +2616,7 @@
 #include <RED4ext/Scripting/Natives/Generated/tools/IMessageLocation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/tools/IMessageToken.hpp>
 #include <RED4ext/Scripting/Natives/Generated/tools/MessageSeverity.hpp>
+#include <RED4ext/Scripting/Natives/Generated/tools/MessageVerbosity.hpp>
 #include <RED4ext/Scripting/Natives/Generated/user/SettingsVar.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/AudioEventAction.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/AudioPSData.hpp>

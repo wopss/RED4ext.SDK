@@ -12,10 +12,9 @@ namespace game::ui {
 struct DeathMenuGameController : game::ui::MenuItemListGameController
 {
     static constexpr const char* NAME = "gameuiDeathMenuGameController";
-    static constexpr const char* ALIAS = "DeathMenuGameController";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(DeathMenuGameController, 0x140);
 } // namespace game::ui
-using DeathMenuGameController = game::ui::DeathMenuGameController;
 } // namespace RED4ext

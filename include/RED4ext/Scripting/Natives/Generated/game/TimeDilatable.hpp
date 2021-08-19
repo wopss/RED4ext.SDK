@@ -12,11 +12,10 @@ namespace game {
 struct TimeDilatable : game::Object
 {
     static constexpr const char* NAME = "gameTimeDilatable";
-    static constexpr const char* ALIAS = "TimeDilatable";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x2B8 - 0x230]; // 230
+    uint8_t unk240[0x2C8 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(TimeDilatable, 0x2B8);
+RED4EXT_ASSERT_SIZE(TimeDilatable, 0x2C8);
 } // namespace game
-using TimeDilatable = game::TimeDilatable;
 } // namespace RED4ext

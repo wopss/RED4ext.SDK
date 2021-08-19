@@ -21,8 +21,8 @@ struct TPPRepresentationComponent : ent::IComponent
     DynArray<game::FppRepDetachedObjectInfo> detachedObjectInfo; // 90
     DynArray<game::TppRepAttachedObjectInfo> attachedObjectInfo; // A0
     DynArray<TweakDBID> affectedAppearanceSlots; // B0
-    uint8_t unkC0[0x190 - 0xC0]; // C0
+    uint8_t unkC0[0x1A0 - 0xC0]; // C0
 };
-RED4EXT_ASSERT_SIZE(TPPRepresentationComponent, 0x190);
+RED4EXT_ASSERT_SIZE(TPPRepresentationComponent, 0x1A0);
 } // namespace game
 } // namespace RED4ext

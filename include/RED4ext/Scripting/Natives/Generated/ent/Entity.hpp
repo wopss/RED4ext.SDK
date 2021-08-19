@@ -14,7 +14,7 @@ namespace ent {
 struct Entity : IScriptable
 {
     static constexpr const char* NAME = "entEntity";
-    static constexpr const char* ALIAS = "Entity";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x154 - 0x40]; // 40
     ECustomCameraTarget customCameraTarget; // 154
@@ -24,5 +24,4 @@ struct Entity : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Entity, 0x160);
 } // namespace ent
-using Entity = ent::Entity;
 } // namespace RED4ext

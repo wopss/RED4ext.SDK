@@ -12,7 +12,7 @@ namespace game::ui {
 struct TooltipAttachmentSlot : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTooltipAttachmentSlot";
-    static constexpr const char* ALIAS = "gameuiTooltipAttachmentSlot";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(TooltipAttachmentSlot, 0x68);

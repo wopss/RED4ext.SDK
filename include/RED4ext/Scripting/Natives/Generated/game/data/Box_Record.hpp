@@ -12,11 +12,10 @@ namespace game::data {
 struct Box_Record : game::data::SenseShape_Record
 {
     static constexpr const char* NAME = "gamedataBox_Record";
-    static constexpr const char* ALIAS = "Box_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x58 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(Box_Record, 0x58);
 } // namespace game::data
-using Box_Record = game::data::Box_Record;
 } // namespace RED4ext

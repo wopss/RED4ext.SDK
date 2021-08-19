@@ -12,7 +12,7 @@ namespace game::ui {
 struct PanzerScoreRecordData
 {
     static constexpr const char* NAME = "gameuiPanzerScoreRecordData";
-    static constexpr const char* ALIAS = "PanzerScoreRecordData";
+    static constexpr const char* ALIAS = NAME;
 
     CString name; // 00
     uint32_t score; // 20
@@ -20,5 +20,4 @@ struct PanzerScoreRecordData
 };
 RED4EXT_ASSERT_SIZE(PanzerScoreRecordData, 0x28);
 } // namespace game::ui
-using PanzerScoreRecordData = game::ui::PanzerScoreRecordData;
 } // namespace RED4ext

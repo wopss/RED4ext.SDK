@@ -12,11 +12,10 @@ namespace game::data {
 struct CoverSelectionPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCoverSelectionPreset_Record";
-    static constexpr const char* ALIAS = "CoverSelectionPreset_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x60 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CoverSelectionPreset_Record, 0x60);
 } // namespace game::data
-using CoverSelectionPreset_Record = game::data::CoverSelectionPreset_Record;
 } // namespace RED4ext

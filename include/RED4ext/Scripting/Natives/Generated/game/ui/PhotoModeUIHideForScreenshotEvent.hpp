@@ -12,12 +12,11 @@ namespace game::ui {
 struct PhotoModeUIHideForScreenshotEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPhotoModeUIHideForScreenshotEvent";
-    static constexpr const char* ALIAS = "PhotoModeUIHideForScreenshotEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool hide; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(PhotoModeUIHideForScreenshotEvent, 0x48);
 } // namespace game::ui
-using PhotoModeUIHideForScreenshotEvent = game::ui::PhotoModeUIHideForScreenshotEvent;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game {
 struct LookAtFacingPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "gameLookAtFacingPositionProvider";
-    static constexpr const char* ALIAS = "LookAtFacingPositionProvider";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(LookAtFacingPositionProvider, 0x60);
 } // namespace game
-using LookAtFacingPositionProvider = game::LookAtFacingPositionProvider;
 } // namespace RED4ext

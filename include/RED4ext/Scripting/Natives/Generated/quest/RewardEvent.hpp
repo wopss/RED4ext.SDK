@@ -13,11 +13,10 @@ namespace quest {
 struct RewardEvent : red::Event
 {
     static constexpr const char* NAME = "questRewardEvent";
-    static constexpr const char* ALIAS = "RewardEvent";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID rewardName; // 40
 };
 RED4EXT_ASSERT_SIZE(RewardEvent, 0x48);
 } // namespace quest
-using RewardEvent = quest::RewardEvent;
 } // namespace RED4ext

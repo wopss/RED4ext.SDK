@@ -16,7 +16,7 @@ namespace ink {
 struct VideoWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkVideoWidget";
-    static constexpr const char* ALIAS = "inkVideo";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk1F0[0x228 - 0x1F0]; // 1F0
     RaRef<Bink> videoResource; // 228
@@ -32,5 +32,4 @@ struct VideoWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(VideoWidget, 0x2A0);
 } // namespace ink
-using inkVideo = ink::VideoWidget;
 } // namespace RED4ext

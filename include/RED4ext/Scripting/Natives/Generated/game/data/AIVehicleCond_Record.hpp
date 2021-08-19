@@ -12,11 +12,10 @@ namespace game::data {
 struct AIVehicleCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIVehicleCond_Record";
-    static constexpr const char* ALIAS = "AIVehicleCond_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk50[0x68 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AIVehicleCond_Record, 0x68);
 } // namespace game::data
-using AIVehicleCond_Record = game::data::AIVehicleCond_Record;
 } // namespace RED4ext

@@ -21,7 +21,8 @@ struct ShowCustomTooltip_NodeType : quest::IUIManagerNodeType
     LocalizationString text; // 40
     CString inputAction; // 68
     ink::InputHintHoldIndicationType holdIndicationType; // 88
-    uint8_t unk89[0x90 - 0x89]; // 89
+    uint8_t unk89[0x8C - 0x89]; // 89
+    int32_t queuePriority; // 8C
 };
 RED4EXT_ASSERT_SIZE(ShowCustomTooltip_NodeType, 0x90);
 } // namespace quest

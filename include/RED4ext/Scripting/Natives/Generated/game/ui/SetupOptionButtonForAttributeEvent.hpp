@@ -13,7 +13,7 @@ namespace game::ui {
 struct SetupOptionButtonForAttributeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetupOptionButtonForAttributeEvent";
-    static constexpr const char* ALIAS = "SetupOptionButtonForAttributeEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint32_t attribute; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -21,5 +21,4 @@ struct SetupOptionButtonForAttributeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetupOptionButtonForAttributeEvent, 0x68);
 } // namespace game::ui
-using SetupOptionButtonForAttributeEvent = game::ui::SetupOptionButtonForAttributeEvent;
 } // namespace RED4ext

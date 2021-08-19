@@ -14,5 +14,5 @@ struct MergedMesh : CMesh
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(MergedMesh, 0x220);
+RED4EXT_ASSERT_SIZE(MergedMesh, 0x230);
 } // namespace RED4ext

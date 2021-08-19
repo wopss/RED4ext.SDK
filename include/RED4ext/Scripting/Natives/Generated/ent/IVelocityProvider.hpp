@@ -12,10 +12,9 @@ namespace ent {
 struct IVelocityProvider : IScriptable
 {
     static constexpr const char* NAME = "entIVelocityProvider";
-    static constexpr const char* ALIAS = "IVelocityProvider";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(IVelocityProvider, 0x40);
 } // namespace ent
-using IVelocityProvider = ent::IVelocityProvider;
 } // namespace RED4ext

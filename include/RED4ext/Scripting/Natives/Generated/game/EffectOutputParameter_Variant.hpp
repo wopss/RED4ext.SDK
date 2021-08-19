@@ -12,12 +12,11 @@ namespace game {
 struct EffectOutputParameter_Variant
 {
     static constexpr const char* NAME = "gameEffectOutputParameter_Variant";
-    static constexpr const char* ALIAS = "EffectOutputParameter_Variant";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     game::BlackboardPropertyBindingDefinition blackboardProperty; // 08
 };
 RED4EXT_ASSERT_SIZE(EffectOutputParameter_Variant, 0x40);
 } // namespace game
-using EffectOutputParameter_Variant = game::EffectOutputParameter_Variant;
 } // namespace RED4ext

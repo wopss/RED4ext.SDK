@@ -12,7 +12,7 @@ namespace game::ui {
 struct TutorialOverlayLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTutorialOverlayLogicController";
-    static constexpr const char* ALIAS = "TutorialOverlayLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     bool hideInMenu; // 68
     bool hideOnInput; // 69
@@ -20,5 +20,4 @@ struct TutorialOverlayLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayLogicController, 0x70);
 } // namespace game::ui
-using TutorialOverlayLogicController = game::ui::TutorialOverlayLogicController;
 } // namespace RED4ext

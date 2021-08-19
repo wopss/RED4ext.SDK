@@ -19,7 +19,9 @@ struct BlockTokenActivation_NodeSubType : quest::IContentTokenManager_NodeSubTyp
     quest::BlockAction action; // 30
     uint8_t unk34[0x38 - 0x34]; // 34
     CName source; // 38
+    bool resetTokenSpawnTimer; // 40
+    uint8_t unk41[0x48 - 0x41]; // 41
 };
-RED4EXT_ASSERT_SIZE(BlockTokenActivation_NodeSubType, 0x40);
+RED4EXT_ASSERT_SIZE(BlockTokenActivation_NodeSubType, 0x48);
 } // namespace quest
 } // namespace RED4ext

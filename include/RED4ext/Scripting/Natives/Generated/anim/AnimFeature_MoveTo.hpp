@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_MoveTo : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_MoveTo";
-    static constexpr const char* ALIAS = "AnimFeature_MoveTo";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 initialFwdVector; // 40
     Vector4 targetPositionWs; // 50
@@ -23,5 +23,4 @@ struct AnimFeature_MoveTo : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_MoveTo, 0x80);
 } // namespace anim
-using AnimFeature_MoveTo = anim::AnimFeature_MoveTo;
 } // namespace RED4ext

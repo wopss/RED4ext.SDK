@@ -13,12 +13,11 @@ namespace game {
 struct EquippedPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameEquippedPrereq";
-    static constexpr const char* ALIAS = "EquippedPrereq";
+    static constexpr const char* ALIAS = NAME;
 
     ItemID itemID; // 40
     TweakDBID slot; // 50
 };
 RED4EXT_ASSERT_SIZE(EquippedPrereq, 0x58);
 } // namespace game
-using EquippedPrereq = game::EquippedPrereq;
 } // namespace RED4ext

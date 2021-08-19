@@ -12,11 +12,10 @@ namespace game {
 struct IVehicleSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIVehicleSystem";
-    static constexpr const char* ALIAS = "IVehicleSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(IVehicleSystem, 0x50);
 } // namespace game
-using IVehicleSystem = game::IVehicleSystem;
 } // namespace RED4ext

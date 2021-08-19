@@ -13,7 +13,7 @@ namespace game::ui {
 struct RoachRaceDynObjectLogic : game::ui::SideScrollerMiniGameDynObjectLogic
 {
     static constexpr const char* NAME = "gameuiRoachRaceDynObjectLogic";
-    static constexpr const char* ALIAS = "RoachRaceMinigameDynObject";
+    static constexpr const char* ALIAS = NAME;
 
     float minSpawnY; // 80
     float maxSpawnY; // 84
@@ -23,5 +23,4 @@ struct RoachRaceDynObjectLogic : game::ui::SideScrollerMiniGameDynObjectLogic
 };
 RED4EXT_ASSERT_SIZE(RoachRaceDynObjectLogic, 0xA0);
 } // namespace game::ui
-using RoachRaceMinigameDynObject = game::ui::RoachRaceDynObjectLogic;
 } // namespace RED4ext

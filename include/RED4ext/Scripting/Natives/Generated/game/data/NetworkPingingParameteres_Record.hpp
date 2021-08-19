@@ -12,11 +12,10 @@ namespace game::data {
 struct NetworkPingingParameteres_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNetworkPingingParameteres_Record";
-    static constexpr const char* ALIAS = "NetworkPingingParameteres_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x90 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(NetworkPingingParameteres_Record, 0x90);
 } // namespace game::data
-using NetworkPingingParameteres_Record = game::data::NetworkPingingParameteres_Record;
 } // namespace RED4ext

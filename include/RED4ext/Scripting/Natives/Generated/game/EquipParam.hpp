@@ -12,7 +12,7 @@ namespace game {
 struct EquipParam
 {
     static constexpr const char* NAME = "gameEquipParam";
-    static constexpr const char* ALIAS = "RequestItemParam";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID slotID; // 00
     ItemID itemIDToEquip; // 08
@@ -22,5 +22,4 @@ struct EquipParam
 };
 RED4EXT_ASSERT_SIZE(EquipParam, 0x1C);
 } // namespace game
-using RequestItemParam = game::EquipParam;
 } // namespace RED4ext

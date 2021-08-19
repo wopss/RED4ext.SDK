@@ -12,11 +12,10 @@ namespace vehicle {
 struct GarageComponent : game::Component
 {
     static constexpr const char* NAME = "vehicleGarageComponent";
-    static constexpr const char* ALIAS = "GarageComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkA8[0x2A8 - 0xA8]; // A8
 };
 RED4EXT_ASSERT_SIZE(GarageComponent, 0x2A8);
 } // namespace vehicle
-using GarageComponent = vehicle::GarageComponent;
 } // namespace RED4ext

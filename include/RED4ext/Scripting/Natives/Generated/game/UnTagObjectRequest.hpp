@@ -15,11 +15,10 @@ namespace game {
 struct UnTagObjectRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameUnTagObjectRequest";
-    static constexpr const char* ALIAS = "UnTagObjectRequest";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::Object> object; // 48
 };
 RED4EXT_ASSERT_SIZE(UnTagObjectRequest, 0x58);
 } // namespace game
-using UnTagObjectRequest = game::UnTagObjectRequest;
 } // namespace RED4ext

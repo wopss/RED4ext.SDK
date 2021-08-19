@@ -12,10 +12,9 @@ namespace game {
 struct RPGManager : IScriptable
 {
     static constexpr const char* NAME = "gameRPGManager";
-    static constexpr const char* ALIAS = "RPGManager";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(RPGManager, 0x40);
 } // namespace game
-using RPGManager = game::RPGManager;
 } // namespace RED4ext

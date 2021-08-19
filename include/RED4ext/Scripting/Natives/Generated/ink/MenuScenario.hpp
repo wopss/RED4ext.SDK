@@ -12,7 +12,7 @@ namespace ink {
 struct MenuScenario : IScriptable
 {
     static constexpr const char* NAME = "inkMenuScenario";
-    static constexpr const char* ALIAS = "inkMenuScenario";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x60 - 0x40]; // 40
 };

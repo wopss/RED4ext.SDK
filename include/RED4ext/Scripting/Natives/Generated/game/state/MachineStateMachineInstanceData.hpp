@@ -15,7 +15,7 @@ namespace game::state {
 struct MachineStateMachineInstanceData
 {
     static constexpr const char* NAME = "gamestateMachineStateMachineInstanceData";
-    static constexpr const char* ALIAS = "StateMachineInstanceData";
+    static constexpr const char* ALIAS = NAME;
 
     CName referenceName; // 00
     uint32_t priority; // 08
@@ -24,5 +24,4 @@ struct MachineStateMachineInstanceData
 };
 RED4EXT_ASSERT_SIZE(MachineStateMachineInstanceData, 0x20);
 } // namespace game::state
-using StateMachineInstanceData = game::state::MachineStateMachineInstanceData;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct WorkspotReactionType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWorkspotReactionType_Record";
-    static constexpr const char* ALIAS = "WorkspotReactionType_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(WorkspotReactionType_Record, 0x50);
 } // namespace game::data
-using WorkspotReactionType_Record = game::data::WorkspotReactionType_Record;
 } // namespace RED4ext

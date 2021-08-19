@@ -12,7 +12,7 @@ namespace game {
 struct VisionAppearance
 {
     static constexpr const char* NAME = "gameVisionAppearance";
-    static constexpr const char* ALIAS = "VisionAppearance";
+    static constexpr const char* ALIAS = NAME;
 
     int32_t fill; // 00
     int32_t outline; // 04
@@ -22,5 +22,4 @@ struct VisionAppearance
 };
 RED4EXT_ASSERT_SIZE(VisionAppearance, 0x10);
 } // namespace game
-using VisionAppearance = game::VisionAppearance;
 } // namespace RED4ext

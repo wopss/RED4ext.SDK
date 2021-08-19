@@ -21,8 +21,9 @@ struct SceneInterrupt_ConditionType : quest::ISceneConditionType
     static constexpr const char* ALIAS = NAME;
 
     RaRef<scn::SceneResource> sceneFile; // 38
-    bool onlyInSafeMoment; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
+    uint8_t unk40[0x41 - 0x40]; // 40
+    bool onlyInSafeMoment; // 41
+    uint8_t unk42[0x48 - 0x42]; // 42
     DynArray<Handle<scn::IInterruptCondition>> interruptConditions; // 48
 };
 RED4EXT_ASSERT_SIZE(SceneInterrupt_ConditionType, 0x58);

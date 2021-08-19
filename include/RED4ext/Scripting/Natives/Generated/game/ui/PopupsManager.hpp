@@ -14,15 +14,14 @@ namespace game::ui {
 struct PopupsManager : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiPopupsManager";
-    static constexpr const char* ALIAS = "PopupsManager";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0x118 - 0xD0]; // D0
-    ink::CompoundWidgetReference bracketsContainer; // 118
-    ink::CompoundWidgetReference tutorialOverlayContainer; // 130
-    CName bracketLibraryID; // 148
-    uint8_t unk150[0x168 - 0x150]; // 150
+    uint8_t unkD0[0x128 - 0xD0]; // D0
+    ink::CompoundWidgetReference bracketsContainer; // 128
+    ink::CompoundWidgetReference tutorialOverlayContainer; // 140
+    CName bracketLibraryID; // 158
+    uint8_t unk160[0x178 - 0x160]; // 160
 };
-RED4EXT_ASSERT_SIZE(PopupsManager, 0x168);
+RED4EXT_ASSERT_SIZE(PopupsManager, 0x178);
 } // namespace game::ui
-using PopupsManager = game::ui::PopupsManager;
 } // namespace RED4ext

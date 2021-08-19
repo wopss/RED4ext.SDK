@@ -16,7 +16,7 @@ namespace game {
 struct RegisterCooldownFromRecordRequest
 {
     static constexpr const char* NAME = "gameRegisterCooldownFromRecordRequest";
-    static constexpr const char* ALIAS = "RegisterCooldownFromRecordRequest";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<ent::Entity> owner; // 00
     ItemID ownerItemId; // 10
@@ -25,5 +25,4 @@ struct RegisterCooldownFromRecordRequest
 };
 RED4EXT_ASSERT_SIZE(RegisterCooldownFromRecordRequest, 0x38);
 } // namespace game
-using RegisterCooldownFromRecordRequest = game::RegisterCooldownFromRecordRequest;
 } // namespace RED4ext

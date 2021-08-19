@@ -13,7 +13,7 @@ namespace game::state {
 struct MachineparameterTypeLadderDescription : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeLadderDescription";
-    static constexpr const char* ALIAS = "LadderDescription";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 position; // 40
     Vector4 normal; // 50
@@ -29,5 +29,4 @@ struct MachineparameterTypeLadderDescription : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeLadderDescription, 0x90);
 } // namespace game::state
-using LadderDescription = game::state::MachineparameterTypeLadderDescription;
 } // namespace RED4ext

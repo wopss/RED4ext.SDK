@@ -21,7 +21,10 @@ struct TriggerCallRequest : game::ScriptableSystemRequest
     CName addressee; // 50
     quest::PhoneCallPhase callPhase; // 58
     quest::PhoneCallMode callMode; // 5C
+    bool isPlayerTriggered; // 60
+    bool isRejectable; // 61
+    uint8_t unk62[0x68 - 0x62]; // 62
 };
-RED4EXT_ASSERT_SIZE(TriggerCallRequest, 0x60);
+RED4EXT_ASSERT_SIZE(TriggerCallRequest, 0x68);
 } // namespace quest
 } // namespace RED4ext

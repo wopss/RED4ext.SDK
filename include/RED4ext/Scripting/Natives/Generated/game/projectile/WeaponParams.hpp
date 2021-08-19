@@ -29,9 +29,10 @@ struct WeaponParams
     Vector4 hitPlaneOffset; // 40
     float shootingOffset; // 50
     bool ignoreWeaponOwnerCollision; // 54
-    uint8_t unk55[0x80 - 0x55]; // 55
-    game::RicochetData ricochetData; // 80
-    uint8_t unk98[0xA0 - 0x98]; // 98
+    uint8_t unk55[0x58 - 0x55]; // 55
+    float range; // 58
+    uint8_t unk5C[0x88 - 0x5C]; // 5C
+    game::RicochetData ricochetData; // 88
 };
 RED4EXT_ASSERT_SIZE(WeaponParams, 0xA0);
 } // namespace game::projectile

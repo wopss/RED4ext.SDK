@@ -13,7 +13,7 @@ namespace game::ui {
 struct StadiaControllersGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiStadiaControllersGameController";
-    static constexpr const char* ALIAS = "StadiaControllersGameController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkD0[0xD8 - 0xD0]; // D0
     ink::WidgetReference stadiaControllerPage; // D8
@@ -24,5 +24,4 @@ struct StadiaControllersGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(StadiaControllersGameController, 0x168);
 } // namespace game::ui
-using StadiaControllersGameController = game::ui::StadiaControllersGameController;
 } // namespace RED4ext

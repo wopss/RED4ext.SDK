@@ -12,11 +12,10 @@ namespace game {
 struct AINetStateComponent : game::ScriptableComponent
 {
     static constexpr const char* NAME = "gameAINetStateComponent";
-    static constexpr const char* ALIAS = "AINetStateComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unkB8[0x118 - 0xB8]; // B8
 };
 RED4EXT_ASSERT_SIZE(AINetStateComponent, 0x118);
 } // namespace game
-using AINetStateComponent = game::AINetStateComponent;
 } // namespace RED4ext

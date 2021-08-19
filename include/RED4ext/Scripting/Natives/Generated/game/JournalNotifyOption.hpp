@@ -13,5 +13,4 @@ enum class JournalNotifyOption : uint32_t
     Notify = 2,
 };
 } // namespace game
-using JournalNotifyOption = game::JournalNotifyOption;
 } // namespace RED4ext

@@ -11,12 +11,11 @@ namespace game::ui {
 struct UIInteractionData
 {
     static constexpr const char* NAME = "gameuiUIInteractionData";
-    static constexpr const char* ALIAS = "bbUIInteractionData";
+    static constexpr const char* ALIAS = NAME;
 
     bool interactionListActive; // 00
     bool terminalInteractionActive; // 01
 };
 RED4EXT_ASSERT_SIZE(UIInteractionData, 0x2);
 } // namespace game::ui
-using bbUIInteractionData = game::ui::UIInteractionData;
 } // namespace RED4ext

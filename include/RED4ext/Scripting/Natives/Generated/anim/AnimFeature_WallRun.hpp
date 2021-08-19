@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_WallRun : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_WallRun";
-    static constexpr const char* ALIAS = "AnimFeature_WallRun";
+    static constexpr const char* ALIAS = NAME;
 
     bool wallOnRightSide; // 40
     uint8_t unk41[0x50 - 0x41]; // 41
@@ -22,5 +22,4 @@ struct AnimFeature_WallRun : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_WallRun, 0x70);
 } // namespace anim
-using AnimFeature_WallRun = anim::AnimFeature_WallRun;
 } // namespace RED4ext

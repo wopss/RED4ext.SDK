@@ -18,20 +18,19 @@ namespace ent {
 struct PhysicalMeshComponent : ent::MeshComponent
 {
     static constexpr const char* NAME = "entPhysicalMeshComponent";
-    static constexpr const char* ALIAS = "PhysicalMeshComponent";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk1D0[0x200 - 0x1D0]; // 1D0
-    Handle<physics::FilterData> filterData; // 200
-    uint8_t unk210[0x218 - 0x210]; // 210
-    CName visibilityAnimationParam; // 218
+    uint8_t unk1E0[0x210 - 0x1E0]; // 1E0
+    Handle<physics::FilterData> filterData; // 210
     uint8_t unk220[0x228 - 0x220]; // 220
-    physics::FilterDataSource filterDataSource; // 228
-    physics::SimulationType simulationType; // 229
-    bool startInactive; // 22A
-    bool useResourceSimulationType; // 22B
-    uint8_t unk22C[0x230 - 0x22C]; // 22C
+    CName visibilityAnimationParam; // 228
+    uint8_t unk230[0x238 - 0x230]; // 230
+    physics::FilterDataSource filterDataSource; // 238
+    physics::SimulationType simulationType; // 239
+    bool startInactive; // 23A
+    bool useResourceSimulationType; // 23B
+    uint8_t unk23C[0x240 - 0x23C]; // 23C
 };
-RED4EXT_ASSERT_SIZE(PhysicalMeshComponent, 0x230);
+RED4EXT_ASSERT_SIZE(PhysicalMeshComponent, 0x240);
 } // namespace ent
-using PhysicalMeshComponent = ent::PhysicalMeshComponent;
 } // namespace RED4ext

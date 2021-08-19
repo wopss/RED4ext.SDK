@@ -12,11 +12,10 @@ namespace game {
 struct StatPoolsSystem : game::IStatPoolsSystem
 {
     static constexpr const char* NAME = "gameStatPoolsSystem";
-    static constexpr const char* ALIAS = "StatPoolsSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x198 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(StatPoolsSystem, 0x198);
 } // namespace game
-using StatPoolsSystem = game::StatPoolsSystem;
 } // namespace RED4ext

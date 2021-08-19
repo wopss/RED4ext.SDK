@@ -15,7 +15,7 @@ namespace AI {
 struct ThreatExpectationInvalid : AI::AIEvent
 {
     static constexpr const char* NAME = "AIThreatExpectationInvalid";
-    static constexpr const char* ALIAS = "ThreatExpectationInvalid";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<ent::Entity> owner; // 50
     WeakHandle<ent::Entity> threat; // 60
@@ -24,5 +24,4 @@ struct ThreatExpectationInvalid : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(ThreatExpectationInvalid, 0x78);
 } // namespace AI
-using ThreatExpectationInvalid = AI::ThreatExpectationInvalid;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct LootBag : game::Object
     static constexpr const char* NAME = "gameLootBag";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x240 - 0x230]; // 230
+    uint8_t unk240[0x250 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(LootBag, 0x240);
+RED4EXT_ASSERT_SIZE(LootBag, 0x250);
 } // namespace game
 } // namespace RED4ext

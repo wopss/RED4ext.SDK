@@ -14,7 +14,7 @@ namespace game {
 struct JournalContact : game::JournalFileEntry
 {
     static constexpr const char* NAME = "gameJournalContact";
-    static constexpr const char* ALIAS = "JournalContact";
+    static constexpr const char* ALIAS = NAME;
 
     LocalizationString name; // 90
     game::ContactType type; // B8
@@ -24,5 +24,4 @@ struct JournalContact : game::JournalFileEntry
 };
 RED4EXT_ASSERT_SIZE(JournalContact, 0xC8);
 } // namespace game
-using JournalContact = game::JournalContact;
 } // namespace RED4ext

@@ -13,12 +13,11 @@ namespace ink::anim {
 struct ShearInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimShearInterpolator";
-    static constexpr const char* ALIAS = "inkAnimShear";
+    static constexpr const char* ALIAS = NAME;
 
     Vector2 startValue; // 68
     Vector2 endValue; // 70
 };
 RED4EXT_ASSERT_SIZE(ShearInterpolator, 0x78);
 } // namespace ink::anim
-using inkAnimShear = ink::anim::ShearInterpolator;
 } // namespace RED4ext

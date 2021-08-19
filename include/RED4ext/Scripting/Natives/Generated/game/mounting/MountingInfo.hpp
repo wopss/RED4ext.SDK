@@ -13,7 +13,7 @@ namespace game::mounting {
 struct MountingInfo
 {
     static constexpr const char* NAME = "gamemountingMountingInfo";
-    static constexpr const char* ALIAS = "MountingInfo";
+    static constexpr const char* ALIAS = NAME;
 
     ent::EntityID childId; // 00
     ent::EntityID parentId; // 08
@@ -21,5 +21,4 @@ struct MountingInfo
 };
 RED4EXT_ASSERT_SIZE(MountingInfo, 0x18);
 } // namespace game::mounting
-using MountingInfo = game::mounting::MountingInfo;
 } // namespace RED4ext

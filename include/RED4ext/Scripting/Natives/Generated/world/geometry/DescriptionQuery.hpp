@@ -15,7 +15,7 @@ namespace world::geometry {
 struct DescriptionQuery : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryDescriptionQuery";
-    static constexpr const char* ALIAS = "GeometryDescriptionQuery";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 refPosition; // 40
     Vector4 refDirection; // 50
@@ -38,5 +38,4 @@ struct DescriptionQuery : IScriptable
 };
 RED4EXT_ASSERT_SIZE(DescriptionQuery, 0xE0);
 } // namespace world::geometry
-using GeometryDescriptionQuery = world::geometry::DescriptionQuery;
 } // namespace RED4ext

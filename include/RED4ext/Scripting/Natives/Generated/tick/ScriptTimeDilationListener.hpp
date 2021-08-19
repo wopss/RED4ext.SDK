@@ -12,10 +12,9 @@ namespace tick {
 struct ScriptTimeDilationListener : tick::ITimeDilationListener
 {
     static constexpr const char* NAME = "tickScriptTimeDilationListener";
-    static constexpr const char* ALIAS = "TimeDilationListener";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ScriptTimeDilationListener, 0x40);
 } // namespace tick
-using TimeDilationListener = tick::ScriptTimeDilationListener;
 } // namespace RED4ext

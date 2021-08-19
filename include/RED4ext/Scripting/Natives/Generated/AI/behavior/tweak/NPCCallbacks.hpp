@@ -13,8 +13,8 @@ struct NPCCallbacks
     static constexpr const char* NAME = "AIbehaviortweakNPCCallbacks";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x18 - 0x0]; // 0
+    uint8_t unk00[0x60 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(NPCCallbacks, 0x18);
+RED4EXT_ASSERT_SIZE(NPCCallbacks, 0x60);
 } // namespace AI::behavior::tweak
 } // namespace RED4ext

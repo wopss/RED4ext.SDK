@@ -17,7 +17,8 @@ struct ChunkFlags
     bool renderInShadows; // 01
     bool isTwoSided; // 02
     bool isRayTracedEmissive; // 03
+    bool isConsoleLOD0; // 04
 };
-RED4EXT_ASSERT_SIZE(ChunkFlags, 0x4);
+RED4EXT_ASSERT_SIZE(ChunkFlags, 0x5);
 } // namespace mesh
 } // namespace RED4ext

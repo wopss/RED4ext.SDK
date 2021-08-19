@@ -14,9 +14,9 @@ struct TimerTest : game::Object
     static constexpr const char* NAME = "cpTimerTest";
     static constexpr const char* ALIAS = NAME;
 
-    int32_t counter; // 230
-    uint8_t unk234[0x238 - 0x234]; // 234
+    int32_t counter; // 240
+    uint8_t unk244[0x248 - 0x244]; // 244
 };
-RED4EXT_ASSERT_SIZE(TimerTest, 0x238);
+RED4EXT_ASSERT_SIZE(TimerTest, 0x248);
 } // namespace cp
 } // namespace RED4ext

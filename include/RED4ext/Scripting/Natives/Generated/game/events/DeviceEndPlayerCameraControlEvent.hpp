@@ -12,10 +12,9 @@ namespace game::events {
 struct DeviceEndPlayerCameraControlEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsDeviceEndPlayerCameraControlEvent";
-    static constexpr const char* ALIAS = "DeviceEndPlayerCameraControlEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(DeviceEndPlayerCameraControlEvent, 0x40);
 } // namespace game::events
-using DeviceEndPlayerCameraControlEvent = game::events::DeviceEndPlayerCameraControlEvent;
 } // namespace RED4ext

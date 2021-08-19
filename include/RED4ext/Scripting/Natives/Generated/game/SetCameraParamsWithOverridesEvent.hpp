@@ -13,7 +13,7 @@ namespace game {
 struct SetCameraParamsWithOverridesEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetCameraParamsWithOverridesEvent";
-    static constexpr const char* ALIAS = "SetCameraParamsWithOverridesEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName paramsName; // 40
     float yawMaxLeft; // 48
@@ -25,5 +25,4 @@ struct SetCameraParamsWithOverridesEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetCameraParamsWithOverridesEvent, 0x60);
 } // namespace game
-using SetCameraParamsWithOverridesEvent = game::SetCameraParamsWithOverridesEvent;
 } // namespace RED4ext

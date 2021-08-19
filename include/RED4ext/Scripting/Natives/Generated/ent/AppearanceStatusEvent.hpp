@@ -16,8 +16,8 @@ struct AppearanceStatusEvent : red::Event
     static constexpr const char* ALIAS = NAME;
 
     ent::AppearanceStatus status; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
+    uint8_t unk41[0x50 - 0x41]; // 41
 };
-RED4EXT_ASSERT_SIZE(AppearanceStatusEvent, 0x48);
+RED4EXT_ASSERT_SIZE(AppearanceStatusEvent, 0x50);
 } // namespace ent
 } // namespace RED4ext

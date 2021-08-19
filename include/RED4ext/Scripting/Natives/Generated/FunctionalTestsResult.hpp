@@ -12,12 +12,11 @@ namespace RED4ext
 struct FunctionalTestsResult
 {
     static constexpr const char* NAME = "FunctionalTestsResult";
-    static constexpr const char* ALIAS = "FTResult";
+    static constexpr const char* ALIAS = NAME;
 
     FunctionalTestsResultCode code; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
     CString msg; // 08
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestsResult, 0x28);
-using FTResult = FunctionalTestsResult;
 } // namespace RED4ext

@@ -12,11 +12,10 @@ namespace game::data {
 struct UICharacterCreationAttributesPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataUICharacterCreationAttributesPreset_Record";
-    static constexpr const char* ALIAS = "UICharacterCreationAttributesPreset_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(UICharacterCreationAttributesPreset_Record, 0x50);
 } // namespace game::data
-using UICharacterCreationAttributesPreset_Record = game::data::UICharacterCreationAttributesPreset_Record;
 } // namespace RED4ext

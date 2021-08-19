@@ -12,11 +12,10 @@ namespace vehicle {
 struct ToggleQuestWeaponEnabledEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleToggleQuestWeaponEnabledEvent";
-    static constexpr const char* ALIAS = "VehicleToggleQuestWeaponEnabledEvent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ToggleQuestWeaponEnabledEvent, 0x48);
 } // namespace vehicle
-using VehicleToggleQuestWeaponEnabledEvent = vehicle::ToggleQuestWeaponEnabledEvent;
 } // namespace RED4ext

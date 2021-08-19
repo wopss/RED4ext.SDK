@@ -12,10 +12,9 @@ namespace game {
 struct ISubtitleHandlerSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameISubtitleHandlerSystem";
-    static constexpr const char* ALIAS = "ISubtitleHandlerSystem";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(ISubtitleHandlerSystem, 0x48);
 } // namespace game
-using ISubtitleHandlerSystem = game::ISubtitleHandlerSystem;
 } // namespace RED4ext

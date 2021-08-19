@@ -14,8 +14,8 @@ struct IconAtlas : ink::IIconAtlas
     static constexpr const char* NAME = "inkIconAtlas";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x120 - 0x40]; // 40
+    uint8_t unk40[0x170 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(IconAtlas, 0x120);
+RED4EXT_ASSERT_SIZE(IconAtlas, 0x170);
 } // namespace ink
 } // namespace RED4ext

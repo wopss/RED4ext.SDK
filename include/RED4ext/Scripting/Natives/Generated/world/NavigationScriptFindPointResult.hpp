@@ -13,7 +13,7 @@ namespace world {
 struct NavigationScriptFindPointResult
 {
     static constexpr const char* NAME = "worldNavigationScriptFindPointResult";
-    static constexpr const char* ALIAS = "NavigationFindPointResult";
+    static constexpr const char* ALIAS = NAME;
 
     world::NavigationRequestStatus status; // 00
     uint8_t unk04[0x10 - 0x4]; // 4
@@ -21,5 +21,4 @@ struct NavigationScriptFindPointResult
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptFindPointResult, 0x20);
 } // namespace world
-using NavigationFindPointResult = world::NavigationScriptFindPointResult;
 } // namespace RED4ext

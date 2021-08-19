@@ -12,12 +12,11 @@ namespace game::ui {
 struct PhotoModeUIVisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPhotoModeUIVisibilityEvent";
-    static constexpr const char* ALIAS = "PhotoModeUIVisibilityEvent";
+    static constexpr const char* ALIAS = NAME;
 
     bool visible; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(PhotoModeUIVisibilityEvent, 0x48);
 } // namespace game::ui
-using PhotoModeUIVisibilityEvent = game::ui::PhotoModeUIVisibilityEvent;
 } // namespace RED4ext

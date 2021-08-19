@@ -12,11 +12,10 @@ namespace game {
 struct PersistencySystem : game::IPersistencySystem
 {
     static constexpr const char* NAME = "gamePersistencySystem";
-    static constexpr const char* ALIAS = "GamePersistencySystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x3A8 - 0x48]; // 48
+    uint8_t unk48[0x1A0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PersistencySystem, 0x3A8);
+RED4EXT_ASSERT_SIZE(PersistencySystem, 0x1A0);
 } // namespace game
-using GamePersistencySystem = game::PersistencySystem;
 } // namespace RED4ext

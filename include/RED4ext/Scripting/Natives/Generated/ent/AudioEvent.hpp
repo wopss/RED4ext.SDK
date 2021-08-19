@@ -15,7 +15,7 @@ namespace ent {
 struct AudioEvent : red::Event
 {
     static constexpr const char* NAME = "entAudioEvent";
-    static constexpr const char* ALIAS = "AudioEvent";
+    static constexpr const char* ALIAS = NAME;
 
     CName eventName; // 40
     CName emitterName; // 48
@@ -27,5 +27,4 @@ struct AudioEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AudioEvent, 0x68);
 } // namespace ent
-using AudioEvent = ent::AudioEvent;
 } // namespace RED4ext

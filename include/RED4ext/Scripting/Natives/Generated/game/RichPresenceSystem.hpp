@@ -12,11 +12,10 @@ namespace game {
 struct RichPresenceSystem : game::IRichPresenceSystem
 {
     static constexpr const char* NAME = "gameRichPresenceSystem";
-    static constexpr const char* ALIAS = "RichPresenceSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(RichPresenceSystem, 0x50);
 } // namespace game
-using RichPresenceSystem = game::RichPresenceSystem;
 } // namespace RED4ext

@@ -18,27 +18,26 @@ namespace game::ui {
 struct MinimapContainerController : game::ui::MappinsContainerController
 {
     static constexpr const char* NAME = "gameuiMinimapContainerController";
-    static constexpr const char* ALIAS = "MinimapContainerController";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk290[0x310 - 0x290]; // 290
-    float visionRadiusVehicle; // 310
-    float visionRadiusCombat; // 314
-    float visionRadiusQuestArea; // 318
-    float visionRadiusSecurityArea; // 31C
-    float visionRadiusInterior; // 320
-    float visionRadiusExterior; // 324
-    ink::CompoundWidgetReference clampedMappinContainer; // 328
-    ink::CompoundWidgetReference unclampedMappinContainer; // 340
-    ink::CacheWidgetReference worldGeometryCache; // 358
-    ink::CanvasWidgetReference worldGeometryContainer; // 370
-    ink::WidgetReference playerIconWidget; // 388
-    ink::WidgetReference compassWidget; // 3A0
-    ink::MaskWidgetReference maskWidget; // 3B8
-    CName geometryLibraryID; // 3D0
-    uint8_t unk3D8[0x420 - 0x3D8]; // 3D8
-    ink::CompoundWidgetReference timeDisplayWidget; // 420
+    uint8_t unk2C0[0x350 - 0x2C0]; // 2C0
+    float visionRadiusVehicle; // 350
+    float visionRadiusCombat; // 354
+    float visionRadiusQuestArea; // 358
+    float visionRadiusSecurityArea; // 35C
+    float visionRadiusInterior; // 360
+    float visionRadiusExterior; // 364
+    ink::CompoundWidgetReference clampedMappinContainer; // 368
+    ink::CompoundWidgetReference unclampedMappinContainer; // 380
+    ink::CacheWidgetReference worldGeometryCache; // 398
+    ink::CanvasWidgetReference worldGeometryContainer; // 3B0
+    ink::WidgetReference playerIconWidget; // 3C8
+    ink::WidgetReference compassWidget; // 3E0
+    ink::MaskWidgetReference maskWidget; // 3F8
+    CName geometryLibraryID; // 410
+    uint8_t unk418[0x460 - 0x418]; // 418
+    ink::CompoundWidgetReference timeDisplayWidget; // 460
 };
-RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x438);
+RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x478);
 } // namespace game::ui
-using MinimapContainerController = game::ui::MinimapContainerController;
 } // namespace RED4ext

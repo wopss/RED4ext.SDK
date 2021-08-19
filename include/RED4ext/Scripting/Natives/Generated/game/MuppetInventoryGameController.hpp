@@ -14,8 +14,8 @@ struct MuppetInventoryGameController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameMuppetInventoryGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE8[0x130 - 0xE8]; // E8
+    uint8_t unkE8[0x148 - 0xE8]; // E8
 };
-RED4EXT_ASSERT_SIZE(MuppetInventoryGameController, 0x130);
+RED4EXT_ASSERT_SIZE(MuppetInventoryGameController, 0x148);
 } // namespace game
 } // namespace RED4ext

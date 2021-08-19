@@ -12,11 +12,10 @@ namespace game::data {
 struct LifePath_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataLifePath_Record";
-    static constexpr const char* ALIAS = "LifePath_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x60 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(LifePath_Record, 0x60);
 } // namespace game::data
-using LifePath_Record = game::data::LifePath_Record;
 } // namespace RED4ext

@@ -15,7 +15,7 @@ namespace game::state {
 struct MachineActionParameterWeakIScriptable
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterWeakIScriptable";
-    static constexpr const char* ALIAS = "ActionParameterWeakIScriptable";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
     CName name; // 08
@@ -23,5 +23,4 @@ struct MachineActionParameterWeakIScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterWeakIScriptable, 0x20);
 } // namespace game::state
-using ActionParameterWeakIScriptable = game::state::MachineActionParameterWeakIScriptable;
 } // namespace RED4ext

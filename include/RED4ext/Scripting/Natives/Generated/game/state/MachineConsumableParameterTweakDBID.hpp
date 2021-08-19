@@ -12,12 +12,11 @@ namespace game::state {
 struct MachineConsumableParameterTweakDBID : game::state::MachineActionParameterTweakDBID
 {
     static constexpr const char* NAME = "gamestateMachineConsumableParameterTweakDBID";
-    static constexpr const char* ALIAS = "ConsumableParameterTweakDBID";
+    static constexpr const char* ALIAS = NAME;
 
     bool consumed; // 18
     uint8_t unk19[0x20 - 0x19]; // 19
 };
 RED4EXT_ASSERT_SIZE(MachineConsumableParameterTweakDBID, 0x20);
 } // namespace game::state
-using ConsumableParameterTweakDBID = game::state::MachineConsumableParameterTweakDBID;
 } // namespace RED4ext

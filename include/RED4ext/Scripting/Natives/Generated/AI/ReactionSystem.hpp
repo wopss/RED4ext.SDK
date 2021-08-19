@@ -12,11 +12,10 @@ namespace AI {
 struct ReactionSystem : AI::IReactionSystem
 {
     static constexpr const char* NAME = "AIReactionSystem";
-    static constexpr const char* ALIAS = "ReactionSystem";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xC0 - 0x48]; // 48
+    uint8_t unk48[0xC8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ReactionSystem, 0xC0);
+RED4EXT_ASSERT_SIZE(ReactionSystem, 0xC8);
 } // namespace AI
-using ReactionSystem = AI::ReactionSystem;
 } // namespace RED4ext

@@ -12,12 +12,11 @@ namespace AI {
 struct LocationInformation
 {
     static constexpr const char* NAME = "AILocationInformation";
-    static constexpr const char* ALIAS = "LocationInformation";
+    static constexpr const char* ALIAS = NAME;
 
     Vector4 position; // 00
     Vector4 direction; // 10
 };
 RED4EXT_ASSERT_SIZE(LocationInformation, 0x20);
 } // namespace AI
-using LocationInformation = AI::LocationInformation;
 } // namespace RED4ext

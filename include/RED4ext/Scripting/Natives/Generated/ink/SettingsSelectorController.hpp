@@ -12,11 +12,10 @@ namespace ink {
 struct SettingsSelectorController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkSettingsSelectorController";
-    static constexpr const char* ALIAS = "SettingsSelectorController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk68[0xB8 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(SettingsSelectorController, 0xB8);
 } // namespace ink
-using SettingsSelectorController = ink::SettingsSelectorController;
 } // namespace RED4ext

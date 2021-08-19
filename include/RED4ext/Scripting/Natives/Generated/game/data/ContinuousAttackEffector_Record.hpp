@@ -12,11 +12,10 @@ namespace game::data {
 struct ContinuousAttackEffector_Record : game::data::ContinuousEffector_Record
 {
     static constexpr const char* NAME = "gamedataContinuousAttackEffector_Record";
-    static constexpr const char* ALIAS = "ContinuousAttackEffector_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk60[0x68 - 0x60]; // 60
 };
 RED4EXT_ASSERT_SIZE(ContinuousAttackEffector_Record, 0x68);
 } // namespace game::data
-using ContinuousAttackEffector_Record = game::data::ContinuousAttackEffector_Record;
 } // namespace RED4ext

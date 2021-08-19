@@ -12,11 +12,10 @@ namespace AI::behavior {
 struct BehaviorDelegate : AI::behavior::BehaviorBlackboard
 {
     static constexpr const char* NAME = "AIbehaviorBehaviorDelegate";
-    static constexpr const char* ALIAS = "BehaviorDelegate";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(BehaviorDelegate, 0x48);
 } // namespace AI::behavior
-using BehaviorDelegate = AI::behavior::BehaviorDelegate;
 } // namespace RED4ext

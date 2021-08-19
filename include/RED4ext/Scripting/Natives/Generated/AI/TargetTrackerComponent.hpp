@@ -4,21 +4,20 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ent/IComponent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/Component.hpp>
 
 namespace RED4ext
 {
 namespace AI { 
-struct TargetTrackerComponent : ent::IComponent
+struct TargetTrackerComponent : game::Component
 {
     static constexpr const char* NAME = "AITargetTrackerComponent";
-    static constexpr const char* ALIAS = "TargetTrackerComponent";
+    static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0x165 - 0x90]; // 90
-    bool TriggersCombat; // 165
-    uint8_t unk166[0x1F0 - 0x166]; // 166
+    uint8_t unkA8[0x17D - 0xA8]; // A8
+    bool TriggersCombat; // 17D
+    uint8_t unk17E[0x210 - 0x17E]; // 17E
 };
-RED4EXT_ASSERT_SIZE(TargetTrackerComponent, 0x1F0);
+RED4EXT_ASSERT_SIZE(TargetTrackerComponent, 0x210);
 } // namespace AI
-using TargetTrackerComponent = AI::TargetTrackerComponent;
 } // namespace RED4ext

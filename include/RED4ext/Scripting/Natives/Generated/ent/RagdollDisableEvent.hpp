@@ -12,10 +12,9 @@ namespace ent {
 struct RagdollDisableEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollDisableEvent";
-    static constexpr const char* ALIAS = "RagdollDisableEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(RagdollDisableEvent, 0x40);
 } // namespace ent
-using RagdollDisableEvent = ent::RagdollDisableEvent;
 } // namespace RED4ext

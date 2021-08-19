@@ -15,13 +15,13 @@ namespace ink {
 struct CacheWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkCacheWidget";
-    static constexpr const char* ALIAS = "inkCacheWidget";
+    static constexpr const char* ALIAS = NAME;
 
     CName externalDynamicTexture; // 220
     Vector2 innerScale; // 228
     ink::CacheMode mode; // 230
-    uint8_t unk231[0x280 - 0x231]; // 231
+    uint8_t unk231[0x2E0 - 0x231]; // 231
 };
-RED4EXT_ASSERT_SIZE(CacheWidget, 0x280);
+RED4EXT_ASSERT_SIZE(CacheWidget, 0x2E0);
 } // namespace ink
 } // namespace RED4ext

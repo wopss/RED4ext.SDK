@@ -13,7 +13,7 @@ namespace ent::ragdoll {
 struct ActivationRequestData
 {
     static constexpr const char* NAME = "entragdollActivationRequestData";
-    static constexpr const char* ALIAS = "RagdollActivationRequestData";
+    static constexpr const char* ALIAS = NAME;
 
     CName filterDataOverride; // 00
     ent::ragdoll::ActivationRequestType type; // 08
@@ -21,9 +21,8 @@ struct ActivationRequestData
     bool activateOnCollision; // 10
     bool applyPowerPose; // 11
     bool applyMomentum; // 12
-    uint8_t unk13[0x18 - 0x13]; // 13
+    uint8_t unk13[0x20 - 0x13]; // 13
 };
-RED4EXT_ASSERT_SIZE(ActivationRequestData, 0x18);
+RED4EXT_ASSERT_SIZE(ActivationRequestData, 0x20);
 } // namespace ent::ragdoll
-using RagdollActivationRequestData = ent::ragdoll::ActivationRequestData;
 } // namespace RED4ext

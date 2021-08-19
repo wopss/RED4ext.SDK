@@ -17,12 +17,11 @@ namespace ink::anim {
 struct Definition : IScriptable
 {
     static constexpr const char* NAME = "inkanimDefinition";
-    static constexpr const char* ALIAS = "inkAnimDef";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<Handle<ink::anim::Interpolator>> interpolators; // 40
     DynArray<Handle<ink::anim::Event>> events; // 50
 };
 RED4EXT_ASSERT_SIZE(Definition, 0x60);
 } // namespace ink::anim
-using inkAnimDef = ink::anim::Definition;
 } // namespace RED4ext

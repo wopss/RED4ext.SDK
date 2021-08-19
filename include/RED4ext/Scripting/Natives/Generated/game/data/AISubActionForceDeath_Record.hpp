@@ -12,11 +12,10 @@ namespace game::data {
 struct AISubActionForceDeath_Record : game::data::AISubAction_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionForceDeath_Record";
-    static constexpr const char* ALIAS = "AISubActionForceDeath_Record";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(AISubActionForceDeath_Record, 0x58);
 } // namespace game::data
-using AISubActionForceDeath_Record = game::data::AISubActionForceDeath_Record;
 } // namespace RED4ext

@@ -15,7 +15,7 @@ namespace game {
 struct AttachmentSlotData
 {
     static constexpr const char* NAME = "gameAttachmentSlotData";
-    static constexpr const char* ALIAS = "AttachmentSlotData";
+    static constexpr const char* ALIAS = NAME;
 
     TweakDBID slotID; // 00
     Handle<game::ItemObject> itemObject; // 08
@@ -26,5 +26,4 @@ struct AttachmentSlotData
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotData, 0x78);
 } // namespace game
-using AttachmentSlotData = game::AttachmentSlotData;
 } // namespace RED4ext

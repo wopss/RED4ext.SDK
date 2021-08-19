@@ -13,7 +13,7 @@ namespace ink {
 struct PlatformSpecificTextController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkPlatformSpecificTextController";
-    static constexpr const char* ALIAS = "PlatformSpecificTextController";
+    static constexpr const char* ALIAS = NAME;
 
     CName textLocKey; // 68
     CName textLocKey_PS4; // 70
@@ -21,5 +21,4 @@ struct PlatformSpecificTextController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(PlatformSpecificTextController, 0x80);
 } // namespace ink
-using PlatformSpecificTextController = ink::PlatformSpecificTextController;
 } // namespace RED4ext

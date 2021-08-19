@@ -17,7 +17,7 @@ namespace game {
 struct FriendlyFireParams : IScriptable
 {
     static constexpr const char* NAME = "gameFriendlyFireParams";
-    static constexpr const char* ALIAS = "FriendlyFireParams";
+    static constexpr const char* ALIAS = NAME;
 
     WeakHandle<game::AttitudeAgent> attitude; // 40
     WeakHandle<ent::SlotComponent> slots; // 50
@@ -30,5 +30,4 @@ struct FriendlyFireParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(FriendlyFireParams, 0x98);
 } // namespace game
-using FriendlyFireParams = game::FriendlyFireParams;
 } // namespace RED4ext

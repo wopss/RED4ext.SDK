@@ -12,10 +12,9 @@ namespace ent {
 struct UncontrolledMovementEndEvent : red::Event
 {
     static constexpr const char* NAME = "entUncontrolledMovementEndEvent";
-    static constexpr const char* ALIAS = "UncontrolledMovementEndEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(UncontrolledMovementEndEvent, 0x40);
 } // namespace ent
-using UncontrolledMovementEndEvent = ent::UncontrolledMovementEndEvent;
 } // namespace RED4ext

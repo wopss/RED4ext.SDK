@@ -13,6 +13,12 @@ enum class PSMLocomotionStates : uint32_t
     Sprint = 2,
     Kereznikov = 3,
     Jump = 5,
+    Vault = 6,
+    Dodge = 7,
+    DodgeAir = 8,
+    Workspot = 9,
+    Slide = 10,
+    SlideFall = 11,
     Any = 4294967295,
 };
 } // namespace game
