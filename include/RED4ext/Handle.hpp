@@ -1,13 +1,13 @@
 #pragma once
 
 #include <cstdint>
-#include <type_traits>
 #include <memory>
 #include <tuple>
 
 #include <Windows.h>
 
 #include <RED4ext/Addresses.hpp>
+#include <RED4ext/HashMap.hpp>
 #include <RED4ext/Relocation.hpp>
 
 namespace RED4ext

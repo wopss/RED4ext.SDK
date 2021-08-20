@@ -23,7 +23,7 @@ struct HashMapHash
 };
 
 template<typename T>
-struct HashMapHash<T, std::enable_if_t<std::is_convertible_v<T, uint32_t>>>
+struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, uint32_t>>>
 {
     // Let's give this a try :)
 
