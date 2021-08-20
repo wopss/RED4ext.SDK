@@ -122,17 +122,18 @@ struct CClass : CBaseRTTIType
 
     struct Flags
     {
-        uint32_t isAbstract : 1;   // 00
-        uint32_t isNative : 1;     // 01
-        uint32_t b2 : 1;           // 02
-        uint32_t b3 : 1;           // 03
-        uint32_t isStruct : 1;     // 04
-        uint32_t b5 : 1;           // 05
-        uint32_t isImportOnly : 1; // 06
-        uint32_t isPrivate : 1;    // 07
-        uint32_t isProtected : 1;  // 08
-        uint32_t isTestOnly : 1;   // 09
-        uint32_t b10 : 22;
+        uint32_t isAbstract : 1;                     // 00
+        uint32_t isNative : 1;                       // 01
+        uint32_t isScriptedClass : 1;                // 02
+        uint32_t isScriptedStruct : 1;               // 03
+        uint32_t isNoDefaultObjectSerialization : 1; // 04
+        uint32_t isAlwaysTransient : 1;              // 05
+        uint32_t isImportOnly : 1;                   // 06
+        uint32_t isPrivate : 1;                      // 07
+        uint32_t isProtected : 1;                    // 08
+        uint32_t isTestOnly : 1;                     // 09
+        uint32_t isSavable : 1;                      // 0A
+        uint32_t b10 : 21;                           // 0B
     };
     RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
 
