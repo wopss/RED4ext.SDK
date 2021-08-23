@@ -52,16 +52,16 @@ struct CProperty
     Flags flags;          // 28
 
     template<typename T>
-    bool IsEqual(ScriptInstance aInstance, T aValue)
+    bool IsEqual(ScriptInstance aInstance, T aValue, uint32_t a3 = 0) const
     {
         auto currValue = GetValuePtr<T>(aInstance);
 
         if constexpr (std::is_pointer_v<T>)
         {
-            return type->IsEqual(currValue, aValue);
+            return type->IsEqual(currValue, aValue, a3);
         }
 
-        return type->IsEqual(currValue, &aValue);
+        return type->IsEqual(currValue, &aValue, a3);
     }
 
     template<typename T>
