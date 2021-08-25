@@ -120,7 +120,7 @@ RED4EXT_INLINE bool RED4ext::CBaseRTTIType::FromString(ScriptInstance aInstance,
 
 RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_78()
 {
-    return false;
+    return true;
 }
 
 RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_80(int64_t a1, ScriptInstance aInstance)
