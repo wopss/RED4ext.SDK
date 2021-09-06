@@ -16,7 +16,7 @@ workspace("RED4ext.SDK")
     characterset("Unicode")
     symbols("Full")
     systemversion("latest")
-    cppdialect("C++17")
+    cppdialect("C++20")
 
     defines(
     {
