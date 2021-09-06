@@ -33,10 +33,45 @@ def get_groups() -> List[Group]:
             Item(name='Register', pattern='48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0 44 8B 4C 24 58 48 8B DA 41 83 C9 01')
         ]),
 
+        Group(name='CBaseRTTIType', functions=[
+            Item(name='sub_80', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B D9', expected=56, index=0),
+            Item(name='sub_88', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B F9', expected=72, index=0),
+            Item(name='sub_90', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 55 48 8D 6C 24 B1', expected=5, index=0),
+            Item(name='sub_98', pattern='40 53 55 57 48 83 EC 50 48 8B D9', expected=2, index=0),
+            Item(name='sub_A0', pattern='48 8B 02 4C 8D 05 ? ? ? ? 4C 8B CA 48 8B D1', expected=1, index=0)
+        ]),
+
         Group(name='CClass', functions=[
+            Item(name='Unserialize', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 49 8B F9', expected=2, index=0),
+            Item(name='ToString', pattern='48 8B C4 55 48 8D 68 E8 48 81 EC 10 01 00 00', expected=5, index=0),
+            Item(name='sub_80', pattern='40 53 57 41 54 41 56 41 57', expected=13, index=0),
+            Item(name='sub_88', pattern='48 89 5C 24 08 48 89 6C 24 18 56 57 41 56', expected=197, index=7),
+            Item(name='sub_90', pattern='48 89 5C 24 10 55 57 41 56 48 81 EC 80 00 00 00', expected=2, index=0),
+            Item(name='sub_98', pattern='48 89 5C 24 10 55 57 41 56 48 81 EC 80 00 00 00', expected=2, index=1),
+            Item(name='sub_A0', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 20', expected=117, index=0),
+            Item(name='sub_B0', pattern='48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57 41 54', expected=250, index=2),
+            Item(name='sub_C0', pattern='4C 8B DC 41 55 48 83 EC 60 49 89 5B 10', expected=3, index=0),
+            Item(name='GetMaxAlignment', pattern='48 89 5C 24 10 57 48 83 EC 30 F6 41 70 0C 48 8B F9', expected=1, index=0),
+            Item(name='sub_D0', pattern='48 89 4C 24 08 53 56 48 83 EC 58', expected=1, index=0),
+
             Item(name='AllocInstance', pattern='48 89 6C 24 18 56 48 83 EC 30 41 0F B6 E8'),
-            Item(name='GetProperty', pattern='48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00'),
-            Item(name='GetFunction', pattern='4C 8B C9 48 85 C9 74 5E 49 8B 41 48')
+            Item(name='GetProperty', pattern='48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00')
+        ]),
+
+        Group(name='TTypedClass', functions=[
+            Item(name='IsEqual', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 54 41 56 41 57', expected=453, index=7)
+        ]),
+
+        Group(name='CEnum', functions=[
+            Item(name='Unserialize', pattern='48 89 5C 24 08 48 89 74 24 18 57 48 83 EC 20 48 8B F9', expected=4, index=0),
+            Item(name='ToString', pattern='40 53 48 83 EC 20 44 0F B6 49 20 33 C0', expected=1, index=0),
+            Item(name='FromString', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 48 8B F9 49 8B D8', expected=1, index=0)
+        ]),
+
+        Group(name='CBitfield', functions=[
+            Item(name='Unserialize', pattern='48 89 5C 24 08 48 89 6C 24 18 56 57 41 55', expected=1, index=0),
+            Item(name='ToString', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 20 0F B6 41 20', expected=1, index=0),
+            Item(name='FromString', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 40', expected=58, index=1)
         ]),
 
         Group(name='CClassFunction', functions=[

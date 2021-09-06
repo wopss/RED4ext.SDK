@@ -56,6 +56,12 @@ struct Allocator : IAllocator
 {
     static_assert(std::is_base_of_v<TPoolInfo<T>, T>, "An allocator must inherit from 'TPoolInfo'.");
 
+    static Allocator<T>* Get()
+    {
+        static Allocator<T> allocator;
+        return &allocator;
+    }
+
     /*
      * All [re]alloc functions have the following typedef:
      *  AllocationResult [Re]Alloc(Vault*, [AllocationResult&], uint32_t, [uint32_t])

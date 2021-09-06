@@ -22,7 +22,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::SetReturnType(CName aType)
     }
 
     CProperty::Flags flags{};
-    flags.b6 = true;
+    flags.isReturn = true;
 
     returnType = CProperty::Create(type, "__return", nullptr, 0, {}, flags);
     return returnType != nullptr;

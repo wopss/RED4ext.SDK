@@ -428,9 +428,9 @@ RED4EXT_INLINE EnumFileDescriptor::EnumFileDescriptor(const RED4ext::CEnum* pEnu
         enumMap[pEnum->valueList[i]] = pEnum->hashList[i].ToString();
     }
 
-    for (uint32_t i = 0; i < pEnum->unk48.size; ++i)
+    for (uint32_t i = 0; i < pEnum->aliasList.size; ++i)
     {
-        enumAlias[pEnum->unk48[i].ToString()] = pEnum->unk58[i];
+        enumAlias[pEnum->aliasList[i].ToString()] = pEnum->aliasValueList[i];
     }
 }
 

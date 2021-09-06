@@ -2,6 +2,7 @@
 
 #include <cstdint>
 
+#include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
@@ -11,6 +12,12 @@ namespace RED4ext
 {
 struct CBaseRTTIType;
 struct IScriptable;
+struct CGameOptions;
+
+namespace Memory
+{
+struct IAllocator;
+}
 
 struct CBaseEngine
 {
@@ -27,46 +34,127 @@ struct CBaseEngine
         uint8_t pad170[0x9];
         uint8_t isClipped;
     };
+    RED4EXT_ASSERT_SIZE(UnkC0, 0x180);
 
-    virtual void sub_0() = 0;
-    virtual void sub_8() = 0;
-    virtual void sub_10() = 0;
-    virtual ~CBaseEngine() = 0;
-    virtual void sub_18() = 0;
-    virtual void sub_28() = 0;
-    virtual void sub_30() = 0;
-    virtual void sub_38() = 0;
-    virtual void sub_40() = 0;
-    virtual void sub_48() = 0;
-    virtual void sub_50() = 0;
-    virtual void sub_58() = 0;
-    virtual void sub_60() = 0;
-    virtual void sub_68() = 0;
-    virtual void sub_70() = 0;
-    virtual void sub_78() = 0;
-    virtual void sub_80() = 0;
-    virtual void sub_88() = 0;
-    virtual void sub_90() = 0;
-    virtual void sub_98() = 0;
-    virtual void sub_A0() = 0;
-    virtual void sub_A8() = 0;
-    virtual void sub_B0() = 0;
-    virtual void sub_B8() = 0;
-    virtual void sub_C0() = 0;
-    virtual void sub_C8() = 0;
-    virtual void sub_D0() = 0;
-    virtual void sub_D8() = 0;
-    virtual void sub_E0() = 0;
-    virtual void sub_E8() = 0;
-    virtual void sub_F0() = 0;
-    virtual void sub_F8() = 0;
-    virtual void sub_100() = 0;
+    struct Unk108
+    {
+        int64_t unk0;
+        int64_t unk8;
+        int64_t unk10;
+        int32_t unk18;
+        int32_t unk1C;
+    };
+    RED4EXT_ASSERT_SIZE(Unk108, 0x20);
 
-    int8_t unk8[0xB8];
-    UnkC0* unkC0;
-    int8_t unkC8[0x158];
+    struct Unk110
+    {
+        int8_t unk0;
+        int32_t unk4;
+        int32_t unk8;
+        int32_t unkC;
+    };
+    RED4EXT_ASSERT_SIZE(Unk110, 0x10);
+
+    virtual CBaseRTTIType* GetNativeType() = 0;      // 00
+    virtual CBaseRTTIType* GetParentType() = 0;      // 08
+    virtual Memory::IAllocator* GetAllocator() = 0;  // 10
+    virtual ~CBaseEngine() = 0;                      // 18
+    virtual void sub_18() = 0;                       // 20
+    virtual void sub_28() = 0;                       // 28
+    virtual void sub_30() = 0;                       // 30
+    virtual void sub_38() = 0;                       // 38
+    virtual void sub_40() = 0;                       // 40
+    virtual void sub_48() = 0;                       // 48
+    virtual void sub_50() = 0;                       // 50
+    virtual void sub_58() = 0;                       // 58
+    virtual void sub_60() = 0;                       // 60
+    virtual void sub_68() = 0;                       // 68
+    virtual void sub_70() = 0;                       // 70
+    virtual void sub_78() = 0;                       // 78
+    virtual void sub_80() = 0;                       // 80
+    virtual void sub_88() = 0;                       // 88
+    virtual void sub_90() = 0;                       // 90
+    virtual void sub_98() = 0;                       // 98
+    virtual void sub_A0() = 0;                       // A0
+    virtual void sub_A8() = 0;                       // A8
+    virtual void sub_B0() = 0;                       // B0
+    virtual void sub_B8() = 0;                       // B8
+    virtual void sub_C0() = 0;                       // C0
+    virtual void sub_C8(CGameOptions& aOptions) = 0; // C8
+    virtual void sub_D0() = 0;                       // D0
+    virtual void sub_D8() = 0;                       // D8
+    virtual void sub_E0() = 0;                       // E0
+    virtual void sub_E8() = 0;                       // E8
+    virtual void sub_F0() = 0;                       // F0
+    virtual void sub_F8() = 0;                       // F8
+    virtual void sub_100() = 0;                      // 100
+
+    double unk8;                 // 08
+    float unk10;                 // 10
+    float unk14;                 // 14
+    float unk18;                 // 18
+    float unk1C;                 // 1C
+    float unk20;                 // 20
+    int64_t unk28;               // 28
+    int32_t unk30;               // 30
+    int8_t unk34;                // 34
+    int64_t unk38;               // 38
+    int8_t unk40;                // 40
+    SharedMutex unk41;           // 41
+    int32_t unk44;               // 44
+    int8_t unk48;                // 48
+    int8_t unk49;                // 49
+    int8_t unk4A;                // 4A
+    int8_t unk4B;                // 4B
+    int32_t unk4C;               // 4C
+    int32_t unk50;               // 50
+    int8_t unk54;                // 54
+    int8_t unattended1;          // 55
+    int8_t unattended2;          // 56
+    int8_t unk57;                // 57
+    int8_t unk58;                // 58
+    int16_t unk5A;               // 5A
+    int32_t interopStartingPort; // 5C
+    CString unk60;               // 60
+    DynArray<void*> unk80;       // 80
+    int64_t unk90;               // 90
+    int64_t unk98;               // 98
+    int64_t unkA0;               // A0
+    int64_t unkA8;               // A8
+    int64_t unkB0;               // B0
+    int64_t unkB8;               // B8
+    UnkC0* unkC0;                // C0
+    double unkC8;                // C8
+    double unkD0;                // D0
+    int32_t unkD8;               // D8
+    int64_t unkE0;               // E0
+    int64_t unkE8;               // E8
+    int64_t unkF0;               // F0
+    volatile int32_t unkF8;      // F8
+    int32_t unkFC;               // FC
+    int32_t unk100;              // 100
+    Unk108* unk108;              // 108
+    Unk110 unk110;               // 110
+    CString unk120;              // 120
+    CString unk140;              // 140
+    int32_t unk160;              // 160
+    int8_t unk164;               // 164
+    int64_t unk168;              // 168
+    int64_t unk170;              // 170
+    int64_t unk178;              // 178
+    int64_t unk180;              // 180
+    int8_t unk188[178];          // 188
+    int32_t unk23C;              // 23C
+    int8_t unk240[64];           // 240
+    DynArray<void*> unk280;      // 280
+    DynArray<void*> unk290;      // 290
+    int64_t unk2A0;              // 2A0
+    int64_t unk2A8;              // 2A8
+    int64_t unk2B0;              // 2B0
+    int64_t unk2B8;              // 2B8
+    int32_t unk2C0;              // 2B0
 };
-RED4EXT_ASSERT_SIZE(CBaseEngine, 0x220);
+RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2C8);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, unkC0, 0xC0);
 RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, unk14C, 0x14C);
 RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, unk15C, 0x15C);
@@ -75,27 +163,29 @@ RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, isClipped, 0x171);
 
 struct BaseGameEngine : CBaseEngine
 {
-    int8_t unk220[0x18];
+    int64_t unk2C8;         // 2C8
+    int64_t unk2D0;         // 2D0
+    int64_t watchdogThread; // 2D8
 };
-RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x238);
-RED4EXT_ASSERT_OFFSET(BaseGameEngine, unk220, 0x220);
+RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x2E0);
+RED4EXT_ASSERT_OFFSET(BaseGameEngine, watchdogThread, 0x2D8);
 
 struct GameInstance
 {
-    virtual ~GameInstance() = 0;
-    virtual IScriptable* GetInstance(const CBaseRTTIType* aType) = 0;
-    virtual void Unk_10() = 0;
-    virtual void Unk_18() = 0;
-    virtual void Unk_20() = 0;
-    virtual void Unk_28() = 0;
-    virtual void Unk_30() = 0;
-    virtual void Unk_38() = 0;
-    virtual void Unk_40() = 0;
-    virtual void Unk_48() = 0;
-    virtual void Unk_50() = 0;
-    virtual void Unk_58() = 0;
-    virtual void Unk_60() = 0;
-    virtual void Unk_68() = 0;
+    virtual ~GameInstance() = 0;                                      // 00
+    virtual IScriptable* GetInstance(const CBaseRTTIType* aType) = 0; // 08
+    virtual void Unk_10() = 0;                                        // 10
+    virtual void Unk_18() = 0;                                        // 18
+    virtual void Unk_20() = 0;                                        // 20
+    virtual void Unk_28() = 0;                                        // 28
+    virtual void Unk_30() = 0;                                        // 30
+    virtual void Unk_38() = 0;                                        // 38
+    virtual void Unk_40() = 0;                                        // 40
+    virtual void Unk_48() = 0;                                        // 48
+    virtual void Unk_50() = 0;                                        // 50
+    virtual void Unk_58() = 0;                                        // 58
+    virtual void Unk_60() = 0;                                        // 60
+    virtual void Unk_68() = 0;                                        // 68
 
     HashMap<CBaseRTTIType*, Handle<IScriptable>> unk08; // 08
     DynArray<Handle<IScriptable>> unk38;                // 38
@@ -108,18 +198,31 @@ struct CGameEngine : BaseGameEngine
 {
     struct CGameFramework
     {
-        int8_t unk0[0x10];
-        GameInstance* gameInstance;
+        int8_t unk00[0x10];         // 00
+        GameInstance* gameInstance; // 10
     };
+    RED4EXT_ASSERT_SIZE(CGameFramework, 0x18);
+    RED4EXT_ASSERT_OFFSET(CGameFramework, gameInstance, 0x10);
 
     static CGameEngine* Get();
 
-    int8_t unk238[0x308 - 0x238];
-    CGameFramework* framework;
-    int8_t unk310[0x30];
+    int64_t unk2E0;            // 2E0
+    int64_t unk2E8;            // 2E8
+    int64_t unk2F0;            // 2F0
+    int32_t unk2F8;            // 2F8
+    int32_t unk2FC;            // 2FC
+    int32_t unk300;            // 300
+    int32_t unk304;            // 304
+    CGameFramework* framework; // 308
+    int64_t unk310;            // 310
+    int64_t unk318;            // 318
+    int64_t unk320;            // 320
+    int64_t unk328;            // 328
+    int64_t unk330;            // 330
+    int64_t unk338;            // 338
+    int32_t unk340;            // 340
 };
-RED4EXT_ASSERT_SIZE(CGameEngine, 0x340);
-RED4EXT_ASSERT_OFFSET(CGameEngine, unk238, 0x238);
+RED4EXT_ASSERT_SIZE(CGameEngine, 0x348);
 RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x308);
 } // namespace RED4ext
 

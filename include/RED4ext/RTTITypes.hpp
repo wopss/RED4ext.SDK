@@ -1,11 +1,13 @@
 #pragma once
 
+#include <type_traits>
+
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
-#include <RED4ext/Unks.hpp>
+#include <RED4ext/Utils.hpp>
 
 namespace RED4ext
 {
@@ -36,31 +38,34 @@ enum class ERTTIType : uint8_t
 
 struct CBaseRTTIType
 {
+    CBaseRTTIType();
     virtual ~CBaseRTTIType() = default; // 00
 
-    virtual CName GetName() const = 0;                                                                     // 08
-    virtual uint32_t GetSize() const = 0;                                                                  // 10
-    virtual uint32_t GetAlignment() const = 0;                                                             // 18
-    virtual ERTTIType GetType() const = 0;                                                                 // 20
-    virtual CString GetTypeName() const = 0;                                                               // 28
-    virtual CName GetComputedName() const = 0;                                                             // 30
-    virtual void Init(ScriptInstance aMemory) = 0;                                                         // 38
-    virtual void Destroy(ScriptInstance aMemory) = 0;                                                      // 40
-    virtual const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs) const = 0;            // 48
-    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) = 0;                               // 50
-    virtual void Move(ScriptInstance aLhs, ScriptInstance aRhs) = 0;                                       // 58
-    virtual void Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) = 0;               // 60
-    virtual bool GetDebugString(ScriptInstance aInstance, CString& aOut) const = 0;                        // 68
-    virtual void sub_70() = 0;                                                                             // 70
-    virtual void sub_78() = 0;                                                                             // 78
-    virtual void sub_80() = 0;                                                                             // 80
-    virtual void sub_88() = 0;                                                                             // 88
-    virtual bool sub_90(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4) = 0;               // 90
-    virtual bool sub_98(uintptr_t unk1, uintptr_t unk2, CString& unk3, uintptr_t& unk4, uint8_t unk5) = 0; // 98
-    virtual void sub_A0() = 0;                                                                             // A0
-    virtual void sub_A8() = 0;                                                                             // A8
-    virtual void sub_B0() = 0;                                                                             // B0
-    virtual Memory::IAllocator* GetAllocator() const = 0;                                                  // B8
+    virtual CName GetName() const = 0;                        // 08
+    virtual uint32_t GetSize() const = 0;                     // 10
+    virtual uint32_t GetAlignment() const = 0;                // 18
+    virtual ERTTIType GetType() const = 0;                    // 20
+    virtual CString GetTypeName() const;                      // 28
+    virtual CName GetComputedName() const;                    // 30
+    virtual void Construct(ScriptInstance aMemory) const = 0; // 38
+    virtual void Destruct(ScriptInstance aMemory) const = 0;  // 40
+    virtual const bool IsEqual(
+        const ScriptInstance aLhs, const ScriptInstance aRhs,
+        uint32_t a3 = 0) = 0; // 48 - Not const because CClass aquire some mutex when this is called and a flag is modified.
+    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const = 0;                 // 50
+    virtual void Move(ScriptInstance aLhs, ScriptInstance aRhs) const;                             // 58
+    virtual bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const = 0; // 60
+    virtual bool ToString(const ScriptInstance aInstance, CString& aOut) const;                    // 68
+    virtual bool FromString(ScriptInstance aInstance, const CString& aString) const;               // 70
+    virtual bool sub_78();                                                                         // 78
+    virtual bool sub_80(int64_t a1, ScriptInstance aInstance);                                     // 80
+    virtual bool sub_88(int64_t a1, ScriptInstance aInstance);                                     // 88
+    virtual bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4);            // 90
+    virtual bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5);   // 98
+    virtual bool sub_A0(int64_t a1, CString& a2, bool a3);                                         // A0
+    virtual bool sub_A8();                                                                         // A8
+    virtual void sub_B0(int64_t a1, int64_t a2);                                                   // B0
+    virtual Memory::IAllocator* GetAllocator() const;                                              // B8
 
     inline void [[deprecated("Use 'GetName()' instead.")]] GetName(CName& aOut) const
     {
@@ -83,67 +88,82 @@ struct CBaseRTTIType
         aOut = name;
     }
 
+    inline void [[deprecated("Use 'Construct()' instead.")]] Init(ScriptInstance aMemory) const
+    {
+        Construct(aMemory);
+    }
+
+    inline void [[deprecated("Use 'Destruct()' instead.")]] Destroy(ScriptInstance aMemory) const
+    {
+        Destruct(aMemory);
+    }
+
     int64_t unk8;
 };
 RED4EXT_ASSERT_SIZE(CBaseRTTIType, 0x10);
 
-struct CBitfield : CBaseRTTIType
-{
-    struct Flags
-    {
-        uint8_t isScripted : 1; // 00
-        uint8_t b2 : 7;
-    };
-    RED4EXT_ASSERT_SIZE(CBitfield::Flags, 0x01);
-
-    CName name;         // 10
-    int64_t unk18;      // 18
-    uint8_t typeSize;   // 20
-    Flags flags;        // 21
-    uint64_t validBits; // 28
-    CName bitNames[64]; // 30
-};
-RED4EXT_ASSERT_SIZE(CBitfield, 0x230);
-RED4EXT_ASSERT_OFFSET(CBitfield, name, 0x10);
-RED4EXT_ASSERT_OFFSET(CBitfield, unk18, 0x18);
-RED4EXT_ASSERT_OFFSET(CBitfield, typeSize, 0x20);
-RED4EXT_ASSERT_OFFSET(CBitfield, flags, 0x21);
-RED4EXT_ASSERT_OFFSET(CBitfield, validBits, 0x28);
-RED4EXT_ASSERT_OFFSET(CBitfield, bitNames, 0x30);
-
 struct CClass : CBaseRTTIType
 {
-    virtual void sub_C0() = 0;
-    virtual void sub_C8() = 0;
-    virtual void sub_D0() = 0;
-    virtual void InitCls(IScriptable* aMemory) = 0;
-    virtual void DestroyCls(IScriptable* aMemory) = 0;
-    virtual void sub_E8() = 0;
-
     struct Flags
     {
-        uint32_t isAbstract : 1;   // 00
-        uint32_t isNative : 1;     // 01
-        uint32_t b2 : 1;           // 02
-        uint32_t b3 : 1;           // 03
-        uint32_t isStruct : 1;     // 04
-        uint32_t b5 : 1;           // 05
-        uint32_t isImportOnly : 1; // 06
-        uint32_t isPrivate : 1;    // 07
-        uint32_t isProtected : 1;  // 08
-        uint32_t isTestOnly : 1;   // 09
-        uint32_t b10 : 22;
+        uint32_t isAbstract : 1;                      // 00
+        uint32_t isNative : 1;                        // 01
+        uint32_t isScriptedClass : 1;                 // 02
+        uint32_t isScriptedStruct : 1;                // 03
+        uint32_t hasNoDefaultObjectSerialization : 1; // 04
+        uint32_t isAlwaysTransient : 1;               // 05
+        uint32_t isImportOnly : 1;                    // 06
+        uint32_t isPrivate : 1;                       // 07
+        uint32_t isProtected : 1;                     // 08
+        uint32_t isTestOnly : 1;                      // 09
+        uint32_t isSavable : 1;                       // 0A
+        uint32_t b10 : 21;                            // 0B
     };
     RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
 
-    IScriptable* AllocInstance();
+    CClass(CName aName, uint32_t aSize, Flags aFlags);
+
+    CName GetName() const final;                                                               // 08
+    uint32_t GetSize() const final;                                                            // 10
+    uint32_t GetAlignment() const final;                                                       // 18
+    ERTTIType GetType() const final;                                                           // 20
+    CName GetComputedName() const final;                                                       // 30
+    void Construct(ScriptInstance aMemory) const final;                                        // 38
+    void Destruct(ScriptInstance aMemory) const final;                                         // 40
+    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;   // 60
+    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                  // 68
+    bool sub_80(int64_t a1, ScriptInstance aInstance) final;                                   // 80
+    bool sub_88(int64_t a1, ScriptInstance aInstance) final;                                   // 88
+    bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4) final;          // 90
+    bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5) final; // 98
+    bool sub_A0(int64_t a1, CString& a2, bool a3) final;                                       // A0
+    void sub_B0(int64_t a1, int64_t a2) final;                                                 // B0
+
+    virtual void sub_C0();                                       // C0
+    virtual uint32_t GetMaxAlignment() const;                    // C8
+    virtual bool sub_D0() const;                                 // D0
+    virtual void ConstructCls(ScriptInstance aMemory) const = 0; // D8
+    virtual void DestructCls(ScriptInstance aMemory) const = 0;  // E0
+    virtual void* AllocMemory() const = 0;                       // E8
+
+    ScriptInstance AllocInstance(bool aZeroMemory = false) const;
 
     bool IsA(const CBaseRTTIType* aType) const;
 
     CProperty* GetProperty(CName aName);
-    CClassFunction* GetFunction(CName aName);
+    CClassFunction* GetFunction(CName aShortName) const;
 
     void RegisterFunction(CClassFunction* aFunc);
+
+    inline void [[deprecated("Use 'ConstructCls()' instead.")]] InitCls(ScriptInstance aMemory) const
+    {
+        ConstructCls(aMemory);
+    }
+
+    inline void [[deprecated("Use 'DestructCls()' instead.")]] DestroyCls(ScriptInstance aMemory) const
+    {
+        DestructCls(aMemory);
+    }
 
     CClass* parent;                              // 10
     CName name;                                  // 18
@@ -152,7 +172,7 @@ struct CClass : CBaseRTTIType
     DynArray<CProperty*> overriddenProps;        // 38
     DynArray<CClassFunction*> funcs;             // 48
     DynArray<CClassStaticFunction*> staticFuncs; // 58
-    uint32_t realSize;                           // 68
+    uint32_t size;                               // 68
     uint32_t holderSize;                         // 6C
     Flags flags;                                 // 70
     uint32_t alignment;                          // 74
@@ -160,7 +180,7 @@ struct CClass : CBaseRTTIType
     HashMap<void*, void*> unkA8;                 // A8
     int64_t unkD8;                               // D8
     int64_t unkE0;                               // E0
-    HashMap<uint64_t, CProperty*> unkE8;         // E8
+    HashMap<CName, CProperty*> unkE8;            // E8
     DynArray<CProperty*> unk118;                 // 118 - More entries than 0x28, will contain native props
     DynArray<void*> unk128;                      // 128
     DynArray<CProperty*> unk138;                 // 138 - Only RT_Class types?
@@ -173,8 +193,8 @@ struct CClass : CBaseRTTIType
     int8_t unk1C0[256];                          // 1C0
     int16_t unk2C0;                              // 2C0
     int32_t unk2C4;                              // 2C4
-    int8_t unk2C8;                               // 2C8
-    int8_t unk2C9;                               // 2C9
+    SharedMutex unk2C8;                          // 2C8
+    uint8_t unk2C9;                              // 2C9
 };
 RED4EXT_ASSERT_SIZE(CClass, 0x2D0);
 RED4EXT_ASSERT_OFFSET(CClass, parent, 0x10);
@@ -182,9 +202,61 @@ RED4EXT_ASSERT_OFFSET(CClass, name, 0x18);
 RED4EXT_ASSERT_OFFSET(CClass, props, 0x28);
 RED4EXT_ASSERT_OFFSET(CClass, overriddenProps, 0x38);
 RED4EXT_ASSERT_OFFSET(CClass, funcs, 0x48);
-RED4EXT_ASSERT_OFFSET(CClass, realSize, 0x68);
+RED4EXT_ASSERT_OFFSET(CClass, size, 0x68);
 RED4EXT_ASSERT_OFFSET(CClass, flags, 0x70);
 RED4EXT_ASSERT_OFFSET(CClass, alignment, 0x74);
+
+template<typename T>
+struct TTypedClass : CClass
+{
+    static_assert(std::is_class_v<T>, "T must be a struct or class");
+    static_assert(std::is_default_constructible_v<T>, "T must be default-constructible");
+    static_assert(std::is_destructible_v<T>, "T must be destructible");
+
+    TTypedClass(CName aName, CClass::Flags aFlags = {2})
+        : CClass(aName, sizeof(T), aFlags)
+    {
+    }
+
+    const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final // 48
+    {
+        // This is doing something extra beside comparing properties, using the native func until we figure it out.
+        using func_t = bool (*)(TTypedClass<T>*, const ScriptInstance, const ScriptInstance, uint32_t);
+        RelocFunc<func_t> func(Addresses::TTypedClass_IsEqual);
+        return func(this, aLhs, aRhs, a3);
+    }
+
+    void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final // 50
+    {
+        if constexpr (std::is_copy_constructible_v<T>)
+        {
+            new (aLhs) T(*static_cast<T*>(aRhs));
+        }
+    }
+
+    void ConstructCls(ScriptInstance aMemory) const final // D8
+    {
+        new (aMemory) T();
+    }
+
+    void DestructCls(ScriptInstance aMemory) const final // E0
+    {
+        static_cast<T*>(aMemory)->~T();
+    }
+
+    void* AllocMemory() const final // E8
+    {
+        auto alignment = GetAlignment();
+        auto size = RED4ext::AlignUp(GetSize(), alignment);
+
+        auto allocator = GetAllocator();
+        auto allocResult = allocator->AllocAligned(size, alignment);
+
+        std::memset(allocResult.memory, 0, allocResult.size);
+        return allocResult.memory;
+    }
+};
+RED4EXT_ASSERT_SIZE(TTypedClass<CName>, sizeof(CClass));
 
 struct CEnum : CBaseRTTIType
 {
@@ -195,24 +267,78 @@ struct CEnum : CBaseRTTIType
     };
     RED4EXT_ASSERT_SIZE(CEnum::Flags, 0x01);
 
-    CName name;                   // 10
-    CName unk18;                  // 18
-    uint8_t typeSize;             // 20
-    Flags flags;                  // 21
-    DynArray<CName> hashList;     // 28
-    DynArray<uint64_t> valueList; // 38
-    DynArray<CName> unk48;        // 48
-    DynArray<uint64_t> unk58;     // 58
+    CEnum(CName aName, int8_t aActualSize, Flags aFlags = {});
+
+    CName GetName() const final;                                                                     // 08
+    uint32_t GetSize() const final;                                                                  // 10
+    uint32_t GetAlignment() const final;                                                             // 18
+    ERTTIType GetType() const final;                                                                 // 20
+    CName GetComputedName() const final;                                                             // 30
+    void Construct(ScriptInstance aMemory) const final;                                              // 38
+    void Destruct(ScriptInstance aMemory) const final;                                               // 40
+    const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final; // 48
+    void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final;                         // 50
+    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;         // 60
+    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
+    bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
+
+    CName name;                     // 10
+    CName computedName;             // 18
+    uint8_t actualSize;             // 20
+    Flags flags;                    // 21
+    DynArray<CName> hashList;       // 28
+    DynArray<CName> valueList;      // 38
+    DynArray<CName> aliasList;      // 48
+    DynArray<CName> aliasValueList; // 58
 };
 RED4EXT_ASSERT_SIZE(CEnum, 0x68);
 RED4EXT_ASSERT_OFFSET(CEnum, name, 0x10);
-RED4EXT_ASSERT_OFFSET(CEnum, unk18, 0x18);
-RED4EXT_ASSERT_OFFSET(CEnum, typeSize, 0x20);
+RED4EXT_ASSERT_OFFSET(CEnum, computedName, 0x18);
+RED4EXT_ASSERT_OFFSET(CEnum, actualSize, 0x20);
 RED4EXT_ASSERT_OFFSET(CEnum, flags, 0x21);
 RED4EXT_ASSERT_OFFSET(CEnum, hashList, 0x28);
 RED4EXT_ASSERT_OFFSET(CEnum, valueList, 0x38);
-RED4EXT_ASSERT_OFFSET(CEnum, unk48, 0x48);
-RED4EXT_ASSERT_OFFSET(CEnum, unk58, 0x58);
+RED4EXT_ASSERT_OFFSET(CEnum, aliasList, 0x48);
+RED4EXT_ASSERT_OFFSET(CEnum, aliasValueList, 0x58);
+
+struct CBitfield : CBaseRTTIType
+{
+    struct Flags
+    {
+        uint8_t isScripted : 1; // 00
+        uint8_t b2 : 7;
+    };
+    RED4EXT_ASSERT_SIZE(CBitfield::Flags, 0x01);
+
+    CBitfield(CName aName, int8_t aActualSize, Flags aFlags = {});
+
+    CName GetName() const final;                                                                     // 08
+    uint32_t GetSize() const final;                                                                  // 10
+    uint32_t GetAlignment() const final;                                                             // 18
+    ERTTIType GetType() const final;                                                                 // 20
+    CName GetComputedName() const final;                                                             // 30
+    void Construct(ScriptInstance aMemory) const final;                                              // 38
+    void Destruct(ScriptInstance aMemory) const final;                                               // 40
+    const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final; // 48
+    void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final;                         // 50
+    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;         // 60
+    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
+    bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
+
+    CName name;         // 10
+    CName computedName; // 18
+    uint8_t actualSize; // 20
+    Flags flags;        // 21
+    uint64_t validBits; // 28
+    CName bitNames[64]; // 30
+};
+RED4EXT_ASSERT_SIZE(CBitfield, 0x230);
+RED4EXT_ASSERT_OFFSET(CBitfield, name, 0x10);
+RED4EXT_ASSERT_OFFSET(CBitfield, computedName, 0x18);
+RED4EXT_ASSERT_OFFSET(CBitfield, actualSize, 0x20);
+RED4EXT_ASSERT_OFFSET(CBitfield, flags, 0x21);
+RED4EXT_ASSERT_OFFSET(CBitfield, validBits, 0x28);
+RED4EXT_ASSERT_OFFSET(CBitfield, bitNames, 0x30);
 
 #pragma region Fundamentals
 using CFundamentalRTTITypeBool = CBaseRTTIType;

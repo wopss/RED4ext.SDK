@@ -17,6 +17,42 @@ enum class EGameStateStatus
     Done,
 };
 
+struct CGameOptions
+{
+    int16_t interopStartingPort;                  // 00
+    int8_t renderPreset;                          // 02
+    int8_t unk3;                                  // 03
+    int32_t lowSettingsOptions;                   // 04
+    int32_t texQualityLevel;                      // 08
+    int32_t meshQualityLevel;                     // 0C
+    int32_t watchdogTimeout;                      // 10
+    int8_t scriptVersion;                         // 14
+    int16_t scriptProfiling;                      // 16
+    CString scriptsBlobPath;                      // 18
+    CString tweakdbBlobPath;                      // 38
+    int8_t unattended1;                           // 58
+    int8_t unattended2;                           // 59
+    int8_t unattended3;                           // 5A
+    int8_t forceRawTweakDB;                       // 5B
+    int8_t pvdDumpToFile;                         // 5C
+    int8_t profiler;                              // 5D
+    int8_t unk5E;                                 // 5E
+    int8_t unk5F;                                 // 5F
+    int8_t unk60;                                 // 60
+    int64_t unk68;                                // 68
+    CString automator;                            // 70
+    CString windowCaption;                        // 90
+    int8_t isBackendGameEngine;                   // B0
+    int8_t disableRayTracing;                     // B1
+    int8_t disableRayTracedReflection;            // B2
+    int8_t disableRayTracedTransparentReflection; // B3
+    int32_t rayTracingAmbientOcclusionRayNumber;  // B4
+    int8_t dlss;                                  // B8
+    int32_t dlssQuality;                          // BC
+    int8_t unkC0;                                 // C0
+};
+RED4EXT_ASSERT_SIZE(CGameOptions, 0xC8);
+
 struct CBaseGameApplication
 {
     virtual void sub_0() = 0;  // 00
@@ -47,31 +83,7 @@ RED4EXT_ASSERT_SIZE(CBaseGameApplication, 0x88);
 
 struct CGameApplication : CBaseGameApplication
 {
-    struct Unk88
-    {
-        int16_t unk0;  // 00
-        int8_t unk2;   // 02
-        int8_t unk3;   // 03
-        int32_t unk4;  // 04
-        int64_t unk8;  // 08
-        int32_t unk10; // 10
-        int8_t unk14;  // 14
-        int16_t unk16; // 16
-        CString unk18; // 18
-        CString unk38; // 38
-        int64_t unk58; // 58
-        int8_t unk60;  // 60
-        int64_t unk68; // 68
-        CString unk70; // 70
-        CString unk90; // 90
-        int32_t unkB0; // B0
-        int32_t unkB4; // B4
-        int8_t unkB8;  // B8
-        int32_t unkBC; // BC
-        int8_t unkC0;  // C0
-    };
-
-    Unk88 unk88;                     // 88
+    CGameOptions options;            // 88
     DynArray<uint32_t> stateIndexes; // 150
     DynArray<IGameState*> states;    // 160
     int64_t unk170;                  // 170
