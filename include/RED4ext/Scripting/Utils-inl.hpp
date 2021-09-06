@@ -109,6 +109,7 @@ RED4EXT_INLINE void RED4ext::GetParameter(RED4ext::CStackFrame* aFrame, void* aI
 {
     aFrame->unk30 = 0;
     aFrame->unk38 = 0;
+    aFrame->currentParam++;
     const auto opcode = *(aFrame->code++);
-    RED4ext::OpcodeHandlers::Run(opcode, aFrame->context, aFrame, aInstance, nullptr);
+    RED4ext::OpcodeHandlers::Run(opcode, (IScriptable*)aFrame->context, aFrame, aInstance, nullptr);
 }

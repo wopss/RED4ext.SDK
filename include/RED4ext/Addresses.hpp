@@ -16,6 +16,7 @@ constexpr uintptr_t ImageBase = 0x140000000;
 #pragma region CBaseFunction
 constexpr uintptr_t CBaseFunction_Execute = 0x14022EA10 - ImageBase; // 48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6, expected: 1, index: 0
 constexpr uintptr_t CBaseFunction_InternalExecute = 0x14022EDE0 - ImageBase; // 40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6, expected: 1, index: 0
+constexpr uintptr_t CBaseFunction_Register = 0x14022E270 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0 44 8B 4C 24 58 48 8B DA 41 83 C9 01, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CBaseRTTIType
@@ -72,7 +73,7 @@ constexpr uintptr_t CGlobalFunction_ctor = 0x14022E1C0 - ImageBase; // 48 89 5C 
 
 #pragma region CNamePool
 constexpr uintptr_t CNamePool_AddCstr = 0x1401CDA30 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 30 45 33 C0 48 8B F9, expected: 1, index: 0
-constexpr uintptr_t CNamePool_AddCString = 0x140A4B150 - ImageBase; // 48 89 5C 24 08 48 89 74  24 10 57 48 83 EC 20 48 8B F1 48 8B DA 48 8B CA E8 ? ? ? ? 48 8B CB 48 8B F8 E8, expected: 1, index: 0
+constexpr uintptr_t CNamePool_AddCString = 0x140A4B160 - ImageBase; // 48 89 5C 24 08 48 89 74  24 10 57 48 83 EC 20 48 8B F1 48 8B DA 48 8B CA E8 ? ? ? ? 48 8B CB 48 8B F8 E8, expected: 1, index: 0
 constexpr uintptr_t CNamePool_AddPair = 0x1401CDE80 - ImageBase; // 48 83 EC 38 33 C0 48 89 54 24 20 48 85 D2, expected: 1, index: 0
 constexpr uintptr_t CNamePool_Get = 0x1401CD9F0 - ImageBase; // 48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8, expected: 1, index: 0
 #pragma endregion
@@ -125,7 +126,7 @@ constexpr uintptr_t OpcodeHandlers_Get = 0x1401E566D - ImageBase; // 4C 8D 15 ? 
 #pragma endregion
 
 #pragma region Streams
-constexpr uintptr_t Streams_MemoryStream_ctor = 0x142C546A0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
+constexpr uintptr_t Streams_MemoryStream_ctor = 0x142C54770 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
 #pragma endregion
 
 #pragma region TTypedClass
@@ -133,11 +134,11 @@ constexpr uintptr_t TTypedClass_IsEqual = 0x14021BB20 - ImageBase; // 48 89 5C 2
 #pragma endregion
 
 #pragma region TweakDB
-constexpr uintptr_t TweakDB_Get = 0x140C42B00 - ImageBase; // 48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00, expected: 1, index: 0
-constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140FADB5A - ImageBase; // 48 89 1D ? ? ? ? 41 89 BF 30 01 00 00, expected: 1, index: 0
-constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140FAAE70 - ImageBase; // 48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C, expected: 4, index: 0
-constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140FADD3F - ImageBase; // 48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B, expected: 1, index: 0
-constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140FADDF5 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67, expected: 2, index: 0
-constexpr uintptr_t TweakDB_CreateRecord = 0x1410490D0 - ImageBase; // 48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
+constexpr uintptr_t TweakDB_Get = 0x140C42B10 - ImageBase; // 48 83 EC 48 48 8B 05 ? ? ? ? 48 85 C0 0F 85 8A 00 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140FADB6A - ImageBase; // 48 89 1D ? ? ? ? 41 89 BF 30 01 00 00, expected: 1, index: 0
+constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140FAAE80 - ImageBase; // 48 89 5C 24 20 55 41 54 41 55 41 56 41 57 48 83 EC 20 65 48 8B 04 25 58 00 00 00 4C, expected: 4, index: 0
+constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140FADD4F - ImageBase; // 48 8D 3D ? ? ? ? 65 48 8B 04 25 58 00 00 00 4C 8B, expected: 1, index: 0
+constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140FADE05 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 06 48 8D 55 67, expected: 2, index: 0
+constexpr uintptr_t TweakDB_CreateRecord = 0x1410490E0 - ImageBase; // 48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
 #pragma endregion
 } // namespace RED4ext::Addresses

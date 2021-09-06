@@ -26,8 +26,10 @@ struct CBaseEngine
     {
         uint8_t pad0[0x140];
         uint32_t unk140;
-        uint8_t pad144[0x164 - 0x144];
-        uint32_t unk164;
+        uint8_t pad144[0x14C - 0x144];
+        uint32_t unk14C;
+        uint8_t pad150[0x15C - 0x150];
+        uint32_t unk15C;
         void* hWnd;
         uint8_t pad170[0x9];
         uint8_t isClipped;
@@ -154,6 +156,10 @@ struct CBaseEngine
 };
 RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2C8);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, unkC0, 0xC0);
+RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, unk14C, 0x14C);
+RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, unk15C, 0x15C);
+RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, hWnd, 0x160);
+RED4EXT_ASSERT_OFFSET(CBaseEngine::UnkC0, isClipped, 0x171);
 
 struct BaseGameEngine : CBaseEngine
 {

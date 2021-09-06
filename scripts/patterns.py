@@ -29,7 +29,8 @@ def get_groups() -> List[Group]:
     return [
         Group(name='CBaseFunction', functions=[
             Item(name='Execute', pattern='48 89 5C 24 08 57 48 81 EC 90 01 00 00 F6'),
-            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6')
+            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6'),
+            Item(name='Register', pattern='48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0 44 8B 4C 24 58 48 8B DA 41 83 C9 01')
         ]),
 
         Group(name='CBaseRTTIType', functions=[
