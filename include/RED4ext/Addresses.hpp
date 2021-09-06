@@ -19,10 +19,34 @@ constexpr uintptr_t CBaseFunction_InternalExecute = 0x14022EDE0 - ImageBase; // 
 constexpr uintptr_t CBaseFunction_Register = 0x14022E270 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0 44 8B 4C 24 58 48 8B DA 41 83 C9 01, expected: 1, index: 0
 #pragma endregion
 
+#pragma region CBaseRTTIType
+constexpr uintptr_t CBaseRTTIType_sub_80 = 0x1402156D0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B D9, expected: 56, index: 0
+constexpr uintptr_t CBaseRTTIType_sub_88 = 0x140215660 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B F9, expected: 72, index: 0
+constexpr uintptr_t CBaseRTTIType_sub_90 = 0x140215410 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 55 48 8D 6C 24 B1, expected: 5, index: 0
+constexpr uintptr_t CBaseRTTIType_sub_98 = 0x140215740 - ImageBase; // 40 53 55 57 48 83 EC 50 48 8B D9, expected: 2, index: 0
+constexpr uintptr_t CBaseRTTIType_sub_A0 = 0x1402153E0 - ImageBase; // 48 8B 02 4C 8D 05 ? ? ? ? 4C 8B CA 48 8B D1, expected: 1, index: 0
+#pragma endregion
+
+#pragma region CBitfield
+constexpr uintptr_t CBitfield_Unserialize = 0x14026E9A0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 18 56 57 41 55, expected: 1, index: 0
+constexpr uintptr_t CBitfield_ToString = 0x14026EB20 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 20 0F B6 41 20, expected: 1, index: 0
+constexpr uintptr_t CBitfield_FromString = 0x14026E670 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 40, expected: 58, index: 1
+#pragma endregion
+
 #pragma region CClass
+constexpr uintptr_t CClass_Unserialize = 0x1402207C0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 49 8B F9, expected: 2, index: 0
+constexpr uintptr_t CClass_ToString = 0x140220A80 - ImageBase; // 48 8B C4 55 48 8D 68 E8 48 81 EC 10 01 00 00, expected: 5, index: 0
+constexpr uintptr_t CClass_sub_80 = 0x14021BC00 - ImageBase; // 40 53 57 41 54 41 56 41 57, expected: 13, index: 0
+constexpr uintptr_t CClass_sub_88 = 0x1402208E0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 18 56 57 41 56, expected: 197, index: 7
+constexpr uintptr_t CClass_sub_90 = 0x14021F4A0 - ImageBase; // 48 89 5C 24 10 55 57 41 56 48 81 EC 80 00 00 00, expected: 2, index: 0
+constexpr uintptr_t CClass_sub_98 = 0x140221390 - ImageBase; // 48 89 5C 24 10 55 57 41 56 48 81 EC 80 00 00 00, expected: 2, index: 1
+constexpr uintptr_t CClass_sub_A0 = 0x14021D980 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 20, expected: 117, index: 0
+constexpr uintptr_t CClass_sub_B0 = 0x14021F600 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57 41 54, expected: 250, index: 2
+constexpr uintptr_t CClass_sub_C0 = 0x14021FE40 - ImageBase; // 4C 8B DC 41 55 48 83 EC 60 49 89 5B 10, expected: 3, index: 0
+constexpr uintptr_t CClass_GetMaxAlignment = 0x140218270 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 30 F6 41 70 0C 48 8B F9, expected: 1, index: 0
+constexpr uintptr_t CClass_sub_D0 = 0x140220CB0 - ImageBase; // 48 89 4C 24 08 53 56 48 83 EC 58, expected: 1, index: 0
 constexpr uintptr_t CClass_AllocInstance = 0x14021B9F0 - ImageBase; // 48 89 6C 24 18 56 48 83 EC 30 41 0F B6 E8, expected: 1, index: 0
 constexpr uintptr_t CClass_GetProperty = 0x14021C420 - ImageBase; // 48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00, expected: 1, index: 0
-constexpr uintptr_t CClass_GetFunction = 0x14021C1B0 - ImageBase; // 4C 8B C9 48 85 C9 74 5E 49 8B 41 48, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CClassFunction
@@ -31,6 +55,12 @@ constexpr uintptr_t CClassFunction_ctor = 0x14022E270 - ImageBase; // 48 89 5C 2
 
 #pragma region CClassStaticFunction
 constexpr uintptr_t CClassStaticFunction_ctor = 0x14022E210 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0, expected: 3, index: 0
+#pragma endregion
+
+#pragma region CEnum
+constexpr uintptr_t CEnum_Unserialize = 0x14023CEA0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 18 57 48 83 EC 20 48 8B F9, expected: 4, index: 0
+constexpr uintptr_t CEnum_ToString = 0x14023D0E0 - ImageBase; // 40 53 48 83 EC 20 44 0F B6 49 20 33 C0, expected: 1, index: 0
+constexpr uintptr_t CEnum_FromString = 0x14023CC40 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 48 8B F9 49 8B D8, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CGameEngine
@@ -97,6 +127,10 @@ constexpr uintptr_t OpcodeHandlers_Get = 0x1401E566D - ImageBase; // 4C 8D 15 ? 
 
 #pragma region Streams
 constexpr uintptr_t Streams_MemoryStream_ctor = 0x142C54770 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
+#pragma endregion
+
+#pragma region TTypedClass
+constexpr uintptr_t TTypedClass_IsEqual = 0x14021BB20 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 54 41 56 41 57, expected: 453, index: 7
 #pragma endregion
 
 #pragma region TweakDB

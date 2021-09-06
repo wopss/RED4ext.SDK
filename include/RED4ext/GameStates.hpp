@@ -6,6 +6,8 @@
 namespace RED4ext
 {
 struct CGameApplication;
+struct CGameOptions;
+
 struct IGameState
 {
     virtual ~IGameState() = 0;
@@ -19,7 +21,7 @@ struct IGameState
 
 struct CBaseInitializationState : IGameState
 {
-    virtual void sub_30() = 0;
+    virtual void ReadOptions(int64_t a1, CGameOptions* aOptions) = 0;
     virtual CName GetEngineName(int64_t a3) = 0;
 };
 
