@@ -16,11 +16,11 @@ This library is similar to:
 
 ### Header only version
 
-Include the [header files](/include) in your project and use a C++17 compiler.
+Include the [header files](/include) in your project and use a C++20 compiler.
 
 ### Static library version
 
-Add the [header files](/include) and the [source files](/src) to your project, define `RED4EXT_STATIC_LIB` and use a C++17 compiler.
+Add the [header files](/include) and the [source files](/src) to your project, define `RED4EXT_STATIC_LIB` and use a C++20 compiler.
 
 ## Build instructions
 
