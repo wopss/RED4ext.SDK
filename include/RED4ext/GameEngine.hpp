@@ -34,7 +34,8 @@ struct CBaseEngine
         uint8_t pad170[0x9];
         uint8_t isClipped;
     };
-    RED4EXT_ASSERT_SIZE(UnkC0, 0x180);
+    RED4EXT_ASSERT_SIZE(UnkC0, 0x178);
+    RED4EXT_ASSERT_OFFSET(UnkC0, hWnd, 0x160);
 
     struct Unk108
     {
