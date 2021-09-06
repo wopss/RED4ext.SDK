@@ -31,25 +31,28 @@ using StackArgs_t = std::vector<CStackType>;
 struct IStack
 {
     // clang-format off
-    virtual ~IStack() = default;                          // 00
-    virtual void* GetResultAddr() { return nullptr; };    // 08
-    virtual CBaseRTTIType* GetType() { return nullptr; }; // 10
-    virtual void sub_18(int64_t a2){};                    // 18
-    virtual void sub_20(){};                              // 20
-    virtual void GenerateCode(char* aCode){};             // 28
+    virtual ~IStack() = default;                            // 00
+    virtual void* GetResultAddr() { return nullptr; }       // 08
+    virtual CBaseRTTIType* GetType() { return nullptr; }    // 10
+    virtual void sub_18(int64_t a2) {}                      // 18
     // clang-format on
 };
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
 
 struct CBaseStack : IStack
 {
+    // clang-format off
+    virtual void sub_20() {}                    // 20
+    virtual void GenerateCode(char* aCode) {}   // 28
+    // clang-format on
+
     RED4ext::IScriptable* GetContext() const;
 
-    int64_t unk08;            // 08
-    void* unk10;              // 10
-    IScriptable* context18;   // 18
-    IScriptable* context20;   // 20
-    int64_t unk28;            // 28
+    int64_t unk08;          // 08
+    void* unk10;            // 10
+    IScriptable* context18; // 18
+    IScriptable* context20; // 20
+    int64_t unk28;          // 28
 };
 
 RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
@@ -63,7 +66,7 @@ struct CStack : CBaseStack
     CStackType* args;   // 30
     uint32_t argsCount; // 38
     CStackType* result; // 40
-    uint8_t pad48[0x10]; 
+    uint8_t pad48[0x10];
 };
 
 RED4EXT_ASSERT_SIZE(CStack, 0x58);
