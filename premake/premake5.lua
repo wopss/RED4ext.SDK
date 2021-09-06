@@ -1,4 +1,4 @@
-require("premake", ">=5.0.0-alpha15")
+require("premake", ">=5.0.0-alpha16")
 
 -- Disable premake.downloadModule, see https://github.com/premake/premake-core/issues/1381.
 premake.downloadModule = function(modname, versions)
