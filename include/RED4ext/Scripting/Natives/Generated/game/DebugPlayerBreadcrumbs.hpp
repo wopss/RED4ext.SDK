@@ -12,9 +12,10 @@ namespace game {
 struct DebugPlayerBreadcrumbs : game::IDebugPlayerBreadcrumbs
 {
     static constexpr const char* NAME = "gameDebugPlayerBreadcrumbs";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DebugPlayerBreadcrumbs";
 
 };
 RED4EXT_ASSERT_SIZE(DebugPlayerBreadcrumbs, 0x48);
 } // namespace game
+using DebugPlayerBreadcrumbs = game::DebugPlayerBreadcrumbs;
 } // namespace RED4ext

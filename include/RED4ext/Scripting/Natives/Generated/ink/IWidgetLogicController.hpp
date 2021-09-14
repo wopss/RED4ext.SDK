@@ -13,11 +13,12 @@ namespace ink {
 struct IWidgetLogicController : IScriptable
 {
     static constexpr const char* NAME = "inkIWidgetLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkILogicController";
 
     uint8_t unk40[0x60 - 0x40]; // 40
     CName audioMetadataName; // 60
 };
 RED4EXT_ASSERT_SIZE(IWidgetLogicController, 0x68);
 } // namespace ink
+using inkILogicController = ink::IWidgetLogicController;
 } // namespace RED4ext

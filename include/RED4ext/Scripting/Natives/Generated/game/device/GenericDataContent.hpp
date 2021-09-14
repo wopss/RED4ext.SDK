@@ -14,11 +14,12 @@ namespace game::device {
 struct GenericDataContent
 {
     static constexpr const char* NAME = "gamedeviceGenericDataContent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GenericDataContent";
 
     CString name; // 00
     DynArray<game::device::DataElement> content; // 20
 };
 RED4EXT_ASSERT_SIZE(GenericDataContent, 0x30);
 } // namespace game::device
+using GenericDataContent = game::device::GenericDataContent;
 } // namespace RED4ext

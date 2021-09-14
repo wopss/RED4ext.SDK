@@ -15,7 +15,7 @@ namespace ent {
 struct AnimInputSetterAnimFeature : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimInputSetterAnimFeature";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimInputSetterAnimFeature";
 
     float delay; // 48
     uint8_t unk4C[0x50 - 0x4C]; // 4C
@@ -23,4 +23,5 @@ struct AnimInputSetterAnimFeature : ent::AnimInputSetter
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetterAnimFeature, 0x60);
 } // namespace ent
+using AnimInputSetterAnimFeature = ent::AnimInputSetterAnimFeature;
 } // namespace RED4ext

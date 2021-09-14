@@ -13,7 +13,7 @@ namespace game::ui {
 struct InteractionMappinController : game::ui::MappinBaseController
 {
     static constexpr const char* NAME = "gameuiInteractionMappinController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BaseInteractionMappinController";
 
     uint8_t unk1C8[0x260 - 0x1C8]; // 1C8
     CName canvasWidgetName; // 260
@@ -26,4 +26,5 @@ struct InteractionMappinController : game::ui::MappinBaseController
 };
 RED4EXT_ASSERT_SIZE(InteractionMappinController, 0x2A0);
 } // namespace game::ui
+using BaseInteractionMappinController = game::ui::InteractionMappinController;
 } // namespace RED4ext

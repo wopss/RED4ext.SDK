@@ -17,7 +17,7 @@ namespace game {
 struct TelemetryEnemy
 {
     static constexpr const char* NAME = "gameTelemetryEnemy";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TelemetryEnemy";
 
     TweakDBID characterRecord; // 00
     CString enemyAffiliation; // 08
@@ -28,4 +28,5 @@ struct TelemetryEnemy
 };
 RED4EXT_ASSERT_SIZE(TelemetryEnemy, 0x48);
 } // namespace game
+using TelemetryEnemy = game::TelemetryEnemy;
 } // namespace RED4ext

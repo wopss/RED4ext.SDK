@@ -13,7 +13,7 @@ namespace ink {
 struct ScrollAreaWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkScrollAreaWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkScrollArea";
 
     uint8_t unk220[0x230 - 0x220]; // 220
     float horizontalScrolling; // 230
@@ -26,4 +26,5 @@ struct ScrollAreaWidget : ink::CompoundWidget
 };
 RED4EXT_ASSERT_SIZE(ScrollAreaWidget, 0x250);
 } // namespace ink
+using inkScrollArea = ink::ScrollAreaWidget;
 } // namespace RED4ext

@@ -12,11 +12,12 @@ namespace anim {
 struct AnimFeature_NPCState : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_NPCState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_NPCState";
 
     int32_t state; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_NPCState, 0x48);
 } // namespace anim
+using AnimFeature_NPCState = anim::AnimFeature_NPCState;
 } // namespace RED4ext

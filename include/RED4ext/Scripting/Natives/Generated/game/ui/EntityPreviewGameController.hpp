@@ -15,7 +15,7 @@ namespace game::ui {
 struct EntityPreviewGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiEntityPreviewGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkEntityPreviewGameController";
 
     uint8_t unkD0[0x128 - 0xD0]; // D0
     RaRef<ent::EntityTemplate> entityToPreview; // 128
@@ -23,4 +23,5 @@ struct EntityPreviewGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(EntityPreviewGameController, 0x140);
 } // namespace game::ui
+using inkEntityPreviewGameController = game::ui::EntityPreviewGameController;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game {
 struct IEffect : IScriptable
 {
     static constexpr const char* NAME = "gameIEffect";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IEffect";
 
 };
 RED4EXT_ASSERT_SIZE(IEffect, 0x40);
 } // namespace game
+using IEffect = game::IEffect;
 } // namespace RED4ext

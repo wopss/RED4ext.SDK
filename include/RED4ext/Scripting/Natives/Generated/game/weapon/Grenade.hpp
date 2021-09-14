@@ -14,7 +14,7 @@ namespace game::weapon {
 struct Grenade : game::ItemObject
 {
     static constexpr const char* NAME = "gameweaponGrenade";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WeaponGrenade";
 
     uint8_t unk328[0x330 - 0x328]; // 328
     Vector4 lastHitNormal; // 330
@@ -24,4 +24,5 @@ struct Grenade : game::ItemObject
 };
 RED4EXT_ASSERT_SIZE(Grenade, 0x360);
 } // namespace game::weapon
+using WeaponGrenade = game::weapon::Grenade;
 } // namespace RED4ext

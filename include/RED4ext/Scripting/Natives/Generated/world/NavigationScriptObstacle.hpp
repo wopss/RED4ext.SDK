@@ -12,10 +12,11 @@ namespace world {
 struct NavigationScriptObstacle : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptObstacle";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NavigationObstacle";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptObstacle, 0x48);
 } // namespace world
+using NavigationObstacle = world::NavigationScriptObstacle;
 } // namespace RED4ext

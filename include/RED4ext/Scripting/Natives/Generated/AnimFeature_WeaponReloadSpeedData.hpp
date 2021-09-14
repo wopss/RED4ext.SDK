@@ -11,7 +11,7 @@ namespace RED4ext
 struct AnimFeature_WeaponReloadSpeedData : anim::AnimFeature
 {
     static constexpr const char* NAME = "AnimFeature_WeaponReloadSpeedData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_WeaponReloadSpeedData";
 
     float reloadSpeed; // 40
     float emptyReloadSpeed; // 44

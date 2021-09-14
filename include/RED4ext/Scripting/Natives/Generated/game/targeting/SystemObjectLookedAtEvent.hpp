@@ -13,7 +13,7 @@ namespace game::targeting {
 struct SystemObjectLookedAtEvent : red::Event
 {
     static constexpr const char* NAME = "gametargetingSystemObjectLookedAtEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ObjectLookedAtEvent";
 
     ent::EntityID ownerID; // 40
     bool state; // 48
@@ -21,4 +21,5 @@ struct SystemObjectLookedAtEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SystemObjectLookedAtEvent, 0x50);
 } // namespace game::targeting
+using ObjectLookedAtEvent = game::targeting::SystemObjectLookedAtEvent;
 } // namespace RED4ext

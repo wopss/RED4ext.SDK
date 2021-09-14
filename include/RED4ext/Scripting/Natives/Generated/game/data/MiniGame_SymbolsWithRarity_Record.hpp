@@ -12,10 +12,11 @@ namespace game::data {
 struct MiniGame_SymbolsWithRarity_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMiniGame_SymbolsWithRarity_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MiniGame_SymbolsWithRarity_Record";
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(MiniGame_SymbolsWithRarity_Record, 0x58);
 } // namespace game::data
+using MiniGame_SymbolsWithRarity_Record = game::data::MiniGame_SymbolsWithRarity_Record;
 } // namespace RED4ext

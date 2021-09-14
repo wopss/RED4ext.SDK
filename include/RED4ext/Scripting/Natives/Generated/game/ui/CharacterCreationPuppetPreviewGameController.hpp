@@ -17,7 +17,7 @@ namespace game::ui {
 struct CharacterCreationPuppetPreviewGameController : game::ui::PuppetPreviewGameController
 {
     static constexpr const char* NAME = "gameuiCharacterCreationPuppetPreviewGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkCharacterCreationPuppetPreviewGameController";
 
     CName maleSceneName; // 1C0
     CName femaleSceneName; // 1C8
@@ -31,4 +31,5 @@ struct CharacterCreationPuppetPreviewGameController : game::ui::PuppetPreviewGam
 };
 RED4EXT_ASSERT_SIZE(CharacterCreationPuppetPreviewGameController, 0x248);
 } // namespace game::ui
+using inkCharacterCreationPuppetPreviewGameController = game::ui::CharacterCreationPuppetPreviewGameController;
 } // namespace RED4ext

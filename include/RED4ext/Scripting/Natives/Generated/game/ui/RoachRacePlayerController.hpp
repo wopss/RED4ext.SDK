@@ -12,10 +12,11 @@ namespace game::ui {
 struct RoachRacePlayerController : game::ui::SideScrollerMiniGamePlayerController
 {
     static constexpr const char* NAME = "gameuiRoachRacePlayerController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RoachRacePlayerController";
 
     uint8_t unk78[0x88 - 0x78]; // 78
 };
 RED4EXT_ASSERT_SIZE(RoachRacePlayerController, 0x88);
 } // namespace game::ui
+using RoachRacePlayerController = game::ui::RoachRacePlayerController;
 } // namespace RED4ext

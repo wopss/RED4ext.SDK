@@ -12,10 +12,11 @@ namespace game {
 struct JournalRequestClassFilter
 {
     static constexpr const char* NAME = "gameJournalRequestClassFilter";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalRequestClassFilter";
 
     CName className; // 00
 };
 RED4EXT_ASSERT_SIZE(JournalRequestClassFilter, 0x8);
 } // namespace game
+using JournalRequestClassFilter = game::JournalRequestClassFilter;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace game {
 struct EffectSystem : game::IEffectSystem
 {
     static constexpr const char* NAME = "gameEffectSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectSystem";
 
     uint8_t unk48[0xF8 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(EffectSystem, 0xF8);
 } // namespace game
+using EffectSystem = game::EffectSystem;
 } // namespace RED4ext

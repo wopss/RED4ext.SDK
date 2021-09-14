@@ -13,11 +13,12 @@ namespace game::interactions {
 struct InteractionActivationEvent : game::interactions::InteractionBaseEvent
 {
     static constexpr const char* NAME = "gameinteractionsInteractionActivationEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionActivationEvent";
 
     game::interactions::EInteractionEventType eventType; // 68
     uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
 RED4EXT_ASSERT_SIZE(InteractionActivationEvent, 0x70);
 } // namespace game::interactions
+using InteractionActivationEvent = game::interactions::InteractionActivationEvent;
 } // namespace RED4ext

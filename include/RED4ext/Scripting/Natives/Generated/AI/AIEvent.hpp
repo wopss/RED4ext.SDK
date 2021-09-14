@@ -13,7 +13,7 @@ namespace AI {
 struct AIEvent : red::Event
 {
     static constexpr const char* NAME = "AIAIEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIEvent";
 
     CName name; // 40
     float timeToLive; // 48
@@ -21,4 +21,5 @@ struct AIEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AIEvent, 0x50);
 } // namespace AI
+using AIEvent = AI::AIEvent;
 } // namespace RED4ext

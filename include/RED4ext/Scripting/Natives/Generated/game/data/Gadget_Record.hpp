@@ -12,9 +12,10 @@ namespace game::data {
 struct Gadget_Record : game::data::WeaponItem_Record
 {
     static constexpr const char* NAME = "gamedataGadget_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "Gadget_Record";
 
 };
 RED4EXT_ASSERT_SIZE(Gadget_Record, 0x188);
 } // namespace game::data
+using Gadget_Record = game::data::Gadget_Record;
 } // namespace RED4ext

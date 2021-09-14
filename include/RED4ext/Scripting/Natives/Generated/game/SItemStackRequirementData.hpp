@@ -12,11 +12,12 @@ namespace game {
 struct SItemStackRequirementData
 {
     static constexpr const char* NAME = "gameSItemStackRequirementData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SItemStackRequirementData";
 
     game::data::StatType statType; // 00
     float requiredValue; // 04
 };
 RED4EXT_ASSERT_SIZE(SItemStackRequirementData, 0x8);
 } // namespace game
+using SItemStackRequirementData = game::SItemStackRequirementData;
 } // namespace RED4ext

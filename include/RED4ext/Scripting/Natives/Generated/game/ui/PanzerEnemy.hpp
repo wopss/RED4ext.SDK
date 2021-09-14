@@ -14,7 +14,7 @@ namespace game::ui {
 struct PanzerEnemy : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerEnemy";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PanzerEnemy";
 
     uint8_t unkC0[0xCC - 0xC0]; // C0
     int32_t health; // CC
@@ -37,4 +37,5 @@ struct PanzerEnemy : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 };
 RED4EXT_ASSERT_SIZE(PanzerEnemy, 0x128);
 } // namespace game::ui
+using PanzerEnemy = game::ui::PanzerEnemy;
 } // namespace RED4ext

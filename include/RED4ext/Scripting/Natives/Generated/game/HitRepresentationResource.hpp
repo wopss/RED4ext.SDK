@@ -15,11 +15,12 @@ namespace game {
 struct HitRepresentationResource : CResource
 {
     static constexpr const char* NAME = "gameHitRepresentationResource";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitRepresentationResource";
 
     DynArray<game::HitShapeContainer> representations; // 40
     DynArray<game::HitRepresentationVisualTaggedOverride> overrides; // 50
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationResource, 0x60);
 } // namespace game
+using HitRepresentationResource = game::HitRepresentationResource;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game {
 struct QuestTypeRequestFilter : game::CustomRequestFilter
 {
     static constexpr const char* NAME = "gameQuestTypeRequestFilter";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "QuestTypeRequestFilter";
 
     bool includeMainQuests; // 08
     bool includeSideQuests; // 09
@@ -22,4 +22,5 @@ struct QuestTypeRequestFilter : game::CustomRequestFilter
 };
 RED4EXT_ASSERT_SIZE(QuestTypeRequestFilter, 0x10);
 } // namespace game
+using QuestTypeRequestFilter = game::QuestTypeRequestFilter;
 } // namespace RED4ext

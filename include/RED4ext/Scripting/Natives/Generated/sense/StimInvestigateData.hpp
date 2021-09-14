@@ -16,7 +16,7 @@ namespace sense {
 struct StimInvestigateData
 {
     static constexpr const char* NAME = "senseStimInvestigateData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "stimInvestigateData";
 
     Vector4 distrationPoint; // 00
     Vector4 attackInstigatorPosition; // 10
@@ -35,4 +35,5 @@ struct StimInvestigateData
 };
 RED4EXT_ASSERT_SIZE(StimInvestigateData, 0x80);
 } // namespace sense
+using stimInvestigateData = sense::StimInvestigateData;
 } // namespace RED4ext

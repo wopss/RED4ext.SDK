@@ -12,10 +12,11 @@ namespace game {
 struct TelemetryTelemetrySystem : game::ITelemetrySystem
 {
     static constexpr const char* NAME = "gameTelemetryTelemetrySystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TelemetrySystem";
 
     uint8_t unk48[0x1F8 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(TelemetryTelemetrySystem, 0x1F8);
 } // namespace game
+using TelemetrySystem = game::TelemetryTelemetrySystem;
 } // namespace RED4ext

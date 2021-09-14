@@ -12,10 +12,11 @@ namespace game::ui {
 struct ForceAttributeValueEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiForceAttributeValueEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ForceAttributeValueEvent";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ForceAttributeValueEvent, 0x48);
 } // namespace game::ui
+using ForceAttributeValueEvent = game::ui::ForceAttributeValueEvent;
 } // namespace RED4ext

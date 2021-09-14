@@ -16,11 +16,12 @@ namespace game {
 struct ActionEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "gameActionEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ActionEvent";
 
     CName eventAction; // 50
     Handle<game::ActionInternalEvent> internalEvent; // 58
 };
 RED4EXT_ASSERT_SIZE(ActionEvent, 0x68);
 } // namespace game
+using ActionEvent = game::ActionEvent;
 } // namespace RED4ext

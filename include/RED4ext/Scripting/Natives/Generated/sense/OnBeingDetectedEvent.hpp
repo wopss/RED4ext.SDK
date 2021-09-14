@@ -16,7 +16,7 @@ namespace sense {
 struct OnBeingDetectedEvent : red::Event
 {
     static constexpr const char* NAME = "senseOnBeingDetectedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "OnBeingDetectedEvent";
 
     WeakHandle<sense::SensorObject> source; // 40
     TweakDBID shapeId; // 50
@@ -25,4 +25,5 @@ struct OnBeingDetectedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnBeingDetectedEvent, 0x60);
 } // namespace sense
+using OnBeingDetectedEvent = sense::OnBeingDetectedEvent;
 } // namespace RED4ext

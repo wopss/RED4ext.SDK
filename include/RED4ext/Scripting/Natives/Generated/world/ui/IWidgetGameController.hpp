@@ -13,7 +13,7 @@ namespace world::ui {
 struct IWidgetGameController : ink::IWidgetController
 {
     static constexpr const char* NAME = "worlduiIWidgetGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "worlduiIGameController";
 
     uint8_t unk98[0xA8 - 0x98]; // 98
     TweakDBID elementRecordID; // A8
@@ -21,4 +21,5 @@ struct IWidgetGameController : ink::IWidgetController
 };
 RED4EXT_ASSERT_SIZE(IWidgetGameController, 0xC0);
 } // namespace world::ui
+using worlduiIGameController = world::ui::IWidgetGameController;
 } // namespace RED4ext

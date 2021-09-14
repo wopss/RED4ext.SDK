@@ -17,11 +17,12 @@ namespace game::ui {
 struct OnMiniGameStateUpdateEventAdvanced : red::Event
 {
     static constexpr const char* NAME = "gameuiOnMiniGameStateUpdateEventAdvanced";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MiniGameStateUpdateEventAdvanced";
 
     Handle<game::ui::SideScrollerMiniGameStateAdvanced> gameState; // 40
     DynArray<CName> propertyNames; // 50
 };
 RED4EXT_ASSERT_SIZE(OnMiniGameStateUpdateEventAdvanced, 0x60);
 } // namespace game::ui
+using MiniGameStateUpdateEventAdvanced = game::ui::OnMiniGameStateUpdateEventAdvanced;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_PlayerSpatialAwareness : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_PlayerSpatialAwareness";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_PlayerSpatialAwareness";
 
     Vector4 leftClosestVector; // 40
     Vector4 rightClosestVector; // 50
@@ -23,4 +23,5 @@ struct AnimFeature_PlayerSpatialAwareness : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_PlayerSpatialAwareness, 0x80);
 } // namespace anim
+using AnimFeature_PlayerSpatialAwareness = anim::AnimFeature_PlayerSpatialAwareness;
 } // namespace RED4ext

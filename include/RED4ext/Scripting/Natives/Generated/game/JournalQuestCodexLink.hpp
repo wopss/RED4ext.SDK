@@ -15,10 +15,11 @@ namespace game {
 struct JournalQuestCodexLink : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalQuestCodexLink";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalQuestCodexLink";
 
     Handle<game::JournalPath> path; // 60
 };
 RED4EXT_ASSERT_SIZE(JournalQuestCodexLink, 0x70);
 } // namespace game
+using JournalQuestCodexLink = game::JournalQuestCodexLink;
 } // namespace RED4ext

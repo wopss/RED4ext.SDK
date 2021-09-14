@@ -12,9 +12,10 @@ namespace game {
 struct CommunityProxyPSPresentEvent : red::Event
 {
     static constexpr const char* NAME = "gameCommunityProxyPSPresentEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CommunityProxyPSPresentEvent";
 
 };
 RED4EXT_ASSERT_SIZE(CommunityProxyPSPresentEvent, 0x40);
 } // namespace game
+using CommunityProxyPSPresentEvent = game::CommunityProxyPSPresentEvent;
 } // namespace RED4ext

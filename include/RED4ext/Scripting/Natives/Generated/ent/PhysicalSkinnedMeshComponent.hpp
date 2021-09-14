@@ -17,7 +17,7 @@ namespace ent {
 struct PhysicalSkinnedMeshComponent : ent::SkinnedMeshComponent
 {
     static constexpr const char* NAME = "entPhysicalSkinnedMeshComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhysicalSkinnedMeshComponent";
 
     uint8_t unk270[0x2A8 - 0x270]; // 270
     Handle<physics::FilterData> filterData; // 2A8
@@ -31,4 +31,5 @@ struct PhysicalSkinnedMeshComponent : ent::SkinnedMeshComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalSkinnedMeshComponent, 0x2E0);
 } // namespace ent
+using PhysicalSkinnedMeshComponent = ent::PhysicalSkinnedMeshComponent;
 } // namespace RED4ext

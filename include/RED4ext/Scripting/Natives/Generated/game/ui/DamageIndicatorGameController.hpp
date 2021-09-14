@@ -12,7 +12,7 @@ namespace game::ui {
 struct DamageIndicatorGameController : game::ui::HUDGameController
 {
     static constexpr const char* NAME = "gameuiDamageIndicatorGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DamageIndicatorGameController";
 
     uint8_t unkE8[0x168 - 0xE8]; // E8
     uint8_t maxVisibleParts; // 168
@@ -20,4 +20,5 @@ struct DamageIndicatorGameController : game::ui::HUDGameController
 };
 RED4EXT_ASSERT_SIZE(DamageIndicatorGameController, 0x170);
 } // namespace game::ui
+using DamageIndicatorGameController = game::ui::DamageIndicatorGameController;
 } // namespace RED4ext

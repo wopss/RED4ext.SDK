@@ -13,10 +13,11 @@ namespace game {
 struct QueryResult
 {
     static constexpr const char* NAME = "gameQueryResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitRepresentationQueryResult";
 
     DynArray<game::ShapeData> hitShapes; // 00
 };
 RED4EXT_ASSERT_SIZE(QueryResult, 0x10);
 } // namespace game
+using HitRepresentationQueryResult = game::QueryResult;
 } // namespace RED4ext

@@ -15,10 +15,11 @@ namespace game::events {
 struct ReactionChangeRequestEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsReactionChangeRequestEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ReactionChangeRequestEvent";
 
     Handle<game::data::ReactionPreset_Record> reactionPresetRecord; // 40
 };
 RED4EXT_ASSERT_SIZE(ReactionChangeRequestEvent, 0x50);
 } // namespace game::events
+using ReactionChangeRequestEvent = game::events::ReactionChangeRequestEvent;
 } // namespace RED4ext

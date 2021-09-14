@@ -12,11 +12,12 @@ namespace game {
 struct LoadoutData
 {
     static constexpr const char* NAME = "gameLoadoutData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LoadoutData";
 
     ItemID itemID; // 00
     TweakDBID slotID; // 10
 };
 RED4EXT_ASSERT_SIZE(LoadoutData, 0x18);
 } // namespace game
+using LoadoutData = game::LoadoutData;
 } // namespace RED4ext

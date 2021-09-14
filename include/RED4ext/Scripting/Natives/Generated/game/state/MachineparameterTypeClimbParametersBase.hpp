@@ -12,10 +12,11 @@ namespace game::state {
 struct MachineparameterTypeClimbParametersBase : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeClimbParametersBase";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ClimbParametersBase";
 
     uint8_t unk40[0xF0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeClimbParametersBase, 0xF0);
 } // namespace game::state
+using ClimbParametersBase = game::state::MachineparameterTypeClimbParametersBase;
 } // namespace RED4ext

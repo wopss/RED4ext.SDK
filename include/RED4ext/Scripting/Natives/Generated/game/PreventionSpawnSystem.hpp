@@ -12,10 +12,11 @@ namespace game {
 struct PreventionSpawnSystem : game::IPreventionSpawnSystem
 {
     static constexpr const char* NAME = "gamePreventionSpawnSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PreventionSpawnSystem";
 
     uint8_t unk48[0xB0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(PreventionSpawnSystem, 0xB0);
 } // namespace game
+using PreventionSpawnSystem = game::PreventionSpawnSystem;
 } // namespace RED4ext

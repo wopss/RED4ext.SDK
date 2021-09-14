@@ -13,7 +13,7 @@ namespace quest {
 struct CustomQuestNotificationData
 {
     static constexpr const char* NAME = "questCustomQuestNotificationData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CustomQuestNotificationData";
 
     CString header; // 00
     CString desc; // 20
@@ -22,4 +22,5 @@ struct CustomQuestNotificationData
 };
 RED4EXT_ASSERT_SIZE(CustomQuestNotificationData, 0x68);
 } // namespace quest
+using CustomQuestNotificationData = quest::CustomQuestNotificationData;
 } // namespace RED4ext

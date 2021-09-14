@@ -15,7 +15,7 @@ namespace game::ui {
 struct InputHintGroupController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiInputHintGroupController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InputHintGroupController";
 
     uint8_t unk68[0xB8 - 0x68]; // 68
     ink::TextWidgetReference titleTextRef; // B8
@@ -25,4 +25,5 @@ struct InputHintGroupController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(InputHintGroupController, 0x118);
 } // namespace game::ui
+using InputHintGroupController = game::ui::InputHintGroupController;
 } // namespace RED4ext

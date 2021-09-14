@@ -12,10 +12,11 @@ namespace AI {
 struct ObjectSelectionComponent : ent::IComponent
 {
     static constexpr const char* NAME = "AIObjectSelectionComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ObjectSelectionComponent";
 
     uint8_t unk90[0x140 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(ObjectSelectionComponent, 0x140);
 } // namespace AI
+using ObjectSelectionComponent = AI::ObjectSelectionComponent;
 } // namespace RED4ext

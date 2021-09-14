@@ -14,11 +14,12 @@ namespace game {
 struct EffectInputParameter_String
 {
     static constexpr const char* NAME = "gameEffectInputParameter_String";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectInputParameter_String";
 
     uint8_t unk00[0x8 - 0x0]; // 0
     Handle<game::IEffectParameter_StringEvaluator> evaluator; // 08
 };
 RED4EXT_ASSERT_SIZE(EffectInputParameter_String, 0x18);
 } // namespace game
+using EffectInputParameter_String = game::EffectInputParameter_String;
 } // namespace RED4ext

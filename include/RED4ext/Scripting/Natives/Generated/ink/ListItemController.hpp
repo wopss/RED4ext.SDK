@@ -13,7 +13,7 @@ namespace ink {
 struct ListItemController : ink::ButtonController
 {
     static constexpr const char* NAME = "inkListItemController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ListItemController";
 
     ink::ListItemControllerCallback AddedToList; // 1E8
     ink::ListItemControllerCallback ToggledOn; // 220
@@ -24,4 +24,5 @@ struct ListItemController : ink::ButtonController
 };
 RED4EXT_ASSERT_SIZE(ListItemController, 0x348);
 } // namespace ink
+using ListItemController = ink::ListItemController;
 } // namespace RED4ext

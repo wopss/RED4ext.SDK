@@ -15,7 +15,7 @@ namespace ink {
 struct CacheWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkCacheWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkCacheWidget";
 
     CName externalDynamicTexture; // 220
     Vector2 innerScale; // 228

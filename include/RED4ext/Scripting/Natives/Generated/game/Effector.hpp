@@ -12,10 +12,11 @@ namespace game {
 struct Effector : IScriptable
 {
     static constexpr const char* NAME = "gameEffector";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "Effector";
 
     uint8_t unk40[0xA0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(Effector, 0xA0);
 } // namespace game
+using Effector = game::Effector;
 } // namespace RED4ext

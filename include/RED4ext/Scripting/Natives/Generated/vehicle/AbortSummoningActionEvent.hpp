@@ -12,9 +12,10 @@ namespace vehicle {
 struct AbortSummoningActionEvent : game::ActionEvent
 {
     static constexpr const char* NAME = "vehicleAbortSummoningActionEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AbortSummoningActionEvent";
 
 };
 RED4EXT_ASSERT_SIZE(AbortSummoningActionEvent, 0x68);
 } // namespace vehicle
+using AbortSummoningActionEvent = vehicle::AbortSummoningActionEvent;
 } // namespace RED4ext

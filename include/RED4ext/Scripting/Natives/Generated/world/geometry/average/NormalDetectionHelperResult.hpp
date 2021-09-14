@@ -12,10 +12,11 @@ namespace world::geometry::average {
 struct NormalDetectionHelperResult : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryaverageNormalDetectionHelperResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AverageNormalResult";
 
     uint8_t unk40[0x1A0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(NormalDetectionHelperResult, 0x1A0);
 } // namespace world::geometry::average
+using AverageNormalResult = world::geometry::average::NormalDetectionHelperResult;
 } // namespace RED4ext

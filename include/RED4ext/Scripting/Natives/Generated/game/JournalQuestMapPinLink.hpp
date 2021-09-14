@@ -15,10 +15,11 @@ namespace game {
 struct JournalQuestMapPinLink : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalQuestMapPinLink";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalQuestMapPinLink";
 
     Handle<game::JournalPath> path; // 60
 };
 RED4EXT_ASSERT_SIZE(JournalQuestMapPinLink, 0x70);
 } // namespace game
+using JournalQuestMapPinLink = game::JournalQuestMapPinLink;
 } // namespace RED4ext

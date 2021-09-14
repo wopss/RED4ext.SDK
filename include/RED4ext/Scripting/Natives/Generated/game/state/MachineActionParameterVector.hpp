@@ -13,7 +13,7 @@ namespace game::state {
 struct MachineActionParameterVector
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterVector";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ActionParameterVector";
 
     uint8_t unk00[0x10 - 0x0]; // 0
     CName name; // 10
@@ -22,4 +22,5 @@ struct MachineActionParameterVector
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterVector, 0x30);
 } // namespace game::state
+using ActionParameterVector = game::state::MachineActionParameterVector;
 } // namespace RED4ext

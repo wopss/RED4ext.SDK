@@ -13,7 +13,7 @@ namespace anim {
 struct LookAtStateMachineSettings
 {
     static constexpr const char* NAME = "animLookAtStateMachineSettings";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LookAtStateMachineSettings";
 
     CName partName; // 00
     CName partAlias; // 08
@@ -29,4 +29,5 @@ struct LookAtStateMachineSettings
 };
 RED4EXT_ASSERT_SIZE(LookAtStateMachineSettings, 0x78);
 } // namespace anim
+using LookAtStateMachineSettings = anim::LookAtStateMachineSettings;
 } // namespace RED4ext

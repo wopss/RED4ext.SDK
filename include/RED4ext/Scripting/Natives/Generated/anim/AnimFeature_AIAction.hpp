@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_AIAction : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_AIAction";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_AIAction";
 
     int32_t state; // 40
     int32_t animVariation; // 44
@@ -21,4 +21,5 @@ struct AnimFeature_AIAction : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_AIAction, 0x50);
 } // namespace anim
+using AnimFeature_AIAction = anim::AnimFeature_AIAction;
 } // namespace RED4ext

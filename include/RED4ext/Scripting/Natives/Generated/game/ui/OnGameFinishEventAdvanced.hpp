@@ -15,10 +15,11 @@ namespace game::ui {
 struct OnGameFinishEventAdvanced : red::Event
 {
     static constexpr const char* NAME = "gameuiOnGameFinishEventAdvanced";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GameFinishEventAdvanced";
 
     Handle<game::ui::SideScrollerMiniGameStateAdvanced> gameState; // 40
 };
 RED4EXT_ASSERT_SIZE(OnGameFinishEventAdvanced, 0x50);
 } // namespace game::ui
+using GameFinishEventAdvanced = game::ui::OnGameFinishEventAdvanced;
 } // namespace RED4ext

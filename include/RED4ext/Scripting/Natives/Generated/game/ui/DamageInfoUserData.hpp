@@ -12,9 +12,10 @@ namespace game::ui {
 struct DamageInfoUserData : IScriptable
 {
     static constexpr const char* NAME = "gameuiDamageInfoUserData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DamageInfoUserData";
 
 };
 RED4EXT_ASSERT_SIZE(DamageInfoUserData, 0x40);
 } // namespace game::ui
+using DamageInfoUserData = game::ui::DamageInfoUserData;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace vehicle {
 struct ToggleRadioReceiverEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleToggleRadioReceiverEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ToggleRadioReceiver";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ToggleRadioReceiverEvent, 0x48);
 } // namespace vehicle
+using ToggleRadioReceiver = vehicle::ToggleRadioReceiverEvent;
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace ink {
 struct LanguageSpecificVideoController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkLanguageSpecificVideoController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LanguageSpecificVideoController";
 
     bool isLooped; // 68
     uint8_t unk69[0x70 - 0x69]; // 69
@@ -27,4 +27,5 @@ struct LanguageSpecificVideoController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(LanguageSpecificVideoController, 0x90);
 } // namespace ink
+using LanguageSpecificVideoController = ink::LanguageSpecificVideoController;
 } // namespace RED4ext

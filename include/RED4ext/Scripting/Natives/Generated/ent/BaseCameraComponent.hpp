@@ -13,7 +13,7 @@ namespace ent {
 struct BaseCameraComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entBaseCameraComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "entCameraComponent";
 
     uint8_t unk120[0x128 - 0x120]; // 120
     float fov; // 128
@@ -29,4 +29,5 @@ struct BaseCameraComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(BaseCameraComponent, 0x1D0);
 } // namespace ent
+using entCameraComponent = ent::BaseCameraComponent;
 } // namespace RED4ext

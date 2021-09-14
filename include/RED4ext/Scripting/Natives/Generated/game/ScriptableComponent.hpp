@@ -12,7 +12,7 @@ namespace game {
 struct ScriptableComponent : game::Component
 {
     static constexpr const char* NAME = "gameScriptableComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScriptableComponent";
 
     uint8_t unkA8[0xB0 - 0xA8]; // A8
     uint32_t priority; // B0
@@ -20,4 +20,5 @@ struct ScriptableComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(ScriptableComponent, 0xB8);
 } // namespace game
+using ScriptableComponent = game::ScriptableComponent;
 } // namespace RED4ext

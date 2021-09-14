@@ -20,7 +20,7 @@ namespace world {
 struct PhysicalDestructionNode : world::Node
 {
     static constexpr const char* NAME = "worldPhysicalDestructionNode";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhysicalDestructionNode";
 
     physics::DestructionParams destructionParams; // 38
     uint8_t unk7C[0x80 - 0x7C]; // 7C
@@ -36,4 +36,5 @@ struct PhysicalDestructionNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionNode, 0xB8);
 } // namespace world
+using PhysicalDestructionNode = world::PhysicalDestructionNode;
 } // namespace RED4ext

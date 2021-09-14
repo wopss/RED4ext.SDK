@@ -12,11 +12,12 @@ namespace ink::anim {
 struct TransparencyInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimTransparencyInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimTransparency";
 
     float startValue; // 68
     float endValue; // 6C
 };
 RED4EXT_ASSERT_SIZE(TransparencyInterpolator, 0x70);
 } // namespace ink::anim
+using inkAnimTransparency = ink::anim::TransparencyInterpolator;
 } // namespace RED4ext

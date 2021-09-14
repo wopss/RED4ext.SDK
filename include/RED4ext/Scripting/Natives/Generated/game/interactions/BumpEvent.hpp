@@ -15,7 +15,7 @@ namespace game::interactions {
 struct BumpEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsBumpEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BumpEvent";
 
     game::interactions::BumpSide side; // 40
     game::interactions::BumpLocation sourceLocation; // 44
@@ -30,4 +30,5 @@ struct BumpEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BumpEvent, 0x80);
 } // namespace game::interactions
+using BumpEvent = game::interactions::BumpEvent;
 } // namespace RED4ext

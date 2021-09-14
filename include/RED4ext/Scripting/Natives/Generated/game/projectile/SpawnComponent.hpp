@@ -15,7 +15,7 @@ namespace game::projectile {
 struct SpawnComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameprojectileSpawnComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ProjectileSpawnComponent";
 
     uint8_t unk120[0x130 - 0x120]; // 120
     DynArray<CName> projectileTemplates; // 130
@@ -27,4 +27,5 @@ struct SpawnComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SpawnComponent, 0x2E0);
 } // namespace game::projectile
+using ProjectileSpawnComponent = game::projectile::SpawnComponent;
 } // namespace RED4ext

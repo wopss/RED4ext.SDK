@@ -12,7 +12,7 @@ namespace anim {
 struct LookAtRef
 {
     static constexpr const char* NAME = "animLookAtRef";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LookAtRef";
 
     int32_t id; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -20,4 +20,5 @@ struct LookAtRef
 };
 RED4EXT_ASSERT_SIZE(LookAtRef, 0x10);
 } // namespace anim
+using LookAtRef = anim::LookAtRef;
 } // namespace RED4ext

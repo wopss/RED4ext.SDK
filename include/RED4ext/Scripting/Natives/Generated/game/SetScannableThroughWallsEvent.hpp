@@ -12,11 +12,12 @@ namespace game {
 struct SetScannableThroughWallsEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetScannableThroughWallsEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SetScannableThroughWallsEvent";
 
     bool isScannableThroughWalls; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(SetScannableThroughWallsEvent, 0x48);
 } // namespace game
+using SetScannableThroughWallsEvent = game::SetScannableThroughWallsEvent;
 } // namespace RED4ext

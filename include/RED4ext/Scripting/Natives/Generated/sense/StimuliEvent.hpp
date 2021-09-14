@@ -22,7 +22,7 @@ namespace sense {
 struct StimuliEvent : sense::BaseStimuliEvent
 {
     static constexpr const char* NAME = "senseStimuliEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StimuliEvent";
 
     sense::StimInvestigateData stimInvestigateData; // 50
     WeakHandle<game::Object> sourceObject; // D0
@@ -39,4 +39,5 @@ struct StimuliEvent : sense::BaseStimuliEvent
 };
 RED4EXT_ASSERT_SIZE(StimuliEvent, 0x140);
 } // namespace sense
+using StimuliEvent = sense::StimuliEvent;
 } // namespace RED4ext

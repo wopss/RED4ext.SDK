@@ -15,10 +15,11 @@ namespace game {
 struct TagObjectRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameTagObjectRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TagObjectRequest";
 
     WeakHandle<game::Object> object; // 48
 };
 RED4EXT_ASSERT_SIZE(TagObjectRequest, 0x58);
 } // namespace game
+using TagObjectRequest = game::TagObjectRequest;
 } // namespace RED4ext

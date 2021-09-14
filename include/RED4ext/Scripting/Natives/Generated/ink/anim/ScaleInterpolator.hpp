@@ -13,11 +13,12 @@ namespace ink::anim {
 struct ScaleInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimScaleInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimScale";
 
     Vector2 startValue; // 68
     Vector2 endValue; // 70
 };
 RED4EXT_ASSERT_SIZE(ScaleInterpolator, 0x78);
 } // namespace ink::anim
+using inkAnimScale = ink::anim::ScaleInterpolator;
 } // namespace RED4ext

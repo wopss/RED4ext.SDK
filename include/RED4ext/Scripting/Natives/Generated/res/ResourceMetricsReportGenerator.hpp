@@ -12,9 +12,10 @@ namespace res {
 struct ResourceMetricsReportGenerator : IScriptable
 {
     static constexpr const char* NAME = "resResourceMetricsReportGenerator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ResourceMetricsReportGenerator";
 
 };
 RED4EXT_ASSERT_SIZE(ResourceMetricsReportGenerator, 0x40);
 } // namespace res
+using ResourceMetricsReportGenerator = res::ResourceMetricsReportGenerator;
 } // namespace RED4ext

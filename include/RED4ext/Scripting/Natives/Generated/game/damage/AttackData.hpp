@@ -19,7 +19,7 @@ namespace game::damage {
 struct AttackData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageAttackData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AttackData";
 
     game::data::AttackType attackType; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -35,4 +35,5 @@ struct AttackData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AttackData, 0xC0);
 } // namespace game::damage
+using AttackData = game::damage::AttackData;
 } // namespace RED4ext

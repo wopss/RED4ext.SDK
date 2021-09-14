@@ -16,11 +16,12 @@ namespace game::mounting {
 struct MountingEvent : red::Event
 {
     static constexpr const char* NAME = "gamemountingMountingEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MountingEvent";
 
     Handle<game::mounting::MountingRequest> request; // 40
     game::mounting::MountingRelationship relationship; // 50
 };
 RED4EXT_ASSERT_SIZE(MountingEvent, 0x78);
 } // namespace game::mounting
+using MountingEvent = game::mounting::MountingEvent;
 } // namespace RED4ext

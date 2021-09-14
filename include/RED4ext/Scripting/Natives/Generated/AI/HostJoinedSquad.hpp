@@ -13,10 +13,11 @@ namespace AI {
 struct HostJoinedSquad : AI::AIEvent
 {
     static constexpr const char* NAME = "AIHostJoinedSquad";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HostJoinedSquad";
 
     CName squad; // 50
 };
 RED4EXT_ASSERT_SIZE(HostJoinedSquad, 0x58);
 } // namespace AI
+using HostJoinedSquad = AI::HostJoinedSquad;
 } // namespace RED4ext

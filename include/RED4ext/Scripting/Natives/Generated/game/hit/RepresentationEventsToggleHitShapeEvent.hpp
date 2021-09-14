@@ -13,7 +13,7 @@ namespace game::hit {
 struct RepresentationEventsToggleHitShapeEvent : red::Event
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsToggleHitShapeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ToggleHitShapeEvent";
 
     CName hitShapeName; // 40
     bool enable; // 48
@@ -22,4 +22,5 @@ struct RepresentationEventsToggleHitShapeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsToggleHitShapeEvent, 0x50);
 } // namespace game::hit
+using ToggleHitShapeEvent = game::hit::RepresentationEventsToggleHitShapeEvent;
 } // namespace RED4ext

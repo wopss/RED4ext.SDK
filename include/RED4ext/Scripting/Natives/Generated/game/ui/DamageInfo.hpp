@@ -18,7 +18,7 @@ namespace game::ui {
 struct DamageInfo
 {
     static constexpr const char* NAME = "gameuiDamageInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DamageInfo";
 
     Vector4 hitPosition; // 00
     float damageValue; // 10
@@ -31,4 +31,5 @@ struct DamageInfo
 };
 RED4EXT_ASSERT_SIZE(DamageInfo, 0x50);
 } // namespace game::ui
+using DamageInfo = game::ui::DamageInfo;
 } // namespace RED4ext

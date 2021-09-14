@@ -12,10 +12,11 @@ namespace game {
 struct SaveSanitizationForbiddenAreaSystem : game::ISaveSanitizationForbiddenAreaSystem
 {
     static constexpr const char* NAME = "gameSaveSanitizationForbiddenAreaSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SaveSanitizationForbiddenAreaSystem";
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SaveSanitizationForbiddenAreaSystem, 0x50);
 } // namespace game
+using SaveSanitizationForbiddenAreaSystem = game::SaveSanitizationForbiddenAreaSystem;
 } // namespace RED4ext

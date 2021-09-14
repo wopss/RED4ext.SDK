@@ -17,7 +17,7 @@ namespace game::targeting {
 struct SystemHitInfo
 {
     static constexpr const char* NAME = "gametargetingSystemHitInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetHitInfo";
 
     uint64_t queryMask; // 00
     ent::EntityID entityId; // 08
@@ -31,4 +31,5 @@ struct SystemHitInfo
 };
 RED4EXT_ASSERT_SIZE(SystemHitInfo, 0x60);
 } // namespace game::targeting
+using TargetHitInfo = game::targeting::SystemHitInfo;
 } // namespace RED4ext

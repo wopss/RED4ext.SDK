@@ -14,4 +14,5 @@ enum class TargetingSet : uint32_t
     None = 4,
 };
 } // namespace game
+using TargetingSet = game::TargetingSet;
 } // namespace RED4ext

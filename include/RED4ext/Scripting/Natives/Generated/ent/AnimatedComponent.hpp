@@ -24,7 +24,7 @@ namespace ent {
 struct AnimatedComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entAnimatedComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimatedComponent";
 
     CName audioAltName; // 130
     Ref<anim::Rig> rig; // 138
@@ -48,4 +48,5 @@ struct AnimatedComponent : ent::ISkinableComponent
 };
 RED4EXT_ASSERT_SIZE(AnimatedComponent, 0x2A0);
 } // namespace ent
+using AnimatedComponent = ent::AnimatedComponent;
 } // namespace RED4ext

@@ -15,7 +15,7 @@ namespace ent {
 struct SlotComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entSlotComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SlotComponent";
 
     DynArray<ent::Slot> slots; // 120
     DynArray<ent::FallbackSlot> fallbackSlots; // 130
@@ -23,4 +23,5 @@ struct SlotComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SlotComponent, 0x1A0);
 } // namespace ent
+using SlotComponent = ent::SlotComponent;
 } // namespace RED4ext

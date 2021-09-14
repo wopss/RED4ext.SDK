@@ -13,11 +13,12 @@ namespace ent {
 struct MusicSyncEvent : red::Event
 {
     static constexpr const char* NAME = "entMusicSyncEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MusicSync";
 
     audio::MusicSyncType syncType; // 40
     float syncParameter; // 44
 };
 RED4EXT_ASSERT_SIZE(MusicSyncEvent, 0x48);
 } // namespace ent
+using MusicSync = ent::MusicSyncEvent;
 } // namespace RED4ext

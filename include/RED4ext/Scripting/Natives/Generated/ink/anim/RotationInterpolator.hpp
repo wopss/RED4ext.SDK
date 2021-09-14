@@ -12,7 +12,7 @@ namespace ink::anim {
 struct RotationInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimRotationInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimRotation";
 
     float startValue; // 68
     float endValue; // 6C
@@ -21,4 +21,5 @@ struct RotationInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(RotationInterpolator, 0x78);
 } // namespace ink::anim
+using inkAnimRotation = ink::anim::RotationInterpolator;
 } // namespace RED4ext

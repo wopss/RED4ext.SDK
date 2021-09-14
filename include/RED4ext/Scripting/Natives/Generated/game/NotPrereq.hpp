@@ -15,10 +15,11 @@ namespace game {
 struct NotPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameNotPrereq";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NotPrereq";
 
     Handle<game::IPrereq> negatedPrereq; // 40
 };
 RED4EXT_ASSERT_SIZE(NotPrereq, 0x50);
 } // namespace game
+using NotPrereq = game::NotPrereq;
 } // namespace RED4ext

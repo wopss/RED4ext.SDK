@@ -12,9 +12,10 @@ namespace game::ui {
 struct CyberspaceMappinsContainerController : game::ui::MappinsContainerController
 {
     static constexpr const char* NAME = "gameuiCyberspaceMappinsContainerController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CyberspaceMappinsContainerController";
 
 };
 RED4EXT_ASSERT_SIZE(CyberspaceMappinsContainerController, 0x2C0);
 } // namespace game::ui
+using CyberspaceMappinsContainerController = game::ui::CyberspaceMappinsContainerController;
 } // namespace RED4ext

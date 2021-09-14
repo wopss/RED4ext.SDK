@@ -13,7 +13,7 @@ namespace ent {
 struct IVisualComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entIVisualComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IVisualComponent";
 
     float autoHideDistance; // 120
     uint8_t unk124[0x125 - 0x124]; // 124
@@ -23,4 +23,5 @@ struct IVisualComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(IVisualComponent, 0x140);
 } // namespace ent
+using IVisualComponent = ent::IVisualComponent;
 } // namespace RED4ext

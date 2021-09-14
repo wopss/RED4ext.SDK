@@ -13,7 +13,7 @@ namespace ink::anim {
 struct PlaybackOptions
 {
     static constexpr const char* NAME = "inkanimPlaybackOptions";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimOptions";
 
     bool playReversed; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
@@ -31,4 +31,5 @@ struct PlaybackOptions
 };
 RED4EXT_ASSERT_SIZE(PlaybackOptions, 0x30);
 } // namespace ink::anim
+using inkAnimOptions = ink::anim::PlaybackOptions;
 } // namespace RED4ext

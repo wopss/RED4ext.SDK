@@ -13,7 +13,7 @@ namespace game {
 struct JournalCodexEntry : game::JournalContainerEntry
 {
     static constexpr const char* NAME = "gameJournalCodexEntry";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalCodexEntry";
 
     LocalizationString title; // 78
     TweakDBID imageId; // A0
@@ -21,4 +21,5 @@ struct JournalCodexEntry : game::JournalContainerEntry
 };
 RED4EXT_ASSERT_SIZE(JournalCodexEntry, 0xB0);
 } // namespace game
+using JournalCodexEntry = game::JournalCodexEntry;
 } // namespace RED4ext

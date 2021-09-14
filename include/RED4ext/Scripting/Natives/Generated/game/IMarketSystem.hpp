@@ -12,10 +12,11 @@ namespace game {
 struct IMarketSystem : game::ScriptableSystem
 {
     static constexpr const char* NAME = "gameIMarketSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IMarketSystem";
 
     uint8_t unk2D8[0x360 - 0x2D8]; // 2D8
 };
 RED4EXT_ASSERT_SIZE(IMarketSystem, 0x360);
 } // namespace game
+using IMarketSystem = game::IMarketSystem;
 } // namespace RED4ext

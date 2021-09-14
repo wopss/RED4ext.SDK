@@ -15,7 +15,7 @@ namespace ink {
 struct FastTravelLoadingScreenLogicController : ink::ILoadingLogicController
 {
     static constexpr const char* NAME = "inkFastTravelLoadingScreenLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LoadingScreenLogicController";
 
     uint8_t unk180[0x1C8 - 0x180]; // 180
     ink::ImageWidgetReference mainBackgroundImage; // 1C8
@@ -34,4 +34,5 @@ struct FastTravelLoadingScreenLogicController : ink::ILoadingLogicController
 };
 RED4EXT_ASSERT_SIZE(FastTravelLoadingScreenLogicController, 0x338);
 } // namespace ink
+using LoadingScreenLogicController = ink::FastTravelLoadingScreenLogicController;
 } // namespace RED4ext

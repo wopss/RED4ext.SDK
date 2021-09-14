@@ -12,10 +12,11 @@ namespace game {
 struct GeometryDescriptionSystem : IScriptable
 {
     static constexpr const char* NAME = "gameGeometryDescriptionSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GeometryDescriptionSystem";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(GeometryDescriptionSystem, 0x48);
 } // namespace game
+using GeometryDescriptionSystem = game::GeometryDescriptionSystem;
 } // namespace RED4ext

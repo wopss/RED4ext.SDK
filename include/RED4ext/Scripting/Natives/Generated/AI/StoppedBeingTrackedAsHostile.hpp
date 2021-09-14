@@ -12,9 +12,10 @@ namespace AI {
 struct StoppedBeingTrackedAsHostile : AI::AIEvent
 {
     static constexpr const char* NAME = "AIStoppedBeingTrackedAsHostile";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StoppedBeingTrackedAsHostile";
 
 };
 RED4EXT_ASSERT_SIZE(StoppedBeingTrackedAsHostile, 0x50);
 } // namespace AI
+using StoppedBeingTrackedAsHostile = AI::StoppedBeingTrackedAsHostile;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace ink {
 struct WidgetLibraryReference
 {
     static constexpr const char* NAME = "inkWidgetLibraryReference";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkWidgetLibraryReference";
 
     ink::WidgetLibraryResourceWrapper widgetLibrary; // 00
     CName widgetItem; // 08

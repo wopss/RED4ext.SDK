@@ -12,7 +12,7 @@ namespace game::ui {
 struct PhotoModeOptionSelectorData
 {
     static constexpr const char* NAME = "gameuiPhotoModeOptionSelectorData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhotoModeOptionSelectorData";
 
     CString optionText; // 00
     int32_t optionData; // 20
@@ -20,4 +20,5 @@ struct PhotoModeOptionSelectorData
 };
 RED4EXT_ASSERT_SIZE(PhotoModeOptionSelectorData, 0x28);
 } // namespace game::ui
+using PhotoModeOptionSelectorData = game::ui::PhotoModeOptionSelectorData;
 } // namespace RED4ext

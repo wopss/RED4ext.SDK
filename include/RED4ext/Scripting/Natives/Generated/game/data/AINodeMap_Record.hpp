@@ -12,10 +12,11 @@ namespace game::data {
 struct AINodeMap_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAINodeMap_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AINodeMap_Record";
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(AINodeMap_Record, 0x50);
 } // namespace game::data
+using AINodeMap_Record = game::data::AINodeMap_Record;
 } // namespace RED4ext

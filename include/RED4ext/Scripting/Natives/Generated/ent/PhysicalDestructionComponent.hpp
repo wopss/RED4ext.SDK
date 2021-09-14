@@ -19,7 +19,7 @@ namespace ent {
 struct PhysicalDestructionComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entPhysicalDestructionComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhysicalDestructionComponent";
 
     uint8_t unk140[0x1E8 - 0x140]; // 140
     physics::DestructionParams destructionParams; // 1E8
@@ -36,4 +36,5 @@ struct PhysicalDestructionComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionComponent, 0x330);
 } // namespace ent
+using PhysicalDestructionComponent = ent::PhysicalDestructionComponent;
 } // namespace RED4ext

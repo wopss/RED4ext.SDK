@@ -12,11 +12,12 @@ namespace game::weapon::events {
 struct SetMaxChargeEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsSetMaxChargeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WeaponSetMaxChargeEvent";
 
     float maxCharge; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(SetMaxChargeEvent, 0x48);
 } // namespace game::weapon::events
+using WeaponSetMaxChargeEvent = game::weapon::events::SetMaxChargeEvent;
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace game::mappins {
 struct MappinData : game::mappins::IMappinData
 {
     static constexpr const char* NAME = "gamemappinsMappinData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MappinData";
 
     TweakDBID mappinType; // 08
     game::data::MappinVariant variant; // 10
@@ -31,4 +31,5 @@ struct MappinData : game::mappins::IMappinData
 };
 RED4EXT_ASSERT_SIZE(MappinData, 0x78);
 } // namespace game::mappins
+using MappinData = game::mappins::MappinData;
 } // namespace RED4ext

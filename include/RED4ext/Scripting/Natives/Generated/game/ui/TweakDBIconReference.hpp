@@ -13,10 +13,11 @@ namespace game::ui {
 struct TweakDBIconReference : ink::IconReference
 {
     static constexpr const char* NAME = "gameuiTweakDBIconReference";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UIIconReference";
 
     TweakDBID iconID; // 40
 };
 RED4EXT_ASSERT_SIZE(TweakDBIconReference, 0x48);
 } // namespace game::ui
+using UIIconReference = game::ui::TweakDBIconReference;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace game::data {
 struct ApplyEffectorEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataApplyEffectorEffector_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ApplyEffectorEffector_Record";
 
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(ApplyEffectorEffector_Record, 0x60);
 } // namespace game::data
+using ApplyEffectorEffector_Record = game::data::ApplyEffectorEffector_Record;
 } // namespace RED4ext

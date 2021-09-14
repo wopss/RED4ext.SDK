@@ -14,7 +14,7 @@ namespace world {
 struct NavigationScriptFindWallResult : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptFindWallResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NavigationFindWallResult";
 
     world::NavigationRequestStatus status; // 40
     bool isHit; // 44
@@ -23,4 +23,5 @@ struct NavigationScriptFindWallResult : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptFindWallResult, 0x60);
 } // namespace world
+using NavigationFindWallResult = world::NavigationScriptFindWallResult;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game {
 struct InCrowd : red::Event
 {
     static constexpr const char* NAME = "gameInCrowd";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InCrowd";
 
 };
 RED4EXT_ASSERT_SIZE(InCrowd, 0x40);
 } // namespace game
+using InCrowd = game::InCrowd;
 } // namespace RED4ext

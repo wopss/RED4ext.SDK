@@ -14,7 +14,7 @@ namespace game {
 struct CurveStatModifierData_Deprecated : game::StatModifierData_Deprecated
 {
     static constexpr const char* NAME = "gameCurveStatModifierData_Deprecated";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameCurveStatModifierData";
 
     CName curveName; // 48
     CName columnName; // 50
@@ -23,4 +23,5 @@ struct CurveStatModifierData_Deprecated : game::StatModifierData_Deprecated
 };
 RED4EXT_ASSERT_SIZE(CurveStatModifierData_Deprecated, 0x60);
 } // namespace game
+using gameCurveStatModifierData = game::CurveStatModifierData_Deprecated;
 } // namespace RED4ext

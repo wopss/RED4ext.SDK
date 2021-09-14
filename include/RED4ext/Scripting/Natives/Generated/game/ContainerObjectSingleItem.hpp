@@ -13,10 +13,11 @@ namespace game {
 struct ContainerObjectSingleItem : game::ContainerObjectBase
 {
     static constexpr const char* NAME = "gameContainerObjectSingleItem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ContainerObjectSingleItem";
 
     TweakDBID itemTDBID; // 2A8
 };
 RED4EXT_ASSERT_SIZE(ContainerObjectSingleItem, 0x2B0);
 } // namespace game
+using ContainerObjectSingleItem = game::ContainerObjectSingleItem;
 } // namespace RED4ext

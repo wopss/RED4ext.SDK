@@ -14,4 +14,5 @@ enum class EVisualizerType : uint32_t
     Invalid = 3,
 };
 } // namespace game::interactions::vis
+using EVisualizerType = game::interactions::vis::EVisualizerType;
 } // namespace RED4ext

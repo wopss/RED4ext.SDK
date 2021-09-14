@@ -12,9 +12,10 @@ namespace game {
 struct FinalizeDeactivationTPPRepresentationEvent : red::Event
 {
     static constexpr const char* NAME = "gameFinalizeDeactivationTPPRepresentationEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FinalizeDeactivationTPPRepresentationEvent";
 
 };
 RED4EXT_ASSERT_SIZE(FinalizeDeactivationTPPRepresentationEvent, 0x40);
 } // namespace game
+using FinalizeDeactivationTPPRepresentationEvent = game::FinalizeDeactivationTPPRepresentationEvent;
 } // namespace RED4ext

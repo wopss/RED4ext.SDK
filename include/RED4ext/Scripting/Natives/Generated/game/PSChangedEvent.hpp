@@ -12,9 +12,10 @@ namespace game {
 struct PSChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gamePSChangedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PSChangedEvent";
 
 };
 RED4EXT_ASSERT_SIZE(PSChangedEvent, 0x40);
 } // namespace game
+using PSChangedEvent = game::PSChangedEvent;
 } // namespace RED4ext

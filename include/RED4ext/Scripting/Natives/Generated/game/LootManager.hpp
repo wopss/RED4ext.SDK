@@ -12,10 +12,11 @@ namespace game {
 struct LootManager : game::ILootManager
 {
     static constexpr const char* NAME = "gameLootManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LootManager";
 
     uint8_t unk48[0x220 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(LootManager, 0x220);
 } // namespace game
+using LootManager = game::LootManager;
 } // namespace RED4ext

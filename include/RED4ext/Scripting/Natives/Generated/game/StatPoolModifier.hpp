@@ -11,7 +11,7 @@ namespace game {
 struct StatPoolModifier
 {
     static constexpr const char* NAME = "gameStatPoolModifier";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatPoolModifier";
 
     uint8_t unk00[0x68 - 0x0]; // 0
     float rangeBegin; // 68
@@ -25,4 +25,5 @@ struct StatPoolModifier
 };
 RED4EXT_ASSERT_SIZE(StatPoolModifier, 0x80);
 } // namespace game
+using StatPoolModifier = game::StatPoolModifier;
 } // namespace RED4ext

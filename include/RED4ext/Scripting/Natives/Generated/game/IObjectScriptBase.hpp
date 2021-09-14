@@ -15,11 +15,12 @@ namespace game {
 struct IObjectScriptBase : IScriptable
 {
     static constexpr const char* NAME = "gameIObjectScriptBase";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IObjectScriptBase";
 
     uint8_t unk40[0x48 - 0x40]; // 40
     Handle<game::Object> gameObject; // 48
 };
 RED4EXT_ASSERT_SIZE(IObjectScriptBase, 0x58);
 } // namespace game
+using IObjectScriptBase = game::IObjectScriptBase;
 } // namespace RED4ext

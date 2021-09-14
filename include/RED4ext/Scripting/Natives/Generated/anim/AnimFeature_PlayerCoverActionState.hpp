@@ -12,11 +12,12 @@ namespace anim {
 struct AnimFeature_PlayerCoverActionState : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_PlayerCoverActionState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_PlayerCoverActionState";
 
     int32_t state; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_PlayerCoverActionState, 0x48);
 } // namespace anim
+using AnimFeature_PlayerCoverActionState = anim::AnimFeature_PlayerCoverActionState;
 } // namespace RED4ext

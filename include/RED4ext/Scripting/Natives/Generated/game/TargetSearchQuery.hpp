@@ -14,7 +14,7 @@ namespace game {
 struct TargetSearchQuery
 {
     static constexpr const char* NAME = "gameTargetSearchQuery";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetSearchQuery";
 
     game::TargetingSet testedSet; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -29,4 +29,5 @@ struct TargetSearchQuery
 };
 RED4EXT_ASSERT_SIZE(TargetSearchQuery, 0x38);
 } // namespace game
+using TargetSearchQuery = game::TargetSearchQuery;
 } // namespace RED4ext

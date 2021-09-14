@@ -12,9 +12,10 @@ namespace game {
 struct PlayerAttachRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gamePlayerAttachRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlayerAttachRequest";
 
 };
 RED4EXT_ASSERT_SIZE(PlayerAttachRequest, 0x58);
 } // namespace game
+using PlayerAttachRequest = game::PlayerAttachRequest;
 } // namespace RED4ext

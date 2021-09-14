@@ -15,10 +15,11 @@ namespace game::interactions {
 struct ChoiceCaption
 {
     static constexpr const char* NAME = "gameinteractionsChoiceCaption";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionChoiceCaption";
 
     DynArray<Handle<game::interactions::ChoiceCaptionPart>> parts; // 00
 };
 RED4EXT_ASSERT_SIZE(ChoiceCaption, 0x10);
 } // namespace game::interactions
+using InteractionChoiceCaption = game::interactions::ChoiceCaption;
 } // namespace RED4ext

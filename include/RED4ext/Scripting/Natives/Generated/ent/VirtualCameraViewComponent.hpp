@@ -14,7 +14,7 @@ namespace ent {
 struct VirtualCameraViewComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entVirtualCameraViewComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VirtualCameraViewComponent";
 
     CName virtualCameraName; // 140
     Vector2 targetPlaneSize; // 148
@@ -22,4 +22,5 @@ struct VirtualCameraViewComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(VirtualCameraViewComponent, 0x170);
 } // namespace ent
+using VirtualCameraViewComponent = ent::VirtualCameraViewComponent;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game {
 struct StatsObjectID
 {
     static constexpr const char* NAME = "gameStatsObjectID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatsObjectID";
 
     uint64_t entityHash; // 00
     game::StatIDType idType; // 08
@@ -20,4 +20,5 @@ struct StatsObjectID
 };
 RED4EXT_ASSERT_SIZE(StatsObjectID, 0x10);
 } // namespace game
+using StatsObjectID = game::StatsObjectID;
 } // namespace RED4ext

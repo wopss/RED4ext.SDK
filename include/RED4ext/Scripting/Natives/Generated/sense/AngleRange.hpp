@@ -13,7 +13,7 @@ namespace sense {
 struct AngleRange : sense::IShape
 {
     static constexpr const char* NAME = "senseAngleRange";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SenseAngleRange";
 
     Vector4 position; // 50
     float angle; // 60
@@ -23,4 +23,5 @@ struct AngleRange : sense::IShape
 };
 RED4EXT_ASSERT_SIZE(AngleRange, 0x70);
 } // namespace sense
+using SenseAngleRange = sense::AngleRange;
 } // namespace RED4ext

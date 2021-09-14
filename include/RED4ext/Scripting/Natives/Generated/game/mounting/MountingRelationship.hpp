@@ -17,7 +17,7 @@ namespace game::mounting {
 struct MountingRelationship
 {
     static constexpr const char* NAME = "gamemountingMountingRelationship";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MountingRelationship";
 
     game::MountingObjectType otherMountableType; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -28,4 +28,5 @@ struct MountingRelationship
 };
 RED4EXT_ASSERT_SIZE(MountingRelationship, 0x28);
 } // namespace game::mounting
+using MountingRelationship = game::mounting::MountingRelationship;
 } // namespace RED4ext

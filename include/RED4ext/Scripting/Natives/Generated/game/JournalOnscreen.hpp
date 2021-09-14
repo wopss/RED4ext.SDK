@@ -14,7 +14,7 @@ namespace game {
 struct JournalOnscreen : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalOnscreen";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalOnscreen";
 
     CName tag; // 60
     LocalizationString title; // 68
@@ -23,4 +23,5 @@ struct JournalOnscreen : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalOnscreen, 0xC0);
 } // namespace game
+using JournalOnscreen = game::JournalOnscreen;
 } // namespace RED4ext

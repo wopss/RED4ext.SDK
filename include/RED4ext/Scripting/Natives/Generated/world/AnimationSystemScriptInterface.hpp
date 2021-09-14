@@ -12,10 +12,11 @@ namespace world {
 struct AnimationSystemScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "worldAnimationSystemScriptInterface";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimationSystem";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(AnimationSystemScriptInterface, 0x48);
 } // namespace world
+using AnimationSystem = world::AnimationSystemScriptInterface;
 } // namespace RED4ext

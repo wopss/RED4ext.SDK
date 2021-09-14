@@ -12,9 +12,10 @@ namespace game {
 struct AttachmentSlotEventsUnequipStart : game::AttachmentSlotEventsAttachmentSlotEvent
 {
     static constexpr const char* NAME = "gameAttachmentSlotEventsUnequipStart";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UnequipStart";
 
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotEventsUnequipStart, 0x48);
 } // namespace game
+using UnequipStart = game::AttachmentSlotEventsUnequipStart;
 } // namespace RED4ext

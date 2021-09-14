@@ -13,7 +13,7 @@ namespace game::events {
 struct ApplyStatusEffectEvent : game::events::StatusEffectEvent
 {
     static constexpr const char* NAME = "gameeventsApplyStatusEffectEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ApplyStatusEffectEvent";
 
     ent::EntityID instigatorEntityID; // 60
     bool isNewApplication; // 68
@@ -22,4 +22,5 @@ struct ApplyStatusEffectEvent : game::events::StatusEffectEvent
 };
 RED4EXT_ASSERT_SIZE(ApplyStatusEffectEvent, 0x70);
 } // namespace game::events
+using ApplyStatusEffectEvent = game::events::ApplyStatusEffectEvent;
 } // namespace RED4ext

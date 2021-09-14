@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_DroneLocomotion : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_DroneLocomotion";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_DroneLocomotion";
 
     float speed; // 40
     float angularSpeed; // 44
@@ -23,4 +23,5 @@ struct AnimFeature_DroneLocomotion : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_DroneLocomotion, 0x58);
 } // namespace anim
+using AnimFeature_DroneLocomotion = anim::AnimFeature_DroneLocomotion;
 } // namespace RED4ext

@@ -15,11 +15,12 @@ namespace game {
 struct MasterDeviceComponent : game::Component
 {
     static constexpr const char* NAME = "gameMasterDeviceComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MasterDeviceComponent";
 
     uint8_t unkA8[0xC8 - 0xA8]; // A8
     Handle<game::device::Clearance> clearance; // C8
 };
 RED4EXT_ASSERT_SIZE(MasterDeviceComponent, 0xD8);
 } // namespace game
+using MasterDeviceComponent = game::MasterDeviceComponent;
 } // namespace RED4ext

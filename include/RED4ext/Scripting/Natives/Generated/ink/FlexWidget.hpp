@@ -12,9 +12,10 @@ namespace ink {
 struct FlexWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkFlexWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkFlex";
 
 };
 RED4EXT_ASSERT_SIZE(FlexWidget, 0x220);
 } // namespace ink
+using inkFlex = ink::FlexWidget;
 } // namespace RED4ext

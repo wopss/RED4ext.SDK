@@ -12,9 +12,10 @@ namespace ink {
 struct WeakScriptableDataViewWrapper : ink::BaseWeakScriptableDataSource
 {
     static constexpr const char* NAME = "inkWeakScriptableDataViewWrapper";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WeakScriptableDataView";
 
 };
 RED4EXT_ASSERT_SIZE(WeakScriptableDataViewWrapper, 0x48);
 } // namespace ink
+using WeakScriptableDataView = ink::WeakScriptableDataViewWrapper;
 } // namespace RED4ext

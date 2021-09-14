@@ -12,10 +12,11 @@ namespace game::audio {
 struct VehicleAudioComponent : game::audio::SoundComponentBase
 {
     static constexpr const char* NAME = "gameaudioVehicleAudioComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "vehicleAudioComponent";
 
     uint8_t unk180[0x190 - 0x180]; // 180
 };
 RED4EXT_ASSERT_SIZE(VehicleAudioComponent, 0x190);
 } // namespace game::audio
+using vehicleAudioComponent = game::audio::VehicleAudioComponent;
 } // namespace RED4ext

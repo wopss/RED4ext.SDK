@@ -12,9 +12,10 @@ namespace vehicle {
 struct HasVehicleBeenFlippedOverForSomeTimeEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleHasVehicleBeenFlippedOverForSomeTimeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HasVehicleBeenFlippedOverForSomeTimeEvent";
 
 };
 RED4EXT_ASSERT_SIZE(HasVehicleBeenFlippedOverForSomeTimeEvent, 0x40);
 } // namespace vehicle
+using HasVehicleBeenFlippedOverForSomeTimeEvent = vehicle::HasVehicleBeenFlippedOverForSomeTimeEvent;
 } // namespace RED4ext

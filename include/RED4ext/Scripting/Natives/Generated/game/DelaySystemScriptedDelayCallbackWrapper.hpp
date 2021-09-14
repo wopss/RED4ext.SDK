@@ -12,9 +12,10 @@ namespace game {
 struct DelaySystemScriptedDelayCallbackWrapper : IScriptable
 {
     static constexpr const char* NAME = "gameDelaySystemScriptedDelayCallbackWrapper";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DelayCallback";
 
 };
 RED4EXT_ASSERT_SIZE(DelaySystemScriptedDelayCallbackWrapper, 0x40);
 } // namespace game
+using DelayCallback = game::DelaySystemScriptedDelayCallbackWrapper;
 } // namespace RED4ext

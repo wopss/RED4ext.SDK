@@ -13,7 +13,7 @@ namespace prv {
 struct FunctionalTestQueryOverlapResult
 {
     static constexpr const char* NAME = "prvFunctionalTestQueryOverlapResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FunctionalTestQueryOverlapResult";
 
     ent::EntityID entityID; // 00
     Vector3 position; // 08
@@ -21,4 +21,5 @@ struct FunctionalTestQueryOverlapResult
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestQueryOverlapResult, 0x18);
 } // namespace prv
+using FunctionalTestQueryOverlapResult = prv::FunctionalTestQueryOverlapResult;
 } // namespace RED4ext

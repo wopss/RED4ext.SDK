@@ -15,7 +15,7 @@ namespace ink {
 struct TextKiroshiAnimationController : ink::TextAnimationController
 {
     static constexpr const char* NAME = "inkTextKiroshiAnimationController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkTextKiroshiAnimController";
 
     uint8_t unkE0[0x140 - 0xE0]; // E0
     CString nativeText; // 140
@@ -29,4 +29,5 @@ struct TextKiroshiAnimationController : ink::TextAnimationController
 };
 RED4EXT_ASSERT_SIZE(TextKiroshiAnimationController, 0x220);
 } // namespace ink
+using inkTextKiroshiAnimController = ink::TextKiroshiAnimationController;
 } // namespace RED4ext

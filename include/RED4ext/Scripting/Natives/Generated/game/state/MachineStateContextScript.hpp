@@ -12,10 +12,11 @@ namespace game::state {
 struct MachineStateContextScript : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineStateContextScript";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StateContext";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineStateContextScript, 0x48);
 } // namespace game::state
+using StateContext = game::state::MachineStateContextScript;
 } // namespace RED4ext

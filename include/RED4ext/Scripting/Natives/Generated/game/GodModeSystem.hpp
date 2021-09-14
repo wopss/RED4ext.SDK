@@ -12,10 +12,11 @@ namespace game {
 struct GodModeSystem : game::IGodModeSystem
 {
     static constexpr const char* NAME = "gameGodModeSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GodModeSystem";
 
     uint8_t unk58[0xD8 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(GodModeSystem, 0xD8);
 } // namespace game
+using GodModeSystem = game::GodModeSystem;
 } // namespace RED4ext

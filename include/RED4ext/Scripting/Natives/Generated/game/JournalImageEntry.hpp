@@ -13,11 +13,12 @@ namespace game {
 struct JournalImageEntry : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalImageEntry";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalImageEntry";
 
     TweakDBID imageId; // 60
     TweakDBID thumbnailImageId; // 68
 };
 RED4EXT_ASSERT_SIZE(JournalImageEntry, 0x70);
 } // namespace game
+using JournalImageEntry = game::JournalImageEntry;
 } // namespace RED4ext

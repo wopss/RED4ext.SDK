@@ -12,9 +12,10 @@ namespace sense {
 struct BaseStimuliEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "senseBaseStimuliEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BaseStimuliEvent";
 
 };
 RED4EXT_ASSERT_SIZE(BaseStimuliEvent, 0x50);
 } // namespace sense
+using BaseStimuliEvent = sense::BaseStimuliEvent;
 } // namespace RED4ext

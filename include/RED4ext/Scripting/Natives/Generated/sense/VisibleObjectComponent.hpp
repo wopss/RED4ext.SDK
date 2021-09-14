@@ -15,11 +15,12 @@ namespace sense {
 struct VisibleObjectComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "senseVisibleObjectComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VisibleObjectComponent";
 
     Handle<sense::VisibleObject> visibleObject; // 120
     uint8_t unk130[0x140 - 0x130]; // 130
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectComponent, 0x140);
 } // namespace sense
+using VisibleObjectComponent = sense::VisibleObjectComponent;
 } // namespace RED4ext

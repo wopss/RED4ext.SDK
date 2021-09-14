@@ -12,10 +12,11 @@ namespace game::data {
 struct RangedAttack_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataRangedAttack_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RangedAttack_Record";
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(RangedAttack_Record, 0x58);
 } // namespace game::data
+using RangedAttack_Record = game::data::RangedAttack_Record;
 } // namespace RED4ext

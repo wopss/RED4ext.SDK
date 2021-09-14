@@ -15,10 +15,11 @@ namespace game::ui {
 struct MinigameGenerationRule : IScriptable
 {
     static constexpr const char* NAME = "gameuiMinigameGenerationRule";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MinigameGenerationRule";
 
     WeakHandle<game::ui::HackingMinigameGameController> minigameController; // 40
 };
 RED4EXT_ASSERT_SIZE(MinigameGenerationRule, 0x50);
 } // namespace game::ui
+using MinigameGenerationRule = game::ui::MinigameGenerationRule;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game::events {
 struct AttitudeGroupChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsAttitudeGroupChangedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AttitudeGroupChangedEvent";
 
 };
 RED4EXT_ASSERT_SIZE(AttitudeGroupChangedEvent, 0x40);
 } // namespace game::events
+using AttitudeGroupChangedEvent = game::events::AttitudeGroupChangedEvent;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ namespace game {
 struct StatusEffect : game::StatusEffectBase
 {
     static constexpr const char* NAME = "gameStatusEffect";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatusEffect";
 
     uint8_t unk48[0x78 - 0x48]; // 48
     uint32_t maxStacks; // 78
@@ -40,4 +40,5 @@ struct StatusEffect : game::StatusEffectBase
 };
 RED4EXT_ASSERT_SIZE(StatusEffect, 0xE0);
 } // namespace game
+using StatusEffect = game::StatusEffect;
 } // namespace RED4ext

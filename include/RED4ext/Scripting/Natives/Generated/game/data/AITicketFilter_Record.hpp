@@ -12,10 +12,11 @@ namespace game::data {
 struct AITicketFilter_Record : game::data::AITicketCondition_Record
 {
     static constexpr const char* NAME = "gamedataAITicketFilter_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AITicketFilter_Record";
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AITicketFilter_Record, 0x60);
 } // namespace game::data
+using AITicketFilter_Record = game::data::AITicketFilter_Record;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace ent::events {
 struct PhysicalImpulseEvent : red::Event
 {
     static constexpr const char* NAME = "enteventsPhysicalImpulseEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhysicalImpulseEvent";
 
     uint32_t bodyIndex; // 40
     Vector3 worldImpulse; // 44
@@ -24,4 +24,5 @@ struct PhysicalImpulseEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhysicalImpulseEvent, 0x68);
 } // namespace ent::events
+using PhysicalImpulseEvent = ent::events::PhysicalImpulseEvent;
 } // namespace RED4ext

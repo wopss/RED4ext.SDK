@@ -12,9 +12,10 @@ namespace anim {
 struct AnimFeature : IScriptable
 {
     static constexpr const char* NAME = "animAnimFeature";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature";
 
 };
 RED4EXT_ASSERT_SIZE(AnimFeature, 0x40);
 } // namespace anim
+using AnimFeature = anim::AnimFeature;
 } // namespace RED4ext

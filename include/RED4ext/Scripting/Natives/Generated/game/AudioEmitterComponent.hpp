@@ -17,7 +17,7 @@ namespace game {
 struct AudioEmitterComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameAudioEmitterComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "audioEmitter";
 
     uint8_t unk120[0x138 - 0x120]; // 120
     float updateDistance; // 138
@@ -34,4 +34,5 @@ struct AudioEmitterComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(AudioEmitterComponent, 0x200);
 } // namespace game
+using audioEmitter = game::AudioEmitterComponent;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game::ui {
 struct ContraPlayer : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiContraPlayer";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ContraPlayer";
 
     uint8_t unkC0[0xC4 - 0xC0]; // C0
     float mass; // C4
@@ -22,4 +22,5 @@ struct ContraPlayer : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 };
 RED4EXT_ASSERT_SIZE(ContraPlayer, 0xE8);
 } // namespace game::ui
+using ContraPlayer = game::ui::ContraPlayer;
 } // namespace RED4ext

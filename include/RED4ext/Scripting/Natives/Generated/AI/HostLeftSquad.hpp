@@ -15,10 +15,11 @@ namespace AI {
 struct HostLeftSquad : AI::AIEvent
 {
     static constexpr const char* NAME = "AIHostLeftSquad";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HostLeftSquad";
 
     WeakHandle<AI::SquadScriptInterface> squadInterface; // 50
 };
 RED4EXT_ASSERT_SIZE(HostLeftSquad, 0x60);
 } // namespace AI
+using HostLeftSquad = AI::HostLeftSquad;
 } // namespace RED4ext

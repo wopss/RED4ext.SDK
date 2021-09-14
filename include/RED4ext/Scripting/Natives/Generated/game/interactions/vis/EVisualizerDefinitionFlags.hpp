@@ -15,4 +15,5 @@ enum class EVisualizerDefinitionFlags : uint16_t
     CPO_Mode = 16,
 };
 } // namespace game::interactions::vis
+using EVisualizerDefinitionFlags = game::interactions::vis::EVisualizerDefinitionFlags;
 } // namespace RED4ext

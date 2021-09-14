@@ -13,7 +13,7 @@ namespace ink::anim {
 struct ColorInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimColorInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimColor";
 
     uint8_t unk68[0x70 - 0x68]; // 68
     HDRColor startValue; // 70
@@ -21,4 +21,5 @@ struct ColorInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(ColorInterpolator, 0x90);
 } // namespace ink::anim
+using inkAnimColor = ink::anim::ColorInterpolator;
 } // namespace RED4ext

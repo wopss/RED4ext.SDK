@@ -19,7 +19,7 @@ namespace game::projectile {
 struct FollowCurveTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileFollowCurveTrajectoryParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FollowCurveTrajectoryParams";
 
     WeakHandle<game::Object> target; // 40
     CName componentName; // 50
@@ -49,4 +49,5 @@ struct FollowCurveTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(FollowCurveTrajectoryParams, 0xE0);
 } // namespace game::projectile
+using FollowCurveTrajectoryParams = game::projectile::FollowCurveTrajectoryParams;
 } // namespace RED4ext

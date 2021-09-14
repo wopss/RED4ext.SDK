@@ -13,7 +13,7 @@ namespace game::audio {
 struct SoundComponentBase : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameaudioSoundComponentBase";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SoundComponentBase";
 
     CName audioName; // 120
     uint8_t unk128[0x131 - 0x128]; // 128
@@ -28,4 +28,5 @@ struct SoundComponentBase : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SoundComponentBase, 0x180);
 } // namespace game::audio
+using SoundComponentBase = game::audio::SoundComponentBase;
 } // namespace RED4ext

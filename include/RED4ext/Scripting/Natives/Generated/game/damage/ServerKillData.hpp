@@ -13,7 +13,7 @@ namespace game::damage {
 struct ServerKillData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageServerKillData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ServerKillData";
 
     uint32_t id; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -22,4 +22,5 @@ struct ServerKillData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ServerKillData, 0x78);
 } // namespace game::damage
+using ServerKillData = game::damage::ServerKillData;
 } // namespace RED4ext

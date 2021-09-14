@@ -13,7 +13,7 @@ namespace game::ui {
 struct EntityPreviewCameraSettings
 {
     static constexpr const char* NAME = "gameuiEntityPreviewCameraSettings";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkEntityPreviewCameraSettings";
 
     bool autoEnable; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
@@ -30,4 +30,5 @@ struct EntityPreviewCameraSettings
 };
 RED4EXT_ASSERT_SIZE(EntityPreviewCameraSettings, 0x4C);
 } // namespace game::ui
+using inkEntityPreviewCameraSettings = game::ui::EntityPreviewCameraSettings;
 } // namespace RED4ext

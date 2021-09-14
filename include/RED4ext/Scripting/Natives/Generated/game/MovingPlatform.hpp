@@ -13,7 +13,7 @@ namespace game {
 struct MovingPlatform : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameMovingPlatform";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MovingPlatform";
 
     uint8_t unk120[0x1B8 - 0x120]; // 120
     game::MovingPlatformLoopType loopType; // 1B8
@@ -21,4 +21,5 @@ struct MovingPlatform : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(MovingPlatform, 0x1C0);
 } // namespace game
+using MovingPlatform = game::MovingPlatform;
 } // namespace RED4ext

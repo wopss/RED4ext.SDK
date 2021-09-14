@@ -14,4 +14,5 @@ enum class JournalChangeType : uint32_t
     IndirectDependent = 3,
 };
 } // namespace game
+using JournalChangeType = game::JournalChangeType;
 } // namespace RED4ext

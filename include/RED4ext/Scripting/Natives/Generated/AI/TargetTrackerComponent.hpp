@@ -12,7 +12,7 @@ namespace AI {
 struct TargetTrackerComponent : game::Component
 {
     static constexpr const char* NAME = "AITargetTrackerComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetTrackerComponent";
 
     uint8_t unkA8[0x17D - 0xA8]; // A8
     bool TriggersCombat; // 17D
@@ -20,4 +20,5 @@ struct TargetTrackerComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(TargetTrackerComponent, 0x210);
 } // namespace AI
+using TargetTrackerComponent = AI::TargetTrackerComponent;
 } // namespace RED4ext

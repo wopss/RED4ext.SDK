@@ -13,11 +13,12 @@ namespace vehicle {
 struct SummonStartedEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleSummonStartedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SummonStartedEvent";
 
     vehicle::SummonState state; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(SummonStartedEvent, 0x48);
 } // namespace vehicle
+using SummonStartedEvent = vehicle::SummonStartedEvent;
 } // namespace RED4ext

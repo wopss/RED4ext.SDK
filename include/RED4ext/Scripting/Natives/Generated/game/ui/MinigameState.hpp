@@ -12,11 +12,12 @@ namespace game::ui {
 struct MinigameState : IScriptable
 {
     static constexpr const char* NAME = "gameuiMinigameState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MinigameState";
 
     int32_t currentLives; // 40
     int32_t currentScore; // 44
 };
 RED4EXT_ASSERT_SIZE(MinigameState, 0x48);
 } // namespace game::ui
+using MinigameState = game::ui::MinigameState;
 } // namespace RED4ext

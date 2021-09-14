@@ -20,7 +20,7 @@ namespace game {
 struct HitRepresentationComponent : ent::SlotComponent
 {
     static constexpr const char* NAME = "gameHitRepresentationComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitRepresentationComponent";
 
     uint8_t unk1A0[0x1A8 - 0x1A0]; // 1A0
     RaRef<game::HitRepresentationResource> resource; // 1A8
@@ -36,4 +36,5 @@ struct HitRepresentationComponent : ent::SlotComponent
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationComponent, 0x350);
 } // namespace game
+using HitRepresentationComponent = game::HitRepresentationComponent;
 } // namespace RED4ext

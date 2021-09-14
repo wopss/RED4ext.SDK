@@ -12,9 +12,10 @@ namespace game {
 struct IScriptablePrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameIScriptablePrereq";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IScriptablePrereq";
 
 };
 RED4EXT_ASSERT_SIZE(IScriptablePrereq, 0x40);
 } // namespace game
+using IScriptablePrereq = game::IScriptablePrereq;
 } // namespace RED4ext

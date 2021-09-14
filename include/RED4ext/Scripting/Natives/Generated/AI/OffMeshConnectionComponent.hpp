@@ -15,7 +15,7 @@ namespace AI {
 struct OffMeshConnectionComponent : ent::IComponent
 {
     static constexpr const char* NAME = "AIOffMeshConnectionComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "OffMeshConnectionComponent";
 
     DynArray<NodeRef> offMeshConnectionNodesRefs; // 90
     uint8_t unkA0[0xE0 - 0xA0]; // A0
@@ -24,4 +24,5 @@ struct OffMeshConnectionComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(OffMeshConnectionComponent, 0xE8);
 } // namespace AI
+using OffMeshConnectionComponent = AI::OffMeshConnectionComponent;
 } // namespace RED4ext

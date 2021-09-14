@@ -18,7 +18,7 @@ namespace ink::anim {
 struct Sequence : IScriptable
 {
     static constexpr const char* NAME = "inkanimSequence";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimSequence";
 
     CName name; // 40
     DynArray<Handle<ink::anim::Definition>> definitions; // 48
@@ -26,4 +26,5 @@ struct Sequence : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Sequence, 0x68);
 } // namespace ink::anim
+using inkAnimSequence = ink::anim::Sequence;
 } // namespace RED4ext

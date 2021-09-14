@@ -14,7 +14,7 @@ namespace game::ui {
 struct PopupsManager : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiPopupsManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PopupsManager";
 
     uint8_t unkD0[0x128 - 0xD0]; // D0
     ink::CompoundWidgetReference bracketsContainer; // 128
@@ -24,4 +24,5 @@ struct PopupsManager : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(PopupsManager, 0x178);
 } // namespace game::ui
+using PopupsManager = game::ui::PopupsManager;
 } // namespace RED4ext

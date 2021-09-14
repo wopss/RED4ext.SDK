@@ -12,10 +12,11 @@ namespace game::data {
 struct VehicleWheelDrivingSetup_4_Record : game::data::VehicleWheelDrivingSetup_Record
 {
     static constexpr const char* NAME = "gamedataVehicleWheelDrivingSetup_4_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VehicleWheelDrivingSetup_4_Record";
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(VehicleWheelDrivingSetup_4_Record, 0x60);
 } // namespace game::data
+using VehicleWheelDrivingSetup_4_Record = game::data::VehicleWheelDrivingSetup_4_Record;
 } // namespace RED4ext

@@ -13,11 +13,12 @@ namespace ent::events {
 struct EntityResize : red::Event
 {
     static constexpr const char* NAME = "enteventsEntityResize";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EntityResizeEvent";
 
     Vector3 extents; // 40
     uint8_t unk4C[0x50 - 0x4C]; // 4C
 };
 RED4EXT_ASSERT_SIZE(EntityResize, 0x50);
 } // namespace ent::events
+using EntityResizeEvent = ent::events::EntityResize;
 } // namespace RED4ext

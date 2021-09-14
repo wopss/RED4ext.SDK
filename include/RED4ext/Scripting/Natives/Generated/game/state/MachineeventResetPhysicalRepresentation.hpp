@@ -12,9 +12,10 @@ namespace game::state {
 struct MachineeventResetPhysicalRepresentation : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventResetPhysicalRepresentation";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PSMResetPhysicalRepresentation";
 
 };
 RED4EXT_ASSERT_SIZE(MachineeventResetPhysicalRepresentation, 0x40);
 } // namespace game::state
+using PSMResetPhysicalRepresentation = game::state::MachineeventResetPhysicalRepresentation;
 } // namespace RED4ext

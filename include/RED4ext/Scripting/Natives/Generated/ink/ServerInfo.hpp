@@ -13,7 +13,7 @@ namespace ink {
 struct ServerInfo : IScriptable
 {
     static constexpr const char* NAME = "inkServerInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ServerInfo";
 
     int32_t number; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -24,4 +24,5 @@ struct ServerInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ServerInfo, 0xC8);
 } // namespace ink
+using ServerInfo = ink::ServerInfo;
 } // namespace RED4ext

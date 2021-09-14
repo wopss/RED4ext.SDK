@@ -14,7 +14,7 @@ namespace game::ui {
 struct ProgressionViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiProgressionViewData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ProgressionViewData";
 
     int32_t expValue; // 90
     float expProgress; // 94
@@ -28,4 +28,5 @@ struct ProgressionViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(ProgressionViewData, 0xB0);
 } // namespace game::ui
+using ProgressionViewData = game::ui::ProgressionViewData;
 } // namespace RED4ext

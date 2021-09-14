@@ -12,11 +12,12 @@ namespace game {
 struct SetQuickHackableMask : red::Event
 {
     static constexpr const char* NAME = "gameSetQuickHackableMask";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SetQuickHackableMask";
 
     bool isQuickHackable; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(SetQuickHackableMask, 0x48);
 } // namespace game
+using SetQuickHackableMask = game::SetQuickHackableMask;
 } // namespace RED4ext

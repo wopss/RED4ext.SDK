@@ -12,10 +12,11 @@ namespace game {
 struct Attack_Projectile : game::IAttack
 {
     static constexpr const char* NAME = "gameAttack_Projectile";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "Attack_Projectile";
 
     uint8_t unkD8[0xF8 - 0xD8]; // D8
 };
 RED4EXT_ASSERT_SIZE(Attack_Projectile, 0xF8);
 } // namespace game
+using Attack_Projectile = game::Attack_Projectile;
 } // namespace RED4ext

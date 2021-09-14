@@ -15,10 +15,11 @@ namespace game {
 struct JournalBriefingVideoSection : game::JournalBriefingBaseSection
 {
     static constexpr const char* NAME = "gameJournalBriefingVideoSection";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalBriefingVideoSection";
 
     RaRef<Bink> videoResource; // 60
 };
 RED4EXT_ASSERT_SIZE(JournalBriefingVideoSection, 0x68);
 } // namespace game
+using JournalBriefingVideoSection = game::JournalBriefingVideoSection;
 } // namespace RED4ext

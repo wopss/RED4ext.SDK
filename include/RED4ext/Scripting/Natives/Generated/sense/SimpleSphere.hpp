@@ -13,10 +13,11 @@ namespace sense {
 struct SimpleSphere : sense::IShape
 {
     static constexpr const char* NAME = "senseSimpleSphere";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SenseSphere";
 
     Sphere sphere; // 50
 };
 RED4EXT_ASSERT_SIZE(SimpleSphere, 0x60);
 } // namespace sense
+using SenseSphere = sense::SimpleSphere;
 } // namespace RED4ext

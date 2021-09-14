@@ -12,7 +12,7 @@ namespace ink {
 struct GameNotificationToken : IScriptable
 {
     static constexpr const char* NAME = "inkGameNotificationToken";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkGameNotificationToken";
 
     uint8_t unk40[0x88 - 0x40]; // 40
 };

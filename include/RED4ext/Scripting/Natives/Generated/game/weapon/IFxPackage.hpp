@@ -12,9 +12,10 @@ namespace game::weapon {
 struct IFxPackage : IScriptable
 {
     static constexpr const char* NAME = "gameweaponIFxPackage";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IFxPackage";
 
 };
 RED4EXT_ASSERT_SIZE(IFxPackage, 0x40);
 } // namespace game::weapon
+using IFxPackage = game::weapon::IFxPackage;
 } // namespace RED4ext

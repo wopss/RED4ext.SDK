@@ -13,7 +13,7 @@ namespace game {
 struct TutorialOverlayData
 {
     static constexpr const char* NAME = "gameTutorialOverlayData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TutorialOverlayData";
 
     CName itemName; // 00
     uint8_t unk08[0x10 - 0x8]; // 8
@@ -22,4 +22,5 @@ struct TutorialOverlayData
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayData, 0x28);
 } // namespace game
+using TutorialOverlayData = game::TutorialOverlayData;
 } // namespace RED4ext

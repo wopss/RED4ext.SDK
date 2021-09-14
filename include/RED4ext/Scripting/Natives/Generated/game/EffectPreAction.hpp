@@ -12,9 +12,10 @@ namespace game {
 struct EffectPreAction : game::EffectAction
 {
     static constexpr const char* NAME = "gameEffectPreAction";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectPreAction";
 
 };
 RED4EXT_ASSERT_SIZE(EffectPreAction, 0x40);
 } // namespace game
+using EffectPreAction = game::EffectPreAction;
 } // namespace RED4ext

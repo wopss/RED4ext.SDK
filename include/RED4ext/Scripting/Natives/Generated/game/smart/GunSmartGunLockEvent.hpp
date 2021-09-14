@@ -12,7 +12,7 @@ namespace game::smart {
 struct GunSmartGunLockEvent : red::Event
 {
     static constexpr const char* NAME = "gamesmartGunSmartGunLockEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SmartGunLockEvent";
 
     bool locked; // 40
     bool lockedOnByPlayer; // 41
@@ -20,4 +20,5 @@ struct GunSmartGunLockEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(GunSmartGunLockEvent, 0x48);
 } // namespace game::smart
+using SmartGunLockEvent = game::smart::GunSmartGunLockEvent;
 } // namespace RED4ext

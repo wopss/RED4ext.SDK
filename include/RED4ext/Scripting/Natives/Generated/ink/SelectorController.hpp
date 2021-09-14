@@ -15,7 +15,7 @@ namespace ink {
 struct SelectorController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkSelectorController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SelectorController";
 
     ink::SelectionChangeCallback SelectionChanged; // 68
     int32_t index; // A0
@@ -25,4 +25,5 @@ struct SelectorController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(SelectorController, 0xB8);
 } // namespace ink
+using SelectorController = ink::SelectorController;
 } // namespace RED4ext

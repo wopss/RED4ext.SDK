@@ -16,11 +16,12 @@ namespace ent::events {
 struct HitCharacterControllerEvent : red::Event
 {
     static constexpr const char* NAME = "enteventsHitCharacterControllerEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitCharacterControllerEvent";
 
     WeakHandle<ent::Entity> entity; // 40
     WeakHandle<ent::IComponent> component; // 50
 };
 RED4EXT_ASSERT_SIZE(HitCharacterControllerEvent, 0x60);
 } // namespace ent::events
+using HitCharacterControllerEvent = ent::events::HitCharacterControllerEvent;
 } // namespace RED4ext

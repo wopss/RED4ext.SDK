@@ -12,10 +12,11 @@ namespace game::ui {
 struct SetCategoryEnabledEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetCategoryEnabledEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SetCategoryEnabledEvent";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(SetCategoryEnabledEvent, 0x48);
 } // namespace game::ui
+using SetCategoryEnabledEvent = game::ui::SetCategoryEnabledEvent;
 } // namespace RED4ext

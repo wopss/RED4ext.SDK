@@ -12,9 +12,10 @@ namespace game::data {
 struct NumberPlate_Record : game::data::LCDScreen_Record
 {
     static constexpr const char* NAME = "gamedataNumberPlate_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NumberPlate_Record";
 
 };
 RED4EXT_ASSERT_SIZE(NumberPlate_Record, 0x60);
 } // namespace game::data
+using NumberPlate_Record = game::data::NumberPlate_Record;
 } // namespace RED4ext

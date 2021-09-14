@@ -13,11 +13,12 @@ namespace vehicle {
 struct GarageVehicleID
 {
     static constexpr const char* NAME = "vehicleGarageVehicleID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GarageVehicleID";
 
     TweakDBID recordID; // 00
     CName name; // 08
 };
 RED4EXT_ASSERT_SIZE(GarageVehicleID, 0x10);
 } // namespace vehicle
+using GarageVehicleID = vehicle::GarageVehicleID;
 } // namespace RED4ext

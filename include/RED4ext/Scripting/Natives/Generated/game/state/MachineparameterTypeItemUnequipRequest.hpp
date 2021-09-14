@@ -13,7 +13,7 @@ namespace game::state {
 struct MachineparameterTypeItemUnequipRequest : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeItemUnequipRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ItemUnequipRequest";
 
     TweakDBID slotId; // 40
     ItemID itemId; // 48
@@ -22,4 +22,5 @@ struct MachineparameterTypeItemUnequipRequest : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeItemUnequipRequest, 0x60);
 } // namespace game::state
+using ItemUnequipRequest = game::state::MachineparameterTypeItemUnequipRequest;
 } // namespace RED4ext

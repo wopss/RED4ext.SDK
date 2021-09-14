@@ -13,10 +13,11 @@ namespace ink {
 struct TweakDBIDSelector : IScriptable
 {
     static constexpr const char* NAME = "inkTweakDBIDSelector";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TweakDBIDSelector";
 
     TweakDBID baseTweakID; // 40
 };
 RED4EXT_ASSERT_SIZE(TweakDBIDSelector, 0x48);
 } // namespace ink
+using TweakDBIDSelector = ink::TweakDBIDSelector;
 } // namespace RED4ext

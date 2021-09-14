@@ -12,10 +12,11 @@ namespace game::data {
 struct SensePreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSensePreset_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SensePreset_Record";
 
     uint8_t unk48[0x78 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(SensePreset_Record, 0x78);
 } // namespace game::data
+using SensePreset_Record = game::data::SensePreset_Record;
 } // namespace RED4ext

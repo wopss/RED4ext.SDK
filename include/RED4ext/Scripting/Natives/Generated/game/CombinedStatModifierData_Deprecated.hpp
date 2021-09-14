@@ -15,7 +15,7 @@ namespace game {
 struct CombinedStatModifierData_Deprecated : game::StatModifierData_Deprecated
 {
     static constexpr const char* NAME = "gameCombinedStatModifierData_Deprecated";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameCombinedStatModifierData";
 
     game::data::StatType refStatType; // 48
     game::StatObjectsRelation refObject; // 4C
@@ -24,4 +24,5 @@ struct CombinedStatModifierData_Deprecated : game::StatModifierData_Deprecated
 };
 RED4EXT_ASSERT_SIZE(CombinedStatModifierData_Deprecated, 0x58);
 } // namespace game
+using gameCombinedStatModifierData = game::CombinedStatModifierData_Deprecated;
 } // namespace RED4ext

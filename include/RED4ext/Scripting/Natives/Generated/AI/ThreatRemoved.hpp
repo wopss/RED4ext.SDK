@@ -15,7 +15,7 @@ namespace AI {
 struct ThreatRemoved : AI::AIEvent
 {
     static constexpr const char* NAME = "AIThreatRemoved";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ThreatRemoved";
 
     WeakHandle<ent::Entity> owner; // 50
     WeakHandle<ent::Entity> threat; // 60
@@ -26,4 +26,5 @@ struct ThreatRemoved : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(ThreatRemoved, 0x78);
 } // namespace AI
+using ThreatRemoved = AI::ThreatRemoved;
 } // namespace RED4ext

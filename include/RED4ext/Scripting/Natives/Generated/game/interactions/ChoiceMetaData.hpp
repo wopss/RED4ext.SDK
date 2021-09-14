@@ -13,7 +13,7 @@ namespace game::interactions {
 struct ChoiceMetaData
 {
     static constexpr const char* NAME = "gameinteractionsChoiceMetaData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionChoiceMetaData";
 
     CString tweakDBName; // 00
     TweakDBID tweakDBID; // 20
@@ -22,4 +22,5 @@ struct ChoiceMetaData
 };
 RED4EXT_ASSERT_SIZE(ChoiceMetaData, 0x30);
 } // namespace game::interactions
+using InteractionChoiceMetaData = game::interactions::ChoiceMetaData;
 } // namespace RED4ext

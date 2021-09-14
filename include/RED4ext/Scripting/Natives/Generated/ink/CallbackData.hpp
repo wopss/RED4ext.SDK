@@ -17,7 +17,7 @@ namespace ink {
 struct CallbackData : IScriptable
 {
     static constexpr const char* NAME = "inkCallbackData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "iconAtlasCallbackData";
 
     ink::IconResult loadResult; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
@@ -27,4 +27,5 @@ struct CallbackData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CallbackData, 0x80);
 } // namespace ink
+using iconAtlasCallbackData = ink::CallbackData;
 } // namespace RED4ext

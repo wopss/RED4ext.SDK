@@ -15,7 +15,7 @@ namespace world::ui { struct MeshTargetBinding; }
 struct IWorldWidgetComponent : WidgetBaseComponent
 {
     static constexpr const char* NAME = "IWorldWidgetComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IWorldWidgetComponent";
 
     uint8_t unk1A0[0x1D0 - 0x1A0]; // 1A0
     float glitchValue; // 1D0

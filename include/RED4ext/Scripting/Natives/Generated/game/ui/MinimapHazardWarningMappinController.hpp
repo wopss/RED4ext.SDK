@@ -12,10 +12,11 @@ namespace game::ui {
 struct MinimapHazardWarningMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapHazardWarningMappinController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MinimapHazardWarningMappinController";
 
     uint8_t unk210[0x220 - 0x210]; // 210
 };
 RED4EXT_ASSERT_SIZE(MinimapHazardWarningMappinController, 0x220);
 } // namespace game::ui
+using MinimapHazardWarningMappinController = game::ui::MinimapHazardWarningMappinController;
 } // namespace RED4ext

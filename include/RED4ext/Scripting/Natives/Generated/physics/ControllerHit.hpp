@@ -12,7 +12,7 @@ namespace physics {
 struct ControllerHit
 {
     static constexpr const char* NAME = "physicsControllerHit";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ControllerHit";
 
     Vector4 worldPos; // 00
     Vector4 worldNormal; // 10
@@ -20,4 +20,5 @@ struct ControllerHit
 };
 RED4EXT_ASSERT_SIZE(ControllerHit, 0x40);
 } // namespace physics
+using ControllerHit = physics::ControllerHit;
 } // namespace RED4ext

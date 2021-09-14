@@ -12,7 +12,7 @@ namespace ent {
 struct CameraData
 {
     static constexpr const char* NAME = "entCameraData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CameraData";
 
     uint8_t unk00[0x10 - 0x0]; // 0
     Quaternion rotation; // 10
@@ -20,4 +20,5 @@ struct CameraData
 };
 RED4EXT_ASSERT_SIZE(CameraData, 0x90);
 } // namespace ent
+using CameraData = ent::CameraData;
 } // namespace RED4ext

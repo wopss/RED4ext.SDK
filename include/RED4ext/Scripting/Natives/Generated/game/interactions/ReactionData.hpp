@@ -17,7 +17,7 @@ namespace game::interactions {
 struct ReactionData : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsReactionData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ReactionData";
 
     CName choiceName; // 40
     float startDuration; // 48
@@ -33,4 +33,5 @@ struct ReactionData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ReactionData, 0xB0);
 } // namespace game::interactions
+using ReactionData = game::interactions::ReactionData;
 } // namespace RED4ext

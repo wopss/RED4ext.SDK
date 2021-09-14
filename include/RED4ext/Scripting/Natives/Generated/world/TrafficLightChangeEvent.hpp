@@ -13,11 +13,12 @@ namespace world {
 struct TrafficLightChangeEvent : red::Event
 {
     static constexpr const char* NAME = "worldTrafficLightChangeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TrafficLightChangeEvent";
 
     world::TrafficLightColor lightColor; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(TrafficLightChangeEvent, 0x48);
 } // namespace world
+using TrafficLightChangeEvent = world::TrafficLightChangeEvent;
 } // namespace RED4ext

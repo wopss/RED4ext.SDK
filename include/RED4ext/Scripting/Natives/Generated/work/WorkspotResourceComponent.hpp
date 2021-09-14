@@ -16,7 +16,7 @@ namespace work {
 struct WorkspotResourceComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "workWorkspotResourceComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WorkspotResourceComponent";
 
     RaRef<work::WorkspotResource> workspotResource; // 120
     uint8_t unk128[0x140 - 0x128]; // 128
@@ -27,4 +27,5 @@ struct WorkspotResourceComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(WorkspotResourceComponent, 0x180);
 } // namespace work
+using WorkspotResourceComponent = work::WorkspotResourceComponent;
 } // namespace RED4ext

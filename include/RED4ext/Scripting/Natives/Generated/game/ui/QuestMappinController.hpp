@@ -13,7 +13,7 @@ namespace game::ui {
 struct QuestMappinController : game::ui::InteractionMappinController
 {
     static constexpr const char* NAME = "gameuiQuestMappinController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BaseQuestMappinController";
 
     uint8_t unk2A0[0x2B8 - 0x2A0]; // 2A0
     bool nameplateVisible; // 2B8
@@ -23,4 +23,5 @@ struct QuestMappinController : game::ui::InteractionMappinController
 };
 RED4EXT_ASSERT_SIZE(QuestMappinController, 0x2F0);
 } // namespace game::ui
+using BaseQuestMappinController = game::ui::QuestMappinController;
 } // namespace RED4ext

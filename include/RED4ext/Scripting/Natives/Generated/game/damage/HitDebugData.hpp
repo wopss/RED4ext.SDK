@@ -20,7 +20,7 @@ namespace game::damage {
 struct HitDebugData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageHitDebugData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitDebugData";
 
     Vector4 sourceHitPosition; // 40
     Vector4 targetHitPosition; // 50
@@ -41,4 +41,5 @@ struct HitDebugData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(HitDebugData, 0x130);
 } // namespace game::damage
+using HitDebugData = game::damage::HitDebugData;
 } // namespace RED4ext

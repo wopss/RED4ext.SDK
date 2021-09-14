@@ -12,10 +12,11 @@ namespace AI::behavior::condition {
 struct Script : AI::behavior::ScriptBase
 {
     static constexpr const char* NAME = "AIbehaviorconditionScript";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIScriptCondition";
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(Script, 0x50);
 } // namespace AI::behavior::condition
+using AIScriptCondition = AI::behavior::condition::Script;
 } // namespace RED4ext

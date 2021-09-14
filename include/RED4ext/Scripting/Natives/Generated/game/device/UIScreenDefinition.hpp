@@ -12,10 +12,11 @@ namespace game::device {
 struct UIScreenDefinition
 {
     static constexpr const char* NAME = "gamedeviceUIScreenDefinition";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UIScreenDefinition";
 
     TweakDBID screenType; // 00
 };
 RED4EXT_ASSERT_SIZE(UIScreenDefinition, 0x8);
 } // namespace game::device
+using UIScreenDefinition = game::device::UIScreenDefinition;
 } // namespace RED4ext

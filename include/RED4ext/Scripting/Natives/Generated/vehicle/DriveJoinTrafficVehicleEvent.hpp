@@ -12,9 +12,10 @@ namespace vehicle {
 struct DriveJoinTrafficVehicleEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleDriveJoinTrafficVehicleEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DriveJoinTrafficVehicleEvent";
 
 };
 RED4EXT_ASSERT_SIZE(DriveJoinTrafficVehicleEvent, 0x40);
 } // namespace vehicle
+using DriveJoinTrafficVehicleEvent = vehicle::DriveJoinTrafficVehicleEvent;
 } // namespace RED4ext

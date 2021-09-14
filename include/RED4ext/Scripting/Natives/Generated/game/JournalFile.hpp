@@ -15,7 +15,7 @@ namespace game {
 struct JournalFile : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalFile";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalFile";
 
     LocalizationString title; // 60
     LocalizationString content; // 88
@@ -25,4 +25,5 @@ struct JournalFile : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalFile, 0xE0);
 } // namespace game
+using JournalFile = game::JournalFile;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace quest {
 struct BluelineObject : IScriptable
 {
     static constexpr const char* NAME = "questBluelineObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BluelineObject";
 
     uint8_t unk40[0x58 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(BluelineObject, 0x58);
 } // namespace quest
+using BluelineObject = quest::BluelineObject;
 } // namespace RED4ext

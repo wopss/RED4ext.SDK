@@ -12,9 +12,10 @@ namespace vehicle {
 struct AVBaseObject : vehicle::BaseObject
 {
     static constexpr const char* NAME = "vehicleAVBaseObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AVObject";
 
 };
 RED4EXT_ASSERT_SIZE(AVBaseObject, 0x910);
 } // namespace vehicle
+using AVObject = vehicle::AVBaseObject;
 } // namespace RED4ext

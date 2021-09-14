@@ -15,7 +15,7 @@ namespace game::events {
 struct StatusEffectEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsStatusEffectEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatusEffectEvent";
 
     Handle<game::data::StatusEffect_Record> staticData; // 40
     uint32_t stackCount; // 50
@@ -23,4 +23,5 @@ struct StatusEffectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StatusEffectEvent, 0x60);
 } // namespace game::events
+using StatusEffectEvent = game::events::StatusEffectEvent;
 } // namespace RED4ext

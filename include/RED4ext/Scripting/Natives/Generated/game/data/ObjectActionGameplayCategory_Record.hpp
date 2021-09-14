@@ -12,9 +12,10 @@ namespace game::data {
 struct ObjectActionGameplayCategory_Record : game::data::ScannableData_Record
 {
     static constexpr const char* NAME = "gamedataObjectActionGameplayCategory_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ObjectActionGameplayCategory_Record";
 
 };
 RED4EXT_ASSERT_SIZE(ObjectActionGameplayCategory_Record, 0x58);
 } // namespace game::data
+using ObjectActionGameplayCategory_Record = game::data::ObjectActionGameplayCategory_Record;
 } // namespace RED4ext

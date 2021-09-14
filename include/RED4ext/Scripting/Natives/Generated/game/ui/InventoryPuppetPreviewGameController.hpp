@@ -12,9 +12,10 @@ namespace game::ui {
 struct InventoryPuppetPreviewGameController : game::ui::PuppetPreviewGameController
 {
     static constexpr const char* NAME = "gameuiInventoryPuppetPreviewGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkInventoryPuppetPreviewGameController";
 
 };
 RED4EXT_ASSERT_SIZE(InventoryPuppetPreviewGameController, 0x1C0);
 } // namespace game::ui
+using inkInventoryPuppetPreviewGameController = game::ui::InventoryPuppetPreviewGameController;
 } // namespace RED4ext

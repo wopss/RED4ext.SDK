@@ -13,11 +13,12 @@ namespace game::ui {
 struct DeleteInputHintBySourceEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiDeleteInputHintBySourceEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DeleteInputHintBySourceEvent";
 
     CName source; // 40
     CName targetHintContainer; // 48
 };
 RED4EXT_ASSERT_SIZE(DeleteInputHintBySourceEvent, 0x50);
 } // namespace game::ui
+using DeleteInputHintBySourceEvent = game::ui::DeleteInputHintBySourceEvent;
 } // namespace RED4ext

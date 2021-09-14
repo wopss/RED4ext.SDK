@@ -12,9 +12,10 @@ namespace game {
 struct JournalBriefingBaseSection : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalBriefingBaseSection";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalBriefingBaseSection";
 
 };
 RED4EXT_ASSERT_SIZE(JournalBriefingBaseSection, 0x60);
 } // namespace game
+using JournalBriefingBaseSection = game::JournalBriefingBaseSection;
 } // namespace RED4ext

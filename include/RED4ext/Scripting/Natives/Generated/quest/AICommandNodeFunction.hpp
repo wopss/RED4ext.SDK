@@ -14,7 +14,7 @@ namespace quest {
 struct AICommandNodeFunction
 {
     static constexpr const char* NAME = "questAICommandNodeFunction";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AICommandNodeFunction";
 
     uint32_t order; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -27,4 +27,5 @@ struct AICommandNodeFunction
 };
 RED4EXT_ASSERT_SIZE(AICommandNodeFunction, 0x48);
 } // namespace quest
+using AICommandNodeFunction = quest::AICommandNodeFunction;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace ent {
 struct PhysicalDestructionEvent : red::Event
 {
     static constexpr const char* NAME = "entPhysicalDestructionEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhysicalDestructionEvent";
 
     CName componentName; // 40
     uint8_t levelOfDestruction; // 48
@@ -21,4 +21,5 @@ struct PhysicalDestructionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionEvent, 0x50);
 } // namespace ent
+using PhysicalDestructionEvent = ent::PhysicalDestructionEvent;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct FPPCameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "gameFPPCameraComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FPPCameraComponent";
 
     uint8_t unk2A0[0x360 - 0x2A0]; // 2A0
     float pitchMin; // 360
@@ -30,4 +30,5 @@ struct FPPCameraComponent : game::CameraComponent
 };
 RED4EXT_ASSERT_SIZE(FPPCameraComponent, 0x4D0);
 } // namespace game
+using FPPCameraComponent = game::FPPCameraComponent;
 } // namespace RED4ext

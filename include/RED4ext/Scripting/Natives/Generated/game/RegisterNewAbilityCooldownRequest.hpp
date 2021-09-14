@@ -17,7 +17,7 @@ namespace game {
 struct RegisterNewAbilityCooldownRequest
 {
     static constexpr const char* NAME = "gameRegisterNewAbilityCooldownRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RegisterNewAbilityCooldownRequest";
 
     WeakHandle<ent::Entity> owner; // 00
     ItemID ownerItemId; // 10
@@ -32,4 +32,5 @@ struct RegisterNewAbilityCooldownRequest
 };
 RED4EXT_ASSERT_SIZE(RegisterNewAbilityCooldownRequest, 0x48);
 } // namespace game
+using RegisterNewAbilityCooldownRequest = game::RegisterNewAbilityCooldownRequest;
 } // namespace RED4ext

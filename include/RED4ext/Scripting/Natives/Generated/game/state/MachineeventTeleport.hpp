@@ -12,10 +12,11 @@ namespace game::state {
 struct MachineeventTeleport : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventTeleport";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PSMTeleportEvent";
 
     uint8_t unk40[0x60 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineeventTeleport, 0x60);
 } // namespace game::state
+using PSMTeleportEvent = game::state::MachineeventTeleport;
 } // namespace RED4ext

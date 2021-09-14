@@ -13,11 +13,12 @@ namespace sense {
 struct VisibleObjectTypeEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibleObjectTypeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VisibleObjectTypeEvent";
 
     game::data::SenseObjectType type; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectTypeEvent, 0x48);
 } // namespace sense
+using VisibleObjectTypeEvent = sense::VisibleObjectTypeEvent;
 } // namespace RED4ext

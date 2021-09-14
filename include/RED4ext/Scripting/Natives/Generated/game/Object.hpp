@@ -20,7 +20,7 @@ namespace game {
 struct Object : ent::GameEntity
 {
     static constexpr const char* NAME = "gameObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GameObject";
 
     uint8_t unk160[0x168 - 0x160]; // 160
     Handle<game::PersistentState> persistentState; // 168
@@ -36,4 +36,5 @@ struct Object : ent::GameEntity
 };
 RED4EXT_ASSERT_SIZE(Object, 0x240);
 } // namespace game
+using GameObject = game::Object;
 } // namespace RED4ext

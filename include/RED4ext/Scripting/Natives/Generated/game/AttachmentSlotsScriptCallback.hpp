@@ -13,11 +13,12 @@ namespace game {
 struct AttachmentSlotsScriptCallback : IScriptable
 {
     static constexpr const char* NAME = "gameAttachmentSlotsScriptCallback";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AttachmentSlotsScriptCallback";
 
     TweakDBID slotID; // 40
     ItemID itemID; // 48
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotsScriptCallback, 0x58);
 } // namespace game
+using AttachmentSlotsScriptCallback = game::AttachmentSlotsScriptCallback;
 } // namespace RED4ext

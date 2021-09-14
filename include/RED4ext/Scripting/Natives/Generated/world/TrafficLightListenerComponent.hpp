@@ -13,7 +13,7 @@ namespace world {
 struct TrafficLightListenerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "worldTrafficLightListenerComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TrafficLightListenerComponent";
 
     uint8_t unk90[0xA8 - 0x90]; // 90
     NodeRef intersectionRef; // A8
@@ -22,4 +22,5 @@ struct TrafficLightListenerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TrafficLightListenerComponent, 0xB8);
 } // namespace world
+using TrafficLightListenerComponent = world::TrafficLightListenerComponent;
 } // namespace RED4ext

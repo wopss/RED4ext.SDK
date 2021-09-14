@@ -11,10 +11,11 @@ namespace world {
 struct GlobalNodeID
 {
     static constexpr const char* NAME = "worldGlobalNodeID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GlobalNodeID";
 
     uint64_t hash; // 00
 };
 RED4EXT_ASSERT_SIZE(GlobalNodeID, 0x8);
 } // namespace world
+using GlobalNodeID = world::GlobalNodeID;
 } // namespace RED4ext

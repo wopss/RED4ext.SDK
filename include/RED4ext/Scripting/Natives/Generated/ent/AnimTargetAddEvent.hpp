@@ -16,11 +16,12 @@ namespace ent {
 struct AnimTargetAddEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimTargetAddEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimTargetAddEvent";
 
     Handle<ent::IPositionProvider> targetPositionProvider; // 40
     CName bodyPart; // 50
 };
 RED4EXT_ASSERT_SIZE(AnimTargetAddEvent, 0x58);
 } // namespace ent
+using AnimTargetAddEvent = ent::AnimTargetAddEvent;
 } // namespace RED4ext

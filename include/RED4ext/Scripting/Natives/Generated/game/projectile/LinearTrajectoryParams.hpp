@@ -12,11 +12,12 @@ namespace game::projectile {
 struct LinearTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileLinearTrajectoryParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LinearTrajectoryParams";
 
     float startVel; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(LinearTrajectoryParams, 0x48);
 } // namespace game::projectile
+using LinearTrajectoryParams = game::projectile::LinearTrajectoryParams;
 } // namespace RED4ext

@@ -14,10 +14,11 @@ namespace game {
 struct JournalQuestMultiMapPin : game::JournalQuestMapPinBase
 {
     static constexpr const char* NAME = "gameJournalQuestMultiMapPin";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalQuestMultiMapPin";
 
     DynArray<NodeRef> references; // 110
 };
 RED4EXT_ASSERT_SIZE(JournalQuestMultiMapPin, 0x120);
 } // namespace game
+using JournalQuestMultiMapPin = game::JournalQuestMultiMapPin;
 } // namespace RED4ext

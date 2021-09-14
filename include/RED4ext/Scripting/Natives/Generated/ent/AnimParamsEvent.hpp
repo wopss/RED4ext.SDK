@@ -12,10 +12,11 @@ namespace ent {
 struct AnimParamsEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimParamsEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimParamsEvent";
 
     uint8_t unk40[0x68 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(AnimParamsEvent, 0x68);
 } // namespace ent
+using AnimParamsEvent = ent::AnimParamsEvent;
 } // namespace RED4ext

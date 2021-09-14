@@ -17,7 +17,7 @@ namespace game::ui {
 struct LevelUpNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiLevelUpNotificationViewData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LevelUpNotificationViewData";
 
     bool canBeMerged; // 90
     uint8_t unk91[0x94 - 0x91]; // 91
@@ -27,4 +27,5 @@ struct LevelUpNotificationViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(LevelUpNotificationViewData, 0xD8);
 } // namespace game::ui
+using LevelUpNotificationViewData = game::ui::LevelUpNotificationViewData;
 } // namespace RED4ext

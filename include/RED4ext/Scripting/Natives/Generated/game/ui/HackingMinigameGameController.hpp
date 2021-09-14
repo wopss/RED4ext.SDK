@@ -13,7 +13,7 @@ namespace game::ui {
 struct HackingMinigameGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiHackingMinigameGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HackingMinigameGameController";
 
     uint8_t unkD0[0x1B8 - 0xD0]; // D0
     TweakDBID symbolsRecordTDBID; // 1B8
@@ -22,4 +22,5 @@ struct HackingMinigameGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(HackingMinigameGameController, 0x1F8);
 } // namespace game::ui
+using HackingMinigameGameController = game::ui::HackingMinigameGameController;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game {
 struct IPlayerSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPlayerSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameIPlayerSystem";
 
 };
 RED4EXT_ASSERT_SIZE(IPlayerSystem, 0x48);

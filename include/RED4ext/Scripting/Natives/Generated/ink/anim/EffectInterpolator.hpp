@@ -14,7 +14,7 @@ namespace ink::anim {
 struct EffectInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimEffectInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimEffect";
 
     float startValue; // 68
     float endValue; // 6C
@@ -25,4 +25,5 @@ struct EffectInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(EffectInterpolator, 0x88);
 } // namespace ink::anim
+using inkAnimEffect = ink::anim::EffectInterpolator;
 } // namespace RED4ext

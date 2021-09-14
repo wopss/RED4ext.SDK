@@ -12,7 +12,7 @@ namespace game {
 struct BlackboardSerializableID
 {
     static constexpr const char* NAME = "gameBlackboardSerializableID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BlackboardSerializableID";
 
     CName blackboardName; // 00
     CName fieldName; // 08
@@ -20,4 +20,5 @@ struct BlackboardSerializableID
 };
 RED4EXT_ASSERT_SIZE(BlackboardSerializableID, 0x20);
 } // namespace game
+using BlackboardSerializableID = game::BlackboardSerializableID;
 } // namespace RED4ext

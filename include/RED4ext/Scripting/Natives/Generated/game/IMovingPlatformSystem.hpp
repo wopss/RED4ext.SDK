@@ -12,9 +12,10 @@ namespace game {
 struct IMovingPlatformSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIMovingPlatformSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IMovingPlatformSystem";
 
 };
 RED4EXT_ASSERT_SIZE(IMovingPlatformSystem, 0x48);
 } // namespace game
+using IMovingPlatformSystem = game::IMovingPlatformSystem;
 } // namespace RED4ext

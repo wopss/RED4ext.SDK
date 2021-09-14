@@ -12,11 +12,12 @@ namespace game {
 struct SetLootInteractionAccessibilityEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetLootInteractionAccessibilityEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SetLootInteractionAccessibilityEvent";
 
     bool accessible; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(SetLootInteractionAccessibilityEvent, 0x48);
 } // namespace game
+using SetLootInteractionAccessibilityEvent = game::SetLootInteractionAccessibilityEvent;
 } // namespace RED4ext

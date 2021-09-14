@@ -12,10 +12,11 @@ namespace AI {
 struct TargetTrackerManager : AI::TargetTrackerManagerInterface
 {
     static constexpr const char* NAME = "AITargetTrackerManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetTrackerManager";
 
     uint8_t unk48[0xA0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(TargetTrackerManager, 0xA0);
 } // namespace AI
+using TargetTrackerManager = AI::TargetTrackerManager;
 } // namespace RED4ext

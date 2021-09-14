@@ -18,7 +18,7 @@ namespace game {
 struct BinkComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "gameBinkComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BinkComponent";
 
     uint8_t unk140[0x160 - 0x140]; // 140
     Handle<game::BinkMeshTargetBinding> meshTargetBinding; // 160
@@ -33,4 +33,5 @@ struct BinkComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(BinkComponent, 0x1A0);
 } // namespace game
+using BinkComponent = game::BinkComponent;
 } // namespace RED4ext

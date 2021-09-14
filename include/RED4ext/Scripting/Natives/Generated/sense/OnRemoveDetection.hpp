@@ -15,10 +15,11 @@ namespace sense {
 struct OnRemoveDetection : red::Event
 {
     static constexpr const char* NAME = "senseOnRemoveDetection";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "OnRemoveDetection";
 
     WeakHandle<game::Object> target; // 40
 };
 RED4EXT_ASSERT_SIZE(OnRemoveDetection, 0x50);
 } // namespace sense
+using OnRemoveDetection = sense::OnRemoveDetection;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace ink {
 struct ScriptFIFOQueue : IScriptable
 {
     static constexpr const char* NAME = "inkScriptFIFOQueue";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkFIFOQueue";
 
     uint8_t unk40[0x60 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ScriptFIFOQueue, 0x60);
 } // namespace ink
+using inkFIFOQueue = ink::ScriptFIFOQueue;
 } // namespace RED4ext

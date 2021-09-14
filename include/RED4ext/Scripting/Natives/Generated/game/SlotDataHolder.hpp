@@ -15,7 +15,7 @@ namespace game {
 struct SlotDataHolder : IScriptable
 {
     static constexpr const char* NAME = "gameSlotDataHolder";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SlotDataHolder";
 
     DynArray<game::AmmoData> ammoData; // 40
     game::SlotWeaponData weapon; // 50
@@ -23,4 +23,5 @@ struct SlotDataHolder : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SlotDataHolder, 0xA8);
 } // namespace game
+using SlotDataHolder = game::SlotDataHolder;
 } // namespace RED4ext

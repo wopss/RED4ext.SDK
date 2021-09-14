@@ -14,10 +14,11 @@ namespace game::state {
 struct MachineparameterTypeRequestItem : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeRequestItem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "parameterRequestItem";
 
     DynArray<game::EquipParam> requests; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeRequestItem, 0x50);
 } // namespace game::state
+using parameterRequestItem = game::state::MachineparameterTypeRequestItem;
 } // namespace RED4ext

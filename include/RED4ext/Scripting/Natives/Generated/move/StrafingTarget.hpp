@@ -15,7 +15,7 @@ namespace move {
 struct StrafingTarget
 {
     static constexpr const char* NAME = "moveStrafingTarget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StrafingTarget";
 
     Vector3 position; // 00
     uint8_t unk0C[0x10 - 0xC]; // C
@@ -24,4 +24,5 @@ struct StrafingTarget
 };
 RED4EXT_ASSERT_SIZE(StrafingTarget, 0x28);
 } // namespace move
+using StrafingTarget = move::StrafingTarget;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace game::state {
 struct MachineparameterTypeVaultParameters : game::state::MachineparameterTypeClimbParametersBase
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeVaultParameters";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VaultParameters";
 
     uint8_t unkF0[0x120 - 0xF0]; // F0
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeVaultParameters, 0x120);
 } // namespace game::state
+using VaultParameters = game::state::MachineparameterTypeVaultParameters;
 } // namespace RED4ext

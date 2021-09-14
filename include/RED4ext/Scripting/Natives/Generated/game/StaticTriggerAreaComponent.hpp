@@ -12,7 +12,7 @@ namespace game {
 struct StaticTriggerAreaComponent : game::StaticAreaShapeComponent
 {
     static constexpr const char* NAME = "gameStaticTriggerAreaComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TriggerComponent";
 
     uint8_t unk150[0x180 - 0x150]; // 150
     uint32_t includeMask; // 180
@@ -21,4 +21,5 @@ struct StaticTriggerAreaComponent : game::StaticAreaShapeComponent
 };
 RED4EXT_ASSERT_SIZE(StaticTriggerAreaComponent, 0x1A0);
 } // namespace game
+using TriggerComponent = game::StaticTriggerAreaComponent;
 } // namespace RED4ext

@@ -11,7 +11,7 @@ namespace game {
 struct BinkVideoSummary
 {
     static constexpr const char* NAME = "gameBinkVideoSummary";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BinkVideoSummary";
 
     uint32_t currentTimeMs; // 00
     uint32_t totalTimeMs; // 04
@@ -21,4 +21,5 @@ struct BinkVideoSummary
 };
 RED4EXT_ASSERT_SIZE(BinkVideoSummary, 0x14);
 } // namespace game
+using BinkVideoSummary = game::BinkVideoSummary;
 } // namespace RED4ext

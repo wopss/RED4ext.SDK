@@ -12,11 +12,12 @@ namespace game {
 struct EffectOutputParameter_Bool
 {
     static constexpr const char* NAME = "gameEffectOutputParameter_Bool";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectOutputParameter_Bool";
 
     uint8_t unk00[0x8 - 0x0]; // 0
     game::BlackboardPropertyBindingDefinition blackboardProperty; // 08
 };
 RED4EXT_ASSERT_SIZE(EffectOutputParameter_Bool, 0x40);
 } // namespace game
+using EffectOutputParameter_Bool = game::EffectOutputParameter_Bool;
 } // namespace RED4ext

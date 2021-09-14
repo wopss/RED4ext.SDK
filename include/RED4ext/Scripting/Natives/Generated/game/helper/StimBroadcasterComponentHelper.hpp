@@ -12,9 +12,10 @@ namespace game::helper {
 struct StimBroadcasterComponentHelper : IScriptable
 {
     static constexpr const char* NAME = "gamehelperStimBroadcasterComponentHelper";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StimBroadcasterComponentHelper";
 
 };
 RED4EXT_ASSERT_SIZE(StimBroadcasterComponentHelper, 0x40);
 } // namespace game::helper
+using StimBroadcasterComponentHelper = game::helper::StimBroadcasterComponentHelper;
 } // namespace RED4ext

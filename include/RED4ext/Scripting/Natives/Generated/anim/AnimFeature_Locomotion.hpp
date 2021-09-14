@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_Locomotion : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_Locomotion";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_Locomotion";
 
     int32_t action; // 40
     int32_t style; // 44
@@ -30,4 +30,5 @@ struct AnimFeature_Locomotion : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_Locomotion, 0x70);
 } // namespace anim
+using AnimFeature_Locomotion = anim::AnimFeature_Locomotion;
 } // namespace RED4ext

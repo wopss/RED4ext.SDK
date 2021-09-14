@@ -13,11 +13,12 @@ namespace ink::anim {
 struct PivotInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimPivotInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimPivot";
 
     Vector2 startValue; // 68
     Vector2 endValue; // 70
 };
 RED4EXT_ASSERT_SIZE(PivotInterpolator, 0x78);
 } // namespace ink::anim
+using inkAnimPivot = ink::anim::PivotInterpolator;
 } // namespace RED4ext

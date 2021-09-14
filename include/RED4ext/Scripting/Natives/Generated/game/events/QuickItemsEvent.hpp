@@ -13,10 +13,11 @@ namespace game::events {
 struct QuickItemsEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsQuickItemsEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameQuickItemsEvent";
 
     CName questName; // 40
 };
 RED4EXT_ASSERT_SIZE(QuickItemsEvent, 0x48);
 } // namespace game::events
+using gameQuickItemsEvent = game::events::QuickItemsEvent;
 } // namespace RED4ext

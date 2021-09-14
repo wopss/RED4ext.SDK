@@ -12,7 +12,7 @@ namespace game {
 struct MotionConstrainedTierDataParams
 {
     static constexpr const char* NAME = "gameMotionConstrainedTierDataParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MotionConstrainedTierDataParams";
 
     NodeRef splineRef; // 00
     float adjustingSpeed; // 08
@@ -24,4 +24,5 @@ struct MotionConstrainedTierDataParams
 };
 RED4EXT_ASSERT_SIZE(MotionConstrainedTierDataParams, 0x20);
 } // namespace game
+using MotionConstrainedTierDataParams = game::MotionConstrainedTierDataParams;
 } // namespace RED4ext

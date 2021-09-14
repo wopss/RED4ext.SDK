@@ -15,7 +15,7 @@ namespace game {
 struct PopupData
 {
     static constexpr const char* NAME = "gamePopupData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PopupData";
 
     CString title; // 00
     CString message; // 20
@@ -27,4 +27,5 @@ struct PopupData
 };
 RED4EXT_ASSERT_SIZE(PopupData, 0x58);
 } // namespace game
+using PopupData = game::PopupData;
 } // namespace RED4ext

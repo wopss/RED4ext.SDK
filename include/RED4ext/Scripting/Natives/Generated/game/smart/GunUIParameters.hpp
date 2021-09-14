@@ -16,7 +16,7 @@ namespace game::smart {
 struct GunUIParameters : IScriptable
 {
     static constexpr const char* NAME = "gamesmartGunUIParameters";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "smartGunUIParameters";
 
     DynArray<game::smart::GunUITargetParameters> targets; // 40
     game::smart::GunUISightParameters sight; // 50
@@ -29,4 +29,5 @@ struct GunUIParameters : IScriptable
 };
 RED4EXT_ASSERT_SIZE(GunUIParameters, 0x80);
 } // namespace game::smart
+using smartGunUIParameters = game::smart::GunUIParameters;
 } // namespace RED4ext

@@ -13,10 +13,11 @@ namespace game::ui {
 struct InputHintInitializedEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiInputHintInitializedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InputHintInitializedEvent";
 
     CName targetHintContainer; // 40
 };
 RED4EXT_ASSERT_SIZE(InputHintInitializedEvent, 0x48);
 } // namespace game::ui
+using InputHintInitializedEvent = game::ui::InputHintInitializedEvent;
 } // namespace RED4ext

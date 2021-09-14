@@ -12,11 +12,12 @@ namespace anim {
 struct AnimFeature_QuickMelee : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_QuickMelee";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_QuickMelee";
 
     int32_t state; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_QuickMelee, 0x48);
 } // namespace anim
+using AnimFeature_QuickMelee = anim::AnimFeature_QuickMelee;
 } // namespace RED4ext

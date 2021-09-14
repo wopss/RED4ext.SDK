@@ -11,10 +11,11 @@ namespace game {
 struct EffectExecutionScriptContext
 {
     static constexpr const char* NAME = "gameEffectExecutionScriptContext";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectExecutionScriptContext";
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(EffectExecutionScriptContext, 0x8);
 } // namespace game
+using EffectExecutionScriptContext = game::EffectExecutionScriptContext;
 } // namespace RED4ext

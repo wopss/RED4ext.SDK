@@ -14,7 +14,7 @@ namespace vehicle {
 struct PlayerVehicle
 {
     static constexpr const char* NAME = "vehiclePlayerVehicle";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlayerVehicle";
 
     CName name; // 00
     TweakDBID recordID; // 08
@@ -25,4 +25,5 @@ struct PlayerVehicle
 };
 RED4EXT_ASSERT_SIZE(PlayerVehicle, 0x38);
 } // namespace vehicle
+using PlayerVehicle = vehicle::PlayerVehicle;
 } // namespace RED4ext

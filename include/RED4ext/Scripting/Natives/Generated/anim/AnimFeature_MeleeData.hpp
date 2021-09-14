@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_MeleeData : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_MeleeData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_MeleeData";
 
     bool isMeleeWeaponEquipped; // 40
     uint8_t unk41[0x44 - 0x41]; // 41
@@ -37,4 +37,5 @@ struct AnimFeature_MeleeData : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_MeleeData, 0x68);
 } // namespace anim
+using AnimFeature_MeleeData = anim::AnimFeature_MeleeData;
 } // namespace RED4ext

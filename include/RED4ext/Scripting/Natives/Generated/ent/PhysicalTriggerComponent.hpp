@@ -17,7 +17,7 @@ namespace ent {
 struct PhysicalTriggerComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entPhysicalTriggerComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhysicalTriggerComponent";
 
     Handle<physics::FilterData> filterData; // 120
     physics::SimulationType simulationType; // 130
@@ -27,4 +27,5 @@ struct PhysicalTriggerComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalTriggerComponent, 0x180);
 } // namespace ent
+using PhysicalTriggerComponent = ent::PhysicalTriggerComponent;
 } // namespace RED4ext

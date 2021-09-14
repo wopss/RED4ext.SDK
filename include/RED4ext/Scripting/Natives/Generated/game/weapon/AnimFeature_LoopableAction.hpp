@@ -12,7 +12,7 @@ namespace game::weapon {
 struct AnimFeature_LoopableAction : anim::AnimFeature
 {
     static constexpr const char* NAME = "gameweaponAnimFeature_LoopableAction";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_LoopableAction";
 
     float loopDuration; // 40
     uint8_t numLoops; // 44
@@ -21,4 +21,5 @@ struct AnimFeature_LoopableAction : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_LoopableAction, 0x48);
 } // namespace game::weapon
+using AnimFeature_LoopableAction = game::weapon::AnimFeature_LoopableAction;
 } // namespace RED4ext

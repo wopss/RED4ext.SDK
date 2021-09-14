@@ -18,7 +18,7 @@ namespace game::interactions {
 struct CHotSpotLayerDefinition : game::interactions::NodeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCHotSpotLayerDefinition";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HotSpotLayerDefinition";
 
     CName tag; // 48
     bool enabled; // 50
@@ -32,4 +32,5 @@ struct CHotSpotLayerDefinition : game::interactions::NodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CHotSpotLayerDefinition, 0x90);
 } // namespace game::interactions
+using HotSpotLayerDefinition = game::interactions::CHotSpotLayerDefinition;
 } // namespace RED4ext

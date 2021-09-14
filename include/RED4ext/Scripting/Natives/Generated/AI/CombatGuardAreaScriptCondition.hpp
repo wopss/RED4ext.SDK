@@ -12,9 +12,10 @@ namespace AI {
 struct CombatGuardAreaScriptCondition : AI::ICombatGuardAreaCondition
 {
     static constexpr const char* NAME = "AICombatGuardAreaScriptCondition";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CombatRestrictMovementAreaScriptCondition";
 
 };
 RED4EXT_ASSERT_SIZE(CombatGuardAreaScriptCondition, 0x40);
 } // namespace AI
+using CombatRestrictMovementAreaScriptCondition = AI::CombatGuardAreaScriptCondition;
 } // namespace RED4ext

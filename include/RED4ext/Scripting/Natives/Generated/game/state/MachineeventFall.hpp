@@ -12,10 +12,11 @@ namespace game::state {
 struct MachineeventFall : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventFall";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PSMFall";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineeventFall, 0x48);
 } // namespace game::state
+using PSMFall = game::state::MachineeventFall;
 } // namespace RED4ext

@@ -13,11 +13,12 @@ namespace game {
 struct NPCstubData
 {
     static constexpr const char* NAME = "gameNPCstubData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NPCstubData";
 
     ent::EntityID spawnerID; // 00
     CName entryID; // 08
 };
 RED4EXT_ASSERT_SIZE(NPCstubData, 0x10);
 } // namespace game
+using NPCstubData = game::NPCstubData;
 } // namespace RED4ext

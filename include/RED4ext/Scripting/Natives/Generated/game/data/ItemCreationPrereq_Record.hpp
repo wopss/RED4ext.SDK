@@ -12,9 +12,10 @@ namespace game::data {
 struct ItemCreationPrereq_Record : game::data::StatPrereq_Record
 {
     static constexpr const char* NAME = "gamedataItemCreationPrereq_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ItemCreationPrereq_Record";
 
 };
 RED4EXT_ASSERT_SIZE(ItemCreationPrereq_Record, 0x60);
 } // namespace game::data
+using ItemCreationPrereq_Record = game::data::ItemCreationPrereq_Record;
 } // namespace RED4ext

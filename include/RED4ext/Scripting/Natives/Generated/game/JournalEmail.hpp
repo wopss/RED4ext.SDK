@@ -15,7 +15,7 @@ namespace game {
 struct JournalEmail : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalEmail";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalEmail";
 
     LocalizationString sender; // 60
     LocalizationString addressee; // 88
@@ -26,4 +26,5 @@ struct JournalEmail : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalEmail, 0x110);
 } // namespace game
+using JournalEmail = game::JournalEmail;
 } // namespace RED4ext

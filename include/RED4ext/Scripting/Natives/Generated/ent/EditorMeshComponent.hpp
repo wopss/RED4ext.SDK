@@ -12,9 +12,10 @@ namespace ent {
 struct EditorMeshComponent : ent::MeshComponent
 {
     static constexpr const char* NAME = "entEditorMeshComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EditorMeshComponent";
 
 };
 RED4EXT_ASSERT_SIZE(EditorMeshComponent, 0x1E0);
 } // namespace ent
+using EditorMeshComponent = ent::EditorMeshComponent;
 } // namespace RED4ext

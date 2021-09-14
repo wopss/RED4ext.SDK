@@ -18,7 +18,7 @@ namespace game {
 struct MountEventData : IScriptable
 {
     static constexpr const char* NAME = "gameMountEventData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MountEventData";
 
     Transform initialTransformLS; // 40
     ent::EntityID mountParentEntityId; // 60
@@ -34,4 +34,5 @@ struct MountEventData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MountEventData, 0xA0);
 } // namespace game
+using MountEventData = game::MountEventData;
 } // namespace RED4ext

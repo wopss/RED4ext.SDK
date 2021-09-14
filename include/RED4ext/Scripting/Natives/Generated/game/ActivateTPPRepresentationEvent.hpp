@@ -12,10 +12,11 @@ namespace game {
 struct ActivateTPPRepresentationEvent : red::Event
 {
     static constexpr const char* NAME = "gameActivateTPPRepresentationEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ActivateTPPRepresentationEvent";
 
     uint8_t unk40[0x78 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ActivateTPPRepresentationEvent, 0x78);
 } // namespace game
+using ActivateTPPRepresentationEvent = game::ActivateTPPRepresentationEvent;
 } // namespace RED4ext

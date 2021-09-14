@@ -12,9 +12,10 @@ namespace game {
 struct DeviceReplicatedState : IScriptable
 {
     static constexpr const char* NAME = "gameDeviceReplicatedState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DeviceReplicatedState";
 
 };
 RED4EXT_ASSERT_SIZE(DeviceReplicatedState, 0x40);
 } // namespace game
+using DeviceReplicatedState = game::DeviceReplicatedState;
 } // namespace RED4ext

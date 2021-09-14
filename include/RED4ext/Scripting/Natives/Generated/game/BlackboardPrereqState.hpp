@@ -12,10 +12,11 @@ namespace game {
 struct BlackboardPrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameBlackboardPrereqState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BlackboardPrereqState";
 
     uint8_t unkC0[0xD0 - 0xC0]; // C0
 };
 RED4EXT_ASSERT_SIZE(BlackboardPrereqState, 0xD0);
 } // namespace game
+using BlackboardPrereqState = game::BlackboardPrereqState;
 } // namespace RED4ext

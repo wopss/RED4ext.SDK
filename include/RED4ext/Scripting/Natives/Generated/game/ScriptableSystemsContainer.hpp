@@ -12,10 +12,11 @@ namespace game {
 struct ScriptableSystemsContainer : game::IScriptableSystemsContainer
 {
     static constexpr const char* NAME = "gameScriptableSystemsContainer";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScriptableSystemsContainer";
 
     uint8_t unk48[0xA0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ScriptableSystemsContainer, 0xA0);
 } // namespace game
+using ScriptableSystemsContainer = game::ScriptableSystemsContainer;
 } // namespace RED4ext

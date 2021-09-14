@@ -14,10 +14,11 @@ namespace game {
 struct FxResource
 {
     static constexpr const char* NAME = "gameFxResource";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FxResource";
 
     RaRef<world::Effect> effect; // 00
 };
 RED4EXT_ASSERT_SIZE(FxResource, 0x8);
 } // namespace game
+using FxResource = game::FxResource;
 } // namespace RED4ext

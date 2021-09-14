@@ -12,7 +12,7 @@ namespace game {
 struct JournalMetaQuestScriptedData
 {
     static constexpr const char* NAME = "gameJournalMetaQuestScriptedData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalMetaQuestScriptedData";
 
     bool hidden; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
@@ -21,4 +21,5 @@ struct JournalMetaQuestScriptedData
 };
 RED4EXT_ASSERT_SIZE(JournalMetaQuestScriptedData, 0x28);
 } // namespace game
+using JournalMetaQuestScriptedData = game::JournalMetaQuestScriptedData;
 } // namespace RED4ext

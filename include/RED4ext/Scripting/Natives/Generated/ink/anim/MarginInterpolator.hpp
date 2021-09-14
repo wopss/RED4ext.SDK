@@ -13,11 +13,12 @@ namespace ink::anim {
 struct MarginInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimMarginInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimMargin";
 
     ink::Margin startValue; // 68
     ink::Margin endValue; // 78
 };
 RED4EXT_ASSERT_SIZE(MarginInterpolator, 0x88);
 } // namespace ink::anim
+using inkAnimMargin = ink::anim::MarginInterpolator;
 } // namespace RED4ext

@@ -16,11 +16,12 @@ namespace game {
 struct MultiPrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameMultiPrereqState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MultiPrereqState";
 
     DynArray<Handle<game::PrereqState>> nestedStates; // C0
     uint8_t unkD0[0xD8 - 0xD0]; // D0
 };
 RED4EXT_ASSERT_SIZE(MultiPrereqState, 0xD8);
 } // namespace game
+using MultiPrereqState = game::MultiPrereqState;
 } // namespace RED4ext

@@ -16,7 +16,7 @@ namespace ent {
 struct CorpseComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entCorpseComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CorpseComponent";
 
     uint8_t unk130[0x160 - 0x130]; // 130
     Handle<physics::FilterData> filterData; // 160
@@ -25,4 +25,5 @@ struct CorpseComponent : ent::ISkinableComponent
 };
 RED4EXT_ASSERT_SIZE(CorpseComponent, 0x180);
 } // namespace ent
+using CorpseComponent = ent::CorpseComponent;
 } // namespace RED4ext

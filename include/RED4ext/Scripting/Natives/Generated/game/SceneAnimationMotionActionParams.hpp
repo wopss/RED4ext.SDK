@@ -21,7 +21,7 @@ namespace game {
 struct SceneAnimationMotionActionParams : IScriptable
 {
     static constexpr const char* NAME = "gameSceneAnimationMotionActionParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SceneAnimationMotionActionParams";
 
     game::SceneAnimationMotionActionParamsMotionType motionType; // 40
     uint8_t unk44[0x50 - 0x44]; // 44
@@ -47,4 +47,5 @@ struct SceneAnimationMotionActionParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SceneAnimationMotionActionParams, 0x160);
 } // namespace game
+using SceneAnimationMotionActionParams = game::SceneAnimationMotionActionParams;
 } // namespace RED4ext

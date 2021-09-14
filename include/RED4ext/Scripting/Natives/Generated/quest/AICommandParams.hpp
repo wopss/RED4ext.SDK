@@ -12,9 +12,10 @@ namespace quest {
 struct AICommandParams : scn::AICommandFactory
 {
     static constexpr const char* NAME = "questAICommandParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AICommandParams";
 
 };
 RED4EXT_ASSERT_SIZE(AICommandParams, 0x40);
 } // namespace quest
+using AICommandParams = quest::AICommandParams;
 } // namespace RED4ext

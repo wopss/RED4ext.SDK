@@ -26,7 +26,7 @@ namespace ent {
 struct LightComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LightComponent";
 
     Color color; // 140
     float temperature; // 144
@@ -80,4 +80,5 @@ struct LightComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(LightComponent, 0x1F0);
 } // namespace ent
+using LightComponent = ent::LightComponent;
 } // namespace RED4ext

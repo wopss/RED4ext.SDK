@@ -12,9 +12,10 @@ namespace game::data {
 struct AISubActionSetWaypointByTag_Record : game::data::AISubActionSetTargetByTag_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionSetWaypointByTag_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AISubActionSetWaypointByTag_Record";
 
 };
 RED4EXT_ASSERT_SIZE(AISubActionSetWaypointByTag_Record, 0x70);
 } // namespace game::data
+using AISubActionSetWaypointByTag_Record = game::data::AISubActionSetWaypointByTag_Record;
 } // namespace RED4ext

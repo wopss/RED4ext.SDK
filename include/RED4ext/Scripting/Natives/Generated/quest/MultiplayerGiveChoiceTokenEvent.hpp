@@ -13,7 +13,7 @@ namespace quest {
 struct MultiplayerGiveChoiceTokenEvent : red::Event
 {
     static constexpr const char* NAME = "questMultiplayerGiveChoiceTokenEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MultiplayerGiveChoiceTokenEvent";
 
     CName compatibleDeviceName; // 40
     uint32_t timeout; // 48
@@ -21,4 +21,5 @@ struct MultiplayerGiveChoiceTokenEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MultiplayerGiveChoiceTokenEvent, 0x50);
 } // namespace quest
+using MultiplayerGiveChoiceTokenEvent = quest::MultiplayerGiveChoiceTokenEvent;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game::audio {
 struct AcousticPortalComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameaudioAcousticPortalComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AcousticPortalComponent";
 
     uint8_t radius; // 120
     uint8_t nominalRadius; // 121
@@ -21,4 +21,5 @@ struct AcousticPortalComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(AcousticPortalComponent, 0x130);
 } // namespace game::audio
+using AcousticPortalComponent = game::audio::AcousticPortalComponent;
 } // namespace RED4ext

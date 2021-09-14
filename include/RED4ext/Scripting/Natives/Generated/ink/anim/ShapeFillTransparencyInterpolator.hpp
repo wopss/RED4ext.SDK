@@ -12,7 +12,7 @@ namespace ink::anim {
 struct ShapeFillTransparencyInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimShapeFillTransparencyInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimShapeFillTransparency";
 
     uint8_t unk68[0x70 - 0x68]; // 68
     float startValue; // 70
@@ -20,4 +20,5 @@ struct ShapeFillTransparencyInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(ShapeFillTransparencyInterpolator, 0x78);
 } // namespace ink::anim
+using inkAnimShapeFillTransparency = ink::anim::ShapeFillTransparencyInterpolator;
 } // namespace RED4ext

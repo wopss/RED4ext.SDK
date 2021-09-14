@@ -16,7 +16,7 @@ namespace game::mounting {
 struct MountingRequest : IScriptable
 {
     static constexpr const char* NAME = "gamemountingMountingRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MountingRequest";
 
     game::mounting::MountingInfo lowLevelMountingInfo; // 40
     bool preservePositionAfterMounting; // 58
@@ -25,4 +25,5 @@ struct MountingRequest : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MountingRequest, 0x70);
 } // namespace game::mounting
+using MountingRequest = game::mounting::MountingRequest;
 } // namespace RED4ext

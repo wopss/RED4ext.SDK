@@ -12,10 +12,11 @@ namespace game::data {
 struct LoadingTipsGroup_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataLoadingTipsGroup_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LoadingTipsGroup_Record";
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(LoadingTipsGroup_Record, 0x50);
 } // namespace game::data
+using LoadingTipsGroup_Record = game::data::LoadingTipsGroup_Record;
 } // namespace RED4ext

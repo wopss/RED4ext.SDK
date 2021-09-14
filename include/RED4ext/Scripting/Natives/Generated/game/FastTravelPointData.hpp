@@ -14,7 +14,7 @@ namespace game {
 struct FastTravelPointData : IScriptable
 {
     static constexpr const char* NAME = "gameFastTravelPointData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FastTravelPointData";
 
     TweakDBID pointRecord; // 40
     NodeRef markerRef; // 48
@@ -22,4 +22,5 @@ struct FastTravelPointData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(FastTravelPointData, 0x58);
 } // namespace game
+using FastTravelPointData = game::FastTravelPointData;
 } // namespace RED4ext

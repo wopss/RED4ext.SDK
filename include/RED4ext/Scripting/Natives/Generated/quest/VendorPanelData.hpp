@@ -15,7 +15,7 @@ namespace quest {
 struct VendorPanelData : IScriptable
 {
     static constexpr const char* NAME = "questVendorPanelData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VendorPanelData";
 
     game::VendorData data; // 40
     CString assetsLibrary; // 70
@@ -23,4 +23,5 @@ struct VendorPanelData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(VendorPanelData, 0x98);
 } // namespace quest
+using VendorPanelData = quest::VendorPanelData;
 } // namespace RED4ext

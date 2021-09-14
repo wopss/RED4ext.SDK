@@ -13,10 +13,11 @@ namespace ink {
 struct KeyBindingEvent : red::Event
 {
     static constexpr const char* NAME = "inkKeyBindingEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "KeyBindingEvent";
 
     CName keyName; // 40
 };
 RED4EXT_ASSERT_SIZE(KeyBindingEvent, 0x48);
 } // namespace ink
+using KeyBindingEvent = ink::KeyBindingEvent;
 } // namespace RED4ext

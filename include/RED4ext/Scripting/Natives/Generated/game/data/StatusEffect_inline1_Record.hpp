@@ -12,9 +12,10 @@ namespace game::data {
 struct StatusEffect_inline1_Record : game::data::ConstantStatModifier_Record
 {
     static constexpr const char* NAME = "gamedataStatusEffect_inline1_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatusEffect_inline1_Record";
 
 };
 RED4EXT_ASSERT_SIZE(StatusEffect_inline1_Record, 0x58);
 } // namespace game::data
+using StatusEffect_inline1_Record = game::data::StatusEffect_inline1_Record;
 } // namespace RED4ext

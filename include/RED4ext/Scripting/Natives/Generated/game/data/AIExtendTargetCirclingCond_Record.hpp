@@ -12,10 +12,11 @@ namespace game::data {
 struct AIExtendTargetCirclingCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIExtendTargetCirclingCond_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIExtendTargetCirclingCond_Record";
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AIExtendTargetCirclingCond_Record, 0x60);
 } // namespace game::data
+using AIExtendTargetCirclingCond_Record = game::data::AIExtendTargetCirclingCond_Record;
 } // namespace RED4ext

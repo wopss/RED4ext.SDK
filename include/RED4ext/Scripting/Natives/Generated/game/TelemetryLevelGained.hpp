@@ -15,7 +15,7 @@ namespace game {
 struct TelemetryLevelGained
 {
     static constexpr const char* NAME = "gameTelemetryLevelGained";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TelemetryLevelGained";
 
     WeakHandle<game::Object> playerPuppet; // 00
     game::data::ProficiencyType proficiencyType; // 10
@@ -27,4 +27,5 @@ struct TelemetryLevelGained
 };
 RED4EXT_ASSERT_SIZE(TelemetryLevelGained, 0x28);
 } // namespace game
+using TelemetryLevelGained = game::TelemetryLevelGained;
 } // namespace RED4ext

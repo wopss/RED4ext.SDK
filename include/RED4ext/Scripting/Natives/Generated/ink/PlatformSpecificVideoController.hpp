@@ -15,7 +15,7 @@ namespace ink {
 struct PlatformSpecificVideoController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkPlatformSpecificVideoController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlatformSpecificVideoController";
 
     RaRef<Bink> video; // 68
     RaRef<Bink> video_PS4; // 70
@@ -25,4 +25,5 @@ struct PlatformSpecificVideoController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(PlatformSpecificVideoController, 0x88);
 } // namespace ink
+using PlatformSpecificVideoController = ink::PlatformSpecificVideoController;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct SItemStack
 {
     static constexpr const char* NAME = "gameSItemStack";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SItemStack";
 
     ItemID itemID; // 00
     int32_t quantity; // 10
@@ -25,4 +25,5 @@ struct SItemStack
 };
 RED4EXT_ASSERT_SIZE(SItemStack, 0x2C);
 } // namespace game
+using SItemStack = game::SItemStack;
 } // namespace RED4ext

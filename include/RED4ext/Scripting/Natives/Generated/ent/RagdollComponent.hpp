@@ -12,10 +12,11 @@ namespace ent {
 struct RagdollComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entRagdollComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RagdollComponent";
 
     uint8_t unk90[0x210 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(RagdollComponent, 0x210);
 } // namespace ent
+using RagdollComponent = ent::RagdollComponent;
 } // namespace RED4ext

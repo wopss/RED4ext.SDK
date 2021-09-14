@@ -15,10 +15,11 @@ namespace game {
 struct MovingPlatformAttachEntity : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformAttachEntity";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AttachEntity";
 
     WeakHandle<ent::Entity> entity; // 40
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformAttachEntity, 0x50);
 } // namespace game
+using AttachEntity = game::MovingPlatformAttachEntity;
 } // namespace RED4ext

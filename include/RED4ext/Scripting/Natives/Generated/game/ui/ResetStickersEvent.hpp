@@ -12,9 +12,10 @@ namespace game::ui {
 struct ResetStickersEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiResetStickersEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ResetStickersEvent";
 
 };
 RED4EXT_ASSERT_SIZE(ResetStickersEvent, 0x40);
 } // namespace game::ui
+using ResetStickersEvent = game::ui::ResetStickersEvent;
 } // namespace RED4ext

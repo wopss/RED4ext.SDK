@@ -22,7 +22,7 @@ namespace game::ui {
 struct WorldMapMenuGameController : game::ui::MappinsContainerController
 {
     static constexpr const char* NAME = "gameuiWorldMapMenuGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WorldMapMenuGameController";
 
     uint8_t unk2C0[0x2E8 - 0x2C0]; // 2C0
     WeakHandle<game::ui::BaseWorldMapMappinController> selectedMappin; // 2E8
@@ -55,4 +55,5 @@ struct WorldMapMenuGameController : game::ui::MappinsContainerController
 };
 RED4EXT_ASSERT_SIZE(WorldMapMenuGameController, 0x5D0);
 } // namespace game::ui
+using WorldMapMenuGameController = game::ui::WorldMapMenuGameController;
 } // namespace RED4ext

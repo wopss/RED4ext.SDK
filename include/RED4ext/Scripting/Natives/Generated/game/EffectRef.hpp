@@ -15,7 +15,7 @@ namespace game {
 struct EffectRef
 {
     static constexpr const char* NAME = "gameEffectRef";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectRef";
 
     uint8_t unk00[0x8 - 0x0]; // 0
     Ref<game::EffectSet> set; // 08
@@ -23,4 +23,5 @@ struct EffectRef
 };
 RED4EXT_ASSERT_SIZE(EffectRef, 0x28);
 } // namespace game
+using EffectRef = game::EffectRef;
 } // namespace RED4ext

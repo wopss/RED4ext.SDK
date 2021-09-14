@@ -12,11 +12,12 @@ namespace AI {
 struct SquadIsTracked : AI::AIEvent
 {
     static constexpr const char* NAME = "AISquadIsTracked";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SquadIsTracked";
 
     bool isSquadTracked; // 50
     uint8_t unk51[0x58 - 0x51]; // 51
 };
 RED4EXT_ASSERT_SIZE(SquadIsTracked, 0x58);
 } // namespace AI
+using SquadIsTracked = AI::SquadIsTracked;
 } // namespace RED4ext

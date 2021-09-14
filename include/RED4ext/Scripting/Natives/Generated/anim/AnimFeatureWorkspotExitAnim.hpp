@@ -12,9 +12,10 @@ namespace anim {
 struct AnimFeatureWorkspotExitAnim : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeatureWorkspotExitAnim";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeatureWorkspotExitAnim";
 
 };
 RED4EXT_ASSERT_SIZE(AnimFeatureWorkspotExitAnim, 0x40);
 } // namespace anim
+using AnimFeatureWorkspotExitAnim = anim::AnimFeatureWorkspotExitAnim;
 } // namespace RED4ext

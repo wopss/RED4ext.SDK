@@ -15,11 +15,12 @@ namespace ent {
 struct AnimGraphResourceContainerEntry
 {
     static constexpr const char* NAME = "entAnimGraphResourceContainerEntry";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimGraphResourceContainerEntry";
 
     CName graphName; // 00
     Ref<anim::AnimGraph> animGraphResource; // 08
 };
 RED4EXT_ASSERT_SIZE(AnimGraphResourceContainerEntry, 0x20);
 } // namespace ent
+using AnimGraphResourceContainerEntry = ent::AnimGraphResourceContainerEntry;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace ink::anim {
 struct TextOffsetInterpolator : ink::anim::TextInterpolator
 {
     static constexpr const char* NAME = "inkanimTextOffsetInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimTextOffset";
 
 };
 RED4EXT_ASSERT_SIZE(TextOffsetInterpolator, 0x70);
 } // namespace ink::anim
+using inkAnimTextOffset = ink::anim::TextOffsetInterpolator;
 } // namespace RED4ext

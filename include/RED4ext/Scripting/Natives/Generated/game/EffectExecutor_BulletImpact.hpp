@@ -12,7 +12,7 @@ namespace game {
 struct EffectExecutor_BulletImpact : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_BulletImpact";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectExecutor_BulletImpact";
 
     bool isBackfaceImpact; // 48
     bool noAudio; // 49
@@ -21,4 +21,5 @@ struct EffectExecutor_BulletImpact : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_BulletImpact, 0x50);
 } // namespace game
+using EffectExecutor_BulletImpact = game::EffectExecutor_BulletImpact;
 } // namespace RED4ext

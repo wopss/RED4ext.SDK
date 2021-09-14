@@ -12,9 +12,10 @@ namespace AI {
 struct ICommandsManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIICommandsManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ICommandsManager";
 
 };
 RED4EXT_ASSERT_SIZE(ICommandsManager, 0x48);
 } // namespace AI
+using ICommandsManager = AI::ICommandsManager;
 } // namespace RED4ext

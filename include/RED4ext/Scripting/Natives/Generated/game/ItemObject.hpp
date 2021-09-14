@@ -13,7 +13,7 @@ namespace game {
 struct ItemObject : game::TimeDilatable
 {
     static constexpr const char* NAME = "gameItemObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ItemObject";
 
     uint8_t unk2C8[0x320 - 0x2C8]; // 2C8
     UpdateBucketEnum updateBucket; // 320
@@ -21,4 +21,5 @@ struct ItemObject : game::TimeDilatable
 };
 RED4EXT_ASSERT_SIZE(ItemObject, 0x328);
 } // namespace game
+using ItemObject = game::ItemObject;
 } // namespace RED4ext

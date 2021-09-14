@@ -12,7 +12,7 @@ namespace game::ui {
 struct DamageIndicatorPartLogicController : game::ui::BaseDirectionalIndicatorPartLogicController
 {
     static constexpr const char* NAME = "gameuiDamageIndicatorPartLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DamageIndicatorPartLogicController";
 
     uint8_t unkC0[0xDC - 0xC0]; // C0
     float maxDistanceForSharedIndicators; // DC
@@ -20,4 +20,5 @@ struct DamageIndicatorPartLogicController : game::ui::BaseDirectionalIndicatorPa
 };
 RED4EXT_ASSERT_SIZE(DamageIndicatorPartLogicController, 0xF0);
 } // namespace game::ui
+using DamageIndicatorPartLogicController = game::ui::DamageIndicatorPartLogicController;
 } // namespace RED4ext

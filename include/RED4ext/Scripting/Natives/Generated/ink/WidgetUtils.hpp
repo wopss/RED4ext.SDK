@@ -11,10 +11,11 @@ namespace ink {
 struct WidgetUtils
 {
     static constexpr const char* NAME = "inkWidgetUtils";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WidgetUtils";
 
     uint8_t unk00[0x1 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(WidgetUtils, 0x1);
 } // namespace ink
+using WidgetUtils = ink::WidgetUtils;
 } // namespace RED4ext

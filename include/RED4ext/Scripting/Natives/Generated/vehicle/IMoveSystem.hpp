@@ -12,9 +12,10 @@ namespace vehicle {
 struct IMoveSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "vehicleIMoveSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IMoveSystem";
 
 };
 RED4EXT_ASSERT_SIZE(IMoveSystem, 0x48);
 } // namespace vehicle
+using IMoveSystem = vehicle::IMoveSystem;
 } // namespace RED4ext

@@ -15,10 +15,11 @@ namespace game::events {
 struct DeathEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsDeathEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameDeathEvent";
 
     WeakHandle<game::Object> instigator; // 40
 };
 RED4EXT_ASSERT_SIZE(DeathEvent, 0x50);
 } // namespace game::events
+using gameDeathEvent = game::events::DeathEvent;
 } // namespace RED4ext

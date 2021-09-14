@@ -17,7 +17,7 @@ namespace game::events {
 struct CloseByEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsCloseByEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameCloseByEvent";
 
     Vector4 position; // 40
     Vector4 forward; // 50
@@ -26,4 +26,5 @@ struct CloseByEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CloseByEvent, 0x80);
 } // namespace game::events
+using gameCloseByEvent = game::events::CloseByEvent;
 } // namespace RED4ext

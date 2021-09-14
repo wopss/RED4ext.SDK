@@ -12,9 +12,10 @@ namespace game::data {
 struct AISquadAvoidLastFilter_Record : game::data::AITicketFilter_Record
 {
     static constexpr const char* NAME = "gamedataAISquadAvoidLastFilter_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AISquadAvoidLastFilter_Record";
 
 };
 RED4EXT_ASSERT_SIZE(AISquadAvoidLastFilter_Record, 0x60);
 } // namespace game::data
+using AISquadAvoidLastFilter_Record = game::data::AISquadAvoidLastFilter_Record;
 } // namespace RED4ext

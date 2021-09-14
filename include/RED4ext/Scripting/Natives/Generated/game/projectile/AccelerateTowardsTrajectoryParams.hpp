@@ -17,7 +17,7 @@ namespace game::projectile {
 struct AccelerateTowardsTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileAccelerateTowardsTrajectoryParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AccelerateTowardsTrajectoryParams";
 
     float accelerationSpeed; // 40
     float maxSpeed; // 44
@@ -34,4 +34,5 @@ struct AccelerateTowardsTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(AccelerateTowardsTrajectoryParams, 0xA0);
 } // namespace game::projectile
+using AccelerateTowardsTrajectoryParams = game::projectile::AccelerateTowardsTrajectoryParams;
 } // namespace RED4ext

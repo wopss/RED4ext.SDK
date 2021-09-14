@@ -12,9 +12,10 @@ namespace game::bb {
 struct ScriptID_EntityID : game::bb::ScriptID
 {
     static constexpr const char* NAME = "gamebbScriptID_EntityID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BlackboardID_EntityID";
 
 };
 RED4EXT_ASSERT_SIZE(ScriptID_EntityID, 0x10);
 } // namespace game::bb
+using BlackboardID_EntityID = game::bb::ScriptID_EntityID;
 } // namespace RED4ext

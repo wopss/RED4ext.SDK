@@ -14,7 +14,7 @@ namespace game::audio::events {
 struct VoicePlayedEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsVoicePlayedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VoicePlayedEvent";
 
     CName eventName; // 40
     audio::VoGruntType gruntType; // 48
@@ -23,4 +23,5 @@ struct VoicePlayedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VoicePlayedEvent, 0x50);
 } // namespace game::audio::events
+using VoicePlayedEvent = game::audio::events::VoicePlayedEvent;
 } // namespace RED4ext

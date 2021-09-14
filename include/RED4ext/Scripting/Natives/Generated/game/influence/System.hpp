@@ -12,10 +12,11 @@ namespace game::influence {
 struct System : game::influence::ISystem
 {
     static constexpr const char* NAME = "gameinfluenceSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InfluenceMapSystem";
 
     uint8_t unk48[0x1E0 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(System, 0x1E0);
 } // namespace game::influence
+using InfluenceMapSystem = game::influence::System;
 } // namespace RED4ext

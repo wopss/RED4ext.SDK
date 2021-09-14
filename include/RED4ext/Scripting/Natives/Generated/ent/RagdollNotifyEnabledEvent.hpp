@@ -13,10 +13,11 @@ namespace ent {
 struct RagdollNotifyEnabledEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollNotifyEnabledEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RagdollNotifyEnabledEvent";
 
     ent::EntityID instigator; // 40
 };
 RED4EXT_ASSERT_SIZE(RagdollNotifyEnabledEvent, 0x48);
 } // namespace ent
+using RagdollNotifyEnabledEvent = ent::RagdollNotifyEnabledEvent;
 } // namespace RED4ext

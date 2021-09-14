@@ -11,7 +11,7 @@ namespace game {
 struct ActionAnimationSlideParams
 {
     static constexpr const char* NAME = "gameActionAnimationSlideParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ActionAnimationSlideParams";
 
     float distance; // 00
     float directionAngle; // 04
@@ -34,4 +34,5 @@ struct ActionAnimationSlideParams
 };
 RED4EXT_ASSERT_SIZE(ActionAnimationSlideParams, 0x3C);
 } // namespace game
+using ActionAnimationSlideParams = game::ActionAnimationSlideParams;
 } // namespace RED4ext

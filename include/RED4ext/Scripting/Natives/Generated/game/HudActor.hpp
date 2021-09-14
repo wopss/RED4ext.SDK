@@ -12,9 +12,10 @@ namespace game {
 struct HudActor : IScriptable
 {
     static constexpr const char* NAME = "gameHudActor";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HUDActor";
 
 };
 RED4EXT_ASSERT_SIZE(HudActor, 0x40);
 } // namespace game
+using HUDActor = game::HudActor;
 } // namespace RED4ext

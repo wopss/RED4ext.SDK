@@ -18,7 +18,7 @@ namespace game::interactions::vis {
 struct ListChoiceData
 {
     static constexpr const char* NAME = "gameinteractionsvisListChoiceData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ListChoiceData";
 
     CString localizedName; // 00
     game::interactions::ChoiceTypeWrapper type; // 20
@@ -30,4 +30,5 @@ struct ListChoiceData
 };
 RED4EXT_ASSERT_SIZE(ListChoiceData, 0xF0);
 } // namespace game::interactions::vis
+using ListChoiceData = game::interactions::vis::ListChoiceData;
 } // namespace RED4ext

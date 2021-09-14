@@ -12,9 +12,10 @@ namespace ink {
 struct BasePanelWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkBasePanelWidgetReference";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkBasePanelRef";
 
 };
 RED4EXT_ASSERT_SIZE(BasePanelWidgetReference, 0x18);
 } // namespace ink
+using inkBasePanelRef = ink::BasePanelWidgetReference;
 } // namespace RED4ext

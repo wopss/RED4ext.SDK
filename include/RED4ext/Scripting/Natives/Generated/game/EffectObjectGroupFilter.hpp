@@ -12,9 +12,10 @@ namespace game {
 struct EffectObjectGroupFilter : game::EffectObjectFilter
 {
     static constexpr const char* NAME = "gameEffectObjectGroupFilter";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectObjectGroupFilter";
 
 };
 RED4EXT_ASSERT_SIZE(EffectObjectGroupFilter, 0x40);
 } // namespace game
+using EffectObjectGroupFilter = game::EffectObjectGroupFilter;
 } // namespace RED4ext

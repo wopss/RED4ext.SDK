@@ -13,11 +13,12 @@ namespace ent {
 struct AnimInputSetterVector : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimInputSetterVector";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimInputSetterVector";
 
     uint8_t unk48[0x50 - 0x48]; // 48
     Vector4 value; // 50
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetterVector, 0x60);
 } // namespace ent
+using AnimInputSetterVector = ent::AnimInputSetterVector;
 } // namespace RED4ext

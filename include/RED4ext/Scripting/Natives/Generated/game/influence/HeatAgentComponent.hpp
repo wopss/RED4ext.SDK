@@ -12,10 +12,11 @@ namespace game::influence {
 struct HeatAgentComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceHeatAgentComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HeatAgentComponent";
 
     uint8_t unk120[0x180 - 0x120]; // 120
 };
 RED4EXT_ASSERT_SIZE(HeatAgentComponent, 0x180);
 } // namespace game::influence
+using HeatAgentComponent = game::influence::HeatAgentComponent;
 } // namespace RED4ext

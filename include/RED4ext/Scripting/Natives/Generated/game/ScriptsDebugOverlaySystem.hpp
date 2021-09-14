@@ -12,10 +12,11 @@ namespace game {
 struct ScriptsDebugOverlaySystem : game::IScriptsDebugOverlaySystem
 {
     static constexpr const char* NAME = "gameScriptsDebugOverlaySystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScriptsDebugOverlaySystem";
 
     uint8_t unk48[0x70 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(ScriptsDebugOverlaySystem, 0x70);
 } // namespace game
+using ScriptsDebugOverlaySystem = game::ScriptsDebugOverlaySystem;
 } // namespace RED4ext

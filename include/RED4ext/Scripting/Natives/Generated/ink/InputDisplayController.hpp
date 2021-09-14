@@ -17,7 +17,7 @@ namespace ink {
 struct InputDisplayController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkInputDisplayController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkInputDisplayController";
 
     ink::WidgetReference iconRef; // 68
     ink::WidgetReference nameRef; // 80

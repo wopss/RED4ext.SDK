@@ -13,7 +13,7 @@ namespace ent {
 struct LookAtRemoveEvent : red::Event
 {
     static constexpr const char* NAME = "entLookAtRemoveEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LookAtRemoveEvent";
 
     anim::LookAtRef lookAtRef; // 40
     bool hasOutTransition; // 50
@@ -22,4 +22,5 @@ struct LookAtRemoveEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(LookAtRemoveEvent, 0x58);
 } // namespace ent
+using LookAtRemoveEvent = ent::LookAtRemoveEvent;
 } // namespace RED4ext

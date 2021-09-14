@@ -13,7 +13,7 @@ namespace game::ui {
 struct NarrationEvent
 {
     static constexpr const char* NAME = "gameuiNarrationEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NarrationEvent";
 
     CString text; // 00
     float durationSec; // 20
@@ -21,4 +21,5 @@ struct NarrationEvent
 };
 RED4EXT_ASSERT_SIZE(NarrationEvent, 0x28);
 } // namespace game::ui
+using NarrationEvent = game::ui::NarrationEvent;
 } // namespace RED4ext

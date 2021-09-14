@@ -16,7 +16,7 @@ namespace AI {
 struct ApproachingAreaResponseEvent : red::Event
 {
     static constexpr const char* NAME = "AIApproachingAreaResponseEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIApproachingAreaResponseEvent";
 
     WeakHandle<ent::Entity> sender; // 40
     WeakHandle<game::StaticAreaShapeComponent> areaComponent; // 50

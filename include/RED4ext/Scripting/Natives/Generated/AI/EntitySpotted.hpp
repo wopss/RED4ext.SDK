@@ -15,7 +15,7 @@ namespace AI {
 struct EntitySpotted : AI::AIEvent
 {
     static constexpr const char* NAME = "AIEntitySpotted";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EntitySpotted";
 
     WeakHandle<ent::Entity> spotter; // 50
     WeakHandle<ent::Entity> spotted; // 60
@@ -24,4 +24,5 @@ struct EntitySpotted : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(EntitySpotted, 0x78);
 } // namespace AI
+using EntitySpotted = AI::EntitySpotted;
 } // namespace RED4ext

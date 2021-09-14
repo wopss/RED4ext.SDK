@@ -16,7 +16,7 @@ namespace ink {
 struct PlatformSpecificImageController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkPlatformSpecificImageController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlatformSpecificImageController";
 
     RaRef<ink::TextureAtlas> textureAtlas; // 68
     RaRef<ink::TextureAtlas> textureAtlas_PS4; // 70
@@ -27,4 +27,5 @@ struct PlatformSpecificImageController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(PlatformSpecificImageController, 0x98);
 } // namespace ink
+using PlatformSpecificImageController = ink::PlatformSpecificImageController;
 } // namespace RED4ext

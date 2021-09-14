@@ -12,7 +12,7 @@ namespace game {
 struct PlayerSystem : game::IPlayerSystem
 {
     static constexpr const char* NAME = "gamePlayerSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gamePlayerSystem";
 
     uint8_t unk48[0x68 - 0x48]; // 48
 };

@@ -14,10 +14,11 @@ namespace AI::behavior {
 struct WorkspotList : IScriptable
 {
     static constexpr const char* NAME = "AIbehaviorWorkspotList";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WorkspotList";
 
     DynArray<NodeRef> spots; // 40
 };
 RED4EXT_ASSERT_SIZE(WorkspotList, 0x50);
 } // namespace AI::behavior
+using WorkspotList = AI::behavior::WorkspotList;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game::ui {
 struct BaseCharacterCreationController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiBaseCharacterCreationController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BaseCharacterCreationController";
 
 };
 RED4EXT_ASSERT_SIZE(BaseCharacterCreationController, 0xD0);
 } // namespace game::ui
+using BaseCharacterCreationController = game::ui::BaseCharacterCreationController;
 } // namespace RED4ext

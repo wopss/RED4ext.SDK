@@ -11,7 +11,7 @@ namespace game::state {
 struct MachineResultFloat
 {
     static constexpr const char* NAME = "gamestateMachineResultFloat";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StateResultFloat";
 
     bool valid; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
@@ -19,4 +19,5 @@ struct MachineResultFloat
 };
 RED4EXT_ASSERT_SIZE(MachineResultFloat, 0x8);
 } // namespace game::state
+using StateResultFloat = game::state::MachineResultFloat;
 } // namespace RED4ext

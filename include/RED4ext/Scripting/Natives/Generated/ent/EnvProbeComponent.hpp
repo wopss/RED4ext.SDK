@@ -19,7 +19,7 @@ namespace ent {
 struct EnvProbeComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entEnvProbeComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EnvProbeComponent";
 
     uint8_t unk140[0x150 - 0x140]; // 140
     RaRef<CReflectionProbeDataResource> probeDataRef; // 150
@@ -44,4 +44,5 @@ struct EnvProbeComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(EnvProbeComponent, 0x190);
 } // namespace ent
+using EnvProbeComponent = ent::EnvProbeComponent;
 } // namespace RED4ext

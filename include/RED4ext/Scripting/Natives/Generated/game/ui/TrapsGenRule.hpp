@@ -12,9 +12,10 @@ namespace game::ui {
 struct TrapsGenRule : game::ui::MinigameGenerationRule
 {
     static constexpr const char* NAME = "gameuiTrapsGenRule";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TrapsGenRule";
 
 };
 RED4EXT_ASSERT_SIZE(TrapsGenRule, 0x50);
 } // namespace game::ui
+using TrapsGenRule = game::ui::TrapsGenRule;
 } // namespace RED4ext

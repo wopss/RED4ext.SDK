@@ -15,10 +15,11 @@ namespace sense {
 struct SensorObjectComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "senseSensorObjectComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SensorObjectComponent";
 
     Handle<sense::SensorObject> sensorObject; // 120
 };
 RED4EXT_ASSERT_SIZE(SensorObjectComponent, 0x130);
 } // namespace sense
+using SensorObjectComponent = sense::SensorObjectComponent;
 } // namespace RED4ext

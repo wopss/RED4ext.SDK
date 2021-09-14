@@ -12,7 +12,7 @@ namespace game::projectile {
 struct SpiralParams : IScriptable
 {
     static constexpr const char* NAME = "gameprojectileSpiralParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SpiralControllerParams";
 
     bool enabled; // 40
     uint8_t unk41[0x44 - 0x41]; // 41
@@ -30,4 +30,5 @@ struct SpiralParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SpiralParams, 0x68);
 } // namespace game::projectile
+using SpiralControllerParams = game::projectile::SpiralParams;
 } // namespace RED4ext

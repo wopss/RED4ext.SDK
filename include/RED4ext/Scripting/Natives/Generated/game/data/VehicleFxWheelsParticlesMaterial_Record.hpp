@@ -12,10 +12,11 @@ namespace game::data {
 struct VehicleFxWheelsParticlesMaterial_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleFxWheelsParticlesMaterial_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VehicleFxWheelsParticlesMaterial_Record";
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(VehicleFxWheelsParticlesMaterial_Record, 0x58);
 } // namespace game::data
+using VehicleFxWheelsParticlesMaterial_Record = game::data::VehicleFxWheelsParticlesMaterial_Record;
 } // namespace RED4ext

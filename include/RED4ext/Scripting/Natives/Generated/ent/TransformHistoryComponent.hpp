@@ -12,7 +12,7 @@ namespace ent {
 struct TransformHistoryComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entTransformHistoryComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TransformHistoryComponent";
 
     uint8_t unk90[0xA8 - 0x90]; // 90
     float historyLength; // A8
@@ -21,4 +21,5 @@ struct TransformHistoryComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TransformHistoryComponent, 0xC0);
 } // namespace ent
+using TransformHistoryComponent = ent::TransformHistoryComponent;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game {
 struct IGodModeSystem : game::IReplicatedGameSystem
 {
     static constexpr const char* NAME = "gameIGodModeSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IGodModeSystem";
 
 };
 RED4EXT_ASSERT_SIZE(IGodModeSystem, 0x58);
 } // namespace game
+using IGodModeSystem = game::IGodModeSystem;
 } // namespace RED4ext

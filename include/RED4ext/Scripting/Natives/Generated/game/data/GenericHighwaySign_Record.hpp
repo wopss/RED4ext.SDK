@@ -12,10 +12,11 @@ namespace game::data {
 struct GenericHighwaySign_Record : game::data::BaseSign_Record
 {
     static constexpr const char* NAME = "gamedataGenericHighwaySign_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GenericHighwaySign_Record";
 
     uint8_t unk58[0x68 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(GenericHighwaySign_Record, 0x68);
 } // namespace game::data
+using GenericHighwaySign_Record = game::data::GenericHighwaySign_Record;
 } // namespace RED4ext

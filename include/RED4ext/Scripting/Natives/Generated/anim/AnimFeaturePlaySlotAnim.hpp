@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeaturePlaySlotAnim : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeaturePlaySlotAnim";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeaturePlaySlotAnim";
 
     CName slotName; // 40
     CName animationName; // 48
@@ -28,4 +28,5 @@ struct AnimFeaturePlaySlotAnim : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeaturePlaySlotAnim, 0x68);
 } // namespace anim
+using AnimFeaturePlaySlotAnim = anim::AnimFeaturePlaySlotAnim;
 } // namespace RED4ext

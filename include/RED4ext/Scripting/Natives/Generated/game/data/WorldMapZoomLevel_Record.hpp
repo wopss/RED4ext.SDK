@@ -12,10 +12,11 @@ namespace game::data {
 struct WorldMapZoomLevel_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWorldMapZoomLevel_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WorldMapZoomLevel_Record";
 
     uint8_t unk48[0x68 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(WorldMapZoomLevel_Record, 0x68);
 } // namespace game::data
+using WorldMapZoomLevel_Record = game::data::WorldMapZoomLevel_Record;
 } // namespace RED4ext

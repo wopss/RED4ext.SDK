@@ -11,10 +11,11 @@ namespace AI {
 struct UtilsCombatSpaceHelper
 {
     static constexpr const char* NAME = "AIUtilsCombatSpaceHelper";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CombatSpaceHelper";
 
     uint8_t unk00[0x1 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(UtilsCombatSpaceHelper, 0x1);
 } // namespace AI
+using CombatSpaceHelper = AI::UtilsCombatSpaceHelper;
 } // namespace RED4ext

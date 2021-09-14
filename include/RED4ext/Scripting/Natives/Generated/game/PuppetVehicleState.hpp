@@ -16,4 +16,5 @@ enum class PuppetVehicleState : uint32_t
     GunnerSlot = 5,
 };
 } // namespace game
+using PuppetVehicleState = game::PuppetVehicleState;
 } // namespace RED4ext

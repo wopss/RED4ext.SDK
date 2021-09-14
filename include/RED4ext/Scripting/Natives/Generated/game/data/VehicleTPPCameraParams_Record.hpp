@@ -12,10 +12,11 @@ namespace game::data {
 struct VehicleTPPCameraParams_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleTPPCameraParams_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VehicleTPPCameraParams_Record";
 
     uint8_t unk48[0xC8 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(VehicleTPPCameraParams_Record, 0xC8);
 } // namespace game::data
+using VehicleTPPCameraParams_Record = game::data::VehicleTPPCameraParams_Record;
 } // namespace RED4ext

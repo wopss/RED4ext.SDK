@@ -13,7 +13,7 @@ namespace game::input {
 struct ActionDisplayData
 {
     static constexpr const char* NAME = "gameinputActionDisplayData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ActionDisplayData";
 
     CName name; // 00
     bool isHold; // 08
@@ -23,4 +23,5 @@ struct ActionDisplayData
 };
 RED4EXT_ASSERT_SIZE(ActionDisplayData, 0x50);
 } // namespace game::input
+using ActionDisplayData = game::input::ActionDisplayData;
 } // namespace RED4ext

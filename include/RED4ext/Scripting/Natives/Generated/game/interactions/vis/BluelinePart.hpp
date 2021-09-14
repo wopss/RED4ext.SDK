@@ -13,7 +13,7 @@ namespace game::interactions::vis {
 struct BluelinePart : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsvisBluelinePart";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BluelinePart";
 
     bool passed; // 40
     uint8_t unk41[0x44 - 0x41]; // 41
@@ -22,4 +22,5 @@ struct BluelinePart : IScriptable
 };
 RED4EXT_ASSERT_SIZE(BluelinePart, 0x50);
 } // namespace game::interactions::vis
+using BluelinePart = game::interactions::vis::BluelinePart;
 } // namespace RED4ext

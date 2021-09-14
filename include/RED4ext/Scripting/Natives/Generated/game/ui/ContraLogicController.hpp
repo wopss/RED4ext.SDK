@@ -13,7 +13,7 @@ namespace game::ui {
 struct ContraLogicController : game::ui::SideScrollerMiniGameLogicControllerAdvanced
 {
     static constexpr const char* NAME = "gameuiContraLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ContraLogicController";
 
     float playerSpawnHeight; // 138
     uint8_t unk13C[0x140 - 0x13C]; // 13C
@@ -50,4 +50,5 @@ struct ContraLogicController : game::ui::SideScrollerMiniGameLogicControllerAdva
 };
 RED4EXT_ASSERT_SIZE(ContraLogicController, 0x240);
 } // namespace game::ui
+using ContraLogicController = game::ui::ContraLogicController;
 } // namespace RED4ext

@@ -13,10 +13,11 @@ namespace game {
 struct SceneTier3Data : game::SceneTierDataMotionConstrained
 {
     static constexpr const char* NAME = "gameSceneTier3Data";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SceneTier3Data";
 
     game::Tier3CameraSettings cameraSettings; // 68
 };
 RED4EXT_ASSERT_SIZE(SceneTier3Data, 0x80);
 } // namespace game
+using SceneTier3Data = game::SceneTier3Data;
 } // namespace RED4ext

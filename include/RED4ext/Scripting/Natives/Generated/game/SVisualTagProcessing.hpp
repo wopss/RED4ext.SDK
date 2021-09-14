@@ -12,7 +12,7 @@ namespace game {
 struct SVisualTagProcessing
 {
     static constexpr const char* NAME = "gameSVisualTagProcessing";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SVisualTagProcessing";
 
     game::data::EquipmentArea areaType; // 00
     bool showItem; // 04
@@ -20,4 +20,5 @@ struct SVisualTagProcessing
 };
 RED4EXT_ASSERT_SIZE(SVisualTagProcessing, 0x8);
 } // namespace game
+using SVisualTagProcessing = game::SVisualTagProcessing;
 } // namespace RED4ext

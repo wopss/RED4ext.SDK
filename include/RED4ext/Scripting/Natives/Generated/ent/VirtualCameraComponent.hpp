@@ -13,7 +13,7 @@ namespace ent {
 struct VirtualCameraComponent : ent::BaseCameraComponent
 {
     static constexpr const char* NAME = "entVirtualCameraComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VirtualCameraComponent";
 
     CName virtualCameraName; // 1D0
     uint32_t resolutionWidth; // 1D8
@@ -23,4 +23,5 @@ struct VirtualCameraComponent : ent::BaseCameraComponent
 };
 RED4EXT_ASSERT_SIZE(VirtualCameraComponent, 0x1F0);
 } // namespace ent
+using VirtualCameraComponent = ent::VirtualCameraComponent;
 } // namespace RED4ext

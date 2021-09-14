@@ -13,11 +13,12 @@ namespace game {
 struct GodModeEntityData
 {
     static constexpr const char* NAME = "gameGodModeEntityData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GodModeEntityData";
 
     DynArray<game::GodModeData> overrides; // 00
     DynArray<game::GodModeData> base; // 10
 };
 RED4EXT_ASSERT_SIZE(GodModeEntityData, 0x20);
 } // namespace game
+using GodModeEntityData = game::GodModeEntityData;
 } // namespace RED4ext

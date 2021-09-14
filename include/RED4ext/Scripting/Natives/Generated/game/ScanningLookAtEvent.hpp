@@ -13,7 +13,7 @@ namespace game {
 struct ScanningLookAtEvent : red::Event
 {
     static constexpr const char* NAME = "gameScanningLookAtEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScanningLookAtEvent";
 
     ent::EntityID ownerID; // 40
     bool state; // 48
@@ -21,4 +21,5 @@ struct ScanningLookAtEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ScanningLookAtEvent, 0x50);
 } // namespace game
+using ScanningLookAtEvent = game::ScanningLookAtEvent;
 } // namespace RED4ext

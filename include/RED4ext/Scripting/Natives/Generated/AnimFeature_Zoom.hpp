@@ -11,7 +11,7 @@ namespace RED4ext
 struct AnimFeature_Zoom : anim::AnimFeature
 {
     static constexpr const char* NAME = "AnimFeature_Zoom";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_Zoom";
 
     float finalZoomLevel; // 40
     float weaponZoomLevel; // 44

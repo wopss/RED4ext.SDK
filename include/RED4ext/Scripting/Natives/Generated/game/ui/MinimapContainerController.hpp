@@ -18,7 +18,7 @@ namespace game::ui {
 struct MinimapContainerController : game::ui::MappinsContainerController
 {
     static constexpr const char* NAME = "gameuiMinimapContainerController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MinimapContainerController";
 
     uint8_t unk2C0[0x350 - 0x2C0]; // 2C0
     float visionRadiusVehicle; // 350
@@ -40,4 +40,5 @@ struct MinimapContainerController : game::ui::MappinsContainerController
 };
 RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x478);
 } // namespace game::ui
+using MinimapContainerController = game::ui::MinimapContainerController;
 } // namespace RED4ext

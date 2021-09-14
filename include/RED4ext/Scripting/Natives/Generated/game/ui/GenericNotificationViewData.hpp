@@ -14,7 +14,7 @@ namespace game::ui {
 struct GenericNotificationViewData : IScriptable
 {
     static constexpr const char* NAME = "gameuiGenericNotificationViewData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GenericNotificationViewData";
 
     CString title; // 40
     CString text; // 60
@@ -23,4 +23,5 @@ struct GenericNotificationViewData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(GenericNotificationViewData, 0x90);
 } // namespace game::ui
+using GenericNotificationViewData = game::ui::GenericNotificationViewData;
 } // namespace RED4ext

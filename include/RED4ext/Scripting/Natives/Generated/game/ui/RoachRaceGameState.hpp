@@ -12,7 +12,7 @@ namespace game::ui {
 struct RoachRaceGameState : game::ui::MinigameState
 {
     static constexpr const char* NAME = "gameuiRoachRaceGameState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RoachRaceGameState";
 
     float invincibleTime; // 48
     float pointsBonusTime; // 4C
@@ -21,4 +21,5 @@ struct RoachRaceGameState : game::ui::MinigameState
 };
 RED4EXT_ASSERT_SIZE(RoachRaceGameState, 0x58);
 } // namespace game::ui
+using RoachRaceGameState = game::ui::RoachRaceGameState;
 } // namespace RED4ext

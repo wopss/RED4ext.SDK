@@ -21,7 +21,7 @@ namespace ink {
 struct ImageWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkImageWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkImage";
 
     RaRef<ink::TextureAtlas> textureAtlas; // 1F0
     CName texturePart; // 1F8
@@ -40,4 +40,5 @@ struct ImageWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(ImageWidget, 0x320);
 } // namespace ink
+using inkImage = ink::ImageWidget;
 } // namespace RED4ext

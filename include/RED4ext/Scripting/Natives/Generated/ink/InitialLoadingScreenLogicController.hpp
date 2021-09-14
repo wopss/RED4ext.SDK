@@ -15,7 +15,7 @@ namespace ink {
 struct InitialLoadingScreenLogicController : ink::ILoadingLogicController
 {
     static constexpr const char* NAME = "inkInitialLoadingScreenLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InitialLoadingScreenLogicController";
 
     CName afterSkipAnimation; // 180
     CName loadingFinishedAudioStopEvent; // 188
@@ -26,4 +26,5 @@ struct InitialLoadingScreenLogicController : ink::ILoadingLogicController
 };
 RED4EXT_ASSERT_SIZE(InitialLoadingScreenLogicController, 0x2A8);
 } // namespace ink
+using InitialLoadingScreenLogicController = ink::InitialLoadingScreenLogicController;
 } // namespace RED4ext

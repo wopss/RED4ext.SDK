@@ -12,9 +12,10 @@ namespace game {
 struct DeviceDynamicConnectionChange : red::Event
 {
     static constexpr const char* NAME = "gameDeviceDynamicConnectionChange";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DeviceDynamicConnectionChange";
 
 };
 RED4EXT_ASSERT_SIZE(DeviceDynamicConnectionChange, 0x40);
 } // namespace game
+using DeviceDynamicConnectionChange = game::DeviceDynamicConnectionChange;
 } // namespace RED4ext

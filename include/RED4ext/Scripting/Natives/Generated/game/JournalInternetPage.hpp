@@ -22,7 +22,7 @@ namespace game {
 struct JournalInternetPage : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalInternetPage";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalInternetPage";
 
     CString address; // 60
     DynArray<game::JournalFactNameValue> factsToSet; // 80
@@ -38,4 +38,5 @@ struct JournalInternetPage : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalInternetPage, 0xE8);
 } // namespace game
+using JournalInternetPage = game::JournalInternetPage;
 } // namespace RED4ext

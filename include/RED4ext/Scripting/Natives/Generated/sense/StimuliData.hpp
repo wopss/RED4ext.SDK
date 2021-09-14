@@ -12,9 +12,10 @@ namespace sense {
 struct StimuliData : IScriptable
 {
     static constexpr const char* NAME = "senseStimuliData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StimuliData";
 
 };
 RED4EXT_ASSERT_SIZE(StimuliData, 0x40);
 } // namespace sense
+using StimuliData = sense::StimuliData;
 } // namespace RED4ext

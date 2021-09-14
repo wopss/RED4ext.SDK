@@ -15,7 +15,7 @@ namespace ink {
 struct LinePatternWidget : ink::ImageWidget
 {
     static constexpr const char* NAME = "inkLinePatternWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkLinePattern";
 
     DynArray<ink::LineVertex> vertexList; // 320
     uint8_t unk330[0x334 - 0x330]; // 330
@@ -30,4 +30,5 @@ struct LinePatternWidget : ink::ImageWidget
 };
 RED4EXT_ASSERT_SIZE(LinePatternWidget, 0x350);
 } // namespace ink
+using inkLinePattern = ink::LinePatternWidget;
 } // namespace RED4ext

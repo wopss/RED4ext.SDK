@@ -12,10 +12,11 @@ namespace AI {
 struct CombatSquad : AI::SquadBase
 {
     static constexpr const char* NAME = "AICombatSquad";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CombatSquad";
 
     uint8_t unk148[0x270 - 0x148]; // 148
 };
 RED4EXT_ASSERT_SIZE(CombatSquad, 0x270);
 } // namespace AI
+using CombatSquad = AI::CombatSquad;
 } // namespace RED4ext

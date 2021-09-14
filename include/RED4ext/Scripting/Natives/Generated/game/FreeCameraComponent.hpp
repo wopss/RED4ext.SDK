@@ -12,10 +12,11 @@ namespace game {
 struct FreeCameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "gameFreeCameraComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FreeCameraComponent";
 
     uint8_t unk2A0[0x3F0 - 0x2A0]; // 2A0
 };
 RED4EXT_ASSERT_SIZE(FreeCameraComponent, 0x3F0);
 } // namespace game
+using FreeCameraComponent = game::FreeCameraComponent;
 } // namespace RED4ext

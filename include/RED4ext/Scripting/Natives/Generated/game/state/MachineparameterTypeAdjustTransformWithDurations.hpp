@@ -12,10 +12,11 @@ namespace game::state {
 struct MachineparameterTypeAdjustTransformWithDurations : game::state::MachineparameterTypeAdjustTransform
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeAdjustTransformWithDurations";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AdjustTransformWithDurations";
 
     uint8_t unk60[0x90 - 0x60]; // 60
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeAdjustTransformWithDurations, 0x90);
 } // namespace game::state
+using AdjustTransformWithDurations = game::state::MachineparameterTypeAdjustTransformWithDurations;
 } // namespace RED4ext

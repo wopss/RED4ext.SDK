@@ -14,7 +14,7 @@ namespace game {
 struct OnCarHitPlayer : red::Event
 {
     static constexpr const char* NAME = "gameOnCarHitPlayer";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "OnCarHitPlayer";
 
     Vector4 hitDirection; // 40
     ent::EntityID carId; // 50
@@ -22,4 +22,5 @@ struct OnCarHitPlayer : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnCarHitPlayer, 0x60);
 } // namespace game
+using OnCarHitPlayer = game::OnCarHitPlayer;
 } // namespace RED4ext

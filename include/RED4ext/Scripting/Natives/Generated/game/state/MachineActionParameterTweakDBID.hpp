@@ -13,7 +13,7 @@ namespace game::state {
 struct MachineActionParameterTweakDBID
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterTweakDBID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ActionParameterTweakDBID";
 
     uint8_t unk00[0x8 - 0x0]; // 0
     CName name; // 08
@@ -21,4 +21,5 @@ struct MachineActionParameterTweakDBID
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterTweakDBID, 0x18);
 } // namespace game::state
+using ActionParameterTweakDBID = game::state::MachineActionParameterTweakDBID;
 } // namespace RED4ext

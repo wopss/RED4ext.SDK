@@ -12,7 +12,7 @@ namespace game::influence {
 struct HeatAgent : game::influence::IAgent
 {
     static constexpr const char* NAME = "gameinfluenceHeatAgent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HeatAgent";
 
     uint8_t unk08[0x4C - 0x8]; // 8
     float timeToNextUpdate; // 4C
@@ -22,4 +22,5 @@ struct HeatAgent : game::influence::IAgent
 };
 RED4EXT_ASSERT_SIZE(HeatAgent, 0x60);
 } // namespace game::influence
+using HeatAgent = game::influence::HeatAgent;
 } // namespace RED4ext

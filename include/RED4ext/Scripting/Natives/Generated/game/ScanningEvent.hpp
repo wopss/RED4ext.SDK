@@ -13,11 +13,12 @@ namespace game {
 struct ScanningEvent : red::Event
 {
     static constexpr const char* NAME = "gameScanningEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScanningEvent";
 
     game::ScanningState state; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(ScanningEvent, 0x48);
 } // namespace game
+using ScanningEvent = game::ScanningEvent;
 } // namespace RED4ext

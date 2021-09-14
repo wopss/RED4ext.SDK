@@ -12,10 +12,11 @@ namespace scn {
 struct ScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "scnScriptInterface";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SceneSystemInterface";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ScriptInterface, 0x48);
 } // namespace scn
+using SceneSystemInterface = scn::ScriptInterface;
 } // namespace RED4ext

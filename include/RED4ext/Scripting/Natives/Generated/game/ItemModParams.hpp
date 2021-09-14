@@ -12,7 +12,7 @@ namespace game {
 struct ItemModParams
 {
     static constexpr const char* NAME = "gameItemModParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ItemModParams";
 
     uint8_t unk00[0x8 - 0x0]; // 0
     ItemID itemID; // 08
@@ -21,4 +21,5 @@ struct ItemModParams
 };
 RED4EXT_ASSERT_SIZE(ItemModParams, 0x40);
 } // namespace game
+using ItemModParams = game::ItemModParams;
 } // namespace RED4ext

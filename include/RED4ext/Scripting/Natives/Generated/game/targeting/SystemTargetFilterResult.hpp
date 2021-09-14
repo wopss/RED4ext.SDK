@@ -16,11 +16,12 @@ namespace game::targeting {
 struct SystemTargetFilterResult : IScriptable
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilterResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetFilterResult";
 
     ent::EntityID hitEntId; // 40
     WeakHandle<ent::IComponent> hitComponent; // 48
 };
 RED4EXT_ASSERT_SIZE(SystemTargetFilterResult, 0x58);
 } // namespace game::targeting
+using TargetFilterResult = game::targeting::SystemTargetFilterResult;
 } // namespace RED4ext

@@ -13,11 +13,12 @@ namespace game::events {
 struct StanceStateChangeEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsStanceStateChangeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StanceStateChangeEvent";
 
     game::data::NPCStanceState state; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(StanceStateChangeEvent, 0x48);
 } // namespace game::events
+using StanceStateChangeEvent = game::events::StanceStateChangeEvent;
 } // namespace RED4ext

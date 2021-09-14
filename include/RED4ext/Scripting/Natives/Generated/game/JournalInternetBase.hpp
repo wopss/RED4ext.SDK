@@ -15,7 +15,7 @@ namespace game {
 struct JournalInternetBase : IScriptable
 {
     static constexpr const char* NAME = "gameJournalInternetBase";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalInternetBase";
 
     CName name; // 40
     CString linkAddress; // 48
@@ -24,4 +24,5 @@ struct JournalInternetBase : IScriptable
 };
 RED4EXT_ASSERT_SIZE(JournalInternetBase, 0x70);
 } // namespace game
+using JournalInternetBase = game::JournalInternetBase;
 } // namespace RED4ext

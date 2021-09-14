@@ -14,7 +14,7 @@ namespace game::influence {
 struct BumpComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceBumpComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BumpComponent";
 
     uint8_t unk120[0x3D0 - 0x120]; // 120
     bool autoPlayBumpAnimation; // 3D0
@@ -30,4 +30,5 @@ struct BumpComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(BumpComponent, 0x400);
 } // namespace game::influence
+using BumpComponent = game::influence::BumpComponent;
 } // namespace RED4ext

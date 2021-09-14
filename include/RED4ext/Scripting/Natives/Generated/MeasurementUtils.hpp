@@ -10,7 +10,7 @@ namespace RED4ext
 struct MeasurementUtils
 {
     static constexpr const char* NAME = "MeasurementUtils";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MeasurementUtils";
 
     uint8_t unk00[0x1 - 0x0]; // 0
 };

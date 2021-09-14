@@ -14,10 +14,11 @@ namespace AI::behavior {
 struct UsedSpotTokensList : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorUsedSpotTokensList";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UsedSpotTokensList";
 
     DynArray<AI::SpotUsageToken> tokens; // 30
 };
 RED4EXT_ASSERT_SIZE(UsedSpotTokensList, 0x40);
 } // namespace AI::behavior
+using UsedSpotTokensList = AI::behavior::UsedSpotTokensList;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace text {
 struct TextParameterSet : IScriptable
 {
     static constexpr const char* NAME = "textTextParameterSet";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkTextParams";
 
     uint8_t unk40[0x8A8 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(TextParameterSet, 0x8A8);
 } // namespace text
+using inkTextParams = text::TextParameterSet;
 } // namespace RED4ext

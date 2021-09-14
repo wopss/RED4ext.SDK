@@ -18,7 +18,7 @@ namespace ent {
 struct AnimationControllerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entAnimationControllerComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimationControllerComponent";
 
     uint8_t unk90[0xF8 - 0x90]; // 90
     Ref<anim::ActionAnimDatabase> actionAnimDatabaseRef; // F8
@@ -28,4 +28,5 @@ struct AnimationControllerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(AnimationControllerComponent, 0x1D0);
 } // namespace ent
+using AnimationControllerComponent = ent::AnimationControllerComponent;
 } // namespace RED4ext

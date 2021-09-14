@@ -14,7 +14,7 @@ namespace sense {
 struct VisibleObject : IScriptable
 {
     static constexpr const char* NAME = "senseVisibleObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VisibleObject";
 
     uint8_t unk40[0x68 - 0x40]; // 40
     CName description; // 68
@@ -26,4 +26,5 @@ struct VisibleObject : IScriptable
 };
 RED4EXT_ASSERT_SIZE(VisibleObject, 0xC8);
 } // namespace sense
+using VisibleObject = sense::VisibleObject;
 } // namespace RED4ext

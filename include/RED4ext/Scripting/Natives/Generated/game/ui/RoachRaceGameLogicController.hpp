@@ -17,7 +17,7 @@ namespace game::ui {
 struct RoachRaceGameLogicController : game::ui::SideScrollerMiniGameLogicController
 {
     static constexpr const char* NAME = "gameuiRoachRaceGameLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RoachRaceLogicController";
 
     uint8_t unk118[0x120 - 0x118]; // 118
     CName startAnimation; // 120
@@ -39,4 +39,5 @@ struct RoachRaceGameLogicController : game::ui::SideScrollerMiniGameLogicControl
 };
 RED4EXT_ASSERT_SIZE(RoachRaceGameLogicController, 0x1C0);
 } // namespace game::ui
+using RoachRaceLogicController = game::ui::RoachRaceGameLogicController;
 } // namespace RED4ext

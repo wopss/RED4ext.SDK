@@ -18,7 +18,7 @@ namespace game::state {
 struct MachineScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineScriptInterface";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StateScriptInterface";
 
     WeakHandle<game::Object> owner; // 40
     ent::EntityID ownerEntityID; // 50
@@ -29,4 +29,5 @@ struct MachineScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineScriptInterface, 0x90);
 } // namespace game::state
+using StateScriptInterface = game::state::MachineScriptInterface;
 } // namespace RED4ext

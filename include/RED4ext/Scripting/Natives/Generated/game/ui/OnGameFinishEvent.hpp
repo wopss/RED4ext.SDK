@@ -16,11 +16,12 @@ namespace game::ui {
 struct OnGameFinishEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiOnGameFinishEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GameFinishEvent";
 
     CName gameName; // 40
     Handle<game::ui::MinigameState> gameState; // 48
 };
 RED4EXT_ASSERT_SIZE(OnGameFinishEvent, 0x58);
 } // namespace game::ui
+using GameFinishEvent = game::ui::OnGameFinishEvent;
 } // namespace RED4ext

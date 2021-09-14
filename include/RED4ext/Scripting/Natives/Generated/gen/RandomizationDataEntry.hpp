@@ -14,7 +14,7 @@ namespace gen {
 struct RandomizationDataEntry
 {
     static constexpr const char* NAME = "genRandomizationDataEntry";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RandomizationDataEntry";
 
     CString id; // 00
     CName templateName; // 20
@@ -24,4 +24,5 @@ struct RandomizationDataEntry
 };
 RED4EXT_ASSERT_SIZE(RandomizationDataEntry, 0x50);
 } // namespace gen
+using RandomizationDataEntry = gen::RandomizationDataEntry;
 } // namespace RED4ext

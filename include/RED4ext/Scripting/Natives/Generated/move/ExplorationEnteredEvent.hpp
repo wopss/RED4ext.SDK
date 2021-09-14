@@ -13,11 +13,12 @@ namespace move {
 struct ExplorationEnteredEvent : red::Event
 {
     static constexpr const char* NAME = "moveExplorationEnteredEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ExplorationEnteredEvent";
 
     move::ExplorationType type; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(ExplorationEnteredEvent, 0x48);
 } // namespace move
+using ExplorationEnteredEvent = move::ExplorationEnteredEvent;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace game {
 struct PlayerCoverStatusChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gamePlayerCoverStatusChangedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlayerCoverStatusChangedEvent";
 
     game::PlayerCoverDirection direction; // 40
     bool fullyBehindCover; // 44
@@ -21,4 +21,5 @@ struct PlayerCoverStatusChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PlayerCoverStatusChangedEvent, 0x48);
 } // namespace game
+using PlayerCoverStatusChangedEvent = game::PlayerCoverStatusChangedEvent;
 } // namespace RED4ext

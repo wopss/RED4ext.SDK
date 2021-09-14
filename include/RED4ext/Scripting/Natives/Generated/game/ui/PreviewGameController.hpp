@@ -14,7 +14,7 @@ namespace game::ui {
 struct PreviewGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiPreviewGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkPreviewGameController";
 
     CName sceneName; // D0
     NodeRef cameraRef; // D8
@@ -24,4 +24,5 @@ struct PreviewGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(PreviewGameController, 0xF8);
 } // namespace game::ui
+using inkPreviewGameController = game::ui::PreviewGameController;
 } // namespace RED4ext

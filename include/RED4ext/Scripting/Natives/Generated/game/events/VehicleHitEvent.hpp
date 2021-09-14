@@ -13,11 +13,12 @@ namespace game::events {
 struct VehicleHitEvent : game::events::HitEvent
 {
     static constexpr const char* NAME = "gameeventsVehicleHitEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameVehicleHitEvent";
 
     Vector4 vehicleVelocity; // E0
     Vector4 preyVelocity; // F0
 };
 RED4EXT_ASSERT_SIZE(VehicleHitEvent, 0x100);
 } // namespace game::events
+using gameVehicleHitEvent = game::events::VehicleHitEvent;
 } // namespace RED4ext

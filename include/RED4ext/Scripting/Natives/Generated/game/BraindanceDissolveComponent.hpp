@@ -12,7 +12,7 @@ namespace game {
 struct BraindanceDissolveComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameBraindanceDissolveComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BraindanceDissolveComponent";
 
     uint8_t unk90[0xC0 - 0x90]; // 90
     float dissolveRadius; // C0
@@ -20,4 +20,5 @@ struct BraindanceDissolveComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(BraindanceDissolveComponent, 0xC8);
 } // namespace game
+using BraindanceDissolveComponent = game::BraindanceDissolveComponent;
 } // namespace RED4ext

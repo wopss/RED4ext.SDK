@@ -16,10 +16,11 @@ namespace game {
 struct DamagePack : IScriptable
 {
     static constexpr const char* NAME = "gameDamagePack";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DamagePack";
 
     DynArray<Handle<game::Damage>> damageList; // 40
 };
 RED4EXT_ASSERT_SIZE(DamagePack, 0x50);
 } // namespace game
+using DamagePack = game::DamagePack;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace game {
 struct StatPoolPrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameStatPoolPrereqState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatPoolPrereqState";
 
     uint8_t unkC0[0xD0 - 0xC0]; // C0
 };
 RED4EXT_ASSERT_SIZE(StatPoolPrereqState, 0xD0);
 } // namespace game
+using StatPoolPrereqState = game::StatPoolPrereqState;
 } // namespace RED4ext

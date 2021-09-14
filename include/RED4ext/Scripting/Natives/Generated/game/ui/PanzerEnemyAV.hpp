@@ -12,7 +12,7 @@ namespace game::ui {
 struct PanzerEnemyAV : game::ui::PanzerEnemy
 {
     static constexpr const char* NAME = "gameuiPanzerEnemyAV";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PanzerEnemyAV";
 
     float speed; // 128
     uint32_t shotsAmount; // 12C
@@ -22,4 +22,5 @@ struct PanzerEnemyAV : game::ui::PanzerEnemy
 };
 RED4EXT_ASSERT_SIZE(PanzerEnemyAV, 0x140);
 } // namespace game::ui
+using PanzerEnemyAV = game::ui::PanzerEnemyAV;
 } // namespace RED4ext

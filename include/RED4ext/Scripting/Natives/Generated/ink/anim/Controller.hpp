@@ -12,10 +12,11 @@ namespace ink::anim {
 struct Controller : IScriptable
 {
     static constexpr const char* NAME = "inkanimController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimController";
 
     uint8_t unk40[0x88 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(Controller, 0x88);
 } // namespace ink::anim
+using inkAnimController = ink::anim::Controller;
 } // namespace RED4ext

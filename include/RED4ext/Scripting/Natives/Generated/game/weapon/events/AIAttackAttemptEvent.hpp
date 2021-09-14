@@ -16,7 +16,7 @@ namespace game::weapon::events {
 struct AIAttackAttemptEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsAIAttackAttemptEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIAttackAttemptEvent";
 
     WeakHandle<game::Object> instigator; // 40
     WeakHandle<game::Object> target; // 50
@@ -28,4 +28,5 @@ struct AIAttackAttemptEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AIAttackAttemptEvent, 0x70);
 } // namespace game::weapon::events
+using AIAttackAttemptEvent = game::weapon::events::AIAttackAttemptEvent;
 } // namespace RED4ext

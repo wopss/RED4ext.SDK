@@ -12,9 +12,10 @@ namespace game::mounting {
 struct IMountingFacility : game::IGameSystem
 {
     static constexpr const char* NAME = "gamemountingIMountingFacility";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IMountingFacility";
 
 };
 RED4EXT_ASSERT_SIZE(IMountingFacility, 0x48);
 } // namespace game::mounting
+using IMountingFacility = game::mounting::IMountingFacility;
 } // namespace RED4ext

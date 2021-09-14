@@ -15,7 +15,7 @@ namespace game::ui {
 struct InputHintManagerGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiInputHintManagerGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InputHintManagerGameController";
 
     uint8_t unkD0[0x1D0 - 0xD0]; // D0
     ink::CompoundWidgetReference baseGroupContainer; // 1D0
@@ -32,4 +32,5 @@ struct InputHintManagerGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(InputHintManagerGameController, 0x258);
 } // namespace game::ui
+using InputHintManagerGameController = game::ui::InputHintManagerGameController;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace ink {
 struct VariantDataViewWrapper : ink::BaseVariantDataSource
 {
     static constexpr const char* NAME = "inkVariantDataViewWrapper";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VariantDataView";
 
 };
 RED4EXT_ASSERT_SIZE(VariantDataViewWrapper, 0x48);
 } // namespace ink
+using VariantDataView = ink::VariantDataViewWrapper;
 } // namespace RED4ext

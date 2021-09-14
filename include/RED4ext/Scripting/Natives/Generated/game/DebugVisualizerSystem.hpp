@@ -12,10 +12,11 @@ namespace game {
 struct DebugVisualizerSystem : game::IDebugVisualizerSystem
 {
     static constexpr const char* NAME = "gameDebugVisualizerSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DebugVisualizerSystem";
 
     uint8_t unk48[0x60 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(DebugVisualizerSystem, 0x60);
 } // namespace game
+using DebugVisualizerSystem = game::DebugVisualizerSystem;
 } // namespace RED4ext

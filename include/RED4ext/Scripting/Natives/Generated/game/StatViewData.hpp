@@ -13,7 +13,7 @@ namespace game {
 struct StatViewData
 {
     static constexpr const char* NAME = "gameStatViewData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatViewData";
 
     game::data::StatType type; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -34,4 +34,5 @@ struct StatViewData
 };
 RED4EXT_ASSERT_SIZE(StatViewData, 0x50);
 } // namespace game
+using StatViewData = game::StatViewData;
 } // namespace RED4ext

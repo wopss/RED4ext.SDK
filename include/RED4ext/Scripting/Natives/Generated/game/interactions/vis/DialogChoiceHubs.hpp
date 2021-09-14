@@ -13,10 +13,11 @@ namespace game::interactions::vis {
 struct DialogChoiceHubs
 {
     static constexpr const char* NAME = "gameinteractionsvisDialogChoiceHubs";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DialogChoiceHubs";
 
     DynArray<game::interactions::vis::ListChoiceHubData> choiceHubs; // 00
 };
 RED4EXT_ASSERT_SIZE(DialogChoiceHubs, 0x10);
 } // namespace game::interactions::vis
+using DialogChoiceHubs = game::interactions::vis::DialogChoiceHubs;
 } // namespace RED4ext

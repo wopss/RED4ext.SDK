@@ -12,10 +12,11 @@ namespace game::mappins {
 struct FastTravelMappin : game::mappins::RuntimeMappin
 {
     static constexpr const char* NAME = "gamemappinsFastTravelMappin";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FastTravelMappin";
 
     uint8_t unk108[0x138 - 0x108]; // 108
 };
 RED4EXT_ASSERT_SIZE(FastTravelMappin, 0x138);
 } // namespace game::mappins
+using FastTravelMappin = game::mappins::FastTravelMappin;
 } // namespace RED4ext

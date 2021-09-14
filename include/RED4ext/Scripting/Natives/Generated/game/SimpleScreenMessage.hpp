@@ -12,7 +12,7 @@ namespace game {
 struct SimpleScreenMessage
 {
     static constexpr const char* NAME = "gameSimpleScreenMessage";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SimpleScreenMessage";
 
     bool isShown; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
@@ -23,4 +23,5 @@ struct SimpleScreenMessage
 };
 RED4EXT_ASSERT_SIZE(SimpleScreenMessage, 0x30);
 } // namespace game
+using SimpleScreenMessage = game::SimpleScreenMessage;
 } // namespace RED4ext

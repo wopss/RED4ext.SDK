@@ -15,10 +15,11 @@ namespace game::targeting {
 struct SystemEntityUntargetedEvent : red::Event
 {
     static constexpr const char* NAME = "gametargetingSystemEntityUntargetedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EntityUntargetedEvent";
 
     WeakHandle<ent::Entity> targetingEntity; // 40
 };
 RED4EXT_ASSERT_SIZE(SystemEntityUntargetedEvent, 0x50);
 } // namespace game::targeting
+using EntityUntargetedEvent = game::targeting::SystemEntityUntargetedEvent;
 } // namespace RED4ext

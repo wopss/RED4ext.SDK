@@ -12,7 +12,7 @@ namespace game::ui {
 struct PinInfo
 {
     static constexpr const char* NAME = "gameuiPinInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PinInfo";
 
     bool shouldShow; // 00
     bool showFloorAbove; // 01
@@ -25,4 +25,5 @@ struct PinInfo
 };
 RED4EXT_ASSERT_SIZE(PinInfo, 0x30);
 } // namespace game::ui
+using PinInfo = game::ui::PinInfo;
 } // namespace RED4ext

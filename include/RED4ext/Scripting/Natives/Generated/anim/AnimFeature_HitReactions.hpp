@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_HitReactions : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_HitReactions";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_HitReactions";
 
     Vector4 hitDirection; // 40
     float hitIntensity; // 50
@@ -23,4 +23,5 @@ struct AnimFeature_HitReactions : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_HitReactions, 0x60);
 } // namespace anim
+using AnimFeature_HitReactions = anim::AnimFeature_HitReactions;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game {
 struct ItemsMeshesLoaded : red::Event
 {
     static constexpr const char* NAME = "gameItemsMeshesLoaded";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameItemsMeshesLoaded";
 
     uint8_t unk40[0x98 - 0x40]; // 40
 };

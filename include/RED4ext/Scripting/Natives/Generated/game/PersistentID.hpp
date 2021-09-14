@@ -12,11 +12,12 @@ namespace game {
 struct PersistentID
 {
     static constexpr const char* NAME = "gamePersistentID";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PersistentID";
 
     uint64_t entityHash; // 00
     CName componentName; // 08
 };
 RED4EXT_ASSERT_SIZE(PersistentID, 0x10);
 } // namespace game
+using PersistentID = game::PersistentID;
 } // namespace RED4ext

@@ -14,10 +14,11 @@ namespace game::ui {
 struct BinkResource
 {
     static constexpr const char* NAME = "gameuiBinkResource";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BinkResource";
 
     RaRef<Bink> video; // 00
 };
 RED4EXT_ASSERT_SIZE(BinkResource, 0x8);
 } // namespace game::ui
+using BinkResource = game::ui::BinkResource;
 } // namespace RED4ext

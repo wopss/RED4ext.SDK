@@ -12,10 +12,11 @@ namespace game {
 struct IAttack : IScriptable
 {
     static constexpr const char* NAME = "gameIAttack";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IAttack";
 
     uint8_t unk40[0xD8 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(IAttack, 0xD8);
 } // namespace game
+using IAttack = game::IAttack;
 } // namespace RED4ext

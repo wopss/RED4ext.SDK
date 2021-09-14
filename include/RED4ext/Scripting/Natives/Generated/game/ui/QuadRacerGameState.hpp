@@ -12,7 +12,7 @@ namespace game::ui {
 struct QuadRacerGameState : game::ui::MinigameState
 {
     static constexpr const char* NAME = "gameuiQuadRacerGameState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "QuadRacerGameState";
 
     float speed; // 48
     float maxSpeed; // 4C
@@ -26,4 +26,5 @@ struct QuadRacerGameState : game::ui::MinigameState
 };
 RED4EXT_ASSERT_SIZE(QuadRacerGameState, 0x68);
 } // namespace game::ui
+using QuadRacerGameState = game::ui::QuadRacerGameState;
 } // namespace RED4ext

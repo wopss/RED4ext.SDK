@@ -23,7 +23,7 @@ namespace ink {
 struct ShapeWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkShapeWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkShape";
 
     Ref<ink::ShapeCollectionResource> shapeResource; // 220
     CName shapeName; // 238
@@ -46,4 +46,5 @@ struct ShapeWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(ShapeWidget, 0x360);
 } // namespace ink
+using inkShape = ink::ShapeWidget;
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace quest {
 struct MappinVariantChangedEvent : red::Event
 {
     static constexpr const char* NAME = "questMappinVariantChangedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MappinVariantChangedEvent";
 
     WeakHandle<game::JournalEntry> entry; // 40
     game::data::MappinPhase phase; // 50
@@ -25,4 +25,5 @@ struct MappinVariantChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MappinVariantChangedEvent, 0x58);
 } // namespace quest
+using MappinVariantChangedEvent = quest::MappinVariantChangedEvent;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct CombinedStatModifier : game::StatModifierBase
     static constexpr const char* NAME = "gameCombinedStatModifier";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk10[0x20 - 0x10]; // 10
+    uint8_t unk18[0x28 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CombinedStatModifier, 0x20);
+RED4EXT_ASSERT_SIZE(CombinedStatModifier, 0x28);
 } // namespace game
 } // namespace RED4ext

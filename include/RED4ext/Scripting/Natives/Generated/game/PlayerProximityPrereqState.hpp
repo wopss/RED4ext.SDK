@@ -12,10 +12,11 @@ namespace game {
 struct PlayerProximityPrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gamePlayerProximityPrereqState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlayerProximityPrereqState";
 
     uint8_t unkC0[0xD0 - 0xC0]; // C0
 };
 RED4EXT_ASSERT_SIZE(PlayerProximityPrereqState, 0xD0);
 } // namespace game
+using PlayerProximityPrereqState = game::PlayerProximityPrereqState;
 } // namespace RED4ext

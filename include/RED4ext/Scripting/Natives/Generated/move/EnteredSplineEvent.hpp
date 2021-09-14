@@ -12,11 +12,12 @@ namespace move {
 struct EnteredSplineEvent : red::Event
 {
     static constexpr const char* NAME = "moveEnteredSplineEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EnteredSplineEvent";
 
     bool useDoors; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };
 RED4EXT_ASSERT_SIZE(EnteredSplineEvent, 0x48);
 } // namespace move
+using EnteredSplineEvent = move::EnteredSplineEvent;
 } // namespace RED4ext

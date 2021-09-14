@@ -12,9 +12,10 @@ namespace game::data {
 struct Stop_Record : game::data::ProjectileCollision_Record
 {
     static constexpr const char* NAME = "gamedataStop_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "Stop_Record";
 
 };
 RED4EXT_ASSERT_SIZE(Stop_Record, 0x58);
 } // namespace game::data
+using Stop_Record = game::data::Stop_Record;
 } // namespace RED4ext

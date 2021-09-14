@@ -12,7 +12,7 @@ namespace game::aim {
 struct AssistAimRequest
 {
     static constexpr const char* NAME = "gameaimAssistAimRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AimRequest";
 
     float duration; // 00
     bool adjustPitch; // 04
@@ -42,4 +42,5 @@ struct AssistAimRequest
 };
 RED4EXT_ASSERT_SIZE(AssistAimRequest, 0xE0);
 } // namespace game::aim
+using AimRequest = game::aim::AssistAimRequest;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace anim {
 struct LookAtPartRequest
 {
     static constexpr const char* NAME = "animLookAtPartRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LookAtPartRequest";
 
     CName partName; // 00
     float weight; // 08
@@ -22,4 +22,5 @@ struct LookAtPartRequest
 };
 RED4EXT_ASSERT_SIZE(LookAtPartRequest, 0x18);
 } // namespace anim
+using LookAtPartRequest = anim::LookAtPartRequest;
 } // namespace RED4ext

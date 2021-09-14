@@ -12,10 +12,11 @@ namespace game {
 struct PlayerMappinComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gamePlayerMappinComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlayerMappinComponent";
 
     uint8_t unk90[0xA8 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(PlayerMappinComponent, 0xA8);
 } // namespace game
+using PlayerMappinComponent = game::PlayerMappinComponent;
 } // namespace RED4ext

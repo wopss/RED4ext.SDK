@@ -11,10 +11,11 @@ namespace game {
 struct EffectPreloadScriptContext
 {
     static constexpr const char* NAME = "gameEffectPreloadScriptContext";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectPreloadScriptContext";
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(EffectPreloadScriptContext, 0x8);
 } // namespace game
+using EffectPreloadScriptContext = game::EffectPreloadScriptContext;
 } // namespace RED4ext

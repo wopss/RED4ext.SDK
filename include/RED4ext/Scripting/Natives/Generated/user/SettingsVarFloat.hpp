@@ -12,9 +12,10 @@ namespace user {
 struct SettingsVarFloat : user::SettingsVar
 {
     static constexpr const char* NAME = "userSettingsVarFloat";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ConfigVarFloat";
 
 };
 RED4EXT_ASSERT_SIZE(SettingsVarFloat, 0x48);
 } // namespace user
+using ConfigVarFloat = user::SettingsVarFloat;
 } // namespace RED4ext

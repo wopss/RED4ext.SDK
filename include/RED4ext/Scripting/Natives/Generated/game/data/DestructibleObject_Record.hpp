@@ -12,9 +12,10 @@ namespace game::data {
 struct DestructibleObject_Record : game::data::BaseObject_Record
 {
     static constexpr const char* NAME = "gamedataDestructibleObject_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DestructibleObject_Record";
 
 };
 RED4EXT_ASSERT_SIZE(DestructibleObject_Record, 0x60);
 } // namespace game::data
+using DestructibleObject_Record = game::data::DestructibleObject_Record;
 } // namespace RED4ext

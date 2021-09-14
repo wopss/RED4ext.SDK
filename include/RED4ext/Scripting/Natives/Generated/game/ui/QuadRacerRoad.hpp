@@ -15,7 +15,7 @@ namespace game::ui {
 struct QuadRacerRoad : game::ui::SideScrollerMiniGameDynObjectLogic
 {
     static constexpr const char* NAME = "gameuiQuadRacerRoad";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "QuadRacerRoad";
 
     ink::QuadWidgetReference roadQuad; // 80
     ink::QuadWidgetReference leftBackground; // 98
@@ -25,4 +25,5 @@ struct QuadRacerRoad : game::ui::SideScrollerMiniGameDynObjectLogic
 };
 RED4EXT_ASSERT_SIZE(QuadRacerRoad, 0xE8);
 } // namespace game::ui
+using QuadRacerRoad = game::ui::QuadRacerRoad;
 } // namespace RED4ext

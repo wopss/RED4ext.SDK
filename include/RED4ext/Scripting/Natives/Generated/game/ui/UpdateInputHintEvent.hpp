@@ -14,7 +14,7 @@ namespace game::ui {
 struct UpdateInputHintEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiUpdateInputHintEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UpdateInputHintEvent";
 
     game::ui::InputHintData data; // 40
     bool show; // 90
@@ -23,4 +23,5 @@ struct UpdateInputHintEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UpdateInputHintEvent, 0xA0);
 } // namespace game::ui
+using UpdateInputHintEvent = game::ui::UpdateInputHintEvent;
 } // namespace RED4ext

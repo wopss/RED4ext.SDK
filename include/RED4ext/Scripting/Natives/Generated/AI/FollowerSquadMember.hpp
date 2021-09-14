@@ -12,10 +12,11 @@ namespace AI {
 struct FollowerSquadMember : AI::SquadNPCMember
 {
     static constexpr const char* NAME = "AIFollowerSquadMember";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FollowerSquadMember";
 
     uint8_t unk90[0x98 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(FollowerSquadMember, 0x98);
 } // namespace AI
+using FollowerSquadMember = AI::FollowerSquadMember;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace ink {
 struct RichTextBoxWidget : ink::TextWidget
 {
     static constexpr const char* NAME = "inkRichTextBoxWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkRichTextBox";
 
     uint8_t unk420[0x440 - 0x420]; // 420
 };
 RED4EXT_ASSERT_SIZE(RichTextBoxWidget, 0x440);
 } // namespace ink
+using inkRichTextBox = ink::RichTextBoxWidget;
 } // namespace RED4ext

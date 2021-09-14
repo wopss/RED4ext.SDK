@@ -14,7 +14,7 @@ namespace ink {
 struct LatestSaveMetadataInfo : IScriptable
 {
     static constexpr const char* NAME = "inkLatestSaveMetadataInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LatestSaveMetadataInfo";
 
     CString locationName; // 40
     CString trackedQuest; // 60
@@ -27,4 +27,5 @@ struct LatestSaveMetadataInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(LatestSaveMetadataInfo, 0xC0);
 } // namespace ink
+using LatestSaveMetadataInfo = ink::LatestSaveMetadataInfo;
 } // namespace RED4ext

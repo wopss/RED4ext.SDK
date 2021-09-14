@@ -13,7 +13,7 @@ namespace game {
 struct PrereqData
 {
     static constexpr const char* NAME = "gamePrereqData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PrereqData";
 
     DynArray<game::PrereqCheckData> prereqList; // 00
     bool bAndValues; // 10
@@ -21,4 +21,5 @@ struct PrereqData
 };
 RED4EXT_ASSERT_SIZE(PrereqData, 0x18);
 } // namespace game
+using PrereqData = game::PrereqData;
 } // namespace RED4ext

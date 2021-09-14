@@ -14,7 +14,7 @@ namespace quest {
 struct PhoneCallInformation
 {
     static constexpr const char* NAME = "questPhoneCallInformation";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhoneCallInformation";
 
     quest::PhoneCallMode callMode; // 00
     bool isAudioCall; // 04
@@ -27,4 +27,5 @@ struct PhoneCallInformation
 };
 RED4EXT_ASSERT_SIZE(PhoneCallInformation, 0x18);
 } // namespace quest
+using PhoneCallInformation = quest::PhoneCallInformation;
 } // namespace RED4ext

@@ -12,7 +12,7 @@ namespace game {
 struct InventoryPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameInventoryPS";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InventoryPS";
 
     bool isRegisteredShared; // 68
     bool accessible; // 69
@@ -20,4 +20,5 @@ struct InventoryPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(InventoryPS, 0x70);
 } // namespace game
+using InventoryPS = game::InventoryPS;
 } // namespace RED4ext

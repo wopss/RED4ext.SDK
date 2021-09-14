@@ -15,10 +15,11 @@ namespace game::targeting {
 struct SystemLookAtObjectChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gametargetingSystemLookAtObjectChangedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LookAtObjectChangedEvent";
 
     WeakHandle<game::Object> lookatObject; // 40
 };
 RED4EXT_ASSERT_SIZE(SystemLookAtObjectChangedEvent, 0x50);
 } // namespace game::targeting
+using LookAtObjectChangedEvent = game::targeting::SystemLookAtObjectChangedEvent;
 } // namespace RED4ext

@@ -13,7 +13,7 @@ namespace physics {
 struct TraceResult
 {
     static constexpr const char* NAME = "physicsTraceResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TraceResult";
 
     Vector3 position; // 00
     Vector3 normal; // 0C
@@ -22,4 +22,5 @@ struct TraceResult
 };
 RED4EXT_ASSERT_SIZE(TraceResult, 0x60);
 } // namespace physics
+using TraceResult = physics::TraceResult;
 } // namespace RED4ext

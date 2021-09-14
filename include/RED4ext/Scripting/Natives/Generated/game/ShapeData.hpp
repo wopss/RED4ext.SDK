@@ -16,7 +16,7 @@ namespace game {
 struct ShapeData
 {
     static constexpr const char* NAME = "gameShapeData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitShapeData";
 
     game::HitResult result; // 00
     Handle<game::HitShapeUserData> userData; // 30
@@ -27,4 +27,5 @@ struct ShapeData
 };
 RED4EXT_ASSERT_SIZE(ShapeData, 0x70);
 } // namespace game
+using HitShapeData = game::ShapeData;
 } // namespace RED4ext

@@ -11,7 +11,7 @@ namespace RED4ext
 struct AnimFeature_PlayerVitals : anim::AnimFeature
 {
     static constexpr const char* NAME = "AnimFeature_PlayerVitals";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_PlayerVitals";
 
     int32_t state; // 40
     float stateDuration; // 44

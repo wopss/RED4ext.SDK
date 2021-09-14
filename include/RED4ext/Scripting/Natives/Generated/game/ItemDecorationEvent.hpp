@@ -12,10 +12,11 @@ namespace game {
 struct ItemDecorationEvent : red::Event
 {
     static constexpr const char* NAME = "gameItemDecorationEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ItemDecorationEvent";
 
     uint8_t unk40[0x50 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ItemDecorationEvent, 0x50);
 } // namespace game
+using ItemDecorationEvent = game::ItemDecorationEvent;
 } // namespace RED4ext

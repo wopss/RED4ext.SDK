@@ -13,7 +13,7 @@ namespace game {
 struct JournalRequestContext
 {
     static constexpr const char* NAME = "gameJournalRequestContext";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalRequestContext";
 
     game::JournalRequestStateFilter stateFilter; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -22,4 +22,5 @@ struct JournalRequestContext
 };
 RED4EXT_ASSERT_SIZE(JournalRequestContext, 0x20);
 } // namespace game
+using JournalRequestContext = game::JournalRequestContext;
 } // namespace RED4ext

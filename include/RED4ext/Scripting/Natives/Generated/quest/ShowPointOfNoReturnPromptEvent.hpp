@@ -12,9 +12,10 @@ namespace quest {
 struct ShowPointOfNoReturnPromptEvent : red::Event
 {
     static constexpr const char* NAME = "questShowPointOfNoReturnPromptEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ShowPointOfNoReturnPromptEvent";
 
 };
 RED4EXT_ASSERT_SIZE(ShowPointOfNoReturnPromptEvent, 0x40);
 } // namespace quest
+using ShowPointOfNoReturnPromptEvent = quest::ShowPointOfNoReturnPromptEvent;
 } // namespace RED4ext

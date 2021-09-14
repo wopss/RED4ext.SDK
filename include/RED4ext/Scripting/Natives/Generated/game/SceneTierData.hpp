@@ -13,7 +13,7 @@ namespace game {
 struct SceneTierData : IScriptable
 {
     static constexpr const char* NAME = "gameSceneTierData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SceneTierData";
 
     GameplayTier tier; // 40
     bool emptyHands; // 44
@@ -21,4 +21,5 @@ struct SceneTierData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SceneTierData, 0x48);
 } // namespace game
+using SceneTierData = game::SceneTierData;
 } // namespace RED4ext

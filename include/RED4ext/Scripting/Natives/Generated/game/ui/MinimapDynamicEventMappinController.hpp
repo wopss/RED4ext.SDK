@@ -13,7 +13,7 @@ namespace game::ui {
 struct MinimapDynamicEventMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapDynamicEventMappinController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MinimapDynamicEventMappinController";
 
     bool pulseEnabled; // 210
     uint8_t unk211[0x218 - 0x211]; // 211
@@ -24,4 +24,5 @@ struct MinimapDynamicEventMappinController : game::ui::BaseMinimapMappinControll
 };
 RED4EXT_ASSERT_SIZE(MinimapDynamicEventMappinController, 0x238);
 } // namespace game::ui
+using MinimapDynamicEventMappinController = game::ui::MinimapDynamicEventMappinController;
 } // namespace RED4ext

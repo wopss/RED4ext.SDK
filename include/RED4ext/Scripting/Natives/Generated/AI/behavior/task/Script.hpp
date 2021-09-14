@@ -12,10 +12,11 @@ namespace AI::behavior::task {
 struct Script : AI::behavior::ScriptBase
 {
     static constexpr const char* NAME = "AIbehaviortaskScript";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIScriptTask";
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(Script, 0x48);
 } // namespace AI::behavior::task
+using AIScriptTask = AI::behavior::task::Script;
 } // namespace RED4ext

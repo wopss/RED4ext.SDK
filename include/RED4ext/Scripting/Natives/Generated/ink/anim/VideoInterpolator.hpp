@@ -13,7 +13,7 @@ namespace ink::anim {
 struct VideoInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimVideoInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimVideo";
 
     float startValue; // 68
     float endValue; // 6C
@@ -25,4 +25,5 @@ struct VideoInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(VideoInterpolator, 0x80);
 } // namespace ink::anim
+using inkAnimVideo = ink::anim::VideoInterpolator;
 } // namespace RED4ext

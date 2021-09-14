@@ -15,7 +15,7 @@ namespace game::gps {
 struct Settings
 {
     static constexpr const char* NAME = "gamegpsSettings";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GPSSettings";
 
     RaRef<world::Effect> lineEffectOnFoot; // 00
     RaRef<world::Effect> lineEffectVehicle; // 08
@@ -28,4 +28,5 @@ struct Settings
 };
 RED4EXT_ASSERT_SIZE(Settings, 0x38);
 } // namespace game::gps
+using GPSSettings = game::gps::Settings;
 } // namespace RED4ext

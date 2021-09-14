@@ -14,10 +14,11 @@ namespace red {
 struct ResourceReferenceScriptToken
 {
     static constexpr const char* NAME = "redResourceReferenceScriptToken";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ResRef";
 
     RaRef<CResource> resource; // 00
 };
 RED4EXT_ASSERT_SIZE(ResourceReferenceScriptToken, 0x8);
 } // namespace red
+using ResRef = red::ResourceReferenceScriptToken;
 } // namespace RED4ext

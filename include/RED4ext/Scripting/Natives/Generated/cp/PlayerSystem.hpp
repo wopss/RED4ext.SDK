@@ -12,10 +12,11 @@ namespace cp {
 struct PlayerSystem : game::PlayerSystem
 {
     static constexpr const char* NAME = "cpPlayerSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PlayerSystem";
 
     uint8_t unk68[0x60500 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(PlayerSystem, 0x60500);
 } // namespace cp
+using PlayerSystem = cp::PlayerSystem;
 } // namespace RED4ext

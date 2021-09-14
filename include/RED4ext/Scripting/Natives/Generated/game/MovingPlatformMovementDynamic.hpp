@@ -13,11 +13,12 @@ namespace game {
 struct MovingPlatformMovementDynamic : game::IMovingPlatformMovementPointToPoint
 {
     static constexpr const char* NAME = "gameMovingPlatformMovementDynamic";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MovingPlatformMovementDynamic";
 
     CName curveName; // 80
     uint8_t unk88[0xA0 - 0x88]; // 88
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformMovementDynamic, 0xA0);
 } // namespace game
+using MovingPlatformMovementDynamic = game::MovingPlatformMovementDynamic;
 } // namespace RED4ext

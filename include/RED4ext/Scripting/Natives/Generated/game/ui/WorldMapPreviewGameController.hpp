@@ -16,7 +16,7 @@ namespace game::ui {
 struct WorldMapPreviewGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiWorldMapPreviewGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkWorldMapPreviewGameController";
 
     uint8_t unkD0[0x198 - 0xD0]; // D0
     RaRef<ent::EntityTemplate> viewTemplate; // 198
@@ -25,4 +25,5 @@ struct WorldMapPreviewGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(WorldMapPreviewGameController, 0x1C0);
 } // namespace game::ui
+using inkWorldMapPreviewGameController = game::ui::WorldMapPreviewGameController;
 } // namespace RED4ext

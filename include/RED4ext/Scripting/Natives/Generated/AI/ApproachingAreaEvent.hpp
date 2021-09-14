@@ -16,7 +16,7 @@ namespace AI {
 struct ApproachingAreaEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AIApproachingAreaEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIApproachingAreaEvent";
 
     bool isApproachCancellation; // 50
     uint8_t unk51[0x58 - 0x51]; // 51

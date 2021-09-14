@@ -13,7 +13,7 @@ namespace scn {
 struct VoicesetComponent : game::Component
 {
     static constexpr const char* NAME = "scnVoicesetComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VoicesetComponent";
 
     uint8_t unkA8[0x258 - 0xA8]; // A8
     CName combatVoSettingsName; // 258
@@ -21,4 +21,5 @@ struct VoicesetComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(VoicesetComponent, 0x320);
 } // namespace scn
+using VoicesetComponent = scn::VoicesetComponent;
 } // namespace RED4ext

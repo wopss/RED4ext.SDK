@@ -12,10 +12,11 @@ namespace AI {
 struct EntityStubHandlerProviderSystem : AI::IEntityStubHandlerProviderSystem
 {
     static constexpr const char* NAME = "AIEntityStubHandlerProviderSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EntityStubHandlerProviderSystem";
 
     uint8_t unk48[0x160 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(EntityStubHandlerProviderSystem, 0x160);
 } // namespace AI
+using EntityStubHandlerProviderSystem = AI::EntityStubHandlerProviderSystem;
 } // namespace RED4ext

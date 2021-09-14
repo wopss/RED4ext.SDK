@@ -13,7 +13,7 @@ namespace anim {
 struct AnimFeature_PlayerCover : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_PlayerCover";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_PlayerCover";
 
     Vector4 cameraPositionMS; // 40
     int32_t coverState; // 50
@@ -24,4 +24,5 @@ struct AnimFeature_PlayerCover : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_PlayerCover, 0x60);
 } // namespace anim
+using AnimFeature_PlayerCover = anim::AnimFeature_PlayerCover;
 } // namespace RED4ext

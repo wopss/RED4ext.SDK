@@ -15,7 +15,7 @@ namespace AI {
 struct AddedAsHostileThreat : AI::AIEvent
 {
     static constexpr const char* NAME = "AIAddedAsHostileThreat";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AddedAsHostileThreat";
 
     WeakHandle<AI::TargetTrackerComponent> threateningEntity; // 50
     bool threateningEntityCanTriggersCombat; // 60
@@ -23,4 +23,5 @@ struct AddedAsHostileThreat : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(AddedAsHostileThreat, 0x68);
 } // namespace AI
+using AddedAsHostileThreat = AI::AddedAsHostileThreat;
 } // namespace RED4ext

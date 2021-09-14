@@ -22,7 +22,7 @@ namespace move {
 struct Policies : IScriptable
 {
     static constexpr const char* NAME = "movePolicies";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MovePolicies";
 
     Vector3 destination; // 40
     Vector3 destinationTangent; // 4C
@@ -73,4 +73,5 @@ struct Policies : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Policies, 0x220);
 } // namespace move
+using MovePolicies = move::Policies;
 } // namespace RED4ext

@@ -14,7 +14,7 @@ namespace game {
 struct VisionModeComponent : game::Component
 {
     static constexpr const char* NAME = "gameVisionModeComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VisionModeComponent";
 
     uint8_t unkA8[0xB0 - 0xA8]; // A8
     DynArray<game::VisionModuleParams> availableVisionModes; // B0
@@ -22,4 +22,5 @@ struct VisionModeComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(VisionModeComponent, 0x108);
 } // namespace game
+using VisionModeComponent = game::VisionModeComponent;
 } // namespace RED4ext

@@ -12,10 +12,11 @@ namespace game::data {
 struct CyberwareArea_Record : game::data::EquipmentArea_Record
 {
     static constexpr const char* NAME = "gamedataCyberwareArea_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CyberwareArea_Record";
 
     uint8_t unk60[0x68 - 0x60]; // 60
 };
 RED4EXT_ASSERT_SIZE(CyberwareArea_Record, 0x68);
 } // namespace game::data
+using CyberwareArea_Record = game::data::CyberwareArea_Record;
 } // namespace RED4ext

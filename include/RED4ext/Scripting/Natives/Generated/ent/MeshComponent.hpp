@@ -22,7 +22,7 @@ namespace ent {
 struct MeshComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entMeshComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MeshComponent";
 
     uint8_t unk140[0x150 - 0x140]; // 140
     RaRef<CMesh> mesh; // 150
@@ -49,4 +49,5 @@ struct MeshComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(MeshComponent, 0x1E0);
 } // namespace ent
+using MeshComponent = ent::MeshComponent;
 } // namespace RED4ext

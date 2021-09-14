@@ -15,7 +15,7 @@ namespace ink::anim {
 struct Interpolator : IScriptable
 {
     static constexpr const char* NAME = "inkanimInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimInterpolator";
 
     uint8_t unk40[0x58 - 0x40]; // 40
     bool useRelativeDuration; // 58
@@ -30,4 +30,5 @@ struct Interpolator : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Interpolator, 0x68);
 } // namespace ink::anim
+using inkAnimInterpolator = ink::anim::Interpolator;
 } // namespace RED4ext

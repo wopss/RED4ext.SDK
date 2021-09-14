@@ -12,9 +12,10 @@ namespace game::interactions::vis {
 struct IVisualizerTimeProvider : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsvisIVisualizerTimeProvider";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IVisualizerTimeProvider";
 
 };
 RED4EXT_ASSERT_SIZE(IVisualizerTimeProvider, 0x40);
 } // namespace game::interactions::vis
+using IVisualizerTimeProvider = game::interactions::vis::IVisualizerTimeProvider;
 } // namespace RED4ext

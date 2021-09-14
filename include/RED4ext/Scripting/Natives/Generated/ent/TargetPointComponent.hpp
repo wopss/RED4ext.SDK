@@ -12,9 +12,10 @@ namespace ent {
 struct TargetPointComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entTargetPointComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetPointComponent";
 
 };
 RED4EXT_ASSERT_SIZE(TargetPointComponent, 0x120);
 } // namespace ent
+using TargetPointComponent = ent::TargetPointComponent;
 } // namespace RED4ext

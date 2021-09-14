@@ -13,11 +13,12 @@ namespace game {
 struct NarrationPlateComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameNarrationPlateComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NarrationPlateComponent";
 
     CName narrationText; // 90
     CName narrationCaption; // 98
 };
 RED4EXT_ASSERT_SIZE(NarrationPlateComponent, 0xA0);
 } // namespace game
+using NarrationPlateComponent = game::NarrationPlateComponent;
 } // namespace RED4ext

@@ -11,7 +11,7 @@ namespace RED4ext
 struct AnimFeature_PhotomodeFacial : anim::AnimFeature
 {
     static constexpr const char* NAME = "AnimFeature_PhotomodeFacial";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_PhotomodeFacial";
 
     int32_t facialPoseIndex; // 40
     uint8_t unk44[0x48 - 0x44]; // 44

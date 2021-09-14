@@ -12,7 +12,7 @@ namespace game::state {
 struct MachineResultString
 {
     static constexpr const char* NAME = "gamestateMachineResultString";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StateResultString";
 
     bool valid; // 00
     uint8_t unk01[0x8 - 0x1]; // 1
@@ -20,4 +20,5 @@ struct MachineResultString
 };
 RED4EXT_ASSERT_SIZE(MachineResultString, 0x28);
 } // namespace game::state
+using StateResultString = game::state::MachineResultString;
 } // namespace RED4ext

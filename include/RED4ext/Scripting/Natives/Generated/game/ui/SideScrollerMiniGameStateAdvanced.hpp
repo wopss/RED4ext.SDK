@@ -14,7 +14,7 @@ namespace game::ui {
 struct SideScrollerMiniGameStateAdvanced : IScriptable
 {
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameStateAdvanced";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MinigameStateAdvanced";
 
     game::ui::GameStatePropertyChangedCallback PropertyChanged; // 40
     CName opertyMaxScore; // 78
@@ -24,4 +24,5 @@ struct SideScrollerMiniGameStateAdvanced : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SideScrollerMiniGameStateAdvanced, 0xA0);
 } // namespace game::ui
+using MinigameStateAdvanced = game::ui::SideScrollerMiniGameStateAdvanced;
 } // namespace RED4ext

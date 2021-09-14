@@ -14,11 +14,12 @@ namespace game {
 struct StatModifierData_Deprecated : IScriptable
 {
     static constexpr const char* NAME = "gameStatModifierData_Deprecated";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameStatModifierData";
 
     game::data::StatType statType; // 40
     game::StatModifierType modifierType; // 44
 };
 RED4EXT_ASSERT_SIZE(StatModifierData_Deprecated, 0x48);
 } // namespace game
+using gameStatModifierData = game::StatModifierData_Deprecated;
 } // namespace RED4ext

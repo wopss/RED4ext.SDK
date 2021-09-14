@@ -12,9 +12,10 @@ namespace move {
 struct ObstacleDetectedEvent : red::Event
 {
     static constexpr const char* NAME = "moveObstacleDetectedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimObstacleDetected";
 
 };
 RED4EXT_ASSERT_SIZE(ObstacleDetectedEvent, 0x40);
 } // namespace move
+using AnimObstacleDetected = move::ObstacleDetectedEvent;
 } // namespace RED4ext

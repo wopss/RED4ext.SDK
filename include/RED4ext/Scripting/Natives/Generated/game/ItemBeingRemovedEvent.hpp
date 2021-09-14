@@ -16,7 +16,7 @@ namespace game {
 struct ItemBeingRemovedEvent : red::Event
 {
     static constexpr const char* NAME = "gameItemBeingRemovedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ItemBeingRemovedEvent";
 
     ItemID itemID; // 40
     Handle<game::ItemData> itemData; // 50
@@ -25,4 +25,5 @@ struct ItemBeingRemovedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ItemBeingRemovedEvent, 0x68);
 } // namespace game
+using ItemBeingRemovedEvent = game::ItemBeingRemovedEvent;
 } // namespace RED4ext

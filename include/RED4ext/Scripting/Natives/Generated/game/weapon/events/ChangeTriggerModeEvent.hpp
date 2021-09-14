@@ -13,11 +13,12 @@ namespace game::weapon::events {
 struct ChangeTriggerModeEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsChangeTriggerModeEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WeaponChangeTriggerModeEvent";
 
     game::data::TriggerMode triggerMode; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };
 RED4EXT_ASSERT_SIZE(ChangeTriggerModeEvent, 0x48);
 } // namespace game::weapon::events
+using WeaponChangeTriggerModeEvent = game::weapon::events::ChangeTriggerModeEvent;
 } // namespace RED4ext

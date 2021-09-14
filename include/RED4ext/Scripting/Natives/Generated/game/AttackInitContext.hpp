@@ -16,7 +16,7 @@ namespace game {
 struct AttackInitContext
 {
     static constexpr const char* NAME = "gameAttackInitContext";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AttackInitContext";
 
     Handle<game::data::Attack_Record> record; // 00
     WeakHandle<game::Object> instigator; // 10
@@ -25,4 +25,5 @@ struct AttackInitContext
 };
 RED4EXT_ASSERT_SIZE(AttackInitContext, 0x40);
 } // namespace game
+using AttackInitContext = game::AttackInitContext;
 } // namespace RED4ext

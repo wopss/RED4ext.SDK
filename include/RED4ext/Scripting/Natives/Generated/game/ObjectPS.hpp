@@ -12,9 +12,10 @@ namespace game {
 struct ObjectPS : game::PersistentState
 {
     static constexpr const char* NAME = "gameObjectPS";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GameObjectPS";
 
 };
 RED4EXT_ASSERT_SIZE(ObjectPS, 0x68);
 } // namespace game
+using GameObjectPS = game::ObjectPS;
 } // namespace RED4ext

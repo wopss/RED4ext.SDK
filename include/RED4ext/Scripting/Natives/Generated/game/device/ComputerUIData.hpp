@@ -13,11 +13,12 @@ namespace game::device {
 struct ComputerUIData
 {
     static constexpr const char* NAME = "gamedeviceComputerUIData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ComputerUIData";
 
     DynArray<game::device::GenericDataContent> mails; // 00
     DynArray<game::device::GenericDataContent> files; // 10
 };
 RED4EXT_ASSERT_SIZE(ComputerUIData, 0x20);
 } // namespace game::device
+using ComputerUIData = game::device::ComputerUIData;
 } // namespace RED4ext

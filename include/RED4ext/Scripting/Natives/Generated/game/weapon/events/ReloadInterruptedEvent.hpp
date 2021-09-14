@@ -12,9 +12,10 @@ namespace game::weapon::events {
 struct ReloadInterruptedEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsReloadInterruptedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WeaponReloadInterruptedEvent";
 
 };
 RED4EXT_ASSERT_SIZE(ReloadInterruptedEvent, 0x40);
 } // namespace game::weapon::events
+using WeaponReloadInterruptedEvent = game::weapon::events::ReloadInterruptedEvent;
 } // namespace RED4ext

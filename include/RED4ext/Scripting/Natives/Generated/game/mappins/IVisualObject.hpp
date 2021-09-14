@@ -12,9 +12,10 @@ namespace game::mappins {
 struct IVisualObject : IScriptable
 {
     static constexpr const char* NAME = "gamemappinsIVisualObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IVisualObject";
 
 };
 RED4EXT_ASSERT_SIZE(IVisualObject, 0x40);
 } // namespace game::mappins
+using IVisualObject = game::mappins::IVisualObject;
 } // namespace RED4ext

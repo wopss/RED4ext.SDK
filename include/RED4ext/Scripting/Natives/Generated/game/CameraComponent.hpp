@@ -13,7 +13,7 @@ namespace game {
 struct CameraComponent : ent::BaseCameraComponent
 {
     static constexpr const char* NAME = "gameCameraComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "CameraComponent";
 
     uint8_t unk1D0[0x1D8 - 0x1D0]; // 1D0
     CName animParamFovOverrideWeight; // 1D8
@@ -44,4 +44,5 @@ struct CameraComponent : ent::BaseCameraComponent
 };
 RED4EXT_ASSERT_SIZE(CameraComponent, 0x2A0);
 } // namespace game
+using CameraComponent = game::CameraComponent;
 } // namespace RED4ext

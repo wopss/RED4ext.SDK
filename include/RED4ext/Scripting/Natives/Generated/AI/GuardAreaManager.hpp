@@ -12,10 +12,11 @@ namespace AI {
 struct GuardAreaManager : AI::IGuardAreaManager
 {
     static constexpr const char* NAME = "AIGuardAreaManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RestrictMovementAreaManager";
 
     uint8_t unk48[0x160 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(GuardAreaManager, 0x160);
 } // namespace AI
+using RestrictMovementAreaManager = AI::GuardAreaManager;
 } // namespace RED4ext

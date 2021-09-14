@@ -12,9 +12,10 @@ namespace game {
 struct ScriptStatusEffectListener : game::IStatusEffectListener
 {
     static constexpr const char* NAME = "gameScriptStatusEffectListener";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScriptStatusEffectListener";
 
 };
 RED4EXT_ASSERT_SIZE(ScriptStatusEffectListener, 0x40);
 } // namespace game
+using ScriptStatusEffectListener = game::ScriptStatusEffectListener;
 } // namespace RED4ext

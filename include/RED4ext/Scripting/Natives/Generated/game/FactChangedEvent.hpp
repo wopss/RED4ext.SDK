@@ -13,10 +13,11 @@ namespace game {
 struct FactChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameFactChangedEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "FactChangedEvent";
 
     CName factName; // 40
 };
 RED4EXT_ASSERT_SIZE(FactChangedEvent, 0x48);
 } // namespace game
+using FactChangedEvent = game::FactChangedEvent;
 } // namespace RED4ext

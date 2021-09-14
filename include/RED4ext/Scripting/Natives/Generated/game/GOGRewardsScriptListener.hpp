@@ -12,9 +12,10 @@ namespace game {
 struct GOGRewardsScriptListener : IScriptable
 {
     static constexpr const char* NAME = "gameGOGRewardsScriptListener";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "GOGRewardsScriptListener";
 
 };
 RED4EXT_ASSERT_SIZE(GOGRewardsScriptListener, 0x40);
 } // namespace game
+using GOGRewardsScriptListener = game::GOGRewardsScriptListener;
 } // namespace RED4ext

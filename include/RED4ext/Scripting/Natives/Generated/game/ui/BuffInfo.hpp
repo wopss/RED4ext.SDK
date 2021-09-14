@@ -12,11 +12,12 @@ namespace game::ui {
 struct BuffInfo
 {
     static constexpr const char* NAME = "gameuiBuffInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BuffInfo";
 
     TweakDBID buffID; // 00
     float timeRemaining; // 08
 };
 RED4EXT_ASSERT_SIZE(BuffInfo, 0xC);
 } // namespace game::ui
+using BuffInfo = game::ui::BuffInfo;
 } // namespace RED4ext

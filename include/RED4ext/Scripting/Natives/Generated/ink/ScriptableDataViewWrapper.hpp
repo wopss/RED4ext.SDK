@@ -12,9 +12,10 @@ namespace ink {
 struct ScriptableDataViewWrapper : ink::BaseScriptableDataSource
 {
     static constexpr const char* NAME = "inkScriptableDataViewWrapper";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScriptableDataView";
 
 };
 RED4EXT_ASSERT_SIZE(ScriptableDataViewWrapper, 0x48);
 } // namespace ink
+using ScriptableDataView = ink::ScriptableDataViewWrapper;
 } // namespace RED4ext

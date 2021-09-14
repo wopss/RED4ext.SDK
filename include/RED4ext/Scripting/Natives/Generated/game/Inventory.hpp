@@ -13,7 +13,7 @@ namespace game {
 struct Inventory : game::Component
 {
     static constexpr const char* NAME = "gameInventory";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "Inventory";
 
     uint8_t unkA8[0xB0 - 0xA8]; // A8
     game::SharedInventoryTag inventoryTag; // B0
@@ -24,4 +24,5 @@ struct Inventory : game::Component
 };
 RED4EXT_ASSERT_SIZE(Inventory, 0x120);
 } // namespace game
+using Inventory = game::Inventory;
 } // namespace RED4ext

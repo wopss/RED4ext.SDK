@@ -13,10 +13,11 @@ namespace game {
 struct JournalEntry : IScriptable
 {
     static constexpr const char* NAME = "gameJournalEntry";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalEntry";
 
     CString id; // 40
 };
 RED4EXT_ASSERT_SIZE(JournalEntry, 0x60);
 } // namespace game
+using JournalEntry = game::JournalEntry;
 } // namespace RED4ext

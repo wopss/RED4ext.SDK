@@ -13,7 +13,7 @@ namespace game {
 struct TelemetryDamage
 {
     static constexpr const char* NAME = "gameTelemetryDamage";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TelemetryDamage";
 
     game::data::AttackType attackType; // 00
     float damageAmount; // 04
@@ -25,4 +25,5 @@ struct TelemetryDamage
 };
 RED4EXT_ASSERT_SIZE(TelemetryDamage, 0xA8);
 } // namespace game
+using TelemetryDamage = game::TelemetryDamage;
 } // namespace RED4ext

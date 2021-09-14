@@ -12,9 +12,10 @@ namespace game::data {
 struct AISquadFurthestToTargetCheck_Record : game::data::AISquadDistanceRelationToTargetCheck_Record
 {
     static constexpr const char* NAME = "gamedataAISquadFurthestToTargetCheck_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AISquadFurthestToTargetCheck_Record";
 
 };
 RED4EXT_ASSERT_SIZE(AISquadFurthestToTargetCheck_Record, 0x60);
 } // namespace game::data
+using AISquadFurthestToTargetCheck_Record = game::data::AISquadFurthestToTargetCheck_Record;
 } // namespace RED4ext

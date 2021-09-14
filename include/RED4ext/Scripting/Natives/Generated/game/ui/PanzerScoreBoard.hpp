@@ -16,7 +16,7 @@ namespace game::ui {
 struct PanzerScoreBoard : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerScoreBoard";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PanzerScoreBoard";
 
     ink::VerticalPanelWidgetReference scoreboardList; // C0
     DynArray<game::ui::PanzerScoreRecordData> champions; // D8
@@ -25,4 +25,5 @@ struct PanzerScoreBoard : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 };
 RED4EXT_ASSERT_SIZE(PanzerScoreBoard, 0x108);
 } // namespace game::ui
+using PanzerScoreBoard = game::ui::PanzerScoreBoard;
 } // namespace RED4ext

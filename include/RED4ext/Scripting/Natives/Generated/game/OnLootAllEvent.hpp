@@ -12,9 +12,10 @@ namespace game {
 struct OnLootAllEvent : red::Event
 {
     static constexpr const char* NAME = "gameOnLootAllEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "OnLootAllEvent";
 
 };
 RED4EXT_ASSERT_SIZE(OnLootAllEvent, 0x40);
 } // namespace game
+using OnLootAllEvent = game::OnLootAllEvent;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game {
 struct WorkspotGameSystem : game::IWorkspotGameSystem
 {
     static constexpr const char* NAME = "gameWorkspotGameSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "WorkspotGameSystem";
 
 };
 RED4EXT_ASSERT_SIZE(WorkspotGameSystem, 0x48);
 } // namespace game
+using WorkspotGameSystem = game::WorkspotGameSystem;
 } // namespace RED4ext

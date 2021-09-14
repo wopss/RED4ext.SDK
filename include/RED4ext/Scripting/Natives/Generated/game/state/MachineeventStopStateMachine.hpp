@@ -13,10 +13,11 @@ namespace game::state {
 struct MachineeventStopStateMachine : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventStopStateMachine";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PSMStopStateMachine";
 
     game::state::MachineStateMachineIdentifier stateMachineIdentifier; // 40
 };
 RED4EXT_ASSERT_SIZE(MachineeventStopStateMachine, 0x50);
 } // namespace game::state
+using PSMStopStateMachine = game::state::MachineeventStopStateMachine;
 } // namespace RED4ext

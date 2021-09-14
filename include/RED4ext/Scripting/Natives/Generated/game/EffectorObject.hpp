@@ -12,10 +12,11 @@ namespace game {
 struct EffectorObject : ISerializable
 {
     static constexpr const char* NAME = "gameEffectorObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectorObject";
 
     uint8_t unk30[0x60 - 0x30]; // 30
 };
 RED4EXT_ASSERT_SIZE(EffectorObject, 0x60);
 } // namespace game
+using EffectorObject = game::EffectorObject;
 } // namespace RED4ext

@@ -14,7 +14,7 @@ namespace game {
 struct JournalTarot : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalTarot";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "JournalTarot";
 
     int32_t index; // 60
     uint8_t unk64[0x68 - 0x64]; // 64
@@ -24,4 +24,5 @@ struct JournalTarot : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalTarot, 0xC0);
 } // namespace game
+using JournalTarot = game::JournalTarot;
 } // namespace RED4ext

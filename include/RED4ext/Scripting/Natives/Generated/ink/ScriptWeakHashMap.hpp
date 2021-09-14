@@ -12,10 +12,11 @@ namespace ink {
 struct ScriptWeakHashMap : IScriptable
 {
     static constexpr const char* NAME = "inkScriptWeakHashMap";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkWeakHashMap";
 
     uint8_t unk40[0x78 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ScriptWeakHashMap, 0x78);
 } // namespace ink
+using inkWeakHashMap = ink::ScriptWeakHashMap;
 } // namespace RED4ext

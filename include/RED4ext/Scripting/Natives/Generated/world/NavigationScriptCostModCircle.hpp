@@ -13,7 +13,7 @@ namespace world {
 struct NavigationScriptCostModCircle : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptCostModCircle";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NavigationCostModCircle";
 
     Vector4 pos; // 40
     float range; // 50
@@ -22,4 +22,5 @@ struct NavigationScriptCostModCircle : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptCostModCircle, 0x60);
 } // namespace world
+using NavigationCostModCircle = world::NavigationScriptCostModCircle;
 } // namespace RED4ext

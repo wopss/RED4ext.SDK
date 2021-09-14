@@ -12,10 +12,11 @@ namespace game::interactions {
 struct TargetFilterResult_Logical : game::targeting::SystemTargetFilterResult
 {
     static constexpr const char* NAME = "gameinteractionsTargetFilterResult_Logical";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "TargetFilterResult_Logical";
 
     uint8_t unk58[0xA8 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(TargetFilterResult_Logical, 0xA8);
 } // namespace game::interactions
+using TargetFilterResult_Logical = game::interactions::TargetFilterResult_Logical;
 } // namespace RED4ext

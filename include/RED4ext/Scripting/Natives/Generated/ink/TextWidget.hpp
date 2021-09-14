@@ -26,7 +26,7 @@ namespace ink {
 struct TextWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkTextWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkText";
 
     uint8_t unk1F0[0x218 - 0x1F0]; // 1F0
     CString text; // 218
@@ -62,4 +62,5 @@ struct TextWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(TextWidget, 0x420);
 } // namespace ink
+using inkText = ink::TextWidget;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace AI {
 struct ISmartObjectManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIISmartObjectManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ISmartObjectManager";
 
 };
 RED4EXT_ASSERT_SIZE(ISmartObjectManager, 0x48);
 } // namespace AI
+using ISmartObjectManager = AI::ISmartObjectManager;
 } // namespace RED4ext

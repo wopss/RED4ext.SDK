@@ -12,7 +12,7 @@ namespace game {
 struct HitShape_Capsule : game::HitShapeBase
 {
     static constexpr const char* NAME = "gameHitShape_Capsule";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitShape_Capsule";
 
     float radius; // 90
     float height; // 94
@@ -20,4 +20,5 @@ struct HitShape_Capsule : game::HitShapeBase
 };
 RED4EXT_ASSERT_SIZE(HitShape_Capsule, 0xA0);
 } // namespace game
+using HitShape_Capsule = game::HitShape_Capsule;
 } // namespace RED4ext

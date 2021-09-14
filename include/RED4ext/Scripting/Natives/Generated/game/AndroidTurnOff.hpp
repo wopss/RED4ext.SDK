@@ -12,9 +12,10 @@ namespace game {
 struct AndroidTurnOff : red::Event
 {
     static constexpr const char* NAME = "gameAndroidTurnOff";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AndroidTurnOff";
 
 };
 RED4EXT_ASSERT_SIZE(AndroidTurnOff, 0x40);
 } // namespace game
+using AndroidTurnOff = game::AndroidTurnOff;
 } // namespace RED4ext

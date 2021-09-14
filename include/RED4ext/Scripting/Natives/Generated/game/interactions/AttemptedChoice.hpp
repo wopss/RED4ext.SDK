@@ -13,7 +13,7 @@ namespace game::interactions {
 struct AttemptedChoice
 {
     static constexpr const char* NAME = "gameinteractionsAttemptedChoice";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionAttemptedChoice";
 
     game::interactions::vis::EVisualizerType visualizerType; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
@@ -24,4 +24,5 @@ struct AttemptedChoice
 };
 RED4EXT_ASSERT_SIZE(AttemptedChoice, 0xB0);
 } // namespace game::interactions
+using InteractionAttemptedChoice = game::interactions::AttemptedChoice;
 } // namespace RED4ext

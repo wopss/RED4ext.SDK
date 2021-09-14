@@ -13,7 +13,7 @@ namespace game::projectile {
 struct SlideTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileSlideTrajectoryParams";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SlideTrajectoryParams";
 
     float stickiness; // 40
     uint8_t unk44[0x50 - 0x44]; // 44
@@ -21,4 +21,5 @@ struct SlideTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(SlideTrajectoryParams, 0x60);
 } // namespace game::projectile
+using SlideTrajectoryParams = game::projectile::SlideTrajectoryParams;
 } // namespace RED4ext

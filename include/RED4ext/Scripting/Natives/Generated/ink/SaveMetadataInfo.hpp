@@ -15,7 +15,7 @@ namespace ink {
 struct SaveMetadataInfo : IScriptable
 {
     static constexpr const char* NAME = "inkSaveMetadataInfo";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SaveMetadataInfo";
 
     int32_t saveIndex; // 40
     uint32_t saveID; // 44
@@ -36,4 +36,5 @@ struct SaveMetadataInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x100);
 } // namespace ink
+using SaveMetadataInfo = ink::SaveMetadataInfo;
 } // namespace RED4ext

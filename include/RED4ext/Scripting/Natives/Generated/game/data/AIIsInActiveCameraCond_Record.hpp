@@ -12,10 +12,11 @@ namespace game::data {
 struct AIIsInActiveCameraCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIIsInActiveCameraCond_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIIsInActiveCameraCond_Record";
 
     uint8_t unk50[0x60 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(AIIsInActiveCameraCond_Record, 0x60);
 } // namespace game::data
+using AIIsInActiveCameraCond_Record = game::data::AIIsInActiveCameraCond_Record;
 } // namespace RED4ext

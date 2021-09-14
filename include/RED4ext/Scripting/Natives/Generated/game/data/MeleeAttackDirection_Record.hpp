@@ -12,10 +12,11 @@ namespace game::data {
 struct MeleeAttackDirection_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMeleeAttackDirection_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MeleeAttackDirection_Record";
 
     uint8_t unk48[0x58 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(MeleeAttackDirection_Record, 0x58);
 } // namespace game::data
+using MeleeAttackDirection_Record = game::data::MeleeAttackDirection_Record;
 } // namespace RED4ext

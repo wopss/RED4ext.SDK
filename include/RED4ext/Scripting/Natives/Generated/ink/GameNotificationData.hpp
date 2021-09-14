@@ -16,7 +16,7 @@ namespace ink {
 struct GameNotificationData : ink::UserData
 {
     static constexpr const char* NAME = "inkGameNotificationData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkGameNotificationData";
 
     CName notificationName; // 40
     CName queueName; // 48

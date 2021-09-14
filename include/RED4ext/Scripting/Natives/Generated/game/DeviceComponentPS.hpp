@@ -12,10 +12,11 @@ namespace game {
 struct DeviceComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameDeviceComponentPS";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "DeviceComponentPS";
 
     uint8_t unk68[0x78 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(DeviceComponentPS, 0x78);
 } // namespace game
+using DeviceComponentPS = game::DeviceComponentPS;
 } // namespace RED4ext

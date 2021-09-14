@@ -14,7 +14,7 @@ namespace game::interactions {
 struct ChoiceEvent : game::interactions::InteractionBaseEvent
 {
     static constexpr const char* NAME = "gameinteractionsChoiceEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionChoiceEvent";
 
     game::interactions::Choice choice; // 68
     game::input::ActionType actionType; // 108
@@ -22,4 +22,5 @@ struct ChoiceEvent : game::interactions::InteractionBaseEvent
 };
 RED4EXT_ASSERT_SIZE(ChoiceEvent, 0x110);
 } // namespace game::interactions
+using InteractionChoiceEvent = game::interactions::ChoiceEvent;
 } // namespace RED4ext

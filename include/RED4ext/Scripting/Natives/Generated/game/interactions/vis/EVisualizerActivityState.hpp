@@ -14,4 +14,5 @@ enum class EVisualizerActivityState : uint32_t
     Active = 3,
 };
 } // namespace game::interactions::vis
+using EVisualizerActivityState = game::interactions::vis::EVisualizerActivityState;
 } // namespace RED4ext

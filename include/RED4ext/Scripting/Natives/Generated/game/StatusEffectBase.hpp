@@ -13,10 +13,11 @@ namespace game {
 struct StatusEffectBase : IScriptable
 {
     static constexpr const char* NAME = "gameStatusEffectBase";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatusEffectBase";
 
     TweakDBID statusEffectRecordID; // 40
 };
 RED4EXT_ASSERT_SIZE(StatusEffectBase, 0x48);
 } // namespace game
+using StatusEffectBase = game::StatusEffectBase;
 } // namespace RED4ext

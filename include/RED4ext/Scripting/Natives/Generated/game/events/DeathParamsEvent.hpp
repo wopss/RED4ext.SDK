@@ -12,7 +12,7 @@ namespace game::events {
 struct DeathParamsEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsDeathParamsEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameDeathParamsEvent";
 
     bool noAnimation; // 40
     bool noRagdoll; // 41
@@ -20,4 +20,5 @@ struct DeathParamsEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeathParamsEvent, 0x48);
 } // namespace game::events
+using gameDeathParamsEvent = game::events::DeathParamsEvent;
 } // namespace RED4ext

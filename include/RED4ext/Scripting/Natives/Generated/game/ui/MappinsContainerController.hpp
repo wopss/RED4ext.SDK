@@ -18,7 +18,7 @@ namespace game::ui {
 struct MappinsContainerController : game::ui::ProjectedHUDGameController
 {
     static constexpr const char* NAME = "gameuiMappinsContainerController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MappinsContainerController";
 
     uint8_t unk138[0x150 - 0x138]; // 138
     ink::WidgetPath spawnContainerPath; // 150
@@ -34,4 +34,5 @@ struct MappinsContainerController : game::ui::ProjectedHUDGameController
 };
 RED4EXT_ASSERT_SIZE(MappinsContainerController, 0x2C0);
 } // namespace game::ui
+using MappinsContainerController = game::ui::MappinsContainerController;
 } // namespace RED4ext

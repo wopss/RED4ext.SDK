@@ -11,7 +11,7 @@ namespace game {
 struct RicochetData
 {
     static constexpr const char* NAME = "gameRicochetData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RicochetData";
 
     int32_t count; // 00
     float range; // 04
@@ -22,4 +22,5 @@ struct RicochetData
 };
 RED4EXT_ASSERT_SIZE(RicochetData, 0x18);
 } // namespace game
+using RicochetData = game::RicochetData;
 } // namespace RED4ext

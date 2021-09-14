@@ -11,7 +11,7 @@ namespace game {
 struct Tier3CameraSettings
 {
     static constexpr const char* NAME = "gameTier3CameraSettings";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "Tier3CameraSettings";
 
     float yawLeftLimit; // 00
     float yawRightLimit; // 04
@@ -22,4 +22,5 @@ struct Tier3CameraSettings
 };
 RED4EXT_ASSERT_SIZE(Tier3CameraSettings, 0x18);
 } // namespace game
+using Tier3CameraSettings = game::Tier3CameraSettings;
 } // namespace RED4ext

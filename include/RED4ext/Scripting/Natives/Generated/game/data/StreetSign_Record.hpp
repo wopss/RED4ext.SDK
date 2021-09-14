@@ -12,9 +12,10 @@ namespace game::data {
 struct StreetSign_Record : game::data::BaseSign_Record
 {
     static constexpr const char* NAME = "gamedataStreetSign_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StreetSign_Record";
 
 };
 RED4EXT_ASSERT_SIZE(StreetSign_Record, 0x58);
 } // namespace game::data
+using StreetSign_Record = game::data::StreetSign_Record;
 } // namespace RED4ext

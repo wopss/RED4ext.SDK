@@ -12,9 +12,10 @@ namespace game::data {
 struct RandomRatioCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataRandomRatioCoverSelectionParameters_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RandomRatioCoverSelectionParameters_Record";
 
 };
 RED4EXT_ASSERT_SIZE(RandomRatioCoverSelectionParameters_Record, 0x50);
 } // namespace game::data
+using RandomRatioCoverSelectionParameters_Record = game::data::RandomRatioCoverSelectionParameters_Record;
 } // namespace RED4ext

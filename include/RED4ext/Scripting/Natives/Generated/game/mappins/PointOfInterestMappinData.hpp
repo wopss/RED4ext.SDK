@@ -15,7 +15,7 @@ namespace game::mappins {
 struct PointOfInterestMappinData : game::mappins::IMappinData
 {
     static constexpr const char* NAME = "gamemappinsPointOfInterestMappinData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PointOfInterestMappinData";
 
     Handle<game::mappins::IPointOfInterestVariant> typedVariant; // 08
     bool active; // 18
@@ -23,4 +23,5 @@ struct PointOfInterestMappinData : game::mappins::IMappinData
 };
 RED4EXT_ASSERT_SIZE(PointOfInterestMappinData, 0x20);
 } // namespace game::mappins
+using PointOfInterestMappinData = game::mappins::PointOfInterestMappinData;
 } // namespace RED4ext

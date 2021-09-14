@@ -13,11 +13,12 @@ namespace game {
 struct SubStatModifierData_Deprecated : game::StatModifierData_Deprecated
 {
     static constexpr const char* NAME = "gameSubStatModifierData_Deprecated";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameSubStatModifierData";
 
     game::data::StatType refStatType; // 48
     uint8_t unk4C[0x50 - 0x4C]; // 4C
 };
 RED4EXT_ASSERT_SIZE(SubStatModifierData_Deprecated, 0x50);
 } // namespace game
+using gameSubStatModifierData = game::SubStatModifierData_Deprecated;
 } // namespace RED4ext

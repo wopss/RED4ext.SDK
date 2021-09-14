@@ -14,7 +14,7 @@ namespace move {
 struct SecureFootingResult
 {
     static constexpr const char* NAME = "moveSecureFootingResult";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SecureFootingResult";
 
     Vector4 slidingDirection; // 00
     Vector4 normalDirection; // 10
@@ -26,4 +26,5 @@ struct SecureFootingResult
 };
 RED4EXT_ASSERT_SIZE(SecureFootingResult, 0x40);
 } // namespace move
+using SecureFootingResult = move::SecureFootingResult;
 } // namespace RED4ext

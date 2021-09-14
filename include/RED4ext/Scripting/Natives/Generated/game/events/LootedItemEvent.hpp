@@ -13,10 +13,11 @@ namespace game::events {
 struct LootedItemEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsLootedItemEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UILootedItemEvent";
 
     ItemID itemID; // 40
 };
 RED4EXT_ASSERT_SIZE(LootedItemEvent, 0x50);
 } // namespace game::events
+using UILootedItemEvent = game::events::LootedItemEvent;
 } // namespace RED4ext

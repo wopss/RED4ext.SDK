@@ -13,7 +13,7 @@ namespace game::interactions {
 struct SetEnableEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsSetEnableEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionSetEnableEvent";
 
     bool enable; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
@@ -22,4 +22,5 @@ struct SetEnableEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetEnableEvent, 0x58);
 } // namespace game::interactions
+using InteractionSetEnableEvent = game::interactions::SetEnableEvent;
 } // namespace RED4ext

@@ -17,7 +17,7 @@ namespace ent {
 struct BakedDestructionComponent : ent::PhysicalMeshComponent
 {
     static constexpr const char* NAME = "entBakedDestructionComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BakedDestructionComponent";
 
     uint8_t unk240[0x260 - 0x240]; // 240
     RaRef<world::Effect> destructionEffect; // 260
@@ -42,4 +42,5 @@ struct BakedDestructionComponent : ent::PhysicalMeshComponent
 };
 RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x370);
 } // namespace ent
+using BakedDestructionComponent = ent::BakedDestructionComponent;
 } // namespace RED4ext

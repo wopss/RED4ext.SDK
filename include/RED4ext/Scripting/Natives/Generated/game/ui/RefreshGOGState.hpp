@@ -16,7 +16,7 @@ namespace game::ui {
 struct RefreshGOGState : red::Event
 {
     static constexpr const char* NAME = "gameuiRefreshGOGState";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "RefreshGOGState";
 
     game::GOGRewardsSystemStatus status; // 40
     game::GOGRewardsSystemErrors error; // 44
@@ -25,4 +25,5 @@ struct RefreshGOGState : red::Event
 };
 RED4EXT_ASSERT_SIZE(RefreshGOGState, 0x78);
 } // namespace game::ui
+using RefreshGOGState = game::ui::RefreshGOGState;
 } // namespace RED4ext

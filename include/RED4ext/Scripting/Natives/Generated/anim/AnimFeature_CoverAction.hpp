@@ -12,7 +12,7 @@ namespace anim {
 struct AnimFeature_CoverAction : anim::AnimFeature_AIAction
 {
     static constexpr const char* NAME = "animAnimFeature_CoverAction";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimFeature_CoverAction";
 
     int32_t coverStance; // 50
     int32_t coverActionType; // 54
@@ -21,4 +21,5 @@ struct AnimFeature_CoverAction : anim::AnimFeature_AIAction
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_CoverAction, 0x60);
 } // namespace anim
+using AnimFeature_CoverAction = anim::AnimFeature_CoverAction;
 } // namespace RED4ext

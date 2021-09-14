@@ -13,7 +13,7 @@ namespace game {
 struct PhotoModeBackgroundViewComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gamePhotoModeBackgroundViewComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "PhotoModeBackgroundViewComponent";
 
     uint8_t unk90[0xC0 - 0x90]; // 90
     NodeRef backgroundPrefabRef; // C0
@@ -22,4 +22,5 @@ struct PhotoModeBackgroundViewComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(PhotoModeBackgroundViewComponent, 0xE0);
 } // namespace game
+using PhotoModeBackgroundViewComponent = game::PhotoModeBackgroundViewComponent;
 } // namespace RED4ext

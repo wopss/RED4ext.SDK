@@ -11,10 +11,11 @@ namespace game {
 struct EffectData
 {
     static constexpr const char* NAME = "gameEffectData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "EffectData";
 
     uint8_t unk00[0x8 - 0x0]; // 0
 };
 RED4EXT_ASSERT_SIZE(EffectData, 0x8);
 } // namespace game
+using EffectData = game::EffectData;
 } // namespace RED4ext

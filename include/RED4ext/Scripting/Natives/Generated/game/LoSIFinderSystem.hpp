@@ -12,9 +12,10 @@ namespace game {
 struct LoSIFinderSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameLoSIFinderSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ILoSFinderSystem";
 
 };
 RED4EXT_ASSERT_SIZE(LoSIFinderSystem, 0x48);
 } // namespace game
+using ILoSFinderSystem = game::LoSIFinderSystem;
 } // namespace RED4ext

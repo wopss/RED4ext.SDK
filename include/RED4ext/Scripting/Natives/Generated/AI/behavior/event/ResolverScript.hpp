@@ -12,9 +12,10 @@ namespace AI::behavior::event {
 struct ResolverScript : IScriptable
 {
     static constexpr const char* NAME = "AIbehavioreventResolverScript";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AIScriptEventResolver";
 
 };
 RED4EXT_ASSERT_SIZE(ResolverScript, 0x40);
 } // namespace AI::behavior::event
+using AIScriptEventResolver = AI::behavior::event::ResolverScript;
 } // namespace RED4ext

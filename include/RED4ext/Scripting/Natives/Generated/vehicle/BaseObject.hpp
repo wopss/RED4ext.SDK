@@ -15,7 +15,7 @@ namespace vehicle {
 struct BaseObject : game::Object
 {
     static constexpr const char* NAME = "vehicleBaseObject";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VehicleObject";
 
     uint8_t unk240[0x350 - 0x240]; // 240
     Ref<AI::Archetype> archetype; // 350
@@ -23,4 +23,5 @@ struct BaseObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(BaseObject, 0x910);
 } // namespace vehicle
+using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext

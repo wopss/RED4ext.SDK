@@ -12,9 +12,10 @@ namespace game::data {
 struct NPCEquipmentGroupEntry_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNPCEquipmentGroupEntry_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "NPCEquipmentGroupEntry_Record";
 
 };
 RED4EXT_ASSERT_SIZE(NPCEquipmentGroupEntry_Record, 0x48);
 } // namespace game::data
+using NPCEquipmentGroupEntry_Record = game::data::NPCEquipmentGroupEntry_Record;
 } // namespace RED4ext

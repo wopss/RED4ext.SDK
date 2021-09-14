@@ -12,10 +12,11 @@ namespace game {
 struct StatusEffectTDBPicker
 {
     static constexpr const char* NAME = "gameStatusEffectTDBPicker";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "StatusEffectTDBPicker";
 
     TweakDBID statusEffect; // 00
 };
 RED4EXT_ASSERT_SIZE(StatusEffectTDBPicker, 0x8);
 } // namespace game
+using StatusEffectTDBPicker = game::StatusEffectTDBPicker;
 } // namespace RED4ext

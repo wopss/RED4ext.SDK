@@ -12,10 +12,11 @@ namespace game::data {
 struct HitPrereqCondition_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataHitPrereqCondition_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HitPrereqCondition_Record";
 
     uint8_t unk48[0x50 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(HitPrereqCondition_Record, 0x50);
 } // namespace game::data
+using HitPrereqCondition_Record = game::data::HitPrereqCondition_Record;
 } // namespace RED4ext

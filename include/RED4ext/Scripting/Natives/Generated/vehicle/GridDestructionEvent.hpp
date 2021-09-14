@@ -13,7 +13,7 @@ namespace vehicle {
 struct GridDestructionEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleGridDestructionEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "VehicleGridDestructionEvent";
 
     NativeArray<float, 16> state; // 40
     NativeArray<float, 16> rawChange; // 80
@@ -21,4 +21,5 @@ struct GridDestructionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(GridDestructionEvent, 0x100);
 } // namespace vehicle
+using VehicleGridDestructionEvent = vehicle::GridDestructionEvent;
 } // namespace RED4ext

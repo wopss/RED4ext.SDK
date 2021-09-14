@@ -12,10 +12,11 @@ namespace game::data {
 struct LCDScreen_Record : game::data::BaseSign_Record
 {
     static constexpr const char* NAME = "gamedataLCDScreen_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LCDScreen_Record";
 
     uint8_t unk58[0x60 - 0x58]; // 58
 };
 RED4EXT_ASSERT_SIZE(LCDScreen_Record, 0x60);
 } // namespace game::data
+using LCDScreen_Record = game::data::LCDScreen_Record;
 } // namespace RED4ext

@@ -14,7 +14,7 @@ namespace ink {
 struct TextMotherTongueController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkTextMotherTongueController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkTextMotherTongueController";
 
     uint8_t unk68[0xE8 - 0x68]; // 68
     ink::TextWidgetReference preTranslatedTextWidget; // E8

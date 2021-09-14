@@ -13,11 +13,12 @@ namespace game::influence {
 struct BumpReactionSetting : ISerializable
 {
     static constexpr const char* NAME = "gameinfluenceBumpReactionSetting";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "BumpReactionSetting";
 
     game::interactions::BumpIntensity reaction; // 30
     float maxVelocity; // 34
 };
 RED4EXT_ASSERT_SIZE(BumpReactionSetting, 0x38);
 } // namespace game::influence
+using BumpReactionSetting = game::influence::BumpReactionSetting;
 } // namespace RED4ext

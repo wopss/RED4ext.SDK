@@ -16,7 +16,7 @@ namespace ent {
 struct LightChannelComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightChannelComponent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "LightChannelComponent";
 
     uint8_t unk140[0x150 - 0x140]; // 140
     Handle<GeometryShape> shape; // 150
@@ -25,4 +25,5 @@ struct LightChannelComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(LightChannelComponent, 0x170);
 } // namespace ent
+using LightChannelComponent = ent::LightChannelComponent;
 } // namespace RED4ext

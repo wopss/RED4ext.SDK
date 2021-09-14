@@ -12,10 +12,11 @@ namespace game::data {
 struct InAirGravityModifier_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataInAirGravityModifier_Record";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InAirGravityModifier_Record";
 
     uint8_t unk50[0x68 - 0x50]; // 50
 };
 RED4EXT_ASSERT_SIZE(InAirGravityModifier_Record, 0x68);
 } // namespace game::data
+using InAirGravityModifier_Record = game::data::InAirGravityModifier_Record;
 } // namespace RED4ext

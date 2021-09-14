@@ -12,10 +12,11 @@ namespace game::ui {
 struct SideScrollerSpawnerAdvanced : IScriptable
 {
     static constexpr const char* NAME = "gameuiSideScrollerSpawnerAdvanced";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SideScrollerSpawnerAdvanced";
 
     uint8_t unk40[0xB8 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(SideScrollerSpawnerAdvanced, 0xB8);
 } // namespace game::ui
+using SideScrollerSpawnerAdvanced = game::ui::SideScrollerSpawnerAdvanced;
 } // namespace RED4ext

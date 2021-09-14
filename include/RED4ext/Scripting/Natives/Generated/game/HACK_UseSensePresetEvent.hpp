@@ -13,10 +13,11 @@ namespace game {
 struct HACK_UseSensePresetEvent : red::Event
 {
     static constexpr const char* NAME = "gameHACK_UseSensePresetEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HACK_UseSensePresetEvent";
 
     TweakDBID sensePreset; // 40
 };
 RED4EXT_ASSERT_SIZE(HACK_UseSensePresetEvent, 0x48);
 } // namespace game
+using HACK_UseSensePresetEvent = game::HACK_UseSensePresetEvent;
 } // namespace RED4ext

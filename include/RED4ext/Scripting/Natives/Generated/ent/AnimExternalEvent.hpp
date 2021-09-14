@@ -13,10 +13,11 @@ namespace ent {
 struct AnimExternalEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimExternalEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "AnimExternalEvent";
 
     CName name; // 40
 };
 RED4EXT_ASSERT_SIZE(AnimExternalEvent, 0x48);
 } // namespace ent
+using AnimExternalEvent = ent::AnimExternalEvent;
 } // namespace RED4ext

@@ -16,11 +16,12 @@ namespace game::mounting {
 struct UnmountingRequest : IScriptable
 {
     static constexpr const char* NAME = "gamemountingUnmountingRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "UnmountingRequest";
 
     game::mounting::MountingInfo lowLevelMountingInfo; // 40
     Handle<game::MountEventData> mountData; // 58
 };
 RED4EXT_ASSERT_SIZE(UnmountingRequest, 0x68);
 } // namespace game::mounting
+using UnmountingRequest = game::mounting::UnmountingRequest;
 } // namespace RED4ext

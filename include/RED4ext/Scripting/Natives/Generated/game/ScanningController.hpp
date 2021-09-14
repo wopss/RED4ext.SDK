@@ -12,10 +12,11 @@ namespace game {
 struct ScanningController : IScriptable
 {
     static constexpr const char* NAME = "gameScanningController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ScanningController";
 
     uint8_t unk40[0x22E0 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ScanningController, 0x22E0);
 } // namespace game
+using ScanningController = game::ScanningController;
 } // namespace RED4ext

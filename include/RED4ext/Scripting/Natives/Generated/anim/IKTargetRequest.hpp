@@ -11,7 +11,7 @@ namespace anim {
 struct IKTargetRequest
 {
     static constexpr const char* NAME = "animIKTargetRequest";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IKTargetRequest";
 
     float weightPosition; // 00
     float weightOrientation; // 04
@@ -22,4 +22,5 @@ struct IKTargetRequest
 };
 RED4EXT_ASSERT_SIZE(IKTargetRequest, 0x18);
 } // namespace anim
+using IKTargetRequest = anim::IKTargetRequest;
 } // namespace RED4ext

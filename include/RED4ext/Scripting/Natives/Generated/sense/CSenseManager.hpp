@@ -12,10 +12,11 @@ namespace sense {
 struct CSenseManager : sense::ISenseManager
 {
     static constexpr const char* NAME = "senseCSenseManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "SenseManager";
 
     uint8_t unk48[0x188 - 0x48]; // 48
 };
 RED4EXT_ASSERT_SIZE(CSenseManager, 0x188);
 } // namespace sense
+using SenseManager = sense::CSenseManager;
 } // namespace RED4ext

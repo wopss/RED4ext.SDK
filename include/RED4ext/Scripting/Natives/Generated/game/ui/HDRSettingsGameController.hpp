@@ -17,7 +17,7 @@ namespace game::ui {
 struct HDRSettingsGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiHDRSettingsGameController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HDRSettingsGameController";
 
     Ref<CBitmapTexture> callibrationScreen; // D0
     RaRef<ink::TextureAtlas> callibrationScreenAtlas; // E8
@@ -27,4 +27,5 @@ struct HDRSettingsGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(HDRSettingsGameController, 0x128);
 } // namespace game::ui
+using HDRSettingsGameController = game::ui::HDRSettingsGameController;
 } // namespace RED4ext

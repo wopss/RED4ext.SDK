@@ -12,10 +12,11 @@ namespace game::interactions {
 struct LayerData
 {
     static constexpr const char* NAME = "gameinteractionsLayerData";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionLayerData";
 
     CName tag; // 00
 };
 RED4EXT_ASSERT_SIZE(LayerData, 0x8);
 } // namespace game::interactions
+using InteractionLayerData = game::interactions::LayerData;
 } // namespace RED4ext

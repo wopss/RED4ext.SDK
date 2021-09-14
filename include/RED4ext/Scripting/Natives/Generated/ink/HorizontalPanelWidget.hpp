@@ -12,9 +12,10 @@ namespace ink {
 struct HorizontalPanelWidget : ink::BasePanelWidget
 {
     static constexpr const char* NAME = "inkHorizontalPanelWidget";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkHorizontalPanel";
 
 };
 RED4EXT_ASSERT_SIZE(HorizontalPanelWidget, 0x230);
 } // namespace ink
+using inkHorizontalPanel = ink::HorizontalPanelWidget;
 } // namespace RED4ext

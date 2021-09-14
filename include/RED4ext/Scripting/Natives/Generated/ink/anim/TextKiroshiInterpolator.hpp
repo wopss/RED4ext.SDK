@@ -12,9 +12,10 @@ namespace ink::anim {
 struct TextKiroshiInterpolator : ink::anim::TextInterpolator
 {
     static constexpr const char* NAME = "inkanimTextKiroshiInterpolator";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkAnimTextKiroshi";
 
 };
 RED4EXT_ASSERT_SIZE(TextKiroshiInterpolator, 0x70);
 } // namespace ink::anim
+using inkAnimTextKiroshi = ink::anim::TextKiroshiInterpolator;
 } // namespace RED4ext

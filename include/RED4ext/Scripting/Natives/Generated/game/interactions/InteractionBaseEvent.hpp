@@ -16,7 +16,7 @@ namespace game::interactions {
 struct InteractionBaseEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsInteractionBaseEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "InteractionBaseEvent";
 
     WeakHandle<game::Object> hotspot; // 40
     WeakHandle<game::Object> activator; // 50
@@ -24,4 +24,5 @@ struct InteractionBaseEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(InteractionBaseEvent, 0x68);
 } // namespace game::interactions
+using InteractionBaseEvent = game::interactions::InteractionBaseEvent;
 } // namespace RED4ext

@@ -12,9 +12,10 @@ namespace game::ui {
 struct HideCustomTooltipEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiHideCustomTooltipEvent";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "HideCustomTooltipEvent";
 
 };
 RED4EXT_ASSERT_SIZE(HideCustomTooltipEvent, 0x40);
 } // namespace game::ui
+using HideCustomTooltipEvent = game::ui::HideCustomTooltipEvent;
 } // namespace RED4ext
