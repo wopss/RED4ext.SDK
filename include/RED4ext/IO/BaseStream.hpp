@@ -19,16 +19,16 @@ struct BaseStream
     virtual Memory::EngineAllocator* GetAllocator(); // 00
     virtual ~BaseStream() = default;                 // 08
 
-    virtual bool ReadWrite(void* aBuffer, uint32_t aLength) = 0; // 10
-    virtual size_t GetPointerPosition() = 0;                     // 18
-    virtual size_t GetLength() = 0;                              // 20
-    virtual bool Seek(size_t aDistance) = 0;                     // 28
-    virtual bool Flush() = 0;                                    // 30
-    virtual void sub_38();                                       // 38
-    virtual const char* GetFileName();                           // 40
+    virtual void* ReadWrite(void* aBuffer, uint32_t aLength) = 0; // 10
+    virtual size_t GetPointerPosition() = 0;                      // 18
+    virtual size_t GetLength() = 0;                               // 20
+    virtual bool Seek(size_t aDistance) = 0;                      // 28
+    virtual bool Flush() = 0;                                     // 30
+    virtual void sub_38();                                        // 38
+    virtual const char* GetFileName();                            // 40
 
     template<typename T>
-    inline bool ReadWriteEx(T* aBuffer)
+    inline void* ReadWriteEx(T* aBuffer)
     {
         return ReadWrite(aBuffer, sizeof(T));
     }
