@@ -6,6 +6,7 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/InstanceType.hpp>
+#include <RED4ext/Scripting/Script.hpp>
 
 namespace RED4ext
 {
@@ -81,7 +82,7 @@ struct CBaseFunction : IFunction
     DynArray<CProperty*> params;    // 28
     DynArray<CProperty*> localVars; // 38
     HashMap<uint64_t, void*> unk48; // 48
-    int8_t unk78[48];               // 78
+    CCompiledCode bytecode;         // 78
     Flags flags;                    // A8
     int32_t unkAC;                  // AC
 
@@ -94,7 +95,8 @@ private:
     bool ExecuteNative(CStack* aStack, CStackFrame& aFrame);
 };
 RED4EXT_ASSERT_SIZE(CBaseFunction, 0xB0);
-RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x8);
+RED4EXT_ASSERT_OFFSET(CBaseFunction, fullName, 0x08);
+RED4EXT_ASSERT_OFFSET(CBaseFunction, bytecode, 0x78);
 RED4EXT_ASSERT_OFFSET(CBaseFunction, flags, 0xA8);
 
 struct CGlobalFunction : CBaseFunction
