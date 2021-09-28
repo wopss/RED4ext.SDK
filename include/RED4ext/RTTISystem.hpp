@@ -25,9 +25,9 @@ struct IRTTISystem
     virtual CGlobalFunction* GetFunction(CName aName) = 0;                                       // 30
     virtual void sub_38() = 0;                                                                   // 38
     virtual void GetNativeTypes(DynArray<CBaseRTTIType*>& aTypes) = 0;                           // 40
-    virtual void GetGlobalFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;                 // 48
+    virtual void GetGlobalFunctions(DynArray<CBaseFunction*>& aFunctions) = 0;                   // 48
     virtual void sub_50() = 0;                                                                   // 50
-    virtual void GetClassFunctions(DynArray<CGlobalFunction*>& aFunctions) = 0;                  // 58
+    virtual void GetClassFunctions(DynArray<CBaseFunction*>& aFunctions) = 0;                    // 58
     virtual void GetEnums(DynArray<CEnum*>& aEnums, bool aScriptedOnly = false) = 0;             // 60
     virtual void GetBitfields(DynArray<CBitfield*>& aBitfields, bool aScriptedOnly = false) = 0; // 68
     virtual void GetClasses(CClass* aIsAClass, DynArray<CClass*>& aClasses, bool (*aFilter)(CClass*) = nullptr,
@@ -35,9 +35,9 @@ struct IRTTISystem
     virtual void GetDerivedClasses(CClass* aBaseClass, DynArray<CClass*>& aClasses) = 0;      // 78
     virtual void RegisterType(CBaseRTTIType* aType, uint32_t aAsyncId) = 0;                   // 80
     virtual void sub_88() = 0;                                                                // 88
-    virtual void sub_90() = 0;                                                                // 90
+    virtual void UnregisterType(CBaseRTTIType* aType) = 0;                                    // 90
     virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                // 98
-    virtual void sub_A0() = 0;                                                                // A0
+    virtual void UnregisterFunction(CGlobalFunction* aFunc) = 0;                              // A0
     virtual void sub_A8() = 0;                                                                // A8
     virtual void sub_B0() = 0;                                                                // B0
     virtual void sub_B8() = 0;                                                                // B8
@@ -73,7 +73,7 @@ struct CRTTISystem : IRTTISystem
     HashMap<uint64_t, CBaseRTTIType*> typesByAsyncId; // 40
     HashMap<CName, uint32_t> typeAsyncIds;            // 70
     HashMap<CName, CGlobalFunction*> funcs;           // A0
-    HashMap<void*, void*> unkD0;                      // D0
+    HashMap<uint64_t, CGlobalFunction*> funcsByHash;  // D0
     HashMap<void*, void*> unkF8;                      // F8
     DynArray<void*> unk130;                           // 130
     DynArray<void*> unk140;                           // 140
@@ -91,6 +91,15 @@ RED4EXT_ASSERT_OFFSET(CRTTISystem, types, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTISystem, funcs, 0xA0);
 RED4EXT_ASSERT_OFFSET(CRTTISystem, scriptToNative, 0x150);
 RED4EXT_ASSERT_OFFSET(CRTTISystem, nativeToScript, 0x180);
+
+struct RTTIRegistrator
+{
+    typedef void (*CallbackFunc)(void);
+
+    static void Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused = true);
+};
+RED4EXT_ASSERT_SIZE(RTTIRegistrator, 0x01);
+
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

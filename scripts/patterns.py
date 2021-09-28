@@ -97,6 +97,10 @@ def get_groups() -> List[Group]:
             Item(name='Get', pattern='48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8')
         ]),
 
+        Group(name='CRTTIRegistrator', functions=[
+            Item(name='Add', pattern='48 89 5C 24 08 48 89 74 24 20 4C 89 44 24 18 48 89 54 24 10 57 48 83 EC 50 48 8B F1')
+        ]),
+
         Group(name='CRTTISystem', functions=[
             Item(name='Get', pattern='40 53 48 83 EC 20 65 48 8B 04 25 58 00 00 00 48 8D 1D ? ? ? ?')
         ]),
