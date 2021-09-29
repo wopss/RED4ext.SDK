@@ -12,3 +12,13 @@ RED4EXT_INLINE RED4ext::CRTTISystem* RED4ext::CRTTISystem::Get()
     RelocFunc<CRTTISystem* (*)()> func(Addresses::CRTTISystem_Get);
     return func();
 }
+
+RED4EXT_INLINE void RED4ext::RTTIRegistrator::Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused)
+{
+    static RTTIRegistrator instance;
+
+    using func_t = RTTIRegistrator* (*)(RTTIRegistrator*, CallbackFunc, CallbackFunc, bool);
+
+    RelocFunc<func_t> func(Addresses::CRTTIRegistrator_Add);
+    func(&instance, aRegFunc, aPostRegFunc, aUnused);
+}

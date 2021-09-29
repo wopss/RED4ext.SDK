@@ -78,6 +78,10 @@ constexpr uintptr_t CNamePool_AddPair = 0x1401CDF40 - ImageBase; // 48 83 EC 38 
 constexpr uintptr_t CNamePool_Get = 0x1401CDAB0 - ImageBase; // 48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8, expected: 1, index: 0
 #pragma endregion
 
+#pragma region CRTTIRegistrator
+constexpr uintptr_t CRTTIRegistrator_Add = 0x1401D0A40 - ImageBase; // 48 89 5C 24 08 48 89 74 24 20 4C 89 44 24 18 48 89 54 24 10 57 48 83 EC 50 48 8B F1, expected: 1, index: 0
+#pragma endregion
+
 #pragma region CRTTIScriptReferenceType
 constexpr uintptr_t CRTTIScriptReferenceType_ctor = 0x14023A400 - ImageBase; // 48 89 5C 24 18 57 48 83 EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 05 , expected: 1, index: 0
 constexpr uintptr_t CRTTIScriptReferenceType_Set = 0x14023B960 - ImageBase; // 48 89 5C 24 20 57 48 83  EC 20 4C 89 41 18 48 8B, expected: 1, index: 0

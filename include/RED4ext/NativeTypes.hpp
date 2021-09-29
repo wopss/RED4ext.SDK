@@ -118,13 +118,19 @@ struct Variant
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
+struct RawBuffer
+{
+    void* data;         // 00
+    uint32_t size;      // 08
+    uint32_t alignment; // 0C
+    Unk530 unk10;       // 10
+};
+RED4EXT_ASSERT_SIZE(RawBuffer, 0x20);
+
 struct DataBuffer
 {
-    int64_t unk00; // 00
-    int32_t unk08; // 08
-    int32_t unk0C; // 0C
-    Unk530 unk10;  // 10
-    int64_t unk20; // 20
+    RawBuffer buffer; // 00
+    uint64_t unk20;   // 20 - Pointer to something
 };
 RED4EXT_ASSERT_SIZE(DataBuffer, 0x28);
 
@@ -138,9 +144,7 @@ struct DeferredDataBuffer
 {
     int64_t unk00; // 00
     int64_t unk08; // 08
-    int64_t unk10; // 10
-    int64_t unk18; // 18
-    Unk530 unk20;  // 20
+    RawBuffer buffer; // 10
     int64_t unk30; // 30
     int8_t unk38;  // 38
     int64_t unk40; // 40
