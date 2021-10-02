@@ -4,6 +4,7 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Meta.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
+#include <variant>
 
 namespace RED4ext
 {
@@ -71,16 +72,43 @@ bool ExecuteGlobalFunction(CName aFunc, void* aOut, Args&&... aArgs)
 {
     return ExecuteGlobalFunction("cpPlayerSystem", aFunc, aOut, std::forward<Args>(aArgs)...);
 }
+
+namespace details
+{
+template<class T>
+struct Caller
+{
+    template<class Func, class Ret, class... Args>
+    void Call(Func f, Ret* ret, Args&&... args)
+    {
+        Ret result = std::apply(f, std::forward<Args>(args)...);
+        if (ret)
+            *ret = result;
+    }
+};
+
+template<>
+struct Caller<void>
+{
+    template<class Func, class... Args>
+    void Call(Func f, void*, Args&&... args)
+    {
+        std::apply(f, std::forward<Args>(args)...);
+    }
+};
+} // namespace details
+
 } // namespace RED4ext
 
 #define RED4EXT_MAKE_RED_NATIVE_CALL(retType, name, ...)                                                               \
     static retType name##Impl(__VA_ARGS__);                                                                            \
-    static void name(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, RED4ext::CString* aOut, int64_t a4) \
+    static void name(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, retType* aOut, int64_t a4)          \
     {                                                                                                                  \
         auto args = RED4ext::Meta::GetFunctionArgs(&name##Impl);                                                       \
         RED4ext::Meta::ForEach([aFrame](void* apInstance) { RED4ext::GetParameter(aFrame, apInstance); }, args);       \
         aFrame->code++;                                                                                                \
-        (void)std::apply(name##Impl, args);                                                                            \
+        RED4ext::details::Caller<retType> c;                                                                           \
+        c.Call(name##Impl, aOut, args);                                                                                \
     }
 
 #ifdef RED4EXT_HEADER_ONLY
