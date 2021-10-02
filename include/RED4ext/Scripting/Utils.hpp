@@ -75,27 +75,19 @@ bool ExecuteGlobalFunction(CName aFunc, void* aOut, Args&&... aArgs)
 
 namespace details
 {
-template<class T>
-struct Caller
+template<class Func, class Ret, class... Args>
+void Call(Func f, Ret* ret, Args&&... args)
 {
-    template<class Func, class Ret, class... Args>
-    void Call(Func f, Ret* ret, Args&&... args)
-    {
-        Ret result = std::apply(f, std::forward<Args>(args)...);
-        if (ret)
-            *ret = result;
-    }
-};
+    Ret result = std::apply(f, std::forward<Args>(args)...);
+    if (ret)
+        *ret = result;
+}
 
-template<>
-struct Caller<void>
+template<class Func, class... Args>
+void Call(Func f, void* ret, Args&&... args)
 {
-    template<class Func, class... Args>
-    void Call(Func f, void*, Args&&... args)
-    {
-        std::apply(f, std::forward<Args>(args)...);
-    }
-};
+    std::apply(f, std::forward<Args>(args)...);
+}
 } // namespace details
 
 } // namespace RED4ext
@@ -107,8 +99,7 @@ struct Caller<void>
         auto args = RED4ext::Meta::GetFunctionArgs(&name##Impl);                                                       \
         RED4ext::Meta::ForEach([aFrame](void* apInstance) { RED4ext::GetParameter(aFrame, apInstance); }, args);       \
         aFrame->code++;                                                                                                \
-        RED4ext::details::Caller<retType> c;                                                                           \
-        c.Call(name##Impl, aOut, args);                                                                                \
+        RED4ext::details::Call(name##Impl, aOut, args);                                                                \
     }
 
 #ifdef RED4EXT_HEADER_ONLY
