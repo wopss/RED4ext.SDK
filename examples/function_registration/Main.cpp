@@ -76,7 +76,7 @@ RED4EXT_C_EXPORT bool RED4EXT_CALL Load(RED4ext::PluginHandle aHandle, const RED
         func->SetReturnType("Int32");
 
         auto staticFunc = RED4ext::CClassStaticFunction::Create(playerPuppetCls, "MyStaticFunc", "MyStaticFunc", &MyStaticFunc);
-        func->SetReturnType("Bool");
+        staticFunc->SetReturnType("Bool");
 
         playerPuppetCls->RegisterFunction(func);
         playerPuppetCls->RegisterFunction(staticFunc);
