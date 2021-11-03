@@ -13,20 +13,17 @@ namespace RED4ext
 struct CBaseFunction;
 struct IScriptable : ISerializable
 {
-    virtual void sub_D8() = 0;  // D8
-    virtual void sub_E0() = 0;  // E0
-    virtual void sub_E8() = 0;  // E8
-    virtual void sub_F0() = 0;  // F0
-    virtual void sub_F8() = 0;  // F8
-    virtual void sub_100() = 0; // 100
-    virtual void sub_108() = 0; // 108
+    virtual CClass* GetType();
+
+    virtual void sub_D8(int64_t a1, int64_t a2); // D8
+    virtual void sub_E0();                       // E0
+    virtual void sub_E8();                       // E8
+    virtual void sub_F0();                       // F0
+    virtual void sub_F8();                       // F8
+    virtual void sub_100();                      // 100
+    virtual void sub_108();                      // 108
 
     void* GetValueHolder();
-
-    CClass* GetType()
-    {
-        return classType ? classType : reinterpret_cast<CClass*>(GetNativeType());
-    }
 
     template<typename ReturnT = void, typename... Args, typename = std::enable_if_t<!std::is_same_v<ReturnT, void>>>
     std::optional<ReturnT> ExecuteFunction(CName aFunc, Args&&... aArgs)
@@ -47,14 +44,14 @@ struct IScriptable : ISerializable
         return ExecuteFunctionImpl<void>(aFunc, nullptr, std::forward<Args>(aArgs)...);
     }
 
-    CClass* classType; // 30
+    CClass* unk30;     // 30
     void* valueHolder; // 38
 
 protected:
     template<typename ReturnType, typename... Args>
     bool ExecuteFunctionImpl(CName aFunc, ReturnType* ret, Args&&... aArgs)
     {
-        CClass* cls = GetType();
+        CClass* cls = GetBaseType();
         if (!cls)
         {
             return false;

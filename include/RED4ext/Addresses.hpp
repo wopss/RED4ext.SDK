@@ -111,7 +111,16 @@ constexpr uintptr_t Handle_DecWeakRef = 0x1401D2B00 - ImageBase; // 40 53 48 83 
 #pragma endregion
 
 #pragma region IScriptable
+constexpr uintptr_t IScriptable_sub_D8 = 0x140206570 - ImageBase; // 40 53 48 83 EC ? 48 8B 01 49 8B D8, expected: 4, index: 0
 constexpr uintptr_t IScriptable_GetValueHolder = 0x140206600 - ImageBase; // 40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75, expected: 2, index: 1
+#pragma endregion
+
+#pragma region ISerializable
+constexpr uintptr_t ISerializable_sub_30 = 0x140208410 - ImageBase; // 48 83 EC ? E8 ? ? ? ? 48 85 C0, expected: 28, index: 1
+constexpr uintptr_t ISerializable_sub_40 = 0x140208440 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC ? 48 8B F2, expected: 69, index: 0
+constexpr uintptr_t ISerializable_sub_78 = 0x140207EA0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 44 88 4C 24 20 55 41 54, expected: 1, index: 0
+constexpr uintptr_t ISerializable_sub_A0 = 0x1402081B0 - ImageBase; // 48 83 EC ? 48 8B 01 FF 50 08, expected: 7, index: 1
+constexpr uintptr_t ISerializable_sub_C0 = 0x1402082E0 - ImageBase; // 48 83 EC ? E8 ? ? ? ? 48 85 C0, expected: 28, index: 0
 #pragma endregion
 
 #pragma region Memory

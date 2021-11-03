@@ -124,7 +124,16 @@ def get_groups() -> List[Group]:
             Item(name='DecWeakRef', pattern='40 53 48 83 EC 30 48 8B D9 48 8B 49 08 48 85 C9 74 43 B8 FF FF FF FF')
         ]),
 
+        Group(name='ISerializable', functions=[
+            Item(name='sub_30', pattern='48 83 EC ? E8 ? ? ? ? 48 85 C0', expected=28, index=1),
+            Item(name='sub_40', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC ? 48 8B F2', expected=69, index=0),
+            Item(name='sub_78', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 44 88 4C 24 20 55 41 54', expected=1, index=0),
+            Item(name='sub_A0', pattern='48 83 EC ? 48 8B 01 FF 50 08', expected=7, index=1),
+            Item(name='sub_C0', pattern='48 83 EC ? E8 ? ? ? ? 48 85 C0', expected=28, index=0)
+        ]),
+
         Group(name='IScriptable', functions=[
+            Item(name='sub_D8', pattern='40 53 48 83 EC ? 48 8B 01 49 8B D8', expected=4, index=0),
             Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75', expected=2, index=1)
         ]),
 

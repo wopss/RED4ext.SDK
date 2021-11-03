@@ -4,47 +4,54 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
-#include <RED4ext/Memory/Allocators.hpp>
 
 namespace RED4ext
 {
-struct CBaseRTTIType;
+namespace Memory
+{
+struct IAllocator;
+}
+
+struct CClass;
+struct BaseStream;
+struct CString;
 
 struct ISerializable
 {
-    virtual CBaseRTTIType* GetNativeType() = 0;     // 00
-    virtual CBaseRTTIType* GetParentType() = 0;     // 08
-    virtual Memory::IAllocator* GetAllocator() = 0; // 10
-    virtual ~ISerializable() = 0;                   // 18
-    virtual void sub_20() = 0;                      // 20
-    virtual void sub_28() = 0;                      // 28
-    virtual void sub_30() = 0;                      // 30
-    virtual void sub_38() = 0;                      // 38
-    virtual void sub_40() = 0;                      // 40
-    virtual void sub_48() = 0;                      // 48
-    virtual void sub_50() = 0;                      // 50
-    virtual void sub_58() = 0;                      // 58
-    virtual void sub_60() = 0;                      // 60
-    virtual void sub_68() = 0;                      // 68
-    virtual void sub_70() = 0;                      // 70
-    virtual void sub_78() = 0;                      // 78
-    virtual void sub_80() = 0;                      // 80
-    virtual void sub_88() = 0;                      // 88
-    virtual void sub_90() = 0;                      // 90
-    virtual void sub_98() = 0;                      // 98
-    virtual void sub_A0() = 0;                      // A0
-    virtual void sub_A8() = 0;                      // A8
-    virtual void sub_B0() = 0;                      // B0
-    virtual void sub_B8() = 0;                      // B8
-    virtual void sub_C0() = 0;                      // C0
-    virtual void sub_C8() = 0;                      // C8
-    virtual bool sub_D0() = 0;                      // D0
+    virtual CClass* GetNativeType() = 0;                                                // 00
+    virtual CClass* GetType();                                                          // 08
+    virtual Memory::IAllocator* GetAllocator();                                         // 10
+    virtual ~ISerializable() = default;                                                 // 18
+    virtual void sub_20();                                                              // 20
+    virtual void sub_28();                                                              // 28
+    virtual bool sub_30();                                                              // 30
+    virtual void sub_38();                                                              // 38
+    virtual bool sub_40(BaseStream* aStream);                                           // 40
+    virtual bool sub_48(int64_t a1);                                                    // 48
+    virtual bool sub_50(int64_t a1);                                                    // 50
+    virtual bool sub_58();                                                              // 58
+    virtual bool sub_60();                                                              // 60
+    virtual bool sub_68();                                                              // 68
+    virtual bool sub_70();                                                              // 70
+    virtual int64_t sub_78(int64_t a1, int64_t a2, uint8_t a3, int64_t a4, int64_t a5); // 78
+    virtual bool sub_80();                                                              // 80
+    virtual void sub_88();                                                              // 88
+    virtual bool sub_90();                                                              // 90
+    virtual bool sub_98();                                                              // 98
+    virtual void* sub_A0();                                                             // A0
+    virtual CClass* sub_A8();                                                           // A8
+    virtual void sub_B0(void* a1);                                                      // B0
+    virtual CString sub_B8();                                                           // B8
+    virtual void* sub_C0(void* a1);                                                     // C0
+    virtual void* sub_C8(void* a1);                                                     // C8
+    virtual bool sub_D0();                                                              // D0
 
     WeakHandle<ISerializable> ref; // 00
     int64_t unk18;                 // 18
     int64_t unk20;                 // 20
     int64_t unk28;                 // 28
 };
+RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 
 template<typename T, typename = std::enable_if_t<std::is_base_of_v<ISerializable, T>>>
 bool IsHandleEmpty(Handle<T>& handle)
@@ -59,6 +66,8 @@ void DeleteHandle(Handle<T>& handle)
     handle->~T();
     alloc->Free(handle);
 }
-
-RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/ISerializable-inl.hpp>
+#endif
