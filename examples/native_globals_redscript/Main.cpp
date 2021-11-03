@@ -50,7 +50,6 @@ void CustomFunctionTwo(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFr
 
 RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
 {
-    // The function registration also works here - not sure which is better
 }
 
 RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
