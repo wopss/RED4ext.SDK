@@ -51,7 +51,7 @@ protected:
     template<typename ReturnType, typename... Args>
     bool ExecuteFunctionImpl(CName aFunc, ReturnType* ret, Args&&... aArgs)
     {
-        CClass* cls = GetBaseType();
+        CClass* cls = GetType();
         if (!cls)
         {
             return false;
