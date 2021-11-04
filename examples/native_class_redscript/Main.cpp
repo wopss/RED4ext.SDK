@@ -16,7 +16,6 @@ RED4ext::CClass* MyCustomClass::GetNativeType()
 
 void GetNumber(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, float* aOut, int64_t a4)
 {
-    MessageBox(nullptr, L"Test", L"Hello", MB_OK);
     aFrame->code++; // skip ParamEnd
     *aOut = 6.25;
 }
@@ -24,7 +23,7 @@ void GetNumber(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, flo
 RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
 {
     cls.flags = {.isNative = true};
-    RED4ext::CRTTISystem::Get()->RegisterType(&cls, 100000);
+    RED4ext::CRTTISystem::Get()->RegisterType(&cls);
 }
 
 RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
