@@ -102,11 +102,11 @@ struct RTTIRegistrator
     static void Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused = true);
 
     /**
-     * @brief Returns the available unique RTTI identifier.
+     * @brief Returns the next unique identifier used for RTTI types.
      * @return The unique identifier.
      *
      * @note Every type in RED4 has a unique identifier assigned to it, reusing the IDs manually might lead to a crash,
-     * thus we are using the game's counter to create our own IDs.
+     * thus we are using the game's counter to create our own types.
      */
     static const uint32_t GetNextId();
 };
