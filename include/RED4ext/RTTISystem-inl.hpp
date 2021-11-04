@@ -13,6 +13,11 @@ RED4EXT_INLINE RED4ext::CRTTISystem* RED4ext::CRTTISystem::Get()
     return func();
 }
 
+RED4EXT_INLINE void RED4ext::CRTTISystem::RegisterType(CBaseRTTIType* aType)
+{
+    RegisterType(aType, RTTIRegistrator::GetNextId());
+}
+
 RED4EXT_INLINE void RED4ext::RTTIRegistrator::Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused)
 {
     static RTTIRegistrator instance;
@@ -21,4 +26,10 @@ RED4EXT_INLINE void RED4ext::RTTIRegistrator::Add(CallbackFunc aRegFunc, Callbac
 
     RelocFunc<func_t> func(Addresses::CRTTIRegistrator_Add);
     func(&instance, aRegFunc, aPostRegFunc, aUnused);
+}
+
+RED4EXT_INLINE const uint32_t RED4ext::RTTIRegistrator::GetNextId()
+{
+    RelocPtr<volatile uint32_t> ptr(Addresses::CRTTIRegistrator_RTTIAsyncId);
+    return InterlockedIncrement(ptr.GetAddr());
 }
