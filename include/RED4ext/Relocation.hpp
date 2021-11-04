@@ -55,6 +55,11 @@ public:
         return *m_address;
     }
 
+    inline T* GetAddr() const
+    {
+        return m_address;
+    }
+
 private:
     T* m_address;
 };

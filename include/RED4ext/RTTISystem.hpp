@@ -68,6 +68,9 @@ struct CRTTISystem : IRTTISystem
 {
     static CRTTISystem* Get();
 
+    using IRTTISystem::RegisterType;
+    void RegisterType(CBaseRTTIType* aType);
+
     int32_t unk8;                                     // 08
     HashMap<CName, CBaseRTTIType*> types;             // 10
     HashMap<uint64_t, CBaseRTTIType*> typesByAsyncId; // 40
@@ -97,6 +100,15 @@ struct RTTIRegistrator
     typedef void (*CallbackFunc)(void);
 
     static void Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused = true);
+
+    /**
+     * @brief Returns the next unique identifier used for RTTI types.
+     * @return The unique identifier.
+     *
+     * @note Every type in RED4 has a unique identifier assigned to it, reusing the IDs manually might lead to a crash,
+     * thus we are using the game's counter to create our own types.
+     */
+    static const uint32_t GetNextId();
 };
 RED4EXT_ASSERT_SIZE(RTTIRegistrator, 0x01);
 

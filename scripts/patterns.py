@@ -97,7 +97,10 @@ def get_groups() -> List[Group]:
             Item(name='Get', pattern='48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8')
         ]),
 
-        Group(name='CRTTIRegistrator', functions=[
+        Group(name='CRTTIRegistrator', pointers=[
+            Item(name='RTTIAsyncId', pattern='B8 01 00 00 00 F0 0F C1 05 ? ? ? ? FF C0 C3', expected=3, index=0, offset=9)
+        ],
+        functions=[
             Item(name='Add', pattern='48 89 5C 24 08 48 89 74 24 20 4C 89 44 24 18 48 89 54 24 10 57 48 83 EC 50 48 8B F1')
         ]),
 
