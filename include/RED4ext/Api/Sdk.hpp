@@ -3,6 +3,7 @@
 #include <RED4ext/Api/v0/Sdk.hpp>
 
 #define RED4EXT_SDK_0_1_0 RED4EXT_V0_SDK_0_1_0
+#define RED4EXT_SDK_0_2_0 RED4EXT_V0_SDK_0_2_0
 
 /*
  * @brief The latest SDK version.
