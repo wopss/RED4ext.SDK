@@ -91,7 +91,11 @@ void PrintScannerStatus(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aF
     }
 }
 
-RED4EXT_C_EXPORT bool RED4EXT_CALL Load(RED4ext::PluginHandle aHandle, const RED4ext::IRED4ext* aInterface)
+RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
+{
+}
+
+RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 {
     auto rtti = RED4ext::CRTTISystem::Get();
 
@@ -114,6 +118,23 @@ RED4EXT_C_EXPORT bool RED4EXT_CALL Load(RED4ext::PluginHandle aHandle, const RED
     {
         auto func = RED4ext::CGlobalFunction::Create("PrintScannerStatus", "PrintScannerStatus", &PrintScannerStatus);
         rtti->RegisterFunction(func);
+    }
+}
+
+RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,
+                                        const RED4ext::RED4ext* aRED4ext)
+{
+    switch (aReason)
+    {
+    case RED4ext::EMainReason::Load:
+    {
+        RED4ext::RTTIRegistrator::Add(RegisterTypes, PostRegisterTypes);
+        break;
+    }
+    case RED4ext::EMainReason::Unload:
+    {
+        break;
+    }
     }
 
     return true;

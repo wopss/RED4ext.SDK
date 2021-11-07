@@ -39,37 +39,23 @@ RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
    cls.RegisterFunction(getNumber);
 }
 
-BOOL APIENTRY DllMain(HMODULE aModule, DWORD aReason, LPVOID aReserved)
+RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,
+                                        const RED4ext::RED4ext* aRED4ext)
 {
     switch (aReason)
     {
-    case DLL_PROCESS_ATTACH:
+    case RED4ext::EMainReason::Load:
     {
-        DisableThreadLibraryCalls(aModule);
         RED4ext::RTTIRegistrator::Add(RegisterTypes, PostRegisterTypes);
         break;
     }
-    case DLL_PROCESS_DETACH:
+    case RED4ext::EMainReason::Unload:
     {
         break;
     }
     }
 
-    return TRUE;
-}
-
-RED4EXT_C_EXPORT bool RED4EXT_CALL Load(RED4ext::PluginHandle aHandle, const RED4ext::IRED4ext* aInterface)
-{
     return true;
-}
-
-RED4EXT_C_EXPORT void RED4EXT_CALL PostLoad()
-{
-
-}
-
-RED4EXT_C_EXPORT void RED4EXT_CALL Unload()
-{
 }
 
 RED4EXT_C_EXPORT void RED4EXT_CALL Query(RED4ext::PluginInfo* aInfo)
