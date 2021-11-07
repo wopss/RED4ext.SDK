@@ -14,3 +14,8 @@ using RED4ext = v0::RED4ext;
  */
 using Hooking = v0::Hooking;
 } // namespace RED4ext
+
+#ifndef RED4EXT_OFFSET_TO_ADDR
+#define RED4EXT_OFFSET_TO_ADDR(offset)                                                                                 \
+    reinterpret_cast<void*>(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)) + offset)
+#endif

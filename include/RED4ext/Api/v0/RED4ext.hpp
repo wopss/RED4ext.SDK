@@ -9,13 +9,11 @@ struct RED4ext
 {
     /**
      * @brief Get the game's version.
-     * @return The game's version.
      */
     VersionInfo runtime;
 
     /**
      * @brief Get the hooking struct.
-     * @return The hooking struct.
      */
     Hooking hooking;
 };
