@@ -137,7 +137,7 @@ RED4EXT_INLINE RED4ext::Variant::~Variant()
 
 RED4EXT_INLINE bool RED4ext::Variant::IsEmpty() const noexcept
 {
-    return type == nullptr;
+    return !type;
 }
 
 RED4EXT_INLINE bool RED4ext::Variant::IsInlined() const noexcept
@@ -152,12 +152,12 @@ RED4EXT_INLINE RED4ext::CBaseRTTIType* RED4ext::Variant::GetType() const noexcep
 
 RED4EXT_INLINE RED4ext::ScriptInstance RED4ext::Variant::GetDataPtr() const noexcept
 {
-    return IsInlined() ? (RED4ext::ScriptInstance)inlined : instance;
+    return IsInlined() ? const_cast<uint8_t*>(inlined) : instance;
 }
 
 RED4EXT_INLINE bool RED4ext::Variant::Init(const RED4ext::CBaseRTTIType* aType)
 {
-    if (aType == nullptr)
+    if (!aType)
     {
         Free();
         return false;
@@ -166,13 +166,18 @@ RED4EXT_INLINE bool RED4ext::Variant::Init(const RED4ext::CBaseRTTIType* aType)
     RED4ext::CBaseRTTIType* ownType = GetType();
     RED4ext::ScriptInstance ownData = GetDataPtr();
 
-    if (ownType != nullptr)
+    if (ownType)
     {
-        if (ownData != nullptr)
-            ownType->Destruct(ownData);
-
         if (aType == ownType)
             return true;
+
+        if (ownData)
+        {
+            ownType->Destruct(ownData);
+
+            if (!IsInlined())
+                ownType->GetAllocator()->Free(ownData);
+        }
     }
 
     type = aType;
@@ -184,9 +189,6 @@ RED4EXT_INLINE bool RED4ext::Variant::Init(const RED4ext::CBaseRTTIType* aType)
     }
     else
     {
-        if (ownType != nullptr && ownData != nullptr)
-            ownType->GetAllocator()->Free(ownData);
-
         instance = aType->GetAllocator()->AllocAligned(aType->GetSize(), aType->GetAlignment()).memory;
         ownData = instance;
     }
@@ -201,7 +203,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::CBaseRTTIType* aType, 
     if (!Init(aType))
         return false;
 
-    if (aData == nullptr)
+    if (!aData)
         return false;
     
     GetType()->Assign(GetDataPtr(), aData);
@@ -227,7 +229,7 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
     RED4ext::CBaseRTTIType* ownType = GetType();
     RED4ext::ScriptInstance ownData = GetDataPtr();
 
-    if (ownData != nullptr)
+    if (ownData)
     {
         ownType->Destruct(ownData);
 

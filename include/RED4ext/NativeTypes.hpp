@@ -123,7 +123,8 @@ struct Variant
     static bool CanBeInlined(const CBaseRTTIType* aType) noexcept;
 
     const CBaseRTTIType* type{ nullptr };
-    union {
+    union
+    {
         uint8_t inlined[InlineSize]{ 0 };
         ScriptInstance instance;
     };
