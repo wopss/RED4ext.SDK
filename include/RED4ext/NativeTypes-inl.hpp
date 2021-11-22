@@ -5,6 +5,7 @@
 #endif
 
 #include <RED4ext/Hashing/CRC.hpp>
+#include <RED4ext/RTTISystem.hpp>
 
 RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(uint64_t aValue) noexcept
     : value(aValue)
@@ -99,4 +100,146 @@ RED4EXT_INLINE bool RED4ext::TweakDBID::operator==(const TweakDBID& aDBID) const
 RED4EXT_INLINE bool RED4ext::TweakDBID::operator!=(const TweakDBID& aDBID) const noexcept
 {
     return !(aDBID == *this);
+}
+
+RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::CBaseRTTIType* aType)
+    : Variant()
+{
+    if (aType)
+    {
+        Init(aType);
+    }
+}
+
+RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::CBaseRTTIType* aType, const RED4ext::ScriptInstance aData)
+    : Variant()
+{
+    if (aType)
+    {
+        Fill(aType, aData);
+    }
+}
+
+RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::CName& aTypeName, const RED4ext::ScriptInstance aData)
+    : Variant(RED4ext::CRTTISystem::Get()->GetType(aTypeName), aData)
+{
+}
+
+RED4EXT_INLINE RED4ext::Variant::Variant(const Variant& aOther)
+    : Variant(aOther.GetType(), aOther.GetDataPtr())
+{
+}
+
+RED4EXT_INLINE RED4ext::Variant::~Variant()
+{
+    Free();
+}
+
+RED4EXT_INLINE bool RED4ext::Variant::IsEmpty() const noexcept
+{
+    return type == nullptr;
+}
+
+RED4EXT_INLINE bool RED4ext::Variant::IsInlined() const noexcept
+{
+    return reinterpret_cast<uintptr_t>(type) & InlineFlag;
+}
+
+RED4EXT_INLINE RED4ext::CBaseRTTIType* RED4ext::Variant::GetType() const noexcept
+{
+    return reinterpret_cast<RED4ext::CBaseRTTIType*>(reinterpret_cast<uintptr_t>(type) & TypeMask);
+}
+
+RED4EXT_INLINE RED4ext::ScriptInstance RED4ext::Variant::GetDataPtr() const noexcept
+{
+    return IsInlined() ? (RED4ext::ScriptInstance)inlined : instance;
+}
+
+RED4EXT_INLINE bool RED4ext::Variant::Init(const RED4ext::CBaseRTTIType* aType)
+{
+    if (aType == nullptr)
+    {
+        Free();
+        return false;
+    }
+
+    RED4ext::CBaseRTTIType* ownType = GetType();
+    RED4ext::ScriptInstance ownData = GetDataPtr();
+
+    if (ownType != nullptr)
+    {
+        if (ownData != nullptr)
+            ownType->Destruct(ownData);
+
+        if (aType == ownType)
+            return true;
+    }
+
+    type = aType;
+
+    if (CanBeInlined(aType))
+    {
+        reinterpret_cast<uintptr_t&>(type) |= InlineFlag;
+        ownData = inlined;
+    }
+    else
+    {
+        if (ownType != nullptr && ownData != nullptr)
+            ownType->GetAllocator()->Free(ownData);
+
+        instance = aType->GetAllocator()->AllocAligned(aType->GetSize(), aType->GetAlignment()).memory;
+        ownData = instance;
+    }
+
+    aType->Construct(ownData);
+
+    return true;
+}
+
+RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::CBaseRTTIType* aType, const RED4ext::ScriptInstance aData)
+{
+    if (!Init(aType))
+        return false;
+
+    if (aData == nullptr)
+        return false;
+    
+    GetType()->Assign(GetDataPtr(), aData);
+
+    return true;
+}
+
+RED4EXT_INLINE bool RED4ext::Variant::Extract(RED4ext::ScriptInstance aBuffer)
+{
+    if (IsEmpty())
+        return false;
+    
+    GetType()->Assign(aBuffer, GetDataPtr());
+
+    return true;
+}
+
+RED4EXT_INLINE void RED4ext::Variant::Free()
+{
+    if (IsEmpty())
+        return;
+    
+    RED4ext::CBaseRTTIType* ownType = GetType();
+    RED4ext::ScriptInstance ownData = GetDataPtr();
+
+    if (ownData != nullptr)
+    {
+        ownType->Destruct(ownData);
+
+        if (!IsInlined())
+            ownType->GetAllocator()->Free(ownData);
+    }
+
+    instance = nullptr;
+    type = nullptr;
+}
+
+RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::CBaseRTTIType* aType) noexcept
+{
+    return aType->GetSize() <= InlineSize && aType->GetAlignment() <= InlineAlignment;
 }
