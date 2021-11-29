@@ -64,7 +64,8 @@ constexpr uint64_t FNV1a64(const uint8_t* aData, const size_t aLen, uint64_t aSe
     return hash;
 }
 
-constexpr [[deprecated("Use 'FNV1a64' instead.")]] uint64_t FNV1a(const char* aText,
+[[deprecated("Use 'FNV1a64' instead.")]]
+constexpr uint64_t FNV1a(const char* aText,
                                                                   uint64_t aSeed = 0xCBF29CE484222325)
 {
     return FNV1a64(aText, aSeed);

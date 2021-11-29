@@ -67,33 +67,39 @@ struct CBaseRTTIType
     virtual void sub_B0(int64_t a1, int64_t a2);                                                   // B0
     virtual Memory::IAllocator* GetAllocator() const;                                              // B8
 
-    inline void [[deprecated("Use 'GetName()' instead.")]] GetName(CName& aOut) const
+    [[deprecated("Use 'GetName()' instead.")]]
+    inline void GetName(CName& aOut) const
     {
         aOut = GetName();
     }
 
-    inline CName [[deprecated("Use 'GetComputedName()' instead.")]] GetName2() const
+    [[deprecated("Use 'GetComputedName()' instead.")]]
+    inline CName GetName2() const
     {
         return GetComputedName();
     }
 
-    inline void [[deprecated("Use 'GetComputedName()' instead.")]] GetName2(CName& aOut) const
+    [[deprecated("Use 'GetComputedName()' instead.")]]
+    inline void GetName2(CName& aOut) const
     {
         aOut = GetComputedName();
     }
 
-    inline void [[deprecated("Use 'GetTypeName()' instead.")]] GetTypeName(CString& aOut) const
+    [[deprecated("Use 'GetTypeName()' instead.")]]
+    inline void GetTypeName(CString& aOut) const
     {
         auto name = GetTypeName();
         aOut = name;
     }
 
-    inline void [[deprecated("Use 'Construct()' instead.")]] Init(ScriptInstance aMemory) const
+    [[deprecated("Use 'Construct()' instead.")]]
+    inline void Init(ScriptInstance aMemory) const
     {
         Construct(aMemory);
     }
 
-    inline void [[deprecated("Use 'Destruct()' instead.")]] Destroy(ScriptInstance aMemory) const
+    [[deprecated("Use 'Destruct()' instead.")]]
+    inline void Destroy(ScriptInstance aMemory) const
     {
         Destruct(aMemory);
     }
@@ -155,12 +161,14 @@ struct CClass : CBaseRTTIType
 
     void RegisterFunction(CClassFunction* aFunc);
 
-    inline void [[deprecated("Use 'ConstructCls()' instead.")]] InitCls(ScriptInstance aMemory) const
+    [[deprecated("Use 'ConstructCls()' instead.")]]
+    inline void InitCls(ScriptInstance aMemory) const
     {
         ConstructCls(aMemory);
     }
 
-    inline void [[deprecated("Use 'DestructCls()' instead.")]] DestroyCls(ScriptInstance aMemory) const
+    [[deprecated("Use 'DestructCls()' instead.")]]
+    inline void DestroyCls(ScriptInstance aMemory) const
     {
         DestructCls(aMemory);
     }
