@@ -26,7 +26,7 @@
 
 #ifndef RED4EXT_DECLARE_TYPE
 #define RED4EXT_DECLARE_TYPE(type, name)                                                                               \
-    const type* const_##name##;                                                                                        \
+    const type* const_##name;                                                                                          \
     type* name;
 #endif
 
