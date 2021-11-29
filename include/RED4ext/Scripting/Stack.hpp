@@ -107,6 +107,10 @@ struct CStackFrame
     uint16_t paramFlags;  // 60
     uint8_t currentParam; // 62
 
+    void Step() {
+        this->code++;
+    }
+
     bool IsCurrentParamSet() const
     {
         return (paramFlags & (1 << currentParam)) != 0;
