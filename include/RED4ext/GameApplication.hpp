@@ -5,10 +5,12 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <RED4ext/GameStates.hpp>
 
 namespace RED4ext
 {
+struct IGameState;
+enum class EGameStateType : uint32_t;
+
 enum class EGameStateStatus
 {
     Uninitialized = 0,
@@ -83,15 +85,15 @@ RED4EXT_ASSERT_SIZE(CBaseGameApplication, 0x88);
 
 struct CGameApplication : CBaseGameApplication
 {
-    CGameOptions options;            // 88
-    DynArray<uint32_t> stateIndexes; // 150
-    DynArray<IGameState*> states;    // 160
-    int64_t unk170;                  // 170
-    IGameState* currState;           // 178
-    IGameState* nextState;           // 180
-    EGameStateStatus status;         // 188
-    char* name;                      // 190
-    uint32_t result;                 // 198
+    CGameOptions options;                // 88
+    DynArray<EGameStateType> stateTypes; // 150
+    DynArray<IGameState*> states;        // 160
+    int64_t unk170;                      // 170
+    IGameState* currState;               // 178
+    IGameState* nextState;               // 180
+    EGameStateStatus status;             // 188
+    char* name;                          // 190
+    uint32_t result;                     // 198
 };
 RED4EXT_ASSERT_SIZE(CGameApplication, 0x1A0);
 RED4EXT_ASSERT_OFFSET(CGameApplication, currState, 0x178);

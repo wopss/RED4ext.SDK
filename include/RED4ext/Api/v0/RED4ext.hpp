@@ -1,9 +1,14 @@
 #pragma once
 
+#include <RED4ext/Api/v0/GameState.hpp>
 #include <RED4ext/Api/v0/Hooking.hpp>
 #include <RED4ext/Api/v0/VersionInfo.hpp>
 
-namespace RED4ext::v0
+namespace RED4ext
+{
+enum class EGameStateType : uint32_t;
+
+namespace v0
 {
 struct RED4ext
 {
@@ -16,5 +21,8 @@ struct RED4ext
      * @brief Get the hooking struct.
      */
     Hooking hooking;
+
+    bool (*AddState)(PluginHandle aHandle, EGameStateType aType, GameState* aState);
 };
-} // namespace RED4ext::v0
+} // namespace v0
+} // namespace RED4ext

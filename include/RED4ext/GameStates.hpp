@@ -8,15 +8,23 @@ namespace RED4ext
 struct CGameApplication;
 struct CGameOptions;
 
+enum class EGameStateType : uint32_t
+{
+    BaseInitialization = 0,
+    Initialization,
+    Running,
+    Shutdown
+};
+
 struct IGameState
 {
     virtual ~IGameState() = 0;
 
     virtual const char* GetName() = 0;
-    virtual uint32_t GetIndex() = 0;
-    virtual bool Init(CGameApplication* aApp) = 0;
-    virtual bool Run(CGameApplication* aApp) = 0;
-    virtual bool Done(CGameApplication* aApp) = 0;
+    virtual EGameStateType GetType() = 0;
+    virtual bool OnEnter(CGameApplication* aApp) = 0;
+    virtual bool OnUpdate(CGameApplication* aApp) = 0;
+    virtual bool OnExit(CGameApplication* aApp) = 0;
 };
 
 struct CBaseInitializationState : IGameState
