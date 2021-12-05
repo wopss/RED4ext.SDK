@@ -96,25 +96,38 @@ RED4EXT_ASSERT_SIZE(EditorObjectID, 0x20);
 
 struct Variant
 {
-    Variant() = default;
+    static constexpr uint32_t InlineSize = 16;
+    static constexpr uint32_t InlineAlignment = 8;
 
-    Variant(uint64_t aType, uint64_t aValue)
-        : type(aType)
-        , value(aValue)
-        , unknown(0)
+    static constexpr uintptr_t InlineFlag = 1;
+    static constexpr uintptr_t TypeMask = ~InlineFlag;
+ 
+    Variant() noexcept = default;
+    Variant(const CBaseRTTIType* aType);
+    Variant(const CBaseRTTIType* aType, const ScriptInstance aData);
+    Variant(const CName& aTypeName, const ScriptInstance aData);
+    Variant(const Variant& aOther);
+    ~Variant();
+
+    bool IsEmpty() const noexcept;
+    bool IsInlined() const noexcept;
+    
+    CBaseRTTIType* GetType() const noexcept;
+    ScriptInstance GetDataPtr() const noexcept;
+    
+    bool Init(const CBaseRTTIType* aType);
+    bool Fill(const CBaseRTTIType* aType, const ScriptInstance aData);
+    bool Extract(ScriptInstance aBuffer);
+    void Free();
+
+    static bool CanBeInlined(const CBaseRTTIType* aType) noexcept;
+
+    const CBaseRTTIType* type{ nullptr };
+    union
     {
-    }
-
-    Variant(CBaseRTTIType* aType, ScriptInstance aValue)
-        : type(reinterpret_cast<std::uintptr_t>(aType))
-        , value(reinterpret_cast<std::uintptr_t>(aValue))
-        , unknown(0)
-    {
-    }
-
-    int64_t type;    // 00
-    int64_t value;   // 08
-    int64_t unknown; // 10
+        uint8_t inlined[InlineSize]{ 0 };
+        ScriptInstance instance;
+    };
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
