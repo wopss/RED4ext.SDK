@@ -247,7 +247,7 @@ struct TTypedClass : CClass
     void* AllocMemory() const final // E8
     {
         auto alignment = GetAlignment();
-        auto size = RED4ext::AlignUp(GetSize(), alignment);
+        auto size = AlignUp(GetSize(), alignment);
 
         auto allocator = GetAllocator();
         auto allocResult = allocator->AllocAligned(size, alignment);
