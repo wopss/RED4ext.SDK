@@ -1,12 +1,37 @@
 #pragma once
 
-#include <RED4ext/Api/v0/VersionInfo.hpp>
-#include <RED4ext/Version.hpp>
+#include <RED4ext/Api/v0/GameState.hpp>
+#include <RED4ext/Api/v0/Hooking.hpp>
 
-#define RED4EXT_V0_SDK_0_1_0 RED4EXT_V0_SEMVER(0, 1, 0)
-#define RED4EXT_V0_SDK_0_2_0 RED4EXT_V0_SEMVER(0, 2, 0)
+namespace RED4ext
+{
+enum class EGameStateType : uint32_t;
 
-/*
- * @brief The latest SDK version.
- */
-#define RED4EXT_V0_SDK_LATEST RED4EXT_V0_SEMVER(RED4EXT_VER_MAJOR, RED4EXT_VER_MINOR, RED4EXT_VER_PATCH)
+namespace v0
+{
+struct Sdk
+{
+    /**
+     * @brief Get the game's version.
+     */
+    VersionInfo runtime;
+
+    /**
+     * @brief Get the hooking struct.
+     */
+    Hooking hooking;
+
+    /**
+     * @brief Add a custom game state.
+     *
+     * @param[in] aHandle   The plugin's handle.
+     * @param[in] aType     The type of the state.
+     * @param[in] aState    The state. Can be allocated on stack.
+     *
+     * @return true if the state is added successfully, false otherwise.
+     */
+    bool (*AddState)(PluginHandle aHandle, EGameStateType aType, GameState* aState);
+};
+} // namespace v0
+} // namespace RED4ext
+

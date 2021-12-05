@@ -4,6 +4,9 @@
 
 namespace RED4ext
 {
+/**
+ * @brief The reason plugin's main function is called.
+ */
 enum class EMainReason : uint8_t
 {
     Load = 0,

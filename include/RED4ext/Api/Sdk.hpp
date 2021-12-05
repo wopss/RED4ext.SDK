@@ -1,11 +1,44 @@
 #pragma once
 
+#include <RED4ext/Api/v0/PluginInfo.hpp>
 #include <RED4ext/Api/v0/Sdk.hpp>
 
-#define RED4EXT_SDK_0_1_0 RED4EXT_V0_SDK_0_1_0
-#define RED4EXT_SDK_0_2_0 RED4EXT_V0_SDK_0_2_0
+namespace RED4ext
+{
+/**
+ * @brief The latest plugin info type.
+ */
+using PluginInfo = v0::PluginInfo;
+
+/**
+ * @brief The latest version info type.
+ */
+using VersionInfo = v0::VersionInfo;
+
+/**
+ * @brief The latest RED4ext.
+ */
+using Sdk = v0::Sdk;
+
+/**
+ * @brief The latest hooking.
+ */
+using Hooking = v0::Hooking;
+
+/**
+ * @brief The latest game state type.
+ */
+using GameState = v0::GameState;
+} // namespace RED4ext
 
 /*
- * @brief The latest SDK version.
+ * @brief Compute the runtime address of an offset.
+ *
+ * @example
+ *  const auto offset = 0x14022EAD0 - 0x140000000;
+ *  const auto addr =  RED4EXT_OFFSET_TO_ADDR(offset);
  */
-#define RED4EXT_SDK_LATEST RED4EXT_V0_SDK_LATEST
+#ifndef RED4EXT_OFFSET_TO_ADDR
+#define RED4EXT_OFFSET_TO_ADDR(offset)                                                                                 \
+    reinterpret_cast<void*>(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)) + offset)
+#endif

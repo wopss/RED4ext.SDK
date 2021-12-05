@@ -46,7 +46,7 @@ RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 }
 
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,
-                                        const RED4ext::RED4ext* aRED4ext)
+                                        const RED4ext::Sdk* aSdk)
 {
     switch (aReason)
     {

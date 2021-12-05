@@ -37,10 +37,7 @@
 #include <RED4ext/NativeTypes.hpp>
 
 #include <RED4ext/Api/EMainReason.hpp>
-#include <RED4ext/Api/GameState.hpp>
 #include <RED4ext/Api/PluginHandle.hpp>
-#include <RED4ext/Api/PluginInfo.hpp>
-#include <RED4ext/Api/RED4ext.hpp>
 #include <RED4ext/Api/Runtime.hpp>
 #include <RED4ext/Api/Sdk.hpp>
 #include <RED4ext/Api/Version.hpp>
