@@ -7,6 +7,7 @@
 #include <Windows.h>
 
 #include <RED4ext/Addresses.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Relocation.hpp>
 
@@ -103,6 +104,9 @@ protected:
         }
     }
 };
+RED4EXT_ASSERT_SIZE(HandleBase, 0x10);
+RED4EXT_ASSERT_OFFSET(HandleBase, instance, 0x00);
+RED4EXT_ASSERT_OFFSET(HandleBase, refCount, 0x08);
 
 template<typename T>
 bool IsHandleEmpty(T)
@@ -249,6 +253,7 @@ protected:
         }
     }
 };
+RED4EXT_ASSERT_SIZE(Handle<void*>, 0x10);
 
 template<typename T>
 class WeakHandle : public HandleBase
@@ -332,6 +337,5 @@ protected:
         }
     }
 };
-RED4EXT_ASSERT_SIZE(Handle<void>, 0x10);
 RED4EXT_ASSERT_SIZE(WeakHandle<void>, 0x10);
 } // namespace RED4ext

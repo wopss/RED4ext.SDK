@@ -17,13 +17,14 @@ RED4EXT_INLINE RED4ext::CString::CString(Memory::IAllocator* aAllocator)
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText, Memory::IAllocator* aAllocator)
-    : allocator(aAllocator ? *reinterpret_cast<Memory::IAllocator**>(aAllocator) : nullptr)
+    : CString(aAllocator)
 {
     RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor);
     func(this, aText);
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const CString& aOther)
+    : CString()
 {
     RelocFunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
     func(this, aOther);

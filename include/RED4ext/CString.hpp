@@ -1,7 +1,7 @@
 #pragma once
 
-#include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {
@@ -54,7 +54,7 @@ struct CString
     } text; // 00
 #pragma pack(pop)
 
-    uint32_t length; // 14
+    uint32_t length;               // 14
     Memory::IAllocator* allocator; // 18
 };
 RED4EXT_ASSERT_SIZE(CString, 0x20);
