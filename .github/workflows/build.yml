@@ -1,6 +1,9 @@
 name: Build Workflow
 on: [ push, pull_request ]
 
+env:
+  premake: 5.0.0-beta1
+
 jobs:
   build:
     name: Build (${{ matrix.config }})
@@ -9,7 +12,6 @@ jobs:
     strategy:
       matrix:
         config: [ Debug, Release ]
-        premake: 5.0.0-beta1
 
     steps:
       - name: Checkout
@@ -22,7 +24,7 @@ jobs:
 
       - name: Download Premake
         shell: powershell
-        run: Invoke-WebRequest https://github.com/premake/premake-core/releases/download/v${{ matrix.premake }}/premake-${{ matrix.premake }}-windows.zip -OutFile ./premake/premake.zip
+        run: Invoke-WebRequest https://github.com/premake/premake-core/releases/download/v${{ env.premake }}/premake-${{ env.premake }}-windows.zip -OutFile ./premake/premake.zip
 
       - name: Extract Premake
         shell: powershell
