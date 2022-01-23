@@ -23,7 +23,17 @@ using Sdk = v0::Sdk;
 /**
  * @brief The latest hooking.
  */
+using Logger = v0::Logger;
+
+/**
+ * @brief The latest hooking.
+ */
 using Hooking = v0::Hooking;
+
+/**
+ * @brief The latest game state type.
+ */
+using GameStates = v0::GameStates;
 
 /**
  * @brief The latest game state type.

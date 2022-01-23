@@ -35,7 +35,7 @@ struct Hooking
      *     {
      *     case RED4ext::EMainReason::Load:
      *     {
-     *         aRED4ext->hooking.Attach(aHandle, RED4EXT_OFFSET_TO_ADDR(0x140AD5F70 - RED4ext::Addresses::ImageBase),
+     *         aRED4ext->hooking->Attach(aHandle, RED4EXT_OFFSET_TO_ADDR(0x140AD5F70 - RED4ext::Addresses::ImageBase),
      * &_CInitializationState_Init, reinterpret_cast<void**>(&_CInitializationState_Init_Original));
      *         break;
      *     }
@@ -72,13 +72,13 @@ struct Hooking
      *     {
      *     case RED4ext::EMainReason::Load:
      *     {
-     *         aRED4ext->hooking.Attach(aHandle, RED4EXT_OFFSET_TO_ADDR(0x140AD5F70 - RED4ext::Addresses::ImageBase),
+     *         aRED4ext->hooking->Attach(aHandle, RED4EXT_OFFSET_TO_ADDR(0x140AD5F70 - RED4ext::Addresses::ImageBase),
      * &_CInitializationState_Init, reinterpret_cast<void**>(&_CInitializationState_Init_Original));
      *         break;
      *     }
      *     case RED4ext::EMainReason::Unload:
      *     {
-     *         aRED4ext->hooking.Detach(aHandle, RED4EXT_OFFSET_TO_ADDR(0x140AD5F70 - RED4ext::Addresses::ImageBase));
+     *         aRED4ext->hooking->Detach(aHandle, RED4EXT_OFFSET_TO_ADDR(0x140AD5F70 - RED4ext::Addresses::ImageBase));
      *         break;
      *     }
      *     }
