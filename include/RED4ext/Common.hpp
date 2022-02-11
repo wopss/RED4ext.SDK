@@ -20,8 +20,13 @@
 #endif
 
 #ifndef RED4EXT_ASSERT_OFFSET
-#define RED4EXT_ASSERT_OFFSET(cls, mbr, offset)                                                                        \
-    static_assert(offsetof(cls, mbr) == offset, #cls "::" #mbr " is not on the expected offset (" #offset ")")
+    // TODO: find a better way to handle this (clang does not allow offsetof in static_assert)
+    #ifdef __clang__
+        #define RED4EXT_ASSERT_OFFSET(cls, mbr, offset)
+    #else
+        #define RED4EXT_ASSERT_OFFSET(cls, mbr, offset)                                                                        \
+            static_assert(offsetof(cls, mbr) == offset, #cls "::" #mbr " is not on the expected offset (" #offset ")")
+    #endif
 #endif
 
 #ifndef RED4EXT_DECLARE_TYPE
