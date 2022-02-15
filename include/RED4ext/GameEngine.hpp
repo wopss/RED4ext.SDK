@@ -210,11 +210,11 @@ struct CGameEngine : BaseGameEngine
     int64_t unk2E0;            // 2E0
     int64_t unk2E8;            // 2E8
     int64_t unk2F0;            // 2F0
-    int32_t unk2F8;            // 2F8
+    CGameFramework* framework; // 2F8
     int32_t unk2FC;            // 2FC
     int32_t unk300;            // 300
     int32_t unk304;            // 304
-    CGameFramework* framework; // 308
+    int64_t unk308;            // 308
     int64_t unk310;            // 310
     int64_t unk318;            // 318
     int64_t unk320;            // 320
@@ -224,7 +224,7 @@ struct CGameEngine : BaseGameEngine
     int32_t unk340;            // 340
 };
 RED4EXT_ASSERT_SIZE(CGameEngine, 0x348);
-RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x308);
+RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x2F8);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
