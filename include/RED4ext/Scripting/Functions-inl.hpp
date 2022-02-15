@@ -67,11 +67,12 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
 
 RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute_(CStack* aStack)
 {
-    using func_t = bool (*)(CBaseFunction*, CStack*);
-    RelocFunc<func_t> func(Addresses::CBaseFunction_Execute);
-
     if (!flags.isNative)
+    {
+        using func_t = bool (*)(CBaseFunction*, CStack*);
+        RelocFunc<func_t> func(Addresses::CBaseFunction_ExecuteScripted);
         return func(this, aStack);
+    }
 
     char code[264];
     aStack->GenerateCode(code);
