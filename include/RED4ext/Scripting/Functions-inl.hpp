@@ -6,11 +6,11 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/CNamePool.hpp>
-#include <RED4ext/Relocation.hpp>
 #include <RED4ext/RTTISystem.hpp>
+#include <RED4ext/Relocation.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
-#include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/Scripting/OpcodeHandlers.hpp>
+#include <RED4ext/Scripting/Stack.hpp>
 
 RED4EXT_INLINE bool RED4ext::CBaseFunction::SetReturnType(CName aType)
 {
@@ -53,9 +53,16 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::AddParam(CName aType, const char* aN
 
 RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
 {
-    using func_t = bool (*)(CBaseFunction*, CStack*);
-    RelocFunc<func_t> func(Addresses::CBaseFunction_Execute);
-    return func(this, aStack);
+    if (!flags.isNative)
+    {
+        using executeScriptedFn_t = bool (*)(CBaseFunction*, CStack*, void*);
+        RelocFunc<executeScriptedFn_t> executeScriptedFn(Addresses::CBaseFunction_ExecuteScripted);
+        return executeScriptedFn(this, aStack, nullptr);
+    }
+
+    using executeNativeFn_t = bool (*)(CBaseFunction*, CStack*);
+    RelocFunc<executeNativeFn_t> executeNativeFn(Addresses::CBaseFunction_ExecuteNative);
+    return executeNativeFn(this, aStack);
 }
 
 RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute_(CStack* aStack)
@@ -77,7 +84,8 @@ RED4EXT_INLINE RED4ext::CBaseFunction::Handler_t RED4ext::CBaseFunction::GetHand
 {
     static uint8_t* pLocation = reinterpret_cast<uint8_t*>(Addresses::CBaseFunction_Register) + 0x43 +
                                 reinterpret_cast<uintptr_t>(GetModuleHandleA(nullptr));
-    static uintptr_t pSecondCall = reinterpret_cast<uintptr_t>(pLocation) + 4 + *reinterpret_cast<uint32_t*>(pLocation) + 9;
+    static uintptr_t pSecondCall =
+        reinterpret_cast<uintptr_t>(pLocation) + 4 + *reinterpret_cast<uint32_t*>(pLocation) + 9;
     static uintptr_t pFinalAddress = pSecondCall + 4 + *reinterpret_cast<uint32_t*>(pSecondCall);
 
     static auto* s_handlers = reinterpret_cast<Handler_t*>(pFinalAddress);
