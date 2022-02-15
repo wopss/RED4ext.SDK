@@ -19,17 +19,17 @@ struct MaskWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkMaskWidget";
     static constexpr const char* ALIAS = "inkMask";
 
-    uint8_t unk1F0[0x1F8 - 0x1F0]; // 1F0
-    float maskTransparency; // 1F8
-    uint8_t unk1FC[0x200 - 0x1FC]; // 1FC
-    RaRef<ink::TextureAtlas> textureAtlas; // 200
-    CName dynamicTextureMask; // 208
-    CName texturePart; // 210
-    ink::MaskDataSource dataSource; // 218
-    bool invertMask; // 219
-    uint8_t unk21A[0x270 - 0x21A]; // 21A
+    uint8_t unk200[0x208 - 0x200]; // 200
+    float maskTransparency; // 208
+    uint8_t unk20C[0x210 - 0x20C]; // 20C
+    RaRef<ink::TextureAtlas> textureAtlas; // 210
+    CName dynamicTextureMask; // 218
+    CName texturePart; // 220
+    ink::MaskDataSource dataSource; // 228
+    bool invertMask; // 229
+    uint8_t unk22A[0x280 - 0x22A]; // 22A
 };
-RED4EXT_ASSERT_SIZE(MaskWidget, 0x270);
+RED4EXT_ASSERT_SIZE(MaskWidget, 0x280);
 } // namespace ink
 using inkMask = ink::MaskWidget;
 } // namespace RED4ext

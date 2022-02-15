@@ -10,8 +10,10 @@
 #include <RED4ext/Scripting/Natives/Generated/Box.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/res/StreamedResource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/PrefabInteriorMapContribution.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/PrefabMinimapContribution.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/PrefabOwnership.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/PrefabStreamingImportance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/PrefabStreamingOcclusion.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/PrefabType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/ProxyMeshBuildParams.hpp>
@@ -39,18 +41,21 @@ struct Prefab : res::StreamedResource
     RaRef<CMesh> proxyMesh; // 58
     Vector3 proxyScale; // 60
     float proxyDistanceFactor; // 6C
-    RaRef<world::Prefab> booleanProxyHelper; // 70
-    RaRef<world::Prefab> proxyLimiterHelper; // 78
-    RaRef<CMesh> customProxyMeshHelper; // 80
-    Handle<world::PrefabVariantsList> defaultVariants; // 88
-    Handle<world::NodesGroup> mainGroup; // 98
-    uint8_t unkA8[0xD8 - 0xA8]; // A8
-    world::ProxyMeshBuildParams proxyMeshBuildParams; // D8
-    world::PrefabOwnership teamOwnership; // 1C0
-    world::PrefabStreamingOcclusion streamingOcclusion; // 1C1
-    world::PrefabType type; // 1C2
-    bool isLocked; // 1C3
-    uint8_t unk1C4[0x1D0 - 0x1C4]; // 1C4
+    float averageNodeDiagonal; // 70
+    uint8_t unk74[0x78 - 0x74]; // 74
+    RaRef<world::Prefab> booleanProxyHelper; // 78
+    RaRef<world::Prefab> proxyLimiterHelper; // 80
+    RaRef<CMesh> customProxyMeshHelper; // 88
+    Handle<world::PrefabVariantsList> defaultVariants; // 90
+    Handle<world::NodesGroup> mainGroup; // A0
+    uint8_t unkB0[0xE0 - 0xB0]; // B0
+    world::ProxyMeshBuildParams proxyMeshBuildParams; // E0
+    world::PrefabOwnership teamOwnership; // 1C8
+    world::PrefabStreamingOcclusion streamingOcclusion; // 1C9
+    world::PrefabStreamingImportance streamingImportance; // 1CA
+    world::PrefabType type; // 1CB
+    bool isLocked; // 1CC
+    uint8_t unk1CD[0x1D0 - 0x1CD]; // 1CD
     Box maxBounds; // 1D0
     bool isMerged; // 1F0
     bool isProxyMeshOnly; // 1F1
@@ -61,7 +66,8 @@ struct Prefab : res::StreamedResource
     bool isTerrainPrefab; // 1F6
     bool excludeOnConsole; // 1F7
     world::PrefabMinimapContribution minimapContribution; // 1F8
-    uint8_t unk1F9[0x210 - 0x1F9]; // 1F9
+    world::PrefabInteriorMapContribution interiorMapContribution; // 1F9
+    uint8_t unk1FA[0x210 - 0x1FA]; // 1FA
     CRUID prefabUniqueId; // 210
     uint8_t unk218[0x2B0 - 0x218]; // 218
     DynArray<Handle<world::PrefabMetadata>> metadataArray; // 2B0

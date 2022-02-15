@@ -4,6 +4,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/SItemStackRequirementData.hpp>
 
@@ -22,8 +24,10 @@ struct SItemStack
     bool isAvailable; // 20
     uint8_t unk21[0x24 - 0x21]; // 21
     game::SItemStackRequirementData requirement; // 24
+    uint8_t unk2C[0x30 - 0x2C]; // 2C
+    DynArray<CName> dynamicTags; // 30
 };
-RED4EXT_ASSERT_SIZE(SItemStack, 0x2C);
+RED4EXT_ASSERT_SIZE(SItemStack, 0x40);
 } // namespace game
 using SItemStack = game::SItemStack;
 } // namespace RED4ext

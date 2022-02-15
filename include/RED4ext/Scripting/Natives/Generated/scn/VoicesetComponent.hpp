@@ -17,9 +17,9 @@ struct VoicesetComponent : game::Component
 
     uint8_t unkA8[0x258 - 0xA8]; // A8
     CName combatVoSettingsName; // 258
-    uint8_t unk260[0x320 - 0x260]; // 260
+    uint8_t unk260[0x330 - 0x260]; // 260
 };
-RED4EXT_ASSERT_SIZE(VoicesetComponent, 0x320);
+RED4EXT_ASSERT_SIZE(VoicesetComponent, 0x330);
 } // namespace scn
 using VoicesetComponent = scn::VoicesetComponent;
 } // namespace RED4ext

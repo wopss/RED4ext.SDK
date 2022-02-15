@@ -18,8 +18,8 @@ struct AttachmentSlots : ent::IComponent
 
     uint8_t unk90[0xE0 - 0x90]; // 90
     DynArray<game::AnimParamSlotsOption> animParams; // E0
-    uint8_t unkF0[0x108 - 0xF0]; // F0
+    uint8_t unkF0[0x118 - 0xF0]; // F0
 };
-RED4EXT_ASSERT_SIZE(AttachmentSlots, 0x108);
+RED4EXT_ASSERT_SIZE(AttachmentSlots, 0x118);
 } // namespace game
 } // namespace RED4ext

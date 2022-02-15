@@ -14,8 +14,8 @@ struct Component : ent::IMoverComponent
     static constexpr const char* NAME = "moveComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0x2B0 - 0x90]; // 90
+    uint8_t unk90[0x2C0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(Component, 0x2B0);
+RED4EXT_ASSERT_SIZE(Component, 0x2C0);
 } // namespace move
 } // namespace RED4ext

@@ -17,7 +17,7 @@ struct PuppetAIManagerNodeDefinitionEntry
 
     game::EntityReference entityReference; // 00
     game::StoryTier aiTier; // 38
-    uint8_t unk3C[0x40 - 0x3C]; // 3C
+    uint8_t unk39[0x40 - 0x39]; // 39
 };
 RED4EXT_ASSERT_SIZE(PuppetAIManagerNodeDefinitionEntry, 0x40);
 } // namespace quest

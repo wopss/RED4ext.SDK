@@ -5,14 +5,14 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
-#include <RED4ext/Scripting/Natives/Generated/quest/DisableableNodeDefinition.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/SignalStoppingNodeDefinition.hpp>
 
 namespace RED4ext
 {
 namespace quest { struct IJournal_NodeType; }
 
 namespace quest { 
-struct JournalNodeDefinition : quest::DisableableNodeDefinition
+struct JournalNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questJournalNodeDefinition";
     static constexpr const char* ALIAS = NAME;

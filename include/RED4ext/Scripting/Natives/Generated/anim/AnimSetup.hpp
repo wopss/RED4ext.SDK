@@ -17,7 +17,8 @@ struct AnimSetup
 
     DynArray<anim::AnimSetupEntry> cinematics; // 00
     DynArray<anim::AnimSetupEntry> gameplay; // 10
+    uint64_t hash; // 20
 };
-RED4EXT_ASSERT_SIZE(AnimSetup, 0x20);
+RED4EXT_ASSERT_SIZE(AnimSetup, 0x28);
 } // namespace anim
 } // namespace RED4ext

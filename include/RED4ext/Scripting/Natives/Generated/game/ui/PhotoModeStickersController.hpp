@@ -20,15 +20,15 @@ struct PhotoModeStickersController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiPhotoModeStickersController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::EmptyCallback ResetStickers; // D0
-    game::ui::StickerImageCallback SetStickerImage; // 108
-    game::ui::StickerCallback SetSetSelectedSticker; // 140
-    game::ui::StickerFrameCallback SetFrameImage; // 178
-    game::ui::StickerBackgroundCallback SetBackground; // 1B0
-    uint8_t unk1E8[0x268 - 0x1E8]; // 1E8
-    NodeRef backgroundPrefabRef; // 268
-    uint8_t unk270[0x2A0 - 0x270]; // 270
+    ink::EmptyCallback ResetStickers; // E0
+    game::ui::StickerImageCallback SetStickerImage; // 118
+    game::ui::StickerCallback SetSetSelectedSticker; // 150
+    game::ui::StickerFrameCallback SetFrameImage; // 188
+    game::ui::StickerBackgroundCallback SetBackground; // 1C0
+    uint8_t unk1F8[0x278 - 0x1F8]; // 1F8
+    NodeRef backgroundPrefabRef; // 278
+    uint8_t unk280[0x2B0 - 0x280]; // 280
 };
-RED4EXT_ASSERT_SIZE(PhotoModeStickersController, 0x2A0);
+RED4EXT_ASSERT_SIZE(PhotoModeStickersController, 0x2B0);
 } // namespace game::ui
 } // namespace RED4ext

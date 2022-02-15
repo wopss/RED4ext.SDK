@@ -12,8 +12,10 @@ enum class JournalQuestType : uint32_t
     SideQuest = 1,
     MinorQuest = 2,
     StreetStory = 3,
-    Contract = 4,
-    VehicleQuest = 5,
+    CyberPsycho = 4,
+    Contract = 5,
+    VehicleQuest = 6,
+    ApartmentQuest = 7,
 };
 } // namespace game
 } // namespace RED4ext

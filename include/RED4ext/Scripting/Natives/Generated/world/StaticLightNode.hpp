@@ -36,16 +36,16 @@ struct StaticLightNode : world::Node
     float rayTracingIntensityScale; // 4C
     float EV; // 50
     ELightType type; // 54
-    bool useInTransparents; // 58
-    bool useInParticles; // 59
-    bool sceneDiffuse; // 5A
-    bool directional; // 5B
-    bool clampAttenuation; // 5C
-    uint8_t scaleGI; // 5D
-    uint8_t scaleEnvProbes; // 5E
-    uint8_t sceneSpecularScale; // 5F
-    uint8_t scaleVolFog; // 60
-    int8_t roughnessBias; // 61
+    uint8_t scaleGI; // 58
+    uint8_t scaleEnvProbes; // 59
+    uint8_t sceneSpecularScale; // 5A
+    uint8_t scaleVolFog; // 5B
+    int8_t roughnessBias; // 5C
+    bool useInTransparents; // 5D
+    bool useInParticles; // 5E
+    bool sceneDiffuse; // 5F
+    bool directional; // 60
+    bool clampAttenuation; // 61
     rend::LightChannel lightChannel; // 62
     rend::LightGroup group; // 64
     rend::LightAttenuation attenuation; // 65
@@ -56,29 +56,31 @@ struct StaticLightNode : world::Node
     float shadowFadeDistance; // 6C
     float shadowFadeRange; // 70
     ELightShadowSoftnessMode shadowSoftnessMode; // 74
-    rend::SLightFlickering flicker; // 78
-    EEnvColorGroup envColorGroup; // 84
-    uint8_t colorGroupSaturation; // 85
-    uint8_t portalAngleCutoff; // 86
-    bool allowDistantLight; // 87
-    float innerAngle; // 88
-    float outerAngle; // 8C
-    float shadowAngle; // 90
-    float shadowRadius; // 94
-    float softness; // 98
-    EAreaLightShape areaShape; // 9C
-    bool areaTwoSided; // A0
-    bool spotCapsule; // A1
-    uint8_t unkA2[0xA4 - 0xA2]; // A2
-    float sourceRadius; // A4
-    float capsuleLength; // A8
-    float areaRectSideA; // AC
-    float areaRectSideB; // B0
-    uint8_t unkB4[0xB8 - 0xB4]; // B4
-    RaRef<CIESDataResource> iesProfile; // B8
-    float autoHideDistance; // C0
-    uint8_t unkC4[0xC8 - 0xC4]; // C4
+    float rayTracingLightSourceRadius; // 78
+    float rayTracingContactShadowRange; // 7C
+    rend::SLightFlickering flicker; // 80
+    EEnvColorGroup envColorGroup; // 8C
+    uint8_t colorGroupSaturation; // 8D
+    uint8_t portalAngleCutoff; // 8E
+    bool allowDistantLight; // 8F
+    float innerAngle; // 90
+    float outerAngle; // 94
+    float shadowAngle; // 98
+    float shadowRadius; // 9C
+    float softness; // A0
+    EAreaLightShape areaShape; // A4
+    bool areaTwoSided; // A8
+    bool spotCapsule; // A9
+    uint8_t unkAA[0xAC - 0xAA]; // AA
+    float sourceRadius; // AC
+    float capsuleLength; // B0
+    float areaRectSideA; // B4
+    float areaRectSideB; // B8
+    uint8_t unkBC[0xC0 - 0xBC]; // BC
+    RaRef<CIESDataResource> iesProfile; // C0
+    float autoHideDistance; // C8
+    uint8_t unkCC[0xD0 - 0xCC]; // CC
 };
-RED4EXT_ASSERT_SIZE(StaticLightNode, 0xC8);
+RED4EXT_ASSERT_SIZE(StaticLightNode, 0xD0);
 } // namespace world
 } // namespace RED4ext

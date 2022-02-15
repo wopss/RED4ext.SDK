@@ -16,8 +16,8 @@ struct MorphInfo : game::ui::CharacterCustomizationInfo
     static constexpr const char* NAME = "gameuiMorphInfo";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<game::ui::IndexedMorphName> morphNames; // A8
+    DynArray<game::ui::IndexedMorphName> morphNames; // B8
 };
-RED4EXT_ASSERT_SIZE(MorphInfo, 0xB8);
+RED4EXT_ASSERT_SIZE(MorphInfo, 0xC8);
 } // namespace game::ui
 } // namespace RED4ext

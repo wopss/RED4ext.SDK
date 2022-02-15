@@ -20,7 +20,8 @@ struct ActionTeleportTreeNodeDefinition : AI::behavior::ActionTreeNodeDefinition
     Handle<AI::ArgumentMapping> destinationPoint; // 40
     Handle<AI::ArgumentMapping> doNavTest; // 50
     Handle<AI::ArgumentMapping> rotation; // 60
+    Handle<AI::ArgumentMapping> waitForPositionUpdate; // 70
 };
-RED4EXT_ASSERT_SIZE(ActionTeleportTreeNodeDefinition, 0x70);
+RED4EXT_ASSERT_SIZE(ActionTeleportTreeNodeDefinition, 0x80);
 } // namespace AI::behavior
 } // namespace RED4ext

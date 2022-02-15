@@ -5,11 +5,14 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/graph/GraphResource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/QuestPrefabEntry.hpp>
 
 namespace RED4ext
 {
+struct CResource;
+
 namespace quest { 
 struct QuestPhaseResource : graph::GraphResource
 {
@@ -17,7 +20,8 @@ struct QuestPhaseResource : graph::GraphResource
     static constexpr const char* ALIAS = NAME;
 
     DynArray<quest::QuestPrefabEntry> phasePrefabs; // 50
+    DynArray<Ref<CResource>> inplacePhases; // 60
 };
-RED4EXT_ASSERT_SIZE(QuestPhaseResource, 0x60);
+RED4EXT_ASSERT_SIZE(QuestPhaseResource, 0x70);
 } // namespace quest
 } // namespace RED4ext

@@ -15,7 +15,7 @@ struct LinearTrajectoryParams : game::projectile::TrajectoryParams
     static constexpr const char* ALIAS = "LinearTrajectoryParams";
 
     float startVel; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
+    float acceleration; // 44
 };
 RED4EXT_ASSERT_SIZE(LinearTrajectoryParams, 0x48);
 } // namespace game::projectile

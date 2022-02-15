@@ -10,6 +10,8 @@ enum class Platform : uint32_t
 {
     PC = 0,
     Console = 1,
+    LastGenConsole = 2,
+    CurrGenConsole = 3,
 };
 } // namespace quest
 } // namespace RED4ext

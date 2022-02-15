@@ -16,7 +16,8 @@ struct UncontrolledMovementStartEvent : red::Event
 
     float ragdollNoGroundThreshold; // 40
     bool ragdollOnCollision; // 44
-    uint8_t unk45[0x48 - 0x45]; // 45
+    bool calculateEarlyPositionGroundHeight; // 45
+    uint8_t unk46[0x48 - 0x46]; // 46
 };
 RED4EXT_ASSERT_SIZE(UncontrolledMovementStartEvent, 0x48);
 } // namespace ent

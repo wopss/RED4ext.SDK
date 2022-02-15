@@ -4,8 +4,9 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/FinisherSyncData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IFinisherScenario.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/Regular1v1FinisherScenarioPivotSetting.hpp>
 
@@ -21,15 +22,15 @@ struct Regular1v1FinisherScenario : game::IFinisherScenario
 
     RaRef<work::WorkspotResource> attackerWorkspot; // 30
     RaRef<work::WorkspotResource> targetWorkspot; // 38
-    CName syncAnimSlotName; // 40
-    float targetPlaybackDelay; // 48
-    float targetBlendTime; // 4C
-    float attackerPlaybackDelay; // 50
-    float attackerBlendTime; // 54
-    game::Regular1v1FinisherScenarioPivotSetting pivotSettings; // 58
-    bool attackerIsMaster; // 59
-    uint8_t unk5A[0x60 - 0x5A]; // 5A
+    DynArray<game::FinisherSyncData> syncData; // 40
+    float targetPlaybackDelay; // 50
+    float targetBlendTime; // 54
+    float attackerPlaybackDelay; // 58
+    float attackerBlendTime; // 5C
+    game::Regular1v1FinisherScenarioPivotSetting pivotSettings; // 60
+    bool attackerIsMaster; // 61
+    uint8_t unk62[0x68 - 0x62]; // 62
 };
-RED4EXT_ASSERT_SIZE(Regular1v1FinisherScenario, 0x60);
+RED4EXT_ASSERT_SIZE(Regular1v1FinisherScenario, 0x68);
 } // namespace game
 } // namespace RED4ext

@@ -14,7 +14,9 @@ struct SharpeningAreaSettings : IAreaSettings
     static constexpr const char* ALIAS = NAME;
 
     float sharpeningStrength; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    float sharpeningStrengthWhenUpsaling; // 4C
+    float sharpeningStrengthUpscalingTreshold; // 50
+    uint8_t unk54[0x58 - 0x54]; // 54
 };
-RED4EXT_ASSERT_SIZE(SharpeningAreaSettings, 0x50);
+RED4EXT_ASSERT_SIZE(SharpeningAreaSettings, 0x58);
 } // namespace RED4ext

@@ -15,10 +15,10 @@ struct IWidgetLogicController : IScriptable
     static constexpr const char* NAME = "inkIWidgetLogicController";
     static constexpr const char* ALIAS = "inkILogicController";
 
-    uint8_t unk40[0x60 - 0x40]; // 40
-    CName audioMetadataName; // 60
+    uint8_t unk40[0x70 - 0x40]; // 40
+    CName audioMetadataName; // 70
 };
-RED4EXT_ASSERT_SIZE(IWidgetLogicController, 0x68);
+RED4EXT_ASSERT_SIZE(IWidgetLogicController, 0x78);
 } // namespace ink
 using inkILogicController = ink::IWidgetLogicController;
 } // namespace RED4ext

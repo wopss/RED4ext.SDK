@@ -267,9 +267,13 @@ enum class EInputKey : uint32_t
     IK_Pad_Fake_LeftAxis = 257,
     IK_Pad_Fake_RightAxis = 258,
     IK_Pad_Fake_RelativeLeftAxis = 259,
-    IK_Pad_Fake_DigitLeftRight = 260,
-    IK_Pad_Fake_DigitUpDown = 261,
-    IK_Last = 262,
-    IK_Count = 263,
+    IK_Pad_Fake_RelativeRightAxis = 260,
+    IK_Pad_Fake_DigitLeftRight = 261,
+    IK_Pad_Fake_DigitUpDown = 262,
+    IK_STADIA_CAPTURE = 263,
+    IK_SWITCH_CAPTURE = 264,
+    IK_CAPTURE = 265,
+    IK_Last = 266,
+    IK_Count = 267,
 };
 } // namespace RED4ext

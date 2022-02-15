@@ -14,9 +14,9 @@ struct ProjectedHUDGameController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameuiProjectedHUDGameController";
     static constexpr const char* ALIAS = "inkProjectedHUDGameController";
 
-    uint8_t unkE8[0x138 - 0xE8]; // E8
+    uint8_t unkF8[0x148 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(ProjectedHUDGameController, 0x138);
+RED4EXT_ASSERT_SIZE(ProjectedHUDGameController, 0x148);
 } // namespace game::ui
 using inkProjectedHUDGameController = game::ui::ProjectedHUDGameController;
 } // namespace RED4ext

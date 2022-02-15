@@ -30,8 +30,9 @@ struct GetActionsContext
     CName interactionLayerTag; // 30
     WeakHandle<game::Object> processInitiatorObject; // 38
     bool ignoresAuthorization; // 48
-    bool ignoresRPG; // 49
-    uint8_t unk4A[0x50 - 0x4A]; // 4A
+    bool allowsRemoteAuthorization; // 49
+    bool ignoresRPG; // 4A
+    uint8_t unk4B[0x50 - 0x4B]; // 4B
 };
 RED4EXT_ASSERT_SIZE(GetActionsContext, 0x50);
 } // namespace game

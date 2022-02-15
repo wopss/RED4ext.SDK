@@ -14,9 +14,9 @@ struct IMovingPlatformMovementPointToPoint : game::IMovingPlatformMovement
     static constexpr const char* NAME = "gameIMovingPlatformMovementPointToPoint";
     static constexpr const char* ALIAS = "IMovingPlatformMovementPointToPoint";
 
-    uint8_t unk60[0x80 - 0x60]; // 60
+    uint8_t unk58[0x90 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(IMovingPlatformMovementPointToPoint, 0x80);
+RED4EXT_ASSERT_SIZE(IMovingPlatformMovementPointToPoint, 0x90);
 } // namespace game
 using IMovingPlatformMovementPointToPoint = game::IMovingPlatformMovementPointToPoint;
 } // namespace RED4ext

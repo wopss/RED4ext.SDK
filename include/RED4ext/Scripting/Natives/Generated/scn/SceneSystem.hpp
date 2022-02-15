@@ -14,8 +14,8 @@ struct SceneSystem : scn::ISceneSystem
     static constexpr const char* NAME = "scnSceneSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xFC0 - 0x48]; // 48
+    uint8_t unk48[0xFF0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SceneSystem, 0xFC0);
+RED4EXT_ASSERT_SIZE(SceneSystem, 0xFF0);
 } // namespace scn
 } // namespace RED4ext

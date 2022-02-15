@@ -17,9 +17,9 @@ struct TrapTooltipDisplayer : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiTrapTooltipDisplayer";
     static constexpr const char* ALIAS = "TrapTooltipDisplayer";
 
-    WeakHandle<game::data::MiniGame_Trap_Record> trap; // 68
+    WeakHandle<game::data::MiniGame_Trap_Record> trap; // 78
 };
-RED4EXT_ASSERT_SIZE(TrapTooltipDisplayer, 0x78);
+RED4EXT_ASSERT_SIZE(TrapTooltipDisplayer, 0x88);
 } // namespace game::ui
 using TrapTooltipDisplayer = game::ui::TrapTooltipDisplayer;
 } // namespace RED4ext

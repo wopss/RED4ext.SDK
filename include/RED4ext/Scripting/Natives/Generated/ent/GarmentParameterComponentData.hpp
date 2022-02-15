@@ -19,9 +19,9 @@ struct GarmentParameterComponentData
     DataBuffer compiledTriangleIndsData; // 00
     CRUID componentID; // 28
     uint64_t meshGeometryHash; // 30
-    uint32_t chunksCount; // 38
-    uint8_t unk3C[0x40 - 0x3C]; // 3C
-    uint64_t visibleTrangleIndexBufferHash; // 40
+    uint64_t visibleTrangleIndexBufferHash; // 38
+    uint32_t chunksCount; // 40
+    uint8_t unk44[0x48 - 0x44]; // 44
     DynArray<ent::GarmentParameterChunkData> chunks; // 48
     uint8_t unk58[0x60 - 0x58]; // 58
     bool hideComponent; // 60

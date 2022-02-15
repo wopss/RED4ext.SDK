@@ -14,9 +14,9 @@ struct PoliciesComponent : ent::IComponent
     static constexpr const char* NAME = "movePoliciesComponent";
     static constexpr const char* ALIAS = "MovePoliciesComponent";
 
-    uint8_t unk90[0x780 - 0x90]; // 90
+    uint8_t unk90[0x5E0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(PoliciesComponent, 0x780);
+RED4EXT_ASSERT_SIZE(PoliciesComponent, 0x5E0);
 } // namespace move
 using MovePoliciesComponent = move::PoliciesComponent;
 } // namespace RED4ext

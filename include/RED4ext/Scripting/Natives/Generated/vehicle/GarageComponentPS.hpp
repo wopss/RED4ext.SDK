@@ -24,10 +24,10 @@ struct GarageComponentPS : game::ComponentPS
     DynArray<vehicle::UnlockedVehicle> unlockedVehicleArray; // 88
     alignas(8) StaticArray<vehicle::GarageVehicleID, 3> activeVehicles; // 98
     vehicle::GarageComponentVehicleData mountedVehicleData; // D0
-    bool mountedVehicleStolen; // E8
-    uint8_t unkE9[0xF0 - 0xE9]; // E9
+    bool mountedVehicleStolen; // F0
+    uint8_t unkF1[0xF8 - 0xF1]; // F1
 };
-RED4EXT_ASSERT_SIZE(GarageComponentPS, 0xF0);
+RED4EXT_ASSERT_SIZE(GarageComponentPS, 0xF8);
 } // namespace vehicle
 using GarageComponentPS = vehicle::GarageComponentPS;
 } // namespace RED4ext

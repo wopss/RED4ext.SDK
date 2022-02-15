@@ -19,17 +19,17 @@ struct StepperController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkStepperController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::StepperChangedCallback Change; // 68
-    uint8_t unkA0[0xB8 - 0xA0]; // A0
-    bool cycledNavigation; // B8
-    uint8_t unkB9[0xC0 - 0xB9]; // B9
-    ink::TextWidgetReference currentValueDisplay; // C0
-    ink::CompoundWidgetReference indicatorContainer; // D8
-    ink::WidgetReference leftButton; // F0
-    ink::WidgetReference rightButton; // 108
-    CName indicatorUnitLibraryID; // 120
-    uint8_t unk128[0x148 - 0x128]; // 128
+    ink::StepperChangedCallback Change; // 78
+    uint8_t unkB0[0xC8 - 0xB0]; // B0
+    bool cycledNavigation; // C8
+    uint8_t unkC9[0xD0 - 0xC9]; // C9
+    ink::TextWidgetReference currentValueDisplay; // D0
+    ink::CompoundWidgetReference indicatorContainer; // E8
+    ink::WidgetReference leftButton; // 100
+    ink::WidgetReference rightButton; // 118
+    CName indicatorUnitLibraryID; // 130
+    uint8_t unk138[0x158 - 0x138]; // 138
 };
-RED4EXT_ASSERT_SIZE(StepperController, 0x148);
+RED4EXT_ASSERT_SIZE(StepperController, 0x158);
 } // namespace ink
 } // namespace RED4ext

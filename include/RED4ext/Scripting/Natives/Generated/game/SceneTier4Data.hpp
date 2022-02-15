@@ -15,7 +15,7 @@ struct SceneTier4Data : game::SceneTierDataMotionConstrained
     static constexpr const char* ALIAS = "SceneTier4Data";
 
 };
-RED4EXT_ASSERT_SIZE(SceneTier4Data, 0x68);
+RED4EXT_ASSERT_SIZE(SceneTier4Data, 0x88);
 } // namespace game
 using SceneTier4Data = game::SceneTier4Data;
 } // namespace RED4ext

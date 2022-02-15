@@ -14,8 +14,8 @@ struct OffscreenWidgetSpawnEvt : red::Event
     static constexpr const char* NAME = "inkOffscreenWidgetSpawnEvt";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0xC8 - 0x40]; // 40
+    uint8_t unk40[0xD8 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(OffscreenWidgetSpawnEvt, 0xC8);
+RED4EXT_ASSERT_SIZE(OffscreenWidgetSpawnEvt, 0xD8);
 } // namespace ink
 } // namespace RED4ext

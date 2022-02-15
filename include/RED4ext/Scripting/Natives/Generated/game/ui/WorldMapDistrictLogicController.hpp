@@ -20,14 +20,14 @@ struct WorldMapDistrictLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiWorldMapDistrictLogicController";
     static constexpr const char* ALIAS = "WorldMapDistrictLogicController";
 
-    WeakHandle<game::data::District_Record> record; // 68
-    game::data::District type; // 78
-    bool selected; // 7C
-    uint8_t unk7D[0x80 - 0x7D]; // 7D
-    ink::LinePatternWidgetReference outlineWidget; // 80
-    ink::ImageWidgetReference iconWidget; // 98
+    WeakHandle<game::data::District_Record> record; // 78
+    game::data::District type; // 88
+    bool selected; // 8C
+    uint8_t unk8D[0x90 - 0x8D]; // 8D
+    ink::LinePatternWidgetReference outlineWidget; // 90
+    ink::ImageWidgetReference iconWidget; // A8
 };
-RED4EXT_ASSERT_SIZE(WorldMapDistrictLogicController, 0xB0);
+RED4EXT_ASSERT_SIZE(WorldMapDistrictLogicController, 0xC0);
 } // namespace game::ui
 using WorldMapDistrictLogicController = game::ui::WorldMapDistrictLogicController;
 } // namespace RED4ext

@@ -10,7 +10,7 @@ enum class GodModeType : uint32_t
 {
     Invulnerable = 0,
     Immortal = 1,
-    Mortal = 3,
+    Mortal = 2,
 };
 } // namespace game
 } // namespace RED4ext

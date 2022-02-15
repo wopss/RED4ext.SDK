@@ -19,25 +19,25 @@ struct RoachRaceGameLogicController : game::ui::SideScrollerMiniGameLogicControl
     static constexpr const char* NAME = "gameuiRoachRaceGameLogicController";
     static constexpr const char* ALIAS = "RoachRaceLogicController";
 
-    uint8_t unk118[0x120 - 0x118]; // 118
-    CName startAnimation; // 120
-    CName deathAnimation; // 128
-    uint8_t unk130[0x138 - 0x130]; // 130
-    Vector2 playerSpawnPoint; // 138
-    float pixelsPerScore; // 140
-    float jumpAcceleration; // 144
-    float jumpCancelAcceleration; // 148
-    float gravity; // 14C
-    float invincibilityTime; // 150
-    float maxSpeedMultiplier; // 154
-    float multiplierPerScore; // 158
-    uint8_t unk15C[0x170 - 0x15C]; // 15C
-    ink::WidgetReference house; // 170
-    ink::WidgetReference ground; // 188
-    uint8_t unk1A0[0x1B0 - 0x1A0]; // 1A0
-    DynArray<game::ui::RoachRaceChunkLayer> layers; // 1B0
+    uint8_t unk128[0x130 - 0x128]; // 128
+    CName startAnimation; // 130
+    CName deathAnimation; // 138
+    uint8_t unk140[0x148 - 0x140]; // 140
+    Vector2 playerSpawnPoint; // 148
+    float pixelsPerScore; // 150
+    float jumpAcceleration; // 154
+    float jumpCancelAcceleration; // 158
+    float gravity; // 15C
+    float invincibilityTime; // 160
+    float maxSpeedMultiplier; // 164
+    float multiplierPerScore; // 168
+    uint8_t unk16C[0x180 - 0x16C]; // 16C
+    ink::WidgetReference house; // 180
+    ink::WidgetReference ground; // 198
+    uint8_t unk1B0[0x1C0 - 0x1B0]; // 1B0
+    DynArray<game::ui::RoachRaceChunkLayer> layers; // 1C0
 };
-RED4EXT_ASSERT_SIZE(RoachRaceGameLogicController, 0x1C0);
+RED4EXT_ASSERT_SIZE(RoachRaceGameLogicController, 0x1D0);
 } // namespace game::ui
 using RoachRaceLogicController = game::ui::RoachRaceGameLogicController;
 } // namespace RED4ext

@@ -15,7 +15,7 @@ struct ContraPlatformCollision : game::ui::SideScrollerMiniGameCollisionLogicAdv
     static constexpr const char* ALIAS = "ContraPlatformCollision";
 
 };
-RED4EXT_ASSERT_SIZE(ContraPlatformCollision, 0xB0);
+RED4EXT_ASSERT_SIZE(ContraPlatformCollision, 0xC0);
 } // namespace game::ui
 using ContraPlatformCollision = game::ui::ContraPlatformCollision;
 } // namespace RED4ext

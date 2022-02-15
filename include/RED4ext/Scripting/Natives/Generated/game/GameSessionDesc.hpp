@@ -13,8 +13,8 @@ struct GameSessionDesc
     static constexpr const char* NAME = "gameGameSessionDesc";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x1A0 - 0x0]; // 0
+    uint8_t unk00[0x1C0 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(GameSessionDesc, 0x1A0);
+RED4EXT_ASSERT_SIZE(GameSessionDesc, 0x1C0);
 } // namespace game
 } // namespace RED4ext

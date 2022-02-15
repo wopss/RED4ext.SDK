@@ -25,8 +25,9 @@ struct EntityStubComponentPS : game::ComponentPS
     game::CommunityID spawnerId; // B0
     CName ownerCommunityEntryName; // B8
     CName selectedAppearanceName; // C0
-    uint8_t unkC8[0xD0 - 0xC8]; // C8
+    CName selectedColorVariantName; // C8
+    uint8_t unkD0[0xE0 - 0xD0]; // D0
 };
-RED4EXT_ASSERT_SIZE(EntityStubComponentPS, 0xD0);
+RED4EXT_ASSERT_SIZE(EntityStubComponentPS, 0xE0);
 } // namespace game
 } // namespace RED4ext

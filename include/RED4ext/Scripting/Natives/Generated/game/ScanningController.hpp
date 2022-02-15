@@ -14,9 +14,9 @@ struct ScanningController : IScriptable
     static constexpr const char* NAME = "gameScanningController";
     static constexpr const char* ALIAS = "ScanningController";
 
-    uint8_t unk40[0x22E0 - 0x40]; // 40
+    uint8_t unk40[0x3308 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(ScanningController, 0x22E0);
+RED4EXT_ASSERT_SIZE(ScanningController, 0x3308);
 } // namespace game
 using ScanningController = game::ScanningController;
 } // namespace RED4ext

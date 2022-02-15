@@ -23,22 +23,22 @@ struct ImageWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkImageWidget";
     static constexpr const char* ALIAS = "inkImage";
 
-    RaRef<ink::TextureAtlas> textureAtlas; // 1F0
-    CName texturePart; // 1F8
-    CName externalDynamicTexture; // 200
-    ink::EHorizontalAlign contentHAlign; // 208
-    ink::EVerticalAlign contentVAlign; // 209
-    ink::BrushMirrorType mirrorType; // 20A
-    ink::BrushTileType tileType; // 20B
-    bool useExternalDynamicTexture; // 20C
-    bool useNineSliceScale; // 20D
-    uint8_t unk20E[0x210 - 0x20E]; // 20E
-    ink::Margin nineSliceScale; // 210
-    ink::EHorizontalAlign tileHAlign; // 220
-    ink::EVerticalAlign tileVAlign; // 221
-    uint8_t unk222[0x320 - 0x222]; // 222
+    RaRef<ink::TextureAtlas> textureAtlas; // 200
+    CName texturePart; // 208
+    CName externalDynamicTexture; // 210
+    ink::EHorizontalAlign contentHAlign; // 218
+    ink::EVerticalAlign contentVAlign; // 219
+    ink::BrushMirrorType mirrorType; // 21A
+    ink::BrushTileType tileType; // 21B
+    bool useExternalDynamicTexture; // 21C
+    bool useNineSliceScale; // 21D
+    uint8_t unk21E[0x220 - 0x21E]; // 21E
+    ink::Margin nineSliceScale; // 220
+    ink::EHorizontalAlign tileHAlign; // 230
+    ink::EVerticalAlign tileVAlign; // 231
+    uint8_t unk232[0x330 - 0x232]; // 232
 };
-RED4EXT_ASSERT_SIZE(ImageWidget, 0x320);
+RED4EXT_ASSERT_SIZE(ImageWidget, 0x330);
 } // namespace ink
 using inkImage = ink::ImageWidget;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct TrafficMovementSystem : AI::ITrafficMovementSystem
     static constexpr const char* NAME = "AITrafficMovementSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x150 - 0x48]; // 48
+    uint8_t unk48[0x160 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(TrafficMovementSystem, 0x150);
+RED4EXT_ASSERT_SIZE(TrafficMovementSystem, 0x160);
 } // namespace AI
 } // namespace RED4ext

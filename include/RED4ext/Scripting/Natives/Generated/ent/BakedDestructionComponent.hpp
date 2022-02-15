@@ -22,25 +22,25 @@ struct BakedDestructionComponent : ent::PhysicalMeshComponent
     uint8_t unk240[0x260 - 0x240]; // 240
     RaRef<world::Effect> destructionEffect; // 260
     RaRef<CMesh> meshFractured; // 268
-    uint8_t unk270[0x290 - 0x270]; // 270
-    CName audioMetadata; // 290
-    CName meshFracturedAppearance; // 298
-    uint8_t unk2A0[0x318 - 0x2A0]; // 2A0
-    DataBuffer compiledBufferFractured; // 318
-    float damageThreshold; // 340
-    float damageEndurance; // 344
-    float impulseToDamage; // 348
-    float contactToDamage; // 34C
-    uint8_t unk350[0x358 - 0x350]; // 350
-    float numFrames; // 358
-    float frameRate; // 35C
-    bool playOnlyOnce; // 360
-    bool restartOnTrigger; // 361
-    bool disableCollidersOnTrigger; // 362
-    bool accumulateDamage; // 363
-    uint8_t unk364[0x370 - 0x364]; // 364
+    uint8_t unk270[0x2A0 - 0x270]; // 270
+    CName audioMetadata; // 2A0
+    CName meshFracturedAppearance; // 2A8
+    uint8_t unk2B0[0x328 - 0x2B0]; // 2B0
+    DataBuffer compiledBufferFractured; // 328
+    float damageThreshold; // 350
+    float damageEndurance; // 354
+    float impulseToDamage; // 358
+    float contactToDamage; // 35C
+    uint8_t unk360[0x368 - 0x360]; // 360
+    float numFrames; // 368
+    float frameRate; // 36C
+    bool playOnlyOnce; // 370
+    bool restartOnTrigger; // 371
+    bool disableCollidersOnTrigger; // 372
+    bool accumulateDamage; // 373
+    uint8_t unk374[0x380 - 0x374]; // 374
 };
-RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x370);
+RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x380);
 } // namespace ent
 using BakedDestructionComponent = ent::BakedDestructionComponent;
 } // namespace RED4ext

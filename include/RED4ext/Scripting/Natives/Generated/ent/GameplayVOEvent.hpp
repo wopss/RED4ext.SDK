@@ -28,13 +28,13 @@ struct GameplayVOEvent : red::Event
     CName debugInitialContext; // 50
     ent::EntityID answeringEntityId; // 58
     loc::VoiceoverContext overridingVoiceoverContext; // 60
-    loc::VoiceoverExpression overridingVoiceoverExpression; // 64
-    bool overrideVoiceoverExpression; // 68
-    uint8_t overridingVisualStyleValue; // 69
-    bool overrideVisualStyle; // 6A
-    uint8_t unk6B[0x70 - 0x6B]; // 6B
+    loc::VoiceoverExpression overridingVoiceoverExpression; // 61
+    bool overrideVoiceoverExpression; // 62
+    uint8_t overridingVisualStyleValue; // 63
+    bool overrideVisualStyle; // 64
+    uint8_t unk65[0x68 - 0x65]; // 65
 };
-RED4EXT_ASSERT_SIZE(GameplayVOEvent, 0x70);
+RED4EXT_ASSERT_SIZE(GameplayVOEvent, 0x68);
 } // namespace ent
 using SoundPlayVo = ent::GameplayVOEvent;
 } // namespace RED4ext

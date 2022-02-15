@@ -16,30 +16,33 @@ struct DirectorSystemSettings : audio::AudioMetadata
     static constexpr const char* NAME = "audioDirectorSystemSettings";
     static constexpr const char* ALIAS = NAME;
 
-    CName mixSettingsName; // 38
-    CName combatVoManagerSettingsName; // 40
-    float singleConversationMinRepeatTime; // 48
-    float allConversationsMinRepeatTime; // 4C
-    float maxVelocityMagnitudeToConsiderPlayerVehicleInactive; // 50
-    float maxVelocityMagnitudeToConsiderTrafficVehicleIdle; // 54
-    float playerInactiveMinTimeNeededToEngageMovingFaster; // 58
-    audio::VehicleEngageMovingFasterInterpolationData vehEngageMovingFasterInterpolation; // 5C
-    float trafficSpeedRC; // 6C
-    float trafficAccelerationRC; // 70
-    float trafficRpmRC; // 74
-    float overHeadVisibilityMaxOcclusion; // 78
-    float overHeadVisibilityMaxObstruction; // 7C
-    float conversationMixCooldown; // 80
-    float enemyPingCooldown; // 84
-    float idleTimeBeforeAllowingOwMusicChange; // 88
-    float drivingStreamingAmbientEmittersDistanceRolloff; // 8C
-    float lowHealthStateMaxTime; // 90
-    float lowGearMaxTrafficSpeed; // 94
-    float lowGearAccelerationThreshold; // 98
-    float mediumGearMaxTrafficSpeed; // 9C
-    float mediumGearAccelerationThreshold; // A0
-    float highGearAccelerationThreshold; // A4
-    uint8_t unkA8[0xB8 - 0xA8]; // A8
+    CName combatVoManagerSettingsName; // 38
+    float singleConversationMinRepeatTime; // 40
+    float allConversationsMinRepeatTime; // 44
+    float maxVelocityMagnitudeToConsiderPlayerVehicleInactive; // 48
+    float maxVelocityMagnitudeToConsiderTrafficVehicleIdle; // 4C
+    float playerInactiveMinTimeNeededToEngageMovingFaster; // 50
+    audio::VehicleEngageMovingFasterInterpolationData vehEngageMovingFasterInterpolation; // 54
+    float trafficSpeedRC; // 64
+    float trafficAccelerationRC; // 68
+    float trafficRpmRC; // 6C
+    float trafficSlipRatioSkidThreshold; // 70
+    float trafficHornSingleVehicleCooldown; // 74
+    float trafficHornAllVehiclesCooldown; // 78
+    float trafficHornMaxDistanceRangeToPlayer; // 7C
+    float overHeadVisibilityMaxOcclusion; // 80
+    float overHeadVisibilityMaxObstruction; // 84
+    float conversationMixCooldown; // 88
+    float enemyPingCooldown; // 8C
+    float idleTimeBeforeAllowingOwMusicChange; // 90
+    float drivingStreamingAmbientEmittersDistanceRolloff; // 94
+    float lowHealthStateMaxTime; // 98
+    float lowGearMaxTrafficSpeed; // 9C
+    float lowGearAccelerationThreshold; // A0
+    float mediumGearMaxTrafficSpeed; // A4
+    float mediumGearAccelerationThreshold; // A8
+    float highGearAccelerationThreshold; // AC
+    uint8_t unkB0[0xB8 - 0xB0]; // B0
 };
 RED4EXT_ASSERT_SIZE(DirectorSystemSettings, 0xB8);
 } // namespace audio

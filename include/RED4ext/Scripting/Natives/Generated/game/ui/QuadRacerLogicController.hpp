@@ -18,44 +18,44 @@ struct QuadRacerLogicController : game::ui::SideScrollerMiniGameLogicController
     static constexpr const char* NAME = "gameuiQuadRacerLogicController";
     static constexpr const char* ALIAS = "QuadRacerLogicController";
 
-    float endgameDelay; // 118
-    float roadWidth; // 11C
-    float segmentLength; // 120
-    float baseMultiplicatorScale; // 124
-    uint32_t segmentDetails; // 128
-    float centrifugalForce; // 12C
-    float backgroundSpeed; // 130
-    float backgroundStitch; // 134
-    int32_t carDistanceOfView; // 138
-    int32_t scorePerMeter; // 13C
-    int32_t scorePerExtraSecond; // 140
-    int32_t playerSegmentOffset; // 144
-    uint32_t drawDistance; // 148
-    uint32_t colorBlindDrawDistance; // 14C
-    float cameraFov; // 150
-    float cameraHeight; // 154
-    uint8_t unk158[0x15C - 0x158]; // 158
-    float defaultMaxSpeed; // 15C
-    float nitroMaxSpeed; // 160
-    float offRoadLimit; // 164
-    float acceleration; // 168
-    float breaking; // 16C
-    float deceleration; // 170
-    float offRoadDeceleration; // 174
-    float bonusTime; // 178
-    uint8_t unk17C[0x180 - 0x17C]; // 17C
-    CName checkpointLibraryName; // 180
-    float timeToPassCheckpoint; // 188
-    float startTime; // 18C
-    CName backgroundLibraryName; // 190
-    CName roadLibraryName; // 198
-    uint8_t unk1A0[0x1F8 - 0x1A0]; // 1A0
-    DynArray<game::ui::RoadEditorSegment> road; // 1F8
-    uint8_t unk208[0x220 - 0x208]; // 208
-    ink::WidgetReference skyWidget; // 220
-    uint8_t unk238[0x250 - 0x238]; // 238
+    float endgameDelay; // 128
+    float roadWidth; // 12C
+    float segmentLength; // 130
+    float baseMultiplicatorScale; // 134
+    uint32_t segmentDetails; // 138
+    float centrifugalForce; // 13C
+    float backgroundSpeed; // 140
+    float backgroundStitch; // 144
+    int32_t carDistanceOfView; // 148
+    int32_t scorePerMeter; // 14C
+    int32_t scorePerExtraSecond; // 150
+    int32_t playerSegmentOffset; // 154
+    uint32_t drawDistance; // 158
+    uint32_t colorBlindDrawDistance; // 15C
+    float cameraFov; // 160
+    float cameraHeight; // 164
+    uint8_t unk168[0x16C - 0x168]; // 168
+    float defaultMaxSpeed; // 16C
+    float nitroMaxSpeed; // 170
+    float offRoadLimit; // 174
+    float acceleration; // 178
+    float breaking; // 17C
+    float deceleration; // 180
+    float offRoadDeceleration; // 184
+    float bonusTime; // 188
+    uint8_t unk18C[0x190 - 0x18C]; // 18C
+    CName checkpointLibraryName; // 190
+    float timeToPassCheckpoint; // 198
+    float startTime; // 19C
+    CName backgroundLibraryName; // 1A0
+    CName roadLibraryName; // 1A8
+    uint8_t unk1B0[0x208 - 0x1B0]; // 1B0
+    DynArray<game::ui::RoadEditorSegment> road; // 208
+    uint8_t unk218[0x230 - 0x218]; // 218
+    ink::WidgetReference skyWidget; // 230
+    uint8_t unk248[0x260 - 0x248]; // 248
 };
-RED4EXT_ASSERT_SIZE(QuadRacerLogicController, 0x250);
+RED4EXT_ASSERT_SIZE(QuadRacerLogicController, 0x260);
 } // namespace game::ui
 using QuadRacerLogicController = game::ui::QuadRacerLogicController;
 } // namespace RED4ext

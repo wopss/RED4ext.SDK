@@ -16,13 +16,13 @@ struct PreviewGameController : game::ui::MenuGameController
     static constexpr const char* NAME = "gameuiPreviewGameController";
     static constexpr const char* ALIAS = "inkPreviewGameController";
 
-    CName sceneName; // D0
-    NodeRef cameraRef; // D8
-    uint8_t unkE0[0xF0 - 0xE0]; // E0
-    float yawSpeed; // F0
-    float yawDefault; // F4
+    CName sceneName; // F0
+    NodeRef cameraRef; // F8
+    uint8_t unk100[0x110 - 0x100]; // 100
+    float yawSpeed; // 110
+    float yawDefault; // 114
 };
-RED4EXT_ASSERT_SIZE(PreviewGameController, 0xF8);
+RED4EXT_ASSERT_SIZE(PreviewGameController, 0x118);
 } // namespace game::ui
 using inkPreviewGameController = game::ui::PreviewGameController;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct InputSystemWin32Base : input::IInputSystem
     static constexpr const char* NAME = "inputInputSystemWin32Base";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk140[0x178 - 0x140]; // 140
+    uint8_t unk148[0x180 - 0x148]; // 148
 };
-RED4EXT_ASSERT_SIZE(InputSystemWin32Base, 0x178);
+RED4EXT_ASSERT_SIZE(InputSystemWin32Base, 0x180);
 } // namespace input
 } // namespace RED4ext

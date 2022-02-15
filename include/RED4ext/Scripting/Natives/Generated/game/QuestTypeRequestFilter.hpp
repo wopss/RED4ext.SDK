@@ -17,8 +17,9 @@ struct QuestTypeRequestFilter : game::CustomRequestFilter
     bool includeMainQuests; // 08
     bool includeSideQuests; // 09
     bool includeStreetStories; // 0A
-    bool includeContracts; // 0B
-    uint8_t unk0C[0x10 - 0xC]; // C
+    bool includeCyberPsycho; // 0B
+    bool includeContracts; // 0C
+    uint8_t unk0D[0x10 - 0xD]; // D
 };
 RED4EXT_ASSERT_SIZE(QuestTypeRequestFilter, 0x10);
 } // namespace game

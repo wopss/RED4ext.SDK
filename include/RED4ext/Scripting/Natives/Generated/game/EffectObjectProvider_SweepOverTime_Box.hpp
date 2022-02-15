@@ -15,6 +15,6 @@ struct EffectObjectProvider_SweepOverTime_Box : game::EffectObjectProvider_Sweep
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime_Box, 0x60);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime_Box, 0x68);
 } // namespace game
 } // namespace RED4ext

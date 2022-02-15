@@ -14,9 +14,9 @@ struct PanzerScoreBonus : game::ui::PanzerBonus
     static constexpr const char* NAME = "gameuiPanzerScoreBonus";
     static constexpr const char* ALIAS = "PanzerScoreBonus";
 
-    uint8_t unkD8[0xE0 - 0xD8]; // D8
+    uint8_t unkE8[0xF0 - 0xE8]; // E8
 };
-RED4EXT_ASSERT_SIZE(PanzerScoreBonus, 0xE0);
+RED4EXT_ASSERT_SIZE(PanzerScoreBonus, 0xF0);
 } // namespace game::ui
 using PanzerScoreBonus = game::ui::PanzerScoreBonus;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct PuppetBase : game::TimeDilatable
     static constexpr const char* NAME = "gamePuppetBase";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk2C8[0x2D0 - 0x2C8]; // 2C8
+    uint8_t unk260[0x268 - 0x260]; // 260
 };
-RED4EXT_ASSERT_SIZE(PuppetBase, 0x2D0);
+RED4EXT_ASSERT_SIZE(PuppetBase, 0x268);
 } // namespace game
 } // namespace RED4ext

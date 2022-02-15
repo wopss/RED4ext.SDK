@@ -14,8 +14,8 @@ struct MachineplayeractionsLocomotionSimple : game::state::MachineplayeractionsL
     static constexpr const char* NAME = "gamestateMachineplayeractionsLocomotionSimple";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk120[0x150 - 0x120]; // 120
+    uint8_t unk120[0x170 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionSimple, 0x150);
+RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionSimple, 0x170);
 } // namespace game::state
 } // namespace RED4ext

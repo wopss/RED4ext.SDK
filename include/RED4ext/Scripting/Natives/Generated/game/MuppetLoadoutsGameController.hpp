@@ -15,6 +15,6 @@ struct MuppetLoadoutsGameController : game::ui::HUDGameController
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(MuppetLoadoutsGameController, 0xE8);
+RED4EXT_ASSERT_SIZE(MuppetLoadoutsGameController, 0xF8);
 } // namespace game
 } // namespace RED4ext

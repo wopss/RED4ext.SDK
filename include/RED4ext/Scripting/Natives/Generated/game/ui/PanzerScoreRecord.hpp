@@ -15,10 +15,10 @@ struct PanzerScoreRecord : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiPanzerScoreRecord";
     static constexpr const char* ALIAS = "PanzerScoreRecord";
 
-    ink::TextWidgetReference nameWidget; // 68
-    ink::TextWidgetReference scoreWidget; // 80
+    ink::TextWidgetReference nameWidget; // 78
+    ink::TextWidgetReference scoreWidget; // 90
 };
-RED4EXT_ASSERT_SIZE(PanzerScoreRecord, 0x98);
+RED4EXT_ASSERT_SIZE(PanzerScoreRecord, 0xA8);
 } // namespace game::ui
 using PanzerScoreRecord = game::ui::PanzerScoreRecord;
 } // namespace RED4ext

@@ -15,9 +15,9 @@ struct GlobaltvWidgetGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiGlobaltvWidgetGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0xF8 - 0xD0]; // D0
-    ink::CompoundWidgetReference overlayContainer; // F8
+    uint8_t unkE0[0x108 - 0xE0]; // E0
+    ink::CompoundWidgetReference overlayContainer; // 108
 };
-RED4EXT_ASSERT_SIZE(GlobaltvWidgetGameController, 0x110);
+RED4EXT_ASSERT_SIZE(GlobaltvWidgetGameController, 0x120);
 } // namespace game::ui
 } // namespace RED4ext

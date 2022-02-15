@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/EmptyCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/TextWidgetReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetLogicController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetReference.hpp>
@@ -15,17 +16,18 @@ namespace ink {
 struct GenericSystemNotificationLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkGenericSystemNotificationLogicController";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "inkGenericSystemNotificationLogicController";
 
-    ink::TextWidgetReference titleTextWidget; // 68
-    ink::TextWidgetReference descriptionTextWidget; // 80
-    ink::TextWidgetReference additionalDataTextWidget; // 98
-    ink::WidgetReference confirmButton; // B0
-    ink::WidgetReference cancelButton; // C8
-    CName introAnimationName; // E0
-    CName outroAnimationName; // E8
-    uint8_t unkF0[0x138 - 0xF0]; // F0
+    ink::EmptyCallback DataSetByToken; // 78
+    ink::TextWidgetReference titleTextWidget; // B0
+    ink::TextWidgetReference descriptionTextWidget; // C8
+    ink::TextWidgetReference additionalDataTextWidget; // E0
+    ink::WidgetReference confirmButton; // F8
+    ink::WidgetReference cancelButton; // 110
+    CName introAnimationName; // 128
+    CName outroAnimationName; // 130
+    uint8_t unk138[0x1A0 - 0x138]; // 138
 };
-RED4EXT_ASSERT_SIZE(GenericSystemNotificationLogicController, 0x138);
+RED4EXT_ASSERT_SIZE(GenericSystemNotificationLogicController, 0x1A0);
 } // namespace ink
 } // namespace RED4ext

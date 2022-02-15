@@ -22,7 +22,8 @@ struct EffectExecutor_AnimFeature : game::EffectExecutor
     CName key; // 48
     Handle<anim::AnimFeature> animFeature; // 50
     game::EffectExecutor_AnimFeatureApplyTo applyTo; // 60
-    uint8_t unk64[0x68 - 0x64]; // 64
+    bool ignoreWaterImpacts; // 64
+    uint8_t unk65[0x68 - 0x65]; // 65
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_AnimFeature, 0x68);
 } // namespace game

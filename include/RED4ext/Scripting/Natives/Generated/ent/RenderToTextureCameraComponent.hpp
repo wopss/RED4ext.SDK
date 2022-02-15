@@ -44,7 +44,7 @@ struct RenderToTextureCameraComponent : ent::BaseCameraComponent
     RenderSceneLayer renderSceneLayer; // 970
     bool overrideBackgroundColor; // 971
     ent::RenderToTextureFeatures features; // 972
-    uint8_t unk979[0x980 - 0x979]; // 979
+    uint8_t unk978[0x980 - 0x978]; // 978
 };
 RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0x980);
 } // namespace ent

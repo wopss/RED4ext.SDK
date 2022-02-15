@@ -14,9 +14,9 @@ struct RoachRacePlayerController : game::ui::SideScrollerMiniGamePlayerControlle
     static constexpr const char* NAME = "gameuiRoachRacePlayerController";
     static constexpr const char* ALIAS = "RoachRacePlayerController";
 
-    uint8_t unk78[0x88 - 0x78]; // 78
+    uint8_t unk88[0x98 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(RoachRacePlayerController, 0x88);
+RED4EXT_ASSERT_SIZE(RoachRacePlayerController, 0x98);
 } // namespace game::ui
 using RoachRacePlayerController = game::ui::RoachRacePlayerController;
 } // namespace RED4ext

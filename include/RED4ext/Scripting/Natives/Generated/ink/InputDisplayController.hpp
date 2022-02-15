@@ -19,21 +19,21 @@ struct InputDisplayController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkInputDisplayController";
     static constexpr const char* ALIAS = "inkInputDisplayController";
 
-    ink::WidgetReference iconRef; // 68
-    ink::WidgetReference nameRef; // 80
-    ink::WidgetReference canvasRef; // 98
-    ink::CompoundWidgetReference holdIndicatorContainerRef; // B0
-    ink::WidgetLibraryReference gamepadHoldIndicatorLibraryRef; // C8
-    ink::WidgetLibraryReference keyboardHoldIndicatorLibraryRef; // D8
-    uint8_t unkE8[0xF8 - 0xE8]; // E8
-    float fixedIconHeight; // F8
-    uint8_t unkFC[0x100 - 0xFC]; // FC
-    CName inputActionName; // 100
-    uint8_t unk108[0x122 - 0x108]; // 108
-    bool supportAnimatedHoldIndicator; // 122
-    ink::InputHintHoldIndicationType holdIndicationType; // 123
-    uint8_t unk124[0x128 - 0x124]; // 124
+    ink::WidgetReference iconRef; // 78
+    ink::WidgetReference nameRef; // 90
+    ink::WidgetReference canvasRef; // A8
+    ink::CompoundWidgetReference holdIndicatorContainerRef; // C0
+    ink::WidgetLibraryReference gamepadHoldIndicatorLibraryRef; // D8
+    ink::WidgetLibraryReference keyboardHoldIndicatorLibraryRef; // E8
+    uint8_t unkF8[0x108 - 0xF8]; // F8
+    float fixedIconHeight; // 108
+    uint8_t unk10C[0x110 - 0x10C]; // 10C
+    CName inputActionName; // 110
+    uint8_t unk118[0x132 - 0x118]; // 118
+    bool supportAnimatedHoldIndicator; // 132
+    ink::InputHintHoldIndicationType holdIndicationType; // 133
+    uint8_t unk134[0x138 - 0x134]; // 134
 };
-RED4EXT_ASSERT_SIZE(InputDisplayController, 0x128);
+RED4EXT_ASSERT_SIZE(InputDisplayController, 0x138);
 } // namespace ink
 } // namespace RED4ext

@@ -16,7 +16,8 @@ struct Platform_ConditionType : quest::ISystemConditionType
     static constexpr const char* ALIAS = NAME;
 
     quest::Platform platform; // 38
-    uint8_t unk3C[0x40 - 0x3C]; // 3C
+    bool inverted; // 3C
+    uint8_t unk3D[0x40 - 0x3D]; // 3D
 };
 RED4EXT_ASSERT_SIZE(Platform_ConditionType, 0x40);
 } // namespace quest

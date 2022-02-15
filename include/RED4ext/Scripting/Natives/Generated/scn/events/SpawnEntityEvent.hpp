@@ -15,9 +15,8 @@ struct SpawnEntityEvent : scn::SceneEvent
     static constexpr const char* NAME = "scneventsSpawnEntityEvent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0x60 - 0x58]; // 58
-    scn::events::SpawnEntityEventParams params; // 60
+    scn::events::SpawnEntityEventParams params; // 58
 };
-RED4EXT_ASSERT_SIZE(SpawnEntityEvent, 0x120);
+RED4EXT_ASSERT_SIZE(SpawnEntityEvent, 0x80);
 } // namespace scn::events
 } // namespace RED4ext

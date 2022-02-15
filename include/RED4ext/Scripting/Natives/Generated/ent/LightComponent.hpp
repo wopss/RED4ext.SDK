@@ -36,16 +36,16 @@ struct LightComponent : ent::IVisualComponent
     float rayTracingIntensityScale; // 154
     float EV; // 158
     ELightType type; // 15C
-    bool useInTransparents; // 160
-    bool useInParticles; // 161
-    bool sceneDiffuse; // 162
-    bool directional; // 163
-    bool clampAttenuation; // 164
-    uint8_t scaleGI; // 165
-    uint8_t scaleEnvProbes; // 166
-    uint8_t sceneSpecularScale; // 167
-    uint8_t scaleVolFog; // 168
-    int8_t roughnessBias; // 169
+    uint8_t scaleGI; // 160
+    uint8_t scaleEnvProbes; // 161
+    uint8_t sceneSpecularScale; // 162
+    uint8_t scaleVolFog; // 163
+    int8_t roughnessBias; // 164
+    bool useInTransparents; // 165
+    bool useInParticles; // 166
+    bool sceneDiffuse; // 167
+    bool directional; // 168
+    bool clampAttenuation; // 169
     rend::LightChannel lightChannel; // 16A
     rend::LightGroup group; // 16C
     rend::LightAttenuation attenuation; // 16D
@@ -56,27 +56,29 @@ struct LightComponent : ent::IVisualComponent
     float shadowFadeDistance; // 174
     float shadowFadeRange; // 178
     ELightShadowSoftnessMode shadowSoftnessMode; // 17C
-    rend::SLightFlickering flicker; // 180
-    EEnvColorGroup envColorGroup; // 18C
-    uint8_t colorGroupSaturation; // 18D
-    uint8_t portalAngleCutoff; // 18E
-    bool allowDistantLight; // 18F
-    float innerAngle; // 190
-    float outerAngle; // 194
-    float shadowAngle; // 198
-    float shadowRadius; // 19C
-    float softness; // 1A0
-    EAreaLightShape areaShape; // 1A4
-    bool areaTwoSided; // 1A8
-    bool spotCapsule; // 1A9
-    uint8_t unk1AA[0x1AC - 0x1AA]; // 1AA
-    float sourceRadius; // 1AC
-    float capsuleLength; // 1B0
-    float areaRectSideA; // 1B4
-    float areaRectSideB; // 1B8
-    uint8_t unk1BC[0x1C0 - 0x1BC]; // 1BC
-    RaRef<CIESDataResource> iesProfile; // 1C0
-    uint8_t unk1C8[0x1F0 - 0x1C8]; // 1C8
+    float rayTracingLightSourceRadius; // 180
+    float rayTracingContactShadowRange; // 184
+    rend::SLightFlickering flicker; // 188
+    EEnvColorGroup envColorGroup; // 194
+    uint8_t colorGroupSaturation; // 195
+    uint8_t portalAngleCutoff; // 196
+    bool allowDistantLight; // 197
+    float innerAngle; // 198
+    float outerAngle; // 19C
+    float shadowAngle; // 1A0
+    float shadowRadius; // 1A4
+    float softness; // 1A8
+    EAreaLightShape areaShape; // 1AC
+    bool areaTwoSided; // 1B0
+    bool spotCapsule; // 1B1
+    uint8_t unk1B2[0x1B4 - 0x1B2]; // 1B2
+    float sourceRadius; // 1B4
+    float capsuleLength; // 1B8
+    float areaRectSideA; // 1BC
+    float areaRectSideB; // 1C0
+    uint8_t unk1C4[0x1C8 - 0x1C4]; // 1C4
+    RaRef<CIESDataResource> iesProfile; // 1C8
+    uint8_t unk1D0[0x1F0 - 0x1D0]; // 1D0
 };
 RED4EXT_ASSERT_SIZE(LightComponent, 0x1F0);
 } // namespace ent

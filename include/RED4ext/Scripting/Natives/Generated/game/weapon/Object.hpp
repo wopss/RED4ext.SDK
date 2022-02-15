@@ -17,11 +17,11 @@ struct Object : game::ItemObject
     static constexpr const char* NAME = "gameweaponObject";
     static constexpr const char* ALIAS = "WeaponObject";
 
-    uint8_t unk328[0x358 - 0x328]; // 328
-    Ref<game::EffectSet> effect; // 358
-    uint8_t unk370[0x550 - 0x370]; // 370
+    uint8_t unk2C0[0x2F0 - 0x2C0]; // 2C0
+    Ref<game::EffectSet> effect; // 2F0
+    uint8_t unk308[0x4F0 - 0x308]; // 308
 };
-RED4EXT_ASSERT_SIZE(Object, 0x550);
+RED4EXT_ASSERT_SIZE(Object, 0x4F0);
 } // namespace game::weapon
 using WeaponObject = game::weapon::Object;
 } // namespace RED4ext

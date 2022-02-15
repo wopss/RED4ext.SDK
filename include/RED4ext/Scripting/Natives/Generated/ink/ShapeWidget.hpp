@@ -25,26 +25,26 @@ struct ShapeWidget : ink::BaseShapeWidget
     static constexpr const char* NAME = "inkShapeWidget";
     static constexpr const char* ALIAS = "inkShape";
 
-    Ref<ink::ShapeCollectionResource> shapeResource; // 220
-    CName shapeName; // 238
-    bool keepInBounds; // 240
-    uint8_t unk241[0x244 - 0x241]; // 241
-    float lineThickness; // 244
-    uint8_t unk248[0x250 - 0x248]; // 248
-    HDRColor borderColor; // 250
-    float borderOpacity; // 260
-    float fillOpacity; // 264
-    ink::EShapeVariant shapeVariant; // 268
-    ink::EEndCapStyle endCapStyle; // 26C
-    ink::EJointStyle jointStyle; // 270
-    ink::EHorizontalAlign contentHAlign; // 274
-    ink::EVerticalAlign contentVAlign; // 275
-    bool useNineSlice; // 276
-    uint8_t unk277[0x278 - 0x277]; // 277
-    ink::Margin nineSliceScale; // 278
-    uint8_t unk288[0x360 - 0x288]; // 288
+    Ref<ink::ShapeCollectionResource> shapeResource; // 230
+    CName shapeName; // 248
+    bool keepInBounds; // 250
+    uint8_t unk251[0x254 - 0x251]; // 251
+    float lineThickness; // 254
+    uint8_t unk258[0x260 - 0x258]; // 258
+    HDRColor borderColor; // 260
+    float borderOpacity; // 270
+    float fillOpacity; // 274
+    ink::EShapeVariant shapeVariant; // 278
+    ink::EEndCapStyle endCapStyle; // 27C
+    ink::EJointStyle jointStyle; // 280
+    ink::EHorizontalAlign contentHAlign; // 284
+    ink::EVerticalAlign contentVAlign; // 285
+    bool useNineSlice; // 286
+    uint8_t unk287[0x288 - 0x287]; // 287
+    ink::Margin nineSliceScale; // 288
+    uint8_t unk298[0x370 - 0x298]; // 298
 };
-RED4EXT_ASSERT_SIZE(ShapeWidget, 0x360);
+RED4EXT_ASSERT_SIZE(ShapeWidget, 0x370);
 } // namespace ink
 using inkShape = ink::ShapeWidget;
 } // namespace RED4ext

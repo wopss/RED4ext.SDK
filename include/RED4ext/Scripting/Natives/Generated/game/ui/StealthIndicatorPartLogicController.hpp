@@ -15,7 +15,7 @@ struct StealthIndicatorPartLogicController : game::ui::BaseDirectionalIndicatorP
     static constexpr const char* ALIAS = "StealthIndicatorPartLogicController";
 
 };
-RED4EXT_ASSERT_SIZE(StealthIndicatorPartLogicController, 0xC0);
+RED4EXT_ASSERT_SIZE(StealthIndicatorPartLogicController, 0xD0);
 } // namespace game::ui
 using StealthIndicatorPartLogicController = game::ui::StealthIndicatorPartLogicController;
 } // namespace RED4ext

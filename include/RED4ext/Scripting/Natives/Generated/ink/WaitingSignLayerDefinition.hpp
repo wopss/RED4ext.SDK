@@ -23,7 +23,7 @@ struct WaitingSignLayerDefinition : ink::LayerDefinition
     float waitingTime; // 58
     float postWaitTime; // 5C
     float outroTime; // 60
-    float layerInitTime; // 64
+    uint8_t unk64[0x68 - 0x64]; // 64
 };
 RED4EXT_ASSERT_SIZE(WaitingSignLayerDefinition, 0x68);
 } // namespace ink

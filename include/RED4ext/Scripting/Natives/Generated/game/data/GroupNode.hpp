@@ -35,11 +35,11 @@ struct GroupNode : game::data::DataNode
     Handle<game::data::FileNode> fileNode; // 160
     uint32_t inlineGroupId; // 170
     game::data::GroupNodeInheritanceState inheritanceState; // 174
-    uint8_t unk178[0x1B0 - 0x178]; // 178
-    DynArray<game::data::GroupNodeGroupVariable> serializedVariables; // 1B0
-    DynArray<CName> tags; // 1C0
-    uint8_t unk1D0[0x1E0 - 0x1D0]; // 1D0
+    uint8_t unk178[0x1E8 - 0x178]; // 178
+    DynArray<game::data::GroupNodeGroupVariable> serializedVariables; // 1E8
+    DynArray<CName> tags; // 1F8
+    uint8_t unk208[0x228 - 0x208]; // 208
 };
-RED4EXT_ASSERT_SIZE(GroupNode, 0x1E0);
+RED4EXT_ASSERT_SIZE(GroupNode, 0x228);
 } // namespace game::data
 } // namespace RED4ext

@@ -15,6 +15,6 @@ struct TooltipAttachmentSlot : ink::WidgetLogicController
     static constexpr const char* ALIAS = "gameuiTooltipAttachmentSlot";
 
 };
-RED4EXT_ASSERT_SIZE(TooltipAttachmentSlot, 0x68);
+RED4EXT_ASSERT_SIZE(TooltipAttachmentSlot, 0x78);
 } // namespace game::ui
 } // namespace RED4ext

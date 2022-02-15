@@ -28,39 +28,39 @@ struct TextWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkTextWidget";
     static constexpr const char* ALIAS = "inkText";
 
-    uint8_t unk1F0[0x218 - 0x1F0]; // 1F0
-    CString text; // 218
-    CName textIdKey; // 238
-    RaRef<ink::FontFamilyResource> fontFamily; // 240
-    CName fontStyle; // 248
-    uint32_t fontSize; // 250
-    uint8_t unk254[0x258 - 0x254]; // 254
-    ink::EHorizontalAlign contentHAlign; // 258
-    ink::EVerticalAlign contentVAlign; // 259
-    uint8_t unk25A[0x270 - 0x25A]; // 25A
-    Handle<rend::Font> font; // 270
-    uint8_t unk280[0x2B8 - 0x280]; // 280
-    text::LetterCase letterCase; // 2B8
-    uint8_t unk2B9[0x2C0 - 0x2B9]; // 2B9
-    uint32_t tracking; // 2C0
-    bool lockFontInGame; // 2C4
-    uint8_t unk2C5[0x2C8 - 0x2C5]; // 2C5
-    LocalizationString localizationString; // 2C8
-    uint8_t unk2F0[0x320 - 0x2F0]; // 2F0
-    float lineHeightPercentage; // 320
-    uint8_t unk324[0x328 - 0x324]; // 324
-    float scrollTextSpeed; // 328
-    uint16_t scrollDelay; // 32C
-    uint8_t unk32E[0x340 - 0x32E]; // 32E
-    text::WrappingInfo wrappingInfo; // 340
-    text::JustificationType justification; // 34C
-    text::VerticalAlignment textVerticalAlignment; // 34D
-    text::HorizontalAlignment textHorizontalAlignment; // 34E
-    uint8_t unk34F[0x350 - 0x34F]; // 34F
-    text::OverflowPolicy textOverflowPolicy; // 350
-    uint8_t unk351[0x420 - 0x351]; // 351
+    uint8_t unk200[0x228 - 0x200]; // 200
+    CString text; // 228
+    CName textIdKey; // 248
+    RaRef<ink::FontFamilyResource> fontFamily; // 250
+    CName fontStyle; // 258
+    uint32_t fontSize; // 260
+    uint8_t unk264[0x268 - 0x264]; // 264
+    ink::EHorizontalAlign contentHAlign; // 268
+    ink::EVerticalAlign contentVAlign; // 269
+    uint8_t unk26A[0x280 - 0x26A]; // 26A
+    Handle<rend::Font> font; // 280
+    uint8_t unk290[0x2C8 - 0x290]; // 290
+    text::LetterCase letterCase; // 2C8
+    uint8_t unk2C9[0x2D0 - 0x2C9]; // 2C9
+    uint32_t tracking; // 2D0
+    bool lockFontInGame; // 2D4
+    uint8_t unk2D5[0x2D8 - 0x2D5]; // 2D5
+    LocalizationString localizationString; // 2D8
+    uint8_t unk300[0x330 - 0x300]; // 300
+    float lineHeightPercentage; // 330
+    uint8_t unk334[0x338 - 0x334]; // 334
+    float scrollTextSpeed; // 338
+    uint16_t scrollDelay; // 33C
+    uint8_t unk33E[0x350 - 0x33E]; // 33E
+    text::WrappingInfo wrappingInfo; // 350
+    text::JustificationType justification; // 35C
+    text::VerticalAlignment textVerticalAlignment; // 35D
+    text::HorizontalAlignment textHorizontalAlignment; // 35E
+    uint8_t unk35F[0x360 - 0x35F]; // 35F
+    text::OverflowPolicy textOverflowPolicy; // 360
+    uint8_t unk361[0x430 - 0x361]; // 361
 };
-RED4EXT_ASSERT_SIZE(TextWidget, 0x420);
+RED4EXT_ASSERT_SIZE(TextWidget, 0x430);
 } // namespace ink
 using inkText = ink::TextWidget;
 } // namespace RED4ext

@@ -14,9 +14,9 @@ struct MinimapHazardWarningMappinController : game::ui::BaseMinimapMappinControl
     static constexpr const char* NAME = "gameuiMinimapHazardWarningMappinController";
     static constexpr const char* ALIAS = "MinimapHazardWarningMappinController";
 
-    uint8_t unk210[0x220 - 0x210]; // 210
+    uint8_t unk220[0x230 - 0x220]; // 220
 };
-RED4EXT_ASSERT_SIZE(MinimapHazardWarningMappinController, 0x220);
+RED4EXT_ASSERT_SIZE(MinimapHazardWarningMappinController, 0x230);
 } // namespace game::ui
 using MinimapHazardWarningMappinController = game::ui::MinimapHazardWarningMappinController;
 } // namespace RED4ext

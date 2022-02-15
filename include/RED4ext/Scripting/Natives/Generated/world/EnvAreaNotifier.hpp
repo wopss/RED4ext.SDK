@@ -31,7 +31,9 @@ struct EnvAreaNotifier : world::ITriggerAreaNotifer
     uint8_t unkF4[0xF8 - 0xF4]; // F4
     DynArray<CName> weatherStateNames; // F8
     DynArray<bool> weatherStateValues; // 108
+    uint8_t resourceVersion; // 118
+    uint8_t unk119[0x120 - 0x119]; // 119
 };
-RED4EXT_ASSERT_SIZE(EnvAreaNotifier, 0x118);
+RED4EXT_ASSERT_SIZE(EnvAreaNotifier, 0x120);
 } // namespace world
 } // namespace RED4ext

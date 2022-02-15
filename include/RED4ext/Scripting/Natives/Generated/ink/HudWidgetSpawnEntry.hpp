@@ -41,11 +41,11 @@ struct HudWidgetSpawnEntry
     uint8_t unk5D[0x60 - 0x5D]; // 5D
     ink::WidgetSlotAttachmentParams slotParams; // 60
     bool useSeparateWindow; // A0
-    uint8_t unkA1[0x10F - 0xA1]; // A1
-    bool affectedByGlitchEffect; // 10F
-    bool spawnBeforeSlots; // 110
-    uint8_t unk111[0x118 - 0x111]; // 111
+    uint8_t unkA1[0x117 - 0xA1]; // A1
+    bool affectedByGlitchEffect; // 117
+    bool spawnBeforeSlots; // 118
+    uint8_t unk119[0x120 - 0x119]; // 119
 };
-RED4EXT_ASSERT_SIZE(HudWidgetSpawnEntry, 0x118);
+RED4EXT_ASSERT_SIZE(HudWidgetSpawnEntry, 0x120);
 } // namespace ink
 } // namespace RED4ext

@@ -14,11 +14,11 @@ struct TutorialOverlayLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiTutorialOverlayLogicController";
     static constexpr const char* ALIAS = "TutorialOverlayLogicController";
 
-    bool hideInMenu; // 68
-    bool hideOnInput; // 69
-    uint8_t unk6A[0x70 - 0x6A]; // 6A
+    bool hideInMenu; // 78
+    bool hideOnInput; // 79
+    uint8_t unk7A[0x80 - 0x7A]; // 7A
 };
-RED4EXT_ASSERT_SIZE(TutorialOverlayLogicController, 0x70);
+RED4EXT_ASSERT_SIZE(TutorialOverlayLogicController, 0x80);
 } // namespace game::ui
 using TutorialOverlayLogicController = game::ui::TutorialOverlayLogicController;
 } // namespace RED4ext

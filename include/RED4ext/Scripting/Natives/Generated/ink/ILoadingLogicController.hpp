@@ -14,9 +14,9 @@ struct ILoadingLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkILoadingLogicController";
     static constexpr const char* ALIAS = "ILoadingLogicController";
 
-    uint8_t unk68[0x180 - 0x68]; // 68
+    uint8_t unk78[0x190 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(ILoadingLogicController, 0x180);
+RED4EXT_ASSERT_SIZE(ILoadingLogicController, 0x190);
 } // namespace ink
 using ILoadingLogicController = ink::ILoadingLogicController;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct Player : game::Player
     static constexpr const char* NAME = "cpPlayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x60 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(Player, 0x58);
+RED4EXT_ASSERT_SIZE(Player, 0x60);
 } // namespace cp
 } // namespace RED4ext

@@ -24,8 +24,10 @@ struct PhoneCallInformation
     bool isPlayerTriggered; // 11
     uint8_t unk12[0x14 - 0x12]; // 12
     quest::PhoneCallPhase callPhase; // 14
+    bool isRejectable; // 18
+    uint8_t unk19[0x20 - 0x19]; // 19
 };
-RED4EXT_ASSERT_SIZE(PhoneCallInformation, 0x18);
+RED4EXT_ASSERT_SIZE(PhoneCallInformation, 0x20);
 } // namespace quest
 using PhoneCallInformation = quest::PhoneCallInformation;
 } // namespace RED4ext

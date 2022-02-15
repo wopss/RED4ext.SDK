@@ -11,6 +11,7 @@
 #include <RED4ext/Scripting/Natives/Generated/CensorshipFlags.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationAction.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationActionType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationEditTag.hpp>
 
 namespace RED4ext
 {
@@ -30,12 +31,12 @@ struct CharacterCustomizationInfo : IScriptable
     uint8_t unk7A[0x80 - 0x7A]; // 7A
     CName link; // 80
     bool linkController; // 88
-    uint8_t unk89[0x8C - 0x89]; // 89
-    CensorshipFlags censorFlag; // 8C
-    game::ui::CharacterCustomizationActionType censorFlagAction; // 90
-    uint8_t unk94[0x98 - 0x94]; // 94
-    DynArray<game::ui::CharacterCustomizationAction> onDeactivateActions; // 98
+    uint8_t unk89[0x90 - 0x89]; // 89
+    DynArray<game::ui::CharacterCustomizationEditTag> editTags; // 90
+    CensorshipFlags censorFlag; // A0
+    game::ui::CharacterCustomizationActionType censorFlagAction; // A4
+    DynArray<game::ui::CharacterCustomizationAction> onDeactivateActions; // A8
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationInfo, 0xA8);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationInfo, 0xB8);
 } // namespace game::ui
 } // namespace RED4ext

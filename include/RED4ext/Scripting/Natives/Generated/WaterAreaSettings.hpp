@@ -23,10 +23,16 @@ struct WaterAreaSettings : IAreaSettings
     float depth; // 54
     float density; // 58
     uint8_t unk5C[0x60 - 0x5C]; // 5C
-    HDRColor lightAbsorptionColor; // 60
-    HDRColor lightDecayColor; // 70
-    Ref<CBitmapTexture> globalWaterMask; // 80
-    uint8_t unk98[0xA0 - 0x98]; // 98
+    CurveData<float> windDir; // 60
+    CurveData<float> windSpeed; // 98
+    CurveData<float> windScale; // D0
+    CurveData<float> amplitude; // 108
+    CurveData<float> lambda; // 140
+    uint8_t unk178[0x180 - 0x178]; // 178
+    HDRColor lightAbsorptionColor; // 180
+    HDRColor lightDecayColor; // 190
+    Ref<CBitmapTexture> globalWaterMask; // 1A0
+    uint8_t unk1B8[0x1C0 - 0x1B8]; // 1B8
 };
-RED4EXT_ASSERT_SIZE(WaterAreaSettings, 0xA0);
+RED4EXT_ASSERT_SIZE(WaterAreaSettings, 0x1C0);
 } // namespace RED4ext

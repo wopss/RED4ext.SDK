@@ -37,16 +37,16 @@ struct AdvertisementLightData
     float rayTracingIntensityScale; // 14
     float EV; // 18
     ELightType type; // 1C
-    bool useInTransparents; // 20
-    bool useInParticles; // 21
-    bool sceneDiffuse; // 22
-    bool directional; // 23
-    bool clampAttenuation; // 24
-    uint8_t scaleGI; // 25
-    uint8_t scaleEnvProbes; // 26
-    uint8_t sceneSpecularScale; // 27
-    uint8_t scaleVolFog; // 28
-    int8_t roughnessBias; // 29
+    uint8_t scaleGI; // 20
+    uint8_t scaleEnvProbes; // 21
+    uint8_t sceneSpecularScale; // 22
+    uint8_t scaleVolFog; // 23
+    int8_t roughnessBias; // 24
+    bool useInTransparents; // 25
+    bool useInParticles; // 26
+    bool sceneDiffuse; // 27
+    bool directional; // 28
+    bool clampAttenuation; // 29
     rend::LightChannel lightChannel; // 2A
     rend::LightGroup group; // 2C
     rend::LightAttenuation attenuation; // 2D
@@ -57,27 +57,28 @@ struct AdvertisementLightData
     float shadowFadeDistance; // 34
     float shadowFadeRange; // 38
     ELightShadowSoftnessMode shadowSoftnessMode; // 3C
-    rend::SLightFlickering flicker; // 40
-    EEnvColorGroup envColorGroup; // 4C
-    uint8_t colorGroupSaturation; // 4D
-    uint8_t portalAngleCutoff; // 4E
-    bool allowDistantLight; // 4F
-    float innerAngle; // 50
-    float outerAngle; // 54
-    float shadowAngle; // 58
-    float shadowRadius; // 5C
-    float softness; // 60
-    EAreaLightShape areaShape; // 64
-    bool areaTwoSided; // 68
-    bool spotCapsule; // 69
-    uint8_t unk6A[0x6C - 0x6A]; // 6A
-    float sourceRadius; // 6C
-    float capsuleLength; // 70
-    float areaRectSideA; // 74
-    float areaRectSideB; // 78
-    uint8_t unk7C[0x80 - 0x7C]; // 7C
-    RaRef<CIESDataResource> iesProfile; // 80
-    uint8_t unk88[0x90 - 0x88]; // 88
+    float rayTracingLightSourceRadius; // 40
+    float rayTracingContactShadowRange; // 44
+    rend::SLightFlickering flicker; // 48
+    EEnvColorGroup envColorGroup; // 54
+    uint8_t colorGroupSaturation; // 55
+    uint8_t portalAngleCutoff; // 56
+    bool allowDistantLight; // 57
+    float innerAngle; // 58
+    float outerAngle; // 5C
+    float shadowAngle; // 60
+    float shadowRadius; // 64
+    float softness; // 68
+    EAreaLightShape areaShape; // 6C
+    bool areaTwoSided; // 70
+    bool spotCapsule; // 71
+    uint8_t unk72[0x74 - 0x72]; // 72
+    float sourceRadius; // 74
+    float capsuleLength; // 78
+    float areaRectSideA; // 7C
+    float areaRectSideB; // 80
+    uint8_t unk84[0x88 - 0x84]; // 84
+    RaRef<CIESDataResource> iesProfile; // 88
     Transform transform; // 90
     bool isEnabled; // B0
     bool useAutoHideDistance; // B1

@@ -15,6 +15,6 @@ struct JournalTrackQuest_NodeType : quest::IJournal_NodeType
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(JournalTrackQuest_NodeType, 0x40);
+RED4EXT_ASSERT_SIZE(JournalTrackQuest_NodeType, 0x48);
 } // namespace quest
 } // namespace RED4ext

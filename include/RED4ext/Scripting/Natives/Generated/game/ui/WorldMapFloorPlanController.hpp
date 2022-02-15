@@ -14,9 +14,9 @@ struct WorldMapFloorPlanController : game::ui::MinimapContainerController
     static constexpr const char* NAME = "gameuiWorldMapFloorPlanController";
     static constexpr const char* ALIAS = "WorldMapFloorPlanController";
 
-    uint8_t unk478[0x480 - 0x478]; // 478
+    uint8_t unk488[0x490 - 0x488]; // 488
 };
-RED4EXT_ASSERT_SIZE(WorldMapFloorPlanController, 0x480);
+RED4EXT_ASSERT_SIZE(WorldMapFloorPlanController, 0x490);
 } // namespace game::ui
 using WorldMapFloorPlanController = game::ui::WorldMapFloorPlanController;
 } // namespace RED4ext

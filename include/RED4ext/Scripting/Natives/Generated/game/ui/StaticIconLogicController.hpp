@@ -15,8 +15,8 @@ struct StaticIconLogicController : game::ui::DynamicIconLogicController
     static constexpr const char* NAME = "gameuiStaticIconLogicController";
     static constexpr const char* ALIAS = NAME;
 
-    TweakDBID iconReference; // 68
+    TweakDBID iconReference; // 78
 };
-RED4EXT_ASSERT_SIZE(StaticIconLogicController, 0x70);
+RED4EXT_ASSERT_SIZE(StaticIconLogicController, 0x80);
 } // namespace game::ui
 } // namespace RED4ext

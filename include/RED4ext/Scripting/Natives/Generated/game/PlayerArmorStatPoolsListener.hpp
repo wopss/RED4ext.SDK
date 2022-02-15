@@ -14,8 +14,8 @@ struct PlayerArmorStatPoolsListener : game::PuppetStatPoolsListener
     static constexpr const char* NAME = "gamePlayerArmorStatPoolsListener";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk48[0x50 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PlayerArmorStatPoolsListener, 0x60);
+RED4EXT_ASSERT_SIZE(PlayerArmorStatPoolsListener, 0x50);
 } // namespace game
 } // namespace RED4ext

@@ -16,9 +16,7 @@ struct AnimsetVariableCondition : anim::IRuntimeCondition
     static constexpr const char* ALIAS = NAME;
 
     CName variableToCompare; // 30
-    float valueToCompare; // 38
-    uint8_t unk3C[0x40 - 0x3C]; // 3C
 };
-RED4EXT_ASSERT_SIZE(AnimsetVariableCondition, 0x40);
+RED4EXT_ASSERT_SIZE(AnimsetVariableCondition, 0x38);
 } // namespace anim
 } // namespace RED4ext

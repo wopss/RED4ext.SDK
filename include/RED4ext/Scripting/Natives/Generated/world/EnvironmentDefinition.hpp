@@ -5,16 +5,19 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/RenderSettingFactors.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldLightingConfig.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldRenderAreaSettings.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldShadowConfig.hpp>
-#include <RED4ext/Scripting/Natives/Generated/world/WeatherState.hpp>
 
 namespace RED4ext
 {
 namespace world { struct EnvironmentAreaParameters; }
+namespace world { struct WeatherState; }
+namespace world { struct WeatherStateTransition; }
 
 namespace world { 
 struct EnvironmentDefinition : CResource
@@ -26,12 +29,14 @@ struct EnvironmentDefinition : CResource
     WorldShadowConfig worldShadowConfig; // 50
     WorldLightingConfig worldLightingConfig; // 78
     uint8_t unk7C[0x80 - 0x7C]; // 7C
-    DynArray<world::WeatherState> weatherStates; // 80
-    DynArray<Ref<world::EnvironmentAreaParameters>> areaEnvironmentParameterLayers; // 90
-    uint8_t unkA0[0xB0 - 0xA0]; // A0
-    bool resaved; // B0
-    uint8_t unkB1[0xB8 - 0xB1]; // B1
+    RenderSettingFactors renderSettingFactors; // 80
+    DynArray<Ref<world::EnvironmentAreaParameters>> areaEnvironmentParameterLayers; // 160
+    uint8_t unk170[0x180 - 0x170]; // 170
+    uint8_t resourceVersion; // 180
+    uint8_t unk181[0x188 - 0x181]; // 181
+    DynArray<Handle<world::WeatherState>> weatherStates; // 188
+    DynArray<Handle<world::WeatherStateTransition>> weatherStateTransitions; // 198
 };
-RED4EXT_ASSERT_SIZE(EnvironmentDefinition, 0xB8);
+RED4EXT_ASSERT_SIZE(EnvironmentDefinition, 0x1A8);
 } // namespace world
 } // namespace RED4ext

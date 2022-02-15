@@ -14,8 +14,8 @@ struct PreGameMenuGameController : game::ui::BaseMenuGameController
     static constexpr const char* NAME = "gameuiPreGameMenuGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk130[0x138 - 0x130]; // 130
+    uint8_t unk140[0x148 - 0x140]; // 140
 };
-RED4EXT_ASSERT_SIZE(PreGameMenuGameController, 0x138);
+RED4EXT_ASSERT_SIZE(PreGameMenuGameController, 0x148);
 } // namespace game::ui
 } // namespace RED4ext

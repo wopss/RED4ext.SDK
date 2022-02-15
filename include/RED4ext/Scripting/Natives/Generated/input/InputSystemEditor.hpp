@@ -14,8 +14,8 @@ struct InputSystemEditor : input::InputSystemWin32Base
     static constexpr const char* NAME = "inputInputSystemEditor";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk178[0xE58 - 0x178]; // 178
+    uint8_t unk180[0xE60 - 0x180]; // 180
 };
-RED4EXT_ASSERT_SIZE(InputSystemEditor, 0xE58);
+RED4EXT_ASSERT_SIZE(InputSystemEditor, 0xE60);
 } // namespace input
 } // namespace RED4ext

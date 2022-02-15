@@ -14,9 +14,9 @@ struct PanzerHUDGameController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameuiPanzerHUDGameController";
     static constexpr const char* ALIAS = "PanzerHUDGameController";
 
-    uint8_t unkE8[0x128 - 0xE8]; // E8
+    uint8_t unkF8[0x138 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(PanzerHUDGameController, 0x128);
+RED4EXT_ASSERT_SIZE(PanzerHUDGameController, 0x138);
 } // namespace game::ui
 using PanzerHUDGameController = game::ui::PanzerHUDGameController;
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct RandomStatModifier : game::StatModifierBase
     static constexpr const char* NAME = "gameRandomStatModifier";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x28 - 0x18]; // 18
+    uint8_t unk18[0x30 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(RandomStatModifier, 0x28);
+RED4EXT_ASSERT_SIZE(RandomStatModifier, 0x30);
 } // namespace game
 } // namespace RED4ext

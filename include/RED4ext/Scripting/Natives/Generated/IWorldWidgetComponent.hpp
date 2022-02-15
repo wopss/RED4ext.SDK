@@ -24,7 +24,9 @@ struct IWorldWidgetComponent : WidgetBaseComponent
     uint8_t unk210[0x290 - 0x210]; // 210
     Color tintColor; // 290
     float screenAreaMultiplier; // 294
-    uint8_t unk298[0x2B0 - 0x298]; // 298
+    uint32_t textureMinMipBias; // 298
+    uint32_t textureMaxMipBias; // 29C
+    uint8_t unk2A0[0x2B0 - 0x2A0]; // 2A0
 };
 RED4EXT_ASSERT_SIZE(IWorldWidgetComponent, 0x2B0);
 } // namespace RED4ext

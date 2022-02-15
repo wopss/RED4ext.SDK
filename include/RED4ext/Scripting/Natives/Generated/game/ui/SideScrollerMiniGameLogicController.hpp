@@ -18,19 +18,19 @@ struct SideScrollerMiniGameLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameLogicController";
     static constexpr const char* ALIAS = "MinigameLogicController";
 
-    uint32_t startHealth; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
-    ink::CompoundWidgetReference gameplayRoot; // 70
-    uint8_t unk88[0xE0 - 0x88]; // 88
-    float baseSpeed; // E0
-    Vector2 playerColliderPositionOffset; // E4
-    Vector2 playerColliderSizeOffset; // EC
-    uint8_t unkF4[0xF8 - 0xF4]; // F4
-    CName gameName; // F8
-    CName playerLibraryName; // 100
-    DynArray<CName> spawnedListLibraryNames; // 108
+    uint32_t startHealth; // 78
+    uint8_t unk7C[0x80 - 0x7C]; // 7C
+    ink::CompoundWidgetReference gameplayRoot; // 80
+    uint8_t unk98[0xF0 - 0x98]; // 98
+    float baseSpeed; // F0
+    Vector2 playerColliderPositionOffset; // F4
+    Vector2 playerColliderSizeOffset; // FC
+    uint8_t unk104[0x108 - 0x104]; // 104
+    CName gameName; // 108
+    CName playerLibraryName; // 110
+    DynArray<CName> spawnedListLibraryNames; // 118
 };
-RED4EXT_ASSERT_SIZE(SideScrollerMiniGameLogicController, 0x118);
+RED4EXT_ASSERT_SIZE(SideScrollerMiniGameLogicController, 0x128);
 } // namespace game::ui
 using MinigameLogicController = game::ui::SideScrollerMiniGameLogicController;
 } // namespace RED4ext

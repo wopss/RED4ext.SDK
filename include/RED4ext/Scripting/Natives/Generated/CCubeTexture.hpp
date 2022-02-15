@@ -18,13 +18,14 @@ struct CCubeTexture : ITexture
     static constexpr const char* NAME = "CCubeTexture";
     static constexpr const char* ALIAS = NAME;
 
-    uint32_t size; // 40
-    STextureGroupSetup setup; // 44
-    uint8_t unk54[0x60 - 0x54]; // 54
-    Handle<IRenderResourceBlob> renderResourceBlob; // 60
-    uint8_t unk70[0x78 - 0x70]; // 70
-    rend::RenderTextureResource renderTextureResource; // 78
-    uint8_t unk88[0x98 - 0x88]; // 88
+    uint8_t unk40[0x48 - 0x40]; // 40
+    uint32_t size; // 48
+    STextureGroupSetup setup; // 4C
+    uint8_t unk5C[0x68 - 0x5C]; // 5C
+    Handle<IRenderResourceBlob> renderResourceBlob; // 68
+    uint8_t unk78[0x80 - 0x78]; // 78
+    rend::RenderTextureResource renderTextureResource; // 80
+    uint8_t unk90[0xA0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(CCubeTexture, 0x98);
+RED4EXT_ASSERT_SIZE(CCubeTexture, 0xA0);
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct AnimNode_NPCExploration : anim::AnimNode_Base
     static constexpr const char* NAME = "animAnimNode_NPCExploration";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xF8 - 0x48]; // 48
+    uint8_t unk48[0x108 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AnimNode_NPCExploration, 0xF8);
+RED4EXT_ASSERT_SIZE(AnimNode_NPCExploration, 0x108);
 } // namespace anim
 } // namespace RED4ext

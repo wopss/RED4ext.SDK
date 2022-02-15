@@ -14,12 +14,13 @@ struct EffectObjectProvider_SweepMelee_Box : game::EffectObjectProvider_SweepOve
     static constexpr const char* NAME = "gameEffectObjectProvider_SweepMelee_Box";
     static constexpr const char* ALIAS = NAME;
 
-    float playerStaticDetectionConeDistance; // 60
-    float playerStaticDetectionConeStartAngle; // 64
-    float playerStaticDetectionConeEndAngle; // 68
-    bool checkMeleeInvulnerability; // 6C
-    uint8_t unk6D[0x70 - 0x6D]; // 6D
+    float playerStaticDetectionConeDistance; // 68
+    float playerStaticDetectionConeStartAngle; // 6C
+    float playerStaticDetectionConeEndAngle; // 70
+    bool playerUseCameraForObstructionChecks; // 74
+    bool checkMeleeInvulnerability; // 75
+    uint8_t unk76[0x78 - 0x76]; // 76
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepMelee_Box, 0x70);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepMelee_Box, 0x78);
 } // namespace game
 } // namespace RED4ext

@@ -9,8 +9,9 @@ namespace world {
 enum class PrefabStreamingOcclusion : uint8_t
 {
     Default = 0,
-    Interior = 1,
-    OpenInterior = 2,
+    Exterior = 1,
+    Interior = 2,
+    OpenInterior = 3,
 };
 } // namespace world
 } // namespace RED4ext

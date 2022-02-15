@@ -15,7 +15,7 @@ struct PanzerFriendlyBullet : game::ui::PanzerBullet
     static constexpr const char* ALIAS = "PanzerFriendlyBullet";
 
 };
-RED4EXT_ASSERT_SIZE(PanzerFriendlyBullet, 0xC0);
+RED4EXT_ASSERT_SIZE(PanzerFriendlyBullet, 0xD0);
 } // namespace game::ui
 using PanzerFriendlyBullet = game::ui::PanzerFriendlyBullet;
 } // namespace RED4ext

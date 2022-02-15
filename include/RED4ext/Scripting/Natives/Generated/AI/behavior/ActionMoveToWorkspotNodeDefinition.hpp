@@ -28,7 +28,8 @@ struct ActionMoveToWorkspotNodeDefinition : AI::behavior::ActionTreeNodeDefiniti
     Handle<AI::ArgumentMapping> startTangent; // C0
     Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // D0
     Handle<AI::ArgumentMapping> ignoreExploration; // E0
+    Handle<AI::ArgumentMapping> canUseInconvenientEntries; // F0
 };
-RED4EXT_ASSERT_SIZE(ActionMoveToWorkspotNodeDefinition, 0xF0);
+RED4EXT_ASSERT_SIZE(ActionMoveToWorkspotNodeDefinition, 0x100);
 } // namespace AI::behavior
 } // namespace RED4ext

@@ -14,9 +14,9 @@ struct TransactionSystem : game::ITransactionSystem
     static constexpr const char* NAME = "gameTransactionSystem";
     static constexpr const char* ALIAS = "TransactionSystem";
 
-    uint8_t unk48[0x148 - 0x48]; // 48
+    uint8_t unk48[0x180 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(TransactionSystem, 0x148);
+RED4EXT_ASSERT_SIZE(TransactionSystem, 0x180);
 } // namespace game
 using TransactionSystem = game::TransactionSystem;
 } // namespace RED4ext

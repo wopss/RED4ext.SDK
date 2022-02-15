@@ -15,9 +15,9 @@ struct CensorshipController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkCensorshipController";
     static constexpr const char* ALIAS = NAME;
 
-    CensorshipFlags censorshipFlags; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    CensorshipFlags censorshipFlags; // 78
+    uint8_t unk7C[0x80 - 0x7C]; // 7C
 };
-RED4EXT_ASSERT_SIZE(CensorshipController, 0x70);
+RED4EXT_ASSERT_SIZE(CensorshipController, 0x80);
 } // namespace ink
 } // namespace RED4ext

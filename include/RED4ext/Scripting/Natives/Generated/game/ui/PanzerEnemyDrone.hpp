@@ -14,12 +14,12 @@ struct PanzerEnemyDrone : game::ui::PanzerEnemy
     static constexpr const char* NAME = "gameuiPanzerEnemyDrone";
     static constexpr const char* ALIAS = "PanzerEnemyDrone";
 
-    float speed; // 128
-    float shootIntervalMinimum; // 12C
-    float shootIntervalMaximum; // 130
-    uint8_t unk134[0x140 - 0x134]; // 134
+    float speed; // 138
+    float shootIntervalMinimum; // 13C
+    float shootIntervalMaximum; // 140
+    uint8_t unk144[0x150 - 0x144]; // 144
 };
-RED4EXT_ASSERT_SIZE(PanzerEnemyDrone, 0x140);
+RED4EXT_ASSERT_SIZE(PanzerEnemyDrone, 0x150);
 } // namespace game::ui
 using PanzerEnemyDrone = game::ui::PanzerEnemyDrone;
 } // namespace RED4ext

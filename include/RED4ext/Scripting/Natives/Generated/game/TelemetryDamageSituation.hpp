@@ -13,6 +13,7 @@ enum class TelemetryDamageSituation : uint32_t
     EnemyToCompanion = 2,
     PlayerToEnemy = 3,
     CompanionToEnemy = 4,
+    PlayerToPlayer = 5,
 };
 } // namespace game
 } // namespace RED4ext

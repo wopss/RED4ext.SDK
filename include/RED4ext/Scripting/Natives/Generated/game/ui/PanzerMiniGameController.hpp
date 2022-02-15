@@ -15,7 +15,7 @@ struct PanzerMiniGameController : game::ui::SideScrollerMiniGameControllerAdvanc
     static constexpr const char* ALIAS = "PanzerMiniGameController";
 
 };
-RED4EXT_ASSERT_SIZE(PanzerMiniGameController, 0x100);
+RED4EXT_ASSERT_SIZE(PanzerMiniGameController, 0x110);
 } // namespace game::ui
 using PanzerMiniGameController = game::ui::PanzerMiniGameController;
 } // namespace RED4ext

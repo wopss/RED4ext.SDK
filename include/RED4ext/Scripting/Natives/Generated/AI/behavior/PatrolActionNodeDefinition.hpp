@@ -24,7 +24,8 @@ struct PatrolActionNodeDefinition : AI::behavior::ActionTreeNodeDefinition
     Handle<AI::ArgumentMapping> lookAtTarget; // 80
     Handle<AI::ArgumentMapping> startFromClosestPoint; // 90
     Handle<AI::ArgumentMapping> playStartAnimation; // A0
+    Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // B0
 };
-RED4EXT_ASSERT_SIZE(PatrolActionNodeDefinition, 0xB0);
+RED4EXT_ASSERT_SIZE(PatrolActionNodeDefinition, 0xC0);
 } // namespace AI::behavior
 } // namespace RED4ext

@@ -15,6 +15,6 @@ struct DestructibleEntityProxyMeshNode : world::EntityProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(DestructibleEntityProxyMeshNode, 0x80);
+RED4EXT_ASSERT_SIZE(DestructibleEntityProxyMeshNode, 0x70);
 } // namespace world
 } // namespace RED4ext

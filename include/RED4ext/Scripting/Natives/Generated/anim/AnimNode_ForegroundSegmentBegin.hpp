@@ -14,7 +14,8 @@ struct AnimNode_ForegroundSegmentBegin : anim::AnimNode_OnePoseInput
     static constexpr const char* NAME = "animAnimNode_ForegroundSegmentBegin";
     static constexpr const char* ALIAS = NAME;
 
+    uint8_t unk60[0x68 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AnimNode_ForegroundSegmentBegin, 0x60);
+RED4EXT_ASSERT_SIZE(AnimNode_ForegroundSegmentBegin, 0x68);
 } // namespace anim
 } // namespace RED4ext

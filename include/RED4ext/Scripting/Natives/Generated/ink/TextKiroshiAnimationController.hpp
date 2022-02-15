@@ -17,17 +17,17 @@ struct TextKiroshiAnimationController : ink::TextAnimationController
     static constexpr const char* NAME = "inkTextKiroshiAnimationController";
     static constexpr const char* ALIAS = "inkTextKiroshiAnimController";
 
-    uint8_t unkE0[0x140 - 0xE0]; // E0
-    CString nativeText; // 140
-    ink::TextWidgetReference preTranslatedTextWidget; // 160
-    ink::TextWidgetReference postTranslatedTextWidget; // 178
-    ink::RichTextBoxWidgetReference nativeTextWidget; // 190
-    ink::TextWidgetReference translatedTextWidget; // 1A8
-    uint8_t unk1C0[0x218 - 0x1C0]; // 1C0
-    float timeToSkip; // 218
-    uint8_t unk21C[0x220 - 0x21C]; // 21C
+    uint8_t unkF0[0x150 - 0xF0]; // F0
+    CString nativeText; // 150
+    ink::TextWidgetReference preTranslatedTextWidget; // 170
+    ink::TextWidgetReference postTranslatedTextWidget; // 188
+    ink::RichTextBoxWidgetReference nativeTextWidget; // 1A0
+    ink::TextWidgetReference translatedTextWidget; // 1B8
+    uint8_t unk1D0[0x228 - 0x1D0]; // 1D0
+    float timeToSkip; // 228
+    uint8_t unk22C[0x230 - 0x22C]; // 22C
 };
-RED4EXT_ASSERT_SIZE(TextKiroshiAnimationController, 0x220);
+RED4EXT_ASSERT_SIZE(TextKiroshiAnimationController, 0x230);
 } // namespace ink
 using inkTextKiroshiAnimController = ink::TextKiroshiAnimationController;
 } // namespace RED4ext

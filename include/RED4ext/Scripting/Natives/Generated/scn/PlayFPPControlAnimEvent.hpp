@@ -28,7 +28,8 @@ struct PlayFPPControlAnimEvent : scn::PlayAnimEvent
     scn::fpp::BlendOverride blendOverride; // C4
     bool cameraUseTrajectorySpace; // C8
     bool idleIsMountedWorkspot; // C9
-    uint8_t unkCA[0xCC - 0xCA]; // CA
+    bool enableWorldSpaceSmoothing; // CA
+    uint8_t unkCB[0xCC - 0xCB]; // CB
     float cameraBlendInDuration; // CC
     float cameraBlendOutDuration; // D0
     bool stayInScene; // D4

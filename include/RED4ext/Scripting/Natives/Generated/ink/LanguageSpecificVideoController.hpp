@@ -19,13 +19,13 @@ struct LanguageSpecificVideoController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkLanguageSpecificVideoController";
     static constexpr const char* ALIAS = "LanguageSpecificVideoController";
 
-    bool isLooped; // 68
-    uint8_t unk69[0x70 - 0x69]; // 69
-    RaRef<Bink> specificVideoForLanguage; // 70
-    DynArray<ink::LanguageId> languages; // 78
-    RaRef<Bink> fallbackVideo; // 88
+    bool isLooped; // 78
+    uint8_t unk79[0x80 - 0x79]; // 79
+    RaRef<Bink> specificVideoForLanguage; // 80
+    DynArray<ink::LanguageId> languages; // 88
+    RaRef<Bink> fallbackVideo; // 98
 };
-RED4EXT_ASSERT_SIZE(LanguageSpecificVideoController, 0x90);
+RED4EXT_ASSERT_SIZE(LanguageSpecificVideoController, 0xA0);
 } // namespace ink
 using LanguageSpecificVideoController = ink::LanguageSpecificVideoController;
 } // namespace RED4ext

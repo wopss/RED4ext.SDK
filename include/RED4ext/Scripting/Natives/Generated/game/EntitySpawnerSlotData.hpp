@@ -17,9 +17,9 @@ struct EntitySpawnerSlotData
 
     CName slotName; // 00
     TweakDBID spawnableObject; // 08
-    uint8_t unk10[0x20 - 0x10]; // 10
+    uint8_t unk10[0x28 - 0x10]; // 10
 };
-RED4EXT_ASSERT_SIZE(EntitySpawnerSlotData, 0x20);
+RED4EXT_ASSERT_SIZE(EntitySpawnerSlotData, 0x28);
 } // namespace game
 using EntitySpawnerSlotData = game::EntitySpawnerSlotData;
 } // namespace RED4ext

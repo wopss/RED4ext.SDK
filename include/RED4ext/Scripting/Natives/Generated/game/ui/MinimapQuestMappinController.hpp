@@ -15,7 +15,7 @@ struct MinimapQuestMappinController : game::ui::BaseMinimapMappinController
     static constexpr const char* ALIAS = "MinimapQuestMappinController";
 
 };
-RED4EXT_ASSERT_SIZE(MinimapQuestMappinController, 0x210);
+RED4EXT_ASSERT_SIZE(MinimapQuestMappinController, 0x220);
 } // namespace game::ui
 using MinimapQuestMappinController = game::ui::MinimapQuestMappinController;
 } // namespace RED4ext

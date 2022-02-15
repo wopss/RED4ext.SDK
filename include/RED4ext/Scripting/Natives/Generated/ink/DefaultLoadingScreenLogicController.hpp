@@ -14,9 +14,9 @@ struct DefaultLoadingScreenLogicController : ink::ILoadingLogicController
     static constexpr const char* NAME = "inkDefaultLoadingScreenLogicController";
     static constexpr const char* ALIAS = "DefaultLoadingScreenLogicController";
 
-    uint8_t unk180[0x190 - 0x180]; // 180
+    uint8_t unk190[0x1A0 - 0x190]; // 190
 };
-RED4EXT_ASSERT_SIZE(DefaultLoadingScreenLogicController, 0x190);
+RED4EXT_ASSERT_SIZE(DefaultLoadingScreenLogicController, 0x1A0);
 } // namespace ink
 using DefaultLoadingScreenLogicController = ink::DefaultLoadingScreenLogicController;
 } // namespace RED4ext

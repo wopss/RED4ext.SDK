@@ -6,8 +6,8 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/GOGRewardsSystemErrors.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/GOGRewardsSystemStatus.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/OnlineSystemErrors.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/OnlineSystemStatus.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
 
 namespace RED4ext
@@ -18,8 +18,8 @@ struct RefreshGOGState : red::Event
     static constexpr const char* NAME = "gameuiRefreshGOGState";
     static constexpr const char* ALIAS = "RefreshGOGState";
 
-    game::GOGRewardsSystemStatus status; // 40
-    game::GOGRewardsSystemErrors error; // 44
+    game::OnlineSystemStatus status; // 40
+    game::OnlineSystemErrors error; // 44
     CString registerURL; // 48
     DynArray<uint8_t> qrCodePNGBlob; // 68
 };

@@ -15,9 +15,9 @@ struct CreditsPositionController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiCreditsPositionController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::TextWidgetReference titleText; // 68
-    ink::TextWidgetReference namesText; // 80
+    ink::TextWidgetReference titleText; // 78
+    ink::TextWidgetReference namesText; // 90
 };
-RED4EXT_ASSERT_SIZE(CreditsPositionController, 0x98);
+RED4EXT_ASSERT_SIZE(CreditsPositionController, 0xA8);
 } // namespace game::ui
 } // namespace RED4ext

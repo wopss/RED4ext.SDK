@@ -4,20 +4,22 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/MuppetComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/net/Time.hpp>
 
 namespace RED4ext
 {
 namespace game { 
-struct MuppetInputStates
+struct MuppetInputStates : game::MuppetComponent
 {
     static constexpr const char* NAME = "gameMuppetInputStates";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "MuppetInputStates";
 
-    uint8_t unk00[0x10 - 0x0]; // 0
-    net::Time replicationTime; // 10
-    uint8_t unk18[0x20 - 0x18]; // 18
+    uint8_t unk90[0xA0 - 0x90]; // 90
+    net::Time replicationTime; // A0
+    uint8_t unkA8[0xB0 - 0xA8]; // A8
 };
-RED4EXT_ASSERT_SIZE(MuppetInputStates, 0x20);
+RED4EXT_ASSERT_SIZE(MuppetInputStates, 0xB0);
 } // namespace game
+using MuppetInputStates = game::MuppetInputStates;
 } // namespace RED4ext

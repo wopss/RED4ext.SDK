@@ -27,8 +27,8 @@ struct FileNode : game::data::DataNode
     WeakHandle<game::data::PackageNode> package; // 3C8
     DynArray<Handle<game::data::VariableNode>> variables; // 3D8
     DynArray<Handle<game::data::GroupNode>> groups; // 3E8
-    uint8_t unk3F8[0x408 - 0x3F8]; // 3F8
+    uint8_t unk3F8[0x428 - 0x3F8]; // 3F8
 };
-RED4EXT_ASSERT_SIZE(FileNode, 0x408);
+RED4EXT_ASSERT_SIZE(FileNode, 0x428);
 } // namespace game::data
 } // namespace RED4ext

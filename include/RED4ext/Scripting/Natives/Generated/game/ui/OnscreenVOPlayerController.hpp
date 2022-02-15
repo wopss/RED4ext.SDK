@@ -21,13 +21,13 @@ struct OnscreenVOPlayerController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiOnscreenVOPlayerController";
     static constexpr const char* ALIAS = NAME;
 
-    RaRef<ink::WidgetLibraryResource> subtitlesLibraryResource; // D0
-    CName subtitlesRootName; // D8
-    ink::CompoundWidgetReference subtitlesContainer; // E0
-    uint8_t unkF8[0x128 - 0xF8]; // F8
-    DynArray<game::ui::VOWithDelay> audioVOList; // 128
-    uint8_t unk138[0x140 - 0x138]; // 138
+    RaRef<ink::WidgetLibraryResource> subtitlesLibraryResource; // E0
+    CName subtitlesRootName; // E8
+    ink::CompoundWidgetReference subtitlesContainer; // F0
+    uint8_t unk108[0x138 - 0x108]; // 108
+    DynArray<game::ui::VOWithDelay> audioVOList; // 138
+    uint8_t unk148[0x150 - 0x148]; // 148
 };
-RED4EXT_ASSERT_SIZE(OnscreenVOPlayerController, 0x140);
+RED4EXT_ASSERT_SIZE(OnscreenVOPlayerController, 0x150);
 } // namespace game::ui
 } // namespace RED4ext

@@ -15,10 +15,10 @@ struct MinimapQuestAreaMappinController : game::ui::BaseMinimapMappinController
     static constexpr const char* NAME = "gameuiMinimapQuestAreaMappinController";
     static constexpr const char* ALIAS = "MinimapQuestAreaMappinController";
 
-    uint8_t unk210[0x218 - 0x210]; // 210
-    ink::ShapeWidgetReference areaShapeWidget; // 218
+    uint8_t unk220[0x228 - 0x220]; // 220
+    ink::ShapeWidgetReference areaShapeWidget; // 228
 };
-RED4EXT_ASSERT_SIZE(MinimapQuestAreaMappinController, 0x230);
+RED4EXT_ASSERT_SIZE(MinimapQuestAreaMappinController, 0x240);
 } // namespace game::ui
 using MinimapQuestAreaMappinController = game::ui::MinimapQuestAreaMappinController;
 } // namespace RED4ext

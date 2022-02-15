@@ -14,10 +14,10 @@ struct SideScrollerMiniGameDynObjectLogic : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameDynObjectLogic";
     static constexpr const char* ALIAS = "MinigameDynObject";
 
-    uint32_t spawnPoolSize; // 68
-    uint8_t unk6C[0x80 - 0x6C]; // 6C
+    uint32_t spawnPoolSize; // 78
+    uint8_t unk7C[0x90 - 0x7C]; // 7C
 };
-RED4EXT_ASSERT_SIZE(SideScrollerMiniGameDynObjectLogic, 0x80);
+RED4EXT_ASSERT_SIZE(SideScrollerMiniGameDynObjectLogic, 0x90);
 } // namespace game::ui
 using MinigameDynObject = game::ui::SideScrollerMiniGameDynObjectLogic;
 } // namespace RED4ext

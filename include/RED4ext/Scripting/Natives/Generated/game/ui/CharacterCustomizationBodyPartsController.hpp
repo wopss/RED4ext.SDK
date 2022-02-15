@@ -14,8 +14,10 @@ struct CharacterCustomizationBodyPartsController : game::ui::ICharacterCustomiza
     static constexpr const char* NAME = "gameuiCharacterCustomizationBodyPartsController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk98[0xA8 - 0x98]; // 98
+    uint8_t unk98[0xB8 - 0x98]; // 98
+    bool isHiddenInFpp; // B8
+    uint8_t unkB9[0xC0 - 0xB9]; // B9
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationBodyPartsController, 0xA8);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationBodyPartsController, 0xC0);
 } // namespace game::ui
 } // namespace RED4ext

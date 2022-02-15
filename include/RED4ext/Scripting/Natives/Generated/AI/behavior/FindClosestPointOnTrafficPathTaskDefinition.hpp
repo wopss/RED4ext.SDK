@@ -21,12 +21,13 @@ struct FindClosestPointOnTrafficPathTaskDefinition : AI::behavior::TaskDefinitio
     Handle<AI::ArgumentMapping> enterClosest; // 48
     Handle<AI::ArgumentMapping> pathDirection; // 58
     Handle<AI::ArgumentMapping> avoidedPosition; // 68
-    Handle<AI::ArgumentMapping> avoidedPositionDistance; // 78
-    Handle<AI::ArgumentMapping> usePreviousPosition; // 88
-    Handle<AI::ArgumentMapping> checkRoadIntersection; // 98
-    Handle<AI::ArgumentMapping> joinTrafficSettings; // A8
-    Handle<AI::ArgumentMapping> workspotData; // B8
+    Handle<AI::ArgumentMapping> useThreatPosAsAvoidedPos; // 78
+    Handle<AI::ArgumentMapping> avoidedPositionDistance; // 88
+    Handle<AI::ArgumentMapping> usePreviousPosition; // 98
+    Handle<AI::ArgumentMapping> checkRoadIntersection; // A8
+    Handle<AI::ArgumentMapping> joinTrafficSettings; // B8
+    Handle<AI::ArgumentMapping> workspotData; // C8
 };
-RED4EXT_ASSERT_SIZE(FindClosestPointOnTrafficPathTaskDefinition, 0xC8);
+RED4EXT_ASSERT_SIZE(FindClosestPointOnTrafficPathTaskDefinition, 0xD8);
 } // namespace AI::behavior
 } // namespace RED4ext

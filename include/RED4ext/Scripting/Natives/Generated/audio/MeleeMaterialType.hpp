@@ -13,6 +13,9 @@ enum class MeleeMaterialType : uint32_t
     Solid = 2,
     Flesh = 3,
     Robot = 4,
+    Android = 5,
+    Mech = 6,
+    Water = 7,
 };
 } // namespace audio
 } // namespace RED4ext

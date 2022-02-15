@@ -22,9 +22,9 @@ struct WorkspotAnimsetEntry
     uint8_t unk00[0x8 - 0x0]; // 0
     RaRef<anim::Rig> rig; // 08
     anim::AnimSetup animations; // 10
-    DynArray<Ref<anim::AnimSet>> loadingHandles; // 30
-    uint8_t unk40[0x70 - 0x40]; // 40
+    DynArray<Ref<anim::AnimSet>> loadingHandles; // 38
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(WorkspotAnimsetEntry, 0x70);
+RED4EXT_ASSERT_SIZE(WorkspotAnimsetEntry, 0x78);
 } // namespace work
 } // namespace RED4ext

@@ -9,7 +9,10 @@
 #include <RED4ext/Scripting/Natives/Generated/RenderSceneLayerMask.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/Node.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/PrefabInteriorMapContribution.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/PrefabProxyMeshOnly.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/PrefabStreamingImportance.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/PrefabStreamingOcclusion.hpp>
 
 namespace RED4ext
 {
@@ -34,12 +37,17 @@ struct PrefabNode : world::Node
     bool canBeToggledInGame; // 78
     uint8_t unk79[0x7A - 0x79]; // 79
     bool noCollision; // 7A
-    bool ignoreMeshEmbeddedOccluders; // 7B
-    bool ignoreAllOccluders; // 7C
-    uint8_t occluderAutoHideDistanceScale; // 7D
-    bool enableRenderSceneLayerOverride; // 7E
-    RenderSceneLayerMask renderSceneLayerMask; // 7F
+    bool applyMaxStreamingDistance; // 7B
+    bool ignoreMeshEmbeddedOccluders; // 7C
+    bool ignoreAllOccluders; // 7D
+    uint8_t occluderAutoHideDistanceScale; // 7E
+    bool enableRenderSceneLayerOverride; // 7F
+    RenderSceneLayerMask renderSceneLayerMask; // 80
+    world::PrefabStreamingImportance streamingImportance; // 81
+    world::PrefabStreamingOcclusion streamingOcclusionOverride; // 82
+    world::PrefabInteriorMapContribution interiorMapContribution; // 83
+    uint8_t unk84[0x88 - 0x84]; // 84
 };
-RED4EXT_ASSERT_SIZE(PrefabNode, 0x80);
+RED4EXT_ASSERT_SIZE(PrefabNode, 0x88);
 } // namespace world
 } // namespace RED4ext

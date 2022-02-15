@@ -17,9 +17,9 @@ struct ItemModParams
     uint8_t unk00[0x8 - 0x0]; // 0
     ItemID itemID; // 08
     int32_t quantity; // 18
-    uint8_t unk1C[0x40 - 0x1C]; // 1C
+    uint8_t unk1C[0x50 - 0x1C]; // 1C
 };
-RED4EXT_ASSERT_SIZE(ItemModParams, 0x40);
+RED4EXT_ASSERT_SIZE(ItemModParams, 0x50);
 } // namespace game
 using ItemModParams = game::ItemModParams;
 } // namespace RED4ext

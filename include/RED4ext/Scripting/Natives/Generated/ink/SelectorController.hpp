@@ -17,13 +17,13 @@ struct SelectorController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkSelectorController";
     static constexpr const char* ALIAS = "SelectorController";
 
-    ink::SelectionChangeCallback SelectionChanged; // 68
-    int32_t index; // A0
-    bool cycledNavigation; // A4
-    uint8_t unkA5[0xA8 - 0xA5]; // A5
-    DynArray<CString> values; // A8
+    ink::SelectionChangeCallback SelectionChanged; // 78
+    int32_t index; // B0
+    bool cycledNavigation; // B4
+    uint8_t unkB5[0xB8 - 0xB5]; // B5
+    DynArray<CString> values; // B8
 };
-RED4EXT_ASSERT_SIZE(SelectorController, 0xB8);
+RED4EXT_ASSERT_SIZE(SelectorController, 0xC8);
 } // namespace ink
 using SelectorController = ink::SelectorController;
 } // namespace RED4ext

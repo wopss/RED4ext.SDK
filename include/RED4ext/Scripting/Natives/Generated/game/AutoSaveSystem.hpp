@@ -14,8 +14,8 @@ struct AutoSaveSystem : game::IAutoSaveSystem
     static constexpr const char* NAME = "gameAutoSaveSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x98 - 0x48]; // 48
+    uint8_t unk48[0xB8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AutoSaveSystem, 0x98);
+RED4EXT_ASSERT_SIZE(AutoSaveSystem, 0xB8);
 } // namespace game
 } // namespace RED4ext

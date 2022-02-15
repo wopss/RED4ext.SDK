@@ -14,8 +14,8 @@ struct WidgetSlotController : ink::IWidgetSlotController
     static constexpr const char* NAME = "inkWidgetSlotController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkB8[0xD0 - 0xB8]; // B8
+    uint8_t unkC8[0xE0 - 0xC8]; // C8
 };
-RED4EXT_ASSERT_SIZE(WidgetSlotController, 0xD0);
+RED4EXT_ASSERT_SIZE(WidgetSlotController, 0xE0);
 } // namespace ink
 } // namespace RED4ext

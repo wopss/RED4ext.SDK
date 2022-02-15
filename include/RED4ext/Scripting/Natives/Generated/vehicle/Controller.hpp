@@ -17,7 +17,8 @@ struct Controller : game::Component
 
     CName alarmCurve; // A8
     float alarmTime; // B0
-    uint8_t unkB4[0xD8 - 0xB4]; // B4
+    bool overrideHeadlightsSettingsForPlayer; // B4
+    uint8_t unkB5[0xD8 - 0xB5]; // B5
 };
 RED4EXT_ASSERT_SIZE(Controller, 0xD8);
 } // namespace vehicle

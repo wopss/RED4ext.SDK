@@ -16,10 +16,10 @@ struct IWidgetSlotController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkIWidgetSlotController";
     static constexpr const char* ALIAS = NAME;
 
-    CName slotID; // 68
-    ink::WidgetLayout layout; // 70
-    uint8_t unkA0[0xB8 - 0xA0]; // A0
+    CName slotID; // 78
+    ink::WidgetLayout layout; // 80
+    uint8_t unkB0[0xC8 - 0xB0]; // B0
 };
-RED4EXT_ASSERT_SIZE(IWidgetSlotController, 0xB8);
+RED4EXT_ASSERT_SIZE(IWidgetSlotController, 0xC8);
 } // namespace ink
 } // namespace RED4ext

@@ -15,9 +15,9 @@ struct GenericNotificationReceiverGameController : game::ui::WidgetGameControlle
     static constexpr const char* NAME = "gameuiGenericNotificationReceiverGameController";
     static constexpr const char* ALIAS = "gameuiGenericNotificationReceiverGameController";
 
-    ink::EmptyCallback ItemChanged; // D0
-    uint8_t unk108[0x118 - 0x108]; // 108
+    ink::EmptyCallback ItemChanged; // E0
+    uint8_t unk118[0x128 - 0x118]; // 118
 };
-RED4EXT_ASSERT_SIZE(GenericNotificationReceiverGameController, 0x118);
+RED4EXT_ASSERT_SIZE(GenericNotificationReceiverGameController, 0x128);
 } // namespace game::ui
 } // namespace RED4ext

@@ -51,7 +51,8 @@ struct InstancedDestructibleMeshNode : world::MeshNode
     bool isPierceable; // CA
     bool isWorkspot; // CB
     bool useMeshNavmeshSettings; // CC
-    uint8_t unkCD[0xD0 - 0xCD]; // CD
+    uint8_t unkCD[0xCE - 0xCD]; // CD
+    uint16_t systemsToNotifyFlags; // CE
     DynArray<Transform> instanceTransforms; // D0
 };
 RED4EXT_ASSERT_SIZE(InstancedDestructibleMeshNode, 0xE0);

@@ -19,8 +19,8 @@ struct MixingActionData
     static constexpr const char* ALIAS = NAME;
 
     audio::MixingActionType actionType; // 00
-    uint8_t unk01[0x4 - 0x1]; // 1
-    loc::VoiceoverContext voContext; // 04
+    loc::VoiceoverContext voContext; // 01
+    uint8_t unk02[0x8 - 0x2]; // 2
     CName tagValue; // 08
     float dbOffset; // 10
     float distanceRolloffFactor; // 14

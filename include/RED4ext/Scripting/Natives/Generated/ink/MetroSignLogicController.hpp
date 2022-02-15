@@ -17,12 +17,12 @@ struct MetroSignLogicController : ink::IStreetNameSignLogicController
     static constexpr const char* NAME = "inkMetroSignLogicController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::TextWidgetReference stationName; // 68
-    ink::TextWidgetReference subDistrictName; // 80
-    ink::CompoundWidgetReference metroStationsContainer; // 98
-    CName metroStationLibraryName; // B0
-    CName metroStationTextWidgetName; // B8
+    ink::TextWidgetReference stationName; // 78
+    ink::TextWidgetReference subDistrictName; // 90
+    ink::CompoundWidgetReference metroStationsContainer; // A8
+    CName metroStationLibraryName; // C0
+    CName metroStationTextWidgetName; // C8
 };
-RED4EXT_ASSERT_SIZE(MetroSignLogicController, 0xC0);
+RED4EXT_ASSERT_SIZE(MetroSignLogicController, 0xD0);
 } // namespace ink
 } // namespace RED4ext

@@ -19,11 +19,13 @@ struct ChoiceNodeNsReminderParams
     bool useCustomReminder; // 01
     uint8_t unk02[0x4 - 0x2]; // 2
     scn::ActorId reminderActor; // 04
-    scn::SceneTime waitTimeForReminderA; // 08
-    scn::SceneTime waitTimeForReminderB; // 0C
-    scn::SceneTime waitTimeForReminderC; // 10
-    scn::SceneTime waitTimeForLooping; // 14
+    uint8_t unk08[0x28 - 0x8]; // 8
+    scn::SceneTime waitTimeForReminderA; // 28
+    scn::SceneTime waitTimeForReminderB; // 2C
+    scn::SceneTime waitTimeForReminderC; // 30
+    scn::SceneTime waitTimeForLooping; // 34
+    uint8_t unk38[0x40 - 0x38]; // 38
 };
-RED4EXT_ASSERT_SIZE(ChoiceNodeNsReminderParams, 0x18);
+RED4EXT_ASSERT_SIZE(ChoiceNodeNsReminderParams, 0x40);
 } // namespace scn
 } // namespace RED4ext

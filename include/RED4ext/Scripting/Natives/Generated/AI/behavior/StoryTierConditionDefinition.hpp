@@ -20,7 +20,7 @@ struct StoryTierConditionDefinition : AI::behavior::ConditionDefinition
 
     Handle<AI::ArgumentMapping> storyTier; // 38
     game::StoryTier tier; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    uint8_t unk49[0x50 - 0x49]; // 49
 };
 RED4EXT_ASSERT_SIZE(StoryTierConditionDefinition, 0x50);
 } // namespace AI::behavior

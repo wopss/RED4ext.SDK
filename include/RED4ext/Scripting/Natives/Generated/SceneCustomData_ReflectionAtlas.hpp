@@ -13,7 +13,7 @@ struct SceneCustomData_ReflectionAtlas : ISceneStorageCustomData
     static constexpr const char* NAME = "SceneCustomData_ReflectionAtlas";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x70 - 0x18]; // 18
+    uint8_t unk18[0xB0 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(SceneCustomData_ReflectionAtlas, 0x70);
+RED4EXT_ASSERT_SIZE(SceneCustomData_ReflectionAtlas, 0xB0);
 } // namespace RED4ext

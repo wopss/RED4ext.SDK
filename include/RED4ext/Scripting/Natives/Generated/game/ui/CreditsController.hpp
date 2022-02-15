@@ -21,38 +21,38 @@ struct CreditsController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiCreditsController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0x120 - 0xD0]; // D0
-    Ref<ink::CreditsResource> creditsResourcePS4; // 120
-    Ref<ink::CreditsResource> creditsResourceXBOXPC; // 138
-    ink::CompoundWidgetReference sectionsContainer; // 150
-    ink::TextWidgetReference singleTextWidget; // 168
-    ink::TextWidgetReference speakerNameTextWidget; // 180
-    ink::CompoundWidgetReference exitTooltipContainer; // 198
-    uint8_t unk1B0[0x1E8 - 0x1B0]; // 1B0
-    CName openVideoScreenAnimName; // 1E8
-    CName closeVideoScreenAnimName; // 1F0
-    CName swapBackgroundVideoAnimName; // 1F8
-    CName singleAnimName; // 200
-    uint8_t unk208[0x234 - 0x208]; // 208
-    float exitNotificationDisplayTime; // 234
-    uint8_t unk238[0x23D - 0x238]; // 238
-    bool shouldShowRewardPrompt; // 23D
-    bool isInFinalBoardsMode; // 23E
-    uint8_t unk23F[0x240 - 0x23F]; // 23F
-    ink::CompoundWidgetReference subtitlesContainer; // 240
-    RaRef<CResource> subtitlesLibraryPath; // 258
-    float scrollingSpeed; // 260
-    float fastforwardScrollingSpeed; // 264
-    float topCreditsMargin; // 268
-    float bottomCreditsMargin; // 26C
-    float startPosition; // 270
-    uint8_t unk274[0x278 - 0x274]; // 274
-    CName headerLibraryID; // 278
-    CName boldLibraryID; // 280
-    CName basicLibraryID; // 288
-    CName basicTranslatableLibraryID; // 290
-    uint8_t unk298[0x318 - 0x298]; // 298
+    uint8_t unkE0[0x130 - 0xE0]; // E0
+    Ref<ink::CreditsResource> creditsResourcePS4; // 130
+    Ref<ink::CreditsResource> creditsResourceXBOXPC; // 148
+    ink::CompoundWidgetReference sectionsContainer; // 160
+    ink::TextWidgetReference singleTextWidget; // 178
+    ink::TextWidgetReference speakerNameTextWidget; // 190
+    ink::CompoundWidgetReference exitTooltipContainer; // 1A8
+    uint8_t unk1C0[0x1F8 - 0x1C0]; // 1C0
+    CName openVideoScreenAnimName; // 1F8
+    CName closeVideoScreenAnimName; // 200
+    CName swapBackgroundVideoAnimName; // 208
+    CName singleAnimName; // 210
+    uint8_t unk218[0x244 - 0x218]; // 218
+    float exitNotificationDisplayTime; // 244
+    uint8_t unk248[0x24D - 0x248]; // 248
+    bool shouldShowRewardPrompt; // 24D
+    bool isInFinalBoardsMode; // 24E
+    uint8_t unk24F[0x250 - 0x24F]; // 24F
+    ink::CompoundWidgetReference subtitlesContainer; // 250
+    RaRef<CResource> subtitlesLibraryPath; // 268
+    float scrollingSpeed; // 270
+    float fastforwardScrollingSpeed; // 274
+    float topCreditsMargin; // 278
+    float bottomCreditsMargin; // 27C
+    float startPosition; // 280
+    uint8_t unk284[0x288 - 0x284]; // 284
+    CName headerLibraryID; // 288
+    CName boldLibraryID; // 290
+    CName basicLibraryID; // 298
+    CName basicTranslatableLibraryID; // 2A0
+    uint8_t unk2A8[0x328 - 0x2A8]; // 2A8
 };
-RED4EXT_ASSERT_SIZE(CreditsController, 0x318);
+RED4EXT_ASSERT_SIZE(CreditsController, 0x328);
 } // namespace game::ui
 } // namespace RED4ext

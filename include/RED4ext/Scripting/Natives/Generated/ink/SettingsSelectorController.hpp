@@ -14,9 +14,9 @@ struct SettingsSelectorController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkSettingsSelectorController";
     static constexpr const char* ALIAS = "SettingsSelectorController";
 
-    uint8_t unk68[0xB8 - 0x68]; // 68
+    uint8_t unk78[0xC8 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(SettingsSelectorController, 0xB8);
+RED4EXT_ASSERT_SIZE(SettingsSelectorController, 0xC8);
 } // namespace ink
 using SettingsSelectorController = ink::SettingsSelectorController;
 } // namespace RED4ext

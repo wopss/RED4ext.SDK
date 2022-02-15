@@ -23,18 +23,19 @@ struct PhysicalDestructionComponent : ent::IVisualComponent
 
     uint8_t unk140[0x1E8 - 0x140]; // 140
     physics::DestructionParams destructionParams; // 1E8
-    uint8_t unk22C[0x230 - 0x22C]; // 22C
     DynArray<physics::DestructionLevelData> destructionLevelData; // 230
     uint8_t unk240[0x290 - 0x240]; // 240
     RaRef<CMesh> mesh; // 290
-    uint8_t unk298[0x2F0 - 0x298]; // 298
-    CName audioMetadata; // 2F0
-    CName meshAppearance; // 2F8
-    uint8_t unk300[0x318 - 0x300]; // 300
-    float forceAutoHideDistance; // 318
-    uint8_t unk31C[0x330 - 0x31C]; // 31C
+    uint8_t unk298[0x300 - 0x298]; // 298
+    CName audioMetadata; // 300
+    CName meshAppearance; // 308
+    uint8_t unk310[0x328 - 0x310]; // 310
+    float forceAutoHideDistance; // 328
+    uint8_t unk32C[0x334 - 0x32C]; // 32C
+    uint16_t systemsToNotifyFlags; // 334
+    uint8_t unk336[0x340 - 0x336]; // 336
 };
-RED4EXT_ASSERT_SIZE(PhysicalDestructionComponent, 0x330);
+RED4EXT_ASSERT_SIZE(PhysicalDestructionComponent, 0x340);
 } // namespace ent
 using PhysicalDestructionComponent = ent::PhysicalDestructionComponent;
 } // namespace RED4ext

@@ -14,9 +14,9 @@ struct RichTextBoxWidget : ink::TextWidget
     static constexpr const char* NAME = "inkRichTextBoxWidget";
     static constexpr const char* ALIAS = "inkRichTextBox";
 
-    uint8_t unk420[0x440 - 0x420]; // 420
+    uint8_t unk430[0x450 - 0x430]; // 430
 };
-RED4EXT_ASSERT_SIZE(RichTextBoxWidget, 0x440);
+RED4EXT_ASSERT_SIZE(RichTextBoxWidget, 0x450);
 } // namespace ink
 using inkRichTextBox = ink::RichTextBoxWidget;
 } // namespace RED4ext

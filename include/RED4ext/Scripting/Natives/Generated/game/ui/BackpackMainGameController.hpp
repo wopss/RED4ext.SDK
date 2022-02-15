@@ -15,7 +15,7 @@ struct BackpackMainGameController : game::ui::MenuGameController
     static constexpr const char* ALIAS = "BackpackMainGameController";
 
 };
-RED4EXT_ASSERT_SIZE(BackpackMainGameController, 0xD0);
+RED4EXT_ASSERT_SIZE(BackpackMainGameController, 0xF0);
 } // namespace game::ui
 using BackpackMainGameController = game::ui::BackpackMainGameController;
 } // namespace RED4ext

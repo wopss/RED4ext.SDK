@@ -15,6 +15,6 @@ struct InitialLoadingControllerSupervisor : game::ui::OnscreenVOPlayerController
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(InitialLoadingControllerSupervisor, 0x140);
+RED4EXT_ASSERT_SIZE(InitialLoadingControllerSupervisor, 0x150);
 } // namespace ink
 } // namespace RED4ext

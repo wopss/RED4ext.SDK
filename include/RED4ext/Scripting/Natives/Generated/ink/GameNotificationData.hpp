@@ -20,12 +20,13 @@ struct GameNotificationData : ink::UserData
 
     CName notificationName; // 40
     CName queueName; // 48
-    bool isBlocking; // 50
-    bool useCursor; // 51
-    uint8_t unk52[0x58 - 0x52]; // 52
-    CName introAnimation; // 58
-    WeakHandle<ink::GameNotificationToken> token; // 60
+    CName requiredGameState; // 50
+    bool isBlocking; // 58
+    bool useCursor; // 59
+    uint8_t unk5A[0x60 - 0x5A]; // 5A
+    CName introAnimation; // 60
+    WeakHandle<ink::GameNotificationToken> token; // 68
 };
-RED4EXT_ASSERT_SIZE(GameNotificationData, 0x70);
+RED4EXT_ASSERT_SIZE(GameNotificationData, 0x78);
 } // namespace ink
 } // namespace RED4ext

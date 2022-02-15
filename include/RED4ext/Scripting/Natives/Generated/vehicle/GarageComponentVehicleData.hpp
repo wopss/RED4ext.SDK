@@ -18,7 +18,9 @@ struct GarageComponentVehicleData
     TweakDBID spawnRecordID; // 00
     ent::EntityID entityID; // 08
     NodeRef vehicleNameNodeRef; // 10
+    bool despawnOnDistanceEnabled; // 18
+    uint8_t unk19[0x20 - 0x19]; // 19
 };
-RED4EXT_ASSERT_SIZE(GarageComponentVehicleData, 0x18);
+RED4EXT_ASSERT_SIZE(GarageComponentVehicleData, 0x20);
 } // namespace vehicle
 } // namespace RED4ext

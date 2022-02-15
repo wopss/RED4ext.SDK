@@ -15,7 +15,7 @@ struct FlexWidget : ink::CompoundWidget
     static constexpr const char* ALIAS = "inkFlex";
 
 };
-RED4EXT_ASSERT_SIZE(FlexWidget, 0x220);
+RED4EXT_ASSERT_SIZE(FlexWidget, 0x230);
 } // namespace ink
 using inkFlex = ink::FlexWidget;
 } // namespace RED4ext

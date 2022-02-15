@@ -15,7 +15,7 @@ struct Clothing_Record : game::data::Item_Record
     static constexpr const char* ALIAS = "Clothing_Record";
 
 };
-RED4EXT_ASSERT_SIZE(Clothing_Record, 0x130);
+RED4EXT_ASSERT_SIZE(Clothing_Record, 0x148);
 } // namespace game::data
 using Clothing_Record = game::data::Clothing_Record;
 } // namespace RED4ext

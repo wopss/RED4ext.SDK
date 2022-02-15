@@ -14,8 +14,8 @@ struct IronsightGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiIronsightGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0xD8 - 0xD0]; // D0
+    uint8_t unkE0[0xE8 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(IronsightGameController, 0xD8);
+RED4EXT_ASSERT_SIZE(IronsightGameController, 0xE8);
 } // namespace game::ui
 } // namespace RED4ext

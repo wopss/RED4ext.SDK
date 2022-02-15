@@ -11,6 +11,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/EffectRef.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/projectile/OnCollisionAction.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/projectile/VelocityParams.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/QueryPreset.hpp>
 
 namespace RED4ext
 {
@@ -36,18 +37,19 @@ struct Component : ent::IPlacedComponent
     game::projectile::VelocityParams derivedVelocityParams; // 770
     uint8_t unk77C[0x7A0 - 0x77C]; // 77C
     Handle<physics::FilterData> filterData; // 7A0
-    uint8_t unk7B0[0x7B8 - 0x7B0]; // 7B0
-    game::EffectRef gameEffectRef; // 7B8
-    uint8_t unk7E0[0x808 - 0x7E0]; // 7E0
-    RaRef<world::Effect> previewEffect; // 808
-    RaRef<world::Effect> bouncePreviewEffect; // 810
-    RaRef<world::Effect> explosionPreviewEffect; // 818
-    float explosionPreviewTime; // 820
-    uint8_t unk824[0x830 - 0x824]; // 824
+    physics::QueryPreset queryPreset; // 7B0
+    uint8_t unk7B8[0x7C0 - 0x7B8]; // 7B8
+    game::EffectRef gameEffectRef; // 7C0
+    uint8_t unk7E8[0x810 - 0x7E8]; // 7E8
+    RaRef<world::Effect> previewEffect; // 810
+    RaRef<world::Effect> bouncePreviewEffect; // 818
+    RaRef<world::Effect> explosionPreviewEffect; // 820
+    float explosionPreviewTime; // 828
+    uint8_t unk82C[0x830 - 0x82C]; // 82C
     Quaternion rotationOffset; // 830
-    uint8_t unk840[0x8A0 - 0x840]; // 840
+    uint8_t unk840[0x8B0 - 0x840]; // 840
 };
-RED4EXT_ASSERT_SIZE(Component, 0x8A0);
+RED4EXT_ASSERT_SIZE(Component, 0x8B0);
 } // namespace game::projectile
 using ProjectileComponent = game::projectile::Component;
 } // namespace RED4ext

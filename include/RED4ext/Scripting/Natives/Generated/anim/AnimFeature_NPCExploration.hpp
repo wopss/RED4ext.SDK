@@ -19,7 +19,9 @@ struct AnimFeature_NPCExploration : anim::AnimFeature
     int32_t movementType; // 48
     bool isEvenLoop; // 4C
     uint8_t unk4D[0x50 - 0x4D]; // 4D
+    float playbackTime; // 50
+    uint8_t unk54[0x58 - 0x54]; // 54
 };
-RED4EXT_ASSERT_SIZE(AnimFeature_NPCExploration, 0x50);
+RED4EXT_ASSERT_SIZE(AnimFeature_NPCExploration, 0x58);
 } // namespace anim
 } // namespace RED4ext

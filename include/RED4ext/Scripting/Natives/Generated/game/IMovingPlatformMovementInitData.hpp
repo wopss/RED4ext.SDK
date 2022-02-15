@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MovingPlatformMovementInitializationType.hpp>
 
 namespace RED4ext
@@ -17,9 +16,7 @@ struct IMovingPlatformMovementInitData
 
     game::MovingPlatformMovementInitializationType initType; // 00
     float initValue; // 04
-    NodeRef startNode; // 08
-    NodeRef endNode; // 10
 };
-RED4EXT_ASSERT_SIZE(IMovingPlatformMovementInitData, 0x18);
+RED4EXT_ASSERT_SIZE(IMovingPlatformMovementInitData, 0x8);
 } // namespace game
 } // namespace RED4ext

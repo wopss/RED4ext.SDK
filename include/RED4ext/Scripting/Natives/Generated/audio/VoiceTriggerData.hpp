@@ -19,7 +19,7 @@ struct VoiceTriggerData
     uint32_t variationIndex; // 08
     uint32_t variationNumber; // 0C
     loc::VoiceoverContext overridingVoContext; // 10
-    uint8_t unk14[0x18 - 0x14]; // 14
+    uint8_t unk11[0x18 - 0x11]; // 11
 };
 RED4EXT_ASSERT_SIZE(VoiceTriggerData, 0x18);
 } // namespace audio

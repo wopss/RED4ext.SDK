@@ -18,12 +18,12 @@ struct PanzerScoreBoard : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
     static constexpr const char* NAME = "gameuiPanzerScoreBoard";
     static constexpr const char* ALIAS = "PanzerScoreBoard";
 
-    ink::VerticalPanelWidgetReference scoreboardList; // C0
-    DynArray<game::ui::PanzerScoreRecordData> champions; // D8
-    CName recordWidgetLibraryName; // E8
-    uint8_t unkF0[0x108 - 0xF0]; // F0
+    ink::VerticalPanelWidgetReference scoreboardList; // D0
+    DynArray<game::ui::PanzerScoreRecordData> champions; // E8
+    CName recordWidgetLibraryName; // F8
+    uint8_t unk100[0x118 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(PanzerScoreBoard, 0x108);
+RED4EXT_ASSERT_SIZE(PanzerScoreBoard, 0x118);
 } // namespace game::ui
 using PanzerScoreBoard = game::ui::PanzerScoreBoard;
 } // namespace RED4ext

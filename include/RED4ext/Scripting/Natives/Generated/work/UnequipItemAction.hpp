@@ -16,7 +16,8 @@ struct UnequipItemAction : work::IWorkspotItemAction
     static constexpr const char* ALIAS = NAME;
 
     TweakDBID item; // 30
+    uint8_t unk38[0x40 - 0x38]; // 38
 };
-RED4EXT_ASSERT_SIZE(UnequipItemAction, 0x38);
+RED4EXT_ASSERT_SIZE(UnequipItemAction, 0x40);
 } // namespace work
 } // namespace RED4ext

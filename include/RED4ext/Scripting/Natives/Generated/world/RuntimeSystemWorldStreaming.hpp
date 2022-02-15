@@ -14,8 +14,8 @@ struct RuntimeSystemWorldStreaming : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemWorldStreaming";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x3B8 - 0x48]; // 48
+    uint8_t unk48[0x3C0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemWorldStreaming, 0x3B8);
+RED4EXT_ASSERT_SIZE(RuntimeSystemWorldStreaming, 0x3C0);
 } // namespace world
 } // namespace RED4ext

@@ -13,7 +13,7 @@ struct FunctionalTestsGameEngine : CGameEngine
     static constexpr const char* NAME = "FunctionalTestsGameEngine";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk348[0x3220 - 0x348]; // 348
+    uint8_t unk338[0x3338 - 0x338]; // 338
 };
-RED4EXT_ASSERT_SIZE(FunctionalTestsGameEngine, 0x3220);
+RED4EXT_ASSERT_SIZE(FunctionalTestsGameEngine, 0x3338);
 } // namespace RED4ext

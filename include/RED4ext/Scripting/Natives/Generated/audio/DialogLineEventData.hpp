@@ -19,12 +19,12 @@ struct DialogLineEventData
 
     CRUID stringId; // 00
     loc::VoiceoverContext context; // 08
-    loc::VoiceoverExpression expression; // 0C
-    uint8_t unk10[0x14 - 0x10]; // 10
-    bool isPlayer; // 14
-    bool isRewind; // 15
-    bool isHolocall; // 16
-    uint8_t unk17[0x18 - 0x17]; // 17
+    loc::VoiceoverExpression expression; // 09
+    uint8_t unk0A[0x10 - 0xA]; // A
+    bool isPlayer; // 10
+    bool isRewind; // 11
+    bool isHolocall; // 12
+    uint8_t unk13[0x18 - 0x13]; // 13
     CName customVoEvent; // 18
     float seekTime; // 20
     float playbackSpeedParameter; // 24

@@ -15,11 +15,11 @@ struct ItemObject : game::TimeDilatable
     static constexpr const char* NAME = "gameItemObject";
     static constexpr const char* ALIAS = "ItemObject";
 
-    uint8_t unk2C8[0x320 - 0x2C8]; // 2C8
-    UpdateBucketEnum updateBucket; // 320
-    uint8_t unk321[0x328 - 0x321]; // 321
+    uint8_t unk260[0x2B8 - 0x260]; // 260
+    UpdateBucketEnum updateBucket; // 2B8
+    uint8_t unk2B9[0x2C0 - 0x2B9]; // 2B9
 };
-RED4EXT_ASSERT_SIZE(ItemObject, 0x328);
+RED4EXT_ASSERT_SIZE(ItemObject, 0x2C0);
 } // namespace game
 using ItemObject = game::ItemObject;
 } // namespace RED4ext

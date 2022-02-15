@@ -19,8 +19,9 @@ struct HACK_AREA_Settings : IAreaSettings
     float skyScale; // 4C
     float emissiveScale; // 50
     float missingEnergyScale; // 54
-    bool overrideOnPureView; // 58
-    uint8_t unk59[0x60 - 0x59]; // 59
+    float albedoMetalness; // 58
+    bool overrideOnPureView; // 5C
+    uint8_t unk5D[0x60 - 0x5D]; // 5D
     CurveData<HDRColor> bottomHemisphereTint; // 60
     float bottomHemisphereStrength; // 98
     uint8_t unk9C[0xA0 - 0x9C]; // 9C

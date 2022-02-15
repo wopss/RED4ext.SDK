@@ -6,24 +6,24 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Handle.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ent/IComponent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ITriggerDestructionComponent.hpp>
 
 namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
 namespace game { 
-struct BodyTriggerDestructionComponent : ent::IComponent
+struct BodyTriggerDestructionComponent : game::ITriggerDestructionComponent
 {
     static constexpr const char* NAME = "gameBodyTriggerDestructionComponent";
     static constexpr const char* ALIAS = NAME;
 
-    CName colliderComponentName; // 90
-    Handle<physics::FilterData> filterData; // 98
-    float impulseForce; // A8
-    float impulseRadius; // AC
-    uint8_t unkB0[0x110 - 0xB0]; // B0
+    CName colliderComponentName; // 98
+    Handle<physics::FilterData> filterData; // A0
+    float impulseForce; // B0
+    float impulseRadius; // B4
+    uint8_t unkB8[0x120 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(BodyTriggerDestructionComponent, 0x110);
+RED4EXT_ASSERT_SIZE(BodyTriggerDestructionComponent, 0x120);
 } // namespace game
 } // namespace RED4ext

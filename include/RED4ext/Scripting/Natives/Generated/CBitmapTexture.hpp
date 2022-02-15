@@ -19,18 +19,19 @@ struct CBitmapTexture : ITexture
     static constexpr const char* NAME = "CBitmapTexture";
     static constexpr const char* ALIAS = NAME;
 
-    uint32_t width; // 40
-    uint32_t height; // 44
-    uint32_t depth; // 48
-    STextureGroupSetup setup; // 4C
-    uint8_t unk5C[0x68 - 0x5C]; // 5C
-    Handle<IRenderResourceBlob> renderResourceBlob; // 68
-    uint8_t unk78[0x80 - 0x78]; // 78
-    rend::RenderTextureResource renderTextureResource; // 80
-    uint8_t unk90[0x9C - 0x90]; // 90
-    Vector3 histBiasMulCoef; // 9C
-    Vector3 histBiasAddCoef; // A8
-    uint8_t unkB4[0xB8 - 0xB4]; // B4
+    uint8_t unk40[0x48 - 0x40]; // 40
+    uint32_t width; // 48
+    uint32_t height; // 4C
+    uint32_t depth; // 50
+    STextureGroupSetup setup; // 54
+    uint8_t unk64[0x70 - 0x64]; // 64
+    Handle<IRenderResourceBlob> renderResourceBlob; // 70
+    uint8_t unk80[0x88 - 0x80]; // 80
+    rend::RenderTextureResource renderTextureResource; // 88
+    uint8_t unk98[0xA4 - 0x98]; // 98
+    Vector3 histBiasMulCoef; // A4
+    Vector3 histBiasAddCoef; // B0
+    uint8_t unkBC[0xC0 - 0xBC]; // BC
 };
-RED4EXT_ASSERT_SIZE(CBitmapTexture, 0xB8);
+RED4EXT_ASSERT_SIZE(CBitmapTexture, 0xC0);
 } // namespace RED4ext

@@ -20,20 +20,20 @@ struct SideScrollerMiniGameLogicControllerAdvanced : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameLogicControllerAdvanced";
     static constexpr const char* ALIAS = "MinigameLogicControllerAdvanced";
 
-    uint8_t unk68[0xB0 - 0x68]; // 68
-    float baseSpeed; // B0
-    Vector2 playerColliderPositionOffset; // B4
-    Vector2 playerColliderSizeOffset; // BC
-    uint8_t unkC4[0xC8 - 0xC4]; // C4
-    ink::CompoundWidgetReference gameplayRoot; // C8
-    CName playerLibraryName; // E0
-    DynArray<ink::WidgetReference> layers; // E8
-    DynArray<game::ui::SideScrollerCheatCode> cheatCodes; // F8
-    uint8_t unk108[0x120 - 0x108]; // 108
-    DynArray<CName> acceptableCheatKeys; // 120
-    uint8_t unk130[0x138 - 0x130]; // 130
+    uint8_t unk78[0xC0 - 0x78]; // 78
+    float baseSpeed; // C0
+    Vector2 playerColliderPositionOffset; // C4
+    Vector2 playerColliderSizeOffset; // CC
+    uint8_t unkD4[0xD8 - 0xD4]; // D4
+    ink::CompoundWidgetReference gameplayRoot; // D8
+    CName playerLibraryName; // F0
+    DynArray<ink::WidgetReference> layers; // F8
+    DynArray<game::ui::SideScrollerCheatCode> cheatCodes; // 108
+    uint8_t unk118[0x130 - 0x118]; // 118
+    DynArray<CName> acceptableCheatKeys; // 130
+    uint8_t unk140[0x148 - 0x140]; // 140
 };
-RED4EXT_ASSERT_SIZE(SideScrollerMiniGameLogicControllerAdvanced, 0x138);
+RED4EXT_ASSERT_SIZE(SideScrollerMiniGameLogicControllerAdvanced, 0x148);
 } // namespace game::ui
 using MinigameLogicControllerAdvanced = game::ui::SideScrollerMiniGameLogicControllerAdvanced;
 } // namespace RED4ext

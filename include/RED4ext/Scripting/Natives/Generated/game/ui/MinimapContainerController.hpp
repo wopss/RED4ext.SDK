@@ -20,25 +20,25 @@ struct MinimapContainerController : game::ui::MappinsContainerController
     static constexpr const char* NAME = "gameuiMinimapContainerController";
     static constexpr const char* ALIAS = "MinimapContainerController";
 
-    uint8_t unk2C0[0x350 - 0x2C0]; // 2C0
-    float visionRadiusVehicle; // 350
-    float visionRadiusCombat; // 354
-    float visionRadiusQuestArea; // 358
-    float visionRadiusSecurityArea; // 35C
-    float visionRadiusInterior; // 360
-    float visionRadiusExterior; // 364
-    ink::CompoundWidgetReference clampedMappinContainer; // 368
-    ink::CompoundWidgetReference unclampedMappinContainer; // 380
-    ink::CacheWidgetReference worldGeometryCache; // 398
-    ink::CanvasWidgetReference worldGeometryContainer; // 3B0
-    ink::WidgetReference playerIconWidget; // 3C8
-    ink::WidgetReference compassWidget; // 3E0
-    ink::MaskWidgetReference maskWidget; // 3F8
-    CName geometryLibraryID; // 410
-    uint8_t unk418[0x460 - 0x418]; // 418
-    ink::CompoundWidgetReference timeDisplayWidget; // 460
+    uint8_t unk2D0[0x360 - 0x2D0]; // 2D0
+    float visionRadiusVehicle; // 360
+    float visionRadiusCombat; // 364
+    float visionRadiusQuestArea; // 368
+    float visionRadiusSecurityArea; // 36C
+    float visionRadiusInterior; // 370
+    float visionRadiusExterior; // 374
+    ink::CompoundWidgetReference clampedMappinContainer; // 378
+    ink::CompoundWidgetReference unclampedMappinContainer; // 390
+    ink::CacheWidgetReference worldGeometryCache; // 3A8
+    ink::CanvasWidgetReference worldGeometryContainer; // 3C0
+    ink::WidgetReference playerIconWidget; // 3D8
+    ink::WidgetReference compassWidget; // 3F0
+    ink::MaskWidgetReference maskWidget; // 408
+    CName geometryLibraryID; // 420
+    uint8_t unk428[0x470 - 0x428]; // 428
+    ink::CompoundWidgetReference timeDisplayWidget; // 470
 };
-RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x478);
+RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x488);
 } // namespace game::ui
 using MinimapContainerController = game::ui::MinimapContainerController;
 } // namespace RED4ext

@@ -21,8 +21,9 @@ struct LootChoiceActionWrapper
     ItemID itemId; // 04
     uint8_t unk14[0x18 - 0x14]; // 14
     CName action; // 18
+    uint8_t unk20[0x30 - 0x20]; // 20
 };
-RED4EXT_ASSERT_SIZE(LootChoiceActionWrapper, 0x20);
+RED4EXT_ASSERT_SIZE(LootChoiceActionWrapper, 0x30);
 } // namespace game::interactions
 using LootChoiceActionWrapper = game::interactions::LootChoiceActionWrapper;
 } // namespace RED4ext

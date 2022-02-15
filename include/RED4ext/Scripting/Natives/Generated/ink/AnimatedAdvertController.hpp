@@ -16,11 +16,11 @@ struct AnimatedAdvertController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkAnimatedAdvertController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk68[0x80 - 0x68]; // 68
-    CName animName; // 80
-    ink::anim::LoopType loopType; // 88
-    uint8_t unk89[0x90 - 0x89]; // 89
+    uint8_t unk78[0x90 - 0x78]; // 78
+    CName animName; // 90
+    ink::anim::LoopType loopType; // 98
+    uint8_t unk99[0xA0 - 0x99]; // 99
 };
-RED4EXT_ASSERT_SIZE(AnimatedAdvertController, 0x90);
+RED4EXT_ASSERT_SIZE(AnimatedAdvertController, 0xA0);
 } // namespace ink
 } // namespace RED4ext

@@ -18,7 +18,9 @@ struct ToggleDoorWrapperEvent : red::Event
 
     vehicle::EQuestVehicleDoorState action; // 40
     vehicle::EVehicleDoor door; // 44
+    bool forceScene; // 48
+    uint8_t unk49[0x50 - 0x49]; // 49
 };
-RED4EXT_ASSERT_SIZE(ToggleDoorWrapperEvent, 0x48);
+RED4EXT_ASSERT_SIZE(ToggleDoorWrapperEvent, 0x50);
 } // namespace vehicle
 } // namespace RED4ext

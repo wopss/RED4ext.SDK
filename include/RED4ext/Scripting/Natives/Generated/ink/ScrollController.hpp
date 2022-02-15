@@ -19,24 +19,24 @@ struct ScrollController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkScrollController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::ScrollAreaWidgetReference ScrollArea; // 68
-    ink::WidgetReference VerticalScrollBarRef; // 80
-    ink::WidgetReference navigableCompoundWidget; // 98
-    ink::CompoundWidgetReference CompoundWidgetRef; // B0
-    uint8_t unkC8[0xD8 - 0xC8]; // C8
-    bool autoHideVertical; // D8
-    uint8_t unkD9[0xDC - 0xD9]; // D9
-    float scrollSpeedGamepad; // DC
-    float scrollSpeedMouse; // E0
-    ink::EScrollDirection direction; // E4
-    bool useGlobalInput; // E8
+    ink::ScrollAreaWidgetReference ScrollArea; // 78
+    ink::WidgetReference VerticalScrollBarRef; // 90
+    ink::WidgetReference navigableCompoundWidget; // A8
+    ink::CompoundWidgetReference CompoundWidgetRef; // C0
+    uint8_t unkD8[0xE8 - 0xD8]; // D8
+    bool autoHideVertical; // E8
     uint8_t unkE9[0xEC - 0xE9]; // E9
-    float position; // EC
-    float scrollDelta; // F0
-    Vector2 viewportSize; // F4
-    Vector2 contentSize; // FC
-    uint8_t unk104[0x168 - 0x104]; // 104
+    float scrollSpeedGamepad; // EC
+    float scrollSpeedMouse; // F0
+    ink::EScrollDirection direction; // F4
+    bool useGlobalInput; // F8
+    uint8_t unkF9[0xFC - 0xF9]; // F9
+    float position; // FC
+    float scrollDelta; // 100
+    Vector2 viewportSize; // 104
+    Vector2 contentSize; // 10C
+    uint8_t unk114[0x178 - 0x114]; // 114
 };
-RED4EXT_ASSERT_SIZE(ScrollController, 0x168);
+RED4EXT_ASSERT_SIZE(ScrollController, 0x178);
 } // namespace ink
 } // namespace RED4ext

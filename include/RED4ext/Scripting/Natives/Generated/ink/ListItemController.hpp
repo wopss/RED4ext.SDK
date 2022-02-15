@@ -15,14 +15,14 @@ struct ListItemController : ink::ButtonController
     static constexpr const char* NAME = "inkListItemController";
     static constexpr const char* ALIAS = "ListItemController";
 
-    ink::ListItemControllerCallback AddedToList; // 1E8
-    ink::ListItemControllerCallback ToggledOn; // 220
-    ink::ListItemControllerCallback ToggledOff; // 258
-    ink::ListItemControllerCallback Selected; // 290
-    ink::ListItemControllerCallback Deselected; // 2C8
-    uint8_t unk300[0x348 - 0x300]; // 300
+    ink::ListItemControllerCallback AddedToList; // 1F8
+    ink::ListItemControllerCallback ToggledOn; // 230
+    ink::ListItemControllerCallback ToggledOff; // 268
+    ink::ListItemControllerCallback Selected; // 2A0
+    ink::ListItemControllerCallback Deselected; // 2D8
+    uint8_t unk310[0x358 - 0x310]; // 310
 };
-RED4EXT_ASSERT_SIZE(ListItemController, 0x348);
+RED4EXT_ASSERT_SIZE(ListItemController, 0x358);
 } // namespace ink
 using ListItemController = ink::ListItemController;
 } // namespace RED4ext

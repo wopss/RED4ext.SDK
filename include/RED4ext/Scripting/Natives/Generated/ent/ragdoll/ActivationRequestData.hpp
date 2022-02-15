@@ -21,7 +21,8 @@ struct ActivationRequestData
     bool activateOnCollision; // 10
     bool applyPowerPose; // 11
     bool applyMomentum; // 12
-    uint8_t unk13[0x20 - 0x13]; // 13
+    bool calculateEarlyPositionGroundHeight; // 13
+    uint8_t unk14[0x20 - 0x14]; // 14
 };
 RED4EXT_ASSERT_SIZE(ActivationRequestData, 0x20);
 } // namespace ent::ragdoll

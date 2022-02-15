@@ -18,11 +18,13 @@ struct FootstepsMetadata : audio::AudioMetadata
 
     CName defaultFootwearMetadata; // 38
     DynArray<CName> footwearMetadataArray; // 40
-    uint8_t unk50[0x80 - 0x50]; // 50
-    CName slideEvent; // 80
-    CName onEnterSound; // 88
-    CName onExitSound; // 90
+    CName defaultFootwearVfxMetadata; // 50
+    DynArray<CName> footwearVfxMetadataArray; // 58
+    uint8_t unk68[0xC8 - 0x68]; // 68
+    CName slideEvent; // C8
+    CName onEnterSound; // D0
+    CName onExitSound; // D8
 };
-RED4EXT_ASSERT_SIZE(FootstepsMetadata, 0x98);
+RED4EXT_ASSERT_SIZE(FootstepsMetadata, 0xE0);
 } // namespace audio
 } // namespace RED4ext

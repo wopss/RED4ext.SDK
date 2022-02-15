@@ -14,11 +14,11 @@ struct PanzerBonus : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
     static constexpr const char* NAME = "gameuiPanzerBonus";
     static constexpr const char* ALIAS = "PanzerBonus";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
-    float fallingSpeed; // D0
-    uint8_t unkD4[0xD8 - 0xD4]; // D4
+    uint8_t unkD0[0xE0 - 0xD0]; // D0
+    float fallingSpeed; // E0
+    uint8_t unkE4[0xE8 - 0xE4]; // E4
 };
-RED4EXT_ASSERT_SIZE(PanzerBonus, 0xD8);
+RED4EXT_ASSERT_SIZE(PanzerBonus, 0xE8);
 } // namespace game::ui
 using PanzerBonus = game::ui::PanzerBonus;
 } // namespace RED4ext

@@ -18,11 +18,11 @@ struct CTextureArray : ITexture
     static constexpr const char* NAME = "CTextureArray";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x58 - 0x40]; // 40
-    STextureGroupSetup setup; // 58
-    Handle<IRenderResourceBlob> renderResourceBlob; // 68
-    uint8_t unk78[0x80 - 0x78]; // 78
-    rend::RenderTextureResource renderTextureResource; // 80
+    uint8_t unk40[0x60 - 0x40]; // 40
+    STextureGroupSetup setup; // 60
+    Handle<IRenderResourceBlob> renderResourceBlob; // 70
+    uint8_t unk80[0x88 - 0x80]; // 80
+    rend::RenderTextureResource renderTextureResource; // 88
 };
-RED4EXT_ASSERT_SIZE(CTextureArray, 0x90);
+RED4EXT_ASSERT_SIZE(CTextureArray, 0x98);
 } // namespace RED4ext

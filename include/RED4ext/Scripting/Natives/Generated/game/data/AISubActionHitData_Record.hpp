@@ -14,8 +14,9 @@ struct AISubActionHitData_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionHitData_Record";
     static constexpr const char* ALIAS = "AISubActionHitData_Record";
 
+    uint8_t unk48[0x50 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionHitData_Record, 0x48);
+RED4EXT_ASSERT_SIZE(AISubActionHitData_Record, 0x50);
 } // namespace game::data
 using AISubActionHitData_Record = game::data::AISubActionHitData_Record;
 } // namespace RED4ext

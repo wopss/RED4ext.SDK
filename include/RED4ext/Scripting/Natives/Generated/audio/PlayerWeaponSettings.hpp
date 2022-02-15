@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-namespace audio { struct WeaponTailOverrides; }
+namespace audio { struct WeaponEventOverrides; }
 
 namespace audio { 
 struct PlayerWeaponSettings : audio::WeaponSettings
@@ -32,10 +32,15 @@ struct PlayerWeaponSettings : audio::WeaponSettings
     CName aimEnterSound; // 110
     CName aimExitSound; // 118
     CName dryFireSound; // 120
-    float timeLimitForAutoFireSingleShot; // 128
-    uint8_t unk12C[0x130 - 0x12C]; // 12C
-    Handle<audio::WeaponTailOverrides> weaponTailOverrides; // 130
+    CName triggerEffectSingle; // 128
+    CName triggerEffectAiming; // 130
+    CName triggerEffectAuto; // 138
+    float timeLimitForAutoFireSingleShot; // 140
+    float padVibrationGain; // 144
+    float padVibrationReloadGain; // 148
+    uint8_t unk14C[0x150 - 0x14C]; // 14C
+    Handle<audio::WeaponEventOverrides> animEventOverrides; // 150
 };
-RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x140);
+RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x160);
 } // namespace audio
 } // namespace RED4ext

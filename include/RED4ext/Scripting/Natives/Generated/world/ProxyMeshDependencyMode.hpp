@@ -9,7 +9,8 @@ namespace world {
 enum class ProxyMeshDependencyMode : uint8_t
 {
     Auto = 0,
-    Discard = 1,
+    Include = 1,
+    Discard = 2,
 };
 } // namespace world
 } // namespace RED4ext

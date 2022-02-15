@@ -16,12 +16,12 @@ struct PhotoModeMenuController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiPhotoModeMenuController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0x250 - 0xD0]; // D0
-    game::ui::SetPhotoModeKeyEnabledCallback SetAttributeOptionEnabled; // 250
-    game::ui::SetPhotoModeKeyEnabledCallback SetCategoryEnabled; // 288
-    game::ui::StickerImageCallback SetStickerImage; // 2C0
-    uint8_t unk2F8[0x320 - 0x2F8]; // 2F8
+    uint8_t unkE0[0x260 - 0xE0]; // E0
+    game::ui::SetPhotoModeKeyEnabledCallback SetAttributeOptionEnabled; // 260
+    game::ui::SetPhotoModeKeyEnabledCallback SetCategoryEnabled; // 298
+    game::ui::StickerImageCallback SetStickerImage; // 2D0
+    uint8_t unk308[0x330 - 0x308]; // 308
 };
-RED4EXT_ASSERT_SIZE(PhotoModeMenuController, 0x320);
+RED4EXT_ASSERT_SIZE(PhotoModeMenuController, 0x330);
 } // namespace game::ui
 } // namespace RED4ext

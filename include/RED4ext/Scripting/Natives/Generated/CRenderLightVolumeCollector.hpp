@@ -13,7 +13,7 @@ struct CRenderLightVolumeCollector : ICameraStorageCustomData
     static constexpr const char* NAME = "CRenderLightVolumeCollector";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x58 - 0x18]; // 18
+    uint8_t unk18[0x60 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CRenderLightVolumeCollector, 0x58);
+RED4EXT_ASSERT_SIZE(CRenderLightVolumeCollector, 0x60);
 } // namespace RED4ext

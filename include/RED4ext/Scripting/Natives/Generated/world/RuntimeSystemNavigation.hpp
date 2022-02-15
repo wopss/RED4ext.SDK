@@ -14,8 +14,8 @@ struct RuntimeSystemNavigation : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemNavigation";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x5A0 - 0x48]; // 48
+    uint8_t unk48[0x608 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemNavigation, 0x5A0);
+RED4EXT_ASSERT_SIZE(RuntimeSystemNavigation, 0x608);
 } // namespace world
 } // namespace RED4ext

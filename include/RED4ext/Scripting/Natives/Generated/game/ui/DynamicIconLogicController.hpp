@@ -15,6 +15,6 @@ struct DynamicIconLogicController : ink::WidgetLogicController
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(DynamicIconLogicController, 0x68);
+RED4EXT_ASSERT_SIZE(DynamicIconLogicController, 0x78);
 } // namespace game::ui
 } // namespace RED4ext

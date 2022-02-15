@@ -12,7 +12,7 @@ namespace world {
 struct IDestructibleSpotsSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "worldIDestructibleSpotsSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "worldIDestructibleSpotsSystem";
 
 };
 RED4EXT_ASSERT_SIZE(IDestructibleSpotsSystem, 0x48);

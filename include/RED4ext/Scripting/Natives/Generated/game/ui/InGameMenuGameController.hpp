@@ -6,7 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/BaseMenuGameController.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/ui/InGameMenuGameControllerGarmentSwitchEffectController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/GarmentSwitchEffectController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/InGameMenuGameControllerItemSceneInfo.hpp>
 
 namespace RED4ext
@@ -17,10 +17,11 @@ struct InGameMenuGameController : game::ui::BaseMenuGameController
     static constexpr const char* NAME = "gameuiInGameMenuGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk130[0x140 - 0x130]; // 130
-    DynArray<game::ui::InGameMenuGameControllerItemSceneInfo> itemSceneInfos; // 140
-    DynArray<game::ui::InGameMenuGameControllerGarmentSwitchEffectController> garmentSwitchEffectControllers; // 150
+    uint8_t unk140[0x150 - 0x140]; // 140
+    DynArray<game::ui::InGameMenuGameControllerItemSceneInfo> itemSceneInfos; // 150
+    DynArray<game::ui::GarmentSwitchEffectController> garmentSwitchEffectControllers; // 160
+    uint8_t unk170[0x180 - 0x170]; // 170
 };
-RED4EXT_ASSERT_SIZE(InGameMenuGameController, 0x160);
+RED4EXT_ASSERT_SIZE(InGameMenuGameController, 0x180);
 } // namespace game::ui
 } // namespace RED4ext

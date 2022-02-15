@@ -14,8 +14,8 @@ struct RuntimeSystemEntityVisualController : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemEntityVisualController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x160 - 0x48]; // 48
+    uint8_t unk48[0x170 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemEntityVisualController, 0x160);
+RED4EXT_ASSERT_SIZE(RuntimeSystemEntityVisualController, 0x170);
 } // namespace world
 } // namespace RED4ext

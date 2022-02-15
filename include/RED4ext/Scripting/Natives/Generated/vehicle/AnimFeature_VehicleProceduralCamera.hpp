@@ -18,7 +18,9 @@ struct AnimFeature_VehicleProceduralCamera : anim::AnimFeature
 
     Vector4 cameraTranslationVS; // 40
     Quaternion cameraOrientationVS; // 50
+    float cameraTargetWeight; // 60
+    uint8_t unk64[0x70 - 0x64]; // 64
 };
-RED4EXT_ASSERT_SIZE(AnimFeature_VehicleProceduralCamera, 0x60);
+RED4EXT_ASSERT_SIZE(AnimFeature_VehicleProceduralCamera, 0x70);
 } // namespace vehicle
 } // namespace RED4ext

@@ -17,42 +17,42 @@ struct PanzerGameLogicController : game::ui::SideScrollerMiniGameLogicController
     static constexpr const char* NAME = "gameuiPanzerGameLogicController";
     static constexpr const char* ALIAS = "PanzerGameLogicController";
 
-    uint8_t unk138[0x174 - 0x138]; // 138
-    float gameOverDelay; // 174
-    uint8_t unk178[0x180 - 0x178]; // 178
-    CName mainMenuLibraryName; // 180
-    CName scoreboardLibraryName; // 188
-    CName panelsLayer; // 190
-    CName gameLayer; // 198
-    CName cloudsLayer; // 1A0
-    CName backgroundLibraryName; // 1A8
-    DynArray<CName> cloudsLibraryNames; // 1B0
-    float minCloudSpawnInterval; // 1C0
-    float maxCloudSpawnInterval; // 1C4
-    float minCloudSpeed; // 1C8
-    float maxCloudSpeed; // 1CC
-    ink::TextWidgetReference scoreCounter; // 1D0
-    ink::TextWidgetReference livesCounter; // 1E8
-    CName moveUpKey; // 200
-    CName moveDownKey; // 208
-    CName moveLeftKey; // 210
-    CName moveRightKey; // 218
-    CName shootKey; // 220
-    CName backKey; // 228
-    CName submitKey; // 230
-    float axisDeadZone; // 238
-    uint8_t unk23C[0x240 - 0x23C]; // 23C
-    CName moveXAxis; // 240
-    CName moveYAxis; // 248
-    CName shootAxis; // 250
-    CName droneLibraryName; // 258
-    float minDroneSpawnInterval; // 260
-    float maxDroneSpawnInterval; // 264
-    CName avLibraryName; // 268
-    float minAvSpawnInterval; // 270
-    float maxAvSpawnInterval; // 274
+    uint8_t unk148[0x184 - 0x148]; // 148
+    float gameOverDelay; // 184
+    uint8_t unk188[0x190 - 0x188]; // 188
+    CName mainMenuLibraryName; // 190
+    CName scoreboardLibraryName; // 198
+    CName panelsLayer; // 1A0
+    CName gameLayer; // 1A8
+    CName cloudsLayer; // 1B0
+    CName backgroundLibraryName; // 1B8
+    DynArray<CName> cloudsLibraryNames; // 1C0
+    float minCloudSpawnInterval; // 1D0
+    float maxCloudSpawnInterval; // 1D4
+    float minCloudSpeed; // 1D8
+    float maxCloudSpeed; // 1DC
+    ink::TextWidgetReference scoreCounter; // 1E0
+    ink::TextWidgetReference livesCounter; // 1F8
+    CName moveUpKey; // 210
+    CName moveDownKey; // 218
+    CName moveLeftKey; // 220
+    CName moveRightKey; // 228
+    CName shootKey; // 230
+    CName backKey; // 238
+    CName submitKey; // 240
+    float axisDeadZone; // 248
+    uint8_t unk24C[0x250 - 0x24C]; // 24C
+    CName moveXAxis; // 250
+    CName moveYAxis; // 258
+    CName shootAxis; // 260
+    CName droneLibraryName; // 268
+    float minDroneSpawnInterval; // 270
+    float maxDroneSpawnInterval; // 274
+    CName avLibraryName; // 278
+    float minAvSpawnInterval; // 280
+    float maxAvSpawnInterval; // 284
 };
-RED4EXT_ASSERT_SIZE(PanzerGameLogicController, 0x278);
+RED4EXT_ASSERT_SIZE(PanzerGameLogicController, 0x288);
 } // namespace game::ui
 using PanzerGameLogicController = game::ui::PanzerGameLogicController;
 } // namespace RED4ext

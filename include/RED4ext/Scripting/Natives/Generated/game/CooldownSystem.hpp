@@ -14,8 +14,8 @@ struct CooldownSystem : game::ICooldownSystem
     static constexpr const char* NAME = "gameCooldownSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xD0 - 0x48]; // 48
+    uint8_t unk48[0xD8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CooldownSystem, 0xD0);
+RED4EXT_ASSERT_SIZE(CooldownSystem, 0xD8);
 } // namespace game
 } // namespace RED4ext

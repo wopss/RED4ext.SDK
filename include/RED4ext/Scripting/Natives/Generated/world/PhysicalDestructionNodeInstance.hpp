@@ -14,8 +14,8 @@ struct PhysicalDestructionNodeInstance : world::SnappableNodeInstance
     static constexpr const char* NAME = "worldPhysicalDestructionNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0x230 - 0x90]; // 90
+    uint8_t unk90[0x240 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(PhysicalDestructionNodeInstance, 0x230);
+RED4EXT_ASSERT_SIZE(PhysicalDestructionNodeInstance, 0x240);
 } // namespace world
 } // namespace RED4ext

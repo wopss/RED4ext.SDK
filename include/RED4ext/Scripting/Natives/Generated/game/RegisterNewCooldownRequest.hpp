@@ -26,7 +26,8 @@ struct RegisterNewCooldownRequest
     float duration; // 30
     game::data::StatType type; // 34
     bool modifiable; // 38
-    uint8_t unk39[0x40 - 0x39]; // 39
+    bool affectedByTimeDilation; // 39
+    uint8_t unk3A[0x40 - 0x3A]; // 3A
 };
 RED4EXT_ASSERT_SIZE(RegisterNewCooldownRequest, 0x40);
 } // namespace game

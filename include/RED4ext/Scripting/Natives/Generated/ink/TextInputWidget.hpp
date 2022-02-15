@@ -14,9 +14,9 @@ struct TextInputWidget : ink::TextWidget
     static constexpr const char* NAME = "inkTextInputWidget";
     static constexpr const char* ALIAS = "inkTextInput";
 
-    uint8_t unk420[0x460 - 0x420]; // 420
+    uint8_t unk430[0x470 - 0x430]; // 430
 };
-RED4EXT_ASSERT_SIZE(TextInputWidget, 0x460);
+RED4EXT_ASSERT_SIZE(TextInputWidget, 0x470);
 } // namespace ink
 using inkTextInput = ink::TextInputWidget;
 } // namespace RED4ext

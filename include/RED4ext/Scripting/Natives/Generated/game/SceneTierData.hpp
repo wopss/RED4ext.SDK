@@ -4,6 +4,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/GameplayTier.hpp>
 
@@ -18,8 +19,9 @@ struct SceneTierData : IScriptable
     GameplayTier tier; // 40
     bool emptyHands; // 44
     uint8_t unk45[0x48 - 0x45]; // 45
+    CString userDebugInfo; // 48
 };
-RED4EXT_ASSERT_SIZE(SceneTierData, 0x48);
+RED4EXT_ASSERT_SIZE(SceneTierData, 0x68);
 } // namespace game
 using SceneTierData = game::SceneTierData;
 } // namespace RED4ext

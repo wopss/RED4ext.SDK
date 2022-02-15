@@ -28,7 +28,7 @@ struct SpawnPlayerVehicle_NodeType : quest::IVehicleManagerNodeType
     uint8_t unk55[0x58 - 0x55]; // 55
     CString vehicle; // 58
     CName vehicleGlobalName; // 78
-    bool despawnAllVehicles; // 80
+    bool despawnAllEnabledVehicles; // 80
     uint8_t unk81[0x88 - 0x81]; // 81
 };
 RED4EXT_ASSERT_SIZE(SpawnPlayerVehicle_NodeType, 0x88);

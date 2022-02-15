@@ -21,10 +21,12 @@ struct ToggleDoor_NodeType : quest::IVehicleManagerNodeType
     game::EntityReference vehicleRef; // 30
     vehicle::EQuestVehicleDoorState doorAction; // 68
     vehicle::EVehicleDoor door; // 6C
-    CName doorID; // 70
-    bool toOpen; // 78
-    uint8_t unk79[0x80 - 0x79]; // 79
+    bool forceScene; // 70
+    uint8_t unk71[0x78 - 0x71]; // 71
+    CName doorID; // 78
+    bool toOpen; // 80
+    uint8_t unk81[0x88 - 0x81]; // 81
 };
-RED4EXT_ASSERT_SIZE(ToggleDoor_NodeType, 0x80);
+RED4EXT_ASSERT_SIZE(ToggleDoor_NodeType, 0x88);
 } // namespace quest
 } // namespace RED4ext

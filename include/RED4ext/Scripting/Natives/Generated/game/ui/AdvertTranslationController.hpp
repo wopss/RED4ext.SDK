@@ -15,11 +15,11 @@ struct AdvertTranslationController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiAdvertTranslationController";
     static constexpr const char* ALIAS = "AdvertTranslationLogicController";
 
-    uint8_t unkD0[0xE0 - 0xD0]; // D0
-    ink::TextWidgetReference advertText; // E0
-    uint8_t unkF8[0x118 - 0xF8]; // F8
+    uint8_t unkE0[0xF0 - 0xE0]; // E0
+    ink::TextWidgetReference advertText; // F0
+    uint8_t unk108[0x128 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(AdvertTranslationController, 0x118);
+RED4EXT_ASSERT_SIZE(AdvertTranslationController, 0x128);
 } // namespace game::ui
 using AdvertTranslationLogicController = game::ui::AdvertTranslationController;
 } // namespace RED4ext

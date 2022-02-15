@@ -19,12 +19,12 @@ struct CompoundWidget : ink::Widget
     static constexpr const char* NAME = "inkCompoundWidget";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<ink::MultiChildren> children; // 1F0
-    ink::EChildOrder childOrder; // 200
-    uint8_t unk201[0x204 - 0x201]; // 201
-    ink::Margin childMargin; // 204
-    uint8_t unk214[0x220 - 0x214]; // 214
+    Handle<ink::MultiChildren> children; // 200
+    ink::EChildOrder childOrder; // 210
+    uint8_t unk211[0x214 - 0x211]; // 211
+    ink::Margin childMargin; // 214
+    uint8_t unk224[0x230 - 0x224]; // 224
 };
-RED4EXT_ASSERT_SIZE(CompoundWidget, 0x220);
+RED4EXT_ASSERT_SIZE(CompoundWidget, 0x230);
 } // namespace ink
 } // namespace RED4ext

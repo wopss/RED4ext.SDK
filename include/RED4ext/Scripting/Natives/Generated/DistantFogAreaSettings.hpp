@@ -30,6 +30,9 @@ struct DistantFogAreaSettings : IAreaSettings
     CurveData<float> simpleDensity; // 2E8
     CurveData<HDRColor> envProbeColor; // 320
     CurveData<float> envProbeDensity; // 358
+    CurveData<float> skyAltitudeBegin; // 390
+    CurveData<float> skyAltitudeEnd; // 3C8
+    CurveData<float> skyOpacity; // 400
 };
-RED4EXT_ASSERT_SIZE(DistantFogAreaSettings, 0x390);
+RED4EXT_ASSERT_SIZE(DistantFogAreaSettings, 0x438);
 } // namespace RED4ext

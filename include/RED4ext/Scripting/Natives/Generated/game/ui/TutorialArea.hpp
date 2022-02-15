@@ -15,10 +15,10 @@ struct TutorialArea : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiTutorialArea";
     static constexpr const char* ALIAS = "TutorialArea";
 
-    uint8_t unk68[0x70 - 0x68]; // 68
-    CName bracketID; // 70
+    uint8_t unk78[0x80 - 0x78]; // 78
+    CName bracketID; // 80
 };
-RED4EXT_ASSERT_SIZE(TutorialArea, 0x78);
+RED4EXT_ASSERT_SIZE(TutorialArea, 0x88);
 } // namespace game::ui
 using TutorialArea = game::ui::TutorialArea;
 } // namespace RED4ext

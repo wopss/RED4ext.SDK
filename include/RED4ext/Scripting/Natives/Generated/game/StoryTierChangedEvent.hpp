@@ -16,7 +16,7 @@ struct StoryTierChangedEvent : AI::AIEvent
     static constexpr const char* ALIAS = "StoryTierChangedEvent";
 
     game::StoryTier newTier; // 50
-    uint8_t unk54[0x58 - 0x54]; // 54
+    uint8_t unk51[0x58 - 0x51]; // 51
 };
 RED4EXT_ASSERT_SIZE(StoryTierChangedEvent, 0x58);
 } // namespace game

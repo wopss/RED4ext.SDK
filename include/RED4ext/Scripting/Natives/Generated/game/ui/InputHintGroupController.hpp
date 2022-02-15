@@ -17,13 +17,13 @@ struct InputHintGroupController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiInputHintGroupController";
     static constexpr const char* ALIAS = "InputHintGroupController";
 
-    uint8_t unk68[0xB8 - 0x68]; // 68
-    ink::TextWidgetReference titleTextRef; // B8
-    ink::TextWidgetReference descriptionTextRef; // D0
-    ink::CompoundWidgetReference hintsContainerRef; // E8
-    ink::ImageWidgetReference iconRef; // 100
+    uint8_t unk78[0xC8 - 0x78]; // 78
+    ink::TextWidgetReference titleTextRef; // C8
+    ink::TextWidgetReference descriptionTextRef; // E0
+    ink::CompoundWidgetReference hintsContainerRef; // F8
+    ink::ImageWidgetReference iconRef; // 110
 };
-RED4EXT_ASSERT_SIZE(InputHintGroupController, 0x118);
+RED4EXT_ASSERT_SIZE(InputHintGroupController, 0x128);
 } // namespace game::ui
 using InputHintGroupController = game::ui::InputHintGroupController;
 } // namespace RED4ext

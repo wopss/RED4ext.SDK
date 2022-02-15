@@ -16,13 +16,13 @@ struct HoldIndicatorGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiHoldIndicatorGameController";
     static constexpr const char* ALIAS = "HoldIndicatorGameController";
 
-    game::ui::HoldIndicatorProgressCallback HoldProgress; // D0
-    ink::EmptyCallback HoldStart; // 108
-    ink::EmptyCallback HoldFinish; // 140
-    ink::EmptyCallback HoldStop; // 178
-    uint8_t unk1B0[0x1D8 - 0x1B0]; // 1B0
+    game::ui::HoldIndicatorProgressCallback HoldProgress; // E0
+    ink::EmptyCallback HoldStart; // 118
+    ink::EmptyCallback HoldFinish; // 150
+    ink::EmptyCallback HoldStop; // 188
+    uint8_t unk1C0[0x1E8 - 0x1C0]; // 1C0
 };
-RED4EXT_ASSERT_SIZE(HoldIndicatorGameController, 0x1D8);
+RED4EXT_ASSERT_SIZE(HoldIndicatorGameController, 0x1E8);
 } // namespace game::ui
 using HoldIndicatorGameController = game::ui::HoldIndicatorGameController;
 } // namespace RED4ext

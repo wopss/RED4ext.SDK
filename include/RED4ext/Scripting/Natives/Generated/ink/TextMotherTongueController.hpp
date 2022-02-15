@@ -16,13 +16,13 @@ struct TextMotherTongueController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkTextMotherTongueController";
     static constexpr const char* ALIAS = "inkTextMotherTongueController";
 
-    uint8_t unk68[0xE8 - 0x68]; // 68
-    ink::TextWidgetReference preTranslatedTextWidget; // E8
-    ink::TextWidgetReference postTranslatedTextWidget; // 100
-    ink::RichTextBoxWidgetReference nativeTextWidget; // 118
-    ink::TextWidgetReference translatedTextWidget; // 130
-    uint8_t unk148[0x150 - 0x148]; // 148
+    uint8_t unk78[0xF8 - 0x78]; // 78
+    ink::TextWidgetReference preTranslatedTextWidget; // F8
+    ink::TextWidgetReference postTranslatedTextWidget; // 110
+    ink::RichTextBoxWidgetReference nativeTextWidget; // 128
+    ink::TextWidgetReference translatedTextWidget; // 140
+    uint8_t unk158[0x160 - 0x158]; // 158
 };
-RED4EXT_ASSERT_SIZE(TextMotherTongueController, 0x150);
+RED4EXT_ASSERT_SIZE(TextMotherTongueController, 0x160);
 } // namespace ink
 } // namespace RED4ext

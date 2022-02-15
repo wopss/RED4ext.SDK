@@ -17,9 +17,9 @@ struct LayerDefinition
     static constexpr const char* NAME = "inkLayerDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0xC - 0x0]; // 0
-    bool enabled; // 0C
-    uint8_t unk0D[0x10 - 0xD]; // D
+    uint8_t unk00[0x9 - 0x0]; // 0
+    bool enabled; // 09
+    uint8_t unk0A[0x10 - 0xA]; // A
     Ref<ink::WidgetLibraryResource> rootLibrary; // 10
     bool activeByDefault; // 28
     bool isPermanent; // 29

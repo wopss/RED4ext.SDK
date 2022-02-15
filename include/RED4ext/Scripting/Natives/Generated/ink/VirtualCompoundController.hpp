@@ -16,12 +16,12 @@ struct VirtualCompoundController : ink::DiscreteNavigationController
     static constexpr const char* NAME = "inkVirtualCompoundController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkB0[0xC0 - 0xB0]; // B0
-    ink::VirtualCompoundControllerCallback ItemSelected; // C0
-    ink::VirtualCompoundControllerCallback ItemActivated; // F8
-    ink::EmptyCallback AllElementsSpawned; // 130
-    uint8_t unk168[0x1E0 - 0x168]; // 168
+    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    ink::VirtualCompoundControllerCallback ItemSelected; // D0
+    ink::VirtualCompoundControllerCallback ItemActivated; // 108
+    ink::EmptyCallback AllElementsSpawned; // 140
+    uint8_t unk178[0x1F0 - 0x178]; // 178
 };
-RED4EXT_ASSERT_SIZE(VirtualCompoundController, 0x1E0);
+RED4EXT_ASSERT_SIZE(VirtualCompoundController, 0x1F0);
 } // namespace ink
 } // namespace RED4ext

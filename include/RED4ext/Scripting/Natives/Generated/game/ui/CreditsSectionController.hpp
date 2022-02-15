@@ -15,8 +15,8 @@ struct CreditsSectionController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiCreditsSectionController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::TextWidgetReference sectionName; // 68
+    ink::TextWidgetReference sectionName; // 78
 };
-RED4EXT_ASSERT_SIZE(CreditsSectionController, 0x80);
+RED4EXT_ASSERT_SIZE(CreditsSectionController, 0x90);
 } // namespace game::ui
 } // namespace RED4ext

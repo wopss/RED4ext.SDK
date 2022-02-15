@@ -16,7 +16,8 @@ struct OnscreenVOData
 
     uint8_t unk00[0x28 - 0x0]; // 0
     CRUID text; // 28
+    uint8_t unk30[0x38 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(OnscreenVOData, 0x30);
+RED4EXT_ASSERT_SIZE(OnscreenVOData, 0x38);
 } // namespace ink
 } // namespace RED4ext

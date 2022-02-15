@@ -21,10 +21,12 @@ struct SecurityTurretMetadata : audio::CustomEmitterMetadata
     CName destroyed; // 50
     CName idleStart; // 58
     CName idleStop; // 60
-    bool obstructionEnabled; // 68
-    bool occlusionEnabled; // 69
-    uint8_t unk6A[0x70 - 0x6A]; // 6A
+    CName triggerEffectSingle; // 68
+    CName triggerEffectAuto; // 70
+    bool obstructionEnabled; // 78
+    bool occlusionEnabled; // 79
+    uint8_t unk7A[0x80 - 0x7A]; // 7A
 };
-RED4EXT_ASSERT_SIZE(SecurityTurretMetadata, 0x70);
+RED4EXT_ASSERT_SIZE(SecurityTurretMetadata, 0x80);
 } // namespace audio
 } // namespace RED4ext

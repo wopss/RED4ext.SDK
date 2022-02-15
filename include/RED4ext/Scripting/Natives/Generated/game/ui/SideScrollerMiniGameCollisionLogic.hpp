@@ -15,11 +15,11 @@ struct SideScrollerMiniGameCollisionLogic : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameCollisionLogic";
     static constexpr const char* ALIAS = "MinigameCollisionLogic";
 
-    uint8_t unk68[0xA0 - 0x68]; // 68
-    Vector2 colliderPositionOffset; // A0
-    Vector2 colliderSizeOffset; // A8
+    uint8_t unk78[0xB0 - 0x78]; // 78
+    Vector2 colliderPositionOffset; // B0
+    Vector2 colliderSizeOffset; // B8
 };
-RED4EXT_ASSERT_SIZE(SideScrollerMiniGameCollisionLogic, 0xB0);
+RED4EXT_ASSERT_SIZE(SideScrollerMiniGameCollisionLogic, 0xC0);
 } // namespace game::ui
 using MinigameCollisionLogic = game::ui::SideScrollerMiniGameCollisionLogic;
 } // namespace RED4ext

@@ -26,7 +26,8 @@ struct PlayRidCameraAnimEvent : scn::SceneEvent
     scn::Marker animOriginMarker; // 80
     bool activateAsGameCamera; // E0
     bool controlRenderToTextureState; // E1
-    uint8_t unkE2[0xE8 - 0xE2]; // E2
+    bool markCamerCut; // E2
+    uint8_t unkE3[0xE8 - 0xE3]; // E3
 };
 RED4EXT_ASSERT_SIZE(PlayRidCameraAnimEvent, 0xE8);
 } // namespace scn::events

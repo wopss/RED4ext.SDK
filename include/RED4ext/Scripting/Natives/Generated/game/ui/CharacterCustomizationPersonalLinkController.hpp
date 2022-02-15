@@ -16,8 +16,8 @@ struct CharacterCustomizationPersonalLinkController : game::ui::ICharacterCustom
     static constexpr const char* ALIAS = NAME;
 
     CName simpleLinkGroup; // 98
-    uint8_t unkA0[0xB8 - 0xA0]; // A0
+    uint8_t unkA0[0xC8 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationPersonalLinkController, 0xB8);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationPersonalLinkController, 0xC8);
 } // namespace game::ui
 } // namespace RED4ext

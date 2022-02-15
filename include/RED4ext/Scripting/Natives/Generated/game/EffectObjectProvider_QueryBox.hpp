@@ -7,6 +7,7 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EffectInputParameter_Vector.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EffectObjectProvider.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/QueryPreset.hpp>
 
 namespace RED4ext
 {
@@ -19,9 +20,10 @@ struct EffectObjectProvider_QueryBox : game::EffectObjectProvider
     static constexpr const char* ALIAS = NAME;
 
     Handle<physics::FilterData> filterData; // 40
-    uint8_t unk50[0x60 - 0x50]; // 50
-    game::EffectInputParameter_Vector inputPosition; // 60
+    physics::QueryPreset queryPreset; // 50
+    uint8_t unk58[0x68 - 0x58]; // 58
+    game::EffectInputParameter_Vector inputPosition; // 68
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_QueryBox, 0x78);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_QueryBox, 0x80);
 } // namespace game
 } // namespace RED4ext

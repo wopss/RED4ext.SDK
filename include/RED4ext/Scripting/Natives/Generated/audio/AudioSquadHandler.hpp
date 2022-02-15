@@ -14,8 +14,8 @@ struct AudioSquadHandler : audio::BaseAudioSquadHandler
     static constexpr const char* NAME = "audioAudioSquadHandler";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk08[0xC0 - 0x8]; // 8
+    uint8_t unk08[0xA8 - 0x8]; // 8
 };
-RED4EXT_ASSERT_SIZE(AudioSquadHandler, 0xC0);
+RED4EXT_ASSERT_SIZE(AudioSquadHandler, 0xA8);
 } // namespace audio
 } // namespace RED4ext

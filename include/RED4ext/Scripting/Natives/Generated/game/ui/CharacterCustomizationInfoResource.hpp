@@ -9,6 +9,7 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationUiPresetInfo.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationVersionUpdateInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/OptionsGroup.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/PerspectiveInfo.hpp>
 
@@ -33,7 +34,8 @@ struct CharacterCustomizationInfoResource : CResource
     DynArray<CName> excludedFromRandomize; // C0
     uint32_t version; // D0
     uint8_t unkD4[0xD8 - 0xD4]; // D4
+    DynArray<game::ui::CharacterCustomizationVersionUpdateInfo> versionUpdateInfo; // D8
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationInfoResource, 0xD8);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationInfoResource, 0xE8);
 } // namespace game::ui
 } // namespace RED4ext

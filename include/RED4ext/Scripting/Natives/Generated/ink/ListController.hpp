@@ -16,15 +16,15 @@ struct ListController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkListController";
     static constexpr const char* ALIAS = "ListController";
 
-    ink::ListControllerCallback ItemSelected; // 68
-    ink::ListControllerCallback ItemActivated; // A0
-    uint8_t unkD8[0x108 - 0xD8]; // D8
-    CName itemLibraryID; // 108
-    bool cycledNavigation; // 110
-    bool beginToggled; // 111
-    uint8_t unk112[0x118 - 0x112]; // 112
+    ink::ListControllerCallback ItemSelected; // 78
+    ink::ListControllerCallback ItemActivated; // B0
+    uint8_t unkE8[0x118 - 0xE8]; // E8
+    CName itemLibraryID; // 118
+    bool cycledNavigation; // 120
+    bool beginToggled; // 121
+    uint8_t unk122[0x128 - 0x122]; // 122
 };
-RED4EXT_ASSERT_SIZE(ListController, 0x118);
+RED4EXT_ASSERT_SIZE(ListController, 0x128);
 } // namespace ink
 using ListController = ink::ListController;
 } // namespace RED4ext

@@ -14,9 +14,9 @@ struct SettingsSelectorControllerKeyBinding : ink::SettingsSelectorController
     static constexpr const char* NAME = "inkSettingsSelectorControllerKeyBinding";
     static constexpr const char* ALIAS = "SettingsSelectorControllerKeyBinding";
 
-    uint8_t unkB8[0xD0 - 0xB8]; // B8
+    uint8_t unkC8[0xE0 - 0xC8]; // C8
 };
-RED4EXT_ASSERT_SIZE(SettingsSelectorControllerKeyBinding, 0xD0);
+RED4EXT_ASSERT_SIZE(SettingsSelectorControllerKeyBinding, 0xE0);
 } // namespace ink
 using SettingsSelectorControllerKeyBinding = ink::SettingsSelectorControllerKeyBinding;
 } // namespace RED4ext

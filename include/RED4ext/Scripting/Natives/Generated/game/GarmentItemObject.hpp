@@ -14,8 +14,8 @@ struct GarmentItemObject : game::ItemObject
     static constexpr const char* NAME = "gameGarmentItemObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk328[0x360 - 0x328]; // 328
+    uint8_t unk2C0[0x2F8 - 0x2C0]; // 2C0
 };
-RED4EXT_ASSERT_SIZE(GarmentItemObject, 0x360);
+RED4EXT_ASSERT_SIZE(GarmentItemObject, 0x2F8);
 } // namespace game
 } // namespace RED4ext

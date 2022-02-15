@@ -15,14 +15,14 @@ struct TextValueProgressAnimationController : ink::TextAnimationController
     static constexpr const char* NAME = "inkTextValueProgressAnimationController";
     static constexpr const char* ALIAS = "inkTextValueProgressController";
 
-    float baseValue; // E0
-    float targetValue; // E4
-    int32_t numbersAfterDot; // E8
-    float stepValue; // EC
-    uint8_t unkF0[0x118 - 0xF0]; // F0
-    CString suffix; // 118
+    float baseValue; // F0
+    float targetValue; // F4
+    int32_t numbersAfterDot; // F8
+    float stepValue; // FC
+    uint8_t unk100[0x128 - 0x100]; // 100
+    CString suffix; // 128
 };
-RED4EXT_ASSERT_SIZE(TextValueProgressAnimationController, 0x138);
+RED4EXT_ASSERT_SIZE(TextValueProgressAnimationController, 0x148);
 } // namespace ink
 using inkTextValueProgressController = ink::TextValueProgressAnimationController;
 } // namespace RED4ext

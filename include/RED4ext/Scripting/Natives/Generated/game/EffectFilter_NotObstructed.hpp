@@ -6,6 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EffectObjectSingleFilter.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/QueryPreset.hpp>
 
 namespace RED4ext
 {
@@ -18,10 +19,11 @@ struct EffectFilter_NotObstructed : game::EffectObjectSingleFilter
     static constexpr const char* ALIAS = NAME;
 
     Handle<physics::FilterData> filterData; // 40
-    uint8_t unk50[0x60 - 0x50]; // 50
-    float forwardOffset; // 60
-    uint8_t unk64[0x68 - 0x64]; // 64
+    physics::QueryPreset queryPreset; // 50
+    uint8_t unk58[0x68 - 0x58]; // 58
+    float forwardOffset; // 68
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
-RED4EXT_ASSERT_SIZE(EffectFilter_NotObstructed, 0x68);
+RED4EXT_ASSERT_SIZE(EffectFilter_NotObstructed, 0x70);
 } // namespace game
 } // namespace RED4ext

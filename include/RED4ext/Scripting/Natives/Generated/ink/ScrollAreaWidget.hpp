@@ -15,16 +15,16 @@ struct ScrollAreaWidget : ink::CompoundWidget
     static constexpr const char* NAME = "inkScrollAreaWidget";
     static constexpr const char* ALIAS = "inkScrollArea";
 
-    uint8_t unk220[0x230 - 0x220]; // 220
-    float horizontalScrolling; // 230
-    float verticalScrolling; // 234
-    bool constrainContentPosition; // 238
-    bool useInternalMask; // 239
-    uint8_t unk23A[0x244 - 0x23A]; // 23A
-    ink::FitToContentDirection fitToContentDirection; // 244
-    uint8_t unk248[0x250 - 0x248]; // 248
+    uint8_t unk230[0x240 - 0x230]; // 230
+    float horizontalScrolling; // 240
+    float verticalScrolling; // 244
+    bool constrainContentPosition; // 248
+    bool useInternalMask; // 249
+    uint8_t unk24A[0x254 - 0x24A]; // 24A
+    ink::FitToContentDirection fitToContentDirection; // 254
+    uint8_t unk258[0x260 - 0x258]; // 258
 };
-RED4EXT_ASSERT_SIZE(ScrollAreaWidget, 0x250);
+RED4EXT_ASSERT_SIZE(ScrollAreaWidget, 0x260);
 } // namespace ink
 using inkScrollArea = ink::ScrollAreaWidget;
 } // namespace RED4ext

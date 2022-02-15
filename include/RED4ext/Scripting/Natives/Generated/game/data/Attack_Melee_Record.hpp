@@ -14,9 +14,9 @@ struct Attack_Melee_Record : game::data::Attack_GameEffect_Record
     static constexpr const char* NAME = "gamedataAttack_Melee_Record";
     static constexpr const char* ALIAS = "Attack_Melee_Record";
 
-    uint8_t unk88[0x98 - 0x88]; // 88
+    uint8_t unk88[0xF8 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(Attack_Melee_Record, 0x98);
+RED4EXT_ASSERT_SIZE(Attack_Melee_Record, 0xF8);
 } // namespace game::data
 using Attack_Melee_Record = game::data::Attack_Melee_Record;
 } // namespace RED4ext

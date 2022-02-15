@@ -21,7 +21,8 @@ struct CollisionEvaluatorParams : IScriptable
 
     WeakHandle<game::Object> target; // 40
     bool isPiercableSurface; // 50
-    uint8_t unk51[0x54 - 0x51]; // 51
+    bool isWaterSurface; // 51
+    uint8_t unk52[0x54 - 0x52]; // 52
     float angle; // 54
     uint32_t numBounces; // 58
     uint8_t unk5C[0x60 - 0x5C]; // 5C

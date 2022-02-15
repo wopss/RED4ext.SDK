@@ -23,7 +23,8 @@ struct ActionUseWorkspotNodeDefinition : AI::behavior::ActionTreeNodeDefinition
     Handle<AI::ArgumentMapping> dependentWorkspotData; // 70
     Handle<AI::ArgumentMapping> playExitAutomatically; // 80
     Handle<AI::ArgumentMapping> markUninterruptable; // 90
+    Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // A0
 };
-RED4EXT_ASSERT_SIZE(ActionUseWorkspotNodeDefinition, 0xA0);
+RED4EXT_ASSERT_SIZE(ActionUseWorkspotNodeDefinition, 0xB0);
 } // namespace AI::behavior
 } // namespace RED4ext

@@ -25,9 +25,9 @@ struct SystemHitInfo
     WeakHandle<ent::IComponent> component; // 20
     Vector4 aimStartPosition; // 30
     Vector4 closestHitPosition; // 40
-    uint8_t unk50[0x58 - 0x50]; // 50
-    bool isTransparent; // 58
-    uint8_t unk59[0x60 - 0x59]; // 59
+    uint8_t unk50[0x5C - 0x50]; // 50
+    bool isTransparent; // 5C
+    uint8_t unk5D[0x60 - 0x5D]; // 5D
 };
 RED4EXT_ASSERT_SIZE(SystemHitInfo, 0x60);
 } // namespace game::targeting

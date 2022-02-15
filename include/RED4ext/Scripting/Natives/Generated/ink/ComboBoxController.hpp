@@ -16,10 +16,10 @@ struct ComboBoxController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkComboBoxController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::ComboBoxVisibleChangedCallback ComboBoxVisibleChanged; // 68
-    ink::WidgetReference comboBoxObjectRef; // A0
-    uint8_t unkB8[0xD8 - 0xB8]; // B8
+    ink::ComboBoxVisibleChangedCallback ComboBoxVisibleChanged; // 78
+    ink::WidgetReference comboBoxObjectRef; // B0
+    uint8_t unkC8[0xE8 - 0xC8]; // C8
 };
-RED4EXT_ASSERT_SIZE(ComboBoxController, 0xD8);
+RED4EXT_ASSERT_SIZE(ComboBoxController, 0xE8);
 } // namespace ink
 } // namespace RED4ext

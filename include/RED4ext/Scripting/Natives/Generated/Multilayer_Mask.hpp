@@ -14,8 +14,9 @@ struct Multilayer_Mask : CResource
     static constexpr const char* NAME = "Multilayer_Mask";
     static constexpr const char* ALIAS = NAME;
 
-    rend::RenderMultilayerMaskResource renderResourceBlob; // 40
-    uint8_t unk50[0x70 - 0x50]; // 50
+    uint8_t unk40[0x48 - 0x40]; // 40
+    rend::RenderMultilayerMaskResource renderResourceBlob; // 48
+    uint8_t unk58[0x78 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(Multilayer_Mask, 0x70);
+RED4EXT_ASSERT_SIZE(Multilayer_Mask, 0x78);
 } // namespace RED4ext

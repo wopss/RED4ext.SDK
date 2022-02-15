@@ -36,13 +36,14 @@ struct NodeEditorData : ISerializable
     uint64_t questPrefabRefHash; // 108
     bool isInterior; // 110
     bool isDestructibleNode; // 111
-    bool isDiscarded; // 112
-    bool isSnapSource; // 113
-    bool isSnapTarget; // 114
-    uint8_t unk115[0x118 - 0x115]; // 115
-    bool excludeOnConsole; // 118
-    world::ProxyMeshDependencyMode proxyMeshDependency; // 119
-    uint8_t unk11A[0x11C - 0x11A]; // 11A
+    bool shouldSkipStreamingInEditor; // 112
+    bool isDiscarded; // 113
+    bool isSnapSource; // 114
+    bool isSnapTarget; // 115
+    uint8_t unk116[0x119 - 0x116]; // 116
+    bool excludeOnConsole; // 119
+    world::ProxyMeshDependencyMode proxyMeshDependency; // 11A
+    uint8_t unk11B[0x11C - 0x11B]; // 11B
     float maxStreamingDistance; // 11C
 };
 RED4EXT_ASSERT_SIZE(NodeEditorData, 0x120);

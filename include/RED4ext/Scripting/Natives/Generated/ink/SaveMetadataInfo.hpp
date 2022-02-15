@@ -7,6 +7,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LifePath.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/SaveStatus.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/SaveType.hpp>
 
 namespace RED4ext
@@ -25,7 +26,8 @@ struct SaveMetadataInfo : IScriptable
     CString gameVersion; // A8
     ink::LifePath lifePath; // C8
     ink::SaveType saveType; // C9
-    uint8_t unkCA[0xD0 - 0xCA]; // CA
+    ink::SaveStatus saveStatus; // CA
+    uint8_t unkCB[0xD0 - 0xCB]; // CB
     uint64_t timestamp; // D0
     double playTime; // D8
     double playthroughTime; // E0

@@ -15,10 +15,10 @@ struct CharacterCustomizationFeetController : game::ui::CharacterCustomizationBo
     static constexpr const char* NAME = "gameuiCharacterCustomizationFeetController";
     static constexpr const char* ALIAS = NAME;
 
-    CName liftedFeetGroupName; // A8
-    CName flatFeetGroupName; // B0
-    uint8_t unkB8[0x158 - 0xB8]; // B8
+    CName liftedFeetGroupName; // C0
+    CName flatFeetGroupName; // C8
+    uint8_t unkD0[0x170 - 0xD0]; // D0
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationFeetController, 0x158);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationFeetController, 0x170);
 } // namespace game::ui
 } // namespace RED4ext

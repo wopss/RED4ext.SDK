@@ -15,10 +15,10 @@ struct StreetNameSignLogicController : ink::IStreetNameSignLogicController
     static constexpr const char* NAME = "inkStreetNameSignLogicController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::TextWidgetReference streetName; // 68
-    ink::TextWidgetReference districtName; // 80
-    ink::TextWidgetReference subdistrictName; // 98
+    ink::TextWidgetReference streetName; // 78
+    ink::TextWidgetReference districtName; // 90
+    ink::TextWidgetReference subdistrictName; // A8
 };
-RED4EXT_ASSERT_SIZE(StreetNameSignLogicController, 0xB0);
+RED4EXT_ASSERT_SIZE(StreetNameSignLogicController, 0xC0);
 } // namespace ink
 } // namespace RED4ext

@@ -15,10 +15,10 @@ struct ContraPlatform : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
     static constexpr const char* NAME = "gameuiContraPlatform";
     static constexpr const char* ALIAS = "ContraPlatform";
 
-    uint8_t unkC0[0xC8 - 0xC0]; // C0
-    ink::ImageWidgetReference image; // C8
+    uint8_t unkD0[0xD8 - 0xD0]; // D0
+    ink::ImageWidgetReference image; // D8
 };
-RED4EXT_ASSERT_SIZE(ContraPlatform, 0xE0);
+RED4EXT_ASSERT_SIZE(ContraPlatform, 0xF0);
 } // namespace game::ui
 using ContraPlatform = game::ui::ContraPlatform;
 } // namespace RED4ext

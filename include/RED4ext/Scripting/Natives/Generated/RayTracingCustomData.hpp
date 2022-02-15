@@ -13,7 +13,7 @@ struct RayTracingCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "RayTracingCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x1E0 - 0x18]; // 18
+    uint8_t unk18[0x178 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(RayTracingCustomData, 0x1E0);
+RED4EXT_ASSERT_SIZE(RayTracingCustomData, 0x178);
 } // namespace RED4ext

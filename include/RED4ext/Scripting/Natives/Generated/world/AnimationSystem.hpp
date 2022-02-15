@@ -14,8 +14,8 @@ struct AnimationSystem : world::IRuntimeSystem
     static constexpr const char* NAME = "worldAnimationSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xB2B80 - 0x48]; // 48
+    uint8_t unk48[0xB2B70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AnimationSystem, 0xB2B80);
+RED4EXT_ASSERT_SIZE(AnimationSystem, 0xB2B70);
 } // namespace world
 } // namespace RED4ext

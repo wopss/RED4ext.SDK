@@ -19,13 +19,13 @@ struct HDRSettingsGameController : game::ui::MenuGameController
     static constexpr const char* NAME = "gameuiHDRSettingsGameController";
     static constexpr const char* ALIAS = "HDRSettingsGameController";
 
-    Ref<CBitmapTexture> callibrationScreen; // D0
-    RaRef<ink::TextureAtlas> callibrationScreenAtlas; // E8
-    uint8_t unkF0[0x100 - 0xF0]; // F0
-    ink::WidgetReference callibrationScreenTarget; // 100
-    uint8_t unk118[0x128 - 0x118]; // 118
+    Ref<CBitmapTexture> callibrationScreen; // F0
+    RaRef<ink::TextureAtlas> callibrationScreenAtlas; // 108
+    uint8_t unk110[0x120 - 0x110]; // 110
+    ink::WidgetReference callibrationScreenTarget; // 120
+    uint8_t unk138[0x148 - 0x138]; // 138
 };
-RED4EXT_ASSERT_SIZE(HDRSettingsGameController, 0x128);
+RED4EXT_ASSERT_SIZE(HDRSettingsGameController, 0x148);
 } // namespace game::ui
 using HDRSettingsGameController = game::ui::HDRSettingsGameController;
 } // namespace RED4ext

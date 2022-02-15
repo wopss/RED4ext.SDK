@@ -20,7 +20,8 @@ enum class SceneCategoryTag : uint8_t
     cityOpenWorld = 9,
     chatsOpenWorld = 10,
     otherOpenWorld = 11,
-    other = 12,
+    holocalls = 12,
+    other = 13,
 };
 } // namespace scn
 } // namespace RED4ext

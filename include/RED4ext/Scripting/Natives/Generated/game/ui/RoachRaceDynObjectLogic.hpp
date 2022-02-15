@@ -15,13 +15,13 @@ struct RoachRaceDynObjectLogic : game::ui::SideScrollerMiniGameDynObjectLogic
     static constexpr const char* NAME = "gameuiRoachRaceDynObjectLogic";
     static constexpr const char* ALIAS = "RoachRaceMinigameDynObject";
 
-    float minSpawnY; // 80
-    float maxSpawnY; // 84
-    float extraSpeed; // 88
-    uint8_t unk8C[0x90 - 0x8C]; // 8C
-    DynArray<float> availableY; // 90
+    float minSpawnY; // 90
+    float maxSpawnY; // 94
+    float extraSpeed; // 98
+    uint8_t unk9C[0xA0 - 0x9C]; // 9C
+    DynArray<float> availableY; // A0
 };
-RED4EXT_ASSERT_SIZE(RoachRaceDynObjectLogic, 0xA0);
+RED4EXT_ASSERT_SIZE(RoachRaceDynObjectLogic, 0xB0);
 } // namespace game::ui
 using RoachRaceMinigameDynObject = game::ui::RoachRaceDynObjectLogic;
 } // namespace RED4ext

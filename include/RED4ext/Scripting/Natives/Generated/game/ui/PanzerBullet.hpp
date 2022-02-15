@@ -15,7 +15,7 @@ struct PanzerBullet : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
     static constexpr const char* ALIAS = "PanzerBullet";
 
 };
-RED4EXT_ASSERT_SIZE(PanzerBullet, 0xC0);
+RED4EXT_ASSERT_SIZE(PanzerBullet, 0xD0);
 } // namespace game::ui
 using PanzerBullet = game::ui::PanzerBullet;
 } // namespace RED4ext

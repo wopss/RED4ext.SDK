@@ -14,9 +14,9 @@ struct BaseGOGRegisterController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiBaseGOGRegisterController";
     static constexpr const char* ALIAS = "BaseGOGRegisterController";
 
-    uint8_t unk68[0x90 - 0x68]; // 68
+    uint8_t unk78[0xA0 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(BaseGOGRegisterController, 0x90);
+RED4EXT_ASSERT_SIZE(BaseGOGRegisterController, 0xA0);
 } // namespace game::ui
 using BaseGOGRegisterController = game::ui::BaseGOGRegisterController;
 } // namespace RED4ext

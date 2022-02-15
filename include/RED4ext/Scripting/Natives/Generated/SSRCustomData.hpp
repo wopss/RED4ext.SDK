@@ -13,7 +13,7 @@ struct SSRCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "SSRCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0xD0 - 0x18]; // 18
+    uint8_t unk18[0x150 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(SSRCustomData, 0xD0);
+RED4EXT_ASSERT_SIZE(SSRCustomData, 0x150);
 } // namespace RED4ext

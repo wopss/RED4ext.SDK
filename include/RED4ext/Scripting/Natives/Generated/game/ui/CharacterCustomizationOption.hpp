@@ -24,7 +24,8 @@ struct CharacterCustomizationOption : IScriptable
     uint32_t currIndex; // 58
     bool isActive; // 5C
     bool isCensored; // 5D
-    uint8_t unk5E[0x60 - 0x5E]; // 5E
+    bool isEditable; // 5E
+    uint8_t unk5F[0x60 - 0x5F]; // 5F
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationOption, 0x60);
 } // namespace game::ui

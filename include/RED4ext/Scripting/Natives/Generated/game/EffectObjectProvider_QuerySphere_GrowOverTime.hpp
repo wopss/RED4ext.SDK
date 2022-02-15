@@ -15,6 +15,6 @@ struct EffectObjectProvider_QuerySphere_GrowOverTime : game::EffectObjectProvide
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_QuerySphere_GrowOverTime, 0x68);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_QuerySphere_GrowOverTime, 0x70);
 } // namespace game
 } // namespace RED4ext

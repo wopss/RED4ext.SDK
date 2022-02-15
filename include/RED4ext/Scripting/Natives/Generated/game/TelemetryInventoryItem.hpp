@@ -6,6 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/ItemType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/Quality.hpp>
 
 namespace RED4ext
 {
@@ -18,7 +19,7 @@ struct TelemetryInventoryItem
     CString friendlyName; // 00
     CString localizedName; // 20
     ItemID itemID; // 40
-    int32_t quality; // 50
+    game::data::Quality quality; // 50
     game::data::ItemType itemType; // 54
     bool iconic; // 58
     uint8_t unk59[0x5C - 0x59]; // 59

@@ -15,7 +15,7 @@ struct VerticalPanelWidget : ink::BasePanelWidget
     static constexpr const char* ALIAS = "inkVerticalPanel";
 
 };
-RED4EXT_ASSERT_SIZE(VerticalPanelWidget, 0x230);
+RED4EXT_ASSERT_SIZE(VerticalPanelWidget, 0x240);
 } // namespace ink
 using inkVerticalPanel = ink::VerticalPanelWidget;
 } // namespace RED4ext

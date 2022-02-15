@@ -21,25 +21,25 @@ struct SplashScreenLoadingScreenLogicController : ink::ILoadingLogicController
     static constexpr const char* NAME = "inkSplashScreenLoadingScreenLogicController";
     static constexpr const char* ALIAS = "SplashScreenLoadingScreenLogicController";
 
-    RaRef<Bink> logoTrainWBBink; // 180
-    RaRef<Bink> logoTrainNamcoBink; // 188
-    RaRef<Bink> logoTrainStadiaBink; // 190
-    RaRef<Bink> logoTrainNoRTXBink; // 198
-    RaRef<Bink> logoTrainRTXBink; // 1A0
-    ink::LocalizedBink introMessageBink; // 1A8
-    RaRef<Bink> trailerBink; // 1C0
-    ink::CompoundWidgetReference skipButtonPanel; // 1C8
-    ink::VideoWidgetReference videoPlayer; // 1E0
-    uint8_t unk1F8[0x218 - 0x1F8]; // 1F8
-    CName logosTrainAnimation; // 218
-    CName longLogosTrainAnimation; // 220
-    CName localizedMessageAnimation; // 228
-    CName gameIntroAnimation; // 230
-    CName stopIntroAudioEventName; // 238
-    CName afterSkipAnimation; // 240
-    uint8_t unk248[0x288 - 0x248]; // 248
+    RaRef<Bink> logoTrainWBBink; // 190
+    RaRef<Bink> logoTrainNamcoBink; // 198
+    RaRef<Bink> logoTrainStadiaBink; // 1A0
+    RaRef<Bink> logoTrainNoRTXBink; // 1A8
+    RaRef<Bink> logoTrainRTXBink; // 1B0
+    ink::LocalizedBink introMessageBink; // 1B8
+    RaRef<Bink> trailerBink; // 1D0
+    ink::CompoundWidgetReference skipButtonPanel; // 1D8
+    ink::VideoWidgetReference videoPlayer; // 1F0
+    uint8_t unk208[0x228 - 0x208]; // 208
+    CName logosTrainAnimation; // 228
+    CName longLogosTrainAnimation; // 230
+    CName localizedMessageAnimation; // 238
+    CName gameIntroAnimation; // 240
+    CName stopIntroAudioEventName; // 248
+    CName afterSkipAnimation; // 250
+    uint8_t unk258[0x298 - 0x258]; // 258
 };
-RED4EXT_ASSERT_SIZE(SplashScreenLoadingScreenLogicController, 0x288);
+RED4EXT_ASSERT_SIZE(SplashScreenLoadingScreenLogicController, 0x298);
 } // namespace ink
 using SplashScreenLoadingScreenLogicController = ink::SplashScreenLoadingScreenLogicController;
 } // namespace RED4ext

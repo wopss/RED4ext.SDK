@@ -14,9 +14,9 @@ struct MachineparameterTypeClimbParameters : game::state::MachineparameterTypeCl
     static constexpr const char* NAME = "gamestateMachineparameterTypeClimbParameters";
     static constexpr const char* ALIAS = "ClimbParameters";
 
-    uint8_t unkF0[0x110 - 0xF0]; // F0
+    uint8_t unkF0[0x120 - 0xF0]; // F0
 };
-RED4EXT_ASSERT_SIZE(MachineparameterTypeClimbParameters, 0x110);
+RED4EXT_ASSERT_SIZE(MachineparameterTypeClimbParameters, 0x120);
 } // namespace game::state
 using ClimbParameters = game::state::MachineparameterTypeClimbParameters;
 } // namespace RED4ext

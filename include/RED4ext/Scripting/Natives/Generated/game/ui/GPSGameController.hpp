@@ -15,9 +15,9 @@ struct GPSGameController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameuiGPSGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE8[0xF0 - 0xE8]; // E8
-    game::gps::Settings gpsSettings; // F0
+    uint8_t unkF8[0x100 - 0xF8]; // F8
+    game::gps::Settings gpsSettings; // 100
 };
-RED4EXT_ASSERT_SIZE(GPSGameController, 0x128);
+RED4EXT_ASSERT_SIZE(GPSGameController, 0x138);
 } // namespace game::ui
 } // namespace RED4ext

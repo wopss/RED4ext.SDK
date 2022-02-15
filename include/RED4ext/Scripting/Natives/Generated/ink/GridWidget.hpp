@@ -17,13 +17,13 @@ struct GridWidget : ink::CompoundWidget
     static constexpr const char* NAME = "inkGridWidget";
     static constexpr const char* ALIAS = "inkGrid";
 
-    ink::EOrientation orientation; // 220
-    uint8_t unk221[0x224 - 0x221]; // 221
-    ink::Margin childPadding; // 224
-    Vector2 childSizeStep; // 234
-    uint8_t unk23C[0x270 - 0x23C]; // 23C
+    ink::EOrientation orientation; // 230
+    uint8_t unk231[0x234 - 0x231]; // 231
+    ink::Margin childPadding; // 234
+    Vector2 childSizeStep; // 244
+    uint8_t unk24C[0x280 - 0x24C]; // 24C
 };
-RED4EXT_ASSERT_SIZE(GridWidget, 0x270);
+RED4EXT_ASSERT_SIZE(GridWidget, 0x280);
 } // namespace ink
 using inkGrid = ink::GridWidget;
 } // namespace RED4ext

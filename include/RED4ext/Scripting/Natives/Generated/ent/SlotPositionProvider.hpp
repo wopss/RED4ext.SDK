@@ -14,8 +14,8 @@ struct SlotPositionProvider : ent::IPositionProvider
     static constexpr const char* NAME = "entSlotPositionProvider";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk50[0x90 - 0x50]; // 50
+    uint8_t unk50[0xA0 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(SlotPositionProvider, 0x90);
+RED4EXT_ASSERT_SIZE(SlotPositionProvider, 0xA0);
 } // namespace ent
 } // namespace RED4ext

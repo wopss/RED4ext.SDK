@@ -24,7 +24,8 @@ struct PopulationSpawnerNode : world::Node
     game::AlwaysSpawnedState alwaysSpawned; // 49
     game::SpawnInViewState spawnInView; // 4A
     bool prefetchAppearance; // 4B
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    bool isVehicle; // 4C
+    uint8_t unk4D[0x50 - 0x4D]; // 4D
 };
 RED4EXT_ASSERT_SIZE(PopulationSpawnerNode, 0x50);
 } // namespace world

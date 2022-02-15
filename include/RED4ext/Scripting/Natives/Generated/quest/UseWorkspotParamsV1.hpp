@@ -48,7 +48,8 @@ struct UseWorkspotParamsV1 : quest::AICommandParams
     move::MovementType movementType; // C8
     bool repeatCommandOnInterrupt; // CC
     bool continueInCombat; // CD
-    uint8_t unkCE[0xD0 - 0xCE]; // CE
+    bool meshDissolvingEnabled; // CE
+    uint8_t unkCF[0xD0 - 0xCF]; // CF
 };
 RED4EXT_ASSERT_SIZE(UseWorkspotParamsV1, 0xD0);
 } // namespace quest

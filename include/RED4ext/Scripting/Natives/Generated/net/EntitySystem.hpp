@@ -14,8 +14,8 @@ struct EntitySystem : world::IRuntimeSystem
     static constexpr const char* NAME = "netEntitySystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x98 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(EntitySystem, 0x98);
+RED4EXT_ASSERT_SIZE(EntitySystem, 0x90);
 } // namespace net
 } // namespace RED4ext

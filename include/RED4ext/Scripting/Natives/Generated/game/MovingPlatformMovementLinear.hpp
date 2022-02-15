@@ -15,7 +15,7 @@ struct MovingPlatformMovementLinear : game::IMovingPlatformMovementPointToPoint
     static constexpr const char* ALIAS = "MovingPlatformMovementLinear";
 
 };
-RED4EXT_ASSERT_SIZE(MovingPlatformMovementLinear, 0x80);
+RED4EXT_ASSERT_SIZE(MovingPlatformMovementLinear, 0x90);
 } // namespace game
 using MovingPlatformMovementLinear = game::MovingPlatformMovementLinear;
 } // namespace RED4ext

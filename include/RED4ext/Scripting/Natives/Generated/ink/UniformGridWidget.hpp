@@ -15,11 +15,11 @@ struct UniformGridWidget : ink::CompoundWidget
     static constexpr const char* NAME = "inkUniformGridWidget";
     static constexpr const char* ALIAS = "inkUniformGrid";
 
-    uint32_t wrappingWidgetCount; // 220
-    ink::EOrientation orientation; // 224
-    uint8_t unk225[0x230 - 0x225]; // 225
+    uint32_t wrappingWidgetCount; // 230
+    ink::EOrientation orientation; // 234
+    uint8_t unk235[0x240 - 0x235]; // 235
 };
-RED4EXT_ASSERT_SIZE(UniformGridWidget, 0x230);
+RED4EXT_ASSERT_SIZE(UniformGridWidget, 0x240);
 } // namespace ink
 using inkUniformGrid = ink::UniformGridWidget;
 } // namespace RED4ext

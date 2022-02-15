@@ -14,9 +14,9 @@ struct Bounty_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataBounty_Record";
     static constexpr const char* ALIAS = "Bounty_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Bounty_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Bounty_Record, 0x60);
 } // namespace game::data
 using Bounty_Record = game::data::Bounty_Record;
 } // namespace RED4ext

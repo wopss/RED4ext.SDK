@@ -15,11 +15,11 @@ struct RandomNewsFeedAnimator : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiRandomNewsFeedAnimator";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk68[0x98 - 0x68]; // 68
-    ink::TextWidgetReference textWidget; // 98
-    float animDuration; // B0
-    uint8_t unkB4[0xB8 - 0xB4]; // B4
+    uint8_t unk78[0xA8 - 0x78]; // 78
+    ink::TextWidgetReference textWidget; // A8
+    float animDuration; // C0
+    uint8_t unkC4[0xC8 - 0xC4]; // C4
 };
-RED4EXT_ASSERT_SIZE(RandomNewsFeedAnimator, 0xB8);
+RED4EXT_ASSERT_SIZE(RandomNewsFeedAnimator, 0xC8);
 } // namespace game::ui
 } // namespace RED4ext

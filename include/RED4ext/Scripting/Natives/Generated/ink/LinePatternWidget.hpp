@@ -17,18 +17,18 @@ struct LinePatternWidget : ink::ImageWidget
     static constexpr const char* NAME = "inkLinePatternWidget";
     static constexpr const char* ALIAS = "inkLinePattern";
 
-    DynArray<ink::LineVertex> vertexList; // 320
-    uint8_t unk330[0x334 - 0x330]; // 330
-    float spacing; // 334
-    float looseSpacing; // 338
-    float startOffset; // 33C
-    float endOffset; // 340
-    float fadeInLength; // 344
-    bool rotateWithSegment; // 348
-    ink::EChildOrder patternDirection; // 349
-    uint8_t unk34A[0x350 - 0x34A]; // 34A
+    DynArray<ink::LineVertex> vertexList; // 330
+    uint8_t unk340[0x344 - 0x340]; // 340
+    float spacing; // 344
+    float looseSpacing; // 348
+    float startOffset; // 34C
+    float endOffset; // 350
+    float fadeInLength; // 354
+    bool rotateWithSegment; // 358
+    ink::EChildOrder patternDirection; // 359
+    uint8_t unk35A[0x360 - 0x35A]; // 35A
 };
-RED4EXT_ASSERT_SIZE(LinePatternWidget, 0x350);
+RED4EXT_ASSERT_SIZE(LinePatternWidget, 0x360);
 } // namespace ink
 using inkLinePattern = ink::LinePatternWidget;
 } // namespace RED4ext

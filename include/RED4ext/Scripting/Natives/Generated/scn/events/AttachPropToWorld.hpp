@@ -4,7 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/CName.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
@@ -12,12 +11,9 @@
 #include <RED4ext/Scripting/Natives/Generated/scn/PerformerId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/PropId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneEvent.hpp>
-#include <RED4ext/Scripting/Natives/Generated/scn/events/AttachPropToWorldCachedFallbackBone.hpp>
 
 namespace RED4ext
 {
-namespace anim { struct AnimSet; }
-
 namespace scn::events { 
 struct AttachPropToWorld : scn::SceneEvent
 {
@@ -33,13 +29,8 @@ struct AttachPropToWorld : scn::SceneEvent
     scn::PerformerId referencePerformer; // 80
     TweakDBID referencePerformerSlotId; // 84
     TweakDBID referencePerformerItemId; // 8C
-    uint8_t unk94[0xA0 - 0x94]; // 94
-    alignas(16) StaticArray<scn::events::AttachPropToWorldCachedFallbackBone, 2> fallbackCachedBones; // A0
-    Ref<anim::AnimSet> fallbackAnimset; // 110
-    CName fallbackAnimationName; // 128
-    float fallbackAnimTime; // 130
-    uint8_t unk134[0x140 - 0x134]; // 134
+    uint8_t unk94[0xB0 - 0x94]; // 94
 };
-RED4EXT_ASSERT_SIZE(AttachPropToWorld, 0x140);
+RED4EXT_ASSERT_SIZE(AttachPropToWorld, 0xB0);
 } // namespace scn::events
 } // namespace RED4ext

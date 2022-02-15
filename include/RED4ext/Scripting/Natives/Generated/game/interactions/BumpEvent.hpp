@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/BumpLocation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/BumpSide.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
@@ -27,8 +28,10 @@ struct BumpEvent : red::Event
     float sourceRadius; // 78
     bool isMounted; // 7C
     uint8_t unk7D[0x80 - 0x7D]; // 7D
+    ent::EntityID vehicleEntityID; // 80
+    uint8_t unk88[0x90 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(BumpEvent, 0x80);
+RED4EXT_ASSERT_SIZE(BumpEvent, 0x90);
 } // namespace game::interactions
 using BumpEvent = game::interactions::BumpEvent;
 } // namespace RED4ext

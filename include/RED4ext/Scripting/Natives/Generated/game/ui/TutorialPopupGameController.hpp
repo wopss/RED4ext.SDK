@@ -14,9 +14,9 @@ struct TutorialPopupGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiTutorialPopupGameController";
     static constexpr const char* ALIAS = "TutorialPopupGameController";
 
-    uint8_t unkD0[0xD8 - 0xD0]; // D0
+    uint8_t unkE0[0xE8 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(TutorialPopupGameController, 0xD8);
+RED4EXT_ASSERT_SIZE(TutorialPopupGameController, 0xE8);
 } // namespace game::ui
 using TutorialPopupGameController = game::ui::TutorialPopupGameController;
 } // namespace RED4ext

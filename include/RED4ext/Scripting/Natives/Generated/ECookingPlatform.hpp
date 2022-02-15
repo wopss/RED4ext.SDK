@@ -11,7 +11,10 @@ enum class ECookingPlatform : uint8_t
     PLATFORM_PC = 1,
     PLATFORM_XboxOne = 2,
     PLATFORM_PS4 = 3,
-    PLATFORM_WindowsServer = 4,
-    PLATFORM_LinuxServer = 5,
+    PLATFORM_PS5 = 4,
+    PLATFORM_XSX = 5,
+    PLATFORM_WindowsServer = 6,
+    PLATFORM_LinuxServer = 7,
+    PLATFORM_GGP = 8,
 };
 } // namespace RED4ext

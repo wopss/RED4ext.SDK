@@ -14,7 +14,6 @@
 
 namespace RED4ext
 {
-struct CResource;
 namespace anim { struct AnimSetEntry; }
 namespace anim { struct Rig; }
 
@@ -38,12 +37,11 @@ struct AnimSet : CResource
     uint16_t fallbackNumRotationData; // F2
     uint8_t unkF4[0x128 - 0xF4]; // F4
     Ref<anim::Rig> rig; // 128
-    Ref<CResource> correspondingArchetype; // 140
-    red::TagList tags; // 158
-    uint8_t unk168[0x1F0 - 0x168]; // 168
-    uint32_t version; // 1F0
-    uint8_t unk1F4[0x1F8 - 0x1F4]; // 1F4
+    red::TagList tags; // 140
+    uint8_t unk150[0x1D8 - 0x150]; // 150
+    uint32_t version; // 1D8
+    uint8_t unk1DC[0x1E0 - 0x1DC]; // 1DC
 };
-RED4EXT_ASSERT_SIZE(AnimSet, 0x1F8);
+RED4EXT_ASSERT_SIZE(AnimSet, 0x1E0);
 } // namespace anim
 } // namespace RED4ext

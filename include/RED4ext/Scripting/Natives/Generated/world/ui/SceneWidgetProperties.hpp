@@ -23,7 +23,7 @@ struct SceneWidgetProperties
     bool useCustomFaceVector; // 1C
     bool isInteractable; // 1D
     bool isInteractableFromBehind; // 1E
-    uint8_t unk1F[0x20 - 0x1F]; // 1F
+    bool isAlwaysVisible; // 1F
 };
 RED4EXT_ASSERT_SIZE(SceneWidgetProperties, 0x20);
 } // namespace world::ui

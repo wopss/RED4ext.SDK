@@ -20,13 +20,13 @@ struct LanguageSpecificImageController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkLanguageSpecificImageController";
     static constexpr const char* ALIAS = "LanguageSpecificImageController";
 
-    RaRef<ink::TextureAtlas> textureAtlasForLanguage; // 68
-    CName partNameForLanguage; // 70
-    DynArray<ink::LanguageId> languages; // 78
-    RaRef<ink::TextureAtlas> fallbackTextureAtlas; // 88
-    CName fallbackPartName; // 90
+    RaRef<ink::TextureAtlas> textureAtlasForLanguage; // 78
+    CName partNameForLanguage; // 80
+    DynArray<ink::LanguageId> languages; // 88
+    RaRef<ink::TextureAtlas> fallbackTextureAtlas; // 98
+    CName fallbackPartName; // A0
 };
-RED4EXT_ASSERT_SIZE(LanguageSpecificImageController, 0x98);
+RED4EXT_ASSERT_SIZE(LanguageSpecificImageController, 0xA8);
 } // namespace ink
 using LanguageSpecificImageController = ink::LanguageSpecificImageController;
 } // namespace RED4ext

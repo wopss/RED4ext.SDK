@@ -14,8 +14,8 @@ struct HudEntrySpawnedEvent : red::Event
     static constexpr const char* NAME = "inkHudEntrySpawnedEvent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x158 - 0x40]; // 40
+    uint8_t unk40[0x160 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(HudEntrySpawnedEvent, 0x158);
+RED4EXT_ASSERT_SIZE(HudEntrySpawnedEvent, 0x160);
 } // namespace ink
 } // namespace RED4ext

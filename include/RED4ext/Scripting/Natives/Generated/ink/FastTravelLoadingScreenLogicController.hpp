@@ -17,22 +17,22 @@ struct FastTravelLoadingScreenLogicController : ink::ILoadingLogicController
     static constexpr const char* NAME = "inkFastTravelLoadingScreenLogicController";
     static constexpr const char* ALIAS = "LoadingScreenLogicController";
 
-    uint8_t unk180[0x1C8 - 0x180]; // 180
-    ink::ImageWidgetReference mainBackgroundImage; // 1C8
-    ink::ImageWidgetReference supportBackgroundImage; // 1E0
-    uint8_t unk1F8[0x200 - 0x1F8]; // 1F8
-    CName breathInAnimName; // 200
-    CName breathOutAnimName; // 208
-    uint8_t unk210[0x278 - 0x210]; // 210
-    ink::RichTextBoxWidgetReference tooltipsWidget; // 278
-    uint8_t unk290[0x298 - 0x290]; // 290
-    CName tooltipAnimName; // 298
-    uint8_t unk2A0[0x310 - 0x2A0]; // 2A0
-    CName introAnimationName; // 310
-    CName loopAnimationName; // 318
-    uint8_t unk320[0x338 - 0x320]; // 320
+    uint8_t unk190[0x1D8 - 0x190]; // 190
+    ink::ImageWidgetReference mainBackgroundImage; // 1D8
+    ink::ImageWidgetReference supportBackgroundImage; // 1F0
+    uint8_t unk208[0x210 - 0x208]; // 208
+    CName breathInAnimName; // 210
+    CName breathOutAnimName; // 218
+    uint8_t unk220[0x288 - 0x220]; // 220
+    ink::RichTextBoxWidgetReference tooltipsWidget; // 288
+    uint8_t unk2A0[0x2A8 - 0x2A0]; // 2A0
+    CName tooltipAnimName; // 2A8
+    uint8_t unk2B0[0x320 - 0x2B0]; // 2B0
+    CName introAnimationName; // 320
+    CName loopAnimationName; // 328
+    uint8_t unk330[0x348 - 0x330]; // 330
 };
-RED4EXT_ASSERT_SIZE(FastTravelLoadingScreenLogicController, 0x338);
+RED4EXT_ASSERT_SIZE(FastTravelLoadingScreenLogicController, 0x348);
 } // namespace ink
 using LoadingScreenLogicController = ink::FastTravelLoadingScreenLogicController;
 } // namespace RED4ext

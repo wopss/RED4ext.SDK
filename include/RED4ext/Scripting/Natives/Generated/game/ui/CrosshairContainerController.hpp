@@ -15,9 +15,9 @@ struct CrosshairContainerController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameuiCrosshairContainerController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE8[0x1F0 - 0xE8]; // E8
-    TweakDBID defaultCrosshair; // 1F0
+    uint8_t unkF8[0x200 - 0xF8]; // F8
+    TweakDBID defaultCrosshair; // 200
 };
-RED4EXT_ASSERT_SIZE(CrosshairContainerController, 0x1F8);
+RED4EXT_ASSERT_SIZE(CrosshairContainerController, 0x208);
 } // namespace game::ui
 } // namespace RED4ext

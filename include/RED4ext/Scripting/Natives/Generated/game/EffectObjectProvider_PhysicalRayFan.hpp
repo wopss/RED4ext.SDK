@@ -15,8 +15,8 @@ struct EffectObjectProvider_PhysicalRayFan : game::EffectObjectProvider_Physical
     static constexpr const char* NAME = "gameEffectObjectProvider_PhysicalRayFan";
     static constexpr const char* ALIAS = NAME;
 
-    game::EffectInputParameter_Float inputMinRayAngleDiff; // E8
+    game::EffectInputParameter_Float inputMinRayAngleDiff; // F0
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_PhysicalRayFan, 0x100);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_PhysicalRayFan, 0x108);
 } // namespace game
 } // namespace RED4ext

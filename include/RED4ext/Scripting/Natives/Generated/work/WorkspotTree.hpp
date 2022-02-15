@@ -34,8 +34,7 @@ struct WorkspotTree : ISerializable
     red::TagList tags; // 48
     DynArray<work::TransitionAnim> customTransitionAnims; // 58
     RaRef<anim::Rig> workspotRig; // 68
-    DynArray<CName> availableRigSlots; // 70
-    DynArray<CName> availablePropIds; // 80
+    uint8_t unk70[0x90 - 0x70]; // 70
     DynArray<work::WorkspotGlobalProp> globalProps; // 90
     DynArray<Handle<work::IWorkspotItemAction>> initialActions; // A0
     bool dontInjectWorkspotGraph; // B0
@@ -48,29 +47,22 @@ struct WorkspotTree : ISerializable
     float inertializationDurationExitForced; // C8
     uint8_t unkCC[0xD0 - 0xCC]; // CC
     DynArray<work::WorkspotAnimsetEntry> finalAnimsets; // D0
-    uint8_t unkE0[0xE4 - 0xE0]; // E0
-    float autoTransitionBlendTime; // E4
+    float autoTransitionBlendTime; // E0
+    uint8_t unkE4[0xE8 - 0xE4]; // E4
     red::TagList whitelistVisualTags; // E8
     red::TagList blacklistVisualTags; // F8
     uint8_t unk108[0x118 - 0x108]; // 108
     TweakDBID statusEffectID; // 118
-    DynArray<work::WorkspotAnimsetEntry> animsets; // 120
-    bool hasEntityPathsGenerated; // 130
-    uint8_t unk131[0x138 - 0x131]; // 131
-    DynArray<CName> entitiesPaths; // 138
-    uint8_t unk148[0x149 - 0x148]; // 148
-    bool disableAutoAnimsetGeneraion; // 149
-    bool useTimeLimitForSequences; // 14A
-    uint8_t unk14B[0x14C - 0x14B]; // 14B
-    float sequencesTimeLimit; // 14C
-    uint8_t unk150[0x151 - 0x150]; // 150
-    bool snapToTerrain; // 151
-    bool unmountBodyCarry; // 152
-    uint8_t unk153[0x154 - 0x153]; // 153
-    CensorshipFlags censorshipFlags; // 154
-    work::WorkspotItemPolicy itemsPolicy; // 158
-    uint8_t unk15C[0x160 - 0x15C]; // 15C
+    bool useTimeLimitForSequences; // 120
+    uint8_t unk121[0x124 - 0x121]; // 121
+    float sequencesTimeLimit; // 124
+    bool snapToTerrain; // 128
+    bool unmountBodyCarry; // 129
+    uint8_t unk12A[0x12C - 0x12A]; // 12A
+    CensorshipFlags censorshipFlags; // 12C
+    work::WorkspotItemPolicy itemsPolicy; // 130
+    uint8_t unk134[0x138 - 0x134]; // 134
 };
-RED4EXT_ASSERT_SIZE(WorkspotTree, 0x160);
+RED4EXT_ASSERT_SIZE(WorkspotTree, 0x138);
 } // namespace work
 } // namespace RED4ext

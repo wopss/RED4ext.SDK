@@ -24,14 +24,13 @@ struct TriggerVOEvent : red::Event
     CName debugInitialContext; // 68
     uint64_t answeringEntityIDHash; // 70
     bool ignoreGlobalVoLimitCheck; // 78
-    uint8_t unk79[0x7C - 0x79]; // 79
-    loc::VoiceoverContext overridingVoContext; // 7C
-    loc::VoiceoverExpression overridingVoiceoverExpression; // 80
-    bool overrideVoiceoverExpression; // 84
-    uint8_t overridingVisualStyleValue; // 85
-    bool overrideVisualStyle; // 86
-    uint8_t unk87[0x88 - 0x87]; // 87
+    loc::VoiceoverContext overridingVoContext; // 79
+    loc::VoiceoverExpression overridingVoiceoverExpression; // 7A
+    bool overrideVoiceoverExpression; // 7B
+    uint8_t overridingVisualStyleValue; // 7C
+    bool overrideVisualStyle; // 7D
+    uint8_t unk7E[0x80 - 0x7E]; // 7E
 };
-RED4EXT_ASSERT_SIZE(TriggerVOEvent, 0x88);
+RED4EXT_ASSERT_SIZE(TriggerVOEvent, 0x80);
 } // namespace ent
 } // namespace RED4ext

@@ -24,7 +24,7 @@ struct WorldLayerDefinition : ink::LayerDefinition
     bool useCustomFaceVector; // 54
     uint8_t unk55[0x56 - 0x55]; // 55
     bool isInteractableFromBehind; // 56
-    uint8_t unk57[0x58 - 0x57]; // 57
+    bool isAlwaysVisible; // 57
 };
 RED4EXT_ASSERT_SIZE(WorldLayerDefinition, 0x58);
 } // namespace ink

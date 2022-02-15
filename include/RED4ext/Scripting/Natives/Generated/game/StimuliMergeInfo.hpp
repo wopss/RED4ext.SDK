@@ -7,6 +7,7 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/StimPropagation.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/StimTargets.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/StimType.hpp>
 
 namespace RED4ext
@@ -24,7 +25,8 @@ struct StimuliMergeInfo
     float radius; // 20
     game::data::StimType type; // 24
     game::data::StimPropagation propagationType; // 28
-    uint8_t unk2C[0x40 - 0x2C]; // 2C
+    game::data::StimTargets targets; // 2C
+    uint8_t unk30[0x40 - 0x30]; // 30
 };
 RED4EXT_ASSERT_SIZE(StimuliMergeInfo, 0x40);
 } // namespace game

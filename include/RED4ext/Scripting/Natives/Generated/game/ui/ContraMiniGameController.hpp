@@ -15,7 +15,7 @@ struct ContraMiniGameController : game::ui::SideScrollerMiniGameControllerAdvanc
     static constexpr const char* ALIAS = "ContraMiniGameController";
 
 };
-RED4EXT_ASSERT_SIZE(ContraMiniGameController, 0x100);
+RED4EXT_ASSERT_SIZE(ContraMiniGameController, 0x110);
 } // namespace game::ui
 using ContraMiniGameController = game::ui::ContraMiniGameController;
 } // namespace RED4ext

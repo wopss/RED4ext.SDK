@@ -14,9 +14,9 @@ struct TeleportationFacility : game::ITeleportationFacility
     static constexpr const char* NAME = "gameTeleportationFacility";
     static constexpr const char* ALIAS = "TeleportationFacility";
 
-    uint8_t unk48[0xC90 - 0x48]; // 48
+    uint8_t unk48[0x80 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(TeleportationFacility, 0xC90);
+RED4EXT_ASSERT_SIZE(TeleportationFacility, 0x80);
 } // namespace game
 using TeleportationFacility = game::TeleportationFacility;
 } // namespace RED4ext

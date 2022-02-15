@@ -33,9 +33,11 @@ struct RainAreaSettings : IAreaSettings
     CurveData<float> rainOverride; // E8
     CurveData<float> rainMoistureOverride; // 120
     CurveData<float> rainPuddlesOverride; // 158
-    Ref<CBitmapTexture> rainleaksMask; // 190
-    Ref<CBitmapTexture> raindropsMask; // 1A8
-    Ref<CBitmapTexture> rainRipplesMask; // 1C0
+    float waterRainIntensity; // 190
+    uint8_t unk194[0x198 - 0x194]; // 194
+    Ref<CBitmapTexture> rainleaksMask; // 198
+    Ref<CBitmapTexture> raindropsMask; // 1B0
+    Ref<CBitmapTexture> rainRipplesMask; // 1C8
 };
-RED4EXT_ASSERT_SIZE(RainAreaSettings, 0x1D8);
+RED4EXT_ASSERT_SIZE(RainAreaSettings, 0x1E0);
 } // namespace RED4ext

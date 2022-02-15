@@ -14,8 +14,8 @@ struct ChatBoxGameController : game::ui::HUDGameController
     static constexpr const char* NAME = "gameuiChatBoxGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE8[0xF0 - 0xE8]; // E8
+    uint8_t unkF8[0x100 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(ChatBoxGameController, 0xF0);
+RED4EXT_ASSERT_SIZE(ChatBoxGameController, 0x100);
 } // namespace game::ui
 } // namespace RED4ext

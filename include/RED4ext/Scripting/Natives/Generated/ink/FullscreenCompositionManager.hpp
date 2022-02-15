@@ -14,8 +14,8 @@ struct FullscreenCompositionManager : ISerializable
     static constexpr const char* NAME = "inkFullscreenCompositionManager";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0xD0 - 0x30]; // 30
+    uint8_t unk30[0xE0 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(FullscreenCompositionManager, 0xD0);
+RED4EXT_ASSERT_SIZE(FullscreenCompositionManager, 0xE0);
 } // namespace ink
 } // namespace RED4ext

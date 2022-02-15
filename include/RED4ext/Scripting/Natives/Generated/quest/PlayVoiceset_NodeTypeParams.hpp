@@ -24,15 +24,13 @@ struct PlayVoiceset_NodeTypeParams
     CName voicesetName; // 40
     bool useVoicesetSystem; // 48
     bool playOnlyGrunt; // 49
-    uint8_t unk4A[0x4C - 0x4A]; // 4A
-    loc::VoiceoverContext overridingVoiceoverContext; // 4C
-    bool overrideVoiceoverExpression; // 50
-    uint8_t unk51[0x54 - 0x51]; // 51
-    loc::VoiceoverExpression overridingVoiceoverExpression; // 54
-    bool overrideVisualStyle; // 58
-    scn::DialogLineVisualStyle overridingVisualStyle; // 59
-    uint8_t unk5A[0x60 - 0x5A]; // 5A
+    loc::VoiceoverContext overridingVoiceoverContext; // 4A
+    bool overrideVoiceoverExpression; // 4B
+    loc::VoiceoverExpression overridingVoiceoverExpression; // 4C
+    bool overrideVisualStyle; // 4D
+    scn::DialogLineVisualStyle overridingVisualStyle; // 4E
+    uint8_t unk4F[0x50 - 0x4F]; // 4F
 };
-RED4EXT_ASSERT_SIZE(PlayVoiceset_NodeTypeParams, 0x60);
+RED4EXT_ASSERT_SIZE(PlayVoiceset_NodeTypeParams, 0x50);
 } // namespace quest
 } // namespace RED4ext

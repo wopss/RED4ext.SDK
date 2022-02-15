@@ -14,9 +14,9 @@ struct VehicleSystem : game::IVehicleSystem
     static constexpr const char* NAME = "gameVehicleSystem";
     static constexpr const char* ALIAS = "VehicleSystem";
 
-    uint8_t unk50[0x1D980 - 0x50]; // 50
+    uint8_t unk50[0x208C0 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(VehicleSystem, 0x1D980);
+RED4EXT_ASSERT_SIZE(VehicleSystem, 0x208C0);
 } // namespace game
 using VehicleSystem = game::VehicleSystem;
 } // namespace RED4ext

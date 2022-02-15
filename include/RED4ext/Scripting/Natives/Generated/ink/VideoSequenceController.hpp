@@ -17,10 +17,10 @@ struct VideoSequenceController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkVideoSequenceController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::VideoWidgetReference videoWidget; // 68
-    DynArray<ink::VideoSequenceEntry> videoSequence; // 80
-    uint8_t unk90[0x98 - 0x90]; // 90
+    ink::VideoWidgetReference videoWidget; // 78
+    DynArray<ink::VideoSequenceEntry> videoSequence; // 90
+    uint8_t unkA0[0xA8 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(VideoSequenceController, 0x98);
+RED4EXT_ASSERT_SIZE(VideoSequenceController, 0xA8);
 } // namespace ink
 } // namespace RED4ext

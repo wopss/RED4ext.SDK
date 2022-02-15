@@ -16,9 +16,9 @@ struct BaseMenuGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiBaseMenuGameController";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<game::ui::BaseMenuGameControllerPuppetSceneInfo> puppetSceneInfos; // D0
-    uint8_t unkE0[0x130 - 0xE0]; // E0
+    DynArray<game::ui::BaseMenuGameControllerPuppetSceneInfo> puppetSceneInfos; // E0
+    uint8_t unkF0[0x140 - 0xF0]; // F0
 };
-RED4EXT_ASSERT_SIZE(BaseMenuGameController, 0x130);
+RED4EXT_ASSERT_SIZE(BaseMenuGameController, 0x140);
 } // namespace game::ui
 } // namespace RED4ext

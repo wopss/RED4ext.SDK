@@ -14,9 +14,9 @@ struct JournalEntry_NodeType : quest::IJournal_NodeType
     static constexpr const char* NAME = "questJournalEntry_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    bool sendNotification; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
+    bool sendNotification; // 48
+    uint8_t unk49[0x50 - 0x49]; // 49
 };
-RED4EXT_ASSERT_SIZE(JournalEntry_NodeType, 0x48);
+RED4EXT_ASSERT_SIZE(JournalEntry_NodeType, 0x50);
 } // namespace quest
 } // namespace RED4ext

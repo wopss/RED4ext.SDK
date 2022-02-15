@@ -17,7 +17,8 @@ struct DialogLineVoParams
     static constexpr const char* ALIAS = NAME;
 
     loc::VoiceoverContext voContext; // 00
-    loc::VoiceoverExpression voExpression; // 04
+    loc::VoiceoverExpression voExpression; // 01
+    uint8_t unk02[0x8 - 0x2]; // 2
     CName customVoEvent; // 08
     bool disableHeadMovement; // 10
     bool isHolocallSpeaker; // 11

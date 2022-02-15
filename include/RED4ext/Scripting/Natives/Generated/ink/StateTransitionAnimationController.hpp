@@ -16,10 +16,10 @@ struct StateTransitionAnimationController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkStateTransitionAnimationController";
     static constexpr const char* ALIAS = NAME;
 
-    bool stopActiveAnimation; // 68
-    uint8_t unk69[0x80 - 0x69]; // 69
-    DynArray<ink::WidgetStateAnimatedTransition> transition; // 80
+    bool stopActiveAnimation; // 78
+    uint8_t unk79[0x90 - 0x79]; // 79
+    DynArray<ink::WidgetStateAnimatedTransition> transition; // 90
 };
-RED4EXT_ASSERT_SIZE(StateTransitionAnimationController, 0x90);
+RED4EXT_ASSERT_SIZE(StateTransitionAnimationController, 0xA0);
 } // namespace ink
 } // namespace RED4ext

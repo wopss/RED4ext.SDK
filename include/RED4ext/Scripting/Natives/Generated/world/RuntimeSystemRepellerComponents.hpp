@@ -14,8 +14,8 @@ struct RuntimeSystemRepellerComponents : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemRepellerComponents";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x3A0 - 0x48]; // 48
+    uint8_t unk48[0x1B8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemRepellerComponents, 0x3A0);
+RED4EXT_ASSERT_SIZE(RuntimeSystemRepellerComponents, 0x1B8);
 } // namespace world
 } // namespace RED4ext

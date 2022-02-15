@@ -6,6 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/Quality.hpp>
 
 namespace RED4ext
 {
@@ -19,7 +20,7 @@ struct TelemetryQuickHack
     CString titleLocKey; // 08
     CString targetType; // 28
     TweakDBID quickHackRecordID; // 48
-    int32_t quality; // 50
+    game::data::Quality quality; // 50
     uint8_t unk54[0x58 - 0x54]; // 54
 };
 RED4EXT_ASSERT_SIZE(TelemetryQuickHack, 0x58);

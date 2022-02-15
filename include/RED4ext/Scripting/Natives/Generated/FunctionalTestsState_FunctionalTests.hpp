@@ -13,7 +13,7 @@ struct FunctionalTestsState_FunctionalTests : gsm::State
     static constexpr const char* NAME = "FunctionalTestsState_FunctionalTests";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkB8[0x170 - 0xB8]; // B8
+    uint8_t unkB8[0x190 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(FunctionalTestsState_FunctionalTests, 0x170);
+RED4EXT_ASSERT_SIZE(FunctionalTestsState_FunctionalTests, 0x190);
 } // namespace RED4ext

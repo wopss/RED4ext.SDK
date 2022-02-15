@@ -14,9 +14,9 @@ struct SmartCoverManager : AI::ISmartCoverManager
     static constexpr const char* NAME = "AISmartCoverManager";
     static constexpr const char* ALIAS = "CoverManager";
 
-    uint8_t unk48[0x260 - 0x48]; // 48
+    uint8_t unk48[0x228 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SmartCoverManager, 0x260);
+RED4EXT_ASSERT_SIZE(SmartCoverManager, 0x228);
 } // namespace AI
 using CoverManager = AI::SmartCoverManager;
 } // namespace RED4ext

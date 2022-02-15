@@ -15,9 +15,9 @@ struct VirtualUniformListController : ink::VirtualCompoundController
     static constexpr const char* NAME = "inkVirtualUniformListController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::WidgetLibraryReference itemTemplate; // 1E0
-    uint8_t unk1F0[0x208 - 0x1F0]; // 1F0
+    ink::WidgetLibraryReference itemTemplate; // 1F0
+    uint8_t unk200[0x218 - 0x200]; // 200
 };
-RED4EXT_ASSERT_SIZE(VirtualUniformListController, 0x208);
+RED4EXT_ASSERT_SIZE(VirtualUniformListController, 0x218);
 } // namespace ink
 } // namespace RED4ext

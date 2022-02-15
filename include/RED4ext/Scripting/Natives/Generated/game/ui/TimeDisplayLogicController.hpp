@@ -15,11 +15,11 @@ struct TimeDisplayLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiTimeDisplayLogicController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk68[0x70 - 0x68]; // 68
-    ink::TextWidgetReference timerText; // 70
-    ink::TextWidgetReference noConnectionText; // 88
-    uint8_t unkA0[0xB0 - 0xA0]; // A0
+    uint8_t unk78[0x80 - 0x78]; // 78
+    ink::TextWidgetReference timerText; // 80
+    ink::TextWidgetReference noConnectionText; // 98
+    uint8_t unkB0[0xC0 - 0xB0]; // B0
 };
-RED4EXT_ASSERT_SIZE(TimeDisplayLogicController, 0xB0);
+RED4EXT_ASSERT_SIZE(TimeDisplayLogicController, 0xC0);
 } // namespace game::ui
 } // namespace RED4ext

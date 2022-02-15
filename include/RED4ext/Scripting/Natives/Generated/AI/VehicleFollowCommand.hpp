@@ -25,9 +25,7 @@ struct VehicleFollowCommand : AI::VehicleCommand
     bool useTraffic; // 85
     bool trafficTryNeighborsForStart; // 86
     bool trafficTryNeighborsForEnd; // 87
-    bool allowStubMovement; // 88
-    uint8_t unk89[0x90 - 0x89]; // 89
 };
-RED4EXT_ASSERT_SIZE(VehicleFollowCommand, 0x90);
+RED4EXT_ASSERT_SIZE(VehicleFollowCommand, 0x88);
 } // namespace AI
 } // namespace RED4ext

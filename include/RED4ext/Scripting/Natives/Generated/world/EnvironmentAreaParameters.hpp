@@ -16,7 +16,7 @@ struct EnvironmentAreaParameters : CResource
     static constexpr const char* ALIAS = NAME;
 
     WorldRenderAreaSettings renderAreaSettings; // 40
-    bool resaved; // 50
+    uint8_t resourceVersion; // 50
     uint8_t unk51[0x58 - 0x51]; // 51
 };
 RED4EXT_ASSERT_SIZE(EnvironmentAreaParameters, 0x58);

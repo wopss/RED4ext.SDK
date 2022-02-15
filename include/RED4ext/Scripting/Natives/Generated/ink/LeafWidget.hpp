@@ -15,6 +15,6 @@ struct LeafWidget : ink::Widget
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(LeafWidget, 0x1F0);
+RED4EXT_ASSERT_SIZE(LeafWidget, 0x200);
 } // namespace ink
 } // namespace RED4ext

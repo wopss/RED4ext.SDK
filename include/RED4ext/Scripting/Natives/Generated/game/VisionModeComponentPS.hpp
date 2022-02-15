@@ -4,8 +4,6 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/CName.hpp>
-#include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ComponentPS.hpp>
 
 namespace RED4ext
@@ -21,9 +19,7 @@ struct VisionModeComponentPS : game::ComponentPS
     bool inactive; // 6A
     bool questInactive; // 6B
     uint8_t unk6C[0x70 - 0x6C]; // 6C
-    DynArray<CName> questForcedMeshes; // 70
-    DynArray<CName> questForcedModules; // 80
 };
-RED4EXT_ASSERT_SIZE(VisionModeComponentPS, 0x90);
+RED4EXT_ASSERT_SIZE(VisionModeComponentPS, 0x70);
 } // namespace game
 } // namespace RED4ext

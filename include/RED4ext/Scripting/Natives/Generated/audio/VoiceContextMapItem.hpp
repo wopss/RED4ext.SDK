@@ -25,6 +25,7 @@ struct VoiceContextMapItem : audio::AudioMetadata
     audio::VoGruntType grunt; // 44
     audio::VoiceContextAnswer answer; // 48
     loc::VoiceoverContext overridingVoContext; // 58
+    uint8_t unk59[0x5C - 0x59]; // 59
     audio::VoGruntInterruptMode gruntInterruptMode; // 5C
 };
 RED4EXT_ASSERT_SIZE(VoiceContextMapItem, 0x60);

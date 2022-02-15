@@ -14,8 +14,8 @@ struct FunctionalTestsDebuggerCommandData : work::DebuggerCommandData
     static constexpr const char* NAME = "workFunctionalTestsDebuggerCommandData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk10[0x20 - 0x10]; // 10
+    uint8_t unk20[0x30 - 0x20]; // 20
 };
-RED4EXT_ASSERT_SIZE(FunctionalTestsDebuggerCommandData, 0x20);
+RED4EXT_ASSERT_SIZE(FunctionalTestsDebuggerCommandData, 0x30);
 } // namespace work
 } // namespace RED4ext

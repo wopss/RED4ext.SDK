@@ -14,8 +14,8 @@ struct AnimNode_FPPCamera : anim::AnimNode_OnePoseInput
     static constexpr const char* NAME = "animAnimNode_FPPCamera";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk60[0x5C8 - 0x60]; // 60
+    uint8_t unk60[0x5D8 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AnimNode_FPPCamera, 0x5C8);
+RED4EXT_ASSERT_SIZE(AnimNode_FPPCamera, 0x5D8);
 } // namespace anim
 } // namespace RED4ext

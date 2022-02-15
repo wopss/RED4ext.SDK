@@ -15,6 +15,6 @@ struct TerrainProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(TerrainProxyMeshNode, 0x70);
+RED4EXT_ASSERT_SIZE(TerrainProxyMeshNode, 0x60);
 } // namespace world
 } // namespace RED4ext

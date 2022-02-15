@@ -29,9 +29,9 @@ struct MeshNode : world::Node
     RenderSceneLayerMask renderSceneLayerMask; // 52
     bool castShadows; // 53
     bool castLocalShadows; // 54
-    bool windImpulseEnabled; // 55
-    bool removeFromRainMap; // 56
-    uint8_t unk57[0x58 - 0x57]; // 57
+    bool castRayTracedLocalShadows; // 55
+    bool windImpulseEnabled; // 56
+    bool removeFromRainMap; // 57
 };
 RED4EXT_ASSERT_SIZE(MeshNode, 0x58);
 } // namespace world

@@ -17,11 +17,11 @@ struct CacheWidget : ink::CompoundWidget
     static constexpr const char* NAME = "inkCacheWidget";
     static constexpr const char* ALIAS = "inkCacheWidget";
 
-    CName externalDynamicTexture; // 220
-    Vector2 innerScale; // 228
-    ink::CacheMode mode; // 230
-    uint8_t unk231[0x2E0 - 0x231]; // 231
+    CName externalDynamicTexture; // 230
+    Vector2 innerScale; // 238
+    ink::CacheMode mode; // 240
+    uint8_t unk241[0x2F0 - 0x241]; // 241
 };
-RED4EXT_ASSERT_SIZE(CacheWidget, 0x2E0);
+RED4EXT_ASSERT_SIZE(CacheWidget, 0x2F0);
 } // namespace ink
 } // namespace RED4ext

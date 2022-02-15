@@ -4,7 +4,9 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/TelemetryInventoryItem.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/TelemetrySourceEntity.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/AttackType.hpp>
 
 namespace RED4ext
@@ -16,14 +18,16 @@ struct TelemetryDamage
     static constexpr const char* ALIAS = "TelemetryDamage";
 
     game::data::AttackType attackType; // 00
-    float damageAmount; // 04
-    game::TelemetryInventoryItem weapon; // 08
-    uint32_t hitCount; // 78
-    float distance; // 7C
-    float time; // 80
-    uint8_t unk84[0xA8 - 0x84]; // 84
+    TweakDBID attackRecord; // 04
+    float damageAmount; // 0C
+    game::TelemetryInventoryItem weapon; // 10
+    game::TelemetrySourceEntity sourceEntity; // 80
+    uint32_t hitCount; // A8
+    float distance; // AC
+    float time; // B0
+    uint8_t unkB4[0xD8 - 0xB4]; // B4
 };
-RED4EXT_ASSERT_SIZE(TelemetryDamage, 0xA8);
+RED4EXT_ASSERT_SIZE(TelemetryDamage, 0xD8);
 } // namespace game
 using TelemetryDamage = game::TelemetryDamage;
 } // namespace RED4ext

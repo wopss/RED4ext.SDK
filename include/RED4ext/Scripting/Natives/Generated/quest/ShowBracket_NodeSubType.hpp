@@ -8,6 +8,7 @@
 #include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/TutorialBracketType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/EAnchor.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/ELayerType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ITutorial_NodeSubType.hpp>
 
 namespace RED4ext
@@ -23,7 +24,8 @@ struct ShowBracket_NodeSubType : quest::ITutorial_NodeSubType
     uint8_t unk41[0x44 - 0x41]; // 41
     game::TutorialBracketType bracketType; // 44
     ink::EAnchor anchor; // 48
-    uint8_t unk49[0x4C - 0x49]; // 49
+    ink::ELayerType visibleOnUILayer; // 49
+    uint8_t unk4A[0x4C - 0x4A]; // 4A
     Vector2 offset; // 4C
     Vector2 size; // 54
     bool ignoreDisabledTutorials; // 5C

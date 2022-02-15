@@ -18,21 +18,21 @@ struct ReminderCondition : ISerializable
     static constexpr const char* NAME = "scnReminderCondition";
     static constexpr const char* ALIAS = NAME;
 
-    bool useCustomReminder; // 30
-    uint8_t unk31[0x34 - 0x31]; // 31
-    scn::ActorId reminderActor; // 34
-    scn::SceneTime waitTimeForReminderA; // 38
-    scn::SceneTime waitTimeForReminderB; // 3C
-    scn::SceneTime waitTimeForReminderC; // 40
-    scn::SceneTime waitTimeForLooping; // 44
-    scn::SceneTime startTime; // 48
-    scn::ReminderConditionProcessStep processStep; // 4C
-    bool playing; // 50
-    bool running; // 51
-    uint8_t unk52[0x54 - 0x52]; // 52
-    scn::ChoiceNodeNsReminderParams reminderParams; // 54
+    scn::ActorId reminderActor; // 30
+    uint8_t unk34[0x58 - 0x34]; // 34
+    scn::SceneTime waitTimeForReminderA; // 58
+    scn::SceneTime waitTimeForReminderB; // 5C
+    scn::SceneTime waitTimeForReminderC; // 60
+    scn::SceneTime waitTimeForLooping; // 64
+    scn::SceneTime startTime; // 68
     uint8_t unk6C[0x70 - 0x6C]; // 6C
+    scn::ReminderConditionProcessStep processStep; // 70
+    bool useCustomReminder; // 74
+    uint8_t unk75[0x76 - 0x75]; // 75
+    bool playing; // 76
+    bool running; // 77
+    scn::ChoiceNodeNsReminderParams reminderParams; // 78
 };
-RED4EXT_ASSERT_SIZE(ReminderCondition, 0x70);
+RED4EXT_ASSERT_SIZE(ReminderCondition, 0xB8);
 } // namespace scn
 } // namespace RED4ext

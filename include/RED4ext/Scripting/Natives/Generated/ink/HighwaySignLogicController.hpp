@@ -16,11 +16,11 @@ struct HighwaySignLogicController : ink::IStreetNameSignLogicController
     static constexpr const char* NAME = "inkHighwaySignLogicController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::TextWidgetReference districtName; // 68
-    ink::TextWidgetReference subDistrictName; // 80
-    ink::ImageWidgetReference metroStationIconLeft; // 98
-    ink::ImageWidgetReference metroStationIconRight; // B0
+    ink::TextWidgetReference districtName; // 78
+    ink::TextWidgetReference subDistrictName; // 90
+    ink::ImageWidgetReference metroStationIconLeft; // A8
+    ink::ImageWidgetReference metroStationIconRight; // C0
 };
-RED4EXT_ASSERT_SIZE(HighwaySignLogicController, 0xC8);
+RED4EXT_ASSERT_SIZE(HighwaySignLogicController, 0xD8);
 } // namespace ink
 } // namespace RED4ext

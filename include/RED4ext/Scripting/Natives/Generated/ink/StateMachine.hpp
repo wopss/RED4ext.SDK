@@ -4,12 +4,12 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/ISerializable.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/IStateMachine.hpp>
 
 namespace RED4ext
 {
 namespace ink { 
-struct StateMachine : ISerializable
+struct StateMachine : ink::IStateMachine
 {
     static constexpr const char* NAME = "inkStateMachine";
     static constexpr const char* ALIAS = NAME;

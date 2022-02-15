@@ -14,7 +14,6 @@
 
 namespace RED4ext
 {
-namespace ent { struct ColliderComponentShape; }
 namespace physics { struct FilterData; }
 namespace physics { struct ICollider; }
 
@@ -25,24 +24,22 @@ struct ColliderComponent : ent::IPlacedComponent
     static constexpr const char* ALIAS = "ColliderComponent";
 
     uint8_t unk120[0x138 - 0x120]; // 120
-    DynArray<Handle<ent::ColliderComponentShape>> shapes; // 138
-    DynArray<Handle<physics::ICollider>> colliders; // 148
-    physics::SimulationType simulationType; // 158
-    bool startInactive; // 159
-    bool useCCD; // 15A
-    bool sendOnStoppedMovingEvents; // 15B
-    uint8_t unk15C[0x160 - 0x15C]; // 15C
-    float massOverride; // 160
-    float mass; // 164
-    float volume; // 168
-    Vector3 inertia; // 16C
-    uint8_t unk178[0x180 - 0x178]; // 178
-    Transform comOffset; // 180
-    Handle<physics::FilterData> filterData; // 1A0
-    TrafficGenDynamicTrafficSetting dynamicTrafficSetting; // 1B0
-    uint8_t unk1B2[0x1E0 - 0x1B2]; // 1B2
+    DynArray<Handle<physics::ICollider>> colliders; // 138
+    physics::SimulationType simulationType; // 148
+    bool startInactive; // 149
+    bool useCCD; // 14A
+    uint8_t unk14B[0x14C - 0x14B]; // 14B
+    float massOverride; // 14C
+    float mass; // 150
+    float volume; // 154
+    Vector3 inertia; // 158
+    uint8_t unk164[0x170 - 0x164]; // 164
+    Transform comOffset; // 170
+    Handle<physics::FilterData> filterData; // 190
+    TrafficGenDynamicTrafficSetting dynamicTrafficSetting; // 1A0
+    uint8_t unk1A2[0x1D0 - 0x1A2]; // 1A2
 };
-RED4EXT_ASSERT_SIZE(ColliderComponent, 0x1E0);
+RED4EXT_ASSERT_SIZE(ColliderComponent, 0x1D0);
 } // namespace ent
 using ColliderComponent = ent::ColliderComponent;
 } // namespace RED4ext

@@ -15,6 +15,6 @@ struct State_PreGameSession : gsm::State_Session
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(State_PreGameSession, 0x300);
+RED4EXT_ASSERT_SIZE(State_PreGameSession, 0x320);
 } // namespace gsm
 } // namespace RED4ext

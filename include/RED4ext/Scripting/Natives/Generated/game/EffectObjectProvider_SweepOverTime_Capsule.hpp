@@ -14,9 +14,9 @@ struct EffectObjectProvider_SweepOverTime_Capsule : game::EffectObjectProvider_S
     static constexpr const char* NAME = "gameEffectObjectProvider_SweepOverTime_Capsule";
     static constexpr const char* ALIAS = NAME;
 
-    float radius; // 60
-    float height; // 64
+    float radius; // 68
+    float height; // 6C
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime_Capsule, 0x68);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime_Capsule, 0x70);
 } // namespace game
 } // namespace RED4ext

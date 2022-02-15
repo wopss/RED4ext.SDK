@@ -16,11 +16,11 @@ struct BaseShapeWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkBaseShapeWidget";
     static constexpr const char* ALIAS = "inkBaseShape";
 
-    uint8_t unk1F0[0x1F8 - 0x1F0]; // 1F0
-    DynArray<Vector2> vertexList; // 1F8
-    uint8_t unk208[0x220 - 0x208]; // 208
+    uint8_t unk200[0x208 - 0x200]; // 200
+    DynArray<Vector2> vertexList; // 208
+    uint8_t unk218[0x230 - 0x218]; // 218
 };
-RED4EXT_ASSERT_SIZE(BaseShapeWidget, 0x220);
+RED4EXT_ASSERT_SIZE(BaseShapeWidget, 0x230);
 } // namespace ink
 using inkBaseShape = ink::BaseShapeWidget;
 } // namespace RED4ext

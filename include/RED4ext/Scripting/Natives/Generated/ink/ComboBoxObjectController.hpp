@@ -17,13 +17,13 @@ struct ComboBoxObjectController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkComboBoxObjectController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::ShapeWidgetReference colliderRef; // 68
-    ink::WidgetReference placeholderOffsetWidgetRef; // 80
-    ink::WidgetReference contentWidgetRef; // 98
-    uint8_t unkB0[0xC4 - 0xB0]; // B0
-    ink::Margin offset; // C4
-    uint8_t unkD4[0xE8 - 0xD4]; // D4
+    ink::ShapeWidgetReference colliderRef; // 78
+    ink::WidgetReference placeholderOffsetWidgetRef; // 90
+    ink::WidgetReference contentWidgetRef; // A8
+    uint8_t unkC0[0xD4 - 0xC0]; // C0
+    ink::Margin offset; // D4
+    uint8_t unkE4[0xF8 - 0xE4]; // E4
 };
-RED4EXT_ASSERT_SIZE(ComboBoxObjectController, 0xE8);
+RED4EXT_ASSERT_SIZE(ComboBoxObjectController, 0xF8);
 } // namespace ink
 } // namespace RED4ext

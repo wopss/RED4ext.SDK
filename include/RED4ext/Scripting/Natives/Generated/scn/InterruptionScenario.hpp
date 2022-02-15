@@ -38,7 +38,8 @@ struct InterruptionScenario
     scn::InterruptionScenarioId id; // 50
     uint8_t unk54[0x58 - 0x54]; // 54
     CName name; // 58
+    CName queueName; // 60
 };
-RED4EXT_ASSERT_SIZE(InterruptionScenario, 0x60);
+RED4EXT_ASSERT_SIZE(InterruptionScenario, 0x68);
 } // namespace scn
 } // namespace RED4ext

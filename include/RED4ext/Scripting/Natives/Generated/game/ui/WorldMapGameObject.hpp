@@ -16,9 +16,9 @@ struct WorldMapGameObject : game::Object
     static constexpr const char* NAME = "gameuiWorldMapGameObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk240[0x3A8 - 0x240]; // 240
-    DynArray<game::ui::DistrictTriggerData> districts; // 3A8
+    uint8_t unk240[0x3E0 - 0x240]; // 240
+    DynArray<game::ui::DistrictTriggerData> districts; // 3E0
 };
-RED4EXT_ASSERT_SIZE(WorldMapGameObject, 0x3B8);
+RED4EXT_ASSERT_SIZE(WorldMapGameObject, 0x3F0);
 } // namespace game::ui
 } // namespace RED4ext

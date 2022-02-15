@@ -15,9 +15,9 @@ struct SceneTier3Data : game::SceneTierDataMotionConstrained
     static constexpr const char* NAME = "gameSceneTier3Data";
     static constexpr const char* ALIAS = "SceneTier3Data";
 
-    game::Tier3CameraSettings cameraSettings; // 68
+    game::Tier3CameraSettings cameraSettings; // 88
 };
-RED4EXT_ASSERT_SIZE(SceneTier3Data, 0x80);
+RED4EXT_ASSERT_SIZE(SceneTier3Data, 0xA0);
 } // namespace game
 using SceneTier3Data = game::SceneTier3Data;
 } // namespace RED4ext

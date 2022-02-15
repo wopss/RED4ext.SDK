@@ -14,8 +14,8 @@ struct BriefingGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiBriefingGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0x1D8 - 0xD0]; // D0
+    uint8_t unkE0[0x1E8 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(BriefingGameController, 0x1D8);
+RED4EXT_ASSERT_SIZE(BriefingGameController, 0x1E8);
 } // namespace game::ui
 } // namespace RED4ext

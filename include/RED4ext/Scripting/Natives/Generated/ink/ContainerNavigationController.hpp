@@ -16,10 +16,10 @@ struct ContainerNavigationController : ink::DiscreteNavigationController
     static constexpr const char* NAME = "inkContainerNavigationController";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<ink::NavigationOverrideEntry> overrideEntries; // B0
-    bool useGlobalInput; // C0
-    uint8_t unkC1[0xE8 - 0xC1]; // C1
+    DynArray<ink::NavigationOverrideEntry> overrideEntries; // C0
+    bool useGlobalInput; // D0
+    uint8_t unkD1[0xF8 - 0xD1]; // D1
 };
-RED4EXT_ASSERT_SIZE(ContainerNavigationController, 0xE8);
+RED4EXT_ASSERT_SIZE(ContainerNavigationController, 0xF8);
 } // namespace ink
 } // namespace RED4ext

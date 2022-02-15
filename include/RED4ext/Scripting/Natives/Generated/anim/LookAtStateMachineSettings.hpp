@@ -26,8 +26,10 @@ struct LookAtStateMachineSettings
     float transitionSpeedMultiplier; // 68
     float blendWeightPowFactor; // 6C
     CName coneLimitReached; // 70
+    bool allowToBlendBehindBack; // 78
+    uint8_t unk79[0x80 - 0x79]; // 79
 };
-RED4EXT_ASSERT_SIZE(LookAtStateMachineSettings, 0x78);
+RED4EXT_ASSERT_SIZE(LookAtStateMachineSettings, 0x80);
 } // namespace anim
 using LookAtStateMachineSettings = anim::LookAtStateMachineSettings;
 } // namespace RED4ext

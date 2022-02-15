@@ -16,16 +16,16 @@ struct TooltipsManager : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiTooltipsManager";
     static constexpr const char* ALIAS = "gameuiTooltipsManager";
 
-    uint8_t unk68[0x6D - 0x68]; // 68
-    bool flipX; // 6D
-    bool flipY; // 6E
-    uint8_t unk6F[0x70 - 0x6F]; // 6F
-    ink::Margin rootMargin; // 70
-    uint8_t unk80[0xC0 - 0x80]; // 80
-    ink::Margin screenMargin; // C0
-    ink::WidgetReference tooltipsContainer; // D0
-    uint8_t unkE8[0x120 - 0xE8]; // E8
+    uint8_t unk78[0x7D - 0x78]; // 78
+    bool flipX; // 7D
+    bool flipY; // 7E
+    uint8_t unk7F[0x80 - 0x7F]; // 7F
+    ink::Margin rootMargin; // 80
+    uint8_t unk90[0xD0 - 0x90]; // 90
+    ink::Margin screenMargin; // D0
+    ink::WidgetReference tooltipsContainer; // E0
+    uint8_t unkF8[0x130 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(TooltipsManager, 0x120);
+RED4EXT_ASSERT_SIZE(TooltipsManager, 0x130);
 } // namespace game::ui
 } // namespace RED4ext

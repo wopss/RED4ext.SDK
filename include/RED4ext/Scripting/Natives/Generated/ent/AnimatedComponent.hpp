@@ -32,21 +32,21 @@ struct AnimatedComponent : ent::ISkinableComponent
     uint8_t unk168[0x180 - 0x168]; // 168
     red::TagList animTags; // 180
     anim::AnimSetup animations; // 190
-    uint8_t unk1B0[0x1E8 - 0x1B0]; // 1B0
-    RaRef<anim::FacialSetup> facialSetup; // 1E8
-    uint8_t unk1F0[0x250 - 0x1F0]; // 1F0
-    int32_t serverForcedLod; // 250
-    int32_t clientForcedLod; // 254
-    bool serverForcedVisibility; // 258
-    bool clientForcedVisibility; // 259
-    bool useLongRangeVisibility; // 25A
-    bool calculateAccelerationWs; // 25B
-    uint8_t unk25C[0x268 - 0x25C]; // 25C
-    DynArray<ent::AnimTrackParameter> animParameters; // 268
-    Handle<ent::AnimationControlBinding> controlBinding; // 278
-    uint8_t unk288[0x2A0 - 0x288]; // 288
+    uint8_t unk1B8[0x1F8 - 0x1B8]; // 1B8
+    RaRef<anim::FacialSetup> facialSetup; // 1F8
+    uint8_t unk200[0x260 - 0x200]; // 200
+    int32_t serverForcedLod; // 260
+    int32_t clientForcedLod; // 264
+    bool serverForcedVisibility; // 268
+    bool clientForcedVisibility; // 269
+    bool useLongRangeVisibility; // 26A
+    bool calculateAccelerationWs; // 26B
+    uint8_t unk26C[0x278 - 0x26C]; // 26C
+    DynArray<ent::AnimTrackParameter> animParameters; // 278
+    Handle<ent::AnimationControlBinding> controlBinding; // 288
+    uint8_t unk298[0x2B0 - 0x298]; // 298
 };
-RED4EXT_ASSERT_SIZE(AnimatedComponent, 0x2A0);
+RED4EXT_ASSERT_SIZE(AnimatedComponent, 0x2B0);
 } // namespace ent
 using AnimatedComponent = ent::AnimatedComponent;
 } // namespace RED4ext

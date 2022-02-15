@@ -14,8 +14,8 @@ struct SystemImpl : AI::ISystem
     static constexpr const char* NAME = "AISystemImpl";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x210 - 0x48]; // 48
+    uint8_t unk48[0x220 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SystemImpl, 0x210);
+RED4EXT_ASSERT_SIZE(SystemImpl, 0x220);
 } // namespace AI
 } // namespace RED4ext

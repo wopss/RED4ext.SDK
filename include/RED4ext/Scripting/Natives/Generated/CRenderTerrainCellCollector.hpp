@@ -13,7 +13,7 @@ struct CRenderTerrainCellCollector : ISceneStorageCustomData
     static constexpr const char* NAME = "CRenderTerrainCellCollector";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x1480 - 0x18]; // 18
+    uint8_t unk18[0x1490 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CRenderTerrainCellCollector, 0x1480);
+RED4EXT_ASSERT_SIZE(CRenderTerrainCellCollector, 0x1490);
 } // namespace RED4ext

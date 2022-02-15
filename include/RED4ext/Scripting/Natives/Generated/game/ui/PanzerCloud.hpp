@@ -15,7 +15,7 @@ struct PanzerCloud : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
     static constexpr const char* ALIAS = "PanzerCloud";
 
 };
-RED4EXT_ASSERT_SIZE(PanzerCloud, 0xC0);
+RED4EXT_ASSERT_SIZE(PanzerCloud, 0xD0);
 } // namespace game::ui
 using PanzerCloud = game::ui::PanzerCloud;
 } // namespace RED4ext

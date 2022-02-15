@@ -25,12 +25,17 @@ struct AnimFeature_Crowd : anim::AnimFeature
     int32_t fearStage; // 60
     int32_t startType; // 64
     int32_t fleeType; // 68
-    float lookAtAngle; // 6C
-    float startDirectionAngle; // 70
-    float animTime; // 74
-    bool isBlocked; // 78
-    uint8_t unk79[0x80 - 0x79]; // 79
+    float randomVariation; // 6C
+    float lookAtAngle; // 70
+    float startDirectionAngle; // 74
+    float animTime; // 78
+    float animScale; // 7C
+    float slopeRatio; // 80
+    float distanceToPlayer2D; // 84
+    float angleToPlayer; // 88
+    bool isBlocked; // 8C
+    uint8_t unk8D[0x90 - 0x8D]; // 8D
 };
-RED4EXT_ASSERT_SIZE(AnimFeature_Crowd, 0x80);
+RED4EXT_ASSERT_SIZE(AnimFeature_Crowd, 0x90);
 } // namespace anim
 } // namespace RED4ext

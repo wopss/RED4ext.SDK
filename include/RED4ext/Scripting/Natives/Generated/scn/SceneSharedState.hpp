@@ -20,13 +20,13 @@ struct SceneSharedState : ISerializable
     uint8_t unk30[0x40 - 0x30]; // 30
     CName entrypoint; // 40
     DynArray<scn::SyncNodeSignal> syncNodesVisited; // 48
-    uint8_t unk58[0x160 - 0x58]; // 58
-    uint64_t instanceHash; // 160
-    uint8_t unk168[0x188 - 0x168]; // 168
-    bool finishedOnClient; // 188
-    bool finishedOnServer; // 189
-    uint8_t unk18A[0x190 - 0x18A]; // 18A
+    uint8_t unk58[0x150 - 0x58]; // 58
+    uint64_t instanceHash; // 150
+    uint8_t unk158[0x178 - 0x158]; // 158
+    bool finishedOnClient; // 178
+    bool finishedOnServer; // 179
+    uint8_t unk17A[0x180 - 0x17A]; // 17A
 };
-RED4EXT_ASSERT_SIZE(SceneSharedState, 0x190);
+RED4EXT_ASSERT_SIZE(SceneSharedState, 0x180);
 } // namespace scn
 } // namespace RED4ext

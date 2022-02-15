@@ -17,7 +17,8 @@ struct WaterPatchNode : world::MeshNode
 
     world::WaterPatchNodeType type; // 58
     float depth; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    bool generateNavmesh; // 6C
+    uint8_t unk6D[0x70 - 0x6D]; // 6D
 };
 RED4EXT_ASSERT_SIZE(WaterPatchNode, 0x70);
 } // namespace world

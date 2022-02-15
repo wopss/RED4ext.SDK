@@ -6,7 +6,7 @@
 namespace RED4ext
 {
 namespace AI::behavior { 
-enum class CombatModes : uint32_t
+enum class CombatModes : uint8_t
 {
     Default = 0,
     LowFPS = 1,

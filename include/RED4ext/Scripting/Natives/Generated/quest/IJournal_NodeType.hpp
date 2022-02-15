@@ -17,8 +17,9 @@ struct IJournal_NodeType : quest::IRetNodeType
     static constexpr const char* NAME = "questIJournal_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<game::JournalPath> path; // 30
+    uint8_t unk30[0x38 - 0x30]; // 30
+    Handle<game::JournalPath> path; // 38
 };
-RED4EXT_ASSERT_SIZE(IJournal_NodeType, 0x40);
+RED4EXT_ASSERT_SIZE(IJournal_NodeType, 0x48);
 } // namespace quest
 } // namespace RED4ext

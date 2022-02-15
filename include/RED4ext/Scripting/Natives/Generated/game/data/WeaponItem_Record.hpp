@@ -14,9 +14,9 @@ struct WeaponItem_Record : game::data::Item_Record
     static constexpr const char* NAME = "gamedataWeaponItem_Record";
     static constexpr const char* ALIAS = "WeaponItem_Record";
 
-    uint8_t unk130[0x188 - 0x130]; // 130
+    uint8_t unk148[0x1A8 - 0x148]; // 148
 };
-RED4EXT_ASSERT_SIZE(WeaponItem_Record, 0x188);
+RED4EXT_ASSERT_SIZE(WeaponItem_Record, 0x1A8);
 } // namespace game::data
 using WeaponItem_Record = game::data::WeaponItem_Record;
 } // namespace RED4ext

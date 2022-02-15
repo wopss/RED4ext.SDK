@@ -14,8 +14,8 @@ struct MachineplayeractionsLocomotionLadder : game::state::MachineplayeractionsL
     static constexpr const char* NAME = "gamestateMachineplayeractionsLocomotionLadder";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk120[0x1D0 - 0x120]; // 120
+    uint8_t unk120[0x1C0 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionLadder, 0x1D0);
+RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionLadder, 0x1C0);
 } // namespace game::state
 } // namespace RED4ext

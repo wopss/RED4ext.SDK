@@ -6,6 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EffectObjectProvider.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/QueryPreset.hpp>
 
 namespace RED4ext
 {
@@ -18,8 +19,9 @@ struct EffectObjectProvider_SweepOverTime : game::EffectObjectProvider
     static constexpr const char* ALIAS = NAME;
 
     Handle<physics::FilterData> filterData; // 40
-    uint8_t unk50[0x60 - 0x50]; // 50
+    physics::QueryPreset queryPreset; // 50
+    uint8_t unk58[0x68 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime, 0x60);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime, 0x68);
 } // namespace game
 } // namespace RED4ext

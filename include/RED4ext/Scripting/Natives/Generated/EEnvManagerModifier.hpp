@@ -77,5 +77,8 @@ enum class EEnvManagerModifier : uint32_t
     EMM_TodvisBakePreview = 67,
     EMM_RainMask = 68,
     EMM_VolFogDensity = 69,
+    EMM_PBRValidationBaseColor = 70,
+    EMM_PBRValidationMetalness = 71,
+    EMM_GreyPlayMode = 72,
 };
 } // namespace RED4ext

@@ -17,13 +17,13 @@ struct QuadRacerRoad : game::ui::SideScrollerMiniGameDynObjectLogic
     static constexpr const char* NAME = "gameuiQuadRacerRoad";
     static constexpr const char* ALIAS = "QuadRacerRoad";
 
-    ink::QuadWidgetReference roadQuad; // 80
-    ink::QuadWidgetReference leftBackground; // 98
-    ink::QuadWidgetReference rightBackground; // B0
-    DynArray<CName> groundParts; // C8
-    DynArray<CName> roadParts; // D8
+    ink::QuadWidgetReference roadQuad; // 90
+    ink::QuadWidgetReference leftBackground; // A8
+    ink::QuadWidgetReference rightBackground; // C0
+    DynArray<CName> groundParts; // D8
+    DynArray<CName> roadParts; // E8
 };
-RED4EXT_ASSERT_SIZE(QuadRacerRoad, 0xE8);
+RED4EXT_ASSERT_SIZE(QuadRacerRoad, 0xF8);
 } // namespace game::ui
 using QuadRacerRoad = game::ui::QuadRacerRoad;
 } // namespace RED4ext

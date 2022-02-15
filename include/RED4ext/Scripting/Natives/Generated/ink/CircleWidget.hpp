@@ -14,11 +14,11 @@ struct CircleWidget : ink::BaseShapeWidget
     static constexpr const char* NAME = "inkCircleWidget";
     static constexpr const char* ALIAS = "inkCircle";
 
-    uint8_t unk220[0x224 - 0x220]; // 220
-    uint32_t segmentsNumber; // 224
-    uint8_t unk228[0x230 - 0x228]; // 228
+    uint8_t unk230[0x234 - 0x230]; // 230
+    uint32_t segmentsNumber; // 234
+    uint8_t unk238[0x240 - 0x238]; // 238
 };
-RED4EXT_ASSERT_SIZE(CircleWidget, 0x230);
+RED4EXT_ASSERT_SIZE(CircleWidget, 0x240);
 } // namespace ink
 using inkCircle = ink::CircleWidget;
 } // namespace RED4ext

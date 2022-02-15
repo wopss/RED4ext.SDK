@@ -19,12 +19,13 @@ struct IMaterialDefinition : IMaterial
     uint8_t unk78[0xB8 - 0x78]; // 78
     DynArray<EMaterialVertexFactory> vertexFactories; // B8
     NativeArray<uint32_t, 3> paramBlockSize; // C8
-    bool compileAllTechniques; // D4
-    bool canHaveTangentUpdate; // D5
-    bool canHaveDismemberment; // D6
-    bool hasDPL; // D7
-    uint8_t materialVersion; // D8
-    uint8_t unkD9[0xE0 - 0xD9]; // D9
+    bool canHaveTangentUpdate; // D4
+    bool canHaveDismemberment; // D5
+    bool hasDPL; // D6
+    bool canBeMasked; // D7
+    bool allowVariableRateShading; // D8
+    uint8_t materialVersion; // D9
+    uint8_t unkDA[0xE0 - 0xDA]; // DA
 };
 RED4EXT_ASSERT_SIZE(IMaterialDefinition, 0xE0);
 } // namespace RED4ext

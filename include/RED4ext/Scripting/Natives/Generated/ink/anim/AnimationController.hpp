@@ -14,8 +14,8 @@ struct AnimationController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkanimAnimationController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk68[0x98 - 0x68]; // 68
+    uint8_t unk78[0xA8 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(AnimationController, 0x98);
+RED4EXT_ASSERT_SIZE(AnimationController, 0xA8);
 } // namespace ink::anim
 } // namespace RED4ext

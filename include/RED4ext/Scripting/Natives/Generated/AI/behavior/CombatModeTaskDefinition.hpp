@@ -16,6 +16,7 @@ struct CombatModeTaskDefinition : AI::behavior::TaskDefinition
     static constexpr const char* ALIAS = NAME;
 
     AI::behavior::CombatModes mode; // 38
+    uint8_t unk39[0x3C - 0x39]; // 39
     int32_t priority; // 3C
     float timeToLive; // 40
     uint8_t unk44[0x48 - 0x44]; // 44

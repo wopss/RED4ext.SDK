@@ -15,6 +15,6 @@ struct QuestResource : quest::QuestPhaseResource
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(QuestResource, 0x60);
+RED4EXT_ASSERT_SIZE(QuestResource, 0x70);
 } // namespace quest
 } // namespace RED4ext

@@ -15,12 +15,12 @@ struct HackingMinigameGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiHackingMinigameGameController";
     static constexpr const char* ALIAS = "HackingMinigameGameController";
 
-    uint8_t unkD0[0x1B8 - 0xD0]; // D0
-    TweakDBID symbolsRecordTDBID; // 1B8
-    TweakDBID minigameDefaultsTDBID; // 1C0
-    uint8_t unk1C8[0x1F8 - 0x1C8]; // 1C8
+    uint8_t unkE0[0x1C8 - 0xE0]; // E0
+    TweakDBID symbolsRecordTDBID; // 1C8
+    TweakDBID minigameDefaultsTDBID; // 1D0
+    uint8_t unk1D8[0x208 - 0x1D8]; // 1D8
 };
-RED4EXT_ASSERT_SIZE(HackingMinigameGameController, 0x1F8);
+RED4EXT_ASSERT_SIZE(HackingMinigameGameController, 0x208);
 } // namespace game::ui
 using HackingMinigameGameController = game::ui::HackingMinigameGameController;
 } // namespace RED4ext

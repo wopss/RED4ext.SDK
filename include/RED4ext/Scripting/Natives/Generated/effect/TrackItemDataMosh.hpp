@@ -21,7 +21,14 @@ struct TrackItemDataMosh : effect::TrackItem
     bool useGlitch; // 69
     uint8_t unk6A[0x70 - 0x6A]; // 6A
     effect::EffectParameterEvaluatorVector glitchColor; // 70
+    bool usePixelsort; // 88
+    uint8_t unk89[0x90 - 0x89]; // 89
+    effect::EffectParameterEvaluatorFloat pixelsortIntensity; // 90
+    bool pixelsortOverride; // B0
+    bool pixelsortStencil; // B1
+    bool pixelsortVfx; // B2
+    uint8_t unkB3[0xB8 - 0xB3]; // B3
 };
-RED4EXT_ASSERT_SIZE(TrackItemDataMosh, 0x88);
+RED4EXT_ASSERT_SIZE(TrackItemDataMosh, 0xB8);
 } // namespace effect
 } // namespace RED4ext

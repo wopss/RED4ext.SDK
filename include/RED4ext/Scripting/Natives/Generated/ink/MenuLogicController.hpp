@@ -15,6 +15,6 @@ struct MenuLogicController : ink::WidgetLogicController
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(MenuLogicController, 0x68);
+RED4EXT_ASSERT_SIZE(MenuLogicController, 0x78);
 } // namespace ink
 } // namespace RED4ext

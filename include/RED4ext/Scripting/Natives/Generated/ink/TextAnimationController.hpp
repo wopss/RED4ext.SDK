@@ -15,18 +15,18 @@ struct TextAnimationController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkTextAnimationController";
     static constexpr const char* ALIAS = "inkTextAnimationController";
 
-    uint8_t unk68[0x98 - 0x68]; // 68
-    bool playOnInitialize; // 98
-    uint8_t unk99[0xA4 - 0x99]; // 99
-    float duration; // A4
-    float startDelay; // A8
-    float startValue; // AC
-    float endValue; // B0
-    uint8_t unkB4[0xB8 - 0xB4]; // B4
-    CName animationName; // B8
-    bool useDefaultAnimation; // C0
-    uint8_t unkC1[0xE0 - 0xC1]; // C1
+    uint8_t unk78[0xA8 - 0x78]; // 78
+    bool playOnInitialize; // A8
+    uint8_t unkA9[0xB4 - 0xA9]; // A9
+    float duration; // B4
+    float startDelay; // B8
+    float startValue; // BC
+    float endValue; // C0
+    uint8_t unkC4[0xC8 - 0xC4]; // C4
+    CName animationName; // C8
+    bool useDefaultAnimation; // D0
+    uint8_t unkD1[0xF0 - 0xD1]; // D1
 };
-RED4EXT_ASSERT_SIZE(TextAnimationController, 0xE0);
+RED4EXT_ASSERT_SIZE(TextAnimationController, 0xF0);
 } // namespace ink
 } // namespace RED4ext

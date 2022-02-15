@@ -14,8 +14,8 @@ struct Window : ink::CanvasWidget
     static constexpr const char* NAME = "inkWindow";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk220[0x260 - 0x220]; // 220
+    uint8_t unk230[0x270 - 0x230]; // 230
 };
-RED4EXT_ASSERT_SIZE(Window, 0x260);
+RED4EXT_ASSERT_SIZE(Window, 0x270);
 } // namespace ink
 } // namespace RED4ext

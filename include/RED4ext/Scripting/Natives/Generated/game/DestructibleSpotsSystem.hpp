@@ -12,10 +12,10 @@ namespace game {
 struct DestructibleSpotsSystem : world::IDestructibleSpotsSystem
 {
     static constexpr const char* NAME = "gameDestructibleSpotsSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "gameDestructibleSpotsSystem";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x80 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DestructibleSpotsSystem, 0x58);
+RED4EXT_ASSERT_SIZE(DestructibleSpotsSystem, 0x80);
 } // namespace game
 } // namespace RED4ext

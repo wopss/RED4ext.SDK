@@ -15,10 +15,10 @@ struct MainMenuGameController : game::ui::MenuItemListGameController
     static constexpr const char* NAME = "gameuiMainMenuGameController";
     static constexpr const char* ALIAS = "MainMenuGameController";
 
-    ink::CompoundWidgetReference backgroundContainer; // 140
-    uint8_t unk158[0x190 - 0x158]; // 158
+    ink::CompoundWidgetReference backgroundContainer; // 170
+    uint8_t unk188[0x1C0 - 0x188]; // 188
 };
-RED4EXT_ASSERT_SIZE(MainMenuGameController, 0x190);
+RED4EXT_ASSERT_SIZE(MainMenuGameController, 0x1C0);
 } // namespace game::ui
 using MainMenuGameController = game::ui::MainMenuGameController;
 } // namespace RED4ext

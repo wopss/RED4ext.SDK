@@ -15,7 +15,7 @@ struct BaseCharacterCreationController : game::ui::MenuGameController
     static constexpr const char* ALIAS = "BaseCharacterCreationController";
 
 };
-RED4EXT_ASSERT_SIZE(BaseCharacterCreationController, 0xD0);
+RED4EXT_ASSERT_SIZE(BaseCharacterCreationController, 0xF0);
 } // namespace game::ui
 using BaseCharacterCreationController = game::ui::BaseCharacterCreationController;
 } // namespace RED4ext

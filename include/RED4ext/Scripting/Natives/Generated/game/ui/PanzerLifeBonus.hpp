@@ -15,7 +15,7 @@ struct PanzerLifeBonus : game::ui::PanzerBonus
     static constexpr const char* ALIAS = "PanzerLifeBonus";
 
 };
-RED4EXT_ASSERT_SIZE(PanzerLifeBonus, 0xD8);
+RED4EXT_ASSERT_SIZE(PanzerLifeBonus, 0xE8);
 } // namespace game::ui
 using PanzerLifeBonus = game::ui::PanzerLifeBonus;
 } // namespace RED4ext

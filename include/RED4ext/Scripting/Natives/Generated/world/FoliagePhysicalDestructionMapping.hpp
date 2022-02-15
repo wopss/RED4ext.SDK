@@ -20,7 +20,6 @@ struct FoliagePhysicalDestructionMapping : world::FoliageDestructionMapping
 
     CName audioMetadata; // 68
     physics::DestructionParams destructionParams; // 70
-    uint8_t unkB4[0xB8 - 0xB4]; // B4
     DynArray<physics::DestructionLevelData> destructionLevelData; // B8
 };
 RED4EXT_ASSERT_SIZE(FoliagePhysicalDestructionMapping, 0xC8);

@@ -15,9 +15,9 @@ struct SceneTierDataMotionConstrained : game::SceneTierData
     static constexpr const char* NAME = "gameSceneTierDataMotionConstrained";
     static constexpr const char* ALIAS = "SceneTierDataMotionConstrained";
 
-    game::MotionConstrainedTierDataParams params; // 48
+    game::MotionConstrainedTierDataParams params; // 68
 };
-RED4EXT_ASSERT_SIZE(SceneTierDataMotionConstrained, 0x68);
+RED4EXT_ASSERT_SIZE(SceneTierDataMotionConstrained, 0x88);
 } // namespace game
 using SceneTierDataMotionConstrained = game::SceneTierDataMotionConstrained;
 } // namespace RED4ext

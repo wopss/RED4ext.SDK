@@ -14,10 +14,10 @@ struct TextOffsetAnimationController : ink::TextAnimationController
     static constexpr const char* NAME = "inkTextOffsetAnimationController";
     static constexpr const char* ALIAS = "inkTextOffsetController";
 
-    uint8_t unkE0[0x164 - 0xE0]; // E0
-    float timeToSkip; // 164
+    uint8_t unkF0[0x174 - 0xF0]; // F0
+    float timeToSkip; // 174
 };
-RED4EXT_ASSERT_SIZE(TextOffsetAnimationController, 0x168);
+RED4EXT_ASSERT_SIZE(TextOffsetAnimationController, 0x178);
 } // namespace ink
 using inkTextOffsetController = ink::TextOffsetAnimationController;
 } // namespace RED4ext

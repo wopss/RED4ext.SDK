@@ -15,11 +15,11 @@ struct IWidgetController : IScriptable
     static constexpr const char* NAME = "inkIWidgetController";
     static constexpr const char* ALIAS = "inkIGameController";
 
-    uint8_t unk40[0x60 - 0x40]; // 40
-    CName audioMetadataName; // 60
-    uint8_t unk68[0x98 - 0x68]; // 68
+    uint8_t unk40[0x70 - 0x40]; // 40
+    CName audioMetadataName; // 70
+    uint8_t unk78[0xA8 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(IWidgetController, 0x98);
+RED4EXT_ASSERT_SIZE(IWidgetController, 0xA8);
 } // namespace ink
 using inkIGameController = ink::IWidgetController;
 } // namespace RED4ext

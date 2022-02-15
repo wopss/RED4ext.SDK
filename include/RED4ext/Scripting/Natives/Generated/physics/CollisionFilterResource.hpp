@@ -20,11 +20,12 @@ struct CollisionFilterResource : ISerializable
 
     Ref<JsonResource> collisionPresetJson; // 30
     Ref<JsonResource> overridesJson; // 48
-    uint8_t unk60[0x80 - 0x60]; // 60
-    alignas(8) StaticArray<CName, 64> collisionGroups; // 80
-    alignas(8) StaticArray<CName, 64> queryGroups; // 288
-    uint8_t unk490[0x710 - 0x490]; // 490
+    Ref<JsonResource> queryPresetJson; // 60
+    uint8_t unk78[0xA8 - 0x78]; // 78
+    alignas(8) StaticArray<CName, 64> collisionGroups; // A8
+    alignas(8) StaticArray<CName, 64> queryGroups; // 2B0
+    uint8_t unk4B8[0x738 - 0x4B8]; // 4B8
 };
-RED4EXT_ASSERT_SIZE(CollisionFilterResource, 0x710);
+RED4EXT_ASSERT_SIZE(CollisionFilterResource, 0x738);
 } // namespace physics
 } // namespace RED4ext

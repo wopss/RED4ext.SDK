@@ -17,21 +17,20 @@ struct BaseWorldMapMappinController : game::ui::InteractionMappinController
     static constexpr const char* NAME = "gameuiBaseWorldMapMappinController";
     static constexpr const char* ALIAS = "BaseWorldMapMappinController";
 
-    bool selected; // 2A0
-    bool inZoomLevel; // 2A1
-    bool inCustomFilter; // 2A2
-    bool hasCustomFilter; // 2A3
-    bool isFastTravelEnabled; // 2A4
-    bool isVisibleInFilterAndZoom; // 2A5
-    uint8_t unk2A6[0x2C0 - 0x2A6]; // 2A6
-    game::ui::MappinGroupState groupState; // 2C0
-    uint8_t collectionCount; // 2C4
-    uint8_t unk2C5[0x2E8 - 0x2C5]; // 2C5
-    ink::WidgetReference groupContainerWidget; // 2E8
-    ink::TextWidgetReference groupCountTextWidget; // 300
-    uint8_t unk318[0x320 - 0x318]; // 318
+    bool selected; // 2B0
+    bool inZoomLevel; // 2B1
+    bool inCustomFilter; // 2B2
+    bool hasCustomFilter; // 2B3
+    bool isFastTravelEnabled; // 2B4
+    bool isVisibleInFilterAndZoom; // 2B5
+    uint8_t unk2B6[0x2D0 - 0x2B6]; // 2B6
+    game::ui::MappinGroupState groupState; // 2D0
+    uint8_t collectionCount; // 2D4
+    uint8_t unk2D5[0x300 - 0x2D5]; // 2D5
+    ink::WidgetReference groupContainerWidget; // 300
+    ink::TextWidgetReference groupCountTextWidget; // 318
 };
-RED4EXT_ASSERT_SIZE(BaseWorldMapMappinController, 0x320);
+RED4EXT_ASSERT_SIZE(BaseWorldMapMappinController, 0x330);
 } // namespace game::ui
 using BaseWorldMapMappinController = game::ui::BaseWorldMapMappinController;
 } // namespace RED4ext

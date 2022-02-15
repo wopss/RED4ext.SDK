@@ -18,14 +18,14 @@ struct JournalBulkUpdate_NodeType : quest::IJournal_NodeType
     static constexpr const char* NAME = "questJournalBulkUpdate_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<game::JournalPath> path; // 40
-    CName requiredEntryType; // 50
-    CName requiredEntryState; // 58
-    CName newEntryState; // 60
-    bool sendNotification; // 68
-    bool propagateChange; // 69
-    uint8_t unk6A[0x70 - 0x6A]; // 6A
+    Handle<game::JournalPath> path; // 48
+    CName requiredEntryType; // 58
+    CName requiredEntryState; // 60
+    CName newEntryState; // 68
+    bool sendNotification; // 70
+    bool propagateChange; // 71
+    uint8_t unk72[0x78 - 0x72]; // 72
 };
-RED4EXT_ASSERT_SIZE(JournalBulkUpdate_NodeType, 0x70);
+RED4EXT_ASSERT_SIZE(JournalBulkUpdate_NodeType, 0x78);
 } // namespace quest
 } // namespace RED4ext

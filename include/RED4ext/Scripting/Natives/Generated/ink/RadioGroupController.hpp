@@ -17,13 +17,13 @@ struct RadioGroupController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkRadioGroupController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::RadioGroupChangedCallback ValueChanged; // 68
-    int32_t selectedIndex; // A0
-    bool alwaysToggled; // A4
-    uint8_t unkA5[0xA8 - 0xA5]; // A5
-    DynArray<ink::WidgetReference> toggleRefs; // A8
-    uint8_t unkB8[0xC8 - 0xB8]; // B8
+    ink::RadioGroupChangedCallback ValueChanged; // 78
+    int32_t selectedIndex; // B0
+    bool alwaysToggled; // B4
+    uint8_t unkB5[0xB8 - 0xB5]; // B5
+    DynArray<ink::WidgetReference> toggleRefs; // B8
+    uint8_t unkC8[0xD8 - 0xC8]; // C8
 };
-RED4EXT_ASSERT_SIZE(RadioGroupController, 0xC8);
+RED4EXT_ASSERT_SIZE(RadioGroupController, 0xD8);
 } // namespace ink
 } // namespace RED4ext

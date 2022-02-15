@@ -17,11 +17,11 @@ struct BaseObject : game::Object
     static constexpr const char* NAME = "vehicleBaseObject";
     static constexpr const char* ALIAS = "VehicleObject";
 
-    uint8_t unk240[0x350 - 0x240]; // 240
-    Ref<AI::Archetype> archetype; // 350
-    uint8_t unk368[0x910 - 0x368]; // 368
+    uint8_t unk240[0x370 - 0x240]; // 240
+    Ref<AI::Archetype> archetype; // 370
+    uint8_t unk388[0x980 - 0x388]; // 388
 };
-RED4EXT_ASSERT_SIZE(BaseObject, 0x910);
+RED4EXT_ASSERT_SIZE(BaseObject, 0x980);
 } // namespace vehicle
 using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext

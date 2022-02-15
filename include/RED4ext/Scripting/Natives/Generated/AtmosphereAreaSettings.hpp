@@ -50,39 +50,6 @@ struct AtmosphereAreaSettings : IAreaSettings
     CurveData<float> probeAlphaOverrideHorizon; // 640
     CurveData<HDRColor> probeColorOverrideZenith; // 678
     CurveData<float> probeAlphaOverrideZenith; // 6B0
-    CurveData<float> cloudSunShadowFaloff; // 6E8
-    CurveData<float> cloudSunScattering; // 720
-    CurveData<float> cloudMoonScattering; // 758
-    CurveData<float> cloudCirrusOpacity; // 790
-    CurveData<float> cloudAmbientIntensity; // 7C8
-    CurveData<float> cloudCirrusScale; // 800
-    CurveData<float> cloudCirrusAltitude; // 838
-    Ref<CBitmapTexture> cloudCirrusTexture; // 870
-    Ref<CBitmapTexture> volWeatherTexture; // 888
-    Ref<CBitmapTexture> volNoiseTexture; // 8A0
-    CurveData<float> volCoverage; // 8B8
-    float volHorizonCoverage; // 8F0
-    uint8_t unk8F4[0x8F8 - 0x8F4]; // 8F4
-    CurveData<float> volDensity; // 8F8
-    float cloudsBottom; // 930
-    float cloudsTop; // 934
-    float rayStartOffset; // 938
-    float rayStartFalloff; // 93C
-    CurveData<float> lightIntensity; // 940
-    CurveData<float> reflectionProbeLightIntensity; // 978
-    CurveData<float> shadowIntensity; // 9B0
-    CurveData<float> worldShadowIntensity; // 9E8
-    CurveData<float> ambientIntensity; // A20
-    float inScatter; // A58
-    float outScatter; // A5C
-    float inVsOutScatter; // A60
-    float silverLining; // A64
-    uint8_t unkA68[0xA70 - 0xA68]; // A68
-    CurveData<float> ambientOutscatter; // A70
-    float volCoverageWindInfluence; // AA8
-    float volNoiseWindInfluence; // AAC
-    float volDetailWindInfluence; // AB0
-    float volDistantFogOpacity; // AB4
 };
-RED4EXT_ASSERT_SIZE(AtmosphereAreaSettings, 0xAB8);
+RED4EXT_ASSERT_SIZE(AtmosphereAreaSettings, 0x6E8);
 } // namespace RED4ext

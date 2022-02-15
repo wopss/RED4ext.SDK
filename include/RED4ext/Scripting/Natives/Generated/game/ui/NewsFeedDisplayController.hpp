@@ -17,11 +17,11 @@ struct NewsFeedDisplayController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiNewsFeedDisplayController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk68[0x90 - 0x68]; // 68
-    ink::TextWidgetReference newsTitleWidget; // 90
-    CName randomNewsLibraryWidget; // A8
-    ink::CompoundWidgetReference randomNewsContainer; // B0
+    uint8_t unk78[0xA0 - 0x78]; // 78
+    ink::TextWidgetReference newsTitleWidget; // A0
+    CName randomNewsLibraryWidget; // B8
+    ink::CompoundWidgetReference randomNewsContainer; // C0
 };
-RED4EXT_ASSERT_SIZE(NewsFeedDisplayController, 0xC8);
+RED4EXT_ASSERT_SIZE(NewsFeedDisplayController, 0xD8);
 } // namespace game::ui
 } // namespace RED4ext

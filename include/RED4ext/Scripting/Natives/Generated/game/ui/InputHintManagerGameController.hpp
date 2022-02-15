@@ -17,20 +17,20 @@ struct InputHintManagerGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiInputHintManagerGameController";
     static constexpr const char* ALIAS = "InputHintManagerGameController";
 
-    uint8_t unkD0[0x1D0 - 0xD0]; // D0
-    ink::CompoundWidgetReference baseGroupContainer; // 1D0
-    ink::CompoundWidgetReference groupsContainer; // 1E8
-    ink::WidgetLibraryReference hintLibRef; // 200
-    uint8_t unk210[0x218 - 0x210]; // 210
-    ink::WidgetLibraryReference groupLibRef; // 218
-    uint8_t unk228[0x230 - 0x228]; // 228
-    CName hintContainerId; // 230
-    uint8_t unk238[0x254 - 0x238]; // 238
-    bool sortInputHints; // 254
-    bool useHideOptim; // 255
-    uint8_t unk256[0x258 - 0x256]; // 256
+    uint8_t unkE0[0x1E0 - 0xE0]; // E0
+    ink::CompoundWidgetReference baseGroupContainer; // 1E0
+    ink::CompoundWidgetReference groupsContainer; // 1F8
+    ink::WidgetLibraryReference hintLibRef; // 210
+    uint8_t unk220[0x228 - 0x220]; // 220
+    ink::WidgetLibraryReference groupLibRef; // 228
+    uint8_t unk238[0x240 - 0x238]; // 238
+    CName hintContainerId; // 240
+    uint8_t unk248[0x264 - 0x248]; // 248
+    bool sortInputHints; // 264
+    bool useHideOptim; // 265
+    uint8_t unk266[0x268 - 0x266]; // 266
 };
-RED4EXT_ASSERT_SIZE(InputHintManagerGameController, 0x258);
+RED4EXT_ASSERT_SIZE(InputHintManagerGameController, 0x268);
 } // namespace game::ui
 using InputHintManagerGameController = game::ui::InputHintManagerGameController;
 } // namespace RED4ext

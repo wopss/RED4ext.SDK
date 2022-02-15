@@ -15,11 +15,11 @@ struct CharacterCustomizationGenitalsController : game::ui::CharacterCustomizati
     static constexpr const char* NAME = "gameuiCharacterCustomizationGenitalsController";
     static constexpr const char* ALIAS = NAME;
 
-    CName upperBodyGroupName; // A8
-    CName bottomBodyGroupName; // B0
-    bool forceHideGenitals; // B8
-    uint8_t unkB9[0x168 - 0xB9]; // B9
+    CName upperBodyGroupName; // C0
+    CName bottomBodyGroupName; // C8
+    bool forceHideGenitals; // D0
+    uint8_t unkD1[0x180 - 0xD1]; // D1
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationGenitalsController, 0x168);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationGenitalsController, 0x180);
 } // namespace game::ui
 } // namespace RED4ext

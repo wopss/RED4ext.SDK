@@ -15,6 +15,6 @@ struct PlayerListGameController : game::ui::HUDGameController
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(PlayerListGameController, 0xE8);
+RED4EXT_ASSERT_SIZE(PlayerListGameController, 0xF8);
 } // namespace game::ui
 } // namespace RED4ext

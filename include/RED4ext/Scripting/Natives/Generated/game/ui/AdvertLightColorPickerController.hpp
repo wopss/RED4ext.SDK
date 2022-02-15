@@ -15,9 +15,9 @@ struct AdvertLightColorPickerController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiAdvertLightColorPickerController";
     static constexpr const char* ALIAS = NAME;
 
-    Color lightColor; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    Color lightColor; // 78
+    uint8_t unk7C[0x80 - 0x7C]; // 7C
 };
-RED4EXT_ASSERT_SIZE(AdvertLightColorPickerController, 0x70);
+RED4EXT_ASSERT_SIZE(AdvertLightColorPickerController, 0x80);
 } // namespace game::ui
 } // namespace RED4ext

@@ -19,7 +19,6 @@ struct AnimationSetupExtensionComponent : ent::IComponent
     static constexpr const char* ALIAS = NAME;
 
     anim::AnimSetup animations; // 90
-    uint8_t unkB0[0xB8 - 0xB0]; // B0
     Handle<ent::AnimationControlBinding> controlBinding; // B8
 };
 RED4EXT_ASSERT_SIZE(AnimationSetupExtensionComponent, 0xC8);

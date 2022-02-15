@@ -9,6 +9,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/EffectInputParameter_Vector.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EffectObjectProvider.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EffectOutputParameter_Vector.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/QueryPreset.hpp>
 
 namespace RED4ext
 {
@@ -25,8 +26,9 @@ struct EffectObjectProvider_PhysicalRay : game::EffectObjectProvider
     game::EffectInputParameter_Float inputRange; // 70
     game::EffectOutputParameter_Vector outputRaycastEnd; // 88
     Handle<physics::FilterData> filterData; // C8
-    uint8_t unkD8[0xE8 - 0xD8]; // D8
+    physics::QueryPreset queryPreset; // D8
+    uint8_t unkE0[0xF0 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(EffectObjectProvider_PhysicalRay, 0xE8);
+RED4EXT_ASSERT_SIZE(EffectObjectProvider_PhysicalRay, 0xF0);
 } // namespace game
 } // namespace RED4ext

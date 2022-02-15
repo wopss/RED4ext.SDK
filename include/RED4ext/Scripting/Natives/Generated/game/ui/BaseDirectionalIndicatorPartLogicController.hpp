@@ -14,11 +14,11 @@ struct BaseDirectionalIndicatorPartLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiBaseDirectionalIndicatorPartLogicController";
     static constexpr const char* ALIAS = "BaseDirectionalIndicatorPartLogicController";
 
-    uint8_t unk68[0xB8 - 0x68]; // 68
-    float defaultForwardFovRange; // B8
-    float adjustedForwardFovRange; // BC
+    uint8_t unk78[0xC8 - 0x78]; // 78
+    float defaultForwardFovRange; // C8
+    float adjustedForwardFovRange; // CC
 };
-RED4EXT_ASSERT_SIZE(BaseDirectionalIndicatorPartLogicController, 0xC0);
+RED4EXT_ASSERT_SIZE(BaseDirectionalIndicatorPartLogicController, 0xD0);
 } // namespace game::ui
 using BaseDirectionalIndicatorPartLogicController = game::ui::BaseDirectionalIndicatorPartLogicController;
 } // namespace RED4ext

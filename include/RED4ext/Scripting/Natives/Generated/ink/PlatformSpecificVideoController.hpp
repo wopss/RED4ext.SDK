@@ -17,13 +17,13 @@ struct PlatformSpecificVideoController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkPlatformSpecificVideoController";
     static constexpr const char* ALIAS = "PlatformSpecificVideoController";
 
-    RaRef<Bink> video; // 68
-    RaRef<Bink> video_PS4; // 70
-    RaRef<Bink> video_XB1; // 78
-    bool isLooped; // 80
-    uint8_t unk81[0x88 - 0x81]; // 81
+    RaRef<Bink> video; // 78
+    RaRef<Bink> video_PS4; // 80
+    RaRef<Bink> video_XB1; // 88
+    bool isLooped; // 90
+    uint8_t unk91[0x98 - 0x91]; // 91
 };
-RED4EXT_ASSERT_SIZE(PlatformSpecificVideoController, 0x88);
+RED4EXT_ASSERT_SIZE(PlatformSpecificVideoController, 0x98);
 } // namespace ink
 using PlatformSpecificVideoController = ink::PlatformSpecificVideoController;
 } // namespace RED4ext

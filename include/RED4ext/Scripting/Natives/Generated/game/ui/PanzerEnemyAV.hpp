@@ -14,13 +14,13 @@ struct PanzerEnemyAV : game::ui::PanzerEnemy
     static constexpr const char* NAME = "gameuiPanzerEnemyAV";
     static constexpr const char* ALIAS = "PanzerEnemyAV";
 
-    float speed; // 128
-    uint32_t shotsAmount; // 12C
-    float longShotInterval; // 130
-    float shortShotInterval; // 134
-    uint8_t unk138[0x140 - 0x138]; // 138
+    float speed; // 138
+    uint32_t shotsAmount; // 13C
+    float longShotInterval; // 140
+    float shortShotInterval; // 144
+    uint8_t unk148[0x150 - 0x148]; // 148
 };
-RED4EXT_ASSERT_SIZE(PanzerEnemyAV, 0x140);
+RED4EXT_ASSERT_SIZE(PanzerEnemyAV, 0x150);
 } // namespace game::ui
 using PanzerEnemyAV = game::ui::PanzerEnemyAV;
 } // namespace RED4ext

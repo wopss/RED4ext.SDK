@@ -23,7 +23,6 @@ struct PhysicalDestructionNode : world::Node
     static constexpr const char* ALIAS = "PhysicalDestructionNode";
 
     physics::DestructionParams destructionParams; // 38
-    uint8_t unk7C[0x80 - 0x7C]; // 7C
     DynArray<physics::DestructionLevelData> destructionLevelData; // 80
     RaRef<CMesh> mesh; // 90
     CName meshAppearance; // 98
@@ -31,8 +30,9 @@ struct PhysicalDestructionNode : world::Node
     float forceAutoHideDistance; // A8
     int32_t forceLODLevel; // AC
     NavGenNavigationSetting navigationSetting; // B0
-    bool useMeshNavmeshSettings; // B2
-    uint8_t unkB3[0xB8 - 0xB3]; // B3
+    uint16_t systemsToNotifyFlags; // B2
+    bool useMeshNavmeshSettings; // B4
+    uint8_t unkB5[0xB8 - 0xB5]; // B5
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionNode, 0xB8);
 } // namespace world

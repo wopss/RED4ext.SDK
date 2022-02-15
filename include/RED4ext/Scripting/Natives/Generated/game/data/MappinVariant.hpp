@@ -132,12 +132,16 @@ enum class MappinVariant : uint32_t
     Zzz01_CarForPurchaseVariant = 121,
     Zzz02_MotorcycleForPurchaseVariant = 122,
     Zzz03_MotorcycleVariant = 123,
-    CPO_PingDoorVariant = 124,
-    CPO_PingGoHereVariant = 125,
-    CPO_PingLootVariant = 126,
-    CPO_RemotePlayerVariant = 127,
-    Count = 128,
-    Invalid = 129,
+    Zzz04_PreventionVehicleVariant = 124,
+    Zzz05_ApartmentToPurchaseVariant = 125,
+    Zzz06_NCPDGigVariant = 126,
+    Zzz07_PlayerStashVariant = 127,
+    CPO_PingDoorVariant = 128,
+    CPO_PingGoHereVariant = 129,
+    CPO_PingLootVariant = 130,
+    CPO_RemotePlayerVariant = 131,
+    Count = 132,
+    Invalid = 133,
 };
 } // namespace game::data
 } // namespace RED4ext

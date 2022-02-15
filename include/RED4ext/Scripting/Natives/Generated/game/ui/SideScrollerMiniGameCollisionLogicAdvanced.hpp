@@ -14,9 +14,9 @@ struct SideScrollerMiniGameCollisionLogicAdvanced : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameCollisionLogicAdvanced";
     static constexpr const char* ALIAS = "MinigameCollisionLogicAdvanced";
 
-    uint8_t unk68[0xB0 - 0x68]; // 68
+    uint8_t unk78[0xC0 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(SideScrollerMiniGameCollisionLogicAdvanced, 0xB0);
+RED4EXT_ASSERT_SIZE(SideScrollerMiniGameCollisionLogicAdvanced, 0xC0);
 } // namespace game::ui
 using MinigameCollisionLogicAdvanced = game::ui::SideScrollerMiniGameCollisionLogicAdvanced;
 } // namespace RED4ext

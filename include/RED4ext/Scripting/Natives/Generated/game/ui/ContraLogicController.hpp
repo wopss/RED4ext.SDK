@@ -15,40 +15,40 @@ struct ContraLogicController : game::ui::SideScrollerMiniGameLogicControllerAdva
     static constexpr const char* NAME = "gameuiContraLogicController";
     static constexpr const char* ALIAS = "ContraLogicController";
 
-    float playerSpawnHeight; // 138
-    uint8_t unk13C[0x140 - 0x13C]; // 13C
-    CName mainMenuScreenLibraryName; // 140
-    CName scoreboardScreenLibraryName; // 148
-    CName uiLayerName; // 150
-    CName gameLayerName; // 158
-    CName platformLayerName; // 160
-    CName backgroundLayerName; // 168
-    CName jumpKey; // 170
-    CName goDownKey; // 178
-    CName goLeftKey; // 180
-    CName goRightKey; // 188
-    CName lieDownKey; // 190
-    CName shootKey; // 198
-    CName submitKey; // 1A0
-    float axisDeadZone; // 1A8
-    uint8_t unk1AC[0x1B0 - 0x1AC]; // 1AC
-    CName moveXAxis; // 1B0
-    CName moveYAxis; // 1B8
-    CName shootTriggerName; // 1C0
-    uint8_t unk1C8[0x1E0 - 0x1C8]; // 1C8
-    CName tileLibraryName; // 1E0
-    CName platformLibraryName; // 1E8
-    CName platformTexturePartName; // 1F0
-    CName RoadTexturePartName; // 1F8
-    float middlePlatformMinDistance; // 200
-    float middlePlatformMaxDistance; // 204
-    float topPlatformPosition; // 208
-    float bottomPlatformPosition; // 20C
-    CName fenceLibraryName; // 210
-    float fenceSpawnDistance; // 218
-    uint8_t unk21C[0x240 - 0x21C]; // 21C
+    float playerSpawnHeight; // 148
+    uint8_t unk14C[0x150 - 0x14C]; // 14C
+    CName mainMenuScreenLibraryName; // 150
+    CName scoreboardScreenLibraryName; // 158
+    CName uiLayerName; // 160
+    CName gameLayerName; // 168
+    CName platformLayerName; // 170
+    CName backgroundLayerName; // 178
+    CName jumpKey; // 180
+    CName goDownKey; // 188
+    CName goLeftKey; // 190
+    CName goRightKey; // 198
+    CName lieDownKey; // 1A0
+    CName shootKey; // 1A8
+    CName submitKey; // 1B0
+    float axisDeadZone; // 1B8
+    uint8_t unk1BC[0x1C0 - 0x1BC]; // 1BC
+    CName moveXAxis; // 1C0
+    CName moveYAxis; // 1C8
+    CName shootTriggerName; // 1D0
+    uint8_t unk1D8[0x1F0 - 0x1D8]; // 1D8
+    CName tileLibraryName; // 1F0
+    CName platformLibraryName; // 1F8
+    CName platformTexturePartName; // 200
+    CName RoadTexturePartName; // 208
+    float middlePlatformMinDistance; // 210
+    float middlePlatformMaxDistance; // 214
+    float topPlatformPosition; // 218
+    float bottomPlatformPosition; // 21C
+    CName fenceLibraryName; // 220
+    float fenceSpawnDistance; // 228
+    uint8_t unk22C[0x250 - 0x22C]; // 22C
 };
-RED4EXT_ASSERT_SIZE(ContraLogicController, 0x240);
+RED4EXT_ASSERT_SIZE(ContraLogicController, 0x250);
 } // namespace game::ui
 using ContraLogicController = game::ui::ContraLogicController;
 } // namespace RED4ext

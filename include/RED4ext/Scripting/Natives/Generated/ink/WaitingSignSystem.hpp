@@ -14,8 +14,8 @@ struct WaitingSignSystem : ink::IWaitingSignSystem
     static constexpr const char* NAME = "inkWaitingSignSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x188 - 0x40]; // 40
+    uint8_t unk40[0x178 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(WaitingSignSystem, 0x188);
+RED4EXT_ASSERT_SIZE(WaitingSignSystem, 0x178);
 } // namespace ink
 } // namespace RED4ext

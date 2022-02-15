@@ -18,11 +18,11 @@ struct QuadShapeWidget : ink::BaseShapeWidget
     static constexpr const char* NAME = "inkQuadShapeWidget";
     static constexpr const char* ALIAS = "inkQuadShape";
 
-    RaRef<ink::TextureAtlas> textureAtlas; // 220
-    CName texturePart; // 228
-    uint8_t unk230[0x270 - 0x230]; // 230
+    RaRef<ink::TextureAtlas> textureAtlas; // 230
+    CName texturePart; // 238
+    uint8_t unk240[0x280 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(QuadShapeWidget, 0x270);
+RED4EXT_ASSERT_SIZE(QuadShapeWidget, 0x280);
 } // namespace ink
 using inkQuadShape = ink::QuadShapeWidget;
 } // namespace RED4ext

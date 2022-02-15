@@ -8,6 +8,7 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/CommunityID.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/CommunityEntryInitialState.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/CommunityRegistryItemAreaNodeType.hpp>
 
 namespace RED4ext
 {
@@ -22,7 +23,7 @@ struct CommunityRegistryItem
     DynArray<world::CommunityEntryInitialState> entriesInitialState; // 00
     Handle<community::CommunityTemplateData> template_; // 10 -- template
     game::CommunityID communityId; // 20
-    bool communityIsBackground; // 28
+    world::CommunityRegistryItemAreaNodeType communityAreaType; // 28
     uint8_t unk29[0x30 - 0x29]; // 29
 };
 RED4EXT_ASSERT_SIZE(CommunityRegistryItem, 0x30);

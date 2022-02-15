@@ -14,10 +14,11 @@ struct TransitionAnim
     static constexpr const char* NAME = "workTransitionAnim";
     static constexpr const char* ALIAS = NAME;
 
-    CName fromIdle; // 00
-    CName toIdle; // 08
-    CName transitionAnim; // 10
+    CName idleA; // 00
+    CName idleB; // 08
+    CName transitionAtoB; // 10
+    CName transitionBtoA; // 18
 };
-RED4EXT_ASSERT_SIZE(TransitionAnim, 0x18);
+RED4EXT_ASSERT_SIZE(TransitionAnim, 0x20);
 } // namespace work
 } // namespace RED4ext

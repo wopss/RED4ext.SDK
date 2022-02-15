@@ -16,12 +16,12 @@ struct MappinBaseController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiMappinBaseController";
     static constexpr const char* ALIAS = "BaseMappinBaseController";
 
-    uint8_t unk68[0x180 - 0x68]; // 68
-    ink::ImageWidgetReference iconWidget; // 180
-    ink::WidgetReference playerTrackedWidget; // 198
-    ink::WidgetReference scaleWidget; // 1B0
+    uint8_t unk78[0x190 - 0x78]; // 78
+    ink::ImageWidgetReference iconWidget; // 190
+    ink::WidgetReference playerTrackedWidget; // 1A8
+    ink::WidgetReference scaleWidget; // 1C0
 };
-RED4EXT_ASSERT_SIZE(MappinBaseController, 0x1C8);
+RED4EXT_ASSERT_SIZE(MappinBaseController, 0x1D8);
 } // namespace game::ui
 using BaseMappinBaseController = game::ui::MappinBaseController;
 } // namespace RED4ext

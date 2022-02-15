@@ -15,6 +15,6 @@ struct RemotePlayer : mp::Player
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(RemotePlayer, 0x60);
+RED4EXT_ASSERT_SIZE(RemotePlayer, 0x68);
 } // namespace mp
 } // namespace RED4ext

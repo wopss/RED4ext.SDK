@@ -13,7 +13,7 @@ struct NavigationFunctionalTests : IScriptable
     static constexpr const char* NAME = "NavigationFunctionalTests";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x50 - 0x40]; // 40
+    uint8_t unk40[0x60 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(NavigationFunctionalTests, 0x50);
+RED4EXT_ASSERT_SIZE(NavigationFunctionalTests, 0x60);
 } // namespace RED4ext

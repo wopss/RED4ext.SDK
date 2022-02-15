@@ -31,7 +31,8 @@ struct AttackData : IScriptable
     Vector4 attackPosition; // 90
     float weaponCharge; // A0
     int32_t numRicochetBounces; // A4
-    uint8_t unkA8[0xC0 - 0xA8]; // A8
+    float attackTime; // A8
+    uint8_t unkAC[0xC0 - 0xAC]; // AC
 };
 RED4EXT_ASSERT_SIZE(AttackData, 0xC0);
 } // namespace game::damage

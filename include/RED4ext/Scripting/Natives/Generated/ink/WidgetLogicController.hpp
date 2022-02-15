@@ -15,7 +15,7 @@ struct WidgetLogicController : ink::IWidgetLogicController
     static constexpr const char* ALIAS = "inkLogicController";
 
 };
-RED4EXT_ASSERT_SIZE(WidgetLogicController, 0x68);
+RED4EXT_ASSERT_SIZE(WidgetLogicController, 0x78);
 } // namespace ink
 using inkLogicController = ink::WidgetLogicController;
 } // namespace RED4ext

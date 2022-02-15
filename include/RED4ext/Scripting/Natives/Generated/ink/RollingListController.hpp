@@ -14,11 +14,11 @@ struct RollingListController : ink::ListController
     static constexpr const char* NAME = "inkRollingListController";
     static constexpr const char* ALIAS = NAME;
 
-    int32_t itemsToDisplay; // 118
-    float convexity; // 11C
-    float verticalCompression; // 120
-    float scrollTime; // 124
+    int32_t itemsToDisplay; // 128
+    float convexity; // 12C
+    float verticalCompression; // 130
+    float scrollTime; // 134
 };
-RED4EXT_ASSERT_SIZE(RollingListController, 0x128);
+RED4EXT_ASSERT_SIZE(RollingListController, 0x138);
 } // namespace ink
 } // namespace RED4ext

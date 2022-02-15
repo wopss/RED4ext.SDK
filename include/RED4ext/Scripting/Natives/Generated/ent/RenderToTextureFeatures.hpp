@@ -19,8 +19,7 @@ struct RenderToTextureFeatures
     bool antiAliasing; // 03
     bool contactShadows; // 04
     bool localShadows; // 05
-    bool allowOcclusionCulling; // 06
 };
-RED4EXT_ASSERT_SIZE(RenderToTextureFeatures, 0x7);
+RED4EXT_ASSERT_SIZE(RenderToTextureFeatures, 0x6);
 } // namespace ent
 } // namespace RED4ext
