@@ -211,7 +211,6 @@ struct CGameEngine : BaseGameEngine
     int64_t unk2E8;            // 2E8
     int64_t unk2F0;            // 2F0
     CGameFramework* framework; // 2F8
-    int32_t unk2FC;            // 2FC
     int32_t unk300;            // 300
     int32_t unk304;            // 304
     int64_t unk308;            // 308
