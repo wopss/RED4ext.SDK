@@ -10,7 +10,7 @@
 namespace RED4ext
 {
 #pragma region HashMapHash
-template<typename T, typename enable = void /* for enable_if specialization */>
+template<typename T, typename enabled = void /* for enable_if specialization */>
 struct HashMapHash
 {
     uint32_t operator()(const T& aKey) const noexcept
@@ -18,7 +18,8 @@ struct HashMapHash
         // You can pass your own hasher as the 3rd template argument to the HashMap
         // Or you can make a specialized version of this class
 
-        static_assert(false, "Please define a HashMapHash<T> specialization for your key type.");
+        static_assert(!std::is_same_v<enabled, void>,
+                      "Please define a HashMapHash<T> specialization for your key type.");
     }
 };
 

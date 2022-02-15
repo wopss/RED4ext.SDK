@@ -109,19 +109,6 @@ RED4EXT_ASSERT_OFFSET(HandleBase, instance, 0x00);
 RED4EXT_ASSERT_OFFSET(HandleBase, refCount, 0x08);
 
 template<typename T>
-bool IsHandleEmpty(T)
-{
-    static_assert(false, "IsHandleEmpty only works for Handle of types inheriting from ISerializable");
-    return false;
-}
-
-template<typename T>
-void DeleteHandle(T)
-{
-    static_assert(false, "DeleteHandle only works for Handle of types inheriting from ISerializable");
-}
-
-template<typename T>
 class Handle : public HandleBase
 {
 public:
@@ -338,4 +325,19 @@ protected:
     }
 };
 RED4EXT_ASSERT_SIZE(WeakHandle<void>, 0x10);
+
+template<typename T, typename enabled = void>
+bool IsHandleEmpty(T)
+{
+    static_assert(!std::is_same_v<enabled, void>,
+                  "IsHandleEmpty only works for Handle of types inheriting from ISerializable");
+    return false;
+}
+
+template<typename T, typename enabled = void>
+void DeleteHandle(T)
+{
+    static_assert(!std::is_same_v<enabled, void>,
+                  "DeleteHandle only works for Handle of types inheriting from ISerializable");
+}
 } // namespace RED4ext
