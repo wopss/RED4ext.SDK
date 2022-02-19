@@ -60,7 +60,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='TTypedClass', functions=[
-            Item(name='IsEqual', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 54 41 56 41 57', expected=422, index=5)
+            Item(name='IsEqual', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 54 41 56 41 57', expected=423, index=5)
         ]),
 
         Group(name='CEnum', functions=[
