@@ -13,7 +13,12 @@ using PluginInfo = v0::PluginInfo;
 /**
  * @brief The latest version info type.
  */
-using VersionInfo = v0::VersionInfo;
+using SemVer = v0::SemVer;
+
+/**
+ * @brief The latest version info type.
+ */
+using FileVer = v0::FileVer;
 
 /**
  * @brief The latest RED4ext.

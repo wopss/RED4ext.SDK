@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/Api/v0/VersionInfo.hpp>
+#include <RED4ext/Api/v0/SemVer.hpp>
 
 /**
  * @brief Creates a semantic version using the latest version info type.

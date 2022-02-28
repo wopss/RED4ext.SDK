@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/Api/v0/VersionInfo.hpp>
+#include <RED4ext/Api/v0/SemVer.hpp>
 
 namespace RED4ext::v0
 {
@@ -19,17 +19,17 @@ struct PluginInfo
     /**
      * @brief The version of the plugin.
      */
-    VersionInfo version;
+    SemVer version;
 
     /**
      * @brief The supported game's version of the plugin.
      * @note If you are using RED4ext only as a loader, use 'RED4EXT_V0_RUNTIME_INDEPENDENT'.
      */
-    VersionInfo runtime;
+    FileVer runtime;
 
     /**
      * @brief The SDK version.
      */
-    VersionInfo sdk;
+    SemVer sdk;
 };
 } // namespace RED4ext::v0
