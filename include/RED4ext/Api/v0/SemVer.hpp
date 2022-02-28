@@ -50,21 +50,23 @@ int32_t CompareSemVerPrerelease(const RED4ext::v0::SemVer::PrereleaseInfo& aLhs,
 // clang-format on
 
 #define RED4EXT_V0_SEMVER_EX(major, minor, patch, prereleaseType, prereleaseNumber)                                    \
-    RED4ext::v0::CreateSemVer(major, minor, patch, prereleaseType, prereleaseNumber)
+    RED4ext::v0::CreateSemver(major, minor, patch, prereleaseType, prereleaseNumber)
 
 #define RED4EXT_V0_SEMVER(major, minor, patch)                                                                         \
-    RED4EXT_V0_SEMVER_EX(major, minor, patch, RED4EXT_V0_SEMVER_PRERELEASE_TYPE_NONE, 0)
-
-#ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Api/v0/SemVer-inl.hpp>
-#endif
+    RED4EXT_V0_SEMVER_EX(major, minor, patch, RED4EXT_V0_PRERELEASE_TYPE_NONE, 0)
 
 #ifdef __cplusplus
 namespace std
 {
 std::wstring to_wstring(const RED4ext::v0::SemVer& aVersion);
 } // namespace std
+#endif
 
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Api/v0/SemVer-inl.hpp>
+#endif
+
+#ifdef __cplusplus
 #pragma region PrereleaseInfo operators
 inline bool operator<(const RED4ext::v0::SemVer::PrereleaseInfo& aLhs, const RED4ext::v0::SemVer::PrereleaseInfo& aRhs)
 {

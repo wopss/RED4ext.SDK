@@ -26,16 +26,18 @@ int32_t CompareFileVer(const RED4ext::v0::FileVer& aLhs, const RED4ext::v0::File
 
 #define RED4EXT_V0_FILEVER(major, minor, build, revision) RED4ext::v0::CreateFileVer(major, minor, build, revision)
 
-#ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/Api/v0/FileVer-inl.hpp>
-#endif
-
 #ifdef __cplusplus
 namespace std
 {
 std::wstring to_wstring(const RED4ext::v0::FileVer& aVersion);
 } // namespace std
+#endif
 
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Api/v0/FileVer-inl.hpp>
+#endif
+
+#ifdef __cplusplus
 inline bool operator<(const RED4ext::v0::FileVer& aLhs, const RED4ext::v0::FileVer& aRhs)
 {
     return RED4ext::v0::CompareFileVer(aLhs, aRhs) < 0;
