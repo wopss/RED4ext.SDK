@@ -24,7 +24,7 @@ constexpr uintptr_t CBaseFunction_Register = 0x140206240 - ImageBase; // 48 89 5
 constexpr uintptr_t CBaseRTTIType_sub_80 = 0x1401F9580 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC ? 48 8B D9, expected: 558, index: 16
 constexpr uintptr_t CBaseRTTIType_sub_88 = 0x1401F9510 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B F9, expected: 25, index: 0
 constexpr uintptr_t CBaseRTTIType_sub_90 = 0x1401F9300 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 81 EC ?, expected: 295, index: 1
-constexpr uintptr_t CBaseRTTIType_sub_98 = 0x141DEF7D0 - ImageBase; // 40 53 55 57 48 83 EC 50 48 8B D9, expected: 2, index: 0
+constexpr uintptr_t CBaseRTTIType_sub_98 = 0x141DEF750 - ImageBase; // 40 53 55 57 48 83 EC 50 48 8B D9, expected: 2, index: 0
 constexpr uintptr_t CBaseRTTIType_sub_A0 = 0x1401F92D0 - ImageBase; // 48 8B 02 4C 8D 05 ? ? ? ? 4C 8B CA 48 8B D1, expected: 1, index: 0
 #pragma endregion
 
@@ -65,7 +65,7 @@ constexpr uintptr_t CEnum_FromString = 0x1402155A0 - ImageBase; // 48 89 5C 24 0
 #pragma endregion
 
 #pragma region CGameEngine
-constexpr uintptr_t CGameEngine = 0x1442397B0 - ImageBase; // 48 89 05 ? ? ? ? ? 8D ? 30 01 00 00, expected: 1, index: 0, offset: 3
+constexpr uintptr_t CGameEngine = 0x1442387B0 - ImageBase; // 48 89 05 ? ? ? ? ? 8D ? 30 01 00 00, expected: 1, index: 0, offset: 3
 #pragma endregion
 
 #pragma region CGlobalFunction
@@ -74,13 +74,13 @@ constexpr uintptr_t CGlobalFunction_ctor = 0x140206190 - ImageBase; // 48 89 5C 
 
 #pragma region CNamePool
 constexpr uintptr_t CNamePool_AddCstr = 0x1401A5390 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 30 45 33 C0 48 8B F9, expected: 1, index: 0
-constexpr uintptr_t CNamePool_AddCString = 0x1409E82F0 - ImageBase; // 48 89 5C 24 08 48 89 74  24 10 57 48 83 EC 20 48 8B F1 48 8B DA 48 8B CA E8 ? ? ? ? 48 8B CB 48 8B F8 E8, expected: 1, index: 0
+constexpr uintptr_t CNamePool_AddCString = 0x1409E82A0 - ImageBase; // 48 89 5C 24 08 48 89 74  24 10 57 48 83 EC 20 48 8B F1 48 8B DA 48 8B CA E8 ? ? ? ? 48 8B CB 48 8B F8 E8, expected: 1, index: 0
 constexpr uintptr_t CNamePool_AddPair = 0x1401A57E0 - ImageBase; // 48 83 EC 38 33 C0 48 89 54 24 20 48 85 D2, expected: 1, index: 0
 constexpr uintptr_t CNamePool_Get = 0x1401A5350 - ImageBase; // 48 83 EC 38 48 8B 11 48 8D 4C 24 20 E8, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CRTTIRegistrator
-constexpr uintptr_t CRTTIRegistrator_RTTIAsyncId = 0x143E145BC - ImageBase; // B8 01 00 00 00 F0 0F C1 05 ? ? ? ? FF C0 C3, expected: 1, index: 0, offset: 9
+constexpr uintptr_t CRTTIRegistrator_RTTIAsyncId = 0x143E135BC - ImageBase; // B8 01 00 00 00 F0 0F C1 05 ? ? ? ? FF C0 C3, expected: 1, index: 0, offset: 9
 constexpr uintptr_t CRTTIRegistrator_Add = 0x1401ABBF0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 20 4C 89 44 24 18 48 89 54 24 10 57 48 83 EC 50 48 8B F1, expected: 1, index: 0
 #pragma endregion
 
@@ -141,7 +141,7 @@ constexpr uintptr_t OpcodeHandlers_Get = 0x1401C0B7D - ImageBase; // 4C 8D 15 ? 
 #pragma endregion
 
 #pragma region Streams
-constexpr uintptr_t Streams_MemoryStream_ctor = 0x142B94220 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
+constexpr uintptr_t Streams_MemoryStream_ctor = 0x142B94170 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
 #pragma endregion
 
 #pragma region TTypedClass
@@ -149,11 +149,11 @@ constexpr uintptr_t TTypedClass_IsEqual = 0x1401F34F0 - ImageBase; // 48 89 5C 2
 #pragma endregion
 
 #pragma region TweakDB
-constexpr uintptr_t TweakDB_Get = 0x140BC88D0 - ImageBase; // 48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 75 68, expected: 1, index: 0
-constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140F135D0 - ImageBase; // 48 89 1D ? ? ? ? 48 C1 E7 04, expected: 1, index: 0
-constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140F10170 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 48 8B DA 48 8B F9 E8 6B FD, expected: 1, index: 0
-constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140F0FCD9 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 07 8B 03, expected: 13, index: 1
-constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140F0FD31 - ImageBase; // 48 8D 05 ? ? ? ? 48 8D 4C 24 48 48 89 06, expected: 17, index: 0
-constexpr uintptr_t TweakDB_CreateRecord = 0x140FAB850 - ImageBase; // 48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
+constexpr uintptr_t TweakDB_Get = 0x140BC8880 - ImageBase; // 48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 75 68, expected: 1, index: 0
+constexpr uintptr_t TweakDB_StaticFlatDataBuffer = 0x140F13580 - ImageBase; // 48 89 1D ? ? ? ? 48 C1 E7 04, expected: 1, index: 0
+constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = 0x140F10120 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 20 48 8B DA 48 8B F9 E8 6B FD, expected: 1, index: 0
+constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140F0FC89 - ImageBase; // 48 8D 05 ? ? ? ? 48 89 07 8B 03, expected: 13, index: 1
+constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140F0FCE1 - ImageBase; // 48 8D 05 ? ? ? ? 48 8D 4C 24 48 48 89 06, expected: 17, index: 0
+constexpr uintptr_t TweakDB_CreateRecord = 0x140FAB800 - ImageBase; // 48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
 #pragma endregion
 } // namespace RED4ext::Addresses
