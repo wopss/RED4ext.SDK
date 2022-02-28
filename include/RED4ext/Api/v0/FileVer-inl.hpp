@@ -7,7 +7,8 @@
 #include <RED4ext/Common.hpp>
 #include <sstream>
 
-RED4EXT_INLINE RED4ext::v0::FileVer RED4ext::v0::CreateFileVer(uint8_t aMajor, uint16_t aMinor, uint32_t aBuild, uint32_t aRevision)
+RED4EXT_INLINE RED4ext::v0::FileVer RED4ext::v0::CreateFileVer(uint16_t aMajor, uint16_t aMinor, uint16_t aBuild,
+                                                               uint16_t aRevision)
 {
     FileVer version{};
     version.major = aMajor;

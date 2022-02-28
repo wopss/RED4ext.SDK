@@ -13,7 +13,7 @@ struct FileVer
     uint16_t revision;
 };
 
-FileVer CreateFileVer(uint8_t aMajor, uint16_t aMinor, uint32_t aBuild, uint32_t aRevision);
+FileVer CreateFileVer(uint16_t aMajor, uint16_t aMinor, uint16_t aBuild, uint16_t aRevision);
 
 /**
  * @brief Compare two file versions.
