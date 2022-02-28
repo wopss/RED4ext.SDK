@@ -50,10 +50,10 @@ int32_t CompareSemVerPrerelease(const RED4ext::v0::SemVer::PrereleaseInfo& aLhs,
 // clang-format on
 
 #define RED4EXT_V0_SEMVER_EX(major, minor, patch, prereleaseType, prereleaseNumber)                                    \
-    RED4ext::v0::CreateSemver(major, minor, patch, prereleaseType, prereleaseNumber)
+    RED4ext::v0::CreateSemVer(major, minor, patch, prereleaseType, prereleaseNumber)
 
 #define RED4EXT_V0_SEMVER(major, minor, patch)                                                                         \
-    RED4EXT_V0_SEMVER_EX(major, minor, patch, RED4EXT_V0_PRERELEASE_TYPE_NONE, 0)
+    RED4EXT_V0_SEMVER_EX(major, minor, patch, RED4EXT_V0_SEMVER_PRERELEASE_TYPE_NONE, 0)
 
 #ifdef __cplusplus
 namespace std
