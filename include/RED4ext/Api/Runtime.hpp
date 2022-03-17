@@ -3,6 +3,8 @@
 #include <RED4ext/Api/v0/Runtime.hpp>
 
 #define RED4EXT_RUNTIME_1_50 RED4EXT_V0_RUNTIME_1_50
+#define RED4EXT_RUNTIME_1_50_HOTFIX_1 RED4EXT_V0_RUNTIME_1_50_HOTFIX_1
+#define RED4EXT_RUNTIME_1_50_HOTFIX_2 RED4EXT_V0_RUNTIME_1_50_HOTFIX_2
 
 /**
  * @brief Supports all game versions.
