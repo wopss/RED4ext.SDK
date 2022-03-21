@@ -205,6 +205,12 @@ RED4EXT_INLINE RED4ext::CClass::CClass(CName aName, uint32_t aSize, Flags aFlags
     std::memset(unk1C0, 0, sizeof(unk1C0));
 }
 
+RED4EXT_INLINE RED4ext::CClass::CClass(const char* aName, uint32_t aSize, Flags aFlags)
+    : CClass(CName(aName), aSize, aFlags)
+{
+    CNamePool::Add(aName);
+}
+
 RED4EXT_INLINE RED4ext::CName RED4ext::CClass::GetName() const
 {
     return name;
