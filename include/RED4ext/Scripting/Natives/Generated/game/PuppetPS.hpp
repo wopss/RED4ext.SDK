@@ -20,7 +20,8 @@ struct PuppetPS : game::ObjectPS
     uint8_t unk71[0x73 - 0x71]; // 71
     bool hasAlternativeName; // 73
     bool isCrouch; // 74
-    uint8_t unk75[0x78 - 0x75]; // 75
+    bool allowVehicleCollisionRagdoll; // 75
+    uint8_t unk76[0x78 - 0x76]; // 76
 };
 RED4EXT_ASSERT_SIZE(PuppetPS, 0x78);
 } // namespace game

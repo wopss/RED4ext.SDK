@@ -32,11 +32,12 @@ enum class ConfigGraphicsQualityLevel : uint32_t
     XboxSeriesX_Quality = 22,
     XboxSeriesX_Backcompat_Performance = 23,
     XboxSeriesX_Backcompat_Quality = 24,
-    GeForceNow = 25,
-    IconsGeneration = 26,
-    SafeMode = 27,
-    Auto = 28,
-    GGP_Performance = 31,
-    GGP_Quality = 32,
+    SteamDeck = 25,
+    GeForceNow = 26,
+    IconsGeneration = 27,
+    SafeMode = 28,
+    Auto = 29,
+    GGP_Performance = 32,
+    GGP_Quality = 33,
 };
 } // namespace RED4ext

@@ -4,6 +4,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
@@ -11,6 +12,7 @@
 #include <RED4ext/Scripting/Natives/Generated/scn/PerformerId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/PropId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneEvent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/AttachPropToWorldFallbackData.hpp>
 
 namespace RED4ext
 {
@@ -29,7 +31,9 @@ struct AttachPropToWorld : scn::SceneEvent
     scn::PerformerId referencePerformer; // 80
     TweakDBID referencePerformerSlotId; // 84
     TweakDBID referencePerformerItemId; // 8C
-    uint8_t unk94[0xB0 - 0x94]; // 94
+    uint8_t unk94[0x98 - 0x94]; // 94
+    DynArray<scn::events::AttachPropToWorldFallbackData> fallbackData; // 98
+    uint8_t unkA8[0xB0 - 0xA8]; // A8
 };
 RED4EXT_ASSERT_SIZE(AttachPropToWorld, 0xB0);
 } // namespace scn::events

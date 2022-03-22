@@ -2603,12 +2603,16 @@
 #include <RED4ext/Scripting/Natives/Generated/scn/WorldMarker.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/WorldMarkerType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/dev/EventType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/AttachPropToWorldCachedFallbackBone.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/AttachPropToWorldFallbackData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/CameraOverrideSettings.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/DespawnEntityEventParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/PlayAnimEventData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/PlayAnimEventExData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/PlayerLookAtEventParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/RidCameraPlacement.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/SpawnEntityEventCachedFallbackBone.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/SpawnEntityEventFallbackData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/SpawnEntityEventParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/events/VFXActionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/fpp/BlendOverride.hpp>

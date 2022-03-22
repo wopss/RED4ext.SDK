@@ -4,8 +4,10 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/PerformerId.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/SpawnEntityEventFallbackData.hpp>
 
 namespace RED4ext
 {
@@ -19,7 +21,7 @@ struct SpawnEntityEventParams
     scn::PerformerId referencePerformer; // 04
     TweakDBID referencePerformerSlotId; // 08
     TweakDBID referencePerformerItemId; // 10
-    uint8_t unk18[0x28 - 0x18]; // 18
+    DynArray<scn::events::SpawnEntityEventFallbackData> fallbackData; // 18
 };
 RED4EXT_ASSERT_SIZE(SpawnEntityEventParams, 0x28);
 } // namespace scn::events
