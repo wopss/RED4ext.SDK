@@ -128,7 +128,6 @@ struct CClass : CBaseRTTIType
     RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
 
     CClass(CName aName, uint32_t aSize, Flags aFlags);
-    CClass(const char* aName, uint32_t aSize, Flags aFlags);
 
     CName GetName() const final;                                                               // 08
     uint32_t GetSize() const final;                                                            // 10
@@ -223,11 +222,6 @@ struct TTypedClass : CClass
     static_assert(std::is_destructible_v<T>, "T must be destructible");
 
     TTypedClass(CName aName, CClass::Flags aFlags = {2})
-        : CClass(aName, sizeof(T), aFlags)
-    {
-    }
-
-    TTypedClass(const char* aName, CClass::Flags aFlags = {2})
         : CClass(aName, sizeof(T), aFlags)
     {
     }
