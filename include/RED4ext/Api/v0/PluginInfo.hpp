@@ -1,5 +1,6 @@
 #pragma once
 
+#include <RED4ext/Api/v0/FileVer.hpp>
 #include <RED4ext/Api/v0/SemVer.hpp>
 
 namespace RED4ext::v0
