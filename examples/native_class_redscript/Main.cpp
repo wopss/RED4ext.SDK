@@ -22,6 +22,8 @@ void GetNumber(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, flo
 
 RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
 {
+    RED4ext::CNamePool::Add("MyCustomClass");
+
     cls.flags = {.isNative = true};
     RED4ext::CRTTISystem::Get()->RegisterType(&cls);
 }
