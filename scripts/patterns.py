@@ -142,8 +142,8 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='Memory', functions=[
-            Item(name='Vault::Get', pattern='48 8D 05 ? ? ? ? C3', expected=1278, index=0),
-            Item(name='Vault::Alloc', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30', expected=1962, index=5),
+            Item(name='Vault::Get', pattern='48 8D 05 ? ? ? ? C3', expected=1275, index=0),
+            Item(name='Vault::Alloc', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30', expected=1964, index=5),
             Item(name='Vault::AllocAligned', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30', expected=451, index=0),
             Item(name='Vault::Realloc', pattern='48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56', expected=301, index=0),
             Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 18 56 57 41 56 48 83 EC 40', expected=15, index=0),
