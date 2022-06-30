@@ -12,7 +12,7 @@ jobs:
         header_only: [ 'OFF', 'ON' ]
         config: [ Debug, Release, MinSizeRel, RelWithDebInfo ]
 
-     steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
 
