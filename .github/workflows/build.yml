@@ -1,47 +1,36 @@
 name: Build Workflow
 on: [ push, pull_request ]
 
-env:
-  premake: 5.0.0-beta1
-
 jobs:
   build:
-    name: Build (${{ matrix.config }})
-    runs-on: windows-2022
+    name: Build (C++${{ matrix.standard }}, Header Only ${{ matrix.header_only }}, ${{ matrix.config }})
+    runs-on: windows-latest
 
     strategy:
       matrix:
-        config: [ Debug, Release ]
+        standard: [ 20, 23 ]
+        header_only: [ OFF, ON ]
+        config: [ Debug, Release, MinSizeRel, RelWithDebInfo ]
 
-    steps:
+     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
-      - name: Add MSBuild to PATH
-        uses: microsoft/setup-msbuild@v1.0.2
+      - name: Create build directory
+        run: mkdir build
 
-      - name: Download Premake
-        shell: powershell
-        run: Invoke-WebRequest https://github.com/premake/premake-core/releases/download/v${{ env.premake }}/premake-${{ env.premake }}-windows.zip -OutFile ./premake/premake.zip
-
-      - name: Extract Premake
-        shell: powershell
-        run: Expand-Archive -Path ./premake/premake.zip -DestinationPath ./premake
-
-      - name: Generate projects
+      - name: Configure
+        working-directory: build
         run: |
-          cd premake
-          ./generate_projects.bat
+          cmake `
+            -DCMAKE_CXX_STANDARD=${{ matrix.standard }} `
+            -DRED4EXT_HEADER_ONLY=${{ matrix.header_only }}`
+            -DRED4EXT_BUILD_EXAMPLES=ON `
+            ${{ github.workspace }}
 
       - name: Build
+        working-directory: build
         run: |
-          cd premake/projects
-          MSBuild.exe RED4ext.SDK.sln -v:minimal -m -property:Configuration=${{ matrix.config }}
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: RED4ext-${{ matrix.config }}
-          path: build/${{ matrix.config }}/
+          cmake `
+            --build . `
+            --config ${{ matrix.config }}
