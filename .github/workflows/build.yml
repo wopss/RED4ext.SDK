@@ -3,13 +3,13 @@ on: [ push, pull_request ]
 
 jobs:
   build:
-    name: Build (C++${{ matrix.standard }}, Header Only ${{ matrix.header_only }}, ${{ matrix.config }})
+    name: Build (C++${{ matrix.cpp_standard }}, Header Only ${{ matrix.header_only }}, ${{ matrix.config }})
     runs-on: windows-latest
 
     strategy:
       matrix:
-        standard: [ 20, 23 ]
-        header_only: [ OFF, ON ]
+        cpp_standard: [ 20, 23 ]
+        header_only: [ 'OFF', 'ON' ]
         config: [ Debug, Release, MinSizeRel, RelWithDebInfo ]
 
      steps:
@@ -23,8 +23,8 @@ jobs:
         working-directory: build
         run: |
           cmake `
-            -DCMAKE_CXX_STANDARD=${{ matrix.standard }} `
-            -DRED4EXT_HEADER_ONLY=${{ matrix.header_only }}`
+            -DCMAKE_CXX_STANDARD=${{ matrix.cpp_standard }} `
+            -DRED4EXT_HEADER_ONLY=${{ matrix.header_only }} `
             -DRED4EXT_BUILD_EXAMPLES=ON `
             ${{ github.workspace }}
 
