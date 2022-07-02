@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.21)
 
 project(RED4ext.SDK LANGUAGES CXX)
 
@@ -9,7 +9,9 @@ elseif(CMAKE_CXX_STANDARD LESS 20)
   message(FATAL_ERROR "RED4ext.SDK requires C++20 or higher.")
 endif()
 
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+if(PROJECT_IS_TOP_LEVEL)
+  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+endif()
 
 option(RED4EXT_HEADER_ONLY "Use the header only version of the library" OFF)
 option(RED4EXT_BUILD_EXAMPLES "Build plugin examples" OFF)
