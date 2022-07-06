@@ -25,11 +25,12 @@ Add the [header files](/include) and the [source files](/src) to your project, d
 ## Build instructions
 
 1. Download and install [Visual Studio 2022 Community Edition](https://www.visualstudio.com/) or a newer version.
-2. Clone this repository.
-3. Download and extract the content of [Premake 5](https://github.com/premake/premake-core/releases) in `premake` directory.
-4. Go to the `premake` directory and run `generate_projects.bat`.
-5. Open the solution (`RED4ext.SDK.sln`) located in `projects` directory.
-6. Build the projects.
+2. Download and install [CMake 3.23](https://cmake.org/) or a newer version.
+3. Clone this repository.
+4. Clone the dependencies (`git submodule update --init --recursive`).
+5. Go to the `build` directory and run `cmake ..`.
+6. Open the solution (`RED4ext.sln`).
+7. Build the projects.
 
 ## Contributing
 
