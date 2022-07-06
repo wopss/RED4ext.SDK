@@ -34,6 +34,7 @@ enum class ERTTIType : uint8_t
     BitField = 13,
     LegacySingleChannelCurve = 14,
     ScriptReference = 15,
+    FixedArray = 16
 };
 
 struct CBaseRTTIType
