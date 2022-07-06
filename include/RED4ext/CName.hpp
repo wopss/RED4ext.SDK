@@ -32,7 +32,7 @@ struct CName
         return hash;
     }
 
-    constexpr size_t operator()(const CName& aName) const
+    constexpr size_t operator()(const CName& aName) const noexcept
     {
         return aName.hash;
     }
