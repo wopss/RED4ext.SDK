@@ -291,14 +291,14 @@ struct CEnum : CBaseRTTIType
     bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
     bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
 
-    CName name;                     // 10
-    CName computedName;             // 18
-    uint8_t actualSize;             // 20
-    Flags flags;                    // 21
-    DynArray<CName> hashList;       // 28
-    DynArray<CName> valueList;      // 38
-    DynArray<CName> aliasList;      // 48
-    DynArray<CName> aliasValueList; // 58
+    CName name;                       // 10
+    CName computedName;               // 18
+    uint8_t actualSize;               // 20
+    Flags flags;                      // 21
+    DynArray<CName> hashList;         // 28
+    DynArray<int64_t> valueList;      // 38
+    DynArray<CName> aliasList;        // 48
+    DynArray<int64_t> aliasValueList; // 58
 };
 RED4EXT_ASSERT_SIZE(CEnum, 0x68);
 RED4EXT_ASSERT_OFFSET(CEnum, name, 0x10);

@@ -3,6 +3,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Meta.hpp>
+#include <RED4ext/Scripting/OpcodeHandlers.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 #include <variant>
 
@@ -20,7 +21,6 @@ bool ExecuteFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
 bool ExecuteGlobalFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs);
 bool ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs);
 bool ExecuteGlobalFunction(CName aFunc, void* aOut, StackArgs_t aArgs);
-void GetParameter(RED4ext::CStackFrame* aFrame, void* aInstance);
 
 template<typename... Args>
 bool ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, Args&&... aArgs)
@@ -71,6 +71,30 @@ template<typename... Args>
 bool ExecuteGlobalFunction(CName aFunc, void* aOut, Args&&... aArgs)
 {
     return ExecuteGlobalFunction("cpPlayerSystem", aFunc, aOut, std::forward<Args>(aArgs)...);
+}
+
+template<typename T>
+inline void GetParameter(RED4ext::CStackFrame* aFrame, T* aInstance)
+{
+    if constexpr (std::is_pointer_v<T>)
+    {
+        aFrame->useDirectData = true;
+    }
+
+    aFrame->data = nullptr;
+    aFrame->dataType = nullptr;
+    aFrame->currentParam++;
+
+    const auto opcode = *(aFrame->code++);
+    RED4ext::OpcodeHandlers::Run(opcode, (IScriptable*)aFrame->context, aFrame, aInstance, nullptr);
+
+    if constexpr (std::is_pointer_v<T>)
+    {
+        aFrame->useDirectData = false;
+
+        if (aFrame->data)
+            *aInstance = reinterpret_cast<T>(aFrame->data);
+    }
 }
 
 namespace details

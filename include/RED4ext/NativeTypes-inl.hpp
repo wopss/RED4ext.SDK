@@ -102,6 +102,21 @@ RED4EXT_INLINE bool RED4ext::TweakDBID::operator!=(const TweakDBID& aDBID) const
     return !(aDBID == *this);
 }
 
+RED4EXT_INLINE RED4ext::gamedataLocKeyWrapper::gamedataLocKeyWrapper() noexcept
+    : primaryKey(0)
+{
+}
+
+RED4EXT_INLINE RED4ext::gamedataLocKeyWrapper::gamedataLocKeyWrapper(uint64_t aPrimaryKey) noexcept
+    : primaryKey(aPrimaryKey)
+{
+}
+
+RED4EXT_INLINE RED4ext::gamedataLocKeyWrapper::gamedataLocKeyWrapper(const char* aSecondaryKey) noexcept
+    : primaryKey(RED4ext::FNV1a64(aSecondaryKey))
+{
+}
+
 RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::CBaseRTTIType* aType)
     : Variant()
 {
@@ -205,7 +220,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::CBaseRTTIType* aType, 
 
     if (!aData)
         return false;
-    
+
     GetType()->Assign(GetDataPtr(), aData);
 
     return true;
@@ -215,7 +230,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Extract(RED4ext::ScriptInstance aBuffer)
 {
     if (IsEmpty())
         return false;
-    
+
     GetType()->Assign(aBuffer, GetDataPtr());
 
     return true;
@@ -225,7 +240,7 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
 {
     if (IsEmpty())
         return;
-    
+
     RED4ext::CBaseRTTIType* ownType = GetType();
     RED4ext::ScriptInstance ownData = GetDataPtr();
 

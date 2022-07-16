@@ -140,6 +140,12 @@ constexpr uintptr_t Memory_PoolStorage_OOM = 0x1401946E0 - ImageBase; // 48 89 5
 constexpr uintptr_t OpcodeHandlers_Get = 0x1401C0D6D - ImageBase; // 4C 8D 15 ? ? ? ? 33 C0 48 C7 44 24 20 00 00 00 00, expected: 13, index: 0
 #pragma endregion
 
+#pragma region ResourceReference
+constexpr uintptr_t ResourceReference_Load = 0x140247CF0 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 30 48 8D 59 08 48 8B F9 48 8B 0B 48 85 C9, expected: 1, index: 0
+constexpr uintptr_t ResourceReference_Fetch = 0x140247DA0 - ImageBase; // 40 53 48 83 EC 20 48 8B D9 E8 ? ? ? ? 48 8B 4B 08 48 85 C9 74 0A, expected: 1, index: 0
+constexpr uintptr_t ResourceReference_Reset = 0x140247C80 - ImageBase; // 48 83 EC 38 45 33 C0 4C 89 01 48 8B 51 10 48 8B 41 08 48 89 54 24 28 4C 89 41 10 48 89 44 24 20, expected: 1, index: 0
+#pragma endregion
+
 #pragma region Streams
 constexpr uintptr_t Streams_MemoryStream_ctor = 0x142B954F0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
 #pragma endregion
