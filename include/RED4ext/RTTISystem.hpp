@@ -51,14 +51,14 @@ struct IRTTISystem
     virtual void CreateScriptedBitfield(
         CName aName, DynArray<uint64_t>& aBits) = 0; // E0 - The bits array is not of type "uint64_t", it is a struct
                                                      // containing the name and the bit.
-    virtual void sub_E8() = 0;                       // E8
+    virtual void InitializeScriptRuntime() = 0;      // E8 - Called by script loader at the very end
     virtual void RegisterScriptName(CName aNativeName, CName aScriptedName) = 0; // F0
-    virtual CClass* GetClassByScriptName(CName aName) = 0;                       // F8
-    virtual CEnum* GetEnumByScriptName(CName aName) = 0;                         // 100
-    virtual CName ConvertNativeToScriptName(CName aName) = 0;                    // 108
-    virtual CName ConvertScriptToNativeName(CName aName) = 0;                    // 110
-    virtual void sub_118() = 0;                                                  // 118
-    virtual void sub_120() = 0;                                                  // 120
+    virtual CClass* GetClassByScriptName(CName aName) = 0;        // F8
+    virtual CEnum* GetEnumByScriptName(CName aName) = 0;          // 100
+    virtual CName ConvertNativeToScriptName(CName aName) = 0;     // 108
+    virtual CName ConvertScriptToNativeName(CName aName) = 0;     // 110
+    virtual CString* GetStringConst(uint32_t aIndex) = 0;         // 118 - Used by StringConst opcode (0x10)
+    virtual void SetStringTable(DynArray<CString>& aStrings) = 0; // 120 - Called by script loader
 
     virtual ~IRTTISystem() = 0; // 128
 };
@@ -82,7 +82,7 @@ struct CRTTISystem : IRTTISystem
     DynArray<void*> unk140;                           // 140
     HashMap<CName, CName> scriptToNative;             // 150
     HashMap<CName, CName> nativeToScript;             // 180
-    DynArray<void*> unk1B0;                           // 1B0
+    DynArray<CString> strings;                        // 1B0 - Used by StringConst opcode (0x10)
     DynArray<void*> unk1C0;                           // 1C0
     DynArray<void*> unk1D0;                           // 1D0
     CRITICAL_SECTION unk1E0;                          // 1E0
