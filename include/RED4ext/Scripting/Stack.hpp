@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/InstanceType.hpp>
+#include <RED4ext/Scripting/Functions.hpp>
 #include <vector>
 
 namespace RED4ext
@@ -93,21 +94,23 @@ struct CStackFrame
     CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
 
     char* code;           // 00
-    int64_t unk8;         // 08
+    CBaseFunction* func;  // 08
     int64_t unk10;        // 10
     int64_t unk18;        // 18
     int64_t unk20;        // 20
     int64_t unk28;        // 28
-    int64_t unk30;        // 30
-    int64_t unk38;        // 38
+    void* data;           // 30 - The result of the opcode, points to the original instance (local, param, etc.)
+    CBaseRTTIType* dataType; // 38 - The type of the result
     IScriptable* context; // 40
-    int64_t unk48;        // 48
+    CStackFrame* parent;  // 48
     int16_t unk50;        // 50
     int64_t unk58;        // 58
     uint16_t paramFlags;  // 60
     uint8_t currentParam; // 62
+    bool useDirectData;   // 63 - If set the result param is not used, preventing an extra copy of the result
 
-    void Step() {
+    void Step()
+    {
         this->code++;
     }
 
