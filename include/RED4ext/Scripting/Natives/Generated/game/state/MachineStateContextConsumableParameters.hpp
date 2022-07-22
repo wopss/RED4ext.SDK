@@ -23,14 +23,23 @@ struct MachineStateContextConsumableParameters
     static constexpr const char* NAME = "gamestateMachineStateContextConsumableParameters";
     static constexpr const char* ALIAS = NAME;
 
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterBool, 128> boolParameters; // 00
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterInt, 128> intParameters; // 1008
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterFloat, 128> floatParameters; // 2010
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterDouble, 128> doubleParameters; // 3018
+    #pragma warning(suppress : 4324)
     alignas(16) StaticArray<game::state::MachineConsumableParameterVector, 128> vectorParameters; // 4020
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterCName, 128> CNameParameters; // 6030
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterIScriptable, 128> IScriptableParameters; // 7038
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterWeakIScriptable, 128> weakIScriptableParameters; // 8440
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::state::MachineConsumableParameterTweakDBID, 128> tweakDBIDParameters; // 9848
 };
 RED4EXT_ASSERT_SIZE(MachineStateContextConsumableParameters, 0xA850);

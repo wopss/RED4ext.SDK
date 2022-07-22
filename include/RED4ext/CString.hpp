@@ -36,21 +36,21 @@ struct CString
         return !(*this == aRhs);
     }
 
-    bool IsInline() const;
+    [[nodiscard]] bool IsInline() const noexcept;
 
-    const char* c_str() const;
-    uint32_t Length() const;
+    [[nodiscard]] const char* c_str() const noexcept;
+    [[nodiscard]] uint32_t Length() const noexcept;
 
 #pragma pack(push, 4)
     union
     {
-        char str[0x14];
+        char inline_str[0x14];
         struct
         {
             char* ptr;
             int8_t unk[8];
             int32_t capacity;
-        };
+        } str;
     } text; // 00
 #pragma pack(pop)
 
@@ -58,6 +58,7 @@ struct CString
     Memory::IAllocator* allocator; // 18
 };
 RED4EXT_ASSERT_SIZE(CString, 0x20);
+RED4EXT_ASSERT_OFFSET(CString, text, 0x00);
 RED4EXT_ASSERT_OFFSET(CString, length, 0x14);
 RED4EXT_ASSERT_OFFSET(CString, allocator, 0x18);
 } // namespace RED4ext

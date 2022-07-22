@@ -21,6 +21,7 @@ struct SpawnEntityEventFallbackData
 
     scn::PerformerId owner; // 00
     uint8_t unk04[0x10 - 0x4]; // 4
+    #pragma warning(suppress : 4324)
     alignas(16) StaticArray<scn::events::SpawnEntityEventCachedFallbackBone, 2> fallbackCachedBones; // 10
     Ref<anim::AnimSet> fallbackAnimset; // 80
     CName fallbackAnimationName; // 98

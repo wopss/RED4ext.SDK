@@ -42,7 +42,7 @@ RED4EXT_INLINE void RED4ext::SharedMutex::Unlock()
 
 RED4EXT_INLINE bool RED4ext::SharedMutex::TryLockShared()
 {
-    int32_t currentState = state;
+    char currentState = state;
     if (currentState != -1)
     {
         return _InterlockedCompareExchange8(&state, currentState + 1, currentState) == currentState;

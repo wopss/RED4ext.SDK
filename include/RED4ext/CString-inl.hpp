@@ -42,9 +42,9 @@ RED4EXT_INLINE RED4ext::CString::CString(CString&& aOther) noexcept
 {
     std::memmove(&text, &aOther.text, sizeof(text));
 
-    aOther.text.ptr = nullptr;
+    std::memset(&aOther.text, 0, sizeof(aOther.text));
     aOther.length = 0;
-    aOther.allocator = 0;
+    aOther.allocator = nullptr;
 }
 
 RED4EXT_INLINE RED4ext::CString& RED4ext::CString::operator=(const CString& aRhs)
@@ -61,9 +61,9 @@ RED4EXT_INLINE RED4ext::CString& RED4ext::CString::operator=(CString&& aRhs) noe
     length = aRhs.length;
     allocator = aRhs.allocator;
 
-    aRhs.text.ptr = nullptr;
+    std::memset(&aRhs.text, 0, sizeof(aRhs.text));
     aRhs.length = 0;
-    aRhs.allocator = 0;
+    aRhs.allocator = nullptr;
 
     return *this;
 }
@@ -100,22 +100,22 @@ RED4EXT_INLINE bool RED4ext::CString::operator==(const CString& aRhs) const noex
     return strcmp(lhsText, rhsText) == 0;
 }
 
-RED4EXT_INLINE bool RED4ext::CString::IsInline() const
+RED4EXT_INLINE bool RED4ext::CString::IsInline() const noexcept
 {
     return length < 0x40000000;
 }
 
-RED4EXT_INLINE const char* RED4ext::CString::c_str() const
+RED4EXT_INLINE const char* RED4ext::CString::c_str() const noexcept
 {
     if (IsInline())
     {
-        return text.str;
+        return text.inline_str;
     }
 
-    return text.ptr;
+    return text.str.ptr;
 }
 
-RED4EXT_INLINE uint32_t RED4ext::CString::Length() const
+RED4EXT_INLINE uint32_t RED4ext::CString::Length() const noexcept
 {
     return length & 0x3FFFFFFF;
 }

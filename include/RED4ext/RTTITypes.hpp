@@ -255,11 +255,11 @@ struct TTypedClass : CClass
 
     void* AllocMemory() const final // E8
     {
-        auto alignment = GetAlignment();
-        auto size = AlignUp(GetSize(), alignment);
+        auto classAlignment = GetAlignment();
+        auto alignedSize = AlignUp(GetSize(), classAlignment);
 
         auto allocator = GetAllocator();
-        auto allocResult = allocator->AllocAligned(size, alignment);
+        auto allocResult = allocator->AllocAligned(alignedSize, classAlignment);
 
         std::memset(allocResult.memory, 0, allocResult.size);
         return allocResult.memory;

@@ -10,6 +10,10 @@
 
 void SummonVehiclePlease(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aOut);
+    RED4EXT_UNUSED_PARAMETER(a4);
+
     aFrame->code++; // skip ParamEnd
 
     // Retrieve global game instance
@@ -39,11 +43,15 @@ void SummonVehiclePlease(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* a
 
 void CustomFunctionTwo(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
-    float var_one;
-    RED4ext::Vector4 var_two;
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aOut);
+    RED4EXT_UNUSED_PARAMETER(a4);
 
-    RED4ext::GetParameter(aFrame, &var_one);
-    RED4ext::GetParameter(aFrame, &var_two);
+    float varOne;
+    RED4ext::Vector4 varTwo;
+
+    RED4ext::GetParameter(aFrame, &varOne);
+    RED4ext::GetParameter(aFrame, &varTwo);
 
     aFrame->code++; // skip ParamEnd
 }
@@ -55,10 +63,11 @@ RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
 RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 {
     auto rtti = RED4ext::CRTTISystem::Get();
-    RED4ext::CBaseFunction::Flags flags = { .isNative = true, .isStatic = true };
+    RED4ext::CBaseFunction::Flags flags = {.isNative = true, .isStatic = true};
 
     {
-        auto func = RED4ext::CGlobalFunction::Create("SummonVehiclePlease", "SummonVehiclePlease", &SummonVehiclePlease);
+        auto func =
+            RED4ext::CGlobalFunction::Create("SummonVehiclePlease", "SummonVehiclePlease", &SummonVehiclePlease);
         func->flags = flags;
         rtti->RegisterFunction(func);
     }
@@ -75,6 +84,9 @@ RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,
                                         const RED4ext::Sdk* aSdk)
 {
+    RED4EXT_UNUSED_PARAMETER(aHandle);
+    RED4EXT_UNUSED_PARAMETER(aSdk);
+
     switch (aReason)
     {
     case RED4ext::EMainReason::Load:

@@ -22,7 +22,9 @@ struct CollisionFilterResource : ISerializable
     Ref<JsonResource> overridesJson; // 48
     Ref<JsonResource> queryPresetJson; // 60
     uint8_t unk78[0xA8 - 0x78]; // 78
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 64> collisionGroups; // A8
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 64> queryGroups; // 2B0
     uint8_t unk4B8[0x738 - 0x4B8]; // 4B8
 };

@@ -31,21 +31,35 @@ using StackArgs_t = std::vector<CStackType>;
 
 struct IStack
 {
-    // clang-format off
-    virtual ~IStack() = default;                            // 00
-    virtual void* GetResultAddr() { return nullptr; }       // 08
-    virtual CBaseRTTIType* GetType() { return nullptr; }    // 10
-    virtual void sub_18(int64_t a2) {}                      // 18
-    // clang-format on
+    virtual ~IStack() = default; // 00
+
+    virtual void* GetResultAddr() // 08
+    {
+        return nullptr;
+    }
+
+    virtual CBaseRTTIType* GetResultType() // 10
+    {
+        return nullptr;
+    }
+
+    virtual void sub_18(int64_t a2) // 18
+    {
+        RED4EXT_UNUSED_PARAMETER(a2);
+    }
 };
 RED4EXT_ASSERT_SIZE(IStack, 0x8);
 
 struct CBaseStack : IStack
 {
-    // clang-format off
-    virtual void sub_20() {}                    // 20
-    virtual void GenerateCode(char* aCode) {}   // 28
-    // clang-format on
+    virtual void sub_20() // 20
+    {
+    }
+
+    virtual void GenerateCode(char* aCode) // 28
+    {
+        RED4EXT_UNUSED_PARAMETER(aCode);
+    }
 
     RED4ext::IScriptable* GetContext() const;
 
@@ -93,21 +107,21 @@ struct CStackFrame
 {
     CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
 
-    char* code;           // 00
-    CBaseFunction* func;  // 08
-    int64_t unk10;        // 10
-    int64_t unk18;        // 18
-    int64_t unk20;        // 20
-    int64_t unk28;        // 28
-    void* data;           // 30 - The result of the opcode, points to the original instance (local, param, etc.)
+    char* code;              // 00
+    CBaseFunction* func;     // 08
+    int64_t unk10;           // 10
+    int64_t unk18;           // 18
+    int64_t unk20;           // 20
+    int64_t unk28;           // 28
+    void* data;              // 30 - The result of the opcode, points to the original instance (local, param, etc.)
     CBaseRTTIType* dataType; // 38 - The type of the result
-    IScriptable* context; // 40
-    CStackFrame* parent;  // 48
-    int16_t unk50;        // 50
-    int64_t unk58;        // 58
-    uint16_t paramFlags;  // 60
-    uint8_t currentParam; // 62
-    bool useDirectData;   // 63 - If set the result param is not used, preventing an extra copy of the result
+    IScriptable* context;    // 40
+    CStackFrame* parent;     // 48
+    int16_t unk50;           // 50
+    int64_t unk58;           // 58
+    uint16_t paramFlags;     // 60
+    uint8_t currentParam;    // 62
+    bool useDirectData;      // 63 - If set the result param is not used, preventing an extra copy of the result
 
     void Step()
     {

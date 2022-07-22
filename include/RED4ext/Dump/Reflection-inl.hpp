@@ -864,7 +864,7 @@ RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, Nam
     {
         if (aType->GetAlignment() >= sizeof(void*))
         {
-            typeName = "alignas(" + std::to_string(aType->GetAlignment()) + ") ";
+            typeName = "#pragma warning(suppress : 4324) alignas(" + std::to_string(aType->GetAlignment()) + ") ";
         }
 
         auto staticArray = static_cast<const RED4ext::CRTTIStaticArrayType*>(aType);

@@ -16,6 +16,13 @@ endif()
 option(RED4EXT_HEADER_ONLY "Use the header only version of the library" OFF)
 option(RED4EXT_BUILD_EXAMPLES "Build plugin examples" OFF)
 
+# Set the custom compile options to enable more warnings and treat them as errors.
+if(MSVC)
+  add_compile_options(/W4 /WX)
+else()
+  add_compile_options(-Wall -Wextra -Werror)
+endif()
+
 set(RED4EXT_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 file(GLOB_RECURSE RED4EXT_HEADERS "${RED4EXT_INCLUDE_DIR}/*.hpp")
 

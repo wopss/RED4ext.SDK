@@ -172,6 +172,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         {
             return AllocAligned(aSize, 8);
         }
+
         virtual Memory::AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) override
         {
             Memory::AllocationResult result;
@@ -179,24 +180,39 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
             result.size = aSize;
             return result;
         }
+
         virtual Memory::AllocationResult Realloc(Memory::AllocationResult& aAllocation, uint32_t aSize) override
         {
+            RED4EXT_UNUSED_PARAMETER(aAllocation);
+            RED4EXT_UNUSED_PARAMETER(aSize);
+
             return {};
         }
+
         virtual Memory::AllocationResult ReallocAligned(Memory::AllocationResult& aAllocation, uint32_t aSize,
                                                         uint32_t aAlignment) override
         {
+            RED4EXT_UNUSED_PARAMETER(aAllocation);
+            RED4EXT_UNUSED_PARAMETER(aSize);
+            RED4EXT_UNUSED_PARAMETER(aAlignment);
+
             return {};
         }
+
         virtual void Free(Memory::AllocationResult& aAllocation) override
         {
             _aligned_free(aAllocation.memory);
         }
-        virtual void sub_28(void* aMemory) override{};
+
+        virtual void sub_28(void* aMemory) override
+        {
+            RED4EXT_UNUSED_PARAMETER(aMemory);
+        }
+
         virtual const uint32_t GetHandle() const override
         {
             return 0;
-        };
+        }
     };
     static FakeAllocator fakeAllocator;
 
@@ -210,16 +226,17 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     if (fakeTweakDB.recordsByID.size != 0)
     {
         // Will only find 1 record
-        fakeTweakDB.recordsByID.for_each([aRecord](const TweakDBID&, Handle<IScriptable>& handle) {
-            aRecord->GetNativeType()->Assign(aRecord, handle.instance);
-        });
+        fakeTweakDB.recordsByID.for_each([aRecord](const TweakDBID&, Handle<IScriptable>& handle)
+                                         { aRecord->GetNativeType()->Assign(aRecord, handle.instance); });
         updated = true;
     }
 
-    fakeTweakDB.recordsByType.for_each([](const CBaseRTTIType*, DynArray<Handle<IScriptable>>& array) {
-        array.Clear();
-        array.GetAllocator()->Free(array.entries);
-    });
+    fakeTweakDB.recordsByType.for_each(
+        [](const CBaseRTTIType*, DynArray<Handle<IScriptable>>& array)
+        {
+            array.Clear();
+            array.GetAllocator()->Free(array.entries);
+        });
 
     fakeTweakDB.recordsByID.Clear();
     fakeTweakDB.recordsByID.GetAllocator()->Free(fakeTweakDB.recordsByID.nodeList.nodes);
@@ -404,7 +421,8 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(void* aBuffer, uint32_t 
     // defaultValues entries will have invalid tdbOffset if flatDataBuffer is changed
     // hacky fix:
     defaultValues.ForEach(
-        [this, oldFlatDataBuffer](const RED4ext::CName, RED4ext::TweakDB::FlatValue*& defaultFlatValue) {
+        [this, oldFlatDataBuffer](const RED4ext::CName, RED4ext::TweakDB::FlatValue*& defaultFlatValue)
+        {
             int32_t offset = static_cast<int32_t>(reinterpret_cast<uintptr_t>(defaultFlatValue) - oldFlatDataBuffer);
             defaultFlatValue = reinterpret_cast<RED4ext::TweakDB::FlatValue*>(flatDataBuffer + offset);
         });

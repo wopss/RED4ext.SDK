@@ -49,7 +49,7 @@ struct HashMapHash<T, std::enable_if_t<std::is_pointer_v<T>>>
 template<typename K, typename T, typename Hasher = HashMapHash<K>>
 struct HashMap
 {
-    static const uint32_t INVALID_INDEX = -1;
+    static const uint32_t INVALID_INDEX = static_cast<uint32_t>(-1);
 
     struct Node
     {
@@ -271,7 +271,7 @@ struct HashMap
                 node->~Node();
             }
 
-            indexTable[i] = -1;
+            indexTable[i] = static_cast<uint32_t>(-1);
         }
         size = 0;
         nodeList.nextIdx = 0;

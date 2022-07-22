@@ -116,12 +116,12 @@ struct DynArray
         // Alignment seems to always be 8.
         constexpr uint32_t alignment = 8;
 
-        auto capacity = CalculateGrowth(aCount);
+        auto newCapacity = CalculateGrowth(aCount);
         using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
         RelocFunc<func_t> func(Addresses::DynArray_Realloc);
-        func(this, capacity, sizeof(T), alignment, nullptr);
+        func(this, newCapacity, sizeof(T), alignment, nullptr);
     }
 
     Memory::IAllocator* GetAllocator()
