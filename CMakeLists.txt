@@ -16,7 +16,7 @@ endif()
 option(RED4EXT_HEADER_ONLY "Use the header only version of the library." OFF)
 option(RED4EXT_BUILD_EXAMPLES "Build plugin examples." OFF)
 option(RED4EXT_EXTRA_WARNINGS "Enable extra warnings." OFF)
-option(RED4EXT_TREAT_WARNINGS_AS_ERRORS "Treats compiler warnings as errors." OFF)
+option(RED4EXT_TREAT_WARNINGS_AS_ERRORS "Treat compiler warnings as errors." OFF)
 
 if(RED4EXT_EXTRA_WARNINGS)
   if(MSVC)
