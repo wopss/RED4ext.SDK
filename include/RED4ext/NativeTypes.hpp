@@ -49,10 +49,10 @@ struct TweakDBID
         uint64_t value = 0;
         struct
         {
-            uint32_t nameHash;      // 00 CRC32
-            uint8_t nameLength;     // 04
+            uint32_t hash;          // 00 - CRC32
+            uint8_t length;         // 04
             uint8_t tdbOffsetBE[3]; // 05 - Big Endian
-        };
+        } name;
     };
 #pragma pack(pop)
 
@@ -123,10 +123,10 @@ struct Variant
 
     static bool CanBeInlined(const CBaseRTTIType* aType) noexcept;
 
-    const CBaseRTTIType* type{ nullptr };
+    const CBaseRTTIType* type{nullptr};
     union
     {
-        uint8_t inlined[InlineSize]{ 0 };
+        uint8_t inlined[InlineSize]{0};
         ScriptInstance instance;
     };
 };
@@ -156,14 +156,14 @@ RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
 struct DeferredDataBuffer
 {
-    int64_t unk00; // 00
-    int64_t unk08; // 08
+    int64_t unk00;    // 00
+    int64_t unk08;    // 08
     RawBuffer buffer; // 10
-    int64_t unk30; // 30
-    int8_t unk38;  // 38
-    int64_t unk40; // 40
-    int64_t unk48; // 48
-    int64_t unk50; // 50
+    int64_t unk30;    // 30
+    int8_t unk38;     // 38
+    int64_t unk40;    // 40
+    int64_t unk48;    // 48
+    int64_t unk50;    // 50
 };
 RED4EXT_ASSERT_SIZE(DeferredDataBuffer, 0x58);
 

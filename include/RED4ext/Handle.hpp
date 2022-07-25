@@ -45,7 +45,7 @@ struct RefCnt
     // Returns true if the strong refs count reached zero.
     bool DecRef()
     {
-        return InterlockedExchangeAdd(&strongRefs, -1) == 1;
+        return InterlockedExchangeAdd(&strongRefs, static_cast<uint32_t>(-1)) == 1;
     }
 
     void IncWeakRef()

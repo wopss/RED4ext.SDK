@@ -21,6 +21,7 @@ struct HeistState
     net::Time time; // 18
     grs::HeistStatus status; // 20
     uint8_t unk24[0x30 - 0x24]; // 24
+    #pragma warning(suppress : 4324)
     alignas(16) StaticArray<grs::HeistPlayerGameInfo, 7> playersInfo; // 30
     uint8_t unk350[0x3D0 - 0x350]; // 350
 };

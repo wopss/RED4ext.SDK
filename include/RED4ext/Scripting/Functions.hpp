@@ -24,7 +24,7 @@ struct IFunction
     {
         virtual void sub_0() = 0;
         virtual void sub_8() = 0;
-        virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult, const CBaseRTTIType* aType) = 0;
+        virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult, const CBaseRTTIType* aResultType) = 0;
     };
 
     virtual Memory::IAllocator* GetAllocator() = 0; // 00

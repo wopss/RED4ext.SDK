@@ -16,6 +16,7 @@ struct AnimSetDynAnimNames
     static constexpr const char* NAME = "scnAnimSetDynAnimNames";
     static constexpr const char* ALIAS = NAME;
 
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 1> animVariable; // 00
     DynArray<CName> animNames; // 10
 };

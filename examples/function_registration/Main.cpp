@@ -18,6 +18,10 @@
 
 void MyGlobalFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, RED4ext::CString* aOut, int64_t a4)
 {
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aFrame);
+    RED4EXT_UNUSED_PARAMETER(a4);
+
     /*
      * You have to take care of the stack and other things, the game usually increase the "code" pointer if they read a
      * value.
@@ -33,6 +37,10 @@ void MyGlobalFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, 
 
 void MyFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, int32_t* aOut, int64_t a4)
 {
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aFrame);
+    RED4EXT_UNUSED_PARAMETER(a4);
+
     /*
      * You have to take care of the stack and other things, the game usually increase the "code" pointer if they read a
      * value.
@@ -47,6 +55,10 @@ void MyFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, int32_
 
 void MyStaticFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, bool* aOut, int64_t a4)
 {
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aFrame);
+    RED4EXT_UNUSED_PARAMETER(a4);
+
     /*
      * You have to take care of the stack and other things, the game usually increase the "code" pointer if they read a
      * value.
@@ -95,6 +107,9 @@ RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,
                                         const RED4ext::Sdk* aSdk)
 {
+    RED4EXT_UNUSED_PARAMETER(aHandle);
+    RED4EXT_UNUSED_PARAMETER(aSdk);
+
     switch (aReason)
     {
     case RED4ext::EMainReason::Load:

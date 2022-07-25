@@ -15,6 +15,7 @@ struct CrowdCreationData
     static constexpr const char* NAME = "gameCrowdCreationData";
     static constexpr const char* ALIAS = NAME;
 
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::CrowdPhaseTimePeriod, 4> timePeriods; // 00
 };
 RED4EXT_ASSERT_SIZE(CrowdCreationData, 0x128);

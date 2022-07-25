@@ -21,6 +21,7 @@ struct MovementPolicyTaskItemDefinition : ISerializable
 
     AI::behavior::MovementPolicyTaskFunctions function; // 30
     uint8_t unk34[0x38 - 0x34]; // 34
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<Handle<AI::behavior::ExpressionSocket>, 4> params; // 38
 };
 RED4EXT_ASSERT_SIZE(MovementPolicyTaskItemDefinition, 0x80);

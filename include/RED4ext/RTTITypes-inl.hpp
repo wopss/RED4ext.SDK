@@ -110,11 +110,17 @@ RED4EXT_INLINE void RED4ext::CBaseRTTIType::Move(ScriptInstance aLhs, ScriptInst
 
 RED4EXT_INLINE bool RED4ext::CBaseRTTIType::ToString(const ScriptInstance aInstance, CString& aOut) const
 {
+    RED4EXT_UNUSED_PARAMETER(aInstance);
+    RED4EXT_UNUSED_PARAMETER(aOut);
+
     return false;
 }
 
 RED4EXT_INLINE bool RED4ext::CBaseRTTIType::FromString(ScriptInstance aInstance, const CString& aString) const
 {
+    RED4EXT_UNUSED_PARAMETER(aInstance);
+    RED4EXT_UNUSED_PARAMETER(aString);
+
     return false;
 }
 
@@ -166,6 +172,8 @@ RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_A8()
 
 RED4EXT_INLINE void RED4ext::CBaseRTTIType::sub_B0(int64_t a1, int64_t a2)
 {
+    RED4EXT_UNUSED_PARAMETER(a1);
+    RED4EXT_UNUSED_PARAMETER(a2);
 }
 
 RED4EXT_INLINE RED4ext::Memory::IAllocator* RED4ext::CBaseRTTIType::GetAllocator() const
@@ -277,6 +285,8 @@ RED4EXT_INLINE bool RED4ext::CClass::sub_90(int64_t a1, ScriptInstance aInstance
 
 RED4EXT_INLINE bool RED4ext::CClass::sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5)
 {
+    RED4EXT_UNUSED_PARAMETER(a5);
+
     using func_t = bool (*)(const CClass*, int64_t, ScriptInstance, CString&, int64_t);
     RelocFunc<func_t> func(Addresses::CClass_sub_90);
     return func(this, a1, aInstance, a3, a4);
@@ -426,14 +436,18 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CEnum::GetComputedName() const
 
 RED4EXT_INLINE void RED4ext::CEnum::Construct(ScriptInstance aMemory) const
 {
+    RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
 RED4EXT_INLINE void RED4ext::CEnum::Destruct(ScriptInstance aMemory) const
 {
+    RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
 RED4EXT_INLINE const bool RED4ext::CEnum::IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3)
 {
+    RED4EXT_UNUSED_PARAMETER(a3);
+
     switch (actualSize)
     {
     case 1:
@@ -542,14 +556,18 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CBitfield::GetComputedName() const
 
 RED4EXT_INLINE void RED4ext::CBitfield::Construct(ScriptInstance aMemory) const
 {
+    RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
 RED4EXT_INLINE void RED4ext::CBitfield::Destruct(ScriptInstance aMemory) const
 {
+    RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
 RED4EXT_INLINE const bool RED4ext::CBitfield::IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3)
 {
+    RED4EXT_UNUSED_PARAMETER(a3);
+
     switch (actualSize)
     {
     case 1:

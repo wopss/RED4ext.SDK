@@ -9,6 +9,11 @@
 
 void PrintGameTime(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aFrame);
+    RED4EXT_UNUSED_PARAMETER(aOut);
+    RED4EXT_UNUSED_PARAMETER(a4);
+
     RED4ext::GameTime gameTime;
     RED4ext::ExecuteFunction("gameTimeSystem", "GetGameTime", &gameTime);
 
@@ -17,6 +22,11 @@ void PrintGameTime(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame,
 
 void ShiftGameTime(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, void* aOut, int64_t a4)
 {
+    RED4EXT_UNUSED_PARAMETER(aContext);
+    RED4EXT_UNUSED_PARAMETER(aFrame);
+    RED4EXT_UNUSED_PARAMETER(aOut);
+    RED4EXT_UNUSED_PARAMETER(a4);
+
     RED4ext::GameTime gameTime;
     RED4ext::ExecuteFunction("gameTimeSystem", "GetGameTime", &gameTime);
 
@@ -48,6 +58,9 @@ RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,
                                         const RED4ext::Sdk* aSdk)
 {
+    RED4EXT_UNUSED_PARAMETER(aHandle);
+    RED4EXT_UNUSED_PARAMETER(aSdk);
+
     switch (aReason)
     {
     case RED4ext::EMainReason::Load:

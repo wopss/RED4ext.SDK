@@ -21,10 +21,10 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::SetReturnType(CName aType)
         return false;
     }
 
-    CProperty::Flags flags{};
-    flags.isReturn = true;
+    CProperty::Flags propertyFlags{};
+    propertyFlags.isReturn = true;
 
-    returnType = CProperty::Create(type, "__return", nullptr, 0, {}, flags);
+    returnType = CProperty::Create(type, "__return", nullptr, 0, {}, propertyFlags);
     return returnType != nullptr;
 }
 
@@ -37,11 +37,11 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::AddParam(CName aType, const char* aN
         return false;
     }
 
-    CProperty::Flags flags{};
-    flags.isOut = aIsOut;
-    flags.isOptional = aIsOptional;
+    CProperty::Flags paramFlags{};
+    paramFlags.isOut = aIsOut;
+    paramFlags.isOptional = aIsOptional;
 
-    auto param = CProperty::Create(type, aName, nullptr, unkAC, nullptr, flags);
+    auto param = CProperty::Create(type, aName, nullptr, unkAC, nullptr, paramFlags);
     if (!param)
     {
         return false;
@@ -96,28 +96,24 @@ RED4EXT_INLINE RED4ext::CBaseFunction::Handler_t RED4ext::CBaseFunction::GetHand
 
 RED4EXT_INLINE bool RED4ext::CBaseFunction::ExecuteNative(CStack* aStack, CStackFrame& aFrame)
 {
+    auto context = aStack->GetContext();
+    auto resultType = aStack->GetResultType();
+    auto resultAddress = aStack->GetResultAddr();
+
     if (!flags.isStatic)
     {
-        auto context = aStack->GetContext();
         if (!context)
         {
-            auto returnType = aStack->GetType();
-            auto resultAddress = aStack->GetResultAddr();
-            auto context = aStack->context20;
+            context = aStack->context20;
 
-            GetInvokable()->Execute(context, aFrame, resultAddress, returnType);
-
+            GetInvokable()->Execute(context, aFrame, resultAddress, resultType);
             return true;
         }
 
         auto func = GetHandler(GetRegIndex());
         if (func)
         {
-            auto returnType = aStack->GetType();
-            auto resultAddress = aStack->GetResultAddr();
-
-            func(context, aFrame, resultAddress, returnType);
-
+            func(context, aFrame, resultAddress, resultType);
             return true;
         }
 
@@ -126,12 +122,10 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::ExecuteNative(CStack* aStack, CStack
 
     auto func = OpcodeHandlers::Get(GetRegIndex() & 0xFF);
     if (!func)
+    {
         return false;
+    }
 
-    auto returnType = aStack->GetType();
-    auto resultAddress = aStack->GetResultAddr();
-    auto context = (IScriptable*)aStack->GetContext();
-    func(context, &aFrame, resultAddress, returnType);
-
+    func(context, &aFrame, resultAddress, resultType);
     return true;
 }

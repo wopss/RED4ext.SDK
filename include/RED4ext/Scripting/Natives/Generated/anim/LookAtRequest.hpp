@@ -27,6 +27,7 @@ struct LookAtRequest
     bool calculatePositionInParentSpace; // 28
     uint8_t unk29[0x2C - 0x29]; // 29
     int32_t priority; // 2C
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<anim::LookAtPartRequest, 2> additionalParts; // 30
     bool invalid; // 68
     uint8_t unk69[0x70 - 0x69]; // 69

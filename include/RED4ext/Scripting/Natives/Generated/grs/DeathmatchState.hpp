@@ -22,6 +22,7 @@ struct DeathmatchState
     grs::DeathmatchStatus status; // 20
     uint8_t unk24[0x28 - 0x24]; // 24
     net::Time sessionLength; // 28
+    #pragma warning(suppress : 4324)
     alignas(8) StaticArray<grs::DeathmatchPlayerGameInfo, 7> playersInfo; // 30
 };
 RED4EXT_ASSERT_SIZE(DeathmatchState, 0x150);
