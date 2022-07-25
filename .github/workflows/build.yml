@@ -25,6 +25,7 @@ jobs:
           cmake `
             -DCMAKE_CXX_STANDARD=${{ matrix.cpp_standard }} `
             -DRED4EXT_HEADER_ONLY=${{ matrix.use_header_only }} `
+            -DRED4EXT_USE_PCH=ON `
             -DRED4EXT_BUILD_EXAMPLES=ON `
             -DRED4EXT_EXTRA_WARNINGS=ON `
             -DRED4EXT_TREAT_WARNINGS_AS_ERRORS=ON `
