@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
+include(CMakeDependentOption)
+
 project(RED4ext.SDK LANGUAGES CXX)
 
 if(NOT CMAKE_CXX_STANDARD)
@@ -17,6 +19,8 @@ option(RED4EXT_HEADER_ONLY "Use the header only version of the library." OFF)
 option(RED4EXT_BUILD_EXAMPLES "Build plugin examples." OFF)
 option(RED4EXT_EXTRA_WARNINGS "Enable extra warnings." OFF)
 option(RED4EXT_TREAT_WARNINGS_AS_ERRORS "Treat compiler warnings as errors." OFF)
+
+cmake_dependent_option(RED4EXT_USE_PCH "Use precompiled headers to speed up compilation time." OFF "NOT RED4EXT_HEADER_ONLY" OFF)
 
 if(RED4EXT_EXTRA_WARNINGS)
   if(MSVC)
@@ -43,6 +47,7 @@ if(RED4EXT_HEADER_ONLY)
 else()
   file(GLOB_RECURSE RED4EXT_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
+  source_group(CMake REGULAR_EXPRESSION cmake_pch.*)
   source_group(TREE "${RED4EXT_INCLUDE_DIR}/RED4ext" FILES ${RED4EXT_HEADERS})
   source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/src" FILES ${RED4EXT_SOURCES})
 
@@ -50,6 +55,11 @@ else()
 
   target_include_directories(RED4ext.SDK PUBLIC ${RED4EXT_INCLUDE_DIR})
   target_compile_definitions(RED4ext.SDK PUBLIC RED4EXT_STATIC_LIB)
+
+  if(COMMAND target_precompile_headers AND RED4EXT_USE_PCH)
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/pch.hpp.in" "${PROJECT_BINARY_DIR}/red4ext_pch.hpp" @ONLY)
+    target_precompile_headers(RED4ext.SDK PRIVATE "${PROJECT_BINARY_DIR}/red4ext_pch.hpp")
+  endif()
 endif()
 
 add_library(RED4ext::SDK ALIAS RED4ext.SDK)
