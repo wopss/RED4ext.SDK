@@ -6,13 +6,28 @@
 
 namespace RED4ext::Memory
 {
+template<typename T>
+struct AllocatorHook : std::false_type {};
+
+template<typename T>
+struct ConstructorHook : std::false_type {};
+
+template<typename T>
+struct AfterConstructedHook : std::false_type {};
+
+template<typename T>
+struct BeforeDestructedHook : std::false_type {};
+
 namespace detail
 {
 template<typename T>
 concept IsAllocator = std::is_base_of_v<IAllocator, T>;
 
 template<typename T>
-concept HasStaticAllocator = requires(T)
+concept HasAllocatorHook = AllocatorHook<T>::value;
+
+template<typename T>
+concept HasStaticAllocator = HasAllocatorHook<T> || requires(T)
 {
     { T::AllocatorType::Get() } -> std::convertible_to<IAllocator*>;
 };
@@ -59,7 +74,19 @@ inline T* New(Args&&... aArgs)
     auto allocator = GetAllocator<T>();
     auto instance = allocator->template Alloc<T>();
 
-    new (instance) T(std::forward<Args>(aArgs)...);
+    if constexpr (ConstructorHook<T>::value)
+    {
+        ConstructorHook<T>::Apply(instance);
+    }
+    else
+    {
+        new (instance) T(std::forward<Args>(aArgs)...);
+    }
+
+    if constexpr (AfterConstructedHook<T>::value)
+    {
+        AfterConstructedHook<T>::Apply(instance);
+    }
 
     return instance;
 }
@@ -78,6 +105,12 @@ requires detail::IsDestructible<T> && detail::HasAnyAllocator<T>
 inline void Delete(T* aPtr)
 {
     auto allocator = GetAllocator<T>(aPtr);
+
+    if constexpr (BeforeDestructedHook<T>::value)
+    {
+        BeforeDestructedHook<T>::Apply(aPtr);
+    }
+
     aPtr->~T();
     allocator->Free(aPtr);
 }
@@ -105,8 +138,14 @@ template<typename T>
 requires detail::HasStaticAllocator<T>
 inline IAllocator* GetAllocator()
 {
-    using AllocatorType = detail::ResolveAllocatorType<T>;
-    return GetAllocator<AllocatorType>();
+    if constexpr (AllocatorHook<T>::value)
+    {
+        return AllocatorHook<T>::Get();
+    }
+    else
+    {
+        return GetAllocator<detail::ResolveAllocatorType<T>>();
+    }
 }
 
 /**
