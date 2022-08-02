@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-class ISerializable;
+struct ISerializable;
 
 template<typename T>
 class WeakHandle;
