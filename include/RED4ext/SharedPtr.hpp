@@ -368,4 +368,10 @@ public:
     }
 };
 RED4EXT_ASSERT_SIZE(WeakPtr<void>, 0x10);
+
+template<typename T, typename... Args>
+inline SharedPtr<T> MakeShared(Args&&... args)
+{
+    return SharedPtr<T>(Memory::New<T>(std::forward<Args>(args)...));
+}
 } // namespace RED4ext

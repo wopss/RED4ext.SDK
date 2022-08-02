@@ -146,4 +146,10 @@ public:
     }
 };
 RED4EXT_ASSERT_SIZE(WeakHandle<ISerializable>, 0x10);
+
+template<typename T, typename... Args>
+inline Handle<T> MakeHandle(Args&&... args)
+{
+    return Handle<T>(Memory::New<T>(std::forward<Args>(args)...));
+}
 } // namespace RED4ext
