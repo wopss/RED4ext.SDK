@@ -22,9 +22,9 @@ public:
     {
     }
 
-    explicit Handle(ISerializable* aPtr)
+    explicit Handle(T* aPtr)
     {
-        RelocFunc<Handle* (*)(Handle*, ISerializable*)> ctor(Addresses::Handle_ctor);
+        RelocFunc<Handle* (*)(Handle*, T*)> ctor(Addresses::Handle_ctor);
         ctor(this, aPtr);
     }
 
