@@ -4,129 +4,149 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/ResourceLoader.hpp>
 #include <RED4ext/ResourcePath.hpp>
+#include <RED4ext/SharedPtr.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 
 namespace RED4ext
 {
+template<typename T = CResource>
 struct ResourceReference
 {
-    ResourceReference() noexcept = default;
-    ResourceReference(ResourcePath aPath) noexcept;
-    ResourceReference(ResourcePath aPath, bool aLoad) noexcept;
-    ResourceReference(const ResourceReference& aOther) noexcept;
-    ResourceReference(ResourceReference&& aOther) noexcept;
-    ~ResourceReference();
+    ResourceReference(ResourcePath aPath) noexcept
+        : path(aPath)
+    {
+    }
+
+    ResourceReference(ResourcePath aPath, bool aLoad) noexcept
+        : path(aPath)
+    {
+        if (aLoad)
+        {
+            Load();
+        }
+    }
+
+    ResourceReference(const ResourceReference& aOther) noexcept
+        : path(aOther.path)
+    {
+        if (aOther.token.instance)
+        {
+            Load(); // Initialize the token if other instance is already loaded
+        }
+    }
+
+    ResourceReference(ResourceReference&& aOther) noexcept
+        : path(aOther.path)
+        , token(aOther.token)
+    {
+        aOther.path = ResourcePath();
+        aOther.token.instance = nullptr;
+        aOther.token.refCount = nullptr;
+    }
+
+    ~ResourceReference()
+    {
+        Reset();
+    }
 
     /**
      * @brief Load the resource synchronously and fill the token.
      */
-    void Load();
+    void Load()
+    {
+        using Load_t = void (*)(ResourceReference*);
+        RelocFunc<Load_t> Load_(Addresses::ResourceReference_Load);
+
+        Load_(this);
+    }
 
     /**
      * @brief Load if it's not already loaded and get the resource.
+     *
      * @return The loaded resource.
      */
-    Handle<CResource>& Fetch();
+    Handle<T>& Fetch()
+    {
+        using Fetch_t = Handle<T>& (*)(ResourceReference*);
+        RelocFunc<Fetch_t> Fetch_(Addresses::ResourceReference_Fetch);
+
+        return Fetch_(this);
+    }
+
+    /**
+     * @brief Get the loaded resource.
+     *
+     * @return The loaded resource.
+     */
+    Handle<T>& Get() const
+    {
+        if (token)
+        {
+            return token->resource;
+        }
+
+        return {};
+    }
 
     /**
      * @brief Reset the path and associated token.
      */
-    void Reset();
-
-    struct ResourceTokenPtr
+    void Reset()
     {
-        void* instance{ nullptr };
-        RED4ext::RefCnt* refCount{ nullptr };
-    };
+        using Reset_t = void (*)(ResourceReference*);
+        RelocFunc<Reset_t> Reset_(Addresses::ResourceReference_Reset);
 
-    ResourcePath path;      // 00
-    ResourceTokenPtr token; // 08
+        Reset_(this);
+    }
+
+    inline bool IsLoaded() const
+    {
+        return token && token->IsLoaded();
+    }
+
+    inline bool IsFailed() const
+    {
+        return token && token->IsFailed();
+    }
+
+    ResourcePath path;                 // 00
+    SharedPtr<ResourceToken<T>> token; // 08
 };
-RED4EXT_ASSERT_SIZE(ResourceReference, 0x18);
+RED4EXT_ASSERT_SIZE(ResourceReference<>, 0x18);
 
+template<typename T = CResource>
 struct ResourceAsyncReference
 {
-    ResourceAsyncReference() noexcept = default;
-    ResourceAsyncReference(ResourcePath aPath) noexcept;
-    ResourceAsyncReference(const ResourceAsyncReference& aOther) noexcept;
-    ResourceAsyncReference(ResourceAsyncReference&& aOther) noexcept;
+    ResourceAsyncReference(ResourcePath aPath) noexcept
+        : path(aPath)
+    {
+    }
 
-    [[nodiscard]] ResourceReference Resolve() const noexcept;
+    ResourceAsyncReference(const ResourceAsyncReference& aOther) noexcept
+        : path(aOther.path)
+    {
+    }
+
+    ResourceAsyncReference(ResourceAsyncReference&& aOther) noexcept
+        : path(aOther.path)
+    {
+        aOther.path = ResourcePath();
+    }
+
+    [[nodiscard]] ResourceReference<T> Resolve() const noexcept
+    {
+        return {path};
+    }
 
     ResourcePath path; // 00
 };
-RED4EXT_ASSERT_SIZE(ResourceAsyncReference, 0x8);
-
-template<typename T = CResource>
-struct TResourceReference : ResourceReference
-{
-    // static_assert(std::is_base_of_v<CResource, T> or std::is_same_v<CResource, T>,
-    //     "Resource reference inner type must inherit from 'CResource'.");
-
-    TResourceReference() noexcept
-        : ResourceReference()
-    {}
-
-    TResourceReference(ResourcePath aPath) noexcept
-        : ResourceReference(aPath)
-    {}
-
-    TResourceReference(ResourcePath aPath, bool aLoad) noexcept
-        : ResourceReference(aPath, aLoad)
-    {}
-
-    TResourceReference(const TResourceReference<T>& aOther) noexcept
-        : ResourceReference(aOther)
-    {}
-
-    TResourceReference(TResourceReference<T>&& aOther) noexcept
-        : ResourceReference(aOther)
-    {}
-
-    inline Handle<T>& Fetch()
-    {
-        return reinterpret_cast<Handle<T>&>(ResourceReference::Fetch());
-    }
-};
-RED4EXT_ASSERT_SIZE(TResourceReference<>, sizeof(ResourceReference));
-
-template<typename T = CResource>
-struct TResourceAsyncReference : ResourceAsyncReference
-{
-    // static_assert(std::is_base_of_v<CResource, T> or std::is_same_v<CResource, T>,
-    //     "Resource reference inner type must inherit from 'CResource'.");
-
-    TResourceAsyncReference() noexcept
-        : ResourceAsyncReference()
-    {}
-
-    TResourceAsyncReference(ResourcePath aPath) noexcept
-        : ResourceAsyncReference(aPath)
-    {}
-
-    TResourceAsyncReference(const TResourceAsyncReference<T>& aOther) noexcept
-        : ResourceAsyncReference(aOther)
-    {}
-
-    TResourceAsyncReference(TResourceAsyncReference<T>&& aOther) noexcept
-        : ResourceAsyncReference(aOther)
-    {}
-
-    [[nodiscard]] inline TResourceReference<T> Resolve() const noexcept
-    {
-        return TResourceReference<T>(path);
-    }
-};
-RED4EXT_ASSERT_SIZE(TResourceReference<>, sizeof(ResourceReference));
+RED4EXT_ASSERT_SIZE(ResourceAsyncReference<>, 0x8);
 
 template<typename T>
-using Ref = TResourceReference<T>;
+using Ref = ResourceReference<T>;
 
 template<typename T>
-using RaRef = TResourceAsyncReference<T>;
+using RaRef = ResourceAsyncReference<T>;
 } // namespace RED4ext
-
-#ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/ResourceReference-inl.hpp>
-#endif
