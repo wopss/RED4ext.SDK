@@ -1,0 +1,43 @@
+name: ClangFormat Workflow
+on:
+  push:
+    branches: '**'
+  pull_request:
+
+jobs:
+  format:
+    name: Check the formatting
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set environment variables for pull requests
+        if: github.event_name == 'pull_request'
+        run: echo "RED4EXT_COMMIT_BASE=${{ github.event.pull_request.base.sha }}" | Out-File -FilePath $env:GITHUB_ENV -Encoding UTF8 -Append
+
+      - name: Set environment variables for everything else
+        if: github.event_name == 'push'
+        run: echo "RED4EXT_COMMIT_BASE=${{ github.event.before }}" | Out-File -FilePath $env:GITHUB_ENV -Encoding UTF8 -Append
+
+      - name: Run clang-format
+        run: |
+          $output = (git `
+                      -c core.autocrlf=false `
+                      -c core.eol=lf `
+                      -c color.ui=always `
+                      clang-format `
+                        --style file `
+                        --diff "${{ env.RED4EXT_COMMIT_BASE }}" "${{ github.sha }}"
+                    ).Trim()
+
+          Write-Output $output
+
+          if ($output -ine "no modified files to format") {
+            exit 1
+          }
+
+
