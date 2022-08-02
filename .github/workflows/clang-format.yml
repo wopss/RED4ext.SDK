@@ -39,5 +39,3 @@ jobs:
           if ($output -ine "no modified files to format") {
             exit 1
           }
-
-
