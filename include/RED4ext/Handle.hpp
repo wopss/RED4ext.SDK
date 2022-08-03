@@ -4,7 +4,7 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Relocation.hpp>
-#include <RED4ext/SharedPtr.hpp>
+#include <RED4ext/Memory/SharedPtr.hpp>
 
 namespace RED4ext
 {
@@ -17,6 +17,8 @@ template<typename T>
 class Handle : public SharedPtrWithAccess<T>
 {
 public:
+    using BaseType = SharedPtrWithAccess<T>;
+
     constexpr Handle() noexcept = default;
     constexpr Handle(std::nullptr_t) noexcept
     {
@@ -30,17 +32,17 @@ public:
 
     Handle(const Handle& aOther) noexcept
     {
-        this->CopyConstructFrom(aOther);
+        BaseType::CopyConstructFrom(aOther);
     }
 
     Handle(Handle&& aRhs) noexcept
     {
-        this->MoveConstructFrom(std::move(aRhs));
+        BaseType::MoveConstructFrom(std::move(aRhs));
     }
 
-    Handle(const WeakHandle<T>& aOther)
+    Handle(const WeakHandle<T>& aOther) noexcept
     {
-        this->TryCopyConstructFromWeak(aOther);
+        BaseType::TryCopyConstructFromWeak(aOther);
     }
 
     ~Handle()
@@ -48,9 +50,9 @@ public:
         static_assert(std::is_base_of_v<ISerializable, T>,
                       "Handle only supports types that inherit from ISerializable.");
 
-        if (this->DecRef() && this->instance->CanBeDestructed())
+        if (BaseType::DecRef() && BaseType::instance->CanBeDestructed())
         {
-            this->Destroy();
+            BaseType::Destroy();
         }
     }
 
@@ -78,7 +80,7 @@ public:
 
     void Swap(Handle& aOther) noexcept
     {
-        this->DoSwap(aOther);
+        BaseType::Swap(aOther);
     }
 };
 RED4EXT_ASSERT_SIZE(Handle<ISerializable>, 0x10);
@@ -87,21 +89,23 @@ template<typename T>
 class WeakHandle : public WeakPtrWithAccess<T>
 {
 public:
+    using BaseType = WeakPtrWithAccess<T>;
+
     constexpr WeakHandle() noexcept = default;
 
     WeakHandle(const WeakHandle& aOther) noexcept
     {
-        this->CopyConstructWeakFrom(aOther);
+        BaseType::CopyConstructWeakFrom(aOther);
     }
 
     WeakHandle(const Handle<T>& aOther) noexcept
     {
-        this->CopyConstructWeakFrom(aOther);
+        BaseType::CopyConstructWeakFrom(aOther);
     }
 
     WeakHandle(WeakHandle&& aOther) noexcept
     {
-        this->MoveConstructFrom(std::move(aOther));
+        BaseType::MoveConstructFrom(std::move(aOther));
     }
 
     ~WeakHandle() noexcept
@@ -109,12 +113,12 @@ public:
         static_assert(std::is_base_of_v<ISerializable, T>,
                       "WeakHandle only supports types that inherit from ISerializable.");
 
-        this->DecWeakRef();
+        BaseType::DecWeakRef();
     }
 
     WeakHandle& operator=(const WeakHandle& aRhs) noexcept
     {
-        WeakHandle(aRhs).swap(*this);
+        WeakHandle(aRhs).Swap(*this);
         return *this;
     }
 
@@ -137,7 +141,7 @@ public:
 
     void Swap(WeakHandle& aOther) noexcept
     {
-        this->DoSwap(aOther);
+        BaseType::Swap(aOther);
     }
 
     [[nodiscard]] Handle<T> Lock() const noexcept

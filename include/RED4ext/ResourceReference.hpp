@@ -6,7 +6,7 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/ResourceLoader.hpp>
 #include <RED4ext/ResourcePath.hpp>
-#include <RED4ext/SharedPtr.hpp>
+#include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 
 namespace RED4ext
@@ -30,25 +30,32 @@ struct ResourceReference
 
     ResourceReference(const ResourceReference& aOther) noexcept
         : path(aOther.path)
+        , token(aOther.token)
     {
-        if (aOther.token.instance)
-        {
-            Load(); // Initialize the token if other instance is already loaded
-        }
     }
 
     ResourceReference(ResourceReference&& aOther) noexcept
         : path(aOther.path)
-        , token(aOther.token)
+        , token(std::move(aOther.token))
     {
-        aOther.path = ResourcePath();
-        aOther.token.instance = nullptr;
-        aOther.token.refCount = nullptr;
+        aOther.path = "";
     }
 
-    ~ResourceReference()
+    ~ResourceReference() noexcept = default;
+
+    ResourceReference& operator=(const ResourceReference& aRhs) noexcept
     {
-        Reset();
+        path = aRhs.path;
+        token = aRhs.token;
+        return *this;
+    }
+
+    ResourceReference& operator=(ResourceReference&& aRhs) noexcept
+    {
+        path = aRhs.path;
+        token = std::move(aRhs.token);
+        aRhs.path = "";
+        return *this;
     }
 
     /**
@@ -57,9 +64,9 @@ struct ResourceReference
     void Load()
     {
         using Load_t = void (*)(ResourceReference*);
-        RelocFunc<Load_t> Load_(Addresses::ResourceReference_Load);
+        RelocFunc<Load_t> func(Addresses::ResourceReference_Load);
 
-        Load_(this);
+        func(this);
     }
 
     /**
@@ -70,9 +77,9 @@ struct ResourceReference
     Handle<T>& Fetch()
     {
         using Fetch_t = Handle<T>& (*)(ResourceReference*);
-        RelocFunc<Fetch_t> Fetch_(Addresses::ResourceReference_Fetch);
+        RelocFunc<Fetch_t> func(Addresses::ResourceReference_Fetch);
 
-        return Fetch_(this);
+        return func(this);
     }
 
     /**
@@ -80,7 +87,7 @@ struct ResourceReference
      *
      * @return The loaded resource.
      */
-    Handle<T>& Get() const
+    Handle<T>& Get() const noexcept
     {
         if (token)
         {
@@ -96,17 +103,17 @@ struct ResourceReference
     void Reset()
     {
         using Reset_t = void (*)(ResourceReference*);
-        RelocFunc<Reset_t> Reset_(Addresses::ResourceReference_Reset);
+        RelocFunc<Reset_t> func(Addresses::ResourceReference_Reset);
 
-        Reset_(this);
+        func(this);
     }
 
-    inline bool IsLoaded() const
+    inline bool IsLoaded() const noexcept
     {
         return token && token->IsLoaded();
     }
 
-    inline bool IsFailed() const
+    inline bool IsFailed() const noexcept
     {
         return token && token->IsFailed();
     }
@@ -115,6 +122,8 @@ struct ResourceReference
     SharedPtr<ResourceToken<T>> token; // 08
 };
 RED4EXT_ASSERT_SIZE(ResourceReference<>, 0x18);
+RED4EXT_ASSERT_OFFSET(ResourceReference<>, path, 0x0);
+RED4EXT_ASSERT_OFFSET(ResourceReference<>, token, 0x8);
 
 template<typename T = CResource>
 struct ResourceAsyncReference
@@ -143,6 +152,7 @@ struct ResourceAsyncReference
     ResourcePath path; // 00
 };
 RED4EXT_ASSERT_SIZE(ResourceAsyncReference<>, 0x8);
+RED4EXT_ASSERT_OFFSET(ResourceAsyncReference<>, path, 0x0);
 
 template<typename T>
 using Ref = ResourceReference<T>;

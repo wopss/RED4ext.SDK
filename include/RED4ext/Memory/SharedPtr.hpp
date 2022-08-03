@@ -34,8 +34,11 @@ struct RefCnt
         while (uses != 0)
         {
             const uint32_t oldUses = InterlockedCompareExchange(&strongRefs, uses + 1, uses);
+
             if (oldUses == uses)
+            {
                 return true;
+            }
 
             uses = oldUses;
         }
@@ -64,10 +67,10 @@ class SharedPtrBase
 {
 public:
     SharedPtrBase(const SharedPtrBase&) = delete;
-
-    ~SharedPtrBase() = default;
-
     SharedPtrBase& operator=(const SharedPtrBase&) = delete;
+    SharedPtrBase& operator=(SharedPtrBase&&) = delete;
+
+    ~SharedPtrBase() noexcept = default;
 
     [[nodiscard]] uint32_t GetUseCount() const noexcept
     {
@@ -84,7 +87,7 @@ protected:
     {
     }
 
-    void DoSwap(SharedPtrBase& aOther) noexcept
+    void Swap(SharedPtrBase& aOther) noexcept
     {
         std::swap(instance, aOther.instance);
         std::swap(refCount, aOther.refCount);
@@ -188,6 +191,8 @@ template<typename T>
 class SharedPtrWithAccess : public SharedPtrBase<T>
 {
 public:
+    using BaseType = SharedPtrBase<T>;
+
     template<typename U = T, typename = std::enable_if_t<!std::is_void_v<U>>>
     [[nodiscard]] inline U& operator*() const
     {
@@ -211,7 +216,7 @@ public:
 
     [[nodiscard]] T* GetPtr() const noexcept
     {
-        return reinterpret_cast<T*>(this->instance);
+        return reinterpret_cast<T*>(BaseType::instance);
     }
 };
 
@@ -219,6 +224,8 @@ template<typename T>
 class WeakPtrWithAccess : public SharedPtrBase<T>
 {
 public:
+    using BaseType = SharedPtrBase<T>;
+
     explicit operator bool() const noexcept
     {
         return !Expired();
@@ -226,7 +233,7 @@ public:
 
     [[nodiscard]] bool Expired() const noexcept
     {
-        return this->GetUseCount() == 0;
+        return BaseType::GetUseCount() == 0;
     }
 };
 
@@ -237,41 +244,43 @@ template<typename T>
 class SharedPtr : public SharedPtrWithAccess<T>
 {
 public:
+    using BaseType = SharedPtrWithAccess<T>;
+
     constexpr SharedPtr() noexcept = default;
     constexpr SharedPtr(std::nullptr_t) noexcept
     {
     }
 
-    explicit SharedPtr(T* aPtr)
+    explicit SharedPtr(T* aPtr) noexcept
     {
-        this->instance = aPtr;
-        this->refCount = Memory::New<RefCnt>();
+        BaseType::instance = aPtr;
+        BaseType::refCount = Memory::New<RefCnt>();
     }
 
     SharedPtr(const SharedPtr& aOther) noexcept
     {
-        this->CopyConstructFrom(aOther);
+        BaseType::CopyConstructFrom(aOther);
     }
 
     SharedPtr(SharedPtr&& aRhs) noexcept
     {
-        this->MoveConstructFrom(std::move(aRhs));
+        BaseType::MoveConstructFrom(std::move(aRhs));
     }
 
-    SharedPtr(const WeakPtr<T>& aOther)
+    SharedPtr(const WeakPtr<T>& aOther) noexcept
     {
-        this->TryCopyConstructFromWeak(aOther);
+        BaseType::TryCopyConstructFromWeak(aOther);
     }
 
-    ~SharedPtr()
+    ~SharedPtr() noexcept
     {
-        static_assert(Memory::detail::HasAnyAllocator<T> && Memory::detail::IsDestructible<T>,
+        static_assert(Memory::IsDeleteCompatible<T>,
                       "SharedPtr only supports types that define the allocator type and are destructible "
-                      "(a polymorphic type requires a virtual destructor).");
+                      "(a polymorphic type requires a virtual destructor)");
 
-        if (this->DecRef())
+        if (BaseType::DecRef())
         {
-            this->Destroy();
+            BaseType::Destroy();
         }
     }
 
@@ -292,14 +301,14 @@ public:
         SharedPtr().Swap(*this);
     }
 
-    void Reset(T* aPtr)
+    void Reset(T* aPtr) noexcept
     {
         SharedPtr(aPtr).Swap(*this);
     }
 
     void Swap(SharedPtr& aOther) noexcept
     {
-        this->DoSwap(aOther);
+        BaseType::Swap(aOther);
     }
 };
 RED4EXT_ASSERT_SIZE(SharedPtr<void*>, 0x10);
@@ -308,35 +317,37 @@ template<typename T>
 class WeakPtr : public WeakPtrWithAccess<T>
 {
 public:
+    using BaseType = WeakPtrWithAccess<T>;
+
     constexpr WeakPtr() noexcept = default;
 
     WeakPtr(const WeakPtr& aOther) noexcept
     {
-        this->CopyConstructWeakFrom(aOther);
+        BaseType::CopyConstructWeakFrom(aOther);
     }
 
     WeakPtr(const SharedPtr<T>& aOther) noexcept
     {
-        this->CopyConstructWeakFrom(aOther);
+        BaseType::CopyConstructWeakFrom(aOther);
     }
 
     WeakPtr(WeakPtr&& aOther) noexcept
     {
-        this->MoveConstructFrom(std::move(aOther));
+        BaseType::MoveConstructFrom(std::move(aOther));
     }
 
     ~WeakPtr() noexcept
     {
-        static_assert(Memory::detail::HasAnyAllocator<T> && Memory::detail::IsDestructible<T>,
+        static_assert(Memory::IsDeleteCompatible<T>,
                       "WeakPtr only supports types that define the allocator type and are destructible "
-                      "(a polymorphic type requires a virtual destructor).");
+                      "(a polymorphic type requires a virtual destructor)");
 
-        this->DecWeakRef();
+        BaseType::DecWeakRef();
     }
 
     WeakPtr& operator=(const WeakPtr& aRhs) noexcept
     {
-        WeakPtr(aRhs).swap(*this);
+        WeakPtr(aRhs).Swap(*this);
         return *this;
     }
 
@@ -359,7 +370,7 @@ public:
 
     void Swap(WeakPtr& aOther) noexcept
     {
-        this->DoSwap(aOther);
+        BaseType::Swap(aOther);
     }
 
     [[nodiscard]] SharedPtr<T> Lock() const noexcept
