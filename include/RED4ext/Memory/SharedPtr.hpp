@@ -7,8 +7,8 @@
 
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Relocation.hpp>
 #include <RED4ext/Memory/Utils.hpp>
+#include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
 {

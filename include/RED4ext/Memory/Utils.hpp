@@ -22,7 +22,7 @@ concept IsDeleteCompatible = Detail::HasAnyAllocatorOrHook<T> && Detail::IsSafeD
  * @param aArgs The constructor arguments.
  * @return The object pointer.
  */
-template<typename T, typename ...Args>
+template<typename T, typename... Args>
 requires IsNewCompatible<T>
 inline T* New(Args&&... aArgs)
 {

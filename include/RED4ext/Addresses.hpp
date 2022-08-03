@@ -141,9 +141,15 @@ constexpr uintptr_t OpcodeHandlers_Get = 0x1401C0D6D - ImageBase; // 4C 8D 15 ? 
 #pragma endregion
 
 #pragma region ResourceLoader
-constexpr uintptr_t ResourceLoader = 0x143E15568 - ImageBase; // 48 8B 87 ? ? ? ? 48 8B 5C 24 ? 48 89 05 ? ? ? ? 48 83 C4 20 5F C3, expected: 1, index: 0, offset: 15
-constexpr uintptr_t ResourceLoader_FindToken = 0x1401FD400 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B F1 49 8B D8 48 83 C1 40 48 8B EA E8, expected: 1, index: 0
-constexpr uintptr_t ResourceLoader_LoadAsync = 0x1401FDCD0 - ImageBase; // 4C 8B DC 49 89 5B 10 49 89 6B 18 49 89 73 20 57 48 83 EC 50 48 8B 69 48 33 C0 49 C7 43 D8 00 00 00 00, expected: 1, index: 0
+constexpr uintptr_t ResourceLoader =
+    0x143E15568 -
+    ImageBase; // 48 8B 87 ? ? ? ? 48 8B 5C 24 ? 48 89 05 ? ? ? ? 48 83 C4 20 5F C3, expected: 1, index: 0, offset: 15
+constexpr uintptr_t ResourceLoader_FindToken =
+    0x1401FD400 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B F1 49 8B D8 48 83 C1
+                             // 40 48 8B EA E8, expected: 1, index: 0
+constexpr uintptr_t ResourceLoader_LoadAsync =
+    0x1401FDCD0 - ImageBase; // 4C 8B DC 49 89 5B 10 49 89 6B 18 49 89 73 20 57 48 83 EC 50 48 8B 69 48 33 C0 49 C7 43
+                             // D8 00 00 00 00, expected: 1, index: 0
 #pragma endregion
 
 #pragma region ResourceReference

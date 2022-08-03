@@ -5,10 +5,10 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
+#include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/Relocation.hpp>
 #include <RED4ext/ResourcePath.hpp>
-#include <RED4ext/Memory/SharedPtr.hpp>
-#include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 
 namespace RED4ext

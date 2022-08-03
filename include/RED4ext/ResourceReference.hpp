@@ -4,9 +4,9 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/ResourceLoader.hpp>
 #include <RED4ext/ResourcePath.hpp>
-#include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 
 namespace RED4ext

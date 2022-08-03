@@ -3,8 +3,8 @@
 #include <type_traits>
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/Relocation.hpp>
 #include <RED4ext/Memory/SharedPtr.hpp>
+#include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
 {
