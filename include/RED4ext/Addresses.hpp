@@ -159,8 +159,11 @@ constexpr uintptr_t ResourceReference_Reset = 0x140247C80 - ImageBase; // 48 83 
 #pragma endregion
 
 #pragma region ResourceToken
-constexpr uintptr_t ResourceToken_dtor = 0x140246290 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74, expected: 1, index: 0
-constexpr uintptr_t ResourceToken_Fetch = 0x1402476B0 - ImageBase; // 40 53 48 83 EC 40 8B 41 58 48 8B D9 0F 29 74 24 30 0F 29 7C 24 20 85 C0 74 0A, expected: 1, index: 0
+constexpr uintptr_t ResourceToken_dtor =
+    0x140246290 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74, expected: 1, index: 0
+constexpr uintptr_t ResourceToken_Fetch =
+    0x1402476B0 -
+    ImageBase; // 40 53 48 83 EC 40 8B 41 58 48 8B D9 0F 29 74 24 30 0F 29 7C 24 20 85 C0 74 0A, expected: 1, index: 0
 #pragma endregion
 
 #pragma region Streams
