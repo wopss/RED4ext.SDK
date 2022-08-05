@@ -34,24 +34,24 @@ struct BeforeDestructedHook : std::false_type
 template<typename T>
 concept HasAllocatorHook = AllocatorHook<T>::value;
 
+// clang-format off
 template<typename T>
 concept HasStaticAllocator = requires(T)
 {
-    {
-        T::AllocatorType::Get()
-        } -> std::convertible_to<Memory::IAllocator*>;
+    { T::AllocatorType::Get() } -> std::convertible_to<Memory::IAllocator*>;
 };
+// clang-format on
 
 template<typename T>
 concept HasStaticAllocatorOrHook = HasStaticAllocator<T> || HasAllocatorHook<T>;
 
+// clang-format off
 template<typename T>
 concept HasDynamicAllocator = requires(T t)
 {
-    {
-        t.GetAllocator()
-        } -> std::convertible_to<Memory::IAllocator*>;
+    { t.GetAllocator() } -> std::convertible_to<Memory::IAllocator*>;
 };
+// clang-format on
 
 template<typename T>
 concept HasAnyAllocator = HasDynamicAllocator<T> || HasStaticAllocator<T>;
