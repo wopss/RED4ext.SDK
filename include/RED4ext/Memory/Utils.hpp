@@ -1,0 +1,126 @@
+#pragma once
+
+#include <type_traits>
+
+#include <RED4ext/Detail/Memory.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
+
+namespace RED4ext::Memory
+{
+template<typename T>
+concept IsNewCompatible = Detail::HasStaticAllocatorOrHook<T>;
+
+template<typename T>
+concept IsDeleteCompatible = Detail::HasAnyAllocatorOrHook<T> && Detail::IsSafeDestructible<T>;
+
+/**
+ * @brief Creates a new object using the appropriate allocator.
+ * The object type must define a scoped type `AllocatorType`.
+ *
+ * @tparam T The object type.
+ * @tparam Args The type of the constructor arguments.
+ * @param aArgs The constructor arguments.
+ * @return The object pointer.
+ */
+template<typename T, typename... Args>
+requires IsNewCompatible<T>
+inline T* New(Args&&... aArgs)
+{
+    auto allocator = GetAllocator<T>();
+    auto instance = allocator->template Alloc<T>();
+
+    if constexpr (Detail::ConstructorHook<T>::value)
+    {
+        Detail::ConstructorHook<T>::Apply(instance);
+    }
+    else
+    {
+        new (instance) T(std::forward<Args>(aArgs)...);
+    }
+
+    if constexpr (Detail::AfterConstructedHook<T>::value)
+    {
+        Detail::AfterConstructedHook<T>::Apply(instance);
+    }
+
+    return instance;
+}
+
+/**
+ * @brief Destroys the object using the appropriate allocator.
+ * The object type must meet the following requirements:
+ * 1) Define a `GetAllocator()` member method or scoped type `AllocatorType`.
+ * 2) To be destructible. If the type is polymorphic, it must have a virtual destructor.
+ *
+ * @tparam T The object type.
+ * @param aPtr The object pointer.
+ */
+template<typename T>
+requires IsDeleteCompatible<T>
+inline void Delete(T* aPtr)
+{
+    auto allocator = GetAllocator<T>(aPtr);
+
+    if constexpr (Detail::BeforeDestructedHook<T>::value)
+    {
+        Detail::BeforeDestructedHook<T>::Apply(aPtr);
+    }
+
+    aPtr->~T();
+    allocator->Free(aPtr);
+}
+
+/**
+ * @brief Gets the allocator instance of given type.
+ *
+ * @tparam T The allocator type.
+ * @return The allocator instance.
+ */
+template<typename T>
+requires Detail::IsAllocator<T>
+inline IAllocator* GetAllocator()
+{
+    return T::Get();
+}
+
+/**
+ * @brief Gets the allocator associated with the type.
+ *
+ * @tparam T The object type.
+ * @return The allocator instance.
+ */
+template<typename T>
+requires Detail::HasStaticAllocatorOrHook<T>
+inline IAllocator* GetAllocator()
+{
+    if constexpr (Detail::AllocatorHook<T>::value)
+    {
+        return Detail::AllocatorHook<T>::Get();
+    }
+    else
+    {
+        return GetAllocator<Detail::ResolveAllocatorType<T>>();
+    }
+}
+
+/**
+ * @brief Gets the allocator associated with the object.
+ *
+ * @tparam T The object type.
+ * @param aPtr The object pointer.
+ * @return The allocator instance.
+ */
+template<typename T>
+requires Detail::HasAnyAllocatorOrHook<T>
+inline IAllocator* GetAllocator(T* aPtr)
+{
+    if constexpr (Detail::HasDynamicAllocator<T>)
+    {
+        return aPtr->GetAllocator();
+    }
+    else
+    {
+        return GetAllocator<T>();
+    }
+}
+} // namespace RED4ext::Memory

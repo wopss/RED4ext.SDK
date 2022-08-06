@@ -44,7 +44,7 @@ struct ISerializable
     virtual CString sub_B8();                                                           // B8
     virtual void* sub_C0(void* a1);                                                     // C0
     virtual void* sub_C8(void* a1);                                                     // C8
-    virtual bool sub_D0();                                                              // D0
+    virtual bool CanBeDestructed();                                                     // D0
 
     WeakHandle<ISerializable> ref; // 00
     int64_t unk18;                 // 18
@@ -52,20 +52,6 @@ struct ISerializable
     int64_t unk28;                 // 28
 };
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
-
-template<typename T, typename = std::enable_if_t<std::is_base_of_v<ISerializable, T>>>
-bool IsHandleEmpty(Handle<T>& handle)
-{
-    return handle->sub_D0();
-}
-
-template<typename T, typename = std::enable_if_t<std::is_base_of_v<ISerializable, T>>>
-void DeleteHandle(Handle<T>& handle)
-{
-    auto alloc = handle->GetAllocator();
-    handle->~T();
-    alloc->Free(handle);
-}
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

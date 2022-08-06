@@ -19,7 +19,7 @@ struct HashMapHash
         // Or you can make a specialized version of this class
 
         static_assert(!std::is_same_v<enabled, void>,
-                      "Please define a HashMapHash<T> specialization for your key type.");
+                      "Please define a HashMapHash<T> specialization for your key type");
     }
 };
 

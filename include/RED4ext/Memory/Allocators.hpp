@@ -54,7 +54,7 @@ RED4EXT_ASSERT_SIZE(IAllocator, 0x8);
 template<typename T>
 struct Allocator : IAllocator
 {
-    static_assert(std::is_base_of_v<TPoolInfo<T>, T>, "An allocator must inherit from 'TPoolInfo'.");
+    static_assert(std::is_base_of_v<TPoolInfo<T>, T>, "An allocator must inherit from 'TPoolInfo'");
 
     static Allocator<T>* Get()
     {
@@ -69,7 +69,7 @@ struct Allocator : IAllocator
      * Because "REDfunc" is using a variable to call them in memory we cannot abuse the __fastcall convention, thus it
      * is necessary to use the following typedef:
      *  void [Re]Alloc(Vault*, AllocationResult*, [AllocationResult&], uint32_t, [uint32_t])
-     * 
+     *
      * Specifing the RDX directly and using void as return type should not cause problems when calling these functions,
      * doing something else the calls will be ill-formed.
      */

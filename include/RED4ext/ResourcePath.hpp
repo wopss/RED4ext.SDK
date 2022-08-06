@@ -82,6 +82,9 @@ struct ResourcePath
         // 4. Convert slashes to backslashes
         // 5. Convert alpha characters to lowercase
 
+        if (!aPath || *aPath == '\0')
+            return 0;
+
         constexpr size_t MaxLength = 216;
         char buffer[MaxLength];
 

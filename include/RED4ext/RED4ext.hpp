@@ -16,6 +16,7 @@
 #include <RED4ext/Hashing/FNV1a.hpp>
 #include <RED4ext/Hashing/Murmur3.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
+#include <RED4ext/Memory/SharedPtr.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>
 #include <RED4ext/IO/MemoryStream.hpp>

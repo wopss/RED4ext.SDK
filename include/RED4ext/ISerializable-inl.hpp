@@ -142,7 +142,7 @@ RED4EXT_INLINE void* RED4ext::ISerializable::sub_C8(void* a1)
     return a1;
 }
 
-RED4EXT_INLINE bool RED4ext::ISerializable::sub_D0()
+RED4EXT_INLINE bool RED4ext::ISerializable::CanBeDestructed()
 {
     return true;
 }
