@@ -36,6 +36,6 @@ jobs:
 
           Write-Output $output
 
-          if ($output -ne $null && $output -ine "no modified files to format") {
+          if ($output -ne $null -and $output -ine "no modified files to format") {
             exit 1
           }
