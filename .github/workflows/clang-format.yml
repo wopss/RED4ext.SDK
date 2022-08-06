@@ -32,10 +32,10 @@ jobs:
                       clang-format `
                         --style file `
                         --diff "${{ env.RED4EXT_COMMIT_BASE }}" "${{ github.sha }}"
-                    ).Trim()
+                    )?.Trim()
 
           Write-Output $output
 
-          if ($output -ine "no modified files to format") {
+          if ($output -ne $null && $output -ine "no modified files to format") {
             exit 1
           }
