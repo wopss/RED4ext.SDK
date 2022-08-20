@@ -125,6 +125,25 @@ constexpr uintptr_t ISerializable_sub_A0 = 0x1401B5B50 - ImageBase; // 48 83 EC 
 constexpr uintptr_t ISerializable_sub_C0 = 0x1401AB930 - ImageBase; // 40 53 48 83 EC ? 48 8B DA E8 ? ? ? ?, expected: 115, index: 1
 #pragma endregion
 
+#pragma region JobHandle
+constexpr uintptr_t JobHandle_ctor = 0x142BB64F0 - ImageBase; // 40 53 48 83 EC 20 0F B7 02 48 8B D9 48 8B 0D ? ? ? ? 4D 8B C8 66 89 44 24 30 4C 8D 44 24 30, expected: 1, index: 0
+constexpr uintptr_t JobHandle_dtor = 0x142BB6530 - ImageBase; // 40 53 48 83 EC 20 48 8B 11 48 8B D9 48 85 D2 74 13 48 8B 0D ? ? ? ? E8 ? ? ? ?, expected: 1, index: 0
+constexpr uintptr_t JobHandle_Join = 0x142BB6560 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 40 48 8B FA 48 8B D9 48 8B 12 48 8B 0D ? ? ? ? E8 ? ? ? ?, expected: 1, index: 0
+#pragma endregion
+
+#pragma region JobInternals
+constexpr uintptr_t JobInternals_SetLocalThreadParam = 0x142BB8010 - ImageBase; // 8B 15 ? ? ? ? 65 48 8B 04 25 58 00 00 00 41 B8 ? ? ? ? 48 8B 04 D0 41 88 0C 00 C3, expected: 4, index: 2
+constexpr uintptr_t JobInternals_DispatchJob = 0x142BB7E60 - ImageBase; // 4D 8B 08 4C 8B 02 48 8B D1 48 8B 0D ? ? ? ? E9 ? ? ? ?, expected: 2, index: 0
+#pragma endregion
+
+#pragma region JobQueue
+constexpr uintptr_t JobQueue_ctor_FromGroup = 0x142BB8030 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56 41 57 48 83 EC 20 0F B7 7A 30 4C 8B F1, expected: 1, index: 0
+constexpr uintptr_t JobQueue_ctor_FromParams = 0x142BB8110 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 56 57 41 56 48 83 EC 20 48 8D 05 ? ? ? ? 49 8B D8 48 89 01, expected: 1, index: 0
+constexpr uintptr_t JobQueue_dtor = 0x142BB81D0 - ImageBase; // 40 53 48 83 EC 20 80 79 30 00 48 8B D9 75 ? E8 ? ? ? ? 48 8D 4B 18 E8 ? ? ? ? 48 8D 4B 10, expected: 1, index: 0
+constexpr uintptr_t JobQueue_Capture = 0x142BB8280 - ImageBase; // 48 89 5C 24 18 57 48 83  EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 53 10 48 8B CF E8, expected: 1, index: 0
+constexpr uintptr_t JobQueue_SyncWait = 0x142BB8200 - ImageBase; // 48 89 5C 24 18 57 48 83 EC 20 48 8B D9 48 83 C1 18 E8 ? ? ? ? 84 C0 75 ? 48 8D 4B 10, expected: 1, index: 0
+#pragma endregion
+
 #pragma region Memory
 constexpr uintptr_t Memory_Vault_Get = 0x1401959D0 - ImageBase; // 48 8D 05 ? ? ? ? C3, expected: 1275, index: 0
 constexpr uintptr_t Memory_Vault_Alloc = 0x140193AC0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30, expected: 1964, index: 5
