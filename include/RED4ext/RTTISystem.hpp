@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <cstdint>
 
+#include <RED4ext/Callback.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
@@ -39,8 +40,8 @@ struct IRTTISystem
     virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                // 98
     virtual void UnregisterFunction(CGlobalFunction* aFunc) = 0;                              // A0
     virtual void sub_A8() = 0;                                                                // A8
-    virtual void sub_B0() = 0;                                                                // B0
-    virtual void sub_B8() = 0;                                                                // B8
+    virtual void AddRegisterCallback(Callback<void (*)()>) = 0;                               // B0
+    virtual void AddPostRegisterCallback(Callback<void (*)()>) = 0;                           // B8
     virtual void sub_C0() = 0;                                                                // C0
     virtual void sub_C8() = 0;                                                                // C8
     virtual void CreateScriptedClass(CName aName, CClass::Flags aFlags, CClass* aParent) = 0; // D0
