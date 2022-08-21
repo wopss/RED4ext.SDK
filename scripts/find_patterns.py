@@ -100,6 +100,7 @@ try:
         file.write('#include <cstdint>\n')
         file.write('\n')
         file.write(f'// Addresses for Cyberpunk 2077, version {version.decode()}.\n')
+        file.write(f'// clang-format off\n')
         file.write('namespace RED4ext::Addresses\n')
         file.write('{\n')
         file.write(f'constexpr uintptr_t ImageBase = 0x{ida_nalt.get_imagebase():X};\n')
@@ -156,6 +157,7 @@ try:
                 file.write('\n')
 
         file.write('} // namespace RED4ext::Addresses\n')
+        file.write(f'// clang-format on\n')
 
         print('Done!')
         ida_kernwin.beep()

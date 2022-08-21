@@ -9,6 +9,7 @@
 #include <cstdint>
 
 // Addresses for Cyberpunk 2077, version 1.52.
+// clang-format off
 namespace RED4ext::Addresses
 {
 constexpr uintptr_t ImageBase = 0x140000000;
@@ -194,3 +195,4 @@ constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140F0FEE1 - ImageBase
 constexpr uintptr_t TweakDB_CreateRecord = 0x140FABA00 - ImageBase; // 48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
 #pragma endregion
 } // namespace RED4ext::Addresses
+// clang-format on
