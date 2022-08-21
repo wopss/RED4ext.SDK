@@ -111,6 +111,30 @@ public:
         MoveTargetFrom(aOther.buffer);
     }
 
+    Callback& operator=(const Callback& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            DestroyTarget();
+            CopyHandlerFrom(aOther.handler);
+            CopyTargetFrom(aOther.buffer);
+        }
+
+        return *this;
+    }
+
+    Callback& operator=(Callback&& aOther) noexcept
+    {
+        if (this != std::addressof(aOther))
+        {
+            DestroyTarget();
+            MoveHandlerFrom(aOther.handler);
+            MoveTargetFrom(aOther.buffer);
+        }
+
+        return *this;
+    }
+
     ~Callback()
     {
         DestroyTarget();
@@ -237,6 +261,34 @@ public:
         InitializeBuffer(aOther.GetSize(), aOther.allocator);
         MoveHandlerFrom(aOther.handler);
         MoveTargetFrom(aOther.GetBuffer());
+    }
+
+    FlexCallback& operator=(const FlexCallback& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            DestroyTarget();
+            ResetBuffer();
+            InitializeBuffer(aOther.GetSize(), aOther.allocator);
+            CopyHandlerFrom(aOther.handler);
+            CopyTargetFrom(aOther.GetBuffer());
+        }
+
+        return *this;
+    }
+
+    FlexCallback& operator=(FlexCallback&& aOther) noexcept
+    {
+        if (this != std::addressof(aOther))
+        {
+            DestroyTarget();
+            ResetBuffer();
+            InitializeBuffer(aOther.GetSize(), aOther.allocator);
+            MoveHandlerFrom(aOther.handler);
+            MoveTargetFrom(aOther.GetBuffer());
+        }
+
+        return *this;
     }
 
     ~FlexCallback()
