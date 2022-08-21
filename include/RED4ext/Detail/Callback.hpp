@@ -46,7 +46,7 @@ struct CallbackHandlerImpl<UnboundFunctionTarget<R, Args...>>
 
     static R Invoke(TargetType* aTarget, Args&&... aArgs)
     {
-        (aTarget->func)(std::forward<Args>(aArgs)...);
+        std::invoke(aTarget->func, std::forward<Args>(aArgs)...);
     }
 
     static void Copy(TargetType* aDst, TargetType* aSrc)
@@ -73,7 +73,7 @@ struct CallbackHandlerImpl<MemberFunctionTarget<C, R, Args...>>
 
     static R Invoke(TargetType* aTarget, Args&&... aArgs)
     {
-        ((aTarget->context)->*(aTarget->func))(std::forward<Args>(aArgs)...);
+        std::invoke(aTarget->func, aTarget->context, std::forward<Args>(aArgs)...);
     }
 
     static void Copy(TargetType* aDst, TargetType* aSrc)
