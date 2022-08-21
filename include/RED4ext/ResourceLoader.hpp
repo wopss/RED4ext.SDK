@@ -2,9 +2,12 @@
 
 #include <type_traits>
 
+#include <RED4ext/Addresses.hpp>
+#include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/JobQueue.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/Relocation.hpp>
@@ -17,6 +20,7 @@ template<typename T = CResource>
 struct ResourceToken
 {
     using AllocatorType = Memory::EngineAllocator;
+    using LoadedCallback = FlexCallback<void (*)(RED4ext::Handle<T>&)>;
 
     ResourceToken() = delete;
     ResourceToken(const ResourceToken&) = delete;
@@ -28,6 +32,20 @@ struct ResourceToken
         RelocFunc<Destruct_t> func(Addresses::ResourceToken_dtor);
 
         func(this);
+    }
+
+    /**
+     * @brief Register callback for the resource load event.
+     *
+     * @param aCallback The callback.
+     */
+    void OnLoaded(LoadedCallback aCallback)
+    {
+        using OnLoaded_t = JobHandle* (*)(ResourceToken*, JobHandle*, LoadedCallback*);
+        RED4ext::RelocFunc<OnLoaded_t> func(Addresses::ResourceToken_OnLoaded);
+
+        JobHandle handle{};
+        func(this, &handle, &aCallback);
     }
 
     /**
@@ -48,22 +66,22 @@ struct ResourceToken
      *
      * @return The loaded resource.
      */
-    Handle<T>& Get() const noexcept
+    [[nodiscard]] Handle<T>& Get() const noexcept
     {
         return resource;
     }
 
-    inline bool IsFinished() const noexcept
+    [[nodiscard]] inline bool IsFinished() const noexcept
     {
         return IsLoaded() || IsFailed();
     }
 
-    inline bool IsLoaded() const noexcept
+    [[nodiscard]] inline bool IsLoaded() const noexcept
     {
         return finished && !error;
     }
 
-    inline bool IsFailed() const noexcept
+    [[nodiscard]] inline bool IsFailed() const noexcept
     {
         return error;
     }
@@ -82,11 +100,11 @@ struct ResourceToken
 
     WeakPtr<ResourceToken<T>> self;                    // 00
     DynArray<SharedPtr<ResourceToken<>>> dependencies; // 10
-    uint8_t unk20;                                     // 20
+    SharedMutex lock;                                  // 20
     Handle<T> resource;                                // 28
     SharedPtr<Unk38> unk38;                            // 38
     ResourcePath path;                                 // 48
-    uintptr_t unk50;                                   // 50
+    JobHandle job;                                     // 50
     volatile int32_t finished;                         // 58
     uint8_t error;                                     // 5C
     uint8_t unk5D;                                     // 5D

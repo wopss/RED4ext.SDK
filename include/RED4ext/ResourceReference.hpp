@@ -14,18 +14,12 @@ namespace RED4ext
 template<typename T = CResource>
 struct ResourceReference
 {
+    ResourceReference() = default;
+
     ResourceReference(ResourcePath aPath) noexcept
         : path(aPath)
     {
-    }
-
-    ResourceReference(ResourcePath aPath, bool aLoad) noexcept
-        : path(aPath)
-    {
-        if (aLoad)
-        {
-            Load();
-        }
+        LoadAsync();
     }
 
     ResourceReference(const ResourceReference& aOther) noexcept
@@ -52,21 +46,40 @@ struct ResourceReference
 
     ResourceReference& operator=(ResourceReference&& aRhs) noexcept
     {
-        path = aRhs.path;
+        path = std::move(aRhs.path);
         token = std::move(aRhs.token);
-        aRhs.path = "";
         return *this;
     }
 
     /**
-     * @brief Load the resource synchronously and fill the token.
+     * @brief Load the resource synchronously.
+     *
+     * @return Returns true if the resource is loaded successfully, false otherwise.
      */
-    void Load()
+    bool Load()
     {
-        using Load_t = void (*)(ResourceReference*);
-        RelocFunc<Load_t> func(Addresses::ResourceReference_Load);
+        if (!token)
+        {
+            token = ResourceLoader::Get()->LoadAsync<T>(path);
+        }
 
-        func(this);
+        token->Fetch();
+        return token->IsLoaded();
+    }
+
+    /**
+     * @brief Start loading the resource asynchronously.
+     *
+     * @return Returns true if the load started successfully, false otherwise.
+     */
+    bool LoadAsync()
+    {
+        if (!token)
+        {
+            token = ResourceLoader::Get()->LoadAsync<T>(path);
+        }
+
+        return !token->IsFailed();
     }
 
     /**
@@ -74,12 +87,14 @@ struct ResourceReference
      *
      * @return The loaded resource.
      */
-    Handle<T>& Fetch()
+    [[nodiscard]] Handle<T>& Fetch()
     {
-        using Fetch_t = Handle<T>& (*)(ResourceReference*);
-        RelocFunc<Fetch_t> func(Addresses::ResourceReference_Fetch);
+        if (!token)
+        {
+            token = ResourceLoader::Get()->LoadAsync<T>(path);
+        }
 
-        return func(this);
+        return token->Fetch();
     }
 
     /**
@@ -87,14 +102,14 @@ struct ResourceReference
      *
      * @return The loaded resource.
      */
-    Handle<T>& Get() const noexcept
+    [[nodiscard]] Handle<T>& Get() const noexcept
     {
-        if (token)
+        if (!token)
         {
-            return token->resource;
+            return {};
         }
 
-        return {};
+        return token->Get();
     }
 
     /**
@@ -102,18 +117,16 @@ struct ResourceReference
      */
     void Reset()
     {
-        using Reset_t = void (*)(ResourceReference*);
-        RelocFunc<Reset_t> func(Addresses::ResourceReference_Reset);
-
-        func(this);
+        path = "";
+        token.Reset();
     }
 
-    inline bool IsLoaded() const noexcept
+    [[nodiscard]] inline bool IsLoaded() const noexcept
     {
         return token && token->IsLoaded();
     }
 
-    inline bool IsFailed() const noexcept
+    [[nodiscard]] inline bool IsFailed() const noexcept
     {
         return token && token->IsFailed();
     }
@@ -128,6 +141,8 @@ RED4EXT_ASSERT_OFFSET(ResourceReference<>, token, 0x8);
 template<typename T = CResource>
 struct ResourceAsyncReference
 {
+    ResourceAsyncReference() = default;
+
     ResourceAsyncReference(ResourcePath aPath) noexcept
         : path(aPath)
     {
