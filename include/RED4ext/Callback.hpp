@@ -178,7 +178,7 @@ private:
 
     R InvokeTarget(Args&&... aArgs) const
     {
-        return (handler->invoke)(buffer, std::forward<Args>(aArgs)...);
+        return handler->invoke(buffer, std::forward<Args>(aArgs)...);
     }
 
     void CopyTargetFrom(void* aTarget)
@@ -319,7 +319,7 @@ protected:
         using HandlerFactory = Detail::CallbackHandlerFactory<HandlerImpl, R, Args...>;
 
         handler = HandlerFactory::Get();
-        handler->copy(buffer, aSrc);
+        handler->copy(GetBuffer(), aSrc);
     }
 
     void CopyHandlerFrom(HandlerPtr aHandler) noexcept
@@ -407,7 +407,7 @@ protected:
 
     inline R InvokeTarget(Args&&... aArgs) const
     {
-        return (handler->invoke)(GetBuffer(), std::forward<Args>(aArgs)...);
+        return handler->invoke(GetBuffer(), std::forward<Args>(aArgs)...);
     }
 
     void CopyTargetFrom(void* aOther)
