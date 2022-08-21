@@ -129,8 +129,6 @@ public:
     HandlerPtr handler;
 
 private:
-    Callback() = default;
-
     template<class TargetType>
     void InitializeHandler(TargetType* aSrc) noexcept
     {
@@ -232,14 +230,14 @@ public:
 
     FlexCallback(const FlexCallback& aOther)
     {
-        InitializeBuffer(aOther.GetSize());
+        InitializeBuffer(aOther.GetSize(), aOther.allocator);
         CopyHandlerFrom(aOther.handler);
         CopyTargetFrom(aOther.GetBuffer());
     }
 
     FlexCallback(FlexCallback&& aOther) noexcept
     {
-        InitializeBuffer(aOther.GetSize());
+        InitializeBuffer(aOther.GetSize(), aOther.allocator);
         MoveHandlerFrom(aOther.handler);
         MoveTargetFrom(aOther.GetBuffer());
     }
@@ -295,7 +293,10 @@ protected:
     {
         if (aSize > InlineSize)
         {
-            allocator = AllocatorType::Get();
+            if (!allocator)
+            {
+                allocator = AllocatorType::Get();
+            }
 
             auto bufferPtr = reinterpret_cast<void**>(buffer);
             *bufferPtr = allocator->Alloc(aSize).memory;
@@ -307,6 +308,13 @@ protected:
         {
             extendedSize = 0;
         }
+    }
+
+    void InitializeBuffer(uint32_t aSize, Memory::IAllocator* aAllocator)
+    {
+        allocator = aAllocator;
+
+        InitializeBuffer(aSize);
     }
 
     [[nodiscard]] inline bool IsInlineMode() const noexcept
@@ -343,7 +351,7 @@ protected:
     {
         if (IsExtendedMode())
         {
-            AllocatorType::Get()->Free(GetBuffer());
+            allocator->Free(GetBuffer());
             extendedSize = 0;
         }
     }
