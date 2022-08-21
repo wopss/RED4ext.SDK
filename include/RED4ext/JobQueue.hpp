@@ -62,13 +62,14 @@ struct JobHandle
     JobHandle() = default;
     JobHandle(const JobHandle&) = default;
     JobHandle(JobHandle&&) = default;
-    JobHandle(JobParamSet aParams, uint64_t a2 = 0);
+    JobHandle(JobParamSet aParams, uintptr_t aUnk = 0);
     ~JobHandle();
 
     /**
-     * @brief
+     * @brief Joins another job handle to this one.
+     * The joint handle represents the completion of all joined handles.
      *
-     * @param aOther
+     * @param aOther The job handle to join.
      */
     void Join(const JobHandle& aOther);
 
