@@ -30,7 +30,8 @@ struct CallbackHandler
     template<typename T>
     using DestructFunc = void (*)(T* aTarget);
 
-    CallbackHandler(InvokeFunc<void> aInvoke, CopyFunc<void> aCopy, MoveFunc<void> aMove, DestructFunc<void> aDestruct) noexcept
+    CallbackHandler(InvokeFunc<void> aInvoke, CopyFunc<void> aCopy, MoveFunc<void> aMove,
+                    DestructFunc<void> aDestruct) noexcept
         : invoke(aInvoke)
         , copy(aCopy)
         , move(aMove)

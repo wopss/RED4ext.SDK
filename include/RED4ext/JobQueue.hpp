@@ -48,8 +48,8 @@ struct JobParamSet
     JobParamSet& operator=(JobParamSet&&) = default;
 
     uint8_t unk00; // 00
-	uint8_t unk01; // 01
-	uint8_t unk02; // 02
+    uint8_t unk01; // 01
+    uint8_t unk02; // 02
 };
 RED4EXT_ASSERT_SIZE(JobParamSet, 0x3);
 
@@ -133,7 +133,7 @@ struct JobInstance
 
     HandleFunc<void> handler; // 00 - Called by job dispatcher to execute the job
     TargetPtr<void> target;   // 08 - Job data that is passed to the handler
-	JobFamily* family;        // 10
+    JobFamily* family;        // 10
     uint64_t unk18;           // 18
 };
 RED4EXT_ASSERT_SIZE(JobInstance, 0x20);
@@ -258,9 +258,9 @@ public:
     JobHandle unk18;    // 18
     uintptr_t unk20;    // 20
     JobParamSet params; // 28
-	uint32_t unk2C;     // 2C
-	bool captured;      // 30
-	uint8_t unk31;      // 31
+    uint32_t unk2C;     // 2C
+    bool captured;      // 30
+    uint8_t unk31;      // 31
 
 private:
     void DispatchJob(const JobInstance& aJob);
