@@ -7,14 +7,11 @@
 #include <RED4ext/Detail/Callback.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 
-namespace
+namespace RED4ext
 {
 constexpr size_t DefaultFixedCallbackBufferSize = 32;
 constexpr size_t DefaultFlexCallbackBufferSize = 24;
-}
 
-namespace RED4ext
-{
 template<typename R, typename... Args>
 struct CallbackHandler
 {
@@ -68,7 +65,7 @@ class Callback<R (*)(Args...), InlineSize>
 public:
     using HandlerPtr = CallbackHandler<R, Args...>*;
 
-    static_assert(InlineSize > sizeof(void*), "Buffer size can't be less than pointer size");
+    static_assert(InlineSize >= sizeof(void*), "Buffer size can't be less than pointer size");
 
     Callback(R (*aFunc)(Args...)) noexcept
     {
@@ -197,7 +194,7 @@ public:
     using HandlerPtr = CallbackHandler<R, Args...>*;
     using AllocatorType = Memory::DefaultAllocator;
 
-    static_assert(InlineSize > sizeof(void*), "Buffer size can't be less than pointer size");
+    static_assert(InlineSize >= sizeof(void*), "Buffer size can't be less than pointer size");
 
     FlexCallback(R (*aFunc)(Args...))
     {

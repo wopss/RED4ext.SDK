@@ -130,7 +130,7 @@ struct ResourceLoader
         SharedPtr<ResourceToken<T>> token;
         func(this, &token, aPath);
 
-        return std::move(token);
+        return token;
     }
 
     template<typename T = CResource>
@@ -142,7 +142,7 @@ struct ResourceLoader
         SharedPtr<ResourceToken<T>> token;
         func(this, &token, aPath);
 
-        return std::move(token);
+        return token;
     }
 
     HashMap<ResourcePath, WeakPtr<ResourceToken<>>> tokens; // 00
