@@ -163,6 +163,7 @@ struct TweakDB
 
     // TweakDBID must include tdbOffset
     bool AddFlat(TweakDBID aDBID);
+    bool AddFlats(const SortedUniqueArray<TweakDBID>& aDBIDs);
     bool RemoveFlat(TweakDBID aDBID);
 
     // Multithreads may lead to undefined behavior

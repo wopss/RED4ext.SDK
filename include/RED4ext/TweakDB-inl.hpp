@@ -303,6 +303,13 @@ RED4EXT_INLINE bool RED4ext::TweakDB::AddFlat(TweakDBID aDBID)
     return flats.Insert(aDBID).second;
 }
 
+RED4EXT_INLINE bool RED4ext::TweakDB::AddFlats(const SortedUniqueArray<TweakDBID>& aDBIDs)
+{
+    std::lock_guard<SharedMutex> _(mutex00);
+
+    return flats.Insert(aDBIDs) > 0;
+}
+
 RED4EXT_INLINE bool RED4ext::TweakDB::RemoveFlat(TweakDBID aDBID)
 {
     std::lock_guard<SharedMutex> _(mutex00);
