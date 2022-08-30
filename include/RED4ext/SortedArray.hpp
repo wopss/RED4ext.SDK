@@ -267,7 +267,7 @@ private:
             auto movableSpan = static_cast<uint32_t>(upperBound - lowerBound);
             if (movableSpan > 0)
             {
-                 MoveEntries(lowerBound, finalPostition + 1, movableSpan);
+                MoveEntries(lowerBound, finalPostition + 1, movableSpan);
             }
 
             *finalPostition = insertions[diff].second;
