@@ -51,6 +51,11 @@ struct SortedArray
         return Emplace(std::forward<T&&>(aItem));
     }
 
+    uint32_t Insert(const SortedArray& aOther)
+    {
+        return Merge(false, aOther);
+    }
+
     std::pair<T*, bool> InsertOrAssign(const T& aItem)
     {
         return Emplace_INTERNAL(true, std::forward<const T&>(aItem));
@@ -59,6 +64,11 @@ struct SortedArray
     std::pair<T*, bool> InsertOrAssign(T&& aItem)
     {
         return Emplace_INTERNAL(true, std::forward<T&&>(aItem));
+    }
+
+    uint32_t InsertOrAssign(const SortedArray& aOther)
+    {
+        return Merge(true, aOther);
     }
 
     T* Find(const T& aItem)
@@ -213,6 +223,60 @@ private:
         *it = std::move(tmp);
         size = newSize;
         return {it, true};
+    }
+
+    uint32_t Merge(bool insertOrAssign, const SortedArray& aOther)
+    {
+        std::vector<std::pair<size_t, const T&>> insertions;
+        insertions.reserve(aOther.size);
+
+        for (const auto& item : aOther)
+        {
+            auto it = LowerBound(item);
+
+            if (Unique && it != end() && *it == item)
+            {
+                if (insertOrAssign)
+                {
+                    *it = item;
+                }
+                continue;
+            }
+
+            insertions.emplace_back(it - begin(), item);
+        }
+
+        int32_t diff = static_cast<int32_t>(insertions.size());
+        if (diff == 0)
+        {
+            return 0;
+        }
+
+        uint32_t newSize = size + diff;
+        if (newSize > capacity)
+        {
+            Reserve(newSize);
+        }
+
+        auto upperBound = end();
+        while (--diff >= 0)
+        {
+            auto lowerBound = begin() + insertions[diff].first;
+            auto finalPostition = lowerBound + diff;
+
+            auto movableSpan = static_cast<uint32_t>(upperBound - lowerBound);
+            if (movableSpan > 0)
+            {
+                MoveEntries(lowerBound, finalPostition + 1, movableSpan);
+            }
+
+            *finalPostition = insertions[diff].second;
+            upperBound = lowerBound;
+        }
+
+        size = newSize;
+
+        return diff;
     }
 
     T* LowerBound(const T& aItem)

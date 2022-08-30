@@ -218,6 +218,12 @@ public:
     {
         return reinterpret_cast<T*>(BaseType::instance);
     }
+
+    template<typename U>
+    [[nodiscard]] U* GetPtr() const noexcept
+    {
+        return reinterpret_cast<U*>(BaseType::instance);
+    }
 };
 
 template<typename T>
