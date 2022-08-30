@@ -246,7 +246,7 @@ private:
             insertions.emplace_back(it - begin(), item);
         }
 
-        int32_t diff = insertions.size();
+        int32_t diff = static_cast<int32_t>(insertions.size());
         if (diff == 0)
         {
             return 0;
