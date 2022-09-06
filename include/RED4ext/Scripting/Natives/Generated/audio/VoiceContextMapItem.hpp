@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -31,3 +33,5 @@ struct VoiceContextMapItem : audio::AudioMetadata
 RED4EXT_ASSERT_SIZE(VoiceContextMapItem, 0x60);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

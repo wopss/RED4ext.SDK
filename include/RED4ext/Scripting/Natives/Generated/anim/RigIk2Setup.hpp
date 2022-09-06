@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ struct RigIk2Setup : anim::IRigIkSetup
 RED4EXT_ASSERT_SIZE(RigIk2Setup, 0x60);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

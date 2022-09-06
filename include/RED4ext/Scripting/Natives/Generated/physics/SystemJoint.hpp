@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -48,3 +50,5 @@ struct SystemJoint : physics::ISystemObject
 RED4EXT_ASSERT_SIZE(SystemJoint, 0x200);
 } // namespace physics
 } // namespace RED4ext
+
+// clang-format on

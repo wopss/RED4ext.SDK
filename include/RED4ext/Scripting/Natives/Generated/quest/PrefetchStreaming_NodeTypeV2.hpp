@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct PrefetchStreaming_NodeTypeV2 : quest::IWorldDataManagerNodeType
 RED4EXT_ASSERT_SIZE(PrefetchStreaming_NodeTypeV2, 0x48);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

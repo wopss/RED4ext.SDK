@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct PlayVideoEvent : scn::SceneEvent
 RED4EXT_ASSERT_SIZE(PlayVideoEvent, 0x80);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

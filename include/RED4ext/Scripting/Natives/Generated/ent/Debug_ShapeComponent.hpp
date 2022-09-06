@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct Debug_ShapeComponent : ent::IVisualComponent
 RED4EXT_ASSERT_SIZE(Debug_ShapeComponent, 0x150);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ RED4EXT_ASSERT_SIZE(PopupsManager, 0x1A0);
 } // namespace game::ui
 using PopupsManager = game::ui::PopupsManager;
 } // namespace RED4ext
+
+// clang-format on

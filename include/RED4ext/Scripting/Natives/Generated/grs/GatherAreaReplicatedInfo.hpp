@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct GatherAreaReplicatedInfo
 RED4EXT_ASSERT_SIZE(GatherAreaReplicatedInfo, 0x14);
 } // namespace grs
 } // namespace RED4ext
+
+// clang-format on

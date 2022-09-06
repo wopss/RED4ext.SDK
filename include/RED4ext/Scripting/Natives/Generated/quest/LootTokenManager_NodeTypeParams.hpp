@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct LootTokenManager_NodeTypeParams
 RED4EXT_ASSERT_SIZE(LootTokenManager_NodeTypeParams, 0x10);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

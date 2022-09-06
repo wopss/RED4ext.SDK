@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct MachineTransitionDefinition : graph::GraphConnectionDefinition
 RED4EXT_ASSERT_SIZE(MachineTransitionDefinition, 0x78);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

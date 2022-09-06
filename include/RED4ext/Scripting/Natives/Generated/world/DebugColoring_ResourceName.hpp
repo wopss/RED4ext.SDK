@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct DebugColoring_ResourceName : world::EditorDebugColoringSettings
 RED4EXT_ASSERT_SIZE(DebugColoring_ResourceName, 0x48);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

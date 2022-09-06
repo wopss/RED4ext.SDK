@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -40,3 +42,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_VehiclePassenger, 0x90);
 } // namespace anim
 using AnimFeature_VehiclePassenger = anim::AnimFeature_VehiclePassenger;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct AnimStateTransitionCondition_FootPhaseEvent : anim::IAnimStateTransitionC
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_FootPhaseEvent, 0x38);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct ProxyMeshAdvancedBuildParams
 RED4EXT_ASSERT_SIZE(ProxyMeshAdvancedBuildParams, 0x90);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

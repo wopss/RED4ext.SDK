@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(Record, 0x58);
 } // namespace game::data::npc_scanning_data_
 using npc_scanning_data_Record = game::data::npc_scanning_data_::Record;
 } // namespace RED4ext
+
+// clang-format on

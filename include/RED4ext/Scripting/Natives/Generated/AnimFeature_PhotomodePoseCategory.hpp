@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct AnimFeature_PhotomodePoseCategory : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_PhotomodePoseCategory, 0x48);
 } // namespace RED4ext
+
+// clang-format on

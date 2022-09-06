@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct ContainerManager : game::IContainerManager
 RED4EXT_ASSERT_SIZE(ContainerManager, 0x158);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

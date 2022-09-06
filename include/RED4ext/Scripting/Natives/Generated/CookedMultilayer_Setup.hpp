@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct CookedMultilayer_Setup : CResource
 };
 RED4EXT_ASSERT_SIZE(CookedMultilayer_Setup, 0x60);
 } // namespace RED4ext
+
+// clang-format on

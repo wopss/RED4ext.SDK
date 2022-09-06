@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ struct TargetLocation
 RED4EXT_ASSERT_SIZE(TargetLocation, 0x38);
 } // namespace AI::behavior::tweak
 } // namespace RED4ext
+
+// clang-format on

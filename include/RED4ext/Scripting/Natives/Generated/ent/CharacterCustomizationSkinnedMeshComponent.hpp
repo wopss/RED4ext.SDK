@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct CharacterCustomizationSkinnedMeshComponent : ent::SkinnedMeshComponent
 RED4EXT_ASSERT_SIZE(CharacterCustomizationSkinnedMeshComponent, 0x280);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct ExtractVehicleSlotWorkspotTaskDefinition : AI::behavior::TaskDefinition
 RED4EXT_ASSERT_SIZE(ExtractVehicleSlotWorkspotTaskDefinition, 0x48);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

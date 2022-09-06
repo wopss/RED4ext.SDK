@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(AimAssistMelee_Record, 0x60);
 } // namespace game::data
 using AimAssistMelee_Record = game::data::AimAssistMelee_Record;
 } // namespace RED4ext
+
+// clang-format on

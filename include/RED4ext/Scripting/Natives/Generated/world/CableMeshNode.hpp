@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct CableMeshNode : world::BendedMeshNode
 RED4EXT_ASSERT_SIZE(CableMeshNode, 0xC0);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

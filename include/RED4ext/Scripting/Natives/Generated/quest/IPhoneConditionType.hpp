@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct IPhoneConditionType : quest::IUIConditionType
 RED4EXT_ASSERT_SIZE(IPhoneConditionType, 0x40);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

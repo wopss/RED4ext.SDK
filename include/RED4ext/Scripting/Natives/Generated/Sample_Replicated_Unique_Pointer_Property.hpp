@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -16,3 +18,5 @@ struct Sample_Replicated_Unique_Pointer_Property
 };
 RED4EXT_ASSERT_SIZE(Sample_Replicated_Unique_Pointer_Property, 0x8);
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct StopRace_NodeType : quest::IVehicleManagerNodeType
 RED4EXT_ASSERT_SIZE(StopRace_NodeType, 0x30);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

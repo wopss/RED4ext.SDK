@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct VarComparison_ConditionType : quest::IFactsDBConditionType
 RED4EXT_ASSERT_SIZE(VarComparison_ConditionType, 0x60);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

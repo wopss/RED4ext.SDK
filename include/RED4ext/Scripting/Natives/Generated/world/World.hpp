@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct World : world::Prefab
 RED4EXT_ASSERT_SIZE(World, 0x2C0);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

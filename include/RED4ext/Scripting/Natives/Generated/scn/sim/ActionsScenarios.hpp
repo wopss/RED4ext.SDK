@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct ActionsScenarios
 RED4EXT_ASSERT_SIZE(ActionsScenarios, 0x10);
 } // namespace scn::sim
 } // namespace RED4ext
+
+// clang-format on

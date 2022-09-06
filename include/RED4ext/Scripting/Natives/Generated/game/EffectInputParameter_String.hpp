@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(EffectInputParameter_String, 0x18);
 } // namespace game
 using EffectInputParameter_String = game::EffectInputParameter_String;
 } // namespace RED4ext
+
+// clang-format on

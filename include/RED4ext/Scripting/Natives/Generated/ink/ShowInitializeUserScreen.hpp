@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(ShowInitializeUserScreen, 0x48);
 } // namespace ink
 using ShowInitializeUserScreen = ink::ShowInitializeUserScreen;
 } // namespace RED4ext
+
+// clang-format on

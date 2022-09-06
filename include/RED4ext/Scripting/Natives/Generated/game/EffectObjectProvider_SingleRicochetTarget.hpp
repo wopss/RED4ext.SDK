@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct EffectObjectProvider_SingleRicochetTarget : game::EffectObjectProvider
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_SingleRicochetTarget, 0x68);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

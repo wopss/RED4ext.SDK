@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct ActionRotateBaseTreeNodeDefinition : AI::behavior::ActionTreeNodeDefiniti
 RED4EXT_ASSERT_SIZE(ActionRotateBaseTreeNodeDefinition, 0x80);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

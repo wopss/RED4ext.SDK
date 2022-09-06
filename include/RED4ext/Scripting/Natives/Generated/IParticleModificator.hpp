@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -16,3 +18,5 @@ struct IParticleModificator : IParticleInitializer
 };
 RED4EXT_ASSERT_SIZE(IParticleModificator, 0x80);
 } // namespace RED4ext
+
+// clang-format on

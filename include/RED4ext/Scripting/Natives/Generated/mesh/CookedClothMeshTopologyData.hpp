@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -32,3 +34,5 @@ struct CookedClothMeshTopologyData
 RED4EXT_ASSERT_SIZE(CookedClothMeshTopologyData, 0xA0);
 } // namespace mesh
 } // namespace RED4ext
+
+// clang-format on

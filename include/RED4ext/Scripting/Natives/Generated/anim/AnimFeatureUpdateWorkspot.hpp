@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -43,3 +45,5 @@ struct AnimFeatureUpdateWorkspot : anim::AnimFeature
 RED4EXT_ASSERT_SIZE(AnimFeatureUpdateWorkspot, 0x98);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

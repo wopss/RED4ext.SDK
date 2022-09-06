@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct OccluderMeshResource : vis::IOccluderResource
 RED4EXT_ASSERT_SIZE(OccluderMeshResource, 0xC0);
 } // namespace vis
 } // namespace RED4ext
+
+// clang-format on

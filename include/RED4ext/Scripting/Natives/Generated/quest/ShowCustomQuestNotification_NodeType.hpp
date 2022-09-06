@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct ShowCustomQuestNotification_NodeType : quest::IUIManagerNodeType
 RED4EXT_ASSERT_SIZE(ShowCustomQuestNotification_NodeType, 0xA0);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

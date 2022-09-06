@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct EffectData_SplatterList
 RED4EXT_ASSERT_SIZE(EffectData_SplatterList, 0x10);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

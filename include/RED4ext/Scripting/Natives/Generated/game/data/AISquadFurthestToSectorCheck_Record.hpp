@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(AISquadFurthestToSectorCheck_Record, 0x60);
 } // namespace game::data
 using AISquadFurthestToSectorCheck_Record = game::data::AISquadFurthestToSectorCheck_Record;
 } // namespace RED4ext
+
+// clang-format on

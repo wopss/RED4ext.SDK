@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -40,3 +42,5 @@ struct CharacterState_PlayerSubType : quest::ICharacterConditionSubType
 RED4EXT_ASSERT_SIZE(CharacterState_PlayerSubType, 0x68);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

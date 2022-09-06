@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct MessageLocation_BoundingBox : tools::IMessageLocation
 RED4EXT_ASSERT_SIZE(MessageLocation_BoundingBox, 0x60);
 } // namespace tools
 } // namespace RED4ext
+
+// clang-format on

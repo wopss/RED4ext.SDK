@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct RTTIClassDump
 RED4EXT_ASSERT_SIZE(RTTIClassDump, 0x40);
 } // namespace interop
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -14,3 +16,5 @@ enum class ObjectTagExt : uint32_t
 };
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct AnimNode_SkAnimAdjuster : anim::AnimNode_SkAnim
 RED4EXT_ASSERT_SIZE(AnimNode_SkAnimAdjuster, 0x190);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

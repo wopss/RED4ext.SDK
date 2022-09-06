@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ enum class EApertureValue : uint32_t
     f_32_0 = 10, // f/32.0
 };
 } // namespace RED4ext
+
+// clang-format on

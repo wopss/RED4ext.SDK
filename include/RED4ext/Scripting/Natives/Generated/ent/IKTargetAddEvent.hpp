@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ RED4EXT_ASSERT_SIZE(IKTargetAddEvent, 0x90);
 } // namespace ent
 using IKTargetAddEvent = ent::IKTargetAddEvent;
 } // namespace RED4ext
+
+// clang-format on

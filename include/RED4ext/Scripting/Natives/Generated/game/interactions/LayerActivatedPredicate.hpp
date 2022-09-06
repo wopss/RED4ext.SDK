@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct LayerActivatedPredicate : game::interactions::IPredicateType
 RED4EXT_ASSERT_SIZE(LayerActivatedPredicate, 0x40);
 } // namespace game::interactions
 } // namespace RED4ext
+
+// clang-format on

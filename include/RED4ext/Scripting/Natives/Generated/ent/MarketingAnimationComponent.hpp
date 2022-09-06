@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -32,3 +34,5 @@ struct MarketingAnimationComponent : ent::IPlacedComponent
 RED4EXT_ASSERT_SIZE(MarketingAnimationComponent, 0x170);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

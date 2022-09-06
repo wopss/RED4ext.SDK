@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct GameNotificationsLayerDefinition : ink::LayerDefinition
 RED4EXT_ASSERT_SIZE(GameNotificationsLayerDefinition, 0x50);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

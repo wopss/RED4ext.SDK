@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(SetupWorkspotActionEvent, 0x260);
 } // namespace game
 using SetupWorkspotActionEvent = game::SetupWorkspotActionEvent;
 } // namespace RED4ext
+
+// clang-format on

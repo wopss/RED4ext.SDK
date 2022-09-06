@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct AnimNodeSourceChannel_OrientationVector : anim::IAnimNodeSourceChannel_Ve
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_OrientationVector, 0x70);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

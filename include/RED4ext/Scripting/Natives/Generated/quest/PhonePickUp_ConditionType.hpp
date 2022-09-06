@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct PhonePickUp_ConditionType : quest::ISystemConditionType
 RED4EXT_ASSERT_SIZE(PhonePickUp_ConditionType, 0x60);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

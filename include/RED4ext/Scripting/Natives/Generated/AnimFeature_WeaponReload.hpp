@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct AnimFeature_WeaponReload : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_WeaponReload, 0x58);
 } // namespace RED4ext
+
+// clang-format on

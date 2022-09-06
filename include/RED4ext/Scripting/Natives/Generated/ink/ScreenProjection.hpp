@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct ScreenProjection : IScriptable
 RED4EXT_ASSERT_SIZE(ScreenProjection, 0x110);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

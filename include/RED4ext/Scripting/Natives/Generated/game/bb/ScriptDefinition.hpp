@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(ScriptDefinition, 0xA0);
 } // namespace game::bb
 using BlackboardDefinition = game::bb::ScriptDefinition;
 } // namespace RED4ext
+
+// clang-format on

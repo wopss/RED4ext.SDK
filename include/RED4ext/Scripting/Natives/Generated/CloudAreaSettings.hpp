@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -54,3 +56,5 @@ struct CloudAreaSettings : IAreaSettings
 };
 RED4EXT_ASSERT_SIZE(CloudAreaSettings, 0x450);
 } // namespace RED4ext
+
+// clang-format on

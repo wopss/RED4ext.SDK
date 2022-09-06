@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct MessageToken_Text : tools::IMessageToken
 RED4EXT_ASSERT_SIZE(MessageToken_Text, 0x50);
 } // namespace tools
 } // namespace RED4ext
+
+// clang-format on

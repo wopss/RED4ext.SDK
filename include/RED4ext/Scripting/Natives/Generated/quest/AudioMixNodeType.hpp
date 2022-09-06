@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct AudioMixNodeType : quest::IAudioNodeType
 RED4EXT_ASSERT_SIZE(AudioMixNodeType, 0x48);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

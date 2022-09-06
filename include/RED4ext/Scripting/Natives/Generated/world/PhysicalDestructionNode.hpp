@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -38,3 +40,5 @@ RED4EXT_ASSERT_SIZE(PhysicalDestructionNode, 0xB8);
 } // namespace world
 using PhysicalDestructionNode = world::PhysicalDestructionNode;
 } // namespace RED4ext
+
+// clang-format on

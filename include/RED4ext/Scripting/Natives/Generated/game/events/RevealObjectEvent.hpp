@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(RevealObjectEvent, 0x58);
 } // namespace game::events
 using RevealObjectEvent = game::events::RevealObjectEvent;
 } // namespace RED4ext
+
+// clang-format on

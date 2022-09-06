@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct ExternalComponent : ent::IComponent
 RED4EXT_ASSERT_SIZE(ExternalComponent, 0x98);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -32,3 +34,5 @@ RED4EXT_ASSERT_SIZE(LinePatternWidget, 0x360);
 } // namespace ink
 using inkLinePattern = ink::LinePatternWidget;
 } // namespace RED4ext
+
+// clang-format on

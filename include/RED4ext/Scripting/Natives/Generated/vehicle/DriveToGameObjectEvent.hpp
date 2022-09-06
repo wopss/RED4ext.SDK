@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct DriveToGameObjectEvent : red::Event
 RED4EXT_ASSERT_SIZE(DriveToGameObjectEvent, 0x50);
 } // namespace vehicle
 } // namespace RED4ext
+
+// clang-format on

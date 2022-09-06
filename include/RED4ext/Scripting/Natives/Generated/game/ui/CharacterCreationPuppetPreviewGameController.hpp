@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -33,3 +35,5 @@ RED4EXT_ASSERT_SIZE(CharacterCreationPuppetPreviewGameController, 0x240);
 } // namespace game::ui
 using inkCharacterCreationPuppetPreviewGameController = game::ui::CharacterCreationPuppetPreviewGameController;
 } // namespace RED4ext
+
+// clang-format on

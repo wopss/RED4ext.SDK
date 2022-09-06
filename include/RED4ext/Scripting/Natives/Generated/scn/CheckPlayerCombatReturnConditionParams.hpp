@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct CheckPlayerCombatReturnConditionParams
 RED4EXT_ASSERT_SIZE(CheckPlayerCombatReturnConditionParams, 0x1);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

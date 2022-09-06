@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct CLinkedLayersDefinition : game::interactions::NodeDefinition
 RED4EXT_ASSERT_SIZE(CLinkedLayersDefinition, 0x80);
 } // namespace game::interactions
 } // namespace RED4ext
+
+// clang-format on

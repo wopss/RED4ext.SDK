@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_Aim, 0x60);
 } // namespace anim
 using AnimFeature_Aim = anim::AnimFeature_Aim;
 } // namespace RED4ext
+
+// clang-format on

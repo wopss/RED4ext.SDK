@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(Stop_Record, 0x58);
 } // namespace game::data
 using Stop_Record = game::data::Stop_Record;
 } // namespace RED4ext
+
+// clang-format on

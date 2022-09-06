@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct CullObject
 RED4EXT_ASSERT_SIZE(CullObject, 0x50);
 } // namespace ent::dismemberment
 } // namespace RED4ext
+
+// clang-format on

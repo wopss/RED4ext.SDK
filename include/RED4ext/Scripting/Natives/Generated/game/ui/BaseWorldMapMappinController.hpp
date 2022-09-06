@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -34,3 +36,5 @@ RED4EXT_ASSERT_SIZE(BaseWorldMapMappinController, 0x330);
 } // namespace game::ui
 using BaseWorldMapMappinController = game::ui::BaseWorldMapMappinController;
 } // namespace RED4ext
+
+// clang-format on

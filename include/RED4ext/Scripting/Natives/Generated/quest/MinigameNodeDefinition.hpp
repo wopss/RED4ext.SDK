@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct MinigameNodeDefinition : quest::SignalStoppingNodeDefinition
 RED4EXT_ASSERT_SIZE(MinigameNodeDefinition, 0x88);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

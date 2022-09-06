@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct CompiledActionConditionData
 RED4EXT_ASSERT_SIZE(CompiledActionConditionData, 0x18);
 } // namespace AI::behavior::tweak
 } // namespace RED4ext
+
+// clang-format on

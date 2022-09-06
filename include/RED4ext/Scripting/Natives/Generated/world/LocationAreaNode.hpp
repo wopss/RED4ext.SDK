@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct LocationAreaNode : world::TriggerAreaNode
 RED4EXT_ASSERT_SIZE(LocationAreaNode, 0x98);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

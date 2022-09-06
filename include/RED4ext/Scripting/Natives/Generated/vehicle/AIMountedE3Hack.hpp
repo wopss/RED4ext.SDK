@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(AIMountedE3Hack, 0x40);
 } // namespace vehicle
 using VehicleAIMountedE3Hack = vehicle::AIMountedE3Hack;
 } // namespace RED4ext
+
+// clang-format on

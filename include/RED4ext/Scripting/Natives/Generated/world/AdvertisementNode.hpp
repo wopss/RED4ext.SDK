@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -36,3 +38,5 @@ struct AdvertisementNode : world::StaticMeshNode
 RED4EXT_ASSERT_SIZE(AdvertisementNode, 0xC0);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

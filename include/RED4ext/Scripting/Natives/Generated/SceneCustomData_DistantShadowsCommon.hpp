@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ struct SceneCustomData_DistantShadowsCommon : ISceneStorageCustomData
 };
 RED4EXT_ASSERT_SIZE(SceneCustomData_DistantShadowsCommon, 0x3E0);
 } // namespace RED4ext
+
+// clang-format on

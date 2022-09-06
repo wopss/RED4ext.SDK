@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct CTreeNodeCompleteImmediatelyDefinition : AI::CTreeNodeAtomicDefinition
 RED4EXT_ASSERT_SIZE(CTreeNodeCompleteImmediatelyDefinition, 0x38);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

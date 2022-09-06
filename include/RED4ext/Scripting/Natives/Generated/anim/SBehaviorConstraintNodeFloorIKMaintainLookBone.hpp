@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct SBehaviorConstraintNodeFloorIKMaintainLookBone
 RED4EXT_ASSERT_SIZE(SBehaviorConstraintNodeFloorIKMaintainLookBone, 0x8);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

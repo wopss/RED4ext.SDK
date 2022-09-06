@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_PlayerCoverActionState, 0x48);
 } // namespace anim
 using AnimFeature_PlayerCoverActionState = anim::AnimFeature_PlayerCoverActionState;
 } // namespace RED4ext
+
+// clang-format on

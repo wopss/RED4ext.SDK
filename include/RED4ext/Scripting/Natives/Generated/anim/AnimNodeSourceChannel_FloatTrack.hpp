@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct AnimNodeSourceChannel_FloatTrack : anim::IAnimNodeSourceChannel_Float
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_FloatTrack, 0x50);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(DeviceComponent, 0xA8);
 } // namespace game
 using DeviceComponent = game::DeviceComponent;
 } // namespace RED4ext
+
+// clang-format on

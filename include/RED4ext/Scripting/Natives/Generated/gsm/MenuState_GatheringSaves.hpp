@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct MenuState_GatheringSaves : gsm::PopupState
 RED4EXT_ASSERT_SIZE(MenuState_GatheringSaves, 0x328);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

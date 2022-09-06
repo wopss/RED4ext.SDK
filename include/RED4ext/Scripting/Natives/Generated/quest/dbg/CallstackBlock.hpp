@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct CallstackBlock
 RED4EXT_ASSERT_SIZE(CallstackBlock, 0x18);
 } // namespace quest::dbg
 } // namespace RED4ext
+
+// clang-format on

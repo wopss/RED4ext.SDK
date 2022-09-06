@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct State_SessionRestoreFromSave : gsm::State
 RED4EXT_ASSERT_SIZE(State_SessionRestoreFromSave, 0x2A0);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

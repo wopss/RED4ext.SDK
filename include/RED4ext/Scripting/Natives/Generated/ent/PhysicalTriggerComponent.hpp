@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ RED4EXT_ASSERT_SIZE(PhysicalTriggerComponent, 0x180);
 } // namespace ent
 using PhysicalTriggerComponent = ent::PhysicalTriggerComponent;
 } // namespace RED4ext
+
+// clang-format on

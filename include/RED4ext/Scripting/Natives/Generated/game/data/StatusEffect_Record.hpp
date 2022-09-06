@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(StatusEffect_Record, 0x90);
 } // namespace game::data
 using StatusEffect_Record = game::data::StatusEffect_Record;
 } // namespace RED4ext
+
+// clang-format on

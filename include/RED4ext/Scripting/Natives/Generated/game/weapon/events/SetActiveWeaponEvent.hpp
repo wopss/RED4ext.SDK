@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(SetActiveWeaponEvent, 0x58);
 } // namespace game::weapon::events
 using SetActiveWeaponEvent = game::weapon::events::SetActiveWeaponEvent;
 } // namespace RED4ext
+
+// clang-format on

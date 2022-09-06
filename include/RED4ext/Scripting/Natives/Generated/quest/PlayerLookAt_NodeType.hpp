@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -37,3 +39,5 @@ struct PlayerLookAt_NodeType : quest::ISceneManagerNodeType
 RED4EXT_ASSERT_SIZE(PlayerLookAt_NodeType, 0xA0);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct TrackItemLightParameter : effect::TrackItem
 RED4EXT_ASSERT_SIZE(TrackItemLightParameter, 0xB0);
 } // namespace effect
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(SceneTier3Data, 0xA0);
 } // namespace game
 using SceneTier3Data = game::SceneTier3Data;
 } // namespace RED4ext
+
+// clang-format on

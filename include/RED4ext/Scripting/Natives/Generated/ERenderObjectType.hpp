@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ enum class ERenderObjectType : uint8_t
     ROT_Enemy = 27,
 };
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct MappinSystemReplicatedState : game::IGameSystemReplicatedState
 RED4EXT_ASSERT_SIZE(MappinSystemReplicatedState, 0x80);
 } // namespace game::mappins
 } // namespace RED4ext
+
+// clang-format on

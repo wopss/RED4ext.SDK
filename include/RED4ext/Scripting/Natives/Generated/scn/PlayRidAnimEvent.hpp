@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ struct PlayRidAnimEvent : scn::PlayFPPControlAnimEvent
 RED4EXT_ASSERT_SIZE(PlayRidAnimEvent, 0x170);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

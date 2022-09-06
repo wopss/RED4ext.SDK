@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct AttachEffectEvent : red::Event
 RED4EXT_ASSERT_SIZE(AttachEffectEvent, 0xB0);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

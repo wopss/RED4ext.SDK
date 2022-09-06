@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct LootVisualizer : game::ui::IChoiceVisualizer
 RED4EXT_ASSERT_SIZE(LootVisualizer, 0x30);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

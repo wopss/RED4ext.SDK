@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct RenderMorphTargetMeshBlob : IRenderResourceBlob
 RED4EXT_ASSERT_SIZE(RenderMorphTargetMeshBlob, 0x168);
 } // namespace rend
 } // namespace RED4ext
+
+// clang-format on

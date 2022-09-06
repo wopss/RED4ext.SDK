@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct PhoneCallPhase_ConditionType : quest::IPhoneConditionType
 RED4EXT_ASSERT_SIZE(PhoneCallPhase_ConditionType, 0x48);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

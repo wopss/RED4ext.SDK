@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ RED4EXT_ASSERT_SIZE(MachineeventAddOnDemandStateMachine, 0x80);
 } // namespace game::state
 using PSMAddOnDemandStateMachine = game::state::MachineeventAddOnDemandStateMachine;
 } // namespace RED4ext
+
+// clang-format on

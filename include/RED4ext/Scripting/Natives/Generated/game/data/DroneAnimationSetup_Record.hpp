@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(DroneAnimationSetup_Record, 0x70);
 } // namespace game::data
 using DroneAnimationSetup_Record = game::data::DroneAnimationSetup_Record;
 } // namespace RED4ext
+
+// clang-format on

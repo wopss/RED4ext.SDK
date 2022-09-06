@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -31,3 +33,5 @@ struct EntityStubComponentPS : game::ComponentPS
 RED4EXT_ASSERT_SIZE(EntityStubComponentPS, 0xE0);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

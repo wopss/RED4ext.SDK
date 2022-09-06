@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct MachineplayeractionsUpperBodyBase : game::state::MachineStateActionDefini
 RED4EXT_ASSERT_SIZE(MachineplayeractionsUpperBodyBase, 0x80);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

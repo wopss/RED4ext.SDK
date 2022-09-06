@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MachineStateMachineBodyLocomotionTier1 : game::state::MachineStateMachine
 RED4EXT_ASSERT_SIZE(MachineStateMachineBodyLocomotionTier1, 0x48);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

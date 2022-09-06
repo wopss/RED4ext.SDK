@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct BodyMaterialConfig
 RED4EXT_ASSERT_SIZE(BodyMaterialConfig, 0x8);
 } // namespace ent::dismemberment
 } // namespace RED4ext
+
+// clang-format on

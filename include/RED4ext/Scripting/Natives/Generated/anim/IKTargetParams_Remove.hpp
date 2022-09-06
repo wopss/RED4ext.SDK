@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct IKTargetParams_Remove : ISerializable
 RED4EXT_ASSERT_SIZE(IKTargetParams_Remove, 0x40);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

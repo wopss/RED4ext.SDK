@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ RED4EXT_ASSERT_SIZE(IVisualComponent, 0x140);
 } // namespace ent
 using IVisualComponent = ent::IVisualComponent;
 } // namespace RED4ext
+
+// clang-format on

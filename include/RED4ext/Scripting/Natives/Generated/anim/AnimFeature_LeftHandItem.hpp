@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_LeftHandItem, 0x48);
 } // namespace anim
 using AnimFeature_LeftHandItem = anim::AnimFeature_LeftHandItem;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct EmissiveColorSettings : IAreaSettings
 };
 RED4EXT_ASSERT_SIZE(EmissiveColorSettings, 0x248);
 } // namespace RED4ext
+
+// clang-format on

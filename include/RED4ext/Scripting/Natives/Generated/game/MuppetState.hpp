@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -43,3 +45,5 @@ struct MuppetState
 RED4EXT_ASSERT_SIZE(MuppetState, 0x2B0);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct DoorsSettings : audio::DeviceSettings
 RED4EXT_ASSERT_SIZE(DoorsSettings, 0xE8);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

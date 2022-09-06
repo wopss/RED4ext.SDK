@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct StackScriptPassiveExpressionDefinition : AI::behavior::PassiveExpressionD
 RED4EXT_ASSERT_SIZE(StackScriptPassiveExpressionDefinition, 0x50);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

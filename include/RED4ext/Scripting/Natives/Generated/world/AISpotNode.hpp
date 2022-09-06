@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -38,3 +40,5 @@ struct AISpotNode : world::SocketNode
 RED4EXT_ASSERT_SIZE(AISpotNode, 0x98);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

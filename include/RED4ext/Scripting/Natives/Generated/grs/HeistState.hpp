@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct HeistState
 RED4EXT_ASSERT_SIZE(HeistState, 0x3D0);
 } // namespace grs
 } // namespace RED4ext
+
+// clang-format on

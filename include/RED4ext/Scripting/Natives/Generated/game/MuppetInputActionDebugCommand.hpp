@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct MuppetInputActionDebugCommand : game::IMuppetInputAction
 RED4EXT_ASSERT_SIZE(MuppetInputActionDebugCommand, 0x10);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MachineplayeractionsLocomotionAir : game::state::MachineplayeractionsLoco
 RED4EXT_ASSERT_SIZE(MachineplayeractionsLocomotionAir, 0x170);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -38,3 +40,5 @@ struct CTreeNodeActionAnimationCurvePathDefinition : AI::CTreeNodeActionDefiniti
 RED4EXT_ASSERT_SIZE(CTreeNodeActionAnimationCurvePathDefinition, 0x1C8);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(BuildCyberwareSet_Record, 0x50);
 } // namespace game::data
 using BuildCyberwareSet_Record = game::data::BuildCyberwareSet_Record;
 } // namespace RED4ext
+
+// clang-format on

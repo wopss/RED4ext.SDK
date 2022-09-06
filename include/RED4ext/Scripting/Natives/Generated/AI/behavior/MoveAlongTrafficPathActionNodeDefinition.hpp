@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -33,3 +35,5 @@ struct MoveAlongTrafficPathActionNodeDefinition : AI::behavior::ActionTreeNodeDe
 RED4EXT_ASSERT_SIZE(MoveAlongTrafficPathActionNodeDefinition, 0x110);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

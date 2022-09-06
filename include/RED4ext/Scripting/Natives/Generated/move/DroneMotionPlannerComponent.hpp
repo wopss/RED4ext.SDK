@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct DroneMotionPlannerComponent : move::MotionPlannerComponent
 RED4EXT_ASSERT_SIZE(DroneMotionPlannerComponent, 0x1F8);
 } // namespace move
 } // namespace RED4ext
+
+// clang-format on

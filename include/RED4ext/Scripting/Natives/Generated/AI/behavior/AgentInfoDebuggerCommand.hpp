@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct AgentInfoDebuggerCommand : AI::behavior::IDebuggerCommand
 RED4EXT_ASSERT_SIZE(AgentInfoDebuggerCommand, 0x70);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

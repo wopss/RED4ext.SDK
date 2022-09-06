@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -35,3 +37,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_HitReactionsData, 0x90);
 } // namespace anim
 using AnimFeature_HitReactionsData = anim::AnimFeature_HitReactionsData;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(EnteredSplineEvent, 0x48);
 } // namespace move
 using EnteredSplineEvent = move::EnteredSplineEvent;
 } // namespace RED4ext
+
+// clang-format on

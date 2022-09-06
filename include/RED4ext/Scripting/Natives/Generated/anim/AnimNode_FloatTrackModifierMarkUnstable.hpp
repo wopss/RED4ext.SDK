@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct AnimNode_FloatTrackModifierMarkUnstable : anim::AnimNode_FloatTrackModifi
 RED4EXT_ASSERT_SIZE(AnimNode_FloatTrackModifierMarkUnstable, 0xD0);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

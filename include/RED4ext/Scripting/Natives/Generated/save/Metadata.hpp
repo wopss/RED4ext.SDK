@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -40,3 +42,5 @@ struct Metadata : save::GameMetadata
 RED4EXT_ASSERT_SIZE(Metadata, 0x3B0);
 } // namespace save
 } // namespace RED4ext
+
+// clang-format on

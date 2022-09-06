@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(PreFireEvent, 0x40);
 } // namespace game::audio::events
 using WeaponPreFireEvent = game::audio::events::PreFireEvent;
 } // namespace RED4ext
+
+// clang-format on

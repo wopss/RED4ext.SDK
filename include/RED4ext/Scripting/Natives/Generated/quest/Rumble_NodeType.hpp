@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct Rumble_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 RED4EXT_ASSERT_SIZE(Rumble_NodeType, 0x80);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

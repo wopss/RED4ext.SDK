@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(Event, 0x48);
 } // namespace ink::anim
 using inkAnimEvent = ink::anim::Event;
 } // namespace RED4ext
+
+// clang-format on

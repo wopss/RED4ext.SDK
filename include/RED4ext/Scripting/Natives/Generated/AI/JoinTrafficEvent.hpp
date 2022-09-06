@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(JoinTrafficEvent, 0xF8);
 } // namespace AI
 using JoinTrafficEvent = AI::JoinTrafficEvent;
 } // namespace RED4ext
+
+// clang-format on

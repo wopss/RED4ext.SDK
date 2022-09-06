@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(RemoveStatusEffect, 0x68);
 } // namespace game::events
 using RemoveStatusEffect = game::events::RemoveStatusEffect;
 } // namespace RED4ext
+
+// clang-format on

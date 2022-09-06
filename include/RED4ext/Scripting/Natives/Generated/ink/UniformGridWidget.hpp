@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(UniformGridWidget, 0x240);
 } // namespace ink
 using inkUniformGrid = ink::UniformGridWidget;
 } // namespace RED4ext
+
+// clang-format on

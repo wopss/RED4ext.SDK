@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ RED4EXT_ASSERT_SIZE(RagdollApplyImpulseEvent, 0x70);
 } // namespace ent
 using RagdollApplyImpulseEvent = ent::RagdollApplyImpulseEvent;
 } // namespace RED4ext
+
+// clang-format on

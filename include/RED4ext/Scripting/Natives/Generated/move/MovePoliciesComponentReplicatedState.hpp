@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct MovePoliciesComponentReplicatedState : net::IComponentState
 RED4EXT_ASSERT_SIZE(MovePoliciesComponentReplicatedState, 0x60);
 } // namespace move
 } // namespace RED4ext
+
+// clang-format on

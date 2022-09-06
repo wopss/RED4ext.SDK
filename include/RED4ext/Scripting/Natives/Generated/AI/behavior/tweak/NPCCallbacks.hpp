@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct NPCCallbacks
 RED4EXT_ASSERT_SIZE(NPCCallbacks, 0x60);
 } // namespace AI::behavior::tweak
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MachineplayeractionsVehicleDrive : game::state::MachineStateActionDefinit
 RED4EXT_ASSERT_SIZE(MachineplayeractionsVehicleDrive, 0x60);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(MappinSystem, 0x18440);
 } // namespace game::mappins
 using MappinSystem = game::mappins::MappinSystem;
 } // namespace RED4ext
+
+// clang-format on

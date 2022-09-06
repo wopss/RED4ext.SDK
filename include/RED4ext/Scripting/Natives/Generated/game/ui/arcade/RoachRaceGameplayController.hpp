@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -40,3 +42,5 @@ struct RoachRaceGameplayController : game::ui::arcade::ArcadeGameplayController
 RED4EXT_ASSERT_SIZE(RoachRaceGameplayController, 0x2E0);
 } // namespace game::ui::arcade
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ RED4EXT_ASSERT_SIZE(BorderWidget, 0x210);
 } // namespace ink
 using inkBorder = ink::BorderWidget;
 } // namespace RED4ext
+
+// clang-format on

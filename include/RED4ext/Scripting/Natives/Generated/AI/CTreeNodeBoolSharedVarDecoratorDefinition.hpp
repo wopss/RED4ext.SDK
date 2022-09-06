@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct CTreeNodeBoolSharedVarDecoratorDefinition : AI::CTreeNodeSingleSharedVarD
 RED4EXT_ASSERT_SIZE(CTreeNodeBoolSharedVarDecoratorDefinition, 0x50);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

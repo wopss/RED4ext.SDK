@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ RED4EXT_ASSERT_SIZE(RepresentationEventsSetMultipleScaleMultipliers_MultipleShap
 } // namespace game::hit
 using HitRepresentation_SetMultipleScaleMultipliers_MultipleShapes = game::hit::RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes;
 } // namespace RED4ext
+
+// clang-format on

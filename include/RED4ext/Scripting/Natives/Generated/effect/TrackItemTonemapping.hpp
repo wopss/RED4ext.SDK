@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct TrackItemTonemapping : effect::TrackItem
 RED4EXT_ASSERT_SIZE(TrackItemTonemapping, 0xD0);
 } // namespace effect
 } // namespace RED4ext
+
+// clang-format on

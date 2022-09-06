@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct MoveOnSplineAndKeepDistance_NodeType : quest::IVehicleManagerNodeType
 RED4EXT_ASSERT_SIZE(MoveOnSplineAndKeepDistance_NodeType, 0xC8);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

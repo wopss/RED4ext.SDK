@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct BodyTriggerDestructionComponent : game::ITriggerDestructionComponent
 RED4EXT_ASSERT_SIZE(BodyTriggerDestructionComponent, 0x120);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

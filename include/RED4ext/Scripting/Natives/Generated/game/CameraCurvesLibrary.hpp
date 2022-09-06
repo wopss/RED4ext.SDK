@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct CameraCurvesLibrary : ent::Entity
 RED4EXT_ASSERT_SIZE(CameraCurvesLibrary, 0x170);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

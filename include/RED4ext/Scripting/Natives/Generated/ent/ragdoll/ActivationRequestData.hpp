@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ RED4EXT_ASSERT_SIZE(ActivationRequestData, 0x20);
 } // namespace ent::ragdoll
 using RagdollActivationRequestData = ent::ragdoll::ActivationRequestData;
 } // namespace RED4ext
+
+// clang-format on

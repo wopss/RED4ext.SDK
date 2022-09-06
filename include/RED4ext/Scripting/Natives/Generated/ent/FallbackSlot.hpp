@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct FallbackSlot
 RED4EXT_ASSERT_SIZE(FallbackSlot, 0x10);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

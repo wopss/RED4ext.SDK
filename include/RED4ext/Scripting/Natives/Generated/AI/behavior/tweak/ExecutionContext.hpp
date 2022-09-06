@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(ExecutionContext, 0x30);
 } // namespace AI::behavior::tweak
 using TweakExecutionContext = AI::behavior::tweak::ExecutionContext;
 } // namespace RED4ext
+
+// clang-format on

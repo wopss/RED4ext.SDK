@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct TaskNameMessage
 RED4EXT_ASSERT_SIZE(TaskNameMessage, 0x30);
 } // namespace red
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct AnimNode_IntLatch : anim::AnimNode_IntValue
 RED4EXT_ASSERT_SIZE(AnimNode_IntLatch, 0x78);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

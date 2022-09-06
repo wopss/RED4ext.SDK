@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_PlayerStateMachineState, 0x48);
 } // namespace anim
 using AnimFeature_PlayerStateMachineState = anim::AnimFeature_PlayerStateMachineState;
 } // namespace RED4ext
+
+// clang-format on

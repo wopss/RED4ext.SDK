@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct OverrideBlendTrackInfo
 RED4EXT_ASSERT_SIZE(OverrideBlendTrackInfo, 0x20);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

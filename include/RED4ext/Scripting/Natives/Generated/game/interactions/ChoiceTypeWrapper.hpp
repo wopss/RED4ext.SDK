@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(ChoiceTypeWrapper, 0x4);
 } // namespace game::interactions
 using ChoiceTypeWrapper = game::interactions::ChoiceTypeWrapper;
 } // namespace RED4ext
+
+// clang-format on

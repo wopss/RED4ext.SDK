@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -16,3 +18,5 @@ struct OnRelease : ink::PointerEvent
 };
 RED4EXT_ASSERT_SIZE(OnRelease, 0xA8);
 } // namespace RED4ext
+
+// clang-format on

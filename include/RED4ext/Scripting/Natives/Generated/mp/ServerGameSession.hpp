@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct ServerGameSession : mp::GameSession
 RED4EXT_ASSERT_SIZE(ServerGameSession, 0x90);
 } // namespace mp
 } // namespace RED4ext
+
+// clang-format on

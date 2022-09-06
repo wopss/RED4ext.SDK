@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct ConveyorObject : game::Object
 RED4EXT_ASSERT_SIZE(ConveyorObject, 0x2C0);
 } // namespace cp
 } // namespace RED4ext
+
+// clang-format on

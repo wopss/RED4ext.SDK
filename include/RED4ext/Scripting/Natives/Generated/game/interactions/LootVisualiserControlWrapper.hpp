@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(LootVisualiserControlWrapper, 0x18);
 } // namespace game::interactions
 using LootVisualiserControlWrapper = game::interactions::LootVisualiserControlWrapper;
 } // namespace RED4ext
+
+// clang-format on

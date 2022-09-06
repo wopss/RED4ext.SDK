@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct SpawnModifier : population::Modifier
 RED4EXT_ASSERT_SIZE(SpawnModifier, 0x40);
 } // namespace population
 } // namespace RED4ext
+
+// clang-format on

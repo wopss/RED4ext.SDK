@@ -443,6 +443,7 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aFilePath
     std::ofstream o(aFilePath);
 
     o << "#pragma once" << std::endl << std::endl;
+    o << "// clang-format off" << std::endl << std::endl;
 
     o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
 
@@ -564,7 +565,8 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aFilePath
         o << "using " << alias << " = " << nameQualified << ";" << std::endl;
     }
 
-    o << "} // namespace RED4ext" << std::endl;
+    o << "} // namespace RED4ext" << std::endl << std::endl;
+    o << "// clang-format on" << std::endl;
 }
 
 RED4EXT_INLINE BitfieldFileDescriptor::BitfieldFileDescriptor(const RED4ext::CBitfield* pBitfield,
@@ -614,6 +616,7 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aFile
     std::ofstream o(aFilePath);
 
     o << "#pragma once" << std::endl << std::endl;
+    o << "// clang-format off" << std::endl << std::endl;
 
     o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
 
@@ -691,7 +694,8 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aFile
         o << "using " << alias << " = " << nameQualified << ";" << std::endl;
     }
 
-    o << "} // namespace RED4ext" << std::endl;
+    o << "} // namespace RED4ext" << std::endl << std::endl;
+    o << "// clang-format on" << std::endl;
 }
 
 RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
@@ -938,6 +942,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     std::ofstream o(aFilePath);
 
     o << "#pragma once" << std::endl << std::endl;
+    o << "// clang-format off" << std::endl << std::endl;
 
     o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
 
@@ -1162,7 +1167,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
         o << "using " << alias << " = " << nameQualified << ";" << std::endl;
     }
 
-    o << "} // namespace RED4ext" << std::endl;
+    o << "} // namespace RED4ext" << std::endl << std::endl;
+    o << "// clang-format on" << std::endl;
 }
 
 void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::string>& aIncludes)

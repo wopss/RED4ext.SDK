@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct SpeedSplineNodeSpeedChangeSection
 RED4EXT_ASSERT_SIZE(SpeedSplineNodeSpeedChangeSection, 0xC);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ enum class EVisualizerDefinitionFlags : uint16_t
 } // namespace game::interactions::vis
 using EVisualizerDefinitionFlags = game::interactions::vis::EVisualizerDefinitionFlags;
 } // namespace RED4ext
+
+// clang-format on

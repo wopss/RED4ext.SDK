@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct SetCyberspacePostFX_NodeType : quest::IRenderFxManagerNodeType
 RED4EXT_ASSERT_SIZE(SetCyberspacePostFX_NodeType, 0x50);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct InputHintGroup_NodeType : quest::IUIManagerNodeType
 RED4EXT_ASSERT_SIZE(InputHintGroup_NodeType, 0x90);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

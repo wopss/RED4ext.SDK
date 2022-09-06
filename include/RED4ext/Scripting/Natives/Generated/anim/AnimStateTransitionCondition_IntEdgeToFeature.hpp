@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct AnimStateTransitionCondition_IntEdgeToFeature : anim::AnimStateTransition
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_IntEdgeToFeature, 0x78);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

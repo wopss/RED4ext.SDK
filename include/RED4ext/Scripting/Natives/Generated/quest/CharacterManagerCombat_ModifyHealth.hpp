@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct CharacterManagerCombat_ModifyHealth : quest::ICharacterManagerCombat_Node
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_ModifyHealth, 0xB0);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

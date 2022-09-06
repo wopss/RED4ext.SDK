@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct GrenadeEntitySettings : audio::EntitySettings
 RED4EXT_ASSERT_SIZE(GrenadeEntitySettings, 0x90);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

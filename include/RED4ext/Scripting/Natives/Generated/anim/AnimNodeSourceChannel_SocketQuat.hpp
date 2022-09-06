@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct AnimNodeSourceChannel_SocketQuat : anim::IAnimNodeSourceChannel_Quat
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_SocketQuat, 0x30);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct CharacterAppearancePrefetched_ConditionType : quest::ICharacterConditionT
 RED4EXT_ASSERT_SIZE(CharacterAppearancePrefetched_ConditionType, 0x88);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct StageMessage
 RED4EXT_ASSERT_SIZE(StageMessage, 0x28);
 } // namespace red
 } // namespace RED4ext
+
+// clang-format on

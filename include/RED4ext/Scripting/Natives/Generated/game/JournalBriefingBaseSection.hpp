@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(JournalBriefingBaseSection, 0x60);
 } // namespace game
 using JournalBriefingBaseSection = game::JournalBriefingBaseSection;
 } // namespace RED4ext
+
+// clang-format on

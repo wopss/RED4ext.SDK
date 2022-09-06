@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -16,3 +18,5 @@ enum class ReactionState : uint32_t
 };
 } // namespace game::interactions
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct AnimFeature_EditorOnlyPredictiveLookAt : anim::AnimFeature
 RED4EXT_ASSERT_SIZE(AnimFeature_EditorOnlyPredictiveLookAt, 0x70);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

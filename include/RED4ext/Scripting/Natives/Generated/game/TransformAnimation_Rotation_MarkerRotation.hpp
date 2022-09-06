@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct TransformAnimation_Rotation_MarkerRotation : game::TransformAnimation_Rot
 RED4EXT_ASSERT_SIZE(TransformAnimation_Rotation_MarkerRotation, 0x48);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

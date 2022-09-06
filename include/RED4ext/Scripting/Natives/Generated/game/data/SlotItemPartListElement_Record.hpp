@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(SlotItemPartListElement_Record, 0x58);
 } // namespace game::data
 using SlotItemPartListElement_Record = game::data::SlotItemPartListElement_Record;
 } // namespace RED4ext
+
+// clang-format on

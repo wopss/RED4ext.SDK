@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(DelegateAttrRef, 0x8);
 } // namespace AI::behavior
 using AIDelegateAttrRef = AI::behavior::DelegateAttrRef;
 } // namespace RED4ext
+
+// clang-format on

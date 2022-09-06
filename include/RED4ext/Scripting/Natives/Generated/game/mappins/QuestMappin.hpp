@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(QuestMappin, 0x128);
 } // namespace game::mappins
 using QuestMappin = game::mappins::QuestMappin;
 } // namespace RED4ext
+
+// clang-format on

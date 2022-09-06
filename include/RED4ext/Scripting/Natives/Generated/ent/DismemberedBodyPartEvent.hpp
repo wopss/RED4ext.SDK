@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(DismemberedBodyPartEvent, 0x148);
 } // namespace ent
 using DismemberedBodyPartEvent = ent::DismemberedBodyPartEvent;
 } // namespace RED4ext
+
+// clang-format on

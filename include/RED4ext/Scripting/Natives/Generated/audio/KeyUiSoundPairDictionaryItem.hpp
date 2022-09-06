@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct KeyUiSoundPairDictionaryItem : audio::InlinedAudioMetadata
 RED4EXT_ASSERT_SIZE(KeyUiSoundPairDictionaryItem, 0x50);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

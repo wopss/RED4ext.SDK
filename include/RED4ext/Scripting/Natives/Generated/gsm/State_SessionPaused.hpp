@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct State_SessionPaused : gsm::State_SessionStreamingAware
 RED4EXT_ASSERT_SIZE(State_SessionPaused, 0xD8);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

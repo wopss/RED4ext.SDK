@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct IStreamedResourceDataExtractor
 RED4EXT_ASSERT_SIZE(IStreamedResourceDataExtractor, 0x8);
 } // namespace res
 } // namespace RED4ext
+
+// clang-format on

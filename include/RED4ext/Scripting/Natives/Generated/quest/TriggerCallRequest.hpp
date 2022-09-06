@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct TriggerCallRequest : game::ScriptableSystemRequest
 RED4EXT_ASSERT_SIZE(TriggerCallRequest, 0x68);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

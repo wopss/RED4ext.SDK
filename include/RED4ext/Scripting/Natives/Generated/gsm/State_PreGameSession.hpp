@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct State_PreGameSession : gsm::State_Session
 RED4EXT_ASSERT_SIZE(State_PreGameSession, 0x320);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

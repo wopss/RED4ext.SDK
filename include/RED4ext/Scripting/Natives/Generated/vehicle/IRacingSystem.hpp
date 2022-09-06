@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(IRacingSystem, 0x48);
 } // namespace vehicle
 using IRacingSystem = vehicle::IRacingSystem;
 } // namespace RED4ext
+
+// clang-format on

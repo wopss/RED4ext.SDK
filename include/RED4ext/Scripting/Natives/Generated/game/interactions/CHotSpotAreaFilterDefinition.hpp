@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct CHotSpotAreaFilterDefinition : game::interactions::NodeDefinition
 RED4EXT_ASSERT_SIZE(CHotSpotAreaFilterDefinition, 0xA0);
 } // namespace game::interactions
 } // namespace RED4ext
+
+// clang-format on

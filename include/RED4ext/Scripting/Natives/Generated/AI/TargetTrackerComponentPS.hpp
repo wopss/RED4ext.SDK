@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct TargetTrackerComponentPS : game::ComponentPS
 RED4EXT_ASSERT_SIZE(TargetTrackerComponentPS, 0x80);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

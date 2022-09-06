@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct RenderHighlightEvent : red::Event
 RED4EXT_ASSERT_SIZE(RenderHighlightEvent, 0x58);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

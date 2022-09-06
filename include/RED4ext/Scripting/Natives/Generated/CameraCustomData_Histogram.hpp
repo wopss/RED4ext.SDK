@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ struct CameraCustomData_Histogram : ICameraStorageCustomData
 };
 RED4EXT_ASSERT_SIZE(CameraCustomData_Histogram, 0x28);
 } // namespace RED4ext
+
+// clang-format on

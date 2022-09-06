@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct SyncAnimClip : work::AnimClip
 RED4EXT_ASSERT_SIZE(SyncAnimClip, 0x70);
 } // namespace work
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(TargetPartInfo, 0x18);
 } // namespace game::targeting
 using TS_TargetPartInfo = game::targeting::TargetPartInfo;
 } // namespace RED4ext
+
+// clang-format on

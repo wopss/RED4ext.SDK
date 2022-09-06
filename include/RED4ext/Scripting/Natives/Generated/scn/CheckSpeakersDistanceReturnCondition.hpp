@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct CheckSpeakersDistanceReturnCondition : scn::IReturnCondition
 RED4EXT_ASSERT_SIZE(CheckSpeakersDistanceReturnCondition, 0x38);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

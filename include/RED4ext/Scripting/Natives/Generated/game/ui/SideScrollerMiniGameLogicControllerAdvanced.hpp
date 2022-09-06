@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -37,3 +39,5 @@ RED4EXT_ASSERT_SIZE(SideScrollerMiniGameLogicControllerAdvanced, 0x148);
 } // namespace game::ui
 using MinigameLogicControllerAdvanced = game::ui::SideScrollerMiniGameLogicControllerAdvanced;
 } // namespace RED4ext
+
+// clang-format on

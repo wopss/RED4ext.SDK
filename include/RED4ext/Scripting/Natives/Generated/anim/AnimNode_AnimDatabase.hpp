@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct AnimNode_AnimDatabase : anim::AnimNode_SkPhaseWithDurationAnim
 RED4EXT_ASSERT_SIZE(AnimNode_AnimDatabase, 0x178);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

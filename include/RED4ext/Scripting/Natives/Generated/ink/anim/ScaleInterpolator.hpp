@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(ScaleInterpolator, 0x78);
 } // namespace ink::anim
 using inkAnimScale = ink::anim::ScaleInterpolator;
 } // namespace RED4ext
+
+// clang-format on

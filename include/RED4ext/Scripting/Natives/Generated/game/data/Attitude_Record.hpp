@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(Attitude_Record, 0x58);
 } // namespace game::data
 using Attitude_Record = game::data::Attitude_Record;
 } // namespace RED4ext
+
+// clang-format on

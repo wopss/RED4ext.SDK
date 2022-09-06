@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct AcceleratedMovementEvent : game::projectile::LinearMovementEvent
 RED4EXT_ASSERT_SIZE(AcceleratedMovementEvent, 0x50);
 } // namespace game::projectile
 } // namespace RED4ext
+
+// clang-format on

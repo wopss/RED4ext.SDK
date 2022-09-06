@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct SetAnimFeatureEvent : scn::SceneEvent
 RED4EXT_ASSERT_SIZE(SetAnimFeatureEvent, 0x78);
 } // namespace scn::events
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct NotablePoint
 RED4EXT_ASSERT_SIZE(NotablePoint, 0x10);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

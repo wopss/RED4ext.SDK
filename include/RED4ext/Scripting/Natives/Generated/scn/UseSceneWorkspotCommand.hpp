@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct UseSceneWorkspotCommand : AI::BaseUseWorkspotCommand
 RED4EXT_ASSERT_SIZE(UseSceneWorkspotCommand, 0x180);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

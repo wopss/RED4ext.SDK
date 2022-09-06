@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct MessageLocation_Point : tools::IMessageLocation
 RED4EXT_ASSERT_SIZE(MessageLocation_Point, 0x48);
 } // namespace tools
 } // namespace RED4ext
+
+// clang-format on

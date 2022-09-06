@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_MeleeSlotData, 0x58);
 } // namespace anim
 using AnimFeature_MeleeSlotData = anim::AnimFeature_MeleeSlotData;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct ActionItemHandlingNodeDefinition : AI::behavior::ActionTreeNodeDefinition
 RED4EXT_ASSERT_SIZE(ActionItemHandlingNodeDefinition, 0x60);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

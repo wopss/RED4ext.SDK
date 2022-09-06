@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct TransformAnimation_Movement_PredefinedFunction : game::TransformAnimation
 RED4EXT_ASSERT_SIZE(TransformAnimation_Movement_PredefinedFunction, 0x38);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

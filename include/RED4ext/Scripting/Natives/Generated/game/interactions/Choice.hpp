@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ RED4EXT_ASSERT_SIZE(Choice, 0xA0);
 } // namespace game::interactions
 using InteractionChoice = game::interactions::Choice;
 } // namespace RED4ext
+
+// clang-format on

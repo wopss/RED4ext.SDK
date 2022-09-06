@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct InputKeyDictionaryJSON : ISerializable
 RED4EXT_ASSERT_SIZE(InputKeyDictionaryJSON, 0x40);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

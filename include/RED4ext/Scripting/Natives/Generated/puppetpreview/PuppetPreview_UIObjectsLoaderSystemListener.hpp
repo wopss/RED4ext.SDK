@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct PuppetPreview_UIObjectsLoaderSystemListener : game::ui::IUIObjectsLoaderS
 RED4EXT_ASSERT_SIZE(PuppetPreview_UIObjectsLoaderSystemListener, 0x40);
 } // namespace puppetpreview
 } // namespace RED4ext
+
+// clang-format on

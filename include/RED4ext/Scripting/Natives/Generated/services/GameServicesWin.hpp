@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct GameServicesWin : services::GameServices
 RED4EXT_ASSERT_SIZE(GameServicesWin, 0x710);
 } // namespace services
 } // namespace RED4ext
+
+// clang-format on

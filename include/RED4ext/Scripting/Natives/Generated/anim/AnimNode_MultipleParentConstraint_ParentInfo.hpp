@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ struct AnimNode_MultipleParentConstraint_ParentInfo
 RED4EXT_ASSERT_SIZE(AnimNode_MultipleParentConstraint_ParentInfo, 0x70);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

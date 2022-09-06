@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(MountableComponent, 0x98);
 } // namespace game::mounting
 using MountableComponent = game::mounting::MountableComponent;
 } // namespace RED4ext
+
+// clang-format on

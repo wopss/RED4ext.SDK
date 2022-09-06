@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct CrowdParkingSpaceNodeInstance : world::INodeInstance
 RED4EXT_ASSERT_SIZE(CrowdParkingSpaceNodeInstance, 0x90);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

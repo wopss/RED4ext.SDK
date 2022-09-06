@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -41,3 +43,5 @@ struct CAnimationBufferBitwiseCompressed : anim::IAnimationBuffer
 RED4EXT_ASSERT_SIZE(CAnimationBufferBitwiseCompressed, 0x110);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

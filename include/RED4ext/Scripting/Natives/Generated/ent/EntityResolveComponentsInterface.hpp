@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(EntityResolveComponentsInterface, 0x8);
 } // namespace ent
 using EntityResolveComponentsInterface = ent::EntityResolveComponentsInterface;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct VirtualCompoundController : ink::DiscreteNavigationController
 RED4EXT_ASSERT_SIZE(VirtualCompoundController, 0x1F0);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

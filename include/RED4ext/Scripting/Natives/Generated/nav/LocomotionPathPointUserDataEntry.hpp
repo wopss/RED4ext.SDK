@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct LocomotionPathPointUserDataEntry
 RED4EXT_ASSERT_SIZE(LocomotionPathPointUserDataEntry, 0x18);
 } // namespace nav
 } // namespace RED4ext
+
+// clang-format on

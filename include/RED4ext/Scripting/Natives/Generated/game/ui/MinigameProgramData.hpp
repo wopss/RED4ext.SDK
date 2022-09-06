@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(MinigameProgramData, 0x10);
 } // namespace game::ui
 using MinigameProgramData = game::ui::MinigameProgramData;
 } // namespace RED4ext
+
+// clang-format on

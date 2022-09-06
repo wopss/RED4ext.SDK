@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct StackTransformsExtender_Entry
 RED4EXT_ASSERT_SIZE(StackTransformsExtender_Entry, 0xB0);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

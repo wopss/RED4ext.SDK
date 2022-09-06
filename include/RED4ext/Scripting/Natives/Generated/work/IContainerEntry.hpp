@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct IContainerEntry : work::IEntry
 RED4EXT_ASSERT_SIZE(IContainerEntry, 0x50);
 } // namespace work
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -36,3 +38,5 @@ RED4EXT_ASSERT_SIZE(MappinsContainerController, 0x2D0);
 } // namespace game::ui
 using MappinsContainerController = game::ui::MappinsContainerController;
 } // namespace RED4ext
+
+// clang-format on

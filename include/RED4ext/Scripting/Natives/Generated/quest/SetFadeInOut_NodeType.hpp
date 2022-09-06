@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct SetFadeInOut_NodeType : quest::IRenderFxManagerNodeType
 RED4EXT_ASSERT_SIZE(SetFadeInOut_NodeType, 0x48);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(BaseDirectionalIndicatorPartLogicController, 0xD0);
 } // namespace game::ui
 using BaseDirectionalIndicatorPartLogicController = game::ui::BaseDirectionalIndicatorPartLogicController;
 } // namespace RED4ext
+
+// clang-format on

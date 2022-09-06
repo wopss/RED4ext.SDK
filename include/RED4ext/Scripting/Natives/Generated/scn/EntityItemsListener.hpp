@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct EntityItemsListener : game::IAttachmentSlotsListener
 RED4EXT_ASSERT_SIZE(EntityItemsListener, 0x50);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

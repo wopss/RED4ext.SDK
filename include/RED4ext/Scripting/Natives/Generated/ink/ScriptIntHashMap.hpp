@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(ScriptIntHashMap, 0x78);
 } // namespace ink
 using inkIntHashMap = ink::ScriptIntHashMap;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(MuppetLocomotionComponent, 0x98);
 } // namespace game
 using MuppetLocomotionComponent = game::MuppetLocomotionComponent;
 } // namespace RED4ext
+
+// clang-format on

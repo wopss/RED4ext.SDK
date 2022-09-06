@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct FacialSetup_BufferInfo
 RED4EXT_ASSERT_SIZE(FacialSetup_BufferInfo, 0x6C);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

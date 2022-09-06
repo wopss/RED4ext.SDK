@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct ToggleScenario_InterruptionScenarioOperation : scn::IInterruptionScenario
 RED4EXT_ASSERT_SIZE(ToggleScenario_InterruptionScenarioOperation, 0x38);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct PhoneManager : quest::IPhoneManager
 RED4EXT_ASSERT_SIZE(PhoneManager, 0x88);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

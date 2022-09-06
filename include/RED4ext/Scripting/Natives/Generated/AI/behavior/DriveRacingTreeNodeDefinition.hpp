@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -40,3 +42,5 @@ struct DriveRacingTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
 RED4EXT_ASSERT_SIZE(DriveRacingTreeNodeDefinition, 0x170);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

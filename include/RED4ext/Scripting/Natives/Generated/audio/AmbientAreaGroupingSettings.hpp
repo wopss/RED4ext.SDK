@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct AmbientAreaGroupingSettings
 RED4EXT_ASSERT_SIZE(AmbientAreaGroupingSettings, 0x28);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

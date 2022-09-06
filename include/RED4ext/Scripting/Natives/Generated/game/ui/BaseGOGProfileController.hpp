@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(BaseGOGProfileController, 0xF8);
 } // namespace game::ui
 using BaseGOGProfileController = game::ui::BaseGOGProfileController;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct GridItem
 RED4EXT_ASSERT_SIZE(GridItem, 0x20);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

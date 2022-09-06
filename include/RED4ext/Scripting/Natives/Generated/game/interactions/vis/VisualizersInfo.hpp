@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(VisualizersInfo, 0x18);
 } // namespace game::interactions::vis
 using VisualizersInfo = game::interactions::vis::VisualizersInfo;
 } // namespace RED4ext
+
+// clang-format on

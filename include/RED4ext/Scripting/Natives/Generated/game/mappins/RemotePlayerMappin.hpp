@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(RemotePlayerMappin, 0x118);
 } // namespace game::mappins
 using RemotePlayerMappin = game::mappins::RemotePlayerMappin;
 } // namespace RED4ext
+
+// clang-format on

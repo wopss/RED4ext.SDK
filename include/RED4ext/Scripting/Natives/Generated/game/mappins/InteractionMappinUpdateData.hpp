@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct InteractionMappinUpdateData : game::mappins::IMappinUpdateData
 RED4EXT_ASSERT_SIZE(InteractionMappinUpdateData, 0x18);
 } // namespace game::mappins
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct CharacterWorkspot_ConditionType : quest::ICharacterConditionType
 RED4EXT_ASSERT_SIZE(CharacterWorkspot_ConditionType, 0x90);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

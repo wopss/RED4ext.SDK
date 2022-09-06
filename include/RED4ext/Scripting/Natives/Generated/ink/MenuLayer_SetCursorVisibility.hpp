@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct MenuLayer_SetCursorVisibility : red::Event
 RED4EXT_ASSERT_SIZE(MenuLayer_SetCursorVisibility, 0x50);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

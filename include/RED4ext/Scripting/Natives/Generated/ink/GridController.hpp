@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct GridController : ink::VirtualCompoundController
 RED4EXT_ASSERT_SIZE(GridController, 0x280);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

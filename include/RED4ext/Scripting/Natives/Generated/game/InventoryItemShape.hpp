@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -14,3 +16,5 @@ enum class InventoryItemShape : uint8_t
 } // namespace game
 using EInventoryItemShape = game::InventoryItemShape;
 } // namespace RED4ext
+
+// clang-format on

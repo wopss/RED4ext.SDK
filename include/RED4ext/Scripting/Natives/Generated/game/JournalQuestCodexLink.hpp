@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(JournalQuestCodexLink, 0x70);
 } // namespace game
 using JournalQuestCodexLink = game::JournalQuestCodexLink;
 } // namespace RED4ext
+
+// clang-format on

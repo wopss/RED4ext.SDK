@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -15,3 +17,5 @@ enum class VehicleDoorState : uint32_t
 } // namespace vehicle
 using VehicleDoorState = vehicle::VehicleDoorState;
 } // namespace RED4ext
+
+// clang-format on

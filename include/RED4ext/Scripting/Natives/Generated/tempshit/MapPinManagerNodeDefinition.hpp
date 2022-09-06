@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct MapPinManagerNodeDefinition : quest::DisableableNodeDefinition
 RED4EXT_ASSERT_SIZE(MapPinManagerNodeDefinition, 0xC8);
 } // namespace tempshit
 } // namespace RED4ext
+
+// clang-format on

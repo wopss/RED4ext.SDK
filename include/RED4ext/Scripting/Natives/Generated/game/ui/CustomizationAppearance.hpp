@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct CustomizationAppearance : game::ui::CensorshipInfo
 RED4EXT_ASSERT_SIZE(CustomizationAppearance, 0x28);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

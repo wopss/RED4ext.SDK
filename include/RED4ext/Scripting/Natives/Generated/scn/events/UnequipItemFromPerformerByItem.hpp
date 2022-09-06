@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct UnequipItemFromPerformerByItem : scn::SceneEvent
 RED4EXT_ASSERT_SIZE(UnequipItemFromPerformerByItem, 0x68);
 } // namespace scn::events
 } // namespace RED4ext
+
+// clang-format on

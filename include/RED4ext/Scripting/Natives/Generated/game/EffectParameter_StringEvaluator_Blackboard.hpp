@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct EffectParameter_StringEvaluator_Blackboard : game::IEffectParameter_Strin
 RED4EXT_ASSERT_SIZE(EffectParameter_StringEvaluator_Blackboard, 0x68);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

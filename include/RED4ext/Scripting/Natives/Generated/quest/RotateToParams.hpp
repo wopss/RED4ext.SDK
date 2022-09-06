@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct RotateToParams : quest::AICommandParams
 RED4EXT_ASSERT_SIZE(RotateToParams, 0x58);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

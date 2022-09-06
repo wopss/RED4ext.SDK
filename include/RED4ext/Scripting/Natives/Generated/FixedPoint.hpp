@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -16,3 +18,5 @@ struct FixedPoint
 };
 RED4EXT_ASSERT_SIZE(FixedPoint, 0x4);
 } // namespace RED4ext
+
+// clang-format on

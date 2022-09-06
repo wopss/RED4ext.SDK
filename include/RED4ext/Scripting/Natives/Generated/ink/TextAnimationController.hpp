@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct TextAnimationController : ink::WidgetLogicController
 RED4EXT_ASSERT_SIZE(TextAnimationController, 0xF0);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ struct HudMeshComponent : ent::MeshComponent
 };
 RED4EXT_ASSERT_SIZE(HudMeshComponent, 0x200);
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct ScriptConditionDefinition : AI::behavior::ConditionDefinition
 RED4EXT_ASSERT_SIZE(ScriptConditionDefinition, 0x50);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

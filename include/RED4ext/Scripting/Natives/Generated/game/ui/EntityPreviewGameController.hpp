@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ RED4EXT_ASSERT_SIZE(EntityPreviewGameController, 0x160);
 } // namespace game::ui
 using inkEntityPreviewGameController = game::ui::EntityPreviewGameController;
 } // namespace RED4ext
+
+// clang-format on

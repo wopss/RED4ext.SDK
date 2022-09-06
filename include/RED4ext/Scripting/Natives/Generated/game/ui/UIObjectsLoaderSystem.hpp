@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct UIObjectsLoaderSystem : game::ui::IUIObjectsLoaderSystem
 RED4EXT_ASSERT_SIZE(UIObjectsLoaderSystem, 0xE8);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct SplineSlot_NonAnimSpline
 RED4EXT_ASSERT_SIZE(SplineSlot_NonAnimSpline, 0x14F0);
 } // namespace vehicle
 } // namespace RED4ext
+
+// clang-format on

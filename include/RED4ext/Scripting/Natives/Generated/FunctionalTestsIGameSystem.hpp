@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ struct FunctionalTestsIGameSystem : game::IGameSystem
 RED4EXT_ASSERT_SIZE(FunctionalTestsIGameSystem, 0x48);
 using FunctionalTestsGameSystemInterface = FunctionalTestsIGameSystem;
 } // namespace RED4ext
+
+// clang-format on

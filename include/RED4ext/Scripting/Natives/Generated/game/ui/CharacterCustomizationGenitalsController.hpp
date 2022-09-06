@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct CharacterCustomizationGenitalsController : game::ui::CharacterCustomizati
 RED4EXT_ASSERT_SIZE(CharacterCustomizationGenitalsController, 0x178);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

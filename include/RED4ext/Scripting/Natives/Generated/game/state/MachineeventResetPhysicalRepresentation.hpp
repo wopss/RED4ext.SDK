@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(MachineeventResetPhysicalRepresentation, 0x40);
 } // namespace game::state
 using PSMResetPhysicalRepresentation = game::state::MachineeventResetPhysicalRepresentation;
 } // namespace RED4ext
+
+// clang-format on

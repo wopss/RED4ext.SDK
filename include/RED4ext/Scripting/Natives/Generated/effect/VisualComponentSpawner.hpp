@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct VisualComponentSpawner : effect::Spawner
 RED4EXT_ASSERT_SIZE(VisualComponentSpawner, 0x40);
 } // namespace effect
 } // namespace RED4ext
+
+// clang-format on

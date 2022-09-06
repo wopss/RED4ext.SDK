@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -49,3 +51,5 @@ struct RenderToTextureCameraComponent : ent::BaseCameraComponent
 RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0x980);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

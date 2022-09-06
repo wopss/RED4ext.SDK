@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct Sample_Replicated_THandle_Property
 };
 RED4EXT_ASSERT_SIZE(Sample_Replicated_THandle_Property, 0x10);
 } // namespace RED4ext
+
+// clang-format on

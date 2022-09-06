@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct InventoryListenerData_InventoryEmpty : game::InventoryListenerData_Base
 RED4EXT_ASSERT_SIZE(InventoryListenerData_InventoryEmpty, 0x38);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

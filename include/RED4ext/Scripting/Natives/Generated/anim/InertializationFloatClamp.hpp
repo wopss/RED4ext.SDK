@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct InertializationFloatClamp
 RED4EXT_ASSERT_SIZE(InertializationFloatClamp, 0xC);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

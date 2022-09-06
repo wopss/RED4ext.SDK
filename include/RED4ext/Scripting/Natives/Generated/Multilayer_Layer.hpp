@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -39,3 +41,5 @@ struct Multilayer_Layer
 };
 RED4EXT_ASSERT_SIZE(Multilayer_Layer, 0x90);
 } // namespace RED4ext
+
+// clang-format on

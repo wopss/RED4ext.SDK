@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct InputSystemWin32Base : input::IInputSystem
 RED4EXT_ASSERT_SIZE(InputSystemWin32Base, 0x180);
 } // namespace input
 } // namespace RED4ext
+
+// clang-format on

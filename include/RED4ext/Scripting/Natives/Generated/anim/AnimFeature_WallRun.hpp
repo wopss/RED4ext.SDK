@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_WallRun, 0x70);
 } // namespace anim
 using AnimFeature_WallRun = anim::AnimFeature_WallRun;
 } // namespace RED4ext
+
+// clang-format on

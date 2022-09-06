@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct VehicleChaseCommand : AI::VehicleCommand
 RED4EXT_ASSERT_SIZE(VehicleChaseCommand, 0x88);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

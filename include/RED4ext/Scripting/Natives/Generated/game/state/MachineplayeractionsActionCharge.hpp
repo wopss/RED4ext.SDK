@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MachineplayeractionsActionCharge : game::state::MachineplayeractionsWeapo
 RED4EXT_ASSERT_SIZE(MachineplayeractionsActionCharge, 0x70);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

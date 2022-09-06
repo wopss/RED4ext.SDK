@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct CharacterManagerCombat_SetWeaponState : quest::ICharacterManagerCombat_No
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_SetWeaponState, 0x78);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

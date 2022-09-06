@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ RED4EXT_ASSERT_SIZE(RefreshGOGState, 0x78);
 } // namespace game::ui
 using RefreshGOGState = game::ui::RefreshGOGState;
 } // namespace RED4ext
+
+// clang-format on

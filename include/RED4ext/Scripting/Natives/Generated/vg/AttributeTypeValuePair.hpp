@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct AttributeTypeValuePair : ISerializable
 RED4EXT_ASSERT_SIZE(AttributeTypeValuePair, 0x50);
 } // namespace vg
 } // namespace RED4ext
+
+// clang-format on

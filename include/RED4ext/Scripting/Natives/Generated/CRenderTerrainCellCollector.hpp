@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ struct CRenderTerrainCellCollector : ISceneStorageCustomData
 };
 RED4EXT_ASSERT_SIZE(CRenderTerrainCellCollector, 0x1490);
 } // namespace RED4ext
+
+// clang-format on

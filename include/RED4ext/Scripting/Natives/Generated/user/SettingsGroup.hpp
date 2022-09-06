@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(SettingsGroup, 0x48);
 } // namespace user
 using ConfigGroup = user::SettingsGroup;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ RED4EXT_ASSERT_SIZE(ReactionComponent, 0xE8);
 } // namespace game::interactions
 using ReactionComponent = game::interactions::ReactionComponent;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct DebugCheatsSharedState : game::IGameSystemReplicatedState
 RED4EXT_ASSERT_SIZE(DebugCheatsSharedState, 0x58);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

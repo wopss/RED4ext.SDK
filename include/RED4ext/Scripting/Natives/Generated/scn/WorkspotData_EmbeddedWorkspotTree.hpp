@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct WorkspotData_EmbeddedWorkspotTree : scn::WorkspotData
 RED4EXT_ASSERT_SIZE(WorkspotData_EmbeddedWorkspotTree, 0x48);
 } // namespace scn
 } // namespace RED4ext
+
+// clang-format on

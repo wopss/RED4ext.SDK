@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ RED4EXT_ASSERT_SIZE(SoundComponentBase, 0x180);
 } // namespace game::audio
 using SoundComponentBase = game::audio::SoundComponentBase;
 } // namespace RED4ext
+
+// clang-format on

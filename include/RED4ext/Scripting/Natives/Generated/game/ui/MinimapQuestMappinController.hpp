@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(MinimapQuestMappinController, 0x220);
 } // namespace game::ui
 using MinimapQuestMappinController = game::ui::MinimapQuestMappinController;
 } // namespace RED4ext
+
+// clang-format on

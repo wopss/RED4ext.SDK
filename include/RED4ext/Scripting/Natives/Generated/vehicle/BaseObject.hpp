@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ RED4EXT_ASSERT_SIZE(BaseObject, 0x980);
 } // namespace vehicle
 using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext
+
+// clang-format on

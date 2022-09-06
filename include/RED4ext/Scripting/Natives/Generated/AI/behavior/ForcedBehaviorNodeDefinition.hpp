@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct ForcedBehaviorNodeDefinition : AI::behavior::TreeNodeDefinition
 RED4EXT_ASSERT_SIZE(ForcedBehaviorNodeDefinition, 0x30);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct CombatNodeParams_LookAtTarget : quest::CombatNodeParams
 RED4EXT_ASSERT_SIZE(CombatNodeParams_LookAtTarget, 0x88);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -38,3 +40,5 @@ RED4EXT_ASSERT_SIZE(HitRepresentationComponent, 0x350);
 } // namespace game
 using HitRepresentationComponent = game::HitRepresentationComponent;
 } // namespace RED4ext
+
+// clang-format on

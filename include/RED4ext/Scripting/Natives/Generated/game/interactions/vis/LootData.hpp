@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -35,3 +37,5 @@ RED4EXT_ASSERT_SIZE(LootData, 0x60);
 } // namespace game::interactions::vis
 using LootData = game::interactions::vis::LootData;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct Vision_ConditionType : quest::ISensesConditionType
 RED4EXT_ASSERT_SIZE(Vision_ConditionType, 0xB0);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

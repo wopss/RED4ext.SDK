@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct VehicleAgent : AI::CAgent
 RED4EXT_ASSERT_SIZE(VehicleAgent, 0x4E8);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

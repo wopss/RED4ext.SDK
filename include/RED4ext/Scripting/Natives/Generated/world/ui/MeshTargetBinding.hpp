@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MeshTargetBinding : ent::ISourceBinding
 RED4EXT_ASSERT_SIZE(MeshTargetBinding, 0x70);
 } // namespace world::ui
 } // namespace RED4ext
+
+// clang-format on

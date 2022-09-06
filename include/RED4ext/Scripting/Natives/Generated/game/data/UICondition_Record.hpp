@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(UICondition_Record, 0x58);
 } // namespace game::data
 using UICondition_Record = game::data::UICondition_Record;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -40,3 +42,5 @@ struct AnimNode_FootStepAdjuster : anim::AnimNode_OnePoseInput
 RED4EXT_ASSERT_SIZE(AnimNode_FootStepAdjuster, 0x2F0);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

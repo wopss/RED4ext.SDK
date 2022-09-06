@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct LookAtParams_Add : ISerializable
 RED4EXT_ASSERT_SIZE(LookAtParams_Add, 0xB0);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

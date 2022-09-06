@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct SetUpEvent : red::Event
 RED4EXT_ASSERT_SIZE(SetUpEvent, 0xA0);
 } // namespace game::projectile
 } // namespace RED4ext
+
+// clang-format on

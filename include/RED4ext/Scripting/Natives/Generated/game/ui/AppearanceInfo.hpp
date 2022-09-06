@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct AppearanceInfo : game::ui::CharacterCustomizationInfo
 RED4EXT_ASSERT_SIZE(AppearanceInfo, 0xD8);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

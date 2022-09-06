@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -50,3 +52,5 @@ struct CompositionShaderParams
 RED4EXT_ASSERT_SIZE(CompositionShaderParams, 0xA0);
 } // namespace fx
 } // namespace RED4ext
+
+// clang-format on

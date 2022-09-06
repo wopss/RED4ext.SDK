@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct StatDetailedData
 RED4EXT_ASSERT_SIZE(StatDetailedData, 0x28);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

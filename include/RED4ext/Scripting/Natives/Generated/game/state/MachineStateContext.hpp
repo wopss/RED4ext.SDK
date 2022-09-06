@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct MachineStateContext
 RED4EXT_ASSERT_SIZE(MachineStateContext, 0x1A910);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

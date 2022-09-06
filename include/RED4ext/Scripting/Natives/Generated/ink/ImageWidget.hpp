@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -42,3 +44,5 @@ RED4EXT_ASSERT_SIZE(ImageWidget, 0x330);
 } // namespace ink
 using inkImage = ink::ImageWidget;
 } // namespace RED4ext
+
+// clang-format on

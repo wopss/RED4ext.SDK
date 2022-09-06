@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct RenderTextureBlobPC : rend::IRenderTextureBlob
 RED4EXT_ASSERT_SIZE(RenderTextureBlobPC, 0xD0);
 } // namespace rend
 } // namespace RED4ext
+
+// clang-format on

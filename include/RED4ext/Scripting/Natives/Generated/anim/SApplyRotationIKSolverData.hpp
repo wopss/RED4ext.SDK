@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct SApplyRotationIKSolverData
 RED4EXT_ASSERT_SIZE(SApplyRotationIKSolverData, 0x18);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

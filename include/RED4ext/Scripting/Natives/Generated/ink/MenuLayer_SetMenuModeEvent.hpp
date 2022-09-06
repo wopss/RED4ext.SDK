@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct MenuLayer_SetMenuModeEvent : red::Event
 RED4EXT_ASSERT_SIZE(MenuLayer_SetMenuModeEvent, 0x48);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

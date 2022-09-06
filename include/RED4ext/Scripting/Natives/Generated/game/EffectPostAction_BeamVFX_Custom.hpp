@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ struct EffectPostAction_BeamVFX_Custom : game::EffectPostAction_BeamVFX
 RED4EXT_ASSERT_SIZE(EffectPostAction_BeamVFX_Custom, 0x70);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ struct LevelRandomizer : game::Object
 RED4EXT_ASSERT_SIZE(LevelRandomizer, 0x2D0);
 } // namespace gen
 } // namespace RED4ext
+
+// clang-format on

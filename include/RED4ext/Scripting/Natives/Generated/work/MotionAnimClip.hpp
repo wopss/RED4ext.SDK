@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MotionAnimClip : work::AnimClip
 RED4EXT_ASSERT_SIZE(MotionAnimClip, 0x48);
 } // namespace work
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(AIActionTicket_Record, 0x80);
 } // namespace game::data
 using AIActionTicket_Record = game::data::AIActionTicket_Record;
 } // namespace RED4ext
+
+// clang-format on

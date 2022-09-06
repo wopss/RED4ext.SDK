@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct TPPCameraComponent : game::CameraComponent
 RED4EXT_ASSERT_SIZE(TPPCameraComponent, 0x5C0);
 } // namespace vehicle
 } // namespace RED4ext
+
+// clang-format on

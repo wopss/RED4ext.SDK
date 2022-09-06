@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(BroadcastStimEffector_Record, 0x68);
 } // namespace game::data
 using BroadcastStimEffector_Record = game::data::BroadcastStimEffector_Record;
 } // namespace RED4ext
+
+// clang-format on

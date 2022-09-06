@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(InventoryPuppetPreviewGameController, 0x1B8);
 } // namespace game::ui
 using inkInventoryPuppetPreviewGameController = game::ui::InventoryPuppetPreviewGameController;
 } // namespace RED4ext
+
+// clang-format on

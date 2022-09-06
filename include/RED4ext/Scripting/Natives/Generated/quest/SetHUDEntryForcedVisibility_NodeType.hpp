@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct SetHUDEntryForcedVisibility_NodeType : quest::IUIManagerNodeType
 RED4EXT_ASSERT_SIZE(SetHUDEntryForcedVisibility_NodeType, 0x58);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

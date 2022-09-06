@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct Label : attr::Attribute
 RED4EXT_ASSERT_SIZE(Label, 0x50);
 } // namespace attr
 } // namespace RED4ext
+
+// clang-format on

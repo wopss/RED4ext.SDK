@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(TargetFilterResult_Logical, 0xA8);
 } // namespace game::interactions
 using TargetFilterResult_Logical = game::interactions::TargetFilterResult_Logical;
 } // namespace RED4ext
+
+// clang-format on

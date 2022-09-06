@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct CharacterManagerCombat_Kill : quest::ICharacterManagerCombat_NodeSubType
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_Kill, 0x80);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

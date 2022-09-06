@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(EnableClientSideInteractionEvent, 0x40);
 } // namespace game::interactions
 using EnableClientSideInteractionEvent = game::interactions::EnableClientSideInteractionEvent;
 } // namespace RED4ext
+
+// clang-format on

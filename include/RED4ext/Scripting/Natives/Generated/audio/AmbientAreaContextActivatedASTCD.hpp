@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct AmbientAreaContextActivatedASTCD : audio::AudioStateTransitionConditionDa
 RED4EXT_ASSERT_SIZE(AmbientAreaContextActivatedASTCD, 0x40);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

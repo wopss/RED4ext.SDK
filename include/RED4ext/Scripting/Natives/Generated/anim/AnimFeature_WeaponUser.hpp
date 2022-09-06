@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct AnimFeature_WeaponUser : anim::AnimFeature
 RED4EXT_ASSERT_SIZE(AnimFeature_WeaponUser, 0x60);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

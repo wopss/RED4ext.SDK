@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(CycleTriggerModeEvent, 0x40);
 } // namespace game::weapon::events
 using WeaponCycleTriggerModeEvent = game::weapon::events::CycleTriggerModeEvent;
 } // namespace RED4ext
+
+// clang-format on

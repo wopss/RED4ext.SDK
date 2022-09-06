@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct EffectPostAction_Beam_RicochetPreview : game::EffectPostAction
 RED4EXT_ASSERT_SIZE(EffectPostAction_Beam_RicochetPreview, 0x90);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

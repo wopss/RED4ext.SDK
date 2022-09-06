@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct BriefingGameController : game::ui::WidgetGameController
 RED4EXT_ASSERT_SIZE(BriefingGameController, 0x1E8);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

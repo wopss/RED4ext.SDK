@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -44,3 +46,5 @@ struct Sample_All_Supported_Replicated_Types
 };
 RED4EXT_ASSERT_SIZE(Sample_All_Supported_Replicated_Types, 0xB8);
 } // namespace RED4ext
+
+// clang-format on

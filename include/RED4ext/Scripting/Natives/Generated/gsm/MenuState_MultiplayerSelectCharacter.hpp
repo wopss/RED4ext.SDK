@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct MenuState_MultiplayerSelectCharacter : gsm::MenuState
 RED4EXT_ASSERT_SIZE(MenuState_MultiplayerSelectCharacter, 0xD8);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

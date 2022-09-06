@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct SetPhotoModeKeyEnabledCallback : ink::CallbackBase
 RED4EXT_ASSERT_SIZE(SetPhotoModeKeyEnabledCallback, 0x38);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

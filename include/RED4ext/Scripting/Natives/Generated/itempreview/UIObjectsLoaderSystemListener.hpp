@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct UIObjectsLoaderSystemListener : game::ui::IUIObjectsLoaderSystemListener
 RED4EXT_ASSERT_SIZE(UIObjectsLoaderSystemListener, 0x40);
 } // namespace itempreview
 } // namespace RED4ext
+
+// clang-format on

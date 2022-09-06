@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ enum class PSODescBlendModeOp : uint8_t
     OP_nOr = 9,
 };
 } // namespace RED4ext
+
+// clang-format on

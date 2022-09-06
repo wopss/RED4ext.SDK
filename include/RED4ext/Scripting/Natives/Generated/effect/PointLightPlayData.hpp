@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct PointLightPlayData : effect::PlacedTrackItemPlayData
 RED4EXT_ASSERT_SIZE(PointLightPlayData, 0x48);
 } // namespace effect
 } // namespace RED4ext
+
+// clang-format on

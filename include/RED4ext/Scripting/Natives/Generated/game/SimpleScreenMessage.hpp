@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ RED4EXT_ASSERT_SIZE(SimpleScreenMessage, 0x30);
 } // namespace game
 using SimpleScreenMessage = game::SimpleScreenMessage;
 } // namespace RED4ext
+
+// clang-format on

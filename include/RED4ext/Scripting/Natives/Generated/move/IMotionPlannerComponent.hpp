@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct IMotionPlannerComponent : ent::IComponent
 RED4EXT_ASSERT_SIZE(IMotionPlannerComponent, 0x90);
 } // namespace move
 } // namespace RED4ext
+
+// clang-format on

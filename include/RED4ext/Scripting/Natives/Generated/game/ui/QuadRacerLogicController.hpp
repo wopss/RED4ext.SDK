@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -59,3 +61,5 @@ RED4EXT_ASSERT_SIZE(QuadRacerLogicController, 0x260);
 } // namespace game::ui
 using QuadRacerLogicController = game::ui::QuadRacerLogicController;
 } // namespace RED4ext
+
+// clang-format on

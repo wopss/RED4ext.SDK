@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -74,3 +76,5 @@ struct GameSettingsResource : CResource
 RED4EXT_ASSERT_SIZE(GameSettingsResource, 0x238);
 } // namespace ink
 } // namespace RED4ext
+
+// clang-format on

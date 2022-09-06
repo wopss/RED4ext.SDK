@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct StateObserver_FunctionalTests : gsm::IStateObserver
 RED4EXT_ASSERT_SIZE(StateObserver_FunctionalTests, 0x30);
 } // namespace gsm::game
 } // namespace RED4ext
+
+// clang-format on

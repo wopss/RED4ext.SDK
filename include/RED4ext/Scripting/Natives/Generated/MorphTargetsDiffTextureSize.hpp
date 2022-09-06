@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -12,3 +14,5 @@ enum class MorphTargetsDiffTextureSize : uint8_t
     TEXTURE_SIZE_256x256 = 2,
 };
 } // namespace RED4ext
+
+// clang-format on

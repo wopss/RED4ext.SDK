@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(JournalPhoneChoiceEntry, 0x90);
 } // namespace game
 using JournalPhoneChoiceEntry = game::JournalPhoneChoiceEntry;
 } // namespace RED4ext
+
+// clang-format on

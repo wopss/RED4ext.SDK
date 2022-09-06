@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(SystemTargetFilter_Script, 0x78);
 } // namespace game::targeting
 using TargetFilter_Script = game::targeting::SystemTargetFilter_Script;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(MachineGameScriptInterface, 0x208);
 } // namespace game::state
 using StateGameScriptInterface = game::state::MachineGameScriptInterface;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct PoseInfoLoggerEntry_FloatTrack : anim::PoseInfoLoggerEntry
 RED4EXT_ASSERT_SIZE(PoseInfoLoggerEntry_FloatTrack, 0x50);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

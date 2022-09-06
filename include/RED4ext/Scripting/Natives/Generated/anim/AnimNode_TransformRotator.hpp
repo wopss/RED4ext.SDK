@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -31,3 +33,5 @@ struct AnimNode_TransformRotator : anim::AnimNode_OnePoseInput
 RED4EXT_ASSERT_SIZE(AnimNode_TransformRotator, 0xE8);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ enum class FunctionalTestsResultCode : uint32_t
     EmptyContainer = 12,
 };
 } // namespace RED4ext
+
+// clang-format on

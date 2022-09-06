@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct SetParameterOnEmitter : game::audio::events::EmitterEvent
 RED4EXT_ASSERT_SIZE(SetParameterOnEmitter, 0x68);
 } // namespace game::audio::events
 } // namespace RED4ext
+
+// clang-format on

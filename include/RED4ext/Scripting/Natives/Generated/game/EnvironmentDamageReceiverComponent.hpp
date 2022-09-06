@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ RED4EXT_ASSERT_SIZE(EnvironmentDamageReceiverComponent, 0x140);
 } // namespace game
 using EnvironmentDamageReceiverComponent = game::EnvironmentDamageReceiverComponent;
 } // namespace RED4ext
+
+// clang-format on

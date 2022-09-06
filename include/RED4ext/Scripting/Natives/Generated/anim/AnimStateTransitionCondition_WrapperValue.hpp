@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct AnimStateTransitionCondition_WrapperValue : anim::IAnimStateTransitionCon
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_WrapperValue, 0x60);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct WrappingInfo
 RED4EXT_ASSERT_SIZE(WrappingInfo, 0xC);
 } // namespace text
 } // namespace RED4ext
+
+// clang-format on

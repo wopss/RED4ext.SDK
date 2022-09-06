@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -29,3 +31,5 @@ RED4EXT_ASSERT_SIZE(AICommandNodeFunction, 0x48);
 } // namespace quest
 using AICommandNodeFunction = quest::AICommandNodeFunction;
 } // namespace RED4ext
+
+// clang-format on

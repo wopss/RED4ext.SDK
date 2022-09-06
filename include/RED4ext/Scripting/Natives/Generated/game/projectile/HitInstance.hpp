@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -39,3 +41,5 @@ struct HitInstance
 RED4EXT_ASSERT_SIZE(HitInstance, 0x100);
 } // namespace game::projectile
 } // namespace RED4ext
+
+// clang-format on

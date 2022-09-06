@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ RED4EXT_ASSERT_SIZE(PlayerClimbInfo, 0x70);
 } // namespace game
 using PlayerClimbInfo = game::PlayerClimbInfo;
 } // namespace RED4ext
+
+// clang-format on

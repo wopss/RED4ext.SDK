@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -82,3 +84,5 @@ enum class EEnvManagerModifier : uint32_t
     EMM_GreyPlayMode = 72,
 };
 } // namespace RED4ext
+
+// clang-format on

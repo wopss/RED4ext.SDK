@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct StatsSystemSave : ISerializable
 RED4EXT_ASSERT_SIZE(StatsSystemSave, 0x78);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

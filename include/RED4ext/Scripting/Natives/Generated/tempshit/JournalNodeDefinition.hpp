@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct JournalNodeDefinition : quest::DisableableNodeDefinition
 RED4EXT_ASSERT_SIZE(JournalNodeDefinition, 0x48);
 } // namespace tempshit
 } // namespace RED4ext
+
+// clang-format on

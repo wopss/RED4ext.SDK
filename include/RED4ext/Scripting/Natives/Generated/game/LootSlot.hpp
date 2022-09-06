@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct LootSlot : game::LootContainerBase
 RED4EXT_ASSERT_SIZE(LootSlot, 0x298);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

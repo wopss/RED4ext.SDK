@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(TriggerNotifier_ScriptInstance, 0x68);
 } // namespace ent
 using TriggerNotifier_ScriptInstance = ent::TriggerNotifier_ScriptInstance;
 } // namespace RED4ext
+
+// clang-format on

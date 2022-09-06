@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct MachineplayeractionsActionReload : game::state::MachineplayeractionsWeapo
 RED4EXT_ASSERT_SIZE(MachineplayeractionsActionReload, 0x78);
 } // namespace game::state
 } // namespace RED4ext
+
+// clang-format on

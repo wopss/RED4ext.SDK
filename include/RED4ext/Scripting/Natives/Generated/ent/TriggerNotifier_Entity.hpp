@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct TriggerNotifier_Entity : world::ITriggerAreaNotifer
 RED4EXT_ASSERT_SIZE(TriggerNotifier_Entity, 0xC0);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

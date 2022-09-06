@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct TerrainImportedTile
 RED4EXT_ASSERT_SIZE(TerrainImportedTile, 0x68);
 } // namespace interop
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ RED4EXT_ASSERT_SIZE(AISubActionBlockData_Record, 0x48);
 } // namespace game::data
 using AISubActionBlockData_Record = game::data::AISubActionBlockData_Record;
 } // namespace RED4ext
+
+// clang-format on

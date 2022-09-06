@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -42,3 +44,5 @@ RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x488);
 } // namespace game::ui
 using MinimapContainerController = game::ui::MinimapContainerController;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct HardAttachment : ent::ITransformAttachment
 RED4EXT_ASSERT_SIZE(HardAttachment, 0x58);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

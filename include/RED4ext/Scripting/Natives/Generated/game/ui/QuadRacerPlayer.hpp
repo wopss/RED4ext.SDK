@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ RED4EXT_ASSERT_SIZE(QuadRacerPlayer, 0x130);
 } // namespace game::ui
 using QuadRacerPlayer = game::ui::QuadRacerPlayer;
 } // namespace RED4ext
+
+// clang-format on

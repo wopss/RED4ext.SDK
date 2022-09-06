@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct VectorGraphicShape_Circle : vg::BaseVectorGraphicShape
 RED4EXT_ASSERT_SIZE(VectorGraphicShape_Circle, 0xD0);
 } // namespace vg
 } // namespace RED4ext
+
+// clang-format on

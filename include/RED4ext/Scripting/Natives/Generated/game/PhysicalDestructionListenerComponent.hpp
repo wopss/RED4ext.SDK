@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct PhysicalDestructionListenerComponent : ent::IComponent
 RED4EXT_ASSERT_SIZE(PhysicalDestructionListenerComponent, 0xA8);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

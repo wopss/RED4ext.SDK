@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct IMappinVolume : ISerializable
 RED4EXT_ASSERT_SIZE(IMappinVolume, 0x30);
 } // namespace game::mappins
 } // namespace RED4ext
+
+// clang-format on

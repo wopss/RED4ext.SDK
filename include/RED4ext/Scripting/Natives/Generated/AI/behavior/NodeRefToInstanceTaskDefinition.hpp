@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct NodeRefToInstanceTaskDefinition : AI::behavior::NodeRefConverterTaskDefin
 RED4EXT_ASSERT_SIZE(NodeRefToInstanceTaskDefinition, 0x58);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

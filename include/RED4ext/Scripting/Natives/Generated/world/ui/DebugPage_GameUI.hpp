@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct DebugPage_GameUI
 RED4EXT_ASSERT_SIZE(DebugPage_GameUI, 0x18);
 } // namespace world::ui
 } // namespace RED4ext
+
+// clang-format on

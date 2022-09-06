@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -41,3 +43,5 @@ struct ActionMoveToSmartObjectState : game::ActionMoveToState
 RED4EXT_ASSERT_SIZE(ActionMoveToSmartObjectState, 0xA0);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct ScriptCollisionEvaluator : game::projectile::CollisionEvaluator
 RED4EXT_ASSERT_SIZE(ScriptCollisionEvaluator, 0x40);
 } // namespace game::projectile
 } // namespace RED4ext
+
+// clang-format on

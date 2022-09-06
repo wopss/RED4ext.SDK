@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(AIAffiliationCond_Record, 0x58);
 } // namespace game::data
 using AIAffiliationCond_Record = game::data::AIAffiliationCond_Record;
 } // namespace RED4ext
+
+// clang-format on

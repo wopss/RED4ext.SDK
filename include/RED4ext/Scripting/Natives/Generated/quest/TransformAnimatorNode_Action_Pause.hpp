@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct TransformAnimatorNode_Action_Pause : quest::TransformAnimatorNode_ActionT
 RED4EXT_ASSERT_SIZE(TransformAnimatorNode_Action_Pause, 0x30);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

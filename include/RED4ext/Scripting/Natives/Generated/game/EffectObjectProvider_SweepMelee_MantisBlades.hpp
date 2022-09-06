@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct EffectObjectProvider_SweepMelee_MantisBlades : game::EffectObjectProvider
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepMelee_MantisBlades, 0x78);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

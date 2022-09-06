@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct PersistentTestBox : game::Object
 RED4EXT_ASSERT_SIZE(PersistentTestBox, 0x250);
 } // namespace mp
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct IsInDesiredRangeConditionDefinition : AI::behavior::CompanionConditionDef
 RED4EXT_ASSERT_SIZE(IsInDesiredRangeConditionDefinition, 0x78);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ struct EffectObjectFilter_HitType : game::EffectObjectSingleFilter
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_HitType, 0x48);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

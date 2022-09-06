@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ RED4EXT_ASSERT_SIZE(HackingMinigameGameController, 0x208);
 } // namespace game::ui
 using HackingMinigameGameController = game::ui::HackingMinigameGameController;
 } // namespace RED4ext
+
+// clang-format on

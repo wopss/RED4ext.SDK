@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(AimAssistBulletMagnetism_Record, 0x58);
 } // namespace game::data
 using AimAssistBulletMagnetism_Record = game::data::AimAssistBulletMagnetism_Record;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(StatModifierData_Deprecated, 0x48);
 } // namespace game
 using gameStatModifierData = game::StatModifierData_Deprecated;
 } // namespace RED4ext
+
+// clang-format on

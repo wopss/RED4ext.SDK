@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -17,3 +19,5 @@ struct VelocityEvaluator : PhysicsParticleInitializer
 };
 RED4EXT_ASSERT_SIZE(VelocityEvaluator, 0x48);
 } // namespace RED4ext
+
+// clang-format on

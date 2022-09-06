@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct LODDefinition : ISerializable
 RED4EXT_ASSERT_SIZE(LODDefinition, 0xD0);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

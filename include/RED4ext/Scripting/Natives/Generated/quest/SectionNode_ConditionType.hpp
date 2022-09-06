@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ struct SectionNode_ConditionType : quest::ISceneConditionType
 RED4EXT_ASSERT_SIZE(SectionNode_ConditionType, 0x58);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

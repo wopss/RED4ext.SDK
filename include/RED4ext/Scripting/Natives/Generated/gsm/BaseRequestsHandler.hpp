@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct BaseRequestsHandler : ink::ISystemRequestsHandler
 RED4EXT_ASSERT_SIZE(BaseRequestsHandler, 0x528);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

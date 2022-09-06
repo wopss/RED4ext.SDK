@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -67,3 +69,5 @@ RED4EXT_ASSERT_SIZE(AnimFeature_FPPCamera, 0x100);
 } // namespace anim
 using AnimFeature_FPPCamera = anim::AnimFeature_FPPCamera;
 } // namespace RED4ext
+
+// clang-format on

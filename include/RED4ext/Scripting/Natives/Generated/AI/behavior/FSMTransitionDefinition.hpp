@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -34,3 +36,5 @@ struct FSMTransitionDefinition : AI::behavior::BehaviorComponentDefinition
 RED4EXT_ASSERT_SIZE(FSMTransitionDefinition, 0x80);
 } // namespace AI::behavior
 } // namespace RED4ext
+
+// clang-format on

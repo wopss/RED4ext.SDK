@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct TransformAnimation_Position_LocalPosition : game::TransformAnimation_Posi
 RED4EXT_ASSERT_SIZE(TransformAnimation_Position_LocalPosition, 0x40);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

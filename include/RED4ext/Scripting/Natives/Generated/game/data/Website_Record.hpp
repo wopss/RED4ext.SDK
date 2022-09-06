@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(Website_Record, 0x50);
 } // namespace game::data
 using Website_Record = game::data::Website_Record;
 } // namespace RED4ext
+
+// clang-format on

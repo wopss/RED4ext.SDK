@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct CTreeNodeReadWorkspotParamsDefinition : AI::CTreeNodeDecoratorDefinition
 RED4EXT_ASSERT_SIZE(CTreeNodeReadWorkspotParamsDefinition, 0x88);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

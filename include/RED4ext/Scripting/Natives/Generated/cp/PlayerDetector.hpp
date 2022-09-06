@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ struct PlayerDetector : game::Object
 RED4EXT_ASSERT_SIZE(PlayerDetector, 0x248);
 } // namespace cp
 } // namespace RED4ext
+
+// clang-format on

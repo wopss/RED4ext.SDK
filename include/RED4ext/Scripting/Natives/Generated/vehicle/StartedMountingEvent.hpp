@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -30,3 +32,5 @@ RED4EXT_ASSERT_SIZE(StartedMountingEvent, 0x68);
 } // namespace vehicle
 using VehicleStartedMountingEvent = vehicle::StartedMountingEvent;
 } // namespace RED4ext
+
+// clang-format on

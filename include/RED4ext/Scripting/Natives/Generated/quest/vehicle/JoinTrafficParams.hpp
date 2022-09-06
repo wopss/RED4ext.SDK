@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct JoinTrafficParams : quest::VehicleSpecificCommandParams
 RED4EXT_ASSERT_SIZE(JoinTrafficParams, 0x38);
 } // namespace quest::vehicle
 } // namespace RED4ext
+
+// clang-format on

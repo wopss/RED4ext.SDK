@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ struct EffectObjectSingleFilter_BlackboardBoolCondition : game::EffectObjectSing
 RED4EXT_ASSERT_SIZE(EffectObjectSingleFilter_BlackboardBoolCondition, 0x68);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

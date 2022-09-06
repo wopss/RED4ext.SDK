@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct CoverDescriptionResult : ISerializable
 RED4EXT_ASSERT_SIZE(CoverDescriptionResult, 0xF0);
 } // namespace world::geometry
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(ChoiceCaption, 0x10);
 } // namespace game::interactions
 using InteractionChoiceCaption = game::interactions::ChoiceCaption;
 } // namespace RED4ext
+
+// clang-format on

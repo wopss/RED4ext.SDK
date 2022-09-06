@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -35,3 +37,5 @@ struct HUDVideo_NodeType : quest::IUIManagerNodeType
 RED4EXT_ASSERT_SIZE(HUDVideo_NodeType, 0x60);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

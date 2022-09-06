@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -51,3 +53,5 @@ RED4EXT_ASSERT_SIZE(MeshComponent, 0x1E0);
 } // namespace ent
 using MeshComponent = ent::MeshComponent;
 } // namespace RED4ext
+
+// clang-format on

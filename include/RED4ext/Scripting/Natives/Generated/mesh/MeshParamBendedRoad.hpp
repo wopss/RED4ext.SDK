@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -35,3 +37,5 @@ struct MeshParamBendedRoad : mesh::MeshParameter
 RED4EXT_ASSERT_SIZE(MeshParamBendedRoad, 0xF0);
 } // namespace mesh
 } // namespace RED4ext
+
+// clang-format on

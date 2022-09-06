@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -23,3 +25,5 @@ RED4EXT_ASSERT_SIZE(SensorObjectComponent, 0x130);
 } // namespace sense
 using SensorObjectComponent = sense::SensorObjectComponent;
 } // namespace RED4ext
+
+// clang-format on

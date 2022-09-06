@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct ScriptsTargetTrackingListener : AI::ITargetTrackingListener
 RED4EXT_ASSERT_SIZE(ScriptsTargetTrackingListener, 0x98);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

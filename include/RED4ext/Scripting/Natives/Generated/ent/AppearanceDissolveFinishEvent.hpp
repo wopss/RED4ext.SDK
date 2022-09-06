@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct AppearanceDissolveFinishEvent : red::Event
 RED4EXT_ASSERT_SIZE(AppearanceDissolveFinishEvent, 0x48);
 } // namespace ent
 } // namespace RED4ext
+
+// clang-format on

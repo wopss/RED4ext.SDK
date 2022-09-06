@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ RED4EXT_ASSERT_SIZE(TelemetryDamageDealt, 0x128);
 } // namespace game
 using TelemetryDamageDealt = game::TelemetryDamageDealt;
 } // namespace RED4ext
+
+// clang-format on

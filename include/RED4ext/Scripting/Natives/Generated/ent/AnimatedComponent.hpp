@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -50,3 +52,5 @@ RED4EXT_ASSERT_SIZE(AnimatedComponent, 0x2B0);
 } // namespace ent
 using AnimatedComponent = ent::AnimatedComponent;
 } // namespace RED4ext
+
+// clang-format on

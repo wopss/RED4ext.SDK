@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -56,3 +58,5 @@ struct CreditsController : game::ui::WidgetGameController
 RED4EXT_ASSERT_SIZE(CreditsController, 0x328);
 } // namespace game::ui
 } // namespace RED4ext
+
+// clang-format on

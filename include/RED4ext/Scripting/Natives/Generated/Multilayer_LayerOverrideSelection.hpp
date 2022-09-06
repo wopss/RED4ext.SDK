@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ struct Multilayer_LayerOverrideSelection
 };
 RED4EXT_ASSERT_SIZE(Multilayer_LayerOverrideSelection, 0x30);
 } // namespace RED4ext
+
+// clang-format on

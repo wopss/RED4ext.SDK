@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ struct CharacterManagerCombat_EquipWeapon : quest::ICharacterManagerCombat_NodeS
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_EquipWeapon, 0x88);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

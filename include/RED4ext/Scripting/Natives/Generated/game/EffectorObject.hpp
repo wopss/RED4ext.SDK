@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(EffectorObject, 0x60);
 } // namespace game
 using EffectorObject = game::EffectorObject;
 } // namespace RED4ext
+
+// clang-format on

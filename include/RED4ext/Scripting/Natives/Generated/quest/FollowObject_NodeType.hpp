@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ struct FollowObject_NodeType : quest::IVehicleManagerNodeType
 RED4EXT_ASSERT_SIZE(FollowObject_NodeType, 0xB8);
 } // namespace quest
 } // namespace RED4ext
+
+// clang-format on

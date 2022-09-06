@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct OptionUsage
 RED4EXT_ASSERT_SIZE(OptionUsage, 0x1);
 } // namespace scn::screenplay
 } // namespace RED4ext
+
+// clang-format on

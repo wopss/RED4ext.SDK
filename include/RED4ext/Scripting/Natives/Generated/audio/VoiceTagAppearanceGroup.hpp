@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -21,3 +23,5 @@ struct VoiceTagAppearanceGroup
 RED4EXT_ASSERT_SIZE(VoiceTagAppearanceGroup, 0x20);
 } // namespace audio
 } // namespace RED4ext
+
+// clang-format on

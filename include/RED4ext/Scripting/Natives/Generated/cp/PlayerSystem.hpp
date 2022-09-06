@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(PlayerSystem, 0x60500);
 } // namespace cp
 using PlayerSystem = cp::PlayerSystem;
 } // namespace RED4ext
+
+// clang-format on

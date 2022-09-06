@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct StateObserver_SessionChanged : gsm::IStateObserver
 RED4EXT_ASSERT_SIZE(StateObserver_SessionChanged, 0x8);
 } // namespace gsm
 } // namespace RED4ext
+
+// clang-format on

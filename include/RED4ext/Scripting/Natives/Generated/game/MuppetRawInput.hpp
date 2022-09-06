@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(MuppetRawInput, 0x98);
 } // namespace game
 using MuppetRawInput = game::MuppetRawInput;
 } // namespace RED4ext
+
+// clang-format on

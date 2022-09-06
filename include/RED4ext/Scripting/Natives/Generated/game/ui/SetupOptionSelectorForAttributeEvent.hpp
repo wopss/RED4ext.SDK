@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -27,3 +29,5 @@ RED4EXT_ASSERT_SIZE(SetupOptionSelectorForAttributeEvent, 0x60);
 } // namespace game::ui
 using SetupOptionSelectorForAttributeEvent = game::ui::SetupOptionSelectorForAttributeEvent;
 } // namespace RED4ext
+
+// clang-format on

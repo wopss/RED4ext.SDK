@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -26,3 +28,5 @@ RED4EXT_ASSERT_SIZE(HoldIndicatorGameController, 0x1E8);
 } // namespace game::ui
 using HoldIndicatorGameController = game::ui::HoldIndicatorGameController;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -18,3 +20,5 @@ struct ValueDataNode : game::data::DataNode
 RED4EXT_ASSERT_SIZE(ValueDataNode, 0x98);
 } // namespace game::data
 } // namespace RED4ext
+
+// clang-format on

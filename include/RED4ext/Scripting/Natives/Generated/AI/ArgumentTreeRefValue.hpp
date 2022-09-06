@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -25,3 +27,5 @@ struct ArgumentTreeRefValue : AI::ArgumentDefinition
 RED4EXT_ASSERT_SIZE(ArgumentTreeRefValue, 0x60);
 } // namespace AI
 } // namespace RED4ext
+
+// clang-format on

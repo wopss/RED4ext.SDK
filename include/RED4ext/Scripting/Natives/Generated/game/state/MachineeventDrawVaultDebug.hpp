@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(MachineeventDrawVaultDebug, 0x68);
 } // namespace game::state
 using DrawVaultDebug = game::state::MachineeventDrawVaultDebug;
 } // namespace RED4ext
+
+// clang-format on

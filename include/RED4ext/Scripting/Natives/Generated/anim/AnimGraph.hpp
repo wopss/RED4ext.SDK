@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -50,3 +52,5 @@ struct AnimGraph : CResource
 RED4EXT_ASSERT_SIZE(AnimGraph, 0x120);
 } // namespace anim
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -24,3 +26,5 @@ RED4EXT_ASSERT_SIZE(Tier3CameraSettings, 0x18);
 } // namespace game
 using Tier3CameraSettings = game::Tier3CameraSettings;
 } // namespace RED4ext
+
+// clang-format on

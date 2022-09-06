@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -19,3 +21,5 @@ struct RuntimeSystemMoverComponents : world::IRuntimeSystem
 RED4EXT_ASSERT_SIZE(RuntimeSystemMoverComponents, 0xC8);
 } // namespace world
 } // namespace RED4ext
+
+// clang-format on

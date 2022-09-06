@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(ViewportWidget, 0x240);
 } // namespace world::ui
 using ViewportWidget = world::ui::ViewportWidget;
 } // namespace RED4ext
+
+// clang-format on

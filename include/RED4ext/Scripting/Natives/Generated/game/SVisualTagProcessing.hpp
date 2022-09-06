@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -22,3 +24,5 @@ RED4EXT_ASSERT_SIZE(SVisualTagProcessing, 0x8);
 } // namespace game
 using SVisualTagProcessing = game::SVisualTagProcessing;
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -20,3 +22,5 @@ RED4EXT_ASSERT_SIZE(CameraSystem, 0x730);
 } // namespace game
 using CameraSystem = game::CameraSystem;
 } // namespace RED4ext
+
+// clang-format on

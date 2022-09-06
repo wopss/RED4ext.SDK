@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -53,3 +55,5 @@ RED4EXT_ASSERT_SIZE(Component, 0x8B0);
 } // namespace game::projectile
 using ProjectileComponent = game::projectile::Component;
 } // namespace RED4ext
+
+// clang-format on

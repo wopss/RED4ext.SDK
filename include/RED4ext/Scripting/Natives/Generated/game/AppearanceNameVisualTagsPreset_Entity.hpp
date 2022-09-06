@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -28,3 +30,5 @@ struct AppearanceNameVisualTagsPreset_Entity : ISerializable
 RED4EXT_ASSERT_SIZE(AppearanceNameVisualTagsPreset_Entity, 0x70);
 } // namespace game
 } // namespace RED4ext
+
+// clang-format on

@@ -1,5 +1,7 @@
 #pragma once
 
+// clang-format off
+
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -75,3 +77,5 @@ enum class GpuWrapApieTextureFormat : uint8_t
     TEXFMT_Uint_R32G32B32A32 = TEXFMT_R16G16B16A16_Uint,
 };
 } // namespace RED4ext
+
+// clang-format on
