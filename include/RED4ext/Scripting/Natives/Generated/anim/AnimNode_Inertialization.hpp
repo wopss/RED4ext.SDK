@@ -21,8 +21,8 @@ struct AnimNode_Inertialization : anim::AnimNode_OnePoseInput
     bool safeMode; // 68
     uint8_t unk69[0x70 - 0x69]; // 69
     DynArray<anim::InertializationRotationLimit> rotationLimits; // 70
-    uint8_t unk80[0x1F0 - 0x80]; // 80
+    uint8_t unk80[0x200 - 0x80]; // 80
 };
-RED4EXT_ASSERT_SIZE(AnimNode_Inertialization, 0x1F0);
+RED4EXT_ASSERT_SIZE(AnimNode_Inertialization, 0x200);
 } // namespace anim
 } // namespace RED4ext

@@ -1,0 +1,16 @@
+#pragma once
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+namespace RED4ext
+{
+namespace game { 
+enum class ItemIconGender : uint8_t
+{
+    Female = 0,
+    Male = 1,
+};
+} // namespace game
+using ItemIconGender = game::ItemIconGender;
+} // namespace RED4ext

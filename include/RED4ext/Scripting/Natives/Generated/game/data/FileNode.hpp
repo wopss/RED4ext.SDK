@@ -23,7 +23,7 @@ struct FileNode : game::data::DataNode
 
     CString packageName; // 98
     uint8_t unkB8[0x2C0 - 0xB8]; // B8
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<WeakHandle<game::data::PackageNode>, 16> packageDependencies; // 2C0
     WeakHandle<game::data::PackageNode> package; // 3C8
     DynArray<Handle<game::data::VariableNode>> variables; // 3D8

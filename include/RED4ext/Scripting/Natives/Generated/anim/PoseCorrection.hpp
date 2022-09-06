@@ -19,9 +19,9 @@ struct PoseCorrection
     float rbfCoefficient; // 00
     float rbfPowValue; // 04
     uint8_t unk08[0x10 - 0x8]; // 8
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(16) StaticArray<anim::CompareBone, 4> compareBones; // 10
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(16) StaticArray<anim::BoneCorrection, 4> boneCorrections; // A0
 };
 RED4EXT_ASSERT_SIZE(PoseCorrection, 0x130);

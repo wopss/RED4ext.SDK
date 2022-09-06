@@ -10,6 +10,7 @@ enum class CharacterCustomizationEditTag : uint32_t
 {
     NewGame = 0,
     HairDresser = 1,
+    Ripperdoc = 2,
 };
 } // namespace game::ui
 } // namespace RED4ext

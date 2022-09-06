@@ -14,9 +14,9 @@ struct CameraSystem : game::ICameraSystem
     static constexpr const char* NAME = "gameCameraSystem";
     static constexpr const char* ALIAS = "CameraSystem";
 
-    uint8_t unk48[0x720 - 0x48]; // 48
+    uint8_t unk48[0x730 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CameraSystem, 0x720);
+RED4EXT_ASSERT_SIZE(CameraSystem, 0x730);
 } // namespace game
 using CameraSystem = game::CameraSystem;
 } // namespace RED4ext

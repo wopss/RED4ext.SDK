@@ -11,7 +11,7 @@ struct EItemDynamicTags
     uint8_t Quest : 1; // 0
     uint8_t UnequipBlocked : 1; // 1
     uint8_t DLCAdded : 1; // 2
-    uint8_t b3 : 1; // 3
+    uint8_t TransmogBlocked : 1; // 3
     uint8_t b4 : 1; // 4
     uint8_t b5 : 1; // 5
     uint8_t b6 : 1; // 6

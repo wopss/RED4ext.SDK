@@ -22,7 +22,7 @@ struct GarageComponentPS : game::ComponentPS
     DynArray<vehicle::GarageComponentVehicleData> spawnedVehiclesData; // 68
     DynArray<vehicle::GarageVehicleID> unlockedVehicles; // 78
     DynArray<vehicle::UnlockedVehicle> unlockedVehicleArray; // 88
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<vehicle::GarageVehicleID, 3> activeVehicles; // 98
     vehicle::GarageComponentVehicleData mountedVehicleData; // D0
     bool mountedVehicleStolen; // F0

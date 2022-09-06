@@ -15,7 +15,7 @@ struct CameraAnimationLOD
     static constexpr const char* NAME = "scnCameraAnimationLOD";
     static constexpr const char* ALIAS = NAME;
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(16) StaticArray<scn::AnimationMotionSample, 3> trajectory; // 00
     StaticArray<StaticArray<float, 7>, 3> tracks; // A0
     uint8_t unk104[0x110 - 0x104]; // 104

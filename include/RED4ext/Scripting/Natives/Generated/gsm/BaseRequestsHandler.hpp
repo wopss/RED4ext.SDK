@@ -15,9 +15,9 @@ struct BaseRequestsHandler : ink::ISystemRequestsHandler
     static constexpr const char* NAME = "gsmBaseRequestsHandler";
     static constexpr const char* ALIAS = NAME;
 
-    gsm::SavingRequesResult SavingComplete; // 270
-    uint8_t unk2A8[0x430 - 0x2A8]; // 2A8
+    gsm::SavingRequesResult SavingComplete; // 318
+    uint8_t unk350[0x528 - 0x350]; // 350
 };
-RED4EXT_ASSERT_SIZE(BaseRequestsHandler, 0x430);
+RED4EXT_ASSERT_SIZE(BaseRequestsHandler, 0x528);
 } // namespace gsm
 } // namespace RED4ext

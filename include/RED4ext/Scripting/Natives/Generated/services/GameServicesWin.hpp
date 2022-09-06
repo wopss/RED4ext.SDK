@@ -14,8 +14,8 @@ struct GameServicesWin : services::GameServices
     static constexpr const char* NAME = "servicesGameServicesWin";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk4D8[0x588 - 0x4D8]; // 4D8
+    uint8_t unk600[0x710 - 0x600]; // 600
 };
-RED4EXT_ASSERT_SIZE(GameServicesWin, 0x588);
+RED4EXT_ASSERT_SIZE(GameServicesWin, 0x710);
 } // namespace services
 } // namespace RED4ext

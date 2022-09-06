@@ -25,7 +25,8 @@ struct HitEvent : red::Event
     bool isTargetPuppet; // 6C
     uint8_t unk6D[0x70 - 0x6D]; // 6D
     CName targetPuppetMeleeMaterial; // 70
-    uint8_t unk78[0x80 - 0x78]; // 78
+    bool isTargetPuppetHead; // 78
+    uint8_t unk79[0x80 - 0x79]; // 79
 };
 RED4EXT_ASSERT_SIZE(HitEvent, 0x80);
 } // namespace game::audio::events

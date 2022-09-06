@@ -14,8 +14,8 @@ struct MenuInstanceImpl : ink::MenuInstance
     static constexpr const char* NAME = "inkMenuInstanceImpl";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk78[0xE8 - 0x78]; // 78
+    uint8_t unkB0[0x120 - 0xB0]; // B0
 };
-RED4EXT_ASSERT_SIZE(MenuInstanceImpl, 0xE8);
+RED4EXT_ASSERT_SIZE(MenuInstanceImpl, 0x120);
 } // namespace ink
 } // namespace RED4ext

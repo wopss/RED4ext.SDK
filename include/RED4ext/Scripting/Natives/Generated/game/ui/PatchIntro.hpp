@@ -9,6 +9,7 @@ namespace game::ui {
 enum class PatchIntro : uint32_t
 {
     Patch1500_NextGen = 0,
+    Patch1600 = 1,
 };
 } // namespace game::ui
 } // namespace RED4ext

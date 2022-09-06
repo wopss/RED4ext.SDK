@@ -14,13 +14,13 @@ struct GarmentSwitchEffectController
     static constexpr const char* NAME = "gameuiGarmentSwitchEffectController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x28 - 0x0]; // 0
-    CName sceneName; // 28
-    CName effectName; // 30
-    float switchTime; // 38
-    float hideTime; // 3C
-    uint8_t unk40[0x48 - 0x40]; // 40
+    uint8_t unk00[0x48 - 0x0]; // 0
+    CName sceneName; // 48
+    CName effectName; // 50
+    float switchTime; // 58
+    float hideTime; // 5C
+    uint8_t unk60[0x68 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(GarmentSwitchEffectController, 0x48);
+RED4EXT_ASSERT_SIZE(GarmentSwitchEffectController, 0x68);
 } // namespace game::ui
 } // namespace RED4ext

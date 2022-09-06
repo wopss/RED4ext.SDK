@@ -15,9 +15,9 @@ struct CRenderSimWaterImpulse : IDynamicTextureGenerator
 
     uint8_t unk38[0x50 - 0x38]; // 38
     int32_t resolution; // 50
-    uint8_t unk54[0x68 - 0x54]; // 54
-    float simulationSpeed; // 68
-    uint8_t unk6C[0x98 - 0x6C]; // 6C
+    uint8_t unk54[0x64 - 0x54]; // 54
+    float simulationSpeed; // 64
+    uint8_t unk68[0xA8 - 0x68]; // 68
 };
-RED4EXT_ASSERT_SIZE(CRenderSimWaterImpulse, 0x98);
+RED4EXT_ASSERT_SIZE(CRenderSimWaterImpulse, 0xA8);
 } // namespace RED4ext

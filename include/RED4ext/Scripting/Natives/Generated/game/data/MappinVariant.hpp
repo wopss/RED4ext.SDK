@@ -136,12 +136,13 @@ enum class MappinVariant : uint32_t
     Zzz05_ApartmentToPurchaseVariant = 125,
     Zzz06_NCPDGigVariant = 126,
     Zzz07_PlayerStashVariant = 127,
-    CPO_PingDoorVariant = 128,
-    CPO_PingGoHereVariant = 129,
-    CPO_PingLootVariant = 130,
-    CPO_RemotePlayerVariant = 131,
-    Count = 132,
-    Invalid = 133,
+    Zzz08_WardrobeVariant = 128,
+    CPO_PingDoorVariant = 129,
+    CPO_PingGoHereVariant = 130,
+    CPO_PingLootVariant = 131,
+    CPO_RemotePlayerVariant = 132,
+    Count = 133,
+    Invalid = 134,
 };
 } // namespace game::data
 } // namespace RED4ext

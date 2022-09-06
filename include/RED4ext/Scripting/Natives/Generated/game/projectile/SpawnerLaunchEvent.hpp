@@ -22,11 +22,12 @@ struct SpawnerLaunchEvent : red::Event
 
     game::projectile::LaunchParams launchParams; // 40
     CName templateName; // 98
-    WeakHandle<game::Object> owner; // A0
-    uint8_t unkB0[0xC0 - 0xB0]; // B0
-    game::projectile::WeaponParams projectileParams; // C0
-    uint8_t unk160[0x170 - 0x160]; // 160
+    CName appearance; // A0
+    WeakHandle<game::Object> owner; // A8
+    uint8_t unkB8[0xD0 - 0xB8]; // B8
+    game::projectile::WeaponParams projectileParams; // D0
+    uint8_t unk170[0x180 - 0x170]; // 170
 };
-RED4EXT_ASSERT_SIZE(SpawnerLaunchEvent, 0x170);
+RED4EXT_ASSERT_SIZE(SpawnerLaunchEvent, 0x180);
 } // namespace game::projectile
 } // namespace RED4ext

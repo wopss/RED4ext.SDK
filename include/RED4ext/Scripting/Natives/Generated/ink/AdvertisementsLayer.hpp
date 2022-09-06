@@ -14,8 +14,8 @@ struct AdvertisementsLayer : ink::WorldFluffLayer
     static constexpr const char* NAME = "inkAdvertisementsLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk1F8[0x270 - 0x1F8]; // 1F8
+    uint8_t unk200[0x278 - 0x200]; // 200
 };
-RED4EXT_ASSERT_SIZE(AdvertisementsLayer, 0x270);
+RED4EXT_ASSERT_SIZE(AdvertisementsLayer, 0x278);
 } // namespace ink
 } // namespace RED4ext

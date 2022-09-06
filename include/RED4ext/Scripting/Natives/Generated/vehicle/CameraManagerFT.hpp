@@ -15,7 +15,7 @@ struct CameraManagerFT : vehicle::CameraManager
     static constexpr const char* ALIAS = "VehicleCameraManagerFT";
 
 };
-RED4EXT_ASSERT_SIZE(CameraManagerFT, 0x390);
+RED4EXT_ASSERT_SIZE(CameraManagerFT, 0x370);
 } // namespace vehicle
 using VehicleCameraManagerFT = vehicle::CameraManagerFT;
 } // namespace RED4ext

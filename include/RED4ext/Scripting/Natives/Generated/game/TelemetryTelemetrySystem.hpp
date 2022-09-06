@@ -14,9 +14,9 @@ struct TelemetryTelemetrySystem : game::ITelemetrySystem
     static constexpr const char* NAME = "gameTelemetryTelemetrySystem";
     static constexpr const char* ALIAS = "TelemetrySystem";
 
-    uint8_t unk48[0x210 - 0x48]; // 48
+    uint8_t unk48[0x220 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(TelemetryTelemetrySystem, 0x210);
+RED4EXT_ASSERT_SIZE(TelemetryTelemetrySystem, 0x220);
 } // namespace game
 using TelemetrySystem = game::TelemetryTelemetrySystem;
 } // namespace RED4ext

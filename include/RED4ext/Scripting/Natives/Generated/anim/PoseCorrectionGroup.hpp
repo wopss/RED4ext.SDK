@@ -15,7 +15,7 @@ struct PoseCorrectionGroup
     static constexpr const char* NAME = "animPoseCorrectionGroup";
     static constexpr const char* ALIAS = NAME;
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(16) StaticArray<anim::PoseCorrection, 2> poseCorrections; // 00
 };
 RED4EXT_ASSERT_SIZE(PoseCorrectionGroup, 0x270);

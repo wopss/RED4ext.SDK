@@ -15,9 +15,9 @@ struct RenderMorphTargetMeshBlobTextureData
     static constexpr const char* NAME = "rendRenderMorphTargetMeshBlobTextureData";
     static constexpr const char* ALIAS = NAME;
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(16) StaticArray<Vector4, 3> targetDiffScale; // 00
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(16) StaticArray<Vector4, 3> targetDiffOffset; // 40
     StaticArray<uint32_t, 3> targetDiffsDataOffset; // 80
     StaticArray<uint32_t, 3> targetDiffsDataSize; // 90

@@ -16,7 +16,7 @@ struct GateSignal
     static constexpr const char* NAME = "AIGateSignal";
     static constexpr const char* ALIAS = NAME;
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 4> tags; // 00
     AI::SignalFlags flags; // 28
     float priority; // 2C

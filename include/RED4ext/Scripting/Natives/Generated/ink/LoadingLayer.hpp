@@ -14,8 +14,8 @@ struct LoadingLayer : ink::FullScreenLayer
     static constexpr const char* NAME = "inkLoadingLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk148[0x268 - 0x148]; // 148
+    uint8_t unk150[0x270 - 0x150]; // 150
 };
-RED4EXT_ASSERT_SIZE(LoadingLayer, 0x268);
+RED4EXT_ASSERT_SIZE(LoadingLayer, 0x270);
 } // namespace ink
 } // namespace RED4ext

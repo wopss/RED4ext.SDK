@@ -25,7 +25,8 @@ struct MenuEntry
     ink::SpawnMode spawnMode; // 28
     bool isAffectedByFadeout; // 2C
     uint8_t unk2D[0x30 - 0x2D]; // 2D
+    CName inputContext; // 30
 };
-RED4EXT_ASSERT_SIZE(MenuEntry, 0x30);
+RED4EXT_ASSERT_SIZE(MenuEntry, 0x38);
 } // namespace ink
 } // namespace RED4ext

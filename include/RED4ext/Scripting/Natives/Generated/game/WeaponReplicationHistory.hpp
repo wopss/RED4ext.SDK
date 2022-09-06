@@ -18,7 +18,7 @@ struct WeaponReplicationHistory
 
     uint8_t unk00[0x18 - 0x0]; // 0
     TweakDBID weaponSlot; // 18
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<game::ReplicatedShotData, 8> shots; // 20
     uint32_t latestShotId; // 1A8
     uint8_t unk1AC[0x1B0 - 0x1AC]; // 1AC

@@ -17,9 +17,9 @@ struct MultipleSetEnableEvent : red::Event
     static constexpr const char* ALIAS = "InteractionMultipleSetEnableEvent";
 
     StaticArray<bool, 4> enable; // 40
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 4> layer; // 48
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 4> linkedLayers; // 70
 };
 RED4EXT_ASSERT_SIZE(MultipleSetEnableEvent, 0x98);

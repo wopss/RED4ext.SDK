@@ -15,7 +15,7 @@ struct CurvePathBakerAdvancedUserInput
     static constexpr const char* NAME = "animCurvePathBakerAdvancedUserInput";
     static constexpr const char* ALIAS = NAME;
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<anim::CurvePathPartInput, 3> partsInputs; // 00
 };
 RED4EXT_ASSERT_SIZE(CurvePathBakerAdvancedUserInput, 0x80);

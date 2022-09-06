@@ -14,8 +14,8 @@ struct MenuInstance : IScriptable
     static constexpr const char* NAME = "inkMenuInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x78 - 0x40]; // 40
+    uint8_t unk40[0xB0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(MenuInstance, 0x78);
+RED4EXT_ASSERT_SIZE(MenuInstance, 0xB0);
 } // namespace ink
 } // namespace RED4ext

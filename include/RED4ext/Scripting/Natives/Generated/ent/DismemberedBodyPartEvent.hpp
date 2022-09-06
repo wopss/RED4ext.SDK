@@ -16,7 +16,7 @@ struct DismemberedBodyPartEvent : red::Event
     static constexpr const char* NAME = "entDismemberedBodyPartEvent";
     static constexpr const char* ALIAS = "DismemberedBodyPartEvent";
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<CName, 32> bones; // 40
 };
 RED4EXT_ASSERT_SIZE(DismemberedBodyPartEvent, 0x148);

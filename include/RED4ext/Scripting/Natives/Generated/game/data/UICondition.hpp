@@ -11,9 +11,11 @@ enum class UICondition : uint32_t
     InEyesSubMenu = 0,
     InHandsSubMenu = 1,
     InSubMenu = 2,
-    Visible = 3,
-    Count = 4,
-    Invalid = 5,
+    IsIntroFinished = 3,
+    IsSetEquippingSubMenu = 4,
+    Visible = 5,
+    Count = 6,
+    Invalid = 7,
 };
 } // namespace game::data
 } // namespace RED4ext

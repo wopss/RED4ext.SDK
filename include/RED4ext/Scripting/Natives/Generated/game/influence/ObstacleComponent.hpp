@@ -22,7 +22,7 @@ struct ObstacleComponent : ent::IPlacedComponent
     uint8_t unk144[0x150 - 0x144]; // 144
     game::influence::ObstacleAgent obstacleAgent; // 150
 };
-RED4EXT_ASSERT_SIZE(ObstacleComponent, 0x1F0);
+RED4EXT_ASSERT_SIZE(ObstacleComponent, 0x200);
 } // namespace game::influence
 using InfluenceObstacleComponent = game::influence::ObstacleComponent;
 } // namespace RED4ext

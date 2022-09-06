@@ -18,7 +18,7 @@ struct ControllerPS : game::ComponentPS
     static constexpr const char* NAME = "vehicleControllerPS";
     static constexpr const char* ALIAS = NAME;
 
-    #pragma warning(suppress : 4324)
+#pragma warning(suppress : 4324)
     alignas(8) StaticArray<vehicle::VehicleSlotsState, 6> vehicleDoors; // 68
     vehicle::EState state; // 1F0
     bool isAlarmOn; // 1F4

@@ -16,9 +16,7 @@ struct CharacterCustomizationHairstyleController : game::ui::CharacterCustomizat
     static constexpr const char* ALIAS = NAME;
 
     CName headGroupName; // C0
-    uint8_t unkC8[0x128 - 0xC8]; // C8
-    bool forceDissolveAppearances; // 128
-    uint8_t unk129[0x130 - 0x129]; // 129
+    uint8_t unkC8[0x130 - 0xC8]; // C8
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationHairstyleController, 0x130);
 } // namespace game::ui

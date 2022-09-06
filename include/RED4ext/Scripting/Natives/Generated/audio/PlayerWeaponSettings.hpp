@@ -32,15 +32,16 @@ struct PlayerWeaponSettings : audio::WeaponSettings
     CName aimEnterSound; // 110
     CName aimExitSound; // 118
     CName dryFireSound; // 120
-    CName triggerEffectSingle; // 128
-    CName triggerEffectAiming; // 130
-    CName triggerEffectAuto; // 138
-    float timeLimitForAutoFireSingleShot; // 140
-    float padVibrationGain; // 144
-    float padVibrationReloadGain; // 148
-    uint8_t unk14C[0x150 - 0x14C]; // 14C
-    Handle<audio::WeaponEventOverrides> animEventOverrides; // 150
+    CName reloadSound; // 128
+    CName triggerEffectSingle; // 130
+    CName triggerEffectAiming; // 138
+    CName triggerEffectAuto; // 140
+    float timeLimitForAutoFireSingleShot; // 148
+    float padVibrationGain; // 14C
+    float padVibrationReloadGain; // 150
+    uint8_t unk154[0x158 - 0x154]; // 154
+    Handle<audio::WeaponEventOverrides> animEventOverrides; // 158
 };
-RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x160);
+RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x168);
 } // namespace audio
 } // namespace RED4ext

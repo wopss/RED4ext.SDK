@@ -15,6 +15,6 @@ struct WatermarksLayer : ink::FullScreenLayer
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(WatermarksLayer, 0x148);
+RED4EXT_ASSERT_SIZE(WatermarksLayer, 0x150);
 } // namespace ink
 } // namespace RED4ext

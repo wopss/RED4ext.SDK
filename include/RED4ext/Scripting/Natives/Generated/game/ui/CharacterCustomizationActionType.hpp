@@ -12,6 +12,7 @@ enum class CharacterCustomizationActionType : uint32_t
     Deactivate = 1,
     EquipItem = 2,
     UnequipItem = 3,
+    Refresh = 4,
 };
 } // namespace game::ui
 } // namespace RED4ext

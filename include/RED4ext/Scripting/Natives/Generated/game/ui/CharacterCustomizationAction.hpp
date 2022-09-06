@@ -19,7 +19,8 @@ struct CharacterCustomizationAction
     uint8_t unk04[0x8 - 0x4]; // 4
     CString params; // 08
     bool applyImmediately; // 28
-    uint8_t unk29[0x30 - 0x29]; // 29
+    bool applyToUISlot; // 29
+    uint8_t unk2A[0x30 - 0x2A]; // 2A
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationAction, 0x30);
 } // namespace game::ui

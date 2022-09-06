@@ -34,7 +34,8 @@ struct SaveMetadataInfo : IScriptable
     uint64_t initialLoadingScreenID; // E8
     double level; // F0
     bool isValid; // F8
-    uint8_t unkF9[0x100 - 0xF9]; // F9
+    bool isModded; // F9
+    uint8_t unkFA[0x100 - 0xFA]; // FA
 };
 RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x100);
 } // namespace ink

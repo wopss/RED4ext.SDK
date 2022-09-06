@@ -14,9 +14,9 @@ struct DamageSystem : game::IDamageSystem
     static constexpr const char* NAME = "gameDamageSystem";
     static constexpr const char* ALIAS = "DamageSystem";
 
-    uint8_t unk58[0x170 - 0x58]; // 58
+    uint8_t unk58[0x178 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(DamageSystem, 0x170);
+RED4EXT_ASSERT_SIZE(DamageSystem, 0x178);
 } // namespace game
 using DamageSystem = game::DamageSystem;
 } // namespace RED4ext

@@ -13,13 +13,13 @@ struct CRenderSimWaterFFT : IDynamicTextureGenerator
     static constexpr const char* NAME = "CRenderSimWaterFFT";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk38[0x48 - 0x38]; // 38
-    float windDir; // 48
-    float windSpeed; // 4C
-    float windScale; // 50
-    float amplitude; // 54
-    float lambda; // 58
-    uint8_t unk5C[0x68 - 0x5C]; // 5C
+    uint8_t unk38[0x40 - 0x38]; // 38
+    float windDir; // 40
+    float windSpeed; // 44
+    float windScale; // 48
+    float amplitude; // 4C
+    float lambda; // 50
+    uint8_t unk54[0x70 - 0x54]; // 54
 };
-RED4EXT_ASSERT_SIZE(CRenderSimWaterFFT, 0x68);
+RED4EXT_ASSERT_SIZE(CRenderSimWaterFFT, 0x70);
 } // namespace RED4ext

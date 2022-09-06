@@ -15,12 +15,12 @@ struct AnimNode_RagdollControl : anim::AnimNode_Base
     static constexpr const char* NAME = "animAnimNode_RagdollControl";
     static constexpr const char* ALIAS = NAME;
 
-    bool canRequestInertialization; // 48
-    uint8_t unk49[0x4C - 0x49]; // 49
-    float inertializationBlendDuration; // 4C
-    anim::PoseLink inputPoseNode; // 50
-    uint8_t unk68[0x78 - 0x68]; // 68
+    uint8_t unk48[0x58 - 0x48]; // 48
+    float blendInDuration; // 58
+    float blendOutDuration; // 5C
+    anim::PoseLink inputPoseNode; // 60
+    uint8_t unk78[0xE8 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(AnimNode_RagdollControl, 0x78);
+RED4EXT_ASSERT_SIZE(AnimNode_RagdollControl, 0xE8);
 } // namespace anim
 } // namespace RED4ext

@@ -14,8 +14,8 @@ struct DebugLayer : ink::FullScreenLayer
     static constexpr const char* NAME = "inkDebugLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk148[0x158 - 0x148]; // 148
+    uint8_t unk150[0x160 - 0x150]; // 150
 };
-RED4EXT_ASSERT_SIZE(DebugLayer, 0x158);
+RED4EXT_ASSERT_SIZE(DebugLayer, 0x160);
 } // namespace ink
 } // namespace RED4ext

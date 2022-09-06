@@ -6,6 +6,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOptionVersionPrereq.hpp>
 
 namespace RED4ext
 {
@@ -16,12 +17,13 @@ struct CharacterCustomizationOptionVersionUpdateInfo
     static constexpr const char* ALIAS = NAME;
 
     DynArray<CName> curOptionNames; // 00
-    CName curDefintionName; // 10
-    CName newOptionName; // 18
-    CName newDefinitionName; // 20
-    bool replaceCurOption; // 28
-    uint8_t unk29[0x30 - 0x29]; // 29
+    DynArray<game::ui::CharacterCustomizationOptionVersionPrereq> optionPrereqs; // 10
+    CName curDefintionName; // 20
+    CName newOptionName; // 28
+    CName newDefinitionName; // 30
+    bool replaceCurOption; // 38
+    uint8_t unk39[0x40 - 0x39]; // 39
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationOptionVersionUpdateInfo, 0x30);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationOptionVersionUpdateInfo, 0x40);
 } // namespace game::ui
 } // namespace RED4ext

@@ -792,8 +792,8 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
             std::string propTypeNameQualified = TypeToString(prop.second->type, aQualifiedTransformer, aVerbose);
             std::string propName = prop.second->name.ToString();
 
-            std::get<1>(propList)->push_back(
-                {propTypeName, propTypeNameQualified, propName, prop.first, prop.second->type->GetSize()});
+            std::get<1>(propList)->push_back({propTypeName, propTypeNameQualified, propName, prop.first,
+                                              prop.second->type->GetSize(), prop.second->type->GetAlignment()});
         }
     }
 }
@@ -864,7 +864,7 @@ RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, Nam
     {
         if (aType->GetAlignment() >= sizeof(void*))
         {
-            typeName = "#pragma warning(suppress : 4324) alignas(" + std::to_string(aType->GetAlignment()) + ") ";
+            typeName = "alignas(" + std::to_string(aType->GetAlignment()) + ") ";
         }
 
         auto staticArray = static_cast<const RED4ext::CRTTIStaticArrayType*>(aType);
@@ -1029,6 +1029,12 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
                 o.unsetf(std::ios::hex | std::ios::uppercase);
             }
 
+            // Ugly check, but I don't care for now.
+            if (prop.alignment >= sizeof(void*) && prop.type.starts_with("alignas"))
+            {
+                o << "#pragma warning(suppress : 4324)" << std::endl;
+            }
+
             o << "        " << prop.typeQualified << " ";
 
             bool isSanitized = false;
@@ -1081,6 +1087,12 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
                   << "[0x" << gapEnd << " - 0x" << gapStart << "]; // " << gapStart << std::endl;
 
                 o.unsetf(std::ios::hex | std::ios::uppercase);
+            }
+
+            // Ugly check, but I don't care for now.
+            if (prop.alignment >= sizeof(void*) && prop.type.starts_with("alignas"))
+            {
+                o << "#pragma warning(suppress : 4324)" << std::endl;
             }
 
             o << "    " << prop.typeQualified << " ";

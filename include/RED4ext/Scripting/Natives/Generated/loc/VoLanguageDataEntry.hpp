@@ -20,7 +20,7 @@ struct VoLanguageDataEntry
 
     CName languageCode; // 00
     RaRef<JsonResource> voiceverMapReport; // 08
-    RaRef<JsonResource> lenghtMapReport; // 10
+    RaRef<JsonResource> lengthMapReport; // 10
     DynArray<RaRef<JsonResource>> voMapChunks; // 18
 };
 RED4EXT_ASSERT_SIZE(VoLanguageDataEntry, 0x28);
