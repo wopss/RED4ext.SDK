@@ -276,7 +276,7 @@ private:
 
         size = newSize;
 
-        return diff;
+        return static_cast<uint32_t>(insertions.size());
     }
 
     T* LowerBound(const T& aItem)
