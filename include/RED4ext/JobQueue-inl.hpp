@@ -8,7 +8,7 @@
 #include <RED4ext/Hashing/FNV1a.hpp>
 #include <RED4ext/Relocation.hpp>
 
-void RED4ext::JobInternals::SetLocalThreadParam(uint8_t aParam)
+RED4EXT_INLINE void RED4ext::JobInternals::SetLocalThreadParam(uint8_t aParam)
 {
     using func_t = void (*)(uint8_t);
     RelocFunc<func_t> func(Addresses::JobInternals_SetLocalThreadParam);
@@ -16,7 +16,7 @@ void RED4ext::JobInternals::SetLocalThreadParam(uint8_t aParam)
     func(aParam);
 }
 
-RED4ext::JobFamily::JobFamily(const char* aName) noexcept
+RED4EXT_INLINE RED4ext::JobFamily::JobFamily(const char* aName) noexcept
     : name(aName)
     , unk08("src")
     , unk10("func")
@@ -33,14 +33,14 @@ RED4ext::JobFamily::JobFamily(const char* aName) noexcept
 {
 }
 
-RED4ext::JobParamSet::JobParamSet() noexcept
+RED4EXT_INLINE RED4ext::JobParamSet::JobParamSet() noexcept
     : unk00(0)
     , unk01(0)
     , unk02(255)
 {
 }
 
-RED4ext::JobHandle::JobHandle(JobParamSet aParams, uintptr_t aUnk)
+RED4EXT_INLINE RED4ext::JobHandle::JobHandle(JobParamSet aParams, uintptr_t aUnk)
     : unk00(nullptr)
 {
     using func_t = void (*)(JobHandle*, JobParamSet&, uintptr_t);
@@ -49,7 +49,7 @@ RED4ext::JobHandle::JobHandle(JobParamSet aParams, uintptr_t aUnk)
     func(this, aParams, aUnk);
 }
 
-RED4ext::JobHandle::~JobHandle()
+RED4EXT_INLINE RED4ext::JobHandle::~JobHandle()
 {
     using func_t = void (*)(JobHandle*);
     RelocFunc<func_t> func(Addresses::JobHandle_dtor);
@@ -57,7 +57,7 @@ RED4ext::JobHandle::~JobHandle()
     func(this);
 }
 
-void RED4ext::JobHandle::Join(const JobHandle& aOther)
+RED4EXT_INLINE void RED4ext::JobHandle::Join(const JobHandle& aOther)
 {
     using func_t = void (*)(JobHandle*, const JobHandle&);
     RelocFunc<func_t> func(Addresses::JobHandle_Join);
@@ -65,7 +65,7 @@ void RED4ext::JobHandle::Join(const JobHandle& aOther)
     func(this, aOther);
 }
 
-RED4ext::JobQueue::JobQueue(const JobGroup& aGroup)
+RED4EXT_INLINE RED4ext::JobQueue::JobQueue(const JobGroup& aGroup)
 {
     using func_t = JobQueue* (*)(JobQueue*, const JobGroup&);
     RelocFunc<func_t> func(Addresses::JobQueue_ctor_FromGroup);
@@ -73,7 +73,7 @@ RED4ext::JobQueue::JobQueue(const JobGroup& aGroup)
     func(this, aGroup);
 }
 
-RED4ext::JobQueue::JobQueue(JobParamSet aParams, uintptr_t aUnk)
+RED4EXT_INLINE RED4ext::JobQueue::JobQueue(JobParamSet aParams, uintptr_t aUnk)
 {
     using func_t = JobQueue* (*)(JobQueue*, JobParamSet&, uint64_t);
     RelocFunc<func_t> func(Addresses::JobQueue_ctor_FromParams);
@@ -81,7 +81,7 @@ RED4ext::JobQueue::JobQueue(JobParamSet aParams, uintptr_t aUnk)
     func(this, aParams, aUnk);
 }
 
-RED4ext::JobQueue::~JobQueue()
+RED4EXT_INLINE RED4ext::JobQueue::~JobQueue()
 {
     using func_t = void (*)(JobQueue*);
     RelocFunc<func_t> func(Addresses::JobQueue_dtor);
@@ -89,12 +89,12 @@ RED4ext::JobQueue::~JobQueue()
     func(this);
 }
 
-void RED4ext::JobQueue::Wait(JobHandle& aJob)
+RED4EXT_INLINE void RED4ext::JobQueue::Wait(JobHandle& aJob)
 {
     unk10.Join(aJob);
 }
 
-[[nodiscard]] RED4ext::JobHandle RED4ext::JobQueue::Capture()
+RED4EXT_INLINE [[nodiscard]] RED4ext::JobHandle RED4ext::JobQueue::Capture()
 {
     using func_t = JobHandle* (*)(JobQueue*, JobHandle*);
     RelocFunc<func_t> func(Addresses::JobQueue_Capture);
@@ -105,7 +105,7 @@ void RED4ext::JobQueue::Wait(JobHandle& aJob)
     return std::move(handle);
 }
 
-void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
+RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
 {
     using func_t = void (*)(const JobInstance&, JobHandle&, JobHandle&);
     RelocFunc<func_t> func(Addresses::JobInternals_DispatchJob);
@@ -113,7 +113,7 @@ void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
     func(aJob, unk10, unk18);
 }
 
-void RED4ext::JobQueue::SyncWait()
+RED4EXT_INLINE void RED4ext::JobQueue::SyncWait()
 {
     using func_t = void (*)(JobQueue*);
     RelocFunc<func_t> func(Addresses::JobQueue_SyncWait);
