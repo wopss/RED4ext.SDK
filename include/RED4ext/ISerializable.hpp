@@ -46,10 +46,9 @@ struct ISerializable
     virtual void* sub_C8(void* a1);                                                     // C8
     virtual bool CanBeDestructed();                                                     // D0
 
-    WeakHandle<ISerializable> ref; // 00
-    int64_t unk18;                 // 18
-    int64_t unk20;                 // 20
-    int64_t unk28;                 // 28
+    WeakHandle<ISerializable> ref;   // 00 - Initialized in Handle ctor
+    WeakHandle<ISerializable> unk18; // 18
+    uint64_t unk28;                  // 28 - Incremental ID set in ISerializable ctor, can be zero
 };
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext

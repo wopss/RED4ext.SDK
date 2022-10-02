@@ -202,15 +202,14 @@ RED4EXT_INLINE RED4ext::CClass::CClass(CName aName, uint32_t aSize, Flags aFlags
     , unk128(Memory::RTTIAllocator::Get())
     , unk138(Memory::RTTIAllocator::Get())
     , unk148(Memory::RTTIAllocator::Get())
-    , unk158(Memory::ScriptAllocator::Get())
-    , unk168(Memory::ScriptAllocator::Get())
+    , defaults(Memory::ScriptAllocator::Get())
     , unk180(Memory::RTTIAllocator::Get())
-    , unk1B0(Memory::RTTIAllocator::Get())
-    , unk2C0(-1)
+    , listeners(Memory::RTTIAllocator::Get())
+    , eventTypeId(-1)
     , unk2C4(-1)
     , unk2C9(0xE6)
 {
-    std::memset(unk1C0, 0, sizeof(unk1C0));
+    std::memset(listening, 0, sizeof(listening));
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CClass::GetName() const
@@ -359,6 +358,13 @@ RED4EXT_INLINE RED4ext::CProperty* RED4ext::CClass::GetProperty(CName aName)
     return func(this, aName);
 }
 
+RED4EXT_INLINE void RED4ext::CClass::GetProperties(DynArray<CProperty*>& aProps)
+{
+    using func_t = CProperty* (*)(CClass*, DynArray<CProperty*>&);
+    RelocFunc<func_t> func(Addresses::CClass_GetProperties);
+    func(this, aProps);
+}
+
 RED4EXT_INLINE RED4ext::CClassFunction* RED4ext::CClass::GetFunction(CName aShortName) const
 {
     for (auto func : staticFuncs)
@@ -395,6 +401,13 @@ RED4EXT_INLINE void RED4ext::CClass::RegisterFunction(CClassFunction* aFunc)
     {
         funcs.PushBack(aFunc);
     }
+}
+
+RED4EXT_INLINE void RED4ext::CClass::ClearScriptedData()
+{
+    using func_t = void (*)(CClass*);
+    RelocFunc<func_t> func(Addresses::CClass_ClearScriptedData);
+    func(this);
 }
 
 RED4EXT_INLINE RED4ext::CEnum::CEnum(CName aName, int8_t aActualSize, Flags aFlags)
