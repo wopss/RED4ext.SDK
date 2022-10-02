@@ -138,7 +138,8 @@ def get_groups() -> List[Group]:
 
         Group(name='IScriptable', functions=[
             Item(name='sub_D8', pattern='40 53 48 83 EC ? 48 8B 01 49 8B D8', expected=4, index=0),
-            Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75', expected=2, index=1)
+            Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75', expected=2, index=1),
+            Item(name='DestructValueHolder', pattern='40 56 48 83 EC 30 48 83 79 38 00 48 8B F1 0F 84', expected=1, index=0)
         ]),
 
         Group(name='JobHandle', functions=[
