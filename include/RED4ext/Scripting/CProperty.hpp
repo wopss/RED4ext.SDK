@@ -14,35 +14,35 @@ struct CProperty
 {
     struct Flags
     {
-        uint64_t b0 : 1;           // 00
-        uint64_t b1 : 1;           // 01
-        uint64_t b2 : 1;           // 02
-        uint64_t b3 : 1;           // 03
-        uint64_t b4 : 1;           // 04
-        uint64_t b5 : 1;           // 05
-        uint64_t isReturn : 1;     // 06
-        uint64_t b7 : 1;           // 07
-        uint64_t isLocalVar : 1;   // 08
-        uint64_t isOut : 1;        // 09
-        uint64_t isOptional : 1;   // 0A
-        uint64_t b11 : 1;          // 0B
-        uint64_t b12 : 1;          // 0C
-        uint64_t b13 : 1;          // 0D
-        uint64_t isOverriding : 1; // 0E
-        uint64_t b15 : 1;          // 0F
-        uint64_t isPrivate : 1;    // 10
-        uint64_t isProtected : 1;  // 11
-        uint64_t isPublic : 1;     // 12
-        uint64_t b19 : 2;          // 13
-        uint64_t b21 : 1;          // 15 - When true, acquire value from holder (isScripted?)
-        uint64_t b22 : 5;          // 16
-        uint64_t isHandle : 1;     // 1B
-        uint64_t isPersistent : 1; // 1C
-        uint64_t b29 : 1;          // 1D
-        uint64_t b30 : 1;          // 1E
-        uint64_t b31 : 1;          // 1F
-        uint64_t b32 : 1;          // 20
-        uint64_t isSavable : 1;    // 21
+        uint64_t b0 : 1;            // 00
+        uint64_t b1 : 1;            // 01
+        uint64_t b2 : 1;            // 02
+        uint64_t b3 : 1;            // 03
+        uint64_t b4 : 1;            // 04
+        uint64_t isScripted : 1;    // 05
+        uint64_t isReturn : 1;      // 06
+        uint64_t b7 : 1;            // 07
+        uint64_t isLocalVar : 1;    // 08
+        uint64_t isOut : 1;         // 09
+        uint64_t isOptional : 1;    // 0A
+        uint64_t b11 : 1;           // 0B
+        uint64_t b12 : 1;           // 0C
+        uint64_t b13 : 1;           // 0D
+        uint64_t isOverriding : 1;  // 0E
+        uint64_t b15 : 1;           // 0F
+        uint64_t isPrivate : 1;     // 10
+        uint64_t isProtected : 1;   // 11
+        uint64_t isPublic : 1;      // 12
+        uint64_t b19 : 2;           // 13
+        uint64_t inValueHolder : 1; // 15 - When true, acquire value from holder
+        uint64_t b22 : 5;           // 16
+        uint64_t isHandle : 1;      // 1B
+        uint64_t isPersistent : 1;  // 1C
+        uint64_t b29 : 1;           // 1D
+        uint64_t b30 : 1;           // 1E
+        uint64_t b31 : 1;           // 1F
+        uint64_t b32 : 1;           // 20
+        uint64_t isSavable : 1;     // 21
         uint64_t b34 : 30;
     };
     RED4EXT_ASSERT_SIZE(Flags, 0x8);
@@ -106,7 +106,7 @@ private:
     T* GetValuePtr(ScriptInstance aInstance) const
     {
         void* holder = aInstance;
-        if (flags.b21)
+        if (flags.inValueHolder)
         {
             /*auto scriptable = static_cast<IScriptable*>(aInstance);
             holder = scriptable->GetValueHolder();*/
