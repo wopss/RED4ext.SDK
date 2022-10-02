@@ -21,9 +21,9 @@ struct IAllocator;
 
 enum class EEngineState : int32_t
 {
-	Idle = 0,
-	BaseInitialization = 1,
-	Initialization = 2,
+    Idle = 0,
+    BaseInitialization = 1,
+    Initialization = 2,
     Running = 3
 };
 
