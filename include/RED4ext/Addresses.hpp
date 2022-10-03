@@ -49,6 +49,8 @@ constexpr uintptr_t CClass_GetMaxAlignment = 0x1401F4470 - ImageBase; // 48 89 5
 constexpr uintptr_t CClass_sub_D0 = 0x1401FCC10 - ImageBase; // 48 89 4C 24 08 53 56 48 83 EC 58, expected: 1, index: 0
 constexpr uintptr_t CClass_AllocInstance = 0x1401F77C0 - ImageBase; // 40 56 41 56 48 83 EC ? 41 0F B6 F0, expected: 1, index: 0
 constexpr uintptr_t CClass_GetProperty = 0x1401F82E0 - ImageBase; // 48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00, expected: 1, index: 0
+constexpr uintptr_t CClass_GetProperties = 0x1401F8760 - ImageBase; // 48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 30 4C 8B F1 48 8B FA, expected: 1, index: 0
+constexpr uintptr_t CClass_ClearScriptedData = 0x1401F4830 - ImageBase; // 48 89 5C 24 18 56 57 41 57 48 83 EC 40 80 A1 C9 02 00 00 EF, expected: 1, index: 0
 #pragma endregion
 
 #pragma region CClassFunction
@@ -116,6 +118,7 @@ constexpr uintptr_t Handle_DecWeakRef = 0x1401AB730 - ImageBase; // 40 53 48 83 
 #pragma region IScriptable
 constexpr uintptr_t IScriptable_sub_D8 = 0x1401E4760 - ImageBase; // 40 53 48 83 EC ? 48 8B 01 49 8B D8, expected: 4, index: 0
 constexpr uintptr_t IScriptable_GetValueHolder = 0x1401E47F0 - ImageBase; // 40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75, expected: 2, index: 1
+constexpr uintptr_t IScriptable_DestructValueHolder = 0x1401E5090 - ImageBase; // 40 56 48 83 EC 30 48 83 79 38 00 48 8B F1 0F 84, expected: 1, index: 0
 #pragma endregion
 
 #pragma region ISerializable

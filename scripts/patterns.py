@@ -56,7 +56,9 @@ def get_groups() -> List[Group]:
             Item(name='sub_D0', pattern='48 89 4C 24 08 53 56 48 83 EC 58', expected=1, index=0),
 
             Item(name='AllocInstance', pattern='40 56 41 56 48 83 EC ? 41 0F B6 F0', expected=1, index=0),
-            Item(name='GetProperty', pattern='48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00', expected=1, index=0)
+            Item(name='GetProperty', pattern='48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00', expected=1, index=0),
+            Item(name='GetProperties', pattern='48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 30 4C 8B F1 48 8B FA', expected=1, index=0),
+            Item(name='ClearScriptedData', pattern='48 89 5C 24 18 56 57 41 57 48 83 EC 40 80 A1 C9 02 00 00 EF', expected=1, index=0)
         ]),
 
         Group(name='TTypedClass', functions=[
@@ -138,7 +140,8 @@ def get_groups() -> List[Group]:
 
         Group(name='IScriptable', functions=[
             Item(name='sub_D8', pattern='40 53 48 83 EC ? 48 8B 01 49 8B D8', expected=4, index=0),
-            Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75', expected=2, index=1)
+            Item(name='GetValueHolder', pattern='40 53 48 83 EC 20 48 83 79 38 00 48 8B D9 75', expected=2, index=1),
+            Item(name='DestructValueHolder', pattern='40 56 48 83 EC 30 48 83 79 38 00 48 8B F1 0F 84', expected=1, index=0)
         ]),
 
         Group(name='JobHandle', functions=[

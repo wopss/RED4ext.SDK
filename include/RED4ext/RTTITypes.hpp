@@ -4,9 +4,11 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
+#include <RED4ext/Callback.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
+#include <RED4ext/Map.hpp>
 #include <RED4ext/Utils.hpp>
 
 namespace RED4ext
@@ -15,6 +17,7 @@ struct BaseStream;
 struct CProperty;
 struct CClassFunction;
 struct CClassStaticFunction;
+struct Variant;
 
 enum class ERTTIType : uint8_t
 {
@@ -128,6 +131,17 @@ struct CClass : CBaseRTTIType
     };
     RED4EXT_ASSERT_SIZE(CClass::Flags, 0x4);
 
+    struct Listener
+    {
+        Callback<void (*)(IScriptable&, Handle<IScriptable>&), 16> callback; // 00
+        CName callbackName;                                                  // 18
+        int16_t eventTypeId;                                                 // 20
+        bool isScripted;                                                     // 22
+    };
+    RED4EXT_ASSERT_SIZE(CClass::Listener, 0x28);
+    RED4EXT_ASSERT_OFFSET(CClass::Listener, callbackName, 0x18);
+    RED4EXT_ASSERT_OFFSET(CClass::Listener, isScripted, 0x22);
+
     CClass(CName aName, uint32_t aSize, Flags aFlags);
 
     CName GetName() const final;                                                               // 08
@@ -159,8 +173,11 @@ struct CClass : CBaseRTTIType
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aShortName) const;
+    void GetProperties(DynArray<CProperty*>& aProps);
 
     void RegisterFunction(CClassFunction* aFunc);
+
+    void ClearScriptedData();
 
     [[deprecated("Use 'ConstructCls()' instead.")]]
     inline void InitCls(ScriptInstance aMemory) const
@@ -194,13 +211,11 @@ struct CClass : CBaseRTTIType
     DynArray<void*> unk128;                      // 128
     DynArray<CProperty*> unk138;                 // 138 - Only RT_Class types?
     DynArray<void*> unk148;                      // 148
-    DynArray<CProperty*> unk158;                 // 158 - Scripted props?
-    DynArray<void*> unk168;                      // 168
-    int64_t unk178;                              // 178
+    Map<CName, Variant*> defaults;               // 158
     HashMap<void*, void*> unk180;                // 180
-    DynArray<void*> unk1B0;                      // 1B0
-    int8_t unk1C0[256];                          // 1C0
-    int16_t unk2C0;                              // 2C0
+    DynArray<Listener> listeners;                // 1B0 - Event listeners
+    int8_t listening[256];                       // 1C0 - Bitmask of event types that this class listens to
+    int16_t eventTypeId;                         // 2C0 - Assigned to event classes only
     int32_t unk2C4;                              // 2C4
     SharedMutex unk2C8;                          // 2C8
     uint8_t unk2C9;                              // 2C9
