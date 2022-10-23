@@ -7,6 +7,12 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Relocation.hpp>
 
+RED4EXT_INLINE RED4ext::IScriptable::IScriptable()
+    : valueHolder(nullptr)
+    , unk30(nullptr)
+{
+}
+
 RED4EXT_INLINE RED4ext::IScriptable::~IScriptable()
 {
     DestructValueHolder();
