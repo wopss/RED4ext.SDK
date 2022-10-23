@@ -191,6 +191,10 @@ def get_groups() -> List[Group]:
             Item(name='Get', pattern='4C 8D 15 ? ? ? ? 33 C0 48 C7 44 24 20 00 00 00 00', expected=14, index=0)
         ]),
 
+        Group(name='ResourceDepot', pointers=[
+            Item(pattern="48 89 0D ? ? ? ? C3", offset=3, expected=26, index=2)
+        ]),
+
         Group(name='ResourceLoader', pointers=[
             Item(pattern='48 8B 87 ? ? ? ? 48 8B 5C 24 ? 48 89 05 ? ? ? ? 48 83 C4 20 5F C3', offset=15)
         ],

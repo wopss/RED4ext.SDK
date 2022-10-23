@@ -163,6 +163,10 @@ constexpr uintptr_t Memory_PoolStorage_OOM = 0x140198890 - ImageBase; // 48 89 5
 constexpr uintptr_t OpcodeHandlers_Get = 0x1401C4EED - ImageBase; // 4C 8D 15 ? ? ? ? 33 C0 48 C7 44 24 20 00 00 00 00, expected: 14, index: 0
 #pragma endregion
 
+#pragma region ResourceDepot
+constexpr uintptr_t ResourceDepot = 0x143F17528 - ImageBase; // 48 89 0D ? ? ? ? C3, expected: 26, index: 2, offset: 3
+#pragma endregion
+
 #pragma region ResourceLoader
 constexpr uintptr_t ResourceLoader = 0x143E87090 - ImageBase; // 48 8B 87 ? ? ? ? 48 8B 5C 24 ? 48 89 05 ? ? ? ? 48 83 C4 20 5F C3, expected: 1, index: 0, offset: 15
 constexpr uintptr_t ResourceLoader_FindToken = 0x140201730 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B F1 49 8B D8 48 83 C1 40 48 8B EA E8, expected: 1, index: 0
