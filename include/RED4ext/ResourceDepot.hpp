@@ -2,8 +2,8 @@
 
 #include <cstdint>
 
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CString.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 
 namespace RED4ext
