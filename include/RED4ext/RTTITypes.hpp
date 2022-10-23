@@ -167,7 +167,7 @@ struct CClass : CBaseRTTIType
     virtual void DestructCls(ScriptInstance aMemory) const = 0;  // E0
     virtual void* AllocMemory() const = 0;                       // E8
 
-    ScriptInstance AllocInstance(bool aZeroMemory = false) const;
+    ScriptInstance CreateInstance(bool aZeroMemory = false) const;
 
     bool IsA(const CBaseRTTIType* aType) const;
 
@@ -189,6 +189,12 @@ struct CClass : CBaseRTTIType
     inline void DestroyCls(ScriptInstance aMemory) const
     {
         DestructCls(aMemory);
+    }
+
+    [[deprecated("Use 'CreateInstance()' instead.")]]
+    inline ScriptInstance AllocInstance(bool aZeroMemory = false) const
+    {
+        return CreateInstance(aZeroMemory);
     }
 
     CClass* parent;                              // 10
