@@ -13,6 +13,8 @@ namespace RED4ext
 struct CBaseFunction;
 struct IScriptable : ISerializable
 {
+    IScriptable();
+
     ~IScriptable() override;
     CClass* GetType() override;
 
