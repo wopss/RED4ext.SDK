@@ -8,6 +8,11 @@ namespace RED4ext::v0
 struct PluginInfo
 {
     /**
+     * @brief The SDK version.
+     */
+    SemVer sdk;
+
+    /**
      * @brief The name of the plugin.
      */
     const wchar_t* name;
@@ -27,10 +32,5 @@ struct PluginInfo
      * @note If you are using RED4ext only as a loader, use 'RED4EXT_V0_RUNTIME_INDEPENDENT'.
      */
     FileVer runtime;
-
-    /**
-     * @brief The SDK version.
-     */
-    SemVer sdk;
 };
 } // namespace RED4ext::v0
