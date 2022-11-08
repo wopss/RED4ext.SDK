@@ -16,9 +16,9 @@ struct SystemNotificationsLayer : ink::FullScreenLayer
     static constexpr const char* NAME = "inkSystemNotificationsLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk150[0x5E0 - 0x150]; // 150
+    uint8_t unk150[0x600 - 0x150]; // 150
 };
-RED4EXT_ASSERT_SIZE(SystemNotificationsLayer, 0x5E0);
+RED4EXT_ASSERT_SIZE(SystemNotificationsLayer, 0x600);
 } // namespace ink
 } // namespace RED4ext
 

@@ -15,9 +15,9 @@ struct GameServicesGalaxy
     static constexpr const char* NAME = "servicesGameServicesGalaxy";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x210 - 0x0]; // 0
+    uint8_t unk00[0x230 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(GameServicesGalaxy, 0x210);
+RED4EXT_ASSERT_SIZE(GameServicesGalaxy, 0x230);
 } // namespace services
 } // namespace RED4ext
 

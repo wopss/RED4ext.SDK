@@ -20,9 +20,9 @@ struct CharacterCustomizationGenitalsController : game::ui::CharacterCustomizati
     CName upperBodyGroupName; // C0
     CName bottomBodyGroupName; // C8
     bool forceHideGenitals; // D0
-    uint8_t unkD1[0x178 - 0xD1]; // D1
+    uint8_t unkD1[0x180 - 0xD1]; // D1
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationGenitalsController, 0x178);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationGenitalsController, 0x180);
 } // namespace game::ui
 } // namespace RED4ext
 

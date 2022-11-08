@@ -38,8 +38,9 @@ struct SaveMetadataInfo : IScriptable
     bool isValid; // F8
     bool isModded; // F9
     uint8_t unkFA[0x100 - 0xFA]; // FA
+    CString platform; // 100
 };
-RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x100);
+RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x120);
 } // namespace ink
 using SaveMetadataInfo = ink::SaveMetadataInfo;
 } // namespace RED4ext

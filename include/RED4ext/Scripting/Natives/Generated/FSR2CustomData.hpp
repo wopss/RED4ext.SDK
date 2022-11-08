@@ -10,14 +10,14 @@
 
 namespace RED4ext
 {
-struct CameraCustomData_Histogram : ICameraStorageCustomData
+struct FSR2CustomData : ICameraStorageCustomData
 {
-    static constexpr const char* NAME = "CameraCustomData_Histogram";
+    static constexpr const char* NAME = "FSR2CustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x30 - 0x18]; // 18
+    uint8_t unk18[0xF0 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CameraCustomData_Histogram, 0x30);
+RED4EXT_ASSERT_SIZE(FSR2CustomData, 0xF0);
 } // namespace RED4ext
 
 // clang-format on

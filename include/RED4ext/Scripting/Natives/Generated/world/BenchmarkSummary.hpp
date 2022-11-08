@@ -43,14 +43,21 @@ struct BenchmarkSummary : IScriptable
     uint8_t unk179[0x17C - 0x179]; // 179
     int32_t DLSSQuality; // 17C
     float DLSSSharpness; // 180
-    bool CASSharpeningEnabled; // 184
-    bool FSREnabled; // 185
-    uint8_t unk186[0x188 - 0x186]; // 186
-    int32_t FSRQuality; // 188
-    bool DRSEnabled; // 18C
-    uint8_t unk18D[0x190 - 0x18D]; // 18D
+    bool FSR2Enabled; // 184
+    uint8_t unk185[0x188 - 0x185]; // 185
+    int32_t FSR2Quality; // 188
+    float FSR2Sharpness; // 18C
+    bool DRSEnabled; // 190
+    uint8_t unk191[0x194 - 0x191]; // 191
+    uint32_t DRSTargetFPS; // 194
+    uint32_t DRSMinimalResolutionPercentage; // 198
+    uint32_t DRSMaximalResolutionPercentage; // 19C
+    bool CASSharpeningEnabled; // 1A0
+    bool FSREnabled; // 1A1
+    uint8_t unk1A2[0x1A4 - 0x1A2]; // 1A2
+    int32_t FSRQuality; // 1A4
 };
-RED4EXT_ASSERT_SIZE(BenchmarkSummary, 0x190);
+RED4EXT_ASSERT_SIZE(BenchmarkSummary, 0x1A8);
 } // namespace world
 } // namespace RED4ext
 

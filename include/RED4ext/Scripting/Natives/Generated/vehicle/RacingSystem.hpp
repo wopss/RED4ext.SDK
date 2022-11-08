@@ -16,9 +16,9 @@ struct RacingSystem : vehicle::IRacingSystem
     static constexpr const char* NAME = "vehicleRacingSystem";
     static constexpr const char* ALIAS = "RacingSystem";
 
-    uint8_t unk48[0x120 - 0x48]; // 48
+    uint8_t unk48[0x130 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RacingSystem, 0x120);
+RED4EXT_ASSERT_SIZE(RacingSystem, 0x130);
 } // namespace vehicle
 using RacingSystem = vehicle::RacingSystem;
 } // namespace RED4ext
