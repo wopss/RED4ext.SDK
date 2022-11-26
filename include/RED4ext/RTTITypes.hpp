@@ -412,17 +412,16 @@ struct CRTTIBaseArrayType : CBaseRTTIType
     virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
     virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
     virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) const = 0; // E0
-    virtual ScriptInstance GetValuePointer(ScriptInstance aInstance,
-                                           uint32_t aIndex) const = 0; // E8 Same func at 0xE0 ?
-    virtual int32_t sub_F0(ScriptInstance aInstance, int32_t aIndex, ScriptInstance aElement) = 0; // F0
-    virtual bool RemoveAt(ScriptInstance aInstance, int32_t aIndex) = 0;                           // F8
+    virtual ScriptInstance sub_E8(ScriptInstance aInstance, uint32_t aIndex) const = 0;     // E8 Same as E0
+    virtual int32_t Add(ScriptInstance aInstance, int32_t aCount) const = 0;                // F0
+    virtual bool RemoveAt(ScriptInstance aInstance, int32_t aIndex) const = 0;              // F8
     // [1, 2, 3]
-    // RTTI->InsertAt(aIndex: 1);
-    // [1, 2 (freed/destroyed), 2, 3]
-    // InnerRTTI->Assign(RTTI->GetElement(aIndex: 1), newValue)
+    // ArrayRTTI->InsertAt(aIndex: 1);
+    // [1, (free), 2, 3]
+    // InnerRTTI->Assign(ArrayRTTI->GetElement(1), newValue)
     // [1, newValue, 2, 3]
-    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) = 0; // 100
-    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) = 0;   // 108
+    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) const = 0;              // 100
+    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) const = 0;                // 108
 
     CBaseRTTIType* innerType; // 10
 };
