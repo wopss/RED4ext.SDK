@@ -66,7 +66,7 @@ struct ResourceToken
      *
      * @return The loaded resource.
      */
-    [[nodiscard]] Handle<T>& Get() const noexcept
+    [[nodiscard]] Handle<T>& Get() noexcept
     {
         return resource;
     }
@@ -86,23 +86,17 @@ struct ResourceToken
         return error;
     }
 
-    [[nodiscard]] inline operator T*() const noexcept
+    [[nodiscard]] inline operator T*() noexcept
     {
         return resource.GetPtr();
     }
-
-    struct Unk38
-    {
-        using AllocatorType = Memory::EngineAllocator;
-        uint8_t unk0[0x78];
-    };
-    RED4EXT_ASSERT_SIZE(Unk38, 0x78);
 
     WeakPtr<ResourceToken<T>> self;                    // 00
     DynArray<SharedPtr<ResourceToken<>>> dependencies; // 10
     SharedMutex lock;                                  // 20
     Handle<T> resource;                                // 28
-    SharedPtr<Unk38> unk38;                            // 38
+    uint64_t unk38;                                    // 38 - SharedPtr<Unk38>
+    uint64_t unk40;                                    // 40
     ResourcePath path;                                 // 48
     JobHandle job;                                     // 50
     volatile int32_t finished;                         // 58
