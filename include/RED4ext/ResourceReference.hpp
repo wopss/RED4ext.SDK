@@ -159,6 +159,18 @@ struct ResourceAsyncReference
         aOther.path = ResourcePath();
     }
 
+    ResourceAsyncReference& operator=(const ResourceAsyncReference& aRhs) noexcept
+    {
+        path = aRhs.path;
+        return *this;
+    }
+
+    ResourceAsyncReference& operator=(ResourceAsyncReference&& aRhs) noexcept
+    {
+        path = std::move(aRhs.path);
+        return *this;
+    }
+
     [[nodiscard]] ResourceReference<T> Resolve() const noexcept
     {
         return {path};
