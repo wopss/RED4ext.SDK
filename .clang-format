@@ -11,4 +11,4 @@ BreakInheritanceList: BeforeComma
 KeepEmptyLinesAtTheStartOfBlocks: false
 PointerAlignment: Left
 SpaceAfterTemplateKeyword: false
-IndentRequiresClause: false
+IndentRequires: false
