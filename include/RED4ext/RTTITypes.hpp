@@ -420,8 +420,8 @@ struct CRTTIBaseArrayType : CBaseRTTIType
     // [1, (free), 2, 3]
     // InnerRTTI->Assign(ArrayRTTI->GetElement(1), newValue)
     // [1, newValue, 2, 3]
-    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) const = 0;              // 100
-    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) const = 0;                // 108
+    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) const = 0; // 100
+    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) const = 0;   // 108
 
     CBaseRTTIType* innerType; // 10
 };
