@@ -212,7 +212,9 @@ def get_groups() -> List[Group]:
         Group(name='ResourceToken', functions=[
             Item(name='dtor', pattern='48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74'),
             Item(name='Fetch', pattern='40 53 48 83 EC 40 8B 41 58 48 8B D9 0F 29 74 24 30 0F 29 7C 24 20 85 C0 74 0A'),
-            Item(name='OnLoaded', pattern='40 55 53 56 57 41 56 48 8D 6C 24 C9 48 81 EC F0 00 00 00 48 8B 41 08 0F 57 C0 49 8B F8 4C 8B F2')
+            Item(name='OnLoaded', pattern='40 55 53 56 57 41 56 48 8D 6C 24 C9 48 81 EC F0 00 00 00 48 8B 41 08 0F 57 C0 49 8B F8 4C 8B F2'),
+            Item(name='CancelUnk38', pattern='40 53 48 83 EC 20 48 8B D9 B9 08 00 00 00 E8'),
+            Item(name='DestructUnk38', pattern='40 53 48 83 EC 20 48 8B D9 48 8B 49 08 48 85 C9 74 ? B8 FF FF FF FF F0 0F C1 01 83 F8 01 75', expected=73, index=1)
         ]),
 
         Group(name='CRTTIScriptReferenceType', functions=[

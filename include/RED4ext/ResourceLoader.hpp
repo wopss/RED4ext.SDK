@@ -28,10 +28,16 @@ struct ResourceToken
 
     ~ResourceToken()
     {
-        using Destruct_t = void (*)(ResourceToken*);
-        RelocFunc<Destruct_t> func(Addresses::ResourceToken_dtor);
+        if (!IsFinished())
+        {
+            using CancelUnk38_t = void (*)(void*);
+            RelocFunc<CancelUnk38_t> CancelUnk38(Addresses::ResourceToken_CancelUnk38);
+            CancelUnk38(unk38);
+        }
 
-        func(this);
+        using DestructUnk38_t = void (*)(void**);
+        RelocFunc<DestructUnk38_t> DestructUnk38(Addresses::ResourceToken_DestructUnk38);
+        DestructUnk38(&unk38);
     }
 
     /**
@@ -95,8 +101,8 @@ struct ResourceToken
     DynArray<SharedPtr<ResourceToken<>>> dependencies; // 10
     SharedMutex lock;                                  // 20
     Handle<T> resource;                                // 28
-    uint64_t unk38;                                    // 38 - SharedPtr<Unk38>
-    uint64_t unk40;                                    // 40
+    void* unk38;                                       // 38 - SharedPtr<Unk38>.instance
+    void* unk40;                                       // 40 - SharedPtr<Unk38>.refCount
     ResourcePath path;                                 // 48
     JobHandle job;                                     // 50
     volatile int32_t finished;                         // 58
