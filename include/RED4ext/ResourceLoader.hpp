@@ -28,10 +28,16 @@ struct ResourceToken
 
     ~ResourceToken()
     {
-        using Destruct_t = void (*)(ResourceToken*);
-        RelocFunc<Destruct_t> func(Addresses::ResourceToken_dtor);
+        if (!IsFinished())
+        {
+            using CancelUnk38_t = void (*)(void*);
+            RelocFunc<CancelUnk38_t> CancelUnk38(Addresses::ResourceToken_CancelUnk38);
+            CancelUnk38(unk38);
+        }
 
-        func(this);
+        using DestructUnk38_t = void (*)(void**);
+        RelocFunc<DestructUnk38_t> DestructUnk38(Addresses::ResourceToken_DestructUnk38);
+        DestructUnk38(&unk38);
     }
 
     /**
@@ -66,7 +72,7 @@ struct ResourceToken
      *
      * @return The loaded resource.
      */
-    [[nodiscard]] Handle<T>& Get() const noexcept
+    [[nodiscard]] Handle<T>& Get() noexcept
     {
         return resource;
     }
@@ -86,23 +92,17 @@ struct ResourceToken
         return error;
     }
 
-    [[nodiscard]] inline operator T*() const noexcept
+    [[nodiscard]] inline operator T*() noexcept
     {
         return resource.GetPtr();
     }
-
-    struct Unk38
-    {
-        using AllocatorType = Memory::EngineAllocator;
-        uint8_t unk0[0x78];
-    };
-    RED4EXT_ASSERT_SIZE(Unk38, 0x78);
 
     WeakPtr<ResourceToken<T>> self;                    // 00
     DynArray<SharedPtr<ResourceToken<>>> dependencies; // 10
     SharedMutex lock;                                  // 20
     Handle<T> resource;                                // 28
-    SharedPtr<Unk38> unk38;                            // 38
+    void* unk38;                                       // 38 - SharedPtr<Unk38>.instance
+    void* unk40;                                       // 40 - SharedPtr<Unk38>.refCount
     ResourcePath path;                                 // 48
     JobHandle job;                                     // 50
     volatile int32_t finished;                         // 58

@@ -101,7 +101,6 @@ struct CProperty
         }
     }
 
-private:
     template<typename T>
     T* GetValuePtr(ScriptInstance aInstance) const
     {

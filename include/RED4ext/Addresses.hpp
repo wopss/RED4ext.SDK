@@ -183,6 +183,8 @@ constexpr uintptr_t ResourceReference_Reset = 0x14024BFD0 - ImageBase; // 48 83 
 constexpr uintptr_t ResourceToken_dtor = 0x14024A5E0 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74, expected: 1, index: 0
 constexpr uintptr_t ResourceToken_Fetch = 0x14024BA00 - ImageBase; // 40 53 48 83 EC 40 8B 41 58 48 8B D9 0F 29 74 24 30 0F 29 7C 24 20 85 C0 74 0A, expected: 1, index: 0
 constexpr uintptr_t ResourceToken_OnLoaded = 0x14024B0F0 - ImageBase; // 40 55 53 56 57 41 56 48 8D 6C 24 C9 48 81 EC F0 00 00 00 48 8B 41 08 0F 57 C0 49 8B F8 4C 8B F2, expected: 1, index: 0
+constexpr uintptr_t ResourceToken_CancelUnk38 = 0x142BC3F40 - ImageBase; // 40 53 48 83 EC 20 48 8B D9 B9 08 00 00 00 E8, expected: 1, index: 0
+constexpr uintptr_t ResourceToken_DestructUnk38 = 0x1401B5670 - ImageBase; // 40 53 48 83 EC 20 48 8B D9 48 8B 49 08 48 85 C9 74 ? B8 FF FF FF FF F0 0F C1 01 83 F8 01 75, expected: 73, index: 1
 #pragma endregion
 
 #pragma region Streams

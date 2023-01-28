@@ -221,6 +221,8 @@ public:
     static_assert(InlineSize >= sizeof(void*), "Buffer size can't be less than pointer size");
 
     FlexCallback(R (*aFunc)(Args...))
+        : allocator(nullptr)
+        , extendedSize(0)
     {
         using TargetType = Detail::UnboundFunctionTarget<R, Args...>;
 
@@ -231,6 +233,8 @@ public:
 
     template<typename C>
     FlexCallback(C* aContext, R (C::*aFunc)(Args...))
+        : allocator(nullptr)
+        , extendedSize(0)
     {
         using TargetType = Detail::MemberFunctionTarget<C, R, Args...>;
 
@@ -242,6 +246,8 @@ public:
     template<typename L>
     requires Detail::IsClosure<L, R, Args...>
     FlexCallback(L&& aClosure)
+        : allocator(nullptr)
+        , extendedSize(0)
     {
         using TargetType = Detail::ClosureTarget<L, R, Args...>;
 
