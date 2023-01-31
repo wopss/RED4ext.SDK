@@ -43,8 +43,9 @@ struct BenchmarkSummary : IScriptable
     uint8_t unk179[0x17C - 0x179]; // 179
     int32_t DLSSQuality; // 17C
     float DLSSSharpness; // 180
-    bool FSR2Enabled; // 184
-    uint8_t unk185[0x188 - 0x185]; // 185
+    bool DLSSFrameGenEnabled; // 184
+    bool FSR2Enabled; // 185
+    uint8_t unk186[0x188 - 0x186]; // 186
     int32_t FSR2Quality; // 188
     float FSR2Sharpness; // 18C
     bool DRSEnabled; // 190
