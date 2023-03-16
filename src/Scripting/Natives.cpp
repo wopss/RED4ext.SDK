@@ -2062,10 +2062,10 @@
 #include <RED4ext/Scripting/Natives/Generated/loc/VoiceTag.hpp>
 #include <RED4ext/Scripting/Natives/Generated/loc/VoiceoverContext.hpp>
 #include <RED4ext/Scripting/Natives/Generated/loc/VoiceoverExpression.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceLocDataMapEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceOnScreenEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceSubtitleEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceSubtitleMapEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceLocDataMapEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceOnScreenEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceSubtitleEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceSubtitleMapEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/ChunkIndicesOffset.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/ChunkOffset.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/CookedClothMeshTopologyData.hpp>

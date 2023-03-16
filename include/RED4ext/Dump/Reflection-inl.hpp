@@ -102,16 +102,24 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     // Build a mapped list of nested prefixes
     for (auto& [prefix, children] : prefixHierarchy)
     {
-        for (auto i = 0; i < prefix.size(); ++i)
+        // Special case for localization (prevents loc::alization namespace)
+        if (prefix != "localization")
         {
-            auto testPrefix = prefix.substr(0, i + 1);
-
-            // Find a substring of ourselves somewhere else in the list
-            auto it = prefixHierarchy.find(testPrefix);
-            if (it != prefixHierarchy.end())
+            for (auto i = 0; i < prefix.size(); ++i)
             {
-                children.push_back(testPrefix);
+                auto testPrefix = prefix.substr(0, i + 1);
+
+                // Find a substring of ourselves somewhere else in the list
+                auto it = prefixHierarchy.find(testPrefix);
+                if (it != prefixHierarchy.end())
+                {
+                    children.push_back(testPrefix);
+                }
             }
+        }
+        else
+        {
+            children.push_back(prefix);
         }
 
         for (auto it = children.rbegin(); it != children.rend(); ++it)

@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-namespace loc::alization { 
+namespace localization { 
 struct PersistenceOnScreenEntry
 {
     static constexpr const char* NAME = "localizationPersistenceOnScreenEntry";
@@ -22,7 +22,7 @@ struct PersistenceOnScreenEntry
     CString maleVariant; // 48
 };
 RED4EXT_ASSERT_SIZE(PersistenceOnScreenEntry, 0x68);
-} // namespace loc::alization
+} // namespace localization
 } // namespace RED4ext
 
 // clang-format on

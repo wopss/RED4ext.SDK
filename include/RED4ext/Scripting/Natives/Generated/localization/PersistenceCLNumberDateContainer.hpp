@@ -11,7 +11,7 @@
 
 namespace RED4ext
 {
-namespace loc::alization { 
+namespace localization { 
 struct PersistenceCLNumberDateContainer : ISerializable
 {
     static constexpr const char* NAME = "localizationPersistenceCLNumberDateContainer";
@@ -21,7 +21,7 @@ struct PersistenceCLNumberDateContainer : ISerializable
     CName clTimestamp; // 38
 };
 RED4EXT_ASSERT_SIZE(PersistenceCLNumberDateContainer, 0x40);
-} // namespace loc::alization
+} // namespace localization
 } // namespace RED4ext
 
 // clang-format on
