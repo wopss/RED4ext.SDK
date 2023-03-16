@@ -45,7 +45,7 @@ struct ResourceToken
      *
      * @param aCallback The callback.
      */
-    void OnLoaded(LoadedCallback aCallback)
+    void OnLoaded(LoadedCallback&& aCallback)
     {
         using OnLoaded_t = JobHandle* (*)(ResourceToken*, JobHandle*, LoadedCallback*);
         RED4ext::RelocFunc<OnLoaded_t> func(Addresses::ResourceToken_OnLoaded);
