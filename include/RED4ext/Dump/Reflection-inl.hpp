@@ -259,8 +259,6 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         {"ISerializable", "ISerializable"},
         {"IScriptable", "Scripting/IScriptable"},
         {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
-        {"gameuiCharacterCustomizationSystem", "Scripting/Natives/CharacterCustomization"},
-        {"gameuiCharacterCustomizationOptionImpl", "Scripting/Natives/CharacterCustomizationOptionImpl"},
         {"gameItemID", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);

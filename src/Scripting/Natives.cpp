@@ -1701,6 +1701,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationBrokenNoseControllerBrokenNoseAppearance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationEditTag.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationInfo.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOption.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOptionVersionPrereq.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOptionVersionUpdateInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationPart.hpp>
@@ -1735,6 +1736,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationBodyPartsController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationState.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/IChoiceVisualizer.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICustomizationStateUpdater.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/IGameSystemUI.hpp>
