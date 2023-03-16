@@ -233,7 +233,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
     auto GetOverridePath = [&aIncludePath](const RED4ext::CBaseRTTIType* aType) -> std::string {
         std::string name = aType->GetName().ToString();
-        std::string path = "Scripting/Natives/" + name  + ".hpp";
+        std::string path = "Scripting/Natives/" + name + ".hpp";
 
         if (std::filesystem::exists(aIncludePath / path))
         {
