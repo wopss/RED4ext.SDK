@@ -72,3 +72,20 @@ RED4EXT_INLINE void RED4ext::IScriptable::DestructValueHolder()
     RelocFunc<func_t> func(Addresses::IScriptable_DestructValueHolder);
     func(this);
 }
+
+RED4EXT_INLINE RED4ext::IScriptable::operator const RED4ext::WeakHandle<RED4ext::IScriptable>&() const noexcept
+{
+    return *reinterpret_cast<const WeakHandle<IScriptable>*>(&ref);
+}
+
+RED4EXT_INLINE RED4ext::IScriptable::operator RED4ext::Handle<RED4ext::IScriptable>() noexcept
+{
+    if (ref.instance)
+    {
+        return *reinterpret_cast<const WeakHandle<IScriptable>*>(&ref);
+    }
+    else
+    {
+        return Handle<IScriptable>(this);
+    }
+}

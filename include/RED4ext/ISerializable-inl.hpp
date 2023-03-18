@@ -146,3 +146,19 @@ RED4EXT_INLINE bool RED4ext::ISerializable::CanBeDestructed()
 {
     return true;
 }
+RED4EXT_INLINE RED4ext::ISerializable::operator const RED4ext::WeakHandle<RED4ext::ISerializable>&() const noexcept
+{
+    return ref;
+}
+
+RED4EXT_INLINE RED4ext::ISerializable::operator RED4ext::Handle<RED4ext::ISerializable>() noexcept
+{
+    if (ref.instance)
+    {
+        return ref;
+    }
+    else
+    {
+        return Handle<ISerializable>(this);
+    }
+}

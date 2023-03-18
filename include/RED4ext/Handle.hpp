@@ -130,6 +130,13 @@ public:
         return *reinterpret_cast<const WeakHandle<U>*>(this);
     }
 
+    template<typename U = T>
+    operator Handle<U>() const noexcept
+    {
+        static_assert(std::is_base_of_v<U, T>, "Cannot conver handle because target type is incompatible.");
+        return *this;
+    }
+
     WeakHandle& operator=(const WeakHandle& aRhs) noexcept
     {
         WeakHandle(aRhs).Swap(*this);
@@ -168,31 +175,23 @@ RED4EXT_ASSERT_SIZE(WeakHandle<ISerializable>, 0x10);
 template<typename T>
 struct SelfHandle
 {
-    template<class U = T>
-    const WeakHandle<U>& ToWeakHandle() const
+    operator const WeakHandle<T>&() const noexcept
     {
         auto& self = static_cast<const T*>(this)->ref;
-        return *reinterpret_cast<const WeakHandle<U>*>(&self);
+        return *reinterpret_cast<const WeakHandle<T>*>(&self);
     }
 
-    template<class U = T>
-    Handle<U> ToHandle() const
+    operator Handle<T>() noexcept
     {
-        return ToWeakHandle<U>();
-    }
-
-    template<typename U>
-    operator const WeakHandle<U>&() const noexcept
-    {
-        static_assert(std::is_base_of_v<U, T>, "Cannot conver handle because target type is incompatible.");
-        return ToWeakHandle<U>();
-    }
-
-    template<typename U>
-    operator Handle<U>() const noexcept
-    {
-        static_assert(std::is_base_of_v<U, T>, "Cannot conver handle because target type is incompatible.");
-        return ToHandle<U>();
+        auto& self = static_cast<T*>(this)->ref;
+        if (self.instance)
+        {
+            return *reinterpret_cast<const WeakHandle<T>*>(&self);
+        }
+        else
+        {
+            return Handle<T>(static_cast<T*>(this));
+        }
     }
 };
 
