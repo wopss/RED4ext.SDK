@@ -8,7 +8,9 @@ namespace RED4ext::ink
 struct Layer;
 struct WidgetLibraryResource;
 
-struct LayerProxy : SelfHandle<LayerProxy>, ISerializable
+struct LayerProxy
+    : SelfHandle<LayerProxy>
+    , ISerializable
 {
     static constexpr const char* NAME = "inkLayerProxy";
     static constexpr const char* ALIAS = NAME;

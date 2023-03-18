@@ -1,14 +1,16 @@
 #pragma once
 
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/ISerializable.hpp>
 
 namespace RED4ext::ink
 {
 struct Widget;
 
-struct Children : SelfHandle<Children>, ISerializable
+struct Children
+    : SelfHandle<Children>
+    , ISerializable
 {
     static constexpr const char* NAME = "inkChildren";
     static constexpr const char* ALIAS = NAME;

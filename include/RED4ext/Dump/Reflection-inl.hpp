@@ -177,7 +177,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     }
 
     auto GetGeneratedPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
-                             &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string {
+                             &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
         auto name = aType->GetName();
 
         std::string pathPrefix = GetPrefix(name.ToString());
@@ -271,8 +272,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     };
 
     // Combine the namespace and sanitized name
-    auto QualifiedType = [GetNamespace, GetPrefix,
-                          &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string
+    auto QualifiedType = [GetNamespace, GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string
     {
         auto name = aType->GetName();
 
@@ -1066,7 +1066,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
         if (usedAsHandle)
         {
-            o<< "SelfHandle<" << name << ">, ";
+            o << "SelfHandle<" << name << ">, ";
         }
 
         o << parentQualified;

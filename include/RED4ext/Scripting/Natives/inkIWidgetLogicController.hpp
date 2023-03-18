@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LayerProxy.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/Widget.hpp>
@@ -10,7 +10,9 @@ namespace RED4ext::ink
 {
 struct Widget;
 
-struct IWidgetLogicController : SelfHandle<IWidgetLogicController>, IScriptable
+struct IWidgetLogicController
+    : SelfHandle<IWidgetLogicController>
+    , IScriptable
 {
     static constexpr const char* NAME = "inkIWidgetLogicController";
     static constexpr const char* ALIAS = "inkILogicController";
