@@ -1,6 +1,5 @@
 #pragma once
 
-#include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/ISerializable.hpp>
 #include <RED4ext/ResourcePath.hpp>
@@ -8,7 +7,7 @@
 
 namespace RED4ext
 {
-struct CResource : ISerializable
+struct CResource : SelfHandle<CResource>, ISerializable
 {
     static constexpr const char* NAME = "CResource";
     static constexpr const char* ALIAS = NAME;

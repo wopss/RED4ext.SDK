@@ -4,13 +4,22 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkLayerProxy.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::LayerProxy, 0x68);
+using inkLayerProxy = ink::LayerProxy;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/ISerializable.hpp>
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 struct LayerProxy : ISerializable
 {
     static constexpr const char* NAME = "inkLayerProxy";
@@ -21,5 +30,6 @@ struct LayerProxy : ISerializable
 RED4EXT_ASSERT_SIZE(LayerProxy, 0x68);
 } // namespace ink
 } // namespace RED4ext
+*/
 
 // clang-format on

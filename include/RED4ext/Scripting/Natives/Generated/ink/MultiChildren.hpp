@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkMultiChildren.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::MultiChildren, 0x48);
+using inkMultiChildren = ink::MultiChildren;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
@@ -14,7 +23,7 @@ namespace RED4ext
 {
 namespace ink { struct Widget; }
 
-namespace ink { 
+namespace ink {
 struct MultiChildren : ink::Children
 {
     static constexpr const char* NAME = "inkMultiChildren";
@@ -26,5 +35,6 @@ struct MultiChildren : ink::Children
 RED4EXT_ASSERT_SIZE(MultiChildren, 0x48);
 } // namespace ink
 } // namespace RED4ext
+*/
 
 // clang-format on

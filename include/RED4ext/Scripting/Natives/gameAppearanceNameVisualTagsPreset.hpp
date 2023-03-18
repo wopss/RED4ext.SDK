@@ -1,6 +1,5 @@
 #pragma once
 
-#include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
@@ -8,10 +7,9 @@
 #include <RED4ext/ResourcePath.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/AppearanceNameVisualTagsPreset_Entity.hpp>
 
-namespace RED4ext
+namespace RED4ext::game
 {
-namespace game {
-struct AppearanceNameVisualTagsPreset : ISerializable
+struct AppearanceNameVisualTagsPreset : SelfHandle<AppearanceNameVisualTagsPreset>, ISerializable
 {
     static constexpr const char* NAME = "gameAppearanceNameVisualTagsPreset";
     static constexpr const char* ALIAS = NAME;
@@ -20,5 +18,4 @@ struct AppearanceNameVisualTagsPreset : ISerializable
     HashMap<ResourcePath, AppearanceNameVisualTagsPreset_Entity> lookup; // 40
 };
 RED4EXT_ASSERT_SIZE(AppearanceNameVisualTagsPreset, 0x70);
-} // namespace game
-} // namespace RED4ext
+} // namespace RED4ext::game
