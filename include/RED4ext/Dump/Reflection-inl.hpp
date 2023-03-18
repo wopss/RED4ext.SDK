@@ -1026,18 +1026,21 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
     {
         for (auto fwd : fwdDeclarations)
         {
-            auto index = fwd.find_last_of("::");
-            if (index != std::string::npos)
+            if (fwd != nameQualified)
             {
-                auto ns = fwd.substr(0, index - 1);
-                auto fwdDecl = fwd.substr(index + 1, fwd.size() - index);
+                auto index = fwd.find_last_of("::");
+                if (index != std::string::npos)
+                {
+                    auto ns = fwd.substr(0, index - 1);
+                    auto fwdDecl = fwd.substr(index + 1, fwd.size() - index);
 
-                o << "namespace " << ns << " { "
-                  << "struct " << fwdDecl << "; }" << std::endl;
-            }
-            else
-            {
-                o << "struct " << fwd << ";" << std::endl;
+                    o << "namespace " << ns << " { "
+                      << "struct " << fwdDecl << "; }" << std::endl;
+                }
+                else
+                {
+                    o << "struct " << fwd << ";" << std::endl;
+                }
             }
         }
         o << std::endl;
