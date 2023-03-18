@@ -24,6 +24,7 @@ using NameSantizer = std::function<std::string(const std::string&, bool&)>;
 using NameTransformer = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
 using DescriptorPath = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
 using NamespaceTransformer = std::function<std::vector<std::string>(const RED4ext::CBaseRTTIType*)>;
+using TypeChecker = std::function<bool(const RED4ext::CBaseRTTIType*)>;
 using FixedTypeMapping = std::unordered_map<RED4ext::CName, std::string, RED4ext::CName>;
 
 static constexpr const char* INVALID_CHARACTERS = R"(-|'|\(|\)|\]|\[|/|\.|\s|:)";
@@ -46,6 +47,7 @@ struct ClassFileDescriptor
     std::string parentQualified;
     std::string directory;
     std::string override;
+    bool usedAsHandle;
     size_t size = 0;
     size_t parentSize = 0;
 
@@ -110,7 +112,8 @@ struct ClassDependencyBuilder
 
     void ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                           NameTransformer aQualifiedTransformer, DescriptorPath aTypeToPath,
-                          DescriptorPath aTypeToOverride, const FixedTypeMapping& aFixedMapping, bool aVerbose);
+                          DescriptorPath aTypeToOverride, TypeChecker aHandleCompatChecker,
+                          const FixedTypeMapping& aFixedMapping, bool aVerbose);
 };
 
 std::string TypeToString(const RED4ext::CBaseRTTIType* aType, NameTransformer aNameTransformer, bool aVerbose = false);

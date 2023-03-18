@@ -231,7 +231,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         return "Scripting/Natives/Generated/" + pathPrefix;
     };
 
-    auto GetOverridePath = [&aIncludePath](const RED4ext::CBaseRTTIType* aType) -> std::string {
+    auto GetOverridePath = [&aIncludePath](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
         std::string name = aType->GetName().ToString();
         std::string path = "Scripting/Natives/" + name + ".hpp";
 
@@ -271,7 +272,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
     // Combine the namespace and sanitized name
     auto QualifiedType = [GetNamespace, GetPrefix,
-                          &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string {
+                          &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
         auto name = aType->GetName();
 
         std::string fullName = name.ToString();
@@ -282,11 +284,20 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         return ns.empty() ? stripped : ns + "::" + stripped;
     };
 
-    FixedTypeMapping fixedMapping = {
-        {"ISerializable", "ISerializable"},
-        {"IScriptable", "Scripting/IScriptable"},
-        {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
-        {"gameItemID", "NativeTypes"}};
+    auto IsHandleCompatible = [serializable](const RED4ext::CBaseRTTIType* aType) -> bool
+    {
+        if (aType->GetType() == RED4ext::ERTTIType::Class)
+        {
+            return reinterpret_cast<const CClass*>(aType)->IsA(serializable);
+        }
+
+        return false;
+    };
+
+    FixedTypeMapping fixedMapping = {{"ISerializable", "ISerializable"},
+                                     {"IScriptable", "Scripting/IScriptable"},
+                                     {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
+                                     {"gameItemID", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
     std::regex invalidKeywords(INVALID_KEYWORDS);
@@ -336,7 +347,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
         ClassFileDescriptor fileDescriptor;
         builder.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, GetGeneratedPath, GetOverridePath,
-                                 fixedMapping, aVerbose);
+                                 IsHandleCompatible, fixedMapping, aVerbose);
 
         for (auto& dep : builder.mDirect)
         {
@@ -727,6 +738,7 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aOutP
 RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                                                              NameTransformer aQualifiedTransformer,
                                                              DescriptorPath aTypeToPath, DescriptorPath aTypeToOverride,
+                                                             TypeChecker aHandleCompatChecker,
                                                              const FixedTypeMapping& aFixedMapping, bool aVerbose)
 {
     auto name = pType->GetName();
@@ -744,6 +756,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
     aFd.size = pType->GetSize();
     aFd.directory = aTypeToPath(pType);
     aFd.override = aTypeToOverride(pType);
+    aFd.usedAsHandle = aHandleCompatChecker(pType);
 
     if (pType->parent)
     {
@@ -979,7 +992,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
         o << "namespace RED4ext" << std::endl;
         o << "{" << std::endl;
-        o << "RED4EXT_ASSERT_SIZE(" << nameQualified << ", 0x" << std::hex << std::uppercase << size << ");" << std::endl;
+        o << "RED4EXT_ASSERT_SIZE(" << nameQualified << ", 0x" << std::hex << std::uppercase << size << ");"
+          << std::endl;
 
         if (name != trueName)
         {
@@ -1034,7 +1048,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
     {
         auto ns = nameQualified.substr(0, nsIndex - 1);
 
-        o << "namespace " << ns << " { " << std::endl;
+        o << "namespace " << ns << std::endl;
+        o << "{" << std::endl;
         o << "struct " << name;
     }
     else
@@ -1044,7 +1059,14 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
     if (!parent.empty())
     {
-        o << " : " << parentQualified;
+        o << " : ";
+
+        if (usedAsHandle)
+        {
+            o<< "SelfHandle<" << name << ">, ";
+        }
+
+        o << parentQualified;
     }
     o << std::endl;
     o << "{" << std::endl;
