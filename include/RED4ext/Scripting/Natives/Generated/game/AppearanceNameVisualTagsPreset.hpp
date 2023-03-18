@@ -4,6 +4,14 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/gameAppearanceNameVisualTagsPreset.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(game::AppearanceNameVisualTagsPreset, 0x70);
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
@@ -12,7 +20,7 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 struct AppearanceNameVisualTagsPreset : ISerializable
 {
     static constexpr const char* NAME = "gameAppearanceNameVisualTagsPreset";
@@ -24,5 +32,6 @@ struct AppearanceNameVisualTagsPreset : ISerializable
 RED4EXT_ASSERT_SIZE(AppearanceNameVisualTagsPreset, 0x70);
 } // namespace game
 } // namespace RED4ext
+*/
 
 // clang-format on

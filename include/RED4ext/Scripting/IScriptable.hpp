@@ -26,6 +26,9 @@ struct IScriptable : ISerializable
     virtual void sub_100();                      // 100
     virtual void sub_108();                      // 108
 
+    operator const WeakHandle<IScriptable>&() const noexcept;
+    operator Handle<IScriptable>() noexcept;
+
     void* GetValueHolder();
     void DestructValueHolder();
 
@@ -72,7 +75,6 @@ protected:
         return ::RED4ext::ExecuteFunction(static_cast<void*>(this), func, ret, args);
     }
 };
-
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);
 } // namespace RED4ext
 

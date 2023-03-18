@@ -208,11 +208,11 @@ struct CClass : CBaseRTTIType
     uint32_t holderSize;                         // 6C
     Flags flags;                                 // 70
     uint32_t alignment;                          // 74
-    HashMap<void*, void*> unk78;                 // 78
+    HashMap<CName, CClassFunction*> funcsByName; // 78
     HashMap<void*, void*> unkA8;                 // A8
     int64_t unkD8;                               // D8
     int64_t unkE0;                               // E0
-    HashMap<CName, CProperty*> unkE8;            // E8
+    HashMap<CName, CProperty*> propsByName;      // E8
     DynArray<CProperty*> unk118;                 // 118 - More entries than 0x28, will contain native props
     DynArray<void*> unk128;                      // 128
     DynArray<CProperty*> unk138;                 // 138 - Only RT_Class types?

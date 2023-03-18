@@ -13,7 +13,7 @@ namespace RED4ext
 {
 struct JsonResource;
 
-namespace loc::alization { 
+namespace localization { 
 struct PersistenceLocDataMapEntry
 {
     static constexpr const char* NAME = "localizationPersistenceLocDataMapEntry";
@@ -24,7 +24,7 @@ struct PersistenceLocDataMapEntry
     RaRef<JsonResource> subtitlePath; // 10
 };
 RED4EXT_ASSERT_SIZE(PersistenceLocDataMapEntry, 0x18);
-} // namespace loc::alization
+} // namespace localization
 } // namespace RED4ext
 
 // clang-format on

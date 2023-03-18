@@ -1701,6 +1701,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationBrokenNoseControllerBrokenNoseAppearance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationEditTag.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationInfo.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOption.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOptionVersionPrereq.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationOptionVersionUpdateInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationPart.hpp>
@@ -1735,6 +1736,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationBodyPartsController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationState.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/ICharacterCustomizationSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/IChoiceVisualizer.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ICustomizationStateUpdater.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/IGameSystemUI.hpp>
@@ -2060,10 +2062,10 @@
 #include <RED4ext/Scripting/Natives/Generated/loc/VoiceTag.hpp>
 #include <RED4ext/Scripting/Natives/Generated/loc/VoiceoverContext.hpp>
 #include <RED4ext/Scripting/Natives/Generated/loc/VoiceoverExpression.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceLocDataMapEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceOnScreenEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceSubtitleEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceSubtitleMapEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceLocDataMapEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceOnScreenEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceSubtitleEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceSubtitleMapEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/ChunkIndicesOffset.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/ChunkOffset.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/CookedClothMeshTopologyData.hpp>

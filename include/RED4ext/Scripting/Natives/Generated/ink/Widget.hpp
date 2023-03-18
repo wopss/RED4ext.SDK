@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkWidget.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::Widget, 0x200);
+using inkWidget = ink::Widget;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -24,7 +33,7 @@ namespace ink { struct UserData; }
 namespace ink { struct Widget; }
 namespace ink { struct WidgetLogicController; }
 
-namespace ink { 
+namespace ink {
 struct Widget : IScriptable
 {
     static constexpr const char* NAME = "inkWidget";
@@ -62,5 +71,6 @@ struct Widget : IScriptable
 RED4EXT_ASSERT_SIZE(Widget, 0x200);
 } // namespace ink
 } // namespace RED4ext
+*/
 
 // clang-format on

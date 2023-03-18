@@ -104,11 +104,6 @@ struct ResourceReference
      */
     [[nodiscard]] Handle<T>& Get() const noexcept
     {
-        if (!token)
-        {
-            return {};
-        }
-
         return token->Get();
     }
 

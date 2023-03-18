@@ -4,6 +4,16 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkIWidgetLogicController.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::IWidgetLogicController, 0x78);
+using inkIWidgetLogicController = ink::IWidgetLogicController;
+using inkILogicController = ink::IWidgetLogicController;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -11,7 +21,7 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 struct IWidgetLogicController : IScriptable
 {
     static constexpr const char* NAME = "inkIWidgetLogicController";
@@ -24,5 +34,6 @@ RED4EXT_ASSERT_SIZE(IWidgetLogicController, 0x78);
 } // namespace ink
 using inkILogicController = ink::IWidgetLogicController;
 } // namespace RED4ext
+*/
 
 // clang-format on

@@ -15,8 +15,9 @@ namespace RED4ext
 {
 namespace ink { struct MultiChildren; }
 
-namespace ink { 
-struct CompoundWidget : ink::Widget
+namespace ink
+{
+struct CompoundWidget : SelfHandle<CompoundWidget>, ink::Widget
 {
     static constexpr const char* NAME = "inkCompoundWidget";
     static constexpr const char* ALIAS = NAME;
@@ -29,6 +30,7 @@ struct CompoundWidget : ink::Widget
 };
 RED4EXT_ASSERT_SIZE(CompoundWidget, 0x230);
 } // namespace ink
+using inkCompoundWidget = ink::CompoundWidget;
 } // namespace RED4ext
 
 // clang-format on

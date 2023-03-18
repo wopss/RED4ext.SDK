@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-namespace loc::alization { 
+namespace localization { 
 struct PersistenceSubtitleEntry
 {
     static constexpr const char* NAME = "localizationPersistenceSubtitleEntry";
@@ -21,7 +21,7 @@ struct PersistenceSubtitleEntry
     CString maleVariant; // 28
 };
 RED4EXT_ASSERT_SIZE(PersistenceSubtitleEntry, 0x48);
-} // namespace loc::alization
+} // namespace localization
 } // namespace RED4ext
 
 // clang-format on

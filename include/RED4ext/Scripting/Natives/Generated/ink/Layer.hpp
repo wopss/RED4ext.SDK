@@ -10,8 +10,9 @@
 
 namespace RED4ext
 {
-namespace ink { 
-struct Layer : ISerializable
+namespace ink
+{
+struct Layer : SelfHandle<Layer>, ISerializable
 {
     static constexpr const char* NAME = "inkLayer";
     static constexpr const char* ALIAS = NAME;
@@ -20,6 +21,7 @@ struct Layer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Layer, 0x150);
 } // namespace ink
+using inkLayer = ink::Layer;
 } // namespace RED4ext
 
 // clang-format on

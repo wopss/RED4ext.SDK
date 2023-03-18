@@ -8,20 +8,20 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/ISerializable.hpp>
-#include <RED4ext/Scripting/Natives/Generated/loc/alization/PersistenceOnScreenEntry.hpp>
+#include <RED4ext/Scripting/Natives/Generated/localization/PersistenceOnScreenEntry.hpp>
 
 namespace RED4ext
 {
-namespace loc::alization { 
+namespace localization { 
 struct PersistenceOnScreenEntries : ISerializable
 {
     static constexpr const char* NAME = "localizationPersistenceOnScreenEntries";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<loc::alization::PersistenceOnScreenEntry> entries; // 30
+    DynArray<localization::PersistenceOnScreenEntry> entries; // 30
 };
 RED4EXT_ASSERT_SIZE(PersistenceOnScreenEntries, 0x40);
-} // namespace loc::alization
+} // namespace localization
 } // namespace RED4ext
 
 // clang-format on

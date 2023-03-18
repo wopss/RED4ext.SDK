@@ -17,8 +17,15 @@
 
 namespace RED4ext::GameReflection
 {
-RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aExtendedPath, bool aPropertyHolders)
+RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path aIncludePath, bool aVerbose,
+                         bool aExtendedPath, bool aPropertyHolders)
 {
+    if (aIncludePath.empty())
+    {
+        // Use SDK path that was used to build this binary as a fallback
+        aIncludePath = std::filesystem::path(__FILE__).parent_path().parent_path();
+    }
+
     auto rttiSystem = RED4ext::CRTTISystem::Get();
     auto* scriptable = rttiSystem->GetClass("IScriptable");
     auto* serializable = rttiSystem->GetClass("ISerializable");
@@ -102,16 +109,24 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     // Build a mapped list of nested prefixes
     for (auto& [prefix, children] : prefixHierarchy)
     {
-        for (auto i = 0; i < prefix.size(); ++i)
+        // Special case for localization (prevents loc::alization namespace)
+        if (prefix != "localization")
         {
-            auto testPrefix = prefix.substr(0, i + 1);
-
-            // Find a substring of ourselves somewhere else in the list
-            auto it = prefixHierarchy.find(testPrefix);
-            if (it != prefixHierarchy.end())
+            for (auto i = 0; i < prefix.size(); ++i)
             {
-                children.push_back(testPrefix);
+                auto testPrefix = prefix.substr(0, i + 1);
+
+                // Find a substring of ourselves somewhere else in the list
+                auto it = prefixHierarchy.find(testPrefix);
+                if (it != prefixHierarchy.end())
+                {
+                    children.push_back(testPrefix);
+                }
             }
+        }
+        else
+        {
+            children.push_back(prefix);
         }
 
         for (auto it = children.rbegin(); it != children.rend(); ++it)
@@ -161,8 +176,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         }
     }
 
-    auto fileToPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
-                       &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string {
+    auto GetGeneratedPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
+                             &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
         auto name = aType->GetName();
 
         std::string pathPrefix = GetPrefix(name.ToString());
@@ -216,6 +232,19 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         return "Scripting/Natives/Generated/" + pathPrefix;
     };
 
+    auto GetOverridePath = [&aIncludePath](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
+        std::string name = aType->GetName().ToString();
+        std::string path = "Scripting/Natives/" + name + ".hpp";
+
+        if (std::filesystem::exists(aIncludePath / path))
+        {
+            return path;
+        }
+
+        return {};
+    };
+
     // Remove the prefix from the class
     auto SanitizeType = [GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string {
         auto name = aType->GetName();
@@ -243,8 +272,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
     };
 
     // Combine the namespace and sanitized name
-    auto QualifiedType = [GetNamespace, GetPrefix,
-                          &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string {
+    auto QualifiedType = [GetNamespace, GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
         auto name = aType->GetName();
 
         std::string fullName = name.ToString();
@@ -255,13 +284,20 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         return ns.empty() ? stripped : ns + "::" + stripped;
     };
 
-    FixedTypeMapping fixedMapping = {
-        {"ISerializable", "ISerializable"},
-        {"IScriptable", "Scripting/IScriptable"},
-        {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
-        {"gameuiCharacterCustomizationSystem", "Scripting/Natives/CharacterCustomization"},
-        {"gameuiCharacterCustomizationOptionImpl", "Scripting/Natives/CharacterCustomizationOptionImpl"},
-        {"gameItemID", "NativeTypes"}};
+    auto IsHandleCompatible = [serializable](const RED4ext::CBaseRTTIType* aType) -> bool
+    {
+        if (aType->GetType() == RED4ext::ERTTIType::Class)
+        {
+            return reinterpret_cast<const CClass*>(aType)->IsA(serializable);
+        }
+
+        return false;
+    };
+
+    FixedTypeMapping fixedMapping = {{"ISerializable", "ISerializable"},
+                                     {"IScriptable", "Scripting/IScriptable"},
+                                     {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
+                                     {"gameItemID", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
     std::regex invalidKeywords(INVALID_KEYWORDS);
@@ -310,7 +346,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
         }
 
         ClassFileDescriptor fileDescriptor;
-        builder.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, fileToPath, fixedMapping, aVerbose);
+        builder.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, GetGeneratedPath, GetOverridePath,
+                                 IsHandleCompatible, fixedMapping, aVerbose);
 
         for (auto& dep : builder.mDirect)
         {
@@ -319,15 +356,15 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
             case RED4ext::ERTTIType::Enum:
             {
                 EnumFileDescriptor enumFd(static_cast<const RED4ext::CEnum*>(dep), SanitizeType, QualifiedType,
-                                          fileToPath);
-                enumFd.EmitFile(filePath, nameSanitizer);
+                                          GetGeneratedPath);
+                enumFd.EmitFile(aOutPath, nameSanitizer);
                 break;
             }
             case RED4ext::ERTTIType::BitField:
             {
                 BitfieldFileDescriptor bfFd(static_cast<const RED4ext::CBitfield*>(dep), SanitizeType, QualifiedType,
-                                            fileToPath);
-                bfFd.EmitFile(filePath, nameSanitizer);
+                                            GetGeneratedPath);
+                bfFd.EmitFile(aOutPath, nameSanitizer);
                 break;
             }
             default:
@@ -340,10 +377,10 @@ RED4EXT_INLINE void Dump(std::filesystem::path filePath, bool aVerbose, bool aEx
             includeCollector.emplace(inc);
         }
 
-        fileDescriptor.EmitFile(filePath, nameSanitizer);
+        fileDescriptor.EmitFile(aOutPath, nameSanitizer);
     }
 
-    EmitBulkGenerated(filePath, includeCollector);
+    EmitBulkGenerated(aOutPath, includeCollector);
 }
 
 RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(const RED4ext::CBaseRTTIType* aType)
@@ -434,13 +471,13 @@ RED4EXT_INLINE EnumFileDescriptor::EnumFileDescriptor(const RED4ext::CEnum* pEnu
     }
 }
 
-RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer)
+RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer)
 {
-    aFilePath /= directory;
-    std::filesystem::create_directories(aFilePath);
-    aFilePath /= name + ".hpp";
+    aOutPath /= directory;
+    std::filesystem::create_directories(aOutPath);
+    aOutPath /= name + ".hpp";
 
-    std::ofstream o(aFilePath);
+    std::ofstream o(aOutPath);
 
     o << "#pragma once" << std::endl << std::endl;
     o << "// clang-format off" << std::endl << std::endl;
@@ -607,13 +644,13 @@ RED4EXT_INLINE BitfieldFileDescriptor::BitfieldFileDescriptor(const RED4ext::CBi
     }
 }
 
-RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer)
+RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer)
 {
-    aFilePath /= directory;
-    std::filesystem::create_directories(aFilePath);
-    aFilePath /= name + ".hpp";
+    aOutPath /= directory;
+    std::filesystem::create_directories(aOutPath);
+    aOutPath /= name + ".hpp";
 
-    std::ofstream o(aFilePath);
+    std::ofstream o(aOutPath);
 
     o << "#pragma once" << std::endl << std::endl;
     o << "// clang-format off" << std::endl << std::endl;
@@ -700,7 +737,8 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aFile
 
 RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                                                              NameTransformer aQualifiedTransformer,
-                                                             DescriptorPath aTypeToPath,
+                                                             DescriptorPath aTypeToPath, DescriptorPath aTypeToOverride,
+                                                             TypeChecker aHandleCompatChecker,
                                                              const FixedTypeMapping& aFixedMapping, bool aVerbose)
 {
     auto name = pType->GetName();
@@ -717,6 +755,8 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
     aFd.trueName = name.ToString();
     aFd.size = pType->GetSize();
     aFd.directory = aTypeToPath(pType);
+    aFd.override = aTypeToOverride(pType);
+    aFd.usedAsHandle = aHandleCompatChecker(pType);
 
     if (pType->parent)
     {
@@ -933,18 +973,41 @@ RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, Nam
     return typeName;
 }
 
-RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer)
+RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer)
 {
-    aFilePath /= directory;
-    std::filesystem::create_directories(aFilePath);
-    aFilePath /= name + ".hpp";
+    aOutPath /= directory;
+    std::filesystem::create_directories(aOutPath);
+    aOutPath /= name + ".hpp";
 
-    std::ofstream o(aFilePath);
+    std::ofstream o(aOutPath);
 
     o << "#pragma once" << std::endl << std::endl;
     o << "// clang-format off" << std::endl << std::endl;
 
     o << "// This file is generated from the Game's Reflection data" << std::endl << std::endl;
+
+    if (!override.empty())
+    {
+        o << "#include <RED4ext/" << override << ">" << std::endl << std::endl;
+
+        o << "namespace RED4ext" << std::endl;
+        o << "{" << std::endl;
+        o << "RED4EXT_ASSERT_SIZE(" << nameQualified << ", 0x" << std::hex << std::uppercase << size << ");"
+          << std::endl;
+
+        if (name != trueName)
+        {
+            o << "using " << trueName << " = " << nameQualified << ";" << std::endl;
+        }
+
+        if (!alias.empty() && alias != trueName)
+        {
+            o << "using " << alias << " = " << nameQualified << ";" << std::endl;
+        }
+
+        o << "} // namespace RED4ext" << std::endl << std::endl;
+        o << "/*" << std::endl;
+    }
 
     o << "#include <cstdint>" << std::endl;
     o << "#include <RED4ext/Common.hpp>" << std::endl;
@@ -963,18 +1026,21 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     {
         for (auto fwd : fwdDeclarations)
         {
-            auto index = fwd.find_last_of("::");
-            if (index != std::string::npos)
+            if (fwd != nameQualified)
             {
-                auto ns = fwd.substr(0, index - 1);
-                auto fwdDecl = fwd.substr(index + 1, fwd.size() - index);
+                auto index = fwd.find_last_of("::");
+                if (index != std::string::npos)
+                {
+                    auto ns = fwd.substr(0, index - 1);
+                    auto fwdDecl = fwd.substr(index + 1, fwd.size() - index);
 
-                o << "namespace " << ns << " { "
-                  << "struct " << fwdDecl << "; }" << std::endl;
-            }
-            else
-            {
-                o << "struct " << fwd << ";" << std::endl;
+                    o << "namespace " << ns << " { "
+                      << "struct " << fwdDecl << "; }" << std::endl;
+                }
+                else
+                {
+                    o << "struct " << fwd << ";" << std::endl;
+                }
             }
         }
         o << std::endl;
@@ -985,7 +1051,8 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
     {
         auto ns = nameQualified.substr(0, nsIndex - 1);
 
-        o << "namespace " << ns << " { " << std::endl;
+        o << "namespace " << ns << std::endl;
+        o << "{" << std::endl;
         o << "struct " << name;
     }
     else
@@ -995,7 +1062,14 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
 
     if (!parent.empty())
     {
-        o << " : " << parentQualified;
+        o << " : ";
+
+        if (usedAsHandle)
+        {
+            o << "SelfHandle<" << name << ">, ";
+        }
+
+        o << parentQualified;
     }
     o << std::endl;
     o << "{" << std::endl;
@@ -1162,21 +1236,33 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aFilePat
         o << "} // namespace " << ns << std::endl;
     }
 
+    if (name != trueName)
+    {
+        o << "using " << trueName << " = " << nameQualified << ";" << std::endl;
+    }
+
     if (!alias.empty() && alias != trueName)
     {
         o << "using " << alias << " = " << nameQualified << ";" << std::endl;
     }
 
-    o << "} // namespace RED4ext" << std::endl << std::endl;
+    o << "} // namespace RED4ext" << std::endl;
+
+    if (!override.empty())
+    {
+        o << "*/" << std::endl;
+    }
+
+    o << std::endl;
     o << "// clang-format on" << std::endl;
 }
 
-void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::string>& aIncludes)
+void EmitBulkGenerated(std::filesystem::path aOutPath, const std::set<std::string>& aIncludes)
 {
-    std::filesystem::create_directories(aFilePath);
-    aFilePath = aFilePath / "Scripting" / "Natives.cpp";
+    std::filesystem::create_directories(aOutPath);
+    aOutPath = aOutPath / "Scripting" / "Natives.cpp";
 
-    std::ofstream o(aFilePath);
+    std::ofstream o(aOutPath);
 
     o << "#ifndef RED4EXT_STATIC_LIB" << std::endl;
     o << "#error Please define 'RED4EXT_STATIC_LIB' to compile this file." << std::endl;

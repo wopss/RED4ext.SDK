@@ -24,6 +24,7 @@ using NameSantizer = std::function<std::string(const std::string&, bool&)>;
 using NameTransformer = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
 using DescriptorPath = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
 using NamespaceTransformer = std::function<std::vector<std::string>(const RED4ext::CBaseRTTIType*)>;
+using TypeChecker = std::function<bool(const RED4ext::CBaseRTTIType*)>;
 using FixedTypeMapping = std::unordered_map<RED4ext::CName, std::string, RED4ext::CName>;
 
 static constexpr const char* INVALID_CHARACTERS = R"(-|'|\(|\)|\]|\[|/|\.|\s|:)";
@@ -45,6 +46,8 @@ struct ClassFileDescriptor
     std::string parent;
     std::string parentQualified;
     std::string directory;
+    std::string override;
+    bool usedAsHandle;
     size_t size = 0;
     size_t parentSize = 0;
 
@@ -61,7 +64,7 @@ struct ClassFileDescriptor
     std::vector<PropertyDescriptor> properties;
     std::vector<PropertyDescriptor> holderProperties;
 
-    void EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer);
+    void EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer);
 };
 
 struct EnumFileDescriptor
@@ -78,7 +81,7 @@ struct EnumFileDescriptor
     std::map<uint64_t, std::string> enumMap;
     std::map<std::string, uint64_t> enumAlias;
 
-    void EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer);
+    void EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer);
 };
 
 struct BitfieldFileDescriptor
@@ -94,7 +97,7 @@ struct BitfieldFileDescriptor
     size_t size = 0;
     std::vector<std::string> bitNames;
 
-    void EmitFile(std::filesystem::path aFilePath, NameSantizer aSanitizer);
+    void EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer);
 };
 
 struct ClassDependencyBuilder
@@ -109,15 +112,16 @@ struct ClassDependencyBuilder
 
     void ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                           NameTransformer aQualifiedTransformer, DescriptorPath aTypeToPath,
+                          DescriptorPath aTypeToOverride, TypeChecker aHandleCompatChecker,
                           const FixedTypeMapping& aFixedMapping, bool aVerbose);
 };
 
 std::string TypeToString(const RED4ext::CBaseRTTIType* aType, NameTransformer aNameTransformer, bool aVerbose = false);
 
-void EmitBulkGenerated(std::filesystem::path aFilePath, const std::set<std::string>& aIncludes);
+void EmitBulkGenerated(std::filesystem::path aOutPath, const std::set<std::string>& aIncludes);
 
-void Dump(std::filesystem::path aFilePath, bool aVerbose = false, bool aExtendedPath = false,
-          bool aPropertyHolders = false);
+void Dump(std::filesystem::path aOutPath, std::filesystem::path aIncludePath = "", bool aVerbose = false,
+          bool aExtendedPath = false, bool aPropertyHolders = false);
 
 } // namespace RED4ext::GameReflection
 

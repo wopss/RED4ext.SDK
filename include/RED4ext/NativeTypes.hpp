@@ -78,11 +78,11 @@ RED4EXT_ASSERT_SIZE(TweakDBID, 0x8);
 
 struct ItemID
 {
-    TweakDBID tdbid;  // 00
-    uint32_t rngSeed; // 08
-    uint16_t unk0C;   // 0C
-    uint8_t unk0E;    // 0E
-    uint8_t pad0F;    // 0F
+    TweakDBID tdbid;        // 00
+    uint32_t rngSeed;       // 08
+    uint16_t uniqueCounter; // 0C
+    uint8_t structure;      // 0E -- gamedataItemStructure
+    uint8_t flags;          // 0F -- gameEItemIDFlag
 };
 RED4EXT_ASSERT_SIZE(ItemID, 0x10);
 
