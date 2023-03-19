@@ -12,7 +12,7 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace red { 
+namespace red {
 struct ResourceReferenceScriptToken
 {
     static constexpr const char* NAME = "redResourceReferenceScriptToken";
@@ -22,6 +22,7 @@ struct ResourceReferenceScriptToken
 };
 RED4EXT_ASSERT_SIZE(ResourceReferenceScriptToken, 0x8);
 } // namespace red
+using redResourceReferenceScriptToken = red::ResourceReferenceScriptToken;
 using ResRef = red::ResourceReferenceScriptToken;
 } // namespace RED4ext
 
