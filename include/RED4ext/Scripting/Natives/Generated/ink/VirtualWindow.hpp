@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 struct VirtualWindow : ink::Window
 {
     static constexpr const char* NAME = "inkVirtualWindow";
@@ -20,6 +20,7 @@ struct VirtualWindow : ink::Window
 };
 RED4EXT_ASSERT_SIZE(VirtualWindow, 0x570);
 } // namespace ink
+using inkVirtualWindow = ink::VirtualWindow;
 } // namespace RED4ext
 
 // clang-format on
