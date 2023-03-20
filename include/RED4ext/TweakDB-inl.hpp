@@ -231,18 +231,6 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         updated = true;
     }
 
-    fakeTweakDB.recordsByType.for_each(
-        [](const CBaseRTTIType*, DynArray<Handle<IScriptable>>& array)
-        {
-            array.Clear();
-            array.GetAllocator()->Free(array.entries);
-        });
-
-    fakeTweakDB.recordsByID.Clear();
-    fakeTweakDB.recordsByID.GetAllocator()->Free(fakeTweakDB.recordsByID.nodeList.nodes);
-    fakeTweakDB.recordsByType.Clear();
-    fakeTweakDB.recordsByType.GetAllocator()->Free(fakeTweakDB.recordsByType.nodeList.nodes);
-
     return updated;
 }
 

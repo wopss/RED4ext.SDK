@@ -8,6 +8,7 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Relocation.hpp>
+#include <RED4ext/Utils.hpp>
 
 namespace RED4ext
 {
@@ -39,10 +40,11 @@ struct DynArray
 
     ~DynArray()
     {
-        if (size)
+        if (capacity)
         {
             Clear();
             GetAllocator()->Free(entries);
+            capacity = 0;
         }
     }
 
@@ -169,9 +171,17 @@ struct DynArray
     Memory::IAllocator* GetAllocator() const
     {
         if (capacity == 0)
+        {
+            // Case 1: Allocator is stored instead of entries pointer
+            // It's only 8 bytes for VFT so it fits in a pointer
             return reinterpret_cast<Memory::IAllocator*>(const_cast<T**>(&entries));
+        }
         else
-            return reinterpret_cast<Memory::IAllocator*>(const_cast<T*>(&entries[capacity]));
+        {
+            // Case 2: Allocator is stored at the end of entries buffer (aligned)
+            auto allocatorPtr = AlignUp(reinterpret_cast<size_t>(&entries[capacity]), sizeof(void*));
+            return reinterpret_cast<Memory::IAllocator*>(allocatorPtr);
+        }
     }
 
 #pragma region Iterator
@@ -273,14 +283,12 @@ private:
         capacity = aOther.capacity;
         size = aOther.size;
 
-        aOther.Reset();
-    }
-
-    void Reset()
-    {
-        entries = nullptr;
-        capacity = 0;
-        size = 0;
+        if (aOther.capacity)
+        {
+            aOther.entries = *reinterpret_cast<T**>(aOther.GetAllocator());
+            aOther.capacity = 0;
+            aOther.size = 0;
+        }
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
