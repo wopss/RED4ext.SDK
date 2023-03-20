@@ -8,6 +8,7 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Relocation.hpp>
+#include <RED4ext/Utils.hpp>
 
 namespace RED4ext
 {
@@ -24,6 +25,49 @@ struct DynArray
         , size(0)
         , capacity(0)
     {
+    }
+
+    DynArray(const DynArray& aOther)
+        : DynArray(aOther.GetAllocator())
+    {
+        CopyFrom(aOther);
+    }
+
+    DynArray(DynArray&& aOther) noexcept
+    {
+        MoveFrom(std::move(aOther));
+    }
+
+    ~DynArray()
+    {
+        if (capacity)
+        {
+            Clear();
+            GetAllocator()->Free(entries);
+            capacity = 0;
+        }
+    }
+
+    DynArray& operator=(const DynArray& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Clear();
+            CopyFrom(aOther);
+        }
+
+        return *this;
+    }
+
+    DynArray& operator=(DynArray&& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Clear();
+            MoveFrom(std::move(aOther));
+        }
+
+        return *this;
     }
 
     const T& operator[](uint32_t aIndex) const
@@ -124,12 +168,20 @@ struct DynArray
         func(this, newCapacity, sizeof(T), alignment, nullptr);
     }
 
-    Memory::IAllocator* GetAllocator()
+    Memory::IAllocator* GetAllocator() const
     {
         if (capacity == 0)
-            return reinterpret_cast<Memory::IAllocator*>(&entries);
+        {
+            // Case 1: Allocator is stored instead of entries pointer
+            // It's only 8 bytes for VFT so it fits in a pointer
+            return reinterpret_cast<Memory::IAllocator*>(const_cast<T**>(&entries));
+        }
         else
-            return reinterpret_cast<Memory::IAllocator*>(&entries[capacity]);
+        {
+            // Case 2: Allocator is stored at the end of entries buffer (aligned)
+            auto allocatorPtr = AlignUp(reinterpret_cast<size_t>(&entries[capacity]), sizeof(void*));
+            return reinterpret_cast<Memory::IAllocator*>(allocatorPtr);
+        }
     }
 
 #pragma region Iterator
@@ -215,6 +267,28 @@ private:
         }
 
         return geometric;
+    }
+
+    void CopyFrom(const DynArray& aOther)
+    {
+        for (uint32_t i = 0; i != aOther.size; ++i)
+        {
+            PushBack(aOther[i]);
+        }
+    }
+
+    void MoveFrom(DynArray&& aOther)
+    {
+        entries = aOther.entries;
+        capacity = aOther.capacity;
+        size = aOther.size;
+
+        if (aOther.capacity)
+        {
+            aOther.entries = *reinterpret_cast<T**>(aOther.GetAllocator());
+            aOther.capacity = 0;
+            aOther.size = 0;
+        }
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);

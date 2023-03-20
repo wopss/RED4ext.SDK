@@ -113,6 +113,49 @@ struct HashMap
         allocator = aAllocator ? *reinterpret_cast<uintptr_t*>(aAllocator) : 0;
     }
 
+    HashMap(const HashMap& aOther)
+        : HashMap(aOther.GetAllocator())
+    {
+        CopyFrom(aOther);
+    }
+
+    HashMap(HashMap&& aOther) noexcept
+    {
+        MoveFrom(std::move(aOther));
+    }
+
+    ~HashMap()
+    {
+        if (capacity)
+        {
+            Clear();
+            GetAllocator()->Free(nodeList.nodes);
+            capacity = 0;
+        }
+    }
+
+    HashMap& operator=(const HashMap& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Clear();
+            CopyFrom(aOther);
+        }
+
+        return *this;
+    }
+
+    HashMap& operator=(HashMap&& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Clear();
+            MoveFrom(std::move(aOther));
+        }
+
+        return *this;
+    }
+
     void for_each(std::function<void(const K&, T&)> aFunctor) const
     {
         ForEach(aFunctor);
@@ -332,6 +375,42 @@ struct HashMap
     Memory::IAllocator* GetAllocator()
     {
         return reinterpret_cast<Memory::IAllocator*>(&allocator);
+    }
+
+    void CopyFrom(const HashMap& aOther)
+    {
+        if (aOther.size != 0)
+        {
+            Reserve(aOther.capacity);
+
+            for (uint32_t index = 0; index != aOther.capacity; ++index)
+            {
+                uint32_t idx = aOther.indexTable[index];
+                while (idx != INVALID_INDEX)
+                {
+                    const Node* node = &aOther.nodeList.nodes[idx];
+                    Insert(node->key, node->value);
+                    idx = node->next;
+                }
+            }
+        }
+    }
+
+    void MoveFrom(HashMap&& aOther)
+    {
+        indexTable = aOther.indexTable;
+        size = aOther.size;
+        capacity = aOther.capacity;
+        nodeList = aOther.nodeList;
+        allocator = aOther.allocator;
+
+        if (aOther.capacity)
+        {
+            aOther.indexTable = nullptr;
+            aOther.size = 0;
+            aOther.capacity = 0;
+            aOther.nodeList = NodeList();
+        }
     }
 
     uint32_t* indexTable; // 00

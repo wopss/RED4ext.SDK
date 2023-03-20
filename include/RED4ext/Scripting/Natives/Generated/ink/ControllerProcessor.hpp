@@ -4,13 +4,22 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkControllerProcessor.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::ControllerProcessor, 0x60);
+using inkControllerProcessor = ink::ControllerProcessor;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/ISerializable.hpp>
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 struct ControllerProcessor : ISerializable
 {
     static constexpr const char* NAME = "inkControllerProcessor";
@@ -21,5 +30,6 @@ struct ControllerProcessor : ISerializable
 RED4EXT_ASSERT_SIZE(ControllerProcessor, 0x60);
 } // namespace ink
 } // namespace RED4ext
+*/
 
 // clang-format on

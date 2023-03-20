@@ -31,6 +31,49 @@ struct SortedArray
     {
     }
 
+    SortedArray(const SortedArray& aOther)
+        : SortedArray(aOther.GetAllocator())
+    {
+        CopyFrom(aOther);
+    }
+
+    SortedArray(SortedArray&& aOther) noexcept
+    {
+        MoveFrom(std::move(aOther));
+    }
+
+    ~SortedArray()
+    {
+        if (capacity)
+        {
+            Clear();
+            GetAllocator()->Free(entries);
+            capacity = 0;
+        }
+    }
+
+    SortedArray& operator=(const SortedArray& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Clear();
+            CopyFrom(aOther);
+        }
+
+        return *this;
+    }
+
+    SortedArray& operator=(SortedArray&& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Clear();
+            MoveFrom(std::move(aOther));
+        }
+
+        return *this;
+    }
+
     const T& operator[](uint32_t aIndex) const
     {
         return entries[aIndex];
@@ -325,6 +368,30 @@ private:
         }
 
         return geometric;
+    }
+
+    void CopyFrom(const SortedArray& aOther)
+    {
+        for (uint32_t i = 0; i != aOther.size; ++i)
+        {
+            PushBack(aOther[i]);
+        }
+    }
+
+    void MoveFrom(SortedArray&& aOther)
+    {
+        entries = aOther.entries;
+        capacity = aOther.capacity;
+        size = aOther.size;
+        flags = aOther.flags;
+
+        if (aOther.capacity)
+        {
+            aOther.entries = *reinterpret_cast<T**>(aOther.GetAllocator());
+            aOther.capacity = 0;
+            aOther.size = 0;
+            aOther.flags = 0;
+        }
     }
 };
 RED4EXT_ASSERT_SIZE(SortedArray<void*>, 0x18);

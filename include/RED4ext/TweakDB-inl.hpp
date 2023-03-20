@@ -231,18 +231,6 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         updated = true;
     }
 
-    fakeTweakDB.recordsByType.for_each(
-        [](const CBaseRTTIType*, DynArray<Handle<IScriptable>>& array)
-        {
-            array.Clear();
-            array.GetAllocator()->Free(array.entries);
-        });
-
-    fakeTweakDB.recordsByID.Clear();
-    fakeTweakDB.recordsByID.GetAllocator()->Free(fakeTweakDB.recordsByID.nodeList.nodes);
-    fakeTweakDB.recordsByType.Clear();
-    fakeTweakDB.recordsByType.GetAllocator()->Free(fakeTweakDB.recordsByType.nodeList.nodes);
-
     return updated;
 }
 
@@ -401,7 +389,10 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
         else if (aStackType.type == pArrayInt32RTTIType)
         {
             *reinterpret_cast<uint64_t*>(flatDataBufferEnd_Aligned) = FlatArrayInt32Vftable;
-            pArrayInt32RTTIType->Assign(reinterpret_cast<void*>(flatDataBufferEnd_Aligned + 8), aStackType.value);
+            using ArrayInt32_t = DynArray<int32_t>;
+            auto value = reinterpret_cast<ArrayInt32_t*>(aStackType.value);
+            auto buffer = reinterpret_cast<ArrayInt32_t*>(flatDataBufferEnd_Aligned + 8);
+            new (buffer) ArrayInt32_t(std::forward<ArrayInt32_t>(*value));
             flatDataBufferEnd = flatDataBufferEnd_Aligned + 24;
             return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned)->ToTDBOffset();
         }
