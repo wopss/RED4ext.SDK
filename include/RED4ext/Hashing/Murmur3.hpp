@@ -5,7 +5,7 @@
 
 namespace RED4ext
 {
-uint32_t Murmur3_32(const uint8_t* aKey, const size_t aLength, const uint32_t aSeed);
+uint32_t Murmur3_32(const uint8_t* aKey, const size_t aLength, const uint32_t aSeed = 0X5EEDBA5E);
 }
 
 #ifdef RED4EXT_HEADER_ONLY
