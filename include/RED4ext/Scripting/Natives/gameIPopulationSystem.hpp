@@ -42,7 +42,7 @@ struct IPopulationSystem : IGameSystem
     virtual void sub_1B0() = 0;                                                    // 1B0
     virtual void sub_1B8() = 0;                                                    // 1B8
     virtual void sub_1C0() = 0;                                                    // 1C0
-    virtual void sub_1C8() = 0;                                                    // 1C8
+    virtual bool IsSpawning(EntityID aEntityID) = 0;                               // 1C8
     virtual void sub_1D0() = 0;                                                    // 1D0
     virtual void sub_1D8() = 0;                                                    // 1D8
     virtual bool RegisterEntity(PopulationEntityRegisterRequest& aRequest) = 0;    // 1E0
