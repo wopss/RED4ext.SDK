@@ -1,31 +1,22 @@
 #pragma once
 
-// clang-format off
-
-// This file is generated from the Game's Reflection data
-
-#include <RED4ext/Scripting/Natives/IUpdatableSystem.hpp>
-
-namespace RED4ext
-{
-RED4EXT_ASSERT_SIZE(IUpdatableSystem, 0x40);
-} // namespace RED4ext
-
-/*
-#include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 
 namespace RED4ext
 {
+struct UpdateRegistrar;
+
 struct IUpdatableSystem : IScriptable
 {
     static constexpr const char* NAME = "IUpdatableSystem";
     static constexpr const char* ALIAS = NAME;
 
+    virtual void OnRegisterUpdates(UpdateRegistrar* aRegistrar); // 110
 };
 RED4EXT_ASSERT_SIZE(IUpdatableSystem, 0x40);
 } // namespace RED4ext
-*/
 
-// clang-format on
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Scripting/Natives/IUpdatableSystem-inl.hpp>
+#endif

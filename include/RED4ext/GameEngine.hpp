@@ -179,25 +179,25 @@ RED4EXT_ASSERT_OFFSET(BaseGameEngine, watchdogThread, 0x2D8);
 
 struct GameInstance
 {
-    virtual ~GameInstance() = 0;                                      // 00
-    virtual IScriptable* GetInstance(const CBaseRTTIType* aType) = 0; // 08
-    virtual void Unk_10() = 0;                                        // 10
-    virtual void Unk_18() = 0;                                        // 18
-    virtual void Unk_20() = 0;                                        // 20
-    virtual void Unk_28() = 0;                                        // 28
-    virtual void Unk_30() = 0;                                        // 30
-    virtual void Unk_38() = 0;                                        // 38
-    virtual void Unk_40() = 0;                                        // 40
-    virtual void Unk_48() = 0;                                        // 48
-    virtual void Unk_50() = 0;                                        // 50
-    virtual void Unk_58() = 0;                                        // 58
-    virtual void Unk_60() = 0;                                        // 60
-    virtual void Unk_68() = 0;                                        // 68
+    virtual ~GameInstance() = 0;                                    // 00
+    virtual IScriptable* GetSystem(const CBaseRTTIType* aType) = 0; // 08
+    virtual void Unk_10() = 0;                                      // 10
+    virtual void Unk_18() = 0;                                      // 18
+    virtual void Unk_20() = 0;                                      // 20
+    virtual void Unk_28() = 0;                                      // 28
+    virtual void Unk_30() = 0;                                      // 30
+    virtual void Unk_38() = 0;                                      // 38
+    virtual void Unk_40() = 0;                                      // 40
+    virtual void Unk_48() = 0;                                      // 48
+    virtual void Unk_50() = 0;                                      // 50
+    virtual void Unk_58() = 0;                                      // 58
+    virtual void Unk_60() = 0;                                      // 60
+    virtual void Unk_68() = 0;                                      // 68
 
-    HashMap<CBaseRTTIType*, Handle<IScriptable>> unk08; // 08
-    DynArray<Handle<IScriptable>> unk38;                // 38
-    HashMap<CBaseRTTIType*, CBaseRTTIType*> unk48;      // 48
-    uintptr_t unk78[(0x138 - 0x78) >> 3];               // 78
+    HashMap<CBaseRTTIType*, Handle<IScriptable>> systemMap;        // 08 - Maps implementation type to instance
+    DynArray<Handle<IScriptable>> systemInstances;                 // 38
+    HashMap<CBaseRTTIType*, CBaseRTTIType*> systemImplementations; // 48 - Maps interface type to implementation type
+    uintptr_t unk78[(0x138 - 0x78) >> 3];                          // 78
 };
 RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
 

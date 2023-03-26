@@ -192,7 +192,7 @@ RED4EXT_ASSERT_SIZE(MessageResourcePath, 0x8);
 
 struct NodeRef
 {
-    int64_t unk00; // 00
+    uint64_t hash; // 00
 };
 RED4EXT_ASSERT_SIZE(NodeRef, 0x8);
 

@@ -203,5 +203,10 @@ constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x140F413C1 - ImageBase; // 
 constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x140F41447 - ImageBase; // 48 8D 05 ? ? ? ? 48 8D ? ? 48 89 06, expected: 49, index: 10
 constexpr uintptr_t TweakDB_CreateRecord = 0x140FC1C00 - ImageBase; // 48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2, expected: 1, index: 0
 #pragma endregion
+
+#pragma region UpdateRegistrar
+constexpr uintptr_t UpdateRegistrar_RegisterGroupUpdate = 0x140A82370 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 81 EC C0 00 00 00 48 8B BC 24 00 01 00 00, expected: 1, index: 0
+constexpr uintptr_t UpdateRegistrar_RegisterBucketUpdate = 0x140A82240 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 81 EC C0 00 00 00 48 8B BC 24 08 01 00 00, expected: 1, index: 0
+#pragma endregion
 } // namespace RED4ext::Addresses
 // clang-format on

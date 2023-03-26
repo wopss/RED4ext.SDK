@@ -176,9 +176,9 @@ struct ResourceAsyncReference
 RED4EXT_ASSERT_SIZE(ResourceAsyncReference<>, 0x8);
 RED4EXT_ASSERT_OFFSET(ResourceAsyncReference<>, path, 0x0);
 
-template<typename T>
+template<typename T = CResource>
 using Ref = ResourceReference<T>;
 
-template<typename T>
+template<typename T = CResource>
 using RaRef = ResourceAsyncReference<T>;
 } // namespace RED4ext
