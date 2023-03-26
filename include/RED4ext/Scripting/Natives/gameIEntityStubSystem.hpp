@@ -2,6 +2,8 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldTransform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
@@ -74,6 +76,19 @@ struct EntityStubCreateRequest
         , transform(aTransform)
         , recordID(aRecordID)
     {
+    }
+
+    EntityStubCreateRequest(EntityID aEntityID, const Vector4& aPosition, const Quaternion& aOrientation,
+                            TweakDBID aRecordID)
+        : entityID(aEntityID)
+        , unk08(nullptr)
+        , transform()
+        , recordID(aRecordID)
+    {
+        transform.Position.x.Bits = static_cast<int32_t>(aPosition.X * (2 << 16));
+        transform.Position.y.Bits = static_cast<int32_t>(aPosition.Y * (2 << 16));
+        transform.Position.z.Bits = static_cast<int32_t>(aPosition.Z * (2 << 16));
+        transform.Orientation = aOrientation;
     }
 
     EntityID entityID;        // 00
