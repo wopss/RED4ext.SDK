@@ -5,6 +5,7 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/ResourcePath.hpp>
 
 namespace RED4ext
 {
@@ -39,7 +40,10 @@ RED4EXT_ASSERT_OFFSET(ArchiveGroup, basePath, 0x10);
 
 struct ResourceDepot
 {
+    virtual Memory::IAllocator GetAllocator() = 0;
     virtual ~ResourceDepot() = 0;
+    virtual void* RequestResource(void* aHandle, ResourcePath aPath, int32_t* aContext) = 0;
+    virtual bool IsResourceExists(ResourcePath aPath) = 0;
 
     static ResourceDepot* Get();
 

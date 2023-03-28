@@ -31,8 +31,8 @@ struct IPersistencySystem : IGameSystem
     virtual void sub_1D8() = 0;                                                                 // 1D8
     virtual void RemoveDynamicEntityState(uint32_t aDynamicEntityID) = 0;                       // 1E0
     virtual EntityPersistenceStatus GetEntityStatus(EntityID aEntityID) = 0;                    // 1E8
-    virtual void sub_1F0() = 0;                                                                 // 1F0
-    virtual void sub_1F8() = 0;                                                                 // 1F8
+    virtual void EnableDynamicEntityPersistence(uint32_t aDynamicEntityID) = 0;                 // 1F0
+    virtual void DisableDynamicEntityPersistence(uint32_t aDynamicEntityID) = 0;                // 1F8
     virtual void sub_200() = 0;                                                                 // 200
     virtual void sub_208() = 0;                                                                 // 208
     virtual void sub_210() = 0;                                                                 // 210
