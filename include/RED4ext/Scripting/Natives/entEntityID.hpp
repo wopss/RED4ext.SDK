@@ -53,7 +53,7 @@ struct EntityID
         return hash >= PersistableLowerBound && hash < PersistableUpperBound;
     }
 
-    [[nodiscard]] constexpr bool Transient() const noexcept
+    [[nodiscard]] constexpr bool IsTransient() const noexcept
     {
         return hash && !IsPersistable();
     }
