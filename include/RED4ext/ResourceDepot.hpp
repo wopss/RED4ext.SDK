@@ -43,7 +43,7 @@ struct ResourceDepot
     virtual Memory::IAllocator GetAllocator() = 0;
     virtual ~ResourceDepot() = 0;
     virtual void* RequestResource(void* aHandle, ResourcePath aPath, int32_t* aContext) = 0;
-    virtual bool IsResourceExists(ResourcePath aPath) = 0;
+    virtual bool ResourceExists(ResourcePath aPath) = 0;
 
     static ResourceDepot* Get();
 

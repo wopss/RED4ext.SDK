@@ -37,10 +37,10 @@ enum class UpdateBucketEnum : uint8_t
 
 enum class UpdateBucketMask : uint8_t
 {
-    Vehicle = 1,
-    Character = 2,
-    AttachedObject = 4,
-    Everything = 7,
+    Vehicle = 1 << static_cast<uint8_t>(UpdateBucketEnum::Vehicle),
+    Character = 1 << static_cast<uint8_t>(UpdateBucketEnum::Character),
+    AttachedObject = 1 << static_cast<uint8_t>(UpdateBucketEnum::AttachedObject),
+    Everything = Vehicle | Character | AttachedObject,
 };
 
 enum class UpdateBucketStage : uint8_t
