@@ -73,9 +73,9 @@ RED4EXT_ASSERT_OFFSET(FrameDetailedInfo, unk10, 0x10);
 
 struct FrameInfo
 {
-	float deltaTime;            // 00
+    float deltaTime;            // 00
     FrameDetailedInfo* details; // 08
-	uint8_t unk10;              // 10
+    uint8_t unk10;              // 10
 };
 RED4EXT_ASSERT_SIZE(FrameInfo, 0x18);
 RED4EXT_ASSERT_OFFSET(FrameDetailedInfo, deltaTime, 0x00);
@@ -91,7 +91,7 @@ struct UpdateRegistrar
     void RegisterUpdate(UpdateBucketMask aBuckets, UpdateBucketStage aStage, IUpdatableSystem* aSystem,
                         const char* aName, BucketUpdateCallback&& aCallback);
 };
-}
+} // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
 #include <RED4ext/SystemUpdate-inl.hpp>

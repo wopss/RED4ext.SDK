@@ -15,7 +15,7 @@ namespace game
 struct ComponentPS;
 struct EntityStubComponentPS;
 struct IPersistencySystem;
-}
+} // namespace game
 
 enum class EntityStubType : uint8_t
 {
@@ -64,7 +64,7 @@ RED4EXT_ASSERT_OFFSET(EntityStubToken, stub, 0x00);
 RED4EXT_ASSERT_OFFSET(EntityStubToken, entityID, 0x08);
 
 using EntityStubTokenPtr = SharedPtr<EntityStubToken>;
-using EntityStubCallback = Callback<void(*)(EntityStubTokenPtr& aToken), 128>;
+using EntityStubCallback = Callback<void (*)(EntityStubTokenPtr& aToken), 128>;
 
 struct EntityStubCreateRequest
 {

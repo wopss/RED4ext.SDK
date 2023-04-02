@@ -38,8 +38,8 @@ RED4EXT_INLINE RED4ext::CStackFrame::CStackFrame(IScriptable* aContext, char* aC
 {
     code = aCode;
     func = nullptr;
-    unk10 = 0;
-    unk18 = 0;
+    localVars = nullptr;
+    params = nullptr;
     unk20 = 0;
     unk28 = std::bit_cast<int64_t>(aUnk);
     data = nullptr;

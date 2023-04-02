@@ -108,9 +108,9 @@ struct CStackFrame
     CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
 
     char* code;              // 00
-    CBaseFunction* func;     // 08
-    int64_t unk10;           // 10
-    int64_t unk18;           // 18
+    CBaseFunction* func;     // 08 - For scripted functions
+    void* localVars;         // 10 - For scripted functions
+    void* params;            // 18 - For scripted functions
     int64_t unk20;           // 20
     int64_t unk28;           // 28
     void* data;              // 30 - The result of the opcode, points to the original instance (local, param, etc.)

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/entEntityID.hpp>
 
 namespace RED4ext::game
