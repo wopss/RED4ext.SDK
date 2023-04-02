@@ -4,13 +4,23 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/gameIEntitySpawnerEventsBroadcaster.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(game::IEntitySpawnerEventsBroadcaster, 0x48);
+using gameIEntitySpawnerEventsBroadcaster = game::IEntitySpawnerEventsBroadcaster;
+using IEntitySpawnerEventsBroadcaster = game::IEntitySpawnerEventsBroadcaster;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
 
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 struct IEntitySpawnerEventsBroadcaster : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIEntitySpawnerEventsBroadcaster";
@@ -21,5 +31,6 @@ RED4EXT_ASSERT_SIZE(IEntitySpawnerEventsBroadcaster, 0x48);
 } // namespace game
 using IEntitySpawnerEventsBroadcaster = game::IEntitySpawnerEventsBroadcaster;
 } // namespace RED4ext
+*/
 
 // clang-format on

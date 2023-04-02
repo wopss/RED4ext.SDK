@@ -217,6 +217,11 @@ def get_groups() -> List[Group]:
             Item(name='DestructUnk38', pattern='40 53 48 83 EC 20 48 8B D9 48 8B 49 08 48 85 C9 74 ? B8 FF FF FF FF F0 0F C1 01 83 F8 01 75', expected=73, index=1)
         ]),
 
+        Group(name='UpdateRegistrar', functions=[
+            Item(name='RegisterGroupUpdate', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 81 EC C0 00 00 00 48 8B BC 24 00 01 00 00'),
+            Item(name='RegisterBucketUpdate', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 81 EC C0 00 00 00 48 8B BC 24 08 01 00 00'),
+        ]),
+
         Group(name='CRTTIScriptReferenceType', functions=[
             Item(name='ctor', pattern='48 89 5C 24 18 57 48 83 EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 05 '),
             Item(name='Set', pattern='48 89 5C 24 20 57 48 83  EC 20 4C 89 41 18 48 8B')

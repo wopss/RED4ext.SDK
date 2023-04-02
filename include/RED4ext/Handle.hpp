@@ -63,6 +63,13 @@ public:
         return *reinterpret_cast<const Handle<U>*>(this);
     }
 
+    template<typename U>
+    operator Handle<U>&() noexcept
+    {
+        static_assert(std::is_base_of_v<U, T>, "Cannot conver handle because target type is incompatible.");
+        return *reinterpret_cast<Handle<U>*>(this);
+    }
+
     Handle& operator=(const Handle& aRhs) noexcept
     {
         Handle(aRhs).Swap(*this);
