@@ -2,17 +2,13 @@
 
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EntitySpawnerEventType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
 
 namespace RED4ext
 {
 struct EntityStub;
-
-namespace ent
-{
-struct EntityID;
-}
 
 namespace game
 {

@@ -2,7 +2,7 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/entEntityID.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
 
 namespace RED4ext::game
 {
