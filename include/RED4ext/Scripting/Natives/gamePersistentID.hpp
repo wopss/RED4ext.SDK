@@ -27,6 +27,11 @@ struct PersistentID
         return GetHash();
     }
 
+    constexpr operator bool() const noexcept
+    {
+        return IsDefined();
+    }
+
     [[nodiscard]] constexpr bool IsDefined() const noexcept
     {
         return entityID.IsDefined();

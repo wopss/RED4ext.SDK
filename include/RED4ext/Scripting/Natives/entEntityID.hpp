@@ -28,6 +28,11 @@ struct EntityID
         return hash;
     }
 
+    constexpr operator bool() const noexcept
+    {
+        return IsDefined();
+    }
+
     constexpr bool operator==(const EntityID& aRhs) const noexcept
     {
         return hash == aRhs.hash;
