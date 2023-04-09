@@ -8,6 +8,7 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Hashing/CRC.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/ResourceReference.hpp>
 #include <RED4ext/Unks.hpp>
@@ -56,9 +57,31 @@ struct TweakDBID
     };
 #pragma pack(pop)
 
-    TweakDBID() noexcept = default;
-    TweakDBID(uint64_t aValue) noexcept;
-    TweakDBID(uint32_t aNameHash, uint8_t aNameLength) noexcept;
+    constexpr TweakDBID() noexcept = default;
+
+    constexpr TweakDBID(uint64_t aValue) noexcept
+        : value(aValue)
+    {
+    }
+
+    constexpr TweakDBID(uint32_t aNameHash, uint8_t aNameLength) noexcept
+    {
+        name.hash = aNameHash;
+        name.length = aNameLength;
+        name.tdbOffsetBE[0] = 0;
+        name.tdbOffsetBE[1] = 0;
+        name.tdbOffsetBE[2] = 0;
+    }
+
+    constexpr TweakDBID(const char* aName) noexcept
+    {
+        name.hash = CRC32(aName, 0);
+        name.length = static_cast<uint8_t>(std::char_traits<char>::length(aName));
+        name.tdbOffsetBE[0] = 0;
+        name.tdbOffsetBE[1] = 0;
+        name.tdbOffsetBE[2] = 0;
+    }
+
     TweakDBID(const std::string_view aName) noexcept;
     TweakDBID(const TweakDBID& aBase, const std::string_view aName) noexcept;
     bool IsValid() const;

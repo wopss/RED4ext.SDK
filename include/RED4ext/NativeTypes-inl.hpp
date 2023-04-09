@@ -4,20 +4,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #endif
 
-#include <RED4ext/Hashing/CRC.hpp>
 #include <RED4ext/RTTISystem.hpp>
-
-RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(uint64_t aValue) noexcept
-    : value(aValue)
-{
-}
-
-RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(uint32_t aNameHash, uint8_t aNameLength) noexcept
-{
-    name.hash = aNameHash;
-    name.length = aNameLength;
-    std::memset(name.tdbOffsetBE, 0, sizeof(name.tdbOffsetBE));
-}
 
 RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(const std::string_view aName) noexcept
 {
