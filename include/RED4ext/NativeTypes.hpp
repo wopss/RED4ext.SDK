@@ -57,7 +57,10 @@ struct TweakDBID
     };
 #pragma pack(pop)
 
-    constexpr TweakDBID() noexcept = default;
+    constexpr TweakDBID() noexcept
+        : value(0)
+    {
+    }
 
     constexpr TweakDBID(uint64_t aValue) noexcept
         : value(aValue)
