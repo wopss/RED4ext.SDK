@@ -80,6 +80,19 @@ struct DynArray
         return entries[aIndex];
     }
 
+    bool Contains(const T& aItem) const
+    {
+        for (uint32_t i = 0; i != size; ++i)
+        {
+            if (aItem == entries[i])
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     void PushBack(const T& aItem)
     {
         EmplaceBack(std::forward<const T&>(aItem));
