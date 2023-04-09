@@ -2,7 +2,7 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/entEntityID.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
 
 namespace RED4ext::game
 {
@@ -25,6 +25,11 @@ struct PersistentID
     constexpr operator uint64_t() const noexcept
     {
         return GetHash();
+    }
+
+    constexpr operator bool() const noexcept
+    {
+        return IsDefined();
     }
 
     [[nodiscard]] constexpr bool IsDefined() const noexcept

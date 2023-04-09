@@ -4,13 +4,22 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkCharacterEvent.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::CharacterEvent, 0x98);
+using inkCharacterEvent = ink::CharacterEvent;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/InputEvent.hpp>
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 struct CharacterEvent : ink::InputEvent
 {
     static constexpr const char* NAME = "inkCharacterEvent";
@@ -21,5 +30,6 @@ struct CharacterEvent : ink::InputEvent
 RED4EXT_ASSERT_SIZE(CharacterEvent, 0x98);
 } // namespace ink
 } // namespace RED4ext
+*/
 
 // clang-format on
