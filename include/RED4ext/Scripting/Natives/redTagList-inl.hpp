@@ -14,16 +14,16 @@ RED4EXT_INLINE bool RED4ext::red::TagList::IsEmpty() const
     return !tags.size;
 }
 
-RED4EXT_INLINE bool RED4ext::red::TagList::HasTag(CName aTag) const
+RED4EXT_INLINE bool RED4ext::red::TagList::Contains(CName aTag) const
 {
     return tags.Contains(aTag);
 }
 
-RED4EXT_INLINE bool RED4ext::red::TagList::HasTags(const DynArray<CName>& aTags) const
+RED4EXT_INLINE bool RED4ext::red::TagList::Contains(const DynArray<CName>& aTags) const
 {
     for (auto tag : aTags)
     {
-        if (!HasTag(tag))
+        if (!Contains(tag))
         {
             return false;
         }
@@ -32,12 +32,12 @@ RED4EXT_INLINE bool RED4ext::red::TagList::HasTags(const DynArray<CName>& aTags)
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::red::TagList::HasTags(const TagList& aTags) const
+RED4EXT_INLINE bool RED4ext::red::TagList::Contains(const TagList& aTags) const
 {
-    return HasTags(aTags.tags);
+    return Contains(aTags.tags);
 }
 
-RED4EXT_INLINE void RED4ext::red::TagList::AddTag(CName aTag)
+RED4EXT_INLINE void RED4ext::red::TagList::Add(CName aTag)
 {
     if (!tags.Contains(aTag))
     {
@@ -45,35 +45,35 @@ RED4EXT_INLINE void RED4ext::red::TagList::AddTag(CName aTag)
     }
 }
 
-RED4EXT_INLINE void RED4ext::red::TagList::AddTags(const DynArray<CName>& aTags)
+RED4EXT_INLINE void RED4ext::red::TagList::Add(const DynArray<CName>& aTags)
 {
     for (auto tag : aTags)
     {
-        AddTag(tag);
+        Add(tag);
     }
 }
 
-RED4EXT_INLINE void RED4ext::red::TagList::AddTags(const TagList& aTags)
+RED4EXT_INLINE void RED4ext::red::TagList::Add(const TagList& aTags)
 {
-    AddTags(aTags.tags);
+    Add(aTags.tags);
 }
 
-RED4EXT_INLINE void RED4ext::red::TagList::RemoveTag(CName aTag)
+RED4EXT_INLINE void RED4ext::red::TagList::Remove(CName aTag)
 {
     tags.Remove(aTag);
 }
 
-RED4EXT_INLINE void RED4ext::red::TagList::RemoveTags(const DynArray<CName>& aTags)
+RED4EXT_INLINE void RED4ext::red::TagList::Remove(const DynArray<CName>& aTags)
 {
     for (auto tag : aTags)
     {
-        RemoveTag(tag);
+        Remove(tag);
     }
 }
 
-RED4EXT_INLINE void RED4ext::red::TagList::RemoveTags(const TagList& aTags)
+RED4EXT_INLINE void RED4ext::red::TagList::Remove(const TagList& aTags)
 {
-    RemoveTags(aTags.tags);
+    Remove(aTags.tags);
 }
 
 RED4EXT_INLINE void RED4ext::red::TagList::Clear()

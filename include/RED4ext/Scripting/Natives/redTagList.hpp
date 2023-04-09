@@ -16,16 +16,16 @@ struct TagList
     operator bool() const noexcept;
 
     [[nodiscard]] bool IsEmpty() const;
-    [[nodiscard]] bool HasTag(CName aTag) const;
-    [[nodiscard]] bool HasTags(const DynArray<CName>& aTags) const;
-    [[nodiscard]] bool HasTags(const TagList& aTags) const;
+    [[nodiscard]] bool Contains(CName aTag) const;
+    [[nodiscard]] bool Contains(const DynArray<CName>& aTags) const;
+    [[nodiscard]] bool Contains(const TagList& aTags) const;
 
-    void AddTag(CName aTag);
-    void AddTags(const DynArray<CName>& aTags);
-    void AddTags(const TagList& aTags);
-    void RemoveTag(CName aTag);
-    void RemoveTags(const DynArray<CName>& aTags);
-    void RemoveTags(const TagList& aTags);
+    void Add(CName aTag);
+    void Add(const DynArray<CName>& aTags);
+    void Add(const TagList& aTags);
+    void Remove(CName aTag);
+    void Remove(const DynArray<CName>& aTags);
+    void Remove(const TagList& aTags);
     void Clear();
 
     DynArray<CName> tags; // 00
