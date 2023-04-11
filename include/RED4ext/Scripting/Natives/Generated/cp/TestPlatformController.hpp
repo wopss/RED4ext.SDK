@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct TestPlatformController : game::Object
 {
     static constexpr const char* NAME = "cpTestPlatformController";
@@ -25,6 +26,7 @@ struct TestPlatformController : game::Object
 };
 RED4EXT_ASSERT_SIZE(TestPlatformController, 0x260);
 } // namespace cp
+using cpTestPlatformController = cp::TestPlatformController;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlaceholderNodeSocketInfo
 {
     static constexpr const char* NAME = "questPlaceholderNodeSocketInfo";
@@ -23,6 +24,7 @@ struct PlaceholderNodeSocketInfo
 };
 RED4EXT_ASSERT_SIZE(PlaceholderNodeSocketInfo, 0x10);
 } // namespace quest
+using questPlaceholderNodeSocketInfo = quest::PlaceholderNodeSocketInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct VoicesetComponent : game::Component
 {
     static constexpr const char* NAME = "scnVoicesetComponent";
@@ -23,6 +24,7 @@ struct VoicesetComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(VoicesetComponent, 0x330);
 } // namespace scn
+using scnVoicesetComponent = scn::VoicesetComponent;
 using VoicesetComponent = scn::VoicesetComponent;
 } // namespace RED4ext
 

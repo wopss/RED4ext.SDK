@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct OnScreenTestPredicate : game::interactions::IPredicateType
 {
     static constexpr const char* NAME = "gameinteractionsOnScreenTestPredicate";
@@ -19,6 +20,7 @@ struct OnScreenTestPredicate : game::interactions::IPredicateType
 };
 RED4EXT_ASSERT_SIZE(OnScreenTestPredicate, 0x30);
 } // namespace game::interactions
+using gameinteractionsOnScreenTestPredicate = game::interactions::OnScreenTestPredicate;
 } // namespace RED4ext
 
 // clang-format on

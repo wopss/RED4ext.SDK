@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetExclusiveFocusClueEntityEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetExclusiveFocusClueEntityEvent";
@@ -21,6 +22,7 @@ struct SetExclusiveFocusClueEntityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetExclusiveFocusClueEntityEvent, 0x48);
 } // namespace game
+using gameSetExclusiveFocusClueEntityEvent = game::SetExclusiveFocusClueEntityEvent;
 using SetExclusiveFocusClueEntityEvent = game::SetExclusiveFocusClueEntityEvent;
 } // namespace RED4ext
 

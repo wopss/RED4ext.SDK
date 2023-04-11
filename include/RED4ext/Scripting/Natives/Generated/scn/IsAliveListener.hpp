@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct IsAliveListener : game::IStatPoolsListener
 {
     static constexpr const char* NAME = "scnIsAliveListener";
@@ -20,6 +21,7 @@ struct IsAliveListener : game::IStatPoolsListener
 };
 RED4EXT_ASSERT_SIZE(IsAliveListener, 0x48);
 } // namespace scn
+using scnIsAliveListener = scn::IsAliveListener;
 } // namespace RED4ext
 
 // clang-format on

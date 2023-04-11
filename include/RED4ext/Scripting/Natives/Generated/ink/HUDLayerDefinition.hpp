@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct HudEntriesResource; }
 
-namespace ink { 
+namespace ink
+{
 struct HUDLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkHUDLayerDefinition";
@@ -23,6 +24,7 @@ struct HUDLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(HUDLayerDefinition, 0x50);
 } // namespace ink
+using inkHUDLayerDefinition = ink::HUDLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SEquipSlot
 {
     static constexpr const char* NAME = "gameSEquipSlot";
@@ -22,6 +23,7 @@ struct SEquipSlot
 };
 RED4EXT_ASSERT_SIZE(SEquipSlot, 0x14);
 } // namespace game
+using gameSEquipSlot = game::SEquipSlot;
 using SEquipSlot = game::SEquipSlot;
 } // namespace RED4ext
 

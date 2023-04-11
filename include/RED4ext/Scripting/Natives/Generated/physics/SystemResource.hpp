@@ -15,7 +15,8 @@ namespace RED4ext
 namespace physics { struct SystemBody; }
 namespace physics { struct SystemJoint; }
 
-namespace physics { 
+namespace physics
+{
 struct SystemResource : CResource
 {
     static constexpr const char* NAME = "physicsSystemResource";
@@ -26,6 +27,7 @@ struct SystemResource : CResource
 };
 RED4EXT_ASSERT_SIZE(SystemResource, 0x60);
 } // namespace physics
+using physicsSystemResource = physics::SystemResource;
 } // namespace RED4ext
 
 // clang-format on

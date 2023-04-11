@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct QueryPreset
 {
     static constexpr const char* NAME = "physicsQueryPreset";
@@ -20,6 +21,7 @@ struct QueryPreset
 };
 RED4EXT_ASSERT_SIZE(QueryPreset, 0x8);
 } // namespace physics
+using physicsQueryPreset = physics::QueryPreset;
 using QueryPreset = physics::QueryPreset;
 } // namespace RED4ext
 

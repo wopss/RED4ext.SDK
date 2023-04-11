@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct Controller : game::Component
 {
     static constexpr const char* NAME = "vehicleController";
@@ -24,6 +25,7 @@ struct Controller : game::Component
 };
 RED4EXT_ASSERT_SIZE(Controller, 0xD8);
 } // namespace vehicle
+using vehicleController = vehicle::Controller;
 } // namespace RED4ext
 
 // clang-format on

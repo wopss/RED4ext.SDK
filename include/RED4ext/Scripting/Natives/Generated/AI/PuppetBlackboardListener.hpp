@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct PuppetBlackboardListener : ISerializable
 {
     static constexpr const char* NAME = "AIPuppetBlackboardListener";
@@ -20,6 +21,7 @@ struct PuppetBlackboardListener : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PuppetBlackboardListener, 0x58);
 } // namespace AI
+using AIPuppetBlackboardListener = AI::PuppetBlackboardListener;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AnimationPersistentDataSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameAnimationPersistentDataSystem";
@@ -20,6 +21,7 @@ struct AnimationPersistentDataSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(AnimationPersistentDataSystem, 0x88);
 } // namespace game
+using gameAnimationPersistentDataSystem = game::AnimationPersistentDataSystem;
 } // namespace RED4ext
 
 // clang-format on

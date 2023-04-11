@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StartRecording_NodeType : quest::IRecordingNodeType
 {
     static constexpr const char* NAME = "questStartRecording_NodeType";
@@ -23,6 +24,7 @@ struct StartRecording_NodeType : quest::IRecordingNodeType
 };
 RED4EXT_ASSERT_SIZE(StartRecording_NodeType, 0x58);
 } // namespace quest
+using questStartRecording_NodeType = quest::StartRecording_NodeType;
 } // namespace RED4ext
 
 // clang-format on

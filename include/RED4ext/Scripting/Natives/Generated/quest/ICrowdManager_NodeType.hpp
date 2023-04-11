@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ICrowdManager_NodeType : quest::INodeType
 {
     static constexpr const char* NAME = "questICrowdManager_NodeType";
@@ -19,6 +20,7 @@ struct ICrowdManager_NodeType : quest::INodeType
 };
 RED4EXT_ASSERT_SIZE(ICrowdManager_NodeType, 0x30);
 } // namespace quest
+using questICrowdManager_NodeType = quest::ICrowdManager_NodeType;
 } // namespace RED4ext
 
 // clang-format on

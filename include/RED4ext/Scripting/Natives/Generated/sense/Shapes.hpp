@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace sense { struct IShape; }
 
-namespace sense { 
+namespace sense
+{
 struct Shapes
 {
     static constexpr const char* NAME = "senseShapes";
@@ -23,6 +24,7 @@ struct Shapes
 };
 RED4EXT_ASSERT_SIZE(Shapes, 0x10);
 } // namespace sense
+using senseShapes = sense::Shapes;
 } // namespace RED4ext
 
 // clang-format on

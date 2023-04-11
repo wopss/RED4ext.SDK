@@ -12,18 +12,20 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderMeshBlob : IRenderResourceBlob
 {
     static constexpr const char* NAME = "rendRenderMeshBlob";
     static constexpr const char* ALIAS = NAME;
 
     rend::RenderMeshBlobHeader header; // 30
-    DataBuffer renderBuffer; // 100
-    uint8_t unk128[0x130 - 0x128]; // 128
+    DataBuffer renderBuffer; // 110
+    uint8_t unk138[0x140 - 0x138]; // 138
 };
-RED4EXT_ASSERT_SIZE(RenderMeshBlob, 0x130);
+RED4EXT_ASSERT_SIZE(RenderMeshBlob, 0x140);
 } // namespace rend
+using rendRenderMeshBlob = rend::RenderMeshBlob;
 } // namespace RED4ext
 
 // clang-format on

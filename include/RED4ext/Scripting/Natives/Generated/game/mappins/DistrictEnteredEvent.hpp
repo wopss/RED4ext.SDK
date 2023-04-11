@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct DistrictEnteredEvent : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gamemappinsDistrictEnteredEvent";
@@ -25,6 +26,7 @@ struct DistrictEnteredEvent : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(DistrictEnteredEvent, 0x58);
 } // namespace game::mappins
+using gamemappinsDistrictEnteredEvent = game::mappins::DistrictEnteredEvent;
 using DistrictEnteredEvent = game::mappins::DistrictEnteredEvent;
 } // namespace RED4ext
 

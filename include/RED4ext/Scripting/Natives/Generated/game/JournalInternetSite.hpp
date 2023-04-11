@@ -16,7 +16,8 @@ namespace RED4ext
 namespace game { struct JournalPath; }
 namespace ink { struct TextureAtlas; }
 
-namespace game { 
+namespace game
+{
 struct JournalInternetSite : game::JournalFileEntry
 {
     static constexpr const char* NAME = "gameJournalInternetSite";
@@ -31,6 +32,7 @@ struct JournalInternetSite : game::JournalFileEntry
 };
 RED4EXT_ASSERT_SIZE(JournalInternetSite, 0xE0);
 } // namespace game
+using gameJournalInternetSite = game::JournalInternetSite;
 using JournalInternetSite = game::JournalInternetSite;
 } // namespace RED4ext
 

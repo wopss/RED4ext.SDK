@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_EyesTracksLookAt : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_EyesTracksLookAt";
@@ -28,6 +29,7 @@ struct AnimNode_EyesTracksLookAt : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_EyesTracksLookAt, 0xE0);
 } // namespace anim
+using animAnimNode_EyesTracksLookAt = anim::AnimNode_EyesTracksLookAt;
 } // namespace RED4ext
 
 // clang-format on

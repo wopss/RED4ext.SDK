@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MultiplayerChoiceTokenNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questMultiplayerChoiceTokenNodeDefinition";
@@ -21,6 +22,7 @@ struct MultiplayerChoiceTokenNodeDefinition : quest::SignalStoppingNodeDefinitio
 };
 RED4EXT_ASSERT_SIZE(MultiplayerChoiceTokenNodeDefinition, 0x58);
 } // namespace quest
+using questMultiplayerChoiceTokenNodeDefinition = quest::MultiplayerChoiceTokenNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

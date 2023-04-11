@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SelectCoverTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorSelectCoverTaskDefinition";
@@ -37,6 +38,7 @@ struct SelectCoverTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(SelectCoverTaskDefinition, 0x110);
 } // namespace AI::behavior
+using AIbehaviorSelectCoverTaskDefinition = AI::behavior::SelectCoverTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

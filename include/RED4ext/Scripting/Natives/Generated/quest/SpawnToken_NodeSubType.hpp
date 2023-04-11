@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SpawnToken_NodeSubType : quest::IContentTokenManager_NodeSubType
 {
     static constexpr const char* NAME = "questSpawnToken_NodeSubType";
@@ -21,6 +22,7 @@ struct SpawnToken_NodeSubType : quest::IContentTokenManager_NodeSubType
 };
 RED4EXT_ASSERT_SIZE(SpawnToken_NodeSubType, 0x38);
 } // namespace quest
+using questSpawnToken_NodeSubType = quest::SpawnToken_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

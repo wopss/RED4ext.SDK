@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct RuntimeGenericMappinData : game::mappins::IRuntimeMappinData
 {
     static constexpr const char* NAME = "gamemappinsRuntimeGenericMappinData";
@@ -19,6 +20,7 @@ struct RuntimeGenericMappinData : game::mappins::IRuntimeMappinData
 };
 RED4EXT_ASSERT_SIZE(RuntimeGenericMappinData, 0x50);
 } // namespace game::mappins
+using gamemappinsRuntimeGenericMappinData = game::mappins::RuntimeGenericMappinData;
 } // namespace RED4ext
 
 // clang-format on

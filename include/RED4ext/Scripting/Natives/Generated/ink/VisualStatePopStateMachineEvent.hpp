@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VisualStatePopStateMachineEvent : red::Event
 {
     static constexpr const char* NAME = "inkVisualStatePopStateMachineEvent";
@@ -20,6 +21,7 @@ struct VisualStatePopStateMachineEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisualStatePopStateMachineEvent, 0x48);
 } // namespace ink
+using inkVisualStatePopStateMachineEvent = ink::VisualStatePopStateMachineEvent;
 } // namespace RED4ext
 
 // clang-format on

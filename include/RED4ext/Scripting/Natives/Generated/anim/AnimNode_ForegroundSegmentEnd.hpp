@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_ForegroundSegmentEnd : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_ForegroundSegmentEnd";
@@ -21,6 +22,7 @@ struct AnimNode_ForegroundSegmentEnd : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_ForegroundSegmentEnd, 0x80);
 } // namespace anim
+using animAnimNode_ForegroundSegmentEnd = anim::AnimNode_ForegroundSegmentEnd;
 } // namespace RED4ext
 
 // clang-format on

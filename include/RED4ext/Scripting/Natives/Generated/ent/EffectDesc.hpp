@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace ent { 
+namespace ent
+{
 struct EffectDesc : ISerializable
 {
     static constexpr const char* NAME = "entEffectDesc";
@@ -32,6 +33,7 @@ struct EffectDesc : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EffectDesc, 0xC0);
 } // namespace ent
+using entEffectDesc = ent::EffectDesc;
 } // namespace RED4ext
 
 // clang-format on

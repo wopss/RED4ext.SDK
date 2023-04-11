@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct EntityItemsListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "scnEntityItemsListener";
@@ -20,6 +21,7 @@ struct EntityItemsListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(EntityItemsListener, 0x50);
 } // namespace scn
+using scnEntityItemsListener = scn::EntityItemsListener;
 } // namespace RED4ext
 
 // clang-format on

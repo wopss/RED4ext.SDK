@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn::screenplay { 
+namespace scn::screenplay
+{
 struct StandaloneComment
 {
     static constexpr const char* NAME = "scnscreenplayStandaloneComment";
@@ -23,6 +24,7 @@ struct StandaloneComment
 };
 RED4EXT_ASSERT_SIZE(StandaloneComment, 0x28);
 } // namespace scn::screenplay
+using scnscreenplayStandaloneComment = scn::screenplay::StandaloneComment;
 } // namespace RED4ext
 
 // clang-format on

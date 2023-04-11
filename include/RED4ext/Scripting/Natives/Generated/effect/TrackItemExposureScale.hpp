@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemExposureScale : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemExposureScale";
@@ -28,6 +29,7 @@ struct TrackItemExposureScale : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemExposureScale, 0x80);
 } // namespace effect
+using effectTrackItemExposureScale = effect::TrackItemExposureScale;
 } // namespace RED4ext
 
 // clang-format on

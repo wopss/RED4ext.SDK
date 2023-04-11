@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct GradientEntry : ISerializable
 {
     static constexpr const char* NAME = "rendGradientEntry";
@@ -22,6 +23,7 @@ struct GradientEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(GradientEntry, 0x38);
 } // namespace rend
+using rendGradientEntry = rend::GradientEntry;
 } // namespace RED4ext
 
 // clang-format on

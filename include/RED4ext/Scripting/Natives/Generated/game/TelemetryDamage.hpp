@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TelemetryDamage
 {
     static constexpr const char* NAME = "gameTelemetryDamage";
@@ -31,6 +32,7 @@ struct TelemetryDamage
 };
 RED4EXT_ASSERT_SIZE(TelemetryDamage, 0xD8);
 } // namespace game
+using gameTelemetryDamage = game::TelemetryDamage;
 using TelemetryDamage = game::TelemetryDamage;
 } // namespace RED4ext
 

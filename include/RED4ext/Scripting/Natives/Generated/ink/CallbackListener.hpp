@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace ink { 
+namespace ink
+{
 struct CallbackListener
 {
     static constexpr const char* NAME = "inkCallbackListener";
@@ -25,6 +26,7 @@ struct CallbackListener
 };
 RED4EXT_ASSERT_SIZE(CallbackListener, 0x28);
 } // namespace ink
+using inkCallbackListener = ink::CallbackListener;
 } // namespace RED4ext
 
 // clang-format on

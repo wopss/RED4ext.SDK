@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace appearance { 
+namespace appearance
+{
 struct CensorshipEntry
 {
     static constexpr const char* NAME = "appearanceCensorshipEntry";
@@ -23,6 +24,7 @@ struct CensorshipEntry
 };
 RED4EXT_ASSERT_SIZE(CensorshipEntry, 0x18);
 } // namespace appearance
+using appearanceCensorshipEntry = appearance::CensorshipEntry;
 } // namespace RED4ext
 
 // clang-format on

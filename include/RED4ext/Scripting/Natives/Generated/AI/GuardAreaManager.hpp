@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct GuardAreaManager : AI::IGuardAreaManager
 {
     static constexpr const char* NAME = "AIGuardAreaManager";
@@ -20,6 +21,7 @@ struct GuardAreaManager : AI::IGuardAreaManager
 };
 RED4EXT_ASSERT_SIZE(GuardAreaManager, 0x160);
 } // namespace AI
+using AIGuardAreaManager = AI::GuardAreaManager;
 using RestrictMovementAreaManager = AI::GuardAreaManager;
 } // namespace RED4ext
 

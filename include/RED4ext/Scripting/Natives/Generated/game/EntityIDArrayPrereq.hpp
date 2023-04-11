@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityIDArrayPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameEntityIDArrayPrereq";
@@ -19,6 +20,7 @@ struct EntityIDArrayPrereq : game::IPrereq
 };
 RED4EXT_ASSERT_SIZE(EntityIDArrayPrereq, 0x40);
 } // namespace game
+using gameEntityIDArrayPrereq = game::EntityIDArrayPrereq;
 using EntityIDArrayPrereq = game::EntityIDArrayPrereq;
 } // namespace RED4ext
 

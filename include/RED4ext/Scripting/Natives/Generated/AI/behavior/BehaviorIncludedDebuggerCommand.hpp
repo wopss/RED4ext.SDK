@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct BehaviorIncludedDebuggerCommand : AI::behavior::IDebuggerCommand
 {
     static constexpr const char* NAME = "AIbehaviorBehaviorIncludedDebuggerCommand";
@@ -22,6 +23,7 @@ struct BehaviorIncludedDebuggerCommand : AI::behavior::IDebuggerCommand
 };
 RED4EXT_ASSERT_SIZE(BehaviorIncludedDebuggerCommand, 0x40);
 } // namespace AI::behavior
+using AIbehaviorBehaviorIncludedDebuggerCommand = AI::behavior::BehaviorIncludedDebuggerCommand;
 } // namespace RED4ext
 
 // clang-format on

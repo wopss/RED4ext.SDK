@@ -16,7 +16,8 @@ namespace game { struct IBlackboard; }
 namespace game { struct Object; }
 namespace game::bb { struct ScriptDefinition; }
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineScriptInterface";
@@ -31,6 +32,7 @@ struct MachineScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineScriptInterface, 0x90);
 } // namespace game::state
+using gamestateMachineScriptInterface = game::state::MachineScriptInterface;
 using StateScriptInterface = game::state::MachineScriptInterface;
 } // namespace RED4ext
 

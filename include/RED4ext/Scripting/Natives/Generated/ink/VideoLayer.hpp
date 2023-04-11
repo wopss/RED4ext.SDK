@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VideoLayer : ink::FullScreenLayer
 {
     static constexpr const char* NAME = "inkVideoLayer";
@@ -19,6 +20,7 @@ struct VideoLayer : ink::FullScreenLayer
 };
 RED4EXT_ASSERT_SIZE(VideoLayer, 0x150);
 } // namespace ink
+using inkVideoLayer = ink::VideoLayer;
 } // namespace RED4ext
 
 // clang-format on

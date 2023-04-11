@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct AvoidLineOfSightCoverSelection : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIAvoidLineOfSightCoverSelection";
@@ -20,6 +21,7 @@ struct AvoidLineOfSightCoverSelection : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(AvoidLineOfSightCoverSelection, 0x20);
 } // namespace AI
+using AIAvoidLineOfSightCoverSelection = AI::AvoidLineOfSightCoverSelection;
 } // namespace RED4ext
 
 // clang-format on

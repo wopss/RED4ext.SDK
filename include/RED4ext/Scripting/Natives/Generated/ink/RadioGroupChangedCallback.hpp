@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RadioGroupChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkRadioGroupChangedCallback";
@@ -20,6 +21,7 @@ struct RadioGroupChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(RadioGroupChangedCallback, 0x38);
 } // namespace ink
+using inkRadioGroupChangedCallback = ink::RadioGroupChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

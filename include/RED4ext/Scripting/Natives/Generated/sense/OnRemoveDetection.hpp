@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace sense { 
+namespace sense
+{
 struct OnRemoveDetection : red::Event
 {
     static constexpr const char* NAME = "senseOnRemoveDetection";
@@ -23,6 +24,7 @@ struct OnRemoveDetection : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnRemoveDetection, 0x50);
 } // namespace sense
+using senseOnRemoveDetection = sense::OnRemoveDetection;
 using OnRemoveDetection = sense::OnRemoveDetection;
 } // namespace RED4ext
 

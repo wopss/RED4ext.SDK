@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineStateSocketDefinition : graph::GraphSocketDefinition
 {
     static constexpr const char* NAME = "gamestateMachineStateSocketDefinition";
@@ -19,6 +20,7 @@ struct MachineStateSocketDefinition : graph::GraphSocketDefinition
 };
 RED4EXT_ASSERT_SIZE(MachineStateSocketDefinition, 0x58);
 } // namespace game::state
+using gamestateMachineStateSocketDefinition = game::state::MachineStateSocketDefinition;
 } // namespace RED4ext
 
 // clang-format on

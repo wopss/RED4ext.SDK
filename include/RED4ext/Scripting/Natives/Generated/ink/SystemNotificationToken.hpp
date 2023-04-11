@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SystemNotificationToken : IScriptable
 {
     static constexpr const char* NAME = "inkSystemNotificationToken";
@@ -20,6 +21,7 @@ struct SystemNotificationToken : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SystemNotificationToken, 0xF0);
 } // namespace ink
+using inkSystemNotificationToken = ink::SystemNotificationToken;
 } // namespace RED4ext
 
 // clang-format on

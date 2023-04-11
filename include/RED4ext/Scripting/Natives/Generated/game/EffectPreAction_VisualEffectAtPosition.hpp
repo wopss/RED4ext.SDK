@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace game { 
+namespace game
+{
 struct EffectPreAction_VisualEffectAtPosition : game::EffectPreAction
 {
     static constexpr const char* NAME = "gameEffectPreAction_VisualEffectAtPosition";
@@ -28,6 +29,7 @@ struct EffectPreAction_VisualEffectAtPosition : game::EffectPreAction
 };
 RED4EXT_ASSERT_SIZE(EffectPreAction_VisualEffectAtPosition, 0x58);
 } // namespace game
+using gameEffectPreAction_VisualEffectAtPosition = game::EffectPreAction_VisualEffectAtPosition;
 } // namespace RED4ext
 
 // clang-format on

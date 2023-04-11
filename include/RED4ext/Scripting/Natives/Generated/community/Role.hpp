@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace community { 
+namespace community
+{
 struct Role : ISerializable
 {
     static constexpr const char* NAME = "communityRole";
@@ -21,6 +22,7 @@ struct Role : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Role, 0x38);
 } // namespace community
+using communityRole = community::Role;
 } // namespace RED4ext
 
 // clang-format on

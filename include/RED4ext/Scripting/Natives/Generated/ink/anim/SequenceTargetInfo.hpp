@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct SequenceTargetInfo : ISerializable
 {
     static constexpr const char* NAME = "inkanimSequenceTargetInfo";
@@ -21,6 +22,7 @@ struct SequenceTargetInfo : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SequenceTargetInfo, 0x40);
 } // namespace ink::anim
+using inkanimSequenceTargetInfo = ink::anim::SequenceTargetInfo;
 } // namespace RED4ext
 
 // clang-format on

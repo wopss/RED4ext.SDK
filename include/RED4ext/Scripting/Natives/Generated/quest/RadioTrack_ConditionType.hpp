@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RadioTrack_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questRadioTrack_ConditionType";
@@ -23,6 +24,7 @@ struct RadioTrack_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(RadioTrack_ConditionType, 0x48);
 } // namespace quest
+using questRadioTrack_ConditionType = quest::RadioTrack_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

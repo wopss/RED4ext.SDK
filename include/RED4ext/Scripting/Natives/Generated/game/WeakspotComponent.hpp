@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WeakspotComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameWeakspotComponent";
@@ -20,6 +21,7 @@ struct WeakspotComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(WeakspotComponent, 0xA0);
 } // namespace game
+using gameWeakspotComponent = game::WeakspotComponent;
 using WeakspotComponent = game::WeakspotComponent;
 } // namespace RED4ext
 

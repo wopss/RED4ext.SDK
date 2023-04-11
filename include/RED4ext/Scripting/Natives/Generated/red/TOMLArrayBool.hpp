@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct TOMLArrayBool : red::TOMLBaseValue
 {
     static constexpr const char* NAME = "redTOMLArrayBool";
@@ -20,6 +21,7 @@ struct TOMLArrayBool : red::TOMLBaseValue
 };
 RED4EXT_ASSERT_SIZE(TOMLArrayBool, 0x60);
 } // namespace red
+using redTOMLArrayBool = red::TOMLArrayBool;
 } // namespace RED4ext
 
 // clang-format on

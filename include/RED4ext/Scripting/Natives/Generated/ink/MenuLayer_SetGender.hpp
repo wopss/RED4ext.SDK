@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuLayer_SetGender : red::Event
 {
     static constexpr const char* NAME = "inkMenuLayer_SetGender";
@@ -20,6 +21,7 @@ struct MenuLayer_SetGender : red::Event
 };
 RED4EXT_ASSERT_SIZE(MenuLayer_SetGender, 0x48);
 } // namespace ink
+using inkMenuLayer_SetGender = ink::MenuLayer_SetGender;
 } // namespace RED4ext
 
 // clang-format on

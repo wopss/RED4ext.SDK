@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_AutoJoinServer : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmState_AutoJoinServer";
@@ -20,6 +21,7 @@ struct State_AutoJoinServer : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(State_AutoJoinServer, 0x140);
 } // namespace gsm
+using gsmState_AutoJoinServer = gsm::State_AutoJoinServer;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace services { 
+namespace services
+{
 struct CloudSavesQueryStatusChangeCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "servicesCloudSavesQueryStatusChangeCallback";
@@ -20,6 +21,7 @@ struct CloudSavesQueryStatusChangeCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(CloudSavesQueryStatusChangeCallback, 0x38);
 } // namespace services
+using servicesCloudSavesQueryStatusChangeCallback = services::CloudSavesQueryStatusChangeCallback;
 } // namespace RED4ext
 
 // clang-format on

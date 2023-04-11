@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct UnmountEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnUnmountEvent";
@@ -22,6 +23,7 @@ struct UnmountEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(UnmountEvent, 0x60);
 } // namespace scn
+using scnUnmountEvent = scn::UnmountEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficLanePolygonRepresentation
 {
     static constexpr const char* NAME = "worldTrafficLanePolygonRepresentation";
@@ -23,6 +24,7 @@ struct TrafficLanePolygonRepresentation
 };
 RED4EXT_ASSERT_SIZE(TrafficLanePolygonRepresentation, 0x20);
 } // namespace world
+using worldTrafficLanePolygonRepresentation = world::TrafficLanePolygonRepresentation;
 } // namespace RED4ext
 
 // clang-format on

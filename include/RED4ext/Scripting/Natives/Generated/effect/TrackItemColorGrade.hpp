@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemColorGrade : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemColorGrade";
@@ -27,6 +28,7 @@ struct TrackItemColorGrade : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemColorGrade, 0x108);
 } // namespace effect
+using effectTrackItemColorGrade = effect::TrackItemColorGrade;
 } // namespace RED4ext
 
 // clang-format on

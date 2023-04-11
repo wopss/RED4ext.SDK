@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::projectile { struct TrajectoryParams; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct SetUpAndLaunchEvent : game::projectile::LaunchEvent
 {
     static constexpr const char* NAME = "gameprojectileSetUpAndLaunchEvent";
@@ -25,6 +26,7 @@ struct SetUpAndLaunchEvent : game::projectile::LaunchEvent
 };
 RED4EXT_ASSERT_SIZE(SetUpAndLaunchEvent, 0x1A0);
 } // namespace game::projectile
+using gameprojectileSetUpAndLaunchEvent = game::projectile::SetUpAndLaunchEvent;
 } // namespace RED4ext
 
 // clang-format on

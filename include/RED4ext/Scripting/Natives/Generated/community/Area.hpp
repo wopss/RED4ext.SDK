@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace community { 
+namespace community
+{
 struct Area : ISerializable
 {
     static constexpr const char* NAME = "communityArea";
@@ -22,6 +23,7 @@ struct Area : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Area, 0x40);
 } // namespace community
+using communityArea = community::Area;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct InterestingConversationsAreaNotifier : world::ITriggerAreaNotifer
 {
     static constexpr const char* NAME = "worldInterestingConversationsAreaNotifier";
@@ -19,6 +20,7 @@ struct InterestingConversationsAreaNotifier : world::ITriggerAreaNotifer
 };
 RED4EXT_ASSERT_SIZE(InterestingConversationsAreaNotifier, 0xB8);
 } // namespace world
+using worldInterestingConversationsAreaNotifier = world::InterestingConversationsAreaNotifier;
 } // namespace RED4ext
 
 // clang-format on

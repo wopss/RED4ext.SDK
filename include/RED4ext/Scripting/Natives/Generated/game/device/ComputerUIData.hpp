@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct ComputerUIData
 {
     static constexpr const char* NAME = "gamedeviceComputerUIData";
@@ -22,6 +23,7 @@ struct ComputerUIData
 };
 RED4EXT_ASSERT_SIZE(ComputerUIData, 0x20);
 } // namespace game::device
+using gamedeviceComputerUIData = game::device::ComputerUIData;
 using ComputerUIData = game::device::ComputerUIData;
 } // namespace RED4ext
 

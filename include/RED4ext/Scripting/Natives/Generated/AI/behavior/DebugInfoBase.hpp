@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DebugInfoBase : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorDebugInfoBase";
@@ -21,6 +22,7 @@ struct DebugInfoBase : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DebugInfoBase, 0x50);
 } // namespace AI::behavior
+using AIbehaviorDebugInfoBase = AI::behavior::DebugInfoBase;
 } // namespace RED4ext
 
 // clang-format on

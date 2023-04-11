@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace services { 
+namespace services
+{
 struct TrialHelper
 {
     static constexpr const char* NAME = "servicesTrialHelper";
@@ -19,6 +20,7 @@ struct TrialHelper
 };
 RED4EXT_ASSERT_SIZE(TrialHelper, 0x1);
 } // namespace services
+using servicesTrialHelper = services::TrialHelper;
 using TrialHelper = services::TrialHelper;
 } // namespace RED4ext
 

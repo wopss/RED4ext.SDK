@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_MeleeIKData : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_MeleeIKData";
@@ -25,6 +26,7 @@ struct AnimFeature_MeleeIKData : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_MeleeIKData, 0x80);
 } // namespace anim
+using animAnimFeature_MeleeIKData = anim::AnimFeature_MeleeIKData;
 using AnimFeature_MeleeIKData = anim::AnimFeature_MeleeIKData;
 } // namespace RED4ext
 

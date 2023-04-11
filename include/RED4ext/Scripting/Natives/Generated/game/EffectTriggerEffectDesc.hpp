@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace game { 
+namespace game
+{
 struct EffectTriggerEffectDesc : ISerializable
 {
     static constexpr const char* NAME = "gameEffectTriggerEffectDesc";
@@ -32,6 +33,7 @@ struct EffectTriggerEffectDesc : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EffectTriggerEffectDesc, 0x58);
 } // namespace game
+using gameEffectTriggerEffectDesc = game::EffectTriggerEffectDesc;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct ITransformBinding; }
 
-namespace ent { 
+namespace ent
+{
 struct IPlacedComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entIPlacedComponent";
@@ -27,6 +28,7 @@ struct IPlacedComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(IPlacedComponent, 0x120);
 } // namespace ent
+using entIPlacedComponent = ent::IPlacedComponent;
 using IPlacedComponent = ent::IPlacedComponent;
 } // namespace RED4ext
 

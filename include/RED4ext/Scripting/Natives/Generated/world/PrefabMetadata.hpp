@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PrefabMetadata : IScriptable
 {
     static constexpr const char* NAME = "worldPrefabMetadata";
@@ -19,6 +20,7 @@ struct PrefabMetadata : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PrefabMetadata, 0x40);
 } // namespace world
+using worldPrefabMetadata = world::PrefabMetadata;
 } // namespace RED4ext
 
 // clang-format on

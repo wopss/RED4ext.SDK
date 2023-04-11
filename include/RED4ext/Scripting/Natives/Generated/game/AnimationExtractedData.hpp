@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AnimationExtractedData
 {
     static constexpr const char* NAME = "gameAnimationExtractedData";
@@ -26,6 +27,7 @@ struct AnimationExtractedData
 };
 RED4EXT_ASSERT_SIZE(AnimationExtractedData, 0x20);
 } // namespace game
+using gameAnimationExtractedData = game::AnimationExtractedData;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct Archetype; }
 
-namespace vehicle { 
+namespace vehicle
+{
 struct BaseObject : game::Object
 {
     static constexpr const char* NAME = "vehicleBaseObject";
@@ -25,6 +26,7 @@ struct BaseObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(BaseObject, 0x980);
 } // namespace vehicle
+using vehicleBaseObject = vehicle::BaseObject;
 using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext
 

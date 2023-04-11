@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraAddAttachmentsResult : ISerializable
 {
     static constexpr const char* NAME = "toolsJiraAddAttachmentsResult";
@@ -22,6 +23,7 @@ struct JiraAddAttachmentsResult : ISerializable
 };
 RED4EXT_ASSERT_SIZE(JiraAddAttachmentsResult, 0x40);
 } // namespace tools
+using toolsJiraAddAttachmentsResult = tools::JiraAddAttachmentsResult;
 } // namespace RED4ext
 
 // clang-format on

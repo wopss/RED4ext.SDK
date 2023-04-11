@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct VisualOffsetTransformComponent : ent::TransformComponent
 {
     static constexpr const char* NAME = "entVisualOffsetTransformComponent";
@@ -19,6 +20,7 @@ struct VisualOffsetTransformComponent : ent::TransformComponent
 };
 RED4EXT_ASSERT_SIZE(VisualOffsetTransformComponent, 0x120);
 } // namespace ent
+using entVisualOffsetTransformComponent = ent::VisualOffsetTransformComponent;
 } // namespace RED4ext
 
 // clang-format on

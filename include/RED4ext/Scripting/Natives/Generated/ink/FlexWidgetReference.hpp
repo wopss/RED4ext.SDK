@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FlexWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkFlexWidgetReference";
@@ -19,6 +20,7 @@ struct FlexWidgetReference : ink::CompoundWidgetReference
 };
 RED4EXT_ASSERT_SIZE(FlexWidgetReference, 0x18);
 } // namespace ink
+using inkFlexWidgetReference = ink::FlexWidgetReference;
 using inkFlexRef = ink::FlexWidgetReference;
 } // namespace RED4ext
 

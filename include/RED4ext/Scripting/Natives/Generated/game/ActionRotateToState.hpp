@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionRotateToState : game::ActionRotateBaseState
 {
     static constexpr const char* NAME = "gameActionRotateToState";
@@ -19,6 +20,7 @@ struct ActionRotateToState : game::ActionRotateBaseState
 };
 RED4EXT_ASSERT_SIZE(ActionRotateToState, 0x40);
 } // namespace game
+using gameActionRotateToState = game::ActionRotateToState;
 } // namespace RED4ext
 
 // clang-format on

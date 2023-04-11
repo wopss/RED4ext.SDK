@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ICombatGuardAreaCondition; }
 
-namespace AI { 
+namespace AI
+{
 struct CombatGuardAreaConnectedCommunity
 {
     static constexpr const char* NAME = "AICombatGuardAreaConnectedCommunity";
@@ -25,6 +26,7 @@ struct CombatGuardAreaConnectedCommunity
 };
 RED4EXT_ASSERT_SIZE(CombatGuardAreaConnectedCommunity, 0x48);
 } // namespace AI
+using AICombatGuardAreaConnectedCommunity = AI::CombatGuardAreaConnectedCommunity;
 } // namespace RED4ext
 
 // clang-format on

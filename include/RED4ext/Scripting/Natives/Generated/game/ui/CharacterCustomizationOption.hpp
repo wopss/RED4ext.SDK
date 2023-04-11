@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::ui { struct CharacterCustomizationInfo; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct CharacterCustomizationOption : IScriptable
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationOption";
@@ -31,6 +32,7 @@ struct CharacterCustomizationOption : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationOption, 0x60);
 } // namespace game::ui
+using gameuiCharacterCustomizationOption = game::ui::CharacterCustomizationOption;
 using CharacterCustomizationOption = game::ui::CharacterCustomizationOption;
 } // namespace RED4ext
 

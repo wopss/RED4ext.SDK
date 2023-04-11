@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct JournalQuestObjectiveCounter_NodeType : quest::IJournal_NodeType
 {
     static constexpr const char* NAME = "questJournalQuestObjectiveCounter_NodeType";
@@ -19,6 +20,7 @@ struct JournalQuestObjectiveCounter_NodeType : quest::IJournal_NodeType
 };
 RED4EXT_ASSERT_SIZE(JournalQuestObjectiveCounter_NodeType, 0x48);
 } // namespace quest
+using questJournalQuestObjectiveCounter_NodeType = quest::JournalQuestObjectiveCounter_NodeType;
 } // namespace RED4ext
 
 // clang-format on

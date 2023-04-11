@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimsetVariableCondition : anim::IRuntimeCondition
 {
     static constexpr const char* NAME = "animAnimsetVariableCondition";
@@ -21,6 +22,7 @@ struct AnimsetVariableCondition : anim::IRuntimeCondition
 };
 RED4EXT_ASSERT_SIZE(AnimsetVariableCondition, 0x38);
 } // namespace anim
+using animAnimsetVariableCondition = anim::AnimsetVariableCondition;
 } // namespace RED4ext
 
 // clang-format on

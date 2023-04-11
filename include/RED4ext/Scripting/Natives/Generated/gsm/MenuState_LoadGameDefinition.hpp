@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_LoadGameDefinition : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmMenuState_LoadGameDefinition";
@@ -20,6 +21,7 @@ struct MenuState_LoadGameDefinition : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(MenuState_LoadGameDefinition, 0x100);
 } // namespace gsm
+using gsmMenuState_LoadGameDefinition = gsm::MenuState_LoadGameDefinition;
 } // namespace RED4ext
 
 // clang-format on

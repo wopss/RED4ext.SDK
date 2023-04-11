@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::expression { 
+namespace AI::behavior::expression
+{
 struct Script : AI::behavior::ScriptBase
 {
     static constexpr const char* NAME = "AIbehaviorexpressionScript";
@@ -20,6 +21,7 @@ struct Script : AI::behavior::ScriptBase
 };
 RED4EXT_ASSERT_SIZE(Script, 0x48);
 } // namespace AI::behavior::expression
+using AIbehaviorexpressionScript = AI::behavior::expression::Script;
 } // namespace RED4ext
 
 // clang-format on

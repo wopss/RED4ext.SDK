@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace physics::cloth { struct ClothCapsuleExportData; }
 
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamCloth : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamCloth";
@@ -28,6 +29,7 @@ struct MeshParamCloth : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamCloth, 0x70);
 } // namespace mesh
+using meshMeshParamCloth = mesh::MeshParamCloth;
 } // namespace RED4ext
 
 // clang-format on

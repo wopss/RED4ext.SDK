@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace scn { struct InterruptFactConditionType; }
 
-namespace scn { 
+namespace scn
+{
 struct CheckFactInterruptConditionParams
 {
     static constexpr const char* NAME = "scnCheckFactInterruptConditionParams";
@@ -22,6 +23,7 @@ struct CheckFactInterruptConditionParams
 };
 RED4EXT_ASSERT_SIZE(CheckFactInterruptConditionParams, 0x10);
 } // namespace scn
+using scnCheckFactInterruptConditionParams = scn::CheckFactInterruptConditionParams;
 } // namespace RED4ext
 
 // clang-format on

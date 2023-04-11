@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualCompoundItemSelectControllerCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkVirtualCompoundItemSelectControllerCallback";
@@ -20,6 +21,7 @@ struct VirtualCompoundItemSelectControllerCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(VirtualCompoundItemSelectControllerCallback, 0x38);
 } // namespace ink
+using inkVirtualCompoundItemSelectControllerCallback = ink::VirtualCompoundItemSelectControllerCallback;
 } // namespace RED4ext
 
 // clang-format on

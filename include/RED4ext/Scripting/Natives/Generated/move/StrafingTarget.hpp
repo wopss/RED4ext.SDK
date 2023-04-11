@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace move { 
+namespace move
+{
 struct StrafingTarget
 {
     static constexpr const char* NAME = "moveStrafingTarget";
@@ -26,6 +27,7 @@ struct StrafingTarget
 };
 RED4EXT_ASSERT_SIZE(StrafingTarget, 0x28);
 } // namespace move
+using moveStrafingTarget = move::StrafingTarget;
 using StrafingTarget = move::StrafingTarget;
 } // namespace RED4ext
 

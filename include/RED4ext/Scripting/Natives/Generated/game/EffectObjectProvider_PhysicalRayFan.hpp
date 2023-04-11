@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_PhysicalRayFan : game::EffectObjectProvider_PhysicalRay
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_PhysicalRayFan";
@@ -21,6 +22,7 @@ struct EffectObjectProvider_PhysicalRayFan : game::EffectObjectProvider_Physical
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_PhysicalRayFan, 0x108);
 } // namespace game
+using gameEffectObjectProvider_PhysicalRayFan = game::EffectObjectProvider_PhysicalRayFan;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScriptsDebugOverlaySink
 {
     static constexpr const char* NAME = "gameScriptsDebugOverlaySink";
@@ -19,6 +20,7 @@ struct ScriptsDebugOverlaySink
 };
 RED4EXT_ASSERT_SIZE(ScriptsDebugOverlaySink, 0x28);
 } // namespace game
+using gameScriptsDebugOverlaySink = game::ScriptsDebugOverlaySink;
 using SDOSink = game::ScriptsDebugOverlaySink;
 } // namespace RED4ext
 

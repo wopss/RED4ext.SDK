@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ContinuousEffector : game::Effector
 {
     static constexpr const char* NAME = "gameContinuousEffector";
@@ -20,6 +21,7 @@ struct ContinuousEffector : game::Effector
 };
 RED4EXT_ASSERT_SIZE(ContinuousEffector, 0xB0);
 } // namespace game
+using gameContinuousEffector = game::ContinuousEffector;
 using ContinuousEffector = game::ContinuousEffector;
 } // namespace RED4ext
 

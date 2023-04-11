@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LocalizedBink
 {
     static constexpr const char* NAME = "inkLocalizedBink";
@@ -22,6 +23,7 @@ struct LocalizedBink
 };
 RED4EXT_ASSERT_SIZE(LocalizedBink, 0x18);
 } // namespace ink
+using inkLocalizedBink = ink::LocalizedBink;
 } // namespace RED4ext
 
 // clang-format on

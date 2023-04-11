@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace aiscript { 
+namespace aiscript
+{
 struct SharedVarBool
 {
     static constexpr const char* NAME = "aiscriptSharedVarBool";
@@ -21,6 +22,7 @@ struct SharedVarBool
 };
 RED4EXT_ASSERT_SIZE(SharedVarBool, 0x10);
 } // namespace aiscript
+using aiscriptSharedVarBool = aiscript::SharedVarBool;
 using SharedVarBool = aiscript::SharedVarBool;
 } // namespace RED4ext
 

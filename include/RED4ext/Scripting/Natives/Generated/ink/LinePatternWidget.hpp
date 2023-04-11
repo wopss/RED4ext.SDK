@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LinePatternWidget : ink::ImageWidget
 {
     static constexpr const char* NAME = "inkLinePatternWidget";
@@ -32,6 +33,7 @@ struct LinePatternWidget : ink::ImageWidget
 };
 RED4EXT_ASSERT_SIZE(LinePatternWidget, 0x360);
 } // namespace ink
+using inkLinePatternWidget = ink::LinePatternWidget;
 using inkLinePattern = ink::LinePatternWidget;
 } // namespace RED4ext
 

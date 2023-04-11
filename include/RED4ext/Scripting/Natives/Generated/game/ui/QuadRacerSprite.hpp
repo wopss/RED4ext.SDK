@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct QuadRacerSprite : game::ui::SideScrollerMiniGameDynObjectLogic
 {
     static constexpr const char* NAME = "gameuiQuadRacerSprite";
@@ -20,6 +21,7 @@ struct QuadRacerSprite : game::ui::SideScrollerMiniGameDynObjectLogic
 };
 RED4EXT_ASSERT_SIZE(QuadRacerSprite, 0x98);
 } // namespace game::ui
+using gameuiQuadRacerSprite = game::ui::QuadRacerSprite;
 using QuadRacerSprite = game::ui::QuadRacerSprite;
 } // namespace RED4ext
 

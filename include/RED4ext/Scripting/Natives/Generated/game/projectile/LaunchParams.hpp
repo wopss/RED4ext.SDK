@@ -15,7 +15,8 @@ namespace ent { struct IOrientationProvider; }
 namespace ent { struct IPositionProvider; }
 namespace ent { struct IVelocityProvider; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct LaunchParams
 {
     static constexpr const char* NAME = "gameprojectileLaunchParams";
@@ -31,6 +32,7 @@ struct LaunchParams
 };
 RED4EXT_ASSERT_SIZE(LaunchParams, 0x58);
 } // namespace game::projectile
+using gameprojectileLaunchParams = game::projectile::LaunchParams;
 } // namespace RED4ext
 
 // clang-format on

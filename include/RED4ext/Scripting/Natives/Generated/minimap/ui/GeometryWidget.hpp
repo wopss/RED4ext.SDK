@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace minimap::ui { 
+namespace minimap::ui
+{
 struct GeometryWidget : ink::CanvasWidget
 {
     static constexpr const char* NAME = "minimapuiGeometryWidget";
@@ -27,6 +28,7 @@ struct GeometryWidget : ink::CanvasWidget
 };
 RED4EXT_ASSERT_SIZE(GeometryWidget, 0x380);
 } // namespace minimap::ui
+using minimapuiGeometryWidget = minimap::ui::GeometryWidget;
 } // namespace RED4ext
 
 // clang-format on

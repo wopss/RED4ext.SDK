@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IInt32ValueProvider : ISerializable
 {
     static constexpr const char* NAME = "questIInt32ValueProvider";
@@ -19,6 +20,7 @@ struct IInt32ValueProvider : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IInt32ValueProvider, 0x30);
 } // namespace quest
+using questIInt32ValueProvider = quest::IInt32ValueProvider;
 } // namespace RED4ext
 
 // clang-format on

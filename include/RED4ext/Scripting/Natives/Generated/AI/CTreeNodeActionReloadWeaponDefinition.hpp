@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeActionReloadWeaponDefinition : AI::CTreeNodeActionDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeActionReloadWeaponDefinition";
@@ -19,6 +20,7 @@ struct CTreeNodeActionReloadWeaponDefinition : AI::CTreeNodeActionDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeActionReloadWeaponDefinition, 0x48);
 } // namespace AI
+using AICTreeNodeActionReloadWeaponDefinition = AI::CTreeNodeActionReloadWeaponDefinition;
 } // namespace RED4ext
 
 // clang-format on

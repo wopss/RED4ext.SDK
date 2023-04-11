@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntitySpawnToken : IScriptable
 {
     static constexpr const char* NAME = "entEntitySpawnToken";
@@ -19,6 +20,7 @@ struct EntitySpawnToken : IScriptable
 };
 RED4EXT_ASSERT_SIZE(EntitySpawnToken, 0x40);
 } // namespace ent
+using entEntitySpawnToken = ent::EntitySpawnToken;
 } // namespace RED4ext
 
 // clang-format on

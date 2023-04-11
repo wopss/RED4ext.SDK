@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct GenericMetroSign_Record : game::data::BaseSign_Record
 {
     static constexpr const char* NAME = "gamedataGenericMetroSign_Record";
@@ -20,6 +21,7 @@ struct GenericMetroSign_Record : game::data::BaseSign_Record
 };
 RED4EXT_ASSERT_SIZE(GenericMetroSign_Record, 0x68);
 } // namespace game::data
+using gamedataGenericMetroSign_Record = game::data::GenericMetroSign_Record;
 using GenericMetroSign_Record = game::data::GenericMetroSign_Record;
 } // namespace RED4ext
 

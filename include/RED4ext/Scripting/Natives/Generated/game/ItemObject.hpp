@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ItemObject : game::TimeDilatable
 {
     static constexpr const char* NAME = "gameItemObject";
@@ -23,6 +24,7 @@ struct ItemObject : game::TimeDilatable
 };
 RED4EXT_ASSERT_SIZE(ItemObject, 0x2C0);
 } // namespace game
+using gameItemObject = game::ItemObject;
 using ItemObject = game::ItemObject;
 } // namespace RED4ext
 

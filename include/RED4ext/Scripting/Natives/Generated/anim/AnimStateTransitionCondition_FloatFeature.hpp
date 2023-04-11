@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimStateTransitionCondition_FloatFeature : anim::IAnimStateTransitionCondition
 {
     static constexpr const char* NAME = "animAnimStateTransitionCondition_FloatFeature";
@@ -27,6 +28,7 @@ struct AnimStateTransitionCondition_FloatFeature : anim::IAnimStateTransitionCon
 };
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_FloatFeature, 0x60);
 } // namespace anim
+using animAnimStateTransitionCondition_FloatFeature = anim::AnimStateTransitionCondition_FloatFeature;
 } // namespace RED4ext
 
 // clang-format on

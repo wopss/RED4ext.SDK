@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace prv { 
+namespace prv
+{
 struct FunctionalTestQueryOverlapResult
 {
     static constexpr const char* NAME = "prvFunctionalTestQueryOverlapResult";
@@ -23,6 +24,7 @@ struct FunctionalTestQueryOverlapResult
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestQueryOverlapResult, 0x18);
 } // namespace prv
+using prvFunctionalTestQueryOverlapResult = prv::FunctionalTestQueryOverlapResult;
 using FunctionalTestQueryOverlapResult = prv::FunctionalTestQueryOverlapResult;
 } // namespace RED4ext
 

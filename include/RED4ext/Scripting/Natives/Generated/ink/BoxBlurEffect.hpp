@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct BoxBlurEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkBoxBlurEffect";
@@ -25,6 +26,7 @@ struct BoxBlurEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(BoxBlurEffect, 0x78);
 } // namespace ink
+using inkBoxBlurEffect = ink::BoxBlurEffect;
 } // namespace RED4ext
 
 // clang-format on

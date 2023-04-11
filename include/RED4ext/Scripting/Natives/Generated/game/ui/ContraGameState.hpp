@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ContraGameState : game::ui::SideScrollerMiniGameStateAdvanced
 {
     static constexpr const char* NAME = "gameuiContraGameState";
@@ -19,6 +20,7 @@ struct ContraGameState : game::ui::SideScrollerMiniGameStateAdvanced
 };
 RED4EXT_ASSERT_SIZE(ContraGameState, 0xA0);
 } // namespace game::ui
+using gameuiContraGameState = game::ui::ContraGameState;
 using ContraGameState = game::ui::ContraGameState;
 } // namespace RED4ext
 

@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace game::data { struct Cooldown_Record; }
 
-namespace game { 
+namespace game
+{
 struct RegisterCooldownFromRecordRequest
 {
     static constexpr const char* NAME = "gameRegisterCooldownFromRecordRequest";
@@ -27,6 +28,7 @@ struct RegisterCooldownFromRecordRequest
 };
 RED4EXT_ASSERT_SIZE(RegisterCooldownFromRecordRequest, 0x38);
 } // namespace game
+using gameRegisterCooldownFromRecordRequest = game::RegisterCooldownFromRecordRequest;
 using RegisterCooldownFromRecordRequest = game::RegisterCooldownFromRecordRequest;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BaseGOGProfileController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiBaseGOGProfileController";
@@ -20,6 +21,7 @@ struct BaseGOGProfileController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(BaseGOGProfileController, 0xF8);
 } // namespace game::ui
+using gameuiBaseGOGProfileController = game::ui::BaseGOGProfileController;
 using BaseGOGProfileController = game::ui::BaseGOGProfileController;
 } // namespace RED4ext
 

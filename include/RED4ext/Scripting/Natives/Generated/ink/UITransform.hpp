@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct UITransform
 {
     static constexpr const char* NAME = "inkUITransform";
@@ -24,6 +25,7 @@ struct UITransform
 };
 RED4EXT_ASSERT_SIZE(UITransform, 0x30);
 } // namespace ink
+using inkUITransform = ink::UITransform;
 } // namespace RED4ext
 
 // clang-format on

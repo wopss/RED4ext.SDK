@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuResource : CResource
 {
     static constexpr const char* NAME = "inkMenuResource";
@@ -26,6 +27,7 @@ struct MenuResource : CResource
 };
 RED4EXT_ASSERT_SIZE(MenuResource, 0x70);
 } // namespace ink
+using inkMenuResource = ink::MenuResource;
 } // namespace RED4ext
 
 // clang-format on

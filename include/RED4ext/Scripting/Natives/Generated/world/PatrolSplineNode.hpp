@@ -16,7 +16,8 @@ namespace RED4ext
 namespace world { struct PatrolSplinePointDefinition; }
 namespace world { struct TrafficSpotDefinition; }
 
-namespace world { 
+namespace world
+{
 struct PatrolSplineNode : world::SplineNode
 {
     static constexpr const char* NAME = "worldPatrolSplineNode";
@@ -28,6 +29,7 @@ struct PatrolSplineNode : world::SplineNode
 };
 RED4EXT_ASSERT_SIZE(PatrolSplineNode, 0xA0);
 } // namespace world
+using worldPatrolSplineNode = world::PatrolSplineNode;
 } // namespace RED4ext
 
 // clang-format on

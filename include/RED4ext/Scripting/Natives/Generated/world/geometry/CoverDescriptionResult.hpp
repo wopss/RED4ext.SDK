@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::geometry { 
+namespace world::geometry
+{
 struct CoverDescriptionResult : ISerializable
 {
     static constexpr const char* NAME = "worldgeometryCoverDescriptionResult";
@@ -20,6 +21,7 @@ struct CoverDescriptionResult : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CoverDescriptionResult, 0xF0);
 } // namespace world::geometry
+using worldgeometryCoverDescriptionResult = world::geometry::CoverDescriptionResult;
 } // namespace RED4ext
 
 // clang-format on

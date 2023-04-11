@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct ShootEvent : game::projectile::SetUpEvent
 {
     static constexpr const char* NAME = "gameprojectileShootEvent";
@@ -27,6 +28,7 @@ struct ShootEvent : game::projectile::SetUpEvent
 };
 RED4EXT_ASSERT_SIZE(ShootEvent, 0x1B0);
 } // namespace game::projectile
+using gameprojectileShootEvent = game::projectile::ShootEvent;
 } // namespace RED4ext
 
 // clang-format on

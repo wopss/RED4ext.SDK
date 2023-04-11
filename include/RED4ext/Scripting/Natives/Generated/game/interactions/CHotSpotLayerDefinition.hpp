@@ -16,7 +16,8 @@ namespace RED4ext
 namespace game::interactions { struct CHotSpotAreaFilterDefinition; }
 namespace game::interactions { struct CHotSpotGameLogicFilterDefinition; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CHotSpotLayerDefinition : game::interactions::NodeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCHotSpotLayerDefinition";
@@ -34,6 +35,7 @@ struct CHotSpotLayerDefinition : game::interactions::NodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CHotSpotLayerDefinition, 0x90);
 } // namespace game::interactions
+using gameinteractionsCHotSpotLayerDefinition = game::interactions::CHotSpotLayerDefinition;
 using HotSpotLayerDefinition = game::interactions::CHotSpotLayerDefinition;
 } // namespace RED4ext
 

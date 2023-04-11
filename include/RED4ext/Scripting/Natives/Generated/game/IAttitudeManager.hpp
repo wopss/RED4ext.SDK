@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IAttitudeManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIAttitudeManager";
@@ -19,6 +20,7 @@ struct IAttitudeManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IAttitudeManager, 0x48);
 } // namespace game
+using gameIAttitudeManager = game::IAttitudeManager;
 } // namespace RED4ext
 
 // clang-format on

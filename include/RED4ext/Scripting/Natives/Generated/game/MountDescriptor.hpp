@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MountDescriptor
 {
     static constexpr const char* NAME = "gameMountDescriptor";
@@ -29,6 +30,7 @@ struct MountDescriptor
 };
 RED4EXT_ASSERT_SIZE(MountDescriptor, 0x40);
 } // namespace game
+using gameMountDescriptor = game::MountDescriptor;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GarmentSwitchEffectController
 {
     static constexpr const char* NAME = "gameuiGarmentSwitchEffectController";
@@ -25,6 +26,7 @@ struct GarmentSwitchEffectController
 };
 RED4EXT_ASSERT_SIZE(GarmentSwitchEffectController, 0x68);
 } // namespace game::ui
+using gameuiGarmentSwitchEffectController = game::ui::GarmentSwitchEffectController;
 } // namespace RED4ext
 
 // clang-format on

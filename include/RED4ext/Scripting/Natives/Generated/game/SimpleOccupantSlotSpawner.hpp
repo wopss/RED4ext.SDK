@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SimpleOccupantSlotSpawner : ent::IComponent
 {
     static constexpr const char* NAME = "gameSimpleOccupantSlotSpawner";
@@ -20,6 +21,7 @@ struct SimpleOccupantSlotSpawner : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(SimpleOccupantSlotSpawner, 0x148);
 } // namespace game
+using gameSimpleOccupantSlotSpawner = game::SimpleOccupantSlotSpawner;
 } // namespace RED4ext
 
 // clang-format on

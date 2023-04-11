@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct CollisionPresetsOverridesResource : ISerializable
 {
     static constexpr const char* NAME = "physicsCollisionPresetsOverridesResource";
@@ -22,6 +23,7 @@ struct CollisionPresetsOverridesResource : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CollisionPresetsOverridesResource, 0x40);
 } // namespace physics
+using physicsCollisionPresetsOverridesResource = physics::CollisionPresetsOverridesResource;
 } // namespace RED4ext
 
 // clang-format on

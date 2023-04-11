@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IPhoneConditionType : quest::IUIConditionType
 {
     static constexpr const char* NAME = "questIPhoneConditionType";
@@ -21,6 +22,7 @@ struct IPhoneConditionType : quest::IUIConditionType
 };
 RED4EXT_ASSERT_SIZE(IPhoneConditionType, 0x40);
 } // namespace quest
+using questIPhoneConditionType = quest::IPhoneConditionType;
 } // namespace RED4ext
 
 // clang-format on

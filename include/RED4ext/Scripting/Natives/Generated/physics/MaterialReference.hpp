@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct MaterialReference
 {
     static constexpr const char* NAME = "physicsMaterialReference";
@@ -20,6 +21,7 @@ struct MaterialReference
 };
 RED4EXT_ASSERT_SIZE(MaterialReference, 0x8);
 } // namespace physics
+using physicsMaterialReference = physics::MaterialReference;
 } // namespace RED4ext
 
 // clang-format on

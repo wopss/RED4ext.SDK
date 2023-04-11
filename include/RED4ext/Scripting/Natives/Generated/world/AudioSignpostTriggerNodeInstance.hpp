@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AudioSignpostTriggerNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "worldAudioSignpostTriggerNodeInstance";
@@ -20,6 +21,7 @@ struct AudioSignpostTriggerNodeInstance : world::TriggerAreaNodeInstance
 };
 RED4EXT_ASSERT_SIZE(AudioSignpostTriggerNodeInstance, 0x110);
 } // namespace world
+using worldAudioSignpostTriggerNodeInstance = world::AudioSignpostTriggerNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

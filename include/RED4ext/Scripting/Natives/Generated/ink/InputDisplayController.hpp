@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InputDisplayController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkInputDisplayController";
@@ -38,6 +39,7 @@ struct InputDisplayController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(InputDisplayController, 0x138);
 } // namespace ink
+using inkInputDisplayController = ink::InputDisplayController;
 } // namespace RED4ext
 
 // clang-format on

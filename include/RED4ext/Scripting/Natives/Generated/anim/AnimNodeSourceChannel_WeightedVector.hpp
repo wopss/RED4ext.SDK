@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct IAnimNodeSourceChannel_Vector; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNodeSourceChannel_WeightedVector : ISerializable
 {
     static constexpr const char* NAME = "animAnimNodeSourceChannel_WeightedVector";
@@ -29,6 +30,7 @@ struct AnimNodeSourceChannel_WeightedVector : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_WeightedVector, 0x80);
 } // namespace anim
+using animAnimNodeSourceChannel_WeightedVector = anim::AnimNodeSourceChannel_WeightedVector;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace world { struct TrafficCollisionDebug; }
 
-namespace world { 
+namespace world
+{
 struct TrafficCollisionDebugResource : CResource
 {
     static constexpr const char* NAME = "worldTrafficCollisionDebugResource";
@@ -23,6 +24,7 @@ struct TrafficCollisionDebugResource : CResource
 };
 RED4EXT_ASSERT_SIZE(TrafficCollisionDebugResource, 0x50);
 } // namespace world
+using worldTrafficCollisionDebugResource = world::TrafficCollisionDebugResource;
 } // namespace RED4ext
 
 // clang-format on

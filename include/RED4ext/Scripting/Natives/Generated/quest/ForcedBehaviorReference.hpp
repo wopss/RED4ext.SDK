@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ForcedBehaviorReference : AI::ResourceReference
 {
     static constexpr const char* NAME = "questForcedBehaviorReference";
@@ -19,6 +20,7 @@ struct ForcedBehaviorReference : AI::ResourceReference
 };
 RED4EXT_ASSERT_SIZE(ForcedBehaviorReference, 0x70);
 } // namespace quest
+using questForcedBehaviorReference = quest::ForcedBehaviorReference;
 } // namespace RED4ext
 
 // clang-format on

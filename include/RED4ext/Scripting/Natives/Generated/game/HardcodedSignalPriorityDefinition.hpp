@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HardcodedSignalPriorityDefinition : game::SignalPriorityDefinition
 {
     static constexpr const char* NAME = "gameHardcodedSignalPriorityDefinition";
@@ -23,6 +24,7 @@ struct HardcodedSignalPriorityDefinition : game::SignalPriorityDefinition
 };
 RED4EXT_ASSERT_SIZE(HardcodedSignalPriorityDefinition, 0x78);
 } // namespace game
+using gameHardcodedSignalPriorityDefinition = game::HardcodedSignalPriorityDefinition;
 } // namespace RED4ext
 
 // clang-format on

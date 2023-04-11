@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio::ui { 
+namespace audio::ui
+{
 struct AudioHandler : IScriptable
 {
     static constexpr const char* NAME = "audiouiAudioHandler";
@@ -20,6 +21,7 @@ struct AudioHandler : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AudioHandler, 0x60);
 } // namespace audio::ui
+using audiouiAudioHandler = audio::ui::AudioHandler;
 using UIAudioHandler = audio::ui::AudioHandler;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SelectedCoversData : IScriptable
 {
     static constexpr const char* NAME = "AIbehaviorSelectedCoversData";
@@ -26,6 +27,7 @@ struct SelectedCoversData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SelectedCoversData, 0x80);
 } // namespace AI::behavior
+using AIbehaviorSelectedCoversData = AI::behavior::SelectedCoversData;
 using MultiSelectCovers = AI::behavior::SelectedCoversData;
 } // namespace RED4ext
 

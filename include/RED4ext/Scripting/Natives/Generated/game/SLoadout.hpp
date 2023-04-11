@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SLoadout
 {
     static constexpr const char* NAME = "gameSLoadout";
@@ -23,6 +24,7 @@ struct SLoadout
 };
 RED4EXT_ASSERT_SIZE(SLoadout, 0x20);
 } // namespace game
+using gameSLoadout = game::SLoadout;
 using SLoadout = game::SLoadout;
 } // namespace RED4ext
 

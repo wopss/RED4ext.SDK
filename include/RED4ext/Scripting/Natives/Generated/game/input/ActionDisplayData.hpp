@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::input { 
+namespace game::input
+{
 struct ActionDisplayData
 {
     static constexpr const char* NAME = "gameinputActionDisplayData";
@@ -25,6 +26,7 @@ struct ActionDisplayData
 };
 RED4EXT_ASSERT_SIZE(ActionDisplayData, 0x50);
 } // namespace game::input
+using gameinputActionDisplayData = game::input::ActionDisplayData;
 using ActionDisplayData = game::input::ActionDisplayData;
 } // namespace RED4ext
 

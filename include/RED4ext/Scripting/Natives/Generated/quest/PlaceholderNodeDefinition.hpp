@@ -16,7 +16,8 @@ namespace RED4ext
 {
 struct ISerializable;
 
-namespace quest { 
+namespace quest
+{
 struct PlaceholderNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questPlaceholderNodeDefinition";
@@ -28,6 +29,7 @@ struct PlaceholderNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PlaceholderNodeDefinition, 0x70);
 } // namespace quest
+using questPlaceholderNodeDefinition = quest::PlaceholderNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

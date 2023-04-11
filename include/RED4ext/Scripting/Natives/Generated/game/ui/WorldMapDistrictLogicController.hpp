@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace game::data { struct District_Record; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapDistrictLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiWorldMapDistrictLogicController";
@@ -31,6 +32,7 @@ struct WorldMapDistrictLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(WorldMapDistrictLogicController, 0xC0);
 } // namespace game::ui
+using gameuiWorldMapDistrictLogicController = game::ui::WorldMapDistrictLogicController;
 using WorldMapDistrictLogicController = game::ui::WorldMapDistrictLogicController;
 } // namespace RED4ext
 

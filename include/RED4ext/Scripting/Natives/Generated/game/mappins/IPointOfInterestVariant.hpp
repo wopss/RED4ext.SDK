@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct IPointOfInterestVariant : ISerializable
 {
     static constexpr const char* NAME = "gamemappinsIPointOfInterestVariant";
@@ -21,6 +22,7 @@ struct IPointOfInterestVariant : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IPointOfInterestVariant, 0x38);
 } // namespace game::mappins
+using gamemappinsIPointOfInterestVariant = game::mappins::IPointOfInterestVariant;
 } // namespace RED4ext
 
 // clang-format on

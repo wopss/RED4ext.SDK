@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct IMappinSystem : game::IReplicatedGameSystem
 {
     static constexpr const char* NAME = "gamemappinsIMappinSystem";
@@ -19,6 +20,7 @@ struct IMappinSystem : game::IReplicatedGameSystem
 };
 RED4EXT_ASSERT_SIZE(IMappinSystem, 0x58);
 } // namespace game::mappins
+using gamemappinsIMappinSystem = game::mappins::IMappinSystem;
 using IMappinSystem = game::mappins::IMappinSystem;
 } // namespace RED4ext
 

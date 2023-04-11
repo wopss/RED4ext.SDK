@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TargetSearchQuery
 {
     static constexpr const char* NAME = "gameTargetSearchQuery";
@@ -31,6 +32,7 @@ struct TargetSearchQuery
 };
 RED4EXT_ASSERT_SIZE(TargetSearchQuery, 0x38);
 } // namespace game
+using gameTargetSearchQuery = game::TargetSearchQuery;
 using TargetSearchQuery = game::TargetSearchQuery;
 } // namespace RED4ext
 

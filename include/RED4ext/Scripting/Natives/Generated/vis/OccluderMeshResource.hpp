@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vis { 
+namespace vis
+{
 struct OccluderMeshResource : vis::IOccluderResource
 {
     static constexpr const char* NAME = "visOccluderMeshResource";
@@ -28,6 +29,7 @@ struct OccluderMeshResource : vis::IOccluderResource
 };
 RED4EXT_ASSERT_SIZE(OccluderMeshResource, 0xC0);
 } // namespace vis
+using visOccluderMeshResource = vis::OccluderMeshResource;
 } // namespace RED4ext
 
 // clang-format on

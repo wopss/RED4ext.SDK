@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IFootstepSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIFootstepSystem";
@@ -19,6 +20,7 @@ struct IFootstepSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IFootstepSystem, 0x48);
 } // namespace game
+using gameIFootstepSystem = game::IFootstepSystem;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ScreenMessagesList_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataScreenMessagesList_Record";
@@ -20,6 +21,7 @@ struct ScreenMessagesList_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ScreenMessagesList_Record, 0x50);
 } // namespace game::data
+using gamedataScreenMessagesList_Record = game::data::ScreenMessagesList_Record;
 using ScreenMessagesList_Record = game::data::ScreenMessagesList_Record;
 } // namespace RED4ext
 

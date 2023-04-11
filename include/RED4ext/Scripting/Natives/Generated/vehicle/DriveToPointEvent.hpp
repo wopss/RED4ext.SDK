@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct DriveToPointEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleDriveToPointEvent";
@@ -25,6 +26,7 @@ struct DriveToPointEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DriveToPointEvent, 0x58);
 } // namespace vehicle
+using vehicleDriveToPointEvent = vehicle::DriveToPointEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct ConditionalSegmentCondition
 {
     static constexpr const char* NAME = "animConditionalSegmentCondition";
@@ -25,6 +26,7 @@ struct ConditionalSegmentCondition
 };
 RED4EXT_ASSERT_SIZE(ConditionalSegmentCondition, 0x30);
 } // namespace anim
+using animConditionalSegmentCondition = anim::ConditionalSegmentCondition;
 } // namespace RED4ext
 
 // clang-format on

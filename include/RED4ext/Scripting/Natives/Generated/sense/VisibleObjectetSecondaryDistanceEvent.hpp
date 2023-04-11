@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct VisibleObjectetSecondaryDistanceEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibleObjectetSecondaryDistanceEvent";
@@ -21,6 +22,7 @@ struct VisibleObjectetSecondaryDistanceEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectetSecondaryDistanceEvent, 0x48);
 } // namespace sense
+using senseVisibleObjectetSecondaryDistanceEvent = sense::VisibleObjectetSecondaryDistanceEvent;
 using VisibleObjectetSecondaryDistanceEvent = sense::VisibleObjectetSecondaryDistanceEvent;
 } // namespace RED4ext
 

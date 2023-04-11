@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_KeyPose : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_KeyPose";
@@ -19,6 +20,7 @@ struct AnimEvent_KeyPose : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_KeyPose, 0x40);
 } // namespace anim
+using animAnimEvent_KeyPose = anim::AnimEvent_KeyPose;
 } // namespace RED4ext
 
 // clang-format on

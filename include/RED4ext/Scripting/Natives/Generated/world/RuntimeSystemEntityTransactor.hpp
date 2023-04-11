@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemEntityTransactor : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemEntityTransactor";
@@ -20,6 +21,7 @@ struct RuntimeSystemEntityTransactor : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemEntityTransactor, 0xA0);
 } // namespace world
+using worldRuntimeSystemEntityTransactor = world::RuntimeSystemEntityTransactor;
 } // namespace RED4ext
 
 // clang-format on

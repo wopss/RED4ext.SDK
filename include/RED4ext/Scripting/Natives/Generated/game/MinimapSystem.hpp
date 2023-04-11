@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MinimapSystem : game::IMinimapSystem
 {
     static constexpr const char* NAME = "gameMinimapSystem";
@@ -20,6 +21,7 @@ struct MinimapSystem : game::IMinimapSystem
 };
 RED4EXT_ASSERT_SIZE(MinimapSystem, 0x288);
 } // namespace game
+using gameMinimapSystem = game::MinimapSystem;
 using MinimapSystem = game::MinimapSystem;
 } // namespace RED4ext
 

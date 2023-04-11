@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct UtilsCachedBoolValue
 {
     static constexpr const char* NAME = "AIUtilsCachedBoolValue";
@@ -19,6 +20,7 @@ struct UtilsCachedBoolValue
 };
 RED4EXT_ASSERT_SIZE(UtilsCachedBoolValue, 0x3);
 } // namespace AI
+using AIUtilsCachedBoolValue = AI::UtilsCachedBoolValue;
 using CachedBoolValue = AI::UtilsCachedBoolValue;
 } // namespace RED4ext
 

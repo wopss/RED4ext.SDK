@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamSpeedTreeWind : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamSpeedTreeWind";
@@ -20,6 +21,7 @@ struct MeshParamSpeedTreeWind : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamSpeedTreeWind, 0x4550);
 } // namespace mesh
+using meshMeshParamSpeedTreeWind = mesh::MeshParamSpeedTreeWind;
 } // namespace RED4ext
 
 // clang-format on

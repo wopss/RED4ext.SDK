@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct AdditionalTransformEntry; }
 
-namespace anim { 
+namespace anim
+{
 struct AdditionalTransformContainer
 {
     static constexpr const char* NAME = "animAdditionalTransformContainer";
@@ -23,6 +24,7 @@ struct AdditionalTransformContainer
 };
 RED4EXT_ASSERT_SIZE(AdditionalTransformContainer, 0x10);
 } // namespace anim
+using animAdditionalTransformContainer = anim::AdditionalTransformContainer;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JoinTrafficNPCContext
 {
     static constexpr const char* NAME = "gameJoinTrafficNPCContext";
@@ -25,6 +26,7 @@ struct JoinTrafficNPCContext
 };
 RED4EXT_ASSERT_SIZE(JoinTrafficNPCContext, 0x20);
 } // namespace game
+using gameJoinTrafficNPCContext = game::JoinTrafficNPCContext;
 using JoinTrafficNPCContext = game::JoinTrafficNPCContext;
 } // namespace RED4ext
 

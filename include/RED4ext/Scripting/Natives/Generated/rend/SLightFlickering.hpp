@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct SLightFlickering
 {
     static constexpr const char* NAME = "rendSLightFlickering";
@@ -21,6 +22,7 @@ struct SLightFlickering
 };
 RED4EXT_ASSERT_SIZE(SLightFlickering, 0xC);
 } // namespace rend
+using rendSLightFlickering = rend::SLightFlickering;
 } // namespace RED4ext
 
 // clang-format on

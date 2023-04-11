@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ink { struct HudEntriesResource; }
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct HudSystemData : ink::ILayerSystemData
 {
     static constexpr const char* NAME = "inkHudSystemData";
@@ -25,6 +26,7 @@ struct HudSystemData : ink::ILayerSystemData
 };
 RED4EXT_ASSERT_SIZE(HudSystemData, 0x78);
 } // namespace ink
+using inkHudSystemData = ink::HudSystemData;
 } // namespace RED4ext
 
 // clang-format on

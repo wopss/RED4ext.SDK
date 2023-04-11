@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ink { struct MenuResource; }
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct MenuLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkMenuLayerDefinition";
@@ -25,6 +26,7 @@ struct MenuLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(MenuLayerDefinition, 0x68);
 } // namespace ink
+using inkMenuLayerDefinition = ink::MenuLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

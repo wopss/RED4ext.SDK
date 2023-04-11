@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SquadScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "AISquadScriptInterface";
@@ -20,6 +21,7 @@ struct SquadScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SquadScriptInterface, 0x58);
 } // namespace AI
+using AISquadScriptInterface = AI::SquadScriptInterface;
 using SquadScriptInterface = AI::SquadScriptInterface;
 } // namespace RED4ext
 

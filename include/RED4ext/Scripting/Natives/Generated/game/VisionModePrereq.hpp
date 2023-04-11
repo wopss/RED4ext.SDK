@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VisionModePrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameVisionModePrereq";
@@ -22,6 +23,7 @@ struct VisionModePrereq : game::IPrereq
 };
 RED4EXT_ASSERT_SIZE(VisionModePrereq, 0x48);
 } // namespace game
+using gameVisionModePrereq = game::VisionModePrereq;
 } // namespace RED4ext
 
 // clang-format on

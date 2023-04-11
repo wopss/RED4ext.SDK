@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HierarchyPooler
 {
     static constexpr const char* NAME = "inkHierarchyPooler";
@@ -19,6 +20,7 @@ struct HierarchyPooler
 };
 RED4EXT_ASSERT_SIZE(HierarchyPooler, 0x60);
 } // namespace ink
+using inkHierarchyPooler = ink::HierarchyPooler;
 } // namespace RED4ext
 
 // clang-format on

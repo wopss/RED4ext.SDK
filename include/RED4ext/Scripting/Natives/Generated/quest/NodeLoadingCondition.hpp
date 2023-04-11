@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NodeLoadingCondition : quest::Condition
 {
     static constexpr const char* NAME = "questNodeLoadingCondition";
@@ -23,6 +24,7 @@ struct NodeLoadingCondition : quest::Condition
 };
 RED4EXT_ASSERT_SIZE(NodeLoadingCondition, 0x48);
 } // namespace quest
+using questNodeLoadingCondition = quest::NodeLoadingCondition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CacheWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkCacheWidgetReference";
@@ -19,6 +20,7 @@ struct CacheWidgetReference : ink::CompoundWidgetReference
 };
 RED4EXT_ASSERT_SIZE(CacheWidgetReference, 0x18);
 } // namespace ink
+using inkCacheWidgetReference = ink::CacheWidgetReference;
 using inkCacheRef = ink::CacheWidgetReference;
 } // namespace RED4ext
 

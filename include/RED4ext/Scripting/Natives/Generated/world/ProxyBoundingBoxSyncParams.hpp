@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ProxyBoundingBoxSyncParams
 {
     static constexpr const char* NAME = "worldProxyBoundingBoxSyncParams";
@@ -27,6 +28,7 @@ struct ProxyBoundingBoxSyncParams
 };
 RED4EXT_ASSERT_SIZE(ProxyBoundingBoxSyncParams, 0x18);
 } // namespace world
+using worldProxyBoundingBoxSyncParams = world::ProxyBoundingBoxSyncParams;
 } // namespace RED4ext
 
 // clang-format on

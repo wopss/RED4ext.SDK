@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WaitFormationPositionConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorWaitFormationPositionConditionDefinition";
@@ -19,6 +20,7 @@ struct WaitFormationPositionConditionDefinition : AI::behavior::ConditionDefinit
 };
 RED4EXT_ASSERT_SIZE(WaitFormationPositionConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorWaitFormationPositionConditionDefinition = AI::behavior::WaitFormationPositionConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

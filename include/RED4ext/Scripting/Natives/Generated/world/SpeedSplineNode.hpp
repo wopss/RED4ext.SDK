@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SpeedSplineNode : world::SplineNode
 {
     static constexpr const char* NAME = "worldSpeedSplineNode";
@@ -34,6 +35,7 @@ struct SpeedSplineNode : world::SplineNode
 };
 RED4EXT_ASSERT_SIZE(SpeedSplineNode, 0xC8);
 } // namespace world
+using worldSpeedSplineNode = world::SpeedSplineNode;
 } // namespace RED4ext
 
 // clang-format on

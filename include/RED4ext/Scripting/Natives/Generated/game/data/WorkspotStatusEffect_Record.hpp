@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct WorkspotStatusEffect_Record : game::data::StatusEffect_Record
 {
     static constexpr const char* NAME = "gamedataWorkspotStatusEffect_Record";
@@ -19,6 +20,7 @@ struct WorkspotStatusEffect_Record : game::data::StatusEffect_Record
 };
 RED4EXT_ASSERT_SIZE(WorkspotStatusEffect_Record, 0x90);
 } // namespace game::data
+using gamedataWorkspotStatusEffect_Record = game::data::WorkspotStatusEffect_Record;
 using WorkspotStatusEffect_Record = game::data::WorkspotStatusEffect_Record;
 } // namespace RED4ext
 

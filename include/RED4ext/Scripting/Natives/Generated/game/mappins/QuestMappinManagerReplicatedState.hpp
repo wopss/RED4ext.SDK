@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct QuestMappinManagerReplicatedState
 {
     static constexpr const char* NAME = "gamemappinsQuestMappinManagerReplicatedState";
@@ -23,6 +24,7 @@ struct QuestMappinManagerReplicatedState
 };
 RED4EXT_ASSERT_SIZE(QuestMappinManagerReplicatedState, 0x38);
 } // namespace game::mappins
+using gamemappinsQuestMappinManagerReplicatedState = game::mappins::QuestMappinManagerReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

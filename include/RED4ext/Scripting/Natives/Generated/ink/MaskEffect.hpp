@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MaskEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkMaskEffect";
@@ -23,6 +24,7 @@ struct MaskEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(MaskEffect, 0x78);
 } // namespace ink
+using inkMaskEffect = ink::MaskEffect;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct PlayerSystem : game::PlayerSystem
 {
     static constexpr const char* NAME = "cpPlayerSystem";
@@ -20,6 +21,7 @@ struct PlayerSystem : game::PlayerSystem
 };
 RED4EXT_ASSERT_SIZE(PlayerSystem, 0x60500);
 } // namespace cp
+using cpPlayerSystem = cp::PlayerSystem;
 using PlayerSystem = cp::PlayerSystem;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct ArcadeSpawnerController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiarcadeArcadeSpawnerController";
@@ -20,6 +21,7 @@ struct ArcadeSpawnerController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ArcadeSpawnerController, 0xD0);
 } // namespace game::ui::arcade
+using gameuiarcadeArcadeSpawnerController = game::ui::arcade::ArcadeSpawnerController;
 } // namespace RED4ext
 
 // clang-format on

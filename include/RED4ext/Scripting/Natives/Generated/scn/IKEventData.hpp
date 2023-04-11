@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct IKEventData
 {
     static constexpr const char* NAME = "scnIKEventData";
@@ -26,6 +27,7 @@ struct IKEventData
 };
 RED4EXT_ASSERT_SIZE(IKEventData, 0x80);
 } // namespace scn
+using scnIKEventData = scn::IKEventData;
 } // namespace RED4ext
 
 // clang-format on

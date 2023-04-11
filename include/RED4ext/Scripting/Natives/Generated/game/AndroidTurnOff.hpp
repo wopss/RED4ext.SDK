@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AndroidTurnOff : red::Event
 {
     static constexpr const char* NAME = "gameAndroidTurnOff";
@@ -19,6 +20,7 @@ struct AndroidTurnOff : red::Event
 };
 RED4EXT_ASSERT_SIZE(AndroidTurnOff, 0x40);
 } // namespace game
+using gameAndroidTurnOff = game::AndroidTurnOff;
 using AndroidTurnOff = game::AndroidTurnOff;
 } // namespace RED4ext
 

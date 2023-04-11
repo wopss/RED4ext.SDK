@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct RoachRaceObstacleTexturePartPair_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataRoachRaceObstacleTexturePartPair_Record";
@@ -20,6 +21,7 @@ struct RoachRaceObstacleTexturePartPair_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(RoachRaceObstacleTexturePartPair_Record, 0x50);
 } // namespace game::data
+using gamedataRoachRaceObstacleTexturePartPair_Record = game::data::RoachRaceObstacleTexturePartPair_Record;
 using RoachRaceObstacleTexturePartPair_Record = game::data::RoachRaceObstacleTexturePartPair_Record;
 } // namespace RED4ext
 

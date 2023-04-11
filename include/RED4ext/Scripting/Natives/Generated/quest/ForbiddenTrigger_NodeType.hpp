@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ForbiddenTrigger_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questForbiddenTrigger_NodeType";
@@ -24,6 +25,7 @@ struct ForbiddenTrigger_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ForbiddenTrigger_NodeType, 0x40);
 } // namespace quest
+using questForbiddenTrigger_NodeType = quest::ForbiddenTrigger_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WorldLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkWorldLayerDefinition";
@@ -30,6 +31,7 @@ struct WorldLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(WorldLayerDefinition, 0x58);
 } // namespace ink
+using inkWorldLayerDefinition = ink::WorldLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

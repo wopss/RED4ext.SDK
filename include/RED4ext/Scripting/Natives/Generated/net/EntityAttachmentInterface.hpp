@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace net { 
+namespace net
+{
 struct EntityAttachmentInterface
 {
     static constexpr const char* NAME = "netEntityAttachmentInterface";
@@ -22,6 +23,7 @@ struct EntityAttachmentInterface
 };
 RED4EXT_ASSERT_SIZE(EntityAttachmentInterface, 0x18);
 } // namespace net
+using netEntityAttachmentInterface = net::EntityAttachmentInterface;
 } // namespace RED4ext
 
 // clang-format on

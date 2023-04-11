@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IFinisherScenario : ISerializable
 {
     static constexpr const char* NAME = "gameIFinisherScenario";
@@ -19,6 +20,7 @@ struct IFinisherScenario : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IFinisherScenario, 0x30);
 } // namespace game
+using gameIFinisherScenario = game::IFinisherScenario;
 } // namespace RED4ext
 
 // clang-format on

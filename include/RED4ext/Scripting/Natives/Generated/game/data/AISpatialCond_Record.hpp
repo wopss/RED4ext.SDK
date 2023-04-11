@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISpatialCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAISpatialCond_Record";
@@ -20,6 +21,7 @@ struct AISpatialCond_Record : game::data::AIActionSubCondition_Record
 };
 RED4EXT_ASSERT_SIZE(AISpatialCond_Record, 0x70);
 } // namespace game::data
+using gamedataAISpatialCond_Record = game::data::AISpatialCond_Record;
 using AISpatialCond_Record = game::data::AISpatialCond_Record;
 } // namespace RED4ext
 

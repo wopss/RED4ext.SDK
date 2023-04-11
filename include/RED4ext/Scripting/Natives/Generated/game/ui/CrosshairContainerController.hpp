@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CrosshairContainerController : game::ui::HUDGameController
 {
     static constexpr const char* NAME = "gameuiCrosshairContainerController";
@@ -22,6 +23,7 @@ struct CrosshairContainerController : game::ui::HUDGameController
 };
 RED4EXT_ASSERT_SIZE(CrosshairContainerController, 0x208);
 } // namespace game::ui
+using gameuiCrosshairContainerController = game::ui::CrosshairContainerController;
 } // namespace RED4ext
 
 // clang-format on

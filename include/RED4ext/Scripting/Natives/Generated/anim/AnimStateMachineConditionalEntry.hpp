@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct IAnimStateTransitionCondition; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimStateMachineConditionalEntry : ISerializable
 {
     static constexpr const char* NAME = "animAnimStateMachineConditionalEntry";
@@ -29,6 +30,7 @@ struct AnimStateMachineConditionalEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimStateMachineConditionalEntry, 0x50);
 } // namespace anim
+using animAnimStateMachineConditionalEntry = anim::AnimStateMachineConditionalEntry;
 } // namespace RED4ext
 
 // clang-format on

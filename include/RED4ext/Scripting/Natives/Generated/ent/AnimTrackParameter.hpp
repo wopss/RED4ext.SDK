@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimTrackParameter
 {
     static constexpr const char* NAME = "entAnimTrackParameter";
@@ -23,6 +24,7 @@ struct AnimTrackParameter
 };
 RED4EXT_ASSERT_SIZE(AnimTrackParameter, 0x30);
 } // namespace ent
+using entAnimTrackParameter = ent::AnimTrackParameter;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct VisualTagCondition : anim::IStaticCondition
 {
     static constexpr const char* NAME = "animVisualTagCondition";
@@ -21,6 +22,7 @@ struct VisualTagCondition : anim::IStaticCondition
 };
 RED4EXT_ASSERT_SIZE(VisualTagCondition, 0x38);
 } // namespace anim
+using animVisualTagCondition = anim::VisualTagCondition;
 } // namespace RED4ext
 
 // clang-format on

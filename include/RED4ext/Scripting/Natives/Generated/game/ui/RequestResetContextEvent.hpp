@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RequestResetContextEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiRequestResetContextEvent";
@@ -19,6 +20,7 @@ struct RequestResetContextEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RequestResetContextEvent, 0x40);
 } // namespace game::ui
+using gameuiRequestResetContextEvent = game::ui::RequestResetContextEvent;
 using ResetUIGameContextEvent = game::ui::RequestResetContextEvent;
 } // namespace RED4ext
 

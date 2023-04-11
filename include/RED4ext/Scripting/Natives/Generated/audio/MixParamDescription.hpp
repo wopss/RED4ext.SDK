@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MixParamDescription
 {
     static constexpr const char* NAME = "audioMixParamDescription";
@@ -22,6 +23,7 @@ struct MixParamDescription
 };
 RED4EXT_ASSERT_SIZE(MixParamDescription, 0x10);
 } // namespace audio
+using audioMixParamDescription = audio::MixParamDescription;
 } // namespace RED4ext
 
 // clang-format on

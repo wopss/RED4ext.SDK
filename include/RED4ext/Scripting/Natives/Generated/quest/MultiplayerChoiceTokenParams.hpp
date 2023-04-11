@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MultiplayerChoiceTokenParams
 {
     static constexpr const char* NAME = "questMultiplayerChoiceTokenParams";
@@ -22,6 +23,7 @@ struct MultiplayerChoiceTokenParams
 };
 RED4EXT_ASSERT_SIZE(MultiplayerChoiceTokenParams, 0x10);
 } // namespace quest
+using questMultiplayerChoiceTokenParams = quest::MultiplayerChoiceTokenParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ButtonController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkButtonController";
@@ -36,6 +37,7 @@ struct ButtonController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ButtonController, 0x1F8);
 } // namespace ink
+using inkButtonController = ink::ButtonController;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct DestructionParams
 {
     static constexpr const char* NAME = "physicsDestructionParams";
@@ -48,6 +49,7 @@ struct DestructionParams
 };
 RED4EXT_ASSERT_SIZE(DestructionParams, 0x48);
 } // namespace physics
+using physicsDestructionParams = physics::DestructionParams;
 } // namespace RED4ext
 
 // clang-format on

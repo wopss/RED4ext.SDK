@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InputContextChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkInputContextChangedCallback";
@@ -20,6 +21,7 @@ struct InputContextChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(InputContextChangedCallback, 0x38);
 } // namespace ink
+using inkInputContextChangedCallback = ink::InputContextChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

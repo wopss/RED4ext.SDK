@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BoolSignalTable : IScriptable
 {
     static constexpr const char* NAME = "gameBoolSignalTable";
@@ -20,6 +21,7 @@ struct BoolSignalTable : IScriptable
 };
 RED4EXT_ASSERT_SIZE(BoolSignalTable, 0xD8);
 } // namespace game
+using gameBoolSignalTable = game::BoolSignalTable;
 } // namespace RED4ext
 
 // clang-format on

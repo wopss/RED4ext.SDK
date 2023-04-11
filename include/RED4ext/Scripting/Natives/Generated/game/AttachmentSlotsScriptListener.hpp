@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlotsScriptListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "gameAttachmentSlotsScriptListener";
@@ -20,6 +21,7 @@ struct AttachmentSlotsScriptListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotsScriptListener, 0x50);
 } // namespace game
+using gameAttachmentSlotsScriptListener = game::AttachmentSlotsScriptListener;
 using AttachmentSlotsScriptListener = game::AttachmentSlotsScriptListener;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerVisuals_EntityAppearanceOperationBase : quest::ICharacterManagerVisuals_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerVisuals_EntityAppearanceOperationBase";
@@ -24,6 +25,7 @@ struct CharacterManagerVisuals_EntityAppearanceOperationBase : quest::ICharacter
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerVisuals_EntityAppearanceOperationBase, 0xD8);
 } // namespace quest
+using questCharacterManagerVisuals_EntityAppearanceOperationBase = quest::CharacterManagerVisuals_EntityAppearanceOperationBase;
 } // namespace RED4ext
 
 // clang-format on

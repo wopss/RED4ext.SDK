@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AddBraindanceClue_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questAddBraindanceClue_NodeType";
@@ -26,6 +27,7 @@ struct AddBraindanceClue_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(AddBraindanceClue_NodeType, 0x50);
 } // namespace quest
+using questAddBraindanceClue_NodeType = quest::AddBraindanceClue_NodeType;
 } // namespace RED4ext
 
 // clang-format on

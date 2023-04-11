@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectPostAction_WaterImpulse : game::EffectPostAction
 {
     static constexpr const char* NAME = "gameEffectPostAction_WaterImpulse";
@@ -19,6 +20,7 @@ struct EffectPostAction_WaterImpulse : game::EffectPostAction
 };
 RED4EXT_ASSERT_SIZE(EffectPostAction_WaterImpulse, 0x40);
 } // namespace game
+using gameEffectPostAction_WaterImpulse = game::EffectPostAction_WaterImpulse;
 } // namespace RED4ext
 
 // clang-format on

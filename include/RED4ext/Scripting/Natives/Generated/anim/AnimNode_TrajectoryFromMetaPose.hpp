@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TrajectoryFromMetaPose : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_TrajectoryFromMetaPose";
@@ -21,6 +22,7 @@ struct AnimNode_TrajectoryFromMetaPose : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TrajectoryFromMetaPose, 0x78);
 } // namespace anim
+using animAnimNode_TrajectoryFromMetaPose = anim::AnimNode_TrajectoryFromMetaPose;
 } // namespace RED4ext
 
 // clang-format on

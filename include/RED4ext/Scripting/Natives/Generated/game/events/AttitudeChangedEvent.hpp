@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct AttitudeAgent; }
 
-namespace game::events { 
+namespace game::events
+{
 struct AttitudeChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsAttitudeChangedEvent";
@@ -26,6 +27,7 @@ struct AttitudeChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AttitudeChangedEvent, 0x58);
 } // namespace game::events
+using gameeventsAttitudeChangedEvent = game::events::AttitudeChangedEvent;
 using AttitudeChangedEvent = game::events::AttitudeChangedEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EnforceScreenSpaceReflectionsUberQuality_NodeType : quest::IRenderFxManagerNodeType
 {
     static constexpr const char* NAME = "questEnforceScreenSpaceReflectionsUberQuality_NodeType";
@@ -21,6 +22,7 @@ struct EnforceScreenSpaceReflectionsUberQuality_NodeType : quest::IRenderFxManag
 };
 RED4EXT_ASSERT_SIZE(EnforceScreenSpaceReflectionsUberQuality_NodeType, 0x40);
 } // namespace quest
+using questEnforceScreenSpaceReflectionsUberQuality_NodeType = quest::EnforceScreenSpaceReflectionsUberQuality_NodeType;
 } // namespace RED4ext
 
 // clang-format on

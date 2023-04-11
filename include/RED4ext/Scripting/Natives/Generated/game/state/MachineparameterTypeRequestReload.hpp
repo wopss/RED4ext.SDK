@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct ItemObject; }
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeRequestReload : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeRequestReload";
@@ -23,6 +24,7 @@ struct MachineparameterTypeRequestReload : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeRequestReload, 0x50);
 } // namespace game::state
+using gamestateMachineparameterTypeRequestReload = game::state::MachineparameterTypeRequestReload;
 using parameterRequestReload = game::state::MachineparameterTypeRequestReload;
 } // namespace RED4ext
 

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetBrush : IScriptable
 {
     static constexpr const char* NAME = "inkWidgetBrush";
@@ -30,6 +31,7 @@ struct WidgetBrush : IScriptable
 };
 RED4EXT_ASSERT_SIZE(WidgetBrush, 0x78);
 } // namespace ink
+using inkWidgetBrush = ink::WidgetBrush;
 } // namespace RED4ext
 
 // clang-format on

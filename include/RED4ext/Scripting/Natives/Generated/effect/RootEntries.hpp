@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct RootEntries : effect::IPlacementEntries
 {
     static constexpr const char* NAME = "effectRootEntries";
@@ -24,6 +25,7 @@ struct RootEntries : effect::IPlacementEntries
 };
 RED4EXT_ASSERT_SIZE(RootEntries, 0x48);
 } // namespace effect
+using effectRootEntries = effect::RootEntries;
 } // namespace RED4ext
 
 // clang-format on

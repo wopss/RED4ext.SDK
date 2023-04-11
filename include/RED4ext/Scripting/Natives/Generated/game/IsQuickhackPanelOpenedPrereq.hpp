@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IsQuickhackPanelOpenedPrereq
 {
     static constexpr const char* NAME = "gameIsQuickhackPanelOpenedPrereq";
@@ -21,6 +22,7 @@ struct IsQuickhackPanelOpenedPrereq
 };
 RED4EXT_ASSERT_SIZE(IsQuickhackPanelOpenedPrereq, 0x48);
 } // namespace game
+using gameIsQuickhackPanelOpenedPrereq = game::IsQuickhackPanelOpenedPrereq;
 using IsQuickhackPanelOpenedPrereq = game::IsQuickhackPanelOpenedPrereq;
 } // namespace RED4ext
 

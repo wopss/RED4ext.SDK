@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::bb { 
+namespace game::bb
+{
 struct ScriptID
 {
     static constexpr const char* NAME = "gamebbScriptID";
@@ -21,6 +22,7 @@ struct ScriptID
 };
 RED4EXT_ASSERT_SIZE(ScriptID, 0x10);
 } // namespace game::bb
+using gamebbScriptID = game::bb::ScriptID;
 using BlackboardID = game::bb::ScriptID;
 } // namespace RED4ext
 

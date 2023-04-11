@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RandomizerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questRandomizerNodeDefinition";
@@ -24,6 +25,7 @@ struct RandomizerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(RandomizerNodeDefinition, 0x60);
 } // namespace quest
+using questRandomizerNodeDefinition = quest::RandomizerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

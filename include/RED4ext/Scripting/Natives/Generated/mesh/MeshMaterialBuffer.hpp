@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshMaterialBuffer
 {
     static constexpr const char* NAME = "meshMeshMaterialBuffer";
@@ -24,6 +25,7 @@ struct MeshMaterialBuffer
 };
 RED4EXT_ASSERT_SIZE(MeshMaterialBuffer, 0xA0);
 } // namespace mesh
+using meshMeshMaterialBuffer = mesh::MeshMaterialBuffer;
 } // namespace RED4ext
 
 // clang-format on

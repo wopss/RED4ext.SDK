@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Role : IScriptable
 {
     static constexpr const char* NAME = "AIRole";
@@ -19,6 +20,7 @@ struct Role : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Role, 0x40);
 } // namespace AI
+using AIRole = AI::Role;
 } // namespace RED4ext
 
 // clang-format on

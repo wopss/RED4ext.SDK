@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DialogLineEventData
 {
     static constexpr const char* NAME = "audioDialogLineEventData";
@@ -33,6 +34,7 @@ struct DialogLineEventData
 };
 RED4EXT_ASSERT_SIZE(DialogLineEventData, 0x28);
 } // namespace audio
+using audioDialogLineEventData = audio::DialogLineEventData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuEventDispatcher : IScriptable
 {
     static constexpr const char* NAME = "inkMenuEventDispatcher";
@@ -20,6 +21,7 @@ struct MenuEventDispatcher : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MenuEventDispatcher, 0x88);
 } // namespace ink
+using inkMenuEventDispatcher = ink::MenuEventDispatcher;
 } // namespace RED4ext
 
 // clang-format on

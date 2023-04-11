@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct ReExportOptions
 {
     static constexpr const char* NAME = "interopReExportOptions";
@@ -64,6 +65,7 @@ struct ReExportOptions
 };
 RED4EXT_ASSERT_SIZE(ReExportOptions, 0x2D0);
 } // namespace interop
+using interopReExportOptions = interop::ReExportOptions;
 } // namespace RED4ext
 
 // clang-format on

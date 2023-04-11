@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct KeepCurrentCoverCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataKeepCurrentCoverCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct KeepCurrentCoverCoverSelectionParameters_Record : game::data::CoverSelect
 };
 RED4EXT_ASSERT_SIZE(KeepCurrentCoverCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
+using gamedataKeepCurrentCoverCoverSelectionParameters_Record = game::data::KeepCurrentCoverCoverSelectionParameters_Record;
 using KeepCurrentCoverCoverSelectionParameters_Record = game::data::KeepCurrentCoverCoverSelectionParameters_Record;
 } // namespace RED4ext
 

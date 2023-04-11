@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace audio { struct AmbientAreaSettings; }
 
-namespace world { 
+namespace world
+{
 struct StaticSoundEmitterNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticSoundEmitterNode";
@@ -42,6 +43,7 @@ struct StaticSoundEmitterNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticSoundEmitterNode, 0x88);
 } // namespace world
+using worldStaticSoundEmitterNode = world::StaticSoundEmitterNode;
 } // namespace RED4ext
 
 // clang-format on

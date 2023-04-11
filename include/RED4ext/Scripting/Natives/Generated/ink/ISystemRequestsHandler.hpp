@@ -21,7 +21,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ISystemRequestsHandler : IScriptable
 {
     static constexpr const char* NAME = "inkISystemRequestsHandler";
@@ -43,6 +44,7 @@ struct ISystemRequestsHandler : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x318);
 } // namespace ink
+using inkISystemRequestsHandler = ink::ISystemRequestsHandler;
 } // namespace RED4ext
 
 // clang-format on

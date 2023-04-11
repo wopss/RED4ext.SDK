@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AIDirectorSpawnMarker : world::IMarker
 {
     static constexpr const char* NAME = "worldAIDirectorSpawnMarker";
@@ -19,6 +20,7 @@ struct AIDirectorSpawnMarker : world::IMarker
 };
 RED4EXT_ASSERT_SIZE(AIDirectorSpawnMarker, 0x30);
 } // namespace world
+using worldAIDirectorSpawnMarker = world::AIDirectorSpawnMarker;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneTimeProvider : game::interactions::vis::IVisualizerTimeProvider
 {
     static constexpr const char* NAME = "scnSceneTimeProvider";
@@ -20,6 +21,7 @@ struct SceneTimeProvider : game::interactions::vis::IVisualizerTimeProvider
 };
 RED4EXT_ASSERT_SIZE(SceneTimeProvider, 0x50);
 } // namespace scn
+using scnSceneTimeProvider = scn::SceneTimeProvider;
 } // namespace RED4ext
 
 // clang-format on

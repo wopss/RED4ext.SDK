@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SetTrackRange : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_SetTrackRange";
@@ -32,6 +33,7 @@ struct AnimNode_SetTrackRange : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SetTrackRange, 0x110);
 } // namespace anim
+using animAnimNode_SetTrackRange = anim::AnimNode_SetTrackRange;
 } // namespace RED4ext
 
 // clang-format on

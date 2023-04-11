@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetHUDEntryVisibility_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetHUDEntryVisibility_NodeType";
@@ -27,6 +28,7 @@ struct SetHUDEntryVisibility_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetHUDEntryVisibility_NodeType, 0x58);
 } // namespace quest
+using questSetHUDEntryVisibility_NodeType = quest::SetHUDEntryVisibility_NodeType;
 } // namespace RED4ext
 
 // clang-format on

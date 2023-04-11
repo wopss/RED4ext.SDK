@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct Chunk
 {
     static constexpr const char* NAME = "rendChunk";
@@ -34,6 +35,7 @@ struct Chunk
 };
 RED4EXT_ASSERT_SIZE(Chunk, 0xF8);
 } // namespace rend
+using rendChunk = rend::Chunk;
 } // namespace RED4ext
 
 // clang-format on

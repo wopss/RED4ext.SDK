@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtStateMachineSettings
 {
     static constexpr const char* NAME = "animLookAtStateMachineSettings";
@@ -33,6 +34,7 @@ struct LookAtStateMachineSettings
 };
 RED4EXT_ASSERT_SIZE(LookAtStateMachineSettings, 0x80);
 } // namespace anim
+using animLookAtStateMachineSettings = anim::LookAtStateMachineSettings;
 using LookAtStateMachineSettings = anim::LookAtStateMachineSettings;
 } // namespace RED4ext
 

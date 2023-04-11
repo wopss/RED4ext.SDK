@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WaitSplineBackwardToFollowConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorWaitSplineBackwardToFollowConditionDefinition";
@@ -19,6 +20,7 @@ struct WaitSplineBackwardToFollowConditionDefinition : AI::behavior::ConditionDe
 };
 RED4EXT_ASSERT_SIZE(WaitSplineBackwardToFollowConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorWaitSplineBackwardToFollowConditionDefinition = AI::behavior::WaitSplineBackwardToFollowConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

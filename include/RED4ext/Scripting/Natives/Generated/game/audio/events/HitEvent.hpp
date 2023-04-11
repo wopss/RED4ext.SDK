@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct HitEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsHitEvent";
@@ -32,6 +33,7 @@ struct HitEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HitEvent, 0x80);
 } // namespace game::audio::events
+using gameaudioeventsHitEvent = game::audio::events::HitEvent;
 } // namespace RED4ext
 
 // clang-format on

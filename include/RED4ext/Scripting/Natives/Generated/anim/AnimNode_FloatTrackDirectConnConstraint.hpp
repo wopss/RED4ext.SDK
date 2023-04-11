@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FloatTrackDirectConnConstraint : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_FloatTrackDirectConnConstraint";
@@ -31,6 +32,7 @@ struct AnimNode_FloatTrackDirectConnConstraint : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FloatTrackDirectConnConstraint, 0x100);
 } // namespace anim
+using animAnimNode_FloatTrackDirectConnConstraint = anim::AnimNode_FloatTrackDirectConnConstraint;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior::expression { struct Script; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptPassiveExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorScriptPassiveExpressionDefinition";
@@ -23,6 +24,7 @@ struct ScriptPassiveExpressionDefinition : AI::behavior::PassiveExpressionDefini
 };
 RED4EXT_ASSERT_SIZE(ScriptPassiveExpressionDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorScriptPassiveExpressionDefinition = AI::behavior::ScriptPassiveExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

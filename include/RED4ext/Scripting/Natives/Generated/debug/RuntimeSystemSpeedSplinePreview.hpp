@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace debug { 
+namespace debug
+{
 struct RuntimeSystemSpeedSplinePreview : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "debugRuntimeSystemSpeedSplinePreview";
@@ -20,6 +21,7 @@ struct RuntimeSystemSpeedSplinePreview : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemSpeedSplinePreview, 0x70);
 } // namespace debug
+using debugRuntimeSystemSpeedSplinePreview = debug::RuntimeSystemSpeedSplinePreview;
 } // namespace RED4ext
 
 // clang-format on

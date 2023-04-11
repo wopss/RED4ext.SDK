@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TestNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questTestNodeDefinition";
@@ -19,6 +20,7 @@ struct TestNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TestNodeDefinition, 0x48);
 } // namespace quest
+using questTestNodeDefinition = quest::TestNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

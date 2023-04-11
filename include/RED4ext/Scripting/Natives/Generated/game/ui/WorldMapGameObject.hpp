@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapGameObject : game::Object
 {
     static constexpr const char* NAME = "gameuiWorldMapGameObject";
@@ -23,6 +24,7 @@ struct WorldMapGameObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(WorldMapGameObject, 0x3F0);
 } // namespace game::ui
+using gameuiWorldMapGameObject = game::ui::WorldMapGameObject;
 } // namespace RED4ext
 
 // clang-format on

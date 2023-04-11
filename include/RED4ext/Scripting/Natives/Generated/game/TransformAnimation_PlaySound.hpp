@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_PlaySound : game::TransformAnimationTrackItemImpl
 {
     static constexpr const char* NAME = "gameTransformAnimation_PlaySound";
@@ -23,6 +24,7 @@ struct TransformAnimation_PlaySound : game::TransformAnimationTrackItemImpl
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_PlaySound, 0x40);
 } // namespace game
+using gameTransformAnimation_PlaySound = game::TransformAnimation_PlaySound;
 } // namespace RED4ext
 
 // clang-format on

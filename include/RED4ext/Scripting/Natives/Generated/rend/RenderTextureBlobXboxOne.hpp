@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderTextureBlobXboxOne : rend::IRenderTextureBlob
 {
     static constexpr const char* NAME = "rendRenderTextureBlobXboxOne";
@@ -19,6 +20,7 @@ struct RenderTextureBlobXboxOne : rend::IRenderTextureBlob
 };
 RED4EXT_ASSERT_SIZE(RenderTextureBlobXboxOne, 0xD0);
 } // namespace rend
+using rendRenderTextureBlobXboxOne = rend::RenderTextureBlobXboxOne;
 } // namespace RED4ext
 
 // clang-format on

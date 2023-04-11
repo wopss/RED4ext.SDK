@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace work { struct IWorkspotItemAction; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_WorkspotItem : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_WorkspotItem";
@@ -24,6 +25,7 @@ struct AnimEvent_WorkspotItem : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_WorkspotItem, 0x50);
 } // namespace anim
+using animAnimEvent_WorkspotItem = anim::AnimEvent_WorkspotItem;
 } // namespace RED4ext
 
 // clang-format on

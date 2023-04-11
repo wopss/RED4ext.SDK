@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MuppetRawInput : game::MuppetComponent
 {
     static constexpr const char* NAME = "gameMuppetRawInput";
@@ -20,6 +21,7 @@ struct MuppetRawInput : game::MuppetComponent
 };
 RED4EXT_ASSERT_SIZE(MuppetRawInput, 0x98);
 } // namespace game
+using gameMuppetRawInput = game::MuppetRawInput;
 using MuppetRawInput = game::MuppetRawInput;
 } // namespace RED4ext
 

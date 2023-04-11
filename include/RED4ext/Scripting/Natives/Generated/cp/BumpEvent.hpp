@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct BumpEvent : red::Event
 {
     static constexpr const char* NAME = "cpBumpEvent";
@@ -21,6 +22,7 @@ struct BumpEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BumpEvent, 0x48);
 } // namespace cp
+using cpBumpEvent = cp::BumpEvent;
 } // namespace RED4ext
 
 // clang-format on

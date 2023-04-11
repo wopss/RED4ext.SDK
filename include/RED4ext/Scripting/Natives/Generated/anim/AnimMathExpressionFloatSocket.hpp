@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimMathExpressionFloatSocket
 {
     static constexpr const char* NAME = "animAnimMathExpressionFloatSocket";
@@ -24,6 +25,7 @@ struct AnimMathExpressionFloatSocket
 };
 RED4EXT_ASSERT_SIZE(AnimMathExpressionFloatSocket, 0x40);
 } // namespace anim
+using animAnimMathExpressionFloatSocket = anim::AnimMathExpressionFloatSocket;
 } // namespace RED4ext
 
 // clang-format on

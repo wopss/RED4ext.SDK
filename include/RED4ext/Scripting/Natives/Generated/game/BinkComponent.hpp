@@ -16,7 +16,8 @@ namespace RED4ext
 struct Bink;
 namespace game { struct BinkMeshTargetBinding; }
 
-namespace game { 
+namespace game
+{
 struct BinkComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "gameBinkComponent";
@@ -35,6 +36,7 @@ struct BinkComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(BinkComponent, 0x1A0);
 } // namespace game
+using gameBinkComponent = game::BinkComponent;
 using BinkComponent = game::BinkComponent;
 } // namespace RED4ext
 

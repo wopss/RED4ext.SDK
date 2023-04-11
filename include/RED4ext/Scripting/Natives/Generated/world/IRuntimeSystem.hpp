@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct IRuntimeSystem : IUpdatableSystem
 {
     static constexpr const char* NAME = "worldIRuntimeSystem";
@@ -20,6 +21,7 @@ struct IRuntimeSystem : IUpdatableSystem
 };
 RED4EXT_ASSERT_SIZE(IRuntimeSystem, 0x48);
 } // namespace world
+using worldIRuntimeSystem = world::IRuntimeSystem;
 } // namespace RED4ext
 
 // clang-format on

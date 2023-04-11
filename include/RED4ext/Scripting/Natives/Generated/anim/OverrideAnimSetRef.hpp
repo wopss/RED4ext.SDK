@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace anim { 
+namespace anim
+{
 struct OverrideAnimSetRef
 {
     static constexpr const char* NAME = "animOverrideAnimSetRef";
@@ -24,6 +25,7 @@ struct OverrideAnimSetRef
 };
 RED4EXT_ASSERT_SIZE(OverrideAnimSetRef, 0x10);
 } // namespace anim
+using animOverrideAnimSetRef = anim::OverrideAnimSetRef;
 } // namespace RED4ext
 
 // clang-format on

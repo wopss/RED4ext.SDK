@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct FindNetworkPlayerParams
 {
     static constexpr const char* NAME = "scnFindNetworkPlayerParams";
@@ -19,6 +20,7 @@ struct FindNetworkPlayerParams
 };
 RED4EXT_ASSERT_SIZE(FindNetworkPlayerParams, 0x4);
 } // namespace scn
+using scnFindNetworkPlayerParams = scn::FindNetworkPlayerParams;
 } // namespace RED4ext
 
 // clang-format on

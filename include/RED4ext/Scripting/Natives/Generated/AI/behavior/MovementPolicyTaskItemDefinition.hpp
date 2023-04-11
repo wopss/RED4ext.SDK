@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ExpressionSocket; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MovementPolicyTaskItemDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorMovementPolicyTaskItemDefinition";
@@ -28,6 +29,7 @@ struct MovementPolicyTaskItemDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MovementPolicyTaskItemDefinition, 0x80);
 } // namespace AI::behavior
+using AIbehaviorMovementPolicyTaskItemDefinition = AI::behavior::MovementPolicyTaskItemDefinition;
 } // namespace RED4ext
 
 // clang-format on

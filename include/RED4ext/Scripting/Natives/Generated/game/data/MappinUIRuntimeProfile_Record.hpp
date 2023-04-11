@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct MappinUIRuntimeProfile_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMappinUIRuntimeProfile_Record";
@@ -20,6 +21,7 @@ struct MappinUIRuntimeProfile_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(MappinUIRuntimeProfile_Record, 0x98);
 } // namespace game::data
+using gamedataMappinUIRuntimeProfile_Record = game::data::MappinUIRuntimeProfile_Record;
 using MappinUIRuntimeProfile_Record = game::data::MappinUIRuntimeProfile_Record;
 } // namespace RED4ext
 

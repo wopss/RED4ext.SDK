@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuLayer_SetCursorVisibility : red::Event
 {
     static constexpr const char* NAME = "inkMenuLayer_SetCursorVisibility";
@@ -20,6 +21,7 @@ struct MenuLayer_SetCursorVisibility : red::Event
 };
 RED4EXT_ASSERT_SIZE(MenuLayer_SetCursorVisibility, 0x50);
 } // namespace ink
+using inkMenuLayer_SetCursorVisibility = ink::MenuLayer_SetCursorVisibility;
 } // namespace RED4ext
 
 // clang-format on

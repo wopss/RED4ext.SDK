@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ChoiceMetaData
 {
     static constexpr const char* NAME = "gameinteractionsChoiceMetaData";
@@ -24,6 +25,7 @@ struct ChoiceMetaData
 };
 RED4EXT_ASSERT_SIZE(ChoiceMetaData, 0x30);
 } // namespace game::interactions
+using gameinteractionsChoiceMetaData = game::interactions::ChoiceMetaData;
 using InteractionChoiceMetaData = game::interactions::ChoiceMetaData;
 } // namespace RED4ext
 

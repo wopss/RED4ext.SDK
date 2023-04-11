@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimationBufferCompressed : anim::IAnimationBuffer
 {
     static constexpr const char* NAME = "animAnimationBufferCompressed";
@@ -42,6 +43,7 @@ struct AnimationBufferCompressed : anim::IAnimationBuffer
 };
 RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
 } // namespace anim
+using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
 } // namespace RED4ext
 
 // clang-format on

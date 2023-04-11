@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimStateTransitionCondition_BoolFeature : anim::IAnimStateTransitionCondition
 {
     static constexpr const char* NAME = "animAnimStateTransitionCondition_BoolFeature";
@@ -24,6 +25,7 @@ struct AnimStateTransitionCondition_BoolFeature : anim::IAnimStateTransitionCond
 };
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_BoolFeature, 0x58);
 } // namespace anim
+using animAnimStateTransitionCondition_BoolFeature = anim::AnimStateTransitionCondition_BoolFeature;
 } // namespace RED4ext
 
 // clang-format on

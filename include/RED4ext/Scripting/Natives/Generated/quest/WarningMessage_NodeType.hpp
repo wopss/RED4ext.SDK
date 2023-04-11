@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct WarningMessage_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questWarningMessage_NodeType";
@@ -26,6 +27,7 @@ struct WarningMessage_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(WarningMessage_NodeType, 0x88);
 } // namespace quest
+using questWarningMessage_NodeType = quest::WarningMessage_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuInstance_SwitchToScenario : red::Event
 {
     static constexpr const char* NAME = "inkMenuInstance_SwitchToScenario";
@@ -20,6 +21,7 @@ struct MenuInstance_SwitchToScenario : red::Event
 };
 RED4EXT_ASSERT_SIZE(MenuInstance_SwitchToScenario, 0x60);
 } // namespace ink
+using inkMenuInstance_SwitchToScenario = ink::MenuInstance_SwitchToScenario;
 } // namespace RED4ext
 
 // clang-format on

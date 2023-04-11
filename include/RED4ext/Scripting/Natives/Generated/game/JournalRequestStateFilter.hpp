@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JournalRequestStateFilter
 {
     static constexpr const char* NAME = "gameJournalRequestStateFilter";
@@ -22,6 +23,7 @@ struct JournalRequestStateFilter
 };
 RED4EXT_ASSERT_SIZE(JournalRequestStateFilter, 0x4);
 } // namespace game
+using gameJournalRequestStateFilter = game::JournalRequestStateFilter;
 using JournalRequestStateFilter = game::JournalRequestStateFilter;
 } // namespace RED4ext
 

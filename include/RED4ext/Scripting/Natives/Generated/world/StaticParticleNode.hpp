@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct CParticleSystem;
 
-namespace world { 
+namespace world
+{
 struct StaticParticleNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticParticleNode";
@@ -27,6 +28,7 @@ struct StaticParticleNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticParticleNode, 0x50);
 } // namespace world
+using worldStaticParticleNode = world::StaticParticleNode;
 } // namespace RED4ext
 
 // clang-format on

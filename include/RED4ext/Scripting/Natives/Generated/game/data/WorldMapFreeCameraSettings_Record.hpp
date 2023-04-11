@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct WorldMapFreeCameraSettings_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWorldMapFreeCameraSettings_Record";
@@ -20,6 +21,7 @@ struct WorldMapFreeCameraSettings_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(WorldMapFreeCameraSettings_Record, 0x90);
 } // namespace game::data
+using gamedataWorldMapFreeCameraSettings_Record = game::data::WorldMapFreeCameraSettings_Record;
 using WorldMapFreeCameraSettings_Record = game::data::WorldMapFreeCameraSettings_Record;
 } // namespace RED4ext
 

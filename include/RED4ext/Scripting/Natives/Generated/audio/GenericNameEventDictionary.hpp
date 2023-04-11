@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GenericNameEventDictionary : audio::InlinedAudioMetadata
 {
     static constexpr const char* NAME = "audioGenericNameEventDictionary";
@@ -25,6 +26,7 @@ struct GenericNameEventDictionary : audio::InlinedAudioMetadata
 };
 RED4EXT_ASSERT_SIZE(GenericNameEventDictionary, 0x88);
 } // namespace audio
+using audioGenericNameEventDictionary = audio::GenericNameEventDictionary;
 } // namespace RED4ext
 
 // clang-format on

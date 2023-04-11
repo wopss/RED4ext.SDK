@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ProgressionBuild_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataProgressionBuild_Record";
@@ -20,6 +21,7 @@ struct ProgressionBuild_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ProgressionBuild_Record, 0x88);
 } // namespace game::data
+using gamedataProgressionBuild_Record = game::data::ProgressionBuild_Record;
 using ProgressionBuild_Record = game::data::ProgressionBuild_Record;
 } // namespace RED4ext
 

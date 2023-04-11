@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace garment { 
+namespace garment
+{
 struct MeshParamGarmentChunkData
 {
     static constexpr const char* NAME = "garmentMeshParamGarmentChunkData";
@@ -27,6 +28,7 @@ struct MeshParamGarmentChunkData
 };
 RED4EXT_ASSERT_SIZE(MeshParamGarmentChunkData, 0xA8);
 } // namespace garment
+using garmentMeshParamGarmentChunkData = garment::MeshParamGarmentChunkData;
 } // namespace RED4ext
 
 // clang-format on

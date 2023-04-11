@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CrowdCreationDataRegistry : ISerializable
 {
     static constexpr const char* NAME = "gameCrowdCreationDataRegistry";
@@ -22,6 +23,7 @@ struct CrowdCreationDataRegistry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CrowdCreationDataRegistry, 0x40);
 } // namespace game
+using gameCrowdCreationDataRegistry = game::CrowdCreationDataRegistry;
 } // namespace RED4ext
 
 // clang-format on

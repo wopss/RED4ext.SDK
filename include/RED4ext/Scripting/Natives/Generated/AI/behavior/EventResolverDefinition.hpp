@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct EventResolverDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorEventResolverDefinition";
@@ -19,6 +20,7 @@ struct EventResolverDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EventResolverDefinition, 0x30);
 } // namespace AI::behavior
+using AIbehaviorEventResolverDefinition = AI::behavior::EventResolverDefinition;
 } // namespace RED4ext
 
 // clang-format on

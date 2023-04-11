@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct ShapeFillTransparencyInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimShapeFillTransparencyInterpolator";
@@ -22,6 +23,7 @@ struct ShapeFillTransparencyInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(ShapeFillTransparencyInterpolator, 0x78);
 } // namespace ink::anim
+using inkanimShapeFillTransparencyInterpolator = ink::anim::ShapeFillTransparencyInterpolator;
 using inkAnimShapeFillTransparency = ink::anim::ShapeFillTransparencyInterpolator;
 } // namespace RED4ext
 

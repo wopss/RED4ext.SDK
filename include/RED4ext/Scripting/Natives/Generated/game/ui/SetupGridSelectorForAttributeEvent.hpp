@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SetupGridSelectorForAttributeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetupGridSelectorForAttributeEvent";
@@ -21,6 +22,7 @@ struct SetupGridSelectorForAttributeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetupGridSelectorForAttributeEvent, 0x60);
 } // namespace game::ui
+using gameuiSetupGridSelectorForAttributeEvent = game::ui::SetupGridSelectorForAttributeEvent;
 using SetupGridSelectorForAttributeEvent = game::ui::SetupGridSelectorForAttributeEvent;
 } // namespace RED4ext
 

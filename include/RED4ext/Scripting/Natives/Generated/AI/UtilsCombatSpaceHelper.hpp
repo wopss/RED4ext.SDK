@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct UtilsCombatSpaceHelper
 {
     static constexpr const char* NAME = "AIUtilsCombatSpaceHelper";
@@ -19,6 +20,7 @@ struct UtilsCombatSpaceHelper
 };
 RED4EXT_ASSERT_SIZE(UtilsCombatSpaceHelper, 0x1);
 } // namespace AI
+using AIUtilsCombatSpaceHelper = AI::UtilsCombatSpaceHelper;
 using CombatSpaceHelper = AI::UtilsCombatSpaceHelper;
 } // namespace RED4ext
 

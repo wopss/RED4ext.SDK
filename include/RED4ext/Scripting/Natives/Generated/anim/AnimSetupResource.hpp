@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimSetupResource : CResource
 {
     static constexpr const char* NAME = "animAnimSetupResource";
@@ -24,6 +25,7 @@ struct AnimSetupResource : CResource
 };
 RED4EXT_ASSERT_SIZE(AnimSetupResource, 0x50);
 } // namespace anim
+using animAnimSetupResource = anim::AnimSetupResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowDialogIndicator_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questShowDialogIndicator_NodeType";
@@ -22,6 +23,7 @@ struct ShowDialogIndicator_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ShowDialogIndicator_NodeType, 0x48);
 } // namespace quest
+using questShowDialogIndicator_NodeType = quest::ShowDialogIndicator_NodeType;
 } // namespace RED4ext
 
 // clang-format on

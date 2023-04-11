@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game { 
+namespace game
+{
 struct MovingPlatformAttachEntity : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformAttachEntity";
@@ -23,6 +24,7 @@ struct MovingPlatformAttachEntity : red::Event
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformAttachEntity, 0x50);
 } // namespace game
+using gameMovingPlatformAttachEntity = game::MovingPlatformAttachEntity;
 using AttachEntity = game::MovingPlatformAttachEntity;
 } // namespace RED4ext
 

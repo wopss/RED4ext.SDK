@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ConditionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct EventConditionDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorEventConditionDefinition";
@@ -25,6 +26,7 @@ struct EventConditionDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EventConditionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorEventConditionDefinition = AI::behavior::EventConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

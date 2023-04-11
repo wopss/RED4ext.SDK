@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct CompiledSmartObjectData; }
 
-namespace game { 
+namespace game
+{
 struct CompiledSmartObjectNode
 {
     static constexpr const char* NAME = "gameCompiledSmartObjectNode";
@@ -25,6 +26,7 @@ struct CompiledSmartObjectNode
 };
 RED4EXT_ASSERT_SIZE(CompiledSmartObjectNode, 0x60);
 } // namespace game
+using gameCompiledSmartObjectNode = game::CompiledSmartObjectNode;
 } // namespace RED4ext
 
 // clang-format on

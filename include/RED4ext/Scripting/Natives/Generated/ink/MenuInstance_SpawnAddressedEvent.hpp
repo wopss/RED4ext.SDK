@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuInstance_SpawnAddressedEvent : ink::MenuInstance_SpawnEvent
 {
     static constexpr const char* NAME = "inkMenuInstance_SpawnAddressedEvent";
@@ -20,6 +21,7 @@ struct MenuInstance_SpawnAddressedEvent : ink::MenuInstance_SpawnEvent
 };
 RED4EXT_ASSERT_SIZE(MenuInstance_SpawnAddressedEvent, 0x60);
 } // namespace ink
+using inkMenuInstance_SpawnAddressedEvent = ink::MenuInstance_SpawnAddressedEvent;
 } // namespace RED4ext
 
 // clang-format on

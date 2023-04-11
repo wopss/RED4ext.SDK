@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest::vehicle { 
+namespace quest::vehicle
+{
 struct JoinTrafficParams : quest::VehicleSpecificCommandParams
 {
     static constexpr const char* NAME = "questvehicleJoinTrafficParams";
@@ -19,6 +20,7 @@ struct JoinTrafficParams : quest::VehicleSpecificCommandParams
 };
 RED4EXT_ASSERT_SIZE(JoinTrafficParams, 0x38);
 } // namespace quest::vehicle
+using questvehicleJoinTrafficParams = quest::vehicle::JoinTrafficParams;
 } // namespace RED4ext
 
 // clang-format on

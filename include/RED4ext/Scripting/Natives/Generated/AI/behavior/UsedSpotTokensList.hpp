@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct UsedSpotTokensList : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorUsedSpotTokensList";
@@ -22,6 +23,7 @@ struct UsedSpotTokensList : ISerializable
 };
 RED4EXT_ASSERT_SIZE(UsedSpotTokensList, 0x40);
 } // namespace AI::behavior
+using AIbehaviorUsedSpotTokensList = AI::behavior::UsedSpotTokensList;
 using UsedSpotTokensList = AI::behavior::UsedSpotTokensList;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct ExplorationLeftEvent : red::Event
 {
     static constexpr const char* NAME = "moveExplorationLeftEvent";
@@ -22,6 +23,7 @@ struct ExplorationLeftEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ExplorationLeftEvent, 0x48);
 } // namespace move
+using moveExplorationLeftEvent = move::ExplorationLeftEvent;
 using ExplorationLeftEvent = move::ExplorationLeftEvent;
 } // namespace RED4ext
 

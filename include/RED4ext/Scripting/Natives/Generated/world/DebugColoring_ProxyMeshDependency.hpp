@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_ProxyMeshDependency : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_ProxyMeshDependency";
@@ -22,6 +23,7 @@ struct DebugColoring_ProxyMeshDependency : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_ProxyMeshDependency, 0x38);
 } // namespace world
+using worldDebugColoring_ProxyMeshDependency = world::DebugColoring_ProxyMeshDependency;
 } // namespace RED4ext
 
 // clang-format on

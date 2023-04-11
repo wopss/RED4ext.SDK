@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PackageNodeRefSerializer : red::PackageCustomTypeSerializer
 {
     static constexpr const char* NAME = "worldPackageNodeRefSerializer";
@@ -19,6 +20,7 @@ struct PackageNodeRefSerializer : red::PackageCustomTypeSerializer
 };
 RED4EXT_ASSERT_SIZE(PackageNodeRefSerializer, 0x8);
 } // namespace world
+using worldPackageNodeRefSerializer = world::PackageNodeRefSerializer;
 } // namespace RED4ext
 
 // clang-format on

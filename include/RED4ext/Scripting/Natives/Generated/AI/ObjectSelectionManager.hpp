@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ObjectSelectionManager : AI::ObjectSelectionManagerInterface
 {
     static constexpr const char* NAME = "AIObjectSelectionManager";
@@ -20,6 +21,7 @@ struct ObjectSelectionManager : AI::ObjectSelectionManagerInterface
 };
 RED4EXT_ASSERT_SIZE(ObjectSelectionManager, 0x70);
 } // namespace AI
+using AIObjectSelectionManager = AI::ObjectSelectionManager;
 using ObjectSelectionManager = AI::ObjectSelectionManager;
 } // namespace RED4ext
 

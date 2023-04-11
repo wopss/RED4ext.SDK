@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::debug { 
+namespace game::debug
+{
 struct FailureId
 {
     static constexpr const char* NAME = "gamedebugFailureId";
@@ -20,6 +21,7 @@ struct FailureId
 };
 RED4EXT_ASSERT_SIZE(FailureId, 0x8);
 } // namespace game::debug
+using gamedebugFailureId = game::debug::FailureId;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetGender_NodeTypeParams
 {
     static constexpr const char* NAME = "questSetGender_NodeTypeParams";
@@ -24,6 +25,7 @@ struct SetGender_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(SetGender_NodeTypeParams, 0x48);
 } // namespace quest
+using questSetGender_NodeTypeParams = quest::SetGender_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

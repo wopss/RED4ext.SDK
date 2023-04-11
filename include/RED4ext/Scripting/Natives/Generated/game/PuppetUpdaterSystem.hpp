@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PuppetUpdaterSystem : game::IPuppetUpdaterSystem
 {
     static constexpr const char* NAME = "gamePuppetUpdaterSystem";
@@ -20,6 +21,7 @@ struct PuppetUpdaterSystem : game::IPuppetUpdaterSystem
 };
 RED4EXT_ASSERT_SIZE(PuppetUpdaterSystem, 0x60);
 } // namespace game
+using gamePuppetUpdaterSystem = game::PuppetUpdaterSystem;
 } // namespace RED4ext
 
 // clang-format on

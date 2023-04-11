@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineplayeractionsWeaponActionBase : game::state::MachineStateActionDefinition
 {
     static constexpr const char* NAME = "gamestateMachineplayeractionsWeaponActionBase";
@@ -20,6 +21,7 @@ struct MachineplayeractionsWeaponActionBase : game::state::MachineStateActionDef
 };
 RED4EXT_ASSERT_SIZE(MachineplayeractionsWeaponActionBase, 0x70);
 } // namespace game::state
+using gamestateMachineplayeractionsWeaponActionBase = game::state::MachineplayeractionsWeaponActionBase;
 } // namespace RED4ext
 
 // clang-format on

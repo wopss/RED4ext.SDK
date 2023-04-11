@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetBriefingSize_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetBriefingSize_NodeType";
@@ -22,6 +23,7 @@ struct SetBriefingSize_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetBriefingSize_NodeType, 0x40);
 } // namespace quest
+using questSetBriefingSize_NodeType = quest::SetBriefingSize_NodeType;
 } // namespace RED4ext
 
 // clang-format on

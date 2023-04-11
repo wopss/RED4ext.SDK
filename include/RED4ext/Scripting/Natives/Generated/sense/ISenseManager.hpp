@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct ISenseManager : game::IGameSystem
 {
     static constexpr const char* NAME = "senseISenseManager";
@@ -19,6 +20,7 @@ struct ISenseManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISenseManager, 0x48);
 } // namespace sense
+using senseISenseManager = sense::ISenseManager;
 using ISenseManager = sense::ISenseManager;
 } // namespace RED4ext
 

@@ -18,7 +18,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimNodeSourceChannel_WeightedQuat; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_OrientConstraint : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_OrientConstraint";
@@ -36,6 +37,7 @@ struct AnimNode_OrientConstraint : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_OrientConstraint, 0xD0);
 } // namespace anim
+using animAnimNode_OrientConstraint = anim::AnimNode_OrientConstraint;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ProjectileLaunchMode_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataProjectileLaunchMode_Record";
@@ -20,6 +21,7 @@ struct ProjectileLaunchMode_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ProjectileLaunchMode_Record, 0x58);
 } // namespace game::data
+using gamedataProjectileLaunchMode_Record = game::data::ProjectileLaunchMode_Record;
 using ProjectileLaunchMode_Record = game::data::ProjectileLaunchMode_Record;
 } // namespace RED4ext
 

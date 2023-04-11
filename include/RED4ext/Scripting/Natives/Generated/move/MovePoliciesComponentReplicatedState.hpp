@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct MovePoliciesComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "moveMovePoliciesComponentReplicatedState";
@@ -21,6 +22,7 @@ struct MovePoliciesComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(MovePoliciesComponentReplicatedState, 0x60);
 } // namespace move
+using moveMovePoliciesComponentReplicatedState = move::MovePoliciesComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

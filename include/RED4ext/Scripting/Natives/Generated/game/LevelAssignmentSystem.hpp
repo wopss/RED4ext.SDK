@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LevelAssignmentSystem : game::ILevelAssignmentSystem
 {
     static constexpr const char* NAME = "gameLevelAssignmentSystem";
@@ -20,6 +21,7 @@ struct LevelAssignmentSystem : game::ILevelAssignmentSystem
 };
 RED4EXT_ASSERT_SIZE(LevelAssignmentSystem, 0xB0);
 } // namespace game
+using gameLevelAssignmentSystem = game::LevelAssignmentSystem;
 using LevelAssignmentSystem = game::LevelAssignmentSystem;
 } // namespace RED4ext
 

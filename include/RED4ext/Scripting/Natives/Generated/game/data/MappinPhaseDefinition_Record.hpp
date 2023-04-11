@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct MappinPhaseDefinition_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMappinPhaseDefinition_Record";
@@ -20,6 +21,7 @@ struct MappinPhaseDefinition_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(MappinPhaseDefinition_Record, 0x50);
 } // namespace game::data
+using gamedataMappinPhaseDefinition_Record = game::data::MappinPhaseDefinition_Record;
 using MappinPhaseDefinition_Record = game::data::MappinPhaseDefinition_Record;
 } // namespace RED4ext
 

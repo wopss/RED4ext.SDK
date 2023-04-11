@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct ParamKeepDistance : ISerializable
 {
     static constexpr const char* NAME = "questParamKeepDistance";
@@ -25,6 +26,7 @@ struct ParamKeepDistance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ParamKeepDistance, 0x48);
 } // namespace quest
+using questParamKeepDistance = quest::ParamKeepDistance;
 } // namespace RED4ext
 
 // clang-format on

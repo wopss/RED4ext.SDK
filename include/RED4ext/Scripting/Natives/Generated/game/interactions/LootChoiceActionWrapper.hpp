@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct LootChoiceActionWrapper
 {
     static constexpr const char* NAME = "gameinteractionsLootChoiceActionWrapper";
@@ -27,6 +28,7 @@ struct LootChoiceActionWrapper
 };
 RED4EXT_ASSERT_SIZE(LootChoiceActionWrapper, 0x30);
 } // namespace game::interactions
+using gameinteractionsLootChoiceActionWrapper = game::interactions::LootChoiceActionWrapper;
 using LootChoiceActionWrapper = game::interactions::LootChoiceActionWrapper;
 } // namespace RED4ext
 

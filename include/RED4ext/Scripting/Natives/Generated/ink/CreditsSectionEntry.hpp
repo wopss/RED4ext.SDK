@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CreditsSectionEntry
 {
     static constexpr const char* NAME = "inkCreditsSectionEntry";
@@ -25,6 +26,7 @@ struct CreditsSectionEntry
 };
 RED4EXT_ASSERT_SIZE(CreditsSectionEntry, 0x38);
 } // namespace ink
+using inkCreditsSectionEntry = ink::CreditsSectionEntry;
 } // namespace RED4ext
 
 // clang-format on

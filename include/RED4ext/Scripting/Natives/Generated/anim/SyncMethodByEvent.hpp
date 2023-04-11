@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SyncMethodByEvent : anim::ISyncMethod
 {
     static constexpr const char* NAME = "animSyncMethodByEvent";
@@ -21,6 +22,7 @@ struct SyncMethodByEvent : anim::ISyncMethod
 };
 RED4EXT_ASSERT_SIZE(SyncMethodByEvent, 0x38);
 } // namespace anim
+using animSyncMethodByEvent = anim::SyncMethodByEvent;
 } // namespace RED4ext
 
 // clang-format on

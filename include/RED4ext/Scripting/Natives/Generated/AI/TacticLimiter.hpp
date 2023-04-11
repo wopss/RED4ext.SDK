@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TacticLimiter : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AITacticLimiter";
@@ -20,6 +21,7 @@ struct TacticLimiter : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(TacticLimiter, 0x18);
 } // namespace AI
+using AITacticLimiter = AI::TacticLimiter;
 } // namespace RED4ext
 
 // clang-format on

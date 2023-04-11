@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct EffectSet; }
 
-namespace game::weapon { 
+namespace game::weapon
+{
 struct Object : game::ItemObject
 {
     static constexpr const char* NAME = "gameweaponObject";
@@ -25,6 +26,7 @@ struct Object : game::ItemObject
 };
 RED4EXT_ASSERT_SIZE(Object, 0x4F0);
 } // namespace game::weapon
+using gameweaponObject = game::weapon::Object;
 using WeaponObject = game::weapon::Object;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_EditorOnlyPredictiveLookAt : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_EditorOnlyPredictiveLookAt";
@@ -26,6 +27,7 @@ struct AnimFeature_EditorOnlyPredictiveLookAt : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_EditorOnlyPredictiveLookAt, 0x70);
 } // namespace anim
+using animAnimFeature_EditorOnlyPredictiveLookAt = anim::AnimFeature_EditorOnlyPredictiveLookAt;
 } // namespace RED4ext
 
 // clang-format on

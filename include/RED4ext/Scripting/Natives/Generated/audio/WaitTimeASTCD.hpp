@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct WaitTimeASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioWaitTimeASTCD";
@@ -21,6 +22,7 @@ struct WaitTimeASTCD : audio::AudioStateTransitionConditionData
 };
 RED4EXT_ASSERT_SIZE(WaitTimeASTCD, 0x40);
 } // namespace audio
+using audioWaitTimeASTCD = audio::WaitTimeASTCD;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IWorldBoundarySystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIWorldBoundarySystem";
@@ -19,6 +20,7 @@ struct IWorldBoundarySystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IWorldBoundarySystem, 0x48);
 } // namespace game
+using gameIWorldBoundarySystem = game::IWorldBoundarySystem;
 } // namespace RED4ext
 
 // clang-format on

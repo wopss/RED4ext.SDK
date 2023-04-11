@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntitySpawnerSlotData
 {
     static constexpr const char* NAME = "gameEntitySpawnerSlotData";
@@ -23,6 +24,7 @@ struct EntitySpawnerSlotData
 };
 RED4EXT_ASSERT_SIZE(EntitySpawnerSlotData, 0x28);
 } // namespace game
+using gameEntitySpawnerSlotData = game::EntitySpawnerSlotData;
 using EntitySpawnerSlotData = game::EntitySpawnerSlotData;
 } // namespace RED4ext
 

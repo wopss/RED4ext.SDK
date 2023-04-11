@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct InjectLoot_NodeTypeParams
 {
     static constexpr const char* NAME = "questInjectLoot_NodeTypeParams";
@@ -25,6 +26,7 @@ struct InjectLoot_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(InjectLoot_NodeTypeParams, 0x20);
 } // namespace quest
+using questInjectLoot_NodeTypeParams = quest::InjectLoot_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

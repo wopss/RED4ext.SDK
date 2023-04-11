@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct GenericDataContent
 {
     static constexpr const char* NAME = "gamedeviceGenericDataContent";
@@ -23,6 +24,7 @@ struct GenericDataContent
 };
 RED4EXT_ASSERT_SIZE(GenericDataContent, 0x30);
 } // namespace game::device
+using gamedeviceGenericDataContent = game::device::GenericDataContent;
 using GenericDataContent = game::device::GenericDataContent;
 } // namespace RED4ext
 

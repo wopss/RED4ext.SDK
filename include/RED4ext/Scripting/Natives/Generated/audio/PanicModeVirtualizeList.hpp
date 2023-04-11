@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct PanicModeVirtualizeList : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioPanicModeVirtualizeList";
@@ -22,6 +23,7 @@ struct PanicModeVirtualizeList : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(PanicModeVirtualizeList, 0x48);
 } // namespace audio
+using audioPanicModeVirtualizeList = audio::PanicModeVirtualizeList;
 } // namespace RED4ext
 
 // clang-format on

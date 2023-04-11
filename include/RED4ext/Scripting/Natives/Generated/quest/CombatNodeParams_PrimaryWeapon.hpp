@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CombatNodeParams_PrimaryWeapon : quest::CombatNodeParams
 {
     static constexpr const char* NAME = "questCombatNodeParams_PrimaryWeapon";
@@ -21,6 +22,7 @@ struct CombatNodeParams_PrimaryWeapon : quest::CombatNodeParams
 };
 RED4EXT_ASSERT_SIZE(CombatNodeParams_PrimaryWeapon, 0x48);
 } // namespace quest
+using questCombatNodeParams_PrimaryWeapon = quest::CombatNodeParams_PrimaryWeapon;
 } // namespace RED4ext
 
 // clang-format on

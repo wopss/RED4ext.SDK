@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhotoModeUIHideForScreenshotEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPhotoModeUIHideForScreenshotEvent";
@@ -21,6 +22,7 @@ struct PhotoModeUIHideForScreenshotEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhotoModeUIHideForScreenshotEvent, 0x48);
 } // namespace game::ui
+using gameuiPhotoModeUIHideForScreenshotEvent = game::ui::PhotoModeUIHideForScreenshotEvent;
 using PhotoModeUIHideForScreenshotEvent = game::ui::PhotoModeUIHideForScreenshotEvent;
 } // namespace RED4ext
 

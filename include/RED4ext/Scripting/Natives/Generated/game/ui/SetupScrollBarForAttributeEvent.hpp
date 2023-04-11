@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SetupScrollBarForAttributeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetupScrollBarForAttributeEvent";
@@ -25,6 +26,7 @@ struct SetupScrollBarForAttributeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetupScrollBarForAttributeEvent, 0x58);
 } // namespace game::ui
+using gameuiSetupScrollBarForAttributeEvent = game::ui::SetupScrollBarForAttributeEvent;
 using SetupScrollBarForAttributeEvent = game::ui::SetupScrollBarForAttributeEvent;
 } // namespace RED4ext
 

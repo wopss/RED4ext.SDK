@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IUIObjectsLoaderSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameuiIUIObjectsLoaderSystem";
@@ -19,6 +20,7 @@ struct IUIObjectsLoaderSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IUIObjectsLoaderSystem, 0x48);
 } // namespace game::ui
+using gameuiIUIObjectsLoaderSystem = game::ui::IUIObjectsLoaderSystem;
 } // namespace RED4ext
 
 // clang-format on

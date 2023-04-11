@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace itempreview { 
+namespace itempreview
+{
 struct UIObjectsLoaderSystemListener : game::ui::IUIObjectsLoaderSystemListener
 {
     static constexpr const char* NAME = "itempreviewUIObjectsLoaderSystemListener";
@@ -20,6 +21,7 @@ struct UIObjectsLoaderSystemListener : game::ui::IUIObjectsLoaderSystemListener
 };
 RED4EXT_ASSERT_SIZE(UIObjectsLoaderSystemListener, 0x40);
 } // namespace itempreview
+using itempreviewUIObjectsLoaderSystemListener = itempreview::UIObjectsLoaderSystemListener;
 } // namespace RED4ext
 
 // clang-format on

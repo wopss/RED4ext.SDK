@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct RagdollCollisionMaterial : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioRagdollCollisionMaterial";
@@ -23,6 +24,7 @@ struct RagdollCollisionMaterial : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(RagdollCollisionMaterial, 0x50);
 } // namespace audio
+using audioRagdollCollisionMaterial = audio::RagdollCollisionMaterial;
 } // namespace RED4ext
 
 // clang-format on

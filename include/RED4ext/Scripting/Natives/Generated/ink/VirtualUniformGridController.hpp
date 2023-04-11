@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualUniformGridController : ink::VirtualUniformListController
 {
     static constexpr const char* NAME = "inkVirtualUniformGridController";
@@ -20,6 +21,7 @@ struct VirtualUniformGridController : ink::VirtualUniformListController
 };
 RED4EXT_ASSERT_SIZE(VirtualUniformGridController, 0x220);
 } // namespace ink
+using inkVirtualUniformGridController = ink::VirtualUniformGridController;
 } // namespace RED4ext
 
 // clang-format on

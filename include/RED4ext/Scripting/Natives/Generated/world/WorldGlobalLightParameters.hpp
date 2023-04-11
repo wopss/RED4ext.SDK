@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WorldGlobalLightParameters
 {
     static constexpr const char* NAME = "worldWorldGlobalLightParameters";
@@ -29,6 +30,7 @@ struct WorldGlobalLightParameters
 };
 RED4EXT_ASSERT_SIZE(WorldGlobalLightParameters, 0x128);
 } // namespace world
+using worldWorldGlobalLightParameters = world::WorldGlobalLightParameters;
 } // namespace RED4ext
 
 // clang-format on

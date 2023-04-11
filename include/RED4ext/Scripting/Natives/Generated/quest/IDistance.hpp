@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IDistance : ISerializable
 {
     static constexpr const char* NAME = "questIDistance";
@@ -19,6 +20,7 @@ struct IDistance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IDistance, 0x30);
 } // namespace quest
+using questIDistance = quest::IDistance;
 } // namespace RED4ext
 
 // clang-format on

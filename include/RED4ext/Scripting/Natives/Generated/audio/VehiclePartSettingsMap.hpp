@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehiclePartSettingsMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioVehiclePartSettingsMap";
@@ -25,6 +26,7 @@ struct VehiclePartSettingsMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(VehiclePartSettingsMap, 0x78);
 } // namespace audio
+using audioVehiclePartSettingsMap = audio::VehiclePartSettingsMap;
 } // namespace RED4ext
 
 // clang-format on

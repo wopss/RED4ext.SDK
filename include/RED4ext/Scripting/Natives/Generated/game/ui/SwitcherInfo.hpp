@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SwitcherInfo : game::ui::CharacterCustomizationInfo
 {
     static constexpr const char* NAME = "gameuiSwitcherInfo";
@@ -26,6 +27,7 @@ struct SwitcherInfo : game::ui::CharacterCustomizationInfo
 };
 RED4EXT_ASSERT_SIZE(SwitcherInfo, 0xE0);
 } // namespace game::ui
+using gameuiSwitcherInfo = game::ui::SwitcherInfo;
 } // namespace RED4ext
 
 // clang-format on

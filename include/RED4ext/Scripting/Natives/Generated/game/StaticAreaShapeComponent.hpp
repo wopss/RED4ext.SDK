@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct AreaShapeOutline;
 
-namespace game { 
+namespace game
+{
 struct StaticAreaShapeComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameStaticAreaShapeComponent";
@@ -27,6 +28,7 @@ struct StaticAreaShapeComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(StaticAreaShapeComponent, 0x150);
 } // namespace game
+using gameStaticAreaShapeComponent = game::StaticAreaShapeComponent;
 using AreaShapeComponent = game::StaticAreaShapeComponent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FacialSharedMetaPose : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_FacialSharedMetaPose";
@@ -19,6 +20,7 @@ struct AnimNode_FacialSharedMetaPose : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FacialSharedMetaPose, 0x60);
 } // namespace anim
+using animAnimNode_FacialSharedMetaPose = anim::AnimNode_FacialSharedMetaPose;
 } // namespace RED4ext
 
 // clang-format on

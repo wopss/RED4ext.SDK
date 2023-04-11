@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace appearance { 
+namespace appearance
+{
 struct ChunkMaskSettings
 {
     static constexpr const char* NAME = "appearanceChunkMaskSettings";
@@ -22,6 +23,7 @@ struct ChunkMaskSettings
 };
 RED4EXT_ASSERT_SIZE(ChunkMaskSettings, 0x28);
 } // namespace appearance
+using appearanceChunkMaskSettings = appearance::ChunkMaskSettings;
 } // namespace RED4ext
 
 // clang-format on

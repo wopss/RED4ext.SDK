@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DynamicEventsPerVisualTags
 {
     static constexpr const char* NAME = "audioDynamicEventsPerVisualTags";
@@ -23,6 +24,7 @@ struct DynamicEventsPerVisualTags
 };
 RED4EXT_ASSERT_SIZE(DynamicEventsPerVisualTags, 0x20);
 } // namespace audio
+using audioDynamicEventsPerVisualTags = audio::DynamicEventsPerVisualTags;
 } // namespace RED4ext
 
 // clang-format on

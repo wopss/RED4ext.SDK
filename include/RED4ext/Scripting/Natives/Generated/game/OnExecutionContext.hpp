@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct OnExecutionContext
 {
     static constexpr const char* NAME = "gameOnExecutionContext";
@@ -19,6 +20,7 @@ struct OnExecutionContext
 };
 RED4EXT_ASSERT_SIZE(OnExecutionContext, 0x8);
 } // namespace game
+using gameOnExecutionContext = game::OnExecutionContext;
 } // namespace RED4ext
 
 // clang-format on

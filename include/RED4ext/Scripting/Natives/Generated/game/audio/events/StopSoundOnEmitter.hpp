@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct StopSoundOnEmitter : game::audio::events::EmitterEvent
 {
     static constexpr const char* NAME = "gameaudioeventsStopSoundOnEmitter";
@@ -21,6 +22,7 @@ struct StopSoundOnEmitter : game::audio::events::EmitterEvent
 };
 RED4EXT_ASSERT_SIZE(StopSoundOnEmitter, 0x60);
 } // namespace game::audio::events
+using gameaudioeventsStopSoundOnEmitter = game::audio::events::StopSoundOnEmitter;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionAnimationSlideParams
 {
     static constexpr const char* NAME = "gameActionAnimationSlideParams";
@@ -36,6 +37,7 @@ struct ActionAnimationSlideParams
 };
 RED4EXT_ASSERT_SIZE(ActionAnimationSlideParams, 0x3C);
 } // namespace game
+using gameActionAnimationSlideParams = game::ActionAnimationSlideParams;
 using ActionAnimationSlideParams = game::ActionAnimationSlideParams;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct QuestOrSceneSetVehiclePhysicsActive : red::Event
 {
     static constexpr const char* NAME = "gameQuestOrSceneSetVehiclePhysicsActive";
@@ -20,6 +21,7 @@ struct QuestOrSceneSetVehiclePhysicsActive : red::Event
 };
 RED4EXT_ASSERT_SIZE(QuestOrSceneSetVehiclePhysicsActive, 0x48);
 } // namespace game
+using gameQuestOrSceneSetVehiclePhysicsActive = game::QuestOrSceneSetVehiclePhysicsActive;
 } // namespace RED4ext
 
 // clang-format on

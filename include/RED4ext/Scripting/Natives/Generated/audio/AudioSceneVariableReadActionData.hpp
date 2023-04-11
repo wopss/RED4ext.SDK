@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudioSceneVariableReadActionData
 {
     static constexpr const char* NAME = "audioAudioSceneVariableReadActionData";
@@ -24,6 +25,7 @@ struct AudioSceneVariableReadActionData
 };
 RED4EXT_ASSERT_SIZE(AudioSceneVariableReadActionData, 0x10);
 } // namespace audio
+using audioAudioSceneVariableReadActionData = audio::AudioSceneVariableReadActionData;
 } // namespace RED4ext
 
 // clang-format on

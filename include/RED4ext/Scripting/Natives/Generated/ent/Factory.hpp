@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct Factory : ISerializable
 {
     static constexpr const char* NAME = "entFactory";
@@ -20,6 +21,7 @@ struct Factory : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Factory, 0x38);
 } // namespace ent
+using entFactory = ent::Factory;
 } // namespace RED4ext
 
 // clang-format on

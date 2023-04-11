@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimDebuggerCommand_WeightChanges : anim::IAnimDebuggerCommand
 {
     static constexpr const char* NAME = "animAnimDebuggerCommand_WeightChanges";
@@ -20,6 +21,7 @@ struct AnimDebuggerCommand_WeightChanges : anim::IAnimDebuggerCommand
 };
 RED4EXT_ASSERT_SIZE(AnimDebuggerCommand_WeightChanges, 0x20);
 } // namespace anim
+using animAnimDebuggerCommand_WeightChanges = anim::AnimDebuggerCommand_WeightChanges;
 } // namespace RED4ext
 
 // clang-format on

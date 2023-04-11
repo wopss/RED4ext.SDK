@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct UphillDriveHelper_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataUphillDriveHelper_Record";
@@ -20,6 +21,7 @@ struct UphillDriveHelper_Record : game::data::DriveHelper_Record
 };
 RED4EXT_ASSERT_SIZE(UphillDriveHelper_Record, 0x58);
 } // namespace game::data
+using gamedataUphillDriveHelper_Record = game::data::UphillDriveHelper_Record;
 using UphillDriveHelper_Record = game::data::UphillDriveHelper_Record;
 } // namespace RED4ext
 

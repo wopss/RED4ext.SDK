@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraEditIssueBody : ISerializable
 {
     static constexpr const char* NAME = "toolsJiraEditIssueBody";
@@ -23,6 +24,7 @@ struct JiraEditIssueBody : ISerializable
 };
 RED4EXT_ASSERT_SIZE(JiraEditIssueBody, 0x3C0);
 } // namespace tools
+using toolsJiraEditIssueBody = tools::JiraEditIssueBody;
 } // namespace RED4ext
 
 // clang-format on

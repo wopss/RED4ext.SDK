@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PermanentLayerDefinitionCollection
 {
     static constexpr const char* NAME = "inkPermanentLayerDefinitionCollection";
@@ -26,6 +27,7 @@ struct PermanentLayerDefinitionCollection
 };
 RED4EXT_ASSERT_SIZE(PermanentLayerDefinitionCollection, 0x148);
 } // namespace ink
+using inkPermanentLayerDefinitionCollection = ink::PermanentLayerDefinitionCollection;
 } // namespace RED4ext
 
 // clang-format on

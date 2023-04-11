@@ -18,7 +18,8 @@ namespace RED4ext
 namespace AI { struct Spot; }
 namespace world { struct TrafficSpotDefinition; }
 
-namespace world { 
+namespace world
+{
 struct AISpotNode : world::SocketNode
 {
     static constexpr const char* NAME = "worldAISpotNode";
@@ -39,6 +40,7 @@ struct AISpotNode : world::SocketNode
 };
 RED4EXT_ASSERT_SIZE(AISpotNode, 0x98);
 } // namespace world
+using worldAISpotNode = world::AISpotNode;
 } // namespace RED4ext
 
 // clang-format on

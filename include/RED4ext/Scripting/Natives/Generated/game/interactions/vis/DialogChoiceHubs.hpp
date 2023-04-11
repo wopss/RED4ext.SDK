@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct DialogChoiceHubs
 {
     static constexpr const char* NAME = "gameinteractionsvisDialogChoiceHubs";
@@ -21,6 +22,7 @@ struct DialogChoiceHubs
 };
 RED4EXT_ASSERT_SIZE(DialogChoiceHubs, 0x10);
 } // namespace game::interactions::vis
+using gameinteractionsvisDialogChoiceHubs = game::interactions::vis::DialogChoiceHubs;
 using DialogChoiceHubs = game::interactions::vis::DialogChoiceHubs;
 } // namespace RED4ext
 

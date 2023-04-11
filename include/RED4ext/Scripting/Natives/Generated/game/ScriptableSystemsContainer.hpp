@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScriptableSystemsContainer : game::IScriptableSystemsContainer
 {
     static constexpr const char* NAME = "gameScriptableSystemsContainer";
@@ -20,6 +21,7 @@ struct ScriptableSystemsContainer : game::IScriptableSystemsContainer
 };
 RED4EXT_ASSERT_SIZE(ScriptableSystemsContainer, 0xA0);
 } // namespace game
+using gameScriptableSystemsContainer = game::ScriptableSystemsContainer;
 using ScriptableSystemsContainer = game::ScriptableSystemsContainer;
 } // namespace RED4ext
 

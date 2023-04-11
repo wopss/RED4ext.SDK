@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IEffectInputParameter
 {
     static constexpr const char* NAME = "gameIEffectInputParameter";
@@ -19,6 +20,7 @@ struct IEffectInputParameter
 };
 RED4EXT_ASSERT_SIZE(IEffectInputParameter, 0x8);
 } // namespace game
+using gameIEffectInputParameter = game::IEffectInputParameter;
 } // namespace RED4ext
 
 // clang-format on

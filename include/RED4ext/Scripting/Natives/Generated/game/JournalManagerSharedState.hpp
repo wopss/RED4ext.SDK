@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JournalManagerSharedState : game::IGameSystemReplicatedState
 {
     static constexpr const char* NAME = "gameJournalManagerSharedState";
@@ -24,6 +25,7 @@ struct JournalManagerSharedState : game::IGameSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(JournalManagerSharedState, 0x70);
 } // namespace game
+using gameJournalManagerSharedState = game::JournalManagerSharedState;
 } // namespace RED4ext
 
 // clang-format on

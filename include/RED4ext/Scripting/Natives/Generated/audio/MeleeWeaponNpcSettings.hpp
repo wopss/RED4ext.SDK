@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MeleeWeaponNpcSettings : audio::MeleeWeaponSettings
 {
     static constexpr const char* NAME = "audioMeleeWeaponNpcSettings";
@@ -19,6 +20,7 @@ struct MeleeWeaponNpcSettings : audio::MeleeWeaponSettings
 };
 RED4EXT_ASSERT_SIZE(MeleeWeaponNpcSettings, 0x90);
 } // namespace audio
+using audioMeleeWeaponNpcSettings = audio::MeleeWeaponNpcSettings;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace puppetpreview { 
+namespace puppetpreview
+{
 struct PuppetPreview_UIObjectsLoaderSystemListener : game::ui::IUIObjectsLoaderSystemListener
 {
     static constexpr const char* NAME = "puppetpreviewPuppetPreview_UIObjectsLoaderSystemListener";
@@ -20,6 +21,7 @@ struct PuppetPreview_UIObjectsLoaderSystemListener : game::ui::IUIObjectsLoaderS
 };
 RED4EXT_ASSERT_SIZE(PuppetPreview_UIObjectsLoaderSystemListener, 0x40);
 } // namespace puppetpreview
+using puppetpreviewPuppetPreview_UIObjectsLoaderSystemListener = puppetpreview::PuppetPreview_UIObjectsLoaderSystemListener;
 } // namespace RED4ext
 
 // clang-format on

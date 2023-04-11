@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon::events { 
+namespace game::weapon::events
+{
 struct CycleTriggerModeEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsCycleTriggerModeEvent";
@@ -19,6 +20,7 @@ struct CycleTriggerModeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CycleTriggerModeEvent, 0x40);
 } // namespace game::weapon::events
+using gameweaponeventsCycleTriggerModeEvent = game::weapon::events::CycleTriggerModeEvent;
 using WeaponCycleTriggerModeEvent = game::weapon::events::CycleTriggerModeEvent;
 } // namespace RED4ext
 

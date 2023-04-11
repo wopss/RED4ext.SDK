@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AudioVehicleMultipliers_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questAudioVehicleMultipliers_NodeType";
@@ -23,6 +24,7 @@ struct AudioVehicleMultipliers_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(AudioVehicleMultipliers_NodeType, 0x70);
 } // namespace quest
+using questAudioVehicleMultipliers_NodeType = quest::AudioVehicleMultipliers_NodeType;
 } // namespace RED4ext
 
 // clang-format on

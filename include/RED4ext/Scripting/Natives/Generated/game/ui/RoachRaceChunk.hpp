@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RoachRaceChunk
 {
     static constexpr const char* NAME = "gameuiRoachRaceChunk";
@@ -21,6 +22,7 @@ struct RoachRaceChunk
 };
 RED4EXT_ASSERT_SIZE(RoachRaceChunk, 0x10);
 } // namespace game::ui
+using gameuiRoachRaceChunk = game::ui::RoachRaceChunk;
 using RoachRaceChunk = game::ui::RoachRaceChunk;
 } // namespace RED4ext
 

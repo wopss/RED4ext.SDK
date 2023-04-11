@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ListItemController : ink::ButtonController
 {
     static constexpr const char* NAME = "inkListItemController";
@@ -26,6 +27,7 @@ struct ListItemController : ink::ButtonController
 };
 RED4EXT_ASSERT_SIZE(ListItemController, 0x358);
 } // namespace ink
+using inkListItemController = ink::ListItemController;
 using ListItemController = ink::ListItemController;
 } // namespace RED4ext
 

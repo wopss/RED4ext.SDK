@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TriggerVOEvent : red::Event
 {
     static constexpr const char* NAME = "entTriggerVOEvent";
@@ -35,6 +36,7 @@ struct TriggerVOEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TriggerVOEvent, 0x80);
 } // namespace ent
+using entTriggerVOEvent = ent::TriggerVOEvent;
 } // namespace RED4ext
 
 // clang-format on

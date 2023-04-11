@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ParameterizedBehavior; }
 
-namespace AI { 
+namespace AI
+{
 struct ArgumentTreeRefValue : AI::ArgumentDefinition
 {
     static constexpr const char* NAME = "AIArgumentTreeRefValue";
@@ -26,6 +27,7 @@ struct ArgumentTreeRefValue : AI::ArgumentDefinition
 };
 RED4EXT_ASSERT_SIZE(ArgumentTreeRefValue, 0x60);
 } // namespace AI
+using AIArgumentTreeRefValue = AI::ArgumentTreeRefValue;
 } // namespace RED4ext
 
 // clang-format on

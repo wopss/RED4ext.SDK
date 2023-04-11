@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace minimap { 
+namespace minimap
+{
 struct EncodedShapes : CResource
 {
     static constexpr const char* NAME = "minimapEncodedShapes";
@@ -35,6 +36,7 @@ struct EncodedShapes : CResource
 };
 RED4EXT_ASSERT_SIZE(EncodedShapes, 0xB0);
 } // namespace minimap
+using minimapEncodedShapes = minimap::EncodedShapes;
 } // namespace RED4ext
 
 // clang-format on

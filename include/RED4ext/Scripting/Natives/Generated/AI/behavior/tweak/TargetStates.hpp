@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct TargetStates
 {
     static constexpr const char* NAME = "AIbehaviortweakTargetStates";
@@ -19,6 +20,7 @@ struct TargetStates
 };
 RED4EXT_ASSERT_SIZE(TargetStates, 0xB0);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakTargetStates = AI::behavior::tweak::TargetStates;
 } // namespace RED4ext
 
 // clang-format on

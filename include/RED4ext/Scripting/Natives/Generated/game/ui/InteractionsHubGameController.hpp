@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InteractionsHubGameController : game::ui::HUDGameController
 {
     static constexpr const char* NAME = "gameuiInteractionsHubGameController";
@@ -20,6 +21,7 @@ struct InteractionsHubGameController : game::ui::HUDGameController
 };
 RED4EXT_ASSERT_SIZE(InteractionsHubGameController, 0x100);
 } // namespace game::ui
+using gameuiInteractionsHubGameController = game::ui::InteractionsHubGameController;
 using InteractionsHubGameController = game::ui::InteractionsHubGameController;
 } // namespace RED4ext
 

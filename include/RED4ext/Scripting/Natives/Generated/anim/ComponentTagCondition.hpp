@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct ComponentTagCondition : anim::IStaticCondition
 {
     static constexpr const char* NAME = "animComponentTagCondition";
@@ -21,6 +22,7 @@ struct ComponentTagCondition : anim::IStaticCondition
 };
 RED4EXT_ASSERT_SIZE(ComponentTagCondition, 0x38);
 } // namespace anim
+using animComponentTagCondition = anim::ComponentTagCondition;
 } // namespace RED4ext
 
 // clang-format on

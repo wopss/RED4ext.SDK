@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InputDevicesMappingsJSON
 {
     static constexpr const char* NAME = "inkInputDevicesMappingsJSON";
@@ -23,6 +24,7 @@ struct InputDevicesMappingsJSON
 };
 RED4EXT_ASSERT_SIZE(InputDevicesMappingsJSON, 0x20);
 } // namespace ink
+using inkInputDevicesMappingsJSON = ink::InputDevicesMappingsJSON;
 } // namespace RED4ext
 
 // clang-format on

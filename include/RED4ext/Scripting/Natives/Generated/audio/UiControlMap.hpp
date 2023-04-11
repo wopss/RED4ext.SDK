@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace audio { struct KeyUiControlDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct UiControlMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioUiControlMap";
@@ -23,6 +24,7 @@ struct UiControlMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(UiControlMap, 0x48);
 } // namespace audio
+using audioUiControlMap = audio::UiControlMap;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct IPredicateType : ISerializable
 {
     static constexpr const char* NAME = "gameinteractionsIPredicateType";
@@ -19,6 +20,7 @@ struct IPredicateType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IPredicateType, 0x30);
 } // namespace game::interactions
+using gameinteractionsIPredicateType = game::interactions::IPredicateType;
 } // namespace RED4ext
 
 // clang-format on

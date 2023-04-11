@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_Pose360 : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_Pose360";
@@ -24,6 +25,7 @@ struct AnimNode_Pose360 : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_Pose360, 0x98);
 } // namespace anim
+using animAnimNode_Pose360 = anim::AnimNode_Pose360;
 } // namespace RED4ext
 
 // clang-format on

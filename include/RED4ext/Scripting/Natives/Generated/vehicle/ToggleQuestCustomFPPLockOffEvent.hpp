@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ToggleQuestCustomFPPLockOffEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleToggleQuestCustomFPPLockOffEvent";
@@ -20,6 +21,7 @@ struct ToggleQuestCustomFPPLockOffEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleQuestCustomFPPLockOffEvent, 0x48);
 } // namespace vehicle
+using vehicleToggleQuestCustomFPPLockOffEvent = vehicle::ToggleQuestCustomFPPLockOffEvent;
 using ToggleQuestCustomFPPLockOffEvent = vehicle::ToggleQuestCustomFPPLockOffEvent;
 } // namespace RED4ext
 

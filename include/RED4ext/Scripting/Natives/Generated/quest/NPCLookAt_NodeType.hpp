@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NPCLookAt_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questNPCLookAt_NodeType";
@@ -25,6 +26,7 @@ struct NPCLookAt_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(NPCLookAt_NodeType, 0xB0);
 } // namespace quest
+using questNPCLookAt_NodeType = quest::NPCLookAt_NodeType;
 } // namespace RED4ext
 
 // clang-format on

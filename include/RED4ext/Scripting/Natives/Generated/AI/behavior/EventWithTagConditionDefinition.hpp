@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct EventWithTagConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorEventWithTagConditionDefinition";
@@ -23,6 +24,7 @@ struct EventWithTagConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(EventWithTagConditionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorEventWithTagConditionDefinition = AI::behavior::EventWithTagConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

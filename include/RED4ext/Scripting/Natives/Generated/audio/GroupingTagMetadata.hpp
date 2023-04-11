@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GroupingTagMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioGroupingTagMetadata";
@@ -32,6 +33,7 @@ struct GroupingTagMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(GroupingTagMetadata, 0xA0);
 } // namespace audio
+using audioGroupingTagMetadata = audio::GroupingTagMetadata;
 } // namespace RED4ext
 
 // clang-format on

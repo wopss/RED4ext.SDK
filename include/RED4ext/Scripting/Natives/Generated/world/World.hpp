@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct World : world::Prefab
 {
     static constexpr const char* NAME = "worldWorld";
@@ -19,6 +20,7 @@ struct World : world::Prefab
 };
 RED4EXT_ASSERT_SIZE(World, 0x2C0);
 } // namespace world
+using worldWorld = world::World;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct GateSignal
 {
     static constexpr const char* NAME = "AIGateSignal";
@@ -27,6 +28,7 @@ struct GateSignal
 };
 RED4EXT_ASSERT_SIZE(GateSignal, 0x38);
 } // namespace AI
+using AIGateSignal = AI::GateSignal;
 } // namespace RED4ext
 
 // clang-format on

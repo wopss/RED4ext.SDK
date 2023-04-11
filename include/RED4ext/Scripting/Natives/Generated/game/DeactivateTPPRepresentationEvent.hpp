@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DeactivateTPPRepresentationEvent : red::Event
 {
     static constexpr const char* NAME = "gameDeactivateTPPRepresentationEvent";
@@ -20,6 +21,7 @@ struct DeactivateTPPRepresentationEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeactivateTPPRepresentationEvent, 0x68);
 } // namespace game
+using gameDeactivateTPPRepresentationEvent = game::DeactivateTPPRepresentationEvent;
 using DeactivateTPPRepresentationEvent = game::DeactivateTPPRepresentationEvent;
 } // namespace RED4ext
 

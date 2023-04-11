@@ -19,7 +19,8 @@ namespace RED4ext
 {
 namespace physics { struct PhysicalJointPin; }
 
-namespace physics { 
+namespace physics
+{
 struct SystemJoint : physics::ISystemObject
 {
     static constexpr const char* NAME = "physicsSystemJoint";
@@ -49,6 +50,7 @@ struct SystemJoint : physics::ISystemObject
 };
 RED4EXT_ASSERT_SIZE(SystemJoint, 0x200);
 } // namespace physics
+using physicsSystemJoint = physics::SystemJoint;
 } // namespace RED4ext
 
 // clang-format on

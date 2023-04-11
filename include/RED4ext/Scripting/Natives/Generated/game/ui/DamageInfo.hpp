@@ -16,7 +16,8 @@ namespace RED4ext
 namespace game { struct Object; }
 namespace game::ui { struct DamageInfoUserData; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct DamageInfo
 {
     static constexpr const char* NAME = "gameuiDamageInfo";
@@ -33,6 +34,7 @@ struct DamageInfo
 };
 RED4EXT_ASSERT_SIZE(DamageInfo, 0x50);
 } // namespace game::ui
+using gameuiDamageInfo = game::ui::DamageInfo;
 using DamageInfo = game::ui::DamageInfo;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_CurveVectorValue : anim::AnimNode_VectorValue
 {
     static constexpr const char* NAME = "animAnimNode_CurveVectorValue";
@@ -24,6 +25,7 @@ struct AnimNode_CurveVectorValue : anim::AnimNode_VectorValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_CurveVectorValue, 0xA0);
 } // namespace anim
+using animAnimNode_CurveVectorValue = anim::AnimNode_CurveVectorValue;
 } // namespace RED4ext
 
 // clang-format on

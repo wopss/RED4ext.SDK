@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ClearSearchInfluenceTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorClearSearchInfluenceTaskDefinition";
@@ -25,6 +26,7 @@ struct ClearSearchInfluenceTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(ClearSearchInfluenceTaskDefinition, 0x68);
 } // namespace AI::behavior
+using AIbehaviorClearSearchInfluenceTaskDefinition = AI::behavior::ClearSearchInfluenceTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

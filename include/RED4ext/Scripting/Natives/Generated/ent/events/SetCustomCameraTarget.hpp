@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent::events { 
+namespace ent::events
+{
 struct SetCustomCameraTarget : red::Event
 {
     static constexpr const char* NAME = "enteventsSetCustomCameraTarget";
@@ -20,6 +21,7 @@ struct SetCustomCameraTarget : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetCustomCameraTarget, 0x50);
 } // namespace ent::events
+using enteventsSetCustomCameraTarget = ent::events::SetCustomCameraTarget;
 } // namespace RED4ext
 
 // clang-format on

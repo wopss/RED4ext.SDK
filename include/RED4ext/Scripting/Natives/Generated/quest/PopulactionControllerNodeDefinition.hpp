@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PopulactionControllerNodeDefinition : quest::BaseObjectNodeDefinition
 {
     static constexpr const char* NAME = "questPopulactionControllerNodeDefinition";
@@ -21,6 +22,7 @@ struct PopulactionControllerNodeDefinition : quest::BaseObjectNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PopulactionControllerNodeDefinition, 0x58);
 } // namespace quest
+using questPopulactionControllerNodeDefinition = quest::PopulactionControllerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

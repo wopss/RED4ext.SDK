@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct FloatTrackInfo
 {
     static constexpr const char* NAME = "animFloatTrackInfo";
@@ -22,6 +23,7 @@ struct FloatTrackInfo
 };
 RED4EXT_ASSERT_SIZE(FloatTrackInfo, 0x10);
 } // namespace anim
+using animFloatTrackInfo = anim::FloatTrackInfo;
 } // namespace RED4ext
 
 // clang-format on

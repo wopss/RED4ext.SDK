@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ItemPositionProviderWrapper : IScriptable
 {
     static constexpr const char* NAME = "inkItemPositionProviderWrapper";
@@ -20,6 +21,7 @@ struct ItemPositionProviderWrapper : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ItemPositionProviderWrapper, 0x48);
 } // namespace ink
+using inkItemPositionProviderWrapper = ink::ItemPositionProviderWrapper;
 using inkItemPositionProvider = ink::ItemPositionProviderWrapper;
 } // namespace RED4ext
 

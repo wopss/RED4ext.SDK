@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IVehicleManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct VehicleNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questVehicleNodeDefinition";
@@ -23,6 +24,7 @@ struct VehicleNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(VehicleNodeDefinition, 0x58);
 } // namespace quest
+using questVehicleNodeDefinition = quest::VehicleNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

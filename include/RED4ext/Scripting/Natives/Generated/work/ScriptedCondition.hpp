@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace work { struct IScriptedCondition; }
 
-namespace work { 
+namespace work
+{
 struct ScriptedCondition : work::IWorkspotCondition
 {
     static constexpr const char* NAME = "workScriptedCondition";
@@ -23,6 +24,7 @@ struct ScriptedCondition : work::IWorkspotCondition
 };
 RED4EXT_ASSERT_SIZE(ScriptedCondition, 0x48);
 } // namespace work
+using workScriptedCondition = work::ScriptedCondition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct CookedClothMeshTopologyData
 {
     static constexpr const char* NAME = "meshCookedClothMeshTopologyData";
@@ -33,6 +34,7 @@ struct CookedClothMeshTopologyData
 };
 RED4EXT_ASSERT_SIZE(CookedClothMeshTopologyData, 0xA0);
 } // namespace mesh
+using meshCookedClothMeshTopologyData = mesh::CookedClothMeshTopologyData;
 } // namespace RED4ext
 
 // clang-format on

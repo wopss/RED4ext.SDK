@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct TimeOfDayCondition : work::IWorkspotCondition
 {
     static constexpr const char* NAME = "workTimeOfDayCondition";
@@ -22,6 +23,7 @@ struct TimeOfDayCondition : work::IWorkspotCondition
 };
 RED4EXT_ASSERT_SIZE(TimeOfDayCondition, 0x40);
 } // namespace work
+using workTimeOfDayCondition = work::TimeOfDayCondition;
 } // namespace RED4ext
 
 // clang-format on

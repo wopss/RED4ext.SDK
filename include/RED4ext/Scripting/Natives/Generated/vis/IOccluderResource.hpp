@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vis { 
+namespace vis
+{
 struct IOccluderResource : ISerializable
 {
     static constexpr const char* NAME = "visIOccluderResource";
@@ -21,6 +22,7 @@ struct IOccluderResource : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IOccluderResource, 0x38);
 } // namespace vis
+using visIOccluderResource = vis::IOccluderResource;
 } // namespace RED4ext
 
 // clang-format on

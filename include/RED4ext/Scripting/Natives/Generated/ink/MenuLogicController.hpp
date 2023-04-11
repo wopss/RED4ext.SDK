@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkMenuLogicController";
@@ -19,6 +20,7 @@ struct MenuLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(MenuLogicController, 0x78);
 } // namespace ink
+using inkMenuLogicController = ink::MenuLogicController;
 } // namespace RED4ext
 
 // clang-format on

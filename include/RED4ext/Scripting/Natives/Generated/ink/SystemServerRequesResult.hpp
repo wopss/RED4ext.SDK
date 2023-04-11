@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SystemServerRequesResult : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkSystemServerRequesResult";
@@ -20,6 +21,7 @@ struct SystemServerRequesResult : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(SystemServerRequesResult, 0x38);
 } // namespace ink
+using inkSystemServerRequesResult = ink::SystemServerRequesResult;
 } // namespace RED4ext
 
 // clang-format on

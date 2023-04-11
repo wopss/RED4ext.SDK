@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::task { 
+namespace AI::behavior::task
+{
 struct StackScript : AI::behavior::ScriptBase
 {
     static constexpr const char* NAME = "AIbehaviortaskStackScript";
@@ -20,6 +21,7 @@ struct StackScript : AI::behavior::ScriptBase
 };
 RED4EXT_ASSERT_SIZE(StackScript, 0x78);
 } // namespace AI::behavior::task
+using AIbehaviortaskStackScript = AI::behavior::task::StackScript;
 } // namespace RED4ext
 
 // clang-format on

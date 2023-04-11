@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct CompleteOnEventNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorCompleteOnEventNodeDefinition";
@@ -24,6 +25,7 @@ struct CompleteOnEventNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CompleteOnEventNodeDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorCompleteOnEventNodeDefinition = AI::behavior::CompleteOnEventNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

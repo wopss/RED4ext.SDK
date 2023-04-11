@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NavigationScriptObstacle : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptObstacle";
@@ -20,6 +21,7 @@ struct NavigationScriptObstacle : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptObstacle, 0x48);
 } // namespace world
+using worldNavigationScriptObstacle = world::NavigationScriptObstacle;
 using NavigationObstacle = world::NavigationScriptObstacle;
 } // namespace RED4ext
 

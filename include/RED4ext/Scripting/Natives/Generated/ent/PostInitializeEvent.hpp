@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct PostInitializeEvent : red::Event
 {
     static constexpr const char* NAME = "entPostInitializeEvent";
@@ -19,6 +20,7 @@ struct PostInitializeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PostInitializeEvent, 0x40);
 } // namespace ent
+using entPostInitializeEvent = ent::PostInitializeEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct IRuntimeMappinData
 {
     static constexpr const char* NAME = "gamemappinsIRuntimeMappinData";
@@ -19,6 +20,7 @@ struct IRuntimeMappinData
 };
 RED4EXT_ASSERT_SIZE(IRuntimeMappinData, 0x50);
 } // namespace game::mappins
+using gamemappinsIRuntimeMappinData = game::mappins::IRuntimeMappinData;
 } // namespace RED4ext
 
 // clang-format on

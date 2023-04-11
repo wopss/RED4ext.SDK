@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct PoleVectorDetails
 {
     static constexpr const char* NAME = "animPoleVectorDetails";
@@ -23,6 +24,7 @@ struct PoleVectorDetails
 };
 RED4EXT_ASSERT_SIZE(PoleVectorDetails, 0x28);
 } // namespace anim
+using animPoleVectorDetails = anim::PoleVectorDetails;
 } // namespace RED4ext
 
 // clang-format on

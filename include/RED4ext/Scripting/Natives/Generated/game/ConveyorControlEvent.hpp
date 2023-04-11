@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ConveyorControlEvent : red::Event
 {
     static constexpr const char* NAME = "gameConveyorControlEvent";
@@ -21,6 +22,7 @@ struct ConveyorControlEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ConveyorControlEvent, 0x48);
 } // namespace game
+using gameConveyorControlEvent = game::ConveyorControlEvent;
 } // namespace RED4ext
 
 // clang-format on

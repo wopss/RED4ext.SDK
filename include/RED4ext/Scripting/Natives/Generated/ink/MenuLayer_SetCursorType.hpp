@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuLayer_SetCursorType : red::Event
 {
     static constexpr const char* NAME = "inkMenuLayer_SetCursorType";
@@ -20,6 +21,7 @@ struct MenuLayer_SetCursorType : red::Event
 };
 RED4EXT_ASSERT_SIZE(MenuLayer_SetCursorType, 0x48);
 } // namespace ink
+using inkMenuLayer_SetCursorType = ink::MenuLayer_SetCursorType;
 } // namespace RED4ext
 
 // clang-format on

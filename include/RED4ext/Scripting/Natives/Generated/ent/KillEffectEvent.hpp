@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct KillEffectEvent : red::Event
 {
     static constexpr const char* NAME = "entKillEffectEvent";
@@ -23,6 +24,7 @@ struct KillEffectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(KillEffectEvent, 0x50);
 } // namespace ent
+using entKillEffectEvent = ent::KillEffectEvent;
 } // namespace RED4ext
 
 // clang-format on

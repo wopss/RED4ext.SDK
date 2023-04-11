@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatsBundle
 {
     static constexpr const char* NAME = "gameStatsBundle";
@@ -19,6 +20,7 @@ struct StatsBundle
 };
 RED4EXT_ASSERT_SIZE(StatsBundle, 0x170);
 } // namespace game
+using gameStatsBundle = game::StatsBundle;
 using StatsBundle = game::StatsBundle;
 } // namespace RED4ext
 

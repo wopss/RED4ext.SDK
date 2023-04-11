@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct MaterialParameterPlayData : effect::VisualComponentTrackItemPlayData
 {
     static constexpr const char* NAME = "effectMaterialParameterPlayData";
@@ -20,6 +21,7 @@ struct MaterialParameterPlayData : effect::VisualComponentTrackItemPlayData
 };
 RED4EXT_ASSERT_SIZE(MaterialParameterPlayData, 0x48);
 } // namespace effect
+using effectMaterialParameterPlayData = effect::MaterialParameterPlayData;
 } // namespace RED4ext
 
 // clang-format on

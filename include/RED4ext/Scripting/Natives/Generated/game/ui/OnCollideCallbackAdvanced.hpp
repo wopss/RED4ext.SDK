@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct OnCollideCallbackAdvanced : ink::CallbackBase
 {
     static constexpr const char* NAME = "gameuiOnCollideCallbackAdvanced";
@@ -20,6 +21,7 @@ struct OnCollideCallbackAdvanced : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(OnCollideCallbackAdvanced, 0x38);
 } // namespace game::ui
+using gameuiOnCollideCallbackAdvanced = game::ui::OnCollideCallbackAdvanced;
 } // namespace RED4ext
 
 // clang-format on

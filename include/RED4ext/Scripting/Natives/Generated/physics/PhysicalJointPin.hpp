@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace physics { struct ISystemObject; }
 
-namespace physics { 
+namespace physics
+{
 struct PhysicalJointPin : ISerializable
 {
     static constexpr const char* NAME = "physicsPhysicalJointPin";
@@ -30,6 +31,7 @@ struct PhysicalJointPin : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PhysicalJointPin, 0x70);
 } // namespace physics
+using physicsPhysicalJointPin = physics::PhysicalJointPin;
 } // namespace RED4ext
 
 // clang-format on

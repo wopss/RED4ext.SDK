@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_QueryBox : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_QueryBox";
@@ -28,6 +29,7 @@ struct EffectObjectProvider_QueryBox : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_QueryBox, 0x80);
 } // namespace game
+using gameEffectObjectProvider_QueryBox = game::EffectObjectProvider_QueryBox;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct UseWeapon_NodeType : quest::IItemManagerNodeType
 {
     static constexpr const char* NAME = "questUseWeapon_NodeType";
@@ -28,6 +29,7 @@ struct UseWeapon_NodeType : quest::IItemManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(UseWeapon_NodeType, 0x50);
 } // namespace quest
+using questUseWeapon_NodeType = quest::UseWeapon_NodeType;
 } // namespace RED4ext
 
 // clang-format on

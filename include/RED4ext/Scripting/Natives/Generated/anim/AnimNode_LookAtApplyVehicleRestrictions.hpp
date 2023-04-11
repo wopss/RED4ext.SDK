@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_LookAtApplyVehicleRestrictions : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_LookAtApplyVehicleRestrictions";
@@ -26,6 +27,7 @@ struct AnimNode_LookAtApplyVehicleRestrictions : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_LookAtApplyVehicleRestrictions, 0xD0);
 } // namespace anim
+using animAnimNode_LookAtApplyVehicleRestrictions = anim::AnimNode_LookAtApplyVehicleRestrictions;
 } // namespace RED4ext
 
 // clang-format on

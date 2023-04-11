@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct EndGameLoadingState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkEndGameLoadingState";
@@ -19,6 +20,7 @@ struct EndGameLoadingState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(EndGameLoadingState, 0x10);
 } // namespace ink
+using inkEndGameLoadingState = ink::EndGameLoadingState;
 } // namespace RED4ext
 
 // clang-format on

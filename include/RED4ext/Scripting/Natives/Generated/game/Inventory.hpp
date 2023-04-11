@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Inventory : game::Component
 {
     static constexpr const char* NAME = "gameInventory";
@@ -26,6 +27,7 @@ struct Inventory : game::Component
 };
 RED4EXT_ASSERT_SIZE(Inventory, 0x120);
 } // namespace game
+using gameInventory = game::Inventory;
 using Inventory = game::Inventory;
 } // namespace RED4ext
 

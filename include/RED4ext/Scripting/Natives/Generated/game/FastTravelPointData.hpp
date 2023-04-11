@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FastTravelPointData : IScriptable
 {
     static constexpr const char* NAME = "gameFastTravelPointData";
@@ -24,6 +25,7 @@ struct FastTravelPointData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(FastTravelPointData, 0x58);
 } // namespace game
+using gameFastTravelPointData = game::FastTravelPointData;
 using FastTravelPointData = game::FastTravelPointData;
 } // namespace RED4ext
 

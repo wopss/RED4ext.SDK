@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct InterruptionScenarioId
 {
     static constexpr const char* NAME = "scnInterruptionScenarioId";
@@ -19,6 +20,7 @@ struct InterruptionScenarioId
 };
 RED4EXT_ASSERT_SIZE(InterruptionScenarioId, 0x4);
 } // namespace scn
+using scnInterruptionScenarioId = scn::InterruptionScenarioId;
 } // namespace RED4ext
 
 // clang-format on

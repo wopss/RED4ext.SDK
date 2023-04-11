@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SelectionStagePtrWrapper
 {
     static constexpr const char* NAME = "AIbehaviorSelectionStagePtrWrapper";
@@ -19,6 +20,7 @@ struct SelectionStagePtrWrapper
 };
 RED4EXT_ASSERT_SIZE(SelectionStagePtrWrapper, 0x10);
 } // namespace AI::behavior
+using AIbehaviorSelectionStagePtrWrapper = AI::behavior::SelectionStagePtrWrapper;
 } // namespace RED4ext
 
 // clang-format on

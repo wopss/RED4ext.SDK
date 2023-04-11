@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CursorInfo : ink::UserData
 {
     static constexpr const char* NAME = "inkCursorInfo";
@@ -24,6 +25,7 @@ struct CursorInfo : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(CursorInfo, 0x58);
 } // namespace ink
+using inkCursorInfo = ink::CursorInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckSpeakersDistanceReturnConditionParams
 {
     static constexpr const char* NAME = "scnCheckSpeakersDistanceReturnConditionParams";
@@ -21,6 +22,7 @@ struct CheckSpeakersDistanceReturnConditionParams
 };
 RED4EXT_ASSERT_SIZE(CheckSpeakersDistanceReturnConditionParams, 0x8);
 } // namespace scn
+using scnCheckSpeakersDistanceReturnConditionParams = scn::CheckSpeakersDistanceReturnConditionParams;
 } // namespace RED4ext
 
 // clang-format on

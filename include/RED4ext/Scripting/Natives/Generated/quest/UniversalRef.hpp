@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct UniversalRef : ISerializable
 {
     static constexpr const char* NAME = "questUniversalRef";
@@ -24,6 +25,7 @@ struct UniversalRef : ISerializable
 };
 RED4EXT_ASSERT_SIZE(UniversalRef, 0x70);
 } // namespace quest
+using questUniversalRef = quest::UniversalRef;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct QuestsSystem : quest::IQuestsSystem
 {
     static constexpr const char* NAME = "questQuestsSystem";
@@ -20,6 +21,7 @@ struct QuestsSystem : quest::IQuestsSystem
 };
 RED4EXT_ASSERT_SIZE(QuestsSystem, 0x290);
 } // namespace quest
+using questQuestsSystem = quest::QuestsSystem;
 using QuestsSystem = quest::QuestsSystem;
 } // namespace RED4ext
 

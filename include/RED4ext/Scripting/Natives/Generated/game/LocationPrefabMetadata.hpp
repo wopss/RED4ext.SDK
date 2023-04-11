@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LocationPrefabMetadata : world::PrefabMetadata
 {
     static constexpr const char* NAME = "gameLocationPrefabMetadata";
@@ -24,6 +25,7 @@ struct LocationPrefabMetadata : world::PrefabMetadata
 };
 RED4EXT_ASSERT_SIZE(LocationPrefabMetadata, 0x58);
 } // namespace game
+using gameLocationPrefabMetadata = game::LocationPrefabMetadata;
 } // namespace RED4ext
 
 // clang-format on

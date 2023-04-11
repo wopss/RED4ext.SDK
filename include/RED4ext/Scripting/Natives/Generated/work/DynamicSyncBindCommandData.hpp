@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct DynamicSyncBindCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workDynamicSyncBindCommandData";
@@ -21,6 +22,7 @@ struct DynamicSyncBindCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(DynamicSyncBindCommandData, 0x10);
 } // namespace work
+using workDynamicSyncBindCommandData = work::DynamicSyncBindCommandData;
 } // namespace RED4ext
 
 // clang-format on

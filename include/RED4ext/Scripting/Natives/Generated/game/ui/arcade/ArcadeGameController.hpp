@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct ArcadeGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiarcadeArcadeGameController";
@@ -32,6 +33,7 @@ struct ArcadeGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(ArcadeGameController, 0x200);
 } // namespace game::ui::arcade
+using gameuiarcadeArcadeGameController = game::ui::arcade::ArcadeGameController;
 } // namespace RED4ext
 
 // clang-format on

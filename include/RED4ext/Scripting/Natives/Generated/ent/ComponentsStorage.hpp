@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct IComponent; }
 
-namespace ent { 
+namespace ent
+{
 struct ComponentsStorage : ISerializable
 {
     static constexpr const char* NAME = "entComponentsStorage";
@@ -24,6 +25,7 @@ struct ComponentsStorage : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ComponentsStorage, 0x40);
 } // namespace ent
+using entComponentsStorage = ent::ComponentsStorage;
 } // namespace RED4ext
 
 // clang-format on

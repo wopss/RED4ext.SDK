@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct InteriorAreaNotifier : world::ITriggerAreaNotifer
 {
     static constexpr const char* NAME = "worldInteriorAreaNotifier";
@@ -25,6 +26,7 @@ struct InteriorAreaNotifier : world::ITriggerAreaNotifer
 };
 RED4EXT_ASSERT_SIZE(InteriorAreaNotifier, 0xD0);
 } // namespace world
+using worldInteriorAreaNotifier = world::InteriorAreaNotifier;
 } // namespace RED4ext
 
 // clang-format on

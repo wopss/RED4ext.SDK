@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectParameter_VectorEvaluator_ValueOrBlackboard : game::IEffectParameter_VectorEvaluator
 {
     static constexpr const char* NAME = "gameEffectParameter_VectorEvaluator_ValueOrBlackboard";
@@ -24,6 +25,7 @@ struct EffectParameter_VectorEvaluator_ValueOrBlackboard : game::IEffectParamete
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_VectorEvaluator_ValueOrBlackboard, 0x80);
 } // namespace game
+using gameEffectParameter_VectorEvaluator_ValueOrBlackboard = game::EffectParameter_VectorEvaluator_ValueOrBlackboard;
 } // namespace RED4ext
 
 // clang-format on

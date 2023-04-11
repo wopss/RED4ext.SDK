@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct RagdollSubSystem : game::audio::ISoundComponentSubSystem
 {
     static constexpr const char* NAME = "gameaudioRagdollSubSystem";
@@ -24,6 +25,7 @@ struct RagdollSubSystem : game::audio::ISoundComponentSubSystem
 };
 RED4EXT_ASSERT_SIZE(RagdollSubSystem, 0xD0);
 } // namespace game::audio
+using gameaudioRagdollSubSystem = game::audio::RagdollSubSystem;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BuffInfo
 {
     static constexpr const char* NAME = "gameuiBuffInfo";
@@ -21,6 +22,7 @@ struct BuffInfo
 };
 RED4EXT_ASSERT_SIZE(BuffInfo, 0xC);
 } // namespace game::ui
+using gameuiBuffInfo = game::ui::BuffInfo;
 using BuffInfo = game::ui::BuffInfo;
 } // namespace RED4ext
 

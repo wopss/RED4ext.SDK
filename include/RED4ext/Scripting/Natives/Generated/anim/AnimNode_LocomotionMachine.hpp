@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_LocomotionMachine : anim::AnimNode_StateMachine
 {
     static constexpr const char* NAME = "animAnimNode_LocomotionMachine";
@@ -32,6 +33,7 @@ struct AnimNode_LocomotionMachine : anim::AnimNode_StateMachine
 };
 RED4EXT_ASSERT_SIZE(AnimNode_LocomotionMachine, 0x278);
 } // namespace anim
+using animAnimNode_LocomotionMachine = anim::AnimNode_LocomotionMachine;
 } // namespace RED4ext
 
 // clang-format on

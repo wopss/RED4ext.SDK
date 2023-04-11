@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RewardPack
 {
     static constexpr const char* NAME = "gameRewardPack";
@@ -26,6 +27,7 @@ struct RewardPack
 };
 RED4EXT_ASSERT_SIZE(RewardPack, 0x78);
 } // namespace game
+using gameRewardPack = game::RewardPack;
 using GOGRewardPack = game::RewardPack;
 } // namespace RED4ext
 

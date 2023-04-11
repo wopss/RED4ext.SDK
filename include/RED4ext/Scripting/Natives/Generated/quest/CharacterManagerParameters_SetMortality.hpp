@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetMortality : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetMortality";
@@ -26,6 +27,7 @@ struct CharacterManagerParameters_SetMortality : quest::ICharacterManagerParamet
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetMortality, 0x88);
 } // namespace quest
+using questCharacterManagerParameters_SetMortality = quest::CharacterManagerParameters_SetMortality;
 } // namespace RED4ext
 
 // clang-format on

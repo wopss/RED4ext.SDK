@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PlayerBioMonitor
 {
     static constexpr const char* NAME = "gameuiPlayerBioMonitor";
@@ -23,6 +24,7 @@ struct PlayerBioMonitor
 };
 RED4EXT_ASSERT_SIZE(PlayerBioMonitor, 0x14);
 } // namespace game::ui
+using gameuiPlayerBioMonitor = game::ui::PlayerBioMonitor;
 using PlayerBioMonitor = game::ui::PlayerBioMonitor;
 } // namespace RED4ext
 

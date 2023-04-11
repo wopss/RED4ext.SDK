@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PingComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gamePingComponent";
@@ -22,6 +23,7 @@ struct PingComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(PingComponent, 0x130);
 } // namespace game
+using gamePingComponent = game::PingComponent;
 using PingComponent = game::PingComponent;
 } // namespace RED4ext
 

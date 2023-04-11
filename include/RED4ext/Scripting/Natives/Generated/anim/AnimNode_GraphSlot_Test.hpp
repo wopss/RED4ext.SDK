@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimGraph; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_GraphSlot_Test : anim::AnimNode_GraphSlot
 {
     static constexpr const char* NAME = "animAnimNode_GraphSlot_Test";
@@ -24,6 +25,7 @@ struct AnimNode_GraphSlot_Test : anim::AnimNode_GraphSlot
 };
 RED4EXT_ASSERT_SIZE(AnimNode_GraphSlot_Test, 0x118);
 } // namespace anim
+using animAnimNode_GraphSlot_Test = anim::AnimNode_GraphSlot_Test;
 } // namespace RED4ext
 
 // clang-format on

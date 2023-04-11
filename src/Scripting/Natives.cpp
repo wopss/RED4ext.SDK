@@ -2413,6 +2413,8 @@
 #include <RED4ext/Scripting/Natives/Generated/rend/LightAttenuation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/LightChannel.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/LightGroup.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/OpacityMicromapChunk.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/OpacityMicromapUsageCounts.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/ParticleBurst.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/PostFx_ScanningState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/RenderMeshBlobHeader.hpp>

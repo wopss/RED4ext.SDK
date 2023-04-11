@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MinigameMenuState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkMinigameMenuState";
@@ -19,6 +20,7 @@ struct MinigameMenuState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(MinigameMenuState, 0x10);
 } // namespace ink
+using inkMinigameMenuState = ink::MinigameMenuState;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WeakspotComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "gameWeakspotComponentReplicatedState";
@@ -22,6 +23,7 @@ struct WeakspotComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(WeakspotComponentReplicatedState, 0x30);
 } // namespace game
+using gameWeakspotComponentReplicatedState = game::WeakspotComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

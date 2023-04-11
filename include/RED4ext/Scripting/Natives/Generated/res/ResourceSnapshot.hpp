@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace res { 
+namespace res
+{
 struct ResourceSnapshot : CResource
 {
     static constexpr const char* NAME = "resResourceSnapshot";
@@ -24,6 +25,7 @@ struct ResourceSnapshot : CResource
 };
 RED4EXT_ASSERT_SIZE(ResourceSnapshot, 0x50);
 } // namespace res
+using resResourceSnapshot = res::ResourceSnapshot;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeBoolSharedVarDecoratorDefinition : AI::CTreeNodeSingleSharedVarDecoratorDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeBoolSharedVarDecoratorDefinition";
@@ -19,6 +20,7 @@ struct CTreeNodeBoolSharedVarDecoratorDefinition : AI::CTreeNodeSingleSharedVarD
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeBoolSharedVarDecoratorDefinition, 0x50);
 } // namespace AI
+using AICTreeNodeBoolSharedVarDecoratorDefinition = AI::CTreeNodeBoolSharedVarDecoratorDefinition;
 } // namespace RED4ext
 
 // clang-format on

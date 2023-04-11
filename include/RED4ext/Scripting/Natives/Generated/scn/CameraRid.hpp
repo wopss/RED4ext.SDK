@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CameraRid
 {
     static constexpr const char* NAME = "scnCameraRid";
@@ -23,6 +24,7 @@ struct CameraRid
 };
 RED4EXT_ASSERT_SIZE(CameraRid, 0x20);
 } // namespace scn
+using scnCameraRid = scn::CameraRid;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TutorialBracketData
 {
     static constexpr const char* NAME = "gameTutorialBracketData";
@@ -28,6 +29,7 @@ struct TutorialBracketData
 };
 RED4EXT_ASSERT_SIZE(TutorialBracketData, 0x20);
 } // namespace game
+using gameTutorialBracketData = game::TutorialBracketData;
 using TutorialBracketData = game::TutorialBracketData;
 } // namespace RED4ext
 

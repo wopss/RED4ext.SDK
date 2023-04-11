@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WatermarksLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkWatermarksLayerDefinition";
@@ -19,6 +20,7 @@ struct WatermarksLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(WatermarksLayerDefinition, 0x38);
 } // namespace ink
+using inkWatermarksLayerDefinition = ink::WatermarksLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

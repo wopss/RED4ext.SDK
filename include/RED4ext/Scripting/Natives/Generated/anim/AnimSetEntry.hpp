@@ -14,7 +14,8 @@ namespace RED4ext
 namespace anim { struct Animation; }
 namespace anim { struct EventsContainer; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimSetEntry : ISerializable
 {
     static constexpr const char* NAME = "animAnimSetEntry";
@@ -26,6 +27,7 @@ struct AnimSetEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimSetEntry, 0x78);
 } // namespace anim
+using animAnimSetEntry = anim::AnimSetEntry;
 } // namespace RED4ext
 
 // clang-format on

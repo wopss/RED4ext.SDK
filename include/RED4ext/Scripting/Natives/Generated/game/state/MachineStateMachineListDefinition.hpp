@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::state { struct MachineStateMachineDefinition; }
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineStateMachineListDefinition : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineStateMachineListDefinition";
@@ -24,6 +25,7 @@ struct MachineStateMachineListDefinition : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineStateMachineListDefinition, 0x50);
 } // namespace game::state
+using gamestateMachineStateMachineListDefinition = game::state::MachineStateMachineListDefinition;
 } // namespace RED4ext
 
 // clang-format on

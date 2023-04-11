@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerCombat_ModifyHealth : quest::ICharacterManagerCombat_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerCombat_ModifyHealth";
@@ -25,6 +26,7 @@ struct CharacterManagerCombat_ModifyHealth : quest::ICharacterManagerCombat_Node
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_ModifyHealth, 0xB0);
 } // namespace quest
+using questCharacterManagerCombat_ModifyHealth = quest::CharacterManagerCombat_ModifyHealth;
 } // namespace RED4ext
 
 // clang-format on

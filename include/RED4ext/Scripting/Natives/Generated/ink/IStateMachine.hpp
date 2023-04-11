@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IStateMachine : ISerializable
 {
     static constexpr const char* NAME = "inkIStateMachine";
@@ -19,6 +20,7 @@ struct IStateMachine : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IStateMachine, 0x30);
 } // namespace ink
+using inkIStateMachine = ink::IStateMachine;
 } // namespace RED4ext
 
 // clang-format on

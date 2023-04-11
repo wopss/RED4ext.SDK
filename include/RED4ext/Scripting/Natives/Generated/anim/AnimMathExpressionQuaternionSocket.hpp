@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimMathExpressionQuaternionSocket
 {
     static constexpr const char* NAME = "animAnimMathExpressionQuaternionSocket";
@@ -22,6 +23,7 @@ struct AnimMathExpressionQuaternionSocket
 };
 RED4EXT_ASSERT_SIZE(AnimMathExpressionQuaternionSocket, 0x28);
 } // namespace anim
+using animAnimMathExpressionQuaternionSocket = anim::AnimMathExpressionQuaternionSocket;
 } // namespace RED4ext
 
 // clang-format on

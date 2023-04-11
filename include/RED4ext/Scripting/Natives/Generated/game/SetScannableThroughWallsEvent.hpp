@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetScannableThroughWallsEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetScannableThroughWallsEvent";
@@ -21,6 +22,7 @@ struct SetScannableThroughWallsEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetScannableThroughWallsEvent, 0x48);
 } // namespace game
+using gameSetScannableThroughWallsEvent = game::SetScannableThroughWallsEvent;
 using SetScannableThroughWallsEvent = game::SetScannableThroughWallsEvent;
 } // namespace RED4ext
 

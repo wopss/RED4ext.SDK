@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct TypeRef
 {
     static constexpr const char* NAME = "AIbehaviorTypeRef";
@@ -25,6 +26,7 @@ struct TypeRef
 };
 RED4EXT_ASSERT_SIZE(TypeRef, 0x18);
 } // namespace AI::behavior
+using AIbehaviorTypeRef = AI::behavior::TypeRef;
 } // namespace RED4ext
 
 // clang-format on

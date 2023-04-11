@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct ConvexHullEx
 {
     static constexpr const char* NAME = "redConvexHullEx";
@@ -20,6 +21,7 @@ struct ConvexHullEx
 };
 RED4EXT_ASSERT_SIZE(ConvexHullEx, 0x28);
 } // namespace red
+using redConvexHullEx = red::ConvexHullEx;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink {
+namespace ink
+{
 struct VirtualWindow : ink::Window
 {
     static constexpr const char* NAME = "inkVirtualWindow";

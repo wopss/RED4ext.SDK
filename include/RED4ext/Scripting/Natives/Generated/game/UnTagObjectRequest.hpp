@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct UnTagObjectRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameUnTagObjectRequest";
@@ -23,6 +24,7 @@ struct UnTagObjectRequest : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(UnTagObjectRequest, 0x58);
 } // namespace game
+using gameUnTagObjectRequest = game::UnTagObjectRequest;
 using UnTagObjectRequest = game::UnTagObjectRequest;
 } // namespace RED4ext
 

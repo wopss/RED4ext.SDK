@@ -16,7 +16,8 @@ struct CResource;
 namespace quest { struct QuestResource; }
 namespace world { struct World; }
 
-namespace gsm { 
+namespace gsm
+{
 struct GameDefinition : CResource
 {
     static constexpr const char* NAME = "gsmGameDefinition";
@@ -30,6 +31,7 @@ struct GameDefinition : CResource
 };
 RED4EXT_ASSERT_SIZE(GameDefinition, 0x88);
 } // namespace gsm
+using gsmGameDefinition = gsm::GameDefinition;
 } // namespace RED4ext
 
 // clang-format on

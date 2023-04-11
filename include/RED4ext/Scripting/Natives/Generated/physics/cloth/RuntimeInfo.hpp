@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics::cloth { 
+namespace physics::cloth
+{
 struct RuntimeInfo
 {
     static constexpr const char* NAME = "physicsclothRuntimeInfo";
@@ -40,6 +41,7 @@ struct RuntimeInfo
 };
 RED4EXT_ASSERT_SIZE(RuntimeInfo, 0x70);
 } // namespace physics::cloth
+using physicsclothRuntimeInfo = physics::cloth::RuntimeInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PrefetchStreaming_NodeTypeV2 : quest::IWorldDataManagerNodeType
 {
     static constexpr const char* NAME = "questPrefetchStreaming_NodeTypeV2";
@@ -25,6 +26,7 @@ struct PrefetchStreaming_NodeTypeV2 : quest::IWorldDataManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PrefetchStreaming_NodeTypeV2, 0x48);
 } // namespace quest
+using questPrefetchStreaming_NodeTypeV2 = quest::PrefetchStreaming_NodeTypeV2;
 } // namespace RED4ext
 
 // clang-format on

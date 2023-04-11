@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace ent { 
+namespace ent
+{
 struct InstancedAnimationComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entInstancedAnimationComponent";
@@ -28,6 +29,7 @@ struct InstancedAnimationComponent : ent::ISkinableComponent
 };
 RED4EXT_ASSERT_SIZE(InstancedAnimationComponent, 0x170);
 } // namespace ent
+using entInstancedAnimationComponent = ent::InstancedAnimationComponent;
 } // namespace RED4ext
 
 // clang-format on

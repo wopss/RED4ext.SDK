@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace loc { 
+namespace loc
+{
 struct VoiceTag
 {
     static constexpr const char* NAME = "locVoiceTag";
@@ -26,6 +27,7 @@ struct VoiceTag
 };
 RED4EXT_ASSERT_SIZE(VoiceTag, 0x40);
 } // namespace loc
+using locVoiceTag = loc::VoiceTag;
 } // namespace RED4ext
 
 // clang-format on

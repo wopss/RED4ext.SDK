@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct SoftMinMax : attr::Attribute
 {
     static constexpr const char* NAME = "attrSoftMinMax";
@@ -21,6 +22,7 @@ struct SoftMinMax : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(SoftMinMax, 0x38);
 } // namespace attr
+using attrSoftMinMax = attr::SoftMinMax;
 } // namespace RED4ext
 
 // clang-format on

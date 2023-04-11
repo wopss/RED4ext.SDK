@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetQuickHackableMask : red::Event
 {
     static constexpr const char* NAME = "gameSetQuickHackableMask";
@@ -21,6 +22,7 @@ struct SetQuickHackableMask : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetQuickHackableMask, 0x48);
 } // namespace game
+using gameSetQuickHackableMask = game::SetQuickHackableMask;
 using SetQuickHackableMask = game::SetQuickHackableMask;
 } // namespace RED4ext
 

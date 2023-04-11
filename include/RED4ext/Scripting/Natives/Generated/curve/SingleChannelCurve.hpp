@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace curve { 
+namespace curve
+{
 struct SingleChannelCurve
 {
     static constexpr const char* NAME = "curveSingleChannelCurve";
@@ -26,6 +27,7 @@ struct SingleChannelCurve
 };
 RED4EXT_ASSERT_SIZE(SingleChannelCurve, 0x38);
 } // namespace curve
+using curveSingleChannelCurve = curve::SingleChannelCurve;
 } // namespace RED4ext
 
 // clang-format on

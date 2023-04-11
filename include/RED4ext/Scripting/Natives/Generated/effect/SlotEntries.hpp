@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct SlotEntries : effect::IPlacementEntries
 {
     static constexpr const char* NAME = "effectSlotEntries";
@@ -24,6 +25,7 @@ struct SlotEntries : effect::IPlacementEntries
 };
 RED4EXT_ASSERT_SIZE(SlotEntries, 0x48);
 } // namespace effect
+using effectSlotEntries = effect::SlotEntries;
 } // namespace RED4ext
 
 // clang-format on

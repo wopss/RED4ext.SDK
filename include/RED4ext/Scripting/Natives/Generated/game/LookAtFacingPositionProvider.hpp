@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LookAtFacingPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "gameLookAtFacingPositionProvider";
@@ -20,6 +21,7 @@ struct LookAtFacingPositionProvider : ent::IPositionProvider
 };
 RED4EXT_ASSERT_SIZE(LookAtFacingPositionProvider, 0x60);
 } // namespace game
+using gameLookAtFacingPositionProvider = game::LookAtFacingPositionProvider;
 using LookAtFacingPositionProvider = game::LookAtFacingPositionProvider;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InventoryListenerData_ItemExtracted : game::InventoryListenerData_Base
 {
     static constexpr const char* NAME = "gameInventoryListenerData_ItemExtracted";
@@ -20,6 +21,7 @@ struct InventoryListenerData_ItemExtracted : game::InventoryListenerData_Base
 };
 RED4EXT_ASSERT_SIZE(InventoryListenerData_ItemExtracted, 0x48);
 } // namespace game
+using gameInventoryListenerData_ItemExtracted = game::InventoryListenerData_ItemExtracted;
 } // namespace RED4ext
 
 // clang-format on

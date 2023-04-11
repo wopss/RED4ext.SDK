@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace sense { 
+namespace sense
+{
 struct StimInvestigateData
 {
     static constexpr const char* NAME = "senseStimInvestigateData";
@@ -37,6 +38,7 @@ struct StimInvestigateData
 };
 RED4EXT_ASSERT_SIZE(StimInvestigateData, 0x80);
 } // namespace sense
+using senseStimInvestigateData = sense::StimInvestigateData;
 using stimInvestigateData = sense::StimInvestigateData;
 } // namespace RED4ext
 

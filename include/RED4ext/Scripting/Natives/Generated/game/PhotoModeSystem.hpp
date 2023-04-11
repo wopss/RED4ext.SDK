@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeSystem : game::IPhotoModeSystem
 {
     static constexpr const char* NAME = "gamePhotoModeSystem";
@@ -20,6 +21,7 @@ struct PhotoModeSystem : game::IPhotoModeSystem
 };
 RED4EXT_ASSERT_SIZE(PhotoModeSystem, 0x730);
 } // namespace game
+using gamePhotoModeSystem = game::PhotoModeSystem;
 using PhotoModeSystem = game::PhotoModeSystem;
 } // namespace RED4ext
 

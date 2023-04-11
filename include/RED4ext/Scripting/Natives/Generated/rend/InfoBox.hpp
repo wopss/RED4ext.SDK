@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct InfoBox : IScriptable
 {
     static constexpr const char* NAME = "rendInfoBox";
@@ -20,6 +21,7 @@ struct InfoBox : IScriptable
 };
 RED4EXT_ASSERT_SIZE(InfoBox, 0x98);
 } // namespace rend
+using rendInfoBox = rend::InfoBox;
 using InfoBox = rend::InfoBox;
 } // namespace RED4ext
 

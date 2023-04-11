@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetPhoneStatus_NodeType : quest::IPhoneManagerNodeType
 {
     static constexpr const char* NAME = "questSetPhoneStatus_NodeType";
@@ -24,6 +25,7 @@ struct SetPhoneStatus_NodeType : quest::IPhoneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetPhoneStatus_NodeType, 0x48);
 } // namespace quest
+using questSetPhoneStatus_NodeType = quest::SetPhoneStatus_NodeType;
 } // namespace RED4ext
 
 // clang-format on

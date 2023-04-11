@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace AI { 
+namespace AI
+{
 struct FollowTargetCommand : AI::MoveCommand
 {
     static constexpr const char* NAME = "AIFollowTargetCommand";
@@ -33,6 +34,7 @@ struct FollowTargetCommand : AI::MoveCommand
 };
 RED4EXT_ASSERT_SIZE(FollowTargetCommand, 0xA0);
 } // namespace AI
+using AIFollowTargetCommand = AI::FollowTargetCommand;
 } // namespace RED4ext
 
 // clang-format on

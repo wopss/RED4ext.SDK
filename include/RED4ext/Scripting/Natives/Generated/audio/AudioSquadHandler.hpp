@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudioSquadHandler : audio::BaseAudioSquadHandler
 {
     static constexpr const char* NAME = "audioAudioSquadHandler";
@@ -20,6 +21,7 @@ struct AudioSquadHandler : audio::BaseAudioSquadHandler
 };
 RED4EXT_ASSERT_SIZE(AudioSquadHandler, 0xA8);
 } // namespace audio
+using audioAudioSquadHandler = audio::AudioSquadHandler;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct PieDefinition : game::interactions::IShapeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsPieDefinition";
@@ -25,6 +26,7 @@ struct PieDefinition : game::interactions::IShapeDefinition
 };
 RED4EXT_ASSERT_SIZE(PieDefinition, 0x50);
 } // namespace game::interactions
+using gameinteractionsPieDefinition = game::interactions::PieDefinition;
 } // namespace RED4ext
 
 // clang-format on

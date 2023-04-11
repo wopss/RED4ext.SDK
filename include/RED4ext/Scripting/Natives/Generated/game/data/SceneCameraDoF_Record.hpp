@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct SceneCameraDoF_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSceneCameraDoF_Record";
@@ -20,6 +21,7 @@ struct SceneCameraDoF_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(SceneCameraDoF_Record, 0x60);
 } // namespace game::data
+using gamedataSceneCameraDoF_Record = game::data::SceneCameraDoF_Record;
 using SceneCameraDoF_Record = game::data::SceneCameraDoF_Record;
 } // namespace RED4ext
 

@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ink { struct FontFamilyResource; }
 namespace ink { struct LanguageFontMapper; }
 
-namespace ink { 
+namespace ink
+{
 struct LanguageFont
 {
     static constexpr const char* NAME = "inkLanguageFont";
@@ -25,6 +26,7 @@ struct LanguageFont
 };
 RED4EXT_ASSERT_SIZE(LanguageFont, 0x18);
 } // namespace ink
+using inkLanguageFont = ink::LanguageFont;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 struct CBitmapTexture;
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct CompositionPreviewSettings : ISerializable
 {
     static constexpr const char* NAME = "inkCompositionPreviewSettings";
@@ -33,6 +34,7 @@ struct CompositionPreviewSettings : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CompositionPreviewSettings, 0x90);
 } // namespace ink
+using inkCompositionPreviewSettings = ink::CompositionPreviewSettings;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RoachRaceGameLogicController : game::ui::SideScrollerMiniGameLogicController
 {
     static constexpr const char* NAME = "gameuiRoachRaceGameLogicController";
@@ -41,6 +42,7 @@ struct RoachRaceGameLogicController : game::ui::SideScrollerMiniGameLogicControl
 };
 RED4EXT_ASSERT_SIZE(RoachRaceGameLogicController, 0x1D0);
 } // namespace game::ui
+using gameuiRoachRaceGameLogicController = game::ui::RoachRaceGameLogicController;
 using RoachRaceLogicController = game::ui::RoachRaceGameLogicController;
 } // namespace RED4ext
 

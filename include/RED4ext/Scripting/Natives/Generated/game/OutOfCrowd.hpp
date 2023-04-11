@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct OutOfCrowd : red::Event
 {
     static constexpr const char* NAME = "gameOutOfCrowd";
@@ -19,6 +20,7 @@ struct OutOfCrowd : red::Event
 };
 RED4EXT_ASSERT_SIZE(OutOfCrowd, 0x40);
 } // namespace game
+using gameOutOfCrowd = game::OutOfCrowd;
 using OutOfCrowd = game::OutOfCrowd;
 } // namespace RED4ext
 

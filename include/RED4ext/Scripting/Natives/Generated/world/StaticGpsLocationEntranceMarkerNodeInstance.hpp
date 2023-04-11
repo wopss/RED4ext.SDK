@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticGpsLocationEntranceMarkerNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticGpsLocationEntranceMarkerNodeInstance";
@@ -19,6 +20,7 @@ struct StaticGpsLocationEntranceMarkerNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(StaticGpsLocationEntranceMarkerNodeInstance, 0x90);
 } // namespace world
+using worldStaticGpsLocationEntranceMarkerNodeInstance = world::StaticGpsLocationEntranceMarkerNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

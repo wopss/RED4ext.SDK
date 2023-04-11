@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace graph { struct GraphSocketDefinition; }
 
-namespace graph { 
+namespace graph
+{
 struct GraphConnectionDefinition : graph::IGraphObjectDefinition
 {
     static constexpr const char* NAME = "graphGraphConnectionDefinition";
@@ -24,6 +25,7 @@ struct GraphConnectionDefinition : graph::IGraphObjectDefinition
 };
 RED4EXT_ASSERT_SIZE(GraphConnectionDefinition, 0x50);
 } // namespace graph
+using graphGraphConnectionDefinition = graph::GraphConnectionDefinition;
 } // namespace RED4ext
 
 // clang-format on

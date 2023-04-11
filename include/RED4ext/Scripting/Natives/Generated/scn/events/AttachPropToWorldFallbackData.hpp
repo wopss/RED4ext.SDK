@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace scn::events { 
+namespace scn::events
+{
 struct AttachPropToWorldFallbackData
 {
     static constexpr const char* NAME = "scneventsAttachPropToWorldFallbackData";
@@ -32,6 +33,7 @@ struct AttachPropToWorldFallbackData
 };
 RED4EXT_ASSERT_SIZE(AttachPropToWorldFallbackData, 0xB0);
 } // namespace scn::events
+using scneventsAttachPropToWorldFallbackData = scn::events::AttachPropToWorldFallbackData;
 } // namespace RED4ext
 
 // clang-format on

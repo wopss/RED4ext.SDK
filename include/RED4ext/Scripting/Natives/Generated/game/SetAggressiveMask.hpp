@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetAggressiveMask : red::Event
 {
     static constexpr const char* NAME = "gameSetAggressiveMask";
@@ -19,6 +20,7 @@ struct SetAggressiveMask : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetAggressiveMask, 0x40);
 } // namespace game
+using gameSetAggressiveMask = game::SetAggressiveMask;
 using SetAggressiveMask = game::SetAggressiveMask;
 } // namespace RED4ext
 

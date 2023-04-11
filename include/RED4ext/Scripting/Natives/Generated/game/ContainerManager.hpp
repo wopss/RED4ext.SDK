@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ContainerManager : game::IContainerManager
 {
     static constexpr const char* NAME = "gameContainerManager";
@@ -20,6 +21,7 @@ struct ContainerManager : game::IContainerManager
 };
 RED4EXT_ASSERT_SIZE(ContainerManager, 0x158);
 } // namespace game
+using gameContainerManager = game::ContainerManager;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct IVisualObject : IScriptable
 {
     static constexpr const char* NAME = "gamemappinsIVisualObject";
@@ -19,6 +20,7 @@ struct IVisualObject : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IVisualObject, 0x40);
 } // namespace game::mappins
+using gamemappinsIVisualObject = game::mappins::IVisualObject;
 using IVisualObject = game::mappins::IVisualObject;
 } // namespace RED4ext
 

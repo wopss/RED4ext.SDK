@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PuppetPreviewCameraSetup
 {
     static constexpr const char* NAME = "gameuiPuppetPreviewCameraSetup";
@@ -24,6 +25,7 @@ struct PuppetPreviewCameraSetup
 };
 RED4EXT_ASSERT_SIZE(PuppetPreviewCameraSetup, 0x20);
 } // namespace game::ui
+using gameuiPuppetPreviewCameraSetup = game::ui::PuppetPreviewCameraSetup;
 } // namespace RED4ext
 
 // clang-format on

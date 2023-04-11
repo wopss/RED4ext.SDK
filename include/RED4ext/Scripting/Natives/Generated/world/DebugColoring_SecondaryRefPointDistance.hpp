@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_SecondaryRefPointDistance : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_SecondaryRefPointDistance";
@@ -20,6 +21,7 @@ struct DebugColoring_SecondaryRefPointDistance : world::EditorDebugColoringSetti
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_SecondaryRefPointDistance, 0x40);
 } // namespace world
+using worldDebugColoring_SecondaryRefPointDistance = world::DebugColoring_SecondaryRefPointDistance;
 } // namespace RED4ext
 
 // clang-format on

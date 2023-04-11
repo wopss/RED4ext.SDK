@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtPartRequest
 {
     static constexpr const char* NAME = "animLookAtPartRequest";
@@ -24,6 +25,7 @@ struct LookAtPartRequest
 };
 RED4EXT_ASSERT_SIZE(LookAtPartRequest, 0x18);
 } // namespace anim
+using animLookAtPartRequest = anim::LookAtPartRequest;
 using LookAtPartRequest = anim::LookAtPartRequest;
 } // namespace RED4ext
 

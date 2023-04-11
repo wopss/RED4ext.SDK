@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StaticTriggerAreaComponent : game::StaticAreaShapeComponent
 {
     static constexpr const char* NAME = "gameStaticTriggerAreaComponent";
@@ -23,6 +24,7 @@ struct StaticTriggerAreaComponent : game::StaticAreaShapeComponent
 };
 RED4EXT_ASSERT_SIZE(StaticTriggerAreaComponent, 0x1A0);
 } // namespace game
+using gameStaticTriggerAreaComponent = game::StaticTriggerAreaComponent;
 using TriggerComponent = game::StaticTriggerAreaComponent;
 } // namespace RED4ext
 

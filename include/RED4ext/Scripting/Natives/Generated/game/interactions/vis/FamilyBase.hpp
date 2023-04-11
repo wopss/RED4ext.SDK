@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct FamilyBase
 {
     static constexpr const char* NAME = "gameinteractionsvisFamilyBase";
@@ -19,6 +20,7 @@ struct FamilyBase
 };
 RED4EXT_ASSERT_SIZE(FamilyBase, 0x20);
 } // namespace game::interactions::vis
+using gameinteractionsvisFamilyBase = game::interactions::vis::FamilyBase;
 } // namespace RED4ext
 
 // clang-format on

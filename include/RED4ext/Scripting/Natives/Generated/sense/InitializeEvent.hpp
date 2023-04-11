@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct InitializeEvent : red::Event
 {
     static constexpr const char* NAME = "senseInitializeEvent";
@@ -19,6 +20,7 @@ struct InitializeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(InitializeEvent, 0x40);
 } // namespace sense
+using senseInitializeEvent = sense::InitializeEvent;
 using SenseInitializeEvent = sense::InitializeEvent;
 } // namespace RED4ext
 

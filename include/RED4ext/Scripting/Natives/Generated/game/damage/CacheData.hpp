@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::damage { 
+namespace game::damage
+{
 struct CacheData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageCacheData";
@@ -19,6 +20,7 @@ struct CacheData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CacheData, 0x40);
 } // namespace game::damage
+using gamedamageCacheData = game::damage::CacheData;
 using CacheData = game::damage::CacheData;
 } // namespace RED4ext
 

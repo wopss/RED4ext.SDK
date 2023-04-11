@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IWorldStateSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "questIWorldStateSystem";
@@ -19,6 +20,7 @@ struct IWorldStateSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IWorldStateSystem, 0x48);
 } // namespace quest
+using questIWorldStateSystem = quest::IWorldStateSystem;
 } // namespace RED4ext
 
 // clang-format on

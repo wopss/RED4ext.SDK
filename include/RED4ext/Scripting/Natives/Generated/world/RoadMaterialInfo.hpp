@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RoadMaterialInfo
 {
     static constexpr const char* NAME = "worldRoadMaterialInfo";
@@ -21,6 +22,7 @@ struct RoadMaterialInfo
 };
 RED4EXT_ASSERT_SIZE(RoadMaterialInfo, 0x8);
 } // namespace world
+using worldRoadMaterialInfo = world::RoadMaterialInfo;
 } // namespace RED4ext
 
 // clang-format on

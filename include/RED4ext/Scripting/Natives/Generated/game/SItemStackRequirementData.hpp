@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SItemStackRequirementData
 {
     static constexpr const char* NAME = "gameSItemStackRequirementData";
@@ -21,6 +22,7 @@ struct SItemStackRequirementData
 };
 RED4EXT_ASSERT_SIZE(SItemStackRequirementData, 0x8);
 } // namespace game
+using gameSItemStackRequirementData = game::SItemStackRequirementData;
 using SItemStackRequirementData = game::SItemStackRequirementData;
 } // namespace RED4ext
 

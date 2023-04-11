@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct IPrereq; }
 
-namespace quest { 
+namespace quest
+{
 struct Prereq_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questPrereq_ConditionType";
@@ -27,6 +28,7 @@ struct Prereq_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(Prereq_ConditionType, 0x88);
 } // namespace quest
+using questPrereq_ConditionType = quest::Prereq_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

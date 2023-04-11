@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct BluelineObject : IScriptable
 {
     static constexpr const char* NAME = "questBluelineObject";
@@ -20,6 +21,7 @@ struct BluelineObject : IScriptable
 };
 RED4EXT_ASSERT_SIZE(BluelineObject, 0x58);
 } // namespace quest
+using questBluelineObject = quest::BluelineObject;
 using BluelineObject = quest::BluelineObject;
 } // namespace RED4ext
 

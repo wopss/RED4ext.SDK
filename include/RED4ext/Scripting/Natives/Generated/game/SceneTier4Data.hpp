@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SceneTier4Data : game::SceneTierDataMotionConstrained
 {
     static constexpr const char* NAME = "gameSceneTier4Data";
@@ -19,6 +20,7 @@ struct SceneTier4Data : game::SceneTierDataMotionConstrained
 };
 RED4EXT_ASSERT_SIZE(SceneTier4Data, 0x88);
 } // namespace game
+using gameSceneTier4Data = game::SceneTier4Data;
 using SceneTier4Data = game::SceneTier4Data;
 } // namespace RED4ext
 

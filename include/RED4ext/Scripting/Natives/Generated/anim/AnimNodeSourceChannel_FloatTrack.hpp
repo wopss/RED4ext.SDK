@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNodeSourceChannel_FloatTrack : anim::IAnimNodeSourceChannel_Float
 {
     static constexpr const char* NAME = "animAnimNodeSourceChannel_FloatTrack";
@@ -23,6 +24,7 @@ struct AnimNodeSourceChannel_FloatTrack : anim::IAnimNodeSourceChannel_Float
 };
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_FloatTrack, 0x50);
 } // namespace anim
+using animAnimNodeSourceChannel_FloatTrack = anim::AnimNodeSourceChannel_FloatTrack;
 } // namespace RED4ext
 
 // clang-format on

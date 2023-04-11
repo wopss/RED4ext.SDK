@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GameNotificationsLayer : ink::FullScreenLayer
 {
     static constexpr const char* NAME = "inkGameNotificationsLayer";
@@ -20,6 +21,7 @@ struct GameNotificationsLayer : ink::FullScreenLayer
 };
 RED4EXT_ASSERT_SIZE(GameNotificationsLayer, 0x1A8);
 } // namespace ink
+using inkGameNotificationsLayer = ink::GameNotificationsLayer;
 } // namespace RED4ext
 
 // clang-format on

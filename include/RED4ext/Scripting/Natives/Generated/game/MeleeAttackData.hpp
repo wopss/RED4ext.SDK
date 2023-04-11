@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MeleeAttackData : IScriptable
 {
     static constexpr const char* NAME = "gameMeleeAttackData";
@@ -59,6 +60,7 @@ struct MeleeAttackData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MeleeAttackData, 0x110);
 } // namespace game
+using gameMeleeAttackData = game::MeleeAttackData;
 using MeleeAttackData = game::MeleeAttackData;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct TextKiroshiInterpolator : ink::anim::TextInterpolator
 {
     static constexpr const char* NAME = "inkanimTextKiroshiInterpolator";
@@ -19,6 +20,7 @@ struct TextKiroshiInterpolator : ink::anim::TextInterpolator
 };
 RED4EXT_ASSERT_SIZE(TextKiroshiInterpolator, 0x70);
 } // namespace ink::anim
+using inkanimTextKiroshiInterpolator = ink::anim::TextKiroshiInterpolator;
 using inkAnimTextKiroshi = ink::anim::TextKiroshiInterpolator;
 } // namespace RED4ext
 

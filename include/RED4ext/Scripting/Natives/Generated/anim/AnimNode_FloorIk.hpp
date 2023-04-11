@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FloorIk : anim::AnimNode_FloorIkBase
 {
     static constexpr const char* NAME = "animAnimNode_FloorIk";
@@ -28,6 +29,7 @@ struct AnimNode_FloorIk : anim::AnimNode_FloorIkBase
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FloorIk, 0x440);
 } // namespace anim
+using animAnimNode_FloorIk = anim::AnimNode_FloorIk;
 } // namespace RED4ext
 
 // clang-format on

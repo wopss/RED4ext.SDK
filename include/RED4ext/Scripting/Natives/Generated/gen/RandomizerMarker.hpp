@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace gen { 
+namespace gen
+{
 struct RandomizerMarker : world::IMarker
 {
     static constexpr const char* NAME = "genRandomizerMarker";
@@ -25,6 +26,7 @@ struct RandomizerMarker : world::IMarker
 };
 RED4EXT_ASSERT_SIZE(RandomizerMarker, 0x60);
 } // namespace gen
+using genRandomizerMarker = gen::RandomizerMarker;
 } // namespace RED4ext
 
 // clang-format on

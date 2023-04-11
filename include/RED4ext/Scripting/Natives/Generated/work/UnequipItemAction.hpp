@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct UnequipItemAction : work::IWorkspotItemAction
 {
     static constexpr const char* NAME = "workUnequipItemAction";
@@ -22,6 +23,7 @@ struct UnequipItemAction : work::IWorkspotItemAction
 };
 RED4EXT_ASSERT_SIZE(UnequipItemAction, 0x40);
 } // namespace work
+using workUnequipItemAction = work::UnequipItemAction;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PuppetPreview_SetCameraSetupEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPuppetPreview_SetCameraSetupEvent";
@@ -25,6 +26,7 @@ struct PuppetPreview_SetCameraSetupEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PuppetPreview_SetCameraSetupEvent, 0x58);
 } // namespace game::ui
+using gameuiPuppetPreview_SetCameraSetupEvent = game::ui::PuppetPreview_SetCameraSetupEvent;
 } // namespace RED4ext
 
 // clang-format on

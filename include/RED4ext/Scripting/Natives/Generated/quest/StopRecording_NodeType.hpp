@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StopRecording_NodeType : quest::IRecordingNodeType
 {
     static constexpr const char* NAME = "questStopRecording_NodeType";
@@ -19,6 +20,7 @@ struct StopRecording_NodeType : quest::IRecordingNodeType
 };
 RED4EXT_ASSERT_SIZE(StopRecording_NodeType, 0x30);
 } // namespace quest
+using questStopRecording_NodeType = quest::StopRecording_NodeType;
 } // namespace RED4ext
 
 // clang-format on

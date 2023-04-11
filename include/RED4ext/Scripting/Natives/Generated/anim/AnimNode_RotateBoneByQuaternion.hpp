@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_RotateBoneByQuaternion : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_RotateBoneByQuaternion";
@@ -28,6 +29,7 @@ struct AnimNode_RotateBoneByQuaternion : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_RotateBoneByQuaternion, 0xB0);
 } // namespace anim
+using animAnimNode_RotateBoneByQuaternion = anim::AnimNode_RotateBoneByQuaternion;
 } // namespace RED4ext
 
 // clang-format on

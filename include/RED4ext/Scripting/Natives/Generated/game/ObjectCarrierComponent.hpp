@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectCarrierComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameObjectCarrierComponent";
@@ -22,6 +23,7 @@ struct ObjectCarrierComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(ObjectCarrierComponent, 0xA0);
 } // namespace game
+using gameObjectCarrierComponent = game::ObjectCarrierComponent;
 using ObjectCarrierComponent = game::ObjectCarrierComponent;
 } // namespace RED4ext
 

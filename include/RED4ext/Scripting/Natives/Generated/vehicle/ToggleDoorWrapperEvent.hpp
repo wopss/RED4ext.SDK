@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ToggleDoorWrapperEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleToggleDoorWrapperEvent";
@@ -25,6 +26,7 @@ struct ToggleDoorWrapperEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleDoorWrapperEvent, 0x50);
 } // namespace vehicle
+using vehicleToggleDoorWrapperEvent = vehicle::ToggleDoorWrapperEvent;
 } // namespace RED4ext
 
 // clang-format on

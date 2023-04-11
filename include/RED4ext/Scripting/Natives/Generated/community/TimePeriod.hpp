@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace community { 
+namespace community
+{
 struct TimePeriod
 {
     static constexpr const char* NAME = "communityTimePeriod";
@@ -22,6 +23,7 @@ struct TimePeriod
 };
 RED4EXT_ASSERT_SIZE(TimePeriod, 0x10);
 } // namespace community
+using communityTimePeriod = community::TimePeriod;
 } // namespace RED4ext
 
 // clang-format on

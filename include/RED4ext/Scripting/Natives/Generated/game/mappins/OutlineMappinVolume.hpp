@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct OutlineMappinVolume : game::mappins::IMappinVolume
 {
     static constexpr const char* NAME = "gamemappinsOutlineMappinVolume";
@@ -24,6 +25,7 @@ struct OutlineMappinVolume : game::mappins::IMappinVolume
 };
 RED4EXT_ASSERT_SIZE(OutlineMappinVolume, 0x48);
 } // namespace game::mappins
+using gamemappinsOutlineMappinVolume = game::mappins::OutlineMappinVolume;
 } // namespace RED4ext
 
 // clang-format on

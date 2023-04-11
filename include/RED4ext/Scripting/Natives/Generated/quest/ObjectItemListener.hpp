@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ObjectItemListener : game::IInventoryListener
 {
     static constexpr const char* NAME = "questObjectItemListener";
@@ -20,6 +21,7 @@ struct ObjectItemListener : game::IInventoryListener
 };
 RED4EXT_ASSERT_SIZE(ObjectItemListener, 0x50);
 } // namespace quest
+using questObjectItemListener = quest::ObjectItemListener;
 } // namespace RED4ext
 
 // clang-format on

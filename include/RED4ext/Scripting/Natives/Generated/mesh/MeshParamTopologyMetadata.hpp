@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamTopologyMetadata : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamTopologyMetadata";
@@ -24,6 +25,7 @@ struct MeshParamTopologyMetadata : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamTopologyMetadata, 0x78);
 } // namespace mesh
+using meshMeshParamTopologyMetadata = mesh::MeshParamTopologyMetadata;
 } // namespace RED4ext
 
 // clang-format on

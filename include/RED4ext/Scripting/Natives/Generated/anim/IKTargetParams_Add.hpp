@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IKTargetParams_Add : ISerializable
 {
     static constexpr const char* NAME = "animIKTargetParams_Add";
@@ -20,6 +21,7 @@ struct IKTargetParams_Add : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IKTargetParams_Add, 0x58);
 } // namespace anim
+using animIKTargetParams_Add = anim::IKTargetParams_Add;
 } // namespace RED4ext
 
 // clang-format on

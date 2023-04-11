@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace net { 
+namespace net
+{
 struct EntitySystem : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "netEntitySystem";
@@ -20,6 +21,7 @@ struct EntitySystem : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(EntitySystem, 0x90);
 } // namespace net
+using netEntitySystem = net::EntitySystem;
 } // namespace RED4ext
 
 // clang-format on

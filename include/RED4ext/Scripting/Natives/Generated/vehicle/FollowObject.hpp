@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct FollowObject
 {
     static constexpr const char* NAME = "vehicleFollowObject";
@@ -19,6 +20,7 @@ struct FollowObject
 };
 RED4EXT_ASSERT_SIZE(FollowObject, 0x50);
 } // namespace vehicle
+using vehicleFollowObject = vehicle::FollowObject;
 } // namespace RED4ext
 
 // clang-format on

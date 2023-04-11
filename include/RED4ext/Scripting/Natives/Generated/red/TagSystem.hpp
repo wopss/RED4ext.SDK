@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct TagSystem
 {
     static constexpr const char* NAME = "redTagSystem";
@@ -19,6 +20,7 @@ struct TagSystem
 };
 RED4EXT_ASSERT_SIZE(TagSystem, 0x68);
 } // namespace red
+using redTagSystem = red::TagSystem;
 } // namespace RED4ext
 
 // clang-format on

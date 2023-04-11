@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectPostAction_Beam_RicochetPreview : game::EffectPostAction
 {
     static constexpr const char* NAME = "gameEffectPostAction_Beam_RicochetPreview";
@@ -22,6 +23,7 @@ struct EffectPostAction_Beam_RicochetPreview : game::EffectPostAction
 };
 RED4EXT_ASSERT_SIZE(EffectPostAction_Beam_RicochetPreview, 0x90);
 } // namespace game
+using gameEffectPostAction_Beam_RicochetPreview = game::EffectPostAction_Beam_RicochetPreview;
 } // namespace RED4ext
 
 // clang-format on

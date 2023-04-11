@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ShadowDebugger : work::DebuggingTool
 {
     static constexpr const char* NAME = "workShadowDebugger";
@@ -20,6 +21,7 @@ struct ShadowDebugger : work::DebuggingTool
 };
 RED4EXT_ASSERT_SIZE(ShadowDebugger, 0x68);
 } // namespace work
+using workShadowDebugger = work::ShadowDebugger;
 } // namespace RED4ext
 
 // clang-format on

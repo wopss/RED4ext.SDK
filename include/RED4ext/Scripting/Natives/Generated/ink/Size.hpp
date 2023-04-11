@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct Size
 {
     static constexpr const char* NAME = "inkSize";
@@ -20,6 +21,7 @@ struct Size
 };
 RED4EXT_ASSERT_SIZE(Size, 0x8);
 } // namespace ink
+using inkSize = ink::Size;
 } // namespace RED4ext
 
 // clang-format on

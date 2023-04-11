@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct StickerBackgroundCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "gameuiStickerBackgroundCallback";
@@ -20,6 +21,7 @@ struct StickerBackgroundCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(StickerBackgroundCallback, 0x38);
 } // namespace game::ui
+using gameuiStickerBackgroundCallback = game::ui::StickerBackgroundCallback;
 } // namespace RED4ext
 
 // clang-format on

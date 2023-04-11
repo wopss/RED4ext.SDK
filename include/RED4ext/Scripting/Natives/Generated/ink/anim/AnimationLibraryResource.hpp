@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink::anim { struct Sequence; }
 
-namespace ink::anim { 
+namespace ink::anim
+{
 struct AnimationLibraryResource : CResource
 {
     static constexpr const char* NAME = "inkanimAnimationLibraryResource";
@@ -24,6 +25,7 @@ struct AnimationLibraryResource : CResource
 };
 RED4EXT_ASSERT_SIZE(AnimationLibraryResource, 0x50);
 } // namespace ink::anim
+using inkanimAnimationLibraryResource = ink::anim::AnimationLibraryResource;
 } // namespace RED4ext
 
 // clang-format on

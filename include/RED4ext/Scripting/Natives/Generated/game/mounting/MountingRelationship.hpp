@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::mounting { 
+namespace game::mounting
+{
 struct MountingRelationship
 {
     static constexpr const char* NAME = "gamemountingMountingRelationship";
@@ -30,6 +31,7 @@ struct MountingRelationship
 };
 RED4EXT_ASSERT_SIZE(MountingRelationship, 0x28);
 } // namespace game::mounting
+using gamemountingMountingRelationship = game::mounting::MountingRelationship;
 using MountingRelationship = game::mounting::MountingRelationship;
 } // namespace RED4ext
 

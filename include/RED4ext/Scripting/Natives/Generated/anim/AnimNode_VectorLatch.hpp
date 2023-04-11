@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_VectorLatch : anim::AnimNode_VectorValue
 {
     static constexpr const char* NAME = "animAnimNode_VectorLatch";
@@ -22,6 +23,7 @@ struct AnimNode_VectorLatch : anim::AnimNode_VectorValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_VectorLatch, 0x78);
 } // namespace anim
+using animAnimNode_VectorLatch = anim::AnimNode_VectorLatch;
 } // namespace RED4ext
 
 // clang-format on

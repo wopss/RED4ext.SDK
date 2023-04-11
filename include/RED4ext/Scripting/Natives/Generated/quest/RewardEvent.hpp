@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RewardEvent : red::Event
 {
     static constexpr const char* NAME = "questRewardEvent";
@@ -21,6 +22,7 @@ struct RewardEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RewardEvent, 0x48);
 } // namespace quest
+using questRewardEvent = quest::RewardEvent;
 using RewardEvent = quest::RewardEvent;
 } // namespace RED4ext
 

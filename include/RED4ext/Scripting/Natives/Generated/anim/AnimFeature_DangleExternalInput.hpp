@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_DangleExternalInput : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_DangleExternalInput";
@@ -21,6 +22,7 @@ struct AnimFeature_DangleExternalInput : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_DangleExternalInput, 0x50);
 } // namespace anim
+using animAnimFeature_DangleExternalInput = anim::AnimFeature_DangleExternalInput;
 } // namespace RED4ext
 
 // clang-format on

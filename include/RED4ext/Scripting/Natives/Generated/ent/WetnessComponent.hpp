@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct WetnessComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entWetnessComponent";
@@ -20,6 +21,7 @@ struct WetnessComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(WetnessComponent, 0xF8);
 } // namespace ent
+using entWetnessComponent = ent::WetnessComponent;
 using WetnessComponent = ent::WetnessComponent;
 } // namespace RED4ext
 

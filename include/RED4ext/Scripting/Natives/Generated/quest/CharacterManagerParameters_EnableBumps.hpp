@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_EnableBumps : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_EnableBumps";
@@ -23,6 +24,7 @@ struct CharacterManagerParameters_EnableBumps : quest::ICharacterManagerParamete
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_EnableBumps, 0x78);
 } // namespace quest
+using questCharacterManagerParameters_EnableBumps = quest::CharacterManagerParameters_EnableBumps;
 } // namespace RED4ext
 
 // clang-format on

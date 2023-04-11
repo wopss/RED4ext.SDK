@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ActorOverrideEntry
 {
     static constexpr const char* NAME = "questActorOverrideEntry";
@@ -21,6 +22,7 @@ struct ActorOverrideEntry
 };
 RED4EXT_ASSERT_SIZE(ActorOverrideEntry, 0x10);
 } // namespace quest
+using questActorOverrideEntry = quest::ActorOverrideEntry;
 } // namespace RED4ext
 
 // clang-format on

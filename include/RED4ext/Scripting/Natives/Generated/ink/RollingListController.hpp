@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RollingListController : ink::ListController
 {
     static constexpr const char* NAME = "inkRollingListController";
@@ -23,6 +24,7 @@ struct RollingListController : ink::ListController
 };
 RED4EXT_ASSERT_SIZE(RollingListController, 0x138);
 } // namespace ink
+using inkRollingListController = ink::RollingListController;
 } // namespace RED4ext
 
 // clang-format on

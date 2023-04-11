@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SceneTier_ConditionType : quest::ISceneConditionType
 {
     static constexpr const char* NAME = "questSceneTier_ConditionType";
@@ -23,6 +24,7 @@ struct SceneTier_ConditionType : quest::ISceneConditionType
 };
 RED4EXT_ASSERT_SIZE(SceneTier_ConditionType, 0x40);
 } // namespace quest
+using questSceneTier_ConditionType = quest::SceneTier_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

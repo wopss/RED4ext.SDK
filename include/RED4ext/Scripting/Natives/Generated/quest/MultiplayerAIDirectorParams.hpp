@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MultiplayerAIDirectorParams : ISerializable
 {
     static constexpr const char* NAME = "questMultiplayerAIDirectorParams";
@@ -27,6 +28,7 @@ struct MultiplayerAIDirectorParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MultiplayerAIDirectorParams, 0x80);
 } // namespace quest
+using questMultiplayerAIDirectorParams = quest::MultiplayerAIDirectorParams;
 } // namespace RED4ext
 
 // clang-format on

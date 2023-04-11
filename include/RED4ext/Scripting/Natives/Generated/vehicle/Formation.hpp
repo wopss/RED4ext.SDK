@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct Formation
 {
     static constexpr const char* NAME = "vehicleFormation";
@@ -19,6 +20,7 @@ struct Formation
 };
 RED4EXT_ASSERT_SIZE(Formation, 0x18);
 } // namespace vehicle
+using vehicleFormation = vehicle::Formation;
 } // namespace RED4ext
 
 // clang-format on

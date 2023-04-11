@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct FoliageCompiledResource : CResource
 {
     static constexpr const char* NAME = "worldFoliageCompiledResource";
@@ -25,6 +26,7 @@ struct FoliageCompiledResource : CResource
 };
 RED4EXT_ASSERT_SIZE(FoliageCompiledResource, 0x78);
 } // namespace world
+using worldFoliageCompiledResource = world::FoliageCompiledResource;
 } // namespace RED4ext
 
 // clang-format on

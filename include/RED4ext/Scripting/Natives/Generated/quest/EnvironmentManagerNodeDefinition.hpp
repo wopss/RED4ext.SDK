@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IEnvironmentManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct EnvironmentManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questEnvironmentManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct EnvironmentManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(EnvironmentManagerNodeDefinition, 0x58);
 } // namespace quest
+using questEnvironmentManagerNodeDefinition = quest::EnvironmentManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

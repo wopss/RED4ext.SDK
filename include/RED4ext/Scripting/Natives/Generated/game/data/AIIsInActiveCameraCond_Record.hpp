@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIIsInActiveCameraCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIIsInActiveCameraCond_Record";
@@ -20,6 +21,7 @@ struct AIIsInActiveCameraCond_Record : game::data::AIActionSubCondition_Record
 };
 RED4EXT_ASSERT_SIZE(AIIsInActiveCameraCond_Record, 0x60);
 } // namespace game::data
+using gamedataAIIsInActiveCameraCond_Record = game::data::AIIsInActiveCameraCond_Record;
 using AIIsInActiveCameraCond_Record = game::data::AIIsInActiveCameraCond_Record;
 } // namespace RED4ext
 

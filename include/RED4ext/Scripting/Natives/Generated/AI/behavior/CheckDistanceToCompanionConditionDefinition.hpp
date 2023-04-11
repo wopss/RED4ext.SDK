@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct CheckDistanceToCompanionConditionDefinition : AI::behavior::CompanionConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorCheckDistanceToCompanionConditionDefinition";
@@ -26,6 +27,7 @@ struct CheckDistanceToCompanionConditionDefinition : AI::behavior::CompanionCond
 };
 RED4EXT_ASSERT_SIZE(CheckDistanceToCompanionConditionDefinition, 0x70);
 } // namespace AI::behavior
+using AIbehaviorCheckDistanceToCompanionConditionDefinition = AI::behavior::CheckDistanceToCompanionConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct BaseObjectNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questBaseObjectNodeDefinition";
@@ -21,6 +22,7 @@ struct BaseObjectNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(BaseObjectNodeDefinition, 0x50);
 } // namespace quest
+using questBaseObjectNodeDefinition = quest::BaseObjectNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

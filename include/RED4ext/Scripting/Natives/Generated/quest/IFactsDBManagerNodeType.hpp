@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IFactsDBManagerNodeType : ISerializable
 {
     static constexpr const char* NAME = "questIFactsDBManagerNodeType";
@@ -19,6 +20,7 @@ struct IFactsDBManagerNodeType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IFactsDBManagerNodeType, 0x30);
 } // namespace quest
+using questIFactsDBManagerNodeType = quest::IFactsDBManagerNodeType;
 } // namespace RED4ext
 
 // clang-format on

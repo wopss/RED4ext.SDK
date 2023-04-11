@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct VoicesetComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "scnVoicesetComponentPS";
@@ -30,6 +31,7 @@ struct VoicesetComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(VoicesetComponentPS, 0x90);
 } // namespace scn
+using scnVoicesetComponentPS = scn::VoicesetComponentPS;
 } // namespace RED4ext
 
 // clang-format on

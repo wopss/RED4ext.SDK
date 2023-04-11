@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoiceContextAnswer
 {
     static constexpr const char* NAME = "audioVoiceContextAnswer";
@@ -22,6 +23,7 @@ struct VoiceContextAnswer
 };
 RED4EXT_ASSERT_SIZE(VoiceContextAnswer, 0x10);
 } // namespace audio
+using audioVoiceContextAnswer = audio::VoiceContextAnswer;
 } // namespace RED4ext
 
 // clang-format on

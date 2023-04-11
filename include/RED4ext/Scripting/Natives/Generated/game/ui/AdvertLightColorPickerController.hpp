@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct AdvertLightColorPickerController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiAdvertLightColorPickerController";
@@ -22,6 +23,7 @@ struct AdvertLightColorPickerController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(AdvertLightColorPickerController, 0x80);
 } // namespace game::ui
+using gameuiAdvertLightColorPickerController = game::ui::AdvertLightColorPickerController;
 } // namespace RED4ext
 
 // clang-format on

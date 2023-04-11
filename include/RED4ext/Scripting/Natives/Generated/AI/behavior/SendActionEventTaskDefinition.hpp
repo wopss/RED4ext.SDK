@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct ActionEvent; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SendActionEventTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorSendActionEventTaskDefinition";
@@ -23,6 +24,7 @@ struct SendActionEventTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(SendActionEventTaskDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorSendActionEventTaskDefinition = AI::behavior::SendActionEventTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

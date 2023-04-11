@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AINetStateComponent : game::ScriptableComponent
 {
     static constexpr const char* NAME = "gameAINetStateComponent";
@@ -20,6 +21,7 @@ struct AINetStateComponent : game::ScriptableComponent
 };
 RED4EXT_ASSERT_SIZE(AINetStateComponent, 0x118);
 } // namespace game
+using gameAINetStateComponent = game::AINetStateComponent;
 using AINetStateComponent = game::AINetStateComponent;
 } // namespace RED4ext
 

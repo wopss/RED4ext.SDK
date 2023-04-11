@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckDistractedReturnCondition : scn::IReturnCondition
 {
     static constexpr const char* NAME = "scnCheckDistractedReturnCondition";
@@ -22,6 +23,7 @@ struct CheckDistractedReturnCondition : scn::IReturnCondition
 };
 RED4EXT_ASSERT_SIZE(CheckDistractedReturnCondition, 0x38);
 } // namespace scn
+using scnCheckDistractedReturnCondition = scn::CheckDistractedReturnCondition;
 } // namespace RED4ext
 
 // clang-format on

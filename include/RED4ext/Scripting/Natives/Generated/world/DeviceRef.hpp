@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DeviceRef
 {
     static constexpr const char* NAME = "worldDeviceRef";
@@ -23,6 +24,7 @@ struct DeviceRef
 };
 RED4EXT_ASSERT_SIZE(DeviceRef, 0x18);
 } // namespace world
+using worldDeviceRef = world::DeviceRef;
 using DeviceRef = world::DeviceRef;
 } // namespace RED4ext
 

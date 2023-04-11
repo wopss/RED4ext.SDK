@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StopWorkspot_NodeType : quest::IBehaviourManager_NodeType
 {
     static constexpr const char* NAME = "questStopWorkspot_NodeType";
@@ -23,6 +24,7 @@ struct StopWorkspot_NodeType : quest::IBehaviourManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(StopWorkspot_NodeType, 0x80);
 } // namespace quest
+using questStopWorkspot_NodeType = quest::StopWorkspot_NodeType;
 } // namespace RED4ext
 
 // clang-format on

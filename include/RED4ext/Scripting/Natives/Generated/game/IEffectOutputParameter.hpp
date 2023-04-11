@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IEffectOutputParameter
 {
     static constexpr const char* NAME = "gameIEffectOutputParameter";
@@ -19,6 +20,7 @@ struct IEffectOutputParameter
 };
 RED4EXT_ASSERT_SIZE(IEffectOutputParameter, 0x8);
 } // namespace game
+using gameIEffectOutputParameter = game::IEffectOutputParameter;
 } // namespace RED4ext
 
 // clang-format on

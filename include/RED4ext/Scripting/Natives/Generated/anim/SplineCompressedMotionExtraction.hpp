@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SplineCompressedMotionExtraction : anim::IMotionExtraction
 {
     static constexpr const char* NAME = "animSplineCompressedMotionExtraction";
@@ -24,6 +25,7 @@ struct SplineCompressedMotionExtraction : anim::IMotionExtraction
 };
 RED4EXT_ASSERT_SIZE(SplineCompressedMotionExtraction, 0x58);
 } // namespace anim
+using animSplineCompressedMotionExtraction = anim::SplineCompressedMotionExtraction;
 } // namespace RED4ext
 
 // clang-format on

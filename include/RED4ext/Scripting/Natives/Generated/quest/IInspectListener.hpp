@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IInspectListener : IScriptable
 {
     static constexpr const char* NAME = "questIInspectListener";
@@ -19,6 +20,7 @@ struct IInspectListener : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IInspectListener, 0x40);
 } // namespace quest
+using questIInspectListener = quest::IInspectListener;
 using IInspectListener = quest::IInspectListener;
 } // namespace RED4ext
 

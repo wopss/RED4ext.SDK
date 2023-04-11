@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InitialLoadingScreenSaveData : ink::ILoadingScreenPersistentData
 {
     static constexpr const char* NAME = "inkInitialLoadingScreenSaveData";
@@ -20,6 +21,7 @@ struct InitialLoadingScreenSaveData : ink::ILoadingScreenPersistentData
 };
 RED4EXT_ASSERT_SIZE(InitialLoadingScreenSaveData, 0x10);
 } // namespace ink
+using inkInitialLoadingScreenSaveData = ink::InitialLoadingScreenSaveData;
 } // namespace RED4ext
 
 // clang-format on

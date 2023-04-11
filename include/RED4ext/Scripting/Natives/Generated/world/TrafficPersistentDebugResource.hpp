@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficPersistentDebugResource : res::StreamedResource
 {
     static constexpr const char* NAME = "worldTrafficPersistentDebugResource";
@@ -23,6 +24,7 @@ struct TrafficPersistentDebugResource : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(TrafficPersistentDebugResource, 0x60);
 } // namespace world
+using worldTrafficPersistentDebugResource = world::TrafficPersistentDebugResource;
 } // namespace RED4ext
 
 // clang-format on

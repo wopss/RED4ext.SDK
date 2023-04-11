@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::mappins { struct IPointOfInterestVariant; }
 
-namespace game::mappins { 
+namespace game::mappins
+{
 struct PointOfInterestMappinData : game::mappins::IMappinData
 {
     static constexpr const char* NAME = "gamemappinsPointOfInterestMappinData";
@@ -25,6 +26,7 @@ struct PointOfInterestMappinData : game::mappins::IMappinData
 };
 RED4EXT_ASSERT_SIZE(PointOfInterestMappinData, 0x20);
 } // namespace game::mappins
+using gamemappinsPointOfInterestMappinData = game::mappins::PointOfInterestMappinData;
 using PointOfInterestMappinData = game::mappins::PointOfInterestMappinData;
 } // namespace RED4ext
 

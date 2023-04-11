@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetLayout
 {
     static constexpr const char* NAME = "inkWidgetLayout";
@@ -32,6 +33,7 @@ struct WidgetLayout
 };
 RED4EXT_ASSERT_SIZE(WidgetLayout, 0x30);
 } // namespace ink
+using inkWidgetLayout = ink::WidgetLayout;
 } // namespace RED4ext
 
 // clang-format on

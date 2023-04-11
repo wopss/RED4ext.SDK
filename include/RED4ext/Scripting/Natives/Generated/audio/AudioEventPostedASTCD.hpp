@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudioEventPostedASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioAudioEventPostedASTCD";
@@ -21,6 +22,7 @@ struct AudioEventPostedASTCD : audio::AudioStateTransitionConditionData
 };
 RED4EXT_ASSERT_SIZE(AudioEventPostedASTCD, 0x40);
 } // namespace audio
+using audioAudioEventPostedASTCD = audio::AudioEventPostedASTCD;
 } // namespace RED4ext
 
 // clang-format on

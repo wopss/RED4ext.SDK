@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RuntimeSystemLights : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "gameRuntimeSystemLights";
@@ -20,6 +21,7 @@ struct RuntimeSystemLights : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemLights, 0xD8);
 } // namespace game
+using gameRuntimeSystemLights = game::RuntimeSystemLights;
 } // namespace RED4ext
 
 // clang-format on

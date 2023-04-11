@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct StealthMappinCheckLootEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsStealthMappinCheckLootEvent";
@@ -19,6 +20,7 @@ struct StealthMappinCheckLootEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StealthMappinCheckLootEvent, 0x40);
 } // namespace game::events
+using gameeventsStealthMappinCheckLootEvent = game::events::StealthMappinCheckLootEvent;
 } // namespace RED4ext
 
 // clang-format on

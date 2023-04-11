@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_TrajectoryAdjustment : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_TrajectoryAdjustment";
@@ -19,6 +20,7 @@ struct AnimEvent_TrajectoryAdjustment : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_TrajectoryAdjustment, 0x40);
 } // namespace anim
+using animAnimEvent_TrajectoryAdjustment = anim::AnimEvent_TrajectoryAdjustment;
 } // namespace RED4ext
 
 // clang-format on

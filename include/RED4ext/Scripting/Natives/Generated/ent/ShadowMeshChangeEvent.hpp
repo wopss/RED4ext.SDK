@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ShadowMeshChangeEvent : red::Event
 {
     static constexpr const char* NAME = "entShadowMeshChangeEvent";
@@ -22,6 +23,7 @@ struct ShadowMeshChangeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ShadowMeshChangeEvent, 0x48);
 } // namespace ent
+using entShadowMeshChangeEvent = ent::ShadowMeshChangeEvent;
 } // namespace RED4ext
 
 // clang-format on

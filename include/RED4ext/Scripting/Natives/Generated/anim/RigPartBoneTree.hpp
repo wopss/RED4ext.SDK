@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct RigPartBoneTree
 {
     static constexpr const char* NAME = "animRigPartBoneTree";
@@ -25,6 +26,7 @@ struct RigPartBoneTree
 };
 RED4EXT_ASSERT_SIZE(RigPartBoneTree, 0x20);
 } // namespace anim
+using animRigPartBoneTree = anim::RigPartBoneTree;
 } // namespace RED4ext
 
 // clang-format on

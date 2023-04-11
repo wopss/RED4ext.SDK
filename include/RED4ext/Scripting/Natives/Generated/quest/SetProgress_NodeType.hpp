@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetProgress_NodeType : quest::IAchievementManagerNodeType
 {
     static constexpr const char* NAME = "questSetProgress_NodeType";
@@ -24,6 +25,7 @@ struct SetProgress_NodeType : quest::IAchievementManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetProgress_NodeType, 0x60);
 } // namespace quest
+using questSetProgress_NodeType = quest::SetProgress_NodeType;
 } // namespace RED4ext
 
 // clang-format on

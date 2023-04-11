@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneSharedState : ISerializable
 {
     static constexpr const char* NAME = "scnSceneSharedState";
@@ -31,6 +32,7 @@ struct SceneSharedState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SceneSharedState, 0x180);
 } // namespace scn
+using scnSceneSharedState = scn::SceneSharedState;
 } // namespace RED4ext
 
 // clang-format on

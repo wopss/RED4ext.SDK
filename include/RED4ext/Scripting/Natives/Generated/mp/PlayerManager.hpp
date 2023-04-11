@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace mp { 
+namespace mp
+{
 struct PlayerManager : game::IPlayerManager
 {
     static constexpr const char* NAME = "mpPlayerManager";
@@ -20,6 +21,7 @@ struct PlayerManager : game::IPlayerManager
 };
 RED4EXT_ASSERT_SIZE(PlayerManager, 0x128);
 } // namespace mp
+using mpPlayerManager = mp::PlayerManager;
 } // namespace RED4ext
 
 // clang-format on

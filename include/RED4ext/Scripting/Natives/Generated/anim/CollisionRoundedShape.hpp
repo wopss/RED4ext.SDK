@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct CollisionRoundedShape
 {
     static constexpr const char* NAME = "animCollisionRoundedShape";
@@ -28,6 +29,7 @@ struct CollisionRoundedShape
 };
 RED4EXT_ASSERT_SIZE(CollisionRoundedShape, 0x90);
 } // namespace anim
+using animCollisionRoundedShape = anim::CollisionRoundedShape;
 } // namespace RED4ext
 
 // clang-format on

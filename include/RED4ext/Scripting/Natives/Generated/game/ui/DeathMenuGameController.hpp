@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DeathMenuGameController : game::ui::MenuItemListGameController
 {
     static constexpr const char* NAME = "gameuiDeathMenuGameController";
@@ -19,6 +20,7 @@ struct DeathMenuGameController : game::ui::MenuItemListGameController
 };
 RED4EXT_ASSERT_SIZE(DeathMenuGameController, 0x180);
 } // namespace game::ui
+using gameuiDeathMenuGameController = game::ui::DeathMenuGameController;
 using DeathMenuGameController = game::ui::DeathMenuGameController;
 } // namespace RED4ext
 

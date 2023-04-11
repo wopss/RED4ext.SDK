@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TagSpawParameter : game::ObjectSpawnParameter
 {
     static constexpr const char* NAME = "gameTagSpawParameter";
@@ -22,6 +23,7 @@ struct TagSpawParameter : game::ObjectSpawnParameter
 };
 RED4EXT_ASSERT_SIZE(TagSpawParameter, 0x40);
 } // namespace game
+using gameTagSpawParameter = game::TagSpawParameter;
 } // namespace RED4ext
 
 // clang-format on

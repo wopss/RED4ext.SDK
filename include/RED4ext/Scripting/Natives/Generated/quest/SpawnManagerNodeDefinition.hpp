@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SpawnManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questSpawnManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct SpawnManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(SpawnManagerNodeDefinition, 0x78);
 } // namespace quest
+using questSpawnManagerNodeDefinition = quest::SpawnManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

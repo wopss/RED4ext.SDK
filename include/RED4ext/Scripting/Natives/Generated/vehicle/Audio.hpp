@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct Audio
 {
     static constexpr const char* NAME = "vehicleAudio";
@@ -19,6 +20,7 @@ struct Audio
 };
 RED4EXT_ASSERT_SIZE(Audio, 0x468);
 } // namespace vehicle
+using vehicleAudio = vehicle::Audio;
 } // namespace RED4ext
 
 // clang-format on

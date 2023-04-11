@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct BaseMenuGameControllerPuppetSceneInfo
 {
     static constexpr const char* NAME = "gameuiBaseMenuGameControllerPuppetSceneInfo";
@@ -30,6 +31,7 @@ struct BaseMenuGameControllerPuppetSceneInfo
 };
 RED4EXT_ASSERT_SIZE(BaseMenuGameControllerPuppetSceneInfo, 0x30);
 } // namespace game::ui
+using gameuiBaseMenuGameControllerPuppetSceneInfo = game::ui::BaseMenuGameControllerPuppetSceneInfo;
 } // namespace RED4ext
 
 // clang-format on

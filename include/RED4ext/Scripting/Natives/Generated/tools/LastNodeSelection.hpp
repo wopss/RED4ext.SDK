@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct LastNodeSelection
 {
     static constexpr const char* NAME = "toolsLastNodeSelection";
@@ -22,6 +23,7 @@ struct LastNodeSelection
 };
 RED4EXT_ASSERT_SIZE(LastNodeSelection, 0x30);
 } // namespace tools
+using toolsLastNodeSelection = tools::LastNodeSelection;
 } // namespace RED4ext
 
 // clang-format on

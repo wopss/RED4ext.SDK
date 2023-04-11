@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LineVertex
 {
     static constexpr const char* NAME = "inkLineVertex";
@@ -23,6 +24,7 @@ struct LineVertex
 };
 RED4EXT_ASSERT_SIZE(LineVertex, 0xC);
 } // namespace ink
+using inkLineVertex = ink::LineVertex;
 } // namespace RED4ext
 
 // clang-format on

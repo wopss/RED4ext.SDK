@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TeleportVehicleNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questTeleportVehicleNodeDefinition";
@@ -25,6 +26,7 @@ struct TeleportVehicleNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TeleportVehicleNodeDefinition, 0xA8);
 } // namespace quest
+using questTeleportVehicleNodeDefinition = quest::TeleportVehicleNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

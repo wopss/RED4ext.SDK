@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficCollisionGroupNode : world::Node
 {
     static constexpr const char* NAME = "worldTrafficCollisionGroupNode";
@@ -22,6 +23,7 @@ struct TrafficCollisionGroupNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(TrafficCollisionGroupNode, 0x48);
 } // namespace world
+using worldTrafficCollisionGroupNode = world::TrafficCollisionGroupNode;
 } // namespace RED4ext
 
 // clang-format on

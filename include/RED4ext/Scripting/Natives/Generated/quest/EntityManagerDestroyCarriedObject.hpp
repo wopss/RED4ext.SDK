@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerDestroyCarriedObject : quest::IEntityManagerSetAttachment_NodeSubType
 {
     static constexpr const char* NAME = "questEntityManagerDestroyCarriedObject";
@@ -25,6 +26,7 @@ struct EntityManagerDestroyCarriedObject : quest::IEntityManagerSetAttachment_No
 };
 RED4EXT_ASSERT_SIZE(EntityManagerDestroyCarriedObject, 0x78);
 } // namespace quest
+using questEntityManagerDestroyCarriedObject = quest::EntityManagerDestroyCarriedObject;
 } // namespace RED4ext
 
 // clang-format on

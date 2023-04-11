@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ConfigurableAICommandNode : quest::AICommandNodeBase
 {
     static constexpr const char* NAME = "questConfigurableAICommandNode";
@@ -19,6 +20,7 @@ struct ConfigurableAICommandNode : quest::AICommandNodeBase
 };
 RED4EXT_ASSERT_SIZE(ConfigurableAICommandNode, 0x48);
 } // namespace quest
+using questConfigurableAICommandNode = quest::ConfigurableAICommandNode;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimInputSetterUsesSleepMode : red::Event
 {
     static constexpr const char* NAME = "entAnimInputSetterUsesSleepMode";
@@ -21,6 +22,7 @@ struct AnimInputSetterUsesSleepMode : red::Event
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetterUsesSleepMode, 0x48);
 } // namespace ent
+using entAnimInputSetterUsesSleepMode = ent::AnimInputSetterUsesSleepMode;
 using AnimInputSetterUsesSleepMode = ent::AnimInputSetterUsesSleepMode;
 } // namespace RED4ext
 

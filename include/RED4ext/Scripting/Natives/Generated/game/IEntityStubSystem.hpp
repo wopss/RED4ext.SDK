@@ -19,7 +19,8 @@ using gameIEntityStubSystem = game::IEntityStubSystem;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct IEntityStubSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIEntityStubSystem";
@@ -28,6 +29,7 @@ struct IEntityStubSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IEntityStubSystem, 0x48);
 } // namespace game
+using gameIEntityStubSystem = game::IEntityStubSystem;
 } // namespace RED4ext
 */
 

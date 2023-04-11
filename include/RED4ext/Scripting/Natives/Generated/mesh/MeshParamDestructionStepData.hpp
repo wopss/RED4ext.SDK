@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamDestructionStepData : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamDestructionStepData";
@@ -24,6 +25,7 @@ struct MeshParamDestructionStepData : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamDestructionStepData, 0x60);
 } // namespace mesh
+using meshMeshParamDestructionStepData = mesh::MeshParamDestructionStepData;
 } // namespace RED4ext
 
 // clang-format on

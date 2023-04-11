@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FloatComparator : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_FloatComparator";
@@ -31,6 +32,7 @@ struct AnimNode_FloatComparator : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FloatComparator, 0xE0);
 } // namespace anim
+using animAnimNode_FloatComparator = anim::AnimNode_FloatComparator;
 } // namespace RED4ext
 
 // clang-format on

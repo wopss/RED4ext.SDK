@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CompiledSmartObjectData : ISerializable
 {
     static constexpr const char* NAME = "gameCompiledSmartObjectData";
@@ -20,6 +21,7 @@ struct CompiledSmartObjectData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CompiledSmartObjectData, 0x48);
 } // namespace game
+using gameCompiledSmartObjectData = game::CompiledSmartObjectData;
 } // namespace RED4ext
 
 // clang-format on

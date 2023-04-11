@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct MessageToken_Name : tools::IMessageToken
 {
     static constexpr const char* NAME = "toolsMessageToken_Name";
@@ -21,6 +22,7 @@ struct MessageToken_Name : tools::IMessageToken
 };
 RED4EXT_ASSERT_SIZE(MessageToken_Name, 0x38);
 } // namespace tools
+using toolsMessageToken_Name = tools::MessageToken_Name;
 } // namespace RED4ext
 
 // clang-format on

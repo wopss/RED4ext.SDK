@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SyncMethodByProgress : anim::ISyncMethod
 {
     static constexpr const char* NAME = "animSyncMethodByProgress";
@@ -19,6 +20,7 @@ struct SyncMethodByProgress : anim::ISyncMethod
 };
 RED4EXT_ASSERT_SIZE(SyncMethodByProgress, 0x30);
 } // namespace anim
+using animSyncMethodByProgress = anim::SyncMethodByProgress;
 } // namespace RED4ext
 
 // clang-format on

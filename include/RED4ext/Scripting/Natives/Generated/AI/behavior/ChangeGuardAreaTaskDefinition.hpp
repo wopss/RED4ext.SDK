@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ChangeGuardAreaTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorChangeGuardAreaTaskDefinition";
@@ -23,6 +24,7 @@ struct ChangeGuardAreaTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(ChangeGuardAreaTaskDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorChangeGuardAreaTaskDefinition = AI::behavior::ChangeGuardAreaTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

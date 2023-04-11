@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ITrafficMovementSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "AIITrafficMovementSystem";
@@ -19,6 +20,7 @@ struct ITrafficMovementSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ITrafficMovementSystem, 0x48);
 } // namespace AI
+using AIITrafficMovementSystem = AI::ITrafficMovementSystem;
 } // namespace RED4ext
 
 // clang-format on

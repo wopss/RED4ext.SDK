@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimStateTransitionCondition_IntEdgeToFeature : anim::AnimStateTransitionCondition_IntEdgeFeature
 {
     static constexpr const char* NAME = "animAnimStateTransitionCondition_IntEdgeToFeature";
@@ -21,6 +22,7 @@ struct AnimStateTransitionCondition_IntEdgeToFeature : anim::AnimStateTransition
 };
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_IntEdgeToFeature, 0x78);
 } // namespace anim
+using animAnimStateTransitionCondition_IntEdgeToFeature = anim::AnimStateTransitionCondition_IntEdgeToFeature;
 } // namespace RED4ext
 
 // clang-format on

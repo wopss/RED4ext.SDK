@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerDetachRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gamePlayerDetachRequest";
@@ -19,6 +20,7 @@ struct PlayerDetachRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(PlayerDetachRequest, 0x58);
 } // namespace game
+using gamePlayerDetachRequest = game::PlayerDetachRequest;
 using PlayerDetachRequest = game::PlayerDetachRequest;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TutorialArea : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTutorialArea";
@@ -22,6 +23,7 @@ struct TutorialArea : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(TutorialArea, 0x88);
 } // namespace game::ui
+using gameuiTutorialArea = game::ui::TutorialArea;
 using TutorialArea = game::ui::TutorialArea;
 } // namespace RED4ext
 

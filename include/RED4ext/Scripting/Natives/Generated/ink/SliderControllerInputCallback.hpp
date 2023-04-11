@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SliderControllerInputCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkSliderControllerInputCallback";
@@ -20,6 +21,7 @@ struct SliderControllerInputCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(SliderControllerInputCallback, 0x38);
 } // namespace ink
+using inkSliderControllerInputCallback = ink::SliderControllerInputCallback;
 } // namespace RED4ext
 
 // clang-format on

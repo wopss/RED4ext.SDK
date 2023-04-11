@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PuppetTriggerDestructionComponent : game::ITriggerDestructionComponent
 {
     static constexpr const char* NAME = "gamePuppetTriggerDestructionComponent";
@@ -21,6 +22,7 @@ struct PuppetTriggerDestructionComponent : game::ITriggerDestructionComponent
 };
 RED4EXT_ASSERT_SIZE(PuppetTriggerDestructionComponent, 0xD0);
 } // namespace game
+using gamePuppetTriggerDestructionComponent = game::PuppetTriggerDestructionComponent;
 } // namespace RED4ext
 
 // clang-format on

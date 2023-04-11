@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct NodeTransformInfo
 {
     static constexpr const char* NAME = "interopNodeTransformInfo";
@@ -22,6 +23,7 @@ struct NodeTransformInfo
 };
 RED4EXT_ASSERT_SIZE(NodeTransformInfo, 0x40);
 } // namespace interop
+using interopNodeTransformInfo = interop::NodeTransformInfo;
 } // namespace RED4ext
 
 // clang-format on

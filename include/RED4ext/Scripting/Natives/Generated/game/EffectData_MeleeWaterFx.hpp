@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectData_MeleeWaterFx
 {
     static constexpr const char* NAME = "gameEffectData_MeleeWaterFx";
@@ -19,6 +20,7 @@ struct EffectData_MeleeWaterFx
 };
 RED4EXT_ASSERT_SIZE(EffectData_MeleeWaterFx, 0x30);
 } // namespace game
+using gameEffectData_MeleeWaterFx = game::EffectData_MeleeWaterFx;
 } // namespace RED4ext
 
 // clang-format on

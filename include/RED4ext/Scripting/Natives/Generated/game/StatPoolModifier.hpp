@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatPoolModifier
 {
     static constexpr const char* NAME = "gameStatPoolModifier";
@@ -27,6 +28,7 @@ struct StatPoolModifier
 };
 RED4EXT_ASSERT_SIZE(StatPoolModifier, 0x80);
 } // namespace game
+using gameStatPoolModifier = game::StatPoolModifier;
 using StatPoolModifier = game::StatPoolModifier;
 } // namespace RED4ext
 

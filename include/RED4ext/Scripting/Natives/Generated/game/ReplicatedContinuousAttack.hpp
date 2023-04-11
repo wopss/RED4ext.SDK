@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ReplicatedContinuousAttack
 {
     static constexpr const char* NAME = "gameReplicatedContinuousAttack";
@@ -23,6 +24,7 @@ struct ReplicatedContinuousAttack
 };
 RED4EXT_ASSERT_SIZE(ReplicatedContinuousAttack, 0x18);
 } // namespace game
+using gameReplicatedContinuousAttack = game::ReplicatedContinuousAttack;
 } // namespace RED4ext
 
 // clang-format on

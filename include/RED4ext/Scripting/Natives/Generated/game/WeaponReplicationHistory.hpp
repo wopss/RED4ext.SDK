@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WeaponReplicationHistory
 {
     static constexpr const char* NAME = "gameWeaponReplicationHistory";
@@ -29,6 +30,7 @@ struct WeaponReplicationHistory
 };
 RED4EXT_ASSERT_SIZE(WeaponReplicationHistory, 0x1D0);
 } // namespace game
+using gameWeaponReplicationHistory = game::WeaponReplicationHistory;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct IncludedTreeDefinition : AI::behavior::NestedTreeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorIncludedTreeDefinition";
@@ -23,6 +24,7 @@ struct IncludedTreeDefinition : AI::behavior::NestedTreeDefinition
 };
 RED4EXT_ASSERT_SIZE(IncludedTreeDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorIncludedTreeDefinition = AI::behavior::IncludedTreeDefinition;
 } // namespace RED4ext
 
 // clang-format on

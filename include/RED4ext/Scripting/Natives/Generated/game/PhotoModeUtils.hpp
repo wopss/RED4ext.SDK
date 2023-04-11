@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeUtils
 {
     static constexpr const char* NAME = "gamePhotoModeUtils";
@@ -19,6 +20,7 @@ struct PhotoModeUtils
 };
 RED4EXT_ASSERT_SIZE(PhotoModeUtils, 0x1);
 } // namespace game
+using gamePhotoModeUtils = game::PhotoModeUtils;
 } // namespace RED4ext
 
 // clang-format on

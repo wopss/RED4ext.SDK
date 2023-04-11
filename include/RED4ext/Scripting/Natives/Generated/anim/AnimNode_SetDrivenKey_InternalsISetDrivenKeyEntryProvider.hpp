@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider : ISerializable
 {
     static constexpr const char* NAME = "animAnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider";
@@ -19,6 +20,7 @@ struct AnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider, 0x30);
 } // namespace anim
+using animAnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider = anim::AnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider;
 } // namespace RED4ext
 
 // clang-format on

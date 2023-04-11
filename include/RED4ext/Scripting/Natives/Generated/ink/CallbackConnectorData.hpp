@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace ink { 
+namespace ink
+{
 struct CallbackConnectorData : IScriptable
 {
     static constexpr const char* NAME = "inkCallbackConnectorData";
@@ -24,6 +25,7 @@ struct CallbackConnectorData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CallbackConnectorData, 0x88);
 } // namespace ink
+using inkCallbackConnectorData = ink::CallbackConnectorData;
 } // namespace RED4ext
 
 // clang-format on

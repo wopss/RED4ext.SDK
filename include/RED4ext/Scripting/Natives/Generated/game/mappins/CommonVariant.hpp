@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct CommonVariant : game::mappins::IPointOfInterestVariant
 {
     static constexpr const char* NAME = "gamemappinsCommonVariant";
@@ -22,6 +23,7 @@ struct CommonVariant : game::mappins::IPointOfInterestVariant
 };
 RED4EXT_ASSERT_SIZE(CommonVariant, 0x40);
 } // namespace game::mappins
+using gamemappinsCommonVariant = game::mappins::CommonVariant;
 } // namespace RED4ext
 
 // clang-format on

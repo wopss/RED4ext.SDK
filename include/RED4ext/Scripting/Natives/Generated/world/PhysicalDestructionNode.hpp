@@ -18,7 +18,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace world { 
+namespace world
+{
 struct PhysicalDestructionNode : world::Node
 {
     static constexpr const char* NAME = "worldPhysicalDestructionNode";
@@ -38,6 +39,7 @@ struct PhysicalDestructionNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionNode, 0xB8);
 } // namespace world
+using worldPhysicalDestructionNode = world::PhysicalDestructionNode;
 using PhysicalDestructionNode = world::PhysicalDestructionNode;
 } // namespace RED4ext
 

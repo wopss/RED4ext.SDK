@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TwistConstraint : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_TwistConstraint";
@@ -30,6 +31,7 @@ struct AnimNode_TwistConstraint : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TwistConstraint, 0xB0);
 } // namespace anim
+using animAnimNode_TwistConstraint = anim::AnimNode_TwistConstraint;
 } // namespace RED4ext
 
 // clang-format on

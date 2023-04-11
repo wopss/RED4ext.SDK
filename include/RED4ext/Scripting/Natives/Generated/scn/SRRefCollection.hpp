@@ -20,7 +20,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SRRefCollection
 {
     static constexpr const char* NAME = "scnSRRefCollection";
@@ -43,6 +44,7 @@ struct SRRefCollection
 };
 RED4EXT_ASSERT_SIZE(SRRefCollection, 0xE0);
 } // namespace scn
+using scnSRRefCollection = scn::SRRefCollection;
 } // namespace RED4ext
 
 // clang-format on

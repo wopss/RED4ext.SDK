@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tick { 
+namespace tick
+{
 struct ITimeDilationListener : IScriptable
 {
     static constexpr const char* NAME = "tickITimeDilationListener";
@@ -19,6 +20,7 @@ struct ITimeDilationListener : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ITimeDilationListener, 0x40);
 } // namespace tick
+using tickITimeDilationListener = tick::ITimeDilationListener;
 } // namespace RED4ext
 
 // clang-format on

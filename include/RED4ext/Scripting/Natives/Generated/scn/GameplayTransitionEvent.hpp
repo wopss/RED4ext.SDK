@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct GameplayTransitionEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnGameplayTransitionEvent";
@@ -24,6 +25,7 @@ struct GameplayTransitionEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(GameplayTransitionEvent, 0x60);
 } // namespace scn
+using scnGameplayTransitionEvent = scn::GameplayTransitionEvent;
 } // namespace RED4ext
 
 // clang-format on

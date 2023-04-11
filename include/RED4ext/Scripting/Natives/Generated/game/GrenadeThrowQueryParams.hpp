@@ -13,7 +13,8 @@ namespace RED4ext
 namespace ent { struct IPositionProvider; }
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct GrenadeThrowQueryParams
 {
     static constexpr const char* NAME = "gameGrenadeThrowQueryParams";
@@ -33,6 +34,7 @@ struct GrenadeThrowQueryParams
 };
 RED4EXT_ASSERT_SIZE(GrenadeThrowQueryParams, 0x50);
 } // namespace game
+using gameGrenadeThrowQueryParams = game::GrenadeThrowQueryParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace ent { 
+namespace ent
+{
 struct ReplicatedItem
 {
     static constexpr const char* NAME = "entReplicatedItem";
@@ -25,6 +26,7 @@ struct ReplicatedItem
 };
 RED4EXT_ASSERT_SIZE(ReplicatedItem, 0x20);
 } // namespace ent
+using entReplicatedItem = ent::ReplicatedItem;
 } // namespace RED4ext
 
 // clang-format on

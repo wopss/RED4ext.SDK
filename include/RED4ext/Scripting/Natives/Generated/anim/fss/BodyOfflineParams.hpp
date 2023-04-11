@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim::fss { 
+namespace anim::fss
+{
 struct BodyOfflineParams
 {
     static constexpr const char* NAME = "animfssBodyOfflineParams";
@@ -25,6 +26,7 @@ struct BodyOfflineParams
 };
 RED4EXT_ASSERT_SIZE(BodyOfflineParams, 0x1C);
 } // namespace anim::fss
+using animfssBodyOfflineParams = anim::fss::BodyOfflineParams;
 } // namespace RED4ext
 
 // clang-format on

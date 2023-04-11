@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LipsyncAnimSetSRRefId
 {
     static constexpr const char* NAME = "scnLipsyncAnimSetSRRefId";
@@ -19,6 +20,7 @@ struct LipsyncAnimSetSRRefId
 };
 RED4EXT_ASSERT_SIZE(LipsyncAnimSetSRRefId, 0x4);
 } // namespace scn
+using scnLipsyncAnimSetSRRefId = scn::LipsyncAnimSetSRRefId;
 } // namespace RED4ext
 
 // clang-format on

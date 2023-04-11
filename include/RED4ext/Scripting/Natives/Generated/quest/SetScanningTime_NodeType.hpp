@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetScanningTime_NodeType : quest::IVisionModeNodeType
 {
     static constexpr const char* NAME = "questSetScanningTime_NodeType";
@@ -23,6 +24,7 @@ struct SetScanningTime_NodeType : quest::IVisionModeNodeType
 };
 RED4EXT_ASSERT_SIZE(SetScanningTime_NodeType, 0x70);
 } // namespace quest
+using questSetScanningTime_NodeType = quest::SetScanningTime_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DismemberedLimbCount
 {
     static constexpr const char* NAME = "gameDismemberedLimbCount";
@@ -20,6 +21,7 @@ struct DismemberedLimbCount
 };
 RED4EXT_ASSERT_SIZE(DismemberedLimbCount, 0x8);
 } // namespace game
+using gameDismemberedLimbCount = game::DismemberedLimbCount;
 using DismemberedLimbCount = game::DismemberedLimbCount;
 } // namespace RED4ext
 

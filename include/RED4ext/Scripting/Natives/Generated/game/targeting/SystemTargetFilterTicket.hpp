@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemTargetFilterTicket
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilterTicket";
@@ -19,6 +20,7 @@ struct SystemTargetFilterTicket
 };
 RED4EXT_ASSERT_SIZE(SystemTargetFilterTicket, 0x4);
 } // namespace game::targeting
+using gametargetingSystemTargetFilterTicket = game::targeting::SystemTargetFilterTicket;
 using TargetFilterTicket = game::targeting::SystemTargetFilterTicket;
 } // namespace RED4ext
 

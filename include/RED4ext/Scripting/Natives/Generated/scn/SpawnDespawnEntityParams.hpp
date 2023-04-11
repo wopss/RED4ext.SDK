@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SpawnDespawnEntityParams
 {
     static constexpr const char* NAME = "scnSpawnDespawnEntityParams";
@@ -41,6 +42,7 @@ struct SpawnDespawnEntityParams
 };
 RED4EXT_ASSERT_SIZE(SpawnDespawnEntityParams, 0x60);
 } // namespace scn
+using scnSpawnDespawnEntityParams = scn::SpawnDespawnEntityParams;
 } // namespace RED4ext
 
 // clang-format on

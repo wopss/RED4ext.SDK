@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InputHintInitializedEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiInputHintInitializedEvent";
@@ -21,6 +22,7 @@ struct InputHintInitializedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(InputHintInitializedEvent, 0x48);
 } // namespace game::ui
+using gameuiInputHintInitializedEvent = game::ui::InputHintInitializedEvent;
 using InputHintInitializedEvent = game::ui::InputHintInitializedEvent;
 } // namespace RED4ext
 

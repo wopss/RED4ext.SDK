@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct InjectVoiceTagEvent : red::Event
 {
     static constexpr const char* NAME = "entInjectVoiceTagEvent";
@@ -23,6 +24,7 @@ struct InjectVoiceTagEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(InjectVoiceTagEvent, 0x50);
 } // namespace ent
+using entInjectVoiceTagEvent = ent::InjectVoiceTagEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RadioGroupController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkRadioGroupController";
@@ -28,6 +29,7 @@ struct RadioGroupController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(RadioGroupController, 0xD8);
 } // namespace ink
+using inkRadioGroupController = ink::RadioGroupController;
 } // namespace RED4ext
 
 // clang-format on

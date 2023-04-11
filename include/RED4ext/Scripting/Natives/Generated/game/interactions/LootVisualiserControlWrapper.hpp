@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct LootVisualiserControlWrapper
 {
     static constexpr const char* NAME = "gameinteractionsLootVisualiserControlWrapper";
@@ -19,6 +20,7 @@ struct LootVisualiserControlWrapper
 };
 RED4EXT_ASSERT_SIZE(LootVisualiserControlWrapper, 0x18);
 } // namespace game::interactions
+using gameinteractionsLootVisualiserControlWrapper = game::interactions::LootVisualiserControlWrapper;
 using LootVisualiserControlWrapper = game::interactions::LootVisualiserControlWrapper;
 } // namespace RED4ext
 

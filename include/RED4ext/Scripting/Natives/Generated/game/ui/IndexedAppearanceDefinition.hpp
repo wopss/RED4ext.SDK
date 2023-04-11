@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IndexedAppearanceDefinition
 {
     static constexpr const char* NAME = "gameuiIndexedAppearanceDefinition";
@@ -31,6 +32,7 @@ struct IndexedAppearanceDefinition
 };
 RED4EXT_ASSERT_SIZE(IndexedAppearanceDefinition, 0x58);
 } // namespace game::ui
+using gameuiIndexedAppearanceDefinition = game::ui::IndexedAppearanceDefinition;
 } // namespace RED4ext
 
 // clang-format on

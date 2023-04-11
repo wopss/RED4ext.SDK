@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectVectorEvaluator : ISerializable
 {
     static constexpr const char* NAME = "gameEffectVectorEvaluator";
@@ -21,6 +22,7 @@ struct EffectVectorEvaluator : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EffectVectorEvaluator, 0x38);
 } // namespace game
+using gameEffectVectorEvaluator = game::EffectVectorEvaluator;
 } // namespace RED4ext
 
 // clang-format on

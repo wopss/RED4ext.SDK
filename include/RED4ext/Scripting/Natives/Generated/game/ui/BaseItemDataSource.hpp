@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BaseItemDataSource : ink::AbstractDataSourceWrapper
 {
     static constexpr const char* NAME = "gameuiBaseItemDataSource";
@@ -19,6 +20,7 @@ struct BaseItemDataSource : ink::AbstractDataSourceWrapper
 };
 RED4EXT_ASSERT_SIZE(BaseItemDataSource, 0x48);
 } // namespace game::ui
+using gameuiBaseItemDataSource = game::ui::BaseItemDataSource;
 using BaseItemDataSource = game::ui::BaseItemDataSource;
 } // namespace RED4ext
 

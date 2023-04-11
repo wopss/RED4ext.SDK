@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TarotCardAddedNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiTarotCardAddedNotificationViewData";
@@ -24,6 +25,7 @@ struct TarotCardAddedNotificationViewData : game::ui::GenericNotificationViewDat
 };
 RED4EXT_ASSERT_SIZE(TarotCardAddedNotificationViewData, 0xC0);
 } // namespace game::ui
+using gameuiTarotCardAddedNotificationViewData = game::ui::TarotCardAddedNotificationViewData;
 using TarotCardAddedNotificationViewData = game::ui::TarotCardAddedNotificationViewData;
 } // namespace RED4ext
 

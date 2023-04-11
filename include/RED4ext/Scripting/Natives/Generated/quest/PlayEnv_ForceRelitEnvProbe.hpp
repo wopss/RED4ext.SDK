@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlayEnv_ForceRelitEnvProbe : quest::IEnvironmentManagerNodeType
 {
     static constexpr const char* NAME = "questPlayEnv_ForceRelitEnvProbe";
@@ -19,6 +20,7 @@ struct PlayEnv_ForceRelitEnvProbe : quest::IEnvironmentManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PlayEnv_ForceRelitEnvProbe, 0x30);
 } // namespace quest
+using questPlayEnv_ForceRelitEnvProbe = quest::PlayEnv_ForceRelitEnvProbe;
 } // namespace RED4ext
 
 // clang-format on

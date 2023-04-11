@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct LootPurge_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 {
     static constexpr const char* NAME = "questLootPurge_NodeType";
@@ -19,6 +20,7 @@ struct LootPurge_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 };
 RED4EXT_ASSERT_SIZE(LootPurge_NodeType, 0x38);
 } // namespace quest
+using questLootPurge_NodeType = quest::LootPurge_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 namespace ent { struct EntityTemplate; }
 namespace world { struct EnvironmentAreaParameters; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapPreviewGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiWorldMapPreviewGameController";
@@ -29,6 +30,7 @@ struct WorldMapPreviewGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(WorldMapPreviewGameController, 0x1F8);
 } // namespace game::ui
+using gameuiWorldMapPreviewGameController = game::ui::WorldMapPreviewGameController;
 using inkWorldMapPreviewGameController = game::ui::WorldMapPreviewGameController;
 } // namespace RED4ext
 

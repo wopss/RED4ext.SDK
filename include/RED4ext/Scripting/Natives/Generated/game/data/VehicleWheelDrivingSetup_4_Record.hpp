@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct VehicleWheelDrivingSetup_4_Record : game::data::VehicleWheelDrivingSetup_Record
 {
     static constexpr const char* NAME = "gamedataVehicleWheelDrivingSetup_4_Record";
@@ -20,6 +21,7 @@ struct VehicleWheelDrivingSetup_4_Record : game::data::VehicleWheelDrivingSetup_
 };
 RED4EXT_ASSERT_SIZE(VehicleWheelDrivingSetup_4_Record, 0x60);
 } // namespace game::data
+using gamedataVehicleWheelDrivingSetup_4_Record = game::data::VehicleWheelDrivingSetup_4_Record;
 using VehicleWheelDrivingSetup_4_Record = game::data::VehicleWheelDrivingSetup_4_Record;
 } // namespace RED4ext
 

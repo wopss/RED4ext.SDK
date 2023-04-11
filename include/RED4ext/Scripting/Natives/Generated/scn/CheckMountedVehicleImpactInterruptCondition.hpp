@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckMountedVehicleImpactInterruptCondition : scn::IInterruptCondition
 {
     static constexpr const char* NAME = "scnCheckMountedVehicleImpactInterruptCondition";
@@ -19,6 +20,7 @@ struct CheckMountedVehicleImpactInterruptCondition : scn::IInterruptCondition
 };
 RED4EXT_ASSERT_SIZE(CheckMountedVehicleImpactInterruptCondition, 0x30);
 } // namespace scn
+using scnCheckMountedVehicleImpactInterruptCondition = scn::CheckMountedVehicleImpactInterruptCondition;
 } // namespace RED4ext
 
 // clang-format on

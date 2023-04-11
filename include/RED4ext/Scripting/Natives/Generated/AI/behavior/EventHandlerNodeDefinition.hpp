@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct EventResolverDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct EventHandlerNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorEventHandlerNodeDefinition";
@@ -25,6 +26,7 @@ struct EventHandlerNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(EventHandlerNodeDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorEventHandlerNodeDefinition = AI::behavior::EventHandlerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MaybeNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorMaybeNodeDefinition";
@@ -22,6 +23,7 @@ struct MaybeNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(MaybeNodeDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorMaybeNodeDefinition = AI::behavior::MaybeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

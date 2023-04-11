@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JoinTrafficSettings : ISerializable
 {
     static constexpr const char* NAME = "gameJoinTrafficSettings";
@@ -20,6 +21,7 @@ struct JoinTrafficSettings : ISerializable
 };
 RED4EXT_ASSERT_SIZE(JoinTrafficSettings, 0x90);
 } // namespace game
+using gameJoinTrafficSettings = game::JoinTrafficSettings;
 } // namespace RED4ext
 
 // clang-format on

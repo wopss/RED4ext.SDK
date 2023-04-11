@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace user { 
+namespace user
+{
 struct SettingsNotificationListener : IScriptable
 {
     static constexpr const char* NAME = "userSettingsNotificationListener";
@@ -20,6 +21,7 @@ struct SettingsNotificationListener : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SettingsNotificationListener, 0x48);
 } // namespace user
+using userSettingsNotificationListener = user::SettingsNotificationListener;
 using ConfigNotificationListener = user::SettingsNotificationListener;
 } // namespace RED4ext
 

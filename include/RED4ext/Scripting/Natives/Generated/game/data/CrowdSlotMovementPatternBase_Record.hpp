@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CrowdSlotMovementPatternBase_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCrowdSlotMovementPatternBase_Record";
@@ -20,6 +21,7 @@ struct CrowdSlotMovementPatternBase_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CrowdSlotMovementPatternBase_Record, 0x50);
 } // namespace game::data
+using gamedataCrowdSlotMovementPatternBase_Record = game::data::CrowdSlotMovementPatternBase_Record;
 using CrowdSlotMovementPatternBase_Record = game::data::CrowdSlotMovementPatternBase_Record;
 } // namespace RED4ext
 

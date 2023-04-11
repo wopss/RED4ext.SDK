@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ItemEventsPropagateRenderingPlane : red::Event
 {
     static constexpr const char* NAME = "gameItemEventsPropagateRenderingPlane";
@@ -20,6 +21,7 @@ struct ItemEventsPropagateRenderingPlane : red::Event
 };
 RED4EXT_ASSERT_SIZE(ItemEventsPropagateRenderingPlane, 0x48);
 } // namespace game
+using gameItemEventsPropagateRenderingPlane = game::ItemEventsPropagateRenderingPlane;
 } // namespace RED4ext
 
 // clang-format on

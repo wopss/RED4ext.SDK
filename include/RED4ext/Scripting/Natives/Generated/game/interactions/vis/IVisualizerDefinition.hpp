@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct IVisualizerDefinition : ISerializable
 {
     static constexpr const char* NAME = "gameinteractionsvisIVisualizerDefinition";
@@ -23,6 +24,7 @@ struct IVisualizerDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IVisualizerDefinition, 0x48);
 } // namespace game::interactions::vis
+using gameinteractionsvisIVisualizerDefinition = game::interactions::vis::IVisualizerDefinition;
 } // namespace RED4ext
 
 // clang-format on

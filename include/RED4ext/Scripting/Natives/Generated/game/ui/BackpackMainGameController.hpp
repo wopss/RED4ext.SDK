@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BackpackMainGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiBackpackMainGameController";
@@ -19,6 +20,7 @@ struct BackpackMainGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(BackpackMainGameController, 0xF0);
 } // namespace game::ui
+using gameuiBackpackMainGameController = game::ui::BackpackMainGameController;
 using BackpackMainGameController = game::ui::BackpackMainGameController;
 } // namespace RED4ext
 

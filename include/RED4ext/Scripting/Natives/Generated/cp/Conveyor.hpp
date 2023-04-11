@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct Conveyor : game::Object
 {
     static constexpr const char* NAME = "cpConveyor";
@@ -32,6 +33,7 @@ struct Conveyor : game::Object
 };
 RED4EXT_ASSERT_SIZE(Conveyor, 0x320);
 } // namespace cp
+using cpConveyor = cp::Conveyor;
 } // namespace RED4ext
 
 // clang-format on

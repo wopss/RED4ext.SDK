@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PatrolSplineProgress : ISerializable
 {
     static constexpr const char* NAME = "gamePatrolSplineProgress";
@@ -28,6 +29,7 @@ struct PatrolSplineProgress : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PatrolSplineProgress, 0xC0);
 } // namespace game
+using gamePatrolSplineProgress = game::PatrolSplineProgress;
 } // namespace RED4ext
 
 // clang-format on

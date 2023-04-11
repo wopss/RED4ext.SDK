@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ReferencePointDef
 {
     static constexpr const char* NAME = "scnReferencePointDef";
@@ -24,6 +25,7 @@ struct ReferencePointDef
 };
 RED4EXT_ASSERT_SIZE(ReferencePointDef, 0x70);
 } // namespace scn
+using scnReferencePointDef = scn::ReferencePointDef;
 } // namespace RED4ext
 
 // clang-format on

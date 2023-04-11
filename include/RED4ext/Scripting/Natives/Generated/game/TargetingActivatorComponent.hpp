@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TargetingActivatorComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameTargetingActivatorComponent";
@@ -19,6 +20,7 @@ struct TargetingActivatorComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TargetingActivatorComponent, 0x90);
 } // namespace game
+using gameTargetingActivatorComponent = game::TargetingActivatorComponent;
 } // namespace RED4ext
 
 // clang-format on

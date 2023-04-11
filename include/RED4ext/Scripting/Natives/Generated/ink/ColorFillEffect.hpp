@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ColorFillEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkColorFillEffect";
@@ -25,6 +26,7 @@ struct ColorFillEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(ColorFillEffect, 0x80);
 } // namespace ink
+using inkColorFillEffect = ink::ColorFillEffect;
 } // namespace RED4ext
 
 // clang-format on

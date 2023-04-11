@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace world { 
+namespace world
+{
 struct InstancedOccluderNode : world::Node
 {
     static constexpr const char* NAME = "worldInstancedOccluderNode";
@@ -30,6 +31,7 @@ struct InstancedOccluderNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(InstancedOccluderNode, 0x80);
 } // namespace world
+using worldInstancedOccluderNode = world::InstancedOccluderNode;
 } // namespace RED4ext
 
 // clang-format on

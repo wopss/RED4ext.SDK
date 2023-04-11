@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct FoliageBrushParams
 {
     static constexpr const char* NAME = "worldFoliageBrushParams";
@@ -21,6 +22,7 @@ struct FoliageBrushParams
 };
 RED4EXT_ASSERT_SIZE(FoliageBrushParams, 0xC);
 } // namespace world
+using worldFoliageBrushParams = world::FoliageBrushParams;
 } // namespace RED4ext
 
 // clang-format on

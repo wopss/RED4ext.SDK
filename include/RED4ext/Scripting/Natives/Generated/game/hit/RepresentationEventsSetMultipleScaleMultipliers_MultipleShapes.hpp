@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::hit { 
+namespace game::hit
+{
 struct RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes : red::Event
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsSetMultipleScaleMultipliers_MultipleShapes";
@@ -24,6 +25,7 @@ struct RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes : red::Eve
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes, 0x60);
 } // namespace game::hit
+using gamehitRepresentationEventsSetMultipleScaleMultipliers_MultipleShapes = game::hit::RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes;
 using HitRepresentation_SetMultipleScaleMultipliers_MultipleShapes = game::hit::RepresentationEventsSetMultipleScaleMultipliers_MultipleShapes;
 } // namespace RED4ext
 

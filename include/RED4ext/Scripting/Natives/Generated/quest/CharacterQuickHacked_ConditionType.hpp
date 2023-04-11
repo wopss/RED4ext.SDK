@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterQuickHacked_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterQuickHacked_ConditionType";
@@ -21,6 +22,7 @@ struct CharacterQuickHacked_ConditionType : quest::ICharacterConditionType
 };
 RED4EXT_ASSERT_SIZE(CharacterQuickHacked_ConditionType, 0x80);
 } // namespace quest
+using questCharacterQuickHacked_ConditionType = quest::CharacterQuickHacked_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

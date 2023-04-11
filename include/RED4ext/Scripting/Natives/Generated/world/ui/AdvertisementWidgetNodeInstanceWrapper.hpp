@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct AdvertisementWidgetNodeInstanceWrapper : ink::IAdvertisementWidgetComponentWrapper
 {
     static constexpr const char* NAME = "worlduiAdvertisementWidgetNodeInstanceWrapper";
@@ -20,6 +21,7 @@ struct AdvertisementWidgetNodeInstanceWrapper : ink::IAdvertisementWidgetCompone
 };
 RED4EXT_ASSERT_SIZE(AdvertisementWidgetNodeInstanceWrapper, 0x50);
 } // namespace world::ui
+using worlduiAdvertisementWidgetNodeInstanceWrapper = world::ui::AdvertisementWidgetNodeInstanceWrapper;
 } // namespace RED4ext
 
 // clang-format on

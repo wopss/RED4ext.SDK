@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficPersistentLaneConnections
 {
     static constexpr const char* NAME = "worldTrafficPersistentLaneConnections";
@@ -23,6 +24,7 @@ struct TrafficPersistentLaneConnections
 };
 RED4EXT_ASSERT_SIZE(TrafficPersistentLaneConnections, 0x20);
 } // namespace world
+using worldTrafficPersistentLaneConnections = world::TrafficPersistentLaneConnections;
 } // namespace RED4ext
 
 // clang-format on

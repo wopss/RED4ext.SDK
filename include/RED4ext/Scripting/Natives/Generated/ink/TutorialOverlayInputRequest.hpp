@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TutorialOverlayInputRequest : red::Event
 {
     static constexpr const char* NAME = "inkTutorialOverlayInputRequest";
@@ -21,6 +22,7 @@ struct TutorialOverlayInputRequest : red::Event
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayInputRequest, 0x48);
 } // namespace ink
+using inkTutorialOverlayInputRequest = ink::TutorialOverlayInputRequest;
 } // namespace RED4ext
 
 // clang-format on

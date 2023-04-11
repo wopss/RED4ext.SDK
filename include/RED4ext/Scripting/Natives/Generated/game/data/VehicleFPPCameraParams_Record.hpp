@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct VehicleFPPCameraParams_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleFPPCameraParams_Record";
@@ -20,6 +21,7 @@ struct VehicleFPPCameraParams_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(VehicleFPPCameraParams_Record, 0x80);
 } // namespace game::data
+using gamedataVehicleFPPCameraParams_Record = game::data::VehicleFPPCameraParams_Record;
 using VehicleFPPCameraParams_Record = game::data::VehicleFPPCameraParams_Record;
 } // namespace RED4ext
 

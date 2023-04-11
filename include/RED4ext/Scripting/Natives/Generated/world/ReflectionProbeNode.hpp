@@ -18,7 +18,8 @@ namespace RED4ext
 {
 struct CReflectionProbeDataResource;
 
-namespace world { 
+namespace world
+{
 struct ReflectionProbeNode : world::Node
 {
     static constexpr const char* NAME = "worldReflectionProbeNode";
@@ -57,6 +58,7 @@ struct ReflectionProbeNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(ReflectionProbeNode, 0xB0);
 } // namespace world
+using worldReflectionProbeNode = world::ReflectionProbeNode;
 } // namespace RED4ext
 
 // clang-format on

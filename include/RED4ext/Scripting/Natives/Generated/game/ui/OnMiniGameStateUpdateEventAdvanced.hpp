@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game::ui { struct SideScrollerMiniGameStateAdvanced; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct OnMiniGameStateUpdateEventAdvanced : red::Event
 {
     static constexpr const char* NAME = "gameuiOnMiniGameStateUpdateEventAdvanced";
@@ -26,6 +27,7 @@ struct OnMiniGameStateUpdateEventAdvanced : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnMiniGameStateUpdateEventAdvanced, 0x60);
 } // namespace game::ui
+using gameuiOnMiniGameStateUpdateEventAdvanced = game::ui::OnMiniGameStateUpdateEventAdvanced;
 using MiniGameStateUpdateEventAdvanced = game::ui::OnMiniGameStateUpdateEventAdvanced;
 } // namespace RED4ext
 

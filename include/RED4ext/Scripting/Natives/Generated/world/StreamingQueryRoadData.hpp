@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct Spline;
 
-namespace world { 
+namespace world
+{
 struct StreamingQueryRoadData
 {
     static constexpr const char* NAME = "worldStreamingQueryRoadData";
@@ -29,6 +30,7 @@ struct StreamingQueryRoadData
 };
 RED4EXT_ASSERT_SIZE(StreamingQueryRoadData, 0x40);
 } // namespace world
+using worldStreamingQueryRoadData = world::StreamingQueryRoadData;
 } // namespace RED4ext
 
 // clang-format on

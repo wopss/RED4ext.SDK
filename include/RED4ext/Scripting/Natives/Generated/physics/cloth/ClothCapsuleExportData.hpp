@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace physics::cloth { 
+namespace physics::cloth
+{
 struct ClothCapsuleExportData : ISerializable
 {
     static constexpr const char* NAME = "physicsclothClothCapsuleExportData";
@@ -22,6 +23,7 @@ struct ClothCapsuleExportData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ClothCapsuleExportData, 0x40);
 } // namespace physics::cloth
+using physicsclothClothCapsuleExportData = physics::cloth::ClothCapsuleExportData;
 } // namespace RED4ext
 
 // clang-format on

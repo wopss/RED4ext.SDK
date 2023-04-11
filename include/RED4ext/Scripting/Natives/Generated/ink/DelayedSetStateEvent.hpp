@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DelayedSetStateEvent : red::Event
 {
     static constexpr const char* NAME = "inkDelayedSetStateEvent";
@@ -20,6 +21,7 @@ struct DelayedSetStateEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DelayedSetStateEvent, 0x48);
 } // namespace ink
+using inkDelayedSetStateEvent = ink::DelayedSetStateEvent;
 } // namespace RED4ext
 
 // clang-format on

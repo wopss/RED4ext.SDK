@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerCombat_SetDeathDirection : quest::ICharacterManagerCombat_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerCombat_SetDeathDirection";
@@ -22,6 +23,7 @@ struct CharacterManagerCombat_SetDeathDirection : quest::ICharacterManagerCombat
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_SetDeathDirection, 0x78);
 } // namespace quest
+using questCharacterManagerCombat_SetDeathDirection = quest::CharacterManagerCombat_SetDeathDirection;
 } // namespace RED4ext
 
 // clang-format on

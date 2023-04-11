@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_PreGameSession : gsm::State_Session
 {
     static constexpr const char* NAME = "gsmState_PreGameSession";
@@ -19,6 +20,7 @@ struct State_PreGameSession : gsm::State_Session
 };
 RED4EXT_ASSERT_SIZE(State_PreGameSession, 0x320);
 } // namespace gsm
+using gsmState_PreGameSession = gsm::State_PreGameSession;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace ink { struct ImageWidget; }
 
-namespace ink { 
+namespace ink
+{
 struct CallbackData : IScriptable
 {
     static constexpr const char* NAME = "inkCallbackData";
@@ -29,6 +30,7 @@ struct CallbackData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CallbackData, 0x80);
 } // namespace ink
+using inkCallbackData = ink::CallbackData;
 using iconAtlasCallbackData = ink::CallbackData;
 } // namespace RED4ext
 

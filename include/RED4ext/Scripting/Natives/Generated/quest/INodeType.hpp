@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct INodeType : quest::IBaseNodeType
 {
     static constexpr const char* NAME = "questINodeType";
@@ -19,6 +20,7 @@ struct INodeType : quest::IBaseNodeType
 };
 RED4EXT_ASSERT_SIZE(INodeType, 0x30);
 } // namespace quest
+using questINodeType = quest::INodeType;
 } // namespace RED4ext
 
 // clang-format on

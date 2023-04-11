@@ -20,7 +20,8 @@ namespace game { struct JournalInternetText; }
 namespace game { struct JournalInternetVideo; }
 namespace ink { struct WidgetLibraryResource; }
 
-namespace game { 
+namespace game
+{
 struct JournalInternetPage : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalInternetPage";
@@ -40,6 +41,7 @@ struct JournalInternetPage : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalInternetPage, 0xE8);
 } // namespace game
+using gameJournalInternetPage = game::JournalInternetPage;
 using JournalInternetPage = game::JournalInternetPage;
 } // namespace RED4ext
 

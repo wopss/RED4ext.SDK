@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_VectorInterpolation : anim::AnimNode_VectorValue
 {
     static constexpr const char* NAME = "animAnimNode_VectorInterpolation";
@@ -24,6 +25,7 @@ struct AnimNode_VectorInterpolation : anim::AnimNode_VectorValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_VectorInterpolation, 0xA8);
 } // namespace anim
+using animAnimNode_VectorInterpolation = anim::AnimNode_VectorInterpolation;
 } // namespace RED4ext
 
 // clang-format on

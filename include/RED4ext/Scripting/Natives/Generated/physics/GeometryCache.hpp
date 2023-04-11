@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct GeometryCache : CResource
 {
     static constexpr const char* NAME = "physicsGeometryCache";
@@ -32,6 +33,7 @@ struct GeometryCache : CResource
 };
 RED4EXT_ASSERT_SIZE(GeometryCache, 0x190);
 } // namespace physics
+using physicsGeometryCache = physics::GeometryCache;
 } // namespace RED4ext
 
 // clang-format on

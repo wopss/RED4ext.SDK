@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct InertializationFloatClamp
 {
     static constexpr const char* NAME = "animInertializationFloatClamp";
@@ -22,6 +23,7 @@ struct InertializationFloatClamp
 };
 RED4EXT_ASSERT_SIZE(InertializationFloatClamp, 0xC);
 } // namespace anim
+using animInertializationFloatClamp = anim::InertializationFloatClamp;
 } // namespace RED4ext
 
 // clang-format on

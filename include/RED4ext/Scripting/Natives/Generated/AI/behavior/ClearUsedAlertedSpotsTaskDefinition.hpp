@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ClearUsedAlertedSpotsTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorClearUsedAlertedSpotsTaskDefinition";
@@ -23,6 +24,7 @@ struct ClearUsedAlertedSpotsTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(ClearUsedAlertedSpotsTaskDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorClearUsedAlertedSpotsTaskDefinition = AI::behavior::ClearUsedAlertedSpotsTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

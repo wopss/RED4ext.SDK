@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AIDirectorSpawnAreaNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "worldAIDirectorSpawnAreaNodeInstance";
@@ -19,6 +20,7 @@ struct AIDirectorSpawnAreaNodeInstance : world::AreaShapeNodeInstance
 };
 RED4EXT_ASSERT_SIZE(AIDirectorSpawnAreaNodeInstance, 0xD0);
 } // namespace world
+using worldAIDirectorSpawnAreaNodeInstance = world::AIDirectorSpawnAreaNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

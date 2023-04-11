@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ActionUnequipItemNodeDefinition : AI::behavior::ActionItemHandlingNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorActionUnequipItemNodeDefinition";
@@ -19,6 +20,7 @@ struct ActionUnequipItemNodeDefinition : AI::behavior::ActionItemHandlingNodeDef
 };
 RED4EXT_ASSERT_SIZE(ActionUnequipItemNodeDefinition, 0x60);
 } // namespace AI::behavior
+using AIbehaviorActionUnequipItemNodeDefinition = AI::behavior::ActionUnequipItemNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

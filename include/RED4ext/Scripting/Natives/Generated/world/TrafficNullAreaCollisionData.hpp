@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficNullAreaCollisionData : ISerializable
 {
     static constexpr const char* NAME = "worldTrafficNullAreaCollisionData";
@@ -24,6 +25,7 @@ struct TrafficNullAreaCollisionData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TrafficNullAreaCollisionData, 0x60);
 } // namespace world
+using worldTrafficNullAreaCollisionData = world::TrafficNullAreaCollisionData;
 } // namespace RED4ext
 
 // clang-format on

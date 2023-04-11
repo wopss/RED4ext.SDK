@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapUpdateGroupsEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiWorldMapUpdateGroupsEvent";
@@ -19,6 +20,7 @@ struct WorldMapUpdateGroupsEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(WorldMapUpdateGroupsEvent, 0x40);
 } // namespace game::ui
+using gameuiWorldMapUpdateGroupsEvent = game::ui::WorldMapUpdateGroupsEvent;
 } // namespace RED4ext
 
 // clang-format on

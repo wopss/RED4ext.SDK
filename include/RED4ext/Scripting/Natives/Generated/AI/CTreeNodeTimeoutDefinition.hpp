@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeTimeoutDefinition : AI::CTreeExtendableNodeDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeTimeoutDefinition";
@@ -21,6 +22,7 @@ struct CTreeNodeTimeoutDefinition : AI::CTreeExtendableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeTimeoutDefinition, 0x50);
 } // namespace AI
+using AICTreeNodeTimeoutDefinition = AI::CTreeNodeTimeoutDefinition;
 } // namespace RED4ext
 
 // clang-format on

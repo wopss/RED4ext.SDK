@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ICameraSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameICameraSystem";
@@ -19,6 +20,7 @@ struct ICameraSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ICameraSystem, 0x48);
 } // namespace game
+using gameICameraSystem = game::ICameraSystem;
 using ICameraSystem = game::ICameraSystem;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PrefabVariantsList : ISerializable
 {
     static constexpr const char* NAME = "worldPrefabVariantsList";
@@ -24,6 +25,7 @@ struct PrefabVariantsList : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PrefabVariantsList, 0x68);
 } // namespace world
+using worldPrefabVariantsList = world::PrefabVariantsList;
 } // namespace RED4ext
 
 // clang-format on

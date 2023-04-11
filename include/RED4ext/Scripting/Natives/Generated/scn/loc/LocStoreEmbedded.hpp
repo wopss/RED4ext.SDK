@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn::loc { 
+namespace scn::loc
+{
 struct LocStoreEmbedded
 {
     static constexpr const char* NAME = "scnlocLocStoreEmbedded";
@@ -23,6 +24,7 @@ struct LocStoreEmbedded
 };
 RED4EXT_ASSERT_SIZE(LocStoreEmbedded, 0x20);
 } // namespace scn::loc
+using scnlocLocStoreEmbedded = scn::loc::LocStoreEmbedded;
 } // namespace RED4ext
 
 // clang-format on

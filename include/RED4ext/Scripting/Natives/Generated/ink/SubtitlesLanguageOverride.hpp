@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SubtitlesLanguageOverride : ink::UserData
 {
     static constexpr const char* NAME = "inkSubtitlesLanguageOverride";
@@ -19,6 +20,7 @@ struct SubtitlesLanguageOverride : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(SubtitlesLanguageOverride, 0x40);
 } // namespace ink
+using inkSubtitlesLanguageOverride = ink::SubtitlesLanguageOverride;
 } // namespace RED4ext
 
 // clang-format on

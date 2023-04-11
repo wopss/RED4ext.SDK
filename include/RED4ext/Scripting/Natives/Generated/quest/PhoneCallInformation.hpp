@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PhoneCallInformation
 {
     static constexpr const char* NAME = "questPhoneCallInformation";
@@ -31,6 +32,7 @@ struct PhoneCallInformation
 };
 RED4EXT_ASSERT_SIZE(PhoneCallInformation, 0x20);
 } // namespace quest
+using questPhoneCallInformation = quest::PhoneCallInformation;
 using PhoneCallInformation = quest::PhoneCallInformation;
 } // namespace RED4ext
 

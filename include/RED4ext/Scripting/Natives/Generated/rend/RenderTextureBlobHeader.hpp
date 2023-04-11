@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderTextureBlobHeader
 {
     static constexpr const char* NAME = "rendRenderTextureBlobHeader";
@@ -31,6 +32,7 @@ struct RenderTextureBlobHeader
 };
 RED4EXT_ASSERT_SIZE(RenderTextureBlobHeader, 0x48);
 } // namespace rend
+using rendRenderTextureBlobHeader = rend::RenderTextureBlobHeader;
 } // namespace RED4ext
 
 // clang-format on

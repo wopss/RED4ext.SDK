@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace ink { 
+namespace ink
+{
 struct BinkLanguageDescriptor
 {
     static constexpr const char* NAME = "inkBinkLanguageDescriptor";
@@ -25,6 +26,7 @@ struct BinkLanguageDescriptor
 };
 RED4EXT_ASSERT_SIZE(BinkLanguageDescriptor, 0x10);
 } // namespace ink
+using inkBinkLanguageDescriptor = ink::BinkLanguageDescriptor;
 } // namespace RED4ext
 
 // clang-format on

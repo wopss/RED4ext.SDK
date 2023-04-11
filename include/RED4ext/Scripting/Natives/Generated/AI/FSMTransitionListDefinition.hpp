@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct FSMTransitionListDefinition
 {
     static constexpr const char* NAME = "AIFSMTransitionListDefinition";
@@ -20,6 +21,7 @@ struct FSMTransitionListDefinition
 };
 RED4EXT_ASSERT_SIZE(FSMTransitionListDefinition, 0x4);
 } // namespace AI
+using AIFSMTransitionListDefinition = AI::FSMTransitionListDefinition;
 } // namespace RED4ext
 
 // clang-format on

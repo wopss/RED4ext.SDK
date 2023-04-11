@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DesiredSlotsCountInfo
 {
     static constexpr const char* NAME = "worldDesiredSlotsCountInfo";
@@ -20,6 +21,7 @@ struct DesiredSlotsCountInfo
 };
 RED4EXT_ASSERT_SIZE(DesiredSlotsCountInfo, 0x8);
 } // namespace world
+using worldDesiredSlotsCountInfo = world::DesiredSlotsCountInfo;
 } // namespace RED4ext
 
 // clang-format on

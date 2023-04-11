@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TypedSignalStoppingNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questTypedSignalStoppingNodeDefinition";
@@ -19,6 +20,7 @@ struct TypedSignalStoppingNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TypedSignalStoppingNodeDefinition, 0x48);
 } // namespace quest
+using questTypedSignalStoppingNodeDefinition = quest::TypedSignalStoppingNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

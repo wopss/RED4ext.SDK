@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct AttachPropToWorldCachedFallbackBone
 {
     static constexpr const char* NAME = "scneventsAttachPropToWorldCachedFallbackBone";
@@ -23,6 +24,7 @@ struct AttachPropToWorldCachedFallbackBone
 };
 RED4EXT_ASSERT_SIZE(AttachPropToWorldCachedFallbackBone, 0x30);
 } // namespace scn::events
+using scneventsAttachPropToWorldCachedFallbackBone = scn::events::AttachPropToWorldCachedFallbackBone;
 } // namespace RED4ext
 
 // clang-format on

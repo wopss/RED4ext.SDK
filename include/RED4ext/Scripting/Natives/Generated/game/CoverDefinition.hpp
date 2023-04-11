@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CoverDefinition : game::SmartObjectWorkspotDefinition
 {
     static constexpr const char* NAME = "gameCoverDefinition";
@@ -27,6 +28,7 @@ struct CoverDefinition : game::SmartObjectWorkspotDefinition
 };
 RED4EXT_ASSERT_SIZE(CoverDefinition, 0xA8);
 } // namespace game
+using gameCoverDefinition = game::CoverDefinition;
 } // namespace RED4ext
 
 // clang-format on

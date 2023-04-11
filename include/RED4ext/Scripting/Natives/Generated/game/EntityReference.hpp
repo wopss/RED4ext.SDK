@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityReference
 {
     static constexpr const char* NAME = "gameEntityReference";
@@ -29,6 +30,7 @@ struct EntityReference
 };
 RED4EXT_ASSERT_SIZE(EntityReference, 0x38);
 } // namespace game
+using gameEntityReference = game::EntityReference;
 using EntityReference = game::EntityReference;
 } // namespace RED4ext
 

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SmartObjectPoint
 {
     static constexpr const char* NAME = "gameSmartObjectPoint";
@@ -21,6 +22,7 @@ struct SmartObjectPoint
 };
 RED4EXT_ASSERT_SIZE(SmartObjectPoint, 0x30);
 } // namespace game
+using gameSmartObjectPoint = game::SmartObjectPoint;
 } // namespace RED4ext
 
 // clang-format on

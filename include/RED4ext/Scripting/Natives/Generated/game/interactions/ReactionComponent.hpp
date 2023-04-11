@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ReactionComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameinteractionsReactionComponent";
@@ -26,6 +27,7 @@ struct ReactionComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(ReactionComponent, 0xE8);
 } // namespace game::interactions
+using gameinteractionsReactionComponent = game::interactions::ReactionComponent;
 using ReactionComponent = game::interactions::ReactionComponent;
 } // namespace RED4ext
 

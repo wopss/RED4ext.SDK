@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CParticleSystem;
 
-namespace ent { 
+namespace ent
+{
 struct ParticlesComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entParticlesComponent";
@@ -29,6 +30,7 @@ struct ParticlesComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(ParticlesComponent, 0x180);
 } // namespace ent
+using entParticlesComponent = ent::ParticlesComponent;
 } // namespace RED4ext
 
 // clang-format on

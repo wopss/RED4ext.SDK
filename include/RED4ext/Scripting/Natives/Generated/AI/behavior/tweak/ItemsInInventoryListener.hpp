@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct ItemsInInventoryListener : game::IInventoryListener
 {
     static constexpr const char* NAME = "AIbehaviortweakItemsInInventoryListener";
@@ -20,6 +21,7 @@ struct ItemsInInventoryListener : game::IInventoryListener
 };
 RED4EXT_ASSERT_SIZE(ItemsInInventoryListener, 0x68);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakItemsInInventoryListener = AI::behavior::tweak::ItemsInInventoryListener;
 } // namespace RED4ext
 
 // clang-format on

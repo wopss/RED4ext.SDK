@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace community { 
+namespace community
+{
 struct SquadInitializer : community::SpawnInitializer
 {
     static constexpr const char* NAME = "communitySquadInitializer";
@@ -22,6 +23,7 @@ struct SquadInitializer : community::SpawnInitializer
 };
 RED4EXT_ASSERT_SIZE(SquadInitializer, 0x40);
 } // namespace community
+using communitySquadInitializer = community::SquadInitializer;
 } // namespace RED4ext
 
 // clang-format on

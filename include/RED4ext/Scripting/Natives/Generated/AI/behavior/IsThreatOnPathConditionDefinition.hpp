@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct IsThreatOnPathConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorIsThreatOnPathConditionDefinition";
@@ -24,6 +25,7 @@ struct IsThreatOnPathConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(IsThreatOnPathConditionDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorIsThreatOnPathConditionDefinition = AI::behavior::IsThreatOnPathConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

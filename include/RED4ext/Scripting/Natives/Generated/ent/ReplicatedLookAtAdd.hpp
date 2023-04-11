@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace ent { struct IPositionProvider; }
 
-namespace ent { 
+namespace ent
+{
 struct ReplicatedLookAtAdd : ent::ReplicatedLookAtData
 {
     static constexpr const char* NAME = "entReplicatedLookAtAdd";
@@ -29,6 +30,7 @@ struct ReplicatedLookAtAdd : ent::ReplicatedLookAtData
 };
 RED4EXT_ASSERT_SIZE(ReplicatedLookAtAdd, 0xA8);
 } // namespace ent
+using entReplicatedLookAtAdd = ent::ReplicatedLookAtAdd;
 } // namespace RED4ext
 
 // clang-format on

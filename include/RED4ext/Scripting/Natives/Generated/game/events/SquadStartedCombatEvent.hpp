@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct SquadStartedCombatEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsSquadStartedCombatEvent";
@@ -21,6 +22,7 @@ struct SquadStartedCombatEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SquadStartedCombatEvent, 0x48);
 } // namespace game::events
+using gameeventsSquadStartedCombatEvent = game::events::SquadStartedCombatEvent;
 } // namespace RED4ext
 
 // clang-format on

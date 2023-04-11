@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerCoverInfo : IScriptable
 {
     static constexpr const char* NAME = "gamePlayerCoverInfo";
@@ -20,6 +21,7 @@ struct PlayerCoverInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PlayerCoverInfo, 0x158);
 } // namespace game
+using gamePlayerCoverInfo = game::PlayerCoverInfo;
 } // namespace RED4ext
 
 // clang-format on

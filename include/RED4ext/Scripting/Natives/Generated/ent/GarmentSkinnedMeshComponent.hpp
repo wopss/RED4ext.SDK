@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct GarmentSkinnedMeshComponent : ent::SkinnedMeshComponent
 {
     static constexpr const char* NAME = "entGarmentSkinnedMeshComponent";
@@ -20,6 +21,7 @@ struct GarmentSkinnedMeshComponent : ent::SkinnedMeshComponent
 };
 RED4EXT_ASSERT_SIZE(GarmentSkinnedMeshComponent, 0x2D0);
 } // namespace ent
+using entGarmentSkinnedMeshComponent = ent::GarmentSkinnedMeshComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CreditsRolling_ConditionType : quest::IUIConditionType
 {
     static constexpr const char* NAME = "questCreditsRolling_ConditionType";
@@ -19,6 +20,7 @@ struct CreditsRolling_ConditionType : quest::IUIConditionType
 };
 RED4EXT_ASSERT_SIZE(CreditsRolling_ConditionType, 0x38);
 } // namespace quest
+using questCreditsRolling_ConditionType = quest::CreditsRolling_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

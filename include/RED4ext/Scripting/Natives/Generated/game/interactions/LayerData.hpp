@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct LayerData
 {
     static constexpr const char* NAME = "gameinteractionsLayerData";
@@ -20,6 +21,7 @@ struct LayerData
 };
 RED4EXT_ASSERT_SIZE(LayerData, 0x8);
 } // namespace game::interactions
+using gameinteractionsLayerData = game::interactions::LayerData;
 using InteractionLayerData = game::interactions::LayerData;
 } // namespace RED4ext
 

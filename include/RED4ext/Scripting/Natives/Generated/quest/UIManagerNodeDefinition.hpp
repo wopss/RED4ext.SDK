@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IUIManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct UIManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questUIManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct UIManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(UIManagerNodeDefinition, 0x58);
 } // namespace quest
+using questUIManagerNodeDefinition = quest::UIManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

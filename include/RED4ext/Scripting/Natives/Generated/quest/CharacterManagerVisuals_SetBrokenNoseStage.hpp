@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerVisuals_SetBrokenNoseStage : quest::ICharacterManagerVisuals_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerVisuals_SetBrokenNoseStage";
@@ -22,6 +23,7 @@ struct CharacterManagerVisuals_SetBrokenNoseStage : quest::ICharacterManagerVisu
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerVisuals_SetBrokenNoseStage, 0x78);
 } // namespace quest
+using questCharacterManagerVisuals_SetBrokenNoseStage = quest::CharacterManagerVisuals_SetBrokenNoseStage;
 } // namespace RED4ext
 
 // clang-format on

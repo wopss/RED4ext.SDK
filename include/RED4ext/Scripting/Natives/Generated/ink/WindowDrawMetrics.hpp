@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WindowDrawMetrics
 {
     static constexpr const char* NAME = "inkWindowDrawMetrics";
@@ -27,6 +28,7 @@ struct WindowDrawMetrics
 };
 RED4EXT_ASSERT_SIZE(WindowDrawMetrics, 0x68);
 } // namespace ink
+using inkWindowDrawMetrics = ink::WindowDrawMetrics;
 } // namespace RED4ext
 
 // clang-format on

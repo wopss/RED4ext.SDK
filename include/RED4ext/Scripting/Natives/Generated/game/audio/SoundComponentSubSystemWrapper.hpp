@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::audio { struct ISoundComponentSubSystem; }
 
-namespace game::audio { 
+namespace game::audio
+{
 struct SoundComponentSubSystemWrapper : ISerializable
 {
     static constexpr const char* NAME = "gameaudioSoundComponentSubSystemWrapper";
@@ -23,6 +24,7 @@ struct SoundComponentSubSystemWrapper : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SoundComponentSubSystemWrapper, 0x40);
 } // namespace game::audio
+using gameaudioSoundComponentSubSystemWrapper = game::audio::SoundComponentSubSystemWrapper;
 } // namespace RED4ext
 
 // clang-format on

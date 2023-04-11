@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AnimationEventsOverrideClearNode : quest::IAudioNodeType
 {
     static constexpr const char* NAME = "questAnimationEventsOverrideClearNode";
@@ -23,6 +24,7 @@ struct AnimationEventsOverrideClearNode : quest::IAudioNodeType
 };
 RED4EXT_ASSERT_SIZE(AnimationEventsOverrideClearNode, 0x68);
 } // namespace quest
+using questAnimationEventsOverrideClearNode = quest::AnimationEventsOverrideClearNode;
 } // namespace RED4ext
 
 // clang-format on

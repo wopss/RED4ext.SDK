@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_ItemEffectDuration : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_ItemEffectDuration";
@@ -25,6 +26,7 @@ struct AnimEvent_ItemEffectDuration : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_ItemEffectDuration, 0x58);
 } // namespace anim
+using animAnimEvent_ItemEffectDuration = anim::AnimEvent_ItemEffectDuration;
 } // namespace RED4ext
 
 // clang-format on

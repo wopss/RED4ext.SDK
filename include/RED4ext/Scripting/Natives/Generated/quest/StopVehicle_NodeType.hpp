@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StopVehicle_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questStopVehicle_NodeType";
@@ -24,6 +25,7 @@ struct StopVehicle_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(StopVehicle_NodeType, 0x70);
 } // namespace quest
+using questStopVehicle_NodeType = quest::StopVehicle_NodeType;
 } // namespace RED4ext
 
 // clang-format on

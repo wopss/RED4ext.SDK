@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryItemUnpackedView; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetLibraryItemClipboardData : ISerializable
 {
     static constexpr const char* NAME = "inkWidgetLibraryItemClipboardData";
@@ -23,6 +24,7 @@ struct WidgetLibraryItemClipboardData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WidgetLibraryItemClipboardData, 0x40);
 } // namespace ink
+using inkWidgetLibraryItemClipboardData = ink::WidgetLibraryItemClipboardData;
 } // namespace RED4ext
 
 // clang-format on

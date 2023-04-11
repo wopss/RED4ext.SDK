@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RenderOverlayEvent : red::Event
 {
     static constexpr const char* NAME = "entRenderOverlayEvent";
@@ -20,6 +21,7 @@ struct RenderOverlayEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RenderOverlayEvent, 0x58);
 } // namespace ent
+using entRenderOverlayEvent = ent::RenderOverlayEvent;
 } // namespace RED4ext
 
 // clang-format on

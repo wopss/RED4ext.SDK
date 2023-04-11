@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FullScreenLayer : ink::Layer
 {
     static constexpr const char* NAME = "inkFullScreenLayer";
@@ -19,6 +20,7 @@ struct FullScreenLayer : ink::Layer
 };
 RED4EXT_ASSERT_SIZE(FullScreenLayer, 0x150);
 } // namespace ink
+using inkFullScreenLayer = ink::FullScreenLayer;
 } // namespace RED4ext
 
 // clang-format on

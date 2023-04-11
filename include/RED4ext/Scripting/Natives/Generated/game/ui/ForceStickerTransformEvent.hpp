@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ForceStickerTransformEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiForceStickerTransformEvent";
@@ -20,6 +21,7 @@ struct ForceStickerTransformEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ForceStickerTransformEvent, 0x60);
 } // namespace game::ui
+using gameuiForceStickerTransformEvent = game::ui::ForceStickerTransformEvent;
 using ForceStickerTransformEvent = game::ui::ForceStickerTransformEvent;
 } // namespace RED4ext
 

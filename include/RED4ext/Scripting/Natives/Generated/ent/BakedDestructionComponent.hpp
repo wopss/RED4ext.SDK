@@ -15,7 +15,8 @@ namespace RED4ext
 struct CMesh;
 namespace world { struct Effect; }
 
-namespace ent { 
+namespace ent
+{
 struct BakedDestructionComponent : ent::PhysicalMeshComponent
 {
     static constexpr const char* NAME = "entBakedDestructionComponent";
@@ -44,6 +45,7 @@ struct BakedDestructionComponent : ent::PhysicalMeshComponent
 };
 RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x380);
 } // namespace ent
+using entBakedDestructionComponent = ent::BakedDestructionComponent;
 using BakedDestructionComponent = ent::BakedDestructionComponent;
 } // namespace RED4ext
 

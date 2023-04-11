@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct BreathingStateTransitionMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioBreathingStateTransitionMetadata";
@@ -34,6 +35,7 @@ struct BreathingStateTransitionMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(BreathingStateTransitionMetadata, 0x98);
 } // namespace audio
+using audioBreathingStateTransitionMetadata = audio::BreathingStateTransitionMetadata;
 } // namespace RED4ext
 
 // clang-format on

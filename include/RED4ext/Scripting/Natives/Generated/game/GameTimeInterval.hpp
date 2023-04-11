@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct GameTimeInterval
 {
     static constexpr const char* NAME = "gameGameTimeInterval";
@@ -23,6 +24,7 @@ struct GameTimeInterval
 };
 RED4EXT_ASSERT_SIZE(GameTimeInterval, 0xC);
 } // namespace game
+using gameGameTimeInterval = game::GameTimeInterval;
 } // namespace RED4ext
 
 // clang-format on

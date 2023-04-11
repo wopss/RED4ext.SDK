@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetVar_NodeType : quest::IFactsDBManagerNodeType
 {
     static constexpr const char* NAME = "questSetVar_NodeType";
@@ -24,6 +25,7 @@ struct SetVar_NodeType : quest::IFactsDBManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetVar_NodeType, 0x58);
 } // namespace quest
+using questSetVar_NodeType = quest::SetVar_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemMetadata : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemMetadata";
@@ -19,6 +20,7 @@ struct TrackItemMetadata : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemMetadata, 0x48);
 } // namespace effect
+using effectTrackItemMetadata = effect::TrackItemMetadata;
 } // namespace RED4ext
 
 // clang-format on

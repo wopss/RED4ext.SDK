@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AutoFoliageMapping : CResource
 {
     static constexpr const char* NAME = "worldAutoFoliageMapping";
@@ -22,6 +23,7 @@ struct AutoFoliageMapping : CResource
 };
 RED4EXT_ASSERT_SIZE(AutoFoliageMapping, 0x50);
 } // namespace world
+using worldAutoFoliageMapping = world::AutoFoliageMapping;
 } // namespace RED4ext
 
 // clang-format on

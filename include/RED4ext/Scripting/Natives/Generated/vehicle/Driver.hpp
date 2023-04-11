@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct Driver
 {
     static constexpr const char* NAME = "vehicleDriver";
@@ -19,6 +20,7 @@ struct Driver
 };
 RED4EXT_ASSERT_SIZE(Driver, 0x28);
 } // namespace vehicle
+using vehicleDriver = vehicle::Driver;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LocationResource : CResource
 {
     static constexpr const char* NAME = "gameLocationResource";
@@ -20,6 +21,7 @@ struct LocationResource : CResource
 };
 RED4EXT_ASSERT_SIZE(LocationResource, 0x70);
 } // namespace game
+using gameLocationResource = game::LocationResource;
 } // namespace RED4ext
 
 // clang-format on

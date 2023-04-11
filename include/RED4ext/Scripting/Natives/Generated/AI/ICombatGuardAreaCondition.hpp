@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ICombatGuardAreaCondition : IScriptable
 {
     static constexpr const char* NAME = "AIICombatGuardAreaCondition";
@@ -19,6 +20,7 @@ struct ICombatGuardAreaCondition : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ICombatGuardAreaCondition, 0x40);
 } // namespace AI
+using AIICombatGuardAreaCondition = AI::ICombatGuardAreaCondition;
 using ICombatRestrictMovementAreaCondition = AI::ICombatGuardAreaCondition;
 } // namespace RED4ext
 

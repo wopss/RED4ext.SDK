@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct AudioVehicleCurveSet : CurveSet
 {
     static constexpr const char* NAME = "vehicleAudioVehicleCurveSet";
@@ -19,6 +20,7 @@ struct AudioVehicleCurveSet : CurveSet
 };
 RED4EXT_ASSERT_SIZE(AudioVehicleCurveSet, 0x50);
 } // namespace vehicle
+using vehicleAudioVehicleCurveSet = vehicle::AudioVehicleCurveSet;
 } // namespace RED4ext
 
 // clang-format on

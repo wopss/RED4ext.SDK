@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ConnectedWorkspotNotificationEvent : red::Event
 {
     static constexpr const char* NAME = "workConnectedWorkspotNotificationEvent";
@@ -21,6 +22,7 @@ struct ConnectedWorkspotNotificationEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ConnectedWorkspotNotificationEvent, 0x48);
 } // namespace work
+using workConnectedWorkspotNotificationEvent = work::ConnectedWorkspotNotificationEvent;
 using ConnectedWorkspotNotificationEvent = work::ConnectedWorkspotNotificationEvent;
 } // namespace RED4ext
 

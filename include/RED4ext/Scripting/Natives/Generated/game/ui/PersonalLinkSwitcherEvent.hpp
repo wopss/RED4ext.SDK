@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PersonalLinkSwitcherEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPersonalLinkSwitcherEvent";
@@ -21,6 +22,7 @@ struct PersonalLinkSwitcherEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PersonalLinkSwitcherEvent, 0x48);
 } // namespace game::ui
+using gameuiPersonalLinkSwitcherEvent = game::ui::PersonalLinkSwitcherEvent;
 } // namespace RED4ext
 
 // clang-format on

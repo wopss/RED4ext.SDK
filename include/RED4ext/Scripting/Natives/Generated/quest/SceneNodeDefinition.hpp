@@ -17,7 +17,8 @@ namespace RED4ext
 namespace scn { struct IInterruptionOperation; }
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct SceneNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questSceneNodeDefinition";
@@ -33,6 +34,7 @@ struct SceneNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(SceneNodeDefinition, 0x88);
 } // namespace quest
+using questSceneNodeDefinition = quest::SceneNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct VehicleExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorVehicleExpressionDefinition";
@@ -19,6 +20,7 @@ struct VehicleExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 };
 RED4EXT_ASSERT_SIZE(VehicleExpressionDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorVehicleExpressionDefinition = AI::behavior::VehicleExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

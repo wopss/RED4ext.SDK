@@ -14,7 +14,8 @@ namespace RED4ext
 namespace game { struct IPrereq; }
 namespace game::interactions { struct InteractionScriptedCondition; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CHotSpotGameLogicFilterDefinition : ISerializable
 {
     static constexpr const char* NAME = "gameinteractionsCHotSpotGameLogicFilterDefinition";
@@ -26,6 +27,7 @@ struct CHotSpotGameLogicFilterDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CHotSpotGameLogicFilterDefinition, 0x60);
 } // namespace game::interactions
+using gameinteractionsCHotSpotGameLogicFilterDefinition = game::interactions::CHotSpotGameLogicFilterDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct WidgetLogicController : SelfHandle<WidgetLogicController>, ink::IWidgetLogicController
+struct WidgetLogicController : ink::IWidgetLogicController
 {
     static constexpr const char* NAME = "inkWidgetLogicController";
     static constexpr const char* ALIAS = "inkLogicController";

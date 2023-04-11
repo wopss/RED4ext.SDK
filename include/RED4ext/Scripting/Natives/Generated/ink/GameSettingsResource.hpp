@@ -23,7 +23,8 @@ namespace ink { struct ShapeCollectionResource; }
 namespace ink { struct TextureAtlas; }
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct GameSettingsResource : CResource
 {
     static constexpr const char* NAME = "inkGameSettingsResource";
@@ -75,6 +76,7 @@ struct GameSettingsResource : CResource
 };
 RED4EXT_ASSERT_SIZE(GameSettingsResource, 0x238);
 } // namespace ink
+using inkGameSettingsResource = ink::GameSettingsResource;
 } // namespace RED4ext
 
 // clang-format on

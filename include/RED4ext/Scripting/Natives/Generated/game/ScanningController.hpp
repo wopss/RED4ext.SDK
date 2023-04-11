@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningController : IScriptable
 {
     static constexpr const char* NAME = "gameScanningController";
@@ -20,6 +21,7 @@ struct ScanningController : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScanningController, 0x3308);
 } // namespace game
+using gameScanningController = game::ScanningController;
 using ScanningController = game::ScanningController;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct MeshTargetAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "worlduiMeshTargetAttachment";
@@ -19,6 +20,7 @@ struct MeshTargetAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(MeshTargetAttachment, 0x50);
 } // namespace world::ui
+using worlduiMeshTargetAttachment = world::ui::MeshTargetAttachment;
 } // namespace RED4ext
 
 // clang-format on

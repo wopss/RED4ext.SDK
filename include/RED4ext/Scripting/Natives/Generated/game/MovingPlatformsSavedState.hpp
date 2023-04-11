@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatformsSavedState : ISerializable
 {
     static constexpr const char* NAME = "gameMovingPlatformsSavedState";
@@ -24,6 +25,7 @@ struct MovingPlatformsSavedState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformsSavedState, 0x50);
 } // namespace game
+using gameMovingPlatformsSavedState = game::MovingPlatformsSavedState;
 } // namespace RED4ext
 
 // clang-format on

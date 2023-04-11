@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct DyngParticlesContainer
 {
     static constexpr const char* NAME = "animDyngParticlesContainer";
@@ -29,6 +30,7 @@ struct DyngParticlesContainer
 };
 RED4EXT_ASSERT_SIZE(DyngParticlesContainer, 0xC0);
 } // namespace anim
+using animDyngParticlesContainer = anim::DyngParticlesContainer;
 } // namespace RED4ext
 
 // clang-format on

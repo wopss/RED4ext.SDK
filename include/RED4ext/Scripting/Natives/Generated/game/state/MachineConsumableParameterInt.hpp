@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineConsumableParameterInt : game::state::MachineActionParameterInt
 {
     static constexpr const char* NAME = "gamestateMachineConsumableParameterInt";
@@ -21,6 +22,7 @@ struct MachineConsumableParameterInt : game::state::MachineActionParameterInt
 };
 RED4EXT_ASSERT_SIZE(MachineConsumableParameterInt, 0x20);
 } // namespace game::state
+using gamestateMachineConsumableParameterInt = game::state::MachineConsumableParameterInt;
 using ConsumableParameterInt = game::state::MachineConsumableParameterInt;
 } // namespace RED4ext
 

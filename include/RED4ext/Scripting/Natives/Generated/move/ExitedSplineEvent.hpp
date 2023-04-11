@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct ExitedSplineEvent : red::Event
 {
     static constexpr const char* NAME = "moveExitedSplineEvent";
@@ -19,6 +20,7 @@ struct ExitedSplineEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ExitedSplineEvent, 0x40);
 } // namespace move
+using moveExitedSplineEvent = move::ExitedSplineEvent;
 using ExitedSplineEvent = move::ExitedSplineEvent;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct HackingManager_NodeType : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questHackingManager_NodeType";
@@ -22,6 +23,7 @@ struct HackingManager_NodeType : quest::IInteractiveObjectManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(HackingManager_NodeType, 0x40);
 } // namespace quest
+using questHackingManager_NodeType = quest::HackingManager_NodeType;
 } // namespace RED4ext
 
 // clang-format on

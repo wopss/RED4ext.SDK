@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WeaponShootParams
 {
     static constexpr const char* NAME = "gameuiWeaponShootParams";
@@ -21,6 +22,7 @@ struct WeaponShootParams
 };
 RED4EXT_ASSERT_SIZE(WeaponShootParams, 0x20);
 } // namespace game::ui
+using gameuiWeaponShootParams = game::ui::WeaponShootParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlotsListenerData
 {
     static constexpr const char* NAME = "gameAttachmentSlotsListenerData";
@@ -19,6 +20,7 @@ struct AttachmentSlotsListenerData
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotsListenerData, 0x50);
 } // namespace game
+using gameAttachmentSlotsListenerData = game::AttachmentSlotsListenerData;
 } // namespace RED4ext
 
 // clang-format on

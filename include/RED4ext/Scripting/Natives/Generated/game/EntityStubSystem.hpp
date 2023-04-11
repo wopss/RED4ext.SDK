@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityStubSystem : game::IEntityStubSystem
 {
     static constexpr const char* NAME = "gameEntityStubSystem";
@@ -20,6 +21,7 @@ struct EntityStubSystem : game::IEntityStubSystem
 };
 RED4EXT_ASSERT_SIZE(EntityStubSystem, 0xC8);
 } // namespace game
+using gameEntityStubSystem = game::EntityStubSystem;
 } // namespace RED4ext
 
 // clang-format on

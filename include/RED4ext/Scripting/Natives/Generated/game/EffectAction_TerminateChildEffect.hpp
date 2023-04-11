@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectAction_TerminateChildEffect : game::EffectAction
 {
     static constexpr const char* NAME = "gameEffectAction_TerminateChildEffect";
@@ -21,6 +22,7 @@ struct EffectAction_TerminateChildEffect : game::EffectAction
 };
 RED4EXT_ASSERT_SIZE(EffectAction_TerminateChildEffect, 0x48);
 } // namespace game
+using gameEffectAction_TerminateChildEffect = game::EffectAction_TerminateChildEffect;
 } // namespace RED4ext
 
 // clang-format on

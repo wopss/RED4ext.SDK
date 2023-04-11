@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TriggerCallRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "questTriggerCallRequest";
@@ -29,6 +30,7 @@ struct TriggerCallRequest : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(TriggerCallRequest, 0x68);
 } // namespace quest
+using questTriggerCallRequest = quest::TriggerCallRequest;
 } // namespace RED4ext
 
 // clang-format on

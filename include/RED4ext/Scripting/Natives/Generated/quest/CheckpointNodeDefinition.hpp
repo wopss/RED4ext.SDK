@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CheckpointNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questCheckpointNodeDefinition";
@@ -28,6 +29,7 @@ struct CheckpointNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CheckpointNodeDefinition, 0x80);
 } // namespace quest
+using questCheckpointNodeDefinition = quest::CheckpointNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

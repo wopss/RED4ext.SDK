@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MinimapQuestAreaInitData : game::ui::MappinControllerCustomData
 {
     static constexpr const char* NAME = "gameuiMinimapQuestAreaInitData";
@@ -19,6 +20,7 @@ struct MinimapQuestAreaInitData : game::ui::MappinControllerCustomData
 };
 RED4EXT_ASSERT_SIZE(MinimapQuestAreaInitData, 0x40);
 } // namespace game::ui
+using gameuiMinimapQuestAreaInitData = game::ui::MinimapQuestAreaInitData;
 using MinimapQuestAreaInitData = game::ui::MinimapQuestAreaInitData;
 } // namespace RED4ext
 

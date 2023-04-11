@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ClearActiveNodesDebuggerCommand : AI::behavior::IDebuggerCommand
 {
     static constexpr const char* NAME = "AIbehaviorClearActiveNodesDebuggerCommand";
@@ -19,6 +20,7 @@ struct ClearActiveNodesDebuggerCommand : AI::behavior::IDebuggerCommand
 };
 RED4EXT_ASSERT_SIZE(ClearActiveNodesDebuggerCommand, 0x30);
 } // namespace AI::behavior
+using AIbehaviorClearActiveNodesDebuggerCommand = AI::behavior::ClearActiveNodesDebuggerCommand;
 } // namespace RED4ext
 
 // clang-format on

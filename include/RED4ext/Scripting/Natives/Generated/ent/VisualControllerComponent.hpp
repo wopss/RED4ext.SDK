@@ -17,7 +17,8 @@ namespace RED4ext
 struct CMesh;
 namespace appearance { struct CookedAppearanceData; }
 
-namespace ent { 
+namespace ent
+{
 struct VisualControllerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entVisualControllerComponent";
@@ -32,6 +33,7 @@ struct VisualControllerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(VisualControllerComponent, 0x128);
 } // namespace ent
+using entVisualControllerComponent = ent::VisualControllerComponent;
 } // namespace RED4ext
 
 // clang-format on

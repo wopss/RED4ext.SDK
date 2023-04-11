@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TextValueProgressAnimationController : ink::TextAnimationController
 {
     static constexpr const char* NAME = "inkTextValueProgressAnimationController";
@@ -26,6 +27,7 @@ struct TextValueProgressAnimationController : ink::TextAnimationController
 };
 RED4EXT_ASSERT_SIZE(TextValueProgressAnimationController, 0x148);
 } // namespace ink
+using inkTextValueProgressAnimationController = ink::TextValueProgressAnimationController;
 using inkTextValueProgressController = ink::TextValueProgressAnimationController;
 } // namespace RED4ext
 

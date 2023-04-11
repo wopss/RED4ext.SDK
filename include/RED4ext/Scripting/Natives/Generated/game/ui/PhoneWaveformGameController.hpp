@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhoneWaveformGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiPhoneWaveformGameController";
@@ -23,6 +24,7 @@ struct PhoneWaveformGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(PhoneWaveformGameController, 0x100);
 } // namespace game::ui
+using gameuiPhoneWaveformGameController = game::ui::PhoneWaveformGameController;
 using PhoneWaveformGameController = game::ui::PhoneWaveformGameController;
 } // namespace RED4ext
 

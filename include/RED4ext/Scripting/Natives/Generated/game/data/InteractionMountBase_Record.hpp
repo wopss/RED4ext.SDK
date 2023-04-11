@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct InteractionMountBase_Record : game::data::InteractionBase_Record
 {
     static constexpr const char* NAME = "gamedataInteractionMountBase_Record";
@@ -20,6 +21,7 @@ struct InteractionMountBase_Record : game::data::InteractionBase_Record
 };
 RED4EXT_ASSERT_SIZE(InteractionMountBase_Record, 0x68);
 } // namespace game::data
+using gamedataInteractionMountBase_Record = game::data::InteractionMountBase_Record;
 using InteractionMountBase_Record = game::data::InteractionMountBase_Record;
 } // namespace RED4ext
 

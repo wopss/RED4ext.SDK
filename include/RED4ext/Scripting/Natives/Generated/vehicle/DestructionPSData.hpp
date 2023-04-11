@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct DestructionPSData
 {
     static constexpr const char* NAME = "vehicleDestructionPSData";
@@ -30,6 +31,7 @@ struct DestructionPSData
 };
 RED4EXT_ASSERT_SIZE(DestructionPSData, 0xA8);
 } // namespace vehicle
+using vehicleDestructionPSData = vehicle::DestructionPSData;
 } // namespace RED4ext
 
 // clang-format on

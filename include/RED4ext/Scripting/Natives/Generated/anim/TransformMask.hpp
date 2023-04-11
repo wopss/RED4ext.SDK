@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct TransformMask
 {
     static constexpr const char* NAME = "animTransformMask";
@@ -20,6 +21,7 @@ struct TransformMask
 };
 RED4EXT_ASSERT_SIZE(TransformMask, 0x8);
 } // namespace anim
+using animTransformMask = anim::TransformMask;
 } // namespace RED4ext
 
 // clang-format on

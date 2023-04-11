@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CensorshipInfo
 {
     static constexpr const char* NAME = "gameuiCensorshipInfo";
@@ -23,6 +24,7 @@ struct CensorshipInfo
 };
 RED4EXT_ASSERT_SIZE(CensorshipInfo, 0x10);
 } // namespace game::ui
+using gameuiCensorshipInfo = game::ui::CensorshipInfo;
 } // namespace RED4ext
 
 // clang-format on

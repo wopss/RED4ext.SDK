@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RuntimeStylePropertyReference
 {
     static constexpr const char* NAME = "inkRuntimeStylePropertyReference";
@@ -19,6 +20,7 @@ struct RuntimeStylePropertyReference
 };
 RED4EXT_ASSERT_SIZE(RuntimeStylePropertyReference, 0x10);
 } // namespace ink
+using inkRuntimeStylePropertyReference = ink::RuntimeStylePropertyReference;
 } // namespace RED4ext
 
 // clang-format on

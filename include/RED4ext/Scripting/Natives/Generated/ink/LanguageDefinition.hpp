@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LanguageDefinition
 {
     static constexpr const char* NAME = "inkLanguageDefinition";
@@ -27,6 +28,7 @@ struct LanguageDefinition
 };
 RED4EXT_ASSERT_SIZE(LanguageDefinition, 0x28);
 } // namespace ink
+using inkLanguageDefinition = ink::LanguageDefinition;
 } // namespace RED4ext
 
 // clang-format on

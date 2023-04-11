@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AudioClueObject : game::Object
 {
     static constexpr const char* NAME = "gameAudioClueObject";
@@ -19,6 +20,7 @@ struct AudioClueObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(AudioClueObject, 0x240);
 } // namespace game
+using gameAudioClueObject = game::AudioClueObject;
 } // namespace RED4ext
 
 // clang-format on

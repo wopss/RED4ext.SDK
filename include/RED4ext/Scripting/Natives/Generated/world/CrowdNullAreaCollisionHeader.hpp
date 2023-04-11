@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CrowdNullAreaCollisionHeader
 {
     static constexpr const char* NAME = "worldCrowdNullAreaCollisionHeader";
@@ -25,6 +26,7 @@ struct CrowdNullAreaCollisionHeader
 };
 RED4EXT_ASSERT_SIZE(CrowdNullAreaCollisionHeader, 0x20);
 } // namespace world
+using worldCrowdNullAreaCollisionHeader = world::CrowdNullAreaCollisionHeader;
 } // namespace RED4ext
 
 // clang-format on

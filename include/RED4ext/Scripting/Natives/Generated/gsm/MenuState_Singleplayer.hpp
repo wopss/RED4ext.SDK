@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_Singleplayer : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmMenuState_Singleplayer";
@@ -20,6 +21,7 @@ struct MenuState_Singleplayer : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(MenuState_Singleplayer, 0xE0);
 } // namespace gsm
+using gsmMenuState_Singleplayer = gsm::MenuState_Singleplayer;
 } // namespace RED4ext
 
 // clang-format on

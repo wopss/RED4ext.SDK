@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ScanningSettings
 {
     static constexpr const char* NAME = "audioScanningSettings";
@@ -23,6 +24,7 @@ struct ScanningSettings
 };
 RED4EXT_ASSERT_SIZE(ScanningSettings, 0x20);
 } // namespace audio
+using audioScanningSettings = audio::ScanningSettings;
 } // namespace RED4ext
 
 // clang-format on

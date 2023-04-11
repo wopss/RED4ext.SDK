@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct PhysicalImpulseAreaComponent : ent::PhysicalTriggerComponent
 {
     static constexpr const char* NAME = "entPhysicalImpulseAreaComponent";
@@ -22,6 +23,7 @@ struct PhysicalImpulseAreaComponent : ent::PhysicalTriggerComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalImpulseAreaComponent, 0x190);
 } // namespace ent
+using entPhysicalImpulseAreaComponent = ent::PhysicalImpulseAreaComponent;
 } // namespace RED4ext
 
 // clang-format on

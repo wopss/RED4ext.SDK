@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace vehicle { struct PortalsList; }
 
-namespace quest::vehicle { 
+namespace quest::vehicle
+{
 struct ToNodeParams : quest::VehicleSpecificCommandParams
 {
     static constexpr const char* NAME = "questvehicleToNodeParams";
@@ -35,6 +36,7 @@ struct ToNodeParams : quest::VehicleSpecificCommandParams
 };
 RED4EXT_ASSERT_SIZE(ToNodeParams, 0x68);
 } // namespace quest::vehicle
+using questvehicleToNodeParams = quest::vehicle::ToNodeParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimVariableFloat : anim::AnimVariable
 {
     static constexpr const char* NAME = "animAnimVariableFloat";
@@ -23,6 +24,7 @@ struct AnimVariableFloat : anim::AnimVariable
 };
 RED4EXT_ASSERT_SIZE(AnimVariableFloat, 0x48);
 } // namespace anim
+using animAnimVariableFloat = anim::AnimVariableFloat;
 } // namespace RED4ext
 
 // clang-format on

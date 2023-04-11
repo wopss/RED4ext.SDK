@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct ScreenshotBatchData
 {
     static constexpr const char* NAME = "rendScreenshotBatchData";
@@ -23,6 +24,7 @@ struct ScreenshotBatchData
 };
 RED4EXT_ASSERT_SIZE(ScreenshotBatchData, 0x58);
 } // namespace rend
+using rendScreenshotBatchData = rend::ScreenshotBatchData;
 } // namespace RED4ext
 
 // clang-format on

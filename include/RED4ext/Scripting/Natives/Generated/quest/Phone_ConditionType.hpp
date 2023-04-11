@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct Phone_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questPhone_ConditionType";
@@ -27,6 +28,7 @@ struct Phone_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(Phone_ConditionType, 0x60);
 } // namespace quest
+using questPhone_ConditionType = quest::Phone_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

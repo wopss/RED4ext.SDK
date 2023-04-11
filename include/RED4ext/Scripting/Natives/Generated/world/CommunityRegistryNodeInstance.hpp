@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CommunityRegistryNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldCommunityRegistryNodeInstance";
@@ -19,6 +20,7 @@ struct CommunityRegistryNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(CommunityRegistryNodeInstance, 0x90);
 } // namespace world
+using worldCommunityRegistryNodeInstance = world::CommunityRegistryNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DefaultLoadingScreenLogicController : ink::ILoadingLogicController
 {
     static constexpr const char* NAME = "inkDefaultLoadingScreenLogicController";
@@ -20,6 +21,7 @@ struct DefaultLoadingScreenLogicController : ink::ILoadingLogicController
 };
 RED4EXT_ASSERT_SIZE(DefaultLoadingScreenLogicController, 0x1A0);
 } // namespace ink
+using inkDefaultLoadingScreenLogicController = ink::DefaultLoadingScreenLogicController;
 using DefaultLoadingScreenLogicController = ink::DefaultLoadingScreenLogicController;
 } // namespace RED4ext
 

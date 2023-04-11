@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CensorshipController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkCensorshipController";
@@ -22,6 +23,7 @@ struct CensorshipController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(CensorshipController, 0x80);
 } // namespace ink
+using inkCensorshipController = ink::CensorshipController;
 } // namespace RED4ext
 
 // clang-format on

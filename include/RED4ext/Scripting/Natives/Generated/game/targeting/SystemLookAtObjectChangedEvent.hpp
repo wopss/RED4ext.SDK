@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemLookAtObjectChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gametargetingSystemLookAtObjectChangedEvent";
@@ -23,6 +24,7 @@ struct SystemLookAtObjectChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SystemLookAtObjectChangedEvent, 0x50);
 } // namespace game::targeting
+using gametargetingSystemLookAtObjectChangedEvent = game::targeting::SystemLookAtObjectChangedEvent;
 using LookAtObjectChangedEvent = game::targeting::SystemLookAtObjectChangedEvent;
 } // namespace RED4ext
 

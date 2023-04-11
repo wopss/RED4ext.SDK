@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InputTriggerState
 {
     static constexpr const char* NAME = "gameInputTriggerState";
@@ -19,6 +20,7 @@ struct InputTriggerState
 };
 RED4EXT_ASSERT_SIZE(InputTriggerState, 0x8);
 } // namespace game
+using gameInputTriggerState = game::InputTriggerState;
 using InputTriggerState = game::InputTriggerState;
 } // namespace RED4ext
 

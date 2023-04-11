@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game::mounting { 
+namespace game::mounting
+{
 struct MountingFacilitySharedState : ISerializable
 {
     static constexpr const char* NAME = "gamemountingMountingFacilitySharedState";
@@ -31,6 +32,7 @@ struct MountingFacilitySharedState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MountingFacilitySharedState, 0x88);
 } // namespace game::mounting
+using gamemountingMountingFacilitySharedState = game::mounting::MountingFacilitySharedState;
 } // namespace RED4ext
 
 // clang-format on

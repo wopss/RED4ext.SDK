@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SpawnNewFeedEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSpawnNewFeedEvent";
@@ -20,6 +21,7 @@ struct SpawnNewFeedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SpawnNewFeedEvent, 0x50);
 } // namespace game::ui
+using gameuiSpawnNewFeedEvent = game::ui::SpawnNewFeedEvent;
 } // namespace RED4ext
 
 // clang-format on

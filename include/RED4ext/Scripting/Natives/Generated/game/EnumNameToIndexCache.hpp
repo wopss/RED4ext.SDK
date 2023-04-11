@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EnumNameToIndexCache
 {
     static constexpr const char* NAME = "gameEnumNameToIndexCache";
@@ -19,6 +20,7 @@ struct EnumNameToIndexCache
 };
 RED4EXT_ASSERT_SIZE(EnumNameToIndexCache, 0x30);
 } // namespace game
+using gameEnumNameToIndexCache = game::EnumNameToIndexCache;
 using EnumNameToIndexCache = game::EnumNameToIndexCache;
 } // namespace RED4ext
 

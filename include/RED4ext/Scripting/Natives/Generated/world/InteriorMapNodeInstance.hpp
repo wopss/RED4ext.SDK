@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct InteriorMapNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldInteriorMapNodeInstance";
@@ -20,6 +21,7 @@ struct InteriorMapNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(InteriorMapNodeInstance, 0xA0);
 } // namespace world
+using worldInteriorMapNodeInstance = world::InteriorMapNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

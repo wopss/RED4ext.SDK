@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ContainerNavigationController : ink::DiscreteNavigationController
 {
     static constexpr const char* NAME = "inkContainerNavigationController";
@@ -24,6 +25,7 @@ struct ContainerNavigationController : ink::DiscreteNavigationController
 };
 RED4EXT_ASSERT_SIZE(ContainerNavigationController, 0xF8);
 } // namespace ink
+using inkContainerNavigationController = ink::ContainerNavigationController;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::ui { struct GenericNotificationViewData; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct GenericNotificationData
 {
     static constexpr const char* NAME = "gameuiGenericNotificationData";
@@ -29,6 +30,7 @@ struct GenericNotificationData
 };
 RED4EXT_ASSERT_SIZE(GenericNotificationData, 0x30);
 } // namespace game::ui
+using gameuiGenericNotificationData = game::ui::GenericNotificationData;
 } // namespace RED4ext
 
 // clang-format on

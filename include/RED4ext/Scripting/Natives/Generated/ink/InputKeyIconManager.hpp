@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InputKeyIconManager : ISerializable
 {
     static constexpr const char* NAME = "inkInputKeyIconManager";
@@ -20,6 +21,7 @@ struct InputKeyIconManager : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InputKeyIconManager, 0x1E8);
 } // namespace ink
+using inkInputKeyIconManager = ink::InputKeyIconManager;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct InjectLoot_NodeTypeParams_OperationData
 {
     static constexpr const char* NAME = "questInjectLoot_NodeTypeParams_OperationData";
@@ -23,6 +24,7 @@ struct InjectLoot_NodeTypeParams_OperationData
 };
 RED4EXT_ASSERT_SIZE(InjectLoot_NodeTypeParams_OperationData, 0x10);
 } // namespace quest
+using questInjectLoot_NodeTypeParams_OperationData = quest::InjectLoot_NodeTypeParams_OperationData;
 } // namespace RED4ext
 
 // clang-format on

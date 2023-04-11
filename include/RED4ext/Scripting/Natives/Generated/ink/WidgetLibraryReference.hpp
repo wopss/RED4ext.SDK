@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetLibraryReference
 {
     static constexpr const char* NAME = "inkWidgetLibraryReference";
@@ -22,6 +23,7 @@ struct WidgetLibraryReference
 };
 RED4EXT_ASSERT_SIZE(WidgetLibraryReference, 0x10);
 } // namespace ink
+using inkWidgetLibraryReference = ink::WidgetLibraryReference;
 } // namespace RED4ext
 
 // clang-format on

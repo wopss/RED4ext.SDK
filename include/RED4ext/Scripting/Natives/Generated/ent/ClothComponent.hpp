@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace ent { 
+namespace ent
+{
 struct ClothComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entClothComponent";
@@ -24,6 +25,7 @@ struct ClothComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(ClothComponent, 0x160);
 } // namespace ent
+using entClothComponent = ent::ClothComponent;
 } // namespace RED4ext
 
 // clang-format on

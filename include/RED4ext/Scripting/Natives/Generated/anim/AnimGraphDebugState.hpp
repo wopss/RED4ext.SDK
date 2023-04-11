@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimGraphDebugState : ISerializable
 {
     static constexpr const char* NAME = "animAnimGraphDebugState";
@@ -22,6 +23,7 @@ struct AnimGraphDebugState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimGraphDebugState, 0x40);
 } // namespace anim
+using animAnimGraphDebugState = anim::AnimGraphDebugState;
 } // namespace RED4ext
 
 // clang-format on

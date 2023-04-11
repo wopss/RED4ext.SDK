@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PreventionVehicleSpawnLogic
 {
     static constexpr const char* NAME = "gamePreventionVehicleSpawnLogic";
@@ -19,6 +20,7 @@ struct PreventionVehicleSpawnLogic
 };
 RED4EXT_ASSERT_SIZE(PreventionVehicleSpawnLogic, 0x78);
 } // namespace game
+using gamePreventionVehicleSpawnLogic = game::PreventionVehicleSpawnLogic;
 } // namespace RED4ext
 
 // clang-format on

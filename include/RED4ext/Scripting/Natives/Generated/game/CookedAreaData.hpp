@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::mappins { struct IMappinVolume; }
 
-namespace game { 
+namespace game
+{
 struct CookedAreaData
 {
     static constexpr const char* NAME = "gameCookedAreaData";
@@ -27,6 +28,7 @@ struct CookedAreaData
 };
 RED4EXT_ASSERT_SIZE(CookedAreaData, 0x28);
 } // namespace game
+using gameCookedAreaData = game::CookedAreaData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CombatQueriesSystem : game::ICombatQueriesSystem
 {
     static constexpr const char* NAME = "gameCombatQueriesSystem";
@@ -20,6 +21,7 @@ struct CombatQueriesSystem : game::ICombatQueriesSystem
 };
 RED4EXT_ASSERT_SIZE(CombatQueriesSystem, 0x1DD0);
 } // namespace game
+using gameCombatQueriesSystem = game::CombatQueriesSystem;
 } // namespace RED4ext
 
 // clang-format on

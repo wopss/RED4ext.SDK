@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IVehicleMoveOnSpline_Overrides : ISerializable
 {
     static constexpr const char* NAME = "questIVehicleMoveOnSpline_Overrides";
@@ -19,6 +20,7 @@ struct IVehicleMoveOnSpline_Overrides : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IVehicleMoveOnSpline_Overrides, 0x30);
 } // namespace quest
+using questIVehicleMoveOnSpline_Overrides = quest::IVehicleMoveOnSpline_Overrides;
 } // namespace RED4ext
 
 // clang-format on

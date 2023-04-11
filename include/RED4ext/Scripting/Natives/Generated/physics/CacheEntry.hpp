@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct CacheEntry
 {
     static constexpr const char* NAME = "physicsCacheEntry";
@@ -20,6 +21,7 @@ struct CacheEntry
 };
 RED4EXT_ASSERT_SIZE(CacheEntry, 0x8);
 } // namespace physics
+using physicsCacheEntry = physics::CacheEntry;
 } // namespace RED4ext
 
 // clang-format on

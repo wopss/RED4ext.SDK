@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace quest { struct RecordSelector; }
 
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetStatusEffect : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetStatusEffect";
@@ -30,6 +31,7 @@ struct CharacterManagerParameters_SetStatusEffect : quest::ICharacterManagerPara
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetStatusEffect, 0xC8);
 } // namespace quest
+using questCharacterManagerParameters_SetStatusEffect = quest::CharacterManagerParameters_SetStatusEffect;
 } // namespace RED4ext
 
 // clang-format on

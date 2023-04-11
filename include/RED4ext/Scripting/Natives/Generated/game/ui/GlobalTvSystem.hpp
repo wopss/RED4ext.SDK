@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GlobalTvSystem : game::IGlobalTvSystem
 {
     static constexpr const char* NAME = "gameuiGlobalTvSystem";
@@ -20,6 +21,7 @@ struct GlobalTvSystem : game::IGlobalTvSystem
 };
 RED4EXT_ASSERT_SIZE(GlobalTvSystem, 0xE0);
 } // namespace game::ui
+using gameuiGlobalTvSystem = game::ui::GlobalTvSystem;
 using GlobalTvSystem = game::ui::GlobalTvSystem;
 } // namespace RED4ext
 

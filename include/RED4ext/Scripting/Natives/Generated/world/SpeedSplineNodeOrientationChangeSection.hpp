@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SpeedSplineNodeOrientationChangeSection
 {
     static constexpr const char* NAME = "worldSpeedSplineNodeOrientationChangeSection";
@@ -23,6 +24,7 @@ struct SpeedSplineNodeOrientationChangeSection
 };
 RED4EXT_ASSERT_SIZE(SpeedSplineNodeOrientationChangeSection, 0x14);
 } // namespace world
+using worldSpeedSplineNodeOrientationChangeSection = world::SpeedSplineNodeOrientationChangeSection;
 } // namespace RED4ext
 
 // clang-format on

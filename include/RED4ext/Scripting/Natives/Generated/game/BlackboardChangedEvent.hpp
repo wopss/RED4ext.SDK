@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::bb { struct ScriptDefinition; }
 
-namespace game { 
+namespace game
+{
 struct BlackboardChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gameBlackboardChangedEvent";
@@ -25,6 +26,7 @@ struct BlackboardChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BlackboardChangedEvent, 0x60);
 } // namespace game
+using gameBlackboardChangedEvent = game::BlackboardChangedEvent;
 using BlackboardChangedEvent = game::BlackboardChangedEvent;
 } // namespace RED4ext
 

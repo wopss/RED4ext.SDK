@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SpotSequenceCategory
 {
     static constexpr const char* NAME = "gameSpotSequenceCategory";
@@ -21,6 +22,7 @@ struct SpotSequenceCategory
 };
 RED4EXT_ASSERT_SIZE(SpotSequenceCategory, 0x8);
 } // namespace game
+using gameSpotSequenceCategory = game::SpotSequenceCategory;
 } // namespace RED4ext
 
 // clang-format on

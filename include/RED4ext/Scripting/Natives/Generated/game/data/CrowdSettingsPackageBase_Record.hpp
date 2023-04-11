@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CrowdSettingsPackageBase_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCrowdSettingsPackageBase_Record";
@@ -20,6 +21,7 @@ struct CrowdSettingsPackageBase_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CrowdSettingsPackageBase_Record, 0x50);
 } // namespace game::data
+using gamedataCrowdSettingsPackageBase_Record = game::data::CrowdSettingsPackageBase_Record;
 using CrowdSettingsPackageBase_Record = game::data::CrowdSettingsPackageBase_Record;
 } // namespace RED4ext
 

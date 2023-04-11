@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct HeatmapLayer : CResource
 {
     static constexpr const char* NAME = "worldHeatmapLayer";
@@ -27,6 +28,7 @@ struct HeatmapLayer : CResource
 };
 RED4EXT_ASSERT_SIZE(HeatmapLayer, 0xA0);
 } // namespace world
+using worldHeatmapLayer = world::HeatmapLayer;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlotsScriptCallback : IScriptable
 {
     static constexpr const char* NAME = "gameAttachmentSlotsScriptCallback";
@@ -22,6 +23,7 @@ struct AttachmentSlotsScriptCallback : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotsScriptCallback, 0x58);
 } // namespace game
+using gameAttachmentSlotsScriptCallback = game::AttachmentSlotsScriptCallback;
 using AttachmentSlotsScriptCallback = game::AttachmentSlotsScriptCallback;
 } // namespace RED4ext
 

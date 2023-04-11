@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ILoadingLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkILoadingLogicController";
@@ -20,6 +21,7 @@ struct ILoadingLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ILoadingLogicController, 0x190);
 } // namespace ink
+using inkILoadingLogicController = ink::ILoadingLogicController;
 using ILoadingLogicController = ink::ILoadingLogicController;
 } // namespace RED4ext
 

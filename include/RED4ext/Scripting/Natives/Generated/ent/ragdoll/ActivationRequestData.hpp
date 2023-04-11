@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent::ragdoll { 
+namespace ent::ragdoll
+{
 struct ActivationRequestData
 {
     static constexpr const char* NAME = "entragdollActivationRequestData";
@@ -28,6 +29,7 @@ struct ActivationRequestData
 };
 RED4EXT_ASSERT_SIZE(ActivationRequestData, 0x20);
 } // namespace ent::ragdoll
+using entragdollActivationRequestData = ent::ragdoll::ActivationRequestData;
 using RagdollActivationRequestData = ent::ragdoll::ActivationRequestData;
 } // namespace RED4ext
 

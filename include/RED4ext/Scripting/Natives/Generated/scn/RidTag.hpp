@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct RidTag
 {
     static constexpr const char* NAME = "scnRidTag";
@@ -23,6 +24,7 @@ struct RidTag
 };
 RED4EXT_ASSERT_SIZE(RidTag, 0x10);
 } // namespace scn
+using scnRidTag = scn::RidTag;
 } // namespace RED4ext
 
 // clang-format on

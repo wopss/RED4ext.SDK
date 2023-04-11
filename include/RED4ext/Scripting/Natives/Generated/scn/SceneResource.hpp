@@ -37,7 +37,8 @@ namespace RED4ext
 namespace scn { struct SceneGraph; }
 namespace scn { struct WorkspotData; }
 
-namespace scn { 
+namespace scn
+{
 struct SceneResource : CResource
 {
     static constexpr const char* NAME = "scnSceneResource";
@@ -73,6 +74,7 @@ struct SceneResource : CResource
 };
 RED4EXT_ASSERT_SIZE(SceneResource, 0x2D8);
 } // namespace scn
+using scnSceneResource = scn::SceneResource;
 } // namespace RED4ext
 
 // clang-format on

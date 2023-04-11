@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_SessionLoading : gsm::State
 {
     static constexpr const char* NAME = "gsmState_SessionLoading";
@@ -20,6 +21,7 @@ struct State_SessionLoading : gsm::State
 };
 RED4EXT_ASSERT_SIZE(State_SessionLoading, 0x188);
 } // namespace gsm
+using gsmState_SessionLoading = gsm::State_SessionLoading;
 } // namespace RED4ext
 
 // clang-format on

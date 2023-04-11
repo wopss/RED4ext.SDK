@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct WorldStateSystemReplicatedState
 {
     static constexpr const char* NAME = "questWorldStateSystemReplicatedState";
@@ -29,6 +30,7 @@ struct WorldStateSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(WorldStateSystemReplicatedState, 0x58);
 } // namespace quest
+using questWorldStateSystemReplicatedState = quest::WorldStateSystemReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

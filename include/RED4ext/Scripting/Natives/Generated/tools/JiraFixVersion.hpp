@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraFixVersion
 {
     static constexpr const char* NAME = "toolsJiraFixVersion";
@@ -20,6 +21,7 @@ struct JiraFixVersion
 };
 RED4EXT_ASSERT_SIZE(JiraFixVersion, 0x20);
 } // namespace tools
+using toolsJiraFixVersion = tools::JiraFixVersion;
 } // namespace RED4ext
 
 // clang-format on

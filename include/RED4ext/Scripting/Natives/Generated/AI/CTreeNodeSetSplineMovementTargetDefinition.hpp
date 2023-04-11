@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeSetSplineMovementTargetDefinition : AI::CTreeNodeDecoratorDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeSetSplineMovementTargetDefinition";
@@ -23,6 +24,7 @@ struct CTreeNodeSetSplineMovementTargetDefinition : AI::CTreeNodeDecoratorDefini
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeSetSplineMovementTargetDefinition, 0x58);
 } // namespace AI
+using AICTreeNodeSetSplineMovementTargetDefinition = AI::CTreeNodeSetSplineMovementTargetDefinition;
 } // namespace RED4ext
 
 // clang-format on

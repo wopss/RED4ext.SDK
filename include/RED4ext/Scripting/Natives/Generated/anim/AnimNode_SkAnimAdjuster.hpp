@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkAnimAdjuster : anim::AnimNode_SkAnim
 {
     static constexpr const char* NAME = "animAnimNode_SkAnimAdjuster";
@@ -28,6 +29,7 @@ struct AnimNode_SkAnimAdjuster : anim::AnimNode_SkAnim
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkAnimAdjuster, 0x190);
 } // namespace anim
+using animAnimNode_SkAnimAdjuster = anim::AnimNode_SkAnimAdjuster;
 } // namespace RED4ext
 
 // clang-format on

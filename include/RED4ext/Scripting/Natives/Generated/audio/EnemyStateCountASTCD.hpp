@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct EnemyStateCountASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioEnemyStateCountASTCD";
@@ -25,6 +26,7 @@ struct EnemyStateCountASTCD : audio::AudioStateTransitionConditionData
 };
 RED4EXT_ASSERT_SIZE(EnemyStateCountASTCD, 0x40);
 } // namespace audio
+using audioEnemyStateCountASTCD = audio::EnemyStateCountASTCD;
 } // namespace RED4ext
 
 // clang-format on

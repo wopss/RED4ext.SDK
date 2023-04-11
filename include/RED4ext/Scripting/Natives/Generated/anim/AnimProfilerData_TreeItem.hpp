@@ -13,9 +13,9 @@
 
 namespace RED4ext
 {
-namespace anim { struct AnimProfilerData_TreeItem; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimProfilerData_TreeItem : ISerializable
 {
     static constexpr const char* NAME = "animAnimProfilerData_TreeItem";
@@ -28,6 +28,7 @@ struct AnimProfilerData_TreeItem : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimProfilerData_TreeItem, 0x50);
 } // namespace anim
+using animAnimProfilerData_TreeItem = anim::AnimProfilerData_TreeItem;
 } // namespace RED4ext
 
 // clang-format on

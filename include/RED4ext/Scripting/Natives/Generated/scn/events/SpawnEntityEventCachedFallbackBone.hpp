@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct SpawnEntityEventCachedFallbackBone
 {
     static constexpr const char* NAME = "scneventsSpawnEntityEventCachedFallbackBone";
@@ -23,6 +24,7 @@ struct SpawnEntityEventCachedFallbackBone
 };
 RED4EXT_ASSERT_SIZE(SpawnEntityEventCachedFallbackBone, 0x30);
 } // namespace scn::events
+using scneventsSpawnEntityEventCachedFallbackBone = scn::events::SpawnEntityEventCachedFallbackBone;
 } // namespace RED4ext
 
 // clang-format on

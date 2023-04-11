@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct FSMStateWrapper
 {
     static constexpr const char* NAME = "AIbehaviorFSMStateWrapper";
@@ -19,6 +20,7 @@ struct FSMStateWrapper
 };
 RED4EXT_ASSERT_SIZE(FSMStateWrapper, 0x8);
 } // namespace AI::behavior
+using AIbehaviorFSMStateWrapper = AI::behavior::FSMStateWrapper;
 } // namespace RED4ext
 
 // clang-format on

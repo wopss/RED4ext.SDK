@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct SetTextEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimSetTextEvent";
@@ -21,6 +22,7 @@ struct SetTextEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(SetTextEvent, 0x68);
 } // namespace ink::anim
+using inkanimSetTextEvent = ink::anim::SetTextEvent;
 } // namespace RED4ext
 
 // clang-format on

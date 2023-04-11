@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemRemoteViews : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemRemoteViews";
@@ -20,6 +21,7 @@ struct RuntimeSystemRemoteViews : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemRemoteViews, 0x68);
 } // namespace world
+using worldRuntimeSystemRemoteViews = world::RuntimeSystemRemoteViews;
 } // namespace RED4ext
 
 // clang-format on

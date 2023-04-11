@@ -12,7 +12,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace game::ui { 
+namespace game::ui
+{
 struct BinkResource
 {
     static constexpr const char* NAME = "gameuiBinkResource";
@@ -22,6 +23,7 @@ struct BinkResource
 };
 RED4EXT_ASSERT_SIZE(BinkResource, 0x8);
 } // namespace game::ui
+using gameuiBinkResource = game::ui::BinkResource;
 using BinkResource = game::ui::BinkResource;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MappinBaseController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiMappinBaseController";
@@ -25,6 +26,7 @@ struct MappinBaseController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(MappinBaseController, 0x1D8);
 } // namespace game::ui
+using gameuiMappinBaseController = game::ui::MappinBaseController;
 using BaseMappinBaseController = game::ui::MappinBaseController;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterGender_CondtionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterGender_CondtionType";
@@ -21,6 +22,7 @@ struct CharacterGender_CondtionType : quest::ICharacterConditionType
 };
 RED4EXT_ASSERT_SIZE(CharacterGender_CondtionType, 0x80);
 } // namespace quest
+using questCharacterGender_CondtionType = quest::CharacterGender_CondtionType;
 } // namespace RED4ext
 
 // clang-format on

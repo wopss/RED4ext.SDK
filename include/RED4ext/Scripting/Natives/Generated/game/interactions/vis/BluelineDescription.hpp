@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::interactions::vis { struct BluelinePart; }
 
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct BluelineDescription : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsvisBluelineDescription";
@@ -24,6 +25,7 @@ struct BluelineDescription : IScriptable
 };
 RED4EXT_ASSERT_SIZE(BluelineDescription, 0x50);
 } // namespace game::interactions::vis
+using gameinteractionsvisBluelineDescription = game::interactions::vis::BluelineDescription;
 using BluelineDescription = game::interactions::vis::BluelineDescription;
 } // namespace RED4ext
 

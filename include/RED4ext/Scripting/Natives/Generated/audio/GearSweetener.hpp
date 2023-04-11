@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GearSweetener : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioGearSweetener";
@@ -27,6 +28,7 @@ struct GearSweetener : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(GearSweetener, 0x58);
 } // namespace audio
+using audioGearSweetener = audio::GearSweetener;
 } // namespace RED4ext
 
 // clang-format on

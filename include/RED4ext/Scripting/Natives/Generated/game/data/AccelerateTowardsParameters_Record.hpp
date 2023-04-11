@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AccelerateTowardsParameters_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAccelerateTowardsParameters_Record";
@@ -20,6 +21,7 @@ struct AccelerateTowardsParameters_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AccelerateTowardsParameters_Record, 0x60);
 } // namespace game::data
+using gamedataAccelerateTowardsParameters_Record = game::data::AccelerateTowardsParameters_Record;
 using AccelerateTowardsParameters_Record = game::data::AccelerateTowardsParameters_Record;
 } // namespace RED4ext
 

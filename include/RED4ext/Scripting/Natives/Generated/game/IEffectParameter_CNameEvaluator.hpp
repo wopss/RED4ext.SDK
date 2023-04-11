@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IEffectParameter_CNameEvaluator : ISerializable
 {
     static constexpr const char* NAME = "gameIEffectParameter_CNameEvaluator";
@@ -19,6 +20,7 @@ struct IEffectParameter_CNameEvaluator : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IEffectParameter_CNameEvaluator, 0x30);
 } // namespace game
+using gameIEffectParameter_CNameEvaluator = game::IEffectParameter_CNameEvaluator;
 } // namespace RED4ext
 
 // clang-format on

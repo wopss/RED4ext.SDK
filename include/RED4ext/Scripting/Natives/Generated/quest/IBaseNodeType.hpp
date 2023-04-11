@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IBaseNodeType : ISerializable
 {
     static constexpr const char* NAME = "questIBaseNodeType";
@@ -19,6 +20,7 @@ struct IBaseNodeType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IBaseNodeType, 0x30);
 } // namespace quest
+using questIBaseNodeType = quest::IBaseNodeType;
 } // namespace RED4ext
 
 // clang-format on

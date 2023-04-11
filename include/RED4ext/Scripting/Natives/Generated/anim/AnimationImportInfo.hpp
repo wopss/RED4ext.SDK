@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimationImportInfo
 {
     static constexpr const char* NAME = "animAnimationImportInfo";
@@ -30,6 +31,7 @@ struct AnimationImportInfo
 };
 RED4EXT_ASSERT_SIZE(AnimationImportInfo, 0xC);
 } // namespace anim
+using animAnimationImportInfo = anim::AnimationImportInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimationControlBinding : ent::ISourceBinding
 {
     static constexpr const char* NAME = "entAnimationControlBinding";
@@ -19,6 +20,7 @@ struct AnimationControlBinding : ent::ISourceBinding
 };
 RED4EXT_ASSERT_SIZE(AnimationControlBinding, 0x70);
 } // namespace ent
+using entAnimationControlBinding = ent::AnimationControlBinding;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Spot : ISerializable
 {
     static constexpr const char* NAME = "AISpot";
@@ -19,6 +20,7 @@ struct Spot : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Spot, 0x30);
 } // namespace AI
+using AISpot = AI::Spot;
 } // namespace RED4ext
 
 // clang-format on

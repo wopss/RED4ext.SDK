@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct Font : CResource
 {
     static constexpr const char* NAME = "rendFont";
@@ -22,6 +23,7 @@ struct Font : CResource
 };
 RED4EXT_ASSERT_SIZE(Font, 0xA8);
 } // namespace rend
+using rendFont = rend::Font;
 } // namespace RED4ext
 
 // clang-format on

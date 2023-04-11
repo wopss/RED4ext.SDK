@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticMeshNodeInstance : world::MeshNodeInstance
 {
     static constexpr const char* NAME = "worldStaticMeshNodeInstance";
@@ -19,6 +20,7 @@ struct StaticMeshNodeInstance : world::MeshNodeInstance
 };
 RED4EXT_ASSERT_SIZE(StaticMeshNodeInstance, 0x100);
 } // namespace world
+using worldStaticMeshNodeInstance = world::StaticMeshNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

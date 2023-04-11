@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct ImportFacialInitialPoseWeightDesc
 {
     static constexpr const char* NAME = "animImportFacialInitialPoseWeightDesc";
@@ -22,6 +23,7 @@ struct ImportFacialInitialPoseWeightDesc
 };
 RED4EXT_ASSERT_SIZE(ImportFacialInitialPoseWeightDesc, 0x20);
 } // namespace anim
+using animImportFacialInitialPoseWeightDesc = anim::ImportFacialInitialPoseWeightDesc;
 } // namespace RED4ext
 
 // clang-format on

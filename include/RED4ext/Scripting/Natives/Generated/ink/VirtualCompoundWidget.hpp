@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualCompoundWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkVirtualCompoundWidget";
@@ -20,6 +21,7 @@ struct VirtualCompoundWidget : ink::CompoundWidget
 };
 RED4EXT_ASSERT_SIZE(VirtualCompoundWidget, 0x240);
 } // namespace ink
+using inkVirtualCompoundWidget = ink::VirtualCompoundWidget;
 } // namespace RED4ext
 
 // clang-format on

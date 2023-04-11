@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct SpawnableObjectPriority_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSpawnableObjectPriority_Record";
@@ -20,6 +21,7 @@ struct SpawnableObjectPriority_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(SpawnableObjectPriority_Record, 0x58);
 } // namespace game::data
+using gamedataSpawnableObjectPriority_Record = game::data::SpawnableObjectPriority_Record;
 using SpawnableObjectPriority_Record = game::data::SpawnableObjectPriority_Record;
 } // namespace RED4ext
 

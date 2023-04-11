@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct ConveyorObject : game::Object
 {
     static constexpr const char* NAME = "cpConveyorObject";
@@ -23,6 +24,7 @@ struct ConveyorObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(ConveyorObject, 0x2C0);
 } // namespace cp
+using cpConveyorObject = cp::ConveyorObject;
 } // namespace RED4ext
 
 // clang-format on

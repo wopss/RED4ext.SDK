@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_GatheringSaves : gsm::PopupState
 {
     static constexpr const char* NAME = "gsmMenuState_GatheringSaves";
@@ -20,6 +21,7 @@ struct MenuState_GatheringSaves : gsm::PopupState
 };
 RED4EXT_ASSERT_SIZE(MenuState_GatheringSaves, 0x328);
 } // namespace gsm
+using gsmMenuState_GatheringSaves = gsm::MenuState_GatheringSaves;
 } // namespace RED4ext
 
 // clang-format on

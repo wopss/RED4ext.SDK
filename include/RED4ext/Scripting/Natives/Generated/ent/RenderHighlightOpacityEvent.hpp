@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RenderHighlightOpacityEvent : red::Event
 {
     static constexpr const char* NAME = "entRenderHighlightOpacityEvent";
@@ -21,6 +22,7 @@ struct RenderHighlightOpacityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RenderHighlightOpacityEvent, 0x48);
 } // namespace ent
+using entRenderHighlightOpacityEvent = ent::RenderHighlightOpacityEvent;
 using HighlightOpacityEvent = ent::RenderHighlightOpacityEvent;
 } // namespace RED4ext
 

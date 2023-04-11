@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct UnequipItemParams
 {
     static constexpr const char* NAME = "questUnequipItemParams";
@@ -21,6 +22,7 @@ struct UnequipItemParams
 };
 RED4EXT_ASSERT_SIZE(UnequipItemParams, 0xC);
 } // namespace quest
+using questUnequipItemParams = quest::UnequipItemParams;
 } // namespace RED4ext
 
 // clang-format on

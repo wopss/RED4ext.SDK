@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct Language
 {
     static constexpr const char* NAME = "audioLanguage";
@@ -23,6 +24,7 @@ struct Language
 };
 RED4EXT_ASSERT_SIZE(Language, 0x48);
 } // namespace audio
+using audioLanguage = audio::Language;
 } // namespace RED4ext
 
 // clang-format on

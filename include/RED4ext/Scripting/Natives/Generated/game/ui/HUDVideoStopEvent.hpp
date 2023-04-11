@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HUDVideoStopEvent
 {
     static constexpr const char* NAME = "gameuiHUDVideoStopEvent";
@@ -22,6 +23,7 @@ struct HUDVideoStopEvent
 };
 RED4EXT_ASSERT_SIZE(HUDVideoStopEvent, 0x18);
 } // namespace game::ui
+using gameuiHUDVideoStopEvent = game::ui::HUDVideoStopEvent;
 } // namespace RED4ext
 
 // clang-format on

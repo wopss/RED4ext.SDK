@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct RigPart
 {
     static constexpr const char* NAME = "animRigPart";
@@ -29,6 +30,7 @@ struct RigPart
 };
 RED4EXT_ASSERT_SIZE(RigPart, 0x58);
 } // namespace anim
+using animRigPart = anim::RigPart;
 } // namespace RED4ext
 
 // clang-format on

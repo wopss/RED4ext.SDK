@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CFunctorDefinition : game::interactions::IFunctorDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCFunctorDefinition";
@@ -24,6 +25,7 @@ struct CFunctorDefinition : game::interactions::IFunctorDefinition
 };
 RED4EXT_ASSERT_SIZE(CFunctorDefinition, 0x70);
 } // namespace game::interactions
+using gameinteractionsCFunctorDefinition = game::interactions::CFunctorDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficLightListenerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "worldTrafficLightListenerComponent";
@@ -24,6 +25,7 @@ struct TrafficLightListenerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TrafficLightListenerComponent, 0xB8);
 } // namespace world
+using worldTrafficLightListenerComponent = world::TrafficLightListenerComponent;
 using TrafficLightListenerComponent = world::TrafficLightListenerComponent;
 } // namespace RED4ext
 

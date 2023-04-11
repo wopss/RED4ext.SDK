@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DebugLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkDebugLayerDefinition";
@@ -22,6 +23,7 @@ struct DebugLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(DebugLayerDefinition, 0x48);
 } // namespace ink
+using inkDebugLayerDefinition = ink::DebugLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

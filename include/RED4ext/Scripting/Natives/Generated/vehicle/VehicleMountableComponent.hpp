@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct VehicleMountableComponent : game::mounting::MountableComponent
 {
     static constexpr const char* NAME = "vehicleVehicleMountableComponent";
@@ -20,6 +21,7 @@ struct VehicleMountableComponent : game::mounting::MountableComponent
 };
 RED4EXT_ASSERT_SIZE(VehicleMountableComponent, 0xA8);
 } // namespace vehicle
+using vehicleVehicleMountableComponent = vehicle::VehicleMountableComponent;
 } // namespace RED4ext
 
 // clang-format on

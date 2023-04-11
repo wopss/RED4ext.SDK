@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeActionAnimationCurvePathDefinition : AI::CTreeNodeActionDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeActionAnimationCurvePathDefinition";
@@ -39,6 +40,7 @@ struct CTreeNodeActionAnimationCurvePathDefinition : AI::CTreeNodeActionDefiniti
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeActionAnimationCurvePathDefinition, 0x1C8);
 } // namespace AI
+using AICTreeNodeActionAnimationCurvePathDefinition = AI::CTreeNodeActionAnimationCurvePathDefinition;
 } // namespace RED4ext
 
 // clang-format on

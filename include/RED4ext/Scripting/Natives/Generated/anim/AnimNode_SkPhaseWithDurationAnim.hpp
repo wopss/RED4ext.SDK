@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkPhaseWithDurationAnim : anim::AnimNode_SkPhaseAnim
 {
     static constexpr const char* NAME = "animAnimNode_SkPhaseWithDurationAnim";
@@ -21,6 +22,7 @@ struct AnimNode_SkPhaseWithDurationAnim : anim::AnimNode_SkPhaseAnim
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkPhaseWithDurationAnim, 0xF8);
 } // namespace anim
+using animAnimNode_SkPhaseWithDurationAnim = anim::AnimNode_SkPhaseWithDurationAnim;
 } // namespace RED4ext
 
 // clang-format on

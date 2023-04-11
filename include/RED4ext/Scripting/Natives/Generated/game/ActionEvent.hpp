@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct ActionInternalEvent; }
 
-namespace game { 
+namespace game
+{
 struct ActionEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "gameActionEvent";
@@ -25,6 +26,7 @@ struct ActionEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(ActionEvent, 0x68);
 } // namespace game
+using gameActionEvent = game::ActionEvent;
 using ActionEvent = game::ActionEvent;
 } // namespace RED4ext
 

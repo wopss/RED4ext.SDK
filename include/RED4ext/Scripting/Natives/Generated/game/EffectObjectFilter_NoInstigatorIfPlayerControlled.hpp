@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_NoInstigatorIfPlayerControlled : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_NoInstigatorIfPlayerControlled";
@@ -19,6 +20,7 @@ struct EffectObjectFilter_NoInstigatorIfPlayerControlled : game::EffectObjectSin
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_NoInstigatorIfPlayerControlled, 0x40);
 } // namespace game
+using gameEffectObjectFilter_NoInstigatorIfPlayerControlled = game::EffectObjectFilter_NoInstigatorIfPlayerControlled;
 } // namespace RED4ext
 
 // clang-format on

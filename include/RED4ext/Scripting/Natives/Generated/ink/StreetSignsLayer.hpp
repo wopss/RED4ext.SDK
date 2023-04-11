@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StreetSignsLayer : ink::WorldFluffLayer
 {
     static constexpr const char* NAME = "inkStreetSignsLayer";
@@ -20,6 +21,7 @@ struct StreetSignsLayer : ink::WorldFluffLayer
 };
 RED4EXT_ASSERT_SIZE(StreetSignsLayer, 0x258);
 } // namespace ink
+using inkStreetSignsLayer = ink::StreetSignsLayer;
 } // namespace RED4ext
 
 // clang-format on

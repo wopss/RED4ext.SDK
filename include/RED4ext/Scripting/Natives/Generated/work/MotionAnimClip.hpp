@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct MotionAnimClip : work::AnimClip
 {
     static constexpr const char* NAME = "workMotionAnimClip";
@@ -19,6 +20,7 @@ struct MotionAnimClip : work::AnimClip
 };
 RED4EXT_ASSERT_SIZE(MotionAnimClip, 0x48);
 } // namespace work
+using workMotionAnimClip = work::MotionAnimClip;
 } // namespace RED4ext
 
 // clang-format on

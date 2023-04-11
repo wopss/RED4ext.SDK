@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TransformComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entTransformComponent";
@@ -19,6 +20,7 @@ struct TransformComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(TransformComponent, 0x120);
 } // namespace ent
+using entTransformComponent = ent::TransformComponent;
 } // namespace RED4ext
 
 // clang-format on

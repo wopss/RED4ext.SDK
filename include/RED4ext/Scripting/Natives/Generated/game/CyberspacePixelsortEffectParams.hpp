@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CyberspacePixelsortEffectParams
 {
     static constexpr const char* NAME = "gameCyberspacePixelsortEffectParams";
@@ -27,6 +28,7 @@ struct CyberspacePixelsortEffectParams
 };
 RED4EXT_ASSERT_SIZE(CyberspacePixelsortEffectParams, 0x48);
 } // namespace game
+using gameCyberspacePixelsortEffectParams = game::CyberspacePixelsortEffectParams;
 } // namespace RED4ext
 
 // clang-format on

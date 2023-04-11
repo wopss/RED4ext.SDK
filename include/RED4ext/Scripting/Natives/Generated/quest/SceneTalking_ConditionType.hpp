@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct SceneTalking_ConditionType : quest::ISceneConditionType
 {
     static constexpr const char* NAME = "questSceneTalking_ConditionType";
@@ -33,6 +34,7 @@ struct SceneTalking_ConditionType : quest::ISceneConditionType
 };
 RED4EXT_ASSERT_SIZE(SceneTalking_ConditionType, 0xB0);
 } // namespace quest
+using questSceneTalking_ConditionType = quest::SceneTalking_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

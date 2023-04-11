@@ -18,7 +18,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterState_PlayerSubType : quest::ICharacterConditionSubType
 {
     static constexpr const char* NAME = "questCharacterState_PlayerSubType";
@@ -41,6 +42,7 @@ struct CharacterState_PlayerSubType : quest::ICharacterConditionSubType
 };
 RED4EXT_ASSERT_SIZE(CharacterState_PlayerSubType, 0x68);
 } // namespace quest
+using questCharacterState_PlayerSubType = quest::CharacterState_PlayerSubType;
 } // namespace RED4ext
 
 // clang-format on

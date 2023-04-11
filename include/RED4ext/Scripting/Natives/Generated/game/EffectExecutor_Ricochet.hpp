@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_Ricochet : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_Ricochet";
@@ -21,6 +22,7 @@ struct EffectExecutor_Ricochet : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_Ricochet, 0x88);
 } // namespace game
+using gameEffectExecutor_Ricochet = game::EffectExecutor_Ricochet;
 } // namespace RED4ext
 
 // clang-format on

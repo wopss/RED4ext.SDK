@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneMarkerInternalsWorkspotEntrySocket
 {
     static constexpr const char* NAME = "scnSceneMarkerInternalsWorkspotEntrySocket";
@@ -23,6 +24,7 @@ struct SceneMarkerInternalsWorkspotEntrySocket
 };
 RED4EXT_ASSERT_SIZE(SceneMarkerInternalsWorkspotEntrySocket, 0x30);
 } // namespace scn
+using scnSceneMarkerInternalsWorkspotEntrySocket = scn::SceneMarkerInternalsWorkspotEntrySocket;
 } // namespace RED4ext
 
 // clang-format on

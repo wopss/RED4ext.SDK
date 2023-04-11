@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISquadFurthestToSectorCheck_Record : game::data::AISquadDistanceRelationToSectorCheck_Record
 {
     static constexpr const char* NAME = "gamedataAISquadFurthestToSectorCheck_Record";
@@ -19,6 +20,7 @@ struct AISquadFurthestToSectorCheck_Record : game::data::AISquadDistanceRelation
 };
 RED4EXT_ASSERT_SIZE(AISquadFurthestToSectorCheck_Record, 0x60);
 } // namespace game::data
+using gamedataAISquadFurthestToSectorCheck_Record = game::data::AISquadFurthestToSectorCheck_Record;
 using AISquadFurthestToSectorCheck_Record = game::data::AISquadFurthestToSectorCheck_Record;
 } // namespace RED4ext
 

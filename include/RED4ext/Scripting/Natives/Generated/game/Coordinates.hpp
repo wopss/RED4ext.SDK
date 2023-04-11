@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Coordinates
 {
     static constexpr const char* NAME = "gameCoordinates";
@@ -20,6 +21,7 @@ struct Coordinates
 };
 RED4EXT_ASSERT_SIZE(Coordinates, 0x8);
 } // namespace game
+using gameCoordinates = game::Coordinates;
 using Coordinates = game::Coordinates;
 } // namespace RED4ext
 

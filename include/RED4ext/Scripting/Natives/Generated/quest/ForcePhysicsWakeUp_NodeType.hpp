@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ForcePhysicsWakeUp_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questForcePhysicsWakeUp_NodeType";
@@ -21,6 +22,7 @@ struct ForcePhysicsWakeUp_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ForcePhysicsWakeUp_NodeType, 0x68);
 } // namespace quest
+using questForcePhysicsWakeUp_NodeType = quest::ForcePhysicsWakeUp_NodeType;
 } // namespace RED4ext
 
 // clang-format on

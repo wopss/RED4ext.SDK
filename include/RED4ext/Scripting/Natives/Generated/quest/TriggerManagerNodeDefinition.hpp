@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct ITriggerManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct TriggerManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questTriggerManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct TriggerManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TriggerManagerNodeDefinition, 0x58);
 } // namespace quest
+using questTriggerManagerNodeDefinition = quest::TriggerManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

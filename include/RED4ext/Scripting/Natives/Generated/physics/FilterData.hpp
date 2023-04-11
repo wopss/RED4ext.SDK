@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace physics { struct CustomFilterData; }
 
-namespace physics { 
+namespace physics
+{
 struct FilterData : ISerializable
 {
     static constexpr const char* NAME = "physicsFilterData";
@@ -29,6 +30,7 @@ struct FilterData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(FilterData, 0x68);
 } // namespace physics
+using physicsFilterData = physics::FilterData;
 } // namespace RED4ext
 
 // clang-format on

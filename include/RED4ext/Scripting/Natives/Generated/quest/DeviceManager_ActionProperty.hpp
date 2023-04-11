@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DeviceManager_ActionProperty
 {
     static constexpr const char* NAME = "questDeviceManager_ActionProperty";
@@ -24,6 +25,7 @@ struct DeviceManager_ActionProperty
 };
 RED4EXT_ASSERT_SIZE(DeviceManager_ActionProperty, 0x28);
 } // namespace quest
+using questDeviceManager_ActionProperty = quest::DeviceManager_ActionProperty;
 } // namespace RED4ext
 
 // clang-format on

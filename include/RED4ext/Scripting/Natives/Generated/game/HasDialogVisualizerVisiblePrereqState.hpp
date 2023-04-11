@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HasDialogVisualizerVisiblePrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameHasDialogVisualizerVisiblePrereqState";
@@ -20,6 +21,7 @@ struct HasDialogVisualizerVisiblePrereqState : game::PrereqState
 };
 RED4EXT_ASSERT_SIZE(HasDialogVisualizerVisiblePrereqState, 0xD0);
 } // namespace game
+using gameHasDialogVisualizerVisiblePrereqState = game::HasDialogVisualizerVisiblePrereqState;
 using HasDialogVisualizerVisiblePrereqState = game::HasDialogVisualizerVisiblePrereqState;
 } // namespace RED4ext
 

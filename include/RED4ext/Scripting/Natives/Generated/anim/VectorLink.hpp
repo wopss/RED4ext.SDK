@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimNode_VectorValue; }
 
-namespace anim { 
+namespace anim
+{
 struct VectorLink
 {
     static constexpr const char* NAME = "animVectorLink";
@@ -24,6 +25,7 @@ struct VectorLink
 };
 RED4EXT_ASSERT_SIZE(VectorLink, 0x20);
 } // namespace anim
+using animVectorLink = anim::VectorLink;
 } // namespace RED4ext
 
 // clang-format on

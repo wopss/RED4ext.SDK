@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct Debug_MeshComponent : ent::MeshComponent
 {
     static constexpr const char* NAME = "entDebug_MeshComponent";
@@ -22,6 +23,7 @@ struct Debug_MeshComponent : ent::MeshComponent
 };
 RED4EXT_ASSERT_SIZE(Debug_MeshComponent, 0x430);
 } // namespace ent
+using entDebug_MeshComponent = ent::Debug_MeshComponent;
 } // namespace RED4ext
 
 // clang-format on

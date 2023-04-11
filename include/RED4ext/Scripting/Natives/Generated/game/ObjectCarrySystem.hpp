@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectCarrySystem : game::IObjectCarrySystem
 {
     static constexpr const char* NAME = "gameObjectCarrySystem";
@@ -20,6 +21,7 @@ struct ObjectCarrySystem : game::IObjectCarrySystem
 };
 RED4EXT_ASSERT_SIZE(ObjectCarrySystem, 0x3B8);
 } // namespace game
+using gameObjectCarrySystem = game::ObjectCarrySystem;
 using ObjectCarrySystem = game::ObjectCarrySystem;
 } // namespace RED4ext
 

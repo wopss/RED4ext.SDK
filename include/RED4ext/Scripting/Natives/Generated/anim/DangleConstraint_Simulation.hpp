@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct JsonResource;
 
-namespace anim { 
+namespace anim
+{
 struct DangleConstraint_Simulation : ISerializable
 {
     static constexpr const char* NAME = "animDangleConstraint_Simulation";
@@ -34,6 +35,7 @@ struct DangleConstraint_Simulation : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DangleConstraint_Simulation, 0x78);
 } // namespace anim
+using animDangleConstraint_Simulation = anim::DangleConstraint_Simulation;
 } // namespace RED4ext
 
 // clang-format on

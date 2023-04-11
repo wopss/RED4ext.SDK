@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneVOInfo
 {
     static constexpr const char* NAME = "scnSceneVOInfo";
@@ -24,6 +25,7 @@ struct SceneVOInfo
 };
 RED4EXT_ASSERT_SIZE(SceneVOInfo, 0x18);
 } // namespace scn
+using scnSceneVOInfo = scn::SceneVOInfo;
 } // namespace RED4ext
 
 // clang-format on

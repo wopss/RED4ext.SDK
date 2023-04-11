@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TreeNodeRepeatDefinition : AI::CTreeNodeDecoratorDefinition
 {
     static constexpr const char* NAME = "AITreeNodeRepeatDefinition";
@@ -21,6 +22,7 @@ struct TreeNodeRepeatDefinition : AI::CTreeNodeDecoratorDefinition
 };
 RED4EXT_ASSERT_SIZE(TreeNodeRepeatDefinition, 0x60);
 } // namespace AI
+using AITreeNodeRepeatDefinition = AI::TreeNodeRepeatDefinition;
 } // namespace RED4ext
 
 // clang-format on

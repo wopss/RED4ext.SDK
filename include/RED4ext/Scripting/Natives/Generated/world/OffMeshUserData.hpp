@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct OffMeshUserData : ISerializable
 {
     static constexpr const char* NAME = "worldOffMeshUserData";
@@ -19,6 +20,7 @@ struct OffMeshUserData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(OffMeshUserData, 0x30);
 } // namespace world
+using worldOffMeshUserData = world::OffMeshUserData;
 } // namespace RED4ext
 
 // clang-format on

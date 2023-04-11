@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IContentTokenManager_NodeSubType; }
 
-namespace quest { 
+namespace quest
+{
 struct ContentTokenManager_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 {
     static constexpr const char* NAME = "questContentTokenManager_NodeType";
@@ -23,6 +24,7 @@ struct ContentTokenManager_NodeType : quest::IGameManagerNonSignalStoppingNodeTy
 };
 RED4EXT_ASSERT_SIZE(ContentTokenManager_NodeType, 0x48);
 } // namespace quest
+using questContentTokenManager_NodeType = quest::ContentTokenManager_NodeType;
 } // namespace RED4ext
 
 // clang-format on

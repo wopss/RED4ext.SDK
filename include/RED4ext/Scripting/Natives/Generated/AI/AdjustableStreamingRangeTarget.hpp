@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct AdjustableStreamingRangeTarget : game::Object
 {
     static constexpr const char* NAME = "AIAdjustableStreamingRangeTarget";
@@ -21,6 +22,7 @@ struct AdjustableStreamingRangeTarget : game::Object
 };
 RED4EXT_ASSERT_SIZE(AdjustableStreamingRangeTarget, 0x248);
 } // namespace AI
+using AIAdjustableStreamingRangeTarget = AI::AdjustableStreamingRangeTarget;
 using AdjustableStreamingRangeTarget = AI::AdjustableStreamingRangeTarget;
 } // namespace RED4ext
 

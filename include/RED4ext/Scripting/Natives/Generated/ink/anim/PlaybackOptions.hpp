@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct PlaybackOptions
 {
     static constexpr const char* NAME = "inkanimPlaybackOptions";
@@ -33,6 +34,7 @@ struct PlaybackOptions
 };
 RED4EXT_ASSERT_SIZE(PlaybackOptions, 0x30);
 } // namespace ink::anim
+using inkanimPlaybackOptions = ink::anim::PlaybackOptions;
 using inkAnimOptions = ink::anim::PlaybackOptions;
 } // namespace RED4ext
 

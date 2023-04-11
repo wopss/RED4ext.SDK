@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IconsNameResolver : IScriptable
 {
     static constexpr const char* NAME = "gameuiIconsNameResolver";
@@ -20,6 +21,7 @@ struct IconsNameResolver : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IconsNameResolver, 0x70);
 } // namespace game::ui
+using gameuiIconsNameResolver = game::ui::IconsNameResolver;
 using IconsNameResolver = game::ui::IconsNameResolver;
 } // namespace RED4ext
 

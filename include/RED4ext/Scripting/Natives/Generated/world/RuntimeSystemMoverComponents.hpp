@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemMoverComponents : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemMoverComponents";
@@ -20,6 +21,7 @@ struct RuntimeSystemMoverComponents : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemMoverComponents, 0xC8);
 } // namespace world
+using worldRuntimeSystemMoverComponents = world::RuntimeSystemMoverComponents;
 } // namespace RED4ext
 
 // clang-format on

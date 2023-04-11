@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PointOfInterestMappinResource : CResource
 {
     static constexpr const char* NAME = "gamePointOfInterestMappinResource";
@@ -22,6 +23,7 @@ struct PointOfInterestMappinResource : CResource
 };
 RED4EXT_ASSERT_SIZE(PointOfInterestMappinResource, 0x50);
 } // namespace game
+using gamePointOfInterestMappinResource = game::PointOfInterestMappinResource;
 } // namespace RED4ext
 
 // clang-format on

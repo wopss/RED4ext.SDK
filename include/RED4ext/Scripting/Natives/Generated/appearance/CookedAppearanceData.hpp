@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace appearance { 
+namespace appearance
+{
 struct CookedAppearanceData : CResource
 {
     static constexpr const char* NAME = "appearanceCookedAppearanceData";
@@ -27,6 +28,7 @@ struct CookedAppearanceData : CResource
 };
 RED4EXT_ASSERT_SIZE(CookedAppearanceData, 0x68);
 } // namespace appearance
+using appearanceCookedAppearanceData = appearance::CookedAppearanceData;
 } // namespace RED4ext
 
 // clang-format on

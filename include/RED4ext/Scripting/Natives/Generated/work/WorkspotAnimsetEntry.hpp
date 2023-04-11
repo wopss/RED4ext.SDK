@@ -15,7 +15,8 @@ namespace RED4ext
 namespace anim { struct AnimSet; }
 namespace anim { struct Rig; }
 
-namespace work { 
+namespace work
+{
 struct WorkspotAnimsetEntry
 {
     static constexpr const char* NAME = "workWorkspotAnimsetEntry";
@@ -29,6 +30,7 @@ struct WorkspotAnimsetEntry
 };
 RED4EXT_ASSERT_SIZE(WorkspotAnimsetEntry, 0x78);
 } // namespace work
+using workWorkspotAnimsetEntry = work::WorkspotAnimsetEntry;
 } // namespace RED4ext
 
 // clang-format on

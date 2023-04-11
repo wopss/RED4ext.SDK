@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterState_PuppetSubType : quest::ICharacterConditionSubType
 {
     static constexpr const char* NAME = "questCharacterState_PuppetSubType";
@@ -28,6 +29,7 @@ struct CharacterState_PuppetSubType : quest::ICharacterConditionSubType
 };
 RED4EXT_ASSERT_SIZE(CharacterState_PuppetSubType, 0x80);
 } // namespace quest
+using questCharacterState_PuppetSubType = quest::CharacterState_PuppetSubType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_SweepOverTime : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_SweepOverTime";
@@ -26,6 +27,7 @@ struct EffectObjectProvider_SweepOverTime : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime, 0x68);
 } // namespace game
+using gameEffectObjectProvider_SweepOverTime = game::EffectObjectProvider_SweepOverTime;
 } // namespace RED4ext
 
 // clang-format on

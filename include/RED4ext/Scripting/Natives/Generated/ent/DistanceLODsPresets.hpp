@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct DistanceLODsPresets : ISerializable
 {
     static constexpr const char* NAME = "entDistanceLODsPresets";
@@ -23,6 +24,7 @@ struct DistanceLODsPresets : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DistanceLODsPresets, 0x378);
 } // namespace ent
+using entDistanceLODsPresets = ent::DistanceLODsPresets;
 } // namespace RED4ext
 
 // clang-format on

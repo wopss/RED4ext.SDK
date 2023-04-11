@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemTargetFilter_Closest : game::targeting::SystemTargetFilter
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilter_Closest";
@@ -20,6 +21,7 @@ struct SystemTargetFilter_Closest : game::targeting::SystemTargetFilter
 };
 RED4EXT_ASSERT_SIZE(SystemTargetFilter_Closest, 0x80);
 } // namespace game::targeting
+using gametargetingSystemTargetFilter_Closest = game::targeting::SystemTargetFilter_Closest;
 using TargetFilter_Closest = game::targeting::SystemTargetFilter_Closest;
 } // namespace RED4ext
 

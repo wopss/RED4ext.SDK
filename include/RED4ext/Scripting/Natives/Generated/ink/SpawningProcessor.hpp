@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SpawningProcessor : ISerializable
 {
     static constexpr const char* NAME = "inkSpawningProcessor";
@@ -20,6 +21,7 @@ struct SpawningProcessor : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SpawningProcessor, 0xB8);
 } // namespace ink
+using inkSpawningProcessor = ink::SpawningProcessor;
 } // namespace RED4ext
 
 // clang-format on

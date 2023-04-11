@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct SavingRequesResult : ink::CallbackBase
 {
     static constexpr const char* NAME = "gsmSavingRequesResult";
@@ -20,6 +21,7 @@ struct SavingRequesResult : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(SavingRequesResult, 0x38);
 } // namespace gsm
+using gsmSavingRequesResult = gsm::SavingRequesResult;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::interactions { struct IShapeDefinition; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct InteractionDefinitionOverrider
 {
     static constexpr const char* NAME = "gameinteractionsInteractionDefinitionOverrider";
@@ -29,6 +30,7 @@ struct InteractionDefinitionOverrider
 };
 RED4EXT_ASSERT_SIZE(InteractionDefinitionOverrider, 0x60);
 } // namespace game::interactions
+using gameinteractionsInteractionDefinitionOverrider = game::interactions::InteractionDefinitionOverrider;
 } // namespace RED4ext
 
 // clang-format on

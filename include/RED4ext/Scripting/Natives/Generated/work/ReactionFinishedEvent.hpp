@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ReactionFinishedEvent : red::Event
 {
     static constexpr const char* NAME = "workReactionFinishedEvent";
@@ -19,6 +20,7 @@ struct ReactionFinishedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ReactionFinishedEvent, 0x40);
 } // namespace work
+using workReactionFinishedEvent = work::ReactionFinishedEvent;
 using ReactionFinishedEvent = work::ReactionFinishedEvent;
 } // namespace RED4ext
 

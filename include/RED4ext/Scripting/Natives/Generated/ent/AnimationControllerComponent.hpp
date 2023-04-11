@@ -16,7 +16,8 @@ namespace RED4ext
 namespace anim { struct ActionAnimDatabase; }
 namespace ent { struct AnimationControlBinding; }
 
-namespace ent { 
+namespace ent
+{
 struct AnimationControllerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entAnimationControllerComponent";
@@ -30,6 +31,7 @@ struct AnimationControllerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(AnimationControllerComponent, 0x1D0);
 } // namespace ent
+using entAnimationControllerComponent = ent::AnimationControllerComponent;
 using AnimationControllerComponent = ent::AnimationControllerComponent;
 } // namespace RED4ext
 

@@ -15,7 +15,8 @@ namespace RED4ext
 namespace ent { struct SlotComponent; }
 namespace game { struct AttitudeAgent; }
 
-namespace game { 
+namespace game
+{
 struct FriendlyFireParams : IScriptable
 {
     static constexpr const char* NAME = "gameFriendlyFireParams";
@@ -32,6 +33,7 @@ struct FriendlyFireParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(FriendlyFireParams, 0x98);
 } // namespace game
+using gameFriendlyFireParams = game::FriendlyFireParams;
 using FriendlyFireParams = game::FriendlyFireParams;
 } // namespace RED4ext
 

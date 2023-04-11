@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeSequenceDefinition : AI::CTreeNodeChildrenListDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeSequenceDefinition";
@@ -19,6 +20,7 @@ struct CTreeNodeSequenceDefinition : AI::CTreeNodeChildrenListDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeSequenceDefinition, 0x48);
 } // namespace AI
+using AICTreeNodeSequenceDefinition = AI::CTreeNodeSequenceDefinition;
 } // namespace RED4ext
 
 // clang-format on

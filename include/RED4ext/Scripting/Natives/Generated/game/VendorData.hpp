@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VendorData
 {
     static constexpr const char* NAME = "gameVendorData";
@@ -24,6 +25,7 @@ struct VendorData
 };
 RED4EXT_ASSERT_SIZE(VendorData, 0x30);
 } // namespace game
+using gameVendorData = game::VendorData;
 using VendorData = game::VendorData;
 } // namespace RED4ext
 

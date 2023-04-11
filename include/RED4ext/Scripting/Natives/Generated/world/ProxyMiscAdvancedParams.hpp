@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ProxyMiscAdvancedParams
 {
     static constexpr const char* NAME = "worldProxyMiscAdvancedParams";
@@ -48,6 +49,7 @@ struct ProxyMiscAdvancedParams
 };
 RED4EXT_ASSERT_SIZE(ProxyMiscAdvancedParams, 0x64);
 } // namespace world
+using worldProxyMiscAdvancedParams = world::ProxyMiscAdvancedParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace world { 
+namespace world
+{
 struct DecorationMeshNode : world::MeshNode
 {
     static constexpr const char* NAME = "worldDecorationMeshNode";
@@ -27,6 +28,7 @@ struct DecorationMeshNode : world::MeshNode
 };
 RED4EXT_ASSERT_SIZE(DecorationMeshNode, 0x70);
 } // namespace world
+using worldDecorationMeshNode = world::DecorationMeshNode;
 } // namespace RED4ext
 
 // clang-format on

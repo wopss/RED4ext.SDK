@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhantomEntityParameters
 {
     static constexpr const char* NAME = "gamePhantomEntityParameters";
@@ -26,6 +27,7 @@ struct PhantomEntityParameters
 };
 RED4EXT_ASSERT_SIZE(PhantomEntityParameters, 0x30);
 } // namespace game
+using gamePhantomEntityParameters = game::PhantomEntityParameters;
 } // namespace RED4ext
 
 // clang-format on

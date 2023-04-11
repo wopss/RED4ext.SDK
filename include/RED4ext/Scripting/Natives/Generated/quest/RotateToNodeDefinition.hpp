@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct RotateToParams; }
 
-namespace quest { 
+namespace quest
+{
 struct RotateToNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questRotateToNodeDefinition";
@@ -25,6 +26,7 @@ struct RotateToNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(RotateToNodeDefinition, 0x90);
 } // namespace quest
+using questRotateToNodeDefinition = quest::RotateToNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

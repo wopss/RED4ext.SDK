@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimGraphResourceContainer : ent::IComponent
 {
     static constexpr const char* NAME = "entAnimGraphResourceContainer";
@@ -22,6 +23,7 @@ struct AnimGraphResourceContainer : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(AnimGraphResourceContainer, 0xA0);
 } // namespace ent
+using entAnimGraphResourceContainer = ent::AnimGraphResourceContainer;
 } // namespace RED4ext
 
 // clang-format on

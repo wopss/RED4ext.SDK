@@ -19,7 +19,8 @@ using inkCharacterEvent = ink::CharacterEvent;
 
 namespace RED4ext
 {
-namespace ink {
+namespace ink
+{
 struct CharacterEvent : ink::InputEvent
 {
     static constexpr const char* NAME = "inkCharacterEvent";
@@ -29,6 +30,7 @@ struct CharacterEvent : ink::InputEvent
 };
 RED4EXT_ASSERT_SIZE(CharacterEvent, 0x98);
 } // namespace ink
+using inkCharacterEvent = ink::CharacterEvent;
 } // namespace RED4ext
 */
 

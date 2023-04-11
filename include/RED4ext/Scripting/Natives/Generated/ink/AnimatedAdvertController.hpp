@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct AnimatedAdvertController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkAnimatedAdvertController";
@@ -25,6 +26,7 @@ struct AnimatedAdvertController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(AnimatedAdvertController, 0xA0);
 } // namespace ink
+using inkAnimatedAdvertController = ink::AnimatedAdvertController;
 } // namespace RED4ext
 
 // clang-format on

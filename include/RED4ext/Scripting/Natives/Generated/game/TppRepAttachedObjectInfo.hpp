@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TppRepAttachedObjectInfo
 {
     static constexpr const char* NAME = "gameTppRepAttachedObjectInfo";
@@ -22,6 +23,7 @@ struct TppRepAttachedObjectInfo
 };
 RED4EXT_ASSERT_SIZE(TppRepAttachedObjectInfo, 0x14);
 } // namespace game
+using gameTppRepAttachedObjectInfo = game::TppRepAttachedObjectInfo;
 } // namespace RED4ext
 
 // clang-format on

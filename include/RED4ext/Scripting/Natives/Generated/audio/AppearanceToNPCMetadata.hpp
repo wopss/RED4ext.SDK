@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AppearanceToNPCMetadata
 {
     static constexpr const char* NAME = "audioAppearanceToNPCMetadata";
@@ -22,6 +23,7 @@ struct AppearanceToNPCMetadata
 };
 RED4EXT_ASSERT_SIZE(AppearanceToNPCMetadata, 0x18);
 } // namespace audio
+using audioAppearanceToNPCMetadata = audio::AppearanceToNPCMetadata;
 } // namespace RED4ext
 
 // clang-format on

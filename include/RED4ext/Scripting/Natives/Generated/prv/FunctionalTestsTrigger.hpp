@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace prv { 
+namespace prv
+{
 struct FunctionalTestsTrigger : IScriptable
 {
     static constexpr const char* NAME = "prvFunctionalTestsTrigger";
@@ -20,6 +21,7 @@ struct FunctionalTestsTrigger : IScriptable
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestsTrigger, 0xD0);
 } // namespace prv
+using prvFunctionalTestsTrigger = prv::FunctionalTestsTrigger;
 } // namespace RED4ext
 
 // clang-format on

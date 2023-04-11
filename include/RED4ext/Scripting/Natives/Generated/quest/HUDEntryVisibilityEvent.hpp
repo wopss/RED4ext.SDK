@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct HUDEntryVisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "questHUDEntryVisibilityEvent";
@@ -22,6 +23,7 @@ struct HUDEntryVisibilityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HUDEntryVisibilityEvent, 0x50);
 } // namespace quest
+using questHUDEntryVisibilityEvent = quest::HUDEntryVisibilityEvent;
 } // namespace RED4ext
 
 // clang-format on

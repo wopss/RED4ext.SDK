@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ISmartCoverManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIISmartCoverManager";
@@ -19,6 +20,7 @@ struct ISmartCoverManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISmartCoverManager, 0x48);
 } // namespace AI
+using AIISmartCoverManager = AI::ISmartCoverManager;
 using ICoverManager = AI::ISmartCoverManager;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent::events { 
+namespace ent::events
+{
 struct PhysicalDeformShapesEvent : red::Event
 {
     static constexpr const char* NAME = "enteventsPhysicalDeformShapesEvent";
@@ -23,6 +24,7 @@ struct PhysicalDeformShapesEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhysicalDeformShapesEvent, 0x58);
 } // namespace ent::events
+using enteventsPhysicalDeformShapesEvent = ent::events::PhysicalDeformShapesEvent;
 using PhysicalDeformShapesEvent = ent::events::PhysicalDeformShapesEvent;
 } // namespace RED4ext
 

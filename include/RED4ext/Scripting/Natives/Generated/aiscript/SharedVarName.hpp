@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace aiscript { 
+namespace aiscript
+{
 struct SharedVarName
 {
     static constexpr const char* NAME = "aiscriptSharedVarName";
@@ -21,6 +22,7 @@ struct SharedVarName
 };
 RED4EXT_ASSERT_SIZE(SharedVarName, 0x10);
 } // namespace aiscript
+using aiscriptSharedVarName = aiscript::SharedVarName;
 using SharedVarName = aiscript::SharedVarName;
 } // namespace RED4ext
 

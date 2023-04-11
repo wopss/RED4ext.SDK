@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimWrapperWeightSetter : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimWrapperWeightSetter";
@@ -21,6 +22,7 @@ struct AnimWrapperWeightSetter : ent::AnimInputSetter
 };
 RED4EXT_ASSERT_SIZE(AnimWrapperWeightSetter, 0x50);
 } // namespace ent
+using entAnimWrapperWeightSetter = ent::AnimWrapperWeightSetter;
 using AnimWrapperWeightSetter = ent::AnimWrapperWeightSetter;
 } // namespace RED4ext
 

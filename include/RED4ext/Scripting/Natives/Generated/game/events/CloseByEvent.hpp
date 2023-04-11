@@ -15,7 +15,8 @@ namespace RED4ext
 namespace game { struct Object; }
 namespace game::damage { struct AttackData; }
 
-namespace game::events { 
+namespace game::events
+{
 struct CloseByEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsCloseByEvent";
@@ -28,6 +29,7 @@ struct CloseByEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CloseByEvent, 0x80);
 } // namespace game::events
+using gameeventsCloseByEvent = game::events::CloseByEvent;
 using gameCloseByEvent = game::events::CloseByEvent;
 } // namespace RED4ext
 

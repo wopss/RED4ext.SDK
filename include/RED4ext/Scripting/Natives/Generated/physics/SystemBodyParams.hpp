@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct SystemBodyParams
 {
     static constexpr const char* NAME = "physicsSystemBodyParams";
@@ -35,6 +36,7 @@ struct SystemBodyParams
 };
 RED4EXT_ASSERT_SIZE(SystemBodyParams, 0x60);
 } // namespace physics
+using physicsSystemBodyParams = physics::SystemBodyParams;
 } // namespace RED4ext
 
 // clang-format on

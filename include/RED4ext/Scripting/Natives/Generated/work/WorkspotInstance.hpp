@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct WorkspotInstance : ISerializable
 {
     static constexpr const char* NAME = "workWorkspotInstance";
@@ -20,6 +21,7 @@ struct WorkspotInstance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WorkspotInstance, 0x2A0);
 } // namespace work
+using workWorkspotInstance = work::WorkspotInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace ink { 
+namespace ink
+{
 struct FastTravelLoadingControllerSupervisor : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "inkFastTravelLoadingControllerSupervisor";
@@ -25,6 +26,7 @@ struct FastTravelLoadingControllerSupervisor : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(FastTravelLoadingControllerSupervisor, 0x178);
 } // namespace ink
+using inkFastTravelLoadingControllerSupervisor = ink::FastTravelLoadingControllerSupervisor;
 } // namespace RED4ext
 
 // clang-format on

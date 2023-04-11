@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IEntityManagerSetAttachment_NodeSubType : quest::IEntityManager_NodeSubType
 {
     static constexpr const char* NAME = "questIEntityManagerSetAttachment_NodeSubType";
@@ -19,6 +20,7 @@ struct IEntityManagerSetAttachment_NodeSubType : quest::IEntityManager_NodeSubTy
 };
 RED4EXT_ASSERT_SIZE(IEntityManagerSetAttachment_NodeSubType, 0x30);
 } // namespace quest
+using questIEntityManagerSetAttachment_NodeSubType = quest::IEntityManagerSetAttachment_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

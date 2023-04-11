@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhotoModeOptionSelectorData
 {
     static constexpr const char* NAME = "gameuiPhotoModeOptionSelectorData";
@@ -22,6 +23,7 @@ struct PhotoModeOptionSelectorData
 };
 RED4EXT_ASSERT_SIZE(PhotoModeOptionSelectorData, 0x28);
 } // namespace game::ui
+using gameuiPhotoModeOptionSelectorData = game::ui::PhotoModeOptionSelectorData;
 using PhotoModeOptionSelectorData = game::ui::PhotoModeOptionSelectorData;
 } // namespace RED4ext
 

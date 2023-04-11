@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamDeformableShapesData : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamDeformableShapesData";
@@ -24,6 +25,7 @@ struct MeshParamDeformableShapesData : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamDeformableShapesData, 0x60);
 } // namespace mesh
+using meshMeshParamDeformableShapesData = mesh::MeshParamDeformableShapesData;
 } // namespace RED4ext
 
 // clang-format on

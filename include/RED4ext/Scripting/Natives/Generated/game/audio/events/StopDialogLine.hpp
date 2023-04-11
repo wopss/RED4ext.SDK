@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct StopDialogLine : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsStopDialogLine";
@@ -23,6 +24,7 @@ struct StopDialogLine : red::Event
 };
 RED4EXT_ASSERT_SIZE(StopDialogLine, 0x50);
 } // namespace game::audio::events
+using gameaudioeventsStopDialogLine = game::audio::events::StopDialogLine;
 } // namespace RED4ext
 
 // clang-format on

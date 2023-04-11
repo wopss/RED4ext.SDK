@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game::data { struct MiniGame_Trap_Record; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct GridCell
 {
     static constexpr const char* NAME = "gameuiGridCell";
@@ -26,6 +27,7 @@ struct GridCell
 };
 RED4EXT_ASSERT_SIZE(GridCell, 0x20);
 } // namespace game::ui
+using gameuiGridCell = game::ui::GridCell;
 using GridCell = game::ui::GridCell;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct FoleyGlobalMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioFoleyGlobalMetadata";
@@ -23,6 +24,7 @@ struct FoleyGlobalMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(FoleyGlobalMetadata, 0x48);
 } // namespace audio
+using audioFoleyGlobalMetadata = audio::FoleyGlobalMetadata;
 } // namespace RED4ext
 
 // clang-format on

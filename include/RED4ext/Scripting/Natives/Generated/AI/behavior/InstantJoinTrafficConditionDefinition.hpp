@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct InstantJoinTrafficConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorInstantJoinTrafficConditionDefinition";
@@ -26,6 +27,7 @@ struct InstantJoinTrafficConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(InstantJoinTrafficConditionDefinition, 0x78);
 } // namespace AI::behavior
+using AIbehaviorInstantJoinTrafficConditionDefinition = AI::behavior::InstantJoinTrafficConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

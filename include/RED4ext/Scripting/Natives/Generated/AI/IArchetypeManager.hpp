@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct IArchetypeManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIIArchetypeManager";
@@ -19,6 +20,7 @@ struct IArchetypeManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IArchetypeManager, 0x48);
 } // namespace AI
+using AIIArchetypeManager = AI::IArchetypeManager;
 } // namespace RED4ext
 
 // clang-format on

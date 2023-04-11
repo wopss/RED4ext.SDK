@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct TimeoutNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorTimeoutNodeDefinition";
@@ -23,6 +24,7 @@ struct TimeoutNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TimeoutNodeDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorTimeoutNodeDefinition = AI::behavior::TimeoutNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

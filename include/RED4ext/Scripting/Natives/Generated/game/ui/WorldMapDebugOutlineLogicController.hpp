@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapDebugOutlineLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiWorldMapDebugOutlineLogicController";
@@ -21,6 +22,7 @@ struct WorldMapDebugOutlineLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(WorldMapDebugOutlineLogicController, 0x90);
 } // namespace game::ui
+using gameuiWorldMapDebugOutlineLogicController = game::ui::WorldMapDebugOutlineLogicController;
 using WorldMapDebugOutlineLogicController = game::ui::WorldMapDebugOutlineLogicController;
 } // namespace RED4ext
 

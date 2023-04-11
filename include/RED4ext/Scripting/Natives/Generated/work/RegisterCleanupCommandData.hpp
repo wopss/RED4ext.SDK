@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct RegisterCleanupCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workRegisterCleanupCommandData";
@@ -20,6 +21,7 @@ struct RegisterCleanupCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(RegisterCleanupCommandData, 0x30);
 } // namespace work
+using workRegisterCleanupCommandData = work::RegisterCleanupCommandData;
 } // namespace RED4ext
 
 // clang-format on

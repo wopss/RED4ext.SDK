@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WaterNullAreaNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldWaterNullAreaNode";
@@ -19,6 +20,7 @@ struct WaterNullAreaNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(WaterNullAreaNode, 0x60);
 } // namespace world
+using worldWaterNullAreaNode = world::WaterNullAreaNode;
 } // namespace RED4ext
 
 // clang-format on

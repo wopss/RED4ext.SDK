@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace anim { 
+namespace anim
+{
 struct LipsyncMappingSceneEntry
 {
     static constexpr const char* NAME = "animLipsyncMappingSceneEntry";
@@ -24,6 +25,7 @@ struct LipsyncMappingSceneEntry
 };
 RED4EXT_ASSERT_SIZE(LipsyncMappingSceneEntry, 0x20);
 } // namespace anim
+using animLipsyncMappingSceneEntry = anim::LipsyncMappingSceneEntry;
 } // namespace RED4ext
 
 // clang-format on

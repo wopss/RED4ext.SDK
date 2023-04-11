@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlayVoiceset_NodeType : quest::IVoicesetManager_NodeType
 {
     static constexpr const char* NAME = "questPlayVoiceset_NodeType";
@@ -22,6 +23,7 @@ struct PlayVoiceset_NodeType : quest::IVoicesetManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(PlayVoiceset_NodeType, 0x40);
 } // namespace quest
+using questPlayVoiceset_NodeType = quest::PlayVoiceset_NodeType;
 } // namespace RED4ext
 
 // clang-format on

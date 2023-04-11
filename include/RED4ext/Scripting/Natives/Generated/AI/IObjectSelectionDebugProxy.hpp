@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct IObjectSelectionDebugProxy
 {
     static constexpr const char* NAME = "AIIObjectSelectionDebugProxy";
@@ -19,6 +20,7 @@ struct IObjectSelectionDebugProxy
 };
 RED4EXT_ASSERT_SIZE(IObjectSelectionDebugProxy, 0x8);
 } // namespace AI
+using AIIObjectSelectionDebugProxy = AI::IObjectSelectionDebugProxy;
 } // namespace RED4ext
 
 // clang-format on

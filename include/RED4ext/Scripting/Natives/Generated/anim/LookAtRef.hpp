@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtRef
 {
     static constexpr const char* NAME = "animLookAtRef";
@@ -22,6 +23,7 @@ struct LookAtRef
 };
 RED4EXT_ASSERT_SIZE(LookAtRef, 0x10);
 } // namespace anim
+using animLookAtRef = anim::LookAtRef;
 using LookAtRef = anim::LookAtRef;
 } // namespace RED4ext
 

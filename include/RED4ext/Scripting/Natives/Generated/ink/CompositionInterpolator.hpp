@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CompositionInterpolator
 {
     static constexpr const char* NAME = "inkCompositionInterpolator";
@@ -27,6 +28,7 @@ struct CompositionInterpolator
 };
 RED4EXT_ASSERT_SIZE(CompositionInterpolator, 0x38);
 } // namespace ink
+using inkCompositionInterpolator = ink::CompositionInterpolator;
 } // namespace RED4ext
 
 // clang-format on

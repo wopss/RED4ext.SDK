@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetLocationName_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetLocationName_NodeType";
@@ -26,6 +27,7 @@ struct SetLocationName_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetLocationName_NodeType, 0x68);
 } // namespace quest
+using questSetLocationName_NodeType = quest::SetLocationName_NodeType;
 } // namespace RED4ext
 
 // clang-format on

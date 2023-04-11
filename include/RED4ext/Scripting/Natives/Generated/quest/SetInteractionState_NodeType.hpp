@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetInteractionState_NodeType : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questSetInteractionState_NodeType";
@@ -23,6 +24,7 @@ struct SetInteractionState_NodeType : quest::IInteractiveObjectManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetInteractionState_NodeType, 0x40);
 } // namespace quest
+using questSetInteractionState_NodeType = quest::SetInteractionState_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TimeDilationEvent : red::Event
 {
     static constexpr const char* NAME = "gameTimeDilationEvent";
@@ -20,6 +21,7 @@ struct TimeDilationEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TimeDilationEvent, 0x68);
 } // namespace game
+using gameTimeDilationEvent = game::TimeDilationEvent;
 } // namespace RED4ext
 
 // clang-format on

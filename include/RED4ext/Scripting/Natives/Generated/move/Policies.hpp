@@ -20,7 +20,8 @@ namespace RED4ext
 namespace game { struct Object; }
 namespace game { struct SetupWorkspotActionEvent; }
 
-namespace move { 
+namespace move
+{
 struct Policies : IScriptable
 {
     static constexpr const char* NAME = "movePolicies";
@@ -75,6 +76,7 @@ struct Policies : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Policies, 0x220);
 } // namespace move
+using movePolicies = move::Policies;
 using MovePolicies = move::Policies;
 } // namespace RED4ext
 

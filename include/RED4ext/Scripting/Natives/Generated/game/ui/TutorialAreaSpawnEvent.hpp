@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct Widget; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct TutorialAreaSpawnEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiTutorialAreaSpawnEvent";
@@ -27,6 +28,7 @@ struct TutorialAreaSpawnEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TutorialAreaSpawnEvent, 0x60);
 } // namespace game::ui
+using gameuiTutorialAreaSpawnEvent = game::ui::TutorialAreaSpawnEvent;
 } // namespace RED4ext
 
 // clang-format on

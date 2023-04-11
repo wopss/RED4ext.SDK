@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DebugSystemAccessor : ink::ILayerSystemAccesor
 {
     static constexpr const char* NAME = "inkDebugSystemAccessor";
@@ -20,6 +21,7 @@ struct DebugSystemAccessor : ink::ILayerSystemAccesor
 };
 RED4EXT_ASSERT_SIZE(DebugSystemAccessor, 0x68);
 } // namespace ink
+using inkDebugSystemAccessor = ink::DebugSystemAccessor;
 } // namespace RED4ext
 
 // clang-format on

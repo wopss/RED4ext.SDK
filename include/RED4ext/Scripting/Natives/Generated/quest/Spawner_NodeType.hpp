@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Spawner_NodeType : quest::SpawnManagerNodeType
 {
     static constexpr const char* NAME = "questSpawner_NodeType";
@@ -21,6 +22,7 @@ struct Spawner_NodeType : quest::SpawnManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(Spawner_NodeType, 0x40);
 } // namespace quest
+using questSpawner_NodeType = quest::Spawner_NodeType;
 } // namespace RED4ext
 
 // clang-format on

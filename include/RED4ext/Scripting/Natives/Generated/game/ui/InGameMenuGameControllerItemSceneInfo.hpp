@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InGameMenuGameControllerItemSceneInfo
 {
     static constexpr const char* NAME = "gameuiInGameMenuGameControllerItemSceneInfo";
@@ -24,6 +25,7 @@ struct InGameMenuGameControllerItemSceneInfo
 };
 RED4EXT_ASSERT_SIZE(InGameMenuGameControllerItemSceneInfo, 0x20);
 } // namespace game::ui
+using gameuiInGameMenuGameControllerItemSceneInfo = game::ui::InGameMenuGameControllerItemSceneInfo;
 } // namespace RED4ext
 
 // clang-format on

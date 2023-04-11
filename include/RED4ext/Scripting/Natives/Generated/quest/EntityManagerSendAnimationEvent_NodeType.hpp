@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerSendAnimationEvent_NodeType : quest::IEntityManager_NodeType
 {
     static constexpr const char* NAME = "questEntityManagerSendAnimationEvent_NodeType";
@@ -24,6 +25,7 @@ struct EntityManagerSendAnimationEvent_NodeType : quest::IEntityManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(EntityManagerSendAnimationEvent_NodeType, 0x78);
 } // namespace quest
+using questEntityManagerSendAnimationEvent_NodeType = quest::EntityManagerSendAnimationEvent_NodeType;
 } // namespace RED4ext
 
 // clang-format on

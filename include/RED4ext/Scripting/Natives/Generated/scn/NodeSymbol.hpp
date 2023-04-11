@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct NodeSymbol
 {
     static constexpr const char* NAME = "scnNodeSymbol";
@@ -22,6 +23,7 @@ struct NodeSymbol
 };
 RED4EXT_ASSERT_SIZE(NodeSymbol, 0x10);
 } // namespace scn
+using scnNodeSymbol = scn::NodeSymbol;
 } // namespace RED4ext
 
 // clang-format on

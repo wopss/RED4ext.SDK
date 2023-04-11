@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace loc { 
+namespace loc
+{
 struct PackageLocalizationStringSerializer : red::PackageCustomTypeSerializer
 {
     static constexpr const char* NAME = "locPackageLocalizationStringSerializer";
@@ -20,6 +21,7 @@ struct PackageLocalizationStringSerializer : red::PackageCustomTypeSerializer
 };
 RED4EXT_ASSERT_SIZE(PackageLocalizationStringSerializer, 0x10);
 } // namespace loc
+using locPackageLocalizationStringSerializer = loc::PackageLocalizationStringSerializer;
 } // namespace RED4ext
 
 // clang-format on

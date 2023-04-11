@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SpawnerParams
 {
     static constexpr const char* NAME = "scnSpawnerParams";
@@ -22,6 +23,7 @@ struct SpawnerParams
 };
 RED4EXT_ASSERT_SIZE(SpawnerParams, 0x10);
 } // namespace scn
+using scnSpawnerParams = scn::SpawnerParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct IMessageToken : ISerializable
 {
     static constexpr const char* NAME = "toolsIMessageToken";
@@ -19,6 +20,7 @@ struct IMessageToken : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IMessageToken, 0x30);
 } // namespace tools
+using toolsIMessageToken = tools::IMessageToken;
 } // namespace RED4ext
 
 // clang-format on

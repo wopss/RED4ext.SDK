@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CommandsManager : AI::ICommandsManager
 {
     static constexpr const char* NAME = "AICommandsManager";
@@ -20,6 +21,7 @@ struct CommandsManager : AI::ICommandsManager
 };
 RED4EXT_ASSERT_SIZE(CommandsManager, 0x58);
 } // namespace AI
+using AICommandsManager = AI::CommandsManager;
 using CommandsManager = AI::CommandsManager;
 } // namespace RED4ext
 

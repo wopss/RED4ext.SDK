@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace physics { struct DeferredCollection; }
 
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamCompiledPhysics : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamCompiledPhysics";
@@ -23,6 +24,7 @@ struct MeshParamCompiledPhysics : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamCompiledPhysics, 0x40);
 } // namespace mesh
+using meshMeshParamCompiledPhysics = mesh::MeshParamCompiledPhysics;
 } // namespace RED4ext
 
 // clang-format on

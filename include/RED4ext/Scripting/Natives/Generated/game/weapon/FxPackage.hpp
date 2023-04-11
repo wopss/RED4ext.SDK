@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon { 
+namespace game::weapon
+{
 struct FxPackage : game::weapon::IFxPackage
 {
     static constexpr const char* NAME = "gameweaponFxPackage";
@@ -20,6 +21,7 @@ struct FxPackage : game::weapon::IFxPackage
 };
 RED4EXT_ASSERT_SIZE(FxPackage, 0x3120);
 } // namespace game::weapon
+using gameweaponFxPackage = game::weapon::FxPackage;
 using FxPackage = game::weapon::FxPackage;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AnimationMotionSample
 {
     static constexpr const char* NAME = "scnAnimationMotionSample";
@@ -22,6 +23,7 @@ struct AnimationMotionSample
 };
 RED4EXT_ASSERT_SIZE(AnimationMotionSample, 0x30);
 } // namespace scn
+using scnAnimationMotionSample = scn::AnimationMotionSample;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct SceneTierData; }
 
-namespace scn { 
+namespace scn
+{
 struct PlayerAnimData
 {
     static constexpr const char* NAME = "scnPlayerAnimData";
@@ -25,6 +26,7 @@ struct PlayerAnimData
 };
 RED4EXT_ASSERT_SIZE(PlayerAnimData, 0x18);
 } // namespace scn
+using scnPlayerAnimData = scn::PlayerAnimData;
 } // namespace RED4ext
 
 // clang-format on

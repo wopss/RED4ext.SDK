@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct QuadWidgetReference : ink::LeafWidgetReference
 {
     static constexpr const char* NAME = "inkQuadWidgetReference";
@@ -19,6 +20,7 @@ struct QuadWidgetReference : ink::LeafWidgetReference
 };
 RED4EXT_ASSERT_SIZE(QuadWidgetReference, 0x18);
 } // namespace ink
+using inkQuadWidgetReference = ink::QuadWidgetReference;
 using inkQuadRef = ink::QuadWidgetReference;
 } // namespace RED4ext
 

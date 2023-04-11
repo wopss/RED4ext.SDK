@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct HolocallStateListener : world::IQuestPrefabStateListener
 {
     static constexpr const char* NAME = "questHolocallStateListener";
@@ -20,6 +21,7 @@ struct HolocallStateListener : world::IQuestPrefabStateListener
 };
 RED4EXT_ASSERT_SIZE(HolocallStateListener, 0x48);
 } // namespace quest
+using questHolocallStateListener = quest::HolocallStateListener;
 } // namespace RED4ext
 
 // clang-format on

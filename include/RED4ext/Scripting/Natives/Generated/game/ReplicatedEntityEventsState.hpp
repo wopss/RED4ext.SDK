@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ReplicatedEntityEventsState
 {
     static constexpr const char* NAME = "gameReplicatedEntityEventsState";
@@ -24,6 +25,7 @@ struct ReplicatedEntityEventsState
 };
 RED4EXT_ASSERT_SIZE(ReplicatedEntityEventsState, 0x20);
 } // namespace game
+using gameReplicatedEntityEventsState = game::ReplicatedEntityEventsState;
 } // namespace RED4ext
 
 // clang-format on

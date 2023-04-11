@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetAttitudeGroupForPuppet : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetAttitudeGroupForPuppet";
@@ -21,6 +22,7 @@ struct CharacterManagerParameters_SetAttitudeGroupForPuppet : quest::ICharacterM
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetAttitudeGroupForPuppet, 0x78);
 } // namespace quest
+using questCharacterManagerParameters_SetAttitudeGroupForPuppet = quest::CharacterManagerParameters_SetAttitudeGroupForPuppet;
 } // namespace RED4ext
 
 // clang-format on

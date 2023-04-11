@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SetupSyncWorkspotRelationshipsEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnSetupSyncWorkspotRelationshipsEvent";
@@ -23,6 +24,7 @@ struct SetupSyncWorkspotRelationshipsEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(SetupSyncWorkspotRelationshipsEvent, 0x70);
 } // namespace scn
+using scnSetupSyncWorkspotRelationshipsEvent = scn::SetupSyncWorkspotRelationshipsEvent;
 } // namespace RED4ext
 
 // clang-format on

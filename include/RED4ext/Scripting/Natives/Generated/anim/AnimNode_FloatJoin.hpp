@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FloatJoin : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_FloatJoin";
@@ -22,6 +23,7 @@ struct AnimNode_FloatJoin : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FloatJoin, 0x88);
 } // namespace anim
+using animAnimNode_FloatJoin = anim::AnimNode_FloatJoin;
 } // namespace RED4ext
 
 // clang-format on

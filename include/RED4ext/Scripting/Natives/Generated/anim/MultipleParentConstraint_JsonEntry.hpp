@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct MultipleParentConstraint_JsonEntry
 {
     static constexpr const char* NAME = "animMultipleParentConstraint_JsonEntry";
@@ -29,6 +30,7 @@ struct MultipleParentConstraint_JsonEntry
 };
 RED4EXT_ASSERT_SIZE(MultipleParentConstraint_JsonEntry, 0x50);
 } // namespace anim
+using animMultipleParentConstraint_JsonEntry = anim::MultipleParentConstraint_JsonEntry;
 } // namespace RED4ext
 
 // clang-format on

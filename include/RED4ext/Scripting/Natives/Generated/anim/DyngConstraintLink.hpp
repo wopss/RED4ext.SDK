@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct DyngConstraintLink : anim::IDyngConstraint
 {
     static constexpr const char* NAME = "animDyngConstraintLink";
@@ -29,6 +30,7 @@ struct DyngConstraintLink : anim::IDyngConstraint
 };
 RED4EXT_ASSERT_SIZE(DyngConstraintLink, 0xB0);
 } // namespace anim
+using animDyngConstraintLink = anim::DyngConstraintLink;
 } // namespace RED4ext
 
 // clang-format on

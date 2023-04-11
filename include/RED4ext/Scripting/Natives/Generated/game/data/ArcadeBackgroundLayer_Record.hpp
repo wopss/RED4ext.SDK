@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ArcadeBackgroundLayer_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataArcadeBackgroundLayer_Record";
@@ -20,6 +21,7 @@ struct ArcadeBackgroundLayer_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ArcadeBackgroundLayer_Record, 0x50);
 } // namespace game::data
+using gamedataArcadeBackgroundLayer_Record = game::data::ArcadeBackgroundLayer_Record;
 using ArcadeBackgroundLayer_Record = game::data::ArcadeBackgroundLayer_Record;
 } // namespace RED4ext
 

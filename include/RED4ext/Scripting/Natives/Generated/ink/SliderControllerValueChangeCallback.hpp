@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SliderControllerValueChangeCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkSliderControllerValueChangeCallback";
@@ -20,6 +21,7 @@ struct SliderControllerValueChangeCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(SliderControllerValueChangeCallback, 0x38);
 } // namespace ink
+using inkSliderControllerValueChangeCallback = ink::SliderControllerValueChangeCallback;
 } // namespace RED4ext
 
 // clang-format on

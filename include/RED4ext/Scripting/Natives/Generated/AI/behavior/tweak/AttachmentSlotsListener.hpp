@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct AttachmentSlotsListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "AIbehaviortweakAttachmentSlotsListener";
@@ -20,6 +21,7 @@ struct AttachmentSlotsListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotsListener, 0x90);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakAttachmentSlotsListener = AI::behavior::tweak::AttachmentSlotsListener;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SermoPoseInfo
 {
     static constexpr const char* NAME = "animSermoPoseInfo";
@@ -21,6 +22,7 @@ struct SermoPoseInfo
 };
 RED4EXT_ASSERT_SIZE(SermoPoseInfo, 0x4);
 } // namespace anim
+using animSermoPoseInfo = anim::SermoPoseInfo;
 } // namespace RED4ext
 
 // clang-format on

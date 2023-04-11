@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn::loc { 
+namespace scn::loc
+{
 struct LocStoreEmbeddedVariantDescriptorEntry
 {
     static constexpr const char* NAME = "scnlocLocStoreEmbeddedVariantDescriptorEntry";
@@ -29,6 +30,7 @@ struct LocStoreEmbeddedVariantDescriptorEntry
 };
 RED4EXT_ASSERT_SIZE(LocStoreEmbeddedVariantDescriptorEntry, 0x28);
 } // namespace scn::loc
+using scnlocLocStoreEmbeddedVariantDescriptorEntry = scn::loc::LocStoreEmbeddedVariantDescriptorEntry;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CombatNodeParams_RestrictMovementToArea : quest::CombatNodeParams
 {
     static constexpr const char* NAME = "questCombatNodeParams_RestrictMovementToArea";
@@ -21,6 +22,7 @@ struct CombatNodeParams_RestrictMovementToArea : quest::CombatNodeParams
 };
 RED4EXT_ASSERT_SIZE(CombatNodeParams_RestrictMovementToArea, 0x48);
 } // namespace quest
+using questCombatNodeParams_RestrictMovementToArea = quest::CombatNodeParams_RestrictMovementToArea;
 } // namespace RED4ext
 
 // clang-format on

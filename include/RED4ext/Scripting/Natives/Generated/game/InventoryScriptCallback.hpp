@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InventoryScriptCallback : IScriptable
 {
     static constexpr const char* NAME = "gameInventoryScriptCallback";
@@ -21,6 +22,7 @@ struct InventoryScriptCallback : IScriptable
 };
 RED4EXT_ASSERT_SIZE(InventoryScriptCallback, 0x50);
 } // namespace game
+using gameInventoryScriptCallback = game::InventoryScriptCallback;
 using InventoryScriptCallback = game::InventoryScriptCallback;
 } // namespace RED4ext
 

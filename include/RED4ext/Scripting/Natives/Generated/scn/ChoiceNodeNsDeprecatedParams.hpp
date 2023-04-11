@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsDeprecatedParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsDeprecatedParams";
@@ -22,6 +23,7 @@ struct ChoiceNodeNsDeprecatedParams
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsDeprecatedParams, 0x8);
 } // namespace scn
+using scnChoiceNodeNsDeprecatedParams = scn::ChoiceNodeNsDeprecatedParams;
 } // namespace RED4ext
 
 // clang-format on

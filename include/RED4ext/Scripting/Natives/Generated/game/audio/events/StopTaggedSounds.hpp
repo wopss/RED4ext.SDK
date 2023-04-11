@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct StopTaggedSounds : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsStopTaggedSounds";
@@ -21,6 +22,7 @@ struct StopTaggedSounds : red::Event
 };
 RED4EXT_ASSERT_SIZE(StopTaggedSounds, 0x48);
 } // namespace game::audio::events
+using gameaudioeventsStopTaggedSounds = game::audio::events::StopTaggedSounds;
 } // namespace RED4ext
 
 // clang-format on

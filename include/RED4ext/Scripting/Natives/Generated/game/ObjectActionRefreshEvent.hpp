@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectActionRefreshEvent : red::Event
 {
     static constexpr const char* NAME = "gameObjectActionRefreshEvent";
@@ -19,6 +20,7 @@ struct ObjectActionRefreshEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ObjectActionRefreshEvent, 0x40);
 } // namespace game
+using gameObjectActionRefreshEvent = game::ObjectActionRefreshEvent;
 } // namespace RED4ext
 
 // clang-format on

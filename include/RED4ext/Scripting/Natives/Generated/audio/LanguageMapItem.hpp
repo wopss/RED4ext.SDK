@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LanguageMapItem : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioLanguageMapItem";
@@ -21,6 +22,7 @@ struct LanguageMapItem : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(LanguageMapItem, 0x80);
 } // namespace audio
+using audioLanguageMapItem = audio::LanguageMapItem;
 } // namespace RED4ext
 
 // clang-format on

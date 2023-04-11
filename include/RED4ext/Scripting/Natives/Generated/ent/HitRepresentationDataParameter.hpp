@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct HitRepresentationDataParameter : ent::EntityParameter
 {
     static constexpr const char* NAME = "entHitRepresentationDataParameter";
@@ -22,6 +23,7 @@ struct HitRepresentationDataParameter : ent::EntityParameter
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationDataParameter, 0x40);
 } // namespace ent
+using entHitRepresentationDataParameter = ent::HitRepresentationDataParameter;
 } // namespace RED4ext
 
 // clang-format on

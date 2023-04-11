@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ArgumentReference : AI::ArgumentDefinition
 {
     static constexpr const char* NAME = "AIArgumentReference";
@@ -26,6 +27,7 @@ struct ArgumentReference : AI::ArgumentDefinition
 };
 RED4EXT_ASSERT_SIZE(ArgumentReference, 0x70);
 } // namespace AI
+using AIArgumentReference = AI::ArgumentReference;
 } // namespace RED4ext
 
 // clang-format on

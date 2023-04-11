@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace text { struct TextParameterSet; }
 
-namespace game { 
+namespace game
+{
 struct UILocalizationDataPackage : IScriptable
 {
     static constexpr const char* NAME = "gameUILocalizationDataPackage";
@@ -32,6 +33,7 @@ struct UILocalizationDataPackage : IScriptable
 };
 RED4EXT_ASSERT_SIZE(UILocalizationDataPackage, 0xA8);
 } // namespace game
+using gameUILocalizationDataPackage = game::UILocalizationDataPackage;
 using UILocalizationDataPackage = game::UILocalizationDataPackage;
 } // namespace RED4ext
 

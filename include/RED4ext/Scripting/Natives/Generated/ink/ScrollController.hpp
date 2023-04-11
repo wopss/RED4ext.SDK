@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScrollController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkScrollController";
@@ -44,6 +45,7 @@ struct ScrollController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ScrollController, 0x180);
 } // namespace ink
+using inkScrollController = ink::ScrollController;
 } // namespace RED4ext
 
 // clang-format on

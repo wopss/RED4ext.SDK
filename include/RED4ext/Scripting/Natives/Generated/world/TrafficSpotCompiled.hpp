@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficSpotCompiled : ISerializable
 {
     static constexpr const char* NAME = "worldTrafficSpotCompiled";
@@ -20,6 +21,7 @@ struct TrafficSpotCompiled : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TrafficSpotCompiled, 0x58);
 } // namespace world
+using worldTrafficSpotCompiled = world::TrafficSpotCompiled;
 } // namespace RED4ext
 
 // clang-format on

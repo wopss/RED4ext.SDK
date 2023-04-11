@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct LanguageSpecificImageController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkLanguageSpecificImageController";
@@ -30,6 +31,7 @@ struct LanguageSpecificImageController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(LanguageSpecificImageController, 0xA8);
 } // namespace ink
+using inkLanguageSpecificImageController = ink::LanguageSpecificImageController;
 using LanguageSpecificImageController = ink::LanguageSpecificImageController;
 } // namespace RED4ext
 

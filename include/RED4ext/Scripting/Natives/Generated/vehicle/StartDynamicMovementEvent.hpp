@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct StartDynamicMovementEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleStartDynamicMovementEvent";
@@ -22,6 +23,7 @@ struct StartDynamicMovementEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StartDynamicMovementEvent, 0x60);
 } // namespace vehicle
+using vehicleStartDynamicMovementEvent = vehicle::StartDynamicMovementEvent;
 } // namespace RED4ext
 
 // clang-format on

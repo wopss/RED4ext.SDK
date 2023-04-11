@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct ArcadeSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameuiarcadeArcadeSystem";
@@ -20,6 +21,7 @@ struct ArcadeSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ArcadeSystem, 0x50);
 } // namespace game::ui::arcade
+using gameuiarcadeArcadeSystem = game::ui::arcade::ArcadeSystem;
 } // namespace RED4ext
 
 // clang-format on

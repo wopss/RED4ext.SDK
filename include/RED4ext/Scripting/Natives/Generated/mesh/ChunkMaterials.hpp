@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct ChunkMaterials
 {
     static constexpr const char* NAME = "meshChunkMaterials";
@@ -21,6 +22,7 @@ struct ChunkMaterials
 };
 RED4EXT_ASSERT_SIZE(ChunkMaterials, 0x10);
 } // namespace mesh
+using meshChunkMaterials = mesh::ChunkMaterials;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EffectAttachmentComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entEffectAttachmentComponent";
@@ -20,6 +21,7 @@ struct EffectAttachmentComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(EffectAttachmentComponent, 0xB0);
 } // namespace ent
+using entEffectAttachmentComponent = ent::EffectAttachmentComponent;
 } // namespace RED4ext
 
 // clang-format on

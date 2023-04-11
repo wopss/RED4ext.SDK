@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScrollAreaWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkScrollAreaWidget";
@@ -28,6 +29,7 @@ struct ScrollAreaWidget : ink::CompoundWidget
 };
 RED4EXT_ASSERT_SIZE(ScrollAreaWidget, 0x260);
 } // namespace ink
+using inkScrollAreaWidget = ink::ScrollAreaWidget;
 using inkScrollArea = ink::ScrollAreaWidget;
 } // namespace RED4ext
 

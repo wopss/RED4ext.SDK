@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CooldownSystem : game::ICooldownSystem
 {
     static constexpr const char* NAME = "gameCooldownSystem";
@@ -20,6 +21,7 @@ struct CooldownSystem : game::ICooldownSystem
 };
 RED4EXT_ASSERT_SIZE(CooldownSystem, 0xD8);
 } // namespace game
+using gameCooldownSystem = game::CooldownSystem;
 } // namespace RED4ext
 
 // clang-format on

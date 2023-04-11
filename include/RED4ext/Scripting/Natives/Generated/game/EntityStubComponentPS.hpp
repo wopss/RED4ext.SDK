@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityStubComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameEntityStubComponentPS";
@@ -32,6 +33,7 @@ struct EntityStubComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(EntityStubComponentPS, 0xE0);
 } // namespace game
+using gameEntityStubComponentPS = game::EntityStubComponentPS;
 } // namespace RED4ext
 
 // clang-format on

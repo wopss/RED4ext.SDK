@@ -15,7 +15,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace ent { struct IComponent; }
 
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemHitInfo
 {
     static constexpr const char* NAME = "gametargetingSystemHitInfo";
@@ -33,6 +34,7 @@ struct SystemHitInfo
 };
 RED4EXT_ASSERT_SIZE(SystemHitInfo, 0x60);
 } // namespace game::targeting
+using gametargetingSystemHitInfo = game::targeting::SystemHitInfo;
 using TargetHitInfo = game::targeting::SystemHitInfo;
 } // namespace RED4ext
 

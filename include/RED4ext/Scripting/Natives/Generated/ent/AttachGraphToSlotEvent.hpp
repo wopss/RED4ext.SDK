@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AttachGraphToSlotEvent : red::Event
 {
     static constexpr const char* NAME = "entAttachGraphToSlotEvent";
@@ -20,6 +21,7 @@ struct AttachGraphToSlotEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AttachGraphToSlotEvent, 0x58);
 } // namespace ent
+using entAttachGraphToSlotEvent = ent::AttachGraphToSlotEvent;
 } // namespace RED4ext
 
 // clang-format on

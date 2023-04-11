@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_SendStatusEffect : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_SendStatusEffect";
@@ -19,6 +20,7 @@ struct EffectExecutor_SendStatusEffect : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_SendStatusEffect, 0x48);
 } // namespace game
+using gameEffectExecutor_SendStatusEffect = game::EffectExecutor_SendStatusEffect;
 } // namespace RED4ext
 
 // clang-format on

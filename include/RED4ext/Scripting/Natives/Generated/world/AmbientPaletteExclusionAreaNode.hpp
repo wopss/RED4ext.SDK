@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AmbientPaletteExclusionAreaNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldAmbientPaletteExclusionAreaNode";
@@ -22,6 +23,7 @@ struct AmbientPaletteExclusionAreaNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(AmbientPaletteExclusionAreaNode, 0x70);
 } // namespace world
+using worldAmbientPaletteExclusionAreaNode = world::AmbientPaletteExclusionAreaNode;
 } // namespace RED4ext
 
 // clang-format on

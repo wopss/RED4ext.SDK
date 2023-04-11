@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SignalHandlerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "AISignalHandlerComponent";
@@ -20,6 +21,7 @@ struct SignalHandlerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(SignalHandlerComponent, 0xE0);
 } // namespace AI
+using AISignalHandlerComponent = AI::SignalHandlerComponent;
 } // namespace RED4ext
 
 // clang-format on

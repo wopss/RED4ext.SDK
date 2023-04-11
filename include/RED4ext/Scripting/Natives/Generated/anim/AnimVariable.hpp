@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimVariable : ISerializable
 {
     static constexpr const char* NAME = "animAnimVariable";
@@ -21,6 +22,7 @@ struct AnimVariable : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimVariable, 0x38);
 } // namespace anim
+using animAnimVariable = anim::AnimVariable;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct LootTokenManager_NodeTypeParams
 {
     static constexpr const char* NAME = "questLootTokenManager_NodeTypeParams";
@@ -23,6 +24,7 @@ struct LootTokenManager_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(LootTokenManager_NodeTypeParams, 0x10);
 } // namespace quest
+using questLootTokenManager_NodeTypeParams = quest::LootTokenManager_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

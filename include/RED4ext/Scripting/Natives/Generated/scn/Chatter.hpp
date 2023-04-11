@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace scn { struct VoicesetComponent; }
 
-namespace scn { 
+namespace scn
+{
 struct Chatter
 {
     static constexpr const char* NAME = "scnChatter";
@@ -26,6 +27,7 @@ struct Chatter
 };
 RED4EXT_ASSERT_SIZE(Chatter, 0x50);
 } // namespace scn
+using scnChatter = scn::Chatter;
 } // namespace RED4ext
 
 // clang-format on

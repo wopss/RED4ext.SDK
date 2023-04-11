@@ -22,7 +22,8 @@ namespace RED4ext
 {
 namespace anim { struct IRigIkSetup; }
 
-namespace anim { 
+namespace anim
+{
 struct Rig : CResource
 {
     static constexpr const char* NAME = "animRig";
@@ -52,6 +53,7 @@ struct Rig : CResource
 };
 RED4EXT_ASSERT_SIZE(Rig, 0x180);
 } // namespace anim
+using animRig = anim::Rig;
 } // namespace RED4ext
 
 // clang-format on

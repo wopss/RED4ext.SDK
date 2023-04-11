@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DisableTeleportingMonitoring_NodeType : quest::IWorldDataManagerNodeType
 {
     static constexpr const char* NAME = "questDisableTeleportingMonitoring_NodeType";
@@ -19,6 +20,7 @@ struct DisableTeleportingMonitoring_NodeType : quest::IWorldDataManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(DisableTeleportingMonitoring_NodeType, 0x38);
 } // namespace quest
+using questDisableTeleportingMonitoring_NodeType = quest::DisableTeleportingMonitoring_NodeType;
 } // namespace RED4ext
 
 // clang-format on

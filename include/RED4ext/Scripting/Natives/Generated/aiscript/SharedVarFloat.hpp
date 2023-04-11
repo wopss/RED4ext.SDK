@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace aiscript { 
+namespace aiscript
+{
 struct SharedVarFloat
 {
     static constexpr const char* NAME = "aiscriptSharedVarFloat";
@@ -21,6 +22,7 @@ struct SharedVarFloat
 };
 RED4EXT_ASSERT_SIZE(SharedVarFloat, 0x10);
 } // namespace aiscript
+using aiscriptSharedVarFloat = aiscript::SharedVarFloat;
 using SharedVarFloat = aiscript::SharedVarFloat;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct CoverTypeCondition : work::IWorkspotCondition
 {
     static constexpr const char* NAME = "workCoverTypeCondition";
@@ -21,6 +22,7 @@ struct CoverTypeCondition : work::IWorkspotCondition
 };
 RED4EXT_ASSERT_SIZE(CoverTypeCondition, 0x40);
 } // namespace work
+using workCoverTypeCondition = work::CoverTypeCondition;
 } // namespace RED4ext
 
 // clang-format on

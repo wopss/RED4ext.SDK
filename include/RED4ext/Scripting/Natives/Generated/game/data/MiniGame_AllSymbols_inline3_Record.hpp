@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct MiniGame_AllSymbols_inline3_Record : game::data::MiniGame_SymbolsWithRarity_Record
 {
     static constexpr const char* NAME = "gamedataMiniGame_AllSymbols_inline3_Record";
@@ -19,6 +20,7 @@ struct MiniGame_AllSymbols_inline3_Record : game::data::MiniGame_SymbolsWithRari
 };
 RED4EXT_ASSERT_SIZE(MiniGame_AllSymbols_inline3_Record, 0x58);
 } // namespace game::data
+using gamedataMiniGame_AllSymbols_inline3_Record = game::data::MiniGame_AllSymbols_inline3_Record;
 using MiniGame_AllSymbols_inline3_Record = game::data::MiniGame_AllSymbols_inline3_Record;
 } // namespace RED4ext
 

@@ -16,7 +16,8 @@ namespace RED4ext
 namespace scn { struct IInterruptionOperation; }
 namespace scn { struct SceneResource; }
 
-namespace scn { 
+namespace scn
+{
 struct InterestingConversationData : ISerializable
 {
     static constexpr const char* NAME = "scnInterestingConversationData";
@@ -27,6 +28,7 @@ struct InterestingConversationData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InterestingConversationData, 0x48);
 } // namespace scn
+using scnInterestingConversationData = scn::InterestingConversationData;
 } // namespace RED4ext
 
 // clang-format on

@@ -27,11 +27,11 @@ struct Multilayer_Setup;
 namespace world { struct AutoFoliageMapping; }
 namespace world { struct EnvironmentDefinition; }
 namespace world { struct NodesGroup; }
-namespace world { struct Prefab; }
 namespace world { struct PrefabMetadata; }
 namespace world { struct PrefabVariantsList; }
 
-namespace world { 
+namespace world
+{
 struct Prefab : res::StreamedResource
 {
     static constexpr const char* NAME = "worldPrefab";
@@ -76,6 +76,7 @@ struct Prefab : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(Prefab, 0x2C0);
 } // namespace world
+using worldPrefab = world::Prefab;
 } // namespace RED4ext
 
 // clang-format on

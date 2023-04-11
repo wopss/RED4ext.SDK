@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct KeyUiSoundPairDictionaryItem : audio::InlinedAudioMetadata
 {
     static constexpr const char* NAME = "audioKeyUiSoundPairDictionaryItem";
@@ -23,6 +24,7 @@ struct KeyUiSoundPairDictionaryItem : audio::InlinedAudioMetadata
 };
 RED4EXT_ASSERT_SIZE(KeyUiSoundPairDictionaryItem, 0x50);
 } // namespace audio
+using audioKeyUiSoundPairDictionaryItem = audio::KeyUiSoundPairDictionaryItem;
 } // namespace RED4ext
 
 // clang-format on

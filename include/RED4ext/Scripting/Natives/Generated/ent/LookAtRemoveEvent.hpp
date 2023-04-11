@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LookAtRemoveEvent : red::Event
 {
     static constexpr const char* NAME = "entLookAtRemoveEvent";
@@ -24,6 +25,7 @@ struct LookAtRemoveEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(LookAtRemoveEvent, 0x58);
 } // namespace ent
+using entLookAtRemoveEvent = ent::LookAtRemoveEvent;
 using LookAtRemoveEvent = ent::LookAtRemoveEvent;
 } // namespace RED4ext
 

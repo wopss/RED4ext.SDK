@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct PhaseVariant : game::mappins::IPointOfInterestVariant
 {
     static constexpr const char* NAME = "gamemappinsPhaseVariant";
@@ -23,6 +24,7 @@ struct PhaseVariant : game::mappins::IPointOfInterestVariant
 };
 RED4EXT_ASSERT_SIZE(PhaseVariant, 0x40);
 } // namespace game::mappins
+using gamemappinsPhaseVariant = game::mappins::PhaseVariant;
 } // namespace RED4ext
 
 // clang-format on

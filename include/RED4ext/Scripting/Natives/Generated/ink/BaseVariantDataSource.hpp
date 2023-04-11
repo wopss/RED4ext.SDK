@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct BaseVariantDataSource : ink::AbstractDataSourceWrapper
 {
     static constexpr const char* NAME = "inkBaseVariantDataSource";
@@ -19,6 +20,7 @@ struct BaseVariantDataSource : ink::AbstractDataSourceWrapper
 };
 RED4EXT_ASSERT_SIZE(BaseVariantDataSource, 0x48);
 } // namespace ink
+using inkBaseVariantDataSource = ink::BaseVariantDataSource;
 using BaseVariantDataSource = ink::BaseVariantDataSource;
 } // namespace RED4ext
 

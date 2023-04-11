@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Event : IScriptable
 {
     static constexpr const char* NAME = "inkanimEvent";
@@ -21,6 +22,7 @@ struct Event : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Event, 0x48);
 } // namespace ink::anim
+using inkanimEvent = ink::anim::Event;
 using inkAnimEvent = ink::anim::Event;
 } // namespace RED4ext
 

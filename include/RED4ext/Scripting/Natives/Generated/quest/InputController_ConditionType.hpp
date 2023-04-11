@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct InputController_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questInputController_ConditionType";
@@ -22,6 +23,7 @@ struct InputController_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(InputController_ConditionType, 0x40);
 } // namespace quest
+using questInputController_ConditionType = quest::InputController_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

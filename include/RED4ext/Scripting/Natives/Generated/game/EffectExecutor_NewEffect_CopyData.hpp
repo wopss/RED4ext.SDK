@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_NewEffect_CopyData : game::EffectExecutor_NewEffect
 {
     static constexpr const char* NAME = "gameEffectExecutor_NewEffect_CopyData";
@@ -19,6 +20,7 @@ struct EffectExecutor_NewEffect_CopyData : game::EffectExecutor_NewEffect
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_NewEffect_CopyData, 0x60);
 } // namespace game
+using gameEffectExecutor_NewEffect_CopyData = game::EffectExecutor_NewEffect_CopyData;
 } // namespace RED4ext
 
 // clang-format on

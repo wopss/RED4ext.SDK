@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct DeferredCollection : ISerializable
 {
     static constexpr const char* NAME = "physicsDeferredCollection";
@@ -22,6 +23,7 @@ struct DeferredCollection : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DeferredCollection, 0x98);
 } // namespace physics
+using physicsDeferredCollection = physics::DeferredCollection;
 } // namespace RED4ext
 
 // clang-format on

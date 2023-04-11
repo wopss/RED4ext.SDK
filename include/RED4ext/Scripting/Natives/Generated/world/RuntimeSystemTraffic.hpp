@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemTraffic : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemTraffic";
@@ -20,6 +21,7 @@ struct RuntimeSystemTraffic : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemTraffic, 0x9280);
 } // namespace world
+using worldRuntimeSystemTraffic = world::RuntimeSystemTraffic;
 } // namespace RED4ext
 
 // clang-format on

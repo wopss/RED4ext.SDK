@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct VehicleAIPanicDrivingSettings_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleAIPanicDrivingSettings_Record";
@@ -20,6 +21,7 @@ struct VehicleAIPanicDrivingSettings_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(VehicleAIPanicDrivingSettings_Record, 0x60);
 } // namespace game::data
+using gamedataVehicleAIPanicDrivingSettings_Record = game::data::VehicleAIPanicDrivingSettings_Record;
 using VehicleAIPanicDrivingSettings_Record = game::data::VehicleAIPanicDrivingSettings_Record;
 } // namespace RED4ext
 

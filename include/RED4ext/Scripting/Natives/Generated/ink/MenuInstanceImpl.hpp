@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuInstanceImpl : ink::MenuInstance
 {
     static constexpr const char* NAME = "inkMenuInstanceImpl";
@@ -20,6 +21,7 @@ struct MenuInstanceImpl : ink::MenuInstance
 };
 RED4EXT_ASSERT_SIZE(MenuInstanceImpl, 0x120);
 } // namespace ink
+using inkMenuInstanceImpl = ink::MenuInstanceImpl;
 } // namespace RED4ext
 
 // clang-format on

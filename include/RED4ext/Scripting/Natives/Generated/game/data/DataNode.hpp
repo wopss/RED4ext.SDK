@@ -13,9 +13,9 @@
 
 namespace RED4ext
 {
-namespace game::data { struct DataNode; }
 
-namespace game::data { 
+namespace game::data
+{
 struct DataNode : ISerializable
 {
     static constexpr const char* NAME = "gamedataDataNode";
@@ -29,6 +29,7 @@ struct DataNode : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DataNode, 0x98);
 } // namespace game::data
+using gamedataDataNode = game::data::DataNode;
 } // namespace RED4ext
 
 // clang-format on

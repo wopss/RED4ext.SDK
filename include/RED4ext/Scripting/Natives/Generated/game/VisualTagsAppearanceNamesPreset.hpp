@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VisualTagsAppearanceNamesPreset : ISerializable
 {
     static constexpr const char* NAME = "gameVisualTagsAppearanceNamesPreset";
@@ -23,6 +24,7 @@ struct VisualTagsAppearanceNamesPreset : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VisualTagsAppearanceNamesPreset, 0x70);
 } // namespace game
+using gameVisualTagsAppearanceNamesPreset = game::VisualTagsAppearanceNamesPreset;
 } // namespace RED4ext
 
 // clang-format on

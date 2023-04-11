@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_Scripted : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_Scripted";
@@ -19,6 +20,7 @@ struct EffectObjectProvider_Scripted : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_Scripted, 0x40);
 } // namespace game
+using gameEffectObjectProvider_Scripted = game::EffectObjectProvider_Scripted;
 using EffectObjectProvider_Scripted = game::EffectObjectProvider_Scripted;
 } // namespace RED4ext
 

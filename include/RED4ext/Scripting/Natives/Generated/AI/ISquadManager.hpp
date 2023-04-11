@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ISquadManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIISquadManager";
@@ -20,6 +21,7 @@ struct ISquadManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISquadManager, 0x80);
 } // namespace AI
+using AIISquadManager = AI::ISquadManager;
 } // namespace RED4ext
 
 // clang-format on

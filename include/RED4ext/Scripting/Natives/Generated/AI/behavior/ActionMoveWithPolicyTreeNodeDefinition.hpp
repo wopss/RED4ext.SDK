@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ActionMoveWithPolicyTreeNodeDefinition : AI::behavior::ActionTreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorActionMoveWithPolicyTreeNodeDefinition";
@@ -21,6 +22,7 @@ struct ActionMoveWithPolicyTreeNodeDefinition : AI::behavior::ActionTreeNodeDefi
 };
 RED4EXT_ASSERT_SIZE(ActionMoveWithPolicyTreeNodeDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorActionMoveWithPolicyTreeNodeDefinition = AI::behavior::ActionMoveWithPolicyTreeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence
+{
 struct BumpComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceBumpComponent";
@@ -32,6 +33,7 @@ struct BumpComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(BumpComponent, 0x400);
 } // namespace game::influence
+using gameinfluenceBumpComponent = game::influence::BumpComponent;
 using BumpComponent = game::influence::BumpComponent;
 } // namespace RED4ext
 

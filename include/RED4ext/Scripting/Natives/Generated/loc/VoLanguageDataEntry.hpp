@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct JsonResource;
 
-namespace loc { 
+namespace loc
+{
 struct VoLanguageDataEntry
 {
     static constexpr const char* NAME = "locVoLanguageDataEntry";
@@ -27,6 +28,7 @@ struct VoLanguageDataEntry
 };
 RED4EXT_ASSERT_SIZE(VoLanguageDataEntry, 0x28);
 } // namespace loc
+using locVoLanguageDataEntry = loc::VoLanguageDataEntry;
 } // namespace RED4ext
 
 // clang-format on

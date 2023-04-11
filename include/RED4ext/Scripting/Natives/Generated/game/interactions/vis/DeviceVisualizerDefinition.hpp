@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game::interactions::vis { struct IVisualizerTimeProvider; }
 
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct DeviceVisualizerDefinition : game::interactions::vis::IVisualizerDefinition
 {
     static constexpr const char* NAME = "gameinteractionsvisDeviceVisualizerDefinition";
@@ -32,6 +33,7 @@ struct DeviceVisualizerDefinition : game::interactions::vis::IVisualizerDefiniti
 };
 RED4EXT_ASSERT_SIZE(DeviceVisualizerDefinition, 0x88);
 } // namespace game::interactions::vis
+using gameinteractionsvisDeviceVisualizerDefinition = game::interactions::vis::DeviceVisualizerDefinition;
 } // namespace RED4ext
 
 // clang-format on

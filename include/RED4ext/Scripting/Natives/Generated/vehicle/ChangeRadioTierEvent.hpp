@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ChangeRadioTierEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleChangeRadioTierEvent";
@@ -20,6 +21,7 @@ struct ChangeRadioTierEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ChangeRadioTierEvent, 0x48);
 } // namespace vehicle
+using vehicleChangeRadioTierEvent = vehicle::ChangeRadioTierEvent;
 using ChangeRadioTierEvent = vehicle::ChangeRadioTierEvent;
 } // namespace RED4ext
 

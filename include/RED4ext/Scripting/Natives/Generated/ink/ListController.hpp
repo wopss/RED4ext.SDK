@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ListController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkListController";
@@ -28,6 +29,7 @@ struct ListController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ListController, 0x128);
 } // namespace ink
+using inkListController = ink::ListController;
 using ListController = ink::ListController;
 } // namespace RED4ext
 

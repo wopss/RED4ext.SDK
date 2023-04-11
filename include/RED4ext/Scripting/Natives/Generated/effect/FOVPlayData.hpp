@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct FOVPlayData : effect::PlacedTrackItemPlayData
 {
     static constexpr const char* NAME = "effectFOVPlayData";
@@ -20,6 +21,7 @@ struct FOVPlayData : effect::PlacedTrackItemPlayData
 };
 RED4EXT_ASSERT_SIZE(FOVPlayData, 0x40);
 } // namespace effect
+using effectFOVPlayData = effect::FOVPlayData;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,7 +17,8 @@ struct CResource;
 namespace audio { struct LocomotionCustomActionVfxDictionary; }
 namespace audio { struct LocomotionStateVfxDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct LocomotionWaterSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioLocomotionWaterSettings";
@@ -36,6 +37,7 @@ struct LocomotionWaterSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(LocomotionWaterSettings, 0xA0);
 } // namespace audio
+using audioLocomotionWaterSettings = audio::LocomotionWaterSettings;
 } // namespace RED4ext
 
 // clang-format on

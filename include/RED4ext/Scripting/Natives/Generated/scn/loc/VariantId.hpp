@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn::loc { 
+namespace scn::loc
+{
 struct VariantId
 {
     static constexpr const char* NAME = "scnlocVariantId";
@@ -20,6 +21,7 @@ struct VariantId
 };
 RED4EXT_ASSERT_SIZE(VariantId, 0x8);
 } // namespace scn::loc
+using scnlocVariantId = scn::loc::VariantId;
 } // namespace RED4ext
 
 // clang-format on

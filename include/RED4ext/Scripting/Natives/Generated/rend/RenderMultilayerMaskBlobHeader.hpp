@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderMultilayerMaskBlobHeader
 {
     static constexpr const char* NAME = "rendRenderMultilayerMaskBlobHeader";
@@ -28,6 +29,7 @@ struct RenderMultilayerMaskBlobHeader
 };
 RED4EXT_ASSERT_SIZE(RenderMultilayerMaskBlobHeader, 0x28);
 } // namespace rend
+using rendRenderMultilayerMaskBlobHeader = rend::RenderMultilayerMaskBlobHeader;
 } // namespace RED4ext
 
 // clang-format on

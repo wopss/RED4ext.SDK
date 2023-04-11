@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ReminderCondition : ISerializable
 {
     static constexpr const char* NAME = "scnReminderCondition";
@@ -37,6 +38,7 @@ struct ReminderCondition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ReminderCondition, 0xB8);
 } // namespace scn
+using scnReminderCondition = scn::ReminderCondition;
 } // namespace RED4ext
 
 // clang-format on

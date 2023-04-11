@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AudioCharacterManagerBreathing_NodeSubType : quest::IAudioCharacterManager_NodeSubType
 {
     static constexpr const char* NAME = "questAudioCharacterManagerBreathing_NodeSubType";
@@ -19,6 +20,7 @@ struct AudioCharacterManagerBreathing_NodeSubType : quest::IAudioCharacterManage
 };
 RED4EXT_ASSERT_SIZE(AudioCharacterManagerBreathing_NodeSubType, 0x40);
 } // namespace quest
+using questAudioCharacterManagerBreathing_NodeSubType = quest::AudioCharacterManagerBreathing_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

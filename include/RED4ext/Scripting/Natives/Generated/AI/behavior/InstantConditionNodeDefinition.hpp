@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct InstantConditionNodeDefinition : AI::behavior::ConditionNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorInstantConditionNodeDefinition";
@@ -19,6 +20,7 @@ struct InstantConditionNodeDefinition : AI::behavior::ConditionNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(InstantConditionNodeDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorInstantConditionNodeDefinition = AI::behavior::InstantConditionNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

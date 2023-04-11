@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatform : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameMovingPlatform";
@@ -24,6 +25,7 @@ struct MovingPlatform : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(MovingPlatform, 0x1C0);
 } // namespace game
+using gameMovingPlatform = game::MovingPlatform;
 using MovingPlatform = game::MovingPlatform;
 } // namespace RED4ext
 

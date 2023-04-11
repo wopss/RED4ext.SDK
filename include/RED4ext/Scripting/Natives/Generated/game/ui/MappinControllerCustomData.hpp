@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MappinControllerCustomData : IScriptable
 {
     static constexpr const char* NAME = "gameuiMappinControllerCustomData";
@@ -19,6 +20,7 @@ struct MappinControllerCustomData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MappinControllerCustomData, 0x40);
 } // namespace game::ui
+using gameuiMappinControllerCustomData = game::ui::MappinControllerCustomData;
 using MappinControllerCustomData = game::ui::MappinControllerCustomData;
 } // namespace RED4ext
 

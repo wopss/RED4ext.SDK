@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace localization { 
+namespace localization
+{
 struct PersistenceLocDataMap : ISerializable
 {
     static constexpr const char* NAME = "localizationPersistenceLocDataMap";
@@ -22,6 +23,7 @@ struct PersistenceLocDataMap : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PersistenceLocDataMap, 0x40);
 } // namespace localization
+using localizationPersistenceLocDataMap = localization::PersistenceLocDataMap;
 } // namespace RED4ext
 
 // clang-format on

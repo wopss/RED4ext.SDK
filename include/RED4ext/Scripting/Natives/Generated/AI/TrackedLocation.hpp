@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace AI { 
+namespace AI
+{
 struct TrackedLocation
 {
     static constexpr const char* NAME = "AITrackedLocation";
@@ -40,6 +41,7 @@ struct TrackedLocation
 };
 RED4EXT_ASSERT_SIZE(TrackedLocation, 0xD0);
 } // namespace AI
+using AITrackedLocation = AI::TrackedLocation;
 using TrackedLocation = AI::TrackedLocation;
 } // namespace RED4ext
 

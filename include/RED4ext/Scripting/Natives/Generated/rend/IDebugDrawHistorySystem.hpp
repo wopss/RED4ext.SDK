@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct IDebugDrawHistorySystem
 {
     static constexpr const char* NAME = "rendIDebugDrawHistorySystem";
@@ -19,6 +20,7 @@ struct IDebugDrawHistorySystem
 };
 RED4EXT_ASSERT_SIZE(IDebugDrawHistorySystem, 0x8);
 } // namespace rend
+using rendIDebugDrawHistorySystem = rend::IDebugDrawHistorySystem;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ReplAnimTransformSkipRequest : game::ReplAnimTransformRequestBase
 {
     static constexpr const char* NAME = "gameReplAnimTransformSkipRequest";
@@ -23,6 +24,7 @@ struct ReplAnimTransformSkipRequest : game::ReplAnimTransformRequestBase
 };
 RED4EXT_ASSERT_SIZE(ReplAnimTransformSkipRequest, 0x28);
 } // namespace game
+using gameReplAnimTransformSkipRequest = game::ReplAnimTransformSkipRequest;
 } // namespace RED4ext
 
 // clang-format on

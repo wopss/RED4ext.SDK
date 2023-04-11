@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PuppetAIManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questPuppetAIManagerNodeDefinition";
@@ -22,6 +23,7 @@ struct PuppetAIManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PuppetAIManagerNodeDefinition, 0x58);
 } // namespace quest
+using questPuppetAIManagerNodeDefinition = quest::PuppetAIManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

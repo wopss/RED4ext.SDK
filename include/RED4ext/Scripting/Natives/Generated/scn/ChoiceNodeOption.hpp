@@ -19,7 +19,8 @@ namespace quest { struct IBaseCondition; }
 namespace scn { struct ChoiceNodeNsTimedParams; }
 namespace scn { struct TimedCondition; }
 
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeOption
 {
     static constexpr const char* NAME = "scnChoiceNodeOption";
@@ -43,6 +44,7 @@ struct ChoiceNodeOption
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeOption, 0x80);
 } // namespace scn
+using scnChoiceNodeOption = scn::ChoiceNodeOption;
 } // namespace RED4ext
 
 // clang-format on

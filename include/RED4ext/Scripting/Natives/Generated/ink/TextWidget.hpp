@@ -24,7 +24,8 @@ namespace RED4ext
 namespace ink { struct FontFamilyResource; }
 namespace rend { struct Font; }
 
-namespace ink { 
+namespace ink
+{
 struct TextWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkTextWidget";
@@ -64,6 +65,7 @@ struct TextWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(TextWidget, 0x430);
 } // namespace ink
+using inkTextWidget = ink::TextWidget;
 using inkText = ink::TextWidget;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct NewsFeedDisplayController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiNewsFeedDisplayController";
@@ -26,6 +27,7 @@ struct NewsFeedDisplayController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(NewsFeedDisplayController, 0xD8);
 } // namespace game::ui
+using gameuiNewsFeedDisplayController = game::ui::NewsFeedDisplayController;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics::cloth { 
+namespace physics::cloth
+{
 struct ExportedCapsule
 {
     static constexpr const char* NAME = "physicsclothExportedCapsule";
@@ -25,6 +26,7 @@ struct ExportedCapsule
 };
 RED4EXT_ASSERT_SIZE(ExportedCapsule, 0x28);
 } // namespace physics::cloth
+using physicsclothExportedCapsule = physics::cloth::ExportedCapsule;
 } // namespace RED4ext
 
 // clang-format on

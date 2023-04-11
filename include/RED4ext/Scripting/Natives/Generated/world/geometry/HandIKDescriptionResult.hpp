@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::geometry { 
+namespace world::geometry
+{
 struct HandIKDescriptionResult
 {
     static constexpr const char* NAME = "worldgeometryHandIKDescriptionResult";
@@ -21,6 +22,7 @@ struct HandIKDescriptionResult
 };
 RED4EXT_ASSERT_SIZE(HandIKDescriptionResult, 0x20);
 } // namespace world::geometry
+using worldgeometryHandIKDescriptionResult = world::geometry::HandIKDescriptionResult;
 using HandIKDescriptionResult = world::geometry::HandIKDescriptionResult;
 } // namespace RED4ext
 

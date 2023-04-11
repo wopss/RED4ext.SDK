@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectGroupFilter_Scripted : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectGroupFilter_Scripted";
@@ -19,6 +20,7 @@ struct EffectObjectGroupFilter_Scripted : game::EffectObjectGroupFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectGroupFilter_Scripted, 0x40);
 } // namespace game
+using gameEffectObjectGroupFilter_Scripted = game::EffectObjectGroupFilter_Scripted;
 using EffectObjectGroupFilter_Scripted = game::EffectObjectGroupFilter_Scripted;
 } // namespace RED4ext
 

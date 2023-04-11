@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TextMotherTongueController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkTextMotherTongueController";
@@ -27,6 +28,7 @@ struct TextMotherTongueController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(TextMotherTongueController, 0x160);
 } // namespace ink
+using inkTextMotherTongueController = ink::TextMotherTongueController;
 } // namespace RED4ext
 
 // clang-format on

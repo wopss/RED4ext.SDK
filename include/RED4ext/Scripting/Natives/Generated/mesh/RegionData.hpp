@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct RegionData
 {
     static constexpr const char* NAME = "meshRegionData";
@@ -26,6 +27,7 @@ struct RegionData
 };
 RED4EXT_ASSERT_SIZE(RegionData, 0x38);
 } // namespace mesh
+using meshRegionData = mesh::RegionData;
 } // namespace RED4ext
 
 // clang-format on

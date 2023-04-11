@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct HostJoinedSquad : AI::AIEvent
 {
     static constexpr const char* NAME = "AIHostJoinedSquad";
@@ -21,6 +22,7 @@ struct HostJoinedSquad : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(HostJoinedSquad, 0x58);
 } // namespace AI
+using AIHostJoinedSquad = AI::HostJoinedSquad;
 using HostJoinedSquad = AI::HostJoinedSquad;
 } // namespace RED4ext
 

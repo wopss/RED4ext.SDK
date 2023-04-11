@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PhotoModeCursorStateChangedEvent : red::Event
 {
     static constexpr const char* NAME = "inkPhotoModeCursorStateChangedEvent";
@@ -22,6 +23,7 @@ struct PhotoModeCursorStateChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhotoModeCursorStateChangedEvent, 0x48);
 } // namespace ink
+using inkPhotoModeCursorStateChangedEvent = ink::PhotoModeCursorStateChangedEvent;
 using PhotoModeCursorStateChangedEvent = ink::PhotoModeCursorStateChangedEvent;
 } // namespace RED4ext
 

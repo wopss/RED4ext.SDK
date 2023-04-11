@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AudioSetListenerOverrideNodeType : quest::IAudioNodeType
 {
     static constexpr const char* NAME = "questAudioSetListenerOverrideNodeType";
@@ -21,6 +22,7 @@ struct AudioSetListenerOverrideNodeType : quest::IAudioNodeType
 };
 RED4EXT_ASSERT_SIZE(AudioSetListenerOverrideNodeType, 0x48);
 } // namespace quest
+using questAudioSetListenerOverrideNodeType = quest::AudioSetListenerOverrideNodeType;
 } // namespace RED4ext
 
 // clang-format on

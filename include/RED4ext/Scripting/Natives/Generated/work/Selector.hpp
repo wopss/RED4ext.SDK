@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct Selector : work::RandomList
 {
     static constexpr const char* NAME = "workSelector";
@@ -19,6 +20,7 @@ struct Selector : work::RandomList
 };
 RED4EXT_ASSERT_SIZE(Selector, 0x70);
 } // namespace work
+using workSelector = work::Selector;
 } // namespace RED4ext
 
 // clang-format on

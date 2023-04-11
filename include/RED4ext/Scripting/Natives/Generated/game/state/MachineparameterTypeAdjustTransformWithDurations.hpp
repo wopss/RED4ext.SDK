@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeAdjustTransformWithDurations : game::state::MachineparameterTypeAdjustTransform
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeAdjustTransformWithDurations";
@@ -20,6 +21,7 @@ struct MachineparameterTypeAdjustTransformWithDurations : game::state::Machinepa
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeAdjustTransformWithDurations, 0x90);
 } // namespace game::state
+using gamestateMachineparameterTypeAdjustTransformWithDurations = game::state::MachineparameterTypeAdjustTransformWithDurations;
 using AdjustTransformWithDurations = game::state::MachineparameterTypeAdjustTransformWithDurations;
 } // namespace RED4ext
 

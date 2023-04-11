@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemLoopMarker : effect::TrackItemMetadata
 {
     static constexpr const char* NAME = "effectTrackItemLoopMarker";
@@ -19,6 +20,7 @@ struct TrackItemLoopMarker : effect::TrackItemMetadata
 };
 RED4EXT_ASSERT_SIZE(TrackItemLoopMarker, 0x48);
 } // namespace effect
+using effectTrackItemLoopMarker = effect::TrackItemLoopMarker;
 } // namespace RED4ext
 
 // clang-format on

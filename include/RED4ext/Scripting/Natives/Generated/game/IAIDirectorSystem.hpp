@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IAIDirectorSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIAIDirectorSystem";
@@ -19,6 +20,7 @@ struct IAIDirectorSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IAIDirectorSystem, 0x48);
 } // namespace game
+using gameIAIDirectorSystem = game::IAIDirectorSystem;
 } // namespace RED4ext
 
 // clang-format on

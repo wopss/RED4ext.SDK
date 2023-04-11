@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderParticleUpdaterData
 {
     static constexpr const char* NAME = "rendRenderParticleUpdaterData";
@@ -47,6 +48,7 @@ struct RenderParticleUpdaterData
 };
 RED4EXT_ASSERT_SIZE(RenderParticleUpdaterData, 0x98);
 } // namespace rend
+using rendRenderParticleUpdaterData = rend::RenderParticleUpdaterData;
 } // namespace RED4ext
 
 // clang-format on

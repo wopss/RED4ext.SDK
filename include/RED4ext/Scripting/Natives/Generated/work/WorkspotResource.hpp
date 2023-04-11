@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace work { struct WorkspotTree; }
 
-namespace work { 
+namespace work
+{
 struct WorkspotResource : anim::AnimGraph
 {
     static constexpr const char* NAME = "workWorkspotResource";
@@ -23,6 +24,7 @@ struct WorkspotResource : anim::AnimGraph
 };
 RED4EXT_ASSERT_SIZE(WorkspotResource, 0x130);
 } // namespace work
+using workWorkspotResource = work::WorkspotResource;
 } // namespace RED4ext
 
 // clang-format on

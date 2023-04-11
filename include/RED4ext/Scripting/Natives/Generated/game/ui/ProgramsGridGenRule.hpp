@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ProgramsGridGenRule : game::ui::MinigameGenerationRule
 {
     static constexpr const char* NAME = "gameuiProgramsGridGenRule";
@@ -19,6 +20,7 @@ struct ProgramsGridGenRule : game::ui::MinigameGenerationRule
 };
 RED4EXT_ASSERT_SIZE(ProgramsGridGenRule, 0x50);
 } // namespace game::ui
+using gameuiProgramsGridGenRule = game::ui::ProgramsGridGenRule;
 using ProgramsGridGenRule = game::ui::ProgramsGridGenRule;
 } // namespace RED4ext
 

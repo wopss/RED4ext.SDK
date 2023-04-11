@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct FogVolumeComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entFogVolumeComponent";
@@ -28,6 +29,7 @@ struct FogVolumeComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(FogVolumeComponent, 0x170);
 } // namespace ent
+using entFogVolumeComponent = ent::FogVolumeComponent;
 } // namespace RED4ext
 
 // clang-format on

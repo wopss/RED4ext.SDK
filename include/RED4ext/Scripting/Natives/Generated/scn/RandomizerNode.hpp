@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct RandomizerNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnRandomizerNode";
@@ -25,6 +26,7 @@ struct RandomizerNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(RandomizerNode, 0x70);
 } // namespace scn
+using scnRandomizerNode = scn::RandomizerNode;
 } // namespace RED4ext
 
 // clang-format on

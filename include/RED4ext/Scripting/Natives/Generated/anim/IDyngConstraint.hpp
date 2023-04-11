@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IDyngConstraint : ISerializable
 {
     static constexpr const char* NAME = "animIDyngConstraint";
@@ -20,6 +21,7 @@ struct IDyngConstraint : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IDyngConstraint, 0x38);
 } // namespace anim
+using animIDyngConstraint = anim::IDyngConstraint;
 } // namespace RED4ext
 
 // clang-format on

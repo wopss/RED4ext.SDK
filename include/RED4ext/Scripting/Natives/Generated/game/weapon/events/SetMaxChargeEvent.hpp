@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon::events { 
+namespace game::weapon::events
+{
 struct SetMaxChargeEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsSetMaxChargeEvent";
@@ -21,6 +22,7 @@ struct SetMaxChargeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetMaxChargeEvent, 0x48);
 } // namespace game::weapon::events
+using gameweaponeventsSetMaxChargeEvent = game::weapon::events::SetMaxChargeEvent;
 using WeaponSetMaxChargeEvent = game::weapon::events::SetMaxChargeEvent;
 } // namespace RED4ext
 

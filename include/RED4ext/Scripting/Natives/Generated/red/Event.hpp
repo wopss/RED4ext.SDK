@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct Event : IScriptable
 {
     static constexpr const char* NAME = "redEvent";
@@ -19,6 +20,7 @@ struct Event : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Event, 0x40);
 } // namespace red
+using redEvent = red::Event;
 using Event = red::Event;
 } // namespace RED4ext
 

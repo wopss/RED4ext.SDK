@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlayHUDEntryAnimation_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questPlayHUDEntryAnimation_NodeType";
@@ -24,6 +25,7 @@ struct PlayHUDEntryAnimation_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PlayHUDEntryAnimation_NodeType, 0x60);
 } // namespace quest
+using questPlayHUDEntryAnimation_NodeType = quest::PlayHUDEntryAnimation_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CombinedStatModifier : game::StatModifierBase
 {
     static constexpr const char* NAME = "gameCombinedStatModifier";
@@ -20,6 +21,7 @@ struct CombinedStatModifier : game::StatModifierBase
 };
 RED4EXT_ASSERT_SIZE(CombinedStatModifier, 0x28);
 } // namespace game
+using gameCombinedStatModifier = game::CombinedStatModifier;
 } // namespace RED4ext
 
 // clang-format on

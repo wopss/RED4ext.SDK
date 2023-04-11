@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct ObjectDistance; }
 
-namespace quest { 
+namespace quest
+{
 struct DistanceVsDistanceComparison_ConditionType : quest::IDistanceConditionType
 {
     static constexpr const char* NAME = "questDistanceVsDistanceComparison_ConditionType";
@@ -27,6 +28,7 @@ struct DistanceVsDistanceComparison_ConditionType : quest::IDistanceConditionTyp
 };
 RED4EXT_ASSERT_SIZE(DistanceVsDistanceComparison_ConditionType, 0x60);
 } // namespace quest
+using questDistanceVsDistanceComparison_ConditionType = quest::DistanceVsDistanceComparison_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_NameHashConstant : anim::AnimNode_IntValue
 {
     static constexpr const char* NAME = "animAnimNode_NameHashConstant";
@@ -21,6 +22,7 @@ struct AnimNode_NameHashConstant : anim::AnimNode_IntValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_NameHashConstant, 0x50);
 } // namespace anim
+using animAnimNode_NameHashConstant = anim::AnimNode_NameHashConstant;
 } // namespace RED4ext
 
 // clang-format on

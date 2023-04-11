@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace world::geometry { 
+namespace world::geometry
+{
 struct DescriptionQuery : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryDescriptionQuery";
@@ -40,6 +41,7 @@ struct DescriptionQuery : IScriptable
 };
 RED4EXT_ASSERT_SIZE(DescriptionQuery, 0xE0);
 } // namespace world::geometry
+using worldgeometryDescriptionQuery = world::geometry::DescriptionQuery;
 using GeometryDescriptionQuery = world::geometry::DescriptionQuery;
 } // namespace RED4ext
 

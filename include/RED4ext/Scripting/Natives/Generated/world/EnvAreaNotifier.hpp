@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace world { struct EnvironmentAreaParameters; }
 
-namespace world { 
+namespace world
+{
 struct EnvAreaNotifier : world::ITriggerAreaNotifer
 {
     static constexpr const char* NAME = "worldEnvAreaNotifier";
@@ -38,6 +39,7 @@ struct EnvAreaNotifier : world::ITriggerAreaNotifer
 };
 RED4EXT_ASSERT_SIZE(EnvAreaNotifier, 0x120);
 } // namespace world
+using worldEnvAreaNotifier = world::EnvAreaNotifier;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectSet : CResource
 {
     static constexpr const char* NAME = "gameEffectSet";
@@ -22,6 +23,7 @@ struct EffectSet : CResource
 };
 RED4EXT_ASSERT_SIZE(EffectSet, 0x50);
 } // namespace game
+using gameEffectSet = game::EffectSet;
 } // namespace RED4ext
 
 // clang-format on

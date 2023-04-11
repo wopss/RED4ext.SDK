@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace math { 
+namespace math
+{
 struct ExprExpression : ISerializable
 {
     static constexpr const char* NAME = "mathExprExpression";
@@ -24,6 +25,7 @@ struct ExprExpression : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ExprExpression, 0x58);
 } // namespace math
+using mathExprExpression = math::ExprExpression;
 } // namespace RED4ext
 
 // clang-format on

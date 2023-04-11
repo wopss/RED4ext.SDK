@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace mp { 
+namespace mp
+{
 struct CMultiplayerDebugFunctions
 {
     static constexpr const char* NAME = "mpCMultiplayerDebugFunctions";
@@ -19,6 +20,7 @@ struct CMultiplayerDebugFunctions
 };
 RED4EXT_ASSERT_SIZE(CMultiplayerDebugFunctions, 0x1);
 } // namespace mp
+using mpCMultiplayerDebugFunctions = mp::CMultiplayerDebugFunctions;
 } // namespace RED4ext
 
 // clang-format on

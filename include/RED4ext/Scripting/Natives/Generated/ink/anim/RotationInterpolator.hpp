@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct RotationInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimRotationInterpolator";
@@ -23,6 +24,7 @@ struct RotationInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(RotationInterpolator, 0x78);
 } // namespace ink::anim
+using inkanimRotationInterpolator = ink::anim::RotationInterpolator;
 using inkAnimRotation = ink::anim::RotationInterpolator;
 } // namespace RED4ext
 

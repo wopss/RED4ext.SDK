@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct FollowParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questFollowParams";
@@ -33,6 +34,7 @@ struct FollowParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(FollowParams, 0x68);
 } // namespace quest
+using questFollowParams = quest::FollowParams;
 } // namespace RED4ext
 
 // clang-format on

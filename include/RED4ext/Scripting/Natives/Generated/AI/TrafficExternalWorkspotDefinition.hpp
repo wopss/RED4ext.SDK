@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TrafficExternalWorkspotDefinition : world::TrafficSpotDefinition
 {
     static constexpr const char* NAME = "AITrafficExternalWorkspotDefinition";
@@ -23,6 +24,7 @@ struct TrafficExternalWorkspotDefinition : world::TrafficSpotDefinition
 };
 RED4EXT_ASSERT_SIZE(TrafficExternalWorkspotDefinition, 0x58);
 } // namespace AI
+using AITrafficExternalWorkspotDefinition = AI::TrafficExternalWorkspotDefinition;
 } // namespace RED4ext
 
 // clang-format on

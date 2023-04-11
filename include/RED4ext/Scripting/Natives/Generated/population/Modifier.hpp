@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace population { 
+namespace population
+{
 struct Modifier : ISerializable
 {
     static constexpr const char* NAME = "populationModifier";
@@ -19,6 +20,7 @@ struct Modifier : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Modifier, 0x30);
 } // namespace population
+using populationModifier = population::Modifier;
 } // namespace RED4ext
 
 // clang-format on

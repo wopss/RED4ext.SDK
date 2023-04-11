@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct CBitmapTexture;
 
-namespace world { 
+namespace world
+{
 struct StaticStickerNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticStickerNode";
@@ -35,6 +36,7 @@ struct StaticStickerNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticStickerNode, 0x90);
 } // namespace world
+using worldStaticStickerNode = world::StaticStickerNode;
 } // namespace RED4ext
 
 // clang-format on

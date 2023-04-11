@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct TerrainImportParams
 {
     static constexpr const char* NAME = "interopTerrainImportParams";
@@ -38,6 +39,7 @@ struct TerrainImportParams
 };
 RED4EXT_ASSERT_SIZE(TerrainImportParams, 0xA8);
 } // namespace interop
+using interopTerrainImportParams = interop::TerrainImportParams;
 } // namespace RED4ext
 
 // clang-format on

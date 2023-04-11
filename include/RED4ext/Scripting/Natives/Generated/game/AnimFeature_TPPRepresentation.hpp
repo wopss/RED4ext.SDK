@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AnimFeature_TPPRepresentation : anim::AnimFeature
 {
     static constexpr const char* NAME = "gameAnimFeature_TPPRepresentation";
@@ -21,6 +22,7 @@ struct AnimFeature_TPPRepresentation : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_TPPRepresentation, 0x48);
 } // namespace game
+using gameAnimFeature_TPPRepresentation = game::AnimFeature_TPPRepresentation;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InventoryPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameInventoryPS";
@@ -22,6 +23,7 @@ struct InventoryPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(InventoryPS, 0x70);
 } // namespace game
+using gameInventoryPS = game::InventoryPS;
 using InventoryPS = game::InventoryPS;
 } // namespace RED4ext
 

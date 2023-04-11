@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimDebuggerCommand_HooksUnregistered : anim::IAnimDebuggerCommand
 {
     static constexpr const char* NAME = "animAnimDebuggerCommand_HooksUnregistered";
@@ -20,6 +21,7 @@ struct AnimDebuggerCommand_HooksUnregistered : anim::IAnimDebuggerCommand
 };
 RED4EXT_ASSERT_SIZE(AnimDebuggerCommand_HooksUnregistered, 0x20);
 } // namespace anim
+using animAnimDebuggerCommand_HooksUnregistered = anim::AnimDebuggerCommand_HooksUnregistered;
 } // namespace RED4ext
 
 // clang-format on

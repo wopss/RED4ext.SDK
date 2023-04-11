@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct WorkspotManager : AI::IWorkspotManager
 {
     static constexpr const char* NAME = "AIWorkspotManager";
@@ -20,6 +21,7 @@ struct WorkspotManager : AI::IWorkspotManager
 };
 RED4EXT_ASSERT_SIZE(WorkspotManager, 0x2C0);
 } // namespace AI
+using AIWorkspotManager = AI::WorkspotManager;
 using WorkspotManager = AI::WorkspotManager;
 } // namespace RED4ext
 

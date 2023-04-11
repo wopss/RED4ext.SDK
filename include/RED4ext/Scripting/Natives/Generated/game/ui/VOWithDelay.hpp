@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct VOWithDelay
 {
     static constexpr const char* NAME = "gameuiVOWithDelay";
@@ -22,6 +23,7 @@ struct VOWithDelay
 };
 RED4EXT_ASSERT_SIZE(VOWithDelay, 0x28);
 } // namespace game::ui
+using gameuiVOWithDelay = game::ui::VOWithDelay;
 } // namespace RED4ext
 
 // clang-format on

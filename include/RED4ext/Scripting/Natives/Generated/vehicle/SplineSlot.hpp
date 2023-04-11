@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct SplineSlot
 {
     static constexpr const char* NAME = "vehicleSplineSlot";
@@ -19,6 +20,7 @@ struct SplineSlot
 };
 RED4EXT_ASSERT_SIZE(SplineSlot, 0x210);
 } // namespace vehicle
+using vehicleSplineSlot = vehicle::SplineSlot;
 } // namespace RED4ext
 
 // clang-format on

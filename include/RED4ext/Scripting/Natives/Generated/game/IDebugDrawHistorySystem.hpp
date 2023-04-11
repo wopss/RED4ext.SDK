@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IDebugDrawHistorySystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIDebugDrawHistorySystem";
@@ -20,6 +21,7 @@ struct IDebugDrawHistorySystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IDebugDrawHistorySystem, 0x50);
 } // namespace game
+using gameIDebugDrawHistorySystem = game::IDebugDrawHistorySystem;
 using IDebugDrawHistorySystem = game::IDebugDrawHistorySystem;
 } // namespace RED4ext
 

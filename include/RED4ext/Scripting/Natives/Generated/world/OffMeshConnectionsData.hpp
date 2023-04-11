@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace world { struct OffMeshUserData; }
 
-namespace world { 
+namespace world
+{
 struct OffMeshConnectionsData
 {
     static constexpr const char* NAME = "worldOffMeshConnectionsData";
@@ -34,6 +35,7 @@ struct OffMeshConnectionsData
 };
 RED4EXT_ASSERT_SIZE(OffMeshConnectionsData, 0xA0);
 } // namespace world
+using worldOffMeshConnectionsData = world::OffMeshConnectionsData;
 } // namespace RED4ext
 
 // clang-format on

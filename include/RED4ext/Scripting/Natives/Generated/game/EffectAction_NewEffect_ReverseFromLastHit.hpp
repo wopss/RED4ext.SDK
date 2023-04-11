@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectAction_NewEffect_ReverseFromLastHit : game::EffectPostAction
 {
     static constexpr const char* NAME = "gameEffectAction_NewEffect_ReverseFromLastHit";
@@ -25,6 +26,7 @@ struct EffectAction_NewEffect_ReverseFromLastHit : game::EffectPostAction
 };
 RED4EXT_ASSERT_SIZE(EffectAction_NewEffect_ReverseFromLastHit, 0x58);
 } // namespace game
+using gameEffectAction_NewEffect_ReverseFromLastHit = game::EffectAction_NewEffect_ReverseFromLastHit;
 } // namespace RED4ext
 
 // clang-format on

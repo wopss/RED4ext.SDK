@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetLootInteractionAccess_NodeType : quest::IItemManagerNodeType
 {
     static constexpr const char* NAME = "questSetLootInteractionAccess_NodeType";
@@ -23,6 +24,7 @@ struct SetLootInteractionAccess_NodeType : quest::IItemManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetLootInteractionAccess_NodeType, 0x70);
 } // namespace quest
+using questSetLootInteractionAccess_NodeType = quest::SetLootInteractionAccess_NodeType;
 } // namespace RED4ext
 
 // clang-format on

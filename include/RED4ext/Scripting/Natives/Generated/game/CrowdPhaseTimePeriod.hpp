@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CrowdPhaseTimePeriod : community::TimePeriod
 {
     static constexpr const char* NAME = "gameCrowdPhaseTimePeriod";
@@ -34,6 +35,7 @@ struct CrowdPhaseTimePeriod : community::TimePeriod
 };
 RED4EXT_ASSERT_SIZE(CrowdPhaseTimePeriod, 0x48);
 } // namespace game
+using gameCrowdPhaseTimePeriod = game::CrowdPhaseTimePeriod;
 } // namespace RED4ext
 
 // clang-format on

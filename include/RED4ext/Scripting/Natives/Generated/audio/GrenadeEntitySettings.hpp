@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GrenadeEntitySettings : audio::EntitySettings
 {
     static constexpr const char* NAME = "audioGrenadeEntitySettings";
@@ -21,6 +22,7 @@ struct GrenadeEntitySettings : audio::EntitySettings
 };
 RED4EXT_ASSERT_SIZE(GrenadeEntitySettings, 0x90);
 } // namespace audio
+using audioGrenadeEntitySettings = audio::GrenadeEntitySettings;
 } // namespace RED4ext
 
 // clang-format on

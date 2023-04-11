@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FootstepSystem : game::IFootstepSystem
 {
     static constexpr const char* NAME = "gameFootstepSystem";
@@ -20,6 +21,7 @@ struct FootstepSystem : game::IFootstepSystem
 };
 RED4EXT_ASSERT_SIZE(FootstepSystem, 0x78);
 } // namespace game
+using gameFootstepSystem = game::FootstepSystem;
 using FootstepSystem = game::FootstepSystem;
 } // namespace RED4ext
 

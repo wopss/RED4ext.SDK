@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimGraph; }
 
-namespace ent { 
+namespace ent
+{
 struct AnimGraphResourceContainerEntry
 {
     static constexpr const char* NAME = "entAnimGraphResourceContainerEntry";
@@ -24,6 +25,7 @@ struct AnimGraphResourceContainerEntry
 };
 RED4EXT_ASSERT_SIZE(AnimGraphResourceContainerEntry, 0x20);
 } // namespace ent
+using entAnimGraphResourceContainerEntry = ent::AnimGraphResourceContainerEntry;
 using AnimGraphResourceContainerEntry = ent::AnimGraphResourceContainerEntry;
 } // namespace RED4ext
 

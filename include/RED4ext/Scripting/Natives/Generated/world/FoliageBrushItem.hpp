@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace world { 
+namespace world
+{
 struct FoliageBrushItem : ISerializable
 {
     static constexpr const char* NAME = "worldFoliageBrushItem";
@@ -29,6 +30,7 @@ struct FoliageBrushItem : ISerializable
 };
 RED4EXT_ASSERT_SIZE(FoliageBrushItem, 0x60);
 } // namespace world
+using worldFoliageBrushItem = world::FoliageBrushItem;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest::vehicle { 
+namespace quest::vehicle
+{
 struct FollowParams : quest::VehicleSpecificCommandParams
 {
     static constexpr const char* NAME = "questvehicleFollowParams";
@@ -29,6 +30,7 @@ struct FollowParams : quest::VehicleSpecificCommandParams
 };
 RED4EXT_ASSERT_SIZE(FollowParams, 0x80);
 } // namespace quest::vehicle
+using questvehicleFollowParams = quest::vehicle::FollowParams;
 } // namespace RED4ext
 
 // clang-format on

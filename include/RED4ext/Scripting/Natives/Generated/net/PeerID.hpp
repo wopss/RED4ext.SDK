@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace net { 
+namespace net
+{
 struct PeerID
 {
     static constexpr const char* NAME = "netPeerID";
@@ -19,6 +20,7 @@ struct PeerID
 };
 RED4EXT_ASSERT_SIZE(PeerID, 0x1);
 } // namespace net
+using netPeerID = net::PeerID;
 } // namespace RED4ext
 
 // clang-format on

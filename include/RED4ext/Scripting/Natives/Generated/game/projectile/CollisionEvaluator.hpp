@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct CollisionEvaluator : IScriptable
 {
     static constexpr const char* NAME = "gameprojectileCollisionEvaluator";
@@ -19,6 +20,7 @@ struct CollisionEvaluator : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CollisionEvaluator, 0x40);
 } // namespace game::projectile
+using gameprojectileCollisionEvaluator = game::projectile::CollisionEvaluator;
 } // namespace RED4ext
 
 // clang-format on

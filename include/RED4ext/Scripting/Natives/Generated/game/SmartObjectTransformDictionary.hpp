@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SmartObjectTransformDictionary : ISerializable
 {
     static constexpr const char* NAME = "gameSmartObjectTransformDictionary";
@@ -24,6 +25,7 @@ struct SmartObjectTransformDictionary : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SmartObjectTransformDictionary, 0xC0);
 } // namespace game
+using gameSmartObjectTransformDictionary = game::SmartObjectTransformDictionary;
 } // namespace RED4ext
 
 // clang-format on

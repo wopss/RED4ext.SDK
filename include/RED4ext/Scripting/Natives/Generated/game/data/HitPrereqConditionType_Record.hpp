@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct HitPrereqConditionType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataHitPrereqConditionType_Record";
@@ -20,6 +21,7 @@ struct HitPrereqConditionType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(HitPrereqConditionType_Record, 0x58);
 } // namespace game::data
+using gamedataHitPrereqConditionType_Record = game::data::HitPrereqConditionType_Record;
 using HitPrereqConditionType_Record = game::data::HitPrereqConditionType_Record;
 } // namespace RED4ext
 

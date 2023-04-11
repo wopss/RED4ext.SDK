@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CoverSelectionSystem : AI::ICoverSelectionSystem
 {
     static constexpr const char* NAME = "AICoverSelectionSystem";
@@ -20,6 +21,7 @@ struct CoverSelectionSystem : AI::ICoverSelectionSystem
 };
 RED4EXT_ASSERT_SIZE(CoverSelectionSystem, 0xD8);
 } // namespace AI
+using AICoverSelectionSystem = AI::CoverSelectionSystem;
 using CoverSelectionSystem = AI::CoverSelectionSystem;
 } // namespace RED4ext
 

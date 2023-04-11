@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IStreetNameSignLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkIStreetNameSignLogicController";
@@ -19,6 +20,7 @@ struct IStreetNameSignLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(IStreetNameSignLogicController, 0x78);
 } // namespace ink
+using inkIStreetNameSignLogicController = ink::IStreetNameSignLogicController;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AppearanceChangeFinishEvent : red::Event
 {
     static constexpr const char* NAME = "entAppearanceChangeFinishEvent";
@@ -19,6 +20,7 @@ struct AppearanceChangeFinishEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AppearanceChangeFinishEvent, 0x40);
 } // namespace ent
+using entAppearanceChangeFinishEvent = ent::AppearanceChangeFinishEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct PlayerInVehicleASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioPlayerInVehicleASTCD";
@@ -21,6 +22,7 @@ struct PlayerInVehicleASTCD : audio::AudioStateTransitionConditionData
 };
 RED4EXT_ASSERT_SIZE(PlayerInVehicleASTCD, 0x40);
 } // namespace audio
+using audioPlayerInVehicleASTCD = audio::PlayerInVehicleASTCD;
 } // namespace RED4ext
 
 // clang-format on

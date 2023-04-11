@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DeviceConnections
 {
     static constexpr const char* NAME = "worldDeviceConnections";
@@ -23,6 +24,7 @@ struct DeviceConnections
 };
 RED4EXT_ASSERT_SIZE(DeviceConnections, 0x18);
 } // namespace world
+using worldDeviceConnections = world::DeviceConnections;
 } // namespace RED4ext
 
 // clang-format on

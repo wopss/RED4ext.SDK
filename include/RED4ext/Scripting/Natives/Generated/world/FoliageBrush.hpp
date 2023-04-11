@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world { struct FoliageBrushItem; }
 
-namespace world { 
+namespace world
+{
 struct FoliageBrush : CResource
 {
     static constexpr const char* NAME = "worldFoliageBrush";
@@ -24,6 +25,7 @@ struct FoliageBrush : CResource
 };
 RED4EXT_ASSERT_SIZE(FoliageBrush, 0x50);
 } // namespace world
+using worldFoliageBrush = world::FoliageBrush;
 } // namespace RED4ext
 
 // clang-format on

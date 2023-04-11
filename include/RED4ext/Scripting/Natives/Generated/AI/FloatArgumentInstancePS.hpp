@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct FloatArgumentInstancePS : AI::ArgumentInstancePS
 {
     static constexpr const char* NAME = "AIFloatArgumentInstancePS";
@@ -21,6 +22,7 @@ struct FloatArgumentInstancePS : AI::ArgumentInstancePS
 };
 RED4EXT_ASSERT_SIZE(FloatArgumentInstancePS, 0x40);
 } // namespace AI
+using AIFloatArgumentInstancePS = AI::FloatArgumentInstancePS;
 } // namespace RED4ext
 
 // clang-format on

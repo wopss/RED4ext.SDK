@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TriggerNotifier_EntityInstance : world::ITriggerAreaNotiferInstance
 {
     static constexpr const char* NAME = "entTriggerNotifier_EntityInstance";
@@ -20,6 +21,7 @@ struct TriggerNotifier_EntityInstance : world::ITriggerAreaNotiferInstance
 };
 RED4EXT_ASSERT_SIZE(TriggerNotifier_EntityInstance, 0x60);
 } // namespace ent
+using entTriggerNotifier_EntityInstance = ent::TriggerNotifier_EntityInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -20,7 +20,8 @@ namespace RED4ext
 {
 namespace game::ui { struct BaseWorldMapMappinController; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapMenuGameController : game::ui::MappinsContainerController
 {
     static constexpr const char* NAME = "gameuiWorldMapMenuGameController";
@@ -58,6 +59,7 @@ struct WorldMapMenuGameController : game::ui::MappinsContainerController
 };
 RED4EXT_ASSERT_SIZE(WorldMapMenuGameController, 0x630);
 } // namespace game::ui
+using gameuiWorldMapMenuGameController = game::ui::WorldMapMenuGameController;
 using WorldMapMenuGameController = game::ui::WorldMapMenuGameController;
 } // namespace RED4ext
 

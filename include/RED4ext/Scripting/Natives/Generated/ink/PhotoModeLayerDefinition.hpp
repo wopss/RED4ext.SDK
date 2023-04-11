@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct PhotoModeLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkPhotoModeLayerDefinition";
@@ -25,6 +26,7 @@ struct PhotoModeLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(PhotoModeLayerDefinition, 0x80);
 } // namespace ink
+using inkPhotoModeLayerDefinition = ink::PhotoModeLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

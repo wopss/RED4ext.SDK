@@ -23,7 +23,8 @@ struct CMesh;
 namespace physics { struct FilterData; }
 namespace world { struct Effect; }
 
-namespace world { 
+namespace world
+{
 struct InstancedDestructibleMeshNode : world::MeshNode
 {
     static constexpr const char* NAME = "worldInstancedDestructibleMeshNode";
@@ -59,6 +60,7 @@ struct InstancedDestructibleMeshNode : world::MeshNode
 };
 RED4EXT_ASSERT_SIZE(InstancedDestructibleMeshNode, 0xE0);
 } // namespace world
+using worldInstancedDestructibleMeshNode = world::InstancedDestructibleMeshNode;
 } // namespace RED4ext
 
 // clang-format on

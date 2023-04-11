@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ReplicatedAnimFeaturesState
 {
     static constexpr const char* NAME = "entReplicatedAnimFeaturesState";
@@ -25,6 +26,7 @@ struct ReplicatedAnimFeaturesState
 };
 RED4EXT_ASSERT_SIZE(ReplicatedAnimFeaturesState, 0x30);
 } // namespace ent
+using entReplicatedAnimFeaturesState = ent::ReplicatedAnimFeaturesState;
 } // namespace RED4ext
 
 // clang-format on

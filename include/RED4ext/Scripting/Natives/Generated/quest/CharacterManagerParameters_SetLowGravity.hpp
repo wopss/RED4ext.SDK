@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetLowGravity : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetLowGravity";
@@ -21,6 +22,7 @@ struct CharacterManagerParameters_SetLowGravity : quest::ICharacterManagerParame
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetLowGravity, 0x78);
 } // namespace quest
+using questCharacterManagerParameters_SetLowGravity = quest::CharacterManagerParameters_SetLowGravity;
 } // namespace RED4ext
 
 // clang-format on

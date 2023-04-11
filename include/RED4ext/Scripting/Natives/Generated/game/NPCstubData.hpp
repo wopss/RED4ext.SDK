@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct NPCstubData
 {
     static constexpr const char* NAME = "gameNPCstubData";
@@ -22,6 +23,7 @@ struct NPCstubData
 };
 RED4EXT_ASSERT_SIZE(NPCstubData, 0x10);
 } // namespace game
+using gameNPCstubData = game::NPCstubData;
 using NPCstubData = game::NPCstubData;
 } // namespace RED4ext
 

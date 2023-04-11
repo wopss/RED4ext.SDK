@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualCompoundWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkVirtualCompoundWidgetReference";
@@ -19,6 +20,7 @@ struct VirtualCompoundWidgetReference : ink::CompoundWidgetReference
 };
 RED4EXT_ASSERT_SIZE(VirtualCompoundWidgetReference, 0x18);
 } // namespace ink
+using inkVirtualCompoundWidgetReference = ink::VirtualCompoundWidgetReference;
 using inkVirtualCompoundRef = ink::VirtualCompoundWidgetReference;
 } // namespace RED4ext
 

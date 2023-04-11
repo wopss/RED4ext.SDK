@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FulfillInfo
 {
     static constexpr const char* NAME = "questFulfillInfo";
@@ -19,6 +20,7 @@ struct FulfillInfo
 };
 RED4EXT_ASSERT_SIZE(FulfillInfo, 0x48);
 } // namespace quest
+using questFulfillInfo = quest::FulfillInfo;
 } // namespace RED4ext
 
 // clang-format on

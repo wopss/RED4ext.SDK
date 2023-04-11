@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WorldFluffLayer : ink::Layer
 {
     static constexpr const char* NAME = "inkWorldFluffLayer";
@@ -20,6 +21,7 @@ struct WorldFluffLayer : ink::Layer
 };
 RED4EXT_ASSERT_SIZE(WorldFluffLayer, 0x200);
 } // namespace ink
+using inkWorldFluffLayer = ink::WorldFluffLayer;
 } // namespace RED4ext
 
 // clang-format on

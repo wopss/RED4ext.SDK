@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamWaterPatchData : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamWaterPatchData";
@@ -25,6 +26,7 @@ struct MeshParamWaterPatchData : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamWaterPatchData, 0x44040);
 } // namespace mesh
+using meshMeshParamWaterPatchData = mesh::MeshParamWaterPatchData;
 } // namespace RED4ext
 
 // clang-format on

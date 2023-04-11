@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::mappins { struct IMappinVolume; }
 
-namespace game { 
+namespace game
+{
 struct CookedMappinData
 {
     static constexpr const char* NAME = "gameCookedMappinData";
@@ -25,6 +26,7 @@ struct CookedMappinData
 };
 RED4EXT_ASSERT_SIZE(CookedMappinData, 0x20);
 } // namespace game
+using gameCookedMappinData = game::CookedMappinData;
 } // namespace RED4ext
 
 // clang-format on

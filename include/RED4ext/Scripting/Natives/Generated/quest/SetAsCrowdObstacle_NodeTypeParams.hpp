@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetAsCrowdObstacle_NodeTypeParams
 {
     static constexpr const char* NAME = "questSetAsCrowdObstacle_NodeTypeParams";
@@ -22,6 +23,7 @@ struct SetAsCrowdObstacle_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(SetAsCrowdObstacle_NodeTypeParams, 0x40);
 } // namespace quest
+using questSetAsCrowdObstacle_NodeTypeParams = quest::SetAsCrowdObstacle_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

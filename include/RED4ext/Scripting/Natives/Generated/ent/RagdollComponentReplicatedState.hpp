@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RagdollComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "entRagdollComponentReplicatedState";
@@ -24,6 +25,7 @@ struct RagdollComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(RagdollComponentReplicatedState, 0x38);
 } // namespace ent
+using entRagdollComponentReplicatedState = ent::RagdollComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

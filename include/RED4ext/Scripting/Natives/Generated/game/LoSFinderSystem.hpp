@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LoSFinderSystem : game::LoSIFinderSystem
 {
     static constexpr const char* NAME = "gameLoSFinderSystem";
@@ -20,6 +21,7 @@ struct LoSFinderSystem : game::LoSIFinderSystem
 };
 RED4EXT_ASSERT_SIZE(LoSFinderSystem, 0x128);
 } // namespace game
+using gameLoSFinderSystem = game::LoSFinderSystem;
 using LoSFinderSystem = game::LoSFinderSystem;
 } // namespace RED4ext
 

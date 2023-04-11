@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace fx { 
+namespace fx
+{
 struct CompositionShaderParams
 {
     static constexpr const char* NAME = "fxCompositionShaderParams";
@@ -51,6 +52,7 @@ struct CompositionShaderParams
 };
 RED4EXT_ASSERT_SIZE(CompositionShaderParams, 0xA0);
 } // namespace fx
+using fxCompositionShaderParams = fx::CompositionShaderParams;
 } // namespace RED4ext
 
 // clang-format on

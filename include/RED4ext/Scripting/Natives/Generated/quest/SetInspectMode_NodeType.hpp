@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetInspectMode_NodeType : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questSetInspectMode_NodeType";
@@ -25,6 +26,7 @@ struct SetInspectMode_NodeType : quest::IInteractiveObjectManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetInspectMode_NodeType, 0x60);
 } // namespace quest
+using questSetInspectMode_NodeType = quest::SetInspectMode_NodeType;
 } // namespace RED4ext
 
 // clang-format on

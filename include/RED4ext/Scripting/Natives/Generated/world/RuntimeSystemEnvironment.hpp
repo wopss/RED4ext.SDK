@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemEnvironment : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemEnvironment";
@@ -20,6 +21,7 @@ struct RuntimeSystemEnvironment : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemEnvironment, 0x210);
 } // namespace world
+using worldRuntimeSystemEnvironment = world::RuntimeSystemEnvironment;
 } // namespace RED4ext
 
 // clang-format on

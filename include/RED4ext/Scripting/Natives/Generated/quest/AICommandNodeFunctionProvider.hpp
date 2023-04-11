@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AICommandNodeFunctionProvider : IScriptable
 {
     static constexpr const char* NAME = "questAICommandNodeFunctionProvider";
@@ -19,6 +20,7 @@ struct AICommandNodeFunctionProvider : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AICommandNodeFunctionProvider, 0x40);
 } // namespace quest
+using questAICommandNodeFunctionProvider = quest::AICommandNodeFunctionProvider;
 using AICommandNodeFunctionProvider = quest::AICommandNodeFunctionProvider;
 } // namespace RED4ext
 

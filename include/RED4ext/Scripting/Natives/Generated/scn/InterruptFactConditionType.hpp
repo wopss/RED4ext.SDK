@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct InterruptFactConditionType : ISerializable
 {
     static constexpr const char* NAME = "scnInterruptFactConditionType";
@@ -19,6 +20,7 @@ struct InterruptFactConditionType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InterruptFactConditionType, 0x30);
 } // namespace scn
+using scnInterruptFactConditionType = scn::InterruptFactConditionType;
 } // namespace RED4ext
 
 // clang-format on

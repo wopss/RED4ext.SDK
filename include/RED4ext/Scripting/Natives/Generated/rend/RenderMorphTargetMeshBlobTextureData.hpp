@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderMorphTargetMeshBlobTextureData
 {
     static constexpr const char* NAME = "rendRenderMorphTargetMeshBlobTextureData";
@@ -29,6 +30,7 @@ struct RenderMorphTargetMeshBlobTextureData
 };
 RED4EXT_ASSERT_SIZE(RenderMorphTargetMeshBlobTextureData, 0xC0);
 } // namespace rend
+using rendRenderMorphTargetMeshBlobTextureData = rend::RenderMorphTargetMeshBlobTextureData;
 } // namespace RED4ext
 
 // clang-format on

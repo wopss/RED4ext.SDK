@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace world { struct SharedDataBuffer; }
 
-namespace world { 
+namespace world
+{
 struct TransformBuffer
 {
     static constexpr const char* NAME = "worldTransformBuffer";
@@ -24,6 +25,7 @@ struct TransformBuffer
 };
 RED4EXT_ASSERT_SIZE(TransformBuffer, 0x18);
 } // namespace world
+using worldTransformBuffer = world::TransformBuffer;
 } // namespace RED4ext
 
 // clang-format on

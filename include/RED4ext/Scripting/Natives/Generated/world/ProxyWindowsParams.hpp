@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ProxyWindowsParams
 {
     static constexpr const char* NAME = "worldProxyWindowsParams";
@@ -30,6 +31,7 @@ struct ProxyWindowsParams
 };
 RED4EXT_ASSERT_SIZE(ProxyWindowsParams, 0x24);
 } // namespace world
+using worldProxyWindowsParams = world::ProxyWindowsParams;
 } // namespace RED4ext
 
 // clang-format on

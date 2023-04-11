@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Rotation_InitialRotation : game::TransformAnimation_Rotation
 {
     static constexpr const char* NAME = "gameTransformAnimation_Rotation_InitialRotation";
@@ -19,6 +20,7 @@ struct TransformAnimation_Rotation_InitialRotation : game::TransformAnimation_Ro
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Rotation_InitialRotation, 0x30);
 } // namespace game
+using gameTransformAnimation_Rotation_InitialRotation = game::TransformAnimation_Rotation_InitialRotation;
 } // namespace RED4ext
 
 // clang-format on

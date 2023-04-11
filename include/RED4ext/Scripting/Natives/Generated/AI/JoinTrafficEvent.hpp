@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct JoinTrafficEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AIJoinTrafficEvent";
@@ -20,6 +21,7 @@ struct JoinTrafficEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(JoinTrafficEvent, 0xF8);
 } // namespace AI
+using AIJoinTrafficEvent = AI::JoinTrafficEvent;
 using JoinTrafficEvent = AI::JoinTrafficEvent;
 } // namespace RED4ext
 

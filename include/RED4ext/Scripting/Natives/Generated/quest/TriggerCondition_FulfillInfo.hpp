@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TriggerCondition_FulfillInfo
 {
     static constexpr const char* NAME = "questTriggerCondition_FulfillInfo";
@@ -19,6 +20,7 @@ struct TriggerCondition_FulfillInfo
 };
 RED4EXT_ASSERT_SIZE(TriggerCondition_FulfillInfo, 0x50);
 } // namespace quest
+using questTriggerCondition_FulfillInfo = quest::TriggerCondition_FulfillInfo;
 } // namespace RED4ext
 
 // clang-format on

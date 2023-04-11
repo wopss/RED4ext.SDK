@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game::mappins { 
+namespace game::mappins
+{
 struct DynamicQuestMappinRepInfo
 {
     static constexpr const char* NAME = "gamemappinsDynamicQuestMappinRepInfo";
@@ -25,6 +26,7 @@ struct DynamicQuestMappinRepInfo
 };
 RED4EXT_ASSERT_SIZE(DynamicQuestMappinRepInfo, 0x20);
 } // namespace game::mappins
+using gamemappinsDynamicQuestMappinRepInfo = game::mappins::DynamicQuestMappinRepInfo;
 } // namespace RED4ext
 
 // clang-format on

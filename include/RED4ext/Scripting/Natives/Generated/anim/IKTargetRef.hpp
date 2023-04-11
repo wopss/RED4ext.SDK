@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IKTargetRef
 {
     static constexpr const char* NAME = "animIKTargetRef";
@@ -22,6 +23,7 @@ struct IKTargetRef
 };
 RED4EXT_ASSERT_SIZE(IKTargetRef, 0x10);
 } // namespace anim
+using animIKTargetRef = anim::IKTargetRef;
 using IKTargetRef = anim::IKTargetRef;
 } // namespace RED4ext
 

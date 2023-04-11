@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HitShapeUserData : IScriptable
 {
     static constexpr const char* NAME = "gameHitShapeUserData";
@@ -19,6 +20,7 @@ struct HitShapeUserData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(HitShapeUserData, 0x40);
 } // namespace game
+using gameHitShapeUserData = game::HitShapeUserData;
 using HitShapeUserData = game::HitShapeUserData;
 } // namespace RED4ext
 

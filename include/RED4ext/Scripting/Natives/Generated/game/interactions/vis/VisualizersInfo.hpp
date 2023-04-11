@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct VisualizersInfo
 {
     static constexpr const char* NAME = "gameinteractionsvisVisualizersInfo";
@@ -22,6 +23,7 @@ struct VisualizersInfo
 };
 RED4EXT_ASSERT_SIZE(VisualizersInfo, 0x18);
 } // namespace game::interactions::vis
+using gameinteractionsvisVisualizersInfo = game::interactions::vis::VisualizersInfo;
 using VisualizersInfo = game::interactions::vis::VisualizersInfo;
 } // namespace RED4ext
 

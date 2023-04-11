@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace garment { 
+namespace garment
+{
 struct GarmentLayerParams : CResource
 {
     static constexpr const char* NAME = "garmentGarmentLayerParams";
@@ -27,6 +28,7 @@ struct GarmentLayerParams : CResource
 };
 RED4EXT_ASSERT_SIZE(GarmentLayerParams, 0x80);
 } // namespace garment
+using garmentGarmentLayerParams = garment::GarmentLayerParams;
 } // namespace RED4ext
 
 // clang-format on

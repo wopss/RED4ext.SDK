@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LookAtLimits
 {
     static constexpr const char* NAME = "entLookAtLimits";
@@ -22,6 +23,7 @@ struct LookAtLimits
 };
 RED4EXT_ASSERT_SIZE(LookAtLimits, 0x10);
 } // namespace ent
+using entLookAtLimits = ent::LookAtLimits;
 } // namespace RED4ext
 
 // clang-format on

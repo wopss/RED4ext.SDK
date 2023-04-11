@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIExtendTargetCirclingCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIExtendTargetCirclingCond_Record";
@@ -20,6 +21,7 @@ struct AIExtendTargetCirclingCond_Record : game::data::AIActionSubCondition_Reco
 };
 RED4EXT_ASSERT_SIZE(AIExtendTargetCirclingCond_Record, 0x60);
 } // namespace game::data
+using gamedataAIExtendTargetCirclingCond_Record = game::data::AIExtendTargetCirclingCond_Record;
 using AIExtendTargetCirclingCond_Record = game::data::AIExtendTargetCirclingCond_Record;
 } // namespace RED4ext
 

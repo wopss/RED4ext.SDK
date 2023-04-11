@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world { struct IMarker; }
 
-namespace world { 
+namespace world
+{
 struct StaticMarkerNode : world::SocketNode
 {
     static constexpr const char* NAME = "worldStaticMarkerNode";
@@ -27,6 +28,7 @@ struct StaticMarkerNode : world::SocketNode
 };
 RED4EXT_ASSERT_SIZE(StaticMarkerNode, 0x60);
 } // namespace world
+using worldStaticMarkerNode = world::StaticMarkerNode;
 } // namespace RED4ext
 
 // clang-format on

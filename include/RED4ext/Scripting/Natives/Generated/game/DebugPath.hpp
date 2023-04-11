@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DebugPath
 {
     static constexpr const char* NAME = "gameDebugPath";
@@ -21,6 +22,7 @@ struct DebugPath
 };
 RED4EXT_ASSERT_SIZE(DebugPath, 0x28);
 } // namespace game
+using gameDebugPath = game::DebugPath;
 } // namespace RED4ext
 
 // clang-format on

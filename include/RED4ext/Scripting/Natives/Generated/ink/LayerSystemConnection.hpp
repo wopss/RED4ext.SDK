@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct ILayerSystemData; }
 
-namespace ink { 
+namespace ink
+{
 struct LayerSystemConnection
 {
     static constexpr const char* NAME = "inkLayerSystemConnection";
@@ -24,6 +25,7 @@ struct LayerSystemConnection
 };
 RED4EXT_ASSERT_SIZE(LayerSystemConnection, 0x18);
 } // namespace ink
+using inkLayerSystemConnection = ink::LayerSystemConnection;
 } // namespace RED4ext
 
 // clang-format on

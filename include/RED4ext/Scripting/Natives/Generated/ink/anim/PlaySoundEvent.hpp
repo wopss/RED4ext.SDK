@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct PlaySoundEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimPlaySoundEvent";
@@ -21,6 +22,7 @@ struct PlaySoundEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(PlaySoundEvent, 0x50);
 } // namespace ink::anim
+using inkanimPlaySoundEvent = ink::anim::PlaySoundEvent;
 } // namespace RED4ext
 
 // clang-format on

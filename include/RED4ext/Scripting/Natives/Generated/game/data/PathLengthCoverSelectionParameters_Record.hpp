@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct PathLengthCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataPathLengthCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct PathLengthCoverSelectionParameters_Record : game::data::CoverSelectionPar
 };
 RED4EXT_ASSERT_SIZE(PathLengthCoverSelectionParameters_Record, 0x60);
 } // namespace game::data
+using gamedataPathLengthCoverSelectionParameters_Record = game::data::PathLengthCoverSelectionParameters_Record;
 using PathLengthCoverSelectionParameters_Record = game::data::PathLengthCoverSelectionParameters_Record;
 } // namespace RED4ext
 

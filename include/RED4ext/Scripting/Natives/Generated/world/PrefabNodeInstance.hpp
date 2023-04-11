@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PrefabNodeInstance : world::SnappableNodeInstance
 {
     static constexpr const char* NAME = "worldPrefabNodeInstance";
@@ -20,6 +21,7 @@ struct PrefabNodeInstance : world::SnappableNodeInstance
 };
 RED4EXT_ASSERT_SIZE(PrefabNodeInstance, 0x1A0);
 } // namespace world
+using worldPrefabNodeInstance = world::PrefabNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

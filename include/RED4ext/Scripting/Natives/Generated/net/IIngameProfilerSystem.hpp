@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace net { 
+namespace net
+{
 struct IIngameProfilerSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "netIIngameProfilerSystem";
@@ -19,6 +20,7 @@ struct IIngameProfilerSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IIngameProfilerSystem, 0x48);
 } // namespace net
+using netIIngameProfilerSystem = net::IIngameProfilerSystem;
 } // namespace RED4ext
 
 // clang-format on

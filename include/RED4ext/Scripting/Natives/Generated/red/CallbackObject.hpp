@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct CallbackObject : IScriptable
 {
     static constexpr const char* NAME = "redCallbackObject";
@@ -19,6 +20,7 @@ struct CallbackObject : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CallbackObject, 0x40);
 } // namespace red
+using redCallbackObject = red::CallbackObject;
 using CallbackHandle = red::CallbackObject;
 } // namespace RED4ext
 

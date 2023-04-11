@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ISpawnerConditionType : quest::IConditionType
 {
     static constexpr const char* NAME = "questISpawnerConditionType";
@@ -19,6 +20,7 @@ struct ISpawnerConditionType : quest::IConditionType
 };
 RED4EXT_ASSERT_SIZE(ISpawnerConditionType, 0x38);
 } // namespace quest
+using questISpawnerConditionType = quest::ISpawnerConditionType;
 } // namespace RED4ext
 
 // clang-format on

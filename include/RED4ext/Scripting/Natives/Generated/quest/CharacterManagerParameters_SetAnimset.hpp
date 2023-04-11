@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetAnimset : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetAnimset";
@@ -23,6 +24,7 @@ struct CharacterManagerParameters_SetAnimset : quest::ICharacterManagerParameter
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetAnimset, 0x80);
 } // namespace quest
+using questCharacterManagerParameters_SetAnimset = quest::CharacterManagerParameters_SetAnimset;
 } // namespace RED4ext
 
 // clang-format on

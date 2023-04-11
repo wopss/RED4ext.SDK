@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct PhysicalMaterialSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioPhysicalMaterialSettings";
@@ -41,6 +42,7 @@ struct PhysicalMaterialSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(PhysicalMaterialSettings, 0xB8);
 } // namespace audio
+using audioPhysicalMaterialSettings = audio::PhysicalMaterialSettings;
 } // namespace RED4ext
 
 // clang-format on

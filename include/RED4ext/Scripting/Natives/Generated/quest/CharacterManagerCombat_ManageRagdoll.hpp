@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerCombat_ManageRagdoll : quest::ICharacterManagerCombat_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerCombat_ManageRagdoll";
@@ -21,6 +22,7 @@ struct CharacterManagerCombat_ManageRagdoll : quest::ICharacterManagerCombat_Nod
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_ManageRagdoll, 0x78);
 } // namespace quest
+using questCharacterManagerCombat_ManageRagdoll = quest::CharacterManagerCombat_ManageRagdoll;
 } // namespace RED4ext
 
 // clang-format on

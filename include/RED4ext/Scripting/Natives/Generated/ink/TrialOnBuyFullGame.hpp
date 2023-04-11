@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TrialOnBuyFullGame : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkTrialOnBuyFullGame";
@@ -20,6 +21,7 @@ struct TrialOnBuyFullGame : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(TrialOnBuyFullGame, 0x38);
 } // namespace ink
+using inkTrialOnBuyFullGame = ink::TrialOnBuyFullGame;
 } // namespace RED4ext
 
 // clang-format on

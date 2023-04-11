@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IContentTokenManager_NodeSubType : ISerializable
 {
     static constexpr const char* NAME = "questIContentTokenManager_NodeSubType";
@@ -19,6 +20,7 @@ struct IContentTokenManager_NodeSubType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IContentTokenManager_NodeSubType, 0x30);
 } // namespace quest
+using questIContentTokenManager_NodeSubType = quest::IContentTokenManager_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

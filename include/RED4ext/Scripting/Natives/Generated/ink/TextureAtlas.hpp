@@ -21,7 +21,8 @@ namespace RED4ext
 struct CBitmapTexture;
 struct DynamicTexture;
 
-namespace ink { 
+namespace ink
+{
 struct TextureAtlas : CResource
 {
     static constexpr const char* NAME = "inkTextureAtlas";
@@ -43,6 +44,7 @@ struct TextureAtlas : CResource
 };
 RED4EXT_ASSERT_SIZE(TextureAtlas, 0x138);
 } // namespace ink
+using inkTextureAtlas = ink::TextureAtlas;
 } // namespace RED4ext
 
 // clang-format on

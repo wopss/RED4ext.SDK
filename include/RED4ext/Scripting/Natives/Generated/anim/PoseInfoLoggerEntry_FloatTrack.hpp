@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct PoseInfoLoggerEntry_FloatTrack : anim::PoseInfoLoggerEntry
 {
     static constexpr const char* NAME = "animPoseInfoLoggerEntry_FloatTrack";
@@ -23,6 +24,7 @@ struct PoseInfoLoggerEntry_FloatTrack : anim::PoseInfoLoggerEntry
 };
 RED4EXT_ASSERT_SIZE(PoseInfoLoggerEntry_FloatTrack, 0x50);
 } // namespace anim
+using animPoseInfoLoggerEntry_FloatTrack = anim::PoseInfoLoggerEntry_FloatTrack;
 } // namespace RED4ext
 
 // clang-format on

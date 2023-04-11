@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MappingConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorMappingConditionDefinition";
@@ -23,6 +24,7 @@ struct MappingConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(MappingConditionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorMappingConditionDefinition = AI::behavior::MappingConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

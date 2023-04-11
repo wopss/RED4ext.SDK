@@ -9,6 +9,7 @@
 namespace RED4ext
 {
 RED4EXT_ASSERT_SIZE(game::AppearanceNameVisualTagsPreset, 0x70);
+using gameAppearanceNameVisualTagsPreset = game::AppearanceNameVisualTagsPreset;
 } // namespace RED4ext
 
 /*
@@ -20,7 +21,8 @@ RED4EXT_ASSERT_SIZE(game::AppearanceNameVisualTagsPreset, 0x70);
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct AppearanceNameVisualTagsPreset : ISerializable
 {
     static constexpr const char* NAME = "gameAppearanceNameVisualTagsPreset";
@@ -31,6 +33,7 @@ struct AppearanceNameVisualTagsPreset : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AppearanceNameVisualTagsPreset, 0x70);
 } // namespace game
+using gameAppearanceNameVisualTagsPreset = game::AppearanceNameVisualTagsPreset;
 } // namespace RED4ext
 */
 

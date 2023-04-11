@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SSlotInfo
 {
     static constexpr const char* NAME = "gameSSlotInfo";
@@ -25,6 +26,7 @@ struct SSlotInfo
 };
 RED4EXT_ASSERT_SIZE(SSlotInfo, 0x18);
 } // namespace game
+using gameSSlotInfo = game::SSlotInfo;
 using SSlotInfo = game::SSlotInfo;
 } // namespace RED4ext
 

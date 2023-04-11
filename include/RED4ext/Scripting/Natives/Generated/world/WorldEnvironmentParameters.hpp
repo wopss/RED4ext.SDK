@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WorldEnvironmentParameters
 {
     static constexpr const char* NAME = "worldWorldEnvironmentParameters";
@@ -20,6 +21,7 @@ struct WorldEnvironmentParameters
 };
 RED4EXT_ASSERT_SIZE(WorldEnvironmentParameters, 0x10);
 } // namespace world
+using worldWorldEnvironmentParameters = world::WorldEnvironmentParameters;
 } // namespace RED4ext
 
 // clang-format on

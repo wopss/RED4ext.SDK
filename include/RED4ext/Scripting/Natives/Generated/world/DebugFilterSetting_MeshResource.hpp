@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugFilterSetting_MeshResource : world::EditorDebugFilterSettings
 {
     static constexpr const char* NAME = "worldDebugFilterSetting_MeshResource";
@@ -23,6 +24,7 @@ struct DebugFilterSetting_MeshResource : world::EditorDebugFilterSettings
 };
 RED4EXT_ASSERT_SIZE(DebugFilterSetting_MeshResource, 0x78);
 } // namespace world
+using worldDebugFilterSetting_MeshResource = world::DebugFilterSetting_MeshResource;
 } // namespace RED4ext
 
 // clang-format on

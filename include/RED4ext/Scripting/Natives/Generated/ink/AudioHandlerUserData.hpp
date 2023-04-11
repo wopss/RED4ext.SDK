@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct AudioHandlerUserData : ink::UserData
 {
     static constexpr const char* NAME = "inkAudioHandlerUserData";
@@ -20,6 +21,7 @@ struct AudioHandlerUserData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(AudioHandlerUserData, 0x50);
 } // namespace ink
+using inkAudioHandlerUserData = ink::AudioHandlerUserData;
 } // namespace RED4ext
 
 // clang-format on

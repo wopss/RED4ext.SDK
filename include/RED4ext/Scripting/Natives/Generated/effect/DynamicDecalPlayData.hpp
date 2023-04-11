@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct DynamicDecalPlayData : effect::PlacedTrackItemPlayData
 {
     static constexpr const char* NAME = "effectDynamicDecalPlayData";
@@ -20,6 +21,7 @@ struct DynamicDecalPlayData : effect::PlacedTrackItemPlayData
 };
 RED4EXT_ASSERT_SIZE(DynamicDecalPlayData, 0x58);
 } // namespace effect
+using effectDynamicDecalPlayData = effect::DynamicDecalPlayData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionQueueAIEvent_Record : game::data::AISubAction_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionQueueAIEvent_Record";
@@ -20,6 +21,7 @@ struct AISubActionQueueAIEvent_Record : game::data::AISubAction_Record
 };
 RED4EXT_ASSERT_SIZE(AISubActionQueueAIEvent_Record, 0x50);
 } // namespace game::data
+using gamedataAISubActionQueueAIEvent_Record = game::data::AISubActionQueueAIEvent_Record;
 using AISubActionQueueAIEvent_Record = game::data::AISubActionQueueAIEvent_Record;
 } // namespace RED4ext
 

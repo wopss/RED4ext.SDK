@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticVectorFieldNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticVectorFieldNodeInstance";
@@ -20,6 +21,7 @@ struct StaticVectorFieldNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(StaticVectorFieldNodeInstance, 0xA0);
 } // namespace world
+using worldStaticVectorFieldNodeInstance = world::StaticVectorFieldNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

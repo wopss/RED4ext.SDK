@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct EffectorTimeDilationDriver_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataEffectorTimeDilationDriver_Record";
@@ -20,6 +21,7 @@ struct EffectorTimeDilationDriver_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(EffectorTimeDilationDriver_Record, 0x58);
 } // namespace game::data
+using gamedataEffectorTimeDilationDriver_Record = game::data::EffectorTimeDilationDriver_Record;
 using EffectorTimeDilationDriver_Record = game::data::EffectorTimeDilationDriver_Record;
 } // namespace RED4ext
 

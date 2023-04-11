@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct WorkspotData : ISerializable
 {
     static constexpr const char* NAME = "scnWorkspotData";
@@ -22,6 +23,7 @@ struct WorkspotData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WorkspotData, 0x38);
 } // namespace scn
+using scnWorkspotData = scn::WorkspotData;
 } // namespace RED4ext
 
 // clang-format on

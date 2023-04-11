@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ITransformsHistorySystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameITransformsHistorySystem";
@@ -19,6 +20,7 @@ struct ITransformsHistorySystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ITransformsHistorySystem, 0x48);
 } // namespace game
+using gameITransformsHistorySystem = game::ITransformsHistorySystem;
 } // namespace RED4ext
 
 // clang-format on

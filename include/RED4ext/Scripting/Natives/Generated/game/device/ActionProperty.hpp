@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct ActionProperty : IScriptable
 {
     static constexpr const char* NAME = "gamedeviceActionProperty";
@@ -29,6 +30,7 @@ struct ActionProperty : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ActionProperty, 0xA0);
 } // namespace game::device
+using gamedeviceActionProperty = game::device::ActionProperty;
 using DeviceActionProperty = game::device::ActionProperty;
 } // namespace RED4ext
 

@@ -17,7 +17,8 @@ namespace RED4ext
 struct CMesh;
 namespace world { struct FoliageCompiledResource; }
 
-namespace world { 
+namespace world
+{
 struct FoliageNode : world::Node
 {
     static constexpr const char* NAME = "worldFoliageNode";
@@ -37,6 +38,7 @@ struct FoliageNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(FoliageNode, 0xA0);
 } // namespace world
+using worldFoliageNode = world::FoliageNode;
 } // namespace RED4ext
 
 // clang-format on

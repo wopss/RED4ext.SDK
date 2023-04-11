@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntityPreview : ent::Entity
 {
     static constexpr const char* NAME = "entEntityPreview";
@@ -20,6 +21,7 @@ struct EntityPreview : ent::Entity
 };
 RED4EXT_ASSERT_SIZE(EntityPreview, 0x1B8);
 } // namespace ent
+using entEntityPreview = ent::EntityPreview;
 } // namespace RED4ext
 
 // clang-format on

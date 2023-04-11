@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AreaData
 {
     static constexpr const char* NAME = "gameAreaData";
@@ -31,6 +32,7 @@ struct AreaData
 };
 RED4EXT_ASSERT_SIZE(AreaData, 0x30);
 } // namespace game
+using gameAreaData = game::AreaData;
 } // namespace RED4ext
 
 // clang-format on

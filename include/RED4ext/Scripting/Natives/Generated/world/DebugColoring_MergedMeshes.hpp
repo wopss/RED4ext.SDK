@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_MergedMeshes : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_MergedMeshes";
@@ -22,6 +23,7 @@ struct DebugColoring_MergedMeshes : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_MergedMeshes, 0x38);
 } // namespace world
+using worldDebugColoring_MergedMeshes = world::DebugColoring_MergedMeshes;
 } // namespace RED4ext
 
 // clang-format on

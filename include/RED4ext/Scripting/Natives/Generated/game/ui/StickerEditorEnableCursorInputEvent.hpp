@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct StickerEditorEnableCursorInputEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiStickerEditorEnableCursorInputEvent";
@@ -20,6 +21,7 @@ struct StickerEditorEnableCursorInputEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StickerEditorEnableCursorInputEvent, 0x48);
 } // namespace game::ui
+using gameuiStickerEditorEnableCursorInputEvent = game::ui::StickerEditorEnableCursorInputEvent;
 using StickerEditorEnableCursorInputEvent = game::ui::StickerEditorEnableCursorInputEvent;
 } // namespace RED4ext
 

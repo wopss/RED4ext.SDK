@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SetBackgroundEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetBackgroundEvent";
@@ -20,6 +21,7 @@ struct SetBackgroundEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetBackgroundEvent, 0x48);
 } // namespace game::ui
+using gameuiSetBackgroundEvent = game::ui::SetBackgroundEvent;
 using SetBackgroundEvent = game::ui::SetBackgroundEvent;
 } // namespace RED4ext
 

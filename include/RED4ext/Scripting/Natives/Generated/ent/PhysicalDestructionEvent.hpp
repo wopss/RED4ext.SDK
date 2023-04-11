@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct PhysicalDestructionEvent : red::Event
 {
     static constexpr const char* NAME = "entPhysicalDestructionEvent";
@@ -23,6 +24,7 @@ struct PhysicalDestructionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionEvent, 0x50);
 } // namespace ent
+using entPhysicalDestructionEvent = ent::PhysicalDestructionEvent;
 using PhysicalDestructionEvent = ent::PhysicalDestructionEvent;
 } // namespace RED4ext
 

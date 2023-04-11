@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct MultiplayerAIDirectorParams; }
 
-namespace quest { 
+namespace quest
+{
 struct MultiplayerAIDirectorNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questMultiplayerAIDirectorNodeDefinition";
@@ -23,6 +24,7 @@ struct MultiplayerAIDirectorNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(MultiplayerAIDirectorNodeDefinition, 0x58);
 } // namespace quest
+using questMultiplayerAIDirectorNodeDefinition = quest::MultiplayerAIDirectorNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

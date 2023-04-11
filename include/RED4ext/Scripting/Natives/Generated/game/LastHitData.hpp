@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LastHitData
 {
     static constexpr const char* NAME = "gameLastHitData";
@@ -25,6 +26,7 @@ struct LastHitData
 };
 RED4EXT_ASSERT_SIZE(LastHitData, 0x20);
 } // namespace game
+using gameLastHitData = game::LastHitData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineResultString
 {
     static constexpr const char* NAME = "gamestateMachineResultString";
@@ -22,6 +23,7 @@ struct MachineResultString
 };
 RED4EXT_ASSERT_SIZE(MachineResultString, 0x28);
 } // namespace game::state
+using gamestateMachineResultString = game::state::MachineResultString;
 using StateResultString = game::state::MachineResultString;
 } // namespace RED4ext
 

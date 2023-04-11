@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct EntityEffectSpawnerSyncData
 {
     static constexpr const char* NAME = "interopEntityEffectSpawnerSyncData";
@@ -31,6 +32,7 @@ struct EntityEffectSpawnerSyncData
 };
 RED4EXT_ASSERT_SIZE(EntityEffectSpawnerSyncData, 0x80);
 } // namespace interop
+using interopEntityEffectSpawnerSyncData = interop::EntityEffectSpawnerSyncData;
 } // namespace RED4ext
 
 // clang-format on

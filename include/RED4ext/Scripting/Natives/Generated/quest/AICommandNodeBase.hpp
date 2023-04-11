@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AICommandNodeBase : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questAICommandNodeBase";
@@ -19,6 +20,7 @@ struct AICommandNodeBase : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(AICommandNodeBase, 0x48);
 } // namespace quest
+using questAICommandNodeBase = quest::AICommandNodeBase;
 } // namespace RED4ext
 
 // clang-format on

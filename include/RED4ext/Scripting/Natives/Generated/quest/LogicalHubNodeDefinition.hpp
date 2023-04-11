@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct LogicalHubNodeDefinition : quest::LogicalBaseNodeDefinition
 {
     static constexpr const char* NAME = "questLogicalHubNodeDefinition";
@@ -19,6 +20,7 @@ struct LogicalHubNodeDefinition : quest::LogicalBaseNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(LogicalHubNodeDefinition, 0x50);
 } // namespace quest
+using questLogicalHubNodeDefinition = quest::LogicalHubNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct FindClosestPointOnTrafficPathTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorFindClosestPointOnTrafficPathTaskDefinition";
@@ -32,6 +33,7 @@ struct FindClosestPointOnTrafficPathTaskDefinition : AI::behavior::TaskDefinitio
 };
 RED4EXT_ASSERT_SIZE(FindClosestPointOnTrafficPathTaskDefinition, 0xD8);
 } // namespace AI::behavior
+using AIbehaviorFindClosestPointOnTrafficPathTaskDefinition = AI::behavior::FindClosestPointOnTrafficPathTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

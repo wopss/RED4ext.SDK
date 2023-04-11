@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimDebuggerCommand_FloatOutputApplied : anim::IAnimDebuggerCommand
 {
     static constexpr const char* NAME = "animAnimDebuggerCommand_FloatOutputApplied";
@@ -20,6 +21,7 @@ struct AnimDebuggerCommand_FloatOutputApplied : anim::IAnimDebuggerCommand
 };
 RED4EXT_ASSERT_SIZE(AnimDebuggerCommand_FloatOutputApplied, 0x20);
 } // namespace anim
+using animAnimDebuggerCommand_FloatOutputApplied = anim::AnimDebuggerCommand_FloatOutputApplied;
 } // namespace RED4ext
 
 // clang-format on

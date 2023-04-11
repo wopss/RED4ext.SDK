@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckTriggerReturnConditionParams
 {
     static constexpr const char* NAME = "scnCheckTriggerReturnConditionParams";
@@ -22,6 +23,7 @@ struct CheckTriggerReturnConditionParams
 };
 RED4EXT_ASSERT_SIZE(CheckTriggerReturnConditionParams, 0x10);
 } // namespace scn
+using scnCheckTriggerReturnConditionParams = scn::CheckTriggerReturnConditionParams;
 } // namespace RED4ext
 
 // clang-format on

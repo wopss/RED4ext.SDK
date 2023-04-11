@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DebugContextPtr
 {
     static constexpr const char* NAME = "gameDebugContextPtr";
@@ -19,6 +20,7 @@ struct DebugContextPtr
 };
 RED4EXT_ASSERT_SIZE(DebugContextPtr, 0x8);
 } // namespace game
+using gameDebugContextPtr = game::DebugContextPtr;
 } // namespace RED4ext
 
 // clang-format on

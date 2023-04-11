@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ICoverSelectionSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "AIICoverSelectionSystem";
@@ -19,6 +20,7 @@ struct ICoverSelectionSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ICoverSelectionSystem, 0x48);
 } // namespace AI
+using AIICoverSelectionSystem = AI::ICoverSelectionSystem;
 } // namespace RED4ext
 
 // clang-format on

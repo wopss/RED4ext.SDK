@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct MountEventData; }
 
-namespace game { 
+namespace game
+{
 struct MountAIEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "gameMountAIEvent";
@@ -23,6 +24,7 @@ struct MountAIEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(MountAIEvent, 0x60);
 } // namespace game
+using gameMountAIEvent = game::MountAIEvent;
 using MountAIEvent = game::MountAIEvent;
 } // namespace RED4ext
 

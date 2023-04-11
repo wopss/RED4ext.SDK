@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct ISensesConditionType; }
 
-namespace quest { 
+namespace quest
+{
 struct SensesCondition : quest::TypedCondition
 {
     static constexpr const char* NAME = "questSensesCondition";
@@ -23,6 +24,7 @@ struct SensesCondition : quest::TypedCondition
 };
 RED4EXT_ASSERT_SIZE(SensesCondition, 0x40);
 } // namespace quest
+using questSensesCondition = quest::SensesCondition;
 } // namespace RED4ext
 
 // clang-format on

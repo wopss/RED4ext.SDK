@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NavigationTileResource : res::StreamedResource
 {
     static constexpr const char* NAME = "worldNavigationTileResource";
@@ -24,6 +25,7 @@ struct NavigationTileResource : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(NavigationTileResource, 0x70);
 } // namespace world
+using worldNavigationTileResource = world::NavigationTileResource;
 } // namespace RED4ext
 
 // clang-format on

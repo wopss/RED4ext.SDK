@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MultiplayerTeleportPuppetParams
 {
     static constexpr const char* NAME = "questMultiplayerTeleportPuppetParams";
@@ -28,6 +29,7 @@ struct MultiplayerTeleportPuppetParams
 };
 RED4EXT_ASSERT_SIZE(MultiplayerTeleportPuppetParams, 0x90);
 } // namespace quest
+using questMultiplayerTeleportPuppetParams = quest::MultiplayerTeleportPuppetParams;
 } // namespace RED4ext
 
 // clang-format on

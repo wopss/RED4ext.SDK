@@ -24,7 +24,8 @@ namespace anim { struct Rig; }
 namespace work { struct IEntry; }
 namespace work { struct IWorkspotItemAction; }
 
-namespace work { 
+namespace work
+{
 struct WorkspotTree : ISerializable
 {
     static constexpr const char* NAME = "workWorkspotTree";
@@ -67,6 +68,7 @@ struct WorkspotTree : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WorkspotTree, 0x138);
 } // namespace work
+using workWorkspotTree = work::WorkspotTree;
 } // namespace RED4ext
 
 // clang-format on

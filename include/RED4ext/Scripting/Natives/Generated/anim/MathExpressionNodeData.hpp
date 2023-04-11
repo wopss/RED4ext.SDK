@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace math { struct ExprExpression; }
 
-namespace anim { 
+namespace anim
+{
 struct MathExpressionNodeData
 {
     static constexpr const char* NAME = "animMathExpressionNodeData";
@@ -29,6 +30,7 @@ struct MathExpressionNodeData
 };
 RED4EXT_ASSERT_SIZE(MathExpressionNodeData, 0x40);
 } // namespace anim
+using animMathExpressionNodeData = anim::MathExpressionNodeData;
 } // namespace RED4ext
 
 // clang-format on

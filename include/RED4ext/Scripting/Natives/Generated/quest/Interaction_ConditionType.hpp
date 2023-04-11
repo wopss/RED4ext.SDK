@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Interaction_ConditionType : quest::IObjectConditionType
 {
     static constexpr const char* NAME = "questInteraction_ConditionType";
@@ -24,6 +25,7 @@ struct Interaction_ConditionType : quest::IObjectConditionType
 };
 RED4EXT_ASSERT_SIZE(Interaction_ConditionType, 0x48);
 } // namespace quest
+using questInteraction_ConditionType = quest::Interaction_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

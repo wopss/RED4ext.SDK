@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace input { 
+namespace input
+{
 struct InputSystemWin32Base : input::IInputSystem
 {
     static constexpr const char* NAME = "inputInputSystemWin32Base";
@@ -20,6 +21,7 @@ struct InputSystemWin32Base : input::IInputSystem
 };
 RED4EXT_ASSERT_SIZE(InputSystemWin32Base, 0x180);
 } // namespace input
+using inputInputSystemWin32Base = input::InputSystemWin32Base;
 } // namespace RED4ext
 
 // clang-format on

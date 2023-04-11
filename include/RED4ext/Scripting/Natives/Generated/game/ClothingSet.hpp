@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ClothingSet : IScriptable
 {
     static constexpr const char* NAME = "gameClothingSet";
@@ -27,6 +28,7 @@ struct ClothingSet : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ClothingSet, 0x60);
 } // namespace game
+using gameClothingSet = game::ClothingSet;
 using ClothingSet = game::ClothingSet;
 } // namespace RED4ext
 

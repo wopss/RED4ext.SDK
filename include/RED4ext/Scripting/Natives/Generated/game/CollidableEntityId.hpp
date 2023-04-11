@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CollidableEntityId : ISerializable
 {
     static constexpr const char* NAME = "gameCollidableEntityId";
@@ -20,6 +21,7 @@ struct CollidableEntityId : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CollidableEntityId, 0x38);
 } // namespace game
+using gameCollidableEntityId = game::CollidableEntityId;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence
+{
 struct System : game::influence::ISystem
 {
     static constexpr const char* NAME = "gameinfluenceSystem";
@@ -20,6 +21,7 @@ struct System : game::influence::ISystem
 };
 RED4EXT_ASSERT_SIZE(System, 0x1D8);
 } // namespace game::influence
+using gameinfluenceSystem = game::influence::System;
 using InfluenceMapSystem = game::influence::System;
 } // namespace RED4ext
 

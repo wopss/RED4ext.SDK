@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IMultiplayerHeistNodeType : quest::INodeType
 {
     static constexpr const char* NAME = "questIMultiplayerHeistNodeType";
@@ -19,6 +20,7 @@ struct IMultiplayerHeistNodeType : quest::INodeType
 };
 RED4EXT_ASSERT_SIZE(IMultiplayerHeistNodeType, 0x30);
 } // namespace quest
+using questIMultiplayerHeistNodeType = quest::IMultiplayerHeistNodeType;
 } // namespace RED4ext
 
 // clang-format on

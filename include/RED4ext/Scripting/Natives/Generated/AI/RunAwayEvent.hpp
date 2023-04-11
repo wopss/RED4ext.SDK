@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct RunAwayEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AIRunAwayEvent";
@@ -20,6 +21,7 @@ struct RunAwayEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(RunAwayEvent, 0x60);
 } // namespace AI
+using AIRunAwayEvent = AI::RunAwayEvent;
 using RunAwayEvent = AI::RunAwayEvent;
 } // namespace RED4ext
 

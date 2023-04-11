@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace at_ui { 
+namespace at_ui
+{
 struct UserData : ink::UserData
 {
     static constexpr const char* NAME = "at_uiUserData";
@@ -21,6 +22,7 @@ struct UserData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(UserData, 0x60);
 } // namespace at_ui
+using at_uiUserData = at_ui::UserData;
 } // namespace RED4ext
 
 // clang-format on

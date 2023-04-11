@@ -19,7 +19,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SceneAnimationMotionActionParams : IScriptable
 {
     static constexpr const char* NAME = "gameSceneAnimationMotionActionParams";
@@ -49,6 +50,7 @@ struct SceneAnimationMotionActionParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SceneAnimationMotionActionParams, 0x160);
 } // namespace game
+using gameSceneAnimationMotionActionParams = game::SceneAnimationMotionActionParams;
 using SceneAnimationMotionActionParams = game::SceneAnimationMotionActionParams;
 } // namespace RED4ext
 

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct IRigIkSetup; }
 
-namespace anim { 
+namespace anim
+{
 struct RigSharedData : CResource
 {
     static constexpr const char* NAME = "animRigSharedData";
@@ -26,6 +27,7 @@ struct RigSharedData : CResource
 };
 RED4EXT_ASSERT_SIZE(RigSharedData, 0x60);
 } // namespace anim
+using animRigSharedData = anim::RigSharedData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Command : attr::Attribute
 {
     static constexpr const char* NAME = "attrCommand";
@@ -19,6 +20,7 @@ struct Command : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(Command, 0x30);
 } // namespace attr
+using attrCommand = attr::Command;
 } // namespace RED4ext
 
 // clang-format on

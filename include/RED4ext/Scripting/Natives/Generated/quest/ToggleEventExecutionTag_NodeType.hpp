@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct ToggleEventExecutionTag_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questToggleEventExecutionTag_NodeType";
@@ -27,6 +28,7 @@ struct ToggleEventExecutionTag_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleEventExecutionTag_NodeType, 0x50);
 } // namespace quest
+using questToggleEventExecutionTag_NodeType = quest::ToggleEventExecutionTag_NodeType;
 } // namespace RED4ext
 
 // clang-format on

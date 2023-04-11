@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DelaySystemTickOnEventStruct : game::DelaySystemTickStruct
 {
     static constexpr const char* NAME = "gameDelaySystemTickOnEventStruct";
@@ -20,6 +21,7 @@ struct DelaySystemTickOnEventStruct : game::DelaySystemTickStruct
 };
 RED4EXT_ASSERT_SIZE(DelaySystemTickOnEventStruct, 0x58);
 } // namespace game
+using gameDelaySystemTickOnEventStruct = game::DelaySystemTickOnEventStruct;
 } // namespace RED4ext
 
 // clang-format on

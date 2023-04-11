@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ActionName : IScriptable
 {
     static constexpr const char* NAME = "inkActionName";
@@ -20,6 +21,7 @@ struct ActionName : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ActionName, 0x58);
 } // namespace ink
+using inkActionName = ink::ActionName;
 } // namespace RED4ext
 
 // clang-format on

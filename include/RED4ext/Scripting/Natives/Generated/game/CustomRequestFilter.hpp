@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CustomRequestFilter
 {
     static constexpr const char* NAME = "gameCustomRequestFilter";
@@ -19,6 +20,7 @@ struct CustomRequestFilter
 };
 RED4EXT_ASSERT_SIZE(CustomRequestFilter, 0x8);
 } // namespace game
+using gameCustomRequestFilter = game::CustomRequestFilter;
 using CustomRequestFilter = game::CustomRequestFilter;
 } // namespace RED4ext
 

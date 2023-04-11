@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SaveSanitizationForbiddenAreaSystem : game::ISaveSanitizationForbiddenAreaSystem
 {
     static constexpr const char* NAME = "gameSaveSanitizationForbiddenAreaSystem";
@@ -20,6 +21,7 @@ struct SaveSanitizationForbiddenAreaSystem : game::ISaveSanitizationForbiddenAre
 };
 RED4EXT_ASSERT_SIZE(SaveSanitizationForbiddenAreaSystem, 0x50);
 } // namespace game
+using gameSaveSanitizationForbiddenAreaSystem = game::SaveSanitizationForbiddenAreaSystem;
 using SaveSanitizationForbiddenAreaSystem = game::SaveSanitizationForbiddenAreaSystem;
 } // namespace RED4ext
 

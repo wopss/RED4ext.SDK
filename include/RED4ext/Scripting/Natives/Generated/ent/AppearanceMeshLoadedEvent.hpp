@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AppearanceMeshLoadedEvent : red::Event
 {
     static constexpr const char* NAME = "entAppearanceMeshLoadedEvent";
@@ -20,6 +21,7 @@ struct AppearanceMeshLoadedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AppearanceMeshLoadedEvent, 0x88);
 } // namespace ent
+using entAppearanceMeshLoadedEvent = ent::AppearanceMeshLoadedEvent;
 } // namespace RED4ext
 
 // clang-format on

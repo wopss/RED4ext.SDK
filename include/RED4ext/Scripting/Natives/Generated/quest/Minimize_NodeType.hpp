@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Minimize_NodeType : quest::IPhoneManagerNodeType
 {
     static constexpr const char* NAME = "questMinimize_NodeType";
@@ -21,6 +22,7 @@ struct Minimize_NodeType : quest::IPhoneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(Minimize_NodeType, 0x40);
 } // namespace quest
+using questMinimize_NodeType = quest::Minimize_NodeType;
 } // namespace RED4ext
 
 // clang-format on

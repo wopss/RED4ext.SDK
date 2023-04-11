@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DelegateExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorDelegateExpressionDefinition";
@@ -24,6 +25,7 @@ struct DelegateExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 };
 RED4EXT_ASSERT_SIZE(DelegateExpressionDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorDelegateExpressionDefinition = AI::behavior::DelegateExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

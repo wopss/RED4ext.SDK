@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetSaveDataLoadingScreen_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetSaveDataLoadingScreen_NodeType";
@@ -21,6 +22,7 @@ struct SetSaveDataLoadingScreen_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetSaveDataLoadingScreen_NodeType, 0x40);
 } // namespace quest
+using questSetSaveDataLoadingScreen_NodeType = quest::SetSaveDataLoadingScreen_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct CollisionPresetOverride
 {
     static constexpr const char* NAME = "physicsCollisionPresetOverride";
@@ -21,6 +22,7 @@ struct CollisionPresetOverride
 };
 RED4EXT_ASSERT_SIZE(CollisionPresetOverride, 0x10);
 } // namespace physics
+using physicsCollisionPresetOverride = physics::CollisionPresetOverride;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatformTeleportTo : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformTeleportTo";
@@ -24,6 +25,7 @@ struct MovingPlatformTeleportTo : red::Event
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformTeleportTo, 0x60);
 } // namespace game
+using gameMovingPlatformTeleportTo = game::MovingPlatformTeleportTo;
 using TeleportTo = game::MovingPlatformTeleportTo;
 } // namespace RED4ext
 

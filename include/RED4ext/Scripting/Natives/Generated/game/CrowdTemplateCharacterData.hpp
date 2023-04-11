@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CrowdTemplateCharacterData
 {
     static constexpr const char* NAME = "gameCrowdTemplateCharacterData";
@@ -21,6 +22,7 @@ struct CrowdTemplateCharacterData
 };
 RED4EXT_ASSERT_SIZE(CrowdTemplateCharacterData, 0xC);
 } // namespace game
+using gameCrowdTemplateCharacterData = game::CrowdTemplateCharacterData;
 } // namespace RED4ext
 
 // clang-format on

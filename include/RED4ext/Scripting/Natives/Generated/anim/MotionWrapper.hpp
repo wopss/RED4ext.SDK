@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct MotionWrapper
 {
     static constexpr const char* NAME = "animMotionWrapper";
@@ -19,6 +20,7 @@ struct MotionWrapper
 };
 RED4EXT_ASSERT_SIZE(MotionWrapper, 0x18);
 } // namespace anim
+using animMotionWrapper = anim::MotionWrapper;
 } // namespace RED4ext
 
 // clang-format on

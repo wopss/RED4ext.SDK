@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct IEntry : ISerializable
 {
     static constexpr const char* NAME = "workIEntry";
@@ -22,6 +23,7 @@ struct IEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IEntry, 0x38);
 } // namespace work
+using workIEntry = work::IEntry;
 } // namespace RED4ext
 
 // clang-format on

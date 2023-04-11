@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LayersResource : CResource
 {
     static constexpr const char* NAME = "inkLayersResource";
@@ -26,6 +27,7 @@ struct LayersResource : CResource
 };
 RED4EXT_ASSERT_SIZE(LayersResource, 0x888);
 } // namespace ink
+using inkLayersResource = ink::LayersResource;
 } // namespace RED4ext
 
 // clang-format on

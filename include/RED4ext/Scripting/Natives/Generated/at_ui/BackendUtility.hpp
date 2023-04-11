@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace at_ui { 
+namespace at_ui
+{
 struct BackendUtility : IScriptable
 {
     static constexpr const char* NAME = "at_uiBackendUtility";
@@ -20,6 +21,7 @@ struct BackendUtility : IScriptable
 };
 RED4EXT_ASSERT_SIZE(BackendUtility, 0x50);
 } // namespace at_ui
+using at_uiBackendUtility = at_ui::BackendUtility;
 } // namespace RED4ext
 
 // clang-format on

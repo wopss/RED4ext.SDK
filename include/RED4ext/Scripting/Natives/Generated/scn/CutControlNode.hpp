@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CutControlNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnCutControlNode";
@@ -19,6 +20,7 @@ struct CutControlNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(CutControlNode, 0x48);
 } // namespace scn
+using scnCutControlNode = scn::CutControlNode;
 } // namespace RED4ext
 
 // clang-format on

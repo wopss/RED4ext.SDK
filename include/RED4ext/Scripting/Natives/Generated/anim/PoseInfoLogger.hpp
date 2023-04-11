@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct PoseInfoLoggerEntry; }
 
-namespace anim { 
+namespace anim
+{
 struct PoseInfoLogger
 {
     static constexpr const char* NAME = "animPoseInfoLogger";
@@ -27,6 +28,7 @@ struct PoseInfoLogger
 };
 RED4EXT_ASSERT_SIZE(PoseInfoLogger, 0x18);
 } // namespace anim
+using animPoseInfoLogger = anim::PoseInfoLogger;
 } // namespace RED4ext
 
 // clang-format on

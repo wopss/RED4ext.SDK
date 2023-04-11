@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EnableScanningStatePropagationToParentEvent : red::Event
 {
     static constexpr const char* NAME = "gameEnableScanningStatePropagationToParentEvent";
@@ -21,6 +22,7 @@ struct EnableScanningStatePropagationToParentEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(EnableScanningStatePropagationToParentEvent, 0x48);
 } // namespace game
+using gameEnableScanningStatePropagationToParentEvent = game::EnableScanningStatePropagationToParentEvent;
 } // namespace RED4ext
 
 // clang-format on

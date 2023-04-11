@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CarriedObjectDestroy : red::Event
 {
     static constexpr const char* NAME = "gameCarriedObjectDestroy";
@@ -20,6 +21,7 @@ struct CarriedObjectDestroy : red::Event
 };
 RED4EXT_ASSERT_SIZE(CarriedObjectDestroy, 0x48);
 } // namespace game
+using gameCarriedObjectDestroy = game::CarriedObjectDestroy;
 using CarriedObjectDestroy = game::CarriedObjectDestroy;
 } // namespace RED4ext
 

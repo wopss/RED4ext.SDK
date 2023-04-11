@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoiceTriggerPerSquadOrderMapItem
 {
     static constexpr const char* NAME = "audioVoiceTriggerPerSquadOrderMapItem";
@@ -21,6 +22,7 @@ struct VoiceTriggerPerSquadOrderMapItem
 };
 RED4EXT_ASSERT_SIZE(VoiceTriggerPerSquadOrderMapItem, 0x10);
 } // namespace audio
+using audioVoiceTriggerPerSquadOrderMapItem = audio::VoiceTriggerPerSquadOrderMapItem;
 } // namespace RED4ext
 
 // clang-format on

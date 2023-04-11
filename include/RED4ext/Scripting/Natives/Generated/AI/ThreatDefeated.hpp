@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace AI { 
+namespace AI
+{
 struct ThreatDefeated : AI::AIEvent
 {
     static constexpr const char* NAME = "AIThreatDefeated";
@@ -27,6 +28,7 @@ struct ThreatDefeated : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(ThreatDefeated, 0x78);
 } // namespace AI
+using AIThreatDefeated = AI::ThreatDefeated;
 using ThreatDefeated = AI::ThreatDefeated;
 } // namespace RED4ext
 

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct Uint64Pair
 {
     static constexpr const char* NAME = "interopUint64Pair";
@@ -20,6 +21,7 @@ struct Uint64Pair
 };
 RED4EXT_ASSERT_SIZE(Uint64Pair, 0x10);
 } // namespace interop
+using interopUint64Pair = interop::Uint64Pair;
 } // namespace RED4ext
 
 // clang-format on

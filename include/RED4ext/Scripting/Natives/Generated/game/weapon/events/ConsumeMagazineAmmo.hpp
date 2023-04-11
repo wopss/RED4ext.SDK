@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon::events { 
+namespace game::weapon::events
+{
 struct ConsumeMagazineAmmo : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsConsumeMagazineAmmo";
@@ -21,6 +22,7 @@ struct ConsumeMagazineAmmo : red::Event
 };
 RED4EXT_ASSERT_SIZE(ConsumeMagazineAmmo, 0x48);
 } // namespace game::weapon::events
+using gameweaponeventsConsumeMagazineAmmo = game::weapon::events::ConsumeMagazineAmmo;
 using WeaponConsumeMagazineAmmoEvent = game::weapon::events::ConsumeMagazineAmmo;
 } // namespace RED4ext
 

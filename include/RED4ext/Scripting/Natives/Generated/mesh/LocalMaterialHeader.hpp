@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct LocalMaterialHeader
 {
     static constexpr const char* NAME = "meshLocalMaterialHeader";
@@ -20,6 +21,7 @@ struct LocalMaterialHeader
 };
 RED4EXT_ASSERT_SIZE(LocalMaterialHeader, 0x8);
 } // namespace mesh
+using meshLocalMaterialHeader = mesh::LocalMaterialHeader;
 } // namespace RED4ext
 
 // clang-format on

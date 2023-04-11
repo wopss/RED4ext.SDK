@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ConditionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MonitorConditionDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorMonitorConditionDefinition";
@@ -25,6 +26,7 @@ struct MonitorConditionDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MonitorConditionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorMonitorConditionDefinition = AI::behavior::MonitorConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

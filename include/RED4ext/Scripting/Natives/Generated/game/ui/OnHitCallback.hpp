@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct OnHitCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "gameuiOnHitCallback";
@@ -20,6 +21,7 @@ struct OnHitCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(OnHitCallback, 0x38);
 } // namespace game::ui
+using gameuiOnHitCallback = game::ui::OnHitCallback;
 } // namespace RED4ext
 
 // clang-format on

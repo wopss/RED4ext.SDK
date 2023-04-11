@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayInDeviceCallbackEvent : red::Event
 {
     static constexpr const char* NAME = "gamePlayInDeviceCallbackEvent";
@@ -21,6 +22,7 @@ struct PlayInDeviceCallbackEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PlayInDeviceCallbackEvent, 0x48);
 } // namespace game
+using gamePlayInDeviceCallbackEvent = game::PlayInDeviceCallbackEvent;
 using PlayInDeviceCallbackEvent = game::PlayInDeviceCallbackEvent;
 } // namespace RED4ext
 

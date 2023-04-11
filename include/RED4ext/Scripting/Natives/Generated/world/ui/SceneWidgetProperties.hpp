@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct SceneWidgetProperties
 {
     static constexpr const char* NAME = "worlduiSceneWidgetProperties";
@@ -29,6 +30,7 @@ struct SceneWidgetProperties
 };
 RED4EXT_ASSERT_SIZE(SceneWidgetProperties, 0x20);
 } // namespace world::ui
+using worlduiSceneWidgetProperties = world::ui::SceneWidgetProperties;
 } // namespace RED4ext
 
 // clang-format on

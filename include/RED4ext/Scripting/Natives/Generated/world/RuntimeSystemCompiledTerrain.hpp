@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemCompiledTerrain : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemCompiledTerrain";
@@ -20,6 +21,7 @@ struct RuntimeSystemCompiledTerrain : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemCompiledTerrain, 0x98);
 } // namespace world
+using worldRuntimeSystemCompiledTerrain = world::RuntimeSystemCompiledTerrain;
 } // namespace RED4ext
 
 // clang-format on

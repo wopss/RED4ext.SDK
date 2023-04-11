@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct VirtualNetworkPath_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVirtualNetworkPath_Record";
@@ -20,6 +21,7 @@ struct VirtualNetworkPath_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(VirtualNetworkPath_Record, 0x50);
 } // namespace game::data
+using gamedataVirtualNetworkPath_Record = game::data::VirtualNetworkPath_Record;
 using VirtualNetworkPath_Record = game::data::VirtualNetworkPath_Record;
 } // namespace RED4ext
 

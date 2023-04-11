@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InnerGlowEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkInnerGlowEffect";
@@ -25,6 +26,7 @@ struct InnerGlowEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(InnerGlowEffect, 0x80);
 } // namespace ink
+using inkInnerGlowEffect = ink::InnerGlowEffect;
 } // namespace RED4ext
 
 // clang-format on

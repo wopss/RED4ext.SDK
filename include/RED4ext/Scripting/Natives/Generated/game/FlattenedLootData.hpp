@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FlattenedLootData
 {
     static constexpr const char* NAME = "gameFlattenedLootData";
@@ -21,6 +22,7 @@ struct FlattenedLootData
 };
 RED4EXT_ASSERT_SIZE(FlattenedLootData, 0x18);
 } // namespace game
+using gameFlattenedLootData = game::FlattenedLootData;
 } // namespace RED4ext
 
 // clang-format on

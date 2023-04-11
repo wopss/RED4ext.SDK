@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CameraFocus_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questCameraFocus_ConditionType";
@@ -29,6 +30,7 @@ struct CameraFocus_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(CameraFocus_ConditionType, 0x80);
 } // namespace quest
+using questCameraFocus_ConditionType = quest::CameraFocus_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

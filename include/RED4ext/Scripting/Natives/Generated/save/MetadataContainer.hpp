@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace save { 
+namespace save
+{
 struct MetadataContainer : ISerializable
 {
     static constexpr const char* NAME = "saveMetadataContainer";
@@ -21,6 +22,7 @@ struct MetadataContainer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MetadataContainer, 0x3E0);
 } // namespace save
+using saveMetadataContainer = save::MetadataContainer;
 } // namespace RED4ext
 
 // clang-format on

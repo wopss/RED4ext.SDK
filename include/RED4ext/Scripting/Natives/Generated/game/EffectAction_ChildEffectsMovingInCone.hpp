@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectAction_ChildEffectsMovingInCone : game::EffectPostAction
 {
     static constexpr const char* NAME = "gameEffectAction_ChildEffectsMovingInCone";
@@ -29,6 +30,7 @@ struct EffectAction_ChildEffectsMovingInCone : game::EffectPostAction
 };
 RED4EXT_ASSERT_SIZE(EffectAction_ChildEffectsMovingInCone, 0x60);
 } // namespace game
+using gameEffectAction_ChildEffectsMovingInCone = game::EffectAction_ChildEffectsMovingInCone;
 } // namespace RED4ext
 
 // clang-format on

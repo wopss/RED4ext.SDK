@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISectorType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAISectorType_Record";
@@ -20,6 +21,7 @@ struct AISectorType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AISectorType_Record, 0x50);
 } // namespace game::data
+using gamedataAISectorType_Record = game::data::AISectorType_Record;
 using AISectorType_Record = game::data::AISectorType_Record;
 } // namespace RED4ext
 

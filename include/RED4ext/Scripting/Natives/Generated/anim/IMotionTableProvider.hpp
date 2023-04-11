@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IMotionTableProvider : ISerializable
 {
     static constexpr const char* NAME = "animIMotionTableProvider";
@@ -28,6 +29,7 @@ struct IMotionTableProvider : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IMotionTableProvider, 0x50);
 } // namespace anim
+using animIMotionTableProvider = anim::IMotionTableProvider;
 } // namespace RED4ext
 
 // clang-format on

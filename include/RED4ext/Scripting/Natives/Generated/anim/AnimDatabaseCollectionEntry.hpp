@@ -14,7 +14,8 @@ namespace RED4ext
 struct C2dArray;
 namespace anim { struct GenericAnimDatabase; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimDatabaseCollectionEntry
 {
     static constexpr const char* NAME = "animAnimDatabaseCollectionEntry";
@@ -27,6 +28,7 @@ struct AnimDatabaseCollectionEntry
 };
 RED4EXT_ASSERT_SIZE(AnimDatabaseCollectionEntry, 0x60);
 } // namespace anim
+using animAnimDatabaseCollectionEntry = anim::AnimDatabaseCollectionEntry;
 } // namespace RED4ext
 
 // clang-format on

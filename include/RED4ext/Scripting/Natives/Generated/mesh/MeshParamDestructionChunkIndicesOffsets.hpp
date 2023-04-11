@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamDestructionChunkIndicesOffsets : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamDestructionChunkIndicesOffsets";
@@ -25,6 +26,7 @@ struct MeshParamDestructionChunkIndicesOffsets : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamDestructionChunkIndicesOffsets, 0x60);
 } // namespace mesh
+using meshMeshParamDestructionChunkIndicesOffsets = mesh::MeshParamDestructionChunkIndicesOffsets;
 } // namespace RED4ext
 
 // clang-format on

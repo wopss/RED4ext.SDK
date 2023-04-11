@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct TDBIDHelper
 {
     static constexpr const char* NAME = "gamedataTDBIDHelper";
@@ -19,6 +20,7 @@ struct TDBIDHelper
 };
 RED4EXT_ASSERT_SIZE(TDBIDHelper, 0x40);
 } // namespace game::data
+using gamedataTDBIDHelper = game::data::TDBIDHelper;
 using TDBID = game::data::TDBIDHelper;
 } // namespace RED4ext
 

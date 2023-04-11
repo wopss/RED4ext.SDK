@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Elevator_ManageNPCAttachment_NodeType : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questElevator_ManageNPCAttachment_NodeType";
@@ -22,6 +23,7 @@ struct Elevator_ManageNPCAttachment_NodeType : quest::IInteractiveObjectManagerN
 };
 RED4EXT_ASSERT_SIZE(Elevator_ManageNPCAttachment_NodeType, 0x40);
 } // namespace quest
+using questElevator_ManageNPCAttachment_NodeType = quest::Elevator_ManageNPCAttachment_NodeType;
 } // namespace RED4ext
 
 // clang-format on

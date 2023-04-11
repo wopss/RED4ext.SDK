@@ -17,7 +17,8 @@ namespace RED4ext
 namespace physics { struct FilterData; }
 namespace world { struct Effect; }
 
-namespace world { 
+namespace world
+{
 struct FoliageBakedDestructionMapping : world::FoliageDestructionMapping
 {
     static constexpr const char* NAME = "worldFoliageBakedDestructionMapping";
@@ -33,6 +34,7 @@ struct FoliageBakedDestructionMapping : world::FoliageDestructionMapping
 };
 RED4EXT_ASSERT_SIZE(FoliageBakedDestructionMapping, 0x98);
 } // namespace world
+using worldFoliageBakedDestructionMapping = world::FoliageBakedDestructionMapping;
 } // namespace RED4ext
 
 // clang-format on

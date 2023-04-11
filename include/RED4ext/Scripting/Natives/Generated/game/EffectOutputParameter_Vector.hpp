@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectOutputParameter_Vector
 {
     static constexpr const char* NAME = "gameEffectOutputParameter_Vector";
@@ -21,6 +22,7 @@ struct EffectOutputParameter_Vector
 };
 RED4EXT_ASSERT_SIZE(EffectOutputParameter_Vector, 0x40);
 } // namespace game
+using gameEffectOutputParameter_Vector = game::EffectOutputParameter_Vector;
 using EffectOutputParameter_Vector = game::EffectOutputParameter_Vector;
 } // namespace RED4ext
 

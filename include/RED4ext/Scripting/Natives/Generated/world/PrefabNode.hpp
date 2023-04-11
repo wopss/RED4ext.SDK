@@ -22,7 +22,8 @@ namespace world { struct Prefab; }
 namespace world { struct PrefabInstanceData; }
 namespace world { struct PrefabVariantsList; }
 
-namespace world { 
+namespace world
+{
 struct PrefabNode : world::Node
 {
     static constexpr const char* NAME = "worldPrefabNode";
@@ -52,6 +53,7 @@ struct PrefabNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(PrefabNode, 0x88);
 } // namespace world
+using worldPrefabNode = world::PrefabNode;
 } // namespace RED4ext
 
 // clang-format on

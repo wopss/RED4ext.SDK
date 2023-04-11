@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct OffscreenWidgetSpawnEvt : red::Event
 {
     static constexpr const char* NAME = "inkOffscreenWidgetSpawnEvt";
@@ -20,6 +21,7 @@ struct OffscreenWidgetSpawnEvt : red::Event
 };
 RED4EXT_ASSERT_SIZE(OffscreenWidgetSpawnEvt, 0xD8);
 } // namespace ink
+using inkOffscreenWidgetSpawnEvt = ink::OffscreenWidgetSpawnEvt;
 } // namespace RED4ext
 
 // clang-format on

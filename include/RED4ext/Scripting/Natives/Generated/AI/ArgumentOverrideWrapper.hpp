@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentDefinition; }
 
-namespace AI { 
+namespace AI
+{
 struct ArgumentOverrideWrapper
 {
     static constexpr const char* NAME = "AIArgumentOverrideWrapper";
@@ -27,6 +28,7 @@ struct ArgumentOverrideWrapper
 };
 RED4EXT_ASSERT_SIZE(ArgumentOverrideWrapper, 0x20);
 } // namespace AI
+using AIArgumentOverrideWrapper = AI::ArgumentOverrideWrapper;
 } // namespace RED4ext
 
 // clang-format on

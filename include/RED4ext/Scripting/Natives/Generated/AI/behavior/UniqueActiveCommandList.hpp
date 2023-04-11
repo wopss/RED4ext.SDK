@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct UniqueActiveCommandList
 {
     static constexpr const char* NAME = "AIbehaviorUniqueActiveCommandList";
@@ -19,6 +20,7 @@ struct UniqueActiveCommandList
 };
 RED4EXT_ASSERT_SIZE(UniqueActiveCommandList, 0x50);
 } // namespace AI::behavior
+using AIbehaviorUniqueActiveCommandList = AI::behavior::UniqueActiveCommandList;
 using AIActiveCommandList = AI::behavior::UniqueActiveCommandList;
 } // namespace RED4ext
 

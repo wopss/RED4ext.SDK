@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct FoliageDestructionNodeInstance : world::CollisionNodeInstance
 {
     static constexpr const char* NAME = "worldFoliageDestructionNodeInstance";
@@ -19,6 +20,7 @@ struct FoliageDestructionNodeInstance : world::CollisionNodeInstance
 };
 RED4EXT_ASSERT_SIZE(FoliageDestructionNodeInstance, 0xA0);
 } // namespace world
+using worldFoliageDestructionNodeInstance = world::FoliageDestructionNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

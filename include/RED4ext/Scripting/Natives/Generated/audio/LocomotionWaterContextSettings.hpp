@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LocomotionWaterContextSettings
 {
     static constexpr const char* NAME = "audioLocomotionWaterContextSettings";
@@ -22,6 +23,7 @@ struct LocomotionWaterContextSettings
 };
 RED4EXT_ASSERT_SIZE(LocomotionWaterContextSettings, 0x10);
 } // namespace audio
+using audioLocomotionWaterContextSettings = audio::LocomotionWaterContextSettings;
 } // namespace RED4ext
 
 // clang-format on

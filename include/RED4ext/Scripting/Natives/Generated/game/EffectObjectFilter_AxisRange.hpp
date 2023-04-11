@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_AxisRange : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_AxisRange";
@@ -25,6 +26,7 @@ struct EffectObjectFilter_AxisRange : game::EffectObjectSingleFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_AxisRange, 0x78);
 } // namespace game
+using gameEffectObjectFilter_AxisRange = game::EffectObjectFilter_AxisRange;
 } // namespace RED4ext
 
 // clang-format on

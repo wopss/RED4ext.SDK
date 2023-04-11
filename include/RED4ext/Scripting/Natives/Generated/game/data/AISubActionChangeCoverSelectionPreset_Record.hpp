@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionChangeCoverSelectionPreset_Record : game::data::AISubAction_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionChangeCoverSelectionPreset_Record";
@@ -20,6 +21,7 @@ struct AISubActionChangeCoverSelectionPreset_Record : game::data::AISubAction_Re
 };
 RED4EXT_ASSERT_SIZE(AISubActionChangeCoverSelectionPreset_Record, 0x60);
 } // namespace game::data
+using gamedataAISubActionChangeCoverSelectionPreset_Record = game::data::AISubActionChangeCoverSelectionPreset_Record;
 using AISubActionChangeCoverSelectionPreset_Record = game::data::AISubActionChangeCoverSelectionPreset_Record;
 } // namespace RED4ext
 

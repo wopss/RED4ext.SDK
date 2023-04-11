@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::helper { 
+namespace game::helper
+{
 struct StimBroadcasterComponentHelper : IScriptable
 {
     static constexpr const char* NAME = "gamehelperStimBroadcasterComponentHelper";
@@ -19,6 +20,7 @@ struct StimBroadcasterComponentHelper : IScriptable
 };
 RED4EXT_ASSERT_SIZE(StimBroadcasterComponentHelper, 0x40);
 } // namespace game::helper
+using gamehelperStimBroadcasterComponentHelper = game::helper::StimBroadcasterComponentHelper;
 using StimBroadcasterComponentHelper = game::helper::StimBroadcasterComponentHelper;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_OnlyNearest : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_OnlyNearest";
@@ -21,6 +22,7 @@ struct EffectObjectFilter_OnlyNearest : game::EffectObjectGroupFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_OnlyNearest, 0x48);
 } // namespace game
+using gameEffectObjectFilter_OnlyNearest = game::EffectObjectFilter_OnlyNearest;
 } // namespace RED4ext
 
 // clang-format on

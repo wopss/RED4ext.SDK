@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SetBoneTransformEntry
 {
     static constexpr const char* NAME = "animSetBoneTransformEntry";
@@ -31,6 +32,7 @@ struct SetBoneTransformEntry
 };
 RED4EXT_ASSERT_SIZE(SetBoneTransformEntry, 0x90);
 } // namespace anim
+using animSetBoneTransformEntry = anim::SetBoneTransformEntry;
 } // namespace RED4ext
 
 // clang-format on

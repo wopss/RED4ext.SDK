@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IStreetSignWidgetComponentWrapper : ink::IWorldWidgetComponentWrapper
 {
     static constexpr const char* NAME = "inkIStreetSignWidgetComponentWrapper";
@@ -19,6 +20,7 @@ struct IStreetSignWidgetComponentWrapper : ink::IWorldWidgetComponentWrapper
 };
 RED4EXT_ASSERT_SIZE(IStreetSignWidgetComponentWrapper, 0x8);
 } // namespace ink
+using inkIStreetSignWidgetComponentWrapper = ink::IStreetSignWidgetComponentWrapper;
 } // namespace RED4ext
 
 // clang-format on

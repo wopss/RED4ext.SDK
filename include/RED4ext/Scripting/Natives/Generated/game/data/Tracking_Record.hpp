@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct Tracking_Record : game::data::ProjectileLaunch_Record
 {
     static constexpr const char* NAME = "gamedataTracking_Record";
@@ -20,6 +21,7 @@ struct Tracking_Record : game::data::ProjectileLaunch_Record
 };
 RED4EXT_ASSERT_SIZE(Tracking_Record, 0x70);
 } // namespace game::data
+using gamedataTracking_Record = game::data::Tracking_Record;
 using Tracking_Record = game::data::Tracking_Record;
 } // namespace RED4ext
 

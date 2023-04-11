@@ -24,7 +24,8 @@ namespace RED4ext
 {
 struct CIESDataResource;
 
-namespace ent { 
+namespace ent
+{
 struct LightComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightComponent";
@@ -36,54 +37,61 @@ struct LightComponent : ent::IVisualComponent
     ELightUnit unit; // 14C
     float intensity; // 150
     float rayTracingIntensityScale; // 154
-    float EV; // 158
-    ELightType type; // 15C
-    uint8_t scaleGI; // 160
-    uint8_t scaleEnvProbes; // 161
-    uint8_t sceneSpecularScale; // 162
-    uint8_t scaleVolFog; // 163
-    int8_t roughnessBias; // 164
-    bool useInTransparents; // 165
-    bool useInParticles; // 166
-    bool sceneDiffuse; // 167
-    bool directional; // 168
-    bool clampAttenuation; // 169
-    rend::LightChannel lightChannel; // 16A
-    rend::LightGroup group; // 16C
-    rend::LightAttenuation attenuation; // 16D
-    bool enableLocalShadows; // 16E
-    bool enableLocalShadowsForceStaticsOnly; // 16F
-    rend::ContactShadowReciever contactShadows; // 170
-    uint8_t unk171[0x174 - 0x171]; // 171
-    float shadowFadeDistance; // 174
-    float shadowFadeRange; // 178
-    ELightShadowSoftnessMode shadowSoftnessMode; // 17C
-    float rayTracingLightSourceRadius; // 180
-    float rayTracingContactShadowRange; // 184
-    rend::SLightFlickering flicker; // 188
-    EEnvColorGroup envColorGroup; // 194
-    uint8_t colorGroupSaturation; // 195
-    uint8_t portalAngleCutoff; // 196
-    bool allowDistantLight; // 197
-    float innerAngle; // 198
-    float outerAngle; // 19C
-    float shadowAngle; // 1A0
-    float shadowRadius; // 1A4
-    float softness; // 1A8
-    EAreaLightShape areaShape; // 1AC
-    bool areaTwoSided; // 1B0
-    bool spotCapsule; // 1B1
-    uint8_t unk1B2[0x1B4 - 0x1B2]; // 1B2
-    float sourceRadius; // 1B4
-    float capsuleLength; // 1B8
-    float areaRectSideA; // 1BC
-    float areaRectSideB; // 1C0
-    uint8_t unk1C4[0x1C8 - 0x1C4]; // 1C4
-    RaRef<CIESDataResource> iesProfile; // 1C8
-    uint8_t unk1D0[0x1F0 - 0x1D0]; // 1D0
+    bool rtxdiOverrideGlobalRayOffset; // 158
+    uint8_t unk159[0x15C - 0x159]; // 159
+    float rtxdiRayOffsetMin; // 15C
+    float rtxdiRayOffsetMax; // 160
+    float rtxdiRayScale; // 164
+    bool rtxdiEnableLight; // 168
+    uint8_t unk169[0x16C - 0x169]; // 169
+    float EV; // 16C
+    ELightType type; // 170
+    uint8_t scaleGI; // 174
+    uint8_t scaleEnvProbes; // 175
+    uint8_t sceneSpecularScale; // 176
+    uint8_t scaleVolFog; // 177
+    int8_t roughnessBias; // 178
+    bool useInTransparents; // 179
+    bool useInParticles; // 17A
+    bool sceneDiffuse; // 17B
+    bool directional; // 17C
+    bool clampAttenuation; // 17D
+    rend::LightChannel lightChannel; // 17E
+    rend::LightGroup group; // 180
+    rend::LightAttenuation attenuation; // 181
+    bool enableLocalShadows; // 182
+    bool enableLocalShadowsForceStaticsOnly; // 183
+    rend::ContactShadowReciever contactShadows; // 184
+    uint8_t unk185[0x188 - 0x185]; // 185
+    float shadowFadeDistance; // 188
+    float shadowFadeRange; // 18C
+    ELightShadowSoftnessMode shadowSoftnessMode; // 190
+    float rayTracingLightSourceRadius; // 194
+    float rayTracingContactShadowRange; // 198
+    rend::SLightFlickering flicker; // 19C
+    EEnvColorGroup envColorGroup; // 1A8
+    uint8_t colorGroupSaturation; // 1A9
+    uint8_t portalAngleCutoff; // 1AA
+    bool allowDistantLight; // 1AB
+    float innerAngle; // 1AC
+    float outerAngle; // 1B0
+    float shadowAngle; // 1B4
+    float shadowRadius; // 1B8
+    float softness; // 1BC
+    EAreaLightShape areaShape; // 1C0
+    bool areaTwoSided; // 1C4
+    bool spotCapsule; // 1C5
+    uint8_t unk1C6[0x1C8 - 0x1C6]; // 1C6
+    float sourceRadius; // 1C8
+    float capsuleLength; // 1CC
+    float areaRectSideA; // 1D0
+    float areaRectSideB; // 1D4
+    RaRef<CIESDataResource> iesProfile; // 1D8
+    uint8_t unk1E0[0x200 - 0x1E0]; // 1E0
 };
-RED4EXT_ASSERT_SIZE(LightComponent, 0x1F0);
+RED4EXT_ASSERT_SIZE(LightComponent, 0x200);
 } // namespace ent
+using entLightComponent = ent::LightComponent;
 using LightComponent = ent::LightComponent;
 } // namespace RED4ext
 

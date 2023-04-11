@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world { struct FoliageRawItem; }
 
-namespace world { 
+namespace world
+{
 struct FoliageRawData : ISerializable
 {
     static constexpr const char* NAME = "worldFoliageRawData";
@@ -25,6 +26,7 @@ struct FoliageRawData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(FoliageRawData, 0x50);
 } // namespace world
+using worldFoliageRawData = world::FoliageRawData;
 } // namespace RED4ext
 
 // clang-format on

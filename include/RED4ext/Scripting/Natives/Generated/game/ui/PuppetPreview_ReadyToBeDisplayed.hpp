@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PuppetPreview_ReadyToBeDisplayed : red::Event
 {
     static constexpr const char* NAME = "gameuiPuppetPreview_ReadyToBeDisplayed";
@@ -21,6 +22,7 @@ struct PuppetPreview_ReadyToBeDisplayed : red::Event
 };
 RED4EXT_ASSERT_SIZE(PuppetPreview_ReadyToBeDisplayed, 0x48);
 } // namespace game::ui
+using gameuiPuppetPreview_ReadyToBeDisplayed = game::ui::PuppetPreview_ReadyToBeDisplayed;
 } // namespace RED4ext
 
 // clang-format on

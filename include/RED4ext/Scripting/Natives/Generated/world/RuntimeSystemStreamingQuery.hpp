@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemStreamingQuery : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemStreamingQuery";
@@ -20,6 +21,7 @@ struct RuntimeSystemStreamingQuery : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemStreamingQuery, 0xE0);
 } // namespace world
+using worldRuntimeSystemStreamingQuery = world::RuntimeSystemStreamingQuery;
 } // namespace RED4ext
 
 // clang-format on

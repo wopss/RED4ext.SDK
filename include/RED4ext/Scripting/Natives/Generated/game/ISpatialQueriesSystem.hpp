@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ISpatialQueriesSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameISpatialQueriesSystem";
@@ -19,6 +20,7 @@ struct ISpatialQueriesSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISpatialQueriesSystem, 0x48);
 } // namespace game
+using gameISpatialQueriesSystem = game::ISpatialQueriesSystem;
 } // namespace RED4ext
 
 // clang-format on

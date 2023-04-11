@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct InjectLoot_NodeType : quest::IItemManagerNodeType
 {
     static constexpr const char* NAME = "questInjectLoot_NodeType";
@@ -22,6 +23,7 @@ struct InjectLoot_NodeType : quest::IItemManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(InjectLoot_NodeType, 0x40);
 } // namespace quest
+using questInjectLoot_NodeType = quest::InjectLoot_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RagdollPutToSleepEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollPutToSleepEvent";
@@ -19,6 +20,7 @@ struct RagdollPutToSleepEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RagdollPutToSleepEvent, 0x40);
 } // namespace ent
+using entRagdollPutToSleepEvent = ent::RagdollPutToSleepEvent;
 using RagdollPutToSleepEvent = ent::RagdollPutToSleepEvent;
 } // namespace RED4ext
 

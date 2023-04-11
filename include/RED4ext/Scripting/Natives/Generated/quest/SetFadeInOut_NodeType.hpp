@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetFadeInOut_NodeType : quest::IRenderFxManagerNodeType
 {
     static constexpr const char* NAME = "questSetFadeInOut_NodeType";
@@ -24,6 +25,7 @@ struct SetFadeInOut_NodeType : quest::IRenderFxManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetFadeInOut_NodeType, 0x48);
 } // namespace quest
+using questSetFadeInOut_NodeType = quest::SetFadeInOut_NodeType;
 } // namespace RED4ext
 
 // clang-format on

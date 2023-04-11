@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct TriggerMode_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataTriggerMode_Record";
@@ -20,6 +21,7 @@ struct TriggerMode_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(TriggerMode_Record, 0x50);
 } // namespace game::data
+using gamedataTriggerMode_Record = game::data::TriggerMode_Record;
 using TriggerMode_Record = game::data::TriggerMode_Record;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetTriggerState_NodeTypeParams
 {
     static constexpr const char* NAME = "questSetTriggerState_NodeTypeParams";
@@ -22,6 +23,7 @@ struct SetTriggerState_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(SetTriggerState_NodeTypeParams, 0x10);
 } // namespace quest
+using questSetTriggerState_NodeTypeParams = quest::SetTriggerState_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

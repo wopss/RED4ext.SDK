@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct LightChannelShapeNode : world::GeometryShapeNode
 {
     static constexpr const char* NAME = "worldLightChannelShapeNode";
@@ -23,6 +24,7 @@ struct LightChannelShapeNode : world::GeometryShapeNode
 };
 RED4EXT_ASSERT_SIZE(LightChannelShapeNode, 0x58);
 } // namespace world
+using worldLightChannelShapeNode = world::LightChannelShapeNode;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace anim { struct Rig; }
 
-namespace anim { 
+namespace anim
+{
 struct FacialSetup : CResource
 {
     static constexpr const char* NAME = "animFacialSetup";
@@ -40,6 +41,7 @@ struct FacialSetup : CResource
 };
 RED4EXT_ASSERT_SIZE(FacialSetup, 0x8D8);
 } // namespace anim
+using animFacialSetup = anim::FacialSetup;
 } // namespace RED4ext
 
 // clang-format on

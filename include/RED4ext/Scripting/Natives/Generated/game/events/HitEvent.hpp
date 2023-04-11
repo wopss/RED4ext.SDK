@@ -19,7 +19,8 @@ namespace game { struct AttackComputed; }
 namespace game { struct Object; }
 namespace game::damage { struct AttackData; }
 
-namespace game::events { 
+namespace game::events
+{
 struct HitEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsHitEvent";
@@ -41,6 +42,7 @@ struct HitEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HitEvent, 0xE0);
 } // namespace game::events
+using gameeventsHitEvent = game::events::HitEvent;
 using gameHitEvent = game::events::HitEvent;
 } // namespace RED4ext
 

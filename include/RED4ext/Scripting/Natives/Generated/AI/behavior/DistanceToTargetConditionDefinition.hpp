@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DistanceToTargetConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorDistanceToTargetConditionDefinition";
@@ -27,6 +28,7 @@ struct DistanceToTargetConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(DistanceToTargetConditionDefinition, 0x60);
 } // namespace AI::behavior
+using AIbehaviorDistanceToTargetConditionDefinition = AI::behavior::DistanceToTargetConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

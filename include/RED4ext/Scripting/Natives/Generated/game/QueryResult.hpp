@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct QueryResult
 {
     static constexpr const char* NAME = "gameQueryResult";
@@ -21,6 +22,7 @@ struct QueryResult
 };
 RED4EXT_ASSERT_SIZE(QueryResult, 0x10);
 } // namespace game
+using gameQueryResult = game::QueryResult;
 using HitRepresentationQueryResult = game::QueryResult;
 } // namespace RED4ext
 

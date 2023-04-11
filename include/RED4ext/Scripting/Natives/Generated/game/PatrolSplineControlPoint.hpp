@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PatrolSplineControlPoint
 {
     static constexpr const char* NAME = "gamePatrolSplineControlPoint";
@@ -19,6 +20,7 @@ struct PatrolSplineControlPoint
 };
 RED4EXT_ASSERT_SIZE(PatrolSplineControlPoint, 0x1D0);
 } // namespace game
+using gamePatrolSplineControlPoint = game::PatrolSplineControlPoint;
 } // namespace RED4ext
 
 // clang-format on

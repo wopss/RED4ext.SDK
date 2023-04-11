@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_ProjectileHitEvent : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_ProjectileHitEvent";
@@ -19,6 +20,7 @@ struct EffectObjectProvider_ProjectileHitEvent : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_ProjectileHitEvent, 0x40);
 } // namespace game
+using gameEffectObjectProvider_ProjectileHitEvent = game::EffectObjectProvider_ProjectileHitEvent;
 } // namespace RED4ext
 
 // clang-format on

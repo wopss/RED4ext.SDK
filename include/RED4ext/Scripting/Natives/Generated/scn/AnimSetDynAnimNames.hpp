@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AnimSetDynAnimNames
 {
     static constexpr const char* NAME = "scnAnimSetDynAnimNames";
@@ -24,6 +25,7 @@ struct AnimSetDynAnimNames
 };
 RED4EXT_ASSERT_SIZE(AnimSetDynAnimNames, 0x20);
 } // namespace scn
+using scnAnimSetDynAnimNames = scn::AnimSetDynAnimNames;
 } // namespace RED4ext
 
 // clang-format on

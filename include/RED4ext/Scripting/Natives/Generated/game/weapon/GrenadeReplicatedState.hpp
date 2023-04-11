@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::weapon { 
+namespace game::weapon
+{
 struct GrenadeReplicatedState : net::IEntityState
 {
     static constexpr const char* NAME = "gameweaponGrenadeReplicatedState";
@@ -30,6 +31,7 @@ struct GrenadeReplicatedState : net::IEntityState
 };
 RED4EXT_ASSERT_SIZE(GrenadeReplicatedState, 0xA0);
 } // namespace game::weapon
+using gameweaponGrenadeReplicatedState = game::weapon::GrenadeReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ISkinningAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "entISkinningAttachment";
@@ -19,6 +20,7 @@ struct ISkinningAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(ISkinningAttachment, 0x50);
 } // namespace ent
+using entISkinningAttachment = ent::ISkinningAttachment;
 } // namespace RED4ext
 
 // clang-format on

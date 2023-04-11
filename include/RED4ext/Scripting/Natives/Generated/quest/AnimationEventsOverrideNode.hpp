@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AnimationEventsOverrideNode : quest::IAudioNodeType
 {
     static constexpr const char* NAME = "questAnimationEventsOverrideNode";
@@ -25,6 +26,7 @@ struct AnimationEventsOverrideNode : quest::IAudioNodeType
 };
 RED4EXT_ASSERT_SIZE(AnimationEventsOverrideNode, 0x78);
 } // namespace quest
+using questAnimationEventsOverrideNode = quest::AnimationEventsOverrideNode;
 } // namespace RED4ext
 
 // clang-format on

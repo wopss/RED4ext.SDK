@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ink { struct WidgetBrush; }
 namespace ink { struct WidgetBrushResource; }
 
-namespace ink { 
+namespace ink
+{
 struct BrushWrapper
 {
     static constexpr const char* NAME = "inkBrushWrapper";
@@ -25,6 +26,7 @@ struct BrushWrapper
 };
 RED4EXT_ASSERT_SIZE(BrushWrapper, 0x28);
 } // namespace ink
+using inkBrushWrapper = ink::BrushWrapper;
 } // namespace RED4ext
 
 // clang-format on

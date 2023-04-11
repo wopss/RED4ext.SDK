@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ReplicatedAnimControllerEventsState
 {
     static constexpr const char* NAME = "gameReplicatedAnimControllerEventsState";
@@ -24,6 +25,7 @@ struct ReplicatedAnimControllerEventsState
 };
 RED4EXT_ASSERT_SIZE(ReplicatedAnimControllerEventsState, 0x20);
 } // namespace game
+using gameReplicatedAnimControllerEventsState = game::ReplicatedAnimControllerEventsState;
 } // namespace RED4ext
 
 // clang-format on

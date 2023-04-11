@@ -16,7 +16,8 @@ namespace RED4ext
 namespace scn { struct AnimName; }
 namespace scn { struct EventBlendWorkspotSetupParameters; }
 
-namespace scn { 
+namespace scn
+{
 struct PlaySkAnimEvent : scn::PlayFPPControlAnimEvent
 {
     static constexpr const char* NAME = "scnPlaySkAnimEvent";
@@ -31,6 +32,7 @@ struct PlaySkAnimEvent : scn::PlayFPPControlAnimEvent
 };
 RED4EXT_ASSERT_SIZE(PlaySkAnimEvent, 0x1F0);
 } // namespace scn
+using scnPlaySkAnimEvent = scn::PlaySkAnimEvent;
 } // namespace RED4ext
 
 // clang-format on

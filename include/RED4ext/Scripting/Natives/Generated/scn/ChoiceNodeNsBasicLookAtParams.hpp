@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsBasicLookAtParams : scn::ChoiceNodeNsLookAtParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsBasicLookAtParams";
@@ -24,6 +25,7 @@ struct ChoiceNodeNsBasicLookAtParams : scn::ChoiceNodeNsLookAtParams
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsBasicLookAtParams, 0x48);
 } // namespace scn
+using scnChoiceNodeNsBasicLookAtParams = scn::ChoiceNodeNsBasicLookAtParams;
 } // namespace RED4ext
 
 // clang-format on

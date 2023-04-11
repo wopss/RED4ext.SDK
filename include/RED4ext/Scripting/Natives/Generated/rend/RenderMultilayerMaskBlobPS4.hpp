@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderMultilayerMaskBlobPS4 : rend::RenderMultilayerMaskBlob
 {
     static constexpr const char* NAME = "rendRenderMultilayerMaskBlobPS4";
@@ -19,6 +20,7 @@ struct RenderMultilayerMaskBlobPS4 : rend::RenderMultilayerMaskBlob
 };
 RED4EXT_ASSERT_SIZE(RenderMultilayerMaskBlobPS4, 0x108);
 } // namespace rend
+using rendRenderMultilayerMaskBlobPS4 = rend::RenderMultilayerMaskBlobPS4;
 } // namespace RED4ext
 
 // clang-format on

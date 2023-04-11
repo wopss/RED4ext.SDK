@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RecordIdSpawnModifier : population::Modifier
 {
     static constexpr const char* NAME = "gameRecordIdSpawnModifier";
@@ -20,6 +21,7 @@ struct RecordIdSpawnModifier : population::Modifier
 };
 RED4EXT_ASSERT_SIZE(RecordIdSpawnModifier, 0x38);
 } // namespace game
+using gameRecordIdSpawnModifier = game::RecordIdSpawnModifier;
 } // namespace RED4ext
 
 // clang-format on

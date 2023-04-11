@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScriptWeakHashMap : IScriptable
 {
     static constexpr const char* NAME = "inkScriptWeakHashMap";
@@ -20,6 +21,7 @@ struct ScriptWeakHashMap : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptWeakHashMap, 0x78);
 } // namespace ink
+using inkScriptWeakHashMap = ink::ScriptWeakHashMap;
 using inkWeakHashMap = ink::ScriptWeakHashMap;
 } // namespace RED4ext
 

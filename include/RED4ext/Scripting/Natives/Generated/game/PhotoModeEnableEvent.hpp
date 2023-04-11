@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeEnableEvent : red::Event
 {
     static constexpr const char* NAME = "gamePhotoModeEnableEvent";
@@ -20,6 +21,7 @@ struct PhotoModeEnableEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhotoModeEnableEvent, 0x48);
 } // namespace game
+using gamePhotoModeEnableEvent = game::PhotoModeEnableEvent;
 using PhotoModeEnableEvent = game::PhotoModeEnableEvent;
 } // namespace RED4ext
 

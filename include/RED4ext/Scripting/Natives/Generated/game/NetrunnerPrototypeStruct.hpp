@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace game { 
+namespace game
+{
 struct NetrunnerPrototypeStruct
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeStruct";
@@ -24,6 +25,7 @@ struct NetrunnerPrototypeStruct
 };
 RED4EXT_ASSERT_SIZE(NetrunnerPrototypeStruct, 0x10);
 } // namespace game
+using gameNetrunnerPrototypeStruct = game::NetrunnerPrototypeStruct;
 } // namespace RED4ext
 
 // clang-format on

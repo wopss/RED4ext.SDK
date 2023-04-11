@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct AngleRange : sense::IShape
 {
     static constexpr const char* NAME = "senseAngleRange";
@@ -25,6 +26,7 @@ struct AngleRange : sense::IShape
 };
 RED4EXT_ASSERT_SIZE(AngleRange, 0x70);
 } // namespace sense
+using senseAngleRange = sense::AngleRange;
 using SenseAngleRange = sense::AngleRange;
 } // namespace RED4ext
 

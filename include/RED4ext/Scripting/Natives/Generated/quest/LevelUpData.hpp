@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct LevelUpData
 {
     static constexpr const char* NAME = "questLevelUpData";
@@ -25,6 +26,7 @@ struct LevelUpData
 };
 RED4EXT_ASSERT_SIZE(LevelUpData, 0x14);
 } // namespace quest
+using questLevelUpData = quest::LevelUpData;
 using LevelUpData = quest::LevelUpData;
 } // namespace RED4ext
 

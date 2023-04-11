@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct VehicleDestructionPointDamper_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleDestructionPointDamper_Record";
@@ -20,6 +21,7 @@ struct VehicleDestructionPointDamper_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(VehicleDestructionPointDamper_Record, 0x58);
 } // namespace game::data
+using gamedataVehicleDestructionPointDamper_Record = game::data::VehicleDestructionPointDamper_Record;
 using VehicleDestructionPointDamper_Record = game::data::VehicleDestructionPointDamper_Record;
 } // namespace RED4ext
 

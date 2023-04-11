@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HACK_UseSensePresetEvent : red::Event
 {
     static constexpr const char* NAME = "gameHACK_UseSensePresetEvent";
@@ -21,6 +22,7 @@ struct HACK_UseSensePresetEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HACK_UseSensePresetEvent, 0x48);
 } // namespace game
+using gameHACK_UseSensePresetEvent = game::HACK_UseSensePresetEvent;
 using HACK_UseSensePresetEvent = game::HACK_UseSensePresetEvent;
 } // namespace RED4ext
 

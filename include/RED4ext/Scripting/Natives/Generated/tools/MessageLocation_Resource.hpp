@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct MessageLocation_Resource : tools::IMessageLocation
 {
     static constexpr const char* NAME = "toolsMessageLocation_Resource";
@@ -21,6 +22,7 @@ struct MessageLocation_Resource : tools::IMessageLocation
 };
 RED4EXT_ASSERT_SIZE(MessageLocation_Resource, 0x38);
 } // namespace tools
+using toolsMessageLocation_Resource = tools::MessageLocation_Resource;
 } // namespace RED4ext
 
 // clang-format on

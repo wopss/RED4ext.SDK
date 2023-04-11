@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct ObjectMarkerVisibilityUpdated : red::Event
 {
     static constexpr const char* NAME = "gameeventsObjectMarkerVisibilityUpdated";
@@ -22,6 +23,7 @@ struct ObjectMarkerVisibilityUpdated : red::Event
 };
 RED4EXT_ASSERT_SIZE(ObjectMarkerVisibilityUpdated, 0x48);
 } // namespace game::events
+using gameeventsObjectMarkerVisibilityUpdated = game::events::ObjectMarkerVisibilityUpdated;
 } // namespace RED4ext
 
 // clang-format on

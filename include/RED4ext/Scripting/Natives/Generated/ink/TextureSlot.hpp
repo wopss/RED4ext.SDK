@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct CBitmapTexture;
 
-namespace ink { 
+namespace ink
+{
 struct TextureSlot
 {
     static constexpr const char* NAME = "inkTextureSlot";
@@ -27,6 +28,7 @@ struct TextureSlot
 };
 RED4EXT_ASSERT_SIZE(TextureSlot, 0x28);
 } // namespace ink
+using inkTextureSlot = ink::TextureSlot;
 } // namespace RED4ext
 
 // clang-format on

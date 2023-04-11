@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetBrush; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetBrushResource : CResource
 {
     static constexpr const char* NAME = "inkWidgetBrushResource";
@@ -23,6 +24,7 @@ struct WidgetBrushResource : CResource
 };
 RED4EXT_ASSERT_SIZE(WidgetBrushResource, 0x50);
 } // namespace ink
+using inkWidgetBrushResource = ink::WidgetBrushResource;
 } // namespace RED4ext
 
 // clang-format on

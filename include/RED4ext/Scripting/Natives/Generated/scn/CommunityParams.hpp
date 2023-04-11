@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CommunityParams
 {
     static constexpr const char* NAME = "scnCommunityParams";
@@ -24,6 +25,7 @@ struct CommunityParams
 };
 RED4EXT_ASSERT_SIZE(CommunityParams, 0x18);
 } // namespace scn
+using scnCommunityParams = scn::CommunityParams;
 } // namespace RED4ext
 
 // clang-format on

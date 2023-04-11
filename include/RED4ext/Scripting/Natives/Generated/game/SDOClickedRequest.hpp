@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SDOClickedRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameSDOClickedRequest";
@@ -22,6 +23,7 @@ struct SDOClickedRequest : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(SDOClickedRequest, 0x58);
 } // namespace game
+using gameSDOClickedRequest = game::SDOClickedRequest;
 using SDOClickedRequest = game::SDOClickedRequest;
 } // namespace RED4ext
 

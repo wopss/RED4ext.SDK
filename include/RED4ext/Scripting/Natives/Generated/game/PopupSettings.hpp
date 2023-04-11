@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PopupSettings
 {
     static constexpr const char* NAME = "gamePopupSettings";
@@ -28,6 +29,7 @@ struct PopupSettings
 };
 RED4EXT_ASSERT_SIZE(PopupSettings, 0x1C);
 } // namespace game
+using gamePopupSettings = game::PopupSettings;
 using PopupSettings = game::PopupSettings;
 } // namespace RED4ext
 

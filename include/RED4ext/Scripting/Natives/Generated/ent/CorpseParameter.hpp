@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace anim { struct Rig; }
 
-namespace ent { 
+namespace ent
+{
 struct CorpseParameter : ent::EntityParameter
 {
     static constexpr const char* NAME = "entCorpseParameter";
@@ -31,6 +32,7 @@ struct CorpseParameter : ent::EntityParameter
 };
 RED4EXT_ASSERT_SIZE(CorpseParameter, 0x70);
 } // namespace ent
+using entCorpseParameter = ent::CorpseParameter;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RaceSplineNodeInstance : world::SpeedSplineNodeInstance
 {
     static constexpr const char* NAME = "worldRaceSplineNodeInstance";
@@ -19,6 +20,7 @@ struct RaceSplineNodeInstance : world::SpeedSplineNodeInstance
 };
 RED4EXT_ASSERT_SIZE(RaceSplineNodeInstance, 0xF0);
 } // namespace world
+using worldRaceSplineNodeInstance = world::RaceSplineNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

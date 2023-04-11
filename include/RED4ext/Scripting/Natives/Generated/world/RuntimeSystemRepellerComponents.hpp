@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemRepellerComponents : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemRepellerComponents";
@@ -20,6 +21,7 @@ struct RuntimeSystemRepellerComponents : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemRepellerComponents, 0x1B8);
 } // namespace world
+using worldRuntimeSystemRepellerComponents = world::RuntimeSystemRepellerComponents;
 } // namespace RED4ext
 
 // clang-format on

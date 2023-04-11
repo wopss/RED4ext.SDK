@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct TimerTest : game::Object
 {
     static constexpr const char* NAME = "cpTimerTest";
@@ -21,6 +22,7 @@ struct TimerTest : game::Object
 };
 RED4EXT_ASSERT_SIZE(TimerTest, 0x248);
 } // namespace cp
+using cpTimerTest = cp::TimerTest;
 } // namespace RED4ext
 
 // clang-format on

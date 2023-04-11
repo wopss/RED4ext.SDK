@@ -20,7 +20,8 @@ using IGameSystem = game::IGameSystem;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct IGameSystem : IScriptable
 {
     static constexpr const char* NAME = "gameIGameSystem";
@@ -30,6 +31,7 @@ struct IGameSystem : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IGameSystem, 0x48);
 } // namespace game
+using gameIGameSystem = game::IGameSystem;
 using IGameSystem = game::IGameSystem;
 } // namespace RED4ext
 */

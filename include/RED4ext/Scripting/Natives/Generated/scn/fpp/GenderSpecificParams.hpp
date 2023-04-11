@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn::fpp { 
+namespace scn::fpp
+{
 struct GenderSpecificParams
 {
     static constexpr const char* NAME = "scnfppGenderSpecificParams";
@@ -28,6 +29,7 @@ struct GenderSpecificParams
 };
 RED4EXT_ASSERT_SIZE(GenderSpecificParams, 0x50);
 } // namespace scn::fpp
+using scnfppGenderSpecificParams = scn::fpp::GenderSpecificParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,7 +18,8 @@ namespace RED4ext
 namespace anim { struct AnimSet; }
 namespace anim { struct Rig; }
 
-namespace world { 
+namespace world
+{
 struct CurvePathNode : world::SplineNode
 {
     static constexpr const char* NAME = "worldCurvePathNode";
@@ -42,6 +43,7 @@ struct CurvePathNode : world::SplineNode
 };
 RED4EXT_ASSERT_SIZE(CurvePathNode, 0x2C0);
 } // namespace world
+using worldCurvePathNode = world::CurvePathNode;
 } // namespace RED4ext
 
 // clang-format on

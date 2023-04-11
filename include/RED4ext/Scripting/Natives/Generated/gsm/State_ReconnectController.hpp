@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_ReconnectController : gsm::State
 {
     static constexpr const char* NAME = "gsmState_ReconnectController";
@@ -20,6 +21,7 @@ struct State_ReconnectController : gsm::State
 };
 RED4EXT_ASSERT_SIZE(State_ReconnectController, 0xE8);
 } // namespace gsm
+using gsmState_ReconnectController = gsm::State_ReconnectController;
 } // namespace RED4ext
 
 // clang-format on

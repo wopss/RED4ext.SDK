@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_Aim : anim::AnimFeature_BasicAim
 {
     static constexpr const char* NAME = "animAnimFeature_Aim";
@@ -22,6 +23,7 @@ struct AnimFeature_Aim : anim::AnimFeature_BasicAim
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_Aim, 0x60);
 } // namespace anim
+using animAnimFeature_Aim = anim::AnimFeature_Aim;
 using AnimFeature_Aim = anim::AnimFeature_Aim;
 } // namespace RED4ext
 

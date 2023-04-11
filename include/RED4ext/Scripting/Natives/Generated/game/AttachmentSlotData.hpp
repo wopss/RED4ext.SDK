@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct ItemObject; }
 
-namespace game { 
+namespace game
+{
 struct AttachmentSlotData
 {
     static constexpr const char* NAME = "gameAttachmentSlotData";
@@ -30,6 +31,7 @@ struct AttachmentSlotData
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotData, 0x90);
 } // namespace game
+using gameAttachmentSlotData = game::AttachmentSlotData;
 using AttachmentSlotData = game::AttachmentSlotData;
 } // namespace RED4ext
 

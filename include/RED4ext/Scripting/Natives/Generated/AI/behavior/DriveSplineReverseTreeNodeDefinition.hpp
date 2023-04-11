@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DriveSplineReverseTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorDriveSplineReverseTreeNodeDefinition";
@@ -23,6 +24,7 @@ struct DriveSplineReverseTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinit
 };
 RED4EXT_ASSERT_SIZE(DriveSplineReverseTreeNodeDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorDriveSplineReverseTreeNodeDefinition = AI::behavior::DriveSplineReverseTreeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace scn::events { 
+namespace scn::events
+{
 struct SpawnEntityEventFallbackData
 {
     static constexpr const char* NAME = "scneventsSpawnEntityEventFallbackData";
@@ -32,6 +33,7 @@ struct SpawnEntityEventFallbackData
 };
 RED4EXT_ASSERT_SIZE(SpawnEntityEventFallbackData, 0xB0);
 } // namespace scn::events
+using scneventsSpawnEntityEventFallbackData = scn::events::SpawnEntityEventFallbackData;
 } // namespace RED4ext
 
 // clang-format on

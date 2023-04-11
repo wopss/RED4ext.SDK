@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct BlockTokenActivation_NodeSubType : quest::IContentTokenManager_NodeSubType
 {
     static constexpr const char* NAME = "questBlockTokenActivation_NodeSubType";
@@ -26,6 +27,7 @@ struct BlockTokenActivation_NodeSubType : quest::IContentTokenManager_NodeSubTyp
 };
 RED4EXT_ASSERT_SIZE(BlockTokenActivation_NodeSubType, 0x48);
 } // namespace quest
+using questBlockTokenActivation_NodeSubType = quest::BlockTokenActivation_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct EmitterSimulationShaders
 {
     static constexpr const char* NAME = "rendEmitterSimulationShaders";
@@ -20,6 +21,7 @@ struct EmitterSimulationShaders
 };
 RED4EXT_ASSERT_SIZE(EmitterSimulationShaders, 0x50);
 } // namespace rend
+using rendEmitterSimulationShaders = rend::EmitterSimulationShaders;
 } // namespace RED4ext
 
 // clang-format on

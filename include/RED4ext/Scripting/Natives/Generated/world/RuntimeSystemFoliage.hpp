@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemFoliage : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemFoliage";
@@ -20,6 +21,7 @@ struct RuntimeSystemFoliage : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemFoliage, 0x200);
 } // namespace world
+using worldRuntimeSystemFoliage = world::RuntimeSystemFoliage;
 } // namespace RED4ext
 
 // clang-format on

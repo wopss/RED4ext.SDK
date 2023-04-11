@@ -14,9 +14,9 @@
 
 namespace RED4ext
 {
-namespace game::debug { struct Failure; }
 
-namespace game::debug { 
+namespace game::debug
+{
 struct Failure : ISerializable
 {
     static constexpr const char* NAME = "gamedebugFailure";
@@ -32,6 +32,7 @@ struct Failure : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Failure, 0xB0);
 } // namespace game::debug
+using gamedebugFailure = game::debug::Failure;
 } // namespace RED4ext
 
 // clang-format on

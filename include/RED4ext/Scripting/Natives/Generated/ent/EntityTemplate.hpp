@@ -22,7 +22,8 @@ namespace RED4ext
 struct CResource;
 namespace ent { struct VisualTagsSchema; }
 
-namespace ent { 
+namespace ent
+{
 struct EntityTemplate : res::StreamedResource
 {
     static constexpr const char* NAME = "entEntityTemplate";
@@ -49,6 +50,7 @@ struct EntityTemplate : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(EntityTemplate, 0x2B0);
 } // namespace ent
+using entEntityTemplate = ent::EntityTemplate;
 } // namespace RED4ext
 
 // clang-format on

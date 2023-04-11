@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_HitRepresentation_Sphere : game::EffectObjectFilter_HitRepresentation
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_HitRepresentation_Sphere";
@@ -19,6 +20,7 @@ struct EffectObjectFilter_HitRepresentation_Sphere : game::EffectObjectFilter_Hi
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_HitRepresentation_Sphere, 0x40);
 } // namespace game
+using gameEffectObjectFilter_HitRepresentation_Sphere = game::EffectObjectFilter_HitRepresentation_Sphere;
 } // namespace RED4ext
 
 // clang-format on

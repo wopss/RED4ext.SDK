@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct IEffectParameter_FloatEvaluator; }
 
-namespace game { 
+namespace game
+{
 struct EffectInputParameter_Float
 {
     static constexpr const char* NAME = "gameEffectInputParameter_Float";
@@ -23,6 +24,7 @@ struct EffectInputParameter_Float
 };
 RED4EXT_ASSERT_SIZE(EffectInputParameter_Float, 0x18);
 } // namespace game
+using gameEffectInputParameter_Float = game::EffectInputParameter_Float;
 using EffectInputParameter_Float = game::EffectInputParameter_Float;
 } // namespace RED4ext
 

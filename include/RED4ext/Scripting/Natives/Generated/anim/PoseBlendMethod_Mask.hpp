@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct PoseBlendMethod_Mask : anim::IPoseBlendMethod
 {
     static constexpr const char* NAME = "animPoseBlendMethod_Mask";
@@ -22,6 +23,7 @@ struct PoseBlendMethod_Mask : anim::IPoseBlendMethod
 };
 RED4EXT_ASSERT_SIZE(PoseBlendMethod_Mask, 0x48);
 } // namespace anim
+using animPoseBlendMethod_Mask = anim::PoseBlendMethod_Mask;
 } // namespace RED4ext
 
 // clang-format on

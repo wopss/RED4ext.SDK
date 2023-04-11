@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct TransformIndex
 {
     static constexpr const char* NAME = "animTransformIndex";
@@ -21,6 +22,7 @@ struct TransformIndex
 };
 RED4EXT_ASSERT_SIZE(TransformIndex, 0x18);
 } // namespace anim
+using animTransformIndex = anim::TransformIndex;
 } // namespace RED4ext
 
 // clang-format on

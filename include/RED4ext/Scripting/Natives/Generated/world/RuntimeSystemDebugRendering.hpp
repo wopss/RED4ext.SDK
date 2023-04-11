@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemDebugRendering : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemDebugRendering";
@@ -19,6 +20,7 @@ struct RuntimeSystemDebugRendering : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemDebugRendering, 0x48);
 } // namespace world
+using worldRuntimeSystemDebugRendering = world::RuntimeSystemDebugRendering;
 } // namespace RED4ext
 
 // clang-format on

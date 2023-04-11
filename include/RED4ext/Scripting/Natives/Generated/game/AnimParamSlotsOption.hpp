@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AnimParamSlotsOption
 {
     static constexpr const char* NAME = "gameAnimParamSlotsOption";
@@ -25,6 +26,7 @@ struct AnimParamSlotsOption
 };
 RED4EXT_ASSERT_SIZE(AnimParamSlotsOption, 0x18);
 } // namespace game
+using gameAnimParamSlotsOption = game::AnimParamSlotsOption;
 } // namespace RED4ext
 
 // clang-format on

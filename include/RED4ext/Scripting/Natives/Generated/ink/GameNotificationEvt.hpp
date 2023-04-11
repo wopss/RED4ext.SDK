@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GameNotificationEvt : red::Event
 {
     static constexpr const char* NAME = "inkGameNotificationEvt";
@@ -20,6 +21,7 @@ struct GameNotificationEvt : red::Event
 };
 RED4EXT_ASSERT_SIZE(GameNotificationEvt, 0x50);
 } // namespace ink
+using inkGameNotificationEvt = ink::GameNotificationEvt;
 } // namespace RED4ext
 
 // clang-format on

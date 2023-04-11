@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct MirrorNode : world::MeshNode
 {
     static constexpr const char* NAME = "worldMirrorNode";
@@ -22,6 +23,7 @@ struct MirrorNode : world::MeshNode
 };
 RED4EXT_ASSERT_SIZE(MirrorNode, 0x70);
 } // namespace world
+using worldMirrorNode = world::MirrorNode;
 } // namespace RED4ext
 
 // clang-format on

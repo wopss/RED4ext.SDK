@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct PivotInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimPivotInterpolator";
@@ -22,6 +23,7 @@ struct PivotInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(PivotInterpolator, 0x78);
 } // namespace ink::anim
+using inkanimPivotInterpolator = ink::anim::PivotInterpolator;
 using inkAnimPivot = ink::anim::PivotInterpolator;
 } // namespace RED4ext
 

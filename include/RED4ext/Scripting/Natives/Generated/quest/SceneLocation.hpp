@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SceneLocation
 {
     static constexpr const char* NAME = "questSceneLocation";
@@ -20,6 +21,7 @@ struct SceneLocation
 };
 RED4EXT_ASSERT_SIZE(SceneLocation, 0x8);
 } // namespace quest
+using questSceneLocation = quest::SceneLocation;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_BlockingGeometry : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_BlockingGeometry";
@@ -22,6 +23,7 @@ struct EffectObjectFilter_BlockingGeometry : game::EffectObjectGroupFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_BlockingGeometry, 0x48);
 } // namespace game
+using gameEffectObjectFilter_BlockingGeometry = game::EffectObjectFilter_BlockingGeometry;
 } // namespace RED4ext
 
 // clang-format on

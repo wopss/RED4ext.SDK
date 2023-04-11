@@ -20,7 +20,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct HudWidgetSpawnEntry
 {
     static constexpr const char* NAME = "inkHudWidgetSpawnEntry";
@@ -50,6 +51,7 @@ struct HudWidgetSpawnEntry
 };
 RED4EXT_ASSERT_SIZE(HudWidgetSpawnEntry, 0x120);
 } // namespace ink
+using inkHudWidgetSpawnEntry = ink::HudWidgetSpawnEntry;
 } // namespace RED4ext
 
 // clang-format on

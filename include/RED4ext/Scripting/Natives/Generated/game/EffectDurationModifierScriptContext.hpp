@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectDurationModifierScriptContext
 {
     static constexpr const char* NAME = "gameEffectDurationModifierScriptContext";
@@ -19,6 +20,7 @@ struct EffectDurationModifierScriptContext
 };
 RED4EXT_ASSERT_SIZE(EffectDurationModifierScriptContext, 0x8);
 } // namespace game
+using gameEffectDurationModifierScriptContext = game::EffectDurationModifierScriptContext;
 using EffectDurationModifierScriptContext = game::EffectDurationModifierScriptContext;
 } // namespace RED4ext
 

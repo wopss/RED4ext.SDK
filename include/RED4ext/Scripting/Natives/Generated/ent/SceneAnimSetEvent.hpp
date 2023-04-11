@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct SceneAnimSetEvent : red::Event
 {
     static constexpr const char* NAME = "entSceneAnimSetEvent";
@@ -20,6 +21,7 @@ struct SceneAnimSetEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SceneAnimSetEvent, 0x58);
 } // namespace ent
+using entSceneAnimSetEvent = ent::SceneAnimSetEvent;
 } // namespace RED4ext
 
 // clang-format on

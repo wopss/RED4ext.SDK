@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct IReturnCondition : ISerializable
 {
     static constexpr const char* NAME = "scnIReturnCondition";
@@ -19,6 +20,7 @@ struct IReturnCondition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IReturnCondition, 0x30);
 } // namespace scn
+using scnIReturnCondition = scn::IReturnCondition;
 } // namespace RED4ext
 
 // clang-format on

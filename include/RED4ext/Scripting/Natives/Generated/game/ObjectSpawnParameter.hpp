@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectSpawnParameter : ISerializable
 {
     static constexpr const char* NAME = "gameObjectSpawnParameter";
@@ -19,6 +20,7 @@ struct ObjectSpawnParameter : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ObjectSpawnParameter, 0x30);
 } // namespace game
+using gameObjectSpawnParameter = game::ObjectSpawnParameter;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct StageMessage
 {
     static constexpr const char* NAME = "redStageMessage";
@@ -25,6 +26,7 @@ struct StageMessage
 };
 RED4EXT_ASSERT_SIZE(StageMessage, 0x28);
 } // namespace red
+using redStageMessage = red::StageMessage;
 } // namespace RED4ext
 
 // clang-format on

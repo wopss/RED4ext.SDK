@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckAnyoneDistractedInterruptCondition : scn::IInterruptCondition
 {
     static constexpr const char* NAME = "scnCheckAnyoneDistractedInterruptCondition";
@@ -19,6 +20,7 @@ struct CheckAnyoneDistractedInterruptCondition : scn::IInterruptCondition
 };
 RED4EXT_ASSERT_SIZE(CheckAnyoneDistractedInterruptCondition, 0x30);
 } // namespace scn
+using scnCheckAnyoneDistractedInterruptCondition = scn::CheckAnyoneDistractedInterruptCondition;
 } // namespace RED4ext
 
 // clang-format on

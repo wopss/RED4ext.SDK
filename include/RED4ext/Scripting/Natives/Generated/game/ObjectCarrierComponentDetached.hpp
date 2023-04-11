@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectCarrierComponentDetached : red::Event
 {
     static constexpr const char* NAME = "gameObjectCarrierComponentDetached";
@@ -20,6 +21,7 @@ struct ObjectCarrierComponentDetached : red::Event
 };
 RED4EXT_ASSERT_SIZE(ObjectCarrierComponentDetached, 0x50);
 } // namespace game
+using gameObjectCarrierComponentDetached = game::ObjectCarrierComponentDetached;
 using ObjectCarrierComponentDetached = game::ObjectCarrierComponentDetached;
 } // namespace RED4ext
 

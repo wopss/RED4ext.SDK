@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct FastTravelPoint_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataFastTravelPoint_Record";
@@ -20,6 +21,7 @@ struct FastTravelPoint_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(FastTravelPoint_Record, 0x58);
 } // namespace game::data
+using gamedataFastTravelPoint_Record = game::data::FastTravelPoint_Record;
 using FastTravelPoint_Record = game::data::FastTravelPoint_Record;
 } // namespace RED4ext
 

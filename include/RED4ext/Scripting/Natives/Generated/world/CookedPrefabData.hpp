@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace world { 
+namespace world
+{
 struct CookedPrefabData : CResource
 {
     static constexpr const char* NAME = "worldCookedPrefabData";
@@ -26,6 +27,7 @@ struct CookedPrefabData : CResource
 };
 RED4EXT_ASSERT_SIZE(CookedPrefabData, 0x70);
 } // namespace world
+using worldCookedPrefabData = world::CookedPrefabData;
 } // namespace RED4ext
 
 // clang-format on

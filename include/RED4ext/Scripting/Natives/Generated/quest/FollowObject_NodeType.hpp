@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FollowObject_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questFollowObject_NodeType";
@@ -27,6 +28,7 @@ struct FollowObject_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(FollowObject_NodeType, 0xB8);
 } // namespace quest
+using questFollowObject_NodeType = quest::FollowObject_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ExecutionTag
 {
     static constexpr const char* NAME = "scnExecutionTag";
@@ -19,6 +20,7 @@ struct ExecutionTag
 };
 RED4EXT_ASSERT_SIZE(ExecutionTag, 0x1);
 } // namespace scn
+using scnExecutionTag = scn::ExecutionTag;
 } // namespace RED4ext
 
 // clang-format on

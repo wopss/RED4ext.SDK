@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct NotifyFootstepMaterialContextChanged : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsNotifyFootstepMaterialContextChanged";
@@ -22,6 +23,7 @@ struct NotifyFootstepMaterialContextChanged : red::Event
 };
 RED4EXT_ASSERT_SIZE(NotifyFootstepMaterialContextChanged, 0x50);
 } // namespace game::audio::events
+using gameaudioeventsNotifyFootstepMaterialContextChanged = game::audio::events::NotifyFootstepMaterialContextChanged;
 using NotifyFootstepMaterialContextChangedEvent = game::audio::events::NotifyFootstepMaterialContextChanged;
 } // namespace RED4ext
 

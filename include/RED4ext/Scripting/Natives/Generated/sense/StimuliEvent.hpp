@@ -20,7 +20,8 @@ namespace game { struct Object; }
 namespace game::data { struct Stim_Record; }
 namespace sense { struct StimuliData; }
 
-namespace sense { 
+namespace sense
+{
 struct StimuliEvent : sense::BaseStimuliEvent
 {
     static constexpr const char* NAME = "senseStimuliEvent";
@@ -41,6 +42,7 @@ struct StimuliEvent : sense::BaseStimuliEvent
 };
 RED4EXT_ASSERT_SIZE(StimuliEvent, 0x140);
 } // namespace sense
+using senseStimuliEvent = sense::StimuliEvent;
 using StimuliEvent = sense::StimuliEvent;
 } // namespace RED4ext
 

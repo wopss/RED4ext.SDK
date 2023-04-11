@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct AmmoCountConditionData
 {
     static constexpr const char* NAME = "AIbehaviortweakAmmoCountConditionData";
@@ -19,6 +20,7 @@ struct AmmoCountConditionData
 };
 RED4EXT_ASSERT_SIZE(AmmoCountConditionData, 0x118);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakAmmoCountConditionData = AI::behavior::tweak::AmmoCountConditionData;
 } // namespace RED4ext
 
 // clang-format on

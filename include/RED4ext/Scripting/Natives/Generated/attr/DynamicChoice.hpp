@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct DynamicChoice : attr::Attribute
 {
     static constexpr const char* NAME = "attrDynamicChoice";
@@ -20,6 +21,7 @@ struct DynamicChoice : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(DynamicChoice, 0x70);
 } // namespace attr
+using attrDynamicChoice = attr::DynamicChoice;
 } // namespace RED4ext
 
 // clang-format on

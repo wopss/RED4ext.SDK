@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RadialWipeEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkRadialWipeEffect";
@@ -21,6 +22,7 @@ struct RadialWipeEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(RadialWipeEffect, 0x70);
 } // namespace ink
+using inkRadialWipeEffect = ink::RadialWipeEffect;
 } // namespace RED4ext
 
 // clang-format on

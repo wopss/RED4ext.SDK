@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct PersistentDataPS : game::ComponentPS
 {
     static constexpr const char* NAME = "vehiclePersistentDataPS";
@@ -34,6 +35,7 @@ struct PersistentDataPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(PersistentDataPS, 0x1C0);
 } // namespace vehicle
+using vehiclePersistentDataPS = vehicle::PersistentDataPS;
 } // namespace RED4ext
 
 // clang-format on

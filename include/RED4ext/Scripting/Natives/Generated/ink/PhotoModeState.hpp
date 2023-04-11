@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PhotoModeState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkPhotoModeState";
@@ -19,6 +20,7 @@ struct PhotoModeState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(PhotoModeState, 0x10);
 } // namespace ink
+using inkPhotoModeState = ink::PhotoModeState;
 } // namespace RED4ext
 
 // clang-format on

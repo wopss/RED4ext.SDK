@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace input { 
+namespace input
+{
 struct InputSystemNullInterface : input::IInputSystem
 {
     static constexpr const char* NAME = "inputInputSystemNullInterface";
@@ -19,6 +20,7 @@ struct InputSystemNullInterface : input::IInputSystem
 };
 RED4EXT_ASSERT_SIZE(InputSystemNullInterface, 0x148);
 } // namespace input
+using inputInputSystemNullInterface = input::InputSystemNullInterface;
 } // namespace RED4ext
 
 // clang-format on

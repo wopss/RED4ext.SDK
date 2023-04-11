@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterTriggeredCombatInSecuritySystem_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterTriggeredCombatInSecuritySystem_ConditionType";
@@ -19,6 +20,7 @@ struct CharacterTriggeredCombatInSecuritySystem_ConditionType : quest::ICharacte
 };
 RED4EXT_ASSERT_SIZE(CharacterTriggeredCombatInSecuritySystem_ConditionType, 0x78);
 } // namespace quest
+using questCharacterTriggeredCombatInSecuritySystem_ConditionType = quest::CharacterTriggeredCombatInSecuritySystem_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ClientEntitySpawnSystem : game::IClientEntitySpawnSystem
 {
     static constexpr const char* NAME = "gameClientEntitySpawnSystem";
@@ -20,6 +21,7 @@ struct ClientEntitySpawnSystem : game::IClientEntitySpawnSystem
 };
 RED4EXT_ASSERT_SIZE(ClientEntitySpawnSystem, 0x50);
 } // namespace game
+using gameClientEntitySpawnSystem = game::ClientEntitySpawnSystem;
 } // namespace RED4ext
 
 // clang-format on

@@ -20,7 +20,8 @@ using IGamePersistencySystem = game::IPersistencySystem;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct IPersistencySystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPersistencySystem";
@@ -29,6 +30,7 @@ struct IPersistencySystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IPersistencySystem, 0x48);
 } // namespace game
+using gameIPersistencySystem = game::IPersistencySystem;
 using IGamePersistencySystem = game::IPersistencySystem;
 } // namespace RED4ext
 */

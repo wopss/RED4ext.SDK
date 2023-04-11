@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace ent { 
+namespace ent
+{
 struct VisualControllerDependency
 {
     static constexpr const char* NAME = "entVisualControllerDependency";
@@ -25,6 +26,7 @@ struct VisualControllerDependency
 };
 RED4EXT_ASSERT_SIZE(VisualControllerDependency, 0x18);
 } // namespace ent
+using entVisualControllerDependency = ent::VisualControllerDependency;
 } // namespace RED4ext
 
 // clang-format on

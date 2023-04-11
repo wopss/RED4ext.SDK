@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct SimpleValueNode : game::data::ValueDataNode
 {
     static constexpr const char* NAME = "gamedataSimpleValueNode";
@@ -25,6 +26,7 @@ struct SimpleValueNode : game::data::ValueDataNode
 };
 RED4EXT_ASSERT_SIZE(SimpleValueNode, 0xD0);
 } // namespace game::data
+using gamedataSimpleValueNode = game::data::SimpleValueNode;
 } // namespace RED4ext
 
 // clang-format on

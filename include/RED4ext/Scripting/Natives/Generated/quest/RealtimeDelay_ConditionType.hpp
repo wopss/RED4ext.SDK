@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RealtimeDelay_ConditionType : quest::ITimeConditionType
 {
     static constexpr const char* NAME = "questRealtimeDelay_ConditionType";
@@ -23,6 +24,7 @@ struct RealtimeDelay_ConditionType : quest::ITimeConditionType
 };
 RED4EXT_ASSERT_SIZE(RealtimeDelay_ConditionType, 0x48);
 } // namespace quest
+using questRealtimeDelay_ConditionType = quest::RealtimeDelay_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

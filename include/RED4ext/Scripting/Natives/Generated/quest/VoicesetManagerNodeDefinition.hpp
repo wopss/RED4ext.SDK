@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IVoicesetManager_NodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct VoicesetManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questVoicesetManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct VoicesetManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(VoicesetManagerNodeDefinition, 0x58);
 } // namespace quest
+using questVoicesetManagerNodeDefinition = quest::VoicesetManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

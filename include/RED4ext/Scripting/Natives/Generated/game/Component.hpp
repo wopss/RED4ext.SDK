@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct PersistentState; }
 
-namespace game { 
+namespace game
+{
 struct Component : ent::IComponent
 {
     static constexpr const char* NAME = "gameComponent";
@@ -24,6 +25,7 @@ struct Component : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(Component, 0xA8);
 } // namespace game
+using gameComponent = game::Component;
 using GameComponent = game::Component;
 } // namespace RED4ext
 

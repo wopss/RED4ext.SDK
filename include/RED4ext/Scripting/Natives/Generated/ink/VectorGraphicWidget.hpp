@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VectorGraphicWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkVectorGraphicWidget";
@@ -20,6 +21,7 @@ struct VectorGraphicWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(VectorGraphicWidget, 0x220);
 } // namespace ink
+using inkVectorGraphicWidget = ink::VectorGraphicWidget;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace game::device { 
+namespace game::device
+{
 struct DataElement
 {
     static constexpr const char* NAME = "gamedeviceDataElement";
@@ -37,6 +38,7 @@ struct DataElement
 };
 RED4EXT_ASSERT_SIZE(DataElement, 0xB8);
 } // namespace game::device
+using gamedeviceDataElement = game::device::DataElement;
 using DataElement = game::device::DataElement;
 } // namespace RED4ext
 

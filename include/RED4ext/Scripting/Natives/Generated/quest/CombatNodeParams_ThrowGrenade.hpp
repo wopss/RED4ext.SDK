@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CombatNodeParams_ThrowGrenade : quest::CombatNodeParams
 {
     static constexpr const char* NAME = "questCombatNodeParams_ThrowGrenade";
@@ -27,6 +28,7 @@ struct CombatNodeParams_ThrowGrenade : quest::CombatNodeParams
 };
 RED4EXT_ASSERT_SIZE(CombatNodeParams_ThrowGrenade, 0x88);
 } // namespace quest
+using questCombatNodeParams_ThrowGrenade = quest::CombatNodeParams_ThrowGrenade;
 } // namespace RED4ext
 
 // clang-format on

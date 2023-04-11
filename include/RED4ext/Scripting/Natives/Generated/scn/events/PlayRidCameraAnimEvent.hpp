@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct PlayRidCameraAnimEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsPlayRidCameraAnimEvent";
@@ -33,6 +34,7 @@ struct PlayRidCameraAnimEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(PlayRidCameraAnimEvent, 0xE8);
 } // namespace scn::events
+using scneventsPlayRidCameraAnimEvent = scn::events::PlayRidCameraAnimEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DropItemFromSlot_NodeType : quest::IItemManagerNodeType
 {
     static constexpr const char* NAME = "questDropItemFromSlot_NodeType";
@@ -22,6 +23,7 @@ struct DropItemFromSlot_NodeType : quest::IItemManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(DropItemFromSlot_NodeType, 0x40);
 } // namespace quest
+using questDropItemFromSlot_NodeType = quest::DropItemFromSlot_NodeType;
 } // namespace RED4ext
 
 // clang-format on

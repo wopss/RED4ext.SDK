@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemTonemapping : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemTonemapping";
@@ -26,6 +27,7 @@ struct TrackItemTonemapping : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemTonemapping, 0xD0);
 } // namespace effect
+using effectTrackItemTonemapping = effect::TrackItemTonemapping;
 } // namespace RED4ext
 
 // clang-format on

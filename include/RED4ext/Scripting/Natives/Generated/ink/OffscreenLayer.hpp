@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct OffscreenLayer : ink::Layer
 {
     static constexpr const char* NAME = "inkOffscreenLayer";
@@ -20,6 +21,7 @@ struct OffscreenLayer : ink::Layer
 };
 RED4EXT_ASSERT_SIZE(OffscreenLayer, 0x178);
 } // namespace ink
+using inkOffscreenLayer = ink::OffscreenLayer;
 } // namespace RED4ext
 
 // clang-format on

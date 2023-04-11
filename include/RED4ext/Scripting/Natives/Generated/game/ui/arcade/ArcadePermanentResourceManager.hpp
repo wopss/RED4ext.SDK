@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct ArcadePermanentResourceManager : ISerializable
 {
     static constexpr const char* NAME = "gameuiarcadeArcadePermanentResourceManager";
@@ -20,6 +21,7 @@ struct ArcadePermanentResourceManager : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ArcadePermanentResourceManager, 0x78);
 } // namespace game::ui::arcade
+using gameuiarcadeArcadePermanentResourceManager = game::ui::arcade::ArcadePermanentResourceManager;
 } // namespace RED4ext
 
 // clang-format on

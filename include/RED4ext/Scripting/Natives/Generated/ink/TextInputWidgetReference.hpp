@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TextInputWidgetReference : ink::LeafWidgetReference
 {
     static constexpr const char* NAME = "inkTextInputWidgetReference";
@@ -19,6 +20,7 @@ struct TextInputWidgetReference : ink::LeafWidgetReference
 };
 RED4EXT_ASSERT_SIZE(TextInputWidgetReference, 0x18);
 } // namespace ink
+using inkTextInputWidgetReference = ink::TextInputWidgetReference;
 using inkTextInputRef = ink::TextInputWidgetReference;
 } // namespace RED4ext
 

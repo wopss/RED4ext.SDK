@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ToggleDoorOpenEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleToggleDoorOpenEvent";
@@ -20,6 +21,7 @@ struct ToggleDoorOpenEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleDoorOpenEvent, 0x50);
 } // namespace vehicle
+using vehicleToggleDoorOpenEvent = vehicle::ToggleDoorOpenEvent;
 using VehicleToggleDoorOpenEvent = vehicle::ToggleDoorOpenEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SelectiveJoin : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_SelectiveJoin";
@@ -20,6 +21,7 @@ struct AnimNode_SelectiveJoin : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SelectiveJoin, 0x80);
 } // namespace anim
+using animAnimNode_SelectiveJoin = anim::AnimNode_SelectiveJoin;
 } // namespace RED4ext
 
 // clang-format on

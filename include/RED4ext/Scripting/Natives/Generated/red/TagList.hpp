@@ -13,7 +13,6 @@ using redTagList = red::TagList;
 } // namespace RED4ext
 
 /*
-
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -21,7 +20,8 @@ using redTagList = red::TagList;
 
 namespace RED4ext
 {
-namespace red {
+namespace red
+{
 struct TagList
 {
     static constexpr const char* NAME = "redTagList";
@@ -31,6 +31,7 @@ struct TagList
 };
 RED4EXT_ASSERT_SIZE(TagList, 0x10);
 } // namespace red
+using redTagList = red::TagList;
 } // namespace RED4ext
 */
 

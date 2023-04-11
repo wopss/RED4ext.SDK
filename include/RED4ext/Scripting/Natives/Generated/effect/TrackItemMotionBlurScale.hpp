@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemMotionBlurScale : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemMotionBlurScale";
@@ -21,6 +22,7 @@ struct TrackItemMotionBlurScale : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemMotionBlurScale, 0x68);
 } // namespace effect
+using effectTrackItemMotionBlurScale = effect::TrackItemMotionBlurScale;
 } // namespace RED4ext
 
 // clang-format on

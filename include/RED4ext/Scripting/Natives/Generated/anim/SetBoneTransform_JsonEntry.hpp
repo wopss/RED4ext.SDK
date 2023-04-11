@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SetBoneTransform_JsonEntry
 {
     static constexpr const char* NAME = "animSetBoneTransform_JsonEntry";
@@ -31,6 +32,7 @@ struct SetBoneTransform_JsonEntry
 };
 RED4EXT_ASSERT_SIZE(SetBoneTransform_JsonEntry, 0x60);
 } // namespace anim
+using animSetBoneTransform_JsonEntry = anim::SetBoneTransform_JsonEntry;
 } // namespace RED4ext
 
 // clang-format on

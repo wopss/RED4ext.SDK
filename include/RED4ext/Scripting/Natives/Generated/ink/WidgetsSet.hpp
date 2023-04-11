@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetsSet : IScriptable
 {
     static constexpr const char* NAME = "inkWidgetsSet";
@@ -20,6 +21,7 @@ struct WidgetsSet : IScriptable
 };
 RED4EXT_ASSERT_SIZE(WidgetsSet, 0x50);
 } // namespace ink
+using inkWidgetsSet = ink::WidgetsSet;
 } // namespace RED4ext
 
 // clang-format on

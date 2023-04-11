@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SideScrollerSpawnerAdvanced : IScriptable
 {
     static constexpr const char* NAME = "gameuiSideScrollerSpawnerAdvanced";
@@ -20,6 +21,7 @@ struct SideScrollerSpawnerAdvanced : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SideScrollerSpawnerAdvanced, 0xB8);
 } // namespace game::ui
+using gameuiSideScrollerSpawnerAdvanced = game::ui::SideScrollerSpawnerAdvanced;
 using SideScrollerSpawnerAdvanced = game::ui::SideScrollerSpawnerAdvanced;
 } // namespace RED4ext
 

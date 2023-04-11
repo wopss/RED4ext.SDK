@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ICustomizationStateUpdater : IScriptable
 {
     static constexpr const char* NAME = "gameuiICustomizationStateUpdater";
@@ -20,6 +21,7 @@ struct ICustomizationStateUpdater : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ICustomizationStateUpdater, 0x58);
 } // namespace game::ui
+using gameuiICustomizationStateUpdater = game::ui::ICustomizationStateUpdater;
 } // namespace RED4ext
 
 // clang-format on

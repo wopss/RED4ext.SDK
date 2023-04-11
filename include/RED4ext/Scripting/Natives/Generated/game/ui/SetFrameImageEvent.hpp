@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SetFrameImageEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetFrameImageEvent";
@@ -20,6 +21,7 @@ struct SetFrameImageEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetFrameImageEvent, 0x68);
 } // namespace game::ui
+using gameuiSetFrameImageEvent = game::ui::SetFrameImageEvent;
 using SetFrameImageEvent = game::ui::SetFrameImageEvent;
 } // namespace RED4ext
 

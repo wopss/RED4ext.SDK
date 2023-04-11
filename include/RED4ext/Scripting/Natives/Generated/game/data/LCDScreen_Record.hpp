@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct LCDScreen_Record : game::data::BaseSign_Record
 {
     static constexpr const char* NAME = "gamedataLCDScreen_Record";
@@ -20,6 +21,7 @@ struct LCDScreen_Record : game::data::BaseSign_Record
 };
 RED4EXT_ASSERT_SIZE(LCDScreen_Record, 0x60);
 } // namespace game::data
+using gamedataLCDScreen_Record = game::data::LCDScreen_Record;
 using LCDScreen_Record = game::data::LCDScreen_Record;
 } // namespace RED4ext
 

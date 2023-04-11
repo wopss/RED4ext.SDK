@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct IDynamicCollisionRepresentation
 {
     static constexpr const char* NAME = "worldIDynamicCollisionRepresentation";
@@ -19,6 +20,7 @@ struct IDynamicCollisionRepresentation
 };
 RED4EXT_ASSERT_SIZE(IDynamicCollisionRepresentation, 0x8);
 } // namespace world
+using worldIDynamicCollisionRepresentation = world::IDynamicCollisionRepresentation;
 } // namespace RED4ext
 
 // clang-format on

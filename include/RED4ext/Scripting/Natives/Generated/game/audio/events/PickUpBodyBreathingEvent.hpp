@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct PickUpBodyBreathingEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsPickUpBodyBreathingEvent";
@@ -19,6 +20,7 @@ struct PickUpBodyBreathingEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PickUpBodyBreathingEvent, 0x40);
 } // namespace game::audio::events
+using gameaudioeventsPickUpBodyBreathingEvent = game::audio::events::PickUpBodyBreathingEvent;
 using PickUpBodyBreathingEvent = game::audio::events::PickUpBodyBreathingEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ISceneSystem : game::ISceneSystem
 {
     static constexpr const char* NAME = "scnISceneSystem";
@@ -19,6 +20,7 @@ struct ISceneSystem : game::ISceneSystem
 };
 RED4EXT_ASSERT_SIZE(ISceneSystem, 0x48);
 } // namespace scn
+using scnISceneSystem = scn::ISceneSystem;
 using SceneSystem = scn::ISceneSystem;
 } // namespace RED4ext
 

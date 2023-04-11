@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TranslationLimit : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_TranslationLimit";
@@ -27,6 +28,7 @@ struct AnimNode_TranslationLimit : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TranslationLimit, 0xB8);
 } // namespace anim
+using animAnimNode_TranslationLimit = anim::AnimNode_TranslationLimit;
 } // namespace RED4ext
 
 // clang-format on

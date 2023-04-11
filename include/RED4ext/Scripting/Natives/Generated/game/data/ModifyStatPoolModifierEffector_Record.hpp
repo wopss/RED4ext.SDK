@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ModifyStatPoolModifierEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataModifyStatPoolModifierEffector_Record";
@@ -20,6 +21,7 @@ struct ModifyStatPoolModifierEffector_Record : game::data::Effector_Record
 };
 RED4EXT_ASSERT_SIZE(ModifyStatPoolModifierEffector_Record, 0x68);
 } // namespace game::data
+using gamedataModifyStatPoolModifierEffector_Record = game::data::ModifyStatPoolModifierEffector_Record;
 using ModifyStatPoolModifierEffector_Record = game::data::ModifyStatPoolModifierEffector_Record;
 } // namespace RED4ext
 

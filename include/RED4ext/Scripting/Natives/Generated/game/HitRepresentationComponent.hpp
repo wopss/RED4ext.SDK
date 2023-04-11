@@ -18,7 +18,8 @@ namespace RED4ext
 {
 namespace game { struct HitRepresentationResource; }
 
-namespace game { 
+namespace game
+{
 struct HitRepresentationComponent : ent::SlotComponent
 {
     static constexpr const char* NAME = "gameHitRepresentationComponent";
@@ -38,6 +39,7 @@ struct HitRepresentationComponent : ent::SlotComponent
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationComponent, 0x350);
 } // namespace game
+using gameHitRepresentationComponent = game::HitRepresentationComponent;
 using HitRepresentationComponent = game::HitRepresentationComponent;
 } // namespace RED4ext
 

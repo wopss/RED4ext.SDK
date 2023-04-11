@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CActionAIProxy
 {
     static constexpr const char* NAME = "gameCActionAIProxy";
@@ -19,6 +20,7 @@ struct CActionAIProxy
 };
 RED4EXT_ASSERT_SIZE(CActionAIProxy, 0x40);
 } // namespace game
+using gameCActionAIProxy = game::CActionAIProxy;
 } // namespace RED4ext
 
 // clang-format on

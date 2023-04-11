@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InventoryItemAttachments : IScriptable
 {
     static constexpr const char* NAME = "gameInventoryItemAttachments";
@@ -27,6 +28,7 @@ struct InventoryItemAttachments : IScriptable
 };
 RED4EXT_ASSERT_SIZE(InventoryItemAttachments, 0x2A8);
 } // namespace game
+using gameInventoryItemAttachments = game::InventoryItemAttachments;
 using InventoryItemAttachments = game::InventoryItemAttachments;
 } // namespace RED4ext
 

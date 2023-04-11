@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct VoicetagId
 {
     static constexpr const char* NAME = "scnVoicetagId";
@@ -20,6 +21,7 @@ struct VoicetagId
 };
 RED4EXT_ASSERT_SIZE(VoicetagId, 0x8);
 } // namespace scn
+using scnVoicetagId = scn::VoicetagId;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatModifierHandle
 {
     static constexpr const char* NAME = "gameStatModifierHandle";
@@ -19,6 +20,7 @@ struct StatModifierHandle
 };
 RED4EXT_ASSERT_SIZE(StatModifierHandle, 0x4);
 } // namespace game
+using gameStatModifierHandle = game::StatModifierHandle;
 } // namespace RED4ext
 
 // clang-format on

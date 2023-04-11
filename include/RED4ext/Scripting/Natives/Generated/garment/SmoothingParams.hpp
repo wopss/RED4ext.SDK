@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace garment { 
+namespace garment
+{
 struct SmoothingParams
 {
     static constexpr const char* NAME = "garmentSmoothingParams";
@@ -22,6 +23,7 @@ struct SmoothingParams
 };
 RED4EXT_ASSERT_SIZE(SmoothingParams, 0x10);
 } // namespace garment
+using garmentSmoothingParams = garment::SmoothingParams;
 } // namespace RED4ext
 
 // clang-format on

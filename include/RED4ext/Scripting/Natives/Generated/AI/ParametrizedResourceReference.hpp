@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ParametrizedResourceReference : AI::ResourceReference
 {
     static constexpr const char* NAME = "AIParametrizedResourceReference";
@@ -21,6 +22,7 @@ struct ParametrizedResourceReference : AI::ResourceReference
 };
 RED4EXT_ASSERT_SIZE(ParametrizedResourceReference, 0x80);
 } // namespace AI
+using AIParametrizedResourceReference = AI::ParametrizedResourceReference;
 } // namespace RED4ext
 
 // clang-format on

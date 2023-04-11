@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_WorkspotFastExitCutoff : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_WorkspotFastExitCutoff";
@@ -19,6 +20,7 @@ struct AnimEvent_WorkspotFastExitCutoff : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_WorkspotFastExitCutoff, 0x40);
 } // namespace anim
+using animAnimEvent_WorkspotFastExitCutoff = anim::AnimEvent_WorkspotFastExitCutoff;
 } // namespace RED4ext
 
 // clang-format on

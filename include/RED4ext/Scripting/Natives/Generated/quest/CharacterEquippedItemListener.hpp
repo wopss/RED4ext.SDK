@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterEquippedItemListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "questCharacterEquippedItemListener";
@@ -20,6 +21,7 @@ struct CharacterEquippedItemListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(CharacterEquippedItemListener, 0x48);
 } // namespace quest
+using questCharacterEquippedItemListener = quest::CharacterEquippedItemListener;
 } // namespace RED4ext
 
 // clang-format on

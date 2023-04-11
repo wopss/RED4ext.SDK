@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HolocallStartEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiHolocallStartEvent";
@@ -20,6 +21,7 @@ struct HolocallStartEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HolocallStartEvent, 0x50);
 } // namespace game::ui
+using gameuiHolocallStartEvent = game::ui::HolocallStartEvent;
 using HolocallStartEvent = game::ui::HolocallStartEvent;
 } // namespace RED4ext
 

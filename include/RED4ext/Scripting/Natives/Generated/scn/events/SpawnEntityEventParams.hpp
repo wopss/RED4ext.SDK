@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct SpawnEntityEventParams
 {
     static constexpr const char* NAME = "scneventsSpawnEntityEventParams";
@@ -27,6 +28,7 @@ struct SpawnEntityEventParams
 };
 RED4EXT_ASSERT_SIZE(SpawnEntityEventParams, 0x28);
 } // namespace scn::events
+using scneventsSpawnEntityEventParams = scn::events::SpawnEntityEventParams;
 } // namespace RED4ext
 
 // clang-format on

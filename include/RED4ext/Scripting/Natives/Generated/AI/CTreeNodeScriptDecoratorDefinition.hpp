@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct ActionScript; }
 
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeScriptDecoratorDefinition : AI::CTreeExtendableNodeDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeScriptDecoratorDefinition";
@@ -25,6 +26,7 @@ struct CTreeNodeScriptDecoratorDefinition : AI::CTreeExtendableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeScriptDecoratorDefinition, 0x60);
 } // namespace AI
+using AICTreeNodeScriptDecoratorDefinition = AI::CTreeNodeScriptDecoratorDefinition;
 } // namespace RED4ext
 
 // clang-format on

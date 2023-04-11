@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CorpseSystem : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldCorpseSystem";
@@ -20,6 +21,7 @@ struct CorpseSystem : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(CorpseSystem, 0x6088);
 } // namespace world
+using worldCorpseSystem = world::CorpseSystem;
 } // namespace RED4ext
 
 // clang-format on

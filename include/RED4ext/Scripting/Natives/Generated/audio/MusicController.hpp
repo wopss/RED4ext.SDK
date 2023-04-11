@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MusicController
 {
     static constexpr const char* NAME = "audioMusicController";
@@ -23,6 +24,7 @@ struct MusicController
 };
 RED4EXT_ASSERT_SIZE(MusicController, 0x20);
 } // namespace audio
+using audioMusicController = audio::MusicController;
 } // namespace RED4ext
 
 // clang-format on

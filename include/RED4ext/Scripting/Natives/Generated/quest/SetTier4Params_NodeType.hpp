@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetTier4Params_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questSetTier4Params_NodeType";
@@ -26,6 +27,7 @@ struct SetTier4Params_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetTier4Params_NodeType, 0x48);
 } // namespace quest
+using questSetTier4Params_NodeType = quest::SetTier4Params_NodeType;
 } // namespace RED4ext
 
 // clang-format on

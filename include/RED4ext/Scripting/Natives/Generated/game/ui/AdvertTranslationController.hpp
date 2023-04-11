@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct AdvertTranslationController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiAdvertTranslationController";
@@ -23,6 +24,7 @@ struct AdvertTranslationController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(AdvertTranslationController, 0x128);
 } // namespace game::ui
+using gameuiAdvertTranslationController = game::ui::AdvertTranslationController;
 using AdvertTranslationLogicController = game::ui::AdvertTranslationController;
 } // namespace RED4ext
 

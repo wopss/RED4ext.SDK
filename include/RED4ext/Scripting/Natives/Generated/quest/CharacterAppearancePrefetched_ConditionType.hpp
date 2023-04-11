@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterAppearancePrefetched_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterAppearancePrefetched_ConditionType";
@@ -22,6 +23,7 @@ struct CharacterAppearancePrefetched_ConditionType : quest::ICharacterConditionT
 };
 RED4EXT_ASSERT_SIZE(CharacterAppearancePrefetched_ConditionType, 0x88);
 } // namespace quest
+using questCharacterAppearancePrefetched_ConditionType = quest::CharacterAppearancePrefetched_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

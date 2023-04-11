@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NullMarker : world::IMarker
 {
     static constexpr const char* NAME = "worldNullMarker";
@@ -19,6 +20,7 @@ struct NullMarker : world::IMarker
 };
 RED4EXT_ASSERT_SIZE(NullMarker, 0x30);
 } // namespace world
+using worldNullMarker = world::NullMarker;
 } // namespace RED4ext
 
 // clang-format on

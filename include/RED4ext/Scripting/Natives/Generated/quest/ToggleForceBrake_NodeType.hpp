@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleForceBrake_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleForceBrake_NodeType";
@@ -24,6 +25,7 @@ struct ToggleForceBrake_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleForceBrake_NodeType, 0x70);
 } // namespace quest
+using questToggleForceBrake_NodeType = quest::ToggleForceBrake_NodeType;
 } // namespace RED4ext
 
 // clang-format on

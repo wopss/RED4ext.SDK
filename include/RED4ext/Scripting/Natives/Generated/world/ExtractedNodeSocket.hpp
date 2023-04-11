@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ExtractedNodeSocket
 {
     static constexpr const char* NAME = "worldExtractedNodeSocket";
@@ -33,6 +34,7 @@ struct ExtractedNodeSocket
 };
 RED4EXT_ASSERT_SIZE(ExtractedNodeSocket, 0x50);
 } // namespace world
+using worldExtractedNodeSocket = world::ExtractedNodeSocket;
 } // namespace RED4ext
 
 // clang-format on

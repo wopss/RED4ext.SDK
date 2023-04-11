@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VideoInstanceDoneCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkVideoInstanceDoneCallback";
@@ -20,6 +21,7 @@ struct VideoInstanceDoneCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(VideoInstanceDoneCallback, 0x38);
 } // namespace ink
+using inkVideoInstanceDoneCallback = ink::VideoInstanceDoneCallback;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NodesGroupPath
 {
     static constexpr const char* NAME = "worldNodesGroupPath";
@@ -21,6 +22,7 @@ struct NodesGroupPath
 };
 RED4EXT_ASSERT_SIZE(NodesGroupPath, 0x10);
 } // namespace world
+using worldNodesGroupPath = world::NodesGroupPath;
 } // namespace RED4ext
 
 // clang-format on

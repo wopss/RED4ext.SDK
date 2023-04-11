@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace world { struct BlockoutData; }
 
-namespace world { 
+namespace world
+{
 struct BlockoutResource : CResource
 {
     static constexpr const char* NAME = "worldBlockoutResource";
@@ -23,6 +24,7 @@ struct BlockoutResource : CResource
 };
 RED4EXT_ASSERT_SIZE(BlockoutResource, 0x50);
 } // namespace world
+using worldBlockoutResource = world::BlockoutResource;
 } // namespace RED4ext
 
 // clang-format on

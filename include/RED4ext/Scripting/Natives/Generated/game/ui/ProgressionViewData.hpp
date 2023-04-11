@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ProgressionViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiProgressionViewData";
@@ -30,6 +31,7 @@ struct ProgressionViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(ProgressionViewData, 0xB0);
 } // namespace game::ui
+using gameuiProgressionViewData = game::ui::ProgressionViewData;
 using ProgressionViewData = game::ui::ProgressionViewData;
 } // namespace RED4ext
 

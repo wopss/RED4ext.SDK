@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct DispatchPrefabProxyJobsResult
 {
     static constexpr const char* NAME = "interopDispatchPrefabProxyJobsResult";
@@ -21,6 +22,7 @@ struct DispatchPrefabProxyJobsResult
 };
 RED4EXT_ASSERT_SIZE(DispatchPrefabProxyJobsResult, 0xC);
 } // namespace interop
+using interopDispatchPrefabProxyJobsResult = interop::DispatchPrefabProxyJobsResult;
 } // namespace RED4ext
 
 // clang-format on

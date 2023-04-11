@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IDelaySystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIDelaySystem";
@@ -19,6 +20,7 @@ struct IDelaySystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IDelaySystem, 0x48);
 } // namespace game
+using gameIDelaySystem = game::IDelaySystem;
 using IDelaySystem = game::IDelaySystem;
 } // namespace RED4ext
 

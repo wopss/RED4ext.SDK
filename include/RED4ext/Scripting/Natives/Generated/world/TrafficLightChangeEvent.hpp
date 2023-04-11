@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficLightChangeEvent : red::Event
 {
     static constexpr const char* NAME = "worldTrafficLightChangeEvent";
@@ -22,6 +23,7 @@ struct TrafficLightChangeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TrafficLightChangeEvent, 0x48);
 } // namespace world
+using worldTrafficLightChangeEvent = world::TrafficLightChangeEvent;
 using TrafficLightChangeEvent = world::TrafficLightChangeEvent;
 } // namespace RED4ext
 

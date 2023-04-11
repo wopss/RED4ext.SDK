@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RenderGameplayEffectsManagerSystem : game::IRenderGameplayEffectsManagerSystem
 {
     static constexpr const char* NAME = "gameRenderGameplayEffectsManagerSystem";
@@ -20,6 +21,7 @@ struct RenderGameplayEffectsManagerSystem : game::IRenderGameplayEffectsManagerS
 };
 RED4EXT_ASSERT_SIZE(RenderGameplayEffectsManagerSystem, 0xC0);
 } // namespace game
+using gameRenderGameplayEffectsManagerSystem = game::RenderGameplayEffectsManagerSystem;
 } // namespace RED4ext
 
 // clang-format on

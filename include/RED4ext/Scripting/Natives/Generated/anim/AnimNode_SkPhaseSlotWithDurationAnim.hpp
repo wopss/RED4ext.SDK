@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct ActionAnimDatabase; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkPhaseSlotWithDurationAnim : anim::AnimNode_SkPhaseWithDurationAnim
 {
     static constexpr const char* NAME = "animAnimNode_SkPhaseSlotWithDurationAnim";
@@ -26,6 +27,7 @@ struct AnimNode_SkPhaseSlotWithDurationAnim : anim::AnimNode_SkPhaseWithDuration
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkPhaseSlotWithDurationAnim, 0x178);
 } // namespace anim
+using animAnimNode_SkPhaseSlotWithDurationAnim = anim::AnimNode_SkPhaseSlotWithDurationAnim;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,7 +18,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineStateContextParameters
 {
     static constexpr const char* NAME = "gamestateMachineStateContextParameters";
@@ -44,6 +45,7 @@ struct MachineStateContextParameters
 };
 RED4EXT_ASSERT_SIZE(MachineStateContextParameters, 0x8050);
 } // namespace game::state
+using gamestateMachineStateContextParameters = game::state::MachineStateContextParameters;
 } // namespace RED4ext
 
 // clang-format on

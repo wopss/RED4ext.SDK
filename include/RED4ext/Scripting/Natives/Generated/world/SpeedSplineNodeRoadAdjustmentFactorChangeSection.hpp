@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SpeedSplineNodeRoadAdjustmentFactorChangeSection
 {
     static constexpr const char* NAME = "worldSpeedSplineNodeRoadAdjustmentFactorChangeSection";
@@ -20,6 +21,7 @@ struct SpeedSplineNodeRoadAdjustmentFactorChangeSection
 };
 RED4EXT_ASSERT_SIZE(SpeedSplineNodeRoadAdjustmentFactorChangeSection, 0x8);
 } // namespace world
+using worldSpeedSplineNodeRoadAdjustmentFactorChangeSection = world::SpeedSplineNodeRoadAdjustmentFactorChangeSection;
 } // namespace RED4ext
 
 // clang-format on

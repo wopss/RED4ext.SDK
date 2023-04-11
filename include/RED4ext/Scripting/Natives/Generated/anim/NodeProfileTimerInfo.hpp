@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct NodeProfileTimerInfo
 {
     static constexpr const char* NAME = "animNodeProfileTimerInfo";
@@ -23,6 +24,7 @@ struct NodeProfileTimerInfo
 };
 RED4EXT_ASSERT_SIZE(NodeProfileTimerInfo, 0x10);
 } // namespace anim
+using animNodeProfileTimerInfo = anim::NodeProfileTimerInfo;
 } // namespace RED4ext
 
 // clang-format on

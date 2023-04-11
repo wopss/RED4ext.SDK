@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Int32FactDBProvider : quest::IInt32ValueProvider
 {
     static constexpr const char* NAME = "questInt32FactDBProvider";
@@ -21,6 +22,7 @@ struct Int32FactDBProvider : quest::IInt32ValueProvider
 };
 RED4EXT_ASSERT_SIZE(Int32FactDBProvider, 0x38);
 } // namespace quest
+using questInt32FactDBProvider = quest::Int32FactDBProvider;
 } // namespace RED4ext
 
 // clang-format on

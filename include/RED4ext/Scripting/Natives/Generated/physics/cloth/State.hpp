@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics::cloth { 
+namespace physics::cloth
+{
 struct State
 {
     static constexpr const char* NAME = "physicsclothState";
@@ -26,6 +27,7 @@ struct State
 };
 RED4EXT_ASSERT_SIZE(State, 0xC0);
 } // namespace physics::cloth
+using physicsclothState = physics::cloth::State;
 } // namespace RED4ext
 
 // clang-format on

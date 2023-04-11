@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct ISystemConditionType; }
 
-namespace quest { 
+namespace quest
+{
 struct SystemCondition : quest::TypedCondition
 {
     static constexpr const char* NAME = "questSystemCondition";
@@ -23,6 +24,7 @@ struct SystemCondition : quest::TypedCondition
 };
 RED4EXT_ASSERT_SIZE(SystemCondition, 0x40);
 } // namespace quest
+using questSystemCondition = quest::SystemCondition;
 } // namespace RED4ext
 
 // clang-format on

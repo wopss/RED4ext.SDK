@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ApplyStatGroupEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataApplyStatGroupEffector_Record";
@@ -20,6 +21,7 @@ struct ApplyStatGroupEffector_Record : game::data::Effector_Record
 };
 RED4EXT_ASSERT_SIZE(ApplyStatGroupEffector_Record, 0x60);
 } // namespace game::data
+using gamedataApplyStatGroupEffector_Record = game::data::ApplyStatGroupEffector_Record;
 using ApplyStatGroupEffector_Record = game::data::ApplyStatGroupEffector_Record;
 } // namespace RED4ext
 

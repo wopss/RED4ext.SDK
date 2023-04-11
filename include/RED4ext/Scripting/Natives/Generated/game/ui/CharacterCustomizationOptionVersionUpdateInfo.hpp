@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CharacterCustomizationOptionVersionUpdateInfo
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationOptionVersionUpdateInfo";
@@ -28,6 +29,7 @@ struct CharacterCustomizationOptionVersionUpdateInfo
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationOptionVersionUpdateInfo, 0x40);
 } // namespace game::ui
+using gameuiCharacterCustomizationOptionVersionUpdateInfo = game::ui::CharacterCustomizationOptionVersionUpdateInfo;
 } // namespace RED4ext
 
 // clang-format on

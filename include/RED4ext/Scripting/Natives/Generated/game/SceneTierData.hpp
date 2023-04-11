@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SceneTierData : IScriptable
 {
     static constexpr const char* NAME = "gameSceneTierData";
@@ -25,6 +26,7 @@ struct SceneTierData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SceneTierData, 0x68);
 } // namespace game
+using gameSceneTierData = game::SceneTierData;
 using SceneTierData = game::SceneTierData;
 } // namespace RED4ext
 

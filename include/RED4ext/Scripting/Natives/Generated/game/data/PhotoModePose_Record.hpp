@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct PhotoModePose_Record : game::data::PhotoModeItem_Record
 {
     static constexpr const char* NAME = "gamedataPhotoModePose_Record";
@@ -20,6 +21,7 @@ struct PhotoModePose_Record : game::data::PhotoModeItem_Record
 };
 RED4EXT_ASSERT_SIZE(PhotoModePose_Record, 0x78);
 } // namespace game::data
+using gamedataPhotoModePose_Record = game::data::PhotoModePose_Record;
 using PhotoModePose_Record = game::data::PhotoModePose_Record;
 } // namespace RED4ext
 

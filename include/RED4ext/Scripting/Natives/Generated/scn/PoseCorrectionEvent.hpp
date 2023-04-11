@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PoseCorrectionEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnPoseCorrectionEvent";
@@ -24,6 +25,7 @@ struct PoseCorrectionEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(PoseCorrectionEvent, 0x2D0);
 } // namespace scn
+using scnPoseCorrectionEvent = scn::PoseCorrectionEvent;
 } // namespace RED4ext
 
 // clang-format on

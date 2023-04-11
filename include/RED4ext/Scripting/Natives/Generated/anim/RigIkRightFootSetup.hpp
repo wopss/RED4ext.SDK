@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct RigIkRightFootSetup : anim::RigIk2Setup
 {
     static constexpr const char* NAME = "animRigIkRightFootSetup";
@@ -19,6 +20,7 @@ struct RigIkRightFootSetup : anim::RigIk2Setup
 };
 RED4EXT_ASSERT_SIZE(RigIkRightFootSetup, 0x60);
 } // namespace anim
+using animRigIkRightFootSetup = anim::RigIkRightFootSetup;
 } // namespace RED4ext
 
 // clang-format on

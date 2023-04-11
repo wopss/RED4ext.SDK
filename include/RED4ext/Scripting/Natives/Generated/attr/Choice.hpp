@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Choice : attr::Attribute
 {
     static constexpr const char* NAME = "attrChoice";
@@ -22,6 +23,7 @@ struct Choice : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(Choice, 0x40);
 } // namespace attr
+using attrChoice = attr::Choice;
 } // namespace RED4ext
 
 // clang-format on

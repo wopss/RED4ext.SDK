@@ -19,7 +19,8 @@ using gameIDynamicEntityIDSystem = game::IDynamicEntityIDSystem;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct IDynamicEntityIDSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIDynamicEntityIDSystem";
@@ -28,6 +29,7 @@ struct IDynamicEntityIDSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IDynamicEntityIDSystem, 0x48);
 } // namespace game
+using gameIDynamicEntityIDSystem = game::IDynamicEntityIDSystem;
 } // namespace RED4ext
 */
 

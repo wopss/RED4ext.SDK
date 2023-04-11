@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LODDefinition : ISerializable
 {
     static constexpr const char* NAME = "entLODDefinition";
@@ -28,6 +29,7 @@ struct LODDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(LODDefinition, 0xD0);
 } // namespace ent
+using entLODDefinition = ent::LODDefinition;
 } // namespace RED4ext
 
 // clang-format on

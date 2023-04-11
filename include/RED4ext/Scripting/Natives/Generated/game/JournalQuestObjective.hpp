@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JournalQuestObjective : game::JournalQuestObjectiveBase
 {
     static constexpr const char* NAME = "gameJournalQuestObjective";
@@ -19,6 +20,7 @@ struct JournalQuestObjective : game::JournalQuestObjectiveBase
 };
 RED4EXT_ASSERT_SIZE(JournalQuestObjective, 0xD8);
 } // namespace game
+using gameJournalQuestObjective = game::JournalQuestObjective;
 using JournalQuestObjective = game::JournalQuestObjective;
 } // namespace RED4ext
 

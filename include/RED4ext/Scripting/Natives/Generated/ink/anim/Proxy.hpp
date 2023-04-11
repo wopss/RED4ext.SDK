@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Proxy : IScriptable
 {
     static constexpr const char* NAME = "inkanimProxy";
@@ -20,6 +21,7 @@ struct Proxy : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Proxy, 0x50);
 } // namespace ink::anim
+using inkanimProxy = ink::anim::Proxy;
 using inkAnimProxy = ink::anim::Proxy;
 } // namespace RED4ext
 

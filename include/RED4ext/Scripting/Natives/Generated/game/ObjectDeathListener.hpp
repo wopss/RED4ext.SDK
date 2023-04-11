@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectDeathListener : game::IStatPoolsListener
 {
     static constexpr const char* NAME = "gameObjectDeathListener";
@@ -20,6 +21,7 @@ struct ObjectDeathListener : game::IStatPoolsListener
 };
 RED4EXT_ASSERT_SIZE(ObjectDeathListener, 0x68);
 } // namespace game
+using gameObjectDeathListener = game::ObjectDeathListener;
 } // namespace RED4ext
 
 // clang-format on

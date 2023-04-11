@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ActionWidgetDefinition_Record : game::data::WidgetDefinition_Record
 {
     static constexpr const char* NAME = "gamedataActionWidgetDefinition_Record";
@@ -19,6 +20,7 @@ struct ActionWidgetDefinition_Record : game::data::WidgetDefinition_Record
 };
 RED4EXT_ASSERT_SIZE(ActionWidgetDefinition_Record, 0x58);
 } // namespace game::data
+using gamedataActionWidgetDefinition_Record = game::data::ActionWidgetDefinition_Record;
 using ActionWidgetDefinition_Record = game::data::ActionWidgetDefinition_Record;
 } // namespace RED4ext
 

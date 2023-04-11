@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ApplySoundPositionStrategy
 {
     static constexpr const char* NAME = "audioApplySoundPositionStrategy";
@@ -19,6 +20,7 @@ struct ApplySoundPositionStrategy
 };
 RED4EXT_ASSERT_SIZE(ApplySoundPositionStrategy, 0x8);
 } // namespace audio
+using audioApplySoundPositionStrategy = audio::ApplySoundPositionStrategy;
 } // namespace RED4ext
 
 // clang-format on

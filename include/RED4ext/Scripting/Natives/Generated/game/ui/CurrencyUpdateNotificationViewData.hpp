@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CurrencyUpdateNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiCurrencyUpdateNotificationViewData";
@@ -21,6 +22,7 @@ struct CurrencyUpdateNotificationViewData : game::ui::GenericNotificationViewDat
 };
 RED4EXT_ASSERT_SIZE(CurrencyUpdateNotificationViewData, 0x98);
 } // namespace game::ui
+using gameuiCurrencyUpdateNotificationViewData = game::ui::CurrencyUpdateNotificationViewData;
 using CurrencyUpdateNotificationViewData = game::ui::CurrencyUpdateNotificationViewData;
 } // namespace RED4ext
 

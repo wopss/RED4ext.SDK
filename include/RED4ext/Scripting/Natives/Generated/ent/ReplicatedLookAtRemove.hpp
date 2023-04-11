@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ReplicatedLookAtRemove : ent::ReplicatedLookAtData
 {
     static constexpr const char* NAME = "entReplicatedLookAtRemove";
@@ -23,6 +24,7 @@ struct ReplicatedLookAtRemove : ent::ReplicatedLookAtData
 };
 RED4EXT_ASSERT_SIZE(ReplicatedLookAtRemove, 0x28);
 } // namespace ent
+using entReplicatedLookAtRemove = ent::ReplicatedLookAtRemove;
 } // namespace RED4ext
 
 // clang-format on

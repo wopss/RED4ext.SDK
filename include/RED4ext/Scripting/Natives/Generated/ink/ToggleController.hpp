@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ToggleController : ink::ButtonController
 {
     static constexpr const char* NAME = "inkToggleController";
@@ -24,6 +25,7 @@ struct ToggleController : ink::ButtonController
 };
 RED4EXT_ASSERT_SIZE(ToggleController, 0x238);
 } // namespace ink
+using inkToggleController = ink::ToggleController;
 } // namespace RED4ext
 
 // clang-format on

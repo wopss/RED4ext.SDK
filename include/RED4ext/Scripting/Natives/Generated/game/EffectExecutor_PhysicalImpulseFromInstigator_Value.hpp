@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_PhysicalImpulseFromInstigator_Value : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_PhysicalImpulseFromInstigator_Value";
@@ -21,6 +22,7 @@ struct EffectExecutor_PhysicalImpulseFromInstigator_Value : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_PhysicalImpulseFromInstigator_Value, 0x50);
 } // namespace game
+using gameEffectExecutor_PhysicalImpulseFromInstigator_Value = game::EffectExecutor_PhysicalImpulseFromInstigator_Value;
 } // namespace RED4ext
 
 // clang-format on

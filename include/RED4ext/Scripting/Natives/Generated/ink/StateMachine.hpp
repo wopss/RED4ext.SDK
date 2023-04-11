@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StateMachine : ink::IStateMachine
 {
     static constexpr const char* NAME = "inkStateMachine";
@@ -20,6 +21,7 @@ struct StateMachine : ink::IStateMachine
 };
 RED4EXT_ASSERT_SIZE(StateMachine, 0x168);
 } // namespace ink
+using inkStateMachine = ink::StateMachine;
 } // namespace RED4ext
 
 // clang-format on

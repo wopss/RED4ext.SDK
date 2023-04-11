@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityStubComponentPlacedProxy : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameEntityStubComponentPlacedProxy";
@@ -20,6 +21,7 @@ struct EntityStubComponentPlacedProxy : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(EntityStubComponentPlacedProxy, 0x130);
 } // namespace game
+using gameEntityStubComponentPlacedProxy = game::EntityStubComponentPlacedProxy;
 } // namespace RED4ext
 
 // clang-format on

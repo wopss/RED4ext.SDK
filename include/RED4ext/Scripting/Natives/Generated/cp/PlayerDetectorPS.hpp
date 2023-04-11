@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct PlayerDetectorPS : game::ObjectPS
 {
     static constexpr const char* NAME = "cpPlayerDetectorPS";
@@ -21,6 +22,7 @@ struct PlayerDetectorPS : game::ObjectPS
 };
 RED4EXT_ASSERT_SIZE(PlayerDetectorPS, 0x70);
 } // namespace cp
+using cpPlayerDetectorPS = cp::PlayerDetectorPS;
 } // namespace RED4ext
 
 // clang-format on

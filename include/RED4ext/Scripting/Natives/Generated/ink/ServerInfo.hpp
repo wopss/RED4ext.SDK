@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ServerInfo : IScriptable
 {
     static constexpr const char* NAME = "inkServerInfo";
@@ -26,6 +27,7 @@ struct ServerInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ServerInfo, 0xC8);
 } // namespace ink
+using inkServerInfo = ink::ServerInfo;
 using ServerInfo = ink::ServerInfo;
 } // namespace RED4ext
 

@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct RagdollBodyInfo
 {
     static constexpr const char* NAME = "physicsRagdollBodyInfo";
@@ -43,6 +44,7 @@ struct RagdollBodyInfo
 };
 RED4EXT_ASSERT_SIZE(RagdollBodyInfo, 0x70);
 } // namespace physics
+using physicsRagdollBodyInfo = physics::RagdollBodyInfo;
 } // namespace RED4ext
 
 // clang-format on

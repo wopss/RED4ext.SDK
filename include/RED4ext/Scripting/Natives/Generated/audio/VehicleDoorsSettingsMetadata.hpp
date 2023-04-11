@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehicleDoorsSettingsMetadata
 {
     static constexpr const char* NAME = "audioVehicleDoorsSettingsMetadata";
@@ -22,6 +23,7 @@ struct VehicleDoorsSettingsMetadata
 };
 RED4EXT_ASSERT_SIZE(VehicleDoorsSettingsMetadata, 0x30);
 } // namespace audio
+using audioVehicleDoorsSettingsMetadata = audio::VehicleDoorsSettingsMetadata;
 } // namespace RED4ext
 
 // clang-format on

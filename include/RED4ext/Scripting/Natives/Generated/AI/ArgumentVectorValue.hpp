@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ArgumentVectorValue : AI::ArgumentDefinition
 {
     static constexpr const char* NAME = "AIArgumentVectorValue";
@@ -23,6 +24,7 @@ struct ArgumentVectorValue : AI::ArgumentDefinition
 };
 RED4EXT_ASSERT_SIZE(ArgumentVectorValue, 0x58);
 } // namespace AI
+using AIArgumentVectorValue = AI::ArgumentVectorValue;
 } // namespace RED4ext
 
 // clang-format on

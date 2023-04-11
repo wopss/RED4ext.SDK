@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterEquippedWeapon_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterEquippedWeapon_ConditionType";
@@ -27,6 +28,7 @@ struct CharacterEquippedWeapon_ConditionType : quest::ICharacterConditionType
 };
 RED4EXT_ASSERT_SIZE(CharacterEquippedWeapon_ConditionType, 0xB0);
 } // namespace quest
+using questCharacterEquippedWeapon_ConditionType = quest::CharacterEquippedWeapon_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

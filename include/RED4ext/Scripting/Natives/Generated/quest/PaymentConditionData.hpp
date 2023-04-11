@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PaymentConditionData
 {
     static constexpr const char* NAME = "questPaymentConditionData";
@@ -23,6 +24,7 @@ struct PaymentConditionData
 };
 RED4EXT_ASSERT_SIZE(PaymentConditionData, 0x18);
 } // namespace quest
+using questPaymentConditionData = quest::PaymentConditionData;
 } // namespace RED4ext
 
 // clang-format on

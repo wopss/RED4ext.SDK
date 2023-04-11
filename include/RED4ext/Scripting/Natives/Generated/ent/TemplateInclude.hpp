@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace ent { 
+namespace ent
+{
 struct TemplateInclude
 {
     static constexpr const char* NAME = "entTemplateInclude";
@@ -24,6 +25,7 @@ struct TemplateInclude
 };
 RED4EXT_ASSERT_SIZE(TemplateInclude, 0x10);
 } // namespace ent
+using entTemplateInclude = ent::TemplateInclude;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct LocomotionMode_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataLocomotionMode_Record";
@@ -20,6 +21,7 @@ struct LocomotionMode_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(LocomotionMode_Record, 0x58);
 } // namespace game::data
+using gamedataLocomotionMode_Record = game::data::LocomotionMode_Record;
 using LocomotionMode_Record = game::data::LocomotionMode_Record;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace work { struct WorkspotResource; }
 
-namespace scn { 
+namespace scn
+{
 struct WorkspotData_ExternalWorkspotResource : scn::WorkspotData
 {
     static constexpr const char* NAME = "scnWorkspotData_ExternalWorkspotResource";
@@ -23,6 +24,7 @@ struct WorkspotData_ExternalWorkspotResource : scn::WorkspotData
 };
 RED4EXT_ASSERT_SIZE(WorkspotData_ExternalWorkspotResource, 0x50);
 } // namespace scn
+using scnWorkspotData_ExternalWorkspotResource = scn::WorkspotData_ExternalWorkspotResource;
 } // namespace RED4ext
 
 // clang-format on

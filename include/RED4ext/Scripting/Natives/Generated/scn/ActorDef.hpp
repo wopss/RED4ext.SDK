@@ -30,7 +30,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace scn { 
+namespace scn
+{
 struct ActorDef
 {
     static constexpr const char* NAME = "scnActorDef";
@@ -64,6 +65,7 @@ struct ActorDef
 };
 RED4EXT_ASSERT_SIZE(ActorDef, 0x1E0);
 } // namespace scn
+using scnActorDef = scn::ActorDef;
 } // namespace RED4ext
 
 // clang-format on

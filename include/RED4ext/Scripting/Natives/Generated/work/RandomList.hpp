@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct RandomList : work::IContainerEntry
 {
     static constexpr const char* NAME = "workRandomList";
@@ -28,6 +29,7 @@ struct RandomList : work::IContainerEntry
 };
 RED4EXT_ASSERT_SIZE(RandomList, 0x70);
 } // namespace work
+using workRandomList = work::RandomList;
 } // namespace RED4ext
 
 // clang-format on

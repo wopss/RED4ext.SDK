@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct IMappinVolume : ISerializable
 {
     static constexpr const char* NAME = "gamemappinsIMappinVolume";
@@ -19,6 +20,7 @@ struct IMappinVolume : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IMappinVolume, 0x30);
 } // namespace game::mappins
+using gamemappinsIMappinVolume = game::mappins::IMappinVolume;
 } // namespace RED4ext
 
 // clang-format on

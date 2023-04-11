@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimFeature_HitReactionsData; }
 
-namespace game { 
+namespace game
+{
 struct ActionHitReactionState : game::ActionReplicatedState
 {
     static constexpr const char* NAME = "gameActionHitReactionState";
@@ -23,6 +24,7 @@ struct ActionHitReactionState : game::ActionReplicatedState
 };
 RED4EXT_ASSERT_SIZE(ActionHitReactionState, 0x38);
 } // namespace game
+using gameActionHitReactionState = game::ActionHitReactionState;
 } // namespace RED4ext
 
 // clang-format on

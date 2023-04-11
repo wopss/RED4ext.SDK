@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SocketNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldSocketNodeInstance";
@@ -20,6 +21,7 @@ struct SocketNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(SocketNodeInstance, 0xA0);
 } // namespace world
+using worldSocketNodeInstance = world::SocketNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

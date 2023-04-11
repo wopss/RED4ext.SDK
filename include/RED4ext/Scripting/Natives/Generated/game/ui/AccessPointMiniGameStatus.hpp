@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct AccessPointMiniGameStatus : red::Event
 {
     static constexpr const char* NAME = "gameuiAccessPointMiniGameStatus";
@@ -22,6 +23,7 @@ struct AccessPointMiniGameStatus : red::Event
 };
 RED4EXT_ASSERT_SIZE(AccessPointMiniGameStatus, 0x48);
 } // namespace game::ui
+using gameuiAccessPointMiniGameStatus = game::ui::AccessPointMiniGameStatus;
 using AccessPointMiniGameStatus = game::ui::AccessPointMiniGameStatus;
 } // namespace RED4ext
 

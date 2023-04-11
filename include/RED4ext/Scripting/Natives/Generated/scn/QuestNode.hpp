@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace quest { struct NodeDefinition; }
 
-namespace scn { 
+namespace scn
+{
 struct QuestNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnQuestNode";
@@ -27,6 +28,7 @@ struct QuestNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(QuestNode, 0x78);
 } // namespace scn
+using scnQuestNode = scn::QuestNode;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_EyesReset : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_EyesReset";
@@ -20,6 +21,7 @@ struct AnimNode_EyesReset : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_EyesReset, 0x80);
 } // namespace anim
+using animAnimNode_EyesReset = anim::AnimNode_EyesReset;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoiceTriggerLimits
 {
     static constexpr const char* NAME = "audioVoiceTriggerLimits";
@@ -23,6 +24,7 @@ struct VoiceTriggerLimits
 };
 RED4EXT_ASSERT_SIZE(VoiceTriggerLimits, 0x14);
 } // namespace audio
+using audioVoiceTriggerLimits = audio::VoiceTriggerLimits;
 } // namespace RED4ext
 
 // clang-format on

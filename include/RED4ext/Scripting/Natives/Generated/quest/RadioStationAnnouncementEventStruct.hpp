@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct RadioStationAnnouncementEventStruct
 {
     static constexpr const char* NAME = "questRadioStationAnnouncementEventStruct";
@@ -30,6 +31,7 @@ struct RadioStationAnnouncementEventStruct
 };
 RED4EXT_ASSERT_SIZE(RadioStationAnnouncementEventStruct, 0x20);
 } // namespace quest
+using questRadioStationAnnouncementEventStruct = quest::RadioStationAnnouncementEventStruct;
 } // namespace RED4ext
 
 // clang-format on

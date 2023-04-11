@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InventoryPuppetPreviewGameController : game::ui::PuppetPreviewGameController
 {
     static constexpr const char* NAME = "gameuiInventoryPuppetPreviewGameController";
@@ -19,6 +20,7 @@ struct InventoryPuppetPreviewGameController : game::ui::PuppetPreviewGameControl
 };
 RED4EXT_ASSERT_SIZE(InventoryPuppetPreviewGameController, 0x1B8);
 } // namespace game::ui
+using gameuiInventoryPuppetPreviewGameController = game::ui::InventoryPuppetPreviewGameController;
 using inkInventoryPuppetPreviewGameController = game::ui::InventoryPuppetPreviewGameController;
 } // namespace RED4ext
 

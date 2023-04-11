@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct DeviceVisualizerLogic : game::interactions::vis::IGroupedVisualizerLogic
 {
     static constexpr const char* NAME = "gameinteractionsvisDeviceVisualizerLogic";
@@ -20,6 +21,7 @@ struct DeviceVisualizerLogic : game::interactions::vis::IGroupedVisualizerLogic
 };
 RED4EXT_ASSERT_SIZE(DeviceVisualizerLogic, 0x80);
 } // namespace game::interactions::vis
+using gameinteractionsvisDeviceVisualizerLogic = game::interactions::vis::DeviceVisualizerLogic;
 } // namespace RED4ext
 
 // clang-format on

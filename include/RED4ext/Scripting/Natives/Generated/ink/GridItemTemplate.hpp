@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GridItemTemplate
 {
     static constexpr const char* NAME = "inkGridItemTemplate";
@@ -22,6 +23,7 @@ struct GridItemTemplate
 };
 RED4EXT_ASSERT_SIZE(GridItemTemplate, 0x18);
 } // namespace ink
+using inkGridItemTemplate = ink::GridItemTemplate;
 } // namespace RED4ext
 
 // clang-format on

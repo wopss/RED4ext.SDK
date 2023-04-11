@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct JoinFollowerSquadWithTargetDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorJoinFollowerSquadWithTargetDefinition";
@@ -23,6 +24,7 @@ struct JoinFollowerSquadWithTargetDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(JoinFollowerSquadWithTargetDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorJoinFollowerSquadWithTargetDefinition = AI::behavior::JoinFollowerSquadWithTargetDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LoadingFadeInOutCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkLoadingFadeInOutCallback";
@@ -20,6 +21,7 @@ struct LoadingFadeInOutCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(LoadingFadeInOutCallback, 0x38);
 } // namespace ink
+using inkLoadingFadeInOutCallback = ink::LoadingFadeInOutCallback;
 } // namespace RED4ext
 
 // clang-format on

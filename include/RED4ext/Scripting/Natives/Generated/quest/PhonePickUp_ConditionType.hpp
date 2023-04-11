@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct PhonePickUp_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questPhonePickUp_ConditionType";
@@ -26,6 +27,7 @@ struct PhonePickUp_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(PhonePickUp_ConditionType, 0x60);
 } // namespace quest
+using questPhonePickUp_ConditionType = quest::PhonePickUp_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

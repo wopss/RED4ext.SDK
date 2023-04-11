@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlaylistTrackChanged_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questPlaylistTrackChanged_ConditionType";
@@ -21,6 +22,7 @@ struct PlaylistTrackChanged_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(PlaylistTrackChanged_ConditionType, 0x40);
 } // namespace quest
+using questPlaylistTrackChanged_ConditionType = quest::PlaylistTrackChanged_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

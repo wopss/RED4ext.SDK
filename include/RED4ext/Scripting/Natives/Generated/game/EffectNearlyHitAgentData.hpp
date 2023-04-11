@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game { 
+namespace game
+{
 struct EffectNearlyHitAgentData
 {
     static constexpr const char* NAME = "gameEffectNearlyHitAgentData";
@@ -28,6 +29,7 @@ struct EffectNearlyHitAgentData
 };
 RED4EXT_ASSERT_SIZE(EffectNearlyHitAgentData, 0x40);
 } // namespace game
+using gameEffectNearlyHitAgentData = game::EffectNearlyHitAgentData;
 } // namespace RED4ext
 
 // clang-format on

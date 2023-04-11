@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct WorldInteractionChangeCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "worlduiWorldInteractionChangeCallback";
@@ -20,6 +21,7 @@ struct WorldInteractionChangeCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(WorldInteractionChangeCallback, 0x38);
 } // namespace world::ui
+using worlduiWorldInteractionChangeCallback = world::ui::WorldInteractionChangeCallback;
 } // namespace RED4ext
 
 // clang-format on

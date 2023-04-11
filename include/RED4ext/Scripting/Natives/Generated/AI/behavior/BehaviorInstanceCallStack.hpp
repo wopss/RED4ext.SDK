@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct BehaviorInstanceCallStack
 {
     static constexpr const char* NAME = "AIbehaviorBehaviorInstanceCallStack";
@@ -21,6 +22,7 @@ struct BehaviorInstanceCallStack
 };
 RED4EXT_ASSERT_SIZE(BehaviorInstanceCallStack, 0x18);
 } // namespace AI::behavior
+using AIbehaviorBehaviorInstanceCallStack = AI::behavior::BehaviorInstanceCallStack;
 } // namespace RED4ext
 
 // clang-format on

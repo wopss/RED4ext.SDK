@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AddCombatLogMessage_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questAddCombatLogMessage_NodeType";
@@ -22,6 +23,7 @@ struct AddCombatLogMessage_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(AddCombatLogMessage_NodeType, 0x80);
 } // namespace quest
+using questAddCombatLogMessage_NodeType = quest::AddCombatLogMessage_NodeType;
 } // namespace RED4ext
 
 // clang-format on

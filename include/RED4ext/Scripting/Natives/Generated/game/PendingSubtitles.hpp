@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PendingSubtitles
 {
     static constexpr const char* NAME = "gamePendingSubtitles";
@@ -21,6 +22,7 @@ struct PendingSubtitles
 };
 RED4EXT_ASSERT_SIZE(PendingSubtitles, 0x10);
 } // namespace game
+using gamePendingSubtitles = game::PendingSubtitles;
 } // namespace RED4ext
 
 // clang-format on

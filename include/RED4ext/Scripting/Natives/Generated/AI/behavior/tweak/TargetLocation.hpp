@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct TargetLocation
 {
     static constexpr const char* NAME = "AIbehaviortweakTargetLocation";
@@ -30,6 +31,7 @@ struct TargetLocation
 };
 RED4EXT_ASSERT_SIZE(TargetLocation, 0x38);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakTargetLocation = AI::behavior::tweak::TargetLocation;
 } // namespace RED4ext
 
 // clang-format on

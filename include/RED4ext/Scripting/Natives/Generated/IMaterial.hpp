@@ -11,7 +11,6 @@
 
 namespace RED4ext
 {
-struct IMaterial;
 
 struct IMaterial : CResource
 {

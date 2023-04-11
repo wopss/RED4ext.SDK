@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct Widget; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetBackendData : IBackendData
 {
     static constexpr const char* NAME = "inkWidgetBackendData";
@@ -30,6 +31,7 @@ struct WidgetBackendData : IBackendData
 };
 RED4EXT_ASSERT_SIZE(WidgetBackendData, 0x70);
 } // namespace ink
+using inkWidgetBackendData = ink::WidgetBackendData;
 } // namespace RED4ext
 
 // clang-format on

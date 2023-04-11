@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PreloadFX_NodeTypeParams
 {
     static constexpr const char* NAME = "questPreloadFX_NodeTypeParams";
@@ -25,6 +26,7 @@ struct PreloadFX_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(PreloadFX_NodeTypeParams, 0x48);
 } // namespace quest
+using questPreloadFX_NodeTypeParams = quest::PreloadFX_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

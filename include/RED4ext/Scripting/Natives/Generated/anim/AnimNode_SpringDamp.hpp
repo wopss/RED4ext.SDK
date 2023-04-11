@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SpringDamp : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_SpringDamp";
@@ -34,6 +35,7 @@ struct AnimNode_SpringDamp : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SpringDamp, 0xB0);
 } // namespace anim
+using animAnimNode_SpringDamp = anim::AnimNode_SpringDamp;
 } // namespace RED4ext
 
 // clang-format on

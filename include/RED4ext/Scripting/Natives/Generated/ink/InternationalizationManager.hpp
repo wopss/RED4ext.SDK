@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InternationalizationManager : ISerializable
 {
     static constexpr const char* NAME = "inkInternationalizationManager";
@@ -20,6 +21,7 @@ struct InternationalizationManager : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InternationalizationManager, 0x88);
 } // namespace ink
+using inkInternationalizationManager = ink::InternationalizationManager;
 } // namespace RED4ext
 
 // clang-format on

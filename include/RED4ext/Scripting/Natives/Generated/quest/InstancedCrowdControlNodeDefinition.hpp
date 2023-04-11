@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct InstancedCrowdControlNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questInstancedCrowdControlNodeDefinition";
@@ -23,6 +24,7 @@ struct InstancedCrowdControlNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(InstancedCrowdControlNodeDefinition, 0x58);
 } // namespace quest
+using questInstancedCrowdControlNodeDefinition = quest::InstancedCrowdControlNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemNavigation : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemNavigation";
@@ -20,6 +21,7 @@ struct RuntimeSystemNavigation : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemNavigation, 0x608);
 } // namespace world
+using worldRuntimeSystemNavigation = world::RuntimeSystemNavigation;
 } // namespace RED4ext
 
 // clang-format on

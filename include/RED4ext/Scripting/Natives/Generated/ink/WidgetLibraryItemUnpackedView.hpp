@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryItemInstance; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetLibraryItemUnpackedView : ISerializable
 {
     static constexpr const char* NAME = "inkWidgetLibraryItemUnpackedView";
@@ -25,6 +26,7 @@ struct WidgetLibraryItemUnpackedView : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WidgetLibraryItemUnpackedView, 0x48);
 } // namespace ink
+using inkWidgetLibraryItemUnpackedView = ink::WidgetLibraryItemUnpackedView;
 } // namespace RED4ext
 
 // clang-format on

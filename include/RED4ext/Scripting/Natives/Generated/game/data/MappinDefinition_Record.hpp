@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct MappinDefinition_Record : game::data::Base_MappinDefinition_Record
 {
     static constexpr const char* NAME = "gamedataMappinDefinition_Record";
@@ -20,6 +21,7 @@ struct MappinDefinition_Record : game::data::Base_MappinDefinition_Record
 };
 RED4EXT_ASSERT_SIZE(MappinDefinition_Record, 0x60);
 } // namespace game::data
+using gamedataMappinDefinition_Record = game::data::MappinDefinition_Record;
 using MappinDefinition_Record = game::data::MappinDefinition_Record;
 } // namespace RED4ext
 

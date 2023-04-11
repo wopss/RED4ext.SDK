@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CombatSquadScriptInterface : AI::SquadScriptInterface
 {
     static constexpr const char* NAME = "AICombatSquadScriptInterface";
@@ -20,6 +21,7 @@ struct CombatSquadScriptInterface : AI::SquadScriptInterface
 };
 RED4EXT_ASSERT_SIZE(CombatSquadScriptInterface, 0x60);
 } // namespace AI
+using AICombatSquadScriptInterface = AI::CombatSquadScriptInterface;
 using CombatSquadScriptInterface = AI::CombatSquadScriptInterface;
 } // namespace RED4ext
 

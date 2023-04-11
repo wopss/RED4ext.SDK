@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct EmitterLOD
 {
     static constexpr const char* NAME = "rendEmitterLOD";
@@ -32,6 +33,7 @@ struct EmitterLOD
 };
 RED4EXT_ASSERT_SIZE(EmitterLOD, 0x48);
 } // namespace rend
+using rendEmitterLOD = rend::EmitterLOD;
 } // namespace RED4ext
 
 // clang-format on

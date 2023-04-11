@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent::events { 
+namespace ent::events
+{
 struct EntityResize : red::Event
 {
     static constexpr const char* NAME = "enteventsEntityResize";
@@ -22,6 +23,7 @@ struct EntityResize : red::Event
 };
 RED4EXT_ASSERT_SIZE(EntityResize, 0x50);
 } // namespace ent::events
+using enteventsEntityResize = ent::events::EntityResize;
 using EntityResizeEvent = ent::events::EntityResize;
 } // namespace RED4ext
 

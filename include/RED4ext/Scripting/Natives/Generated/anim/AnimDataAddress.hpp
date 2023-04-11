@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimDataAddress
 {
     static constexpr const char* NAME = "animAnimDataAddress";
@@ -21,6 +22,7 @@ struct AnimDataAddress
 };
 RED4EXT_ASSERT_SIZE(AnimDataAddress, 0xC);
 } // namespace anim
+using animAnimDataAddress = anim::AnimDataAddress;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RagdollImpactPointData
 {
     static constexpr const char* NAME = "entRagdollImpactPointData";
@@ -32,6 +33,7 @@ struct RagdollImpactPointData
 };
 RED4EXT_ASSERT_SIZE(RagdollImpactPointData, 0x60);
 } // namespace ent
+using entRagdollImpactPointData = ent::RagdollImpactPointData;
 using RagdollImpactPointData = ent::RagdollImpactPointData;
 } // namespace RED4ext
 

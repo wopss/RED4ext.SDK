@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimationTrackItemImpl : ISerializable
 {
     static constexpr const char* NAME = "gameTransformAnimationTrackItemImpl";
@@ -19,6 +20,7 @@ struct TransformAnimationTrackItemImpl : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TransformAnimationTrackItemImpl, 0x30);
 } // namespace game
+using gameTransformAnimationTrackItemImpl = game::TransformAnimationTrackItemImpl;
 } // namespace RED4ext
 
 // clang-format on

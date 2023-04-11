@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::condition { 
+namespace AI::behavior::condition
+{
 struct Script : AI::behavior::ScriptBase
 {
     static constexpr const char* NAME = "AIbehaviorconditionScript";
@@ -20,6 +21,7 @@ struct Script : AI::behavior::ScriptBase
 };
 RED4EXT_ASSERT_SIZE(Script, 0x50);
 } // namespace AI::behavior::condition
+using AIbehaviorconditionScript = AI::behavior::condition::Script;
 using AIScriptCondition = AI::behavior::condition::Script;
 } // namespace RED4ext
 

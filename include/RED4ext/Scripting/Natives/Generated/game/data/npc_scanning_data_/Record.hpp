@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data::npc_scanning_data_ { 
+namespace game::data::npc_scanning_data_
+{
 struct Record : game::data::ScannableData_Record
 {
     static constexpr const char* NAME = "gamedatanpc_scanning_data_Record";
@@ -19,6 +20,7 @@ struct Record : game::data::ScannableData_Record
 };
 RED4EXT_ASSERT_SIZE(Record, 0x58);
 } // namespace game::data::npc_scanning_data_
+using gamedatanpc_scanning_data_Record = game::data::npc_scanning_data_::Record;
 using npc_scanning_data_Record = game::data::npc_scanning_data_::Record;
 } // namespace RED4ext
 

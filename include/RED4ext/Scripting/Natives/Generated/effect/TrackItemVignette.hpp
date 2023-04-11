@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemVignette : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemVignette";
@@ -27,6 +28,7 @@ struct TrackItemVignette : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemVignette, 0xA8);
 } // namespace effect
+using effectTrackItemVignette = effect::TrackItemVignette;
 } // namespace RED4ext
 
 // clang-format on

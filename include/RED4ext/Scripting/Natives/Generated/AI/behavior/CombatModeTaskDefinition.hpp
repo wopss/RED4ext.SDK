@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct CombatModeTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorCombatModeTaskDefinition";
@@ -25,6 +26,7 @@ struct CombatModeTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(CombatModeTaskDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorCombatModeTaskDefinition = AI::behavior::CombatModeTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

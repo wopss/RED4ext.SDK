@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TrackSetter : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_TrackSetter";
@@ -23,6 +24,7 @@ struct AnimNode_TrackSetter : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TrackSetter, 0x98);
 } // namespace anim
+using animAnimNode_TrackSetter = anim::AnimNode_TrackSetter;
 } // namespace RED4ext
 
 // clang-format on

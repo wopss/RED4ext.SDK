@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct Margin
 {
     static constexpr const char* NAME = "inkMargin";
@@ -22,6 +23,7 @@ struct Margin
 };
 RED4EXT_ASSERT_SIZE(Margin, 0x10);
 } // namespace ink
+using inkMargin = ink::Margin;
 } // namespace RED4ext
 
 // clang-format on

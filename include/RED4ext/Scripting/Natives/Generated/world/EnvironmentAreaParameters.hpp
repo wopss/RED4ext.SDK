@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct EnvironmentAreaParameters : CResource
 {
     static constexpr const char* NAME = "worldEnvironmentAreaParameters";
@@ -23,6 +24,7 @@ struct EnvironmentAreaParameters : CResource
 };
 RED4EXT_ASSERT_SIZE(EnvironmentAreaParameters, 0x58);
 } // namespace world
+using worldEnvironmentAreaParameters = world::EnvironmentAreaParameters;
 } // namespace RED4ext
 
 // clang-format on

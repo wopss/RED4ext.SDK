@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace physics { struct SystemResource; }
 
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamPhysics : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamPhysics";
@@ -23,6 +24,7 @@ struct MeshParamPhysics : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamPhysics, 0x40);
 } // namespace mesh
+using meshMeshParamPhysics = mesh::MeshParamPhysics;
 } // namespace RED4ext
 
 // clang-format on

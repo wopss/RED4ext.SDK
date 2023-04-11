@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FinalTimeState : game::ITimeState
 {
     static constexpr const char* NAME = "gameFinalTimeState";
@@ -20,6 +21,7 @@ struct FinalTimeState : game::ITimeState
 };
 RED4EXT_ASSERT_SIZE(FinalTimeState, 0x38);
 } // namespace game
+using gameFinalTimeState = game::FinalTimeState;
 } // namespace RED4ext
 
 // clang-format on

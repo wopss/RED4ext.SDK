@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct CollisionShapesCollection : ISerializable
 {
     static constexpr const char* NAME = "animCollisionShapesCollection";
@@ -22,6 +23,7 @@ struct CollisionShapesCollection : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CollisionShapesCollection, 0x40);
 } // namespace anim
+using animCollisionShapesCollection = anim::CollisionShapesCollection;
 } // namespace RED4ext
 
 // clang-format on

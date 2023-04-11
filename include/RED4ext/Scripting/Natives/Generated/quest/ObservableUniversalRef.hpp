@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ObservableUniversalRef : quest::UniversalRef
 {
     static constexpr const char* NAME = "questObservableUniversalRef";
@@ -20,6 +21,7 @@ struct ObservableUniversalRef : quest::UniversalRef
 };
 RED4EXT_ASSERT_SIZE(ObservableUniversalRef, 0x78);
 } // namespace quest
+using questObservableUniversalRef = quest::ObservableUniversalRef;
 } // namespace RED4ext
 
 // clang-format on

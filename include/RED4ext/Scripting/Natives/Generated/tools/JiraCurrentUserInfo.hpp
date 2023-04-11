@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraCurrentUserInfo : ISerializable
 {
     static constexpr const char* NAME = "toolsJiraCurrentUserInfo";
@@ -21,6 +22,7 @@ struct JiraCurrentUserInfo : ISerializable
 };
 RED4EXT_ASSERT_SIZE(JiraCurrentUserInfo, 0x50);
 } // namespace tools
+using toolsJiraCurrentUserInfo = tools::JiraCurrentUserInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct CommandConditionExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorCommandConditionExpressionDefinition";
@@ -25,6 +26,7 @@ struct CommandConditionExpressionDefinition : AI::behavior::PassiveExpressionDef
 };
 RED4EXT_ASSERT_SIZE(CommandConditionExpressionDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorCommandConditionExpressionDefinition = AI::behavior::CommandConditionExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

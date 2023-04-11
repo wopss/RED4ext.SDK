@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderTextureBlobMipMapInfo
 {
     static constexpr const char* NAME = "rendRenderTextureBlobMipMapInfo";
@@ -22,6 +23,7 @@ struct RenderTextureBlobMipMapInfo
 };
 RED4EXT_ASSERT_SIZE(RenderTextureBlobMipMapInfo, 0x10);
 } // namespace rend
+using rendRenderTextureBlobMipMapInfo = rend::RenderTextureBlobMipMapInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 namespace scn { struct IInterruptionOperation; }
 namespace scn { struct InterestingConversationsResource; }
 
-namespace world { 
+namespace world
+{
 struct ConversationGroupData : ISerializable
 {
     static constexpr const char* NAME = "worldConversationGroupData";
@@ -30,6 +31,7 @@ struct ConversationGroupData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ConversationGroupData, 0x60);
 } // namespace world
+using worldConversationGroupData = world::ConversationGroupData;
 } // namespace RED4ext
 
 // clang-format on

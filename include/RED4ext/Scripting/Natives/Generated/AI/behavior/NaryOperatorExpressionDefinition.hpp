@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ExpressionSocket; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct NaryOperatorExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorNaryOperatorExpressionDefinition";
@@ -27,6 +28,7 @@ struct NaryOperatorExpressionDefinition : AI::behavior::PassiveExpressionDefinit
 };
 RED4EXT_ASSERT_SIZE(NaryOperatorExpressionDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorNaryOperatorExpressionDefinition = AI::behavior::NaryOperatorExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct WorkEntryId
 {
     static constexpr const char* NAME = "workWorkEntryId";
@@ -19,6 +20,7 @@ struct WorkEntryId
 };
 RED4EXT_ASSERT_SIZE(WorkEntryId, 0x4);
 } // namespace work
+using workWorkEntryId = work::WorkEntryId;
 using WorkEntryId = work::WorkEntryId;
 } // namespace RED4ext
 

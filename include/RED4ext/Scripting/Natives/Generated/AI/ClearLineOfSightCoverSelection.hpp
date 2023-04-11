@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ClearLineOfSightCoverSelection : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIClearLineOfSightCoverSelection";
@@ -20,6 +21,7 @@ struct ClearLineOfSightCoverSelection : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(ClearLineOfSightCoverSelection, 0x20);
 } // namespace AI
+using AIClearLineOfSightCoverSelection = AI::ClearLineOfSightCoverSelection;
 } // namespace RED4ext
 
 // clang-format on

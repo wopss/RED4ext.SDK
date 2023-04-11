@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NPCHighLevelState_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNPCHighLevelState_Record";
@@ -20,6 +21,7 @@ struct NPCHighLevelState_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(NPCHighLevelState_Record, 0x58);
 } // namespace game::data
+using gamedataNPCHighLevelState_Record = game::data::NPCHighLevelState_Record;
 using NPCHighLevelState_Record = game::data::NPCHighLevelState_Record;
 } // namespace RED4ext
 

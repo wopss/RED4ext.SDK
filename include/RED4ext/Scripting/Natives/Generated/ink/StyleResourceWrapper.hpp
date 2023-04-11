@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct StyleResource; }
 
-namespace ink { 
+namespace ink
+{
 struct StyleResourceWrapper : ISerializable
 {
     static constexpr const char* NAME = "inkStyleResourceWrapper";
@@ -25,6 +26,7 @@ struct StyleResourceWrapper : ISerializable
 };
 RED4EXT_ASSERT_SIZE(StyleResourceWrapper, 0x90);
 } // namespace ink
+using inkStyleResourceWrapper = ink::StyleResourceWrapper;
 } // namespace RED4ext
 
 // clang-format on

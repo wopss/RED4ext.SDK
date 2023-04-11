@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CompiledSector
 {
     static constexpr const char* NAME = "worldCompiledSector";
@@ -19,6 +20,7 @@ struct CompiledSector
 };
 RED4EXT_ASSERT_SIZE(CompiledSector, 0x60);
 } // namespace world
+using worldCompiledSector = world::CompiledSector;
 } // namespace RED4ext
 
 // clang-format on

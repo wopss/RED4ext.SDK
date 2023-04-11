@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct AsyncCallbackToken
 {
     static constexpr const char* NAME = "AIbehaviorAsyncCallbackToken";
@@ -19,6 +20,7 @@ struct AsyncCallbackToken
 };
 RED4EXT_ASSERT_SIZE(AsyncCallbackToken, 0x20);
 } // namespace AI::behavior
+using AIbehaviorAsyncCallbackToken = AI::behavior::AsyncCallbackToken;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct RandomRatioCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataRandomRatioCoverSelectionParameters_Record";
@@ -19,6 +20,7 @@ struct RandomRatioCoverSelectionParameters_Record : game::data::CoverSelectionPa
 };
 RED4EXT_ASSERT_SIZE(RandomRatioCoverSelectionParameters_Record, 0x50);
 } // namespace game::data
+using gamedataRandomRatioCoverSelectionParameters_Record = game::data::RandomRatioCoverSelectionParameters_Record;
 using RandomRatioCoverSelectionParameters_Record = game::data::RandomRatioCoverSelectionParameters_Record;
 } // namespace RED4ext
 

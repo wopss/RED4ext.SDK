@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Movement_PredefinedFunction : game::TransformAnimation_Movement
 {
     static constexpr const char* NAME = "gameTransformAnimation_Movement_PredefinedFunction";
@@ -21,6 +22,7 @@ struct TransformAnimation_Movement_PredefinedFunction : game::TransformAnimation
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Movement_PredefinedFunction, 0x38);
 } // namespace game
+using gameTransformAnimation_Movement_PredefinedFunction = game::TransformAnimation_Movement_PredefinedFunction;
 } // namespace RED4ext
 
 // clang-format on

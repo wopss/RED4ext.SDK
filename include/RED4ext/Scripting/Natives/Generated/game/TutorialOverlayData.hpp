@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TutorialOverlayData
 {
     static constexpr const char* NAME = "gameTutorialOverlayData";
@@ -24,6 +25,7 @@ struct TutorialOverlayData
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayData, 0x28);
 } // namespace game
+using gameTutorialOverlayData = game::TutorialOverlayData;
 using TutorialOverlayData = game::TutorialOverlayData;
 } // namespace RED4ext
 

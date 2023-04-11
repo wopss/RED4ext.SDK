@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace physics { 
+namespace physics
+{
 struct ICollider : ISerializable
 {
     static constexpr const char* NAME = "physicsICollider";
@@ -35,6 +36,7 @@ struct ICollider : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ICollider, 0x90);
 } // namespace physics
+using physicsICollider = physics::ICollider;
 } // namespace RED4ext
 
 // clang-format on

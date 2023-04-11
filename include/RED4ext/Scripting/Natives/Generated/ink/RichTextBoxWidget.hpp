@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RichTextBoxWidget : ink::TextWidget
 {
     static constexpr const char* NAME = "inkRichTextBoxWidget";
@@ -20,6 +21,7 @@ struct RichTextBoxWidget : ink::TextWidget
 };
 RED4EXT_ASSERT_SIZE(RichTextBoxWidget, 0x450);
 } // namespace ink
+using inkRichTextBoxWidget = ink::RichTextBoxWidget;
 using inkRichTextBox = ink::RichTextBoxWidget;
 } // namespace RED4ext
 

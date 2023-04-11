@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PuppetBlackboardUpdater : IScriptable
 {
     static constexpr const char* NAME = "gamePuppetBlackboardUpdater";
@@ -20,6 +21,7 @@ struct PuppetBlackboardUpdater : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PuppetBlackboardUpdater, 0x1F8);
 } // namespace game
+using gamePuppetBlackboardUpdater = game::PuppetBlackboardUpdater;
 using PuppetBlackboardUpdater = game::PuppetBlackboardUpdater;
 } // namespace RED4ext
 

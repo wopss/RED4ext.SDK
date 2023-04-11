@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct DebugDrawerScriptProxy
 {
     static constexpr const char* NAME = "rendDebugDrawerScriptProxy";
@@ -19,6 +20,7 @@ struct DebugDrawerScriptProxy
 };
 RED4EXT_ASSERT_SIZE(DebugDrawerScriptProxy, 0x8);
 } // namespace rend
+using rendDebugDrawerScriptProxy = rend::DebugDrawerScriptProxy;
 using DebugDrawer = rend::DebugDrawerScriptProxy;
 } // namespace RED4ext
 

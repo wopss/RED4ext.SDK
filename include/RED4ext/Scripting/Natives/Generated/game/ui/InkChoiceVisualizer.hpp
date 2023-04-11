@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InkChoiceVisualizer : game::ui::IChoiceVisualizer
 {
     static constexpr const char* NAME = "gameuiInkChoiceVisualizer";
@@ -23,6 +24,7 @@ struct InkChoiceVisualizer : game::ui::IChoiceVisualizer
 };
 RED4EXT_ASSERT_SIZE(InkChoiceVisualizer, 0x38);
 } // namespace game::ui
+using gameuiInkChoiceVisualizer = game::ui::InkChoiceVisualizer;
 } // namespace RED4ext
 
 // clang-format on

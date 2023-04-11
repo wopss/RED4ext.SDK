@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DeleteRequestResult : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkDeleteRequestResult";
@@ -20,6 +21,7 @@ struct DeleteRequestResult : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(DeleteRequestResult, 0x38);
 } // namespace ink
+using inkDeleteRequestResult = ink::DeleteRequestResult;
 } // namespace RED4ext
 
 // clang-format on

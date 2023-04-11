@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FinalBoardsVideosFinished_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questFinalBoardsVideosFinished_NodeType";
@@ -19,6 +20,7 @@ struct FinalBoardsVideosFinished_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(FinalBoardsVideosFinished_NodeType, 0x38);
 } // namespace quest
+using questFinalBoardsVideosFinished_NodeType = quest::FinalBoardsVideosFinished_NodeType;
 } // namespace RED4ext
 
 // clang-format on

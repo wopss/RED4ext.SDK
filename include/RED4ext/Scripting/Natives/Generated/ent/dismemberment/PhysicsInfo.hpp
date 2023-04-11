@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct PhysicsInfo
 {
     static constexpr const char* NAME = "entdismembermentPhysicsInfo";
@@ -19,6 +20,7 @@ struct PhysicsInfo
 };
 RED4EXT_ASSERT_SIZE(PhysicsInfo, 0x4);
 } // namespace ent::dismemberment
+using entdismembermentPhysicsInfo = ent::dismemberment::PhysicsInfo;
 } // namespace RED4ext
 
 // clang-format on

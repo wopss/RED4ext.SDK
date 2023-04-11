@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct RaceCheckpoint_Record : game::data::LCDScreen_Record
 {
     static constexpr const char* NAME = "gamedataRaceCheckpoint_Record";
@@ -19,6 +20,7 @@ struct RaceCheckpoint_Record : game::data::LCDScreen_Record
 };
 RED4EXT_ASSERT_SIZE(RaceCheckpoint_Record, 0x60);
 } // namespace game::data
+using gamedataRaceCheckpoint_Record = game::data::RaceCheckpoint_Record;
 using RaceCheckpoint_Record = game::data::RaceCheckpoint_Record;
 } // namespace RED4ext
 

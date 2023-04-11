@@ -20,7 +20,8 @@ namespace RED4ext
 namespace physics { struct FilterData; }
 namespace world { struct Effect; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct Component : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameprojectileComponent";
@@ -53,6 +54,7 @@ struct Component : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(Component, 0x8B0);
 } // namespace game::projectile
+using gameprojectileComponent = game::projectile::Component;
 using ProjectileComponent = game::projectile::Component;
 } // namespace RED4ext
 

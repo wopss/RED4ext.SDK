@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptUtils
 {
     static constexpr const char* NAME = "AIbehaviorScriptUtils";
@@ -19,6 +20,7 @@ struct ScriptUtils
 };
 RED4EXT_ASSERT_SIZE(ScriptUtils, 0x1);
 } // namespace AI::behavior
+using AIbehaviorScriptUtils = AI::behavior::ScriptUtils;
 using AIScriptUtils = AI::behavior::ScriptUtils;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemTriggers : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemTriggers";
@@ -20,6 +21,7 @@ struct RuntimeSystemTriggers : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemTriggers, 0x50);
 } // namespace world
+using worldRuntimeSystemTriggers = world::RuntimeSystemTriggers;
 } // namespace RED4ext
 
 // clang-format on

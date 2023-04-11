@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AcousticDataResource : res::StreamedResource
 {
     static constexpr const char* NAME = "worldAcousticDataResource";
@@ -23,6 +24,7 @@ struct AcousticDataResource : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(AcousticDataResource, 0x58);
 } // namespace world
+using worldAcousticDataResource = world::AcousticDataResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct PreloadEffectEvent : red::Event
 {
     static constexpr const char* NAME = "entPreloadEffectEvent";
@@ -21,6 +22,7 @@ struct PreloadEffectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PreloadEffectEvent, 0x48);
 } // namespace ent
+using entPreloadEffectEvent = ent::PreloadEffectEvent;
 } // namespace RED4ext
 
 // clang-format on

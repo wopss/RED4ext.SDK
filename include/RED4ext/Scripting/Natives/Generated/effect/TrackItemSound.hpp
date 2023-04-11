@@ -17,7 +17,8 @@ namespace RED4ext
 {
 struct IEvaluatorFloat;
 
-namespace effect { 
+namespace effect
+{
 struct TrackItemSound : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemSound";
@@ -34,6 +35,7 @@ struct TrackItemSound : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemSound, 0xA0);
 } // namespace effect
+using effectTrackItemSound = effect::TrackItemSound;
 } // namespace RED4ext
 
 // clang-format on

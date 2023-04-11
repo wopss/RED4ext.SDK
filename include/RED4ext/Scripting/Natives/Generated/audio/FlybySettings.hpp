@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct FlybySettings
 {
     static constexpr const char* NAME = "audioFlybySettings";
@@ -22,6 +23,7 @@ struct FlybySettings
 };
 RED4EXT_ASSERT_SIZE(FlybySettings, 0x10);
 } // namespace audio
+using audioFlybySettings = audio::FlybySettings;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct StateObserver_UserSignInOut : gsm::IStateObserver
 {
     static constexpr const char* NAME = "gsmStateObserver_UserSignInOut";
@@ -20,6 +21,7 @@ struct StateObserver_UserSignInOut : gsm::IStateObserver
 };
 RED4EXT_ASSERT_SIZE(StateObserver_UserSignInOut, 0x10);
 } // namespace gsm
+using gsmStateObserver_UserSignInOut = gsm::StateObserver_UserSignInOut;
 } // namespace RED4ext
 
 // clang-format on

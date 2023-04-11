@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct StairsTrigger : game::Object
 {
     static constexpr const char* NAME = "cpStairsTrigger";
@@ -19,6 +20,7 @@ struct StairsTrigger : game::Object
 };
 RED4EXT_ASSERT_SIZE(StairsTrigger, 0x240);
 } // namespace cp
+using cpStairsTrigger = cp::StairsTrigger;
 } // namespace RED4ext
 
 // clang-format on

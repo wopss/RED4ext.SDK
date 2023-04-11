@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct VehicleAudioComponent : game::audio::SoundComponentBase
 {
     static constexpr const char* NAME = "gameaudioVehicleAudioComponent";
@@ -20,6 +21,7 @@ struct VehicleAudioComponent : game::audio::SoundComponentBase
 };
 RED4EXT_ASSERT_SIZE(VehicleAudioComponent, 0x190);
 } // namespace game::audio
+using gameaudioVehicleAudioComponent = game::audio::VehicleAudioComponent;
 using vehicleAudioComponent = game::audio::VehicleAudioComponent;
 } // namespace RED4ext
 

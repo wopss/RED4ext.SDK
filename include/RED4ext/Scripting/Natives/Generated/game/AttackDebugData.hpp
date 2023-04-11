@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttackDebugData
 {
     static constexpr const char* NAME = "gameAttackDebugData";
@@ -23,6 +24,7 @@ struct AttackDebugData
 };
 RED4EXT_ASSERT_SIZE(AttackDebugData, 0x40);
 } // namespace game
+using gameAttackDebugData = game::AttackDebugData;
 using AttackDebugData = game::AttackDebugData;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct LoadingTipsGroup_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataLoadingTipsGroup_Record";
@@ -20,6 +21,7 @@ struct LoadingTipsGroup_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(LoadingTipsGroup_Record, 0x50);
 } // namespace game::data
+using gamedataLoadingTipsGroup_Record = game::data::LoadingTipsGroup_Record;
 using LoadingTipsGroup_Record = game::data::LoadingTipsGroup_Record;
 } // namespace RED4ext
 

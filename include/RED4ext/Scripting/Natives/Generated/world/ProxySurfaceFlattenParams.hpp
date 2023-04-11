@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ProxySurfaceFlattenParams
 {
     static constexpr const char* NAME = "worldProxySurfaceFlattenParams";
@@ -27,6 +28,7 @@ struct ProxySurfaceFlattenParams
 };
 RED4EXT_ASSERT_SIZE(ProxySurfaceFlattenParams, 0xC);
 } // namespace world
+using worldProxySurfaceFlattenParams = world::ProxySurfaceFlattenParams;
 } // namespace RED4ext
 
 // clang-format on

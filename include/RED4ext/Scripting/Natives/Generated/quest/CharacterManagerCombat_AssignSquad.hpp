@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerCombat_AssignSquad : quest::ICharacterManagerCombat_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerCombat_AssignSquad";
@@ -26,6 +27,7 @@ struct CharacterManagerCombat_AssignSquad : quest::ICharacterManagerCombat_NodeS
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_AssignSquad, 0xB8);
 } // namespace quest
+using questCharacterManagerCombat_AssignSquad = quest::CharacterManagerCombat_AssignSquad;
 } // namespace RED4ext
 
 // clang-format on

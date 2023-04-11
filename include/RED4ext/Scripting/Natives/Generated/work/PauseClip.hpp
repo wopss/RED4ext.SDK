@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct PauseClip : work::IEntry
 {
     static constexpr const char* NAME = "workPauseClip";
@@ -23,6 +24,7 @@ struct PauseClip : work::IEntry
 };
 RED4EXT_ASSERT_SIZE(PauseClip, 0x48);
 } // namespace work
+using workPauseClip = work::PauseClip;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct LocationAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 {
     static constexpr const char* NAME = "worldLocationAreaNotifierInstance";
@@ -20,6 +21,7 @@ struct LocationAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 };
 RED4EXT_ASSERT_SIZE(LocationAreaNotifierInstance, 0x78);
 } // namespace world
+using worldLocationAreaNotifierInstance = world::LocationAreaNotifierInstance;
 } // namespace RED4ext
 
 // clang-format on

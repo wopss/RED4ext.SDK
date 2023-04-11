@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetProgressionBuild : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetProgressionBuild";
@@ -21,6 +22,7 @@ struct CharacterManagerParameters_SetProgressionBuild : quest::ICharacterManager
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetProgressionBuild, 0x78);
 } // namespace quest
+using questCharacterManagerParameters_SetProgressionBuild = quest::CharacterManagerParameters_SetProgressionBuild;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct CombatVoTriggerVariationsMapItem
 {
     static constexpr const char* NAME = "audioCombatVoTriggerVariationsMapItem";
@@ -23,6 +24,7 @@ struct CombatVoTriggerVariationsMapItem
 };
 RED4EXT_ASSERT_SIZE(CombatVoTriggerVariationsMapItem, 0x10);
 } // namespace audio
+using audioCombatVoTriggerVariationsMapItem = audio::CombatVoTriggerVariationsMapItem;
 } // namespace RED4ext
 
 // clang-format on

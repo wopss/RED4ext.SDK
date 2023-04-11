@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct GenericListFactory : ent::Factory
 {
     static constexpr const char* NAME = "entGenericListFactory";
@@ -20,6 +21,7 @@ struct GenericListFactory : ent::Factory
 };
 RED4EXT_ASSERT_SIZE(GenericListFactory, 0xC0);
 } // namespace ent
+using entGenericListFactory = ent::GenericListFactory;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EthnicityComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameEthnicityComponent";
@@ -20,6 +21,7 @@ struct EthnicityComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(EthnicityComponent, 0xB0);
 } // namespace game
+using gameEthnicityComponent = game::EthnicityComponent;
 using EthnicityComponent = game::EthnicityComponent;
 } // namespace RED4ext
 

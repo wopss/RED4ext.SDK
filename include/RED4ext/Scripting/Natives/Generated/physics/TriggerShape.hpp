@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct TriggerShape
 {
     static constexpr const char* NAME = "physicsTriggerShape";
@@ -25,6 +26,7 @@ struct TriggerShape
 };
 RED4EXT_ASSERT_SIZE(TriggerShape, 0x30);
 } // namespace physics
+using physicsTriggerShape = physics::TriggerShape;
 } // namespace RED4ext
 
 // clang-format on

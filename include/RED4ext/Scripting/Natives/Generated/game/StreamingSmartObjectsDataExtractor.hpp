@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StreamingSmartObjectsDataExtractor : res::IStreamedResourceDataExtractor
 {
     static constexpr const char* NAME = "gameStreamingSmartObjectsDataExtractor";
@@ -19,6 +20,7 @@ struct StreamingSmartObjectsDataExtractor : res::IStreamedResourceDataExtractor
 };
 RED4EXT_ASSERT_SIZE(StreamingSmartObjectsDataExtractor, 0x8);
 } // namespace game
+using gameStreamingSmartObjectsDataExtractor = game::StreamingSmartObjectsDataExtractor;
 } // namespace RED4ext
 
 // clang-format on

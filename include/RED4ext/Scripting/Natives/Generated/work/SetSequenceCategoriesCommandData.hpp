@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct SetSequenceCategoriesCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workSetSequenceCategoriesCommandData";
@@ -21,6 +22,7 @@ struct SetSequenceCategoriesCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(SetSequenceCategoriesCommandData, 0x18);
 } // namespace work
+using workSetSequenceCategoriesCommandData = work::SetSequenceCategoriesCommandData;
 } // namespace RED4ext
 
 // clang-format on

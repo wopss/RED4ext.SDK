@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct InteractionShapeParams : ISerializable
 {
     static constexpr const char* NAME = "scnInteractionShapeParams";
@@ -32,6 +33,7 @@ struct InteractionShapeParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InteractionShapeParams, 0x70);
 } // namespace scn
+using scnInteractionShapeParams = scn::InteractionShapeParams;
 } // namespace RED4ext
 
 // clang-format on

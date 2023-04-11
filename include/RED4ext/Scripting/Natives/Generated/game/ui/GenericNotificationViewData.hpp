@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GenericNotificationViewData : IScriptable
 {
     static constexpr const char* NAME = "gameuiGenericNotificationViewData";
@@ -25,6 +26,7 @@ struct GenericNotificationViewData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(GenericNotificationViewData, 0x90);
 } // namespace game::ui
+using gameuiGenericNotificationViewData = game::ui::GenericNotificationViewData;
 using GenericNotificationViewData = game::ui::GenericNotificationViewData;
 } // namespace RED4ext
 

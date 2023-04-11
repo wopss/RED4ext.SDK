@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RichTextBoxWidgetReference : ink::TextWidgetReference
 {
     static constexpr const char* NAME = "inkRichTextBoxWidgetReference";
@@ -19,6 +20,7 @@ struct RichTextBoxWidgetReference : ink::TextWidgetReference
 };
 RED4EXT_ASSERT_SIZE(RichTextBoxWidgetReference, 0x18);
 } // namespace ink
+using inkRichTextBoxWidgetReference = ink::RichTextBoxWidgetReference;
 using inkRichTextBoxRef = ink::RichTextBoxWidgetReference;
 } // namespace RED4ext
 

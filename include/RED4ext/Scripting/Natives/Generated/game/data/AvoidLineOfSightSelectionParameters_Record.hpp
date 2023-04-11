@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AvoidLineOfSightSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataAvoidLineOfSightSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct AvoidLineOfSightSelectionParameters_Record : game::data::CoverSelectionPa
 };
 RED4EXT_ASSERT_SIZE(AvoidLineOfSightSelectionParameters_Record, 0x60);
 } // namespace game::data
+using gamedataAvoidLineOfSightSelectionParameters_Record = game::data::AvoidLineOfSightSelectionParameters_Record;
 using AvoidLineOfSightSelectionParameters_Record = game::data::AvoidLineOfSightSelectionParameters_Record;
 } // namespace RED4ext
 

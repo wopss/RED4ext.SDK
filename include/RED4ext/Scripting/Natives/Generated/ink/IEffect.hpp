@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IEffect : ISerializable
 {
     static constexpr const char* NAME = "inkIEffect";
@@ -25,6 +26,7 @@ struct IEffect : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IEffect, 0x68);
 } // namespace ink
+using inkIEffect = ink::IEffect;
 } // namespace RED4ext
 
 // clang-format on

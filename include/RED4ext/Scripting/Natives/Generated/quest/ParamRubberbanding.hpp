@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct ParamRubberbanding : ISerializable
 {
     static constexpr const char* NAME = "questParamRubberbanding";
@@ -29,6 +30,7 @@ struct ParamRubberbanding : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ParamRubberbanding, 0x50);
 } // namespace quest
+using questParamRubberbanding = quest::ParamRubberbanding;
 } // namespace RED4ext
 
 // clang-format on

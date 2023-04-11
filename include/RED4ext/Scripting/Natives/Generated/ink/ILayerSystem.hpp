@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ILayerSystem : IScriptable
 {
     static constexpr const char* NAME = "inkILayerSystem";
@@ -19,6 +20,7 @@ struct ILayerSystem : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ILayerSystem, 0x40);
 } // namespace ink
+using inkILayerSystem = ink::ILayerSystem;
 } // namespace RED4ext
 
 // clang-format on

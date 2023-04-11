@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IRewardManagerNodeType : ISerializable
 {
     static constexpr const char* NAME = "questIRewardManagerNodeType";
@@ -19,6 +20,7 @@ struct IRewardManagerNodeType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IRewardManagerNodeType, 0x30);
 } // namespace quest
+using questIRewardManagerNodeType = quest::IRewardManagerNodeType;
 } // namespace RED4ext
 
 // clang-format on

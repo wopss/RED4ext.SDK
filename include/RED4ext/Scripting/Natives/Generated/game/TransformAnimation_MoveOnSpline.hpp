@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct TransformAnimation_Movement; }
 
-namespace game { 
+namespace game
+{
 struct TransformAnimation_MoveOnSpline : game::TransformAnimationTrackItemImpl
 {
     static constexpr const char* NAME = "gameTransformAnimation_MoveOnSpline";
@@ -31,6 +32,7 @@ struct TransformAnimation_MoveOnSpline : game::TransformAnimationTrackItemImpl
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_MoveOnSpline, 0xA0);
 } // namespace game
+using gameTransformAnimation_MoveOnSpline = game::TransformAnimation_MoveOnSpline;
 } // namespace RED4ext
 
 // clang-format on

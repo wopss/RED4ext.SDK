@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct UpdateRenderProxyStateEvent : red::Event
 {
     static constexpr const char* NAME = "entUpdateRenderProxyStateEvent";
@@ -20,6 +21,7 @@ struct UpdateRenderProxyStateEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UpdateRenderProxyStateEvent, 0x50);
 } // namespace ent
+using entUpdateRenderProxyStateEvent = ent::UpdateRenderProxyStateEvent;
 } // namespace RED4ext
 
 // clang-format on

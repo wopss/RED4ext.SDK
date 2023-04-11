@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Builder : IScriptable
 {
     static constexpr const char* NAME = "inkanimBuilder";
@@ -20,6 +21,7 @@ struct Builder : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Builder, 0x70);
 } // namespace ink::anim
+using inkanimBuilder = ink::anim::Builder;
 using inkAnimBuilder = ink::anim::Builder;
 } // namespace RED4ext
 

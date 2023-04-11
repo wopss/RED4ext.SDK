@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VerticalPanelWidgetReference : ink::BasePanelWidgetReference
 {
     static constexpr const char* NAME = "inkVerticalPanelWidgetReference";
@@ -19,6 +20,7 @@ struct VerticalPanelWidgetReference : ink::BasePanelWidgetReference
 };
 RED4EXT_ASSERT_SIZE(VerticalPanelWidgetReference, 0x18);
 } // namespace ink
+using inkVerticalPanelWidgetReference = ink::VerticalPanelWidgetReference;
 using inkVerticalPanelRef = ink::VerticalPanelWidgetReference;
 } // namespace RED4ext
 

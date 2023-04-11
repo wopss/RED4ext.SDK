@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DialogListChoiceVisualizer : game::ui::IChoiceVisualizer
 {
     static constexpr const char* NAME = "gameuiDialogListChoiceVisualizer";
@@ -19,6 +20,7 @@ struct DialogListChoiceVisualizer : game::ui::IChoiceVisualizer
 };
 RED4EXT_ASSERT_SIZE(DialogListChoiceVisualizer, 0x30);
 } // namespace game::ui
+using gameuiDialogListChoiceVisualizer = game::ui::DialogListChoiceVisualizer;
 } // namespace RED4ext
 
 // clang-format on

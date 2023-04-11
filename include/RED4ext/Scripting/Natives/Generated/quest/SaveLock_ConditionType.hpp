@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SaveLock_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questSaveLock_ConditionType";
@@ -21,6 +22,7 @@ struct SaveLock_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(SaveLock_ConditionType, 0x40);
 } // namespace quest
+using questSaveLock_ConditionType = quest::SaveLock_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

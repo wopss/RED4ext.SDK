@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct ChunkIndicesOffset
 {
     static constexpr const char* NAME = "meshChunkIndicesOffset";
@@ -22,6 +23,7 @@ struct ChunkIndicesOffset
 };
 RED4EXT_ASSERT_SIZE(ChunkIndicesOffset, 0xC);
 } // namespace mesh
+using meshChunkIndicesOffset = mesh::ChunkIndicesOffset;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct NpcNameplateGameController : game::ui::ProjectedHUDGameController
 {
     static constexpr const char* NAME = "gameuiNpcNameplateGameController";
@@ -22,6 +23,7 @@ struct NpcNameplateGameController : game::ui::ProjectedHUDGameController
 };
 RED4EXT_ASSERT_SIZE(NpcNameplateGameController, 0x190);
 } // namespace game::ui
+using gameuiNpcNameplateGameController = game::ui::NpcNameplateGameController;
 using NpcNameplateGameController = game::ui::NpcNameplateGameController;
 } // namespace RED4ext
 

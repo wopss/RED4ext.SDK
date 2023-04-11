@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Attack_Projectile : game::IAttack
 {
     static constexpr const char* NAME = "gameAttack_Projectile";
@@ -20,6 +21,7 @@ struct Attack_Projectile : game::IAttack
 };
 RED4EXT_ASSERT_SIZE(Attack_Projectile, 0xF8);
 } // namespace game
+using gameAttack_Projectile = game::Attack_Projectile;
 using Attack_Projectile = game::Attack_Projectile;
 } // namespace RED4ext
 

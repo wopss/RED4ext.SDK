@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatformMovementDynamic : game::IMovingPlatformMovementPointToPoint
 {
     static constexpr const char* NAME = "gameMovingPlatformMovementDynamic";
@@ -22,6 +23,7 @@ struct MovingPlatformMovementDynamic : game::IMovingPlatformMovementPointToPoint
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformMovementDynamic, 0xB0);
 } // namespace game
+using gameMovingPlatformMovementDynamic = game::MovingPlatformMovementDynamic;
 using MovingPlatformMovementDynamic = game::MovingPlatformMovementDynamic;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TransformHistoryComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entTransformHistoryComponent";
@@ -23,6 +24,7 @@ struct TransformHistoryComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TransformHistoryComponent, 0xC0);
 } // namespace ent
+using entTransformHistoryComponent = ent::TransformHistoryComponent;
 using TransformHistoryComponent = ent::TransformHistoryComponent;
 } // namespace RED4ext
 

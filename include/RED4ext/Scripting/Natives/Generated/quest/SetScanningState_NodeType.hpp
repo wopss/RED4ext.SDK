@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetScanningState_NodeType : quest::IVisionModeNodeType
 {
     static constexpr const char* NAME = "questSetScanningState_NodeType";
@@ -24,6 +25,7 @@ struct SetScanningState_NodeType : quest::IVisionModeNodeType
 };
 RED4EXT_ASSERT_SIZE(SetScanningState_NodeType, 0x70);
 } // namespace quest
+using questSetScanningState_NodeType = quest::SetScanningState_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct IBinding; }
 
-namespace ent { 
+namespace ent
+{
 struct TemplateBindingOverride
 {
     static constexpr const char* NAME = "entTemplateBindingOverride";
@@ -25,6 +26,7 @@ struct TemplateBindingOverride
 };
 RED4EXT_ASSERT_SIZE(TemplateBindingOverride, 0x20);
 } // namespace ent
+using entTemplateBindingOverride = ent::TemplateBindingOverride;
 } // namespace RED4ext
 
 // clang-format on

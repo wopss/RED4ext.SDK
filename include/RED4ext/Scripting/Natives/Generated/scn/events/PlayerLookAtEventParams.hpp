@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct PlayerLookAtEventParams
 {
     static constexpr const char* NAME = "scneventsPlayerLookAtEventParams";
@@ -35,6 +36,7 @@ struct PlayerLookAtEventParams
 };
 RED4EXT_ASSERT_SIZE(PlayerLookAtEventParams, 0x30);
 } // namespace scn::events
+using scneventsPlayerLookAtEventParams = scn::events::PlayerLookAtEventParams;
 } // namespace RED4ext
 
 // clang-format on

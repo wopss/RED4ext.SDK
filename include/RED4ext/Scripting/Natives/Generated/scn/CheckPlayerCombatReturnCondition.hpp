@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckPlayerCombatReturnCondition : scn::IReturnCondition
 {
     static constexpr const char* NAME = "scnCheckPlayerCombatReturnCondition";
@@ -22,6 +23,7 @@ struct CheckPlayerCombatReturnCondition : scn::IReturnCondition
 };
 RED4EXT_ASSERT_SIZE(CheckPlayerCombatReturnCondition, 0x38);
 } // namespace scn
+using scnCheckPlayerCombatReturnCondition = scn::CheckPlayerCombatReturnCondition;
 } // namespace RED4ext
 
 // clang-format on

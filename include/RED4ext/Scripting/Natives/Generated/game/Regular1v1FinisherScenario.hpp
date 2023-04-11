@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace work { struct WorkspotResource; }
 
-namespace game { 
+namespace game
+{
 struct Regular1v1FinisherScenario : game::IFinisherScenario
 {
     static constexpr const char* NAME = "gameRegular1v1FinisherScenario";
@@ -35,6 +36,7 @@ struct Regular1v1FinisherScenario : game::IFinisherScenario
 };
 RED4EXT_ASSERT_SIZE(Regular1v1FinisherScenario, 0x68);
 } // namespace game
+using gameRegular1v1FinisherScenario = game::Regular1v1FinisherScenario;
 } // namespace RED4ext
 
 // clang-format on

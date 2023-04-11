@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TargetTrackerManager : AI::TargetTrackerManagerInterface
 {
     static constexpr const char* NAME = "AITargetTrackerManager";
@@ -20,6 +21,7 @@ struct TargetTrackerManager : AI::TargetTrackerManagerInterface
 };
 RED4EXT_ASSERT_SIZE(TargetTrackerManager, 0xA0);
 } // namespace AI
+using AITargetTrackerManager = AI::TargetTrackerManager;
 using TargetTrackerManager = AI::TargetTrackerManager;
 } // namespace RED4ext
 

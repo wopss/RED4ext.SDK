@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PuppetsEffector : ISerializable
 {
     static constexpr const char* NAME = "questPuppetsEffector";
@@ -19,6 +20,7 @@ struct PuppetsEffector : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PuppetsEffector, 0x30);
 } // namespace quest
+using questPuppetsEffector = quest::PuppetsEffector;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,7 +18,8 @@ namespace anim { struct IAnimStateTransitionCondition; }
 namespace anim { struct IAnimStateTransitionInterpolator; }
 namespace anim { struct ISyncMethod; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimStateTransitionDescription : ISerializable
 {
     static constexpr const char* NAME = "animAnimStateTransitionDescription";
@@ -44,6 +45,7 @@ struct AnimStateTransitionDescription : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimStateTransitionDescription, 0x110);
 } // namespace anim
+using animAnimStateTransitionDescription = anim::AnimStateTransitionDescription;
 } // namespace RED4ext
 
 // clang-format on

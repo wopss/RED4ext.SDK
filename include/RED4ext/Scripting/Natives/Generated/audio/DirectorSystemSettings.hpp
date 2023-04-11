@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DirectorSystemSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioDirectorSystemSettings";
@@ -48,6 +49,7 @@ struct DirectorSystemSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(DirectorSystemSettings, 0xB8);
 } // namespace audio
+using audioDirectorSystemSettings = audio::DirectorSystemSettings;
 } // namespace RED4ext
 
 // clang-format on

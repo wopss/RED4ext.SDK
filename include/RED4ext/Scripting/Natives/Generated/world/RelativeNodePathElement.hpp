@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RelativeNodePathElement
 {
     static constexpr const char* NAME = "worldRelativeNodePathElement";
@@ -23,6 +24,7 @@ struct RelativeNodePathElement
 };
 RED4EXT_ASSERT_SIZE(RelativeNodePathElement, 0x38);
 } // namespace world
+using worldRelativeNodePathElement = world::RelativeNodePathElement;
 } // namespace RED4ext
 
 // clang-format on

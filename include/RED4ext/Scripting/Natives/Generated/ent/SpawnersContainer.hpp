@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct SpawnersContainer : ISerializable
 {
     static constexpr const char* NAME = "entSpawnersContainer";
@@ -20,6 +21,7 @@ struct SpawnersContainer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SpawnersContainer, 0x40);
 } // namespace ent
+using entSpawnersContainer = ent::SpawnersContainer;
 } // namespace RED4ext
 
 // clang-format on

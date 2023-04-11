@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SystemImpl : AI::ISystem
 {
     static constexpr const char* NAME = "AISystemImpl";
@@ -20,6 +21,7 @@ struct SystemImpl : AI::ISystem
 };
 RED4EXT_ASSERT_SIZE(SystemImpl, 0x220);
 } // namespace AI
+using AISystemImpl = AI::SystemImpl;
 } // namespace RED4ext
 
 // clang-format on

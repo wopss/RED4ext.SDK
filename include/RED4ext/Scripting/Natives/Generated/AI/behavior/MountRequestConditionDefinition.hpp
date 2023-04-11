@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MountRequestConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorMountRequestConditionDefinition";
@@ -25,6 +26,7 @@ struct MountRequestConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(MountRequestConditionDefinition, 0x60);
 } // namespace AI::behavior
+using AIbehaviorMountRequestConditionDefinition = AI::behavior::MountRequestConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

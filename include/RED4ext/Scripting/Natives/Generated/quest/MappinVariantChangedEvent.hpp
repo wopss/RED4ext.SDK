@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct JournalEntry; }
 
-namespace quest { 
+namespace quest
+{
 struct MappinVariantChangedEvent : red::Event
 {
     static constexpr const char* NAME = "questMappinVariantChangedEvent";
@@ -27,6 +28,7 @@ struct MappinVariantChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MappinVariantChangedEvent, 0x58);
 } // namespace quest
+using questMappinVariantChangedEvent = quest::MappinVariantChangedEvent;
 using MappinVariantChangedEvent = quest::MappinVariantChangedEvent;
 } // namespace RED4ext
 

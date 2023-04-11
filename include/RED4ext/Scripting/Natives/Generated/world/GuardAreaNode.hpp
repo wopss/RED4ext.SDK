@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct GuardAreaNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldGuardAreaNode";
@@ -28,6 +29,7 @@ struct GuardAreaNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(GuardAreaNode, 0x90);
 } // namespace world
+using worldGuardAreaNode = world::GuardAreaNode;
 } // namespace RED4ext
 
 // clang-format on

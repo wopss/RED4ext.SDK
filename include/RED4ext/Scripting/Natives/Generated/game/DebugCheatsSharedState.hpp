@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DebugCheatsSharedState : game::IGameSystemReplicatedState
 {
     static constexpr const char* NAME = "gameDebugCheatsSharedState";
@@ -24,6 +25,7 @@ struct DebugCheatsSharedState : game::IGameSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(DebugCheatsSharedState, 0x58);
 } // namespace game
+using gameDebugCheatsSharedState = game::DebugCheatsSharedState;
 } // namespace RED4ext
 
 // clang-format on

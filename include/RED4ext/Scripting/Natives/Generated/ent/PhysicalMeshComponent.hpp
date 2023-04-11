@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace ent { 
+namespace ent
+{
 struct PhysicalMeshComponent : ent::MeshComponent
 {
     static constexpr const char* NAME = "entPhysicalMeshComponent";
@@ -35,6 +36,7 @@ struct PhysicalMeshComponent : ent::MeshComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalMeshComponent, 0x240);
 } // namespace ent
+using entPhysicalMeshComponent = ent::PhysicalMeshComponent;
 using PhysicalMeshComponent = ent::PhysicalMeshComponent;
 } // namespace RED4ext
 

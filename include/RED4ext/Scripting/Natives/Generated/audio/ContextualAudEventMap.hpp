@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ContextualAudEventMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioContextualAudEventMap";
@@ -22,6 +23,7 @@ struct ContextualAudEventMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(ContextualAudEventMap, 0x48);
 } // namespace audio
+using audioContextualAudEventMap = audio::ContextualAudEventMap;
 } // namespace RED4ext
 
 // clang-format on

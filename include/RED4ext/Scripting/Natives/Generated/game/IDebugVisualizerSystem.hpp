@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IDebugVisualizerSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIDebugVisualizerSystem";
@@ -19,6 +20,7 @@ struct IDebugVisualizerSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IDebugVisualizerSystem, 0x48);
 } // namespace game
+using gameIDebugVisualizerSystem = game::IDebugVisualizerSystem;
 } // namespace RED4ext
 
 // clang-format on

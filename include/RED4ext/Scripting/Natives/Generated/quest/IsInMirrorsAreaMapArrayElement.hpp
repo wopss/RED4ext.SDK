@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IsInMirrorsAreaMapArrayElement
 {
     static constexpr const char* NAME = "questIsInMirrorsAreaMapArrayElement";
@@ -22,6 +23,7 @@ struct IsInMirrorsAreaMapArrayElement
 };
 RED4EXT_ASSERT_SIZE(IsInMirrorsAreaMapArrayElement, 0x10);
 } // namespace quest
+using questIsInMirrorsAreaMapArrayElement = quest::IsInMirrorsAreaMapArrayElement;
 } // namespace RED4ext
 
 // clang-format on

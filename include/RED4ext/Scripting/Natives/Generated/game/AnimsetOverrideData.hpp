@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AnimsetOverrideData
 {
     static constexpr const char* NAME = "gameAnimsetOverrideData";
@@ -22,6 +23,7 @@ struct AnimsetOverrideData
 };
 RED4EXT_ASSERT_SIZE(AnimsetOverrideData, 0x18);
 } // namespace game
+using gameAnimsetOverrideData = game::AnimsetOverrideData;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct Resource; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ParameterizedBehavior : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorParameterizedBehavior";
@@ -27,6 +28,7 @@ struct ParameterizedBehavior : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ParameterizedBehavior, 0x68);
 } // namespace AI::behavior
+using AIbehaviorParameterizedBehavior = AI::behavior::ParameterizedBehavior;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct SoundComponentBase : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameaudioSoundComponentBase";
@@ -30,6 +31,7 @@ struct SoundComponentBase : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SoundComponentBase, 0x180);
 } // namespace game::audio
+using gameaudioSoundComponentBase = game::audio::SoundComponentBase;
 using SoundComponentBase = game::audio::SoundComponentBase;
 } // namespace RED4ext
 

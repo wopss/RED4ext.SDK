@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace vg { struct VectorGraphicStyle; }
 
-namespace vg { 
+namespace vg
+{
 struct BaseVectorGraphicShape : ISerializable
 {
     static constexpr const char* NAME = "vgBaseVectorGraphicShape";
@@ -26,6 +27,7 @@ struct BaseVectorGraphicShape : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BaseVectorGraphicShape, 0xC0);
 } // namespace vg
+using vgBaseVectorGraphicShape = vg::BaseVectorGraphicShape;
 } // namespace RED4ext
 
 // clang-format on

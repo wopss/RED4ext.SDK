@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct EnvironmentDamageReceiverShape; }
 
-namespace game { 
+namespace game
+{
 struct EnvironmentDamageReceiverComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameEnvironmentDamageReceiverComponent";
@@ -27,6 +28,7 @@ struct EnvironmentDamageReceiverComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(EnvironmentDamageReceiverComponent, 0x140);
 } // namespace game
+using gameEnvironmentDamageReceiverComponent = game::EnvironmentDamageReceiverComponent;
 using EnvironmentDamageReceiverComponent = game::EnvironmentDamageReceiverComponent;
 } // namespace RED4ext
 

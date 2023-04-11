@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineConsumableParameterTweakDBID : game::state::MachineActionParameterTweakDBID
 {
     static constexpr const char* NAME = "gamestateMachineConsumableParameterTweakDBID";
@@ -21,6 +22,7 @@ struct MachineConsumableParameterTweakDBID : game::state::MachineActionParameter
 };
 RED4EXT_ASSERT_SIZE(MachineConsumableParameterTweakDBID, 0x20);
 } // namespace game::state
+using gamestateMachineConsumableParameterTweakDBID = game::state::MachineConsumableParameterTweakDBID;
 using ConsumableParameterTweakDBID = game::state::MachineConsumableParameterTweakDBID;
 } // namespace RED4ext
 

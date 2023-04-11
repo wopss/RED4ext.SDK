@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_LookAtPose360Direction : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_LookAtPose360Direction";
@@ -23,6 +24,7 @@ struct AnimNode_LookAtPose360Direction : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_LookAtPose360Direction, 0x68);
 } // namespace anim
+using animAnimNode_LookAtPose360Direction = anim::AnimNode_LookAtPose360Direction;
 } // namespace RED4ext
 
 // clang-format on

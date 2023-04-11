@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct MappinUIFilterGroup_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMappinUIFilterGroup_Record";
@@ -20,6 +21,7 @@ struct MappinUIFilterGroup_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(MappinUIFilterGroup_Record, 0x58);
 } // namespace game::data
+using gamedataMappinUIFilterGroup_Record = game::data::MappinUIFilterGroup_Record;
 using MappinUIFilterGroup_Record = game::data::MappinUIFilterGroup_Record;
 } // namespace RED4ext
 

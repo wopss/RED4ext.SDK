@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ITimeState : ISerializable
 {
     static constexpr const char* NAME = "gameITimeState";
@@ -19,6 +20,7 @@ struct ITimeState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ITimeState, 0x30);
 } // namespace game
+using gameITimeState = game::ITimeState;
 } // namespace RED4ext
 
 // clang-format on

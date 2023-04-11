@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AnyStateTransitionEntry
 {
     static constexpr const char* NAME = "audioAnyStateTransitionEntry";
@@ -23,6 +24,7 @@ struct AnyStateTransitionEntry
 };
 RED4EXT_ASSERT_SIZE(AnyStateTransitionEntry, 0x8);
 } // namespace audio
+using audioAnyStateTransitionEntry = audio::AnyStateTransitionEntry;
 } // namespace RED4ext
 
 // clang-format on

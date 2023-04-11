@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace audio { struct AnimationOverrideDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct AnimationOverrideMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioAnimationOverrideMetadata";
@@ -23,6 +24,7 @@ struct AnimationOverrideMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(AnimationOverrideMetadata, 0x48);
 } // namespace audio
+using audioAnimationOverrideMetadata = audio::AnimationOverrideMetadata;
 } // namespace RED4ext
 
 // clang-format on

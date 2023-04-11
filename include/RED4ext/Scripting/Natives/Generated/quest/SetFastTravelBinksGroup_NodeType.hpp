@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetFastTravelBinksGroup_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetFastTravelBinksGroup_NodeType";
@@ -21,6 +22,7 @@ struct SetFastTravelBinksGroup_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetFastTravelBinksGroup_NodeType, 0x40);
 } // namespace quest
+using questSetFastTravelBinksGroup_NodeType = quest::SetFastTravelBinksGroup_NodeType;
 } // namespace RED4ext
 
 // clang-format on

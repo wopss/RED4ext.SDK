@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_PointConstraint_WeightedTransform
 {
     static constexpr const char* NAME = "animAnimNode_PointConstraint_WeightedTransform";
@@ -22,6 +23,7 @@ struct AnimNode_PointConstraint_WeightedTransform
 };
 RED4EXT_ASSERT_SIZE(AnimNode_PointConstraint_WeightedTransform, 0x20);
 } // namespace anim
+using animAnimNode_PointConstraint_WeightedTransform = anim::AnimNode_PointConstraint_WeightedTransform;
 } // namespace RED4ext
 
 // clang-format on

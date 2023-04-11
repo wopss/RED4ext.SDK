@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct TriggerEffectMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioTriggerEffectMetadata";
@@ -29,6 +30,7 @@ struct TriggerEffectMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(TriggerEffectMetadata, 0x50);
 } // namespace audio
+using audioTriggerEffectMetadata = audio::TriggerEffectMetadata;
 } // namespace RED4ext
 
 // clang-format on

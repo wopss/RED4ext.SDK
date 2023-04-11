@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_SingleEntity : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_SingleEntity";
@@ -19,6 +20,7 @@ struct EffectObjectProvider_SingleEntity : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_SingleEntity, 0x40);
 } // namespace game
+using gameEffectObjectProvider_SingleEntity = game::EffectObjectProvider_SingleEntity;
 } // namespace RED4ext
 
 // clang-format on

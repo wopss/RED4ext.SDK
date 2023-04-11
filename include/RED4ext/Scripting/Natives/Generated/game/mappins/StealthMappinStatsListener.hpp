@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct StealthMappinStatsListener : game::IStatsListener
 {
     static constexpr const char* NAME = "gamemappinsStealthMappinStatsListener";
@@ -20,6 +21,7 @@ struct StealthMappinStatsListener : game::IStatsListener
 };
 RED4EXT_ASSERT_SIZE(StealthMappinStatsListener, 0x50);
 } // namespace game::mappins
+using gamemappinsStealthMappinStatsListener = game::mappins::StealthMappinStatsListener;
 } // namespace RED4ext
 
 // clang-format on

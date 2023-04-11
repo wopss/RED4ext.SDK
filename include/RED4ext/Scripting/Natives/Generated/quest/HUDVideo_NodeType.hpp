@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace quest { 
+namespace quest
+{
 struct HUDVideo_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questHUDVideo_NodeType";
@@ -36,6 +37,7 @@ struct HUDVideo_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(HUDVideo_NodeType, 0x60);
 } // namespace quest
+using questHUDVideo_NodeType = quest::HUDVideo_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct SmartGunTargetSortConfigurations_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSmartGunTargetSortConfigurations_Record";
@@ -20,6 +21,7 @@ struct SmartGunTargetSortConfigurations_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(SmartGunTargetSortConfigurations_Record, 0x50);
 } // namespace game::data
+using gamedataSmartGunTargetSortConfigurations_Record = game::data::SmartGunTargetSortConfigurations_Record;
 using SmartGunTargetSortConfigurations_Record = game::data::SmartGunTargetSortConfigurations_Record;
 } // namespace RED4ext
 

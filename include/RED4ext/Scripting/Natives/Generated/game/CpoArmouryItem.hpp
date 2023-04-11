@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CpoArmouryItem : game::Object
 {
     static constexpr const char* NAME = "gameCpoArmouryItem";
@@ -22,6 +23,7 @@ struct CpoArmouryItem : game::Object
 };
 RED4EXT_ASSERT_SIZE(CpoArmouryItem, 0x258);
 } // namespace game
+using gameCpoArmouryItem = game::CpoArmouryItem;
 } // namespace RED4ext
 
 // clang-format on

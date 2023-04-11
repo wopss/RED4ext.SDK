@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GPSGameController : game::ui::HUDGameController
 {
     static constexpr const char* NAME = "gameuiGPSGameController";
@@ -22,6 +23,7 @@ struct GPSGameController : game::ui::HUDGameController
 };
 RED4EXT_ASSERT_SIZE(GPSGameController, 0x138);
 } // namespace game::ui
+using gameuiGPSGameController = game::ui::GPSGameController;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HoldControllerActionData : ink::UserData
 {
     static constexpr const char* NAME = "inkHoldControllerActionData";
@@ -21,6 +22,7 @@ struct HoldControllerActionData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(HoldControllerActionData, 0x48);
 } // namespace ink
+using inkHoldControllerActionData = ink::HoldControllerActionData;
 } // namespace RED4ext
 
 // clang-format on

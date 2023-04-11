@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LocomotionEventMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioLocomotionEventMetadata";
@@ -19,6 +20,7 @@ struct LocomotionEventMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(LocomotionEventMetadata, 0x38);
 } // namespace audio
+using audioLocomotionEventMetadata = audio::LocomotionEventMetadata;
 } // namespace RED4ext
 
 // clang-format on

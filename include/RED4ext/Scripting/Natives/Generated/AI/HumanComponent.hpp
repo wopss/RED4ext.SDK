@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct HumanComponent : AI::CAgent
 {
     static constexpr const char* NAME = "AIHumanComponent";
@@ -22,6 +23,7 @@ struct HumanComponent : AI::CAgent
 };
 RED4EXT_ASSERT_SIZE(HumanComponent, 0x598);
 } // namespace AI
+using AIHumanComponent = AI::HumanComponent;
 } // namespace RED4ext
 
 // clang-format on

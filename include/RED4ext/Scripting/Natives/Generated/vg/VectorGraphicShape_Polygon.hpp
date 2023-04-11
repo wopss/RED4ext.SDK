@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vg { 
+namespace vg
+{
 struct VectorGraphicShape_Polygon : vg::BaseVectorGraphicShape
 {
     static constexpr const char* NAME = "vgVectorGraphicShape_Polygon";
@@ -22,6 +23,7 @@ struct VectorGraphicShape_Polygon : vg::BaseVectorGraphicShape
 };
 RED4EXT_ASSERT_SIZE(VectorGraphicShape_Polygon, 0xD0);
 } // namespace vg
+using vgVectorGraphicShape_Polygon = vg::VectorGraphicShape_Polygon;
 } // namespace RED4ext
 
 // clang-format on

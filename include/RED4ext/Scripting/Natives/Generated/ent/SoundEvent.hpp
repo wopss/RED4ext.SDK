@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct SoundEvent : red::Event
 {
     static constexpr const char* NAME = "entSoundEvent";
@@ -27,6 +28,7 @@ struct SoundEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SoundEvent, 0x78);
 } // namespace ent
+using entSoundEvent = ent::SoundEvent;
 } // namespace RED4ext
 
 // clang-format on

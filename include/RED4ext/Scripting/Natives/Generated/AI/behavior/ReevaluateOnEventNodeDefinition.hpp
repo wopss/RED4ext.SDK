@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ReevaluateOnEventNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorReevaluateOnEventNodeDefinition";
@@ -21,6 +22,7 @@ struct ReevaluateOnEventNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(ReevaluateOnEventNodeDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorReevaluateOnEventNodeDefinition = AI::behavior::ReevaluateOnEventNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

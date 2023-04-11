@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FxInstance : IScriptable
 {
     static constexpr const char* NAME = "gameFxInstance";
@@ -20,6 +21,7 @@ struct FxInstance : IScriptable
 };
 RED4EXT_ASSERT_SIZE(FxInstance, 0x68);
 } // namespace game
+using gameFxInstance = game::FxInstance;
 using FxInstance = game::FxInstance;
 } // namespace RED4ext
 

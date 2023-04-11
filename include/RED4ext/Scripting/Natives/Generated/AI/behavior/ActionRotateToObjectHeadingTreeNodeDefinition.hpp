@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ActionRotateToObjectHeadingTreeNodeDefinition : AI::behavior::ActionRotateBaseTreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorActionRotateToObjectHeadingTreeNodeDefinition";
@@ -19,6 +20,7 @@ struct ActionRotateToObjectHeadingTreeNodeDefinition : AI::behavior::ActionRotat
 };
 RED4EXT_ASSERT_SIZE(ActionRotateToObjectHeadingTreeNodeDefinition, 0x80);
 } // namespace AI::behavior
+using AIbehaviorActionRotateToObjectHeadingTreeNodeDefinition = AI::behavior::ActionRotateToObjectHeadingTreeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

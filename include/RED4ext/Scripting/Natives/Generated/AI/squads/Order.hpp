@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::squads { 
+namespace AI::squads
+{
 struct Order
 {
     static constexpr const char* NAME = "AIsquadsOrder";
@@ -22,6 +23,7 @@ struct Order
 };
 RED4EXT_ASSERT_SIZE(Order, 0x10);
 } // namespace AI::squads
+using AIsquadsOrder = AI::squads::Order;
 using SquadOrder = AI::squads::Order;
 } // namespace RED4ext
 

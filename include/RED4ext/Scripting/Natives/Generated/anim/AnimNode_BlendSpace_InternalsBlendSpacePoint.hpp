@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BlendSpace_InternalsBlendSpacePoint
 {
     static constexpr const char* NAME = "animAnimNode_BlendSpace_InternalsBlendSpacePoint";
@@ -29,6 +30,7 @@ struct AnimNode_BlendSpace_InternalsBlendSpacePoint
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BlendSpace_InternalsBlendSpacePoint, 0x30);
 } // namespace anim
+using animAnimNode_BlendSpace_InternalsBlendSpacePoint = anim::AnimNode_BlendSpace_InternalsBlendSpacePoint;
 } // namespace RED4ext
 
 // clang-format on

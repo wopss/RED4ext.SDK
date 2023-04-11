@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct MotionTableProvider_MultiBlend : anim::IMotionTableProvider
 {
     static constexpr const char* NAME = "animMotionTableProvider_MultiBlend";
@@ -19,6 +20,7 @@ struct MotionTableProvider_MultiBlend : anim::IMotionTableProvider
 };
 RED4EXT_ASSERT_SIZE(MotionTableProvider_MultiBlend, 0x50);
 } // namespace anim
+using animMotionTableProvider_MultiBlend = anim::MotionTableProvider_MultiBlend;
 } // namespace RED4ext
 
 // clang-format on

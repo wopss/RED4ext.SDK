@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetCameraParamsWithOverridesEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetCameraParamsWithOverridesEvent";
@@ -27,6 +28,7 @@ struct SetCameraParamsWithOverridesEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetCameraParamsWithOverridesEvent, 0x60);
 } // namespace game
+using gameSetCameraParamsWithOverridesEvent = game::SetCameraParamsWithOverridesEvent;
 using SetCameraParamsWithOverridesEvent = game::SetCameraParamsWithOverridesEvent;
 } // namespace RED4ext
 

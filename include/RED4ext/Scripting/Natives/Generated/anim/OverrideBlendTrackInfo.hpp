@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct OverrideBlendTrackInfo
 {
     static constexpr const char* NAME = "animOverrideBlendTrackInfo";
@@ -22,6 +23,7 @@ struct OverrideBlendTrackInfo
 };
 RED4EXT_ASSERT_SIZE(OverrideBlendTrackInfo, 0x20);
 } // namespace anim
+using animOverrideBlendTrackInfo = anim::OverrideBlendTrackInfo;
 } // namespace RED4ext
 
 // clang-format on

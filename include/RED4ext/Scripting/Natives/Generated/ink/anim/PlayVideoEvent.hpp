@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace ink::anim { 
+namespace ink::anim
+{
 struct PlayVideoEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimPlayVideoEvent";
@@ -23,6 +24,7 @@ struct PlayVideoEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(PlayVideoEvent, 0x50);
 } // namespace ink::anim
+using inkanimPlayVideoEvent = ink::anim::PlayVideoEvent;
 } // namespace RED4ext
 
 // clang-format on

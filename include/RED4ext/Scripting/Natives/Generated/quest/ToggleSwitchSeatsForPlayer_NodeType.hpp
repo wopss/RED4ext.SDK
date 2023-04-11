@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleSwitchSeatsForPlayer_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleSwitchSeatsForPlayer_NodeType";
@@ -19,6 +20,7 @@ struct ToggleSwitchSeatsForPlayer_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleSwitchSeatsForPlayer_NodeType, 0x30);
 } // namespace quest
+using questToggleSwitchSeatsForPlayer_NodeType = quest::ToggleSwitchSeatsForPlayer_NodeType;
 } // namespace RED4ext
 
 // clang-format on

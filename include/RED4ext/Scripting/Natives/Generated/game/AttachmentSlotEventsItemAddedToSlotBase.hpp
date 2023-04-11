@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlotEventsItemAddedToSlotBase : red::Event
 {
     static constexpr const char* NAME = "gameAttachmentSlotEventsItemAddedToSlotBase";
@@ -20,6 +21,7 @@ struct AttachmentSlotEventsItemAddedToSlotBase : red::Event
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotEventsItemAddedToSlotBase, 0x68);
 } // namespace game
+using gameAttachmentSlotEventsItemAddedToSlotBase = game::AttachmentSlotEventsItemAddedToSlotBase;
 using ItemAddedToSlotBase = game::AttachmentSlotEventsItemAddedToSlotBase;
 } // namespace RED4ext
 

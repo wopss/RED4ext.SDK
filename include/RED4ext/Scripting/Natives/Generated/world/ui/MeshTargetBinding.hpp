@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct MeshTargetBinding : ent::ISourceBinding
 {
     static constexpr const char* NAME = "worlduiMeshTargetBinding";
@@ -19,6 +20,7 @@ struct MeshTargetBinding : ent::ISourceBinding
 };
 RED4EXT_ASSERT_SIZE(MeshTargetBinding, 0x70);
 } // namespace world::ui
+using worlduiMeshTargetBinding = world::ui::MeshTargetBinding;
 } // namespace RED4ext
 
 // clang-format on

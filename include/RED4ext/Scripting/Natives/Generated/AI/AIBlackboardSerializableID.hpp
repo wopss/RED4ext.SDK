@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct AIBlackboardSerializableID
 {
     static constexpr const char* NAME = "AIAIBlackboardSerializableID";
@@ -21,6 +22,7 @@ struct AIBlackboardSerializableID
 };
 RED4EXT_ASSERT_SIZE(AIBlackboardSerializableID, 0x28);
 } // namespace AI
+using AIAIBlackboardSerializableID = AI::AIBlackboardSerializableID;
 } // namespace RED4ext
 
 // clang-format on

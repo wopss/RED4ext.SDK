@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ChangeGameDifficulty_NodeSubType : quest::IGameManagerNonSignalStoppingNodeType
 {
     static constexpr const char* NAME = "questChangeGameDifficulty_NodeSubType";
@@ -22,6 +23,7 @@ struct ChangeGameDifficulty_NodeSubType : quest::IGameManagerNonSignalStoppingNo
 };
 RED4EXT_ASSERT_SIZE(ChangeGameDifficulty_NodeSubType, 0x40);
 } // namespace quest
+using questChangeGameDifficulty_NodeSubType = quest::ChangeGameDifficulty_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

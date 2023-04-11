@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleWeaponEnabled_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleWeaponEnabled_NodeType";
@@ -26,6 +27,7 @@ struct ToggleWeaponEnabled_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleWeaponEnabled_NodeType, 0x70);
 } // namespace quest
+using questToggleWeaponEnabled_NodeType = quest::ToggleWeaponEnabled_NodeType;
 } // namespace RED4ext
 
 // clang-format on

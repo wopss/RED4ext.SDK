@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneMarker : world::IMarker
 {
     static constexpr const char* NAME = "scnSceneMarker";
@@ -22,6 +23,7 @@ struct SceneMarker : world::IMarker
 };
 RED4EXT_ASSERT_SIZE(SceneMarker, 0x40);
 } // namespace scn
+using scnSceneMarker = scn::SceneMarker;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneGraphNode; }
 
-namespace scn { 
+namespace scn
+{
 struct SceneGraph : ISerializable
 {
     static constexpr const char* NAME = "scnSceneGraph";
@@ -27,6 +28,7 @@ struct SceneGraph : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SceneGraph, 0x60);
 } // namespace scn
+using scnSceneGraph = scn::SceneGraph;
 } // namespace RED4ext
 
 // clang-format on

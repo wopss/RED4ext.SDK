@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityTemplateToAppearancesAndColorVariantsMap : ISerializable
 {
     static constexpr const char* NAME = "gameEntityTemplateToAppearancesAndColorVariantsMap";
@@ -23,6 +24,7 @@ struct EntityTemplateToAppearancesAndColorVariantsMap : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EntityTemplateToAppearancesAndColorVariantsMap, 0x80);
 } // namespace game
+using gameEntityTemplateToAppearancesAndColorVariantsMap = game::EntityTemplateToAppearancesAndColorVariantsMap;
 } // namespace RED4ext
 
 // clang-format on

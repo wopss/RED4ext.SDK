@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LightSettings
 {
     static constexpr const char* NAME = "gameLightSettings";
@@ -26,6 +27,7 @@ struct LightSettings
 };
 RED4EXT_ASSERT_SIZE(LightSettings, 0x1C);
 } // namespace game
+using gameLightSettings = game::LightSettings;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct COrientedBoxDefinition : game::interactions::IShapeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCOrientedBoxDefinition";
@@ -24,6 +25,7 @@ struct COrientedBoxDefinition : game::interactions::IShapeDefinition
 };
 RED4EXT_ASSERT_SIZE(COrientedBoxDefinition, 0x70);
 } // namespace game::interactions
+using gameinteractionsCOrientedBoxDefinition = game::interactions::COrientedBoxDefinition;
 } // namespace RED4ext
 
 // clang-format on

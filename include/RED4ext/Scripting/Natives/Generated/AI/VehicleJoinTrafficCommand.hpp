@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct VehicleJoinTrafficCommand : AI::VehicleCommand
 {
     static constexpr const char* NAME = "AIVehicleJoinTrafficCommand";
@@ -19,6 +20,7 @@ struct VehicleJoinTrafficCommand : AI::VehicleCommand
 };
 RED4EXT_ASSERT_SIZE(VehicleJoinTrafficCommand, 0x68);
 } // namespace AI
+using AIVehicleJoinTrafficCommand = AI::VehicleJoinTrafficCommand;
 } // namespace RED4ext
 
 // clang-format on

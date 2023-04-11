@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_TrialVersionUpgrade : gsm::State
 {
     static constexpr const char* NAME = "gsmState_TrialVersionUpgrade";
@@ -20,6 +21,7 @@ struct State_TrialVersionUpgrade : gsm::State
 };
 RED4EXT_ASSERT_SIZE(State_TrialVersionUpgrade, 0xD8);
 } // namespace gsm
+using gsmState_TrialVersionUpgrade = gsm::State_TrialVersionUpgrade;
 } // namespace RED4ext
 
 // clang-format on

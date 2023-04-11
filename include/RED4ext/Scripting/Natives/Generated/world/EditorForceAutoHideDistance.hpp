@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct EditorForceAutoHideDistance : ISerializable
 {
     static constexpr const char* NAME = "worldEditorForceAutoHideDistance";
@@ -21,6 +22,7 @@ struct EditorForceAutoHideDistance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EditorForceAutoHideDistance, 0x38);
 } // namespace world
+using worldEditorForceAutoHideDistance = world::EditorForceAutoHideDistance;
 } // namespace RED4ext
 
 // clang-format on

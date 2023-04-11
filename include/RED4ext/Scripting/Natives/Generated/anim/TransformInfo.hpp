@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct TransformInfo
 {
     static constexpr const char* NAME = "animTransformInfo";
@@ -23,6 +24,7 @@ struct TransformInfo
 };
 RED4EXT_ASSERT_SIZE(TransformInfo, 0x40);
 } // namespace anim
+using animTransformInfo = anim::TransformInfo;
 } // namespace RED4ext
 
 // clang-format on

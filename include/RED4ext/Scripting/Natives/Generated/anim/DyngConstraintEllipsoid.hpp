@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct DyngConstraintEllipsoid : anim::IDyngConstraint
 {
     static constexpr const char* NAME = "animDyngConstraintEllipsoid";
@@ -27,6 +28,7 @@ struct DyngConstraintEllipsoid : anim::IDyngConstraint
 };
 RED4EXT_ASSERT_SIZE(DyngConstraintEllipsoid, 0xA0);
 } // namespace anim
+using animDyngConstraintEllipsoid = anim::DyngConstraintEllipsoid;
 } // namespace RED4ext
 
 // clang-format on

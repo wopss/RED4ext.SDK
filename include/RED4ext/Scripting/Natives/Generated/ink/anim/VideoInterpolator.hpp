@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct VideoInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimVideoInterpolator";
@@ -27,6 +28,7 @@ struct VideoInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(VideoInterpolator, 0x80);
 } // namespace ink::anim
+using inkanimVideoInterpolator = ink::anim::VideoInterpolator;
 using inkAnimVideo = ink::anim::VideoInterpolator;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerEnablePlayerTPPRepresentation_NodeType : quest::IEntityManager_NodeType
 {
     static constexpr const char* NAME = "questEntityManagerEnablePlayerTPPRepresentation_NodeType";
@@ -21,6 +22,7 @@ struct EntityManagerEnablePlayerTPPRepresentation_NodeType : quest::IEntityManag
 };
 RED4EXT_ASSERT_SIZE(EntityManagerEnablePlayerTPPRepresentation_NodeType, 0x38);
 } // namespace quest
+using questEntityManagerEnablePlayerTPPRepresentation_NodeType = quest::EntityManagerEnablePlayerTPPRepresentation_NodeType;
 } // namespace RED4ext
 
 // clang-format on

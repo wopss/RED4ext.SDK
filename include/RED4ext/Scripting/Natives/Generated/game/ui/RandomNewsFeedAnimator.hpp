@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RandomNewsFeedAnimator : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiRandomNewsFeedAnimator";
@@ -24,6 +25,7 @@ struct RandomNewsFeedAnimator : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(RandomNewsFeedAnimator, 0xC8);
 } // namespace game::ui
+using gameuiRandomNewsFeedAnimator = game::ui::RandomNewsFeedAnimator;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ITrafficSystem : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldITrafficSystem";
@@ -19,6 +20,7 @@ struct ITrafficSystem : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(ITrafficSystem, 0x48);
 } // namespace world
+using worldITrafficSystem = world::ITrafficSystem;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct BaseItem : ISerializable
 {
     static constexpr const char* NAME = "effectBaseItem";
@@ -19,6 +20,7 @@ struct BaseItem : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BaseItem, 0x30);
 } // namespace effect
+using effectBaseItem = effect::BaseItem;
 } // namespace RED4ext
 
 // clang-format on

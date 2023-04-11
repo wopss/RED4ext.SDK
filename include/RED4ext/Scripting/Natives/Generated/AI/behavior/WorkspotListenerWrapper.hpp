@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WorkspotListenerWrapper
 {
     static constexpr const char* NAME = "AIbehaviorWorkspotListenerWrapper";
@@ -19,6 +20,7 @@ struct WorkspotListenerWrapper
 };
 RED4EXT_ASSERT_SIZE(WorkspotListenerWrapper, 0x10);
 } // namespace AI::behavior
+using AIbehaviorWorkspotListenerWrapper = AI::behavior::WorkspotListenerWrapper;
 } // namespace RED4ext
 
 // clang-format on

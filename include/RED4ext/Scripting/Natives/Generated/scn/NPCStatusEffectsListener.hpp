@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct NPCStatusEffectsListener : game::IStatusEffectListener
 {
     static constexpr const char* NAME = "scnNPCStatusEffectsListener";
@@ -20,6 +21,7 @@ struct NPCStatusEffectsListener : game::IStatusEffectListener
 };
 RED4EXT_ASSERT_SIZE(NPCStatusEffectsListener, 0x58);
 } // namespace scn
+using scnNPCStatusEffectsListener = scn::NPCStatusEffectsListener;
 } // namespace RED4ext
 
 // clang-format on

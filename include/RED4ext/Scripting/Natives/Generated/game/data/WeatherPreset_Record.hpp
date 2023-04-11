@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct WeatherPreset_Record : game::data::SpawnableObject_Record
 {
     static constexpr const char* NAME = "gamedataWeatherPreset_Record";
@@ -20,6 +21,7 @@ struct WeatherPreset_Record : game::data::SpawnableObject_Record
 };
 RED4EXT_ASSERT_SIZE(WeatherPreset_Record, 0x80);
 } // namespace game::data
+using gamedataWeatherPreset_Record = game::data::WeatherPreset_Record;
 using WeatherPreset_Record = game::data::WeatherPreset_Record;
 } // namespace RED4ext
 

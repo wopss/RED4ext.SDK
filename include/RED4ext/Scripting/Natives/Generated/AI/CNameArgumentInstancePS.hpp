@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CNameArgumentInstancePS : AI::ArgumentInstancePS
 {
     static constexpr const char* NAME = "AICNameArgumentInstancePS";
@@ -21,6 +22,7 @@ struct CNameArgumentInstancePS : AI::ArgumentInstancePS
 };
 RED4EXT_ASSERT_SIZE(CNameArgumentInstancePS, 0x40);
 } // namespace AI
+using AICNameArgumentInstancePS = AI::CNameArgumentInstancePS;
 } // namespace RED4ext
 
 // clang-format on

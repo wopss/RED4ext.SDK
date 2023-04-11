@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct AngleDistanceCoverSelectionRuntimeData : AI::CoverSelectionRuntimeData
 {
     static constexpr const char* NAME = "AIAngleDistanceCoverSelectionRuntimeData";
@@ -20,6 +21,7 @@ struct AngleDistanceCoverSelectionRuntimeData : AI::CoverSelectionRuntimeData
 };
 RED4EXT_ASSERT_SIZE(AngleDistanceCoverSelectionRuntimeData, 0x10);
 } // namespace AI
+using AIAngleDistanceCoverSelectionRuntimeData = AI::AngleDistanceCoverSelectionRuntimeData;
 } // namespace RED4ext
 
 // clang-format on

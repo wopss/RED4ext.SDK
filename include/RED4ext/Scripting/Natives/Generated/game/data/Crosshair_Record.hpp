@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct Crosshair_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCrosshair_Record";
@@ -20,6 +21,7 @@ struct Crosshair_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(Crosshair_Record, 0x50);
 } // namespace game::data
+using gamedataCrosshair_Record = game::data::Crosshair_Record;
 using Crosshair_Record = game::data::Crosshair_Record;
 } // namespace RED4ext
 

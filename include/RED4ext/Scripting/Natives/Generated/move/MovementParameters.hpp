@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct MovementParameters
 {
     static constexpr const char* NAME = "moveMovementParameters";
@@ -25,6 +26,7 @@ struct MovementParameters
 };
 RED4EXT_ASSERT_SIZE(MovementParameters, 0x1C);
 } // namespace move
+using moveMovementParameters = move::MovementParameters;
 using MovementParameters = move::MovementParameters;
 } // namespace RED4ext
 

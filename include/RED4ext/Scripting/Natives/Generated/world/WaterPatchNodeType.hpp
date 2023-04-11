@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WaterPatchNodeType
 {
     static constexpr const char* NAME = "worldWaterPatchNodeType";
@@ -21,6 +22,7 @@ struct WaterPatchNodeType
 };
 RED4EXT_ASSERT_SIZE(WaterPatchNodeType, 0x10);
 } // namespace world
+using worldWaterPatchNodeType = world::WaterPatchNodeType;
 } // namespace RED4ext
 
 // clang-format on

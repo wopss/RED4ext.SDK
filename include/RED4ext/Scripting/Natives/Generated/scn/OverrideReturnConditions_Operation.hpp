@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn { struct IReturnCondition; }
 
-namespace scn { 
+namespace scn
+{
 struct OverrideReturnConditions_Operation : scn::IInterruptManager_Operation
 {
     static constexpr const char* NAME = "scnOverrideReturnConditions_Operation";
@@ -24,6 +25,7 @@ struct OverrideReturnConditions_Operation : scn::IInterruptManager_Operation
 };
 RED4EXT_ASSERT_SIZE(OverrideReturnConditions_Operation, 0x40);
 } // namespace scn
+using scnOverrideReturnConditions_Operation = scn::OverrideReturnConditions_Operation;
 } // namespace RED4ext
 
 // clang-format on

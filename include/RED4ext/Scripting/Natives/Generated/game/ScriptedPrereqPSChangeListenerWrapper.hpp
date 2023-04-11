@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScriptedPrereqPSChangeListenerWrapper : IScriptable
 {
     static constexpr const char* NAME = "gameScriptedPrereqPSChangeListenerWrapper";
@@ -20,6 +21,7 @@ struct ScriptedPrereqPSChangeListenerWrapper : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptedPrereqPSChangeListenerWrapper, 0x78);
 } // namespace game
+using gameScriptedPrereqPSChangeListenerWrapper = game::ScriptedPrereqPSChangeListenerWrapper;
 } // namespace RED4ext
 
 // clang-format on

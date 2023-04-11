@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct Player : game::Player
 {
     static constexpr const char* NAME = "cpPlayer";
@@ -20,6 +21,7 @@ struct Player : game::Player
 };
 RED4EXT_ASSERT_SIZE(Player, 0x60);
 } // namespace cp
+using cpPlayer = cp::Player;
 } // namespace RED4ext
 
 // clang-format on

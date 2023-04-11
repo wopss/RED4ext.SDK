@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtPartsDependency
 {
     static constexpr const char* NAME = "animLookAtPartsDependency";
@@ -36,6 +37,7 @@ struct LookAtPartsDependency
 };
 RED4EXT_ASSERT_SIZE(LookAtPartsDependency, 0x118);
 } // namespace anim
+using animLookAtPartsDependency = anim::LookAtPartsDependency;
 using LookAtPartsDependency = anim::LookAtPartsDependency;
 } // namespace RED4ext
 

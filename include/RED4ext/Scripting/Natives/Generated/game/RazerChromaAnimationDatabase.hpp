@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RazerChromaAnimationDatabase : CResource
 {
     static constexpr const char* NAME = "gameRazerChromaAnimationDatabase";
@@ -23,6 +24,7 @@ struct RazerChromaAnimationDatabase : CResource
 };
 RED4EXT_ASSERT_SIZE(RazerChromaAnimationDatabase, 0x80);
 } // namespace game
+using gameRazerChromaAnimationDatabase = game::RazerChromaAnimationDatabase;
 } // namespace RED4ext
 
 // clang-format on

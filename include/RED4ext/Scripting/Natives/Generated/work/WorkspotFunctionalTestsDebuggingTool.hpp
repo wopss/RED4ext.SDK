@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct WorkspotFunctionalTestsDebuggingTool : work::DebuggingTool
 {
     static constexpr const char* NAME = "workWorkspotFunctionalTestsDebuggingTool";
@@ -20,6 +21,7 @@ struct WorkspotFunctionalTestsDebuggingTool : work::DebuggingTool
 };
 RED4EXT_ASSERT_SIZE(WorkspotFunctionalTestsDebuggingTool, 0x28);
 } // namespace work
+using workWorkspotFunctionalTestsDebuggingTool = work::WorkspotFunctionalTestsDebuggingTool;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace AI { struct PatrolPathParameters; }
 
-namespace AI { 
+namespace AI
+{
 struct PatrolCommand : AI::MoveCommand
 {
     static constexpr const char* NAME = "AIPatrolCommand";
@@ -29,6 +30,7 @@ struct PatrolCommand : AI::MoveCommand
 };
 RED4EXT_ASSERT_SIZE(PatrolCommand, 0xA0);
 } // namespace AI
+using AIPatrolCommand = AI::PatrolCommand;
 } // namespace RED4ext
 
 // clang-format on

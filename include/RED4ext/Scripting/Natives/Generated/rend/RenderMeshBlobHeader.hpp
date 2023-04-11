@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderMeshBlobHeader
 {
     static constexpr const char* NAME = "rendRenderMeshBlobHeader";
@@ -26,21 +27,23 @@ struct RenderMeshBlobHeader
     DynArray<uint8_t> renderChunks; // 28
     DynArray<rend::Chunk> renderChunkInfos; // 38
     DynArray<uint8_t> speedTreeWind; // 48
-    DynArray<uint8_t> customData; // 58
-    DynArray<uint8_t> topologyData; // 68
-    DynArray<uint8_t> topologyMetadata; // 78
-    DynArray<rend::TopologyData> topology; // 88
-    uint32_t customDataElemStride; // 98
-    uint32_t topologyDataStride; // 9C
-    uint32_t topologyMetadataStride; // A0
-    uint32_t vertexBufferSize; // A4
-    uint32_t indexBufferSize; // A8
-    uint32_t indexBufferOffset; // AC
-    Vector4 quantizationScale; // B0
-    Vector4 quantizationOffset; // C0
+    DynArray<uint8_t> opacityMicromaps; // 58
+    DynArray<uint8_t> customData; // 68
+    DynArray<uint8_t> topologyData; // 78
+    DynArray<uint8_t> topologyMetadata; // 88
+    DynArray<rend::TopologyData> topology; // 98
+    uint32_t customDataElemStride; // A8
+    uint32_t topologyDataStride; // AC
+    uint32_t topologyMetadataStride; // B0
+    uint32_t vertexBufferSize; // B4
+    uint32_t indexBufferSize; // B8
+    uint32_t indexBufferOffset; // BC
+    Vector4 quantizationScale; // C0
+    Vector4 quantizationOffset; // D0
 };
-RED4EXT_ASSERT_SIZE(RenderMeshBlobHeader, 0xD0);
+RED4EXT_ASSERT_SIZE(RenderMeshBlobHeader, 0xE0);
 } // namespace rend
+using rendRenderMeshBlobHeader = rend::RenderMeshBlobHeader;
 } // namespace RED4ext
 
 // clang-format on

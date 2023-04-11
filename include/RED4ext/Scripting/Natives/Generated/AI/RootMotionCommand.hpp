@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct SceneAnimationMotionActionParams; }
 
-namespace AI { 
+namespace AI
+{
 struct RootMotionCommand : AI::MoveCommand
 {
     static constexpr const char* NAME = "AIRootMotionCommand";
@@ -23,6 +24,7 @@ struct RootMotionCommand : AI::MoveCommand
 };
 RED4EXT_ASSERT_SIZE(RootMotionCommand, 0x78);
 } // namespace AI
+using AIRootMotionCommand = AI::RootMotionCommand;
 } // namespace RED4ext
 
 // clang-format on

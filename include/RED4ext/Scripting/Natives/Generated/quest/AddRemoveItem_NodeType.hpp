@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct AddRemoveItem_NodeTypeParams; }
 
-namespace quest { 
+namespace quest
+{
 struct AddRemoveItem_NodeType : quest::IItemManagerNodeType
 {
     static constexpr const char* NAME = "questAddRemoveItem_NodeType";
@@ -24,6 +25,7 @@ struct AddRemoveItem_NodeType : quest::IItemManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(AddRemoveItem_NodeType, 0x40);
 } // namespace quest
+using questAddRemoveItem_NodeType = quest::AddRemoveItem_NodeType;
 } // namespace RED4ext
 
 // clang-format on

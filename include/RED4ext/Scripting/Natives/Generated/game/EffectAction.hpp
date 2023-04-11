@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectAction : IScriptable
 {
     static constexpr const char* NAME = "gameEffectAction";
@@ -19,6 +20,7 @@ struct EffectAction : IScriptable
 };
 RED4EXT_ASSERT_SIZE(EffectAction, 0x40);
 } // namespace game
+using gameEffectAction = game::EffectAction;
 using EffectAction = game::EffectAction;
 } // namespace RED4ext
 

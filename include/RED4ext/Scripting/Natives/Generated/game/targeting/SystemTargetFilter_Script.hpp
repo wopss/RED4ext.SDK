@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemTargetFilter_Script : game::targeting::SystemTargetFilter
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilter_Script";
@@ -19,6 +20,7 @@ struct SystemTargetFilter_Script : game::targeting::SystemTargetFilter
 };
 RED4EXT_ASSERT_SIZE(SystemTargetFilter_Script, 0x78);
 } // namespace game::targeting
+using gametargetingSystemTargetFilter_Script = game::targeting::SystemTargetFilter_Script;
 using TargetFilter_Script = game::targeting::SystemTargetFilter_Script;
 } // namespace RED4ext
 

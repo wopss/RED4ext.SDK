@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace scn { struct IScalingData; }
 
-namespace scn { 
+namespace scn
+{
 struct SceneEvent : ISerializable
 {
     static constexpr const char* NAME = "scnSceneEvent";
@@ -31,6 +32,7 @@ struct SceneEvent : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SceneEvent, 0x58);
 } // namespace scn
+using scnSceneEvent = scn::SceneEvent;
 } // namespace RED4ext
 
 // clang-format on

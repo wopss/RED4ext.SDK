@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct ActionMoveToDynamicNodeState : game::ActionMoveToState
 {
     static constexpr const char* NAME = "gameActionMoveToDynamicNodeState";
@@ -33,6 +34,7 @@ struct ActionMoveToDynamicNodeState : game::ActionMoveToState
 };
 RED4EXT_ASSERT_SIZE(ActionMoveToDynamicNodeState, 0x78);
 } // namespace game
+using gameActionMoveToDynamicNodeState = game::ActionMoveToDynamicNodeState;
 } // namespace RED4ext
 
 // clang-format on

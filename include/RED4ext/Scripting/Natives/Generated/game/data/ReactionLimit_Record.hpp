@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ReactionLimit_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataReactionLimit_Record";
@@ -20,6 +21,7 @@ struct ReactionLimit_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ReactionLimit_Record, 0x50);
 } // namespace game::data
+using gamedataReactionLimit_Record = game::data::ReactionLimit_Record;
 using ReactionLimit_Record = game::data::ReactionLimit_Record;
 } // namespace RED4ext
 

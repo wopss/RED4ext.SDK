@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::ui { struct HackingMinigameGameController; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct MinigameGenerationRule : IScriptable
 {
     static constexpr const char* NAME = "gameuiMinigameGenerationRule";
@@ -23,6 +24,7 @@ struct MinigameGenerationRule : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MinigameGenerationRule, 0x50);
 } // namespace game::ui
+using gameuiMinigameGenerationRule = game::ui::MinigameGenerationRule;
 using MinigameGenerationRule = game::ui::MinigameGenerationRule;
 } // namespace RED4ext
 

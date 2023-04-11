@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct BreakEffectLoopEvent : red::Event
 {
     static constexpr const char* NAME = "entBreakEffectLoopEvent";
@@ -21,6 +22,7 @@ struct BreakEffectLoopEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BreakEffectLoopEvent, 0x48);
 } // namespace ent
+using entBreakEffectLoopEvent = ent::BreakEffectLoopEvent;
 } // namespace RED4ext
 
 // clang-format on

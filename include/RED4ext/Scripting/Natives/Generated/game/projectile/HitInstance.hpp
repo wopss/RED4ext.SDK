@@ -16,7 +16,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace game { struct WeakspotObject; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct HitInstance
 {
     static constexpr const char* NAME = "gameprojectileHitInstance";
@@ -40,6 +41,7 @@ struct HitInstance
 };
 RED4EXT_ASSERT_SIZE(HitInstance, 0x100);
 } // namespace game::projectile
+using gameprojectileHitInstance = game::projectile::HitInstance;
 } // namespace RED4ext
 
 // clang-format on

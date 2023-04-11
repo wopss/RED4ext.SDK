@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct SelectByDefinitionOptions
 {
     static constexpr const char* NAME = "interopSelectByDefinitionOptions";
@@ -27,6 +28,7 @@ struct SelectByDefinitionOptions
 };
 RED4EXT_ASSERT_SIZE(SelectByDefinitionOptions, 0x14);
 } // namespace interop
+using interopSelectByDefinitionOptions = interop::SelectByDefinitionOptions;
 } // namespace RED4ext
 
 // clang-format on

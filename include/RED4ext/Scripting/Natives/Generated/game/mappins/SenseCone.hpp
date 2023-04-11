@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct SenseCone
 {
     static constexpr const char* NAME = "gamemappinsSenseCone";
@@ -25,6 +26,7 @@ struct SenseCone
 };
 RED4EXT_ASSERT_SIZE(SenseCone, 0x30);
 } // namespace game::mappins
+using gamemappinsSenseCone = game::mappins::SenseCone;
 } // namespace RED4ext
 
 // clang-format on

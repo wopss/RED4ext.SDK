@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct UseSceneWorkspotCommand : AI::BaseUseWorkspotCommand
 {
     static constexpr const char* NAME = "scnUseSceneWorkspotCommand";
@@ -29,6 +30,7 @@ struct UseSceneWorkspotCommand : AI::BaseUseWorkspotCommand
 };
 RED4EXT_ASSERT_SIZE(UseSceneWorkspotCommand, 0x180);
 } // namespace scn
+using scnUseSceneWorkspotCommand = scn::UseSceneWorkspotCommand;
 } // namespace RED4ext
 
 // clang-format on

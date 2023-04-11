@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct OwnerThreatCoverSelection : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIOwnerThreatCoverSelection";
@@ -20,6 +21,7 @@ struct OwnerThreatCoverSelection : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(OwnerThreatCoverSelection, 0x18);
 } // namespace AI
+using AIOwnerThreatCoverSelection = AI::OwnerThreatCoverSelection;
 } // namespace RED4ext
 
 // clang-format on

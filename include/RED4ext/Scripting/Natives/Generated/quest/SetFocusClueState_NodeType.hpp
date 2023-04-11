@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetFocusClueState_NodeType : quest::IVisionModeNodeType
 {
     static constexpr const char* NAME = "questSetFocusClueState_NodeType";
@@ -24,6 +25,7 @@ struct SetFocusClueState_NodeType : quest::IVisionModeNodeType
 };
 RED4EXT_ASSERT_SIZE(SetFocusClueState_NodeType, 0x70);
 } // namespace quest
+using questSetFocusClueState_NodeType = quest::SetFocusClueState_NodeType;
 } // namespace RED4ext
 
 // clang-format on

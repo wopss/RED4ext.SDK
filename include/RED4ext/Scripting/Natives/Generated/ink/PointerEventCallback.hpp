@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PointerEventCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkPointerEventCallback";
@@ -20,6 +21,7 @@ struct PointerEventCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(PointerEventCallback, 0x38);
 } // namespace ink
+using inkPointerEventCallback = ink::PointerEventCallback;
 } // namespace RED4ext
 
 // clang-format on

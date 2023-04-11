@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace game { struct StaticAreaShapeComponent; }
 
-namespace AI { 
+namespace AI
+{
 struct ApproachingAreaEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AIApproachingAreaEvent";
@@ -27,6 +28,7 @@ struct ApproachingAreaEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(ApproachingAreaEvent, 0x78);
 } // namespace AI
+using AIApproachingAreaEvent = AI::ApproachingAreaEvent;
 } // namespace RED4ext
 
 // clang-format on

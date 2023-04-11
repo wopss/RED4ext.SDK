@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace appearance { 
+namespace appearance
+{
 struct AppearancePartOverrides
 {
     static constexpr const char* NAME = "appearanceAppearancePartOverrides";
@@ -25,6 +26,7 @@ struct AppearancePartOverrides
 };
 RED4EXT_ASSERT_SIZE(AppearancePartOverrides, 0x18);
 } // namespace appearance
+using appearanceAppearancePartOverrides = appearance::AppearancePartOverrides;
 } // namespace RED4ext
 
 // clang-format on

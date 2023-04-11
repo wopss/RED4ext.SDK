@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RefreshGOGState : red::Event
 {
     static constexpr const char* NAME = "gameuiRefreshGOGState";
@@ -27,6 +28,7 @@ struct RefreshGOGState : red::Event
 };
 RED4EXT_ASSERT_SIZE(RefreshGOGState, 0x78);
 } // namespace game::ui
+using gameuiRefreshGOGState = game::ui::RefreshGOGState;
 using RefreshGOGState = game::ui::RefreshGOGState;
 } // namespace RED4ext
 

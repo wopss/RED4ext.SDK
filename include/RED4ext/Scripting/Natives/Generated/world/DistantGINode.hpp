@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CBitmapTexture;
 
-namespace world { 
+namespace world
+{
 struct DistantGINode : world::Node
 {
     static constexpr const char* NAME = "worldDistantGINode";
@@ -27,6 +28,7 @@ struct DistantGINode : world::Node
 };
 RED4EXT_ASSERT_SIZE(DistantGINode, 0x60);
 } // namespace world
+using worldDistantGINode = world::DistantGINode;
 } // namespace RED4ext
 
 // clang-format on

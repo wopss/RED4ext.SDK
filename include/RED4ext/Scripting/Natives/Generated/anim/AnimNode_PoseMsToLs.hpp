@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_PoseMsToLs : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_PoseMsToLs";
@@ -19,6 +20,7 @@ struct AnimNode_PoseMsToLs : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_PoseMsToLs, 0x60);
 } // namespace anim
+using animAnimNode_PoseMsToLs = anim::AnimNode_PoseMsToLs;
 } // namespace RED4ext
 
 // clang-format on

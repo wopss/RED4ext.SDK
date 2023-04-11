@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace AI { 
+namespace AI
+{
 struct ArgumentObjectValue : AI::ArgumentDefinition
 {
     static constexpr const char* NAME = "AIArgumentObjectValue";
@@ -26,6 +27,7 @@ struct ArgumentObjectValue : AI::ArgumentDefinition
 };
 RED4EXT_ASSERT_SIZE(ArgumentObjectValue, 0x60);
 } // namespace AI
+using AIArgumentObjectValue = AI::ArgumentObjectValue;
 } // namespace RED4ext
 
 // clang-format on

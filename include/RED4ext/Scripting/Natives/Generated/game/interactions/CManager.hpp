@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CManager : game::interactions::IManager
 {
     static constexpr const char* NAME = "gameinteractionsCManager";
@@ -20,6 +21,7 @@ struct CManager : game::interactions::IManager
 };
 RED4EXT_ASSERT_SIZE(CManager, 0x108);
 } // namespace game::interactions
+using gameinteractionsCManager = game::interactions::CManager;
 using InteractionManager = game::interactions::CManager;
 } // namespace RED4ext
 

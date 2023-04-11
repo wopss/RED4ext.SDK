@@ -19,7 +19,8 @@ namespace RED4ext
 struct Bink;
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct ShowPopup_NodeSubType : quest::ITutorial_NodeSubType
 {
     static constexpr const char* NAME = "questShowPopup_NodeSubType";
@@ -44,6 +45,7 @@ struct ShowPopup_NodeSubType : quest::ITutorial_NodeSubType
 };
 RED4EXT_ASSERT_SIZE(ShowPopup_NodeSubType, 0x78);
 } // namespace quest
+using questShowPopup_NodeSubType = quest::ShowPopup_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

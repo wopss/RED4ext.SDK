@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CameraClippingPlane_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questCameraClippingPlane_NodeType";
@@ -22,6 +23,7 @@ struct CameraClippingPlane_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(CameraClippingPlane_NodeType, 0x40);
 } // namespace quest
+using questCameraClippingPlane_NodeType = quest::CameraClippingPlane_NodeType;
 } // namespace RED4ext
 
 // clang-format on

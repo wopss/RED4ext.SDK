@@ -14,7 +14,8 @@ namespace RED4ext
 namespace anim { struct AnimGraph; }
 namespace anim { struct IStaticCondition; }
 
-namespace anim { 
+namespace anim
+{
 struct GraphSlotCondition
 {
     static constexpr const char* NAME = "animGraphSlotCondition";
@@ -25,6 +26,7 @@ struct GraphSlotCondition
 };
 RED4EXT_ASSERT_SIZE(GraphSlotCondition, 0x28);
 } // namespace anim
+using animGraphSlotCondition = anim::GraphSlotCondition;
 } // namespace RED4ext
 
 // clang-format on

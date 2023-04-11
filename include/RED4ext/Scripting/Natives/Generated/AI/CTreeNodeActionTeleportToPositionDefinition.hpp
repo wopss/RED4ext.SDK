@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeActionTeleportToPositionDefinition : AI::CTreeNodeActionDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeActionTeleportToPositionDefinition";
@@ -23,6 +24,7 @@ struct CTreeNodeActionTeleportToPositionDefinition : AI::CTreeNodeActionDefiniti
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeActionTeleportToPositionDefinition, 0x58);
 } // namespace AI
+using AICTreeNodeActionTeleportToPositionDefinition = AI::CTreeNodeActionTeleportToPositionDefinition;
 } // namespace RED4ext
 
 // clang-format on

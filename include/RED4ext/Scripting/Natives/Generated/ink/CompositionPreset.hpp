@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CompositionPreset
 {
     static constexpr const char* NAME = "inkCompositionPreset";
@@ -28,6 +29,7 @@ struct CompositionPreset
 };
 RED4EXT_ASSERT_SIZE(CompositionPreset, 0xC0);
 } // namespace ink
+using inkCompositionPreset = ink::CompositionPreset;
 } // namespace RED4ext
 
 // clang-format on

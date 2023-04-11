@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectDuration_PredefinedTimeout : game::EffectDurationModifier
 {
     static constexpr const char* NAME = "gameEffectDuration_PredefinedTimeout";
@@ -21,6 +22,7 @@ struct EffectDuration_PredefinedTimeout : game::EffectDurationModifier
 };
 RED4EXT_ASSERT_SIZE(EffectDuration_PredefinedTimeout, 0x48);
 } // namespace game
+using gameEffectDuration_PredefinedTimeout = game::EffectDuration_PredefinedTimeout;
 } // namespace RED4ext
 
 // clang-format on

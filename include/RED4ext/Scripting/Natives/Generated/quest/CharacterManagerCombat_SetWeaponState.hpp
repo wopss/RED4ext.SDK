@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerCombat_SetWeaponState : quest::ICharacterManagerCombat_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerCombat_SetWeaponState";
@@ -22,6 +23,7 @@ struct CharacterManagerCombat_SetWeaponState : quest::ICharacterManagerCombat_No
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerCombat_SetWeaponState, 0x78);
 } // namespace quest
+using questCharacterManagerCombat_SetWeaponState = quest::CharacterManagerCombat_SetWeaponState;
 } // namespace RED4ext
 
 // clang-format on

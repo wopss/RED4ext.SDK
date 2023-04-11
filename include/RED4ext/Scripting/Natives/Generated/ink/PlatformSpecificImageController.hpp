@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct PlatformSpecificImageController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkPlatformSpecificImageController";
@@ -33,6 +34,7 @@ struct PlatformSpecificImageController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(PlatformSpecificImageController, 0xC8);
 } // namespace ink
+using inkPlatformSpecificImageController = ink::PlatformSpecificImageController;
 using PlatformSpecificImageController = ink::PlatformSpecificImageController;
 } // namespace RED4ext
 

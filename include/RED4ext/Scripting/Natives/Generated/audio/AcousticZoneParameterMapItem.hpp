@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AcousticZoneParameterMapItem : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioAcousticZoneParameterMapItem";
@@ -25,6 +26,7 @@ struct AcousticZoneParameterMapItem : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(AcousticZoneParameterMapItem, 0x50);
 } // namespace audio
+using audioAcousticZoneParameterMapItem = audio::AcousticZoneParameterMapItem;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct SelectionChangeInfo
 {
     static constexpr const char* NAME = "interopSelectionChangeInfo";
@@ -21,6 +22,7 @@ struct SelectionChangeInfo
 };
 RED4EXT_ASSERT_SIZE(SelectionChangeInfo, 0x20);
 } // namespace interop
+using interopSelectionChangeInfo = interop::SelectionChangeInfo;
 } // namespace RED4ext
 
 // clang-format on

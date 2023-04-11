@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ChangeCameraControlHintVisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiChangeCameraControlHintVisibilityEvent";
@@ -21,6 +22,7 @@ struct ChangeCameraControlHintVisibilityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ChangeCameraControlHintVisibilityEvent, 0x48);
 } // namespace game::ui
+using gameuiChangeCameraControlHintVisibilityEvent = game::ui::ChangeCameraControlHintVisibilityEvent;
 using ChangeCameraControlHintVisibilityEvent = game::ui::ChangeCameraControlHintVisibilityEvent;
 } // namespace RED4ext
 

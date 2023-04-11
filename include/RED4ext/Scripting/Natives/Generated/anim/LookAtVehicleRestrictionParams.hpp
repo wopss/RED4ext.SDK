@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtVehicleRestrictionParams : ISerializable
 {
     static constexpr const char* NAME = "animLookAtVehicleRestrictionParams";
@@ -20,6 +21,7 @@ struct LookAtVehicleRestrictionParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(LookAtVehicleRestrictionParams, 0x48);
 } // namespace anim
+using animLookAtVehicleRestrictionParams = anim::LookAtVehicleRestrictionParams;
 } // namespace RED4ext
 
 // clang-format on

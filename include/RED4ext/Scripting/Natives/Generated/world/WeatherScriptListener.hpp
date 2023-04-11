@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WeatherScriptListener : IScriptable
 {
     static constexpr const char* NAME = "worldWeatherScriptListener";
@@ -20,6 +21,7 @@ struct WeatherScriptListener : IScriptable
 };
 RED4EXT_ASSERT_SIZE(WeatherScriptListener, 0x48);
 } // namespace world
+using worldWeatherScriptListener = world::WeatherScriptListener;
 using WeatherScriptListener = world::WeatherScriptListener;
 } // namespace RED4ext
 

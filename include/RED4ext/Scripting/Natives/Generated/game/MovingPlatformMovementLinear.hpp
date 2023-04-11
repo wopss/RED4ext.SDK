@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatformMovementLinear : game::IMovingPlatformMovementPointToPoint
 {
     static constexpr const char* NAME = "gameMovingPlatformMovementLinear";
@@ -19,6 +20,7 @@ struct MovingPlatformMovementLinear : game::IMovingPlatformMovementPointToPoint
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformMovementLinear, 0x90);
 } // namespace game
+using gameMovingPlatformMovementLinear = game::MovingPlatformMovementLinear;
 using MovingPlatformMovementLinear = game::MovingPlatformMovementLinear;
 } // namespace RED4ext
 

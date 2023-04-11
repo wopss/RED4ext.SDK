@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ReverbCrossoverParams
 {
     static constexpr const char* NAME = "audioReverbCrossoverParams";
@@ -20,6 +21,7 @@ struct ReverbCrossoverParams
 };
 RED4EXT_ASSERT_SIZE(ReverbCrossoverParams, 0x8);
 } // namespace audio
+using audioReverbCrossoverParams = audio::ReverbCrossoverParams;
 } // namespace RED4ext
 
 // clang-format on

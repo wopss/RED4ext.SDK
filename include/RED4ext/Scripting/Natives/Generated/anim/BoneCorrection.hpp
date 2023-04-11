@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct BoneCorrection
 {
     static constexpr const char* NAME = "animBoneCorrection";
@@ -23,6 +24,7 @@ struct BoneCorrection
 };
 RED4EXT_ASSERT_SIZE(BoneCorrection, 0x20);
 } // namespace anim
+using animBoneCorrection = anim::BoneCorrection;
 } // namespace RED4ext
 
 // clang-format on

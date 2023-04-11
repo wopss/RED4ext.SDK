@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct MorphTargetManagerComponent : ent::ExternalComponent
 {
     static constexpr const char* NAME = "entMorphTargetManagerComponent";
@@ -20,6 +21,7 @@ struct MorphTargetManagerComponent : ent::ExternalComponent
 };
 RED4EXT_ASSERT_SIZE(MorphTargetManagerComponent, 0x110);
 } // namespace ent
+using entMorphTargetManagerComponent = ent::MorphTargetManagerComponent;
 } // namespace RED4ext
 
 // clang-format on

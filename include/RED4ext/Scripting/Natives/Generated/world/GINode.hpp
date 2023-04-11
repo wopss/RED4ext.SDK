@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct CGIDataResource;
 
-namespace world { 
+namespace world
+{
 struct GINode : world::Node
 {
     static constexpr const char* NAME = "worldGINode";
@@ -25,6 +26,7 @@ struct GINode : world::Node
 };
 RED4EXT_ASSERT_SIZE(GINode, 0x48);
 } // namespace world
+using worldGINode = world::GINode;
 } // namespace RED4ext
 
 // clang-format on

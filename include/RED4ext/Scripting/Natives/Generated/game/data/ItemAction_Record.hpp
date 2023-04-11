@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ItemAction_Record : game::data::ObjectAction_Record
 {
     static constexpr const char* NAME = "gamedataItemAction_Record";
@@ -20,6 +21,7 @@ struct ItemAction_Record : game::data::ObjectAction_Record
 };
 RED4EXT_ASSERT_SIZE(ItemAction_Record, 0x88);
 } // namespace game::data
+using gamedataItemAction_Record = game::data::ItemAction_Record;
 using ItemAction_Record = game::data::ItemAction_Record;
 } // namespace RED4ext
 

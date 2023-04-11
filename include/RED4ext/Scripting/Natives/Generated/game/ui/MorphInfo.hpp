@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MorphInfo : game::ui::CharacterCustomizationInfo
 {
     static constexpr const char* NAME = "gameuiMorphInfo";
@@ -22,6 +23,7 @@ struct MorphInfo : game::ui::CharacterCustomizationInfo
 };
 RED4EXT_ASSERT_SIZE(MorphInfo, 0xC8);
 } // namespace game::ui
+using gameuiMorphInfo = game::ui::MorphInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SubStatModifierData_Deprecated : game::StatModifierData_Deprecated
 {
     static constexpr const char* NAME = "gameSubStatModifierData_Deprecated";
@@ -22,6 +23,7 @@ struct SubStatModifierData_Deprecated : game::StatModifierData_Deprecated
 };
 RED4EXT_ASSERT_SIZE(SubStatModifierData_Deprecated, 0x50);
 } // namespace game
+using gameSubStatModifierData_Deprecated = game::SubStatModifierData_Deprecated;
 using gameSubStatModifierData = game::SubStatModifierData_Deprecated;
 } // namespace RED4ext
 

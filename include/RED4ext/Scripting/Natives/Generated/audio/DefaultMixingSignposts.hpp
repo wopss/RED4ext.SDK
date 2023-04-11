@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DefaultMixingSignposts : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioDefaultMixingSignposts";
@@ -27,6 +28,7 @@ struct DefaultMixingSignposts : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(DefaultMixingSignposts, 0x70);
 } // namespace audio
+using audioDefaultMixingSignposts = audio::DefaultMixingSignposts;
 } // namespace RED4ext
 
 // clang-format on

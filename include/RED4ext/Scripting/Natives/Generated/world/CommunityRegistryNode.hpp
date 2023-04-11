@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace game { struct CrowdCreationDataRegistry; }
 
-namespace world { 
+namespace world
+{
 struct CommunityRegistryNode : world::Node
 {
     static constexpr const char* NAME = "worldCommunityRegistryNode";
@@ -32,6 +33,7 @@ struct CommunityRegistryNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(CommunityRegistryNode, 0x80);
 } // namespace world
+using worldCommunityRegistryNode = world::CommunityRegistryNode;
 } // namespace RED4ext
 
 // clang-format on

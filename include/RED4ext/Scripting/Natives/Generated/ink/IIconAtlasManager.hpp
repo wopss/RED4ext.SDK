@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IIconAtlasManager
 {
     static constexpr const char* NAME = "inkIIconAtlasManager";
@@ -19,6 +20,7 @@ struct IIconAtlasManager
 };
 RED4EXT_ASSERT_SIZE(IIconAtlasManager, 0x8);
 } // namespace ink
+using inkIIconAtlasManager = ink::IIconAtlasManager;
 } // namespace RED4ext
 
 // clang-format on

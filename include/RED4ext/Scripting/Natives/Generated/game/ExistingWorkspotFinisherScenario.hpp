@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace work { struct WorkspotResource; }
 
-namespace game { 
+namespace game
+{
 struct ExistingWorkspotFinisherScenario : game::IFinisherScenario
 {
     static constexpr const char* NAME = "gameExistingWorkspotFinisherScenario";
@@ -27,6 +28,7 @@ struct ExistingWorkspotFinisherScenario : game::IFinisherScenario
 };
 RED4EXT_ASSERT_SIZE(ExistingWorkspotFinisherScenario, 0x48);
 } // namespace game
+using gameExistingWorkspotFinisherScenario = game::ExistingWorkspotFinisherScenario;
 } // namespace RED4ext
 
 // clang-format on

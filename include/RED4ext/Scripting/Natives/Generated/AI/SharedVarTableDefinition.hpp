@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SharedVarTableDefinition
 {
     static constexpr const char* NAME = "AISharedVarTableDefinition";
@@ -22,6 +23,7 @@ struct SharedVarTableDefinition
 };
 RED4EXT_ASSERT_SIZE(SharedVarTableDefinition, 0x18);
 } // namespace AI
+using AISharedVarTableDefinition = AI::SharedVarTableDefinition;
 } // namespace RED4ext
 
 // clang-format on

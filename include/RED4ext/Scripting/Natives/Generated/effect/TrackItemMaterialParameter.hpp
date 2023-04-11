@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemMaterialParameter : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemMaterialParameter";
@@ -32,6 +33,7 @@ struct TrackItemMaterialParameter : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemMaterialParameter, 0xC8);
 } // namespace effect
+using effectTrackItemMaterialParameter = effect::TrackItemMaterialParameter;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace garment { 
+namespace garment
+{
 struct CollarAreaParams
 {
     static constexpr const char* NAME = "garmentCollarAreaParams";
@@ -25,6 +26,7 @@ struct CollarAreaParams
 };
 RED4EXT_ASSERT_SIZE(CollarAreaParams, 0x1C);
 } // namespace garment
+using garmentCollarAreaParams = garment::CollarAreaParams;
 } // namespace RED4ext
 
 // clang-format on

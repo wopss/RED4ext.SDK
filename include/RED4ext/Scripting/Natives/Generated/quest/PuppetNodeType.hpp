@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PuppetNodeType : quest::IRetNodeType
 {
     static constexpr const char* NAME = "questPuppetNodeType";
@@ -23,6 +24,7 @@ struct PuppetNodeType : quest::IRetNodeType
 };
 RED4EXT_ASSERT_SIZE(PuppetNodeType, 0x70);
 } // namespace quest
+using questPuppetNodeType = quest::PuppetNodeType;
 } // namespace RED4ext
 
 // clang-format on

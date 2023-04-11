@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct AnimationCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkanimAnimationCallback";
@@ -20,6 +21,7 @@ struct AnimationCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(AnimationCallback, 0x38);
 } // namespace ink::anim
+using inkanimAnimationCallback = ink::anim::AnimationCallback;
 } // namespace RED4ext
 
 // clang-format on

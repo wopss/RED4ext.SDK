@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PhonePrefabsListener : world::IQuestPrefabStateListener
 {
     static constexpr const char* NAME = "questPhonePrefabsListener";
@@ -20,6 +21,7 @@ struct PhonePrefabsListener : world::IQuestPrefabStateListener
 };
 RED4EXT_ASSERT_SIZE(PhonePrefabsListener, 0x48);
 } // namespace quest
+using questPhonePrefabsListener = quest::PhonePrefabsListener;
 } // namespace RED4ext
 
 // clang-format on

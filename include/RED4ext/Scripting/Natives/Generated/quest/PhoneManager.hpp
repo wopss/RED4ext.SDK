@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PhoneManager : quest::IPhoneManager
 {
     static constexpr const char* NAME = "questPhoneManager";
@@ -20,6 +21,7 @@ struct PhoneManager : quest::IPhoneManager
 };
 RED4EXT_ASSERT_SIZE(PhoneManager, 0x88);
 } // namespace quest
+using questPhoneManager = quest::PhoneManager;
 } // namespace RED4ext
 
 // clang-format on

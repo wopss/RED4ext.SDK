@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GameStatePropertyChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "gameuiGameStatePropertyChangedCallback";
@@ -20,6 +21,7 @@ struct GameStatePropertyChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(GameStatePropertyChangedCallback, 0x38);
 } // namespace game::ui
+using gameuiGameStatePropertyChangedCallback = game::ui::GameStatePropertyChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

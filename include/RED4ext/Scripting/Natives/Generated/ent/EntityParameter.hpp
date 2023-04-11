@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntityParameter : ISerializable
 {
     static constexpr const char* NAME = "entEntityParameter";
@@ -19,6 +20,7 @@ struct EntityParameter : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EntityParameter, 0x30);
 } // namespace ent
+using entEntityParameter = ent::EntityParameter;
 } // namespace RED4ext
 
 // clang-format on

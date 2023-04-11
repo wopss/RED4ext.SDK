@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct GlobalNodeRef
 {
     static constexpr const char* NAME = "worldGlobalNodeRef";
@@ -19,6 +20,7 @@ struct GlobalNodeRef
 };
 RED4EXT_ASSERT_SIZE(GlobalNodeRef, 0x8);
 } // namespace world
+using worldGlobalNodeRef = world::GlobalNodeRef;
 using GlobalNodeRef = world::GlobalNodeRef;
 } // namespace RED4ext
 

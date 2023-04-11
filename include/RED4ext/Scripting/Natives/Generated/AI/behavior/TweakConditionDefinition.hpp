@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct TweakConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorTweakConditionDefinition";
@@ -21,6 +22,7 @@ struct TweakConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(TweakConditionDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorTweakConditionDefinition = AI::behavior::TweakConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

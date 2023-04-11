@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DroneAnimationSetup_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataDroneAnimationSetup_Record";
@@ -20,6 +21,7 @@ struct DroneAnimationSetup_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(DroneAnimationSetup_Record, 0x70);
 } // namespace game::data
+using gamedataDroneAnimationSetup_Record = game::data::DroneAnimationSetup_Record;
 using DroneAnimationSetup_Record = game::data::DroneAnimationSetup_Record;
 } // namespace RED4ext
 

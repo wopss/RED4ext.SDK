@@ -24,7 +24,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PlayerActorDef
 {
     static constexpr const char* NAME = "scnPlayerActorDef";
@@ -53,6 +54,7 @@ struct PlayerActorDef
 };
 RED4EXT_ASSERT_SIZE(PlayerActorDef, 0x100);
 } // namespace scn
+using scnPlayerActorDef = scn::PlayerActorDef;
 } // namespace RED4ext
 
 // clang-format on

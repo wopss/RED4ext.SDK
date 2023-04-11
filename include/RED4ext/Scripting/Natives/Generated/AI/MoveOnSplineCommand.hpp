@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace AI { 
+namespace AI
+{
 struct MoveOnSplineCommand : AI::MoveCommand
 {
     static constexpr const char* NAME = "AIMoveOnSplineCommand";
@@ -54,6 +55,7 @@ struct MoveOnSplineCommand : AI::MoveCommand
 };
 RED4EXT_ASSERT_SIZE(MoveOnSplineCommand, 0xF0);
 } // namespace AI
+using AIMoveOnSplineCommand = AI::MoveOnSplineCommand;
 } // namespace RED4ext
 
 // clang-format on

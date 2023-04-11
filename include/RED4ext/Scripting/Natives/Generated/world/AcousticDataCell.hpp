@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AcousticDataCell
 {
     static constexpr const char* NAME = "worldAcousticDataCell";
@@ -23,6 +24,7 @@ struct AcousticDataCell
 };
 RED4EXT_ASSERT_SIZE(AcousticDataCell, 0x68);
 } // namespace world
+using worldAcousticDataCell = world::AcousticDataCell;
 } // namespace RED4ext
 
 // clang-format on

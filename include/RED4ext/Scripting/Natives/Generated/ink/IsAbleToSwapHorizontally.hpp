@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IsAbleToSwapHorizontally : ink::UserData
 {
     static constexpr const char* NAME = "inkIsAbleToSwapHorizontally";
@@ -19,6 +20,7 @@ struct IsAbleToSwapHorizontally : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(IsAbleToSwapHorizontally, 0x40);
 } // namespace ink
+using inkIsAbleToSwapHorizontally = ink::IsAbleToSwapHorizontally;
 } // namespace RED4ext
 
 // clang-format on

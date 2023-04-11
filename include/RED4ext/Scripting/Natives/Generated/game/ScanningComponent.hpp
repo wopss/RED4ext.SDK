@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningComponent : game::Component
 {
     static constexpr const char* NAME = "gameScanningComponent";
@@ -32,6 +33,7 @@ struct ScanningComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(ScanningComponent, 0x110);
 } // namespace game
+using gameScanningComponent = game::ScanningComponent;
 using ScanningComponent = game::ScanningComponent;
 } // namespace RED4ext
 

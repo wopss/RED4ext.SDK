@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct TaskNameMessage
 {
     static constexpr const char* NAME = "redTaskNameMessage";
@@ -24,6 +25,7 @@ struct TaskNameMessage
 };
 RED4EXT_ASSERT_SIZE(TaskNameMessage, 0x30);
 } // namespace red
+using redTaskNameMessage = red::TaskNameMessage;
 } // namespace RED4ext
 
 // clang-format on

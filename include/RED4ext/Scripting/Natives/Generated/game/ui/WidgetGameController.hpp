@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WidgetGameController : world::ui::IWidgetGameController
 {
     static constexpr const char* NAME = "gameuiWidgetGameController";
@@ -20,6 +21,7 @@ struct WidgetGameController : world::ui::IWidgetGameController
 };
 RED4EXT_ASSERT_SIZE(WidgetGameController, 0xE0);
 } // namespace game::ui
+using gameuiWidgetGameController = game::ui::WidgetGameController;
 using inkGameController = game::ui::WidgetGameController;
 } // namespace RED4ext
 

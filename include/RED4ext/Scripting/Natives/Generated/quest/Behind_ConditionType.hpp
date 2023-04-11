@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Behind_ConditionType : quest::ISensesConditionType
 {
     static constexpr const char* NAME = "questBehind_ConditionType";
@@ -24,6 +25,7 @@ struct Behind_ConditionType : quest::ISensesConditionType
 };
 RED4EXT_ASSERT_SIZE(Behind_ConditionType, 0x78);
 } // namespace quest
+using questBehind_ConditionType = quest::Behind_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

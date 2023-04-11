@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct FPSCounterGameController : game::ui::HUDGameController
 {
     static constexpr const char* NAME = "gameuiFPSCounterGameController";
@@ -22,6 +23,7 @@ struct FPSCounterGameController : game::ui::HUDGameController
 };
 RED4EXT_ASSERT_SIZE(FPSCounterGameController, 0x118);
 } // namespace game::ui
+using gameuiFPSCounterGameController = game::ui::FPSCounterGameController;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DependentWorkspotData : ISerializable
 {
     static constexpr const char* NAME = "gameDependentWorkspotData";
@@ -20,6 +21,7 @@ struct DependentWorkspotData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DependentWorkspotData, 0x68);
 } // namespace game
+using gameDependentWorkspotData = game::DependentWorkspotData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct BlockoutEdge
 {
     static constexpr const char* NAME = "worldBlockoutEdge";
@@ -23,6 +24,7 @@ struct BlockoutEdge
 };
 RED4EXT_ASSERT_SIZE(BlockoutEdge, 0x14);
 } // namespace world
+using worldBlockoutEdge = world::BlockoutEdge;
 } // namespace RED4ext
 
 // clang-format on

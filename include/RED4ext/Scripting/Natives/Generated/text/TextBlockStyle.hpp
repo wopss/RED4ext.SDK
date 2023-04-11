@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace text { 
+namespace text
+{
 struct TextBlockStyle
 {
     static constexpr const char* NAME = "textTextBlockStyle";
@@ -29,6 +30,7 @@ struct TextBlockStyle
 };
 RED4EXT_ASSERT_SIZE(TextBlockStyle, 0xB0);
 } // namespace text
+using textTextBlockStyle = text::TextBlockStyle;
 } // namespace RED4ext
 
 // clang-format on

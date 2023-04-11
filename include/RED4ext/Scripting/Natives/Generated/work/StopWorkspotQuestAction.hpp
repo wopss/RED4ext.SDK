@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct StopWorkspotQuestAction : work::IWorkspotQuestAction
 {
     static constexpr const char* NAME = "workStopWorkspotQuestAction";
@@ -23,6 +24,7 @@ struct StopWorkspotQuestAction : work::IWorkspotQuestAction
 };
 RED4EXT_ASSERT_SIZE(StopWorkspotQuestAction, 0x40);
 } // namespace work
+using workStopWorkspotQuestAction = work::StopWorkspotQuestAction;
 } // namespace RED4ext
 
 // clang-format on

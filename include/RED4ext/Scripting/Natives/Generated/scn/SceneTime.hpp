@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneTime
 {
     static constexpr const char* NAME = "scnSceneTime";
@@ -19,6 +20,7 @@ struct SceneTime
 };
 RED4EXT_ASSERT_SIZE(SceneTime, 0x4);
 } // namespace scn
+using scnSceneTime = scn::SceneTime;
 } // namespace RED4ext
 
 // clang-format on

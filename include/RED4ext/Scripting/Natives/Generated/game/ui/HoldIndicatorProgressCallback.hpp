@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HoldIndicatorProgressCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "gameuiHoldIndicatorProgressCallback";
@@ -20,6 +21,7 @@ struct HoldIndicatorProgressCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(HoldIndicatorProgressCallback, 0x38);
 } // namespace game::ui
+using gameuiHoldIndicatorProgressCallback = game::ui::HoldIndicatorProgressCallback;
 } // namespace RED4ext
 
 // clang-format on

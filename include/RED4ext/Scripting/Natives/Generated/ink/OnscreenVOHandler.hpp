@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct OnscreenVOHandler
 {
     static constexpr const char* NAME = "inkOnscreenVOHandler";
@@ -19,6 +20,7 @@ struct OnscreenVOHandler
 };
 RED4EXT_ASSERT_SIZE(OnscreenVOHandler, 0x68);
 } // namespace ink
+using inkOnscreenVOHandler = ink::OnscreenVOHandler;
 } // namespace RED4ext
 
 // clang-format on

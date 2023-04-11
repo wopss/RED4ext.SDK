@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct IFunctorDefinition : ISerializable
 {
     static constexpr const char* NAME = "gameinteractionsIFunctorDefinition";
@@ -19,6 +20,7 @@ struct IFunctorDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IFunctorDefinition, 0x30);
 } // namespace game::interactions
+using gameinteractionsIFunctorDefinition = game::interactions::IFunctorDefinition;
 } // namespace RED4ext
 
 // clang-format on

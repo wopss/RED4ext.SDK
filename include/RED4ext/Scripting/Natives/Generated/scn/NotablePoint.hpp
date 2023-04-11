@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct NotablePoint
 {
     static constexpr const char* NAME = "scnNotablePoint";
@@ -23,6 +24,7 @@ struct NotablePoint
 };
 RED4EXT_ASSERT_SIZE(NotablePoint, 0x10);
 } // namespace scn
+using scnNotablePoint = scn::NotablePoint;
 } // namespace RED4ext
 
 // clang-format on

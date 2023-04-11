@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PoolIdentifier : ink::UserData
 {
     static constexpr const char* NAME = "inkPoolIdentifier";
@@ -20,6 +21,7 @@ struct PoolIdentifier : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(PoolIdentifier, 0x48);
 } // namespace ink
+using inkPoolIdentifier = ink::PoolIdentifier;
 } // namespace RED4ext
 
 // clang-format on

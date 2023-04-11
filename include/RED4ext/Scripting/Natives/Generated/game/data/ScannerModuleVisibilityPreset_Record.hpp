@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ScannerModuleVisibilityPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataScannerModuleVisibilityPreset_Record";
@@ -20,6 +21,7 @@ struct ScannerModuleVisibilityPreset_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ScannerModuleVisibilityPreset_Record, 0x70);
 } // namespace game::data
+using gamedataScannerModuleVisibilityPreset_Record = game::data::ScannerModuleVisibilityPreset_Record;
 using ScannerModuleVisibilityPreset_Record = game::data::ScannerModuleVisibilityPreset_Record;
 } // namespace RED4ext
 

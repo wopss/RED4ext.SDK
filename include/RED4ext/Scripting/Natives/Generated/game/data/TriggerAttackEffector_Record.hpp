@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct TriggerAttackEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataTriggerAttackEffector_Record";
@@ -20,6 +21,7 @@ struct TriggerAttackEffector_Record : game::data::Effector_Record
 };
 RED4EXT_ASSERT_SIZE(TriggerAttackEffector_Record, 0x60);
 } // namespace game::data
+using gamedataTriggerAttackEffector_Record = game::data::TriggerAttackEffector_Record;
 using TriggerAttackEffector_Record = game::data::TriggerAttackEffector_Record;
 } // namespace RED4ext
 

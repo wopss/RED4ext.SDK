@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace quest { struct IInt32ValueProvider; }
 
-namespace quest { 
+namespace quest
+{
 struct Int32ValueWrapper
 {
     static constexpr const char* NAME = "questInt32ValueWrapper";
@@ -22,6 +23,7 @@ struct Int32ValueWrapper
 };
 RED4EXT_ASSERT_SIZE(Int32ValueWrapper, 0x10);
 } // namespace quest
+using questInt32ValueWrapper = quest::Int32ValueWrapper;
 } // namespace RED4ext
 
 // clang-format on

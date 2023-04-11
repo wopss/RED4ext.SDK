@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DelayedFunctionsScheduler : ISerializable
 {
     static constexpr const char* NAME = "gameDelayedFunctionsScheduler";
@@ -26,6 +27,7 @@ struct DelayedFunctionsScheduler : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DelayedFunctionsScheduler, 0x60);
 } // namespace game
+using gameDelayedFunctionsScheduler = game::DelayedFunctionsScheduler;
 } // namespace RED4ext
 
 // clang-format on

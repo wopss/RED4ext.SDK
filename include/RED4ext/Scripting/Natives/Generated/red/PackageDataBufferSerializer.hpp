@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct PackageDataBufferSerializer : red::PackageCustomTypeSerializer
 {
     static constexpr const char* NAME = "redPackageDataBufferSerializer";
@@ -19,6 +20,7 @@ struct PackageDataBufferSerializer : red::PackageCustomTypeSerializer
 };
 RED4EXT_ASSERT_SIZE(PackageDataBufferSerializer, 0x8);
 } // namespace red
+using redPackageDataBufferSerializer = red::PackageDataBufferSerializer;
 } // namespace RED4ext
 
 // clang-format on

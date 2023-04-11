@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SectionInternalsActorBehavior
 {
     static constexpr const char* NAME = "scnSectionInternalsActorBehavior";
@@ -22,6 +23,7 @@ struct SectionInternalsActorBehavior
 };
 RED4EXT_ASSERT_SIZE(SectionInternalsActorBehavior, 0x8);
 } // namespace scn
+using scnSectionInternalsActorBehavior = scn::SectionInternalsActorBehavior;
 } // namespace RED4ext
 
 // clang-format on

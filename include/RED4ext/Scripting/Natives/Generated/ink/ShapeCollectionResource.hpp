@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ShapeCollectionResource : CResource
 {
     static constexpr const char* NAME = "inkShapeCollectionResource";
@@ -22,6 +23,7 @@ struct ShapeCollectionResource : CResource
 };
 RED4EXT_ASSERT_SIZE(ShapeCollectionResource, 0x50);
 } // namespace ink
+using inkShapeCollectionResource = ink::ShapeCollectionResource;
 } // namespace RED4ext
 
 // clang-format on

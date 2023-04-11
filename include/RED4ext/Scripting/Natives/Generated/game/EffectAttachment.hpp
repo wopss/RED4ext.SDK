@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "gameEffectAttachment";
@@ -19,6 +20,7 @@ struct EffectAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(EffectAttachment, 0x50);
 } // namespace game
+using gameEffectAttachment = game::EffectAttachment;
 } // namespace RED4ext
 
 // clang-format on

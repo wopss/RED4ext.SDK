@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HitRepresentationResults
 {
     static constexpr const char* NAME = "gameHitRepresentationResults";
@@ -21,6 +22,7 @@ struct HitRepresentationResults
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationResults, 0x10);
 } // namespace game
+using gameHitRepresentationResults = game::HitRepresentationResults;
 } // namespace RED4ext
 
 // clang-format on

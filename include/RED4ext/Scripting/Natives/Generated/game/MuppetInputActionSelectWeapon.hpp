@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MuppetInputActionSelectWeapon : game::IMuppetInputAction
 {
     static constexpr const char* NAME = "gameMuppetInputActionSelectWeapon";
@@ -21,6 +22,7 @@ struct MuppetInputActionSelectWeapon : game::IMuppetInputAction
 };
 RED4EXT_ASSERT_SIZE(MuppetInputActionSelectWeapon, 0x18);
 } // namespace game
+using gameMuppetInputActionSelectWeapon = game::MuppetInputActionSelectWeapon;
 } // namespace RED4ext
 
 // clang-format on

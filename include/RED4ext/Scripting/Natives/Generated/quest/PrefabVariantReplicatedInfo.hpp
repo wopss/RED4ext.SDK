@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PrefabVariantReplicatedInfo
 {
     static constexpr const char* NAME = "questPrefabVariantReplicatedInfo";
@@ -22,6 +23,7 @@ struct PrefabVariantReplicatedInfo
 };
 RED4EXT_ASSERT_SIZE(PrefabVariantReplicatedInfo, 0x10);
 } // namespace quest
+using questPrefabVariantReplicatedInfo = quest::PrefabVariantReplicatedInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace shared { 
+namespace shared
+{
 struct ResourceCommandOutcome
 {
     static constexpr const char* NAME = "sharedResourceCommandOutcome";
@@ -25,6 +26,7 @@ struct ResourceCommandOutcome
 };
 RED4EXT_ASSERT_SIZE(ResourceCommandOutcome, 0x38);
 } // namespace shared
+using sharedResourceCommandOutcome = shared::ResourceCommandOutcome;
 } // namespace RED4ext
 
 // clang-format on

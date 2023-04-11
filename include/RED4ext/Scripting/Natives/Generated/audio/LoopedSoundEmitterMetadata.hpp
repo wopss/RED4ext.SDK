@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LoopedSoundEmitterMetadata : audio::EmitterMetadata
 {
     static constexpr const char* NAME = "audioLoopedSoundEmitterMetadata";
@@ -21,6 +22,7 @@ struct LoopedSoundEmitterMetadata : audio::EmitterMetadata
 };
 RED4EXT_ASSERT_SIZE(LoopedSoundEmitterMetadata, 0x40);
 } // namespace audio
+using audioLoopedSoundEmitterMetadata = audio::LoopedSoundEmitterMetadata;
 } // namespace RED4ext
 
 // clang-format on

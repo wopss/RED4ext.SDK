@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CurveStatModifier : game::StatModifierBase
 {
     static constexpr const char* NAME = "gameCurveStatModifier";
@@ -20,6 +21,7 @@ struct CurveStatModifier : game::StatModifierBase
 };
 RED4EXT_ASSERT_SIZE(CurveStatModifier, 0x30);
 } // namespace game
+using gameCurveStatModifier = game::CurveStatModifier;
 } // namespace RED4ext
 
 // clang-format on

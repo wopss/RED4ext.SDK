@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct MotionTableProvider_StaticSwitch : anim::IMotionTableProvider
 {
     static constexpr const char* NAME = "animMotionTableProvider_StaticSwitch";
@@ -19,6 +20,7 @@ struct MotionTableProvider_StaticSwitch : anim::IMotionTableProvider
 };
 RED4EXT_ASSERT_SIZE(MotionTableProvider_StaticSwitch, 0x50);
 } // namespace anim
+using animMotionTableProvider_StaticSwitch = anim::MotionTableProvider_StaticSwitch;
 } // namespace RED4ext
 
 // clang-format on

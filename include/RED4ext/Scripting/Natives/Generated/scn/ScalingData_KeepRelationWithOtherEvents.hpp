@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ScalingData_KeepRelationWithOtherEvents : scn::IScalingData
 {
     static constexpr const char* NAME = "scnScalingData_KeepRelationWithOtherEvents";
@@ -22,6 +23,7 @@ struct ScalingData_KeepRelationWithOtherEvents : scn::IScalingData
 };
 RED4EXT_ASSERT_SIZE(ScalingData_KeepRelationWithOtherEvents, 0x38);
 } // namespace scn
+using scnScalingData_KeepRelationWithOtherEvents = scn::ScalingData_KeepRelationWithOtherEvents;
 } // namespace RED4ext
 
 // clang-format on

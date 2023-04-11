@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct IsBlockedByCompanionConditionDefinition : AI::behavior::CompanionConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorIsBlockedByCompanionConditionDefinition";
@@ -23,6 +24,7 @@ struct IsBlockedByCompanionConditionDefinition : AI::behavior::CompanionConditio
 };
 RED4EXT_ASSERT_SIZE(IsBlockedByCompanionConditionDefinition, 0x68);
 } // namespace AI::behavior
+using AIbehaviorIsBlockedByCompanionConditionDefinition = AI::behavior::IsBlockedByCompanionConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct AssignGuardAreaCommand : AI::Command
 {
     static constexpr const char* NAME = "AIAssignGuardAreaCommand";
@@ -21,6 +22,7 @@ struct AssignGuardAreaCommand : AI::Command
 };
 RED4EXT_ASSERT_SIZE(AssignGuardAreaCommand, 0x68);
 } // namespace AI
+using AIAssignGuardAreaCommand = AI::AssignGuardAreaCommand;
 using AIAssignRestrictMovementAreaCommand = AI::AssignGuardAreaCommand;
 } // namespace RED4ext
 

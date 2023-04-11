@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct NodeRefToObjectTaskDefinition : AI::behavior::NodeRefConverterTaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorNodeRefToObjectTaskDefinition";
@@ -19,6 +20,7 @@ struct NodeRefToObjectTaskDefinition : AI::behavior::NodeRefConverterTaskDefinit
 };
 RED4EXT_ASSERT_SIZE(NodeRefToObjectTaskDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorNodeRefToObjectTaskDefinition = AI::behavior::NodeRefToObjectTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

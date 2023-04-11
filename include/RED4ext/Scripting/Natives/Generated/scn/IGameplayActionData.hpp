@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct IGameplayActionData : ISerializable
 {
     static constexpr const char* NAME = "scnIGameplayActionData";
@@ -19,6 +20,7 @@ struct IGameplayActionData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IGameplayActionData, 0x30);
 } // namespace scn
+using scnIGameplayActionData = scn::IGameplayActionData;
 } // namespace RED4ext
 
 // clang-format on

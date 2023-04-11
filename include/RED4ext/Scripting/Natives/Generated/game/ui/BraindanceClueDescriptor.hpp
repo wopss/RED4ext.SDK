@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BraindanceClueDescriptor
 {
     static constexpr const char* NAME = "gameuiBraindanceClueDescriptor";
@@ -26,6 +27,7 @@ struct BraindanceClueDescriptor
 };
 RED4EXT_ASSERT_SIZE(BraindanceClueDescriptor, 0x18);
 } // namespace game::ui
+using gameuiBraindanceClueDescriptor = game::ui::BraindanceClueDescriptor;
 using BraindanceClueDescriptor = game::ui::BraindanceClueDescriptor;
 } // namespace RED4ext
 

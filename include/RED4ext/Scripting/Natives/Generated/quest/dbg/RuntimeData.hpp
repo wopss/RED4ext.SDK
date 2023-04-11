@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct ISerializable;
 
-namespace quest::dbg { 
+namespace quest::dbg
+{
 struct RuntimeData
 {
     static constexpr const char* NAME = "questdbgRuntimeData";
@@ -27,6 +28,7 @@ struct RuntimeData
 };
 RED4EXT_ASSERT_SIZE(RuntimeData, 0x30);
 } // namespace quest::dbg
+using questdbgRuntimeData = quest::dbg::RuntimeData;
 } // namespace RED4ext
 
 // clang-format on

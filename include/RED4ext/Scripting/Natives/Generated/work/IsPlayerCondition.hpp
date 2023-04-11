@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct IsPlayerCondition : work::IWorkspotCondition
 {
     static constexpr const char* NAME = "workIsPlayerCondition";
@@ -19,6 +20,7 @@ struct IsPlayerCondition : work::IWorkspotCondition
 };
 RED4EXT_ASSERT_SIZE(IsPlayerCondition, 0x38);
 } // namespace work
+using workIsPlayerCondition = work::IsPlayerCondition;
 } // namespace RED4ext
 
 // clang-format on

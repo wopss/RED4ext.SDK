@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct BoundingCircle : game::ui::arcade::BoundingShape
 {
     static constexpr const char* NAME = "gameuiarcadeBoundingCircle";
@@ -19,6 +20,7 @@ struct BoundingCircle : game::ui::arcade::BoundingShape
 };
 RED4EXT_ASSERT_SIZE(BoundingCircle, 0x30);
 } // namespace game::ui::arcade
+using gameuiarcadeBoundingCircle = game::ui::arcade::BoundingCircle;
 } // namespace RED4ext
 
 // clang-format on

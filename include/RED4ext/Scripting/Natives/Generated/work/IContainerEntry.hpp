@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace work { struct IEntry; }
 
-namespace work { 
+namespace work
+{
 struct IContainerEntry : work::IEntry
 {
     static constexpr const char* NAME = "workIContainerEntry";
@@ -26,6 +27,7 @@ struct IContainerEntry : work::IEntry
 };
 RED4EXT_ASSERT_SIZE(IContainerEntry, 0x50);
 } // namespace work
+using workIContainerEntry = work::IContainerEntry;
 } // namespace RED4ext
 
 // clang-format on

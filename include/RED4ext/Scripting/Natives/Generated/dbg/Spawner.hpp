@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace dbg { 
+namespace dbg
+{
 struct Spawner : game::Object
 {
     static constexpr const char* NAME = "dbgSpawner";
@@ -27,6 +28,7 @@ struct Spawner : game::Object
 };
 RED4EXT_ASSERT_SIZE(Spawner, 0x258);
 } // namespace dbg
+using dbgSpawner = dbg::Spawner;
 } // namespace RED4ext
 
 // clang-format on

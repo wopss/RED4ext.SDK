@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TargetSearchFilter
 {
     static constexpr const char* NAME = "gameTargetSearchFilter";
@@ -19,6 +20,7 @@ struct TargetSearchFilter
 };
 RED4EXT_ASSERT_SIZE(TargetSearchFilter, 0x18);
 } // namespace game
+using gameTargetSearchFilter = game::TargetSearchFilter;
 using TargetSearchFilter = game::TargetSearchFilter;
 } // namespace RED4ext
 

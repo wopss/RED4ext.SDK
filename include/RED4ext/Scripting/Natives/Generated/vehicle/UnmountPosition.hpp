@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct UnmountPosition
 {
     static constexpr const char* NAME = "vehicleUnmountPosition";
@@ -22,6 +23,7 @@ struct UnmountPosition
 };
 RED4EXT_ASSERT_SIZE(UnmountPosition, 0x10);
 } // namespace vehicle
+using vehicleUnmountPosition = vehicle::UnmountPosition;
 } // namespace RED4ext
 
 // clang-format on

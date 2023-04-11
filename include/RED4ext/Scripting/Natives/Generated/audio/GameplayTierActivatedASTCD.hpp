@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GameplayTierActivatedASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioGameplayTierActivatedASTCD";
@@ -22,6 +23,7 @@ struct GameplayTierActivatedASTCD : audio::AudioStateTransitionConditionData
 };
 RED4EXT_ASSERT_SIZE(GameplayTierActivatedASTCD, 0x40);
 } // namespace audio
+using audioGameplayTierActivatedASTCD = audio::GameplayTierActivatedASTCD;
 } // namespace RED4ext
 
 // clang-format on

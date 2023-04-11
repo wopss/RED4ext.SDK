@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VideoWidgetSummary
 {
     static constexpr const char* NAME = "inkVideoWidgetSummary";
@@ -26,6 +27,7 @@ struct VideoWidgetSummary
 };
 RED4EXT_ASSERT_SIZE(VideoWidgetSummary, 0x20);
 } // namespace ink
+using inkVideoWidgetSummary = ink::VideoWidgetSummary;
 using VideoWidgetSummary = ink::VideoWidgetSummary;
 } // namespace RED4ext
 

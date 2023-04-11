@@ -17,7 +17,8 @@ struct CResource;
 namespace audio { struct LocomotionCustomActionVfxDictionary; }
 namespace audio { struct LocomotionStateVfxDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct FootwearVsMaterialVfxMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioFootwearVsMaterialVfxMetadata";
@@ -30,6 +31,7 @@ struct FootwearVsMaterialVfxMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(FootwearVsMaterialVfxMetadata, 0x68);
 } // namespace audio
+using audioFootwearVsMaterialVfxMetadata = audio::FootwearVsMaterialVfxMetadata;
 } // namespace RED4ext
 
 // clang-format on

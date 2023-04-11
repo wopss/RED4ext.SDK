@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FootStepAdjuster : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_FootStepAdjuster";
@@ -41,6 +42,7 @@ struct AnimNode_FootStepAdjuster : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FootStepAdjuster, 0x2F0);
 } // namespace anim
+using animAnimNode_FootStepAdjuster = anim::AnimNode_FootStepAdjuster;
 } // namespace RED4ext
 
 // clang-format on

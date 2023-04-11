@@ -15,7 +15,8 @@ namespace RED4ext
 namespace world { struct Effect; }
 namespace world { struct EnvironmentAreaParameters; }
 
-namespace world { 
+namespace world
+{
 struct WeatherState : ISerializable
 {
     static constexpr const char* NAME = "worldWeatherState";
@@ -31,6 +32,7 @@ struct WeatherState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WeatherState, 0x138);
 } // namespace world
+using worldWeatherState = world::WeatherState;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ClearForcedBehavioursNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questClearForcedBehavioursNodeDefinition";
@@ -21,6 +22,7 @@ struct ClearForcedBehavioursNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(ClearForcedBehavioursNodeDefinition, 0x80);
 } // namespace quest
+using questClearForcedBehavioursNodeDefinition = quest::ClearForcedBehavioursNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

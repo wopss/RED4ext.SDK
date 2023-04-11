@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MeleeRigMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioMeleeRigMap";
@@ -22,6 +23,7 @@ struct MeleeRigMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(MeleeRigMap, 0x48);
 } // namespace audio
+using audioMeleeRigMap = audio::MeleeRigMap;
 } // namespace RED4ext
 
 // clang-format on

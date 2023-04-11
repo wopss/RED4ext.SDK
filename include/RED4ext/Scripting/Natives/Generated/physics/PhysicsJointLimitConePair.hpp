@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct PhysicsJointLimitConePair : physics::PhysicsJointLimitBase
 {
     static constexpr const char* NAME = "physicsPhysicsJointLimitConePair";
@@ -25,6 +26,7 @@ struct PhysicsJointLimitConePair : physics::PhysicsJointLimitBase
 };
 RED4EXT_ASSERT_SIZE(PhysicsJointLimitConePair, 0x30);
 } // namespace physics
+using physicsPhysicsJointLimitConePair = physics::PhysicsJointLimitConePair;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TPPCameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "gameTPPCameraComponent";
@@ -20,6 +21,7 @@ struct TPPCameraComponent : game::CameraComponent
 };
 RED4EXT_ASSERT_SIZE(TPPCameraComponent, 0x3B0);
 } // namespace game
+using gameTPPCameraComponent = game::TPPCameraComponent;
 using TPPCameraComponent = game::TPPCameraComponent;
 } // namespace RED4ext
 

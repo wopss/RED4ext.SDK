@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct STwoBonesIKSolverData
 {
     static constexpr const char* NAME = "animSTwoBonesIKSolverData";
@@ -44,6 +45,7 @@ struct STwoBonesIKSolverData
 };
 RED4EXT_ASSERT_SIZE(STwoBonesIKSolverData, 0x130);
 } // namespace anim
+using animSTwoBonesIKSolverData = anim::STwoBonesIKSolverData;
 } // namespace RED4ext
 
 // clang-format on

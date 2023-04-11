@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BinkVideoSummary
 {
     static constexpr const char* NAME = "gameBinkVideoSummary";
@@ -23,6 +24,7 @@ struct BinkVideoSummary
 };
 RED4EXT_ASSERT_SIZE(BinkVideoSummary, 0x14);
 } // namespace game
+using gameBinkVideoSummary = game::BinkVideoSummary;
 using BinkVideoSummary = game::BinkVideoSummary;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::graph { 
+namespace game::graph
+{
 struct CGraphResource : CResource
 {
     static constexpr const char* NAME = "gamegraphCGraphResource";
@@ -20,6 +21,7 @@ struct CGraphResource : CResource
 };
 RED4EXT_ASSERT_SIZE(CGraphResource, 0x50);
 } // namespace game::graph
+using gamegraphCGraphResource = game::graph::CGraphResource;
 } // namespace RED4ext
 
 // clang-format on

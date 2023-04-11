@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GridDataFillFinished : red::Event
 {
     static constexpr const char* NAME = "gameuiGridDataFillFinished";
@@ -19,6 +20,7 @@ struct GridDataFillFinished : red::Event
 };
 RED4EXT_ASSERT_SIZE(GridDataFillFinished, 0x40);
 } // namespace game::ui
+using gameuiGridDataFillFinished = game::ui::GridDataFillFinished;
 } // namespace RED4ext
 
 // clang-format on

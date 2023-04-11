@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon::events { 
+namespace game::weapon::events
+{
 struct EnableSmartGunHandlerEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsEnableSmartGunHandlerEvent";
@@ -20,6 +21,7 @@ struct EnableSmartGunHandlerEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(EnableSmartGunHandlerEvent, 0x58);
 } // namespace game::weapon::events
+using gameweaponeventsEnableSmartGunHandlerEvent = game::weapon::events::EnableSmartGunHandlerEvent;
 } // namespace RED4ext
 
 // clang-format on

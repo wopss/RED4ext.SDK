@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TriggerActivatorComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entTriggerActivatorComponent";
@@ -27,6 +28,7 @@ struct TriggerActivatorComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(TriggerActivatorComponent, 0x150);
 } // namespace ent
+using entTriggerActivatorComponent = ent::TriggerActivatorComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ProxyCustomGeometryParams
 {
     static constexpr const char* NAME = "worldProxyCustomGeometryParams";
@@ -21,6 +22,7 @@ struct ProxyCustomGeometryParams
 };
 RED4EXT_ASSERT_SIZE(ProxyCustomGeometryParams, 0x2);
 } // namespace world
+using worldProxyCustomGeometryParams = world::ProxyCustomGeometryParams;
 } // namespace RED4ext
 
 // clang-format on

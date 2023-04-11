@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetImmovable_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questSetImmovable_NodeType";
@@ -23,6 +24,7 @@ struct SetImmovable_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetImmovable_NodeType, 0x70);
 } // namespace quest
+using questSetImmovable_NodeType = quest::SetImmovable_NodeType;
 } // namespace RED4ext
 
 // clang-format on

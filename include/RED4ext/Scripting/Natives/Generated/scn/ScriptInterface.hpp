@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "scnScriptInterface";
@@ -20,6 +21,7 @@ struct ScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptInterface, 0x48);
 } // namespace scn
+using scnScriptInterface = scn::ScriptInterface;
 using SceneSystemInterface = scn::ScriptInterface;
 } // namespace RED4ext
 

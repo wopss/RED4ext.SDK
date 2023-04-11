@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct SpiralParams : IScriptable
 {
     static constexpr const char* NAME = "gameprojectileSpiralParams";
@@ -32,6 +33,7 @@ struct SpiralParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SpiralParams, 0x68);
 } // namespace game::projectile
+using gameprojectileSpiralParams = game::projectile::SpiralParams;
 using SpiralControllerParams = game::projectile::SpiralParams;
 } // namespace RED4ext
 

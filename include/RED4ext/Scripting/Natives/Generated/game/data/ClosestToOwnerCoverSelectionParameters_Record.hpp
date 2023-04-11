@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ClosestToOwnerCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataClosestToOwnerCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct ClosestToOwnerCoverSelectionParameters_Record : game::data::CoverSelectio
 };
 RED4EXT_ASSERT_SIZE(ClosestToOwnerCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
+using gamedataClosestToOwnerCoverSelectionParameters_Record = game::data::ClosestToOwnerCoverSelectionParameters_Record;
 using ClosestToOwnerCoverSelectionParameters_Record = game::data::ClosestToOwnerCoverSelectionParameters_Record;
 } // namespace RED4ext
 

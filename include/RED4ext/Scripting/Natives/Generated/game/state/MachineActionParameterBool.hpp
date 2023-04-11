@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineActionParameterBool
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterBool";
@@ -23,6 +24,7 @@ struct MachineActionParameterBool
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterBool, 0x18);
 } // namespace game::state
+using gamestateMachineActionParameterBool = game::state::MachineActionParameterBool;
 using ActionParameterBool = game::state::MachineActionParameterBool;
 } // namespace RED4ext
 

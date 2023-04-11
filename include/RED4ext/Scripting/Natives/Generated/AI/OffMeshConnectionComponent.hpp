@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct OffMeshConnectionComponent : ent::IComponent
 {
     static constexpr const char* NAME = "AIOffMeshConnectionComponent";
@@ -26,6 +27,7 @@ struct OffMeshConnectionComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(OffMeshConnectionComponent, 0xE8);
 } // namespace AI
+using AIOffMeshConnectionComponent = AI::OffMeshConnectionComponent;
 using OffMeshConnectionComponent = AI::OffMeshConnectionComponent;
 } // namespace RED4ext
 

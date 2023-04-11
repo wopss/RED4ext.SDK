@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ScriptableAudioInterface : IScriptable
 {
     static constexpr const char* NAME = "audioScriptableAudioInterface";
@@ -19,6 +20,7 @@ struct ScriptableAudioInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptableAudioInterface, 0x40);
 } // namespace audio
+using audioScriptableAudioInterface = audio::ScriptableAudioInterface;
 } // namespace RED4ext
 
 // clang-format on

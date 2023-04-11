@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SquadBase : ISerializable
 {
     static constexpr const char* NAME = "AISquadBase";
@@ -20,6 +21,7 @@ struct SquadBase : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SquadBase, 0x148);
 } // namespace AI
+using AISquadBase = AI::SquadBase;
 using SquadBase = AI::SquadBase;
 } // namespace RED4ext
 

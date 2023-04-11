@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::hit { 
+namespace game::hit
+{
 struct RepresentationEventsResetAllScaleMultipliers : red::Event
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsResetAllScaleMultipliers";
@@ -19,6 +20,7 @@ struct RepresentationEventsResetAllScaleMultipliers : red::Event
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsResetAllScaleMultipliers, 0x40);
 } // namespace game::hit
+using gamehitRepresentationEventsResetAllScaleMultipliers = game::hit::RepresentationEventsResetAllScaleMultipliers;
 using HitRepresentation_ResetAllScaleMultipliers = game::hit::RepresentationEventsResetAllScaleMultipliers;
 } // namespace RED4ext
 

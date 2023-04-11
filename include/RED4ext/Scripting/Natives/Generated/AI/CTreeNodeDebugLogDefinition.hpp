@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeDebugLogDefinition : AI::CTreeExtendableNodeDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeDebugLogDefinition";
@@ -24,6 +25,7 @@ struct CTreeNodeDebugLogDefinition : AI::CTreeExtendableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeDebugLogDefinition, 0x70);
 } // namespace AI
+using AICTreeNodeDebugLogDefinition = AI::CTreeNodeDebugLogDefinition;
 } // namespace RED4ext
 
 // clang-format on

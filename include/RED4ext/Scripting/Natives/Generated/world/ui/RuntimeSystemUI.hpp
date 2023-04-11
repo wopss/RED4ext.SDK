@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct RuntimeSystemUI : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worlduiRuntimeSystemUI";
@@ -20,6 +21,7 @@ struct RuntimeSystemUI : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemUI, 0x260);
 } // namespace world::ui
+using worlduiRuntimeSystemUI = world::ui::RuntimeSystemUI;
 } // namespace RED4ext
 
 // clang-format on

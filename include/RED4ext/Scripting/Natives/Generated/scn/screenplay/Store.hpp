@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn::screenplay { 
+namespace scn::screenplay
+{
 struct Store
 {
     static constexpr const char* NAME = "scnscreenplayStore";
@@ -23,6 +24,7 @@ struct Store
 };
 RED4EXT_ASSERT_SIZE(Store, 0x20);
 } // namespace scn::screenplay
+using scnscreenplayStore = scn::screenplay::Store;
 } // namespace RED4ext
 
 // clang-format on

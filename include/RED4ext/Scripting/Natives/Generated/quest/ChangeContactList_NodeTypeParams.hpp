@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct ChangeContactList_NodeTypeParams
 {
     static constexpr const char* NAME = "questChangeContactList_NodeTypeParams";
@@ -25,6 +26,7 @@ struct ChangeContactList_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(ChangeContactList_NodeTypeParams, 0x18);
 } // namespace quest
+using questChangeContactList_NodeTypeParams = quest::ChangeContactList_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

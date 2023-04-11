@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct SyncAnimClip : work::AnimClip
 {
     static constexpr const char* NAME = "workSyncAnimClip";
@@ -23,6 +24,7 @@ struct SyncAnimClip : work::AnimClip
 };
 RED4EXT_ASSERT_SIZE(SyncAnimClip, 0x70);
 } // namespace work
+using workSyncAnimClip = work::SyncAnimClip;
 } // namespace RED4ext
 
 // clang-format on

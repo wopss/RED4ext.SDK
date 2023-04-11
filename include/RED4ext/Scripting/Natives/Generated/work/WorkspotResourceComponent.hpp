@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace work { struct WorkspotResource; }
 
-namespace work { 
+namespace work
+{
 struct WorkspotResourceComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "workWorkspotResourceComponent";
@@ -29,6 +30,7 @@ struct WorkspotResourceComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(WorkspotResourceComponent, 0x180);
 } // namespace work
+using workWorkspotResourceComponent = work::WorkspotResourceComponent;
 using WorkspotResourceComponent = work::WorkspotResourceComponent;
 } // namespace RED4ext
 

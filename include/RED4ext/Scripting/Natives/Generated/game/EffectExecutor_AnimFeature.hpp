@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimFeature; }
 
-namespace game { 
+namespace game
+{
 struct EffectExecutor_AnimFeature : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_AnimFeature";
@@ -29,6 +30,7 @@ struct EffectExecutor_AnimFeature : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_AnimFeature, 0x68);
 } // namespace game
+using gameEffectExecutor_AnimFeature = game::EffectExecutor_AnimFeature;
 } // namespace RED4ext
 
 // clang-format on

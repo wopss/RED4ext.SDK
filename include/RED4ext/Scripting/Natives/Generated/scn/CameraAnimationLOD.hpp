@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CameraAnimationLOD
 {
     static constexpr const char* NAME = "scnCameraAnimationLOD";
@@ -24,6 +25,7 @@ struct CameraAnimationLOD
 };
 RED4EXT_ASSERT_SIZE(CameraAnimationLOD, 0x110);
 } // namespace scn
+using scnCameraAnimationLOD = scn::CameraAnimationLOD;
 } // namespace RED4ext
 
 // clang-format on

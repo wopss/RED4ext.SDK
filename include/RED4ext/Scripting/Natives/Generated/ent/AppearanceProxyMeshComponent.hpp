@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AppearanceProxyMeshComponent : ent::PhysicalMeshComponent
 {
     static constexpr const char* NAME = "entAppearanceProxyMeshComponent";
@@ -20,6 +21,7 @@ struct AppearanceProxyMeshComponent : ent::PhysicalMeshComponent
 };
 RED4EXT_ASSERT_SIZE(AppearanceProxyMeshComponent, 0x250);
 } // namespace ent
+using entAppearanceProxyMeshComponent = ent::AppearanceProxyMeshComponent;
 } // namespace RED4ext
 
 // clang-format on

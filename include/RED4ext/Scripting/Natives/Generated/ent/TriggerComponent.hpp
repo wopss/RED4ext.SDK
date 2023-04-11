@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TriggerComponent : ent::PhysicalTriggerComponent
 {
     static constexpr const char* NAME = "entTriggerComponent";
@@ -20,6 +21,7 @@ struct TriggerComponent : ent::PhysicalTriggerComponent
 };
 RED4EXT_ASSERT_SIZE(TriggerComponent, 0x190);
 } // namespace ent
+using entTriggerComponent = ent::TriggerComponent;
 } // namespace RED4ext
 
 // clang-format on

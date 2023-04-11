@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PropertyManager : ISerializable
 {
     static constexpr const char* NAME = "inkPropertyManager";
@@ -23,6 +24,7 @@ struct PropertyManager : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PropertyManager, 0x68);
 } // namespace ink
+using inkPropertyManager = ink::PropertyManager;
 } // namespace RED4ext
 
 // clang-format on

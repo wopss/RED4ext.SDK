@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct MaterialResource : CResource
 {
     static constexpr const char* NAME = "physicsMaterialResource";
@@ -32,6 +33,7 @@ struct MaterialResource : CResource
 };
 RED4EXT_ASSERT_SIZE(MaterialResource, 0x70);
 } // namespace physics
+using physicsMaterialResource = physics::MaterialResource;
 } // namespace RED4ext
 
 // clang-format on

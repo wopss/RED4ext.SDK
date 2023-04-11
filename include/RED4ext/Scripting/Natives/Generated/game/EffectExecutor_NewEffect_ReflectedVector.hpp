@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_NewEffect_ReflectedVector : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_NewEffect_ReflectedVector";
@@ -20,6 +21,7 @@ struct EffectExecutor_NewEffect_ReflectedVector : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_NewEffect_ReflectedVector, 0x60);
 } // namespace game
+using gameEffectExecutor_NewEffect_ReflectedVector = game::EffectExecutor_NewEffect_ReflectedVector;
 } // namespace RED4ext
 
 // clang-format on

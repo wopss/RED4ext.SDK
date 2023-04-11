@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_InGamePause : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmMenuState_InGamePause";
@@ -20,6 +21,7 @@ struct MenuState_InGamePause : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(MenuState_InGamePause, 0xE0);
 } // namespace gsm
+using gsmMenuState_InGamePause = gsm::MenuState_InGamePause;
 } // namespace RED4ext
 
 // clang-format on

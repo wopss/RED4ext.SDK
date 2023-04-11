@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimInputSetterInt : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimInputSetterInt";
@@ -21,6 +22,7 @@ struct AnimInputSetterInt : ent::AnimInputSetter
 };
 RED4EXT_ASSERT_SIZE(AnimInputSetterInt, 0x50);
 } // namespace ent
+using entAnimInputSetterInt = ent::AnimInputSetterInt;
 using AnimInputSetterInt = ent::AnimInputSetterInt;
 } // namespace RED4ext
 

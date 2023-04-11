@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct Marker
 {
     static constexpr const char* NAME = "scnMarker";
@@ -30,6 +31,7 @@ struct Marker
 };
 RED4EXT_ASSERT_SIZE(Marker, 0x60);
 } // namespace scn
+using scnMarker = scn::Marker;
 } // namespace RED4ext
 
 // clang-format on

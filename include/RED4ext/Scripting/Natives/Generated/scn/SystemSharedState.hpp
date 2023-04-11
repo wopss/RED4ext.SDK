@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SystemSharedState
 {
     static constexpr const char* NAME = "scnSystemSharedState";
@@ -19,6 +20,7 @@ struct SystemSharedState
 };
 RED4EXT_ASSERT_SIZE(SystemSharedState, 0x30);
 } // namespace scn
+using scnSystemSharedState = scn::SystemSharedState;
 } // namespace RED4ext
 
 // clang-format on

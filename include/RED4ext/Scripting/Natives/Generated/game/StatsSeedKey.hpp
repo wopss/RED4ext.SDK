@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatsSeedKey
 {
     static constexpr const char* NAME = "gameStatsSeedKey";
@@ -24,6 +25,7 @@ struct StatsSeedKey
 };
 RED4EXT_ASSERT_SIZE(StatsSeedKey, 0x18);
 } // namespace game
+using gameStatsSeedKey = game::StatsSeedKey;
 } // namespace RED4ext
 
 // clang-format on

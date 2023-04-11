@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace vehicle { 
+namespace vehicle
+{
 struct DriveToGameObjectEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleDriveToGameObjectEvent";
@@ -23,6 +24,7 @@ struct DriveToGameObjectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DriveToGameObjectEvent, 0x50);
 } // namespace vehicle
+using vehicleDriveToGameObjectEvent = vehicle::DriveToGameObjectEvent;
 } // namespace RED4ext
 
 // clang-format on

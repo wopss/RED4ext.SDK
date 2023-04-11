@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimStateTransitionInterpolator_Blend : anim::IAnimStateTransitionInterpolator
 {
     static constexpr const char* NAME = "animAnimStateTransitionInterpolator_Blend";
@@ -22,6 +23,7 @@ struct AnimStateTransitionInterpolator_Blend : anim::IAnimStateTransitionInterpo
 };
 RED4EXT_ASSERT_SIZE(AnimStateTransitionInterpolator_Blend, 0x38);
 } // namespace anim
+using animAnimStateTransitionInterpolator_Blend = anim::AnimStateTransitionInterpolator_Blend;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TelemetryTelemetrySystem : game::ITelemetrySystem
 {
     static constexpr const char* NAME = "gameTelemetryTelemetrySystem";
@@ -20,6 +21,7 @@ struct TelemetryTelemetrySystem : game::ITelemetrySystem
 };
 RED4EXT_ASSERT_SIZE(TelemetryTelemetrySystem, 0x220);
 } // namespace game
+using gameTelemetryTelemetrySystem = game::TelemetryTelemetrySystem;
 using TelemetrySystem = game::TelemetryTelemetrySystem;
 } // namespace RED4ext
 

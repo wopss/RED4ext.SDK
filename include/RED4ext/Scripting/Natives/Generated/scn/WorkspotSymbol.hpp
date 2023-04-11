@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct WorkspotSymbol
 {
     static constexpr const char* NAME = "scnWorkspotSymbol";
@@ -23,6 +24,7 @@ struct WorkspotSymbol
 };
 RED4EXT_ASSERT_SIZE(WorkspotSymbol, 0x10);
 } // namespace scn
+using scnWorkspotSymbol = scn::WorkspotSymbol;
 } // namespace RED4ext
 
 // clang-format on

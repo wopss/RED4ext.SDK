@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ComparisonParam : ISerializable
 {
     static constexpr const char* NAME = "questComparisonParam";
@@ -25,6 +26,7 @@ struct ComparisonParam : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ComparisonParam, 0x40);
 } // namespace quest
+using questComparisonParam = quest::ComparisonParam;
 } // namespace RED4ext
 
 // clang-format on

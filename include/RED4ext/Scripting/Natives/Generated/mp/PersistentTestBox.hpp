@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace mp { 
+namespace mp
+{
 struct PersistentTestBox : game::Object
 {
     static constexpr const char* NAME = "mpPersistentTestBox";
@@ -20,6 +21,7 @@ struct PersistentTestBox : game::Object
 };
 RED4EXT_ASSERT_SIZE(PersistentTestBox, 0x250);
 } // namespace mp
+using mpPersistentTestBox = mp::PersistentTestBox;
 } // namespace RED4ext
 
 // clang-format on

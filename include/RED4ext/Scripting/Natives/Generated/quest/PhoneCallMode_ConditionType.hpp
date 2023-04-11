@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PhoneCallMode_ConditionType : quest::IPhoneConditionType
 {
     static constexpr const char* NAME = "questPhoneCallMode_ConditionType";
@@ -22,6 +23,7 @@ struct PhoneCallMode_ConditionType : quest::IPhoneConditionType
 };
 RED4EXT_ASSERT_SIZE(PhoneCallMode_ConditionType, 0x48);
 } // namespace quest
+using questPhoneCallMode_ConditionType = quest::PhoneCallMode_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticFogVolumeNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticFogVolumeNode";
@@ -35,6 +36,7 @@ struct StaticFogVolumeNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticFogVolumeNode, 0x60);
 } // namespace world
+using worldStaticFogVolumeNode = world::StaticFogVolumeNode;
 } // namespace RED4ext
 
 // clang-format on

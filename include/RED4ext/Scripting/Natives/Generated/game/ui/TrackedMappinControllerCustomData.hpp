@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TrackedMappinControllerCustomData : game::ui::MappinControllerCustomData
 {
     static constexpr const char* NAME = "gameuiTrackedMappinControllerCustomData";
@@ -19,6 +20,7 @@ struct TrackedMappinControllerCustomData : game::ui::MappinControllerCustomData
 };
 RED4EXT_ASSERT_SIZE(TrackedMappinControllerCustomData, 0x40);
 } // namespace game::ui
+using gameuiTrackedMappinControllerCustomData = game::ui::TrackedMappinControllerCustomData;
 using TrackedMappinControllerCustomData = game::ui::TrackedMappinControllerCustomData;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterStatusEffectsListener : game::IStatusEffectListener
 {
     static constexpr const char* NAME = "questCharacterStatusEffectsListener";
@@ -20,6 +21,7 @@ struct CharacterStatusEffectsListener : game::IStatusEffectListener
 };
 RED4EXT_ASSERT_SIZE(CharacterStatusEffectsListener, 0x48);
 } // namespace quest
+using questCharacterStatusEffectsListener = quest::CharacterStatusEffectsListener;
 } // namespace RED4ext
 
 // clang-format on

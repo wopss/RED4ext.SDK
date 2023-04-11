@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct NavigationSystemQuery
 {
     static constexpr const char* NAME = "AINavigationSystemQuery";
@@ -30,6 +31,7 @@ struct NavigationSystemQuery
 };
 RED4EXT_ASSERT_SIZE(NavigationSystemQuery, 0x80);
 } // namespace AI
+using AINavigationSystemQuery = AI::NavigationSystemQuery;
 } // namespace RED4ext
 
 // clang-format on

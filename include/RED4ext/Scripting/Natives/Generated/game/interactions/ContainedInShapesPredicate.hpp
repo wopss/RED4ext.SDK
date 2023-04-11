@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ContainedInShapesPredicate : game::interactions::IPredicateType
 {
     static constexpr const char* NAME = "gameinteractionsContainedInShapesPredicate";
@@ -21,6 +22,7 @@ struct ContainedInShapesPredicate : game::interactions::IPredicateType
 };
 RED4EXT_ASSERT_SIZE(ContainedInShapesPredicate, 0x38);
 } // namespace game::interactions
+using gameinteractionsContainedInShapesPredicate = game::interactions::ContainedInShapesPredicate;
 } // namespace RED4ext
 
 // clang-format on

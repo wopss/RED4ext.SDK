@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct LoopData
 {
     static constexpr const char* NAME = "effectLoopData";
@@ -20,6 +21,7 @@ struct LoopData
 };
 RED4EXT_ASSERT_SIZE(LoopData, 0x8);
 } // namespace effect
+using effectLoopData = effect::LoopData;
 } // namespace RED4ext
 
 // clang-format on

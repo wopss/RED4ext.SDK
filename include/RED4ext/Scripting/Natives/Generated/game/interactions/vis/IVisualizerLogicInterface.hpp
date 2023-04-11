@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct IVisualizerLogicInterface : ISerializable
 {
     static constexpr const char* NAME = "gameinteractionsvisIVisualizerLogicInterface";
@@ -19,6 +20,7 @@ struct IVisualizerLogicInterface : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IVisualizerLogicInterface, 0x30);
 } // namespace game::interactions::vis
+using gameinteractionsvisIVisualizerLogicInterface = game::interactions::vis::IVisualizerLogicInterface;
 } // namespace RED4ext
 
 // clang-format on

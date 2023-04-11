@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Uint64ArgumentInstancePS : AI::ArgumentInstancePS
 {
     static constexpr const char* NAME = "AIUint64ArgumentInstancePS";
@@ -20,6 +21,7 @@ struct Uint64ArgumentInstancePS : AI::ArgumentInstancePS
 };
 RED4EXT_ASSERT_SIZE(Uint64ArgumentInstancePS, 0x40);
 } // namespace AI
+using AIUint64ArgumentInstancePS = AI::Uint64ArgumentInstancePS;
 } // namespace RED4ext
 
 // clang-format on

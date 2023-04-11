@@ -15,7 +15,8 @@ namespace RED4ext
 namespace anim { struct AnimSet; }
 namespace anim { struct Rig; }
 
-namespace game { 
+namespace game
+{
 struct BodyTypeAnimationDefinition
 {
     static constexpr const char* NAME = "gameBodyTypeAnimationDefinition";
@@ -27,6 +28,7 @@ struct BodyTypeAnimationDefinition
 };
 RED4EXT_ASSERT_SIZE(BodyTypeAnimationDefinition, 0x28);
 } // namespace game
+using gameBodyTypeAnimationDefinition = game::BodyTypeAnimationDefinition;
 } // namespace RED4ext
 
 // clang-format on

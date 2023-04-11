@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimWrapperVariableDescription
 {
     static constexpr const char* NAME = "animAnimWrapperVariableDescription";
@@ -22,6 +23,7 @@ struct AnimWrapperVariableDescription
 };
 RED4EXT_ASSERT_SIZE(AnimWrapperVariableDescription, 0x10);
 } // namespace anim
+using animAnimWrapperVariableDescription = anim::AnimWrapperVariableDescription;
 } // namespace RED4ext
 
 // clang-format on

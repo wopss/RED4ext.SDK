@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace population { 
+namespace population
+{
 struct PopulationSpawnParameter : game::ObjectSpawnParameter
 {
     static constexpr const char* NAME = "populationPopulationSpawnParameter";
@@ -20,6 +21,7 @@ struct PopulationSpawnParameter : game::ObjectSpawnParameter
 };
 RED4EXT_ASSERT_SIZE(PopulationSpawnParameter, 0x40);
 } // namespace population
+using populationPopulationSpawnParameter = population::PopulationSpawnParameter;
 } // namespace RED4ext
 
 // clang-format on

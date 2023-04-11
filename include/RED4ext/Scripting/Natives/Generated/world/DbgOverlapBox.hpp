@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DbgOverlapBox
 {
     static constexpr const char* NAME = "worldDbgOverlapBox";
@@ -25,6 +26,7 @@ struct DbgOverlapBox
 };
 RED4EXT_ASSERT_SIZE(DbgOverlapBox, 0x50);
 } // namespace world
+using worldDbgOverlapBox = world::DbgOverlapBox;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game { 
+namespace game
+{
 struct GodModeSharedStateData
 {
     static constexpr const char* NAME = "gameGodModeSharedStateData";
@@ -24,6 +25,7 @@ struct GodModeSharedStateData
 };
 RED4EXT_ASSERT_SIZE(GodModeSharedStateData, 0x18);
 } // namespace game
+using gameGodModeSharedStateData = game::GodModeSharedStateData;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct NotifySurfaceDirectionChanged : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsNotifySurfaceDirectionChanged";
@@ -22,6 +23,7 @@ struct NotifySurfaceDirectionChanged : red::Event
 };
 RED4EXT_ASSERT_SIZE(NotifySurfaceDirectionChanged, 0x48);
 } // namespace game::audio::events
+using gameaudioeventsNotifySurfaceDirectionChanged = game::audio::events::NotifySurfaceDirectionChanged;
 using NotifySurfaceDirectionChangedEvent = game::audio::events::NotifySurfaceDirectionChanged;
 } // namespace RED4ext
 

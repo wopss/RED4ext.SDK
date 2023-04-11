@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SceneRecordingContentObserverNode : world::Node
 {
     static constexpr const char* NAME = "worldSceneRecordingContentObserverNode";
@@ -21,6 +22,7 @@ struct SceneRecordingContentObserverNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(SceneRecordingContentObserverNode, 0x68);
 } // namespace world
+using worldSceneRecordingContentObserverNode = world::SceneRecordingContentObserverNode;
 } // namespace RED4ext
 
 // clang-format on

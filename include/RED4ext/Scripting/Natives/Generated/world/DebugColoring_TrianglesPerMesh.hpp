@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_TrianglesPerMesh : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_TrianglesPerMesh";
@@ -24,6 +25,7 @@ struct DebugColoring_TrianglesPerMesh : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_TrianglesPerMesh, 0x40);
 } // namespace world
+using worldDebugColoring_TrianglesPerMesh = world::DebugColoring_TrianglesPerMesh;
 } // namespace RED4ext
 
 // clang-format on

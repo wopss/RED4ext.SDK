@@ -14,7 +14,8 @@ namespace RED4ext
 namespace world { struct TrafficNullAreaCollisionData; }
 namespace world { struct TrafficNullAreaDynamicBlockadeData; }
 
-namespace world { 
+namespace world
+{
 struct TrafficNullAreaCollisionResource : CResource
 {
     static constexpr const char* NAME = "worldTrafficNullAreaCollisionResource";
@@ -25,6 +26,7 @@ struct TrafficNullAreaCollisionResource : CResource
 };
 RED4EXT_ASSERT_SIZE(TrafficNullAreaCollisionResource, 0x60);
 } // namespace world
+using worldTrafficNullAreaCollisionResource = world::TrafficNullAreaCollisionResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct IMessageLocation : ISerializable
 {
     static constexpr const char* NAME = "toolsIMessageLocation";
@@ -19,6 +20,7 @@ struct IMessageLocation : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IMessageLocation, 0x30);
 } // namespace tools
+using toolsIMessageLocation = tools::IMessageLocation;
 } // namespace RED4ext
 
 // clang-format on

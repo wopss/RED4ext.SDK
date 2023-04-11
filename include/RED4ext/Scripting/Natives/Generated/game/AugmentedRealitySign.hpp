@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AugmentedRealitySign : game::Object
 {
     static constexpr const char* NAME = "gameAugmentedRealitySign";
@@ -20,6 +21,7 @@ struct AugmentedRealitySign : game::Object
 };
 RED4EXT_ASSERT_SIZE(AugmentedRealitySign, 0x270);
 } // namespace game
+using gameAugmentedRealitySign = game::AugmentedRealitySign;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DrawItemByContextRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameDrawItemByContextRequest";
@@ -23,6 +24,7 @@ struct DrawItemByContextRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(DrawItemByContextRequest, 0x60);
 } // namespace game
+using gameDrawItemByContextRequest = game::DrawItemByContextRequest;
 using DrawItemByContextRequest = game::DrawItemByContextRequest;
 } // namespace RED4ext
 

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace quest { 
+namespace quest
+{
 struct ShowOverlay_NodeSubType : quest::ITutorial_NodeSubType
 {
     static constexpr const char* NAME = "questShowOverlay_NodeSubType";
@@ -30,6 +31,7 @@ struct ShowOverlay_NodeSubType : quest::ITutorial_NodeSubType
 };
 RED4EXT_ASSERT_SIZE(ShowOverlay_NodeSubType, 0x50);
 } // namespace quest
+using questShowOverlay_NodeSubType = quest::ShowOverlay_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

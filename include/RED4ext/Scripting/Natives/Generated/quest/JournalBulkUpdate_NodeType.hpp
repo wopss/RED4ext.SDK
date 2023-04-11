@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct JournalBulkUpdate_NodeType : quest::IJournal_NodeType
 {
     static constexpr const char* NAME = "questJournalBulkUpdate_NodeType";
@@ -30,6 +31,7 @@ struct JournalBulkUpdate_NodeType : quest::IJournal_NodeType
 };
 RED4EXT_ASSERT_SIZE(JournalBulkUpdate_NodeType, 0x78);
 } // namespace quest
+using questJournalBulkUpdate_NodeType = quest::JournalBulkUpdate_NodeType;
 } // namespace RED4ext
 
 // clang-format on

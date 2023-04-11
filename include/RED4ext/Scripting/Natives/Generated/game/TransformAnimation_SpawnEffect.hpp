@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_SpawnEffect : game::TransformAnimation_Effects
 {
     static constexpr const char* NAME = "gameTransformAnimation_SpawnEffect";
@@ -24,6 +25,7 @@ struct TransformAnimation_SpawnEffect : game::TransformAnimation_Effects
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_SpawnEffect, 0x48);
 } // namespace game
+using gameTransformAnimation_SpawnEffect = game::TransformAnimation_SpawnEffect;
 } // namespace RED4ext
 
 // clang-format on

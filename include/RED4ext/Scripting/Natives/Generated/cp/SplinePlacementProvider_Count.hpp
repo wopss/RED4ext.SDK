@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct SplinePlacementProvider_Count : cp::SplinePlacementProvider_Distance
 {
     static constexpr const char* NAME = "cpSplinePlacementProvider_Count";
@@ -21,6 +22,7 @@ struct SplinePlacementProvider_Count : cp::SplinePlacementProvider_Distance
 };
 RED4EXT_ASSERT_SIZE(SplinePlacementProvider_Count, 0x50);
 } // namespace cp
+using cpSplinePlacementProvider_Count = cp::SplinePlacementProvider_Count;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SideScrollerMiniGameCollisionLogic : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameCollisionLogic";
@@ -23,6 +24,7 @@ struct SideScrollerMiniGameCollisionLogic : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(SideScrollerMiniGameCollisionLogic, 0xC0);
 } // namespace game::ui
+using gameuiSideScrollerMiniGameCollisionLogic = game::ui::SideScrollerMiniGameCollisionLogic;
 using MinigameCollisionLogic = game::ui::SideScrollerMiniGameCollisionLogic;
 } // namespace RED4ext
 

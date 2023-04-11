@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkipConsoleEnd : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_SkipConsoleEnd";
@@ -21,6 +22,7 @@ struct AnimNode_SkipConsoleEnd : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkipConsoleEnd, 0x60);
 } // namespace anim
+using animAnimNode_SkipConsoleEnd = anim::AnimNode_SkipConsoleEnd;
 } // namespace RED4ext
 
 // clang-format on

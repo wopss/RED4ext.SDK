@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ItemPositionProvider
 {
     static constexpr const char* NAME = "inkItemPositionProvider";
@@ -19,6 +20,7 @@ struct ItemPositionProvider
 };
 RED4EXT_ASSERT_SIZE(ItemPositionProvider, 0x8);
 } // namespace ink
+using inkItemPositionProvider = ink::ItemPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

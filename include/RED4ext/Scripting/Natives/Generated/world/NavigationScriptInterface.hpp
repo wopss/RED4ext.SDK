@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NavigationScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptInterface";
@@ -20,6 +21,7 @@ struct NavigationScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptInterface, 0x48);
 } // namespace world
+using worldNavigationScriptInterface = world::NavigationScriptInterface;
 using NavigationSystem = world::NavigationScriptInterface;
 } // namespace RED4ext
 

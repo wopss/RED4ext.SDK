@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ItemCreationPrereqDataWrapper : IScriptable
 {
     static constexpr const char* NAME = "gameItemCreationPrereqDataWrapper";
@@ -20,6 +21,7 @@ struct ItemCreationPrereqDataWrapper : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ItemCreationPrereqDataWrapper, 0x68);
 } // namespace game
+using gameItemCreationPrereqDataWrapper = game::ItemCreationPrereqDataWrapper;
 using ItemCreationPrereqDataWrapper = game::ItemCreationPrereqDataWrapper;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ChoiceLookAtDescriptor
 {
     static constexpr const char* NAME = "gameinteractionsChoiceLookAtDescriptor";
@@ -27,6 +28,7 @@ struct ChoiceLookAtDescriptor
 };
 RED4EXT_ASSERT_SIZE(ChoiceLookAtDescriptor, 0x20);
 } // namespace game::interactions
+using gameinteractionsChoiceLookAtDescriptor = game::interactions::ChoiceLookAtDescriptor;
 } // namespace RED4ext
 
 // clang-format on

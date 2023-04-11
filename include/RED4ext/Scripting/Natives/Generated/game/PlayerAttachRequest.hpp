@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerAttachRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gamePlayerAttachRequest";
@@ -19,6 +20,7 @@ struct PlayerAttachRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(PlayerAttachRequest, 0x58);
 } // namespace game
+using gamePlayerAttachRequest = game::PlayerAttachRequest;
 using PlayerAttachRequest = game::PlayerAttachRequest;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HighwaySignLogicController : ink::IStreetNameSignLogicController
 {
     static constexpr const char* NAME = "inkHighwaySignLogicController";
@@ -25,6 +26,7 @@ struct HighwaySignLogicController : ink::IStreetNameSignLogicController
 };
 RED4EXT_ASSERT_SIZE(HighwaySignLogicController, 0xD8);
 } // namespace ink
+using inkHighwaySignLogicController = ink::HighwaySignLogicController;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ShouldEnterCrowdConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorShouldEnterCrowdConditionDefinition";
@@ -19,6 +20,7 @@ struct ShouldEnterCrowdConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(ShouldEnterCrowdConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorShouldEnterCrowdConditionDefinition = AI::behavior::ShouldEnterCrowdConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

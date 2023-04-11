@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct GiveReward_NodeType : quest::IRewardManagerNodeType
 {
     static constexpr const char* NAME = "questGiveReward_NodeType";
@@ -22,6 +23,7 @@ struct GiveReward_NodeType : quest::IRewardManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(GiveReward_NodeType, 0x40);
 } // namespace quest
+using questGiveReward_NodeType = quest::GiveReward_NodeType;
 } // namespace RED4ext
 
 // clang-format on

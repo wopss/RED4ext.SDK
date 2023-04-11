@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon { 
+namespace game::weapon
+{
 struct AnimFeature_LoopableAction : anim::AnimFeature
 {
     static constexpr const char* NAME = "gameweaponAnimFeature_LoopableAction";
@@ -23,6 +24,7 @@ struct AnimFeature_LoopableAction : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_LoopableAction, 0x48);
 } // namespace game::weapon
+using gameweaponAnimFeature_LoopableAction = game::weapon::AnimFeature_LoopableAction;
 using AnimFeature_LoopableAction = game::weapon::AnimFeature_LoopableAction;
 } // namespace RED4ext
 

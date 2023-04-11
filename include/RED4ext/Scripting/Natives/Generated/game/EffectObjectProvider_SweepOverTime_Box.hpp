@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_SweepOverTime_Box : game::EffectObjectProvider_SweepOverTime
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_SweepOverTime_Box";
@@ -19,6 +20,7 @@ struct EffectObjectProvider_SweepOverTime_Box : game::EffectObjectProvider_Sweep
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_SweepOverTime_Box, 0x68);
 } // namespace game
+using gameEffectObjectProvider_SweepOverTime_Box = game::EffectObjectProvider_SweepOverTime_Box;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InitEngineState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkInitEngineState";
@@ -20,6 +21,7 @@ struct InitEngineState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(InitEngineState, 0x28);
 } // namespace ink
+using inkInitEngineState = ink::InitEngineState;
 } // namespace RED4ext
 
 // clang-format on

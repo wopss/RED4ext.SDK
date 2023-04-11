@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::debug { struct Failure; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct NodeStatusDebuggerCommandEntry
 {
     static constexpr const char* NAME = "AIbehaviorNodeStatusDebuggerCommandEntry";
@@ -28,6 +29,7 @@ struct NodeStatusDebuggerCommandEntry
 };
 RED4EXT_ASSERT_SIZE(NodeStatusDebuggerCommandEntry, 0x28);
 } // namespace AI::behavior
+using AIbehaviorNodeStatusDebuggerCommandEntry = AI::behavior::NodeStatusDebuggerCommandEntry;
 } // namespace RED4ext
 
 // clang-format on

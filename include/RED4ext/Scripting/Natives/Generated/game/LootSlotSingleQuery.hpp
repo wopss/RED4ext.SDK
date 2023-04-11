@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LootSlotSingleQuery : game::LootSlot
 {
     static constexpr const char* NAME = "gameLootSlotSingleQuery";
@@ -21,6 +22,7 @@ struct LootSlotSingleQuery : game::LootSlot
 };
 RED4EXT_ASSERT_SIZE(LootSlotSingleQuery, 0x2A0);
 } // namespace game
+using gameLootSlotSingleQuery = game::LootSlotSingleQuery;
 } // namespace RED4ext
 
 // clang-format on

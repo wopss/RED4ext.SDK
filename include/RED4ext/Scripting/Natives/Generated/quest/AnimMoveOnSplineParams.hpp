@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AnimMoveOnSplineParams
 {
     static constexpr const char* NAME = "questAnimMoveOnSplineParams";
@@ -35,6 +36,7 @@ struct AnimMoveOnSplineParams
 };
 RED4EXT_ASSERT_SIZE(AnimMoveOnSplineParams, 0x40);
 } // namespace quest
+using questAnimMoveOnSplineParams = quest::AnimMoveOnSplineParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PuppetBase : game::TimeDilatable
 {
     static constexpr const char* NAME = "gamePuppetBase";
@@ -20,6 +21,7 @@ struct PuppetBase : game::TimeDilatable
 };
 RED4EXT_ASSERT_SIZE(PuppetBase, 0x268);
 } // namespace game
+using gamePuppetBase = game::PuppetBase;
 } // namespace RED4ext
 
 // clang-format on

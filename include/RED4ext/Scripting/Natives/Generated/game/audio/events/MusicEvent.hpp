@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct MusicEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsMusicEvent";
@@ -21,6 +22,7 @@ struct MusicEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MusicEvent, 0x48);
 } // namespace game::audio::events
+using gameaudioeventsMusicEvent = game::audio::events::MusicEvent;
 using MusicEvent = game::audio::events::MusicEvent;
 } // namespace RED4ext
 

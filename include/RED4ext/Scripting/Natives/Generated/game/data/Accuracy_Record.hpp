@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct Accuracy_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAccuracy_Record";
@@ -20,6 +21,7 @@ struct Accuracy_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(Accuracy_Record, 0x50);
 } // namespace game::data
+using gamedataAccuracy_Record = game::data::Accuracy_Record;
 using Accuracy_Record = game::data::Accuracy_Record;
 } // namespace RED4ext
 

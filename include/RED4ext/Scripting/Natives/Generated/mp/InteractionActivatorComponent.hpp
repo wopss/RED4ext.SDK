@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace mp { 
+namespace mp
+{
 struct InteractionActivatorComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "mpInteractionActivatorComponent";
@@ -20,6 +21,7 @@ struct InteractionActivatorComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(InteractionActivatorComponent, 0x140);
 } // namespace mp
+using mpInteractionActivatorComponent = mp::InteractionActivatorComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineeventPostponedParameterBool : game::state::MachineeventPostponedParameterBase
 {
     static constexpr const char* NAME = "gamestateMachineeventPostponedParameterBool";
@@ -21,6 +22,7 @@ struct MachineeventPostponedParameterBool : game::state::MachineeventPostponedPa
 };
 RED4EXT_ASSERT_SIZE(MachineeventPostponedParameterBool, 0x58);
 } // namespace game::state
+using gamestateMachineeventPostponedParameterBool = game::state::MachineeventPostponedParameterBool;
 using PSMPostponedParameterBool = game::state::MachineeventPostponedParameterBool;
 } // namespace RED4ext
 

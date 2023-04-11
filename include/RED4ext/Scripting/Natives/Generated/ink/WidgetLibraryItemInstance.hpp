@@ -15,7 +15,8 @@ namespace RED4ext
 namespace ink { struct IWidgetController; }
 namespace ink { struct Widget; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetLibraryItemInstance : ISerializable
 {
     static constexpr const char* NAME = "inkWidgetLibraryItemInstance";
@@ -28,6 +29,7 @@ struct WidgetLibraryItemInstance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WidgetLibraryItemInstance, 0x58);
 } // namespace ink
+using inkWidgetLibraryItemInstance = ink::WidgetLibraryItemInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 namespace physics { struct FilterData; }
 namespace world { struct Effect; }
 
-namespace physics { 
+namespace physics
+{
 struct DestructionLevelData
 {
     static constexpr const char* NAME = "physicsDestructionLevelData";
@@ -25,6 +26,7 @@ struct DestructionLevelData
 };
 RED4EXT_ASSERT_SIZE(DestructionLevelData, 0x18);
 } // namespace physics
+using physicsDestructionLevelData = physics::DestructionLevelData;
 } // namespace RED4ext
 
 // clang-format on

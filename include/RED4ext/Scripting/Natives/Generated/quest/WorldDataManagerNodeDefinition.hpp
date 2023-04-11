@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IWorldDataManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct WorldDataManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questWorldDataManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct WorldDataManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(WorldDataManagerNodeDefinition, 0x58);
 } // namespace quest
+using questWorldDataManagerNodeDefinition = quest::WorldDataManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

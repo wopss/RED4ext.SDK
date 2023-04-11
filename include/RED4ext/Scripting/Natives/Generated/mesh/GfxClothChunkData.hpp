@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct GfxClothChunkData
 {
     static constexpr const char* NAME = "meshGfxClothChunkData";
@@ -27,6 +28,7 @@ struct GfxClothChunkData
 };
 RED4EXT_ASSERT_SIZE(GfxClothChunkData, 0x100);
 } // namespace mesh
+using meshGfxClothChunkData = mesh::GfxClothChunkData;
 } // namespace RED4ext
 
 // clang-format on

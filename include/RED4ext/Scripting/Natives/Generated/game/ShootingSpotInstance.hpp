@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ShootingSpotInstance : game::CoverInstance
 {
     static constexpr const char* NAME = "gameShootingSpotInstance";
@@ -19,6 +20,7 @@ struct ShootingSpotInstance : game::CoverInstance
 };
 RED4EXT_ASSERT_SIZE(ShootingSpotInstance, 0xF8);
 } // namespace game
+using gameShootingSpotInstance = game::ShootingSpotInstance;
 } // namespace RED4ext
 
 // clang-format on

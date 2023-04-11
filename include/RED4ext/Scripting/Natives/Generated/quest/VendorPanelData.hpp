@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VendorPanelData : IScriptable
 {
     static constexpr const char* NAME = "questVendorPanelData";
@@ -25,6 +26,7 @@ struct VendorPanelData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(VendorPanelData, 0x98);
 } // namespace quest
+using questVendorPanelData = quest::VendorPanelData;
 using VendorPanelData = quest::VendorPanelData;
 } // namespace RED4ext
 

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct PassiveExpressionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ExpressionSocket : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorExpressionSocket";
@@ -25,6 +26,7 @@ struct ExpressionSocket : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ExpressionSocket, 0x58);
 } // namespace AI::behavior
+using AIbehaviorExpressionSocket = AI::behavior::ExpressionSocket;
 } // namespace RED4ext
 
 // clang-format on

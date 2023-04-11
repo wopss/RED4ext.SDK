@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct IBaseCondition; }
 
-namespace game { 
+namespace game
+{
 struct DynamicEventNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "gameDynamicEventNode";
@@ -25,6 +26,7 @@ struct DynamicEventNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(DynamicEventNode, 0x78);
 } // namespace game
+using gameDynamicEventNode = game::DynamicEventNode;
 } // namespace RED4ext
 
 // clang-format on

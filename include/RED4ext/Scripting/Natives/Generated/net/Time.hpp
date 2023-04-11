@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace net { 
+namespace net
+{
 struct Time
 {
     static constexpr const char* NAME = "netTime";
@@ -19,6 +20,7 @@ struct Time
 };
 RED4EXT_ASSERT_SIZE(Time, 0x8);
 } // namespace net
+using netTime = net::Time;
 } // namespace RED4ext
 
 // clang-format on

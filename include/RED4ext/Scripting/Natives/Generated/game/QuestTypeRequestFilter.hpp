@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct QuestTypeRequestFilter : game::CustomRequestFilter
 {
     static constexpr const char* NAME = "gameQuestTypeRequestFilter";
@@ -25,6 +26,7 @@ struct QuestTypeRequestFilter : game::CustomRequestFilter
 };
 RED4EXT_ASSERT_SIZE(QuestTypeRequestFilter, 0x10);
 } // namespace game
+using gameQuestTypeRequestFilter = game::QuestTypeRequestFilter;
 using QuestTypeRequestFilter = game::QuestTypeRequestFilter;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct InstancedOccluderNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldInstancedOccluderNodeInstance";
@@ -20,6 +21,7 @@ struct InstancedOccluderNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(InstancedOccluderNodeInstance, 0xF0);
 } // namespace world
+using worldInstancedOccluderNodeInstance = world::InstancedOccluderNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

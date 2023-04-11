@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DropInstruction
 {
     static constexpr const char* NAME = "gameDropInstruction";
@@ -21,6 +22,7 @@ struct DropInstruction
 };
 RED4EXT_ASSERT_SIZE(DropInstruction, 0x14);
 } // namespace game
+using gameDropInstruction = game::DropInstruction;
 using DropInstruction = game::DropInstruction;
 } // namespace RED4ext
 

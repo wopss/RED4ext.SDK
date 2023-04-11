@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SimpleBounceTransformOutput
 {
     static constexpr const char* NAME = "animSimpleBounceTransformOutput";
@@ -27,6 +28,7 @@ struct SimpleBounceTransformOutput
 };
 RED4EXT_ASSERT_SIZE(SimpleBounceTransformOutput, 0x48);
 } // namespace anim
+using animSimpleBounceTransformOutput = anim::SimpleBounceTransformOutput;
 } // namespace RED4ext
 
 // clang-format on

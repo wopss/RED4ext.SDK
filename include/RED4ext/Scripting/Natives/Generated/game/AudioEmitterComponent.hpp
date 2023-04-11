@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AudioEmitterComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameAudioEmitterComponent";
@@ -36,6 +37,7 @@ struct AudioEmitterComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(AudioEmitterComponent, 0x200);
 } // namespace game
+using gameAudioEmitterComponent = game::AudioEmitterComponent;
 using audioEmitter = game::AudioEmitterComponent;
 } // namespace RED4ext
 

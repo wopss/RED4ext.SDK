@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VehicleAirtime_ConditionType : quest::IVehicleConditionType
 {
     static constexpr const char* NAME = "questVehicleAirtime_ConditionType";
@@ -21,6 +22,7 @@ struct VehicleAirtime_ConditionType : quest::IVehicleConditionType
 };
 RED4EXT_ASSERT_SIZE(VehicleAirtime_ConditionType, 0x40);
 } // namespace quest
+using questVehicleAirtime_ConditionType = quest::VehicleAirtime_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

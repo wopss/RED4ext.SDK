@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct MorphTargetWeightEntry
 {
     static constexpr const char* NAME = "entMorphTargetWeightEntry";
@@ -23,6 +24,7 @@ struct MorphTargetWeightEntry
 };
 RED4EXT_ASSERT_SIZE(MorphTargetWeightEntry, 0x18);
 } // namespace ent
+using entMorphTargetWeightEntry = ent::MorphTargetWeightEntry;
 } // namespace RED4ext
 
 // clang-format on

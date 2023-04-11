@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VisionAppearance
 {
     static constexpr const char* NAME = "gameVisionAppearance";
@@ -24,6 +25,7 @@ struct VisionAppearance
 };
 RED4EXT_ASSERT_SIZE(VisionAppearance, 0x10);
 } // namespace game
+using gameVisionAppearance = game::VisionAppearance;
 using VisionAppearance = game::VisionAppearance;
 } // namespace RED4ext
 

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct DestructionHierarchyOffset
 {
     static constexpr const char* NAME = "physicsDestructionHierarchyOffset";
@@ -19,6 +20,7 @@ struct DestructionHierarchyOffset
 };
 RED4EXT_ASSERT_SIZE(DestructionHierarchyOffset, 0x4);
 } // namespace physics
+using physicsDestructionHierarchyOffset = physics::DestructionHierarchyOffset;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world::geometry { struct DescriptionResult; }
 
-namespace game { 
+namespace game
+{
 struct PlayerClimbInfo : IScriptable
 {
     static constexpr const char* NAME = "gamePlayerClimbInfo";
@@ -28,6 +29,7 @@ struct PlayerClimbInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PlayerClimbInfo, 0x70);
 } // namespace game
+using gamePlayerClimbInfo = game::PlayerClimbInfo;
 using PlayerClimbInfo = game::PlayerClimbInfo;
 } // namespace RED4ext
 

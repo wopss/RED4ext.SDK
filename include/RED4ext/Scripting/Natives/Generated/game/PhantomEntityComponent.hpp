@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct EffectComponentBinding; }
 
-namespace game { 
+namespace game
+{
 struct PhantomEntityComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gamePhantomEntityComponent";
@@ -25,6 +26,7 @@ struct PhantomEntityComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(PhantomEntityComponent, 0xD0);
 } // namespace game
+using gamePhantomEntityComponent = game::PhantomEntityComponent;
 } // namespace RED4ext
 
 // clang-format on

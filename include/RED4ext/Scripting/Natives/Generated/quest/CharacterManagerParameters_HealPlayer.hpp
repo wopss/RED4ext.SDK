@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_HealPlayer : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_HealPlayer";
@@ -25,6 +26,7 @@ struct CharacterManagerParameters_HealPlayer : quest::ICharacterManagerParameter
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_HealPlayer, 0x78);
 } // namespace quest
+using questCharacterManagerParameters_HealPlayer = quest::CharacterManagerParameters_HealPlayer;
 } // namespace RED4ext
 
 // clang-format on

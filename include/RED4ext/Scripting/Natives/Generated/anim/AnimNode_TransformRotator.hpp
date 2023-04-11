@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TransformRotator : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_TransformRotator";
@@ -32,6 +33,7 @@ struct AnimNode_TransformRotator : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TransformRotator, 0xE8);
 } // namespace anim
+using animAnimNode_TransformRotator = anim::AnimNode_TransformRotator;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct FoliagePhysicalDestructionMapping : world::FoliageDestructionMapping
 {
     static constexpr const char* NAME = "worldFoliagePhysicalDestructionMapping";
@@ -26,6 +27,7 @@ struct FoliagePhysicalDestructionMapping : world::FoliageDestructionMapping
 };
 RED4EXT_ASSERT_SIZE(FoliagePhysicalDestructionMapping, 0xC8);
 } // namespace world
+using worldFoliagePhysicalDestructionMapping = world::FoliagePhysicalDestructionMapping;
 } // namespace RED4ext
 
 // clang-format on

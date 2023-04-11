@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FloatValueDebugProvider
 {
     static constexpr const char* NAME = "animAnimNode_FloatValueDebugProvider";
@@ -26,6 +27,7 @@ struct AnimNode_FloatValueDebugProvider
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FloatValueDebugProvider, 0x38);
 } // namespace anim
+using animAnimNode_FloatValueDebugProvider = anim::AnimNode_FloatValueDebugProvider;
 } // namespace RED4ext
 
 // clang-format on

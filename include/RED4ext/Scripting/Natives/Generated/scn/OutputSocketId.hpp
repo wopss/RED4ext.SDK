@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct OutputSocketId
 {
     static constexpr const char* NAME = "scnOutputSocketId";
@@ -22,6 +23,7 @@ struct OutputSocketId
 };
 RED4EXT_ASSERT_SIZE(OutputSocketId, 0x8);
 } // namespace scn
+using scnOutputSocketId = scn::OutputSocketId;
 } // namespace RED4ext
 
 // clang-format on

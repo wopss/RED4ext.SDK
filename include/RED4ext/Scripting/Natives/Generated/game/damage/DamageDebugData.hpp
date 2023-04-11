@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::damage { 
+namespace game::damage
+{
 struct DamageDebugData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageDamageDebugData";
@@ -25,6 +26,7 @@ struct DamageDebugData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(DamageDebugData, 0x50);
 } // namespace game::damage
+using gamedamageDamageDebugData = game::damage::DamageDebugData;
 using DamageDebugData = game::damage::DamageDebugData;
 } // namespace RED4ext
 

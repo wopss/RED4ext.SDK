@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeAttachmentSlotsListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "gamePhotoModeAttachmentSlotsListener";
@@ -20,6 +21,7 @@ struct PhotoModeAttachmentSlotsListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(PhotoModeAttachmentSlotsListener, 0x50);
 } // namespace game
+using gamePhotoModeAttachmentSlotsListener = game::PhotoModeAttachmentSlotsListener;
 } // namespace RED4ext
 
 // clang-format on

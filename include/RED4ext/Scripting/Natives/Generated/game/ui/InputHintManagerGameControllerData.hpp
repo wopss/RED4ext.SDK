@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InputHintManagerGameControllerData : game::ui::BaseUIData
 {
     static constexpr const char* NAME = "gameuiInputHintManagerGameControllerData";
@@ -23,6 +24,7 @@ struct InputHintManagerGameControllerData : game::ui::BaseUIData
 };
 RED4EXT_ASSERT_SIZE(InputHintManagerGameControllerData, 0x58);
 } // namespace game::ui
+using gameuiInputHintManagerGameControllerData = game::ui::InputHintManagerGameControllerData;
 } // namespace RED4ext
 
 // clang-format on

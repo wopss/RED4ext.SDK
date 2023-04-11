@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AdditionalSpeaker
 {
     static constexpr const char* NAME = "scnAdditionalSpeaker";
@@ -22,6 +23,7 @@ struct AdditionalSpeaker
 };
 RED4EXT_ASSERT_SIZE(AdditionalSpeaker, 0x8);
 } // namespace scn
+using scnAdditionalSpeaker = scn::AdditionalSpeaker;
 } // namespace RED4ext
 
 // clang-format on

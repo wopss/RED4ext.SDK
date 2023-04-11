@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct RidAnimationContainerSRRef
 {
     static constexpr const char* NAME = "scnRidAnimationContainerSRRef";
@@ -21,6 +22,7 @@ struct RidAnimationContainerSRRef
 };
 RED4EXT_ASSERT_SIZE(RidAnimationContainerSRRef, 0x10);
 } // namespace scn
+using scnRidAnimationContainerSRRef = scn::RidAnimationContainerSRRef;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct VehicleSlotsState : ISerializable
 {
     static constexpr const char* NAME = "vehicleVehicleSlotsState";
@@ -26,6 +27,7 @@ struct VehicleSlotsState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VehicleSlotsState, 0x40);
 } // namespace vehicle
+using vehicleVehicleSlotsState = vehicle::VehicleSlotsState;
 using VehicleSlotsState = vehicle::VehicleSlotsState;
 } // namespace RED4ext
 

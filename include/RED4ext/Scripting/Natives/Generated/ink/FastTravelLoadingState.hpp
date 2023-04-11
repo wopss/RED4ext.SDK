@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FastTravelLoadingState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkFastTravelLoadingState";
@@ -19,6 +20,7 @@ struct FastTravelLoadingState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(FastTravelLoadingState, 0x10);
 } // namespace ink
+using inkFastTravelLoadingState = ink::FastTravelLoadingState;
 } // namespace RED4ext
 
 // clang-format on

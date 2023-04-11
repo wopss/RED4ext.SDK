@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DrillingState_ConditionType : quest::IObjectConditionType
 {
     static constexpr const char* NAME = "questDrillingState_ConditionType";
@@ -24,6 +25,7 @@ struct DrillingState_ConditionType : quest::IObjectConditionType
 };
 RED4EXT_ASSERT_SIZE(DrillingState_ConditionType, 0x48);
 } // namespace quest
+using questDrillingState_ConditionType = quest::DrillingState_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

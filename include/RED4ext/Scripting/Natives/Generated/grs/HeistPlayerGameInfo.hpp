@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace grs { 
+namespace grs
+{
 struct HeistPlayerGameInfo
 {
     static constexpr const char* NAME = "grsHeistPlayerGameInfo";
@@ -32,6 +33,7 @@ struct HeistPlayerGameInfo
 };
 RED4EXT_ASSERT_SIZE(HeistPlayerGameInfo, 0x70);
 } // namespace grs
+using grsHeistPlayerGameInfo = grs::HeistPlayerGameInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct LogTutorialHintActionEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiLogTutorialHintActionEvent";
@@ -21,6 +22,7 @@ struct LogTutorialHintActionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(LogTutorialHintActionEvent, 0x48);
 } // namespace game::ui
+using gameuiLogTutorialHintActionEvent = game::ui::LogTutorialHintActionEvent;
 using LogTutorialHintActionEvent = game::ui::LogTutorialHintActionEvent;
 } // namespace RED4ext
 

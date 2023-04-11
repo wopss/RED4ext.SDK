@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct OnscreenVOData
 {
     static constexpr const char* NAME = "inkOnscreenVOData";
@@ -22,6 +23,7 @@ struct OnscreenVOData
 };
 RED4EXT_ASSERT_SIZE(OnscreenVOData, 0x38);
 } // namespace ink
+using inkOnscreenVOData = ink::OnscreenVOData;
 } // namespace RED4ext
 
 // clang-format on

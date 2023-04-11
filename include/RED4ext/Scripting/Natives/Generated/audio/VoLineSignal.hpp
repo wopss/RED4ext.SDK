@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoLineSignal
 {
     static constexpr const char* NAME = "audioVoLineSignal";
@@ -22,6 +23,7 @@ struct VoLineSignal
 };
 RED4EXT_ASSERT_SIZE(VoLineSignal, 0x10);
 } // namespace audio
+using audioVoLineSignal = audio::VoLineSignal;
 } // namespace RED4ext
 
 // clang-format on

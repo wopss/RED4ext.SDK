@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetSlotAttachmentParams
 {
     static constexpr const char* NAME = "inkWidgetSlotAttachmentParams";
@@ -25,6 +26,7 @@ struct WidgetSlotAttachmentParams
 };
 RED4EXT_ASSERT_SIZE(WidgetSlotAttachmentParams, 0x40);
 } // namespace ink
+using inkWidgetSlotAttachmentParams = ink::WidgetSlotAttachmentParams;
 } // namespace RED4ext
 
 // clang-format on

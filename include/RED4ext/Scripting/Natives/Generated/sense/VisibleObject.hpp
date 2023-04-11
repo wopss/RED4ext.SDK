@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct VisibleObject : IScriptable
 {
     static constexpr const char* NAME = "senseVisibleObject";
@@ -28,6 +29,7 @@ struct VisibleObject : IScriptable
 };
 RED4EXT_ASSERT_SIZE(VisibleObject, 0xC8);
 } // namespace sense
+using senseVisibleObject = sense::VisibleObject;
 using VisibleObject = sense::VisibleObject;
 } // namespace RED4ext
 

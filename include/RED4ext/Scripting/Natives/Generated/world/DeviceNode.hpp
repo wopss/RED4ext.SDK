@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DeviceNode : world::EntityNode
 {
     static constexpr const char* NAME = "worldDeviceNode";
@@ -26,6 +27,7 @@ struct DeviceNode : world::EntityNode
 };
 RED4EXT_ASSERT_SIZE(DeviceNode, 0x80);
 } // namespace world
+using worldDeviceNode = world::DeviceNode;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DelegateTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorDelegateTaskDefinition";
@@ -23,6 +24,7 @@ struct DelegateTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(DelegateTaskDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorDelegateTaskDefinition = AI::behavior::DelegateTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_PhysicalRay : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_PhysicalRay";
@@ -33,6 +34,7 @@ struct EffectObjectProvider_PhysicalRay : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_PhysicalRay, 0xF0);
 } // namespace game
+using gameEffectObjectProvider_PhysicalRay = game::EffectObjectProvider_PhysicalRay;
 } // namespace RED4ext
 
 // clang-format on

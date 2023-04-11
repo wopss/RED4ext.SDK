@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNodeSourceChannel_AnimFeatureQuat : anim::IAnimNodeSourceChannel_Quat
 {
     static constexpr const char* NAME = "animAnimNodeSourceChannel_AnimFeatureQuat";
@@ -19,6 +20,7 @@ struct AnimNodeSourceChannel_AnimFeatureQuat : anim::IAnimNodeSourceChannel_Quat
 };
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_AnimFeatureQuat, 0x30);
 } // namespace anim
+using animAnimNodeSourceChannel_AnimFeatureQuat = anim::AnimNodeSourceChannel_AnimFeatureQuat;
 } // namespace RED4ext
 
 // clang-format on

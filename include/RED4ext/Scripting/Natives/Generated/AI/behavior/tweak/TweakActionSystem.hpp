@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct TweakActionSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "AIbehaviortweakTweakActionSystem";
@@ -20,6 +21,7 @@ struct TweakActionSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(TweakActionSystem, 0x550);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakTweakActionSystem = AI::behavior::tweak::TweakActionSystem;
 using AITweakActionSystem = AI::behavior::tweak::TweakActionSystem;
 } // namespace RED4ext
 

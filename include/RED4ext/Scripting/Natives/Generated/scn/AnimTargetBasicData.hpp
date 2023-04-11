@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AnimTargetBasicData
 {
     static constexpr const char* NAME = "scnAnimTargetBasicData";
@@ -37,6 +38,7 @@ struct AnimTargetBasicData
 };
 RED4EXT_ASSERT_SIZE(AnimTargetBasicData, 0x50);
 } // namespace scn
+using scnAnimTargetBasicData = scn::AnimTargetBasicData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct QualitySetting
 {
     static constexpr const char* NAME = "worldQualitySetting";
@@ -21,6 +22,7 @@ struct QualitySetting
 };
 RED4EXT_ASSERT_SIZE(QualitySetting, 0x8);
 } // namespace world
+using worldQualitySetting = world::QualitySetting;
 } // namespace RED4ext
 
 // clang-format on

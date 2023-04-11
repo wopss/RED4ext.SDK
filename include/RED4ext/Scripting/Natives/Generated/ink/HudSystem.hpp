@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HudSystem : ink::IHudSystem
 {
     static constexpr const char* NAME = "inkHudSystem";
@@ -20,6 +21,7 @@ struct HudSystem : ink::IHudSystem
 };
 RED4EXT_ASSERT_SIZE(HudSystem, 0xD0);
 } // namespace ink
+using inkHudSystem = ink::HudSystem;
 } // namespace RED4ext
 
 // clang-format on

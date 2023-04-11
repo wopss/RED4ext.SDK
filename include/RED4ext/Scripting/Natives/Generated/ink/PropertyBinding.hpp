@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PropertyBinding
 {
     static constexpr const char* NAME = "inkPropertyBinding";
@@ -22,6 +23,7 @@ struct PropertyBinding
 };
 RED4EXT_ASSERT_SIZE(PropertyBinding, 0x38);
 } // namespace ink
+using inkPropertyBinding = ink::PropertyBinding;
 } // namespace RED4ext
 
 // clang-format on

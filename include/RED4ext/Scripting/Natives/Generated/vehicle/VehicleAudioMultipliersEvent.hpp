@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct VehicleAudioMultipliersEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleVehicleAudioMultipliersEvent";
@@ -21,6 +22,7 @@ struct VehicleAudioMultipliersEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VehicleAudioMultipliersEvent, 0x48);
 } // namespace vehicle
+using vehicleVehicleAudioMultipliersEvent = vehicle::VehicleAudioMultipliersEvent;
 } // namespace RED4ext
 
 // clang-format on

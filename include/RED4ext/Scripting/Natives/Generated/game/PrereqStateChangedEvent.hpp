@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PrereqStateChangedEvent : red::Event
 {
     static constexpr const char* NAME = "gamePrereqStateChangedEvent";
@@ -20,6 +21,7 @@ struct PrereqStateChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PrereqStateChangedEvent, 0x50);
 } // namespace game
+using gamePrereqStateChangedEvent = game::PrereqStateChangedEvent;
 using PrereqStateChangedEvent = game::PrereqStateChangedEvent;
 } // namespace RED4ext
 

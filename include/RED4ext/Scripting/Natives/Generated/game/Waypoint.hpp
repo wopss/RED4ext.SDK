@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Waypoint : world::IMarker
 {
     static constexpr const char* NAME = "gameWaypoint";
@@ -19,6 +20,7 @@ struct Waypoint : world::IMarker
 };
 RED4EXT_ASSERT_SIZE(Waypoint, 0x30);
 } // namespace game
+using gameWaypoint = game::Waypoint;
 } // namespace RED4ext
 
 // clang-format on

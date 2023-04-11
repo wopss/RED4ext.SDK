@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon { 
+namespace game::weapon
+{
 struct IFxPackage : IScriptable
 {
     static constexpr const char* NAME = "gameweaponIFxPackage";
@@ -19,6 +20,7 @@ struct IFxPackage : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IFxPackage, 0x40);
 } // namespace game::weapon
+using gameweaponIFxPackage = game::weapon::IFxPackage;
 using IFxPackage = game::weapon::IFxPackage;
 } // namespace RED4ext
 

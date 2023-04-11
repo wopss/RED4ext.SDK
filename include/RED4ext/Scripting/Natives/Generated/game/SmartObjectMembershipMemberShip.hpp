@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SmartObjectMembershipMemberShip
 {
     static constexpr const char* NAME = "gameSmartObjectMembershipMemberShip";
@@ -21,6 +22,7 @@ struct SmartObjectMembershipMemberShip
 };
 RED4EXT_ASSERT_SIZE(SmartObjectMembershipMemberShip, 0x10);
 } // namespace game
+using gameSmartObjectMembershipMemberShip = game::SmartObjectMembershipMemberShip;
 } // namespace RED4ext
 
 // clang-format on

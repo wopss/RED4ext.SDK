@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct Slot
 {
     static constexpr const char* NAME = "entSlot";
@@ -26,6 +27,7 @@ struct Slot
 };
 RED4EXT_ASSERT_SIZE(Slot, 0x30);
 } // namespace ent
+using entSlot = ent::Slot;
 } // namespace RED4ext
 
 // clang-format on

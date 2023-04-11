@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DynamicEventsWithInterval
 {
     static constexpr const char* NAME = "audioDynamicEventsWithInterval";
@@ -23,6 +24,7 @@ struct DynamicEventsWithInterval
 };
 RED4EXT_ASSERT_SIZE(DynamicEventsWithInterval, 0x18);
 } // namespace audio
+using audioDynamicEventsWithInterval = audio::DynamicEventsWithInterval;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FullscreenCompositionManager : ISerializable
 {
     static constexpr const char* NAME = "inkFullscreenCompositionManager";
@@ -20,6 +21,7 @@ struct FullscreenCompositionManager : ISerializable
 };
 RED4EXT_ASSERT_SIZE(FullscreenCompositionManager, 0xE0);
 } // namespace ink
+using inkFullscreenCompositionManager = ink::FullscreenCompositionManager;
 } // namespace RED4ext
 
 // clang-format on

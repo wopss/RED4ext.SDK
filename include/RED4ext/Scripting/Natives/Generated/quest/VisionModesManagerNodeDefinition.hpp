@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IVisionModeNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct VisionModesManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questVisionModesManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct VisionModesManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(VisionModesManagerNodeDefinition, 0x58);
 } // namespace quest
+using questVisionModesManagerNodeDefinition = quest::VisionModesManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

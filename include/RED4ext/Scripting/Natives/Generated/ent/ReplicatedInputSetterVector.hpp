@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ReplicatedInputSetterVector : ent::ReplicatedInputSetterBase
 {
     static constexpr const char* NAME = "entReplicatedInputSetterVector";
@@ -22,6 +23,7 @@ struct ReplicatedInputSetterVector : ent::ReplicatedInputSetterBase
 };
 RED4EXT_ASSERT_SIZE(ReplicatedInputSetterVector, 0x30);
 } // namespace ent
+using entReplicatedInputSetterVector = ent::ReplicatedInputSetterVector;
 } // namespace RED4ext
 
 // clang-format on

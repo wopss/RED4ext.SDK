@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct IsAutopilotActiveVehicleExpressionDefinition : AI::behavior::VehicleExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorIsAutopilotActiveVehicleExpressionDefinition";
@@ -19,6 +20,7 @@ struct IsAutopilotActiveVehicleExpressionDefinition : AI::behavior::VehicleExpre
 };
 RED4EXT_ASSERT_SIZE(IsAutopilotActiveVehicleExpressionDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorIsAutopilotActiveVehicleExpressionDefinition = AI::behavior::IsAutopilotActiveVehicleExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

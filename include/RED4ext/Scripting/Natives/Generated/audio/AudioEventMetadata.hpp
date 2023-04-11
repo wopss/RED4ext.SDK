@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudioEventMetadata : ISerializable
 {
     static constexpr const char* NAME = "audioAudioEventMetadata";
@@ -29,6 +30,7 @@ struct AudioEventMetadata : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AudioEventMetadata, 0x68);
 } // namespace audio
+using audioAudioEventMetadata = audio::AudioEventMetadata;
 } // namespace RED4ext
 
 // clang-format on

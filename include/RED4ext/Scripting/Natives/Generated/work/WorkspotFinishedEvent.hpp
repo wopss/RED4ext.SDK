@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct WorkspotFinishedEvent : red::Event
 {
     static constexpr const char* NAME = "workWorkspotFinishedEvent";
@@ -26,6 +27,7 @@ struct WorkspotFinishedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(WorkspotFinishedEvent, 0x60);
 } // namespace work
+using workWorkspotFinishedEvent = work::WorkspotFinishedEvent;
 using WorkspotFinishedEvent = work::WorkspotFinishedEvent;
 } // namespace RED4ext
 

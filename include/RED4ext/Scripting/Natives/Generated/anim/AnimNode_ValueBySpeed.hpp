@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_ValueBySpeed : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_ValueBySpeed";
@@ -29,6 +30,7 @@ struct AnimNode_ValueBySpeed : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_ValueBySpeed, 0x90);
 } // namespace anim
+using animAnimNode_ValueBySpeed = anim::AnimNode_ValueBySpeed;
 } // namespace RED4ext
 
 // clang-format on

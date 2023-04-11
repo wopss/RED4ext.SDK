@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StoryTierChangedEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "gameStoryTierChangedEvent";
@@ -22,6 +23,7 @@ struct StoryTierChangedEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(StoryTierChangedEvent, 0x58);
 } // namespace game
+using gameStoryTierChangedEvent = game::StoryTierChangedEvent;
 using StoryTierChangedEvent = game::StoryTierChangedEvent;
 } // namespace RED4ext
 

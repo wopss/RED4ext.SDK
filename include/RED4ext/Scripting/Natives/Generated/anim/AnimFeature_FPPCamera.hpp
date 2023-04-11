@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_FPPCamera : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_FPPCamera";
@@ -67,6 +68,7 @@ struct AnimFeature_FPPCamera : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_FPPCamera, 0x100);
 } // namespace anim
+using animAnimFeature_FPPCamera = anim::AnimFeature_FPPCamera;
 using AnimFeature_FPPCamera = anim::AnimFeature_FPPCamera;
 } // namespace RED4ext
 

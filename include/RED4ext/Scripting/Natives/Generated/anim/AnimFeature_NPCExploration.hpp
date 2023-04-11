@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_NPCExploration : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_NPCExploration";
@@ -26,6 +27,7 @@ struct AnimFeature_NPCExploration : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_NPCExploration, 0x58);
 } // namespace anim
+using animAnimFeature_NPCExploration = anim::AnimFeature_NPCExploration;
 } // namespace RED4ext
 
 // clang-format on

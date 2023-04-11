@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct AdvertGlitchEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiAdvertGlitchEvent";
@@ -21,6 +22,7 @@ struct AdvertGlitchEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AdvertGlitchEvent, 0x48);
 } // namespace game::ui
+using gameuiAdvertGlitchEvent = game::ui::AdvertGlitchEvent;
 using AdvertGlitchEvent = game::ui::AdvertGlitchEvent;
 } // namespace RED4ext
 
