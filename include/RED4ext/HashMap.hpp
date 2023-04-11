@@ -35,6 +35,16 @@ struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, uint32_t>>>
 };
 
 template<typename T>
+struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, uint64_t>>>
+{
+    uint32_t operator()(const T& aKey) const noexcept
+    {
+        // Not 100% sure if this is correct, but checking quickly seems to be the case for 64bit integers.
+        return static_cast<uint32_t>(aKey) ^ ((aKey >> 32) & 0xFFFFFFFF);
+    }
+};
+
+template<typename T>
 struct HashMapHash<T, std::enable_if_t<std::is_pointer_v<T>>>
 {
     // Used in TweakDB, probably the same for all pointer keys
