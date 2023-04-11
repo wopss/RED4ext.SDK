@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct ICollider; }
 
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamShadowMeshCreationData : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamShadowMeshCreationData";
@@ -25,6 +26,7 @@ struct MeshParamShadowMeshCreationData : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamShadowMeshCreationData, 0x50);
 } // namespace mesh
+using meshMeshParamShadowMeshCreationData = mesh::MeshParamShadowMeshCreationData;
 } // namespace RED4ext
 
 // clang-format on

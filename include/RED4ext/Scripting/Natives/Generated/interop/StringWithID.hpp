@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct StringWithID
 {
     static constexpr const char* NAME = "interopStringWithID";
@@ -21,6 +22,7 @@ struct StringWithID
 };
 RED4EXT_ASSERT_SIZE(StringWithID, 0x28);
 } // namespace interop
+using interopStringWithID = interop::StringWithID;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WorldGlobalLightOverrideWithColorParameters
 {
     static constexpr const char* NAME = "worldWorldGlobalLightOverrideWithColorParameters";
@@ -22,6 +23,7 @@ struct WorldGlobalLightOverrideWithColorParameters
 };
 RED4EXT_ASSERT_SIZE(WorldGlobalLightOverrideWithColorParameters, 0x30);
 } // namespace world
+using worldWorldGlobalLightOverrideWithColorParameters = world::WorldGlobalLightOverrideWithColorParameters;
 } // namespace RED4ext
 
 // clang-format on

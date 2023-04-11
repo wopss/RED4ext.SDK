@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace world { 
+namespace world
+{
 struct CollisionAreaNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldCollisionAreaNode";
@@ -28,6 +29,7 @@ struct CollisionAreaNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(CollisionAreaNode, 0x80);
 } // namespace world
+using worldCollisionAreaNode = world::CollisionAreaNode;
 } // namespace RED4ext
 
 // clang-format on

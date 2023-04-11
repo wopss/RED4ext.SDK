@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct UpdateInputHintMultipleEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiUpdateInputHintMultipleEvent";
@@ -25,6 +26,7 @@ struct UpdateInputHintMultipleEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UpdateInputHintMultipleEvent, 0x68);
 } // namespace game::ui
+using gameuiUpdateInputHintMultipleEvent = game::ui::UpdateInputHintMultipleEvent;
 using UpdateInputHintMultipleEvent = game::ui::UpdateInputHintMultipleEvent;
 } // namespace RED4ext
 

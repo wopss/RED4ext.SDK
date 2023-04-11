@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct WeaponEventOverride : audio::InlinedAudioMetadata
 {
     static constexpr const char* NAME = "audioWeaponEventOverride";
@@ -22,6 +23,7 @@ struct WeaponEventOverride : audio::InlinedAudioMetadata
 };
 RED4EXT_ASSERT_SIZE(WeaponEventOverride, 0x48);
 } // namespace audio
+using audioWeaponEventOverride = audio::WeaponEventOverride;
 } // namespace RED4ext
 
 // clang-format on

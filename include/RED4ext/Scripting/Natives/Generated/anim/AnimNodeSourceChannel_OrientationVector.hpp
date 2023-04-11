@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNodeSourceChannel_OrientationVector : anim::IAnimNodeSourceChannel_Vector
 {
     static constexpr const char* NAME = "animAnimNodeSourceChannel_OrientationVector";
@@ -25,6 +26,7 @@ struct AnimNodeSourceChannel_OrientationVector : anim::IAnimNodeSourceChannel_Ve
 };
 RED4EXT_ASSERT_SIZE(AnimNodeSourceChannel_OrientationVector, 0x70);
 } // namespace anim
+using animAnimNodeSourceChannel_OrientationVector = anim::AnimNodeSourceChannel_OrientationVector;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace quest { struct MountedObjectInfo; }
 
-namespace quest { 
+namespace quest
+{
 struct CharacterMountedTogether_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterMountedTogether_ConditionType";
@@ -30,6 +31,7 @@ struct CharacterMountedTogether_ConditionType : quest::ICharacterConditionType
 };
 RED4EXT_ASSERT_SIZE(CharacterMountedTogether_ConditionType, 0x98);
 } // namespace quest
+using questCharacterMountedTogether_ConditionType = quest::CharacterMountedTogether_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

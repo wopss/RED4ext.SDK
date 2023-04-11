@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IAnimationBuffer : ISerializable
 {
     static constexpr const char* NAME = "animIAnimationBuffer";
@@ -19,6 +20,7 @@ struct IAnimationBuffer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IAnimationBuffer, 0x30);
 } // namespace anim
+using animIAnimationBuffer = anim::IAnimationBuffer;
 } // namespace RED4ext
 
 // clang-format on

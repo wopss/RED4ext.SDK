@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct ToggleStealthMappinVisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsToggleStealthMappinVisibilityEvent";
@@ -21,6 +22,7 @@ struct ToggleStealthMappinVisibilityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleStealthMappinVisibilityEvent, 0x48);
 } // namespace game::events
+using gameeventsToggleStealthMappinVisibilityEvent = game::events::ToggleStealthMappinVisibilityEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BlackboardPropertyBindingDefinition
 {
     static constexpr const char* NAME = "gameBlackboardPropertyBindingDefinition";
@@ -24,6 +25,7 @@ struct BlackboardPropertyBindingDefinition
 };
 RED4EXT_ASSERT_SIZE(BlackboardPropertyBindingDefinition, 0x38);
 } // namespace game
+using gameBlackboardPropertyBindingDefinition = game::BlackboardPropertyBindingDefinition;
 } // namespace RED4ext
 
 // clang-format on

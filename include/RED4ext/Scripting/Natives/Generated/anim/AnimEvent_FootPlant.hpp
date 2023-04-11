@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_FootPlant : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_FootPlant";
@@ -24,6 +25,7 @@ struct AnimEvent_FootPlant : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_FootPlant, 0x50);
 } // namespace anim
+using animAnimEvent_FootPlant = anim::AnimEvent_FootPlant;
 } // namespace RED4ext
 
 // clang-format on

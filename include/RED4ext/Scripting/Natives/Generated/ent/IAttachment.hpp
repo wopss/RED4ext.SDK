@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct IComponent; }
 
-namespace ent { 
+namespace ent
+{
 struct IAttachment : ISerializable
 {
     static constexpr const char* NAME = "entIAttachment";
@@ -24,6 +25,7 @@ struct IAttachment : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IAttachment, 0x50);
 } // namespace ent
+using entIAttachment = ent::IAttachment;
 } // namespace RED4ext
 
 // clang-format on

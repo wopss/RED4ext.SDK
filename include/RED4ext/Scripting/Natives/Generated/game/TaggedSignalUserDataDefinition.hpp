@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TaggedSignalUserDataDefinition : game::SignalUserDataDefinition
 {
     static constexpr const char* NAME = "gameTaggedSignalUserDataDefinition";
@@ -22,6 +23,7 @@ struct TaggedSignalUserDataDefinition : game::SignalUserDataDefinition
 };
 RED4EXT_ASSERT_SIZE(TaggedSignalUserDataDefinition, 0x40);
 } // namespace game
+using gameTaggedSignalUserDataDefinition = game::TaggedSignalUserDataDefinition;
 using TaggedSignalUserDataDefinition = game::TaggedSignalUserDataDefinition;
 } // namespace RED4ext
 

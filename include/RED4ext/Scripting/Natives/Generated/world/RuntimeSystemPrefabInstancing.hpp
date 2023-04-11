@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemPrefabInstancing : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemPrefabInstancing";
@@ -20,6 +21,7 @@ struct RuntimeSystemPrefabInstancing : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemPrefabInstancing, 0x68);
 } // namespace world
+using worldRuntimeSystemPrefabInstancing = world::RuntimeSystemPrefabInstancing;
 } // namespace RED4ext
 
 // clang-format on

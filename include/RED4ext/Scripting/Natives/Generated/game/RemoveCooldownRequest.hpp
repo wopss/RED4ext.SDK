@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RemoveCooldownRequest
 {
     static constexpr const char* NAME = "gameRemoveCooldownRequest";
@@ -19,6 +20,7 @@ struct RemoveCooldownRequest
 };
 RED4EXT_ASSERT_SIZE(RemoveCooldownRequest, 0x4);
 } // namespace game
+using gameRemoveCooldownRequest = game::RemoveCooldownRequest;
 using RemoveCooldownRequest = game::RemoveCooldownRequest;
 } // namespace RED4ext
 

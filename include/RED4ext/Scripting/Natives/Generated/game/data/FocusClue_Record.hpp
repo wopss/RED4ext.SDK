@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct FocusClue_Record : game::data::ScannableData_Record
 {
     static constexpr const char* NAME = "gamedataFocusClue_Record";
@@ -19,6 +20,7 @@ struct FocusClue_Record : game::data::ScannableData_Record
 };
 RED4EXT_ASSERT_SIZE(FocusClue_Record, 0x58);
 } // namespace game::data
+using gamedataFocusClue_Record = game::data::FocusClue_Record;
 using FocusClue_Record = game::data::FocusClue_Record;
 } // namespace RED4ext
 

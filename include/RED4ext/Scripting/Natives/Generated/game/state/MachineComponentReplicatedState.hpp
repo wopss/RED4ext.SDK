@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::state { struct MachineparameterTypeLadderDescription; }
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "gamestateMachineComponentReplicatedState";
@@ -27,6 +28,7 @@ struct MachineComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(MachineComponentReplicatedState, 0x1A980);
 } // namespace game::state
+using gamestateMachineComponentReplicatedState = game::state::MachineComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

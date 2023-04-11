@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetUtils
 {
     static constexpr const char* NAME = "inkWidgetUtils";
@@ -19,6 +20,7 @@ struct WidgetUtils
 };
 RED4EXT_ASSERT_SIZE(WidgetUtils, 0x1);
 } // namespace ink
+using inkWidgetUtils = ink::WidgetUtils;
 using WidgetUtils = ink::WidgetUtils;
 } // namespace RED4ext
 

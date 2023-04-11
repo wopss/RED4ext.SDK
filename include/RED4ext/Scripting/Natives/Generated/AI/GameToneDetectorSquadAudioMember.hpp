@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct GameToneDetectorSquadAudioMember : AI::SquadAudioMemberBase
 {
     static constexpr const char* NAME = "AIGameToneDetectorSquadAudioMember";
@@ -20,6 +21,7 @@ struct GameToneDetectorSquadAudioMember : AI::SquadAudioMemberBase
 };
 RED4EXT_ASSERT_SIZE(GameToneDetectorSquadAudioMember, 0x80);
 } // namespace AI
+using AIGameToneDetectorSquadAudioMember = AI::GameToneDetectorSquadAudioMember;
 } // namespace RED4ext
 
 // clang-format on

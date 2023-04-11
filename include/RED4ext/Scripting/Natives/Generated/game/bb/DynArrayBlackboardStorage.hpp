@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::bb { 
+namespace game::bb
+{
 struct DynArrayBlackboardStorage
 {
     static constexpr const char* NAME = "gamebbDynArrayBlackboardStorage";
@@ -19,6 +20,7 @@ struct DynArrayBlackboardStorage
 };
 RED4EXT_ASSERT_SIZE(DynArrayBlackboardStorage, 0x80);
 } // namespace game::bb
+using gamebbDynArrayBlackboardStorage = game::bb::DynArrayBlackboardStorage;
 } // namespace RED4ext
 
 // clang-format on

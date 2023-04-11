@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemDestruction : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemDestruction";
@@ -20,6 +21,7 @@ struct RuntimeSystemDestruction : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemDestruction, 0xB80);
 } // namespace world
+using worldRuntimeSystemDestruction = world::RuntimeSystemDestruction;
 } // namespace RED4ext
 
 // clang-format on

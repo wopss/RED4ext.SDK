@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectOutputParameter_Variant
 {
     static constexpr const char* NAME = "gameEffectOutputParameter_Variant";
@@ -21,6 +22,7 @@ struct EffectOutputParameter_Variant
 };
 RED4EXT_ASSERT_SIZE(EffectOutputParameter_Variant, 0x40);
 } // namespace game
+using gameEffectOutputParameter_Variant = game::EffectOutputParameter_Variant;
 using EffectOutputParameter_Variant = game::EffectOutputParameter_Variant;
 } // namespace RED4ext
 

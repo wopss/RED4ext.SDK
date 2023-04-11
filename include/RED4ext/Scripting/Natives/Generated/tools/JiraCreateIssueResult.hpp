@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraCreateIssueResult : ISerializable
 {
     static constexpr const char* NAME = "toolsJiraCreateIssueResult";
@@ -26,6 +27,7 @@ struct JiraCreateIssueResult : ISerializable
 };
 RED4EXT_ASSERT_SIZE(JiraCreateIssueResult, 0x260);
 } // namespace tools
+using toolsJiraCreateIssueResult = tools::JiraCreateIssueResult;
 } // namespace RED4ext
 
 // clang-format on

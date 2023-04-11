@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_MultipleParentConstraint_ParentInfo
 {
     static constexpr const char* NAME = "animAnimNode_MultipleParentConstraint_ParentInfo";
@@ -30,6 +31,7 @@ struct AnimNode_MultipleParentConstraint_ParentInfo
 };
 RED4EXT_ASSERT_SIZE(AnimNode_MultipleParentConstraint_ParentInfo, 0x70);
 } // namespace anim
+using animAnimNode_MultipleParentConstraint_ParentInfo = anim::AnimNode_MultipleParentConstraint_ParentInfo;
 } // namespace RED4ext
 
 // clang-format on

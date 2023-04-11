@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterCyberdeckProgram_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterCyberdeckProgram_ConditionType";
@@ -21,6 +22,7 @@ struct CharacterCyberdeckProgram_ConditionType : quest::ICharacterConditionType
 };
 RED4EXT_ASSERT_SIZE(CharacterCyberdeckProgram_ConditionType, 0x80);
 } // namespace quest
+using questCharacterCyberdeckProgram_ConditionType = quest::CharacterCyberdeckProgram_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

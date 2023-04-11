@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct NavmeshDetector : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameNavmeshDetector";
@@ -20,6 +21,7 @@ struct NavmeshDetector : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(NavmeshDetector, 0x160);
 } // namespace game
+using gameNavmeshDetector = game::NavmeshDetector;
 } // namespace RED4ext
 
 // clang-format on

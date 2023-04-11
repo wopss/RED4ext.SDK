@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct RecalculateVehicleWorkspotPositionTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorRecalculateVehicleWorkspotPositionTaskDefinition";
@@ -24,6 +25,7 @@ struct RecalculateVehicleWorkspotPositionTaskDefinition : AI::behavior::TaskDefi
 };
 RED4EXT_ASSERT_SIZE(RecalculateVehicleWorkspotPositionTaskDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorRecalculateVehicleWorkspotPositionTaskDefinition = AI::behavior::RecalculateVehicleWorkspotPositionTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

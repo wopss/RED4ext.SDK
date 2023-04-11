@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PlaySkAnimEventData
 {
     static constexpr const char* NAME = "scnPlaySkAnimEventData";
@@ -27,6 +28,7 @@ struct PlaySkAnimEventData
 };
 RED4EXT_ASSERT_SIZE(PlaySkAnimEventData, 0x28);
 } // namespace scn
+using scnPlaySkAnimEventData = scn::PlaySkAnimEventData;
 } // namespace RED4ext
 
 // clang-format on

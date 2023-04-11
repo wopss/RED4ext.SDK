@@ -15,7 +15,8 @@ namespace RED4ext
 namespace anim { struct IAnimNode_PostProcess; }
 namespace anim { struct Rig; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_Retarget : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_Retarget";
@@ -27,6 +28,7 @@ struct AnimNode_Retarget : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_Retarget, 0xA0);
 } // namespace anim
+using animAnimNode_Retarget = anim::AnimNode_Retarget;
 } // namespace RED4ext
 
 // clang-format on

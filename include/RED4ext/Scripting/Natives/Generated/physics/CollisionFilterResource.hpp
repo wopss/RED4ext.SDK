@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct JsonResource;
 
-namespace physics { 
+namespace physics
+{
 struct CollisionFilterResource : ISerializable
 {
     static constexpr const char* NAME = "physicsCollisionFilterResource";
@@ -32,6 +33,7 @@ struct CollisionFilterResource : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CollisionFilterResource, 0x738);
 } // namespace physics
+using physicsCollisionFilterResource = physics::CollisionFilterResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -19,7 +19,8 @@ using EntityID = ent::EntityID;
 
 namespace RED4ext
 {
-namespace ent {
+namespace ent
+{
 struct EntityID
 {
     static constexpr const char* NAME = "entEntityID";
@@ -29,6 +30,7 @@ struct EntityID
 };
 RED4EXT_ASSERT_SIZE(EntityID, 0x8);
 } // namespace ent
+using entEntityID = ent::EntityID;
 using EntityID = ent::EntityID;
 } // namespace RED4ext
 */

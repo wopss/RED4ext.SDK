@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimatedRagdollNotifyEnabledEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimatedRagdollNotifyEnabledEvent";
@@ -21,6 +22,7 @@ struct AnimatedRagdollNotifyEnabledEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AnimatedRagdollNotifyEnabledEvent, 0x48);
 } // namespace ent
+using entAnimatedRagdollNotifyEnabledEvent = ent::AnimatedRagdollNotifyEnabledEvent;
 using AnimatedRagdollNotifyEnabledEvent = ent::AnimatedRagdollNotifyEnabledEvent;
 } // namespace RED4ext
 

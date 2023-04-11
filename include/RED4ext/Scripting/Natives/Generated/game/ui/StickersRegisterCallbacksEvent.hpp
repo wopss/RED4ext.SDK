@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct StickersRegisterCallbacksEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiStickersRegisterCallbacksEvent";
@@ -20,6 +21,7 @@ struct StickersRegisterCallbacksEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StickersRegisterCallbacksEvent, 0xC0);
 } // namespace game::ui
+using gameuiStickersRegisterCallbacksEvent = game::ui::StickersRegisterCallbacksEvent;
 using StickersRegisterCallbacksEvent = game::ui::StickersRegisterCallbacksEvent;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_DeviceCameraControlled : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_DeviceCameraControlled";
@@ -21,6 +22,7 @@ struct AnimFeature_DeviceCameraControlled : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_DeviceCameraControlled, 0x50);
 } // namespace anim
+using animAnimFeature_DeviceCameraControlled = anim::AnimFeature_DeviceCameraControlled;
 using AnimFeature_DeviceCameraControlled = anim::AnimFeature_DeviceCameraControlled;
 } // namespace RED4ext
 

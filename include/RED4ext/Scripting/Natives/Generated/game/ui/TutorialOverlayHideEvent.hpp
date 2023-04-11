@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TutorialOverlayHideEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiTutorialOverlayHideEvent";
@@ -22,6 +23,7 @@ struct TutorialOverlayHideEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayHideEvent, 0x70);
 } // namespace game::ui
+using gameuiTutorialOverlayHideEvent = game::ui::TutorialOverlayHideEvent;
 } // namespace RED4ext
 
 // clang-format on

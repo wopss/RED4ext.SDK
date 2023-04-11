@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DynamicReverbSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioDynamicReverbSettings";
@@ -43,6 +44,7 @@ struct DynamicReverbSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(DynamicReverbSettings, 0xC0);
 } // namespace audio
+using audioDynamicReverbSettings = audio::DynamicReverbSettings;
 } // namespace RED4ext
 
 // clang-format on

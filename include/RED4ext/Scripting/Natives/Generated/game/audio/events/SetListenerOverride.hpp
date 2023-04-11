@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct SetListenerOverride : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsSetListenerOverride";
@@ -21,6 +22,7 @@ struct SetListenerOverride : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetListenerOverride, 0x48);
 } // namespace game::audio::events
+using gameaudioeventsSetListenerOverride = game::audio::events::SetListenerOverride;
 using SetAudioOverrideEvent = game::audio::events::SetListenerOverride;
 } // namespace RED4ext
 

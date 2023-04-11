@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct Spawner : ISerializable
 {
     static constexpr const char* NAME = "effectSpawner";
@@ -19,6 +20,7 @@ struct Spawner : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Spawner, 0x30);
 } // namespace effect
+using effectSpawner = effect::Spawner;
 } // namespace RED4ext
 
 // clang-format on

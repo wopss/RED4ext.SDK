@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhoneWaveformData : IScriptable
 {
     static constexpr const char* NAME = "gameuiPhoneWaveformData";
@@ -22,6 +23,7 @@ struct PhoneWaveformData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PhoneWaveformData, 0x50);
 } // namespace game::ui
+using gameuiPhoneWaveformData = game::ui::PhoneWaveformData;
 } // namespace RED4ext
 
 // clang-format on

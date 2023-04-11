@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct PassiveConditionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct PassiveConditionNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorPassiveConditionNodeDefinition";
@@ -26,6 +27,7 @@ struct PassiveConditionNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PassiveConditionNodeDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorPassiveConditionNodeDefinition = AI::behavior::PassiveConditionNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

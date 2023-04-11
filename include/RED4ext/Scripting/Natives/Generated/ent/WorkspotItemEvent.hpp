@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct WorkspotItemEvent : red::Event
 {
     static constexpr const char* NAME = "entWorkspotItemEvent";
@@ -20,6 +21,7 @@ struct WorkspotItemEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(WorkspotItemEvent, 0x48);
 } // namespace ent
+using entWorkspotItemEvent = ent::WorkspotItemEvent;
 } // namespace RED4ext
 
 // clang-format on

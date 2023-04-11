@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace tempshit { 
+namespace tempshit
+{
 struct MapPinManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "tempshitMapPinManagerNodeDefinition";
@@ -31,6 +32,7 @@ struct MapPinManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(MapPinManagerNodeDefinition, 0xC8);
 } // namespace tempshit
+using tempshitMapPinManagerNodeDefinition = tempshit::MapPinManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace audio { struct LocomotionStateEventDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct FootstepDecalMaterialEntry
 {
     static constexpr const char* NAME = "audioFootstepDecalMaterialEntry";
@@ -24,6 +25,7 @@ struct FootstepDecalMaterialEntry
 };
 RED4EXT_ASSERT_SIZE(FootstepDecalMaterialEntry, 0x18);
 } // namespace audio
+using audioFootstepDecalMaterialEntry = audio::FootstepDecalMaterialEntry;
 } // namespace RED4ext
 
 // clang-format on

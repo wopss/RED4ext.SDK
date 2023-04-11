@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectParameter_FloatEvaluator_Value : game::IEffectParameter_FloatEvaluator
 {
     static constexpr const char* NAME = "gameEffectParameter_FloatEvaluator_Value";
@@ -21,6 +22,7 @@ struct EffectParameter_FloatEvaluator_Value : game::IEffectParameter_FloatEvalua
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_FloatEvaluator_Value, 0x38);
 } // namespace game
+using gameEffectParameter_FloatEvaluator_Value = game::EffectParameter_FloatEvaluator_Value;
 } // namespace RED4ext
 
 // clang-format on

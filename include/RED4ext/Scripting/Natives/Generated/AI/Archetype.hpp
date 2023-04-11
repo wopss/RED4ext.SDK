@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ParameterizedBehavior; }
 
-namespace AI { 
+namespace AI
+{
 struct Archetype : CResource
 {
     static constexpr const char* NAME = "AIArchetype";
@@ -26,6 +27,7 @@ struct Archetype : CResource
 };
 RED4EXT_ASSERT_SIZE(Archetype, 0xE0);
 } // namespace AI
+using AIArchetype = AI::Archetype;
 } // namespace RED4ext
 
 // clang-format on

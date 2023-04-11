@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LocalizationStringMapEntry
 {
     static constexpr const char* NAME = "entLocalizationStringMapEntry";
@@ -22,6 +23,7 @@ struct LocalizationStringMapEntry
 };
 RED4EXT_ASSERT_SIZE(LocalizationStringMapEntry, 0x30);
 } // namespace ent
+using entLocalizationStringMapEntry = ent::LocalizationStringMapEntry;
 } // namespace RED4ext
 
 // clang-format on

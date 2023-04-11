@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gen { 
+namespace gen
+{
 struct NullRandomizationSupervisor : gen::IRandomizationSupervisor
 {
     static constexpr const char* NAME = "genNullRandomizationSupervisor";
@@ -19,6 +20,7 @@ struct NullRandomizationSupervisor : gen::IRandomizationSupervisor
 };
 RED4EXT_ASSERT_SIZE(NullRandomizationSupervisor, 0x40);
 } // namespace gen
+using genNullRandomizationSupervisor = gen::NullRandomizationSupervisor;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TutorialManager : quest::ITutorialManager
 {
     static constexpr const char* NAME = "questTutorialManager";
@@ -20,6 +21,7 @@ struct TutorialManager : quest::ITutorialManager
 };
 RED4EXT_ASSERT_SIZE(TutorialManager, 0xA0);
 } // namespace quest
+using questTutorialManager = quest::TutorialManager;
 } // namespace RED4ext
 
 // clang-format on

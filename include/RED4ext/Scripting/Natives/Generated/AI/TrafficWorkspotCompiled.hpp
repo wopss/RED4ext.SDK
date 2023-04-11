@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TrafficWorkspotCompiled : world::TrafficSpotCompiled
 {
     static constexpr const char* NAME = "AITrafficWorkspotCompiled";
@@ -20,6 +21,7 @@ struct TrafficWorkspotCompiled : world::TrafficSpotCompiled
 };
 RED4EXT_ASSERT_SIZE(TrafficWorkspotCompiled, 0x80);
 } // namespace AI
+using AITrafficWorkspotCompiled = AI::TrafficWorkspotCompiled;
 } // namespace RED4ext
 
 // clang-format on

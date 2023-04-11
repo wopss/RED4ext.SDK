@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct Entity : IScriptable
 {
     static constexpr const char* NAME = "entEntity";
@@ -26,6 +27,7 @@ struct Entity : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Entity, 0x160);
 } // namespace ent
+using entEntity = ent::Entity;
 using Entity = ent::Entity;
 } // namespace RED4ext
 

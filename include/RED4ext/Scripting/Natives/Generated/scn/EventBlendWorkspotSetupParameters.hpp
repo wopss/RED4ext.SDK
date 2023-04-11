@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct EventBlendWorkspotSetupParameters : ISerializable
 {
     static constexpr const char* NAME = "scnEventBlendWorkspotSetupParameters";
@@ -29,6 +30,7 @@ struct EventBlendWorkspotSetupParameters : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EventBlendWorkspotSetupParameters, 0x70);
 } // namespace scn
+using scnEventBlendWorkspotSetupParameters = scn::EventBlendWorkspotSetupParameters;
 } // namespace RED4ext
 
 // clang-format on

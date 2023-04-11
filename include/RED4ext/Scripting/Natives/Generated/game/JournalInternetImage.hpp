@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct TextureAtlas; }
 
-namespace game { 
+namespace game
+{
 struct JournalInternetImage : game::JournalInternetBase
 {
     static constexpr const char* NAME = "gameJournalInternetImage";
@@ -25,6 +26,7 @@ struct JournalInternetImage : game::JournalInternetBase
 };
 RED4EXT_ASSERT_SIZE(JournalInternetImage, 0x80);
 } // namespace game
+using gameJournalInternetImage = game::JournalInternetImage;
 using JournalInternetImage = game::JournalInternetImage;
 } // namespace RED4ext
 

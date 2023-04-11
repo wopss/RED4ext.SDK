@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct InputSocketStamp
 {
     static constexpr const char* NAME = "scnInputSocketStamp";
@@ -20,6 +21,7 @@ struct InputSocketStamp
 };
 RED4EXT_ASSERT_SIZE(InputSocketStamp, 0x4);
 } // namespace scn
+using scnInputSocketStamp = scn::InputSocketStamp;
 } // namespace RED4ext
 
 // clang-format on

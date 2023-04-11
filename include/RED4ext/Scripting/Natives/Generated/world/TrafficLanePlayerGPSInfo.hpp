@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficLanePlayerGPSInfo
 {
     static constexpr const char* NAME = "worldTrafficLanePlayerGPSInfo";
@@ -20,6 +21,7 @@ struct TrafficLanePlayerGPSInfo
 };
 RED4EXT_ASSERT_SIZE(TrafficLanePlayerGPSInfo, 0x4);
 } // namespace world
+using worldTrafficLanePlayerGPSInfo = world::TrafficLanePlayerGPSInfo;
 } // namespace RED4ext
 
 // clang-format on

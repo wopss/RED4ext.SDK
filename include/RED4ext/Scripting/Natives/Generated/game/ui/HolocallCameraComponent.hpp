@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HolocallCameraComponent : ent::RenderToTextureCameraComponent
 {
     static constexpr const char* NAME = "gameuiHolocallCameraComponent";
@@ -19,6 +20,7 @@ struct HolocallCameraComponent : ent::RenderToTextureCameraComponent
 };
 RED4EXT_ASSERT_SIZE(HolocallCameraComponent, 0x980);
 } // namespace game::ui
+using gameuiHolocallCameraComponent = game::ui::HolocallCameraComponent;
 } // namespace RED4ext
 
 // clang-format on

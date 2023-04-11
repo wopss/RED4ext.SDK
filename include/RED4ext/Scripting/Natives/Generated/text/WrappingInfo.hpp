@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace text { 
+namespace text
+{
 struct WrappingInfo
 {
     static constexpr const char* NAME = "textWrappingInfo";
@@ -24,6 +25,7 @@ struct WrappingInfo
 };
 RED4EXT_ASSERT_SIZE(WrappingInfo, 0xC);
 } // namespace text
+using textWrappingInfo = text::WrappingInfo;
 } // namespace RED4ext
 
 // clang-format on

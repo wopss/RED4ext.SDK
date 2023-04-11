@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlots : ent::IComponent
 {
     static constexpr const char* NAME = "gameAttachmentSlots";
@@ -24,6 +25,7 @@ struct AttachmentSlots : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlots, 0x118);
 } // namespace game
+using gameAttachmentSlots = game::AttachmentSlots;
 } // namespace RED4ext
 
 // clang-format on

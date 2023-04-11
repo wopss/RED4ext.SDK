@@ -18,7 +18,8 @@ namespace anim { struct AnimStateMachineConditionalEntry; }
 namespace anim { struct AnimStateTransitionDescription; }
 namespace anim { struct IAnimStateTransitionInterpolator; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_StateMachine : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_StateMachine";
@@ -36,6 +37,7 @@ struct AnimNode_StateMachine : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_StateMachine, 0x140);
 } // namespace anim
+using animAnimNode_StateMachine = anim::AnimNode_StateMachine;
 } // namespace RED4ext
 
 // clang-format on

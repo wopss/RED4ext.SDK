@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CommunityTemplate_NodeType : quest::SpawnManagerNodeType
 {
     static constexpr const char* NAME = "questCommunityTemplate_NodeType";
@@ -24,6 +25,7 @@ struct CommunityTemplate_NodeType : quest::SpawnManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(CommunityTemplate_NodeType, 0x50);
 } // namespace quest
+using questCommunityTemplate_NodeType = quest::CommunityTemplate_NodeType;
 } // namespace RED4ext
 
 // clang-format on

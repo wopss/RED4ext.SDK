@@ -19,7 +19,8 @@ namespace RED4ext
 namespace ink { struct UserData; }
 namespace ink { struct WidgetLibraryResource; }
 
-namespace quest { 
+namespace quest
+{
 struct BriefingSequencePlayer_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questBriefingSequencePlayer_NodeType";
@@ -39,6 +40,7 @@ struct BriefingSequencePlayer_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(BriefingSequencePlayer_NodeType, 0x80);
 } // namespace quest
+using questBriefingSequencePlayer_NodeType = quest::BriefingSequencePlayer_NodeType;
 } // namespace RED4ext
 
 // clang-format on

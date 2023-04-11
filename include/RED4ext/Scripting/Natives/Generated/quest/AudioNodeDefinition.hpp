@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IAudioNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct AudioNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questAudioNodeDefinition";
@@ -23,6 +24,7 @@ struct AudioNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(AudioNodeDefinition, 0x58);
 } // namespace quest
+using questAudioNodeDefinition = quest::AudioNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

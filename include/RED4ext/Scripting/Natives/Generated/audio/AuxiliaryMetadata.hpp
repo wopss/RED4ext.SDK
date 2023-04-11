@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AuxiliaryMetadata
 {
     static constexpr const char* NAME = "audioAuxiliaryMetadata";
@@ -20,6 +21,7 @@ struct AuxiliaryMetadata
 };
 RED4EXT_ASSERT_SIZE(AuxiliaryMetadata, 0x8);
 } // namespace audio
+using audioAuxiliaryMetadata = audio::AuxiliaryMetadata;
 } // namespace RED4ext
 
 // clang-format on

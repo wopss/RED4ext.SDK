@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InitializeUserScreenState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkInitializeUserScreenState";
@@ -19,6 +20,7 @@ struct InitializeUserScreenState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(InitializeUserScreenState, 0x10);
 } // namespace ink
+using inkInitializeUserScreenState = ink::InitializeUserScreenState;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FinisherSyncData
 {
     static constexpr const char* NAME = "gameFinisherSyncData";
@@ -22,6 +23,7 @@ struct FinisherSyncData
 };
 RED4EXT_ASSERT_SIZE(FinisherSyncData, 0x10);
 } // namespace game
+using gameFinisherSyncData = game::FinisherSyncData;
 } // namespace RED4ext
 
 // clang-format on

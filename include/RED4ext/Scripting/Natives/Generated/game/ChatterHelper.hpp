@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ChatterHelper : IScriptable
 {
     static constexpr const char* NAME = "gameChatterHelper";
@@ -19,6 +20,7 @@ struct ChatterHelper : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ChatterHelper, 0x40);
 } // namespace game
+using gameChatterHelper = game::ChatterHelper;
 using ChatterHelper = game::ChatterHelper;
 } // namespace RED4ext
 

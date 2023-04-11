@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BinkMeshTargetBinding : ent::ISourceBinding
 {
     static constexpr const char* NAME = "gameBinkMeshTargetBinding";
@@ -19,6 +20,7 @@ struct BinkMeshTargetBinding : ent::ISourceBinding
 };
 RED4EXT_ASSERT_SIZE(BinkMeshTargetBinding, 0x70);
 } // namespace game
+using gameBinkMeshTargetBinding = game::BinkMeshTargetBinding;
 } // namespace RED4ext
 
 // clang-format on

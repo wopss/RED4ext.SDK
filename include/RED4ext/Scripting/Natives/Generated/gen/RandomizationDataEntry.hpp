@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace gen { 
+namespace gen
+{
 struct RandomizationDataEntry
 {
     static constexpr const char* NAME = "genRandomizationDataEntry";
@@ -26,6 +27,7 @@ struct RandomizationDataEntry
 };
 RED4EXT_ASSERT_SIZE(RandomizationDataEntry, 0x50);
 } // namespace gen
+using genRandomizationDataEntry = gen::RandomizationDataEntry;
 using RandomizationDataEntry = gen::RandomizationDataEntry;
 } // namespace RED4ext
 

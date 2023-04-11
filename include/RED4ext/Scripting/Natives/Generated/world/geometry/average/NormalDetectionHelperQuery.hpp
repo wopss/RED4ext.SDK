@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::geometry::average { 
+namespace world::geometry::average
+{
 struct NormalDetectionHelperQuery : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryaverageNormalDetectionHelperQuery";
@@ -20,6 +21,7 @@ struct NormalDetectionHelperQuery : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NormalDetectionHelperQuery, 0x90);
 } // namespace world::geometry::average
+using worldgeometryaverageNormalDetectionHelperQuery = world::geometry::average::NormalDetectionHelperQuery;
 using AverageNormalQuery = world::geometry::average::NormalDetectionHelperQuery;
 } // namespace RED4ext
 

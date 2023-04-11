@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct IWorkspotManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIIWorkspotManager";
@@ -19,6 +20,7 @@ struct IWorkspotManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IWorkspotManager, 0x48);
 } // namespace AI
+using AIIWorkspotManager = AI::IWorkspotManager;
 using IWorkspotManager = AI::IWorkspotManager;
 } // namespace RED4ext
 

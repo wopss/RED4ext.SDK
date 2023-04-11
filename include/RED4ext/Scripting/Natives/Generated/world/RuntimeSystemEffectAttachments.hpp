@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemEffectAttachments : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemEffectAttachments";
@@ -20,6 +21,7 @@ struct RuntimeSystemEffectAttachments : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemEffectAttachments, 0x60);
 } // namespace world
+using worldRuntimeSystemEffectAttachments = world::RuntimeSystemEffectAttachments;
 } // namespace RED4ext
 
 // clang-format on

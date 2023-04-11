@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct PreFireEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsPreFireEvent";
@@ -19,6 +20,7 @@ struct PreFireEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PreFireEvent, 0x40);
 } // namespace game::audio::events
+using gameaudioeventsPreFireEvent = game::audio::events::PreFireEvent;
 using WeaponPreFireEvent = game::audio::events::PreFireEvent;
 } // namespace RED4ext
 

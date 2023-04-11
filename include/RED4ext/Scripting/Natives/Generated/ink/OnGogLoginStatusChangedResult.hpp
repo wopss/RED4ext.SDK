@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct OnGogLoginStatusChangedResult : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkOnGogLoginStatusChangedResult";
@@ -20,6 +21,7 @@ struct OnGogLoginStatusChangedResult : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(OnGogLoginStatusChangedResult, 0x38);
 } // namespace ink
+using inkOnGogLoginStatusChangedResult = ink::OnGogLoginStatusChangedResult;
 } // namespace RED4ext
 
 // clang-format on

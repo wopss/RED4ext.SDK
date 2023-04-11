@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon { 
+namespace game::weapon
+{
 struct AnimFeature_AimPlayer : anim::AnimFeature_BasicAim
 {
     static constexpr const char* NAME = "gameweaponAnimFeature_AimPlayer";
@@ -23,6 +24,7 @@ struct AnimFeature_AimPlayer : anim::AnimFeature_BasicAim
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_AimPlayer, 0x58);
 } // namespace game::weapon
+using gameweaponAnimFeature_AimPlayer = game::weapon::AnimFeature_AimPlayer;
 using AnimFeature_AimPlayer = game::weapon::AnimFeature_AimPlayer;
 } // namespace RED4ext
 

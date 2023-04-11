@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct PlayerCallbacks
 {
     static constexpr const char* NAME = "AIbehaviortweakPlayerCallbacks";
@@ -19,6 +20,7 @@ struct PlayerCallbacks
 };
 RED4EXT_ASSERT_SIZE(PlayerCallbacks, 0x50);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakPlayerCallbacks = AI::behavior::tweak::PlayerCallbacks;
 } // namespace RED4ext
 
 // clang-format on

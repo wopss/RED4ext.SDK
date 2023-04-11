@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn { struct InterestingConversationsGroup; }
 
-namespace scn { 
+namespace scn
+{
 struct InterestingConversationsResource : CResource
 {
     static constexpr const char* NAME = "scnInterestingConversationsResource";
@@ -24,6 +25,7 @@ struct InterestingConversationsResource : CResource
 };
 RED4EXT_ASSERT_SIZE(InterestingConversationsResource, 0x50);
 } // namespace scn
+using scnInterestingConversationsResource = scn::InterestingConversationsResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -23,7 +23,8 @@ namespace RED4ext
 {
 namespace ink { struct Widget; }
 
-namespace ink {
+namespace ink
+{
 struct MultiChildren : ink::Children
 {
     static constexpr const char* NAME = "inkMultiChildren";
@@ -34,6 +35,7 @@ struct MultiChildren : ink::Children
 };
 RED4EXT_ASSERT_SIZE(MultiChildren, 0x48);
 } // namespace ink
+using inkMultiChildren = ink::MultiChildren;
 } // namespace RED4ext
 */
 

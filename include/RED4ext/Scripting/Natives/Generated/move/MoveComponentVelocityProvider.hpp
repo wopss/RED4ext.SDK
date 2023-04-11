@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct MoveComponentVelocityProvider : ent::IVelocityProvider
 {
     static constexpr const char* NAME = "moveMoveComponentVelocityProvider";
@@ -20,6 +21,7 @@ struct MoveComponentVelocityProvider : ent::IVelocityProvider
 };
 RED4EXT_ASSERT_SIZE(MoveComponentVelocityProvider, 0x50);
 } // namespace move
+using moveMoveComponentVelocityProvider = move::MoveComponentVelocityProvider;
 using MoveComponentVelocityProvider = move::MoveComponentVelocityProvider;
 } // namespace RED4ext
 

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct IRuntimeCondition; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_RuntimeSwitch : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_RuntimeSwitch";
@@ -27,6 +28,7 @@ struct AnimNode_RuntimeSwitch : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_RuntimeSwitch, 0x98);
 } // namespace anim
+using animAnimNode_RuntimeSwitch = anim::AnimNode_RuntimeSwitch;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SocketDefinition : graph::GraphSocketDefinition
 {
     static constexpr const char* NAME = "questSocketDefinition";
@@ -22,6 +23,7 @@ struct SocketDefinition : graph::GraphSocketDefinition
 };
 RED4EXT_ASSERT_SIZE(SocketDefinition, 0x60);
 } // namespace quest
+using questSocketDefinition = quest::SocketDefinition;
 } // namespace RED4ext
 
 // clang-format on

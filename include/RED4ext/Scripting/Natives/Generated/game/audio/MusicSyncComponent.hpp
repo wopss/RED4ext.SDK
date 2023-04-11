@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct MusicSyncComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameaudioMusicSyncComponent";
@@ -28,6 +29,7 @@ struct MusicSyncComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(MusicSyncComponent, 0xE8);
 } // namespace game::audio
+using gameaudioMusicSyncComponent = game::audio::MusicSyncComponent;
 } // namespace RED4ext
 
 // clang-format on

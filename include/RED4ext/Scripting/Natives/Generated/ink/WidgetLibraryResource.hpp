@@ -17,11 +17,11 @@
 namespace RED4ext
 {
 struct CResource;
-namespace ink { struct WidgetLibraryResource; }
 namespace ink::anim { struct AnimationLibraryResource; }
 namespace ink::anim { struct Sequence; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetLibraryResource : CResource
 {
     static constexpr const char* NAME = "inkWidgetLibraryResource";
@@ -41,6 +41,7 @@ struct WidgetLibraryResource : CResource
 };
 RED4EXT_ASSERT_SIZE(WidgetLibraryResource, 0xA8);
 } // namespace ink
+using inkWidgetLibraryResource = ink::WidgetLibraryResource;
 } // namespace RED4ext
 
 // clang-format on

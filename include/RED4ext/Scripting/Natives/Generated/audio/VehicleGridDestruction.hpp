@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehicleGridDestruction : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioVehicleGridDestruction";
@@ -27,6 +28,7 @@ struct VehicleGridDestruction : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(VehicleGridDestruction, 0x160);
 } // namespace audio
+using audioVehicleGridDestruction = audio::VehicleGridDestruction;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace vis { struct IOccluderResource; }
 
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamOccluderData : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamOccluderData";
@@ -27,6 +28,7 @@ struct MeshParamOccluderData : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamOccluderData, 0x48);
 } // namespace mesh
+using meshMeshParamOccluderData = mesh::MeshParamOccluderData;
 } // namespace RED4ext
 
 // clang-format on

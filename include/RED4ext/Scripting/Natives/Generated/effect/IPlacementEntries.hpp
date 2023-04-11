@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct IPlacementEntries : ISerializable
 {
     static constexpr const char* NAME = "effectIPlacementEntries";
@@ -19,6 +20,7 @@ struct IPlacementEntries : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IPlacementEntries, 0x30);
 } // namespace effect
+using effectIPlacementEntries = effect::IPlacementEntries;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace scn { 
+namespace scn
+{
 struct DialogLineData
 {
     static constexpr const char* NAME = "scnDialogLineData";
@@ -32,6 +33,7 @@ struct DialogLineData
 };
 RED4EXT_ASSERT_SIZE(DialogLineData, 0x68);
 } // namespace scn
+using scnDialogLineData = scn::DialogLineData;
 } // namespace RED4ext
 
 // clang-format on

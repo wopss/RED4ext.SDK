@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct HubNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnHubNode";
@@ -19,6 +20,7 @@ struct HubNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(HubNode, 0x48);
 } // namespace scn
+using scnHubNode = scn::HubNode;
 } // namespace RED4ext
 
 // clang-format on

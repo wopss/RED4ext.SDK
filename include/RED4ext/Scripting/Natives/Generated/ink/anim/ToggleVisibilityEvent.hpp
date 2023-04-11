@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct ToggleVisibilityEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimToggleVisibilityEvent";
@@ -19,6 +20,7 @@ struct ToggleVisibilityEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleVisibilityEvent, 0x48);
 } // namespace ink::anim
+using inkanimToggleVisibilityEvent = ink::anim::ToggleVisibilityEvent;
 using inkAnimToggleVisibilityEvent = ink::anim::ToggleVisibilityEvent;
 } // namespace RED4ext
 

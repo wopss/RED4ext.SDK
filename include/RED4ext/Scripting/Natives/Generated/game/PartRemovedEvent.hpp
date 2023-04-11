@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PartRemovedEvent : red::Event
 {
     static constexpr const char* NAME = "gamePartRemovedEvent";
@@ -22,6 +23,7 @@ struct PartRemovedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PartRemovedEvent, 0x60);
 } // namespace game
+using gamePartRemovedEvent = game::PartRemovedEvent;
 using PartRemovedEvent = game::PartRemovedEvent;
 } // namespace RED4ext
 

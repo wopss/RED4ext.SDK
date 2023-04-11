@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TweakDBIconReference : ink::IconReference
 {
     static constexpr const char* NAME = "gameuiTweakDBIconReference";
@@ -21,6 +22,7 @@ struct TweakDBIconReference : ink::IconReference
 };
 RED4EXT_ASSERT_SIZE(TweakDBIconReference, 0x48);
 } // namespace game::ui
+using gameuiTweakDBIconReference = game::ui::TweakDBIconReference;
 using UIIconReference = game::ui::TweakDBIconReference;
 } // namespace RED4ext
 

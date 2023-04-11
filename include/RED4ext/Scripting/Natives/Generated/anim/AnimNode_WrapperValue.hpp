@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_WrapperValue : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_WrapperValue";
@@ -26,6 +27,7 @@ struct AnimNode_WrapperValue : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_WrapperValue, 0x70);
 } // namespace anim
+using animAnimNode_WrapperValue = anim::AnimNode_WrapperValue;
 } // namespace RED4ext
 
 // clang-format on

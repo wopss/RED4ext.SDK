@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_QuerySphere_GrowOverTime : game::EffectObjectProvider_QuerySphere
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_QuerySphere_GrowOverTime";
@@ -19,6 +20,7 @@ struct EffectObjectProvider_QuerySphere_GrowOverTime : game::EffectObjectProvide
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_QuerySphere_GrowOverTime, 0x70);
 } // namespace game
+using gameEffectObjectProvider_QuerySphere_GrowOverTime = game::EffectObjectProvider_QuerySphere_GrowOverTime;
 } // namespace RED4ext
 
 // clang-format on

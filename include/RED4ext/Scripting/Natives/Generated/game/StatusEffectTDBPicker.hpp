@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatusEffectTDBPicker
 {
     static constexpr const char* NAME = "gameStatusEffectTDBPicker";
@@ -20,6 +21,7 @@ struct StatusEffectTDBPicker
 };
 RED4EXT_ASSERT_SIZE(StatusEffectTDBPicker, 0x8);
 } // namespace game
+using gameStatusEffectTDBPicker = game::StatusEffectTDBPicker;
 using StatusEffectTDBPicker = game::StatusEffectTDBPicker;
 } // namespace RED4ext
 

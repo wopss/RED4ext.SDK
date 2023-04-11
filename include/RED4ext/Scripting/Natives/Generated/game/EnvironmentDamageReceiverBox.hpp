@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EnvironmentDamageReceiverBox : game::EnvironmentDamageReceiverShape
 {
     static constexpr const char* NAME = "gameEnvironmentDamageReceiverBox";
@@ -22,6 +23,7 @@ struct EnvironmentDamageReceiverBox : game::EnvironmentDamageReceiverShape
 };
 RED4EXT_ASSERT_SIZE(EnvironmentDamageReceiverBox, 0x60);
 } // namespace game
+using gameEnvironmentDamageReceiverBox = game::EnvironmentDamageReceiverBox;
 } // namespace RED4ext
 
 // clang-format on

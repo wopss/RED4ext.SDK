@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttitudePrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameAttitudePrereqState";
@@ -20,6 +21,7 @@ struct AttitudePrereqState : game::PrereqState
 };
 RED4EXT_ASSERT_SIZE(AttitudePrereqState, 0xC8);
 } // namespace game
+using gameAttitudePrereqState = game::AttitudePrereqState;
 using AttitudePrereqState = game::AttitudePrereqState;
 } // namespace RED4ext
 

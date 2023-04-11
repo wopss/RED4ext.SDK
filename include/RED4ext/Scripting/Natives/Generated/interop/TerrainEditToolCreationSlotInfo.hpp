@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct TerrainEditToolCreationSlotInfo
 {
     static constexpr const char* NAME = "interopTerrainEditToolCreationSlotInfo";
@@ -24,6 +25,7 @@ struct TerrainEditToolCreationSlotInfo
 };
 RED4EXT_ASSERT_SIZE(TerrainEditToolCreationSlotInfo, 0x14);
 } // namespace interop
+using interopTerrainEditToolCreationSlotInfo = interop::TerrainEditToolCreationSlotInfo;
 } // namespace RED4ext
 
 // clang-format on

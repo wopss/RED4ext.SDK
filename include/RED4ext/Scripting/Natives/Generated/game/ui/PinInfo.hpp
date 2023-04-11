@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PinInfo
 {
     static constexpr const char* NAME = "gameuiPinInfo";
@@ -27,6 +28,7 @@ struct PinInfo
 };
 RED4EXT_ASSERT_SIZE(PinInfo, 0x30);
 } // namespace game::ui
+using gameuiPinInfo = game::ui::PinInfo;
 using PinInfo = game::ui::PinInfo;
 } // namespace RED4ext
 

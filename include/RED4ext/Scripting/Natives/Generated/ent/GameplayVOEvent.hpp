@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct GameplayVOEvent : red::Event
 {
     static constexpr const char* NAME = "entGameplayVOEvent";
@@ -38,6 +39,7 @@ struct GameplayVOEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(GameplayVOEvent, 0x68);
 } // namespace ent
+using entGameplayVOEvent = ent::GameplayVOEvent;
 using SoundPlayVo = ent::GameplayVOEvent;
 } // namespace RED4ext
 

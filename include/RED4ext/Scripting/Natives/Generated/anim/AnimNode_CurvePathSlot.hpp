@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_CurvePathSlot : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_CurvePathSlot";
@@ -21,6 +22,7 @@ struct AnimNode_CurvePathSlot : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_CurvePathSlot, 0x60);
 } // namespace anim
+using animAnimNode_CurvePathSlot = anim::AnimNode_CurvePathSlot;
 } // namespace RED4ext
 
 // clang-format on

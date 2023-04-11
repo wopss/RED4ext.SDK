@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ThreatSaveData
 {
     static constexpr const char* NAME = "AIThreatSaveData";
@@ -22,6 +23,7 @@ struct ThreatSaveData
 };
 RED4EXT_ASSERT_SIZE(ThreatSaveData, 0x10);
 } // namespace AI
+using AIThreatSaveData = AI::ThreatSaveData;
 } // namespace RED4ext
 
 // clang-format on

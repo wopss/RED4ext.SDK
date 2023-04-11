@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AbsoluteZLimiterCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataAbsoluteZLimiterCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct AbsoluteZLimiterCoverSelectionParameters_Record : game::data::CoverSelect
 };
 RED4EXT_ASSERT_SIZE(AbsoluteZLimiterCoverSelectionParameters_Record, 0x58);
 } // namespace game::data
+using gamedataAbsoluteZLimiterCoverSelectionParameters_Record = game::data::AbsoluteZLimiterCoverSelectionParameters_Record;
 using AbsoluteZLimiterCoverSelectionParameters_Record = game::data::AbsoluteZLimiterCoverSelectionParameters_Record;
 } // namespace RED4ext
 

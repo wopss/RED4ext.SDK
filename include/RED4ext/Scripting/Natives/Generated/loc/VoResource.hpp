@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace loc { 
+namespace loc
+{
 struct VoResource : CResource
 {
     static constexpr const char* NAME = "locVoResource";
@@ -19,6 +20,7 @@ struct VoResource : CResource
 };
 RED4EXT_ASSERT_SIZE(VoResource, 0x40);
 } // namespace loc
+using locVoResource = loc::VoResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InitialLoadingControllerSupervisor : game::ui::OnscreenVOPlayerController
 {
     static constexpr const char* NAME = "inkInitialLoadingControllerSupervisor";
@@ -19,6 +20,7 @@ struct InitialLoadingControllerSupervisor : game::ui::OnscreenVOPlayerController
 };
 RED4EXT_ASSERT_SIZE(InitialLoadingControllerSupervisor, 0x150);
 } // namespace ink
+using inkInitialLoadingControllerSupervisor = ink::InitialLoadingControllerSupervisor;
 } // namespace RED4ext
 
 // clang-format on

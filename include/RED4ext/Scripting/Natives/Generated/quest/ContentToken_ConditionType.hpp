@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ContentToken_ConditionType : quest::IContentConditionType
 {
     static constexpr const char* NAME = "questContentToken_ConditionType";
@@ -22,6 +23,7 @@ struct ContentToken_ConditionType : quest::IContentConditionType
 };
 RED4EXT_ASSERT_SIZE(ContentToken_ConditionType, 0x40);
 } // namespace quest
+using questContentToken_ConditionType = quest::ContentToken_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

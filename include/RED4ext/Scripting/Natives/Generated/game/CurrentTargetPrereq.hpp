@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CurrentTargetPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameCurrentTargetPrereq";
@@ -19,6 +20,7 @@ struct CurrentTargetPrereq : game::IPrereq
 };
 RED4EXT_ASSERT_SIZE(CurrentTargetPrereq, 0x40);
 } // namespace game
+using gameCurrentTargetPrereq = game::CurrentTargetPrereq;
 using CurrentTargetPrereq = game::CurrentTargetPrereq;
 } // namespace RED4ext
 

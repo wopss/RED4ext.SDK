@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct EditorObjectIDPath
 {
     static constexpr const char* NAME = "toolsEditorObjectIDPath";
@@ -21,6 +22,7 @@ struct EditorObjectIDPath
 };
 RED4EXT_ASSERT_SIZE(EditorObjectIDPath, 0x10);
 } // namespace tools
+using toolsEditorObjectIDPath = tools::EditorObjectIDPath;
 } // namespace RED4ext
 
 // clang-format on

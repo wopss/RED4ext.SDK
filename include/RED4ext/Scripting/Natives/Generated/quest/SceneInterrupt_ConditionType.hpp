@@ -16,7 +16,8 @@ namespace RED4ext
 namespace scn { struct IInterruptCondition; }
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct SceneInterrupt_ConditionType : quest::ISceneConditionType
 {
     static constexpr const char* NAME = "questSceneInterrupt_ConditionType";
@@ -30,6 +31,7 @@ struct SceneInterrupt_ConditionType : quest::ISceneConditionType
 };
 RED4EXT_ASSERT_SIZE(SceneInterrupt_ConditionType, 0x58);
 } // namespace quest
+using questSceneInterrupt_ConditionType = quest::SceneInterrupt_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

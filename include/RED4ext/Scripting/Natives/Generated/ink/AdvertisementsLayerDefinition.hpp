@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct AdvertisementsLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkAdvertisementsLayerDefinition";
@@ -19,6 +20,7 @@ struct AdvertisementsLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(AdvertisementsLayerDefinition, 0x38);
 } // namespace ink
+using inkAdvertisementsLayerDefinition = ink::AdvertisementsLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace quest { struct TimeDilation_Operation; }
 
-namespace quest { 
+namespace quest
+{
 struct TimeDilation_Entity : quest::TimeDilation_NodeTypeParam
 {
     static constexpr const char* NAME = "questTimeDilation_Entity";
@@ -29,6 +30,7 @@ struct TimeDilation_Entity : quest::TimeDilation_NodeTypeParam
 };
 RED4EXT_ASSERT_SIZE(TimeDilation_Entity, 0x58);
 } // namespace quest
+using questTimeDilation_Entity = quest::TimeDilation_Entity;
 } // namespace RED4ext
 
 // clang-format on

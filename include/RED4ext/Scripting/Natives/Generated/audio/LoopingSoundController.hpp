@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LoopingSoundController
 {
     static constexpr const char* NAME = "audioLoopingSoundController";
@@ -22,6 +23,7 @@ struct LoopingSoundController
 };
 RED4EXT_ASSERT_SIZE(LoopingSoundController, 0x18);
 } // namespace audio
+using audioLoopingSoundController = audio::LoopingSoundController;
 } // namespace RED4ext
 
 // clang-format on

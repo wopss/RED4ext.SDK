@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionMissileRainGrid_Record : game::data::AISubActionShootWithWeapon_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionMissileRainGrid_Record";
@@ -20,6 +21,7 @@ struct AISubActionMissileRainGrid_Record : game::data::AISubActionShootWithWeapo
 };
 RED4EXT_ASSERT_SIZE(AISubActionMissileRainGrid_Record, 0x80);
 } // namespace game::data
+using gamedataAISubActionMissileRainGrid_Record = game::data::AISubActionMissileRainGrid_Record;
 using AISubActionMissileRainGrid_Record = game::data::AISubActionMissileRainGrid_Record;
 } // namespace RED4ext
 

@@ -19,10 +19,10 @@ namespace RED4ext
 {
 struct CMesh;
 namespace world { struct Node; }
-namespace world { struct NodesGroup; }
 namespace world { struct PrefabMetadata; }
 
-namespace world { 
+namespace world
+{
 struct NodesGroup : ISerializable
 {
     static constexpr const char* NAME = "worldNodesGroup";
@@ -50,6 +50,7 @@ struct NodesGroup : ISerializable
 };
 RED4EXT_ASSERT_SIZE(NodesGroup, 0x250);
 } // namespace world
+using worldNodesGroup = world::NodesGroup;
 } // namespace RED4ext
 
 // clang-format on

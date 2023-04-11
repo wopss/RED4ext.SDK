@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemCamera : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemCamera";
@@ -20,6 +21,7 @@ struct RuntimeSystemCamera : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemCamera, 0x60);
 } // namespace world
+using worldRuntimeSystemCamera = world::RuntimeSystemCamera;
 } // namespace RED4ext
 
 // clang-format on

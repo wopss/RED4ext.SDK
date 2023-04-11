@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct UseWorkspotParams
 {
     static constexpr const char* NAME = "questUseWorkspotParams";
@@ -22,6 +23,7 @@ struct UseWorkspotParams
 };
 RED4EXT_ASSERT_SIZE(UseWorkspotParams, 0x10);
 } // namespace quest
+using questUseWorkspotParams = quest::UseWorkspotParams;
 } // namespace RED4ext
 
 // clang-format on

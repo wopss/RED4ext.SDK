@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineStateSnapshotsContainer
 {
     static constexpr const char* NAME = "gamestateMachineStateSnapshotsContainer";
@@ -22,6 +23,7 @@ struct MachineStateSnapshotsContainer
 };
 RED4EXT_ASSERT_SIZE(MachineStateSnapshotsContainer, 0x18);
 } // namespace game::state
+using gamestateMachineStateSnapshotsContainer = game::state::MachineStateSnapshotsContainer;
 using StateSnapshotsContainer = game::state::MachineStateSnapshotsContainer;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IconReference : IScriptable
 {
     static constexpr const char* NAME = "inkIconReference";
@@ -19,6 +20,7 @@ struct IconReference : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IconReference, 0x40);
 } // namespace ink
+using inkIconReference = ink::IconReference;
 } // namespace RED4ext
 
 // clang-format on

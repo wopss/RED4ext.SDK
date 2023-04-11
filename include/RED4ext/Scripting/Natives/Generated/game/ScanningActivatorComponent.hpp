@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningActivatorComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameScanningActivatorComponent";
@@ -20,6 +21,7 @@ struct ScanningActivatorComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(ScanningActivatorComponent, 0x138);
 } // namespace game
+using gameScanningActivatorComponent = game::ScanningActivatorComponent;
 using ScanningActivatorComponent = game::ScanningActivatorComponent;
 } // namespace RED4ext
 

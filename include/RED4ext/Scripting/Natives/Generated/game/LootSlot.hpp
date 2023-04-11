@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LootSlot : game::LootContainerBase
 {
     static constexpr const char* NAME = "gameLootSlot";
@@ -25,6 +26,7 @@ struct LootSlot : game::LootContainerBase
 };
 RED4EXT_ASSERT_SIZE(LootSlot, 0x298);
 } // namespace game
+using gameLootSlot = game::LootSlot;
 } // namespace RED4ext
 
 // clang-format on

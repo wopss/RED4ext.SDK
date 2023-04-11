@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct ExecutionContext
 {
     static constexpr const char* NAME = "AIbehaviortweakExecutionContext";
@@ -19,6 +20,7 @@ struct ExecutionContext
 };
 RED4EXT_ASSERT_SIZE(ExecutionContext, 0x30);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakExecutionContext = AI::behavior::tweak::ExecutionContext;
 using TweakExecutionContext = AI::behavior::tweak::ExecutionContext;
 } // namespace RED4ext
 

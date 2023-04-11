@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct SignalUserDataDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SendSignalTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorSendSignalTaskDefinition";
@@ -31,6 +32,7 @@ struct SendSignalTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(SendSignalTaskDefinition, 0x70);
 } // namespace AI::behavior
+using AIbehaviorSendSignalTaskDefinition = AI::behavior::SendSignalTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

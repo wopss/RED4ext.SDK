@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SideScrollerCheatCode
 {
     static constexpr const char* NAME = "gameuiSideScrollerCheatCode";
@@ -22,6 +23,7 @@ struct SideScrollerCheatCode
 };
 RED4EXT_ASSERT_SIZE(SideScrollerCheatCode, 0x18);
 } // namespace game::ui
+using gameuiSideScrollerCheatCode = game::ui::SideScrollerCheatCode;
 using SideScrollerCheatCodeAdvanced = game::ui::SideScrollerCheatCode;
 } // namespace RED4ext
 

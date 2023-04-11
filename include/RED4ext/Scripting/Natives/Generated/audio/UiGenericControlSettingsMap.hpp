@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct UiGenericControlSettingsMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioUiGenericControlSettingsMap";
@@ -23,6 +24,7 @@ struct UiGenericControlSettingsMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(UiGenericControlSettingsMap, 0x78);
 } // namespace audio
+using audioUiGenericControlSettingsMap = audio::UiGenericControlSettingsMap;
 } // namespace RED4ext
 
 // clang-format on

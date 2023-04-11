@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CompiledNodes : ISerializable
 {
     static constexpr const char* NAME = "gameCompiledNodes";
@@ -22,6 +23,7 @@ struct CompiledNodes : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CompiledNodes, 0x40);
 } // namespace game
+using gameCompiledNodes = game::CompiledNodes;
 } // namespace RED4ext
 
 // clang-format on

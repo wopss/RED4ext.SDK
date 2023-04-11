@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GenericNotificationGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiGenericNotificationGameController";
@@ -20,6 +21,7 @@ struct GenericNotificationGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(GenericNotificationGameController, 0x168);
 } // namespace game::ui
+using gameuiGenericNotificationGameController = game::ui::GenericNotificationGameController;
 } // namespace RED4ext
 
 // clang-format on

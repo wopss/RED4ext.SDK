@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ShootCommand : AI::CombatRelatedCommand
 {
     static constexpr const char* NAME = "AIShootCommand";
@@ -26,6 +27,7 @@ struct ShootCommand : AI::CombatRelatedCommand
 };
 RED4EXT_ASSERT_SIZE(ShootCommand, 0xB0);
 } // namespace AI
+using AIShootCommand = AI::ShootCommand;
 } // namespace RED4ext
 
 // clang-format on

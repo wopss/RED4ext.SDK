@@ -18,7 +18,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace world { 
+namespace world
+{
 struct BendedMeshNode : world::Node
 {
     static constexpr const char* NAME = "worldBendedMeshNode";
@@ -39,6 +40,7 @@ struct BendedMeshNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(BendedMeshNode, 0xA0);
 } // namespace world
+using worldBendedMeshNode = world::BendedMeshNode;
 } // namespace RED4ext
 
 // clang-format on

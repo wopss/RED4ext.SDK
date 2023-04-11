@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NewPlayerPuppetAttached_ConditionType : quest::ISceneConditionType
 {
     static constexpr const char* NAME = "questNewPlayerPuppetAttached_ConditionType";
@@ -19,6 +20,7 @@ struct NewPlayerPuppetAttached_ConditionType : quest::ISceneConditionType
 };
 RED4EXT_ASSERT_SIZE(NewPlayerPuppetAttached_ConditionType, 0x38);
 } // namespace quest
+using questNewPlayerPuppetAttached_ConditionType = quest::NewPlayerPuppetAttached_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

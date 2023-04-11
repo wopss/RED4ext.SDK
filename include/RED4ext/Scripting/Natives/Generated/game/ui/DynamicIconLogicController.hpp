@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DynamicIconLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiDynamicIconLogicController";
@@ -19,6 +20,7 @@ struct DynamicIconLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(DynamicIconLogicController, 0x78);
 } // namespace game::ui
+using gameuiDynamicIconLogicController = game::ui::DynamicIconLogicController;
 } // namespace RED4ext
 
 // clang-format on

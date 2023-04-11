@@ -17,7 +17,8 @@ namespace RED4ext
 {
 struct CReflectionProbeDataResource;
 
-namespace ent { 
+namespace ent
+{
 struct EnvProbeComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entEnvProbeComponent";
@@ -46,6 +47,7 @@ struct EnvProbeComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(EnvProbeComponent, 0x190);
 } // namespace ent
+using entEnvProbeComponent = ent::EnvProbeComponent;
 using EnvProbeComponent = ent::EnvProbeComponent;
 } // namespace RED4ext
 

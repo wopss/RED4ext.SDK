@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct BulletImpactSettings : audio::EntitySettings
 {
     static constexpr const char* NAME = "audioBulletImpactSettings";
@@ -27,6 +28,7 @@ struct BulletImpactSettings : audio::EntitySettings
 };
 RED4EXT_ASSERT_SIZE(BulletImpactSettings, 0xB8);
 } // namespace audio
+using audioBulletImpactSettings = audio::BulletImpactSettings;
 } // namespace RED4ext
 
 // clang-format on

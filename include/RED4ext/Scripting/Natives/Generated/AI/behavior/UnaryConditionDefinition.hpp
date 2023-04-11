@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ConditionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct UnaryConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorUnaryConditionDefinition";
@@ -23,6 +24,7 @@ struct UnaryConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(UnaryConditionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorUnaryConditionDefinition = AI::behavior::UnaryConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

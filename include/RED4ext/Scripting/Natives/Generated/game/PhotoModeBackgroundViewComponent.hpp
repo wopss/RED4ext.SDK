@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeBackgroundViewComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gamePhotoModeBackgroundViewComponent";
@@ -24,6 +25,7 @@ struct PhotoModeBackgroundViewComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(PhotoModeBackgroundViewComponent, 0xE0);
 } // namespace game
+using gamePhotoModeBackgroundViewComponent = game::PhotoModeBackgroundViewComponent;
 using PhotoModeBackgroundViewComponent = game::PhotoModeBackgroundViewComponent;
 } // namespace RED4ext
 

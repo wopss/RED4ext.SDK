@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace grs { 
+namespace grs
+{
 struct GatherAreaManager
 {
     static constexpr const char* NAME = "grsGatherAreaManager";
@@ -22,6 +23,7 @@ struct GatherAreaManager
 };
 RED4EXT_ASSERT_SIZE(GatherAreaManager, 0x78);
 } // namespace grs
+using grsGatherAreaManager = grs::GatherAreaManager;
 } // namespace RED4ext
 
 // clang-format on

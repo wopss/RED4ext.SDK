@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct SmartObjectDefinition; }
 
-namespace world { 
+namespace world
+{
 struct OffMeshSmartObjectNode : world::OffMeshConnectionNode
 {
     static constexpr const char* NAME = "worldOffMeshSmartObjectNode";
@@ -23,6 +24,7 @@ struct OffMeshSmartObjectNode : world::OffMeshConnectionNode
 };
 RED4EXT_ASSERT_SIZE(OffMeshSmartObjectNode, 0xA0);
 } // namespace world
+using worldOffMeshSmartObjectNode = world::OffMeshSmartObjectNode;
 } // namespace RED4ext
 
 // clang-format on

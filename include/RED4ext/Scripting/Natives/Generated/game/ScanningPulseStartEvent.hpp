@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningPulseStartEvent : red::Event
 {
     static constexpr const char* NAME = "gameScanningPulseStartEvent";
@@ -21,6 +22,7 @@ struct ScanningPulseStartEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ScanningPulseStartEvent, 0x48);
 } // namespace game
+using gameScanningPulseStartEvent = game::ScanningPulseStartEvent;
 using ScanningPulseStartEvent = game::ScanningPulseStartEvent;
 } // namespace RED4ext
 

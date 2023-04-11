@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VisualStateBlackBarsVisibilityChangedEvent : red::Event
 {
     static constexpr const char* NAME = "inkVisualStateBlackBarsVisibilityChangedEvent";
@@ -21,6 +22,7 @@ struct VisualStateBlackBarsVisibilityChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisualStateBlackBarsVisibilityChangedEvent, 0x48);
 } // namespace ink
+using inkVisualStateBlackBarsVisibilityChangedEvent = ink::VisualStateBlackBarsVisibilityChangedEvent;
 using VisualStateBlackBarsVisibilityChangedEvent = ink::VisualStateBlackBarsVisibilityChangedEvent;
 } // namespace RED4ext
 

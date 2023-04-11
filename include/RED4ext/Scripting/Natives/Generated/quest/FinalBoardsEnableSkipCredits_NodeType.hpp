@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FinalBoardsEnableSkipCredits_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questFinalBoardsEnableSkipCredits_NodeType";
@@ -21,6 +22,7 @@ struct FinalBoardsEnableSkipCredits_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(FinalBoardsEnableSkipCredits_NodeType, 0x40);
 } // namespace quest
+using questFinalBoardsEnableSkipCredits_NodeType = quest::FinalBoardsEnableSkipCredits_NodeType;
 } // namespace RED4ext
 
 // clang-format on

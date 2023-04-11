@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SwitchNameplate_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSwitchNameplate_NodeType";
@@ -25,6 +26,7 @@ struct SwitchNameplate_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SwitchNameplate_NodeType, 0x78);
 } // namespace quest
+using questSwitchNameplate_NodeType = quest::SwitchNameplate_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkSyncedMasterAnimByTime : anim::AnimNode_SkFrameAnim
 {
     static constexpr const char* NAME = "animAnimNode_SkSyncedMasterAnimByTime";
@@ -22,6 +23,7 @@ struct AnimNode_SkSyncedMasterAnimByTime : anim::AnimNode_SkFrameAnim
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkSyncedMasterAnimByTime, 0x160);
 } // namespace anim
+using animAnimNode_SkSyncedMasterAnimByTime = anim::AnimNode_SkSyncedMasterAnimByTime;
 } // namespace RED4ext
 
 // clang-format on

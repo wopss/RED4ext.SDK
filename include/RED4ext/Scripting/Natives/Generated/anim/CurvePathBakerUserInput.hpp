@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct CurvePathBakerUserInput
 {
     static constexpr const char* NAME = "animCurvePathBakerUserInput";
@@ -24,6 +25,7 @@ struct CurvePathBakerUserInput
 };
 RED4EXT_ASSERT_SIZE(CurvePathBakerUserInput, 0x10);
 } // namespace anim
+using animCurvePathBakerUserInput = anim::CurvePathBakerUserInput;
 } // namespace RED4ext
 
 // clang-format on

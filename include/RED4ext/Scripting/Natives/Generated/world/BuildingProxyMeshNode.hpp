@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct BuildingProxyMeshNode : world::PrefabProxyMeshNode
 {
     static constexpr const char* NAME = "worldBuildingProxyMeshNode";
@@ -19,6 +20,7 @@ struct BuildingProxyMeshNode : world::PrefabProxyMeshNode
 };
 RED4EXT_ASSERT_SIZE(BuildingProxyMeshNode, 0x60);
 } // namespace world
+using worldBuildingProxyMeshNode = world::BuildingProxyMeshNode;
 } // namespace RED4ext
 
 // clang-format on

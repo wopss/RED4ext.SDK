@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct GameNotificationToken; }
 
-namespace ink { 
+namespace ink
+{
 struct GameNotificationData : ink::UserData
 {
     static constexpr const char* NAME = "inkGameNotificationData";
@@ -31,6 +32,7 @@ struct GameNotificationData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(GameNotificationData, 0x78);
 } // namespace ink
+using inkGameNotificationData = ink::GameNotificationData;
 } // namespace RED4ext
 
 // clang-format on

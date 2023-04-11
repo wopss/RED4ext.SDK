@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct TransformInfo
 {
     static constexpr const char* NAME = "interopTransformInfo";
@@ -22,6 +23,7 @@ struct TransformInfo
 };
 RED4EXT_ASSERT_SIZE(TransformInfo, 0x18);
 } // namespace interop
+using interopTransformInfo = interop::TransformInfo;
 } // namespace RED4ext
 
 // clang-format on

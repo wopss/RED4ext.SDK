@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsActorReminderParams : ISerializable
 {
     static constexpr const char* NAME = "scnChoiceNodeNsActorReminderParams";
@@ -32,6 +33,7 @@ struct ChoiceNodeNsActorReminderParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsActorReminderParams, 0x70);
 } // namespace scn
+using scnChoiceNodeNsActorReminderParams = scn::ChoiceNodeNsActorReminderParams;
 } // namespace RED4ext
 
 // clang-format on

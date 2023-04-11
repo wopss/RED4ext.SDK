@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Cyberdrill_NodeType : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questCyberdrill_NodeType";
@@ -22,6 +23,7 @@ struct Cyberdrill_NodeType : quest::IInteractiveObjectManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(Cyberdrill_NodeType, 0x40);
 } // namespace quest
+using questCyberdrill_NodeType = quest::Cyberdrill_NodeType;
 } // namespace RED4ext
 
 // clang-format on

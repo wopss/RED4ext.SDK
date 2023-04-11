@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct CollisionEvaluatorParams : IScriptable
 {
     static constexpr const char* NAME = "gameprojectileCollisionEvaluatorParams";
@@ -35,6 +36,7 @@ struct CollisionEvaluatorParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CollisionEvaluatorParams, 0x80);
 } // namespace game::projectile
+using gameprojectileCollisionEvaluatorParams = game::projectile::CollisionEvaluatorParams;
 using CollisionEvaluatorParams = game::projectile::CollisionEvaluatorParams;
 } // namespace RED4ext
 

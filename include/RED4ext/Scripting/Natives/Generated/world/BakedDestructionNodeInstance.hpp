@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct BakedDestructionNodeInstance : world::MeshNodeInstance
 {
     static constexpr const char* NAME = "worldBakedDestructionNodeInstance";
@@ -20,6 +21,7 @@ struct BakedDestructionNodeInstance : world::MeshNodeInstance
 };
 RED4EXT_ASSERT_SIZE(BakedDestructionNodeInstance, 0x1E0);
 } // namespace world
+using worldBakedDestructionNodeInstance = world::BakedDestructionNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

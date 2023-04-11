@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct OffMeshLinkTag_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataOffMeshLinkTag_Record";
@@ -20,6 +21,7 @@ struct OffMeshLinkTag_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(OffMeshLinkTag_Record, 0x58);
 } // namespace game::data
+using gamedataOffMeshLinkTag_Record = game::data::OffMeshLinkTag_Record;
 using OffMeshLinkTag_Record = game::data::OffMeshLinkTag_Record;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct SyncMasterEntryAnim : work::EntryAnim
 {
     static constexpr const char* NAME = "workSyncMasterEntryAnim";
@@ -19,6 +20,7 @@ struct SyncMasterEntryAnim : work::EntryAnim
 };
 RED4EXT_ASSERT_SIZE(SyncMasterEntryAnim, 0x90);
 } // namespace work
+using workSyncMasterEntryAnim = work::SyncMasterEntryAnim;
 } // namespace RED4ext
 
 // clang-format on

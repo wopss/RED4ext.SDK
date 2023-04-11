@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct TankBaseObject : vehicle::BaseObject
 {
     static constexpr const char* NAME = "vehicleTankBaseObject";
@@ -20,6 +21,7 @@ struct TankBaseObject : vehicle::BaseObject
 };
 RED4EXT_ASSERT_SIZE(TankBaseObject, 0x9E0);
 } // namespace vehicle
+using vehicleTankBaseObject = vehicle::TankBaseObject;
 using TankObject = vehicle::TankBaseObject;
 } // namespace RED4ext
 

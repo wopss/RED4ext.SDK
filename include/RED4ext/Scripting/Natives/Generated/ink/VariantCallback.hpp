@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VariantCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkVariantCallback";
@@ -20,6 +21,7 @@ struct VariantCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(VariantCallback, 0x38);
 } // namespace ink
+using inkVariantCallback = ink::VariantCallback;
 } // namespace RED4ext
 
 // clang-format on

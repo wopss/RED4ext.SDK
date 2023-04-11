@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttitudeAgentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameAttitudeAgentPS";
@@ -21,6 +22,7 @@ struct AttitudeAgentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(AttitudeAgentPS, 0x70);
 } // namespace game
+using gameAttitudeAgentPS = game::AttitudeAgentPS;
 } // namespace RED4ext
 
 // clang-format on

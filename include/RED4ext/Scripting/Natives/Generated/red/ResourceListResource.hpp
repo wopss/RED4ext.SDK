@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace red { 
+namespace red
+{
 struct ResourceListResource : CResource
 {
     static constexpr const char* NAME = "redResourceListResource";
@@ -25,6 +26,7 @@ struct ResourceListResource : CResource
 };
 RED4EXT_ASSERT_SIZE(ResourceListResource, 0x60);
 } // namespace red
+using redResourceListResource = red::ResourceListResource;
 } // namespace RED4ext
 
 // clang-format on

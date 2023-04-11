@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct VisibleObjectTypeEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibleObjectTypeEvent";
@@ -22,6 +23,7 @@ struct VisibleObjectTypeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectTypeEvent, 0x48);
 } // namespace sense
+using senseVisibleObjectTypeEvent = sense::VisibleObjectTypeEvent;
 using VisibleObjectTypeEvent = sense::VisibleObjectTypeEvent;
 } // namespace RED4ext
 

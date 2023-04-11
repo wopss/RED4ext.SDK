@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct TextureRegionPart : ISerializable
 {
     static constexpr const char* NAME = "rendTextureRegionPart";
@@ -22,6 +23,7 @@ struct TextureRegionPart : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TextureRegionPart, 0x50);
 } // namespace rend
+using rendTextureRegionPart = rend::TextureRegionPart;
 } // namespace RED4ext
 
 // clang-format on

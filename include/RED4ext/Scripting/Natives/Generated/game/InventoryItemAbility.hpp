@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct UILocalizationDataPackage; }
 
-namespace game { 
+namespace game
+{
 struct InventoryItemAbility
 {
     static constexpr const char* NAME = "gameInventoryItemAbility";
@@ -27,6 +28,7 @@ struct InventoryItemAbility
 };
 RED4EXT_ASSERT_SIZE(InventoryItemAbility, 0x58);
 } // namespace game
+using gameInventoryItemAbility = game::InventoryItemAbility;
 using InventoryItemAbility = game::InventoryItemAbility;
 } // namespace RED4ext
 

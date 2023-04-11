@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SetBoneOrientation : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_SetBoneOrientation";
@@ -23,6 +24,7 @@ struct AnimNode_SetBoneOrientation : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SetBoneOrientation, 0x98);
 } // namespace anim
+using animAnimNode_SetBoneOrientation = anim::AnimNode_SetBoneOrientation;
 } // namespace RED4ext
 
 // clang-format on

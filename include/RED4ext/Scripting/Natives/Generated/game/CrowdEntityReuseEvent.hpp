@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CrowdEntityReuseEvent : red::Event
 {
     static constexpr const char* NAME = "gameCrowdEntityReuseEvent";
@@ -19,6 +20,7 @@ struct CrowdEntityReuseEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CrowdEntityReuseEvent, 0x40);
 } // namespace game
+using gameCrowdEntityReuseEvent = game::CrowdEntityReuseEvent;
 } // namespace RED4ext
 
 // clang-format on

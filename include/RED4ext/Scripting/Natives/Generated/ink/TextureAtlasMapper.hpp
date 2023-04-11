@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TextureAtlasMapper
 {
     static constexpr const char* NAME = "inkTextureAtlasMapper";
@@ -24,6 +25,7 @@ struct TextureAtlasMapper
 };
 RED4EXT_ASSERT_SIZE(TextureAtlasMapper, 0x28);
 } // namespace ink
+using inkTextureAtlasMapper = ink::TextureAtlasMapper;
 } // namespace RED4ext
 
 // clang-format on

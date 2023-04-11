@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct RoachRaceCollisionSystem : IScriptable
 {
     static constexpr const char* NAME = "gameuiarcadeRoachRaceCollisionSystem";
@@ -20,6 +21,7 @@ struct RoachRaceCollisionSystem : IScriptable
 };
 RED4EXT_ASSERT_SIZE(RoachRaceCollisionSystem, 0x78);
 } // namespace game::ui::arcade
+using gameuiarcadeRoachRaceCollisionSystem = game::ui::arcade::RoachRaceCollisionSystem;
 } // namespace RED4ext
 
 // clang-format on

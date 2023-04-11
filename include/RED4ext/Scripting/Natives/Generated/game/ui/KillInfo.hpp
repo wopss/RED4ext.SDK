@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct KillInfo
 {
     static constexpr const char* NAME = "gameuiKillInfo";
@@ -26,6 +27,7 @@ struct KillInfo
 };
 RED4EXT_ASSERT_SIZE(KillInfo, 0x28);
 } // namespace game::ui
+using gameuiKillInfo = game::ui::KillInfo;
 using KillInfo = game::ui::KillInfo;
 } // namespace RED4ext
 

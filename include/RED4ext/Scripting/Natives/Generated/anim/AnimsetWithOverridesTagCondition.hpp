@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimsetWithOverridesTagCondition : anim::IRuntimeCondition
 {
     static constexpr const char* NAME = "animAnimsetWithOverridesTagCondition";
@@ -21,6 +22,7 @@ struct AnimsetWithOverridesTagCondition : anim::IRuntimeCondition
 };
 RED4EXT_ASSERT_SIZE(AnimsetWithOverridesTagCondition, 0x40);
 } // namespace anim
+using animAnimsetWithOverridesTagCondition = anim::AnimsetWithOverridesTagCondition;
 } // namespace RED4ext
 
 // clang-format on

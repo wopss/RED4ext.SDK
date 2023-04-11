@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkFrameAnimByTrack : anim::AnimNode_SkFrameAnim
 {
     static constexpr const char* NAME = "animAnimNode_SkFrameAnimByTrack";
@@ -25,6 +26,7 @@ struct AnimNode_SkFrameAnimByTrack : anim::AnimNode_SkFrameAnim
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkFrameAnimByTrack, 0x198);
 } // namespace anim
+using animAnimNode_SkFrameAnimByTrack = anim::AnimNode_SkFrameAnimByTrack;
 } // namespace RED4ext
 
 // clang-format on

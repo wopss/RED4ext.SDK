@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct Debris : CResource
 {
     static constexpr const char* NAME = "entdismembermentDebris";
@@ -22,6 +23,7 @@ struct Debris : CResource
 };
 RED4EXT_ASSERT_SIZE(Debris, 0x50);
 } // namespace ent::dismemberment
+using entdismembermentDebris = ent::dismemberment::Debris;
 } // namespace RED4ext
 
 // clang-format on

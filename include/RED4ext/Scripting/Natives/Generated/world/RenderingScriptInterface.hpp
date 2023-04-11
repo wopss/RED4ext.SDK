@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RenderingScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "worldRenderingScriptInterface";
@@ -20,6 +21,7 @@ struct RenderingScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(RenderingScriptInterface, 0x48);
 } // namespace world
+using worldRenderingScriptInterface = world::RenderingScriptInterface;
 using RenderingSystem = world::RenderingScriptInterface;
 } // namespace RED4ext
 

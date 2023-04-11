@@ -18,7 +18,8 @@ namespace scn { struct InterestingConversationsResource; }
 namespace world { struct ConversationData; }
 namespace world { struct ConversationGroupData; }
 
-namespace world { 
+namespace world
+{
 struct InterestingConversationsAreaNode : world::TriggerAreaNode
 {
     static constexpr const char* NAME = "worldInterestingConversationsAreaNode";
@@ -33,6 +34,7 @@ struct InterestingConversationsAreaNode : world::TriggerAreaNode
 };
 RED4EXT_ASSERT_SIZE(InterestingConversationsAreaNode, 0xB8);
 } // namespace world
+using worldInterestingConversationsAreaNode = world::InterestingConversationsAreaNode;
 } // namespace RED4ext
 
 // clang-format on

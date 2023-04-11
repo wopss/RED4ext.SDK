@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AvailableAnimset
 {
     static constexpr const char* NAME = "gameAvailableAnimset";
@@ -21,6 +22,7 @@ struct AvailableAnimset
 };
 RED4EXT_ASSERT_SIZE(AvailableAnimset, 0x28);
 } // namespace game
+using gameAvailableAnimset = game::AvailableAnimset;
 } // namespace RED4ext
 
 // clang-format on

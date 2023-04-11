@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct MinMax : attr::Attribute
 {
     static constexpr const char* NAME = "attrMinMax";
@@ -21,6 +22,7 @@ struct MinMax : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(MinMax, 0x38);
 } // namespace attr
+using attrMinMax = attr::MinMax;
 } // namespace RED4ext
 
 // clang-format on

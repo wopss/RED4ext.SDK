@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn::prv { 
+namespace scn::prv
+{
 struct SpawnDespawnItem
 {
     static constexpr const char* NAME = "scnprvSpawnDespawnItem";
@@ -23,6 +24,7 @@ struct SpawnDespawnItem
 };
 RED4EXT_ASSERT_SIZE(SpawnDespawnItem, 0x30);
 } // namespace scn::prv
+using scnprvSpawnDespawnItem = scn::prv::SpawnDespawnItem;
 } // namespace RED4ext
 
 // clang-format on

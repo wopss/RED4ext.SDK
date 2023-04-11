@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DeleteInputGroupEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiDeleteInputGroupEvent";
@@ -22,6 +23,7 @@ struct DeleteInputGroupEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeleteInputGroupEvent, 0x50);
 } // namespace game::ui
+using gameuiDeleteInputGroupEvent = game::ui::DeleteInputGroupEvent;
 using DeleteInputGroupEvent = game::ui::DeleteInputGroupEvent;
 } // namespace RED4ext
 

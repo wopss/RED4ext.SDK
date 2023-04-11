@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct QueryFilter
 {
     static constexpr const char* NAME = "physicsQueryFilter";
@@ -20,6 +21,7 @@ struct QueryFilter
 };
 RED4EXT_ASSERT_SIZE(QueryFilter, 0x10);
 } // namespace physics
+using physicsQueryFilter = physics::QueryFilter;
 using QueryFilter = physics::QueryFilter;
 } // namespace RED4ext
 

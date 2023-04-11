@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct WaitForAnyKeyLoadingScreen_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questWaitForAnyKeyLoadingScreen_NodeType";
@@ -19,6 +20,7 @@ struct WaitForAnyKeyLoadingScreen_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(WaitForAnyKeyLoadingScreen_NodeType, 0x38);
 } // namespace quest
+using questWaitForAnyKeyLoadingScreen_NodeType = quest::WaitForAnyKeyLoadingScreen_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct Rectangle
 {
     static constexpr const char* NAME = "inkRectangle";
@@ -22,6 +23,7 @@ struct Rectangle
 };
 RED4EXT_ASSERT_SIZE(Rectangle, 0x10);
 } // namespace ink
+using inkRectangle = ink::Rectangle;
 } // namespace RED4ext
 
 // clang-format on

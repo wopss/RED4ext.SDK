@@ -18,7 +18,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct CaptureParameters
 {
     static constexpr const char* NAME = "rendCaptureParameters";
@@ -46,6 +47,7 @@ struct CaptureParameters
 };
 RED4EXT_ASSERT_SIZE(CaptureParameters, 0xA8);
 } // namespace rend
+using rendCaptureParameters = rend::CaptureParameters;
 } // namespace RED4ext
 
 // clang-format on

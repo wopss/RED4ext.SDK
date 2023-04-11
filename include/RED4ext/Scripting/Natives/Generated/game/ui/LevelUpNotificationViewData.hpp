@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game::data { struct Proficiency_Record; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct LevelUpNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiLevelUpNotificationViewData";
@@ -29,6 +30,7 @@ struct LevelUpNotificationViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(LevelUpNotificationViewData, 0xD8);
 } // namespace game::ui
+using gameuiLevelUpNotificationViewData = game::ui::LevelUpNotificationViewData;
 using LevelUpNotificationViewData = game::ui::LevelUpNotificationViewData;
 } // namespace RED4ext
 

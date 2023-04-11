@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetUIGameContext_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetUIGameContext_NodeType";
@@ -23,6 +24,7 @@ struct SetUIGameContext_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetUIGameContext_NodeType, 0x40);
 } // namespace quest
+using questSetUIGameContext_NodeType = quest::SetUIGameContext_NodeType;
 } // namespace RED4ext
 
 // clang-format on

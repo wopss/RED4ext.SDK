@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct INodeInstanceRegistry : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldINodeInstanceRegistry";
@@ -19,6 +20,7 @@ struct INodeInstanceRegistry : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(INodeInstanceRegistry, 0x48);
 } // namespace world
+using worldINodeInstanceRegistry = world::INodeInstanceRegistry;
 } // namespace RED4ext
 
 // clang-format on

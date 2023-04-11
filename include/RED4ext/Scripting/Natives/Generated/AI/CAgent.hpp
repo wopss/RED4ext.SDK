@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CAgent : game::Component
 {
     static constexpr const char* NAME = "AICAgent";
@@ -20,6 +21,7 @@ struct CAgent : game::Component
 };
 RED4EXT_ASSERT_SIZE(CAgent, 0x4E8);
 } // namespace AI
+using AICAgent = AI::CAgent;
 using AIComponent = AI::CAgent;
 } // namespace RED4ext
 

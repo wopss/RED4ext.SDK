@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TrialVersionRemainingTimeUpdate : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkTrialVersionRemainingTimeUpdate";
@@ -20,6 +21,7 @@ struct TrialVersionRemainingTimeUpdate : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(TrialVersionRemainingTimeUpdate, 0x38);
 } // namespace ink
+using inkTrialVersionRemainingTimeUpdate = ink::TrialVersionRemainingTimeUpdate;
 } // namespace RED4ext
 
 // clang-format on

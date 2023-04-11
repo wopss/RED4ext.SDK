@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IGameManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct GameManagerNodeDefinition : quest::TypedSignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questGameManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct GameManagerNodeDefinition : quest::TypedSignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(GameManagerNodeDefinition, 0x58);
 } // namespace quest
+using questGameManagerNodeDefinition = quest::GameManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

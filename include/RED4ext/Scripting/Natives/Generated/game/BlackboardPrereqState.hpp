@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BlackboardPrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameBlackboardPrereqState";
@@ -20,6 +21,7 @@ struct BlackboardPrereqState : game::PrereqState
 };
 RED4EXT_ASSERT_SIZE(BlackboardPrereqState, 0xD0);
 } // namespace game
+using gameBlackboardPrereqState = game::BlackboardPrereqState;
 using BlackboardPrereqState = game::BlackboardPrereqState;
 } // namespace RED4ext
 

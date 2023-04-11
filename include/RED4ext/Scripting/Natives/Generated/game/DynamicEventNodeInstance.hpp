@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DynamicEventNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "gameDynamicEventNodeInstance";
@@ -20,6 +21,7 @@ struct DynamicEventNodeInstance : world::AreaShapeNodeInstance
 };
 RED4EXT_ASSERT_SIZE(DynamicEventNodeInstance, 0x100);
 } // namespace game
+using gameDynamicEventNodeInstance = game::DynamicEventNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

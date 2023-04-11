@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_ApplyCorrectivePoseRBF : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_ApplyCorrectivePoseRBF";
@@ -26,6 +27,7 @@ struct AnimNode_ApplyCorrectivePoseRBF : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_ApplyCorrectivePoseRBF, 0xF0);
 } // namespace anim
+using animAnimNode_ApplyCorrectivePoseRBF = anim::AnimNode_ApplyCorrectivePoseRBF;
 } // namespace RED4ext
 
 // clang-format on

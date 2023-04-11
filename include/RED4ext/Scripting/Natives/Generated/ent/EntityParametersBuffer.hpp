@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntityParametersBuffer
 {
     static constexpr const char* NAME = "entEntityParametersBuffer";
@@ -22,6 +23,7 @@ struct EntityParametersBuffer
 };
 RED4EXT_ASSERT_SIZE(EntityParametersBuffer, 0x28);
 } // namespace ent
+using entEntityParametersBuffer = ent::EntityParametersBuffer;
 } // namespace RED4ext
 
 // clang-format on

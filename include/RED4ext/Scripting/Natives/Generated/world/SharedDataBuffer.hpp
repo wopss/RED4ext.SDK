@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SharedDataBuffer : ISerializable
 {
     static constexpr const char* NAME = "worldSharedDataBuffer";
@@ -21,6 +22,7 @@ struct SharedDataBuffer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x58);
 } // namespace world
+using worldSharedDataBuffer = world::SharedDataBuffer;
 } // namespace RED4ext
 
 // clang-format on

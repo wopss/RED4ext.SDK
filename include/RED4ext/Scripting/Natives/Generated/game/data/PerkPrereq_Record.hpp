@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct PerkPrereq_Record : game::data::IPrereq_Record
 {
     static constexpr const char* NAME = "gamedataPerkPrereq_Record";
@@ -20,6 +21,7 @@ struct PerkPrereq_Record : game::data::IPrereq_Record
 };
 RED4EXT_ASSERT_SIZE(PerkPrereq_Record, 0x58);
 } // namespace game::data
+using gamedataPerkPrereq_Record = game::data::PerkPrereq_Record;
 using PerkPrereq_Record = game::data::PerkPrereq_Record;
 } // namespace RED4ext
 

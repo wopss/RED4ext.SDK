@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace ent { struct IPlacedComponent; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct WeaponParams
 {
     static constexpr const char* NAME = "gameprojectileWeaponParams";
@@ -38,6 +39,7 @@ struct WeaponParams
 };
 RED4EXT_ASSERT_SIZE(WeaponParams, 0xA0);
 } // namespace game::projectile
+using gameprojectileWeaponParams = game::projectile::WeaponParams;
 } // namespace RED4ext
 
 // clang-format on

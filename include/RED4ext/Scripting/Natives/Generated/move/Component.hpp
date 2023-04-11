@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct Component : ent::IMoverComponent
 {
     static constexpr const char* NAME = "moveComponent";
@@ -20,6 +21,7 @@ struct Component : ent::IMoverComponent
 };
 RED4EXT_ASSERT_SIZE(Component, 0x2C0);
 } // namespace move
+using moveComponent = move::Component;
 } // namespace RED4ext
 
 // clang-format on

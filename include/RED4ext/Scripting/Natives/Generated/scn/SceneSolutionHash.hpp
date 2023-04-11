@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneSolutionHash
 {
     static constexpr const char* NAME = "scnSceneSolutionHash";
@@ -20,6 +21,7 @@ struct SceneSolutionHash
 };
 RED4EXT_ASSERT_SIZE(SceneSolutionHash, 0x8);
 } // namespace scn
+using scnSceneSolutionHash = scn::SceneSolutionHash;
 } // namespace RED4ext
 
 // clang-format on

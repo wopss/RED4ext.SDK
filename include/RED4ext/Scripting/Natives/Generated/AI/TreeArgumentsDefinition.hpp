@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentDefinition; }
 
-namespace AI { 
+namespace AI
+{
 struct TreeArgumentsDefinition
 {
     static constexpr const char* NAME = "AITreeArgumentsDefinition";
@@ -24,6 +25,7 @@ struct TreeArgumentsDefinition
 };
 RED4EXT_ASSERT_SIZE(TreeArgumentsDefinition, 0x18);
 } // namespace AI
+using AITreeArgumentsDefinition = AI::TreeArgumentsDefinition;
 } // namespace RED4ext
 
 // clang-format on

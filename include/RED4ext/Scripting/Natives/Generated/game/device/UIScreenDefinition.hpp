@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct UIScreenDefinition
 {
     static constexpr const char* NAME = "gamedeviceUIScreenDefinition";
@@ -20,6 +21,7 @@ struct UIScreenDefinition
 };
 RED4EXT_ASSERT_SIZE(UIScreenDefinition, 0x8);
 } // namespace game::device
+using gamedeviceUIScreenDefinition = game::device::UIScreenDefinition;
 using UIScreenDefinition = game::device::UIScreenDefinition;
 } // namespace RED4ext
 

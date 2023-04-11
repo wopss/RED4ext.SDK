@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct Window : ink::CanvasWidget
 {
     static constexpr const char* NAME = "inkWindow";
@@ -20,6 +21,7 @@ struct Window : ink::CanvasWidget
 };
 RED4EXT_ASSERT_SIZE(Window, 0x270);
 } // namespace ink
+using inkWindow = ink::Window;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TierPrereqState : game::PrereqState
 {
     static constexpr const char* NAME = "gameTierPrereqState";
@@ -20,6 +21,7 @@ struct TierPrereqState : game::PrereqState
 };
 RED4EXT_ASSERT_SIZE(TierPrereqState, 0xD0);
 } // namespace game
+using gameTierPrereqState = game::TierPrereqState;
 } // namespace RED4ext
 
 // clang-format on

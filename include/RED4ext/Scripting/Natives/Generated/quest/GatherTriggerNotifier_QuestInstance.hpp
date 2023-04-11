@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct GatherTriggerNotifier_QuestInstance : quest::TriggerNotifier_QuestInstance
 {
     static constexpr const char* NAME = "questGatherTriggerNotifier_QuestInstance";
@@ -20,6 +21,7 @@ struct GatherTriggerNotifier_QuestInstance : quest::TriggerNotifier_QuestInstanc
 };
 RED4EXT_ASSERT_SIZE(GatherTriggerNotifier_QuestInstance, 0x90);
 } // namespace quest
+using questGatherTriggerNotifier_QuestInstance = quest::GatherTriggerNotifier_QuestInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ScriptGuardArea
 {
     static constexpr const char* NAME = "AIScriptGuardArea";
@@ -19,6 +20,7 @@ struct ScriptGuardArea
 };
 RED4EXT_ASSERT_SIZE(ScriptGuardArea, 0x8);
 } // namespace AI
+using AIScriptGuardArea = AI::ScriptGuardArea;
 using RestrictMovementArea = AI::ScriptGuardArea;
 } // namespace RED4ext
 

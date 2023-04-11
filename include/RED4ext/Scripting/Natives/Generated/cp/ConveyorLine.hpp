@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct ConveyorLine
 {
     static constexpr const char* NAME = "cpConveyorLine";
@@ -29,6 +30,7 @@ struct ConveyorLine
 };
 RED4EXT_ASSERT_SIZE(ConveyorLine, 0xC0);
 } // namespace cp
+using cpConveyorLine = cp::ConveyorLine;
 } // namespace RED4ext
 
 // clang-format on

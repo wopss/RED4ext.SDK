@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct OverrideBlendBoneInfo
 {
     static constexpr const char* NAME = "animOverrideBlendBoneInfo";
@@ -22,6 +23,7 @@ struct OverrideBlendBoneInfo
 };
 RED4EXT_ASSERT_SIZE(OverrideBlendBoneInfo, 0x20);
 } // namespace anim
+using animOverrideBlendBoneInfo = anim::OverrideBlendBoneInfo;
 } // namespace RED4ext
 
 // clang-format on

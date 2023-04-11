@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RequestVehicleCameraPerspective_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questRequestVehicleCameraPerspective_NodeType";
@@ -22,6 +23,7 @@ struct RequestVehicleCameraPerspective_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(RequestVehicleCameraPerspective_NodeType, 0x38);
 } // namespace quest
+using questRequestVehicleCameraPerspective_NodeType = quest::RequestVehicleCameraPerspective_NodeType;
 } // namespace RED4ext
 
 // clang-format on

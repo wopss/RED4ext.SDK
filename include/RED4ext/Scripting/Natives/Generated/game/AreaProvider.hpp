@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AreaProvider
 {
     static constexpr const char* NAME = "gameAreaProvider";
@@ -19,6 +20,7 @@ struct AreaProvider
 };
 RED4EXT_ASSERT_SIZE(AreaProvider, 0x18);
 } // namespace game
+using gameAreaProvider = game::AreaProvider;
 } // namespace RED4ext
 
 // clang-format on

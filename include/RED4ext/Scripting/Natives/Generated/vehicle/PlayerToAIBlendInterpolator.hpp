@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct PlayerToAIBlendInterpolator
 {
     static constexpr const char* NAME = "vehiclePlayerToAIBlendInterpolator";
@@ -19,6 +20,7 @@ struct PlayerToAIBlendInterpolator
 };
 RED4EXT_ASSERT_SIZE(PlayerToAIBlendInterpolator, 0x90);
 } // namespace vehicle
+using vehiclePlayerToAIBlendInterpolator = vehicle::PlayerToAIBlendInterpolator;
 } // namespace RED4ext
 
 // clang-format on

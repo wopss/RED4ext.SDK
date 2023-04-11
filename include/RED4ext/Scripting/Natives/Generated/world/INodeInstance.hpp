@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct INodeInstance : ISerializable
 {
     static constexpr const char* NAME = "worldINodeInstance";
@@ -20,6 +21,7 @@ struct INodeInstance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(INodeInstance, 0x90);
 } // namespace world
+using worldINodeInstance = world::INodeInstance;
 } // namespace RED4ext
 
 // clang-format on

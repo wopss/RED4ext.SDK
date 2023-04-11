@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct VertexAnimationMapperSource
 {
     static constexpr const char* NAME = "entVertexAnimationMapperSource";
@@ -24,6 +25,7 @@ struct VertexAnimationMapperSource
 };
 RED4EXT_ASSERT_SIZE(VertexAnimationMapperSource, 0x28);
 } // namespace ent
+using entVertexAnimationMapperSource = ent::VertexAnimationMapperSource;
 } // namespace RED4ext
 
 // clang-format on

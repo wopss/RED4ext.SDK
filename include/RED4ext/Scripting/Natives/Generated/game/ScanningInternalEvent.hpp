@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningInternalEvent : red::Event
 {
     static constexpr const char* NAME = "gameScanningInternalEvent";
@@ -20,6 +21,7 @@ struct ScanningInternalEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ScanningInternalEvent, 0x48);
 } // namespace game
+using gameScanningInternalEvent = game::ScanningInternalEvent;
 } // namespace RED4ext
 
 // clang-format on

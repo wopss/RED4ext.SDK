@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ICharacterConditionSubType : ISerializable
 {
     static constexpr const char* NAME = "questICharacterConditionSubType";
@@ -19,6 +20,7 @@ struct ICharacterConditionSubType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ICharacterConditionSubType, 0x30);
 } // namespace quest
+using questICharacterConditionSubType = quest::ICharacterConditionSubType;
 } // namespace RED4ext
 
 // clang-format on

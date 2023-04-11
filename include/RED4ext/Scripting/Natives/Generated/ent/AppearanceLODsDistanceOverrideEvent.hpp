@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AppearanceLODsDistanceOverrideEvent : red::Event
 {
     static constexpr const char* NAME = "entAppearanceLODsDistanceOverrideEvent";
@@ -20,6 +21,7 @@ struct AppearanceLODsDistanceOverrideEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AppearanceLODsDistanceOverrideEvent, 0x58);
 } // namespace ent
+using entAppearanceLODsDistanceOverrideEvent = ent::AppearanceLODsDistanceOverrideEvent;
 } // namespace RED4ext
 
 // clang-format on

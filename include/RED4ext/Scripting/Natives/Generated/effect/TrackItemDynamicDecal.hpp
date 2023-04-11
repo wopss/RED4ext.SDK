@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IMaterial;
 
-namespace effect { 
+namespace effect
+{
 struct TrackItemDynamicDecal : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemDynamicDecal";
@@ -30,6 +31,7 @@ struct TrackItemDynamicDecal : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemDynamicDecal, 0x78);
 } // namespace effect
+using effectTrackItemDynamicDecal = effect::TrackItemDynamicDecal;
 } // namespace RED4ext
 
 // clang-format on

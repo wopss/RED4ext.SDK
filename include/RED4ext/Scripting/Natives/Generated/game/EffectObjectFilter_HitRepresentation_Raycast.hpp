@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_HitRepresentation_Raycast : game::EffectObjectFilter_HitRepresentation
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_HitRepresentation_Raycast";
@@ -22,6 +23,7 @@ struct EffectObjectFilter_HitRepresentation_Raycast : game::EffectObjectFilter_H
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_HitRepresentation_Raycast, 0x48);
 } // namespace game
+using gameEffectObjectFilter_HitRepresentation_Raycast = game::EffectObjectFilter_HitRepresentation_Raycast;
 } // namespace RED4ext
 
 // clang-format on

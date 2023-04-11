@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct FollowerSquadMember : AI::SquadNPCMember
 {
     static constexpr const char* NAME = "AIFollowerSquadMember";
@@ -20,6 +21,7 @@ struct FollowerSquadMember : AI::SquadNPCMember
 };
 RED4EXT_ASSERT_SIZE(FollowerSquadMember, 0x98);
 } // namespace AI
+using AIFollowerSquadMember = AI::FollowerSquadMember;
 using FollowerSquadMember = AI::FollowerSquadMember;
 } // namespace RED4ext
 

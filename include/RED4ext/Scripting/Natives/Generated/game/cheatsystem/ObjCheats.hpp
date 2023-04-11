@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::cheatsystem { 
+namespace game::cheatsystem
+{
 struct ObjCheats
 {
     static constexpr const char* NAME = "gamecheatsystemObjCheats";
@@ -25,6 +26,7 @@ struct ObjCheats
 };
 RED4EXT_ASSERT_SIZE(ObjCheats, 0x28);
 } // namespace game::cheatsystem
+using gamecheatsystemObjCheats = game::cheatsystem::ObjCheats;
 } // namespace RED4ext
 
 // clang-format on

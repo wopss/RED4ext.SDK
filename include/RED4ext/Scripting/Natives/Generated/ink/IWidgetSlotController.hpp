@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IWidgetSlotController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkIWidgetSlotController";
@@ -24,6 +25,7 @@ struct IWidgetSlotController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(IWidgetSlotController, 0xC8);
 } // namespace ink
+using inkIWidgetSlotController = ink::IWidgetSlotController;
 } // namespace RED4ext
 
 // clang-format on

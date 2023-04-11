@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct MaxAnimTimeLimitCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workMaxAnimTimeLimitCommandData";
@@ -20,6 +21,7 @@ struct MaxAnimTimeLimitCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(MaxAnimTimeLimitCommandData, 0x10);
 } // namespace work
+using workMaxAnimTimeLimitCommandData = work::MaxAnimTimeLimitCommandData;
 } // namespace RED4ext
 
 // clang-format on

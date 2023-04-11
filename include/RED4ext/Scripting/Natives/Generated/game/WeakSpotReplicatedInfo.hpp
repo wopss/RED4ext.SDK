@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct Puppet; }
 
-namespace game { 
+namespace game
+{
 struct WeakSpotReplicatedInfo
 {
     static constexpr const char* NAME = "gameWeakSpotReplicatedInfo";
@@ -25,6 +26,7 @@ struct WeakSpotReplicatedInfo
 };
 RED4EXT_ASSERT_SIZE(WeakSpotReplicatedInfo, 0x20);
 } // namespace game
+using gameWeakSpotReplicatedInfo = game::WeakSpotReplicatedInfo;
 } // namespace RED4ext
 
 // clang-format on

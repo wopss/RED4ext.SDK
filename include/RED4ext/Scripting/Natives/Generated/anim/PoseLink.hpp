@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimNode_Base; }
 
-namespace anim { 
+namespace anim
+{
 struct PoseLink
 {
     static constexpr const char* NAME = "animPoseLink";
@@ -23,6 +24,7 @@ struct PoseLink
 };
 RED4EXT_ASSERT_SIZE(PoseLink, 0x18);
 } // namespace anim
+using animPoseLink = anim::PoseLink;
 } // namespace RED4ext
 
 // clang-format on

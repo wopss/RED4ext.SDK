@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimationControlAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "entAnimationControlAttachment";
@@ -19,6 +20,7 @@ struct AnimationControlAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(AnimationControlAttachment, 0x50);
 } // namespace ent
+using entAnimationControlAttachment = ent::AnimationControlAttachment;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace oauth { 
+namespace oauth
+{
 struct AuthenticationToken
 {
     static constexpr const char* NAME = "oauthAuthenticationToken";
@@ -24,6 +25,7 @@ struct AuthenticationToken
 };
 RED4EXT_ASSERT_SIZE(AuthenticationToken, 0x70);
 } // namespace oauth
+using oauthAuthenticationToken = oauth::AuthenticationToken;
 } // namespace RED4ext
 
 // clang-format on

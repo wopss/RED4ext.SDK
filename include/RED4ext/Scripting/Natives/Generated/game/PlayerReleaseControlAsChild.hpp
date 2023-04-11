@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerReleaseControlAsChild : red::Event
 {
     static constexpr const char* NAME = "gamePlayerReleaseControlAsChild";
@@ -20,6 +21,7 @@ struct PlayerReleaseControlAsChild : red::Event
 };
 RED4EXT_ASSERT_SIZE(PlayerReleaseControlAsChild, 0x48);
 } // namespace game
+using gamePlayerReleaseControlAsChild = game::PlayerReleaseControlAsChild;
 } // namespace RED4ext
 
 // clang-format on

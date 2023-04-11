@@ -19,7 +19,8 @@ using gameIPopulationSystem = game::IPopulationSystem;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct IPopulationSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPopulationSystem";
@@ -28,6 +29,7 @@ struct IPopulationSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IPopulationSystem, 0x48);
 } // namespace game
+using gameIPopulationSystem = game::IPopulationSystem;
 } // namespace RED4ext
 */
 

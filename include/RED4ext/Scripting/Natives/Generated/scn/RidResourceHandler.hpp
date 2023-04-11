@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace scn { struct RidResource; }
 
-namespace scn { 
+namespace scn
+{
 struct RidResourceHandler
 {
     static constexpr const char* NAME = "scnRidResourceHandler";
@@ -25,6 +26,7 @@ struct RidResourceHandler
 };
 RED4EXT_ASSERT_SIZE(RidResourceHandler, 0x20);
 } // namespace scn
+using scnRidResourceHandler = scn::RidResourceHandler;
 } // namespace RED4ext
 
 // clang-format on

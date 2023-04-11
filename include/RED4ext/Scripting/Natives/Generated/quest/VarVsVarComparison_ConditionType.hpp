@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VarVsVarComparison_ConditionType : quest::IFactsDBConditionType
 {
     static constexpr const char* NAME = "questVarVsVarComparison_ConditionType";
@@ -25,6 +26,7 @@ struct VarVsVarComparison_ConditionType : quest::IFactsDBConditionType
 };
 RED4EXT_ASSERT_SIZE(VarVsVarComparison_ConditionType, 0x80);
 } // namespace quest
+using questVarVsVarComparison_ConditionType = quest::VarVsVarComparison_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

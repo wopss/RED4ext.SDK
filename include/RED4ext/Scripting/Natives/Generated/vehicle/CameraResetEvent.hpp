@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct CameraResetEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleCameraResetEvent";
@@ -19,6 +20,7 @@ struct CameraResetEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CameraResetEvent, 0x40);
 } // namespace vehicle
+using vehicleCameraResetEvent = vehicle::CameraResetEvent;
 } // namespace RED4ext
 
 // clang-format on

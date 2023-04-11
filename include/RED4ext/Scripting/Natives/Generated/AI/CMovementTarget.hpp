@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CMovementTarget : AI::Position
 {
     static constexpr const char* NAME = "AICMovementTarget";
@@ -20,6 +21,7 @@ struct CMovementTarget : AI::Position
 };
 RED4EXT_ASSERT_SIZE(CMovementTarget, 0x20);
 } // namespace AI
+using AICMovementTarget = AI::CMovementTarget;
 } // namespace RED4ext
 
 // clang-format on

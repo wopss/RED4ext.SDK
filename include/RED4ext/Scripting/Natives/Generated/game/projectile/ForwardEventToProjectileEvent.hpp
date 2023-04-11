@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace red { struct Event; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct ForwardEventToProjectileEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileForwardEventToProjectileEvent";
@@ -23,6 +24,7 @@ struct ForwardEventToProjectileEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ForwardEventToProjectileEvent, 0x50);
 } // namespace game::projectile
+using gameprojectileForwardEventToProjectileEvent = game::projectile::ForwardEventToProjectileEvent;
 using ForwardEventToProjectileEvent = game::projectile::ForwardEventToProjectileEvent;
 } // namespace RED4ext
 

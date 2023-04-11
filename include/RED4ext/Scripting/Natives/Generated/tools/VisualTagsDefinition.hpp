@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct VisualTagsDefinition
 {
     static constexpr const char* NAME = "toolsVisualTagsDefinition";
@@ -21,6 +22,7 @@ struct VisualTagsDefinition
 };
 RED4EXT_ASSERT_SIZE(VisualTagsDefinition, 0x38);
 } // namespace tools
+using toolsVisualTagsDefinition = tools::VisualTagsDefinition;
 } // namespace RED4ext
 
 // clang-format on

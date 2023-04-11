@@ -19,7 +19,8 @@ namespace RED4ext
 namespace physics { struct FilterData; }
 namespace physics { struct ICollider; }
 
-namespace ent { 
+namespace ent
+{
 struct ColliderComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entColliderComponent";
@@ -43,6 +44,7 @@ struct ColliderComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(ColliderComponent, 0x1D0);
 } // namespace ent
+using entColliderComponent = ent::ColliderComponent;
 using ColliderComponent = ent::ColliderComponent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct TaskDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorTaskDefinition";
@@ -21,6 +22,7 @@ struct TaskDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TaskDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorTaskDefinition = AI::behavior::TaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

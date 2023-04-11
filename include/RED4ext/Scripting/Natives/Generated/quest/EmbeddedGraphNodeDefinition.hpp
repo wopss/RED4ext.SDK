@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EmbeddedGraphNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questEmbeddedGraphNodeDefinition";
@@ -19,6 +20,7 @@ struct EmbeddedGraphNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(EmbeddedGraphNodeDefinition, 0x48);
 } // namespace quest
+using questEmbeddedGraphNodeDefinition = quest::EmbeddedGraphNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

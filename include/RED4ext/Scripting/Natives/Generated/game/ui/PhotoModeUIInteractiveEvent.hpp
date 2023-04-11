@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhotoModeUIInteractiveEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiPhotoModeUIInteractiveEvent";
@@ -21,6 +22,7 @@ struct PhotoModeUIInteractiveEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhotoModeUIInteractiveEvent, 0x48);
 } // namespace game::ui
+using gameuiPhotoModeUIInteractiveEvent = game::ui::PhotoModeUIInteractiveEvent;
 using PhotoModeUIInteractiveEvent = game::ui::PhotoModeUIInteractiveEvent;
 } // namespace RED4ext
 

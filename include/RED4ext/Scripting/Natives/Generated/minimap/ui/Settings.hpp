@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace minimap::ui { 
+namespace minimap::ui
+{
 struct Settings
 {
     static constexpr const char* NAME = "minimapuiSettings";
@@ -20,6 +21,7 @@ struct Settings
 };
 RED4EXT_ASSERT_SIZE(Settings, 0x8);
 } // namespace minimap::ui
+using minimapuiSettings = minimap::ui::Settings;
 } // namespace RED4ext
 
 // clang-format on

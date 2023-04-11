@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct GarageComponentVehicleData
 {
     static constexpr const char* NAME = "vehicleGarageComponentVehicleData";
@@ -25,6 +26,7 @@ struct GarageComponentVehicleData
 };
 RED4EXT_ASSERT_SIZE(GarageComponentVehicleData, 0x20);
 } // namespace vehicle
+using vehicleGarageComponentVehicleData = vehicle::GarageComponentVehicleData;
 } // namespace RED4ext
 
 // clang-format on

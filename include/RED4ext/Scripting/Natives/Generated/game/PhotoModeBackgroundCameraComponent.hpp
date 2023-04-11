@@ -18,7 +18,8 @@ namespace RED4ext
 struct DynamicTexture;
 namespace world { struct EnvironmentAreaParameters; }
 
-namespace game { 
+namespace game
+{
 struct PhotoModeBackgroundCameraComponent : ent::BaseCameraComponent
 {
     static constexpr const char* NAME = "gamePhotoModeBackgroundCameraComponent";
@@ -39,6 +40,7 @@ struct PhotoModeBackgroundCameraComponent : ent::BaseCameraComponent
 };
 RED4EXT_ASSERT_SIZE(PhotoModeBackgroundCameraComponent, 0x910);
 } // namespace game
+using gamePhotoModeBackgroundCameraComponent = game::PhotoModeBackgroundCameraComponent;
 } // namespace RED4ext
 
 // clang-format on

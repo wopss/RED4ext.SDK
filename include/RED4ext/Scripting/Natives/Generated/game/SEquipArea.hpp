@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SEquipArea
 {
     static constexpr const char* NAME = "gameSEquipArea";
@@ -26,6 +27,7 @@ struct SEquipArea
 };
 RED4EXT_ASSERT_SIZE(SEquipArea, 0x20);
 } // namespace game
+using gameSEquipArea = game::SEquipArea;
 using SEquipArea = game::SEquipArea;
 } // namespace RED4ext
 

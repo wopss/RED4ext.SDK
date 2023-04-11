@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowNarrativeEvent_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questShowNarrativeEvent_NodeType";
@@ -24,6 +25,7 @@ struct ShowNarrativeEvent_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ShowNarrativeEvent_NodeType, 0x60);
 } // namespace quest
+using questShowNarrativeEvent_NodeType = quest::ShowNarrativeEvent_NodeType;
 } // namespace RED4ext
 
 // clang-format on

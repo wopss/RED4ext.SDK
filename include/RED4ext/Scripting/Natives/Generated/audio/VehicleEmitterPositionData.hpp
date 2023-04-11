@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehicleEmitterPositionData
 {
     static constexpr const char* NAME = "audioVehicleEmitterPositionData";
@@ -28,6 +29,7 @@ struct VehicleEmitterPositionData
 };
 RED4EXT_ASSERT_SIZE(VehicleEmitterPositionData, 0x6C);
 } // namespace audio
+using audioVehicleEmitterPositionData = audio::VehicleEmitterPositionData;
 } // namespace RED4ext
 
 // clang-format on

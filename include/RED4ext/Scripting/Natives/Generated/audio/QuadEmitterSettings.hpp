@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct QuadEmitterSettings
 {
     static constexpr const char* NAME = "audioQuadEmitterSettings";
@@ -28,6 +29,7 @@ struct QuadEmitterSettings
 };
 RED4EXT_ASSERT_SIZE(QuadEmitterSettings, 0x38);
 } // namespace audio
+using audioQuadEmitterSettings = audio::QuadEmitterSettings;
 } // namespace RED4ext
 
 // clang-format on

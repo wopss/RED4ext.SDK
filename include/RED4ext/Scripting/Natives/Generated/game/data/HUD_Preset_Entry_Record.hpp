@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct HUD_Preset_Entry_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataHUD_Preset_Entry_Record";
@@ -20,6 +21,7 @@ struct HUD_Preset_Entry_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(HUD_Preset_Entry_Record, 0x50);
 } // namespace game::data
+using gamedataHUD_Preset_Entry_Record = game::data::HUD_Preset_Entry_Record;
 using HUD_Preset_Entry_Record = game::data::HUD_Preset_Entry_Record;
 } // namespace RED4ext
 

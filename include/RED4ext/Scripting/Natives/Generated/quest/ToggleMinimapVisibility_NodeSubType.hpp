@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleMinimapVisibility_NodeSubType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questToggleMinimapVisibility_NodeSubType";
@@ -23,6 +24,7 @@ struct ToggleMinimapVisibility_NodeSubType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleMinimapVisibility_NodeSubType, 0x78);
 } // namespace quest
+using questToggleMinimapVisibility_NodeSubType = quest::ToggleMinimapVisibility_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

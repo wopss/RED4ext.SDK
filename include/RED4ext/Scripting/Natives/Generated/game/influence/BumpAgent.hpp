@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence
+{
 struct BumpAgent : ISerializable
 {
     static constexpr const char* NAME = "gameinfluenceBumpAgent";
@@ -20,6 +21,7 @@ struct BumpAgent : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BumpAgent, 0x2B0);
 } // namespace game::influence
+using gameinfluenceBumpAgent = game::influence::BumpAgent;
 using BumpAgent = game::influence::BumpAgent;
 } // namespace RED4ext
 

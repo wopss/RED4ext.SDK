@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct XPPoints_inline0_Record : game::data::ConstantStatModifier_Record
 {
     static constexpr const char* NAME = "gamedataXPPoints_inline0_Record";
@@ -19,6 +20,7 @@ struct XPPoints_inline0_Record : game::data::ConstantStatModifier_Record
 };
 RED4EXT_ASSERT_SIZE(XPPoints_inline0_Record, 0x58);
 } // namespace game::data
+using gamedataXPPoints_inline0_Record = game::data::XPPoints_inline0_Record;
 using XPPoints_inline0_Record = game::data::XPPoints_inline0_Record;
 } // namespace RED4ext
 

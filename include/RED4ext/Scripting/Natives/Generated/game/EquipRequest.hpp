@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EquipRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameEquipRequest";
@@ -25,6 +26,7 @@ struct EquipRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(EquipRequest, 0x70);
 } // namespace game
+using gameEquipRequest = game::EquipRequest;
 using EquipRequest = game::EquipRequest;
 } // namespace RED4ext
 

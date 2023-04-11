@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_ConditionalSegmentEnd : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_ConditionalSegmentEnd";
@@ -20,6 +21,7 @@ struct AnimNode_ConditionalSegmentEnd : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_ConditionalSegmentEnd, 0xA8);
 } // namespace anim
+using animAnimNode_ConditionalSegmentEnd = anim::AnimNode_ConditionalSegmentEnd;
 } // namespace RED4ext
 
 // clang-format on

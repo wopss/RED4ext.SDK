@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct GlobalNodeID
 {
     static constexpr const char* NAME = "worldGlobalNodeID";
@@ -19,6 +20,7 @@ struct GlobalNodeID
 };
 RED4EXT_ASSERT_SIZE(GlobalNodeID, 0x8);
 } // namespace world
+using worldGlobalNodeID = world::GlobalNodeID;
 using GlobalNodeID = world::GlobalNodeID;
 } // namespace RED4ext
 

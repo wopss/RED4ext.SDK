@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct FacialSetup_BufferInfo
 {
     static constexpr const char* NAME = "animFacialSetup_BufferInfo";
@@ -26,6 +27,7 @@ struct FacialSetup_BufferInfo
 };
 RED4EXT_ASSERT_SIZE(FacialSetup_BufferInfo, 0x6C);
 } // namespace anim
+using animFacialSetup_BufferInfo = anim::FacialSetup_BufferInfo;
 } // namespace RED4ext
 
 // clang-format on

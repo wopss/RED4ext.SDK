@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameScanningComponentPS";
@@ -24,6 +25,7 @@ struct ScanningComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(ScanningComponentPS, 0x78);
 } // namespace game
+using gameScanningComponentPS = game::ScanningComponentPS;
 } // namespace RED4ext
 
 // clang-format on

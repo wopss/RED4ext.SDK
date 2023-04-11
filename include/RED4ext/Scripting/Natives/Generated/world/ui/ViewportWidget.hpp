@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct ViewportWidget : ink::CanvasWidget
 {
     static constexpr const char* NAME = "worlduiViewportWidget";
@@ -20,6 +21,7 @@ struct ViewportWidget : ink::CanvasWidget
 };
 RED4EXT_ASSERT_SIZE(ViewportWidget, 0x240);
 } // namespace world::ui
+using worlduiViewportWidget = world::ui::ViewportWidget;
 using ViewportWidget = world::ui::ViewportWidget;
 } // namespace RED4ext
 

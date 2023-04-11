@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AngleRange_Record : game::data::SenseShape_Record
 {
     static constexpr const char* NAME = "gamedataAngleRange_Record";
@@ -20,6 +21,7 @@ struct AngleRange_Record : game::data::SenseShape_Record
 };
 RED4EXT_ASSERT_SIZE(AngleRange_Record, 0x60);
 } // namespace game::data
+using gamedataAngleRange_Record = game::data::AngleRange_Record;
 using AngleRange_Record = game::data::AngleRange_Record;
 } // namespace RED4ext
 

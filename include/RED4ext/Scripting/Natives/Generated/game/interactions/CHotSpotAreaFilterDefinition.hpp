@@ -17,7 +17,8 @@ namespace RED4ext
 namespace game::interactions { struct CFunctorDefinition; }
 namespace game::interactions { struct IShapeDefinition; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CHotSpotAreaFilterDefinition : game::interactions::NodeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCHotSpotAreaFilterDefinition";
@@ -31,6 +32,7 @@ struct CHotSpotAreaFilterDefinition : game::interactions::NodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CHotSpotAreaFilterDefinition, 0xA0);
 } // namespace game::interactions
+using gameinteractionsCHotSpotAreaFilterDefinition = game::interactions::CHotSpotAreaFilterDefinition;
 } // namespace RED4ext
 
 // clang-format on

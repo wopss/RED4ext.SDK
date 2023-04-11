@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct MeatBag : game::Object
 {
     static constexpr const char* NAME = "cpMeatBag";
@@ -31,6 +32,7 @@ struct MeatBag : game::Object
 };
 RED4EXT_ASSERT_SIZE(MeatBag, 0x320);
 } // namespace cp
+using cpMeatBag = cp::MeatBag;
 } // namespace RED4ext
 
 // clang-format on

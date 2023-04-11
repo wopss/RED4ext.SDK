@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectParameter_IntEvaluator_Value : game::IEffectParameter_IntEvaluator
 {
     static constexpr const char* NAME = "gameEffectParameter_IntEvaluator_Value";
@@ -21,6 +22,7 @@ struct EffectParameter_IntEvaluator_Value : game::IEffectParameter_IntEvaluator
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_IntEvaluator_Value, 0x38);
 } // namespace game
+using gameEffectParameter_IntEvaluator_Value = game::EffectParameter_IntEvaluator_Value;
 } // namespace RED4ext
 
 // clang-format on

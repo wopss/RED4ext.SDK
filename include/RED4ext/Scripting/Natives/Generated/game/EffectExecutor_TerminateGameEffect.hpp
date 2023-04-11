@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_TerminateGameEffect : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_TerminateGameEffect";
@@ -21,6 +22,7 @@ struct EffectExecutor_TerminateGameEffect : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_TerminateGameEffect, 0x50);
 } // namespace game
+using gameEffectExecutor_TerminateGameEffect = game::EffectExecutor_TerminateGameEffect;
 } // namespace RED4ext
 
 // clang-format on

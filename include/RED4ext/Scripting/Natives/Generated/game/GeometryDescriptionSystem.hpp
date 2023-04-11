@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct GeometryDescriptionSystem : IScriptable
 {
     static constexpr const char* NAME = "gameGeometryDescriptionSystem";
@@ -20,6 +21,7 @@ struct GeometryDescriptionSystem : IScriptable
 };
 RED4EXT_ASSERT_SIZE(GeometryDescriptionSystem, 0x48);
 } // namespace game
+using gameGeometryDescriptionSystem = game::GeometryDescriptionSystem;
 using GeometryDescriptionSystem = game::GeometryDescriptionSystem;
 } // namespace RED4ext
 

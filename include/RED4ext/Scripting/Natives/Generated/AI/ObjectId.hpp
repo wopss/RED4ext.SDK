@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ObjectId
 {
     static constexpr const char* NAME = "AIObjectId";
@@ -19,6 +20,7 @@ struct ObjectId
 };
 RED4EXT_ASSERT_SIZE(ObjectId, 0x8);
 } // namespace AI
+using AIObjectId = AI::ObjectId;
 } // namespace RED4ext
 
 // clang-format on

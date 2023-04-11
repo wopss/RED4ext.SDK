@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WaitStunnedConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorWaitStunnedConditionDefinition";
@@ -19,6 +20,7 @@ struct WaitStunnedConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(WaitStunnedConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorWaitStunnedConditionDefinition = AI::behavior::WaitStunnedConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

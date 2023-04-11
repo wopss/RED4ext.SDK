@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DistanceFromOthersCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataDistanceFromOthersCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct DistanceFromOthersCoverSelectionParameters_Record : game::data::CoverSele
 };
 RED4EXT_ASSERT_SIZE(DistanceFromOthersCoverSelectionParameters_Record, 0x60);
 } // namespace game::data
+using gamedataDistanceFromOthersCoverSelectionParameters_Record = game::data::DistanceFromOthersCoverSelectionParameters_Record;
 using DistanceFromOthersCoverSelectionParameters_Record = game::data::DistanceFromOthersCoverSelectionParameters_Record;
 } // namespace RED4ext
 

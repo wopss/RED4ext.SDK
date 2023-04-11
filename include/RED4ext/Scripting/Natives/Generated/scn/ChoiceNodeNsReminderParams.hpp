@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsReminderParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsReminderParams";
@@ -30,6 +31,7 @@ struct ChoiceNodeNsReminderParams
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsReminderParams, 0x40);
 } // namespace scn
+using scnChoiceNodeNsReminderParams = scn::ChoiceNodeNsReminderParams;
 } // namespace RED4ext
 
 // clang-format on

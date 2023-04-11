@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AdditionalFloatTrackEntry : ISerializable
 {
     static constexpr const char* NAME = "animAdditionalFloatTrackEntry";
@@ -25,6 +26,7 @@ struct AdditionalFloatTrackEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AdditionalFloatTrackEntry, 0x80);
 } // namespace anim
+using animAdditionalFloatTrackEntry = anim::AdditionalFloatTrackEntry;
 } // namespace RED4ext
 
 // clang-format on

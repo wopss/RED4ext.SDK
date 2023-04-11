@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PrefabVariantMapArrayElement
 {
     static constexpr const char* NAME = "questPrefabVariantMapArrayElement";
@@ -23,6 +24,7 @@ struct PrefabVariantMapArrayElement
 };
 RED4EXT_ASSERT_SIZE(PrefabVariantMapArrayElement, 0x18);
 } // namespace quest
+using questPrefabVariantMapArrayElement = quest::PrefabVariantMapArrayElement;
 } // namespace RED4ext
 
 // clang-format on

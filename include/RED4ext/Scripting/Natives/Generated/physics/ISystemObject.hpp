@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct ISystemObject : ISerializable
 {
     static constexpr const char* NAME = "physicsISystemObject";
@@ -21,6 +22,7 @@ struct ISystemObject : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ISystemObject, 0x38);
 } // namespace physics
+using physicsISystemObject = physics::ISystemObject;
 } // namespace RED4ext
 
 // clang-format on

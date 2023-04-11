@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlotEventsUnequipEnd : game::AttachmentSlotEventsAttachmentSlotEvent
 {
     static constexpr const char* NAME = "gameAttachmentSlotEventsUnequipEnd";
@@ -19,6 +20,7 @@ struct AttachmentSlotEventsUnequipEnd : game::AttachmentSlotEventsAttachmentSlot
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotEventsUnequipEnd, 0x48);
 } // namespace game
+using gameAttachmentSlotEventsUnequipEnd = game::AttachmentSlotEventsUnequipEnd;
 using UnequipEnd = game::AttachmentSlotEventsUnequipEnd;
 } // namespace RED4ext
 

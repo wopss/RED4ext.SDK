@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SetupOptionButtonForAttributeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiSetupOptionButtonForAttributeEvent";
@@ -23,6 +24,7 @@ struct SetupOptionButtonForAttributeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetupOptionButtonForAttributeEvent, 0x68);
 } // namespace game::ui
+using gameuiSetupOptionButtonForAttributeEvent = game::ui::SetupOptionButtonForAttributeEvent;
 using SetupOptionButtonForAttributeEvent = game::ui::SetupOptionButtonForAttributeEvent;
 } // namespace RED4ext
 

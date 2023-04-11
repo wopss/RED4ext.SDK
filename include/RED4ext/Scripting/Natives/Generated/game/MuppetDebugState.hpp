@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MuppetDebugState : ISerializable
 {
     static constexpr const char* NAME = "gameMuppetDebugState";
@@ -26,6 +27,7 @@ struct MuppetDebugState : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MuppetDebugState, 0x58);
 } // namespace game
+using gameMuppetDebugState = game::MuppetDebugState;
 } // namespace RED4ext
 
 // clang-format on

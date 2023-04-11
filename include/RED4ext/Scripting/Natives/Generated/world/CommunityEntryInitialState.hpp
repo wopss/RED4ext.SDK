@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CommunityEntryInitialState
 {
     static constexpr const char* NAME = "worldCommunityEntryInitialState";
@@ -23,6 +24,7 @@ struct CommunityEntryInitialState
 };
 RED4EXT_ASSERT_SIZE(CommunityEntryInitialState, 0x18);
 } // namespace world
+using worldCommunityEntryInitialState = world::CommunityEntryInitialState;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct AcousticPortalComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameaudioAcousticPortalComponent";
@@ -23,6 +24,7 @@ struct AcousticPortalComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(AcousticPortalComponent, 0x130);
 } // namespace game::audio
+using gameaudioAcousticPortalComponent = game::audio::AcousticPortalComponent;
 using AcousticPortalComponent = game::audio::AcousticPortalComponent;
 } // namespace RED4ext
 

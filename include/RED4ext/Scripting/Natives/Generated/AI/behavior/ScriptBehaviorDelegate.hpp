@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptBehaviorDelegate : AI::behavior::BehaviorDelegate
 {
     static constexpr const char* NAME = "AIbehaviorScriptBehaviorDelegate";
@@ -20,6 +21,7 @@ struct ScriptBehaviorDelegate : AI::behavior::BehaviorDelegate
 };
 RED4EXT_ASSERT_SIZE(ScriptBehaviorDelegate, 0x58);
 } // namespace AI::behavior
+using AIbehaviorScriptBehaviorDelegate = AI::behavior::ScriptBehaviorDelegate;
 using ScriptBehaviorDelegate = AI::behavior::ScriptBehaviorDelegate;
 } // namespace RED4ext
 

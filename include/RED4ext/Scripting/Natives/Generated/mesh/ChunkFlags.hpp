@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct ChunkFlags
 {
     static constexpr const char* NAME = "meshChunkFlags";
@@ -24,6 +25,7 @@ struct ChunkFlags
 };
 RED4EXT_ASSERT_SIZE(ChunkFlags, 0x6);
 } // namespace mesh
+using meshChunkFlags = mesh::ChunkFlags;
 } // namespace RED4ext
 
 // clang-format on

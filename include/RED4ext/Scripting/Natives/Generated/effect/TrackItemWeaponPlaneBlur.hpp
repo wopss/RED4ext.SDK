@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemWeaponPlaneBlur : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemWeaponPlaneBlur";
@@ -23,6 +24,7 @@ struct TrackItemWeaponPlaneBlur : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemWeaponPlaneBlur, 0x70);
 } // namespace effect
+using effectTrackItemWeaponPlaneBlur = effect::TrackItemWeaponPlaneBlur;
 } // namespace RED4ext
 
 // clang-format on

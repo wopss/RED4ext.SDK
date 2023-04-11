@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct LibTreeINodeDefinition;
 
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeDecoratorDefinition : AI::CTreeNodeDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeDecoratorDefinition";
@@ -24,6 +25,7 @@ struct CTreeNodeDecoratorDefinition : AI::CTreeNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeDecoratorDefinition, 0x48);
 } // namespace AI
+using AICTreeNodeDecoratorDefinition = AI::CTreeNodeDecoratorDefinition;
 } // namespace RED4ext
 
 // clang-format on

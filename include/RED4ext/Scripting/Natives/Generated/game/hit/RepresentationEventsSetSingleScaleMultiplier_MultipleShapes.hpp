@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::hit { 
+namespace game::hit
+{
 struct RepresentationEventsSetSingleScaleMultiplier_MultipleShapes : game::hit::RepresentationEventsSetSingleScaleMultiplier_AllShapes
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsSetSingleScaleMultiplier_MultipleShapes";
@@ -22,6 +23,7 @@ struct RepresentationEventsSetSingleScaleMultiplier_MultipleShapes : game::hit::
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsSetSingleScaleMultiplier_MultipleShapes, 0x60);
 } // namespace game::hit
+using gamehitRepresentationEventsSetSingleScaleMultiplier_MultipleShapes = game::hit::RepresentationEventsSetSingleScaleMultiplier_MultipleShapes;
 using HitRepresentation_SetSingleScaleMultiplier_MultipleShapes = game::hit::RepresentationEventsSetSingleScaleMultiplier_MultipleShapes;
 } // namespace RED4ext
 

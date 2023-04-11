@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Tier3CameraSettings
 {
     static constexpr const char* NAME = "gameTier3CameraSettings";
@@ -24,6 +25,7 @@ struct Tier3CameraSettings
 };
 RED4EXT_ASSERT_SIZE(Tier3CameraSettings, 0x18);
 } // namespace game
+using gameTier3CameraSettings = game::Tier3CameraSettings;
 using Tier3CameraSettings = game::Tier3CameraSettings;
 } // namespace RED4ext
 

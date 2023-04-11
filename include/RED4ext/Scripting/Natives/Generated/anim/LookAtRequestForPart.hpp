@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtRequestForPart
 {
     static constexpr const char* NAME = "animLookAtRequestForPart";
@@ -24,6 +25,7 @@ struct LookAtRequestForPart
 };
 RED4EXT_ASSERT_SIZE(LookAtRequestForPart, 0x80);
 } // namespace anim
+using animLookAtRequestForPart = anim::LookAtRequestForPart;
 } // namespace RED4ext
 
 // clang-format on

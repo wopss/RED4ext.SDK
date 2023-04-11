@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoiceTriggerRewireMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioVoiceTriggerRewireMap";
@@ -24,6 +25,7 @@ struct VoiceTriggerRewireMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(VoiceTriggerRewireMap, 0x58);
 } // namespace audio
+using audioVoiceTriggerRewireMap = audio::VoiceTriggerRewireMap;
 } // namespace RED4ext
 
 // clang-format on

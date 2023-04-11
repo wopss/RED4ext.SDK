@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct HudEntriesResource : CResource
 {
     static constexpr const char* NAME = "inkHudEntriesResource";
@@ -28,6 +29,7 @@ struct HudEntriesResource : CResource
 };
 RED4EXT_ASSERT_SIZE(HudEntriesResource, 0x70);
 } // namespace ink
+using inkHudEntriesResource = ink::HudEntriesResource;
 } // namespace RED4ext
 
 // clang-format on

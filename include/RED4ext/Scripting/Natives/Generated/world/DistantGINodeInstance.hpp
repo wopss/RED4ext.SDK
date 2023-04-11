@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DistantGINodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldDistantGINodeInstance";
@@ -20,6 +21,7 @@ struct DistantGINodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(DistantGINodeInstance, 0xC0);
 } // namespace world
+using worldDistantGINodeInstance = world::DistantGINodeInstance;
 } // namespace RED4ext
 
 // clang-format on

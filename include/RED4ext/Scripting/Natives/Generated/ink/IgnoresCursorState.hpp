@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IgnoresCursorState : ink::UserData
 {
     static constexpr const char* NAME = "inkIgnoresCursorState";
@@ -19,6 +20,7 @@ struct IgnoresCursorState : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(IgnoresCursorState, 0x40);
 } // namespace ink
+using inkIgnoresCursorState = ink::IgnoresCursorState;
 } // namespace RED4ext
 
 // clang-format on

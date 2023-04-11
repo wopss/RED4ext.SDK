@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct ReloadLootEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsReloadLootEvent";
@@ -19,6 +20,7 @@ struct ReloadLootEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ReloadLootEvent, 0x40);
 } // namespace game::events
+using gameeventsReloadLootEvent = game::events::ReloadLootEvent;
 } // namespace RED4ext
 
 // clang-format on

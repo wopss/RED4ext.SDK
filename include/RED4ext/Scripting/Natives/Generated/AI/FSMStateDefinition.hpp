@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct CTreeNodeDefinition; }
 
-namespace AI { 
+namespace AI
+{
 struct FSMStateDefinition
 {
     static constexpr const char* NAME = "AIFSMStateDefinition";
@@ -29,6 +30,7 @@ struct FSMStateDefinition
 };
 RED4EXT_ASSERT_SIZE(FSMStateDefinition, 0x28);
 } // namespace AI
+using AIFSMStateDefinition = AI::FSMStateDefinition;
 } // namespace RED4ext
 
 // clang-format on

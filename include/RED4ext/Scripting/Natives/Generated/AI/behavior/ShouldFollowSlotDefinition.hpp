@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ShouldFollowSlotDefinition : AI::behavior::VehicleExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorShouldFollowSlotDefinition";
@@ -19,6 +20,7 @@ struct ShouldFollowSlotDefinition : AI::behavior::VehicleExpressionDefinition
 };
 RED4EXT_ASSERT_SIZE(ShouldFollowSlotDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorShouldFollowSlotDefinition = AI::behavior::ShouldFollowSlotDefinition;
 } // namespace RED4ext
 
 // clang-format on

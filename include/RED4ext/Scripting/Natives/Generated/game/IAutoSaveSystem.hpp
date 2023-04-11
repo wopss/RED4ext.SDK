@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IAutoSaveSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIAutoSaveSystem";
@@ -19,6 +20,7 @@ struct IAutoSaveSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IAutoSaveSystem, 0x48);
 } // namespace game
+using gameIAutoSaveSystem = game::IAutoSaveSystem;
 } // namespace RED4ext
 
 // clang-format on

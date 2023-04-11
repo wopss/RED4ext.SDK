@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerToggleComponent_NodeType : quest::IEntityManager_NodeType
 {
     static constexpr const char* NAME = "questEntityManagerToggleComponent_NodeType";
@@ -22,6 +23,7 @@ struct EntityManagerToggleComponent_NodeType : quest::IEntityManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(EntityManagerToggleComponent_NodeType, 0x40);
 } // namespace quest
+using questEntityManagerToggleComponent_NodeType = quest::EntityManagerToggleComponent_NodeType;
 } // namespace RED4ext
 
 // clang-format on

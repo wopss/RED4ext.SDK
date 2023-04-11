@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::data { struct StatusEffect_Record; }
 
-namespace game::events { 
+namespace game::events
+{
 struct StatusEffectEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsStatusEffectEvent";
@@ -25,6 +26,7 @@ struct StatusEffectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StatusEffectEvent, 0x60);
 } // namespace game::events
+using gameeventsStatusEffectEvent = game::events::StatusEffectEvent;
 using StatusEffectEvent = game::events::StatusEffectEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct CameraData
 {
     static constexpr const char* NAME = "entCameraData";
@@ -22,6 +23,7 @@ struct CameraData
 };
 RED4EXT_ASSERT_SIZE(CameraData, 0x90);
 } // namespace ent
+using entCameraData = ent::CameraData;
 using CameraData = ent::CameraData;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VisionAppearanceForcedEvent : red::Event
 {
     static constexpr const char* NAME = "gameVisionAppearanceForcedEvent";
@@ -21,6 +22,7 @@ struct VisionAppearanceForcedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisionAppearanceForcedEvent, 0x58);
 } // namespace game
+using gameVisionAppearanceForcedEvent = game::VisionAppearanceForcedEvent;
 } // namespace RED4ext
 
 // clang-format on

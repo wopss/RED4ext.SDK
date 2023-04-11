@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ThreatSharedLastKnownPositionProvider : AI::ThreatPositionProvider
 {
     static constexpr const char* NAME = "AIThreatSharedLastKnownPositionProvider";
@@ -19,6 +20,7 @@ struct ThreatSharedLastKnownPositionProvider : AI::ThreatPositionProvider
 };
 RED4EXT_ASSERT_SIZE(ThreatSharedLastKnownPositionProvider, 0xA0);
 } // namespace AI
+using AIThreatSharedLastKnownPositionProvider = AI::ThreatSharedLastKnownPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

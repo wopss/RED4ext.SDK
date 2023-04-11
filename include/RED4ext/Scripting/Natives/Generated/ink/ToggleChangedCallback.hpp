@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ToggleChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkToggleChangedCallback";
@@ -20,6 +21,7 @@ struct ToggleChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(ToggleChangedCallback, 0x38);
 } // namespace ink
+using inkToggleChangedCallback = ink::ToggleChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

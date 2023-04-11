@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IndexedMorphName
 {
     static constexpr const char* NAME = "gameuiIndexedMorphName";
@@ -26,6 +27,7 @@ struct IndexedMorphName
 };
 RED4EXT_ASSERT_SIZE(IndexedMorphName, 0x40);
 } // namespace game::ui
+using gameuiIndexedMorphName = game::ui::IndexedMorphName;
 } // namespace RED4ext
 
 // clang-format on

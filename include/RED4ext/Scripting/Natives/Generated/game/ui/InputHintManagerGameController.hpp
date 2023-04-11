@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InputHintManagerGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiInputHintManagerGameController";
@@ -34,6 +35,7 @@ struct InputHintManagerGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(InputHintManagerGameController, 0x268);
 } // namespace game::ui
+using gameuiInputHintManagerGameController = game::ui::InputHintManagerGameController;
 using InputHintManagerGameController = game::ui::InputHintManagerGameController;
 } // namespace RED4ext
 

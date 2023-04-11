@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HUDVideoStartEvent
 {
     static constexpr const char* NAME = "gameuiHUDVideoStartEvent";
@@ -31,6 +32,7 @@ struct HUDVideoStartEvent
 };
 RED4EXT_ASSERT_SIZE(HUDVideoStartEvent, 0x70);
 } // namespace game::ui
+using gameuiHUDVideoStartEvent = game::ui::HUDVideoStartEvent;
 } // namespace RED4ext
 
 // clang-format on

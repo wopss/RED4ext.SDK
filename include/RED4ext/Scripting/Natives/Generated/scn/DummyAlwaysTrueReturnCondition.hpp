@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct DummyAlwaysTrueReturnCondition : scn::IReturnCondition
 {
     static constexpr const char* NAME = "scnDummyAlwaysTrueReturnCondition";
@@ -19,6 +20,7 @@ struct DummyAlwaysTrueReturnCondition : scn::IReturnCondition
 };
 RED4EXT_ASSERT_SIZE(DummyAlwaysTrueReturnCondition, 0x30);
 } // namespace scn
+using scnDummyAlwaysTrueReturnCondition = scn::DummyAlwaysTrueReturnCondition;
 } // namespace RED4ext
 
 // clang-format on

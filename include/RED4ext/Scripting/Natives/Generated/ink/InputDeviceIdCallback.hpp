@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InputDeviceIdCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkInputDeviceIdCallback";
@@ -20,6 +21,7 @@ struct InputDeviceIdCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(InputDeviceIdCallback, 0x38);
 } // namespace ink
+using inkInputDeviceIdCallback = ink::InputDeviceIdCallback;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::graph { 
+namespace game::graph
+{
 struct CNode : ISerializable
 {
     static constexpr const char* NAME = "gamegraphCNode";
@@ -19,6 +20,7 @@ struct CNode : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CNode, 0x30);
 } // namespace game::graph
+using gamegraphCNode = game::graph::CNode;
 } // namespace RED4ext
 
 // clang-format on

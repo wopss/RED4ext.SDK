@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CompiledCoverData : game::CompiledSmartObjectData
 {
     static constexpr const char* NAME = "gameCompiledCoverData";
@@ -20,6 +21,7 @@ struct CompiledCoverData : game::CompiledSmartObjectData
 };
 RED4EXT_ASSERT_SIZE(CompiledCoverData, 0x60);
 } // namespace game
+using gameCompiledCoverData = game::CompiledCoverData;
 } // namespace RED4ext
 
 // clang-format on

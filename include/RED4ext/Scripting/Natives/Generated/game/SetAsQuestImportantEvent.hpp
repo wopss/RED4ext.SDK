@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetAsQuestImportantEvent : red::Event
 {
     static constexpr const char* NAME = "gameSetAsQuestImportantEvent";
@@ -22,6 +23,7 @@ struct SetAsQuestImportantEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetAsQuestImportantEvent, 0x48);
 } // namespace game
+using gameSetAsQuestImportantEvent = game::SetAsQuestImportantEvent;
 using SetAsQuestImportantEvent = game::SetAsQuestImportantEvent;
 } // namespace RED4ext
 

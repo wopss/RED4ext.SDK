@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtParams_Add : ISerializable
 {
     static constexpr const char* NAME = "animLookAtParams_Add";
@@ -20,6 +21,7 @@ struct LookAtParams_Add : ISerializable
 };
 RED4EXT_ASSERT_SIZE(LookAtParams_Add, 0xB0);
 } // namespace anim
+using animLookAtParams_Add = anim::LookAtParams_Add;
 } // namespace RED4ext
 
 // clang-format on

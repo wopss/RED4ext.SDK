@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct FoleyPlayerAppearanceMappingMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioFoleyPlayerAppearanceMappingMetadata";
@@ -28,6 +29,7 @@ struct FoleyPlayerAppearanceMappingMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(FoleyPlayerAppearanceMappingMetadata, 0x128);
 } // namespace audio
+using audioFoleyPlayerAppearanceMappingMetadata = audio::FoleyPlayerAppearanceMappingMetadata;
 } // namespace RED4ext
 
 // clang-format on

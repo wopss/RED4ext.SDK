@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LocomotionCustomActionEventDictionary : audio::InlinedAudioMetadata
 {
     static constexpr const char* NAME = "audioLocomotionCustomActionEventDictionary";
@@ -25,6 +26,7 @@ struct LocomotionCustomActionEventDictionary : audio::InlinedAudioMetadata
 };
 RED4EXT_ASSERT_SIZE(LocomotionCustomActionEventDictionary, 0x88);
 } // namespace audio
+using audioLocomotionCustomActionEventDictionary = audio::LocomotionCustomActionEventDictionary;
 } // namespace RED4ext
 
 // clang-format on

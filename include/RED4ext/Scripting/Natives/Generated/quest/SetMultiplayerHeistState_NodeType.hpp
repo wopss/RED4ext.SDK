@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetMultiplayerHeistState_NodeType : quest::IMultiplayerHeistNodeType
 {
     static constexpr const char* NAME = "questSetMultiplayerHeistState_NodeType";
@@ -22,6 +23,7 @@ struct SetMultiplayerHeistState_NodeType : quest::IMultiplayerHeistNodeType
 };
 RED4EXT_ASSERT_SIZE(SetMultiplayerHeistState_NodeType, 0x38);
 } // namespace quest
+using questSetMultiplayerHeistState_NodeType = quest::SetMultiplayerHeistState_NodeType;
 } // namespace RED4ext
 
 // clang-format on

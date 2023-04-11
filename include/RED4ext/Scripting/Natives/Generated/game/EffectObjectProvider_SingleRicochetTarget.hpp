@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace game { 
+namespace game
+{
 struct EffectObjectProvider_SingleRicochetTarget : game::EffectObjectProvider
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_SingleRicochetTarget";
@@ -26,6 +27,7 @@ struct EffectObjectProvider_SingleRicochetTarget : game::EffectObjectProvider
 };
 RED4EXT_ASSERT_SIZE(EffectObjectProvider_SingleRicochetTarget, 0x68);
 } // namespace game
+using gameEffectObjectProvider_SingleRicochetTarget = game::EffectObjectProvider_SingleRicochetTarget;
 } // namespace RED4ext
 
 // clang-format on

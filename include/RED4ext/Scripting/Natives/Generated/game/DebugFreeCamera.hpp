@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DebugFreeCamera : game::Object
 {
     static constexpr const char* NAME = "gameDebugFreeCamera";
@@ -20,6 +21,7 @@ struct DebugFreeCamera : game::Object
 };
 RED4EXT_ASSERT_SIZE(DebugFreeCamera, 0x2A0);
 } // namespace game
+using gameDebugFreeCamera = game::DebugFreeCamera;
 } // namespace RED4ext
 
 // clang-format on

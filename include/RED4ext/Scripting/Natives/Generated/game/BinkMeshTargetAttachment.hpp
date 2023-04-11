@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BinkMeshTargetAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "gameBinkMeshTargetAttachment";
@@ -19,6 +20,7 @@ struct BinkMeshTargetAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(BinkMeshTargetAttachment, 0x50);
 } // namespace game
+using gameBinkMeshTargetAttachment = game::BinkMeshTargetAttachment;
 } // namespace RED4ext
 
 // clang-format on

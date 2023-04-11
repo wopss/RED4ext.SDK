@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ProcessLoadingScreenDelayedEvent : red::Event
 {
     static constexpr const char* NAME = "inkProcessLoadingScreenDelayedEvent";
@@ -19,6 +20,7 @@ struct ProcessLoadingScreenDelayedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ProcessLoadingScreenDelayedEvent, 0x40);
 } // namespace ink
+using inkProcessLoadingScreenDelayedEvent = ink::ProcessLoadingScreenDelayedEvent;
 } // namespace RED4ext
 
 // clang-format on

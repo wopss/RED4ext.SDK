@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct IFinisherScenario; }
 
-namespace game { 
+namespace game
+{
 struct EffectExecutor_Finisher : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_Finisher";
@@ -27,6 +28,7 @@ struct EffectExecutor_Finisher : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_Finisher, 0x60);
 } // namespace game
+using gameEffectExecutor_Finisher = game::EffectExecutor_Finisher;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_ExitCover : anim::AnimFeature_AIAction
 {
     static constexpr const char* NAME = "animAnimFeature_ExitCover";
@@ -21,6 +22,7 @@ struct AnimFeature_ExitCover : anim::AnimFeature_AIAction
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_ExitCover, 0x58);
 } // namespace anim
+using animAnimFeature_ExitCover = anim::AnimFeature_ExitCover;
 using AnimFeature_ExitCover = anim::AnimFeature_ExitCover;
 } // namespace RED4ext
 

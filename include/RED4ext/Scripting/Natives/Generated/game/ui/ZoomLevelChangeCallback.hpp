@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ZoomLevelChangeCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "gameuiZoomLevelChangeCallback";
@@ -20,6 +21,7 @@ struct ZoomLevelChangeCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(ZoomLevelChangeCallback, 0x38);
 } // namespace game::ui
+using gameuiZoomLevelChangeCallback = game::ui::ZoomLevelChangeCallback;
 } // namespace RED4ext
 
 // clang-format on

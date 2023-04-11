@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct MusicSyncEvent : red::Event
 {
     static constexpr const char* NAME = "entMusicSyncEvent";
@@ -22,6 +23,7 @@ struct MusicSyncEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MusicSyncEvent, 0x48);
 } // namespace ent
+using entMusicSyncEvent = ent::MusicSyncEvent;
 using MusicSync = ent::MusicSyncEvent;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NavigationScriptPath : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptPath";
@@ -22,6 +23,7 @@ struct NavigationScriptPath : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptPath, 0x50);
 } // namespace world
+using worldNavigationScriptPath = world::NavigationScriptPath;
 using NavigationPath = world::NavigationScriptPath;
 } // namespace RED4ext
 

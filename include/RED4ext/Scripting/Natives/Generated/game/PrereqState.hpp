@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PrereqState : IScriptable
 {
     static constexpr const char* NAME = "gamePrereqState";
@@ -20,6 +21,7 @@ struct PrereqState : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PrereqState, 0xC0);
 } // namespace game
+using gamePrereqState = game::PrereqState;
 using PrereqState = game::PrereqState;
 } // namespace RED4ext
 

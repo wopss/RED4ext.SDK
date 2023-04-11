@@ -21,13 +21,14 @@ RED4EXT_ASSERT_SIZE(AllocationResult, 0x10);
 
 struct IAllocator
 {
-    virtual AllocationResult Alloc(uint32_t aSize) = 0;
-    virtual AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) = 0;
-    virtual AllocationResult Realloc(AllocationResult& aAllocation, uint32_t aSize) = 0;
-    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint32_t aSize, uint32_t aAlignment) = 0;
-    virtual void Free(AllocationResult& aAllocation) = 0;
-    virtual void sub_28(void* a1) = 0;
-    virtual const uint32_t GetHandle() const = 0;
+    virtual AllocationResult Alloc(uint32_t aSize) = 0;                                  // 00
+    virtual AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) = 0;      // 08
+    virtual AllocationResult Realloc(AllocationResult& aAllocation, uint32_t aSize) = 0; // 10
+    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint32_t aSize,
+                                            uint32_t aAlignment) = 0; // 16
+    virtual void Free(AllocationResult& aAllocation) = 0;             // 20
+    virtual void sub_28(void* a1) = 0;                                // 28
+    virtual const uint32_t GetHandle() const = 0;                     // 30
 
     [[deprecated("Use 'GetHandle()' instead.")]] const uint32_t GetId() const
     {

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_ErrorPopup : gsm::PopupState
 {
     static constexpr const char* NAME = "gsmMenuState_ErrorPopup";
@@ -20,6 +21,7 @@ struct MenuState_ErrorPopup : gsm::PopupState
 };
 RED4EXT_ASSERT_SIZE(MenuState_ErrorPopup, 0x328);
 } // namespace gsm
+using gsmMenuState_ErrorPopup = gsm::MenuState_ErrorPopup;
 } // namespace RED4ext
 
 // clang-format on

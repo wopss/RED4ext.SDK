@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct ChangeTexturePartEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimChangeTexturePartEvent";
@@ -21,6 +22,7 @@ struct ChangeTexturePartEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(ChangeTexturePartEvent, 0x50);
 } // namespace ink::anim
+using inkanimChangeTexturePartEvent = ink::anim::ChangeTexturePartEvent;
 } // namespace RED4ext
 
 // clang-format on

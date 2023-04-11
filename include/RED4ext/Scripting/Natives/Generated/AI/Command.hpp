@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Command : IScriptable
 {
     static constexpr const char* NAME = "AICommand";
@@ -26,6 +27,7 @@ struct Command : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Command, 0x60);
 } // namespace AI
+using AICommand = AI::Command;
 using NPCCommand = AI::Command;
 } // namespace RED4ext
 

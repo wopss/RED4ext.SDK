@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ButtonProgressChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkButtonProgressChangedCallback";
@@ -20,6 +21,7 @@ struct ButtonProgressChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(ButtonProgressChangedCallback, 0x38);
 } // namespace ink
+using inkButtonProgressChangedCallback = ink::ButtonProgressChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

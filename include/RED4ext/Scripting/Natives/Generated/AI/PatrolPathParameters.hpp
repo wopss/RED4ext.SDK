@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct PatrolPathParameters : IScriptable
 {
     static constexpr const char* NAME = "AIPatrolPathParameters";
@@ -30,6 +31,7 @@ struct PatrolPathParameters : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PatrolPathParameters, 0x58);
 } // namespace AI
+using AIPatrolPathParameters = AI::PatrolPathParameters;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AudioSyncs
 {
     static constexpr const char* NAME = "gameAudioSyncs";
@@ -26,6 +27,7 @@ struct AudioSyncs
 };
 RED4EXT_ASSERT_SIZE(AudioSyncs, 0x40);
 } // namespace game
+using gameAudioSyncs = game::AudioSyncs;
 } // namespace RED4ext
 
 // clang-format on

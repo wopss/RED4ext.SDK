@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct StateObserver_SessionChanged : gsm::IStateObserver
 {
     static constexpr const char* NAME = "gsmStateObserver_SessionChanged";
@@ -19,6 +20,7 @@ struct StateObserver_SessionChanged : gsm::IStateObserver
 };
 RED4EXT_ASSERT_SIZE(StateObserver_SessionChanged, 0x8);
 } // namespace gsm
+using gsmStateObserver_SessionChanged = gsm::StateObserver_SessionChanged;
 } // namespace RED4ext
 
 // clang-format on

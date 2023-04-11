@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade
+{
 struct BoundingShape
 {
     static constexpr const char* NAME = "gameuiarcadeBoundingShape";
@@ -21,6 +22,7 @@ struct BoundingShape
 };
 RED4EXT_ASSERT_SIZE(BoundingShape, 0x30);
 } // namespace game::ui::arcade
+using gameuiarcadeBoundingShape = game::ui::arcade::BoundingShape;
 } // namespace RED4ext
 
 // clang-format on

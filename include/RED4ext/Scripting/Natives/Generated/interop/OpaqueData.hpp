@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct OpaqueData
 {
     static constexpr const char* NAME = "interopOpaqueData";
@@ -23,6 +24,7 @@ struct OpaqueData
 };
 RED4EXT_ASSERT_SIZE(OpaqueData, 0x48);
 } // namespace interop
+using interopOpaqueData = interop::OpaqueData;
 } // namespace RED4ext
 
 // clang-format on

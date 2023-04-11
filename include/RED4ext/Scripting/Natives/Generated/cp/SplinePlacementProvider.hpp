@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct SplinePlacementProvider : ISerializable
 {
     static constexpr const char* NAME = "cpSplinePlacementProvider";
@@ -20,6 +21,7 @@ struct SplinePlacementProvider : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SplinePlacementProvider, 0x38);
 } // namespace cp
+using cpSplinePlacementProvider = cp::SplinePlacementProvider;
 } // namespace RED4ext
 
 // clang-format on

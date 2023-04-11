@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct TwistOutput
 {
     static constexpr const char* NAME = "animTwistOutput";
@@ -27,6 +28,7 @@ struct TwistOutput
 };
 RED4EXT_ASSERT_SIZE(TwistOutput, 0x40);
 } // namespace anim
+using animTwistOutput = anim::TwistOutput;
 } // namespace RED4ext
 
 // clang-format on

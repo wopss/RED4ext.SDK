@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm::game { 
+namespace gsm::game
+{
 struct StateObserver_FunctionalTests : gsm::IStateObserver
 {
     static constexpr const char* NAME = "gsmgameStateObserver_FunctionalTests";
@@ -20,6 +21,7 @@ struct StateObserver_FunctionalTests : gsm::IStateObserver
 };
 RED4EXT_ASSERT_SIZE(StateObserver_FunctionalTests, 0x30);
 } // namespace gsm::game
+using gsmgameStateObserver_FunctionalTests = gsm::game::StateObserver_FunctionalTests;
 } // namespace RED4ext
 
 // clang-format on

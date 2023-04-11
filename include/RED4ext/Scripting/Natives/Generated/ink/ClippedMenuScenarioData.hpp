@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ClippedMenuScenarioData : IScriptable
 {
     static constexpr const char* NAME = "inkClippedMenuScenarioData";
@@ -22,6 +23,7 @@ struct ClippedMenuScenarioData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ClippedMenuScenarioData, 0x50);
 } // namespace ink
+using inkClippedMenuScenarioData = ink::ClippedMenuScenarioData;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace script { 
+namespace script
+{
 struct OptimizationsHandleWithValue
 {
     static constexpr const char* NAME = "scriptOptimizationsHandleWithValue";
@@ -24,6 +25,7 @@ struct OptimizationsHandleWithValue
 };
 RED4EXT_ASSERT_SIZE(OptimizationsHandleWithValue, 0x18);
 } // namespace script
+using scriptOptimizationsHandleWithValue = script::OptimizationsHandleWithValue;
 using HandleWithValue = script::OptimizationsHandleWithValue;
 } // namespace RED4ext
 

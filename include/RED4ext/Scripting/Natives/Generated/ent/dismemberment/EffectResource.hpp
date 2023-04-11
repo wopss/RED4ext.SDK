@@ -20,7 +20,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct EffectResource : ISerializable
 {
     static constexpr const char* NAME = "entdismembermentEffectResource";
@@ -40,6 +41,7 @@ struct EffectResource : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EffectResource, 0x90);
 } // namespace ent::dismemberment
+using entdismembermentEffectResource = ent::dismemberment::EffectResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IWaitingSignSystem : ink::ILayerSystem
 {
     static constexpr const char* NAME = "inkIWaitingSignSystem";
@@ -19,6 +20,7 @@ struct IWaitingSignSystem : ink::ILayerSystem
 };
 RED4EXT_ASSERT_SIZE(IWaitingSignSystem, 0x40);
 } // namespace ink
+using inkIWaitingSignSystem = ink::IWaitingSignSystem;
 } // namespace RED4ext
 
 // clang-format on

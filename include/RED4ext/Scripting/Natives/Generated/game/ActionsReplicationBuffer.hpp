@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionsReplicationBuffer
 {
     static constexpr const char* NAME = "gameActionsReplicationBuffer";
@@ -19,6 +20,7 @@ struct ActionsReplicationBuffer
 };
 RED4EXT_ASSERT_SIZE(ActionsReplicationBuffer, 0x18);
 } // namespace game
+using gameActionsReplicationBuffer = game::ActionsReplicationBuffer;
 } // namespace RED4ext
 
 // clang-format on

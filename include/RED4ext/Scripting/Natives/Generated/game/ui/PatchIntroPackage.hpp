@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PatchIntroPackage
 {
     static constexpr const char* NAME = "gameuiPatchIntroPackage";
@@ -21,6 +22,7 @@ struct PatchIntroPackage
 };
 RED4EXT_ASSERT_SIZE(PatchIntroPackage, 0x10);
 } // namespace game::ui
+using gameuiPatchIntroPackage = game::ui::PatchIntroPackage;
 } // namespace RED4ext
 
 // clang-format on

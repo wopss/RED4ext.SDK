@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IEffectTriggerSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIEffectTriggerSystem";
@@ -19,6 +20,7 @@ struct IEffectTriggerSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IEffectTriggerSystem, 0x48);
 } // namespace game
+using gameIEffectTriggerSystem = game::IEffectTriggerSystem;
 } // namespace RED4ext
 
 // clang-format on

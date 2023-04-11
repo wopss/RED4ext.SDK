@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DoorsSettings : audio::DeviceSettings
 {
     static constexpr const char* NAME = "audioDoorsSettings";
@@ -27,6 +28,7 @@ struct DoorsSettings : audio::DeviceSettings
 };
 RED4EXT_ASSERT_SIZE(DoorsSettings, 0xE8);
 } // namespace audio
+using audioDoorsSettings = audio::DoorsSettings;
 } // namespace RED4ext
 
 // clang-format on

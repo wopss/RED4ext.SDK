@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntitySpawnerEvent : red::Event
 {
     static constexpr const char* NAME = "gameEntitySpawnerEvent";
@@ -24,6 +25,7 @@ struct EntitySpawnerEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(EntitySpawnerEvent, 0x50);
 } // namespace game
+using gameEntitySpawnerEvent = game::EntitySpawnerEvent;
 } // namespace RED4ext
 
 // clang-format on

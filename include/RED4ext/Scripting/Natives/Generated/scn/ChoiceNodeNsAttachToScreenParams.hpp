@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsAttachToScreenParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsAttachToScreenParams";
@@ -19,6 +20,7 @@ struct ChoiceNodeNsAttachToScreenParams
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsAttachToScreenParams, 0x1);
 } // namespace scn
+using scnChoiceNodeNsAttachToScreenParams = scn::ChoiceNodeNsAttachToScreenParams;
 } // namespace RED4ext
 
 // clang-format on

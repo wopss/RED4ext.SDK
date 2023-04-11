@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct PublisherChoiceEvent : game::interactions::PublisherBaseEvent
 {
     static constexpr const char* NAME = "gameinteractionsPublisherChoiceEvent";
@@ -20,6 +21,7 @@ struct PublisherChoiceEvent : game::interactions::PublisherBaseEvent
 };
 RED4EXT_ASSERT_SIZE(PublisherChoiceEvent, 0xB0);
 } // namespace game::interactions
+using gameinteractionsPublisherChoiceEvent = game::interactions::PublisherChoiceEvent;
 } // namespace RED4ext
 
 // clang-format on

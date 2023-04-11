@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct RootWidgetIdentifier : ink::UserData
 {
     static constexpr const char* NAME = "inkRootWidgetIdentifier";
@@ -19,6 +20,7 @@ struct RootWidgetIdentifier : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(RootWidgetIdentifier, 0x40);
 } // namespace ink
+using inkRootWidgetIdentifier = ink::RootWidgetIdentifier;
 } // namespace RED4ext
 
 // clang-format on

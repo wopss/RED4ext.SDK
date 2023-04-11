@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ItemModParams
 {
     static constexpr const char* NAME = "gameItemModParams";
@@ -23,6 +24,7 @@ struct ItemModParams
 };
 RED4EXT_ASSERT_SIZE(ItemModParams, 0x50);
 } // namespace game
+using gameItemModParams = game::ItemModParams;
 using ItemModParams = game::ItemModParams;
 } // namespace RED4ext
 

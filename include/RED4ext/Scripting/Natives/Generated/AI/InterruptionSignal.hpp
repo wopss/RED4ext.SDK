@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct InterruptionSignal
 {
     static constexpr const char* NAME = "AIInterruptionSignal";
@@ -23,6 +24,7 @@ struct InterruptionSignal
 };
 RED4EXT_ASSERT_SIZE(InterruptionSignal, 0x10);
 } // namespace AI
+using AIInterruptionSignal = AI::InterruptionSignal;
 } // namespace RED4ext
 
 // clang-format on

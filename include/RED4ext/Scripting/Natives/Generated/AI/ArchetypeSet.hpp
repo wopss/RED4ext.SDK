@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ArchetypeSet : CResource
 {
     static constexpr const char* NAME = "AIArchetypeSet";
@@ -22,6 +23,7 @@ struct ArchetypeSet : CResource
 };
 RED4EXT_ASSERT_SIZE(ArchetypeSet, 0x50);
 } // namespace AI
+using AIArchetypeSet = AI::ArchetypeSet;
 } // namespace RED4ext
 
 // clang-format on

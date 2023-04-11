@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CooldownGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiCooldownGameController";
@@ -20,6 +21,7 @@ struct CooldownGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(CooldownGameController, 0xF0);
 } // namespace game::ui
+using gameuiCooldownGameController = game::ui::CooldownGameController;
 using inkCooldownGameController = game::ui::CooldownGameController;
 } // namespace RED4ext
 

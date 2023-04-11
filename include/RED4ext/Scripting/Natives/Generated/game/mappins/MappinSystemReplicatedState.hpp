@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct MappinSystemReplicatedState : game::IGameSystemReplicatedState
 {
     static constexpr const char* NAME = "gamemappinsMappinSystemReplicatedState";
@@ -25,6 +26,7 @@ struct MappinSystemReplicatedState : game::IGameSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(MappinSystemReplicatedState, 0x80);
 } // namespace game::mappins
+using gamemappinsMappinSystemReplicatedState = game::mappins::MappinSystemReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

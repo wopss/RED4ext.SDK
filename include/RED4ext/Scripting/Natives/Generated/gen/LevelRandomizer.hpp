@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace gen { 
+namespace gen
+{
 struct LevelRandomizer : game::Object
 {
     static constexpr const char* NAME = "genLevelRandomizer";
@@ -30,6 +31,7 @@ struct LevelRandomizer : game::Object
 };
 RED4EXT_ASSERT_SIZE(LevelRandomizer, 0x2D0);
 } // namespace gen
+using genLevelRandomizer = gen::LevelRandomizer;
 } // namespace RED4ext
 
 // clang-format on

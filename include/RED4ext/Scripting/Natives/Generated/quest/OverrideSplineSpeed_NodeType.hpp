@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct OverrideSplineSpeed_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questOverrideSplineSpeed_NodeType";
@@ -23,6 +24,7 @@ struct OverrideSplineSpeed_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(OverrideSplineSpeed_NodeType, 0x70);
 } // namespace quest
+using questOverrideSplineSpeed_NodeType = quest::OverrideSplineSpeed_NodeType;
 } // namespace RED4ext
 
 // clang-format on

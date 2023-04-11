@@ -15,7 +15,8 @@ namespace RED4ext
 namespace AI { struct ArgumentInstancePS; }
 namespace AI { struct Role; }
 
-namespace AI { 
+namespace AI
+{
 struct CommandQueuePS : game::ComponentPS
 {
     static constexpr const char* NAME = "AICommandQueuePS";
@@ -29,6 +30,7 @@ struct CommandQueuePS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(CommandQueuePS, 0x390);
 } // namespace AI
+using AICommandQueuePS = AI::CommandQueuePS;
 } // namespace RED4ext
 
 // clang-format on

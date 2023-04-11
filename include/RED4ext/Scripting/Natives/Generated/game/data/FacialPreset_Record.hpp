@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct FacialPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataFacialPreset_Record";
@@ -20,6 +21,7 @@ struct FacialPreset_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(FacialPreset_Record, 0x58);
 } // namespace game::data
+using gamedataFacialPreset_Record = game::data::FacialPreset_Record;
 using FacialPreset_Record = game::data::FacialPreset_Record;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NPCTypePrereq_Record : game::data::IPrereq_Record
 {
     static constexpr const char* NAME = "gamedataNPCTypePrereq_Record";
@@ -20,6 +21,7 @@ struct NPCTypePrereq_Record : game::data::IPrereq_Record
 };
 RED4EXT_ASSERT_SIZE(NPCTypePrereq_Record, 0x58);
 } // namespace game::data
+using gamedataNPCTypePrereq_Record = game::data::NPCTypePrereq_Record;
 using NPCTypePrereq_Record = game::data::NPCTypePrereq_Record;
 } // namespace RED4ext
 

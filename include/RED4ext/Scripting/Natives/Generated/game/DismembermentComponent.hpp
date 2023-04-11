@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DismembermentComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameDismembermentComponent";
@@ -20,6 +21,7 @@ struct DismembermentComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(DismembermentComponent, 0x98);
 } // namespace game
+using gameDismembermentComponent = game::DismembermentComponent;
 using DismembermentComponent = game::DismembermentComponent;
 } // namespace RED4ext
 

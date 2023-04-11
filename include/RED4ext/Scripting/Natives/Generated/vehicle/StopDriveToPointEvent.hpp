@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct StopDriveToPointEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleStopDriveToPointEvent";
@@ -19,6 +20,7 @@ struct StopDriveToPointEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StopDriveToPointEvent, 0x40);
 } // namespace vehicle
+using vehicleStopDriveToPointEvent = vehicle::StopDriveToPointEvent;
 } // namespace RED4ext
 
 // clang-format on

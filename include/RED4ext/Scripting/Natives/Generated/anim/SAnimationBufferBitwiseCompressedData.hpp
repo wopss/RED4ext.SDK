@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SAnimationBufferBitwiseCompressedData
 {
     static constexpr const char* NAME = "animSAnimationBufferBitwiseCompressedData";
@@ -24,6 +25,7 @@ struct SAnimationBufferBitwiseCompressedData
 };
 RED4EXT_ASSERT_SIZE(SAnimationBufferBitwiseCompressedData, 0x10);
 } // namespace anim
+using animSAnimationBufferBitwiseCompressedData = anim::SAnimationBufferBitwiseCompressedData;
 } // namespace RED4ext
 
 // clang-format on

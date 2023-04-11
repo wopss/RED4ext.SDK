@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct ImportFacialMainPoseDesc
 {
     static constexpr const char* NAME = "animImportFacialMainPoseDesc";
@@ -33,6 +34,7 @@ struct ImportFacialMainPoseDesc
 };
 RED4EXT_ASSERT_SIZE(ImportFacialMainPoseDesc, 0x70);
 } // namespace anim
+using animImportFacialMainPoseDesc = anim::ImportFacialMainPoseDesc;
 } // namespace RED4ext
 
 // clang-format on

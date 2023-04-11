@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MoveOnSplineAndKeepDistance_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questMoveOnSplineAndKeepDistance_NodeType";
@@ -29,6 +30,7 @@ struct MoveOnSplineAndKeepDistance_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(MoveOnSplineAndKeepDistance_NodeType, 0xC8);
 } // namespace quest
+using questMoveOnSplineAndKeepDistance_NodeType = quest::MoveOnSplineAndKeepDistance_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetTimer_NodeType : quest::IGameManagerNodeType
 {
     static constexpr const char* NAME = "questSetTimer_NodeType";
@@ -22,6 +23,7 @@ struct SetTimer_NodeType : quest::IGameManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetTimer_NodeType, 0x40);
 } // namespace quest
+using questSetTimer_NodeType = quest::SetTimer_NodeType;
 } // namespace RED4ext
 
 // clang-format on

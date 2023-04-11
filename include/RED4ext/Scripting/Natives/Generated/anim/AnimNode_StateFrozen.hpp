@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_StateFrozen : anim::AnimNode_State
 {
     static constexpr const char* NAME = "animAnimNode_StateFrozen";
@@ -20,6 +21,7 @@ struct AnimNode_StateFrozen : anim::AnimNode_State
 };
 RED4EXT_ASSERT_SIZE(AnimNode_StateFrozen, 0x98);
 } // namespace anim
+using animAnimNode_StateFrozen = anim::AnimNode_StateFrozen;
 } // namespace RED4ext
 
 // clang-format on

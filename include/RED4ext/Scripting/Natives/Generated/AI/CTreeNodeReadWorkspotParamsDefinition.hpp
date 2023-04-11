@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeReadWorkspotParamsDefinition : AI::CTreeNodeDecoratorDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeReadWorkspotParamsDefinition";
@@ -28,6 +29,7 @@ struct CTreeNodeReadWorkspotParamsDefinition : AI::CTreeNodeDecoratorDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeReadWorkspotParamsDefinition, 0x88);
 } // namespace AI
+using AICTreeNodeReadWorkspotParamsDefinition = AI::CTreeNodeReadWorkspotParamsDefinition;
 } // namespace RED4ext
 
 // clang-format on

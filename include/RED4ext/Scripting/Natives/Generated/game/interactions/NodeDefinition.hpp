@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct NodeDefinition : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsNodeDefinition";
@@ -20,6 +21,7 @@ struct NodeDefinition : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NodeDefinition, 0x48);
 } // namespace game::interactions
+using gameinteractionsNodeDefinition = game::interactions::NodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

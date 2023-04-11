@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct StackScriptPassiveExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorStackScriptPassiveExpressionDefinition";
@@ -20,6 +21,7 @@ struct StackScriptPassiveExpressionDefinition : AI::behavior::PassiveExpressionD
 };
 RED4EXT_ASSERT_SIZE(StackScriptPassiveExpressionDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorStackScriptPassiveExpressionDefinition = AI::behavior::StackScriptPassiveExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct CameraComponentSpawner : effect::Spawner
 {
     static constexpr const char* NAME = "effectCameraComponentSpawner";
@@ -19,6 +20,7 @@ struct CameraComponentSpawner : effect::Spawner
 };
 RED4EXT_ASSERT_SIZE(CameraComponentSpawner, 0x30);
 } // namespace effect
+using effectCameraComponentSpawner = effect::CameraComponentSpawner;
 } // namespace RED4ext
 
 // clang-format on

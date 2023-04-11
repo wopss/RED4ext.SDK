@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerLevelBasedQuestRequestFilter : game::CustomRequestFilter
 {
     static constexpr const char* NAME = "gamePlayerLevelBasedQuestRequestFilter";
@@ -21,6 +22,7 @@ struct PlayerLevelBasedQuestRequestFilter : game::CustomRequestFilter
 };
 RED4EXT_ASSERT_SIZE(PlayerLevelBasedQuestRequestFilter, 0x18);
 } // namespace game
+using gamePlayerLevelBasedQuestRequestFilter = game::PlayerLevelBasedQuestRequestFilter;
 using PlayerLevelBasedQuestRequestFilter = game::PlayerLevelBasedQuestRequestFilter;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct NarrativePlateData
 {
     static constexpr const char* NAME = "gameuiNarrativePlateData";
@@ -25,6 +26,7 @@ struct NarrativePlateData
 };
 RED4EXT_ASSERT_SIZE(NarrativePlateData, 0x50);
 } // namespace game::ui
+using gameuiNarrativePlateData = game::ui::NarrativePlateData;
 using NarrativePlateData = game::ui::NarrativePlateData;
 } // namespace RED4ext
 

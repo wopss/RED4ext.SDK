@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct OnRecycleEventAdvanced : red::Event
 {
     static constexpr const char* NAME = "gameuiOnRecycleEventAdvanced";
@@ -19,6 +20,7 @@ struct OnRecycleEventAdvanced : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnRecycleEventAdvanced, 0x40);
 } // namespace game::ui
+using gameuiOnRecycleEventAdvanced = game::ui::OnRecycleEventAdvanced;
 using RecycleEventAdvanced = game::ui::OnRecycleEventAdvanced;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct TextValueProgressInterpolator : ink::anim::TextInterpolator
 {
     static constexpr const char* NAME = "inkanimTextValueProgressInterpolator";
@@ -19,6 +20,7 @@ struct TextValueProgressInterpolator : ink::anim::TextInterpolator
 };
 RED4EXT_ASSERT_SIZE(TextValueProgressInterpolator, 0x70);
 } // namespace ink::anim
+using inkanimTextValueProgressInterpolator = ink::anim::TextValueProgressInterpolator;
 using inkAnimTextValueProgress = ink::anim::TextValueProgressInterpolator;
 } // namespace RED4ext
 

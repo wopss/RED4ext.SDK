@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WardrobeSetPreviewGameController : game::ui::BaseGarmentItemPreviewGameController
 {
     static constexpr const char* NAME = "gameuiWardrobeSetPreviewGameController";
@@ -20,6 +21,7 @@ struct WardrobeSetPreviewGameController : game::ui::BaseGarmentItemPreviewGameCo
 };
 RED4EXT_ASSERT_SIZE(WardrobeSetPreviewGameController, 0x208);
 } // namespace game::ui
+using gameuiWardrobeSetPreviewGameController = game::ui::WardrobeSetPreviewGameController;
 using WardrobeSetPreviewGameController = game::ui::WardrobeSetPreviewGameController;
 } // namespace RED4ext
 

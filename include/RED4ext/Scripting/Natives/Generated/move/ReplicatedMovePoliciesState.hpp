@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct ReplicatedMovePoliciesState
 {
     static constexpr const char* NAME = "moveReplicatedMovePoliciesState";
@@ -25,6 +26,7 @@ struct ReplicatedMovePoliciesState
 };
 RED4EXT_ASSERT_SIZE(ReplicatedMovePoliciesState, 0x40);
 } // namespace move
+using moveReplicatedMovePoliciesState = move::ReplicatedMovePoliciesState;
 } // namespace RED4ext
 
 // clang-format on

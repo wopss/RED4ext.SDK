@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SingleDrawMetric
 {
     static constexpr const char* NAME = "inkSingleDrawMetric";
@@ -25,6 +26,7 @@ struct SingleDrawMetric
 };
 RED4EXT_ASSERT_SIZE(SingleDrawMetric, 0x20);
 } // namespace ink
+using inkSingleDrawMetric = ink::SingleDrawMetric;
 } // namespace RED4ext
 
 // clang-format on

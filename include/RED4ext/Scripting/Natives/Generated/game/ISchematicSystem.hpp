@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ISchematicSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameISchematicSystem";
@@ -19,6 +20,7 @@ struct ISchematicSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISchematicSystem, 0x48);
 } // namespace game
+using gameISchematicSystem = game::ISchematicSystem;
 } // namespace RED4ext
 
 // clang-format on

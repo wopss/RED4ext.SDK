@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StreamingQueryDataResource : CResource
 {
     static constexpr const char* NAME = "worldStreamingQueryDataResource";
@@ -23,6 +24,7 @@ struct StreamingQueryDataResource : CResource
 };
 RED4EXT_ASSERT_SIZE(StreamingQueryDataResource, 0x60);
 } // namespace world
+using worldStreamingQueryDataResource = world::StreamingQueryDataResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HudSystemAccessor : ink::ILayerSystemAccesor
 {
     static constexpr const char* NAME = "inkHudSystemAccessor";
@@ -20,6 +21,7 @@ struct HudSystemAccessor : ink::ILayerSystemAccesor
 };
 RED4EXT_ASSERT_SIZE(HudSystemAccessor, 0x68);
 } // namespace ink
+using inkHudSystemAccessor = ink::HudSystemAccessor;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Enemy : ISerializable
 {
     static constexpr const char* NAME = "AIEnemy";
@@ -20,6 +21,7 @@ struct Enemy : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Enemy, 0x130);
 } // namespace AI
+using AIEnemy = AI::Enemy;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence
+{
 struct BumpReactionSetting : ISerializable
 {
     static constexpr const char* NAME = "gameinfluenceBumpReactionSetting";
@@ -22,6 +23,7 @@ struct BumpReactionSetting : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BumpReactionSetting, 0x38);
 } // namespace game::influence
+using gameinfluenceBumpReactionSetting = game::influence::BumpReactionSetting;
 using BumpReactionSetting = game::influence::BumpReactionSetting;
 } // namespace RED4ext
 

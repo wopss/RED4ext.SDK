@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct EntityPreviewGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiEntityPreviewGameController";
@@ -25,6 +26,7 @@ struct EntityPreviewGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(EntityPreviewGameController, 0x160);
 } // namespace game::ui
+using gameuiEntityPreviewGameController = game::ui::EntityPreviewGameController;
 using inkEntityPreviewGameController = game::ui::EntityPreviewGameController;
 } // namespace RED4ext
 

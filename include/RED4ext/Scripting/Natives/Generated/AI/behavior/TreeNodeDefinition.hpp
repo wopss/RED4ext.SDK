@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct TreeNodeDefinition : AI::behavior::BehaviorComponentDefinition
 {
     static constexpr const char* NAME = "AIbehaviorTreeNodeDefinition";
@@ -19,6 +20,7 @@ struct TreeNodeDefinition : AI::behavior::BehaviorComponentDefinition
 };
 RED4EXT_ASSERT_SIZE(TreeNodeDefinition, 0x30);
 } // namespace AI::behavior
+using AIbehaviorTreeNodeDefinition = AI::behavior::TreeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

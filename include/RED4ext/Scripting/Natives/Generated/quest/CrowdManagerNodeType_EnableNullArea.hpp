@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CrowdManagerNodeType_EnableNullArea : quest::ICrowdManager_NodeType
 {
     static constexpr const char* NAME = "questCrowdManagerNodeType_EnableNullArea";
@@ -23,6 +24,7 @@ struct CrowdManagerNodeType_EnableNullArea : quest::ICrowdManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(CrowdManagerNodeType_EnableNullArea, 0x40);
 } // namespace quest
+using questCrowdManagerNodeType_EnableNullArea = quest::CrowdManagerNodeType_EnableNullArea;
 } // namespace RED4ext
 
 // clang-format on

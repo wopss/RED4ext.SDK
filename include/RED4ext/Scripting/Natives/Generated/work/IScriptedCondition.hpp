@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct IScriptedCondition : IScriptable
 {
     static constexpr const char* NAME = "workIScriptedCondition";
@@ -19,6 +20,7 @@ struct IScriptedCondition : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IScriptedCondition, 0x40);
 } // namespace work
+using workIScriptedCondition = work::IScriptedCondition;
 using WorkspotCondition = work::IScriptedCondition;
 } // namespace RED4ext
 

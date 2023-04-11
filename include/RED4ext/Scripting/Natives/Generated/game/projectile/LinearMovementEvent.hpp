@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct LinearMovementEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileLinearMovementEvent";
@@ -21,6 +22,7 @@ struct LinearMovementEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(LinearMovementEvent, 0x50);
 } // namespace game::projectile
+using gameprojectileLinearMovementEvent = game::projectile::LinearMovementEvent;
 } // namespace RED4ext
 
 // clang-format on

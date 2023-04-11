@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ArchetypeType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataArchetypeType_Record";
@@ -20,6 +21,7 @@ struct ArchetypeType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ArchetypeType_Record, 0x58);
 } // namespace game::data
+using gamedataArchetypeType_Record = game::data::ArchetypeType_Record;
 using ArchetypeType_Record = game::data::ArchetypeType_Record;
 } // namespace RED4ext
 

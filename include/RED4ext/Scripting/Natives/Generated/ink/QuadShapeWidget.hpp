@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct QuadShapeWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkQuadShapeWidget";
@@ -26,6 +27,7 @@ struct QuadShapeWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(QuadShapeWidget, 0x280);
 } // namespace ink
+using inkQuadShapeWidget = ink::QuadShapeWidget;
 using inkQuadShape = ink::QuadShapeWidget;
 } // namespace RED4ext
 

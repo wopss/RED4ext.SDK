@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct InputHintGroupData
 {
     static constexpr const char* NAME = "gameuiInputHintGroupData";
@@ -24,6 +25,7 @@ struct InputHintGroupData
 };
 RED4EXT_ASSERT_SIZE(InputHintGroupData, 0x50);
 } // namespace game::ui
+using gameuiInputHintGroupData = game::ui::InputHintGroupData;
 using InputHintGroupData = game::ui::InputHintGroupData;
 } // namespace RED4ext
 

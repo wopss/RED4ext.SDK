@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PhysicalTriggerAreaNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldPhysicalTriggerAreaNodeInstance";
@@ -20,6 +21,7 @@ struct PhysicalTriggerAreaNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(PhysicalTriggerAreaNodeInstance, 0xA0);
 } // namespace world
+using worldPhysicalTriggerAreaNodeInstance = world::PhysicalTriggerAreaNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

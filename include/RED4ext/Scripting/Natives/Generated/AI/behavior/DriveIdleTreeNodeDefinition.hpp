@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DriveIdleTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorDriveIdleTreeNodeDefinition";
@@ -19,6 +20,7 @@ struct DriveIdleTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(DriveIdleTreeNodeDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorDriveIdleTreeNodeDefinition = AI::behavior::DriveIdleTreeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,7 +17,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct SingleScreenShotData : ISerializable
 {
     static constexpr const char* NAME = "rendSingleScreenShotData";
@@ -37,6 +38,7 @@ struct SingleScreenShotData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SingleScreenShotData, 0xF8);
 } // namespace rend
+using rendSingleScreenShotData = rend::SingleScreenShotData;
 } // namespace RED4ext
 
 // clang-format on

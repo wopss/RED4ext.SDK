@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StreamingMonitorSystem : game::IStreamingMonitorSystem
 {
     static constexpr const char* NAME = "gameStreamingMonitorSystem";
@@ -20,6 +21,7 @@ struct StreamingMonitorSystem : game::IStreamingMonitorSystem
 };
 RED4EXT_ASSERT_SIZE(StreamingMonitorSystem, 0xA0);
 } // namespace game
+using gameStreamingMonitorSystem = game::StreamingMonitorSystem;
 } // namespace RED4ext
 
 // clang-format on

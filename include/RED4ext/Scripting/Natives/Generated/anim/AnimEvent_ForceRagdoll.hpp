@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_ForceRagdoll : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_ForceRagdoll";
@@ -19,6 +20,7 @@ struct AnimEvent_ForceRagdoll : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_ForceRagdoll, 0x40);
 } // namespace anim
+using animAnimEvent_ForceRagdoll = anim::AnimEvent_ForceRagdoll;
 } // namespace RED4ext
 
 // clang-format on

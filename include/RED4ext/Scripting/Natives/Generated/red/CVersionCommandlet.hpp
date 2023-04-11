@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct CVersionCommandlet : red::ICommandlet
 {
     static constexpr const char* NAME = "redCVersionCommandlet";
@@ -19,6 +20,7 @@ struct CVersionCommandlet : red::ICommandlet
 };
 RED4EXT_ASSERT_SIZE(CVersionCommandlet, 0x10);
 } // namespace red
+using redCVersionCommandlet = red::CVersionCommandlet;
 } // namespace RED4ext
 
 // clang-format on

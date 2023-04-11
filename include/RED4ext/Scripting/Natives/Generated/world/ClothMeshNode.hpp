@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ClothMeshNode : world::MeshNode
 {
     static constexpr const char* NAME = "worldClothMeshNode";
@@ -23,6 +24,7 @@ struct ClothMeshNode : world::MeshNode
 };
 RED4EXT_ASSERT_SIZE(ClothMeshNode, 0x60);
 } // namespace world
+using worldClothMeshNode = world::ClothMeshNode;
 } // namespace RED4ext
 
 // clang-format on

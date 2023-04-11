@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CacheWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkCacheWidget";
@@ -26,6 +27,7 @@ struct CacheWidget : ink::CompoundWidget
 };
 RED4EXT_ASSERT_SIZE(CacheWidget, 0x2F0);
 } // namespace ink
+using inkCacheWidget = ink::CacheWidget;
 } // namespace RED4ext
 
 // clang-format on

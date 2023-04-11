@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::bb { 
+namespace game::bb
+{
 struct AllScriptDefinitions : IScriptable
 {
     static constexpr const char* NAME = "gamebbAllScriptDefinitions";
@@ -19,6 +20,7 @@ struct AllScriptDefinitions : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AllScriptDefinitions, 0x40);
 } // namespace game::bb
+using gamebbAllScriptDefinitions = game::bb::AllScriptDefinitions;
 using AllBlackboardDefinitions = game::bb::AllScriptDefinitions;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct UnequipItemFromPerformerByItem : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsUnequipItemFromPerformerByItem";
@@ -25,6 +26,7 @@ struct UnequipItemFromPerformerByItem : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(UnequipItemFromPerformerByItem, 0x68);
 } // namespace scn::events
+using scneventsUnequipItemFromPerformerByItem = scn::events::UnequipItemFromPerformerByItem;
 } // namespace RED4ext
 
 // clang-format on

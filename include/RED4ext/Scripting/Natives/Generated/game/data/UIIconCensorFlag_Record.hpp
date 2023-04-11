@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct UIIconCensorFlag_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataUIIconCensorFlag_Record";
@@ -20,6 +21,7 @@ struct UIIconCensorFlag_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(UIIconCensorFlag_Record, 0x58);
 } // namespace game::data
+using gamedataUIIconCensorFlag_Record = game::data::UIIconCensorFlag_Record;
 using UIIconCensorFlag_Record = game::data::UIIconCensorFlag_Record;
 } // namespace RED4ext
 

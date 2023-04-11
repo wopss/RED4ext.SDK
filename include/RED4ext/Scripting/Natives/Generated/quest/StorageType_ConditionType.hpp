@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StorageType_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questStorageType_ConditionType";
@@ -22,6 +23,7 @@ struct StorageType_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(StorageType_ConditionType, 0x40);
 } // namespace quest
+using questStorageType_ConditionType = quest::StorageType_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GameNotificationLayer_SetCursorVisibility : red::Event
 {
     static constexpr const char* NAME = "inkGameNotificationLayer_SetCursorVisibility";
@@ -20,6 +21,7 @@ struct GameNotificationLayer_SetCursorVisibility : red::Event
 };
 RED4EXT_ASSERT_SIZE(GameNotificationLayer_SetCursorVisibility, 0x50);
 } // namespace ink
+using inkGameNotificationLayer_SetCursorVisibility = ink::GameNotificationLayer_SetCursorVisibility;
 } // namespace RED4ext
 
 // clang-format on

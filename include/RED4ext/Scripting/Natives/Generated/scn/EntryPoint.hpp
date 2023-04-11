@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct EntryPoint
 {
     static constexpr const char* NAME = "scnEntryPoint";
@@ -23,6 +24,7 @@ struct EntryPoint
 };
 RED4EXT_ASSERT_SIZE(EntryPoint, 0x10);
 } // namespace scn
+using scnEntryPoint = scn::EntryPoint;
 } // namespace RED4ext
 
 // clang-format on

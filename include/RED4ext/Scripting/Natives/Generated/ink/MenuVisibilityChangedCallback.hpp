@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuVisibilityChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkMenuVisibilityChangedCallback";
@@ -20,6 +21,7 @@ struct MenuVisibilityChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(MenuVisibilityChangedCallback, 0x38);
 } // namespace ink
+using inkMenuVisibilityChangedCallback = ink::MenuVisibilityChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

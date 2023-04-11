@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SlotDataHolder : IScriptable
 {
     static constexpr const char* NAME = "gameSlotDataHolder";
@@ -25,6 +26,7 @@ struct SlotDataHolder : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SlotDataHolder, 0xA8);
 } // namespace game
+using gameSlotDataHolder = game::SlotDataHolder;
 using SlotDataHolder = game::SlotDataHolder;
 } // namespace RED4ext
 

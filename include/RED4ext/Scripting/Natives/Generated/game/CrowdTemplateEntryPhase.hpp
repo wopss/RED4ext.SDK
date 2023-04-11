@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CrowdTemplateEntryPhase
 {
     static constexpr const char* NAME = "gameCrowdTemplateEntryPhase";
@@ -30,6 +31,7 @@ struct CrowdTemplateEntryPhase
 };
 RED4EXT_ASSERT_SIZE(CrowdTemplateEntryPhase, 0x30);
 } // namespace game
+using gameCrowdTemplateEntryPhase = game::CrowdTemplateEntryPhase;
 } // namespace RED4ext
 
 // clang-format on

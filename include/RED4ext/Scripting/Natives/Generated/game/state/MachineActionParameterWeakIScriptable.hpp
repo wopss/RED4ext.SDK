@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineActionParameterWeakIScriptable
 {
     static constexpr const char* NAME = "gamestateMachineActionParameterWeakIScriptable";
@@ -25,6 +26,7 @@ struct MachineActionParameterWeakIScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineActionParameterWeakIScriptable, 0x20);
 } // namespace game::state
+using gamestateMachineActionParameterWeakIScriptable = game::state::MachineActionParameterWeakIScriptable;
 using ActionParameterWeakIScriptable = game::state::MachineActionParameterWeakIScriptable;
 } // namespace RED4ext
 

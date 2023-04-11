@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace res { 
+namespace res
+{
 struct ResourceMetricsReportGenerator : IScriptable
 {
     static constexpr const char* NAME = "resResourceMetricsReportGenerator";
@@ -19,6 +20,7 @@ struct ResourceMetricsReportGenerator : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ResourceMetricsReportGenerator, 0x40);
 } // namespace res
+using resResourceMetricsReportGenerator = res::ResourceMetricsReportGenerator;
 using ResourceMetricsReportGenerator = res::ResourceMetricsReportGenerator;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIOptimalDistanceCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIOptimalDistanceCond_Record";
@@ -20,6 +21,7 @@ struct AIOptimalDistanceCond_Record : game::data::AIActionSubCondition_Record
 };
 RED4EXT_ASSERT_SIZE(AIOptimalDistanceCond_Record, 0x70);
 } // namespace game::data
+using gamedataAIOptimalDistanceCond_Record = game::data::AIOptimalDistanceCond_Record;
 using AIOptimalDistanceCond_Record = game::data::AIOptimalDistanceCond_Record;
 } // namespace RED4ext
 

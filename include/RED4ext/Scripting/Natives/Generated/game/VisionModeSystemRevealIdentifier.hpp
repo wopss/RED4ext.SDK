@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VisionModeSystemRevealIdentifier
 {
     static constexpr const char* NAME = "gameVisionModeSystemRevealIdentifier";
@@ -22,6 +23,7 @@ struct VisionModeSystemRevealIdentifier
 };
 RED4EXT_ASSERT_SIZE(VisionModeSystemRevealIdentifier, 0x10);
 } // namespace game
+using gameVisionModeSystemRevealIdentifier = game::VisionModeSystemRevealIdentifier;
 } // namespace RED4ext
 
 // clang-format on

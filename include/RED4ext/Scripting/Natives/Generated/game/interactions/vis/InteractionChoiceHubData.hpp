@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace game::interactions::vis { struct IVisualizerTimeProvider; }
 
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct InteractionChoiceHubData
 {
     static constexpr const char* NAME = "gameinteractionsvisInteractionChoiceHubData";
@@ -32,6 +33,7 @@ struct InteractionChoiceHubData
 };
 RED4EXT_ASSERT_SIZE(InteractionChoiceHubData, 0x48);
 } // namespace game::interactions::vis
+using gameinteractionsvisInteractionChoiceHubData = game::interactions::vis::InteractionChoiceHubData;
 using InteractionChoiceHubData = game::interactions::vis::InteractionChoiceHubData;
 } // namespace RED4ext
 

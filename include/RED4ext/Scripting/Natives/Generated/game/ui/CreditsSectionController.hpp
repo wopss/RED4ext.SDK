@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CreditsSectionController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiCreditsSectionController";
@@ -21,6 +22,7 @@ struct CreditsSectionController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(CreditsSectionController, 0x90);
 } // namespace game::ui
+using gameuiCreditsSectionController = game::ui::CreditsSectionController;
 } // namespace RED4ext
 
 // clang-format on

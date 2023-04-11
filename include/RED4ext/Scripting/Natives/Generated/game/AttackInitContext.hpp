@@ -14,7 +14,8 @@ namespace game { struct Object; }
 namespace game::data { struct Attack_Record; }
 namespace game::weapon { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct AttackInitContext
 {
     static constexpr const char* NAME = "gameAttackInitContext";
@@ -27,6 +28,7 @@ struct AttackInitContext
 };
 RED4EXT_ASSERT_SIZE(AttackInitContext, 0x40);
 } // namespace game
+using gameAttackInitContext = game::AttackInitContext;
 using AttackInitContext = game::AttackInitContext;
 } // namespace RED4ext
 

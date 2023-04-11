@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficNullAreaDynamicBlockade
 {
     static constexpr const char* NAME = "worldTrafficNullAreaDynamicBlockade";
@@ -23,6 +24,7 @@ struct TrafficNullAreaDynamicBlockade
 };
 RED4EXT_ASSERT_SIZE(TrafficNullAreaDynamicBlockade, 0x28);
 } // namespace world
+using worldTrafficNullAreaDynamicBlockade = world::TrafficNullAreaDynamicBlockade;
 } // namespace RED4ext
 
 // clang-format on

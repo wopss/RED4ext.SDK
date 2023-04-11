@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TierPrereq : game::IComparisonPrereq
 {
     static constexpr const char* NAME = "gameTierPrereq";
@@ -22,6 +23,7 @@ struct TierPrereq : game::IComparisonPrereq
 };
 RED4EXT_ASSERT_SIZE(TierPrereq, 0x50);
 } // namespace game
+using gameTierPrereq = game::TierPrereq;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct ControllerHit
 {
     static constexpr const char* NAME = "physicsControllerHit";
@@ -22,6 +23,7 @@ struct ControllerHit
 };
 RED4EXT_ASSERT_SIZE(ControllerHit, 0x40);
 } // namespace physics
+using physicsControllerHit = physics::ControllerHit;
 using ControllerHit = physics::ControllerHit;
 } // namespace RED4ext
 

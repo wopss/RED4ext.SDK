@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace res { 
+namespace res
+{
 struct DlcManifest : CResource
 {
     static constexpr const char* NAME = "resDlcManifest";
@@ -29,6 +30,7 @@ struct DlcManifest : CResource
 };
 RED4EXT_ASSERT_SIZE(DlcManifest, 0x78);
 } // namespace res
+using resDlcManifest = res::DlcManifest;
 } // namespace RED4ext
 
 // clang-format on

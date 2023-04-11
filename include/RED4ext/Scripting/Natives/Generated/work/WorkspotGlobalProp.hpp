@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace work { 
+namespace work
+{
 struct WorkspotGlobalProp
 {
     static constexpr const char* NAME = "workWorkspotGlobalProp";
@@ -25,6 +26,7 @@ struct WorkspotGlobalProp
 };
 RED4EXT_ASSERT_SIZE(WorkspotGlobalProp, 0x18);
 } // namespace work
+using workWorkspotGlobalProp = work::WorkspotGlobalProp;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ExpressionSocket; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ComparisonExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorComparisonExpressionDefinition";
@@ -27,6 +28,7 @@ struct ComparisonExpressionDefinition : AI::behavior::PassiveExpressionDefinitio
 };
 RED4EXT_ASSERT_SIZE(ComparisonExpressionDefinition, 0x68);
 } // namespace AI::behavior
+using AIbehaviorComparisonExpressionDefinition = AI::behavior::ComparisonExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

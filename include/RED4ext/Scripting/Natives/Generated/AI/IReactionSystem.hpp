@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct IReactionSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "AIIReactionSystem";
@@ -19,6 +20,7 @@ struct IReactionSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IReactionSystem, 0x48);
 } // namespace AI
+using AIIReactionSystem = AI::IReactionSystem;
 using IReactionSystem = AI::IReactionSystem;
 } // namespace RED4ext
 

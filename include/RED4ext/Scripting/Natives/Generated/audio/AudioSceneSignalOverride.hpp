@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudioSceneSignalOverride
 {
     static constexpr const char* NAME = "audioAudioSceneSignalOverride";
@@ -21,6 +22,7 @@ struct AudioSceneSignalOverride
 };
 RED4EXT_ASSERT_SIZE(AudioSceneSignalOverride, 0x10);
 } // namespace audio
+using audioAudioSceneSignalOverride = audio::AudioSceneSignalOverride;
 } // namespace RED4ext
 
 // clang-format on

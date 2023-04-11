@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct FastExit : work::IEntry
 {
     static constexpr const char* NAME = "workFastExit";
@@ -24,6 +25,7 @@ struct FastExit : work::IEntry
 };
 RED4EXT_ASSERT_SIZE(FastExit, 0x48);
 } // namespace work
+using workFastExit = work::FastExit;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct OverridePhantomParamsEventParams
 {
     static constexpr const char* NAME = "scnOverridePhantomParamsEventParams";
@@ -25,6 +26,7 @@ struct OverridePhantomParamsEventParams
 };
 RED4EXT_ASSERT_SIZE(OverridePhantomParamsEventParams, 0x20);
 } // namespace scn
+using scnOverridePhantomParamsEventParams = scn::OverridePhantomParamsEventParams;
 } // namespace RED4ext
 
 // clang-format on

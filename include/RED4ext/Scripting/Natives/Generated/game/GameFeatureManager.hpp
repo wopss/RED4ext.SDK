@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct GameFeatureManager : IScriptable
 {
     static constexpr const char* NAME = "gameGameFeatureManager";
@@ -20,6 +21,7 @@ struct GameFeatureManager : IScriptable
 };
 RED4EXT_ASSERT_SIZE(GameFeatureManager, 0x60);
 } // namespace game
+using gameGameFeatureManager = game::GameFeatureManager;
 using GameFeatureManager = game::GameFeatureManager;
 } // namespace RED4ext
 

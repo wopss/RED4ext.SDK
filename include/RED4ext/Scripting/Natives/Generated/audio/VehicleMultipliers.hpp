@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehicleMultipliers
 {
     static constexpr const char* NAME = "audioVehicleMultipliers";
@@ -20,6 +21,7 @@ struct VehicleMultipliers
 };
 RED4EXT_ASSERT_SIZE(VehicleMultipliers, 0x8);
 } // namespace audio
+using audioVehicleMultipliers = audio::VehicleMultipliers;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct RotateToParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questRotateToParams";
@@ -25,6 +26,7 @@ struct RotateToParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(RotateToParams, 0x58);
 } // namespace quest
+using questRotateToParams = quest::RotateToParams;
 } // namespace RED4ext
 
 // clang-format on

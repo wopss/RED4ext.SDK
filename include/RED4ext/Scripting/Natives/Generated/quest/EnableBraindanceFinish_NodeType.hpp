@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EnableBraindanceFinish_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questEnableBraindanceFinish_NodeType";
@@ -19,6 +20,7 @@ struct EnableBraindanceFinish_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(EnableBraindanceFinish_NodeType, 0x38);
 } // namespace quest
+using questEnableBraindanceFinish_NodeType = quest::EnableBraindanceFinish_NodeType;
 } // namespace RED4ext
 
 // clang-format on

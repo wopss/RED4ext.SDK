@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimEvent; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimSetEntryAudioData : ISerializable
 {
     static constexpr const char* NAME = "animAnimSetEntryAudioData";
@@ -24,6 +25,7 @@ struct AnimSetEntryAudioData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimSetEntryAudioData, 0x40);
 } // namespace anim
+using animAnimSetEntryAudioData = anim::AnimSetEntryAudioData;
 } // namespace RED4ext
 
 // clang-format on

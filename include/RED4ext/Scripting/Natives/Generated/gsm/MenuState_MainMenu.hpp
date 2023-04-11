@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_MainMenu : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmMenuState_MainMenu";
@@ -19,6 +20,7 @@ struct MenuState_MainMenu : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(MenuState_MainMenu, 0xD8);
 } // namespace gsm
+using gsmMenuState_MainMenu = gsm::MenuState_MainMenu;
 } // namespace RED4ext
 
 // clang-format on

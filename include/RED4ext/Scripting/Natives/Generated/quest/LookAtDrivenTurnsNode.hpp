@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct LookAtDrivenTurnsNode : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questLookAtDrivenTurnsNode";
@@ -26,6 +27,7 @@ struct LookAtDrivenTurnsNode : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(LookAtDrivenTurnsNode, 0x90);
 } // namespace quest
+using questLookAtDrivenTurnsNode = quest::LookAtDrivenTurnsNode;
 } // namespace RED4ext
 
 // clang-format on

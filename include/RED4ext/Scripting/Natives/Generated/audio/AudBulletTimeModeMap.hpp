@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudBulletTimeModeMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioAudBulletTimeModeMap";
@@ -22,6 +23,7 @@ struct AudBulletTimeModeMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(AudBulletTimeModeMap, 0x48);
 } // namespace audio
+using audioAudBulletTimeModeMap = audio::AudBulletTimeModeMap;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_Initialization : gsm::State
 {
     static constexpr const char* NAME = "gsmState_Initialization";
@@ -20,6 +21,7 @@ struct State_Initialization : gsm::State
 };
 RED4EXT_ASSERT_SIZE(State_Initialization, 0xE8);
 } // namespace gsm
+using gsmState_Initialization = gsm::State_Initialization;
 } // namespace RED4ext
 
 // clang-format on

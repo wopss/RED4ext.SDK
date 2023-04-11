@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VisionMode_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questVisionMode_ConditionType";
@@ -22,6 +23,7 @@ struct VisionMode_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(VisionMode_ConditionType, 0x40);
 } // namespace quest
+using questVisionMode_ConditionType = quest::VisionMode_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

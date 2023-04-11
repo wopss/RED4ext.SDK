@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterAim_ConditionType : quest::ICharacterConditionType
 {
     static constexpr const char* NAME = "questCharacterAim_ConditionType";
@@ -23,6 +24,7 @@ struct CharacterAim_ConditionType : quest::ICharacterConditionType
 };
 RED4EXT_ASSERT_SIZE(CharacterAim_ConditionType, 0xB8);
 } // namespace quest
+using questCharacterAim_ConditionType = quest::CharacterAim_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

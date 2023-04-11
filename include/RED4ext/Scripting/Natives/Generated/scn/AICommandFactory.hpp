@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AICommandFactory : IScriptable
 {
     static constexpr const char* NAME = "scnAICommandFactory";
@@ -19,6 +20,7 @@ struct AICommandFactory : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AICommandFactory, 0x40);
 } // namespace scn
+using scnAICommandFactory = scn::AICommandFactory;
 using AICommandFactory = scn::AICommandFactory;
 } // namespace RED4ext
 

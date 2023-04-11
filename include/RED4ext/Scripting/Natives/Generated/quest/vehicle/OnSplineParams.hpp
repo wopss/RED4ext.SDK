@@ -15,7 +15,8 @@ namespace RED4ext
 namespace quest { struct ParamKeepDistance; }
 namespace quest { struct ParamRubberbanding; }
 
-namespace quest::vehicle { 
+namespace quest::vehicle
+{
 struct OnSplineParams : quest::VehicleSpecificCommandParams
 {
     static constexpr const char* NAME = "questvehicleOnSplineParams";
@@ -38,6 +39,7 @@ struct OnSplineParams : quest::VehicleSpecificCommandParams
 };
 RED4EXT_ASSERT_SIZE(OnSplineParams, 0x78);
 } // namespace quest::vehicle
+using questvehicleOnSplineParams = quest::vehicle::OnSplineParams;
 } // namespace RED4ext
 
 // clang-format on

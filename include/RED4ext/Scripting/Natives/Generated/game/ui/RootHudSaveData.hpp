@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RootHudSaveData : ISerializable
 {
     static constexpr const char* NAME = "gameuiRootHudSaveData";
@@ -23,6 +24,7 @@ struct RootHudSaveData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(RootHudSaveData, 0x48);
 } // namespace game::ui
+using gameuiRootHudSaveData = game::ui::RootHudSaveData;
 } // namespace RED4ext
 
 // clang-format on

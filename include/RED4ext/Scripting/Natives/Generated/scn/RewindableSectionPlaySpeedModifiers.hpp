@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct RewindableSectionPlaySpeedModifiers
 {
     static constexpr const char* NAME = "scnRewindableSectionPlaySpeedModifiers";
@@ -24,6 +25,7 @@ struct RewindableSectionPlaySpeedModifiers
 };
 RED4EXT_ASSERT_SIZE(RewindableSectionPlaySpeedModifiers, 0x18);
 } // namespace scn
+using scnRewindableSectionPlaySpeedModifiers = scn::RewindableSectionPlaySpeedModifiers;
 } // namespace RED4ext
 
 // clang-format on

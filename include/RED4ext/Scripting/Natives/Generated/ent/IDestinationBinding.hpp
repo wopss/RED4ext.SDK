@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct IDestinationBinding : ent::IBinding
 {
     static constexpr const char* NAME = "entIDestinationBinding";
@@ -19,6 +20,7 @@ struct IDestinationBinding : ent::IBinding
 };
 RED4EXT_ASSERT_SIZE(IDestinationBinding, 0x70);
 } // namespace ent
+using entIDestinationBinding = ent::IDestinationBinding;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct StatusEffect_inline0_Record : game::data::StatModifierGroup_Record
 {
     static constexpr const char* NAME = "gamedataStatusEffect_inline0_Record";
@@ -19,6 +20,7 @@ struct StatusEffect_inline0_Record : game::data::StatModifierGroup_Record
 };
 RED4EXT_ASSERT_SIZE(StatusEffect_inline0_Record, 0x58);
 } // namespace game::data
+using gamedataStatusEffect_inline0_Record = game::data::StatusEffect_inline0_Record;
 using StatusEffect_inline0_Record = game::data::StatusEffect_inline0_Record;
 } // namespace RED4ext
 

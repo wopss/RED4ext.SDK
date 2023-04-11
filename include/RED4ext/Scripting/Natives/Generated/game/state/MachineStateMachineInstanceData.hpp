@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineStateMachineInstanceData
 {
     static constexpr const char* NAME = "gamestateMachineStateMachineInstanceData";
@@ -26,6 +27,7 @@ struct MachineStateMachineInstanceData
 };
 RED4EXT_ASSERT_SIZE(MachineStateMachineInstanceData, 0x20);
 } // namespace game::state
+using gamestateMachineStateMachineInstanceData = game::state::MachineStateMachineInstanceData;
 using StateMachineInstanceData = game::state::MachineStateMachineInstanceData;
 } // namespace RED4ext
 

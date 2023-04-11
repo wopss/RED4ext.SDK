@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeInteractionDescription : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeInteractionDescription";
@@ -27,6 +28,7 @@ struct MachineparameterTypeInteractionDescription : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeInteractionDescription, 0x90);
 } // namespace game::state
+using gamestateMachineparameterTypeInteractionDescription = game::state::MachineparameterTypeInteractionDescription;
 } // namespace RED4ext
 
 // clang-format on

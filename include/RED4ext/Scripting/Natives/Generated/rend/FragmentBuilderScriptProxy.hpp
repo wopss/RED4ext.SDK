@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct FragmentBuilderScriptProxy
 {
     static constexpr const char* NAME = "rendFragmentBuilderScriptProxy";
@@ -19,6 +20,7 @@ struct FragmentBuilderScriptProxy
 };
 RED4EXT_ASSERT_SIZE(FragmentBuilderScriptProxy, 0x40560);
 } // namespace rend
+using rendFragmentBuilderScriptProxy = rend::FragmentBuilderScriptProxy;
 using FragmentBuilder = rend::FragmentBuilderScriptProxy;
 } // namespace RED4ext
 

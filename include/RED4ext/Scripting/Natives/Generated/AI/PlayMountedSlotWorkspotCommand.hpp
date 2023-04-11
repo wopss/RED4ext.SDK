@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct PlayMountedSlotWorkspotCommand : AI::Command
 {
     static constexpr const char* NAME = "AIPlayMountedSlotWorkspotCommand";
@@ -21,6 +22,7 @@ struct PlayMountedSlotWorkspotCommand : AI::Command
 };
 RED4EXT_ASSERT_SIZE(PlayMountedSlotWorkspotCommand, 0xA0);
 } // namespace AI
+using AIPlayMountedSlotWorkspotCommand = AI::PlayMountedSlotWorkspotCommand;
 } // namespace RED4ext
 
 // clang-format on

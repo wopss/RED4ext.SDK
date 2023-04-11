@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_DistanceFromRoot : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_DistanceFromRoot";
@@ -21,6 +22,7 @@ struct EffectObjectFilter_DistanceFromRoot : game::EffectObjectGroupFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_DistanceFromRoot, 0x48);
 } // namespace game
+using gameEffectObjectFilter_DistanceFromRoot = game::EffectObjectFilter_DistanceFromRoot;
 } // namespace RED4ext
 
 // clang-format on

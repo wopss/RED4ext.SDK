@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct InstantRunAwayConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorInstantRunAwayConditionDefinition";
@@ -24,6 +25,7 @@ struct InstantRunAwayConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(InstantRunAwayConditionDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorInstantRunAwayConditionDefinition = AI::behavior::InstantRunAwayConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

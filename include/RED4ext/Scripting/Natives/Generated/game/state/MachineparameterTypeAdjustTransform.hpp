@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeAdjustTransform : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeAdjustTransform";
@@ -23,6 +24,7 @@ struct MachineparameterTypeAdjustTransform : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeAdjustTransform, 0x60);
 } // namespace game::state
+using gamestateMachineparameterTypeAdjustTransform = game::state::MachineparameterTypeAdjustTransform;
 using AdjustTransform = game::state::MachineparameterTypeAdjustTransform;
 } // namespace RED4ext
 

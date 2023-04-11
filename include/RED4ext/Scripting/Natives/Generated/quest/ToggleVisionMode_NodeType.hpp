@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleVisionMode_NodeType : quest::IVisionModeNodeType
 {
     static constexpr const char* NAME = "questToggleVisionMode_NodeType";
@@ -23,6 +24,7 @@ struct ToggleVisionMode_NodeType : quest::IVisionModeNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleVisionMode_NodeType, 0x70);
 } // namespace quest
+using questToggleVisionMode_NodeType = quest::ToggleVisionMode_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace world { 
+namespace world
+{
 struct WorldListResourceEntry
 {
     static constexpr const char* NAME = "worldWorldListResourceEntry";
@@ -24,6 +25,7 @@ struct WorldListResourceEntry
 };
 RED4EXT_ASSERT_SIZE(WorldListResourceEntry, 0x30);
 } // namespace world
+using worldWorldListResourceEntry = world::WorldListResourceEntry;
 } // namespace RED4ext
 
 // clang-format on

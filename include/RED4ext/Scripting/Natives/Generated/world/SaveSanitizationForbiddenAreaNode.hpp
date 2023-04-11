@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SaveSanitizationForbiddenAreaNode : world::TriggerAreaNode
 {
     static constexpr const char* NAME = "worldSaveSanitizationForbiddenAreaNode";
@@ -21,6 +22,7 @@ struct SaveSanitizationForbiddenAreaNode : world::TriggerAreaNode
 };
 RED4EXT_ASSERT_SIZE(SaveSanitizationForbiddenAreaNode, 0x80);
 } // namespace world
+using worldSaveSanitizationForbiddenAreaNode = world::SaveSanitizationForbiddenAreaNode;
 } // namespace RED4ext
 
 // clang-format on

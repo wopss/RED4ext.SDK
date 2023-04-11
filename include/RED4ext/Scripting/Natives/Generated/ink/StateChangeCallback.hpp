@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StateChangeCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkStateChangeCallback";
@@ -20,6 +21,7 @@ struct StateChangeCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(StateChangeCallback, 0x38);
 } // namespace ink
+using inkStateChangeCallback = ink::StateChangeCallback;
 } // namespace RED4ext
 
 // clang-format on

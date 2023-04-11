@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RandomStatModifier : game::StatModifierBase
 {
     static constexpr const char* NAME = "gameRandomStatModifier";
@@ -20,6 +21,7 @@ struct RandomStatModifier : game::StatModifierBase
 };
 RED4EXT_ASSERT_SIZE(RandomStatModifier, 0x30);
 } // namespace game
+using gameRandomStatModifier = game::RandomStatModifier;
 } // namespace RED4ext
 
 // clang-format on

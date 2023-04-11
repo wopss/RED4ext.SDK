@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct CameraCurveSet; }
 
-namespace game { 
+namespace game
+{
 struct CameraCurvesLibrary : ent::Entity
 {
     static constexpr const char* NAME = "gameCameraCurvesLibrary";
@@ -24,6 +25,7 @@ struct CameraCurvesLibrary : ent::Entity
 };
 RED4EXT_ASSERT_SIZE(CameraCurvesLibrary, 0x170);
 } // namespace game
+using gameCameraCurvesLibrary = game::CameraCurvesLibrary;
 } // namespace RED4ext
 
 // clang-format on

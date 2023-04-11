@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct StopAndStickPerpendicular_Record : game::data::ProjectileCollision_Record
 {
     static constexpr const char* NAME = "gamedataStopAndStickPerpendicular_Record";
@@ -19,6 +20,7 @@ struct StopAndStickPerpendicular_Record : game::data::ProjectileCollision_Record
 };
 RED4EXT_ASSERT_SIZE(StopAndStickPerpendicular_Record, 0x58);
 } // namespace game::data
+using gamedataStopAndStickPerpendicular_Record = game::data::StopAndStickPerpendicular_Record;
 using StopAndStickPerpendicular_Record = game::data::StopAndStickPerpendicular_Record;
 } // namespace RED4ext
 

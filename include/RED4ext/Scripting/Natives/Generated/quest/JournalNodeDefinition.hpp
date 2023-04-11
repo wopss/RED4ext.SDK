@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IJournal_NodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct JournalNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questJournalNodeDefinition";
@@ -23,6 +24,7 @@ struct JournalNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(JournalNodeDefinition, 0x58);
 } // namespace quest
+using questJournalNodeDefinition = quest::JournalNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

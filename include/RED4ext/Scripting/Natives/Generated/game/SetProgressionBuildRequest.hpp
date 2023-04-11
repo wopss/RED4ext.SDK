@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetProgressionBuildRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameSetProgressionBuildRequest";
@@ -21,6 +22,7 @@ struct SetProgressionBuildRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(SetProgressionBuildRequest, 0x60);
 } // namespace game
+using gameSetProgressionBuildRequest = game::SetProgressionBuildRequest;
 } // namespace RED4ext
 
 // clang-format on

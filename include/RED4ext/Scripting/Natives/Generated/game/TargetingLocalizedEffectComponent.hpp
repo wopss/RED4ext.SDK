@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TargetingLocalizedEffectComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameTargetingLocalizedEffectComponent";
@@ -21,6 +22,7 @@ struct TargetingLocalizedEffectComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TargetingLocalizedEffectComponent, 0x98);
 } // namespace game
+using gameTargetingLocalizedEffectComponent = game::TargetingLocalizedEffectComponent;
 } // namespace RED4ext
 
 // clang-format on

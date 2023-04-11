@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SimpleHierarchyPool
 {
     static constexpr const char* NAME = "inkSimpleHierarchyPool";
@@ -19,6 +20,7 @@ struct SimpleHierarchyPool
 };
 RED4EXT_ASSERT_SIZE(SimpleHierarchyPool, 0x30);
 } // namespace ink
+using inkSimpleHierarchyPool = ink::SimpleHierarchyPool;
 } // namespace RED4ext
 
 // clang-format on

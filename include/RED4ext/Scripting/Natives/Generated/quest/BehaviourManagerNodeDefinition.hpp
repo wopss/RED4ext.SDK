@@ -15,7 +15,8 @@ namespace RED4ext
 namespace quest { struct IBehaviourManager_NodeType; }
 namespace work { struct IWorkspotQuestAction; }
 
-namespace quest { 
+namespace quest
+{
 struct BehaviourManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questBehaviourManagerNodeDefinition";
@@ -27,6 +28,7 @@ struct BehaviourManagerNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(BehaviourManagerNodeDefinition, 0xA0);
 } // namespace quest
+using questBehaviourManagerNodeDefinition = quest::BehaviourManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

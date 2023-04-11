@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct LookAtDrivenTurn : work::IEntry
 {
     static constexpr const char* NAME = "workLookAtDrivenTurn";
@@ -23,6 +24,7 @@ struct LookAtDrivenTurn : work::IEntry
 };
 RED4EXT_ASSERT_SIZE(LookAtDrivenTurn, 0x48);
 } // namespace work
+using workLookAtDrivenTurn = work::LookAtDrivenTurn;
 } // namespace RED4ext
 
 // clang-format on

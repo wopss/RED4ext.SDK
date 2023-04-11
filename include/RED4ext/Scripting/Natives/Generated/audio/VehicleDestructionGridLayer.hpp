@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehicleDestructionGridLayer
 {
     static constexpr const char* NAME = "audioVehicleDestructionGridLayer";
@@ -27,6 +28,7 @@ struct VehicleDestructionGridLayer
 };
 RED4EXT_ASSERT_SIZE(VehicleDestructionGridLayer, 0x80);
 } // namespace audio
+using audioVehicleDestructionGridLayer = audio::VehicleDestructionGridLayer;
 } // namespace RED4ext
 
 // clang-format on

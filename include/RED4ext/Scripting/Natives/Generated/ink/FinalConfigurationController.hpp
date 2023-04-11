@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FinalConfigurationController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkFinalConfigurationController";
@@ -22,6 +23,7 @@ struct FinalConfigurationController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(FinalConfigurationController, 0x80);
 } // namespace ink
+using inkFinalConfigurationController = ink::FinalConfigurationController;
 } // namespace RED4ext
 
 // clang-format on

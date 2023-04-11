@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EquipItemParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questEquipItemParams";
@@ -39,6 +40,7 @@ struct EquipItemParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(EquipItemParams, 0x70);
 } // namespace quest
+using questEquipItemParams = quest::EquipItemParams;
 } // namespace RED4ext
 
 // clang-format on

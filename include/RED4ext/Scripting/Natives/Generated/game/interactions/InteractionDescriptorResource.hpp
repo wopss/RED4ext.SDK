@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct InteractionDescriptorResource : CResource
 {
     static constexpr const char* NAME = "gameinteractionsInteractionDescriptorResource";
@@ -22,6 +23,7 @@ struct InteractionDescriptorResource : CResource
 };
 RED4EXT_ASSERT_SIZE(InteractionDescriptorResource, 0x100);
 } // namespace game::interactions
+using gameinteractionsInteractionDescriptorResource = game::interactions::InteractionDescriptorResource;
 } // namespace RED4ext
 
 // clang-format on

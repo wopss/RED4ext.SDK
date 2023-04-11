@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderParticleBlobHeader
 {
     static constexpr const char* NAME = "rendRenderParticleBlobHeader";
@@ -22,6 +23,7 @@ struct RenderParticleBlobHeader
 };
 RED4EXT_ASSERT_SIZE(RenderParticleBlobHeader, 0xE0);
 } // namespace rend
+using rendRenderParticleBlobHeader = rend::RenderParticleBlobHeader;
 } // namespace RED4ext
 
 // clang-format on

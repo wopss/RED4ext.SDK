@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamDestructionBoneChunkMapping : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamDestructionBoneChunkMapping";
@@ -21,6 +22,7 @@ struct MeshParamDestructionBoneChunkMapping : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamDestructionBoneChunkMapping, 0x40);
 } // namespace mesh
+using meshMeshParamDestructionBoneChunkMapping = mesh::MeshParamDestructionBoneChunkMapping;
 } // namespace RED4ext
 
 // clang-format on

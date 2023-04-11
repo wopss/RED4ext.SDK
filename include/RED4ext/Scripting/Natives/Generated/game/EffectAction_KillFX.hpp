@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectAction_KillFX : game::EffectAction
 {
     static constexpr const char* NAME = "gameEffectAction_KillFX";
@@ -24,6 +25,7 @@ struct EffectAction_KillFX : game::EffectAction
 };
 RED4EXT_ASSERT_SIZE(EffectAction_KillFX, 0x50);
 } // namespace game
+using gameEffectAction_KillFX = game::EffectAction_KillFX;
 } // namespace RED4ext
 
 // clang-format on

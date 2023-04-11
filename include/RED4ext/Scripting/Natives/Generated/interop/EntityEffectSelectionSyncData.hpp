@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct EntityEffectSelectionSyncData
 {
     static constexpr const char* NAME = "interopEntityEffectSelectionSyncData";
@@ -22,6 +23,7 @@ struct EntityEffectSelectionSyncData
 };
 RED4EXT_ASSERT_SIZE(EntityEffectSelectionSyncData, 0x18);
 } // namespace interop
+using interopEntityEffectSelectionSyncData = interop::EntityEffectSelectionSyncData;
 } // namespace RED4ext
 
 // clang-format on

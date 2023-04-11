@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct SoundBankStruct
 {
     static constexpr const char* NAME = "audioSoundBankStruct";
@@ -20,6 +21,7 @@ struct SoundBankStruct
 };
 RED4EXT_ASSERT_SIZE(SoundBankStruct, 0x8);
 } // namespace audio
+using audioSoundBankStruct = audio::SoundBankStruct;
 } // namespace RED4ext
 
 // clang-format on

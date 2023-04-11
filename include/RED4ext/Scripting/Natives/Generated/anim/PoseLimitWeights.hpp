@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct PoseLimitWeights
 {
     static constexpr const char* NAME = "animPoseLimitWeights";
@@ -24,6 +25,7 @@ struct PoseLimitWeights
 };
 RED4EXT_ASSERT_SIZE(PoseLimitWeights, 0x10);
 } // namespace anim
+using animPoseLimitWeights = anim::PoseLimitWeights;
 } // namespace RED4ext
 
 // clang-format on

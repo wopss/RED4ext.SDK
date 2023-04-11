@@ -14,7 +14,8 @@ namespace RED4ext
 namespace game::interactions { struct CFunctorDefinition; }
 namespace game::interactions { struct IPredicateType; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CPredicateDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCPredicateDefinition";
@@ -28,6 +29,7 @@ struct CPredicateDefinition
 };
 RED4EXT_ASSERT_SIZE(CPredicateDefinition, 0x38);
 } // namespace game::interactions
+using gameinteractionsCPredicateDefinition = game::interactions::CPredicateDefinition;
 } // namespace RED4ext
 
 // clang-format on

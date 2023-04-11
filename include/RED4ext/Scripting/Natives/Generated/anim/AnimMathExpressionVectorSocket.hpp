@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimMathExpressionVectorSocket
 {
     static constexpr const char* NAME = "animAnimMathExpressionVectorSocket";
@@ -22,6 +23,7 @@ struct AnimMathExpressionVectorSocket
 };
 RED4EXT_ASSERT_SIZE(AnimMathExpressionVectorSocket, 0x28);
 } // namespace anim
+using animAnimMathExpressionVectorSocket = anim::AnimMathExpressionVectorSocket;
 } // namespace RED4ext
 
 // clang-format on

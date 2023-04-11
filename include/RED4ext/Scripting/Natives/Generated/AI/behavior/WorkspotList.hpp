@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WorkspotList : IScriptable
 {
     static constexpr const char* NAME = "AIbehaviorWorkspotList";
@@ -22,6 +23,7 @@ struct WorkspotList : IScriptable
 };
 RED4EXT_ASSERT_SIZE(WorkspotList, 0x50);
 } // namespace AI::behavior
+using AIbehaviorWorkspotList = AI::behavior::WorkspotList;
 using WorkspotList = AI::behavior::WorkspotList;
 } // namespace RED4ext
 

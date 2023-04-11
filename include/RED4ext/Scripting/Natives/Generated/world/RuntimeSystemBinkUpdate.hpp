@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemBinkUpdate : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemBinkUpdate";
@@ -20,6 +21,7 @@ struct RuntimeSystemBinkUpdate : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemBinkUpdate, 0x70);
 } // namespace world
+using worldRuntimeSystemBinkUpdate = world::RuntimeSystemBinkUpdate;
 } // namespace RED4ext
 
 // clang-format on

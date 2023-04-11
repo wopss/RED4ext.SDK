@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct BriefingSequencePlayerEvent : red::Event
 {
     static constexpr const char* NAME = "questBriefingSequencePlayerEvent";
@@ -20,6 +21,7 @@ struct BriefingSequencePlayerEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BriefingSequencePlayerEvent, 0x98);
 } // namespace quest
+using questBriefingSequencePlayerEvent = quest::BriefingSequencePlayerEvent;
 } // namespace RED4ext
 
 // clang-format on

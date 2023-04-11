@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NavigationScriptCostModCircle : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptCostModCircle";
@@ -24,6 +25,7 @@ struct NavigationScriptCostModCircle : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptCostModCircle, 0x60);
 } // namespace world
+using worldNavigationScriptCostModCircle = world::NavigationScriptCostModCircle;
 using NavigationCostModCircle = world::NavigationScriptCostModCircle;
 } // namespace RED4ext
 

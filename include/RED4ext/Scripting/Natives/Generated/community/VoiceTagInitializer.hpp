@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace community { 
+namespace community
+{
 struct VoiceTagInitializer : community::SpawnInitializer
 {
     static constexpr const char* NAME = "communityVoiceTagInitializer";
@@ -21,6 +22,7 @@ struct VoiceTagInitializer : community::SpawnInitializer
 };
 RED4EXT_ASSERT_SIZE(VoiceTagInitializer, 0x38);
 } // namespace community
+using communityVoiceTagInitializer = community::VoiceTagInitializer;
 } // namespace RED4ext
 
 // clang-format on

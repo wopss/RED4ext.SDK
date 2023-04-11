@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace audio { struct EventOverrideDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct EventOverrides : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioEventOverrides";
@@ -23,6 +24,7 @@ struct EventOverrides : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(EventOverrides, 0x48);
 } // namespace audio
+using audioEventOverrides = audio::EventOverrides;
 } // namespace RED4ext
 
 // clang-format on

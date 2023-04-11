@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MappinUIUtils
 {
     static constexpr const char* NAME = "gameuiMappinUIUtils";
@@ -19,6 +20,7 @@ struct MappinUIUtils
 };
 RED4EXT_ASSERT_SIZE(MappinUIUtils, 0x1);
 } // namespace game::ui
+using gameuiMappinUIUtils = game::ui::MappinUIUtils;
 using MappinUIUtils = game::ui::MappinUIUtils;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PrereqCheckData
 {
     static constexpr const char* NAME = "gamePrereqCheckData";
@@ -26,6 +27,7 @@ struct PrereqCheckData
 };
 RED4EXT_ASSERT_SIZE(PrereqCheckData, 0x30);
 } // namespace game
+using gamePrereqCheckData = game::PrereqCheckData;
 using PrereqCheckData = game::PrereqCheckData;
 } // namespace RED4ext
 

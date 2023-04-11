@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttackComputed : IScriptable
 {
     static constexpr const char* NAME = "gameAttackComputed";
@@ -20,6 +21,7 @@ struct AttackComputed : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AttackComputed, 0x68);
 } // namespace game
+using gameAttackComputed = game::AttackComputed;
 } // namespace RED4ext
 
 // clang-format on

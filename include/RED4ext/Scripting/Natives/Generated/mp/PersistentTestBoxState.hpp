@@ -15,7 +15,8 @@ namespace ent { struct IComponent; }
 namespace game { struct Object; }
 namespace mp { struct PersistentTestBox; }
 
-namespace mp { 
+namespace mp
+{
 struct PersistentTestBoxState : net::IEntityState
 {
     static constexpr const char* NAME = "mpPersistentTestBoxState";
@@ -30,6 +31,7 @@ struct PersistentTestBoxState : net::IEntityState
 };
 RED4EXT_ASSERT_SIZE(PersistentTestBoxState, 0x98);
 } // namespace mp
+using mpPersistentTestBoxState = mp::PersistentTestBoxState;
 } // namespace RED4ext
 
 // clang-format on

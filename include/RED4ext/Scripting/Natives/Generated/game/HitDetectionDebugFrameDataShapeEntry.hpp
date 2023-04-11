@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HitDetectionDebugFrameDataShapeEntry
 {
     static constexpr const char* NAME = "gameHitDetectionDebugFrameDataShapeEntry";
@@ -20,6 +21,7 @@ struct HitDetectionDebugFrameDataShapeEntry
 };
 RED4EXT_ASSERT_SIZE(HitDetectionDebugFrameDataShapeEntry, 0x20);
 } // namespace game
+using gameHitDetectionDebugFrameDataShapeEntry = game::HitDetectionDebugFrameDataShapeEntry;
 } // namespace RED4ext
 
 // clang-format on

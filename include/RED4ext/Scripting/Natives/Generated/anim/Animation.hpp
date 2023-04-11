@@ -19,7 +19,8 @@ namespace RED4ext
 namespace anim { struct IAnimationBuffer; }
 namespace anim { struct IMotionExtraction; }
 
-namespace anim { 
+namespace anim
+{
 struct Animation : ISerializable
 {
     static constexpr const char* NAME = "animAnimation";
@@ -40,6 +41,7 @@ struct Animation : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Animation, 0xA0);
 } // namespace anim
+using animAnimation = anim::Animation;
 } // namespace RED4ext
 
 // clang-format on

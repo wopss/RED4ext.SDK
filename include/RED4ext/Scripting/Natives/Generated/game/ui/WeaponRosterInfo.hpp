@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WeaponRosterInfo
 {
     static constexpr const char* NAME = "gameuiWeaponRosterInfo";
@@ -29,6 +30,7 @@ struct WeaponRosterInfo
 };
 RED4EXT_ASSERT_SIZE(WeaponRosterInfo, 0x38);
 } // namespace game::ui
+using gameuiWeaponRosterInfo = game::ui::WeaponRosterInfo;
 using WeaponRosterInfo = game::ui::WeaponRosterInfo;
 } // namespace RED4ext
 

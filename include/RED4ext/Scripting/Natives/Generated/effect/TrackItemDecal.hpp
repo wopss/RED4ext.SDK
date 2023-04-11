@@ -19,7 +19,8 @@ namespace RED4ext
 struct IEvaluatorVector;
 struct IMaterial;
 
-namespace effect { 
+namespace effect
+{
 struct TrackItemDecal : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemDecal";
@@ -48,6 +49,7 @@ struct TrackItemDecal : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemDecal, 0xA8);
 } // namespace effect
+using effectTrackItemDecal = effect::TrackItemDecal;
 } // namespace RED4ext
 
 // clang-format on

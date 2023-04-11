@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace game::gps { 
+namespace game::gps
+{
 struct Settings
 {
     static constexpr const char* NAME = "gamegpsSettings";
@@ -30,6 +31,7 @@ struct Settings
 };
 RED4EXT_ASSERT_SIZE(Settings, 0x38);
 } // namespace game::gps
+using gamegpsSettings = game::gps::Settings;
 using GPSSettings = game::gps::Settings;
 } // namespace RED4ext
 

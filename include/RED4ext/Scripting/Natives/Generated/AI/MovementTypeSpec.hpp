@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct MovementTypeSpec
 {
     static constexpr const char* NAME = "AIMovementTypeSpec";
@@ -22,6 +23,7 @@ struct MovementTypeSpec
 };
 RED4EXT_ASSERT_SIZE(MovementTypeSpec, 0x8);
 } // namespace AI
+using AIMovementTypeSpec = AI::MovementTypeSpec;
 } // namespace RED4ext
 
 // clang-format on

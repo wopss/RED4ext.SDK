@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct TweakDBRecord : IScriptable
 {
     static constexpr const char* NAME = "gamedataTweakDBRecord";
@@ -20,6 +21,7 @@ struct TweakDBRecord : IScriptable
 };
 RED4EXT_ASSERT_SIZE(TweakDBRecord, 0x48);
 } // namespace game::data
+using gamedataTweakDBRecord = game::data::TweakDBRecord;
 using TweakDBRecord = game::data::TweakDBRecord;
 } // namespace RED4ext
 

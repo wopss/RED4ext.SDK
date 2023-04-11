@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ExitWorkspotNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorExitWorkspotNodeDefinition";
@@ -29,6 +30,7 @@ struct ExitWorkspotNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(ExitWorkspotNodeDefinition, 0xB0);
 } // namespace AI::behavior
+using AIbehaviorExitWorkspotNodeDefinition = AI::behavior::ExitWorkspotNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

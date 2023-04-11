@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionReplicatedState
 {
     static constexpr const char* NAME = "gameActionReplicatedState";
@@ -27,6 +28,7 @@ struct ActionReplicatedState
 };
 RED4EXT_ASSERT_SIZE(ActionReplicatedState, 0x28);
 } // namespace game
+using gameActionReplicatedState = game::ActionReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

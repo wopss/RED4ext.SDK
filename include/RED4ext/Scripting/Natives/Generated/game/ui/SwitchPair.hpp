@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game::ui { struct CharacterCustomizationOption; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct SwitchPair
 {
     static constexpr const char* NAME = "gameuiSwitchPair";
@@ -23,6 +24,7 @@ struct SwitchPair
 };
 RED4EXT_ASSERT_SIZE(SwitchPair, 0x20);
 } // namespace game::ui
+using gameuiSwitchPair = game::ui::SwitchPair;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct DebugSystemData : ink::ILayerSystemData
 {
     static constexpr const char* NAME = "inkDebugSystemData";
@@ -26,6 +27,7 @@ struct DebugSystemData : ink::ILayerSystemData
 };
 RED4EXT_ASSERT_SIZE(DebugSystemData, 0x70);
 } // namespace ink
+using inkDebugSystemData = ink::DebugSystemData;
 } // namespace RED4ext
 
 // clang-format on

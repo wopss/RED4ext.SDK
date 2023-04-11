@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CoverSelectionParameters_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct CoverSelectionParameters_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CoverSelectionParameters_Record, 0x50);
 } // namespace game::data
+using gamedataCoverSelectionParameters_Record = game::data::CoverSelectionParameters_Record;
 using CoverSelectionParameters_Record = game::data::CoverSelectionParameters_Record;
 } // namespace RED4ext
 

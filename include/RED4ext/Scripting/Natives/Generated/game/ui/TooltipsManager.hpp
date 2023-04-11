@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TooltipsManager : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTooltipsManager";
@@ -30,6 +31,7 @@ struct TooltipsManager : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(TooltipsManager, 0x130);
 } // namespace game::ui
+using gameuiTooltipsManager = game::ui::TooltipsManager;
 } // namespace RED4ext
 
 // clang-format on

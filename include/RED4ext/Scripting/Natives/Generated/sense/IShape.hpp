@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct IShape : IScriptable
 {
     static constexpr const char* NAME = "senseIShape";
@@ -23,6 +24,7 @@ struct IShape : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IShape, 0x50);
 } // namespace sense
+using senseIShape = sense::IShape;
 using ISenseShape = sense::IShape;
 } // namespace RED4ext
 

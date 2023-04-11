@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct HairProfileGradientEntry : ISerializable
 {
     static constexpr const char* NAME = "rendHairProfileGradientEntry";
@@ -22,6 +23,7 @@ struct HairProfileGradientEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(HairProfileGradientEntry, 0x38);
 } // namespace rend
+using rendHairProfileGradientEntry = rend::HairProfileGradientEntry;
 } // namespace RED4ext
 
 // clang-format on

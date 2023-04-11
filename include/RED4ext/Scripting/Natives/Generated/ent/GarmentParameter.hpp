@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct GarmentParameter : ent::EntityParameter
 {
     static constexpr const char* NAME = "entGarmentParameter";
@@ -27,6 +28,7 @@ struct GarmentParameter : ent::EntityParameter
 };
 RED4EXT_ASSERT_SIZE(GarmentParameter, 0x68);
 } // namespace ent
+using entGarmentParameter = ent::GarmentParameter;
 } // namespace RED4ext
 
 // clang-format on

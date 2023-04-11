@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::aim { 
+namespace game::aim
+{
 struct AssistAimRequest
 {
     static constexpr const char* NAME = "gameaimAssistAimRequest";
@@ -44,6 +45,7 @@ struct AssistAimRequest
 };
 RED4EXT_ASSERT_SIZE(AssistAimRequest, 0xE0);
 } // namespace game::aim
+using gameaimAssistAimRequest = game::aim::AssistAimRequest;
 using AimRequest = game::aim::AssistAimRequest;
 } // namespace RED4ext
 

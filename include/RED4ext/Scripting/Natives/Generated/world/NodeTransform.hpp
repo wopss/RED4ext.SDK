@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NodeTransform
 {
     static constexpr const char* NAME = "worldNodeTransform";
@@ -25,6 +26,7 @@ struct NodeTransform
 };
 RED4EXT_ASSERT_SIZE(NodeTransform, 0x30);
 } // namespace world
+using worldNodeTransform = world::NodeTransform;
 } // namespace RED4ext
 
 // clang-format on

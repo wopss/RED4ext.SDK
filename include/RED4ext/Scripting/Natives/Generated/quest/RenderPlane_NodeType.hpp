@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RenderPlane_NodeType : quest::IRenderFxManagerNodeType
 {
     static constexpr const char* NAME = "questRenderPlane_NodeType";
@@ -24,6 +25,7 @@ struct RenderPlane_NodeType : quest::IRenderFxManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(RenderPlane_NodeType, 0x78);
 } // namespace quest
+using questRenderPlane_NodeType = quest::RenderPlane_NodeType;
 } // namespace RED4ext
 
 // clang-format on

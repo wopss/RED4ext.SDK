@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HideCustomTooltipEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiHideCustomTooltipEvent";
@@ -19,6 +20,7 @@ struct HideCustomTooltipEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HideCustomTooltipEvent, 0x40);
 } // namespace game::ui
+using gameuiHideCustomTooltipEvent = game::ui::HideCustomTooltipEvent;
 using HideCustomTooltipEvent = game::ui::HideCustomTooltipEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::smart { 
+namespace game::smart
+{
 struct GunSmartGunLockEvent : red::Event
 {
     static constexpr const char* NAME = "gamesmartGunSmartGunLockEvent";
@@ -22,6 +23,7 @@ struct GunSmartGunLockEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(GunSmartGunLockEvent, 0x48);
 } // namespace game::smart
+using gamesmartGunSmartGunLockEvent = game::smart::GunSmartGunLockEvent;
 using SmartGunLockEvent = game::smart::GunSmartGunLockEvent;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::device { struct Clearance; }
 
-namespace game { 
+namespace game
+{
 struct MasterDeviceComponent : game::Component
 {
     static constexpr const char* NAME = "gameMasterDeviceComponent";
@@ -24,6 +25,7 @@ struct MasterDeviceComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(MasterDeviceComponent, 0xD8);
 } // namespace game
+using gameMasterDeviceComponent = game::MasterDeviceComponent;
 using MasterDeviceComponent = game::MasterDeviceComponent;
 } // namespace RED4ext
 

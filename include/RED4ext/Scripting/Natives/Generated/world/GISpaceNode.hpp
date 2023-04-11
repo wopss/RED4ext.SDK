@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct GISpaceNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldGISpaceNode";
@@ -28,6 +29,7 @@ struct GISpaceNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(GISpaceNode, 0x70);
 } // namespace world
+using worldGISpaceNode = world::GISpaceNode;
 } // namespace RED4ext
 
 // clang-format on

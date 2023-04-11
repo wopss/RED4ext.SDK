@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ILootManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameILootManager";
@@ -19,6 +20,7 @@ struct ILootManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ILootManager, 0x48);
 } // namespace game
+using gameILootManager = game::ILootManager;
 using ILootManager = game::ILootManager;
 } // namespace RED4ext
 

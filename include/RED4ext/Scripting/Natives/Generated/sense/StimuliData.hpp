@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct StimuliData : IScriptable
 {
     static constexpr const char* NAME = "senseStimuliData";
@@ -19,6 +20,7 @@ struct StimuliData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(StimuliData, 0x40);
 } // namespace sense
+using senseStimuliData = sense::StimuliData;
 using StimuliData = sense::StimuliData;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PuppetAIManagerNodeDefinitionEntry
 {
     static constexpr const char* NAME = "questPuppetAIManagerNodeDefinitionEntry";
@@ -23,6 +24,7 @@ struct PuppetAIManagerNodeDefinitionEntry
 };
 RED4EXT_ASSERT_SIZE(PuppetAIManagerNodeDefinitionEntry, 0x40);
 } // namespace quest
+using questPuppetAIManagerNodeDefinitionEntry = quest::PuppetAIManagerNodeDefinitionEntry;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct QuestStatPoolListener : game::IStatPoolsListener
 {
     static constexpr const char* NAME = "questQuestStatPoolListener";
@@ -20,6 +21,7 @@ struct QuestStatPoolListener : game::IStatPoolsListener
 };
 RED4EXT_ASSERT_SIZE(QuestStatPoolListener, 0x58);
 } // namespace quest
+using questQuestStatPoolListener = quest::QuestStatPoolListener;
 } // namespace RED4ext
 
 // clang-format on

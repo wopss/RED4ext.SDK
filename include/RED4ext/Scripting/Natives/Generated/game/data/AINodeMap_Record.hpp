@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AINodeMap_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAINodeMap_Record";
@@ -20,6 +21,7 @@ struct AINodeMap_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AINodeMap_Record, 0x50);
 } // namespace game::data
+using gamedataAINodeMap_Record = game::data::AINodeMap_Record;
 using AINodeMap_Record = game::data::AINodeMap_Record;
 } // namespace RED4ext
 

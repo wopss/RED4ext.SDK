@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CAabbDefinition : game::interactions::IShapeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCAabbDefinition";
@@ -22,6 +23,7 @@ struct CAabbDefinition : game::interactions::IShapeDefinition
 };
 RED4EXT_ASSERT_SIZE(CAabbDefinition, 0x50);
 } // namespace game::interactions
+using gameinteractionsCAabbDefinition = game::interactions::CAabbDefinition;
 } // namespace RED4ext
 
 // clang-format on

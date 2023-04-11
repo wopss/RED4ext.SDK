@@ -15,7 +15,8 @@ namespace RED4ext
 namespace ent { struct IPlacedComponent; }
 namespace game { struct Object; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct AccelerateTowardsTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileAccelerateTowardsTrajectoryParams";
@@ -36,6 +37,7 @@ struct AccelerateTowardsTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(AccelerateTowardsTrajectoryParams, 0xA0);
 } // namespace game::projectile
+using gameprojectileAccelerateTowardsTrajectoryParams = game::projectile::AccelerateTowardsTrajectoryParams;
 using AccelerateTowardsTrajectoryParams = game::projectile::AccelerateTowardsTrajectoryParams;
 } // namespace RED4ext
 

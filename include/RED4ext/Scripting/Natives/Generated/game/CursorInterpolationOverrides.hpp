@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CursorInterpolationOverrides : ink::UserData
 {
     static constexpr const char* NAME = "gameCursorInterpolationOverrides";
@@ -23,6 +24,7 @@ struct CursorInterpolationOverrides : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(CursorInterpolationOverrides, 0x50);
 } // namespace game
+using gameCursorInterpolationOverrides = game::CursorInterpolationOverrides;
 } // namespace RED4ext
 
 // clang-format on

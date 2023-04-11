@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IAchievementManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct AchievementManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questAchievementManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct AchievementManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(AchievementManagerNodeDefinition, 0x58);
 } // namespace quest
+using questAchievementManagerNodeDefinition = quest::AchievementManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

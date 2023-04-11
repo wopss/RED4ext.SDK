@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetStateAnimatedTransition
 {
     static constexpr const char* NAME = "inkWidgetStateAnimatedTransition";
@@ -24,6 +25,7 @@ struct WidgetStateAnimatedTransition
 };
 RED4EXT_ASSERT_SIZE(WidgetStateAnimatedTransition, 0x48);
 } // namespace ink
+using inkWidgetStateAnimatedTransition = ink::WidgetStateAnimatedTransition;
 } // namespace RED4ext
 
 // clang-format on

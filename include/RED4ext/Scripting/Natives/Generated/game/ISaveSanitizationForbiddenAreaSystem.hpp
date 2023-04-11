@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ISaveSanitizationForbiddenAreaSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameISaveSanitizationForbiddenAreaSystem";
@@ -19,6 +20,7 @@ struct ISaveSanitizationForbiddenAreaSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISaveSanitizationForbiddenAreaSystem, 0x48);
 } // namespace game
+using gameISaveSanitizationForbiddenAreaSystem = game::ISaveSanitizationForbiddenAreaSystem;
 } // namespace RED4ext
 
 // clang-format on

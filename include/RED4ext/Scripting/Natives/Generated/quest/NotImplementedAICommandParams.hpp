@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NotImplementedAICommandParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questNotImplementedAICommandParams";
@@ -19,6 +20,7 @@ struct NotImplementedAICommandParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(NotImplementedAICommandParams, 0x40);
 } // namespace quest
+using questNotImplementedAICommandParams = quest::NotImplementedAICommandParams;
 using NotImplementedAICommandParams = quest::NotImplementedAICommandParams;
 } // namespace RED4ext
 

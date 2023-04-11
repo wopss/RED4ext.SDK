@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticQuestMarkerNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticQuestMarkerNode";
@@ -27,6 +28,7 @@ struct StaticQuestMarkerNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticQuestMarkerNode, 0x78);
 } // namespace world
+using worldStaticQuestMarkerNode = world::StaticQuestMarkerNode;
 } // namespace RED4ext
 
 // clang-format on

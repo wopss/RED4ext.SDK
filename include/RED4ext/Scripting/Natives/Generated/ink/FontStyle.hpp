@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace rend { struct Font; }
 
-namespace ink { 
+namespace ink
+{
 struct FontStyle
 {
     static constexpr const char* NAME = "inkFontStyle";
@@ -24,6 +25,7 @@ struct FontStyle
 };
 RED4EXT_ASSERT_SIZE(FontStyle, 0x20);
 } // namespace ink
+using inkFontStyle = ink::FontStyle;
 } // namespace RED4ext
 
 // clang-format on

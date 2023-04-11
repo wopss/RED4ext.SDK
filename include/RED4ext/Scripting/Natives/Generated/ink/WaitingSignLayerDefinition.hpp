@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WaitingSignLayerDefinition : ink::LayerDefinition
 {
     static constexpr const char* NAME = "inkWaitingSignLayerDefinition";
@@ -29,6 +30,7 @@ struct WaitingSignLayerDefinition : ink::LayerDefinition
 };
 RED4EXT_ASSERT_SIZE(WaitingSignLayerDefinition, 0x68);
 } // namespace ink
+using inkWaitingSignLayerDefinition = ink::WaitingSignLayerDefinition;
 } // namespace RED4ext
 
 // clang-format on

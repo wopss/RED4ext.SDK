@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleCombatForPlayer_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleCombatForPlayer_NodeType";
@@ -21,6 +22,7 @@ struct ToggleCombatForPlayer_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleCombatForPlayer_NodeType, 0x38);
 } // namespace quest
+using questToggleCombatForPlayer_NodeType = quest::ToggleCombatForPlayer_NodeType;
 } // namespace RED4ext
 
 // clang-format on

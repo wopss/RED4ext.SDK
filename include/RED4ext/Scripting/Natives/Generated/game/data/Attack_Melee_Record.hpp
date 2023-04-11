@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct Attack_Melee_Record : game::data::Attack_GameEffect_Record
 {
     static constexpr const char* NAME = "gamedataAttack_Melee_Record";
@@ -20,6 +21,7 @@ struct Attack_Melee_Record : game::data::Attack_GameEffect_Record
 };
 RED4EXT_ASSERT_SIZE(Attack_Melee_Record, 0xF8);
 } // namespace game::data
+using gamedataAttack_Melee_Record = game::data::Attack_Melee_Record;
 using Attack_Melee_Record = game::data::Attack_Melee_Record;
 } // namespace RED4ext
 

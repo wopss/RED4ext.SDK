@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PhaseInstance : ISerializable
 {
     static constexpr const char* NAME = "questPhaseInstance";
@@ -20,6 +21,7 @@ struct PhaseInstance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PhaseInstance, 0x110);
 } // namespace quest
+using questPhaseInstance = quest::PhaseInstance;
 } // namespace RED4ext
 
 // clang-format on

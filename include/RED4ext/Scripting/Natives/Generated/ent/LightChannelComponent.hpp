@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct GeometryShape;
 
-namespace ent { 
+namespace ent
+{
 struct LightChannelComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightChannelComponent";
@@ -27,6 +28,7 @@ struct LightChannelComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(LightChannelComponent, 0x170);
 } // namespace ent
+using entLightChannelComponent = ent::LightChannelComponent;
 using LightChannelComponent = ent::LightChannelComponent;
 } // namespace RED4ext
 

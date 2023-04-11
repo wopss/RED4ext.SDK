@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SignalPriorityDefinition : ISerializable
 {
     static constexpr const char* NAME = "gameSignalPriorityDefinition";
@@ -21,6 +22,7 @@ struct SignalPriorityDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SignalPriorityDefinition, 0x38);
 } // namespace game
+using gameSignalPriorityDefinition = game::SignalPriorityDefinition;
 } // namespace RED4ext
 
 // clang-format on

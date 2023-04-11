@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimDebuggerCommand_SetDebugHookState : anim::IAnimDebuggerCommand
 {
     static constexpr const char* NAME = "animAnimDebuggerCommand_SetDebugHookState";
@@ -20,6 +21,7 @@ struct AnimDebuggerCommand_SetDebugHookState : anim::IAnimDebuggerCommand
 };
 RED4EXT_ASSERT_SIZE(AnimDebuggerCommand_SetDebugHookState, 0x18);
 } // namespace anim
+using animAnimDebuggerCommand_SetDebugHookState = anim::AnimDebuggerCommand_SetDebugHookState;
 } // namespace RED4ext
 
 // clang-format on

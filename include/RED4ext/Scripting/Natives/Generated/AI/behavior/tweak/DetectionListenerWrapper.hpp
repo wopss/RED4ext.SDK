@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct DetectionListenerWrapper
 {
     static constexpr const char* NAME = "AIbehaviortweakDetectionListenerWrapper";
@@ -19,6 +20,7 @@ struct DetectionListenerWrapper
 };
 RED4EXT_ASSERT_SIZE(DetectionListenerWrapper, 0x8);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakDetectionListenerWrapper = AI::behavior::tweak::DetectionListenerWrapper;
 } // namespace RED4ext
 
 // clang-format on

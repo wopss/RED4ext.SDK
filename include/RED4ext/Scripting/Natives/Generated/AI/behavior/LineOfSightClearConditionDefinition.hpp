@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct LineOfSightClearConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorLineOfSightClearConditionDefinition";
@@ -29,6 +30,7 @@ struct LineOfSightClearConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(LineOfSightClearConditionDefinition, 0x68);
 } // namespace AI::behavior
+using AIbehaviorLineOfSightClearConditionDefinition = AI::behavior::LineOfSightClearConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

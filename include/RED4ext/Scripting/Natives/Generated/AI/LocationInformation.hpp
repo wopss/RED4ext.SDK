@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct LocationInformation
 {
     static constexpr const char* NAME = "AILocationInformation";
@@ -21,6 +22,7 @@ struct LocationInformation
 };
 RED4EXT_ASSERT_SIZE(LocationInformation, 0x20);
 } // namespace AI
+using AILocationInformation = AI::LocationInformation;
 using LocationInformation = AI::LocationInformation;
 } // namespace RED4ext
 

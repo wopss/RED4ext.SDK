@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimationEvent : red::Event
 {
     static constexpr const char* NAME = "gameTransformAnimationEvent";
@@ -21,6 +22,7 @@ struct TransformAnimationEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TransformAnimationEvent, 0x48);
 } // namespace game
+using gameTransformAnimationEvent = game::TransformAnimationEvent;
 } // namespace RED4ext
 
 // clang-format on

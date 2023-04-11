@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetCombatSpace : quest::ICharacterManagerCombat_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetCombatSpace";
@@ -22,6 +23,7 @@ struct CharacterManagerParameters_SetCombatSpace : quest::ICharacterManagerComba
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetCombatSpace, 0x78);
 } // namespace quest
+using questCharacterManagerParameters_SetCombatSpace = quest::CharacterManagerParameters_SetCombatSpace;
 } // namespace RED4ext
 
 // clang-format on

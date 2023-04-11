@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct UnlockedVehicle
 {
     static constexpr const char* NAME = "vehicleUnlockedVehicle";
@@ -22,6 +23,7 @@ struct UnlockedVehicle
 };
 RED4EXT_ASSERT_SIZE(UnlockedVehicle, 0x18);
 } // namespace vehicle
+using vehicleUnlockedVehicle = vehicle::UnlockedVehicle;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct TimeDilation_NodeTypeParam; }
 
-namespace quest { 
+namespace quest
+{
 struct TimeDilation_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 {
     static constexpr const char* NAME = "questTimeDilation_NodeType";
@@ -24,6 +25,7 @@ struct TimeDilation_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 };
 RED4EXT_ASSERT_SIZE(TimeDilation_NodeType, 0x48);
 } // namespace quest
+using questTimeDilation_NodeType = quest::TimeDilation_NodeType;
 } // namespace RED4ext
 
 // clang-format on

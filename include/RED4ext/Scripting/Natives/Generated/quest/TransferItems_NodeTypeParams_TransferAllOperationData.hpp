@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TransferItems_NodeTypeParams_TransferAllOperationData : ISerializable
 {
     static constexpr const char* NAME = "questTransferItems_NodeTypeParams_TransferAllOperationData";
@@ -24,6 +25,7 @@ struct TransferItems_NodeTypeParams_TransferAllOperationData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TransferItems_NodeTypeParams_TransferAllOperationData, 0x50);
 } // namespace quest
+using questTransferItems_NodeTypeParams_TransferAllOperationData = quest::TransferItems_NodeTypeParams_TransferAllOperationData;
 } // namespace RED4ext
 
 // clang-format on

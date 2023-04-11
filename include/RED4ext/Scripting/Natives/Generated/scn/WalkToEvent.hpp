@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct WalkToEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnWalkToEvent";
@@ -26,6 +27,7 @@ struct WalkToEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(WalkToEvent, 0x70);
 } // namespace scn
+using scnWalkToEvent = scn::WalkToEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct Pierce_Record : game::data::ProjectileCollision_Record
 {
     static constexpr const char* NAME = "gamedataPierce_Record";
@@ -19,6 +20,7 @@ struct Pierce_Record : game::data::ProjectileCollision_Record
 };
 RED4EXT_ASSERT_SIZE(Pierce_Record, 0x58);
 } // namespace game::data
+using gamedataPierce_Record = game::data::Pierce_Record;
 using Pierce_Record = game::data::Pierce_Record;
 } // namespace RED4ext
 

@@ -16,7 +16,8 @@ namespace RED4ext
 namespace quest { struct TransferItems_NodeTypeParams_TransferAllOperationData; }
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct TransferItems_NodeTypeParams
 {
     static constexpr const char* NAME = "questTransferItems_NodeTypeParams";
@@ -30,6 +31,7 @@ struct TransferItems_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(TransferItems_NodeTypeParams, 0x50);
 } // namespace quest
+using questTransferItems_NodeTypeParams = quest::TransferItems_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

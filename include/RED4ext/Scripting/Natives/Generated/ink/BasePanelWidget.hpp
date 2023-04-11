@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct BasePanelWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkBasePanelWidget";
@@ -20,6 +21,7 @@ struct BasePanelWidget : ink::CompoundWidget
 };
 RED4EXT_ASSERT_SIZE(BasePanelWidget, 0x240);
 } // namespace ink
+using inkBasePanelWidget = ink::BasePanelWidget;
 using inkBasePanel = ink::BasePanelWidget;
 } // namespace RED4ext
 

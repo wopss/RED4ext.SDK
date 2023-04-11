@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatsStateMapStructure
 {
     static constexpr const char* NAME = "gameStatsStateMapStructure";
@@ -24,6 +25,7 @@ struct StatsStateMapStructure
 };
 RED4EXT_ASSERT_SIZE(StatsStateMapStructure, 0x50);
 } // namespace game
+using gameStatsStateMapStructure = game::StatsStateMapStructure;
 } // namespace RED4ext
 
 // clang-format on

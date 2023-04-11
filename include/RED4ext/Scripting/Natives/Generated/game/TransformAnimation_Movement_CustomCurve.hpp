@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Movement_CustomCurve : game::TransformAnimation_Movement
 {
     static constexpr const char* NAME = "gameTransformAnimation_Movement_CustomCurve";
@@ -21,6 +22,7 @@ struct TransformAnimation_Movement_CustomCurve : game::TransformAnimation_Moveme
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Movement_CustomCurve, 0x68);
 } // namespace game
+using gameTransformAnimation_Movement_CustomCurve = game::TransformAnimation_Movement_CustomCurve;
 } // namespace RED4ext
 
 // clang-format on

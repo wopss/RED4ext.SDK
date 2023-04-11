@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WaitTargetToReachConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorWaitTargetToReachConditionDefinition";
@@ -19,6 +20,7 @@ struct WaitTargetToReachConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(WaitTargetToReachConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorWaitTargetToReachConditionDefinition = AI::behavior::WaitTargetToReachConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

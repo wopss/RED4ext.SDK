@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LookAtEventData
 {
     static constexpr const char* NAME = "scnLookAtEventData";
@@ -46,6 +47,7 @@ struct LookAtEventData
 };
 RED4EXT_ASSERT_SIZE(LookAtEventData, 0x168);
 } // namespace scn
+using scnLookAtEventData = scn::LookAtEventData;
 } // namespace RED4ext
 
 // clang-format on

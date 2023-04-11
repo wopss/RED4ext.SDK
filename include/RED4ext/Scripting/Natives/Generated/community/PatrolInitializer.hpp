@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct PatrolRole; }
 
-namespace community { 
+namespace community
+{
 struct PatrolInitializer : community::SpawnInitializer
 {
     static constexpr const char* NAME = "communityPatrolInitializer";
@@ -23,6 +24,7 @@ struct PatrolInitializer : community::SpawnInitializer
 };
 RED4EXT_ASSERT_SIZE(PatrolInitializer, 0x40);
 } // namespace community
+using communityPatrolInitializer = community::PatrolInitializer;
 } // namespace RED4ext
 
 // clang-format on

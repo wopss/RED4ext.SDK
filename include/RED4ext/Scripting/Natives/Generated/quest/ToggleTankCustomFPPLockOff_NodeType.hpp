@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleTankCustomFPPLockOff_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleTankCustomFPPLockOff_NodeType";
@@ -24,6 +25,7 @@ struct ToggleTankCustomFPPLockOff_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleTankCustomFPPLockOff_NodeType, 0x70);
 } // namespace quest
+using questToggleTankCustomFPPLockOff_NodeType = quest::ToggleTankCustomFPPLockOff_NodeType;
 } // namespace RED4ext
 
 // clang-format on

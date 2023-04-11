@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct IconsGeneratorContext_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataIconsGeneratorContext_Record";
@@ -20,6 +21,7 @@ struct IconsGeneratorContext_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(IconsGeneratorContext_Record, 0x50);
 } // namespace game::data
+using gamedataIconsGeneratorContext_Record = game::data::IconsGeneratorContext_Record;
 using IconsGeneratorContext_Record = game::data::IconsGeneratorContext_Record;
 } // namespace RED4ext
 

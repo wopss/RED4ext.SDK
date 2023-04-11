@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlayFX_NodeTypeParams
 {
     static constexpr const char* NAME = "questPlayFX_NodeTypeParams";
@@ -26,6 +27,7 @@ struct PlayFX_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(PlayFX_NodeTypeParams, 0x48);
 } // namespace quest
+using questPlayFX_NodeTypeParams = quest::PlayFX_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

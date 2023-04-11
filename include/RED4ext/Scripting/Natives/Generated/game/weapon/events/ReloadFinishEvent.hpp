@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon::events { 
+namespace game::weapon::events
+{
 struct ReloadFinishEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsReloadFinishEvent";
@@ -20,6 +21,7 @@ struct ReloadFinishEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ReloadFinishEvent, 0x50);
 } // namespace game::weapon::events
+using gameweaponeventsReloadFinishEvent = game::weapon::events::ReloadFinishEvent;
 using WeaponReloadFinishEvent = game::weapon::events::ReloadFinishEvent;
 } // namespace RED4ext
 

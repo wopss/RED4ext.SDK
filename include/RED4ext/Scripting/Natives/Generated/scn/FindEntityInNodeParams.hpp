@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct FindEntityInNodeParams
 {
     static constexpr const char* NAME = "scnFindEntityInNodeParams";
@@ -22,6 +23,7 @@ struct FindEntityInNodeParams
 };
 RED4EXT_ASSERT_SIZE(FindEntityInNodeParams, 0x10);
 } // namespace scn
+using scnFindEntityInNodeParams = scn::FindEntityInNodeParams;
 } // namespace RED4ext
 
 // clang-format on

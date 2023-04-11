@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DeviceContentAssignment_Record : game::data::ContentAssignment_Record
 {
     static constexpr const char* NAME = "gamedataDeviceContentAssignment_Record";
@@ -19,6 +20,7 @@ struct DeviceContentAssignment_Record : game::data::ContentAssignment_Record
 };
 RED4EXT_ASSERT_SIZE(DeviceContentAssignment_Record, 0x50);
 } // namespace game::data
+using gamedataDeviceContentAssignment_Record = game::data::DeviceContentAssignment_Record;
 using DeviceContentAssignment_Record = game::data::DeviceContentAssignment_Record;
 } // namespace RED4ext
 

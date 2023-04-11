@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CustomizationMorph : game::ui::CensorshipInfo
 {
     static constexpr const char* NAME = "gameuiCustomizationMorph";
@@ -22,6 +23,7 @@ struct CustomizationMorph : game::ui::CensorshipInfo
 };
 RED4EXT_ASSERT_SIZE(CustomizationMorph, 0x20);
 } // namespace game::ui
+using gameuiCustomizationMorph = game::ui::CustomizationMorph;
 } // namespace RED4ext
 
 // clang-format on

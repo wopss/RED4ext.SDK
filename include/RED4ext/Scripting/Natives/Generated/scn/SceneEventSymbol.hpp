@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneEventSymbol
 {
     static constexpr const char* NAME = "scnSceneEventSymbol";
@@ -25,6 +26,7 @@ struct SceneEventSymbol
 };
 RED4EXT_ASSERT_SIZE(SceneEventSymbol, 0x20);
 } // namespace scn
+using scnSceneEventSymbol = scn::SceneEventSymbol;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct SourceBasedReverbBussesMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioSourceBasedReverbBussesMetadata";
@@ -24,6 +25,7 @@ struct SourceBasedReverbBussesMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(SourceBasedReverbBussesMetadata, 0x58);
 } // namespace audio
+using audioSourceBasedReverbBussesMetadata = audio::SourceBasedReverbBussesMetadata;
 } // namespace RED4ext
 
 // clang-format on

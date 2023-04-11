@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace localization { 
+namespace localization
+{
 struct PersistenceOnScreenEntries : ISerializable
 {
     static constexpr const char* NAME = "localizationPersistenceOnScreenEntries";
@@ -22,6 +23,7 @@ struct PersistenceOnScreenEntries : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PersistenceOnScreenEntries, 0x40);
 } // namespace localization
+using localizationPersistenceOnScreenEntries = localization::PersistenceOnScreenEntries;
 } // namespace RED4ext
 
 // clang-format on

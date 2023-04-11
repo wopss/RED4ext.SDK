@@ -16,7 +16,8 @@ namespace RED4ext
 namespace anim { struct ActionAnimDatabase; }
 namespace game { struct SmartObjectResource; }
 
-namespace game { 
+namespace game
+{
 struct SmartObjectDefinition : ISerializable
 {
     static constexpr const char* NAME = "gameSmartObjectDefinition";
@@ -31,6 +32,7 @@ struct SmartObjectDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SmartObjectDefinition, 0x78);
 } // namespace game
+using gameSmartObjectDefinition = game::SmartObjectDefinition;
 } // namespace RED4ext
 
 // clang-format on

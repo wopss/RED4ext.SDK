@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct UiSound
 {
     static constexpr const char* NAME = "audioUiSound";
@@ -21,6 +22,7 @@ struct UiSound
 };
 RED4EXT_ASSERT_SIZE(UiSound, 0x10);
 } // namespace audio
+using audioUiSound = audio::UiSound;
 } // namespace RED4ext
 
 // clang-format on

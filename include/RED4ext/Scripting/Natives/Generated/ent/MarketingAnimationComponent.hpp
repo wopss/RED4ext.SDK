@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct LookAtPreset_FullControl; }
 
-namespace ent { 
+namespace ent
+{
 struct MarketingAnimationComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entMarketingAnimationComponent";
@@ -33,6 +34,7 @@ struct MarketingAnimationComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(MarketingAnimationComponent, 0x170);
 } // namespace ent
+using entMarketingAnimationComponent = ent::MarketingAnimationComponent;
 } // namespace RED4ext
 
 // clang-format on

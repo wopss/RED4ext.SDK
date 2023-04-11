@@ -15,7 +15,8 @@ namespace RED4ext
 namespace game { struct SetupWorkspotActionEvent; }
 namespace world { struct TrafficGlobalPathPosition; }
 
-namespace game { 
+namespace game
+{
 struct TrafficWorkspotTransitionData : ISerializable
 {
     static constexpr const char* NAME = "gameTrafficWorkspotTransitionData";
@@ -28,6 +29,7 @@ struct TrafficWorkspotTransitionData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TrafficWorkspotTransitionData, 0x68);
 } // namespace game
+using gameTrafficWorkspotTransitionData = game::TrafficWorkspotTransitionData;
 } // namespace RED4ext
 
 // clang-format on

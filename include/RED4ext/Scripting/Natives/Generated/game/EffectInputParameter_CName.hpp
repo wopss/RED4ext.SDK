@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct IEffectParameter_CNameEvaluator; }
 
-namespace game { 
+namespace game
+{
 struct EffectInputParameter_CName
 {
     static constexpr const char* NAME = "gameEffectInputParameter_CName";
@@ -23,6 +24,7 @@ struct EffectInputParameter_CName
 };
 RED4EXT_ASSERT_SIZE(EffectInputParameter_CName, 0x18);
 } // namespace game
+using gameEffectInputParameter_CName = game::EffectInputParameter_CName;
 using EffectInputParameter_CName = game::EffectInputParameter_CName;
 } // namespace RED4ext
 

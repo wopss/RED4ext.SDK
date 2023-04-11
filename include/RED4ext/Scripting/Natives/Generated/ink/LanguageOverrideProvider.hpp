@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LanguageOverrideProvider : ink::UserData
 {
     static constexpr const char* NAME = "inkLanguageOverrideProvider";
@@ -22,6 +23,7 @@ struct LanguageOverrideProvider : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(LanguageOverrideProvider, 0x48);
 } // namespace ink
+using inkLanguageOverrideProvider = ink::LanguageOverrideProvider;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct IBraindanceConditionType : quest::ISceneConditionType
 {
     static constexpr const char* NAME = "scnIBraindanceConditionType";
@@ -19,6 +20,7 @@ struct IBraindanceConditionType : quest::ISceneConditionType
 };
 RED4EXT_ASSERT_SIZE(IBraindanceConditionType, 0x38);
 } // namespace scn
+using scnIBraindanceConditionType = scn::IBraindanceConditionType;
 } // namespace RED4ext
 
 // clang-format on

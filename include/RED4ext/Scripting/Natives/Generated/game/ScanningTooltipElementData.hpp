@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningTooltipElementData
 {
     static constexpr const char* NAME = "gameScanningTooltipElementData";
@@ -23,6 +24,7 @@ struct ScanningTooltipElementData
 };
 RED4EXT_ASSERT_SIZE(ScanningTooltipElementData, 0x18);
 } // namespace game
+using gameScanningTooltipElementData = game::ScanningTooltipElementData;
 using ScanningTooltipElementData = game::ScanningTooltipElementData;
 } // namespace RED4ext
 

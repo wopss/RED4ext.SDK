@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IKChainSettings
 {
     static constexpr const char* NAME = "animIKChainSettings";
@@ -26,6 +27,7 @@ struct IKChainSettings
 };
 RED4EXT_ASSERT_SIZE(IKChainSettings, 0x30);
 } // namespace anim
+using animIKChainSettings = anim::IKChainSettings;
 using IKChainSettings = anim::IKChainSettings;
 } // namespace RED4ext
 

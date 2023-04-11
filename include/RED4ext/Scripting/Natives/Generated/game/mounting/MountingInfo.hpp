@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::mounting { 
+namespace game::mounting
+{
 struct MountingInfo
 {
     static constexpr const char* NAME = "gamemountingMountingInfo";
@@ -23,6 +24,7 @@ struct MountingInfo
 };
 RED4EXT_ASSERT_SIZE(MountingInfo, 0x18);
 } // namespace game::mounting
+using gamemountingMountingInfo = game::mounting::MountingInfo;
 using MountingInfo = game::mounting::MountingInfo;
 } // namespace RED4ext
 

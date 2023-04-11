@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct NotifyBreathingSubSystemStateChangeRequested : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsNotifyBreathingSubSystemStateChangeRequested";
@@ -20,6 +21,7 @@ struct NotifyBreathingSubSystemStateChangeRequested : red::Event
 };
 RED4EXT_ASSERT_SIZE(NotifyBreathingSubSystemStateChangeRequested, 0x48);
 } // namespace game::audio::events
+using gameaudioeventsNotifyBreathingSubSystemStateChangeRequested = game::audio::events::NotifyBreathingSubSystemStateChangeRequested;
 } // namespace RED4ext
 
 // clang-format on

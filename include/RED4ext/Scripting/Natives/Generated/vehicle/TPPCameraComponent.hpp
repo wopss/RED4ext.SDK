@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct TPPCameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "vehicleTPPCameraComponent";
@@ -20,6 +21,7 @@ struct TPPCameraComponent : game::CameraComponent
 };
 RED4EXT_ASSERT_SIZE(TPPCameraComponent, 0x5C0);
 } // namespace vehicle
+using vehicleTPPCameraComponent = vehicle::TPPCameraComponent;
 } // namespace RED4ext
 
 // clang-format on

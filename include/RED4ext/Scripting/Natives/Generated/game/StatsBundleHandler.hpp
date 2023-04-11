@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatsBundleHandler : IScriptable
 {
     static constexpr const char* NAME = "gameStatsBundleHandler";
@@ -20,6 +21,7 @@ struct StatsBundleHandler : IScriptable
 };
 RED4EXT_ASSERT_SIZE(StatsBundleHandler, 0x50);
 } // namespace game
+using gameStatsBundleHandler = game::StatsBundleHandler;
 using StatsBundleHandler = game::StatsBundleHandler;
 } // namespace RED4ext
 

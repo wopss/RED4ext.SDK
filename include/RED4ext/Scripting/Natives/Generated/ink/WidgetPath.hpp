@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WidgetPath
 {
     static constexpr const char* NAME = "inkWidgetPath";
@@ -21,6 +22,7 @@ struct WidgetPath
 };
 RED4EXT_ASSERT_SIZE(WidgetPath, 0x10);
 } // namespace ink
+using inkWidgetPath = ink::WidgetPath;
 } // namespace RED4ext
 
 // clang-format on

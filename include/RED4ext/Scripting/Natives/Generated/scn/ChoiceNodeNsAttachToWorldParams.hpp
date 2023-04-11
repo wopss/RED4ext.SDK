@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsAttachToWorldParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsAttachToWorldParams";
@@ -27,6 +28,7 @@ struct ChoiceNodeNsAttachToWorldParams
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsAttachToWorldParams, 0x30);
 } // namespace scn
+using scnChoiceNodeNsAttachToWorldParams = scn::ChoiceNodeNsAttachToWorldParams;
 } // namespace RED4ext
 
 // clang-format on

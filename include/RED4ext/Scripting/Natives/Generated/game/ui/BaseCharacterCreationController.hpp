@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BaseCharacterCreationController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiBaseCharacterCreationController";
@@ -19,6 +20,7 @@ struct BaseCharacterCreationController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(BaseCharacterCreationController, 0xF0);
 } // namespace game::ui
+using gameuiBaseCharacterCreationController = game::ui::BaseCharacterCreationController;
 using BaseCharacterCreationController = game::ui::BaseCharacterCreationController;
 } // namespace RED4ext
 

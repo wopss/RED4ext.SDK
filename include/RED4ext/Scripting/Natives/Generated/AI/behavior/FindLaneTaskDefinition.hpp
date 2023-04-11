@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct FindLaneTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorFindLaneTaskDefinition";
@@ -26,6 +27,7 @@ struct FindLaneTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(FindLaneTaskDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorFindLaneTaskDefinition = AI::behavior::FindLaneTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

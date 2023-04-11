@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CooldownType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCooldownType_Record";
@@ -20,6 +21,7 @@ struct CooldownType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CooldownType_Record, 0x50);
 } // namespace game::data
+using gamedataCooldownType_Record = game::data::CooldownType_Record;
 using CooldownType_Record = game::data::CooldownType_Record;
 } // namespace RED4ext
 

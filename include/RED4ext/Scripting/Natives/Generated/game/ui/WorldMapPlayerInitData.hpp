@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct WorldMapPlayerInitData : game::ui::MappinControllerCustomData
 {
     static constexpr const char* NAME = "gameuiWorldMapPlayerInitData";
@@ -19,6 +20,7 @@ struct WorldMapPlayerInitData : game::ui::MappinControllerCustomData
 };
 RED4EXT_ASSERT_SIZE(WorldMapPlayerInitData, 0x40);
 } // namespace game::ui
+using gameuiWorldMapPlayerInitData = game::ui::WorldMapPlayerInitData;
 using WorldMapPlayerInitData = game::ui::WorldMapPlayerInitData;
 } // namespace RED4ext
 

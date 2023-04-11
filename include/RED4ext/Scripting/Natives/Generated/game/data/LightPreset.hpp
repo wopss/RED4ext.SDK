@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct LightPreset
 {
     static constexpr const char* NAME = "gamedataLightPreset";
@@ -22,6 +23,7 @@ struct LightPreset
 };
 RED4EXT_ASSERT_SIZE(LightPreset, 0x10);
 } // namespace game::data
+using gamedataLightPreset = game::data::LightPreset;
 using LightPreset = game::data::LightPreset;
 } // namespace RED4ext
 

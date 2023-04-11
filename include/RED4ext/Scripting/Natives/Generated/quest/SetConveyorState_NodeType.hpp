@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetConveyorState_NodeType : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questSetConveyorState_NodeType";
@@ -23,6 +24,7 @@ struct SetConveyorState_NodeType : quest::IInteractiveObjectManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetConveyorState_NodeType, 0x40);
 } // namespace quest
+using questSetConveyorState_NodeType = quest::SetConveyorState_NodeType;
 } // namespace RED4ext
 
 // clang-format on

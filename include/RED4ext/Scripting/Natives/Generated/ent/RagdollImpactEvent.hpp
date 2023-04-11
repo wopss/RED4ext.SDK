@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace ent { 
+namespace ent
+{
 struct RagdollImpactEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollImpactEvent";
@@ -28,6 +29,7 @@ struct RagdollImpactEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RagdollImpactEvent, 0x68);
 } // namespace ent
+using entRagdollImpactEvent = ent::RagdollImpactEvent;
 using RagdollImpactEvent = ent::RagdollImpactEvent;
 } // namespace RED4ext
 

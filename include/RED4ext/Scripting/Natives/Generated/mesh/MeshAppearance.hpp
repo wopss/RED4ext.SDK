@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshAppearance : ISerializable
 {
     static constexpr const char* NAME = "meshMeshAppearance";
@@ -26,6 +27,7 @@ struct MeshAppearance : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MeshAppearance, 0xA8);
 } // namespace mesh
+using meshMeshAppearance = mesh::MeshAppearance;
 } // namespace RED4ext
 
 // clang-format on

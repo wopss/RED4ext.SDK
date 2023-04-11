@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct StartedBeingTrackedAsHostile : AI::AIEvent
 {
     static constexpr const char* NAME = "AIStartedBeingTrackedAsHostile";
@@ -19,6 +20,7 @@ struct StartedBeingTrackedAsHostile : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(StartedBeingTrackedAsHostile, 0x50);
 } // namespace AI
+using AIStartedBeingTrackedAsHostile = AI::StartedBeingTrackedAsHostile;
 using StartedBeingTrackedAsHostile = AI::StartedBeingTrackedAsHostile;
 } // namespace RED4ext
 

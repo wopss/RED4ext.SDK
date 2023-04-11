@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct InputHintGroup_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questInputHintGroup_NodeType";
@@ -27,6 +28,7 @@ struct InputHintGroup_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(InputHintGroup_NodeType, 0x90);
 } // namespace quest
+using questInputHintGroup_NodeType = quest::InputHintGroup_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EquippedPrereqListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "gameEquippedPrereqListener";
@@ -20,6 +21,7 @@ struct EquippedPrereqListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(EquippedPrereqListener, 0x50);
 } // namespace game
+using gameEquippedPrereqListener = game::EquippedPrereqListener;
 } // namespace RED4ext
 
 // clang-format on

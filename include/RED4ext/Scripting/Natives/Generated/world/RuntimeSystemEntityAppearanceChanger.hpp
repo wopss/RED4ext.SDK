@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemEntityAppearanceChanger : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemEntityAppearanceChanger";
@@ -20,6 +21,7 @@ struct RuntimeSystemEntityAppearanceChanger : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemEntityAppearanceChanger, 0xF8);
 } // namespace world
+using worldRuntimeSystemEntityAppearanceChanger = world::RuntimeSystemEntityAppearanceChanger;
 } // namespace RED4ext
 
 // clang-format on

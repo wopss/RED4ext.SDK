@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct RadioStationMetadataMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioRadioStationMetadataMap";
@@ -28,6 +29,7 @@ struct RadioStationMetadataMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(RadioStationMetadataMap, 0xB0);
 } // namespace audio
+using audioRadioStationMetadataMap = audio::RadioStationMetadataMap;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Replacer_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 {
     static constexpr const char* NAME = "questReplacer_NodeType";
@@ -23,6 +24,7 @@ struct Replacer_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 };
 RED4EXT_ASSERT_SIZE(Replacer_NodeType, 0x78);
 } // namespace quest
+using questReplacer_NodeType = quest::Replacer_NodeType;
 } // namespace RED4ext
 
 // clang-format on

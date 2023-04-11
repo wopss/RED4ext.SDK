@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct NPCQuickHackUploadStatPoolsListener : game::PuppetStatPoolsListener
 {
     static constexpr const char* NAME = "gameNPCQuickHackUploadStatPoolsListener";
@@ -20,6 +21,7 @@ struct NPCQuickHackUploadStatPoolsListener : game::PuppetStatPoolsListener
 };
 RED4EXT_ASSERT_SIZE(NPCQuickHackUploadStatPoolsListener, 0x50);
 } // namespace game
+using gameNPCQuickHackUploadStatPoolsListener = game::NPCQuickHackUploadStatPoolsListener;
 } // namespace RED4ext
 
 // clang-format on

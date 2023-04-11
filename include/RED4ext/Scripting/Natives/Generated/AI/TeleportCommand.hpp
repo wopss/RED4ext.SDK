@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TeleportCommand : AI::Command
 {
     static constexpr const char* NAME = "AITeleportCommand";
@@ -24,6 +25,7 @@ struct TeleportCommand : AI::Command
 };
 RED4EXT_ASSERT_SIZE(TeleportCommand, 0x80);
 } // namespace AI
+using AITeleportCommand = AI::TeleportCommand;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_Multiplayer : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmMenuState_Multiplayer";
@@ -19,6 +20,7 @@ struct MenuState_Multiplayer : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(MenuState_Multiplayer, 0xD8);
 } // namespace gsm
+using gsmMenuState_Multiplayer = gsm::MenuState_Multiplayer;
 } // namespace RED4ext
 
 // clang-format on

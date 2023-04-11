@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::data { struct VariableNode; }
 
-namespace game::data { 
+namespace game::data
+{
 struct GroupNodeGroupVariable
 {
     static constexpr const char* NAME = "gamedataGroupNodeGroupVariable";
@@ -29,6 +30,7 @@ struct GroupNodeGroupVariable
 };
 RED4EXT_ASSERT_SIZE(GroupNodeGroupVariable, 0x20);
 } // namespace game::data
+using gamedataGroupNodeGroupVariable = game::data::GroupNodeGroupVariable;
 } // namespace RED4ext
 
 // clang-format on

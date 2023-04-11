@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RenderToTextureFeatures
 {
     static constexpr const char* NAME = "entRenderToTextureFeatures";
@@ -24,6 +25,7 @@ struct RenderToTextureFeatures
 };
 RED4EXT_ASSERT_SIZE(RenderToTextureFeatures, 0x6);
 } // namespace ent
+using entRenderToTextureFeatures = ent::RenderToTextureFeatures;
 } // namespace RED4ext
 
 // clang-format on

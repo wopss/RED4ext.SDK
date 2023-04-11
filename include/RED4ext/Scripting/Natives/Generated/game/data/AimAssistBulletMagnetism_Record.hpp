@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AimAssistBulletMagnetism_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAimAssistBulletMagnetism_Record";
@@ -20,6 +21,7 @@ struct AimAssistBulletMagnetism_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AimAssistBulletMagnetism_Record, 0x58);
 } // namespace game::data
+using gamedataAimAssistBulletMagnetism_Record = game::data::AimAssistBulletMagnetism_Record;
 using AimAssistBulletMagnetism_Record = game::data::AimAssistBulletMagnetism_Record;
 } // namespace RED4ext
 

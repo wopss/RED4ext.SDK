@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ListItemControllerCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkListItemControllerCallback";
@@ -20,6 +21,7 @@ struct ListItemControllerCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(ListItemControllerCallback, 0x38);
 } // namespace ink
+using inkListItemControllerCallback = ink::ListItemControllerCallback;
 } // namespace RED4ext
 
 // clang-format on

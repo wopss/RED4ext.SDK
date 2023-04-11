@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FocusEvent : ink::Event
 {
     static constexpr const char* NAME = "inkFocusEvent";
@@ -20,6 +21,7 @@ struct FocusEvent : ink::Event
 };
 RED4EXT_ASSERT_SIZE(FocusEvent, 0x70);
 } // namespace ink
+using inkFocusEvent = ink::FocusEvent;
 } // namespace RED4ext
 
 // clang-format on

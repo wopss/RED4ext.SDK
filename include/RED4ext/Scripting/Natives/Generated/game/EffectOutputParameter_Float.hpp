@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectOutputParameter_Float
 {
     static constexpr const char* NAME = "gameEffectOutputParameter_Float";
@@ -21,6 +22,7 @@ struct EffectOutputParameter_Float
 };
 RED4EXT_ASSERT_SIZE(EffectOutputParameter_Float, 0x40);
 } // namespace game
+using gameEffectOutputParameter_Float = game::EffectOutputParameter_Float;
 using EffectOutputParameter_Float = game::EffectOutputParameter_Float;
 } // namespace RED4ext
 

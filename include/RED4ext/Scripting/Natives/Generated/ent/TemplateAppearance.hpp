@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace appearance { struct AppearanceResource; }
 
-namespace ent { 
+namespace ent
+{
 struct TemplateAppearance
 {
     static constexpr const char* NAME = "entTemplateAppearance";
@@ -25,6 +26,7 @@ struct TemplateAppearance
 };
 RED4EXT_ASSERT_SIZE(TemplateAppearance, 0x18);
 } // namespace ent
+using entTemplateAppearance = ent::TemplateAppearance;
 } // namespace RED4ext
 
 // clang-format on

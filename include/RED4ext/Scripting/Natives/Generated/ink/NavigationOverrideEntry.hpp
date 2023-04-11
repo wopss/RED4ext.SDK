@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct NavigationOverrideEntry
 {
     static constexpr const char* NAME = "inkNavigationOverrideEntry";
@@ -24,6 +25,7 @@ struct NavigationOverrideEntry
 };
 RED4EXT_ASSERT_SIZE(NavigationOverrideEntry, 0x38);
 } // namespace ink
+using inkNavigationOverrideEntry = ink::NavigationOverrideEntry;
 } // namespace RED4ext
 
 // clang-format on

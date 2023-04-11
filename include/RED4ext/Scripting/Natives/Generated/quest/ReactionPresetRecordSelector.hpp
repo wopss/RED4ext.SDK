@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ReactionPresetRecordSelector : ISerializable
 {
     static constexpr const char* NAME = "questReactionPresetRecordSelector";
@@ -34,6 +35,7 @@ struct ReactionPresetRecordSelector : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ReactionPresetRecordSelector, 0x68);
 } // namespace quest
+using questReactionPresetRecordSelector = quest::ReactionPresetRecordSelector;
 } // namespace RED4ext
 
 // clang-format on

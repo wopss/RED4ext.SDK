@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AllowVehicleCollisionRagdollInSceneEvent : red::Event
 {
     static constexpr const char* NAME = "entAllowVehicleCollisionRagdollInSceneEvent";
@@ -21,6 +22,7 @@ struct AllowVehicleCollisionRagdollInSceneEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AllowVehicleCollisionRagdollInSceneEvent, 0x48);
 } // namespace ent
+using entAllowVehicleCollisionRagdollInSceneEvent = ent::AllowVehicleCollisionRagdollInSceneEvent;
 } // namespace RED4ext
 
 // clang-format on

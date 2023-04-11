@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct InteractionDisplayData
 {
     static constexpr const char* NAME = "gameinteractionsvisInteractionDisplayData";
@@ -31,6 +32,7 @@ struct InteractionDisplayData
 };
 RED4EXT_ASSERT_SIZE(InteractionDisplayData, 0xD8);
 } // namespace game::interactions::vis
+using gameinteractionsvisInteractionDisplayData = game::interactions::vis::InteractionDisplayData;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace game { struct VehicleCommonCurveSet; }
 namespace game { struct VehicleCurveSet; }
 namespace vehicle { struct BikeCurveSet; }
 
-namespace game { 
+namespace game
+{
 struct VehicleCurvesLibrary : ent::Entity
 {
     static constexpr const char* NAME = "gameVehicleCurvesLibrary";
@@ -28,6 +29,7 @@ struct VehicleCurvesLibrary : ent::Entity
 };
 RED4EXT_ASSERT_SIZE(VehicleCurvesLibrary, 0x190);
 } // namespace game
+using gameVehicleCurvesLibrary = game::VehicleCurvesLibrary;
 } // namespace RED4ext
 
 // clang-format on

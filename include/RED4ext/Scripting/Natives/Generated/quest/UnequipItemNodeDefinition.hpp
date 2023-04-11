@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct UnequipItemNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questUnequipItemNodeDefinition";
@@ -24,6 +25,7 @@ struct UnequipItemNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(UnequipItemNodeDefinition, 0x90);
 } // namespace quest
+using questUnequipItemNodeDefinition = quest::UnequipItemNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

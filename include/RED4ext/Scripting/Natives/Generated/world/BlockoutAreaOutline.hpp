@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct BlockoutAreaOutline : ISerializable
 {
     static constexpr const char* NAME = "worldBlockoutAreaOutline";
@@ -22,6 +23,7 @@ struct BlockoutAreaOutline : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BlockoutAreaOutline, 0x50);
 } // namespace world
+using worldBlockoutAreaOutline = world::BlockoutAreaOutline;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct VectorFieldComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entVectorFieldComponent";
@@ -22,6 +23,7 @@ struct VectorFieldComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(VectorFieldComponent, 0x160);
 } // namespace ent
+using entVectorFieldComponent = ent::VectorFieldComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EnablePlayerVehicle_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questEnablePlayerVehicle_NodeType";
@@ -25,6 +26,7 @@ struct EnablePlayerVehicle_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(EnablePlayerVehicle_NodeType, 0x58);
 } // namespace quest
+using questEnablePlayerVehicle_NodeType = quest::EnablePlayerVehicle_NodeType;
 } // namespace RED4ext
 
 // clang-format on

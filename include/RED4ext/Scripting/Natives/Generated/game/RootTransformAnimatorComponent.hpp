@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RootTransformAnimatorComponent : ent::IMoverComponent
 {
     static constexpr const char* NAME = "gameRootTransformAnimatorComponent";
@@ -24,6 +25,7 @@ struct RootTransformAnimatorComponent : ent::IMoverComponent
 };
 RED4EXT_ASSERT_SIZE(RootTransformAnimatorComponent, 0x110);
 } // namespace game
+using gameRootTransformAnimatorComponent = game::RootTransformAnimatorComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct EffectObjectSingleFilter; }
 
-namespace game { 
+namespace game
+{
 struct EffectObjectSingleFilter_BlackboardBoolCondition : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectObjectSingleFilter_BlackboardBoolCondition";
@@ -25,6 +26,7 @@ struct EffectObjectSingleFilter_BlackboardBoolCondition : game::EffectObjectSing
 };
 RED4EXT_ASSERT_SIZE(EffectObjectSingleFilter_BlackboardBoolCondition, 0x68);
 } // namespace game
+using gameEffectObjectSingleFilter_BlackboardBoolCondition = game::EffectObjectSingleFilter_BlackboardBoolCondition;
 } // namespace RED4ext
 
 // clang-format on

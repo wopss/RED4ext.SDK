@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct IAnimStateTransitionCondition; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimStateTransitionCondition_CompositeSimultaneous : anim::IAnimStateTransitionCondition
 {
     static constexpr const char* NAME = "animAnimStateTransitionCondition_CompositeSimultaneous";
@@ -24,6 +25,7 @@ struct AnimStateTransitionCondition_CompositeSimultaneous : anim::IAnimStateTran
 };
 RED4EXT_ASSERT_SIZE(AnimStateTransitionCondition_CompositeSimultaneous, 0x40);
 } // namespace anim
+using animAnimStateTransitionCondition_CompositeSimultaneous = anim::AnimStateTransitionCondition_CompositeSimultaneous;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace game { 
+namespace game
+{
 struct JournalEmail : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalEmail";
@@ -28,6 +29,7 @@ struct JournalEmail : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalEmail, 0x110);
 } // namespace game
+using gameJournalEmail = game::JournalEmail;
 using JournalEmail = game::JournalEmail;
 } // namespace RED4ext
 

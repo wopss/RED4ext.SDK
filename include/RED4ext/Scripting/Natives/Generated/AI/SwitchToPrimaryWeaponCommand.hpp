@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SwitchToPrimaryWeaponCommand : AI::Command
 {
     static constexpr const char* NAME = "AISwitchToPrimaryWeaponCommand";
@@ -21,6 +22,7 @@ struct SwitchToPrimaryWeaponCommand : AI::Command
 };
 RED4EXT_ASSERT_SIZE(SwitchToPrimaryWeaponCommand, 0x68);
 } // namespace AI
+using AISwitchToPrimaryWeaponCommand = AI::SwitchToPrimaryWeaponCommand;
 } // namespace RED4ext
 
 // clang-format on

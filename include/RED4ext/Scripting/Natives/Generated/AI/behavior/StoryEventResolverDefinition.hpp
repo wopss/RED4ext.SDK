@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct StoryEventResolverDefinition : AI::behavior::EventResolverDefinition
 {
     static constexpr const char* NAME = "AIbehaviorStoryEventResolverDefinition";
@@ -23,6 +24,7 @@ struct StoryEventResolverDefinition : AI::behavior::EventResolverDefinition
 };
 RED4EXT_ASSERT_SIZE(StoryEventResolverDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorStoryEventResolverDefinition = AI::behavior::StoryEventResolverDefinition;
 } // namespace RED4ext
 
 // clang-format on

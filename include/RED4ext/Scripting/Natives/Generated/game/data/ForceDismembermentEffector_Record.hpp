@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ForceDismembermentEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataForceDismembermentEffector_Record";
@@ -20,6 +21,7 @@ struct ForceDismembermentEffector_Record : game::data::Effector_Record
 };
 RED4EXT_ASSERT_SIZE(ForceDismembermentEffector_Record, 0x70);
 } // namespace game::data
+using gamedataForceDismembermentEffector_Record = game::data::ForceDismembermentEffector_Record;
 using ForceDismembermentEffector_Record = game::data::ForceDismembermentEffector_Record;
 } // namespace RED4ext
 

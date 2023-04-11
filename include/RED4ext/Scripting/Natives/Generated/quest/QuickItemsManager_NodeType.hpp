@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct QuickItemsManager_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questQuickItemsManager_NodeType";
@@ -22,6 +23,7 @@ struct QuickItemsManager_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(QuickItemsManager_NodeType, 0x40);
 } // namespace quest
+using questQuickItemsManager_NodeType = quest::QuickItemsManager_NodeType;
 } // namespace RED4ext
 
 // clang-format on

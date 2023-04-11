@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct VertexBufferChunk
 {
     static constexpr const char* NAME = "rendVertexBufferChunk";
@@ -22,6 +23,7 @@ struct VertexBufferChunk
 };
 RED4EXT_ASSERT_SIZE(VertexBufferChunk, 0xD0);
 } // namespace rend
+using rendVertexBufferChunk = rend::VertexBufferChunk;
 } // namespace RED4ext
 
 // clang-format on

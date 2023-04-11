@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ItemFactorySystemPool
 {
     static constexpr const char* NAME = "gameItemFactorySystemPool";
@@ -19,6 +20,7 @@ struct ItemFactorySystemPool
 };
 RED4EXT_ASSERT_SIZE(ItemFactorySystemPool, 0x128);
 } // namespace game
+using gameItemFactorySystemPool = game::ItemFactorySystemPool;
 } // namespace RED4ext
 
 // clang-format on

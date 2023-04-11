@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IUIIconsGeneratorSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameuiIUIIconsGeneratorSystem";
@@ -19,6 +20,7 @@ struct IUIIconsGeneratorSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IUIIconsGeneratorSystem, 0x48);
 } // namespace game::ui
+using gameuiIUIIconsGeneratorSystem = game::ui::IUIIconsGeneratorSystem;
 using IUIIconsGeneratorSystem = game::ui::IUIIconsGeneratorSystem;
 } // namespace RED4ext
 

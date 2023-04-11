@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct UpdateEffectPositionEvent : red::Event
 {
     static constexpr const char* NAME = "entUpdateEffectPositionEvent";
@@ -19,6 +20,7 @@ struct UpdateEffectPositionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UpdateEffectPositionEvent, 0x40);
 } // namespace ent
+using entUpdateEffectPositionEvent = ent::UpdateEffectPositionEvent;
 } // namespace RED4ext
 
 // clang-format on

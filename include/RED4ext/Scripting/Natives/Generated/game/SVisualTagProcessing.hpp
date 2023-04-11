@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SVisualTagProcessing
 {
     static constexpr const char* NAME = "gameSVisualTagProcessing";
@@ -22,6 +23,7 @@ struct SVisualTagProcessing
 };
 RED4EXT_ASSERT_SIZE(SVisualTagProcessing, 0x8);
 } // namespace game
+using gameSVisualTagProcessing = game::SVisualTagProcessing;
 using SVisualTagProcessing = game::SVisualTagProcessing;
 } // namespace RED4ext
 

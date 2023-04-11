@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RequestSwapContextEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiRequestSwapContextEvent";
@@ -22,6 +23,7 @@ struct RequestSwapContextEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RequestSwapContextEvent, 0x48);
 } // namespace game::ui
+using gameuiRequestSwapContextEvent = game::ui::RequestSwapContextEvent;
 using SwapUIGameContextEvent = game::ui::RequestSwapContextEvent;
 } // namespace RED4ext
 

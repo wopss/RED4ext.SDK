@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LightBlockingComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightBlockingComponent";
@@ -23,6 +24,7 @@ struct LightBlockingComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(LightBlockingComponent, 0x160);
 } // namespace ent
+using entLightBlockingComponent = ent::LightBlockingComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct NewsFeedDataProvider : IScriptable
 {
     static constexpr const char* NAME = "gameuiNewsFeedDataProvider";
@@ -22,6 +23,7 @@ struct NewsFeedDataProvider : IScriptable
 };
 RED4EXT_ASSERT_SIZE(NewsFeedDataProvider, 0x50);
 } // namespace game::ui
+using gameuiNewsFeedDataProvider = game::ui::NewsFeedDataProvider;
 } // namespace RED4ext
 
 // clang-format on

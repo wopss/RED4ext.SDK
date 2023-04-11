@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GameNotificationCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkGameNotificationCallback";
@@ -20,6 +21,7 @@ struct GameNotificationCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(GameNotificationCallback, 0x38);
 } // namespace ink
+using inkGameNotificationCallback = ink::GameNotificationCallback;
 } // namespace RED4ext
 
 // clang-format on

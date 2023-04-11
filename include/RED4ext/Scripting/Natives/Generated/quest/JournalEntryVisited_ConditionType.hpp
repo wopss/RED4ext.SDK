@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct JournalEntryVisited_ConditionType : quest::IJournalConditionType
 {
     static constexpr const char* NAME = "questJournalEntryVisited_ConditionType";
@@ -25,6 +26,7 @@ struct JournalEntryVisited_ConditionType : quest::IJournalConditionType
 };
 RED4EXT_ASSERT_SIZE(JournalEntryVisited_ConditionType, 0x50);
 } // namespace quest
+using questJournalEntryVisited_ConditionType = quest::JournalEntryVisited_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

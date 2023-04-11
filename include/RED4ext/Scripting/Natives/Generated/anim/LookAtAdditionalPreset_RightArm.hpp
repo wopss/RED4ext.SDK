@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtAdditionalPreset_RightArm : anim::LookAtAdditionalPreset
 {
     static constexpr const char* NAME = "animLookAtAdditionalPreset_RightArm";
@@ -22,6 +23,7 @@ struct LookAtAdditionalPreset_RightArm : anim::LookAtAdditionalPreset
 };
 RED4EXT_ASSERT_SIZE(LookAtAdditionalPreset_RightArm, 0x48);
 } // namespace anim
+using animLookAtAdditionalPreset_RightArm = anim::LookAtAdditionalPreset_RightArm;
 } // namespace RED4ext
 
 // clang-format on

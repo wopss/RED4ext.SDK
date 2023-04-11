@@ -17,7 +17,8 @@ namespace AI::behavior { struct ExpressionSocket; }
 namespace AI::behavior { struct InstantConditionDefinition; }
 namespace AI::behavior { struct MonitorConditionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct FSMTransitionDefinition : AI::behavior::BehaviorComponentDefinition
 {
     static constexpr const char* NAME = "AIbehaviorFSMTransitionDefinition";
@@ -35,6 +36,7 @@ struct FSMTransitionDefinition : AI::behavior::BehaviorComponentDefinition
 };
 RED4EXT_ASSERT_SIZE(FSMTransitionDefinition, 0x80);
 } // namespace AI::behavior
+using AIbehaviorFSMTransitionDefinition = AI::behavior::FSMTransitionDefinition;
 } // namespace RED4ext
 
 // clang-format on

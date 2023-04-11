@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct EquipInventoryWeaponAction : work::IWorkspotItemAction
 {
     static constexpr const char* NAME = "workEquipInventoryWeaponAction";
@@ -26,6 +27,7 @@ struct EquipInventoryWeaponAction : work::IWorkspotItemAction
 };
 RED4EXT_ASSERT_SIZE(EquipInventoryWeaponAction, 0x48);
 } // namespace work
+using workEquipInventoryWeaponAction = work::EquipInventoryWeaponAction;
 } // namespace RED4ext
 
 // clang-format on

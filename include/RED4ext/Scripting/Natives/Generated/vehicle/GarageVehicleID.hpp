@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct GarageVehicleID
 {
     static constexpr const char* NAME = "vehicleGarageVehicleID";
@@ -22,6 +23,7 @@ struct GarageVehicleID
 };
 RED4EXT_ASSERT_SIZE(GarageVehicleID, 0x10);
 } // namespace vehicle
+using vehicleGarageVehicleID = vehicle::GarageVehicleID;
 using GarageVehicleID = vehicle::GarageVehicleID;
 } // namespace RED4ext
 

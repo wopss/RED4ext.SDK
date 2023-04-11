@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CompiledNodeInstanceSetupInfoBuffer
 {
     static constexpr const char* NAME = "worldCompiledNodeInstanceSetupInfoBuffer";
@@ -19,6 +20,7 @@ struct CompiledNodeInstanceSetupInfoBuffer
 };
 RED4EXT_ASSERT_SIZE(CompiledNodeInstanceSetupInfoBuffer, 0x28);
 } // namespace world
+using worldCompiledNodeInstanceSetupInfoBuffer = world::CompiledNodeInstanceSetupInfoBuffer;
 } // namespace RED4ext
 
 // clang-format on

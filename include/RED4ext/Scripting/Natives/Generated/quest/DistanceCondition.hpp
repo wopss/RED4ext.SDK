@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IDistanceConditionType; }
 
-namespace quest { 
+namespace quest
+{
 struct DistanceCondition : quest::TypedCondition
 {
     static constexpr const char* NAME = "questDistanceCondition";
@@ -23,6 +24,7 @@ struct DistanceCondition : quest::TypedCondition
 };
 RED4EXT_ASSERT_SIZE(DistanceCondition, 0x40);
 } // namespace quest
+using questDistanceCondition = quest::DistanceCondition;
 } // namespace RED4ext
 
 // clang-format on

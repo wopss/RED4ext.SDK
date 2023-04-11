@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct IWorkspotSystem : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldIWorkspotSystem";
@@ -19,6 +20,7 @@ struct IWorkspotSystem : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(IWorkspotSystem, 0x48);
 } // namespace world
+using worldIWorkspotSystem = world::IWorkspotSystem;
 } // namespace RED4ext
 
 // clang-format on

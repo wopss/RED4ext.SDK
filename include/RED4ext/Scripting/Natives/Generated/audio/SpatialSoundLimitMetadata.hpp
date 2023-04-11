@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct SpatialSoundLimitMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioSpatialSoundLimitMetadata";
@@ -26,6 +27,7 @@ struct SpatialSoundLimitMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(SpatialSoundLimitMetadata, 0x70);
 } // namespace audio
+using audioSpatialSoundLimitMetadata = audio::SpatialSoundLimitMetadata;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct ScreenProjection; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct ScreenProjectionsData : IScriptable
 {
     static constexpr const char* NAME = "gameuiScreenProjectionsData";
@@ -24,6 +25,7 @@ struct ScreenProjectionsData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScreenProjectionsData, 0x50);
 } // namespace game::ui
+using gameuiScreenProjectionsData = game::ui::ScreenProjectionsData;
 } // namespace RED4ext
 
 // clang-format on

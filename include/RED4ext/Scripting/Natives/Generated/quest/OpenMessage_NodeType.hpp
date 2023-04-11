@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct OpenMessage_NodeType : quest::IPhoneManagerNodeType
 {
     static constexpr const char* NAME = "questOpenMessage_NodeType";
@@ -23,6 +24,7 @@ struct OpenMessage_NodeType : quest::IPhoneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(OpenMessage_NodeType, 0x48);
 } // namespace quest
+using questOpenMessage_NodeType = quest::OpenMessage_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct VisibleTargetPredicate : game::interactions::IPredicateType
 {
     static constexpr const char* NAME = "gameinteractionsVisibleTargetPredicate";
@@ -21,6 +22,7 @@ struct VisibleTargetPredicate : game::interactions::IPredicateType
 };
 RED4EXT_ASSERT_SIZE(VisibleTargetPredicate, 0x38);
 } // namespace game::interactions
+using gameinteractionsVisibleTargetPredicate = game::interactions::VisibleTargetPredicate;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFallbackFrameDesc
 {
     static constexpr const char* NAME = "animAnimFallbackFrameDesc";
@@ -20,6 +21,7 @@ struct AnimFallbackFrameDesc
 };
 RED4EXT_ASSERT_SIZE(AnimFallbackFrameDesc, 0x4);
 } // namespace anim
+using animAnimFallbackFrameDesc = anim::AnimFallbackFrameDesc;
 } // namespace RED4ext
 
 // clang-format on

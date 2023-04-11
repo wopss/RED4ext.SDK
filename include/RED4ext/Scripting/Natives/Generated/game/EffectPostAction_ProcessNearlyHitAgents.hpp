@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectPostAction_ProcessNearlyHitAgents : game::EffectPostAction
 {
     static constexpr const char* NAME = "gameEffectPostAction_ProcessNearlyHitAgents";
@@ -19,6 +20,7 @@ struct EffectPostAction_ProcessNearlyHitAgents : game::EffectPostAction
 };
 RED4EXT_ASSERT_SIZE(EffectPostAction_ProcessNearlyHitAgents, 0x40);
 } // namespace game
+using gameEffectPostAction_ProcessNearlyHitAgents = game::EffectPostAction_ProcessNearlyHitAgents;
 } // namespace RED4ext
 
 // clang-format on

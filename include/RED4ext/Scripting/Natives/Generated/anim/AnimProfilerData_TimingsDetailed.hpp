@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimProfilerData_TimingsDetailed
 {
     static constexpr const char* NAME = "animAnimProfilerData_TimingsDetailed";
@@ -30,6 +31,7 @@ struct AnimProfilerData_TimingsDetailed
 };
 RED4EXT_ASSERT_SIZE(AnimProfilerData_TimingsDetailed, 0x30);
 } // namespace anim
+using animAnimProfilerData_TimingsDetailed = anim::AnimProfilerData_TimingsDetailed;
 } // namespace RED4ext
 
 // clang-format on

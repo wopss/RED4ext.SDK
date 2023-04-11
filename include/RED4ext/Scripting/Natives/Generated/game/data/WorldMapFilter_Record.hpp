@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct WorldMapFilter_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWorldMapFilter_Record";
@@ -20,6 +21,7 @@ struct WorldMapFilter_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(WorldMapFilter_Record, 0x58);
 } // namespace game::data
+using gamedataWorldMapFilter_Record = game::data::WorldMapFilter_Record;
 using WorldMapFilter_Record = game::data::WorldMapFilter_Record;
 } // namespace RED4ext
 

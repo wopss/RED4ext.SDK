@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct AutopilotTransformProvider
 {
     static constexpr const char* NAME = "vehicleAutopilotTransformProvider";
@@ -19,6 +20,7 @@ struct AutopilotTransformProvider
 };
 RED4EXT_ASSERT_SIZE(AutopilotTransformProvider, 0x2A0);
 } // namespace vehicle
+using vehicleAutopilotTransformProvider = vehicle::AutopilotTransformProvider;
 } // namespace RED4ext
 
 // clang-format on

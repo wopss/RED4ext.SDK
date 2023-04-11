@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ShockwaveMetadata : audio::EmitterMetadata
 {
     static constexpr const char* NAME = "audioShockwaveMetadata";
@@ -25,6 +26,7 @@ struct ShockwaveMetadata : audio::EmitterMetadata
 };
 RED4EXT_ASSERT_SIZE(ShockwaveMetadata, 0x78);
 } // namespace audio
+using audioShockwaveMetadata = audio::ShockwaveMetadata;
 } // namespace RED4ext
 
 // clang-format on

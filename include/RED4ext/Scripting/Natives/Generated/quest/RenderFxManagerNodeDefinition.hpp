@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IRenderFxManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct RenderFxManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questRenderFxManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct RenderFxManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(RenderFxManagerNodeDefinition, 0x58);
 } // namespace quest
+using questRenderFxManagerNodeDefinition = quest::RenderFxManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

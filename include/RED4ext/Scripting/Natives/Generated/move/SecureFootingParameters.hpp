@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct SecureFootingParameters
 {
     static constexpr const char* NAME = "moveSecureFootingParameters";
@@ -31,6 +32,7 @@ struct SecureFootingParameters
 };
 RED4EXT_ASSERT_SIZE(SecureFootingParameters, 0x38);
 } // namespace move
+using moveSecureFootingParameters = move::SecureFootingParameters;
 using SecureFootingParameters = move::SecureFootingParameters;
 } // namespace RED4ext
 

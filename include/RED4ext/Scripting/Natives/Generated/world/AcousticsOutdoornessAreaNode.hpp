@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AcousticsOutdoornessAreaNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldAcousticsOutdoornessAreaNode";
@@ -21,6 +22,7 @@ struct AcousticsOutdoornessAreaNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(AcousticsOutdoornessAreaNode, 0x68);
 } // namespace world
+using worldAcousticsOutdoornessAreaNode = world::AcousticsOutdoornessAreaNode;
 } // namespace RED4ext
 
 // clang-format on

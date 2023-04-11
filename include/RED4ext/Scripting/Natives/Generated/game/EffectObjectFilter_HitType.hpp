@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_HitType : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_HitType";
@@ -24,6 +25,7 @@ struct EffectObjectFilter_HitType : game::EffectObjectSingleFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_HitType, 0x48);
 } // namespace game
+using gameEffectObjectFilter_HitType = game::EffectObjectFilter_HitType;
 } // namespace RED4ext
 
 // clang-format on

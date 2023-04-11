@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace ink { 
+namespace ink
+{
 struct VideoSequenceEntry
 {
     static constexpr const char* NAME = "inkVideoSequenceEntry";
@@ -28,6 +29,7 @@ struct VideoSequenceEntry
 };
 RED4EXT_ASSERT_SIZE(VideoSequenceEntry, 0x18);
 } // namespace ink
+using inkVideoSequenceEntry = ink::VideoSequenceEntry;
 } // namespace RED4ext
 
 // clang-format on

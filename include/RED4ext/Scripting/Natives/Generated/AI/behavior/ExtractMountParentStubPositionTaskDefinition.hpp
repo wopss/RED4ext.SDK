@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ExtractMountParentStubPositionTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorExtractMountParentStubPositionTaskDefinition";
@@ -24,6 +25,7 @@ struct ExtractMountParentStubPositionTaskDefinition : AI::behavior::TaskDefiniti
 };
 RED4EXT_ASSERT_SIZE(ExtractMountParentStubPositionTaskDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorExtractMountParentStubPositionTaskDefinition = AI::behavior::ExtractMountParentStubPositionTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

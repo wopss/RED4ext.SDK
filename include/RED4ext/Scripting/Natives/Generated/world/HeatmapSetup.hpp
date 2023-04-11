@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct HeatmapSetup
 {
     static constexpr const char* NAME = "worldHeatmapSetup";
@@ -23,6 +24,7 @@ struct HeatmapSetup
 };
 RED4EXT_ASSERT_SIZE(HeatmapSetup, 0x30);
 } // namespace world
+using worldHeatmapSetup = world::HeatmapSetup;
 } // namespace RED4ext
 
 // clang-format on

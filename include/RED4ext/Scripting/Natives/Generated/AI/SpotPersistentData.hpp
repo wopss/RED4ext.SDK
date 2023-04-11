@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SpotPersistentData
 {
     static constexpr const char* NAME = "AISpotPersistentData";
@@ -26,6 +27,7 @@ struct SpotPersistentData
 };
 RED4EXT_ASSERT_SIZE(SpotPersistentData, 0x20);
 } // namespace AI
+using AISpotPersistentData = AI::SpotPersistentData;
 } // namespace RED4ext
 
 // clang-format on

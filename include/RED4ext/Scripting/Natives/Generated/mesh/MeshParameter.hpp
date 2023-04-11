@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParameter : ISerializable
 {
     static constexpr const char* NAME = "meshMeshParameter";
@@ -19,6 +20,7 @@ struct MeshParameter : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MeshParameter, 0x30);
 } // namespace mesh
+using meshMeshParameter = mesh::MeshParameter;
 } // namespace RED4ext
 
 // clang-format on

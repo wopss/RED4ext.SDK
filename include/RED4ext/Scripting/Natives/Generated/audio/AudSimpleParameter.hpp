@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudSimpleParameter
 {
     static constexpr const char* NAME = "audioAudSimpleParameter";
@@ -22,6 +23,7 @@ struct AudSimpleParameter
 };
 RED4EXT_ASSERT_SIZE(AudSimpleParameter, 0x10);
 } // namespace audio
+using audioAudSimpleParameter = audio::AudSimpleParameter;
 } // namespace RED4ext
 
 // clang-format on

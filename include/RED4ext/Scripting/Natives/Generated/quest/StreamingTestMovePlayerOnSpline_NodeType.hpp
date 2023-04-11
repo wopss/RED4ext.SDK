@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StreamingTestMovePlayerOnSpline_NodeType : quest::IWorldDataManagerNodeType
 {
     static constexpr const char* NAME = "questStreamingTestMovePlayerOnSpline_NodeType";
@@ -21,6 +22,7 @@ struct StreamingTestMovePlayerOnSpline_NodeType : quest::IWorldDataManagerNodeTy
 };
 RED4EXT_ASSERT_SIZE(StreamingTestMovePlayerOnSpline_NodeType, 0x40);
 } // namespace quest
+using questStreamingTestMovePlayerOnSpline_NodeType = quest::StreamingTestMovePlayerOnSpline_NodeType;
 } // namespace RED4ext
 
 // clang-format on

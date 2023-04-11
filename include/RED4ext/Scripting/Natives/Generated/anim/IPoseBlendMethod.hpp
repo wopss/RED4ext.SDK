@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IPoseBlendMethod : ISerializable
 {
     static constexpr const char* NAME = "animIPoseBlendMethod";
@@ -19,6 +20,7 @@ struct IPoseBlendMethod : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IPoseBlendMethod, 0x30);
 } // namespace anim
+using animIPoseBlendMethod = anim::IPoseBlendMethod;
 } // namespace RED4ext
 
 // clang-format on

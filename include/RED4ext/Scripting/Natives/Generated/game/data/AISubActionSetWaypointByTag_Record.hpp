@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionSetWaypointByTag_Record : game::data::AISubActionSetTargetByTag_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionSetWaypointByTag_Record";
@@ -19,6 +20,7 @@ struct AISubActionSetWaypointByTag_Record : game::data::AISubActionSetTargetByTa
 };
 RED4EXT_ASSERT_SIZE(AISubActionSetWaypointByTag_Record, 0x70);
 } // namespace game::data
+using gamedataAISubActionSetWaypointByTag_Record = game::data::AISubActionSetWaypointByTag_Record;
 using AISubActionSetWaypointByTag_Record = game::data::AISubActionSetWaypointByTag_Record;
 } // namespace RED4ext
 

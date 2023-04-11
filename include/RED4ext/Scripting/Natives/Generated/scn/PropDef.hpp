@@ -23,7 +23,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PropDef
 {
     static constexpr const char* NAME = "scnPropDef";
@@ -48,6 +49,7 @@ struct PropDef
 };
 RED4EXT_ASSERT_SIZE(PropDef, 0x180);
 } // namespace scn
+using scnPropDef = scn::PropDef;
 } // namespace RED4ext
 
 // clang-format on

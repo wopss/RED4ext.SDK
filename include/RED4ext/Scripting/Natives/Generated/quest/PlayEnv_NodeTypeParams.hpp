@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace world { struct EnvironmentAreaParameters; }
 
-namespace quest { 
+namespace quest
+{
 struct PlayEnv_NodeTypeParams
 {
     static constexpr const char* NAME = "questPlayEnv_NodeTypeParams";
@@ -26,6 +27,7 @@ struct PlayEnv_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(PlayEnv_NodeTypeParams, 0x28);
 } // namespace quest
+using questPlayEnv_NodeTypeParams = quest::PlayEnv_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

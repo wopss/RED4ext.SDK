@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CoverInstance : game::SmartObjectWorkspotInstance
 {
     static constexpr const char* NAME = "gameCoverInstance";
@@ -20,6 +21,7 @@ struct CoverInstance : game::SmartObjectWorkspotInstance
 };
 RED4EXT_ASSERT_SIZE(CoverInstance, 0xF8);
 } // namespace game
+using gameCoverInstance = game::CoverInstance;
 } // namespace RED4ext
 
 // clang-format on

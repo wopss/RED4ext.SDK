@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct TerrainSystemInstanceInfo
 {
     static constexpr const char* NAME = "interopTerrainSystemInstanceInfo";
@@ -32,6 +33,7 @@ struct TerrainSystemInstanceInfo
 };
 RED4EXT_ASSERT_SIZE(TerrainSystemInstanceInfo, 0x38);
 } // namespace interop
+using interopTerrainSystemInstanceInfo = interop::TerrainSystemInstanceInfo;
 } // namespace RED4ext
 
 // clang-format on

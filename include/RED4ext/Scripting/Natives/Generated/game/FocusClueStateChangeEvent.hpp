@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FocusClueStateChangeEvent : red::Event
 {
     static constexpr const char* NAME = "gameFocusClueStateChangeEvent";
@@ -22,6 +23,7 @@ struct FocusClueStateChangeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(FocusClueStateChangeEvent, 0x48);
 } // namespace game
+using gameFocusClueStateChangeEvent = game::FocusClueStateChangeEvent;
 using FocusClueStateChangeEvent = game::FocusClueStateChangeEvent;
 } // namespace RED4ext
 

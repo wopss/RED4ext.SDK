@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CompressedSmartObjectPointProperties
 {
     static constexpr const char* NAME = "gameCompressedSmartObjectPointProperties";
@@ -19,6 +20,7 @@ struct CompressedSmartObjectPointProperties
 };
 RED4EXT_ASSERT_SIZE(CompressedSmartObjectPointProperties, 0x2);
 } // namespace game
+using gameCompressedSmartObjectPointProperties = game::CompressedSmartObjectPointProperties;
 } // namespace RED4ext
 
 // clang-format on

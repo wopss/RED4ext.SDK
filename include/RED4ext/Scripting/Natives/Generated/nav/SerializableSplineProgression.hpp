@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace nav { 
+namespace nav
+{
 struct SerializableSplineProgression
 {
     static constexpr const char* NAME = "navSerializableSplineProgression";
@@ -20,6 +21,7 @@ struct SerializableSplineProgression
 };
 RED4EXT_ASSERT_SIZE(SerializableSplineProgression, 0x8);
 } // namespace nav
+using navSerializableSplineProgression = nav::SerializableSplineProgression;
 } // namespace RED4ext
 
 // clang-format on

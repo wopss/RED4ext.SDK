@@ -18,7 +18,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct AddRemoveItem_NodeTypeParams : ISerializable
 {
     static constexpr const char* NAME = "questAddRemoveItem_NodeTypeParams";
@@ -42,6 +43,7 @@ struct AddRemoveItem_NodeTypeParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AddRemoveItem_NodeTypeParams, 0xC0);
 } // namespace quest
+using questAddRemoveItem_NodeTypeParams = quest::AddRemoveItem_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

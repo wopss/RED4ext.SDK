@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct PatrolPathParameters; }
 
-namespace quest { 
+namespace quest
+{
 struct PatrolParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questPatrolParams";
@@ -25,6 +26,7 @@ struct PatrolParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(PatrolParams, 0x58);
 } // namespace quest
+using questPatrolParams = quest::PatrolParams;
 } // namespace RED4ext
 
 // clang-format on

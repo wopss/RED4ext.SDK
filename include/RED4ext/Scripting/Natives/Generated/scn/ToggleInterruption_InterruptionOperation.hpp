@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ToggleInterruption_InterruptionOperation : scn::IInterruptionOperation
 {
     static constexpr const char* NAME = "scnToggleInterruption_InterruptionOperation";
@@ -21,6 +22,7 @@ struct ToggleInterruption_InterruptionOperation : scn::IInterruptionOperation
 };
 RED4EXT_ASSERT_SIZE(ToggleInterruption_InterruptionOperation, 0x38);
 } // namespace scn
+using scnToggleInterruption_InterruptionOperation = scn::ToggleInterruption_InterruptionOperation;
 } // namespace RED4ext
 
 // clang-format on

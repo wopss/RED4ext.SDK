@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IStatusEffectListener : IScriptable
 {
     static constexpr const char* NAME = "gameIStatusEffectListener";
@@ -19,6 +20,7 @@ struct IStatusEffectListener : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IStatusEffectListener, 0x40);
 } // namespace game
+using gameIStatusEffectListener = game::IStatusEffectListener;
 using IStatusEffectListener = game::IStatusEffectListener;
 } // namespace RED4ext
 

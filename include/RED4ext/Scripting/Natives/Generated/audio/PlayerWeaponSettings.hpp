@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace audio { struct WeaponEventOverrides; }
 
-namespace audio { 
+namespace audio
+{
 struct PlayerWeaponSettings : audio::WeaponSettings
 {
     static constexpr const char* NAME = "audioPlayerWeaponSettings";
@@ -46,6 +47,7 @@ struct PlayerWeaponSettings : audio::WeaponSettings
 };
 RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x168);
 } // namespace audio
+using audioPlayerWeaponSettings = audio::PlayerWeaponSettings;
 } // namespace RED4ext
 
 // clang-format on

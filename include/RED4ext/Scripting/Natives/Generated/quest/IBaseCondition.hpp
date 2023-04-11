@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IBaseCondition : graph::IGraphNodeCondition
 {
     static constexpr const char* NAME = "questIBaseCondition";
@@ -19,6 +20,7 @@ struct IBaseCondition : graph::IGraphNodeCondition
 };
 RED4EXT_ASSERT_SIZE(IBaseCondition, 0x30);
 } // namespace quest
+using questIBaseCondition = quest::IBaseCondition;
 } // namespace RED4ext
 
 // clang-format on

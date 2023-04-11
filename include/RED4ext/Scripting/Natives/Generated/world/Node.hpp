@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct Node : ISerializable
 {
     static constexpr const char* NAME = "worldNode";
@@ -22,6 +23,7 @@ struct Node : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Node, 0x38);
 } // namespace world
+using worldNode = world::Node;
 } // namespace RED4ext
 
 // clang-format on

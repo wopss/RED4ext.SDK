@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct InertializationRotationLimit
 {
     static constexpr const char* NAME = "animInertializationRotationLimit";
@@ -25,6 +26,7 @@ struct InertializationRotationLimit
 };
 RED4EXT_ASSERT_SIZE(InertializationRotationLimit, 0x40);
 } // namespace anim
+using animInertializationRotationLimit = anim::InertializationRotationLimit;
 } // namespace RED4ext
 
 // clang-format on

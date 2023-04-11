@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct VehicleCommandParams; }
 
-namespace quest { 
+namespace quest
+{
 struct VehicleNodeCommandDefinition : quest::AICommandNodeBase
 {
     static constexpr const char* NAME = "questVehicleNodeCommandDefinition";
@@ -25,6 +26,7 @@ struct VehicleNodeCommandDefinition : quest::AICommandNodeBase
 };
 RED4EXT_ASSERT_SIZE(VehicleNodeCommandDefinition, 0x90);
 } // namespace quest
+using questVehicleNodeCommandDefinition = quest::VehicleNodeCommandDefinition;
 } // namespace RED4ext
 
 // clang-format on

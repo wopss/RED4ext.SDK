@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GameNotificationToken : IScriptable
 {
     static constexpr const char* NAME = "inkGameNotificationToken";
@@ -20,6 +21,7 @@ struct GameNotificationToken : IScriptable
 };
 RED4EXT_ASSERT_SIZE(GameNotificationToken, 0x88);
 } // namespace ink
+using inkGameNotificationToken = ink::GameNotificationToken;
 } // namespace RED4ext
 
 // clang-format on

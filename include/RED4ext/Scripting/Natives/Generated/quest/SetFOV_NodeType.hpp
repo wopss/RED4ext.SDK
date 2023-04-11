@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetFOV_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questSetFOV_NodeType";
@@ -21,6 +22,7 @@ struct SetFOV_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetFOV_NodeType, 0x40);
 } // namespace quest
+using questSetFOV_NodeType = quest::SetFOV_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SelectorController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkSelectorController";
@@ -27,6 +28,7 @@ struct SelectorController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(SelectorController, 0xC8);
 } // namespace ink
+using inkSelectorController = ink::SelectorController;
 using SelectorController = ink::SelectorController;
 } // namespace RED4ext
 

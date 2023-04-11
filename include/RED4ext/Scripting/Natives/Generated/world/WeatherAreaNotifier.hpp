@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WeatherAreaNotifier : world::ITriggerAreaNotifer
 {
     static constexpr const char* NAME = "worldWeatherAreaNotifier";
@@ -25,6 +26,7 @@ struct WeatherAreaNotifier : world::ITriggerAreaNotifer
 };
 RED4EXT_ASSERT_SIZE(WeatherAreaNotifier, 0xE0);
 } // namespace world
+using worldWeatherAreaNotifier = world::WeatherAreaNotifier;
 } // namespace RED4ext
 
 // clang-format on

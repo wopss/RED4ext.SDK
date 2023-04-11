@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IAnimStateTransitionInterpolator : ISerializable
 {
     static constexpr const char* NAME = "animIAnimStateTransitionInterpolator";
@@ -19,6 +20,7 @@ struct IAnimStateTransitionInterpolator : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IAnimStateTransitionInterpolator, 0x30);
 } // namespace anim
+using animIAnimStateTransitionInterpolator = anim::IAnimStateTransitionInterpolator;
 } // namespace RED4ext
 
 // clang-format on

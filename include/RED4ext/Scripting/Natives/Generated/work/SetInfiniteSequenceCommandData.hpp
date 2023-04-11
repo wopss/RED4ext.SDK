@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct SetInfiniteSequenceCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workSetInfiniteSequenceCommandData";
@@ -20,6 +21,7 @@ struct SetInfiniteSequenceCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(SetInfiniteSequenceCommandData, 0x10);
 } // namespace work
+using workSetInfiniteSequenceCommandData = work::SetInfiniteSequenceCommandData;
 } // namespace RED4ext
 
 // clang-format on

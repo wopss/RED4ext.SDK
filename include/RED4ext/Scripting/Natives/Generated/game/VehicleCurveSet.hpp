@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VehicleCurveSet : CurveSet
 {
     static constexpr const char* NAME = "gameVehicleCurveSet";
@@ -19,6 +20,7 @@ struct VehicleCurveSet : CurveSet
 };
 RED4EXT_ASSERT_SIZE(VehicleCurveSet, 0x50);
 } // namespace game
+using gameVehicleCurveSet = game::VehicleCurveSet;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MinimizeCallRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "questMinimizeCallRequest";
@@ -21,6 +22,7 @@ struct MinimizeCallRequest : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(MinimizeCallRequest, 0x50);
 } // namespace quest
+using questMinimizeCallRequest = quest::MinimizeCallRequest;
 } // namespace RED4ext
 
 // clang-format on

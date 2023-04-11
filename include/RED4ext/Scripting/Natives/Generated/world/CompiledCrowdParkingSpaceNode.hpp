@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CompiledCrowdParkingSpaceNode : world::Node
 {
     static constexpr const char* NAME = "worldCompiledCrowdParkingSpaceNode";
@@ -21,6 +22,7 @@ struct CompiledCrowdParkingSpaceNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(CompiledCrowdParkingSpaceNode, 0x40);
 } // namespace world
+using worldCompiledCrowdParkingSpaceNode = world::CompiledCrowdParkingSpaceNode;
 } // namespace RED4ext
 
 // clang-format on

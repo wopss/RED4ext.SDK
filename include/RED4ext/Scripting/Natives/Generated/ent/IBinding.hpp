@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct IBinding : ISerializable
 {
     static constexpr const char* NAME = "entIBinding";
@@ -25,6 +26,7 @@ struct IBinding : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IBinding, 0x70);
 } // namespace ent
+using entIBinding = ent::IBinding;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Controller : IScriptable
 {
     static constexpr const char* NAME = "inkanimController";
@@ -20,6 +21,7 @@ struct Controller : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Controller, 0x88);
 } // namespace ink::anim
+using inkanimController = ink::anim::Controller;
 using inkAnimController = ink::anim::Controller;
 } // namespace RED4ext
 

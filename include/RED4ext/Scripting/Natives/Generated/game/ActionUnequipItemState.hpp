@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionUnequipItemState : game::ActionReplicatedState
 {
     static constexpr const char* NAME = "gameActionUnequipItemState";
@@ -26,6 +27,7 @@ struct ActionUnequipItemState : game::ActionReplicatedState
 };
 RED4EXT_ASSERT_SIZE(ActionUnequipItemState, 0x48);
 } // namespace game
+using gameActionUnequipItemState = game::ActionUnequipItemState;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct TOMLKeyValue : red::TOMLBaseValue
 {
     static constexpr const char* NAME = "redTOMLKeyValue";
@@ -20,6 +21,7 @@ struct TOMLKeyValue : red::TOMLBaseValue
 };
 RED4EXT_ASSERT_SIZE(TOMLKeyValue, 0x80);
 } // namespace red
+using redTOMLKeyValue = red::TOMLKeyValue;
 } // namespace RED4ext
 
 // clang-format on

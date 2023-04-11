@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PopupsManager : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiPopupsManager";
@@ -26,6 +27,7 @@ struct PopupsManager : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(PopupsManager, 0x1A0);
 } // namespace game::ui
+using gameuiPopupsManager = game::ui::PopupsManager;
 using PopupsManager = game::ui::PopupsManager;
 } // namespace RED4ext
 

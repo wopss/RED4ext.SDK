@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CrowdManagerNodeType_ControlCrowd : quest::ICrowdManager_NodeType
 {
     static constexpr const char* NAME = "questCrowdManagerNodeType_ControlCrowd";
@@ -24,6 +25,7 @@ struct CrowdManagerNodeType_ControlCrowd : quest::ICrowdManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(CrowdManagerNodeType_ControlCrowd, 0x40);
 } // namespace quest
+using questCrowdManagerNodeType_ControlCrowd = quest::CrowdManagerNodeType_ControlCrowd;
 } // namespace RED4ext
 
 // clang-format on

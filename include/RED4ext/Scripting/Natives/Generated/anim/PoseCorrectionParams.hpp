@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct PoseCorrectionParams
 {
     static constexpr const char* NAME = "animPoseCorrectionParams";
@@ -23,6 +24,7 @@ struct PoseCorrectionParams
 };
 RED4EXT_ASSERT_SIZE(PoseCorrectionParams, 0x2B0);
 } // namespace anim
+using animPoseCorrectionParams = anim::PoseCorrectionParams;
 } // namespace RED4ext
 
 // clang-format on

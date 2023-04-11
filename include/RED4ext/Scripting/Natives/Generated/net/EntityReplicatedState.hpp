@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace net { 
+namespace net
+{
 struct EntityReplicatedState : net::IEntityState
 {
     static constexpr const char* NAME = "netEntityReplicatedState";
@@ -19,6 +20,7 @@ struct EntityReplicatedState : net::IEntityState
 };
 RED4EXT_ASSERT_SIZE(EntityReplicatedState, 0x50);
 } // namespace net
+using netEntityReplicatedState = net::EntityReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

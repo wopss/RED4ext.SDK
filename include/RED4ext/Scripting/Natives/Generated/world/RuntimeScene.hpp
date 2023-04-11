@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeScene
 {
     static constexpr const char* NAME = "worldRuntimeScene";
@@ -19,6 +20,7 @@ struct RuntimeScene
 };
 RED4EXT_ASSERT_SIZE(RuntimeScene, 0x4B0);
 } // namespace world
+using worldRuntimeScene = world::RuntimeScene;
 } // namespace RED4ext
 
 // clang-format on

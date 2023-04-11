@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RuntimeSystemEditorMeshes : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "entRuntimeSystemEditorMeshes";
@@ -20,6 +21,7 @@ struct RuntimeSystemEditorMeshes : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemEditorMeshes, 0x88);
 } // namespace ent
+using entRuntimeSystemEditorMeshes = ent::RuntimeSystemEditorMeshes;
 } // namespace RED4ext
 
 // clang-format on

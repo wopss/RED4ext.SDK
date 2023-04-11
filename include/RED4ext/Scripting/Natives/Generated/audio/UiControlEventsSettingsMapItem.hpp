@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace audio { struct KeySoundEventDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct UiControlEventsSettingsMapItem : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioUiControlEventsSettingsMapItem";
@@ -25,6 +26,7 @@ struct UiControlEventsSettingsMapItem : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(UiControlEventsSettingsMapItem, 0x50);
 } // namespace audio
+using audioUiControlEventsSettingsMapItem = audio::UiControlEventsSettingsMapItem;
 } // namespace RED4ext
 
 // clang-format on

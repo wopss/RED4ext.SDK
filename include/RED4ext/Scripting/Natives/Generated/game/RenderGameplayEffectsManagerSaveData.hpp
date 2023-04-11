@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct RenderGameplayEffectsManagerSaveData : ISerializable
 {
     static constexpr const char* NAME = "gameRenderGameplayEffectsManagerSaveData";
@@ -24,6 +25,7 @@ struct RenderGameplayEffectsManagerSaveData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(RenderGameplayEffectsManagerSaveData, 0x80);
 } // namespace game
+using gameRenderGameplayEffectsManagerSaveData = game::RenderGameplayEffectsManagerSaveData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SAnimationBufferBitwiseCompressedBoneTrack
 {
     static constexpr const char* NAME = "animSAnimationBufferBitwiseCompressedBoneTrack";
@@ -22,6 +23,7 @@ struct SAnimationBufferBitwiseCompressedBoneTrack
 };
 RED4EXT_ASSERT_SIZE(SAnimationBufferBitwiseCompressedBoneTrack, 0x30);
 } // namespace anim
+using animSAnimationBufferBitwiseCompressedBoneTrack = anim::SAnimationBufferBitwiseCompressedBoneTrack;
 } // namespace RED4ext
 
 // clang-format on

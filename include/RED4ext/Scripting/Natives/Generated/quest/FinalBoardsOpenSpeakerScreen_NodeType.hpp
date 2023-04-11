@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FinalBoardsOpenSpeakerScreen_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questFinalBoardsOpenSpeakerScreen_NodeType";
@@ -23,6 +24,7 @@ struct FinalBoardsOpenSpeakerScreen_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(FinalBoardsOpenSpeakerScreen_NodeType, 0x60);
 } // namespace quest
+using questFinalBoardsOpenSpeakerScreen_NodeType = quest::FinalBoardsOpenSpeakerScreen_NodeType;
 } // namespace RED4ext
 
 // clang-format on

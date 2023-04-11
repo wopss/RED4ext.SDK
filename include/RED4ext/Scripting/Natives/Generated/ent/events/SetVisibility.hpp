@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent::events { 
+namespace ent::events
+{
 struct SetVisibility : red::Event
 {
     static constexpr const char* NAME = "enteventsSetVisibility";
@@ -23,6 +24,7 @@ struct SetVisibility : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetVisibility, 0x50);
 } // namespace ent::events
+using enteventsSetVisibility = ent::events::SetVisibility;
 } // namespace RED4ext
 
 // clang-format on

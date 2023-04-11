@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ReplicatedVariableValue
 {
     static constexpr const char* NAME = "entReplicatedVariableValue";
@@ -24,6 +25,7 @@ struct ReplicatedVariableValue
 };
 RED4EXT_ASSERT_SIZE(ReplicatedVariableValue, 0x18);
 } // namespace ent
+using entReplicatedVariableValue = ent::ReplicatedVariableValue;
 } // namespace RED4ext
 
 // clang-format on

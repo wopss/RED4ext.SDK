@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AICommand_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAICommand_Record";
@@ -20,6 +21,7 @@ struct AICommand_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AICommand_Record, 0x50);
 } // namespace game::data
+using gamedataAICommand_Record = game::data::AICommand_Record;
 using AICommand_Record = game::data::AICommand_Record;
 } // namespace RED4ext
 

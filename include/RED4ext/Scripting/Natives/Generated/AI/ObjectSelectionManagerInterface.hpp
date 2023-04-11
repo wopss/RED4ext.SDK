@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ObjectSelectionManagerInterface : game::IGameSystem
 {
     static constexpr const char* NAME = "AIObjectSelectionManagerInterface";
@@ -19,6 +20,7 @@ struct ObjectSelectionManagerInterface : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ObjectSelectionManagerInterface, 0x48);
 } // namespace AI
+using AIObjectSelectionManagerInterface = AI::ObjectSelectionManagerInterface;
 } // namespace RED4ext
 
 // clang-format on

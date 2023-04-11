@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ChangeVoicesetState_NodeTypeParams
 {
     static constexpr const char* NAME = "questChangeVoicesetState_NodeTypeParams";
@@ -27,6 +28,7 @@ struct ChangeVoicesetState_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(ChangeVoicesetState_NodeTypeParams, 0x50);
 } // namespace quest
+using questChangeVoicesetState_NodeTypeParams = quest::ChangeVoicesetState_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct HasAnimationCondition : anim::IStaticCondition
 {
     static constexpr const char* NAME = "animHasAnimationCondition";
@@ -21,6 +22,7 @@ struct HasAnimationCondition : anim::IStaticCondition
 };
 RED4EXT_ASSERT_SIZE(HasAnimationCondition, 0x38);
 } // namespace anim
+using animHasAnimationCondition = anim::HasAnimationCondition;
 } // namespace RED4ext
 
 // clang-format on

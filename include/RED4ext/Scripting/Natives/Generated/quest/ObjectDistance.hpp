@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ObjectDistance : quest::IDistance
 {
     static constexpr const char* NAME = "questObjectDistance";
@@ -24,6 +25,7 @@ struct ObjectDistance : quest::IDistance
 };
 RED4EXT_ASSERT_SIZE(ObjectDistance, 0xA8);
 } // namespace quest
+using questObjectDistance = quest::ObjectDistance;
 } // namespace RED4ext
 
 // clang-format on

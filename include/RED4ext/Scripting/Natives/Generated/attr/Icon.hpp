@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Icon : attr::Attribute
 {
     static constexpr const char* NAME = "attrIcon";
@@ -21,6 +22,7 @@ struct Icon : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(Icon, 0x50);
 } // namespace attr
+using attrIcon = attr::Icon;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PrepareTPPRepresentationEvent : red::Event
 {
     static constexpr const char* NAME = "gamePrepareTPPRepresentationEvent";
@@ -19,6 +20,7 @@ struct PrepareTPPRepresentationEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PrepareTPPRepresentationEvent, 0x40);
 } // namespace game
+using gamePrepareTPPRepresentationEvent = game::PrepareTPPRepresentationEvent;
 } // namespace RED4ext
 
 // clang-format on

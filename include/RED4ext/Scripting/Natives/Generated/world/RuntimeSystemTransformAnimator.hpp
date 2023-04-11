@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemTransformAnimator : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemTransformAnimator";
@@ -20,6 +21,7 @@ struct RuntimeSystemTransformAnimator : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemTransformAnimator, 0x100);
 } // namespace world
+using worldRuntimeSystemTransformAnimator = world::RuntimeSystemTransformAnimator;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct NPCNextToTheCrosshair
 {
     static constexpr const char* NAME = "gameuiNPCNextToTheCrosshair";
@@ -41,6 +42,7 @@ struct NPCNextToTheCrosshair
 };
 RED4EXT_ASSERT_SIZE(NPCNextToTheCrosshair, 0x58);
 } // namespace game::ui
+using gameuiNPCNextToTheCrosshair = game::ui::NPCNextToTheCrosshair;
 using NPCNextToTheCrosshair = game::ui::NPCNextToTheCrosshair;
 } // namespace RED4ext
 

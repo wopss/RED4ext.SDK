@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct BaseRequestsHandler : ink::ISystemRequestsHandler
 {
     static constexpr const char* NAME = "gsmBaseRequestsHandler";
@@ -22,6 +23,7 @@ struct BaseRequestsHandler : ink::ISystemRequestsHandler
 };
 RED4EXT_ASSERT_SIZE(BaseRequestsHandler, 0x528);
 } // namespace gsm
+using gsmBaseRequestsHandler = gsm::BaseRequestsHandler;
 } // namespace RED4ext
 
 // clang-format on

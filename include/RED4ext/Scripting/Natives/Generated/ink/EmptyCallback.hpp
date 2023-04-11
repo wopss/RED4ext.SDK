@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct EmptyCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkEmptyCallback";
@@ -20,6 +21,7 @@ struct EmptyCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(EmptyCallback, 0x38);
 } // namespace ink
+using inkEmptyCallback = ink::EmptyCallback;
 } // namespace RED4ext
 
 // clang-format on

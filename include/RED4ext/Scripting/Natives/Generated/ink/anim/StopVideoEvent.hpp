@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct StopVideoEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimStopVideoEvent";
@@ -19,6 +20,7 @@ struct StopVideoEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(StopVideoEvent, 0x48);
 } // namespace ink::anim
+using inkanimStopVideoEvent = ink::anim::StopVideoEvent;
 } // namespace RED4ext
 
 // clang-format on

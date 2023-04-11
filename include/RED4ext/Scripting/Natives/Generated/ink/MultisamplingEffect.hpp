@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MultisamplingEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkMultisamplingEffect";
@@ -19,6 +20,7 @@ struct MultisamplingEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(MultisamplingEffect, 0x68);
 } // namespace ink
+using inkMultisamplingEffect = ink::MultisamplingEffect;
 } // namespace RED4ext
 
 // clang-format on

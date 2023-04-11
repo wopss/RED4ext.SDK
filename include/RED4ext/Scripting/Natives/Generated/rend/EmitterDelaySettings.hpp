@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct EmitterDelaySettings
 {
     static constexpr const char* NAME = "rendEmitterDelaySettings";
@@ -23,6 +24,7 @@ struct EmitterDelaySettings
 };
 RED4EXT_ASSERT_SIZE(EmitterDelaySettings, 0xC);
 } // namespace rend
+using rendEmitterDelaySettings = rend::EmitterDelaySettings;
 } // namespace RED4ext
 
 // clang-format on

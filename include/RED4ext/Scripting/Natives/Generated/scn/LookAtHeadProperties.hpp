@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LookAtHeadProperties
 {
     static constexpr const char* NAME = "scnLookAtHeadProperties";
@@ -21,6 +22,7 @@ struct LookAtHeadProperties
 };
 RED4EXT_ASSERT_SIZE(LookAtHeadProperties, 0xC);
 } // namespace scn
+using scnLookAtHeadProperties = scn::LookAtHeadProperties;
 } // namespace RED4ext
 
 // clang-format on

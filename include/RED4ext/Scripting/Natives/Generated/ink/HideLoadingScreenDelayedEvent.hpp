@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HideLoadingScreenDelayedEvent : red::Event
 {
     static constexpr const char* NAME = "inkHideLoadingScreenDelayedEvent";
@@ -19,6 +20,7 @@ struct HideLoadingScreenDelayedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HideLoadingScreenDelayedEvent, 0x40);
 } // namespace ink
+using inkHideLoadingScreenDelayedEvent = ink::HideLoadingScreenDelayedEvent;
 } // namespace RED4ext
 
 // clang-format on

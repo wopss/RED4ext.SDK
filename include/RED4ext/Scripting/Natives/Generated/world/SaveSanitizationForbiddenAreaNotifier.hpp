@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SaveSanitizationForbiddenAreaNotifier : world::ITriggerAreaNotifer
 {
     static constexpr const char* NAME = "worldSaveSanitizationForbiddenAreaNotifier";
@@ -19,6 +20,7 @@ struct SaveSanitizationForbiddenAreaNotifier : world::ITriggerAreaNotifer
 };
 RED4EXT_ASSERT_SIZE(SaveSanitizationForbiddenAreaNotifier, 0xB8);
 } // namespace world
+using worldSaveSanitizationForbiddenAreaNotifier = world::SaveSanitizationForbiddenAreaNotifier;
 } // namespace RED4ext
 
 // clang-format on

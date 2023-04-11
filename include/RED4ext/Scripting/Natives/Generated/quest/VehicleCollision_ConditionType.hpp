@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VehicleCollision_ConditionType : quest::IVehicleConditionType
 {
     static constexpr const char* NAME = "questVehicleCollision_ConditionType";
@@ -22,6 +23,7 @@ struct VehicleCollision_ConditionType : quest::IVehicleConditionType
 };
 RED4EXT_ASSERT_SIZE(VehicleCollision_ConditionType, 0x40);
 } // namespace quest
+using questVehicleCollision_ConditionType = quest::VehicleCollision_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

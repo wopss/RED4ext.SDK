@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct TEMP_IKTargetsControllerBodyType
 {
     static constexpr const char* NAME = "animTEMP_IKTargetsControllerBodyType";
@@ -24,6 +25,7 @@ struct TEMP_IKTargetsControllerBodyType
 };
 RED4EXT_ASSERT_SIZE(TEMP_IKTargetsControllerBodyType, 0x20);
 } // namespace anim
+using animTEMP_IKTargetsControllerBodyType = anim::TEMP_IKTargetsControllerBodyType;
 } // namespace RED4ext
 
 // clang-format on

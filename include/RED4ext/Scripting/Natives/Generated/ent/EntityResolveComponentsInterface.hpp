@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntityResolveComponentsInterface
 {
     static constexpr const char* NAME = "entEntityResolveComponentsInterface";
@@ -19,6 +20,7 @@ struct EntityResolveComponentsInterface
 };
 RED4EXT_ASSERT_SIZE(EntityResolveComponentsInterface, 0x8);
 } // namespace ent
+using entEntityResolveComponentsInterface = ent::EntityResolveComponentsInterface;
 using EntityResolveComponentsInterface = ent::EntityResolveComponentsInterface;
 } // namespace RED4ext
 

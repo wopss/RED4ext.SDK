@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SimpleScreenMessage
 {
     static constexpr const char* NAME = "gameSimpleScreenMessage";
@@ -25,6 +26,7 @@ struct SimpleScreenMessage
 };
 RED4EXT_ASSERT_SIZE(SimpleScreenMessage, 0x30);
 } // namespace game
+using gameSimpleScreenMessage = game::SimpleScreenMessage;
 using SimpleScreenMessage = game::SimpleScreenMessage;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct EntityTemplate; }
 
-namespace ent { 
+namespace ent
+{
 struct EntityUserComponentResolution
 {
     static constexpr const char* NAME = "entEntityUserComponentResolution";
@@ -26,6 +27,7 @@ struct EntityUserComponentResolution
 };
 RED4EXT_ASSERT_SIZE(EntityUserComponentResolution, 0x18);
 } // namespace ent
+using entEntityUserComponentResolution = ent::EntityUserComponentResolution;
 } // namespace RED4ext
 
 // clang-format on

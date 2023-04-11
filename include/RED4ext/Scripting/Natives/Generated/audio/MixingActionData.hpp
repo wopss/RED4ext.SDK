@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MixingActionData
 {
     static constexpr const char* NAME = "audioMixingActionData";
@@ -32,6 +33,7 @@ struct MixingActionData
 };
 RED4EXT_ASSERT_SIZE(MixingActionData, 0x38);
 } // namespace audio
+using audioMixingActionData = audio::MixingActionData;
 } // namespace RED4ext
 
 // clang-format on

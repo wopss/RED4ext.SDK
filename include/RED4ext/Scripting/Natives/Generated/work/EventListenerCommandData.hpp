@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct EventListenerCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workEventListenerCommandData";
@@ -20,6 +21,7 @@ struct EventListenerCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(EventListenerCommandData, 0x20);
 } // namespace work
+using workEventListenerCommandData = work::EventListenerCommandData;
 } // namespace RED4ext
 
 // clang-format on

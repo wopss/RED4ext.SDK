@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetupControlledByStoryEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "gameSetupControlledByStoryEvent";
@@ -20,6 +21,7 @@ struct SetupControlledByStoryEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(SetupControlledByStoryEvent, 0x80);
 } // namespace game
+using gameSetupControlledByStoryEvent = game::SetupControlledByStoryEvent;
 } // namespace RED4ext
 
 // clang-format on

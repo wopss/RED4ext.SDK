@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct NamedTrackIndex
 {
     static constexpr const char* NAME = "animNamedTrackIndex";
@@ -21,6 +22,7 @@ struct NamedTrackIndex
 };
 RED4EXT_ASSERT_SIZE(NamedTrackIndex, 0x18);
 } // namespace anim
+using animNamedTrackIndex = anim::NamedTrackIndex;
 } // namespace RED4ext
 
 // clang-format on

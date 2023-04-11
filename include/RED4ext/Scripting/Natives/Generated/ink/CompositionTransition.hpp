@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CompositionTransition
 {
     static constexpr const char* NAME = "inkCompositionTransition";
@@ -23,6 +24,7 @@ struct CompositionTransition
 };
 RED4EXT_ASSERT_SIZE(CompositionTransition, 0x18);
 } // namespace ink
+using inkCompositionTransition = ink::CompositionTransition;
 } // namespace RED4ext
 
 // clang-format on

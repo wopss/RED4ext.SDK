@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct IQuestPrefabStateListener : ISerializable
 {
     static constexpr const char* NAME = "worldIQuestPrefabStateListener";
@@ -19,6 +20,7 @@ struct IQuestPrefabStateListener : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IQuestPrefabStateListener, 0x30);
 } // namespace world
+using worldIQuestPrefabStateListener = world::IQuestPrefabStateListener;
 } // namespace RED4ext
 
 // clang-format on

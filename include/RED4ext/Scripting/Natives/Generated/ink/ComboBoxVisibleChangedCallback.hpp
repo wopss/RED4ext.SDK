@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ComboBoxVisibleChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkComboBoxVisibleChangedCallback";
@@ -20,6 +21,7 @@ struct ComboBoxVisibleChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(ComboBoxVisibleChangedCallback, 0x38);
 } // namespace ink
+using inkComboBoxVisibleChangedCallback = ink::ComboBoxVisibleChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

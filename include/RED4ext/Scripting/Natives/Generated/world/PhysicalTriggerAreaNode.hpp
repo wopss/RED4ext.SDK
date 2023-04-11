@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace world { 
+namespace world
+{
 struct PhysicalTriggerAreaNode : world::Node
 {
     static constexpr const char* NAME = "worldPhysicalTriggerAreaNode";
@@ -28,6 +29,7 @@ struct PhysicalTriggerAreaNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(PhysicalTriggerAreaNode, 0x80);
 } // namespace world
+using worldPhysicalTriggerAreaNode = world::PhysicalTriggerAreaNode;
 } // namespace RED4ext
 
 // clang-format on

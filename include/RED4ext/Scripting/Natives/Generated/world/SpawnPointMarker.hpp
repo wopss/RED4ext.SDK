@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SpawnPointMarker : world::IMarker
 {
     static constexpr const char* NAME = "worldSpawnPointMarker";
@@ -21,6 +22,7 @@ struct SpawnPointMarker : world::IMarker
 };
 RED4EXT_ASSERT_SIZE(SpawnPointMarker, 0x38);
 } // namespace world
+using worldSpawnPointMarker = world::SpawnPointMarker;
 } // namespace RED4ext
 
 // clang-format on

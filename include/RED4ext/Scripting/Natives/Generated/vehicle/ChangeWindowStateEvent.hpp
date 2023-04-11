@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ChangeWindowStateEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleChangeWindowStateEvent";
@@ -23,6 +24,7 @@ struct ChangeWindowStateEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ChangeWindowStateEvent, 0x48);
 } // namespace vehicle
+using vehicleChangeWindowStateEvent = vehicle::ChangeWindowStateEvent;
 } // namespace RED4ext
 
 // clang-format on

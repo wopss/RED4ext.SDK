@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IWorldDataManagerNodeType : quest::IRetNodeType
 {
     static constexpr const char* NAME = "questIWorldDataManagerNodeType";
@@ -20,6 +21,7 @@ struct IWorldDataManagerNodeType : quest::IRetNodeType
 };
 RED4EXT_ASSERT_SIZE(IWorldDataManagerNodeType, 0x38);
 } // namespace quest
+using questIWorldDataManagerNodeType = quest::IWorldDataManagerNodeType;
 } // namespace RED4ext
 
 // clang-format on

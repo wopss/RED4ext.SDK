@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct OccupantSlotComponent : ent::SlotComponent
 {
     static constexpr const char* NAME = "gameOccupantSlotComponent";
@@ -22,6 +23,7 @@ struct OccupantSlotComponent : ent::SlotComponent
 };
 RED4EXT_ASSERT_SIZE(OccupantSlotComponent, 0x1B0);
 } // namespace game
+using gameOccupantSlotComponent = game::OccupantSlotComponent;
 } // namespace RED4ext
 
 // clang-format on

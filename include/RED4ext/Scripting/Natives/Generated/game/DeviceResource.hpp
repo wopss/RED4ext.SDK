@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct DeviceResourceData; }
 
-namespace game { 
+namespace game
+{
 struct DeviceResource : CResource
 {
     static constexpr const char* NAME = "gameDeviceResource";
@@ -23,6 +24,7 @@ struct DeviceResource : CResource
 };
 RED4EXT_ASSERT_SIZE(DeviceResource, 0x50);
 } // namespace game
+using gameDeviceResource = game::DeviceResource;
 } // namespace RED4ext
 
 // clang-format on

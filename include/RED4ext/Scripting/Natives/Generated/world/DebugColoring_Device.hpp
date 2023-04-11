@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_Device : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_Device";
@@ -22,6 +23,7 @@ struct DebugColoring_Device : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_Device, 0x38);
 } // namespace world
+using worldDebugColoring_Device = world::DebugColoring_Device;
 } // namespace RED4ext
 
 // clang-format on

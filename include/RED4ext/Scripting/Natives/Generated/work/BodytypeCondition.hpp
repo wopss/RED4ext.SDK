@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct Rig; }
 
-namespace work { 
+namespace work
+{
 struct BodytypeCondition : work::IWorkspotCondition
 {
     static constexpr const char* NAME = "workBodytypeCondition";
@@ -23,6 +24,7 @@ struct BodytypeCondition : work::IWorkspotCondition
 };
 RED4EXT_ASSERT_SIZE(BodytypeCondition, 0x40);
 } // namespace work
+using workBodytypeCondition = work::BodytypeCondition;
 } // namespace RED4ext
 
 // clang-format on

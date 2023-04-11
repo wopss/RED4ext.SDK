@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowLevelUpNotification_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questShowLevelUpNotification_NodeType";
@@ -22,6 +23,7 @@ struct ShowLevelUpNotification_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ShowLevelUpNotification_NodeType, 0x50);
 } // namespace quest
+using questShowLevelUpNotification_NodeType = quest::ShowLevelUpNotification_NodeType;
 } // namespace RED4ext
 
 // clang-format on

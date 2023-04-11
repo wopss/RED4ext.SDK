@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct ConveyorSetupEvent : red::Event
 {
     static constexpr const char* NAME = "cpConveyorSetupEvent";
@@ -20,6 +21,7 @@ struct ConveyorSetupEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ConveyorSetupEvent, 0x90);
 } // namespace cp
+using cpConveyorSetupEvent = cp::ConveyorSetupEvent;
 } // namespace RED4ext
 
 // clang-format on

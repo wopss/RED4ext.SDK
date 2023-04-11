@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct CustomPositionMappin : game::mappins::RuntimeMappin
 {
     static constexpr const char* NAME = "gamemappinsCustomPositionMappin";
@@ -19,6 +20,7 @@ struct CustomPositionMappin : game::mappins::RuntimeMappin
 };
 RED4EXT_ASSERT_SIZE(CustomPositionMappin, 0x108);
 } // namespace game::mappins
+using gamemappinsCustomPositionMappin = game::mappins::CustomPositionMappin;
 using CustomPositionMappin = game::mappins::CustomPositionMappin;
 } // namespace RED4ext
 

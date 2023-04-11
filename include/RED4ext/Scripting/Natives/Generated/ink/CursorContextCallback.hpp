@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CursorContextCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkCursorContextCallback";
@@ -20,6 +21,7 @@ struct CursorContextCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(CursorContextCallback, 0x38);
 } // namespace ink
+using inkCursorContextCallback = ink::CursorContextCallback;
 } // namespace RED4ext
 
 // clang-format on

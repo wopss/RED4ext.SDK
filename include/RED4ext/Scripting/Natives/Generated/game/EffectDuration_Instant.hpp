@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectDuration_Instant : game::EffectDurationModifier
 {
     static constexpr const char* NAME = "gameEffectDuration_Instant";
@@ -19,6 +20,7 @@ struct EffectDuration_Instant : game::EffectDurationModifier
 };
 RED4EXT_ASSERT_SIZE(EffectDuration_Instant, 0x40);
 } // namespace game
+using gameEffectDuration_Instant = game::EffectDuration_Instant;
 } // namespace RED4ext
 
 // clang-format on

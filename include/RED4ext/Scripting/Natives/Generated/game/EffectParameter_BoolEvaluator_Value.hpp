@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectParameter_BoolEvaluator_Value : game::IEffectParameter_BoolEvaluator
 {
     static constexpr const char* NAME = "gameEffectParameter_BoolEvaluator_Value";
@@ -21,6 +22,7 @@ struct EffectParameter_BoolEvaluator_Value : game::IEffectParameter_BoolEvaluato
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_BoolEvaluator_Value, 0x38);
 } // namespace game
+using gameEffectParameter_BoolEvaluator_Value = game::EffectParameter_BoolEvaluator_Value;
 } // namespace RED4ext
 
 // clang-format on

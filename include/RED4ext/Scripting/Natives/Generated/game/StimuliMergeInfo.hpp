@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct StimuliMergeInfo
 {
     static constexpr const char* NAME = "gameStimuliMergeInfo";
@@ -32,6 +33,7 @@ struct StimuliMergeInfo
 };
 RED4EXT_ASSERT_SIZE(StimuliMergeInfo, 0x40);
 } // namespace game
+using gameStimuliMergeInfo = game::StimuliMergeInfo;
 using StimuliMergeInfo = game::StimuliMergeInfo;
 } // namespace RED4ext
 

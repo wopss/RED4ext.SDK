@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct PuppetSwappedEvent : red::Event
 {
     static constexpr const char* NAME = "AIPuppetSwappedEvent";
@@ -19,6 +20,7 @@ struct PuppetSwappedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PuppetSwappedEvent, 0x40);
 } // namespace AI
+using AIPuppetSwappedEvent = AI::PuppetSwappedEvent;
 } // namespace RED4ext
 
 // clang-format on

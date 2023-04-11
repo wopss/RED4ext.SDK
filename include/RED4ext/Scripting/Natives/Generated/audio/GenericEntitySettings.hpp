@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GenericEntitySettings : audio::EntitySettings
 {
     static constexpr const char* NAME = "audioGenericEntitySettings";
@@ -19,6 +20,7 @@ struct GenericEntitySettings : audio::EntitySettings
 };
 RED4EXT_ASSERT_SIZE(GenericEntitySettings, 0x88);
 } // namespace audio
+using audioGenericEntitySettings = audio::GenericEntitySettings;
 } // namespace RED4ext
 
 // clang-format on

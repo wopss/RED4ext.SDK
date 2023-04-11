@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace work { struct IWorkspotCondition; }
 
-namespace work { 
+namespace work
+{
 struct ConditionalSequence : work::Sequence
 {
     static constexpr const char* NAME = "workConditionalSequence";
@@ -27,6 +28,7 @@ struct ConditionalSequence : work::Sequence
 };
 RED4EXT_ASSERT_SIZE(ConditionalSequence, 0x70);
 } // namespace work
+using workConditionalSequence = work::ConditionalSequence;
 } // namespace RED4ext
 
 // clang-format on

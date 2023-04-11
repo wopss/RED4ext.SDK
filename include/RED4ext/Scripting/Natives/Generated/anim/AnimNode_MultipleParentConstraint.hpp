@@ -20,7 +20,8 @@ namespace RED4ext
 namespace anim { struct IAnimNodeSourceChannel_Float; }
 namespace anim { struct IAnimNodeSourceChannel_QsTransform; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_MultipleParentConstraint : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_MultipleParentConstraint";
@@ -40,6 +41,7 @@ struct AnimNode_MultipleParentConstraint : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_MultipleParentConstraint, 0xD8);
 } // namespace anim
+using animAnimNode_MultipleParentConstraint = anim::AnimNode_MultipleParentConstraint;
 } // namespace RED4ext
 
 // clang-format on

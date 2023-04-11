@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct UncontrolledMovementEffector_Record : game::data::Effector_Record
 {
     static constexpr const char* NAME = "gamedataUncontrolledMovementEffector_Record";
@@ -20,6 +21,7 @@ struct UncontrolledMovementEffector_Record : game::data::Effector_Record
 };
 RED4EXT_ASSERT_SIZE(UncontrolledMovementEffector_Record, 0x68);
 } // namespace game::data
+using gamedataUncontrolledMovementEffector_Record = game::data::UncontrolledMovementEffector_Record;
 using UncontrolledMovementEffector_Record = game::data::UncontrolledMovementEffector_Record;
 } // namespace RED4ext
 

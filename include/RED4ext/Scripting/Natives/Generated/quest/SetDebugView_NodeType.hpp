@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetDebugView_NodeType : quest::IRenderFxManagerNodeType
 {
     static constexpr const char* NAME = "questSetDebugView_NodeType";
@@ -22,6 +23,7 @@ struct SetDebugView_NodeType : quest::IRenderFxManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetDebugView_NodeType, 0x40);
 } // namespace quest
+using questSetDebugView_NodeType = quest::SetDebugView_NodeType;
 } // namespace RED4ext
 
 // clang-format on

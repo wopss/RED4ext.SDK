@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct EventHandler
 {
     static constexpr const char* NAME = "AIbehaviorEventHandler";
@@ -19,6 +20,7 @@ struct EventHandler
 };
 RED4EXT_ASSERT_SIZE(EventHandler, 0x8);
 } // namespace AI::behavior
+using AIbehaviorEventHandler = AI::behavior::EventHandler;
 } // namespace RED4ext
 
 // clang-format on

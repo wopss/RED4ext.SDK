@@ -16,7 +16,8 @@ namespace quest { struct AICommandParams; }
 namespace quest { struct MoveOnSplineParams; }
 namespace quest { struct MoveToParams; }
 
-namespace quest { 
+namespace quest
+{
 struct MovePuppetNodeParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questMovePuppetNodeParams";
@@ -32,6 +33,7 @@ struct MovePuppetNodeParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(MovePuppetNodeParams, 0x80);
 } // namespace quest
+using questMovePuppetNodeParams = quest::MovePuppetNodeParams;
 } // namespace RED4ext
 
 // clang-format on

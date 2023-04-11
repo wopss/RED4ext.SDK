@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct PickSearchDestinationTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorPickSearchDestinationTaskDefinition";
@@ -29,6 +30,7 @@ struct PickSearchDestinationTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(PickSearchDestinationTaskDefinition, 0xA8);
 } // namespace AI::behavior
+using AIbehaviorPickSearchDestinationTaskDefinition = AI::behavior::PickSearchDestinationTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

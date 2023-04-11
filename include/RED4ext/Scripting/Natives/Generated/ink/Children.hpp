@@ -19,7 +19,8 @@ using inkChildren = ink::Children;
 
 namespace RED4ext
 {
-namespace ink {
+namespace ink
+{
 struct Children : ISerializable
 {
     static constexpr const char* NAME = "inkChildren";
@@ -28,6 +29,7 @@ struct Children : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Children, 0x30);
 } // namespace ink
+using inkChildren = ink::Children;
 } // namespace RED4ext
 */
 

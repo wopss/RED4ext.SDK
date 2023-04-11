@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MultiplayerJunctionDialogNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questMultiplayerJunctionDialogNodeDefinition";
@@ -19,6 +20,7 @@ struct MultiplayerJunctionDialogNodeDefinition : quest::DisableableNodeDefinitio
 };
 RED4EXT_ASSERT_SIZE(MultiplayerJunctionDialogNodeDefinition, 0x48);
 } // namespace quest
+using questMultiplayerJunctionDialogNodeDefinition = quest::MultiplayerJunctionDialogNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

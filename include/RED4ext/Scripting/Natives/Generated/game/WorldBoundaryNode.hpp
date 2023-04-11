@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WorldBoundaryNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "gameWorldBoundaryNode";
@@ -19,6 +20,7 @@ struct WorldBoundaryNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(WorldBoundaryNode, 0x60);
 } // namespace game
+using gameWorldBoundaryNode = game::WorldBoundaryNode;
 } // namespace RED4ext
 
 // clang-format on

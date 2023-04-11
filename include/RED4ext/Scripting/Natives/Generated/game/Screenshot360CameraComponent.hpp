@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Screenshot360CameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "gameScreenshot360CameraComponent";
@@ -20,6 +21,7 @@ struct Screenshot360CameraComponent : game::CameraComponent
 };
 RED4EXT_ASSERT_SIZE(Screenshot360CameraComponent, 0x2E0);
 } // namespace game
+using gameScreenshot360CameraComponent = game::Screenshot360CameraComponent;
 } // namespace RED4ext
 
 // clang-format on

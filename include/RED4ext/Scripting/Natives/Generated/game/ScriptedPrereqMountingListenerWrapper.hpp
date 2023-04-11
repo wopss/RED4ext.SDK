@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScriptedPrereqMountingListenerWrapper : IScriptable
 {
     static constexpr const char* NAME = "gameScriptedPrereqMountingListenerWrapper";
@@ -20,6 +21,7 @@ struct ScriptedPrereqMountingListenerWrapper : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptedPrereqMountingListenerWrapper, 0x70);
 } // namespace game
+using gameScriptedPrereqMountingListenerWrapper = game::ScriptedPrereqMountingListenerWrapper;
 } // namespace RED4ext
 
 // clang-format on

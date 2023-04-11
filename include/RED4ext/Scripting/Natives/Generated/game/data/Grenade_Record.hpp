@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct Grenade_Record : game::data::Gadget_Record
 {
     static constexpr const char* NAME = "gamedataGrenade_Record";
@@ -20,6 +21,7 @@ struct Grenade_Record : game::data::Gadget_Record
 };
 RED4EXT_ASSERT_SIZE(Grenade_Record, 0x218);
 } // namespace game::data
+using gamedataGrenade_Record = game::data::Grenade_Record;
 using Grenade_Record = game::data::Grenade_Record;
 } // namespace RED4ext
 

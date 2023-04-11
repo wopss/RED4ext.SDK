@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace loc { struct VoResource; }
 
-namespace loc { 
+namespace loc
+{
 struct VoLineEntry
 {
     static constexpr const char* NAME = "locVoLineEntry";
@@ -24,6 +25,7 @@ struct VoLineEntry
 };
 RED4EXT_ASSERT_SIZE(VoLineEntry, 0x18);
 } // namespace loc
+using locVoLineEntry = loc::VoLineEntry;
 } // namespace RED4ext
 
 // clang-format on

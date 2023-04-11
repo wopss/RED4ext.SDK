@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace graph { 
+namespace graph
+{
 struct IGraphNodeCondition : ISerializable
 {
     static constexpr const char* NAME = "graphIGraphNodeCondition";
@@ -19,6 +20,7 @@ struct IGraphNodeCondition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IGraphNodeCondition, 0x30);
 } // namespace graph
+using graphIGraphNodeCondition = graph::IGraphNodeCondition;
 } // namespace RED4ext
 
 // clang-format on

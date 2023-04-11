@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WeaponAudio : ISerializable
 {
     static constexpr const char* NAME = "gameWeaponAudio";
@@ -20,6 +21,7 @@ struct WeaponAudio : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WeaponAudio, 0x130);
 } // namespace game
+using gameWeaponAudio = game::WeaponAudio;
 } // namespace RED4ext
 
 // clang-format on

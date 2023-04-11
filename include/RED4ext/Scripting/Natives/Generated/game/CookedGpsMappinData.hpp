@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CookedGpsMappinData
 {
     static constexpr const char* NAME = "gameCookedGpsMappinData";
@@ -24,6 +25,7 @@ struct CookedGpsMappinData
 };
 RED4EXT_ASSERT_SIZE(CookedGpsMappinData, 0x20);
 } // namespace game
+using gameCookedGpsMappinData = game::CookedGpsMappinData;
 } // namespace RED4ext
 
 // clang-format on

@@ -21,7 +21,8 @@ namespace anim { struct IAnimNode_PostProcess; }
 namespace anim { struct IPoseBlendMethod; }
 namespace anim { struct ISyncMethod; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BlendOverride : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_BlendOverride";
@@ -45,6 +46,7 @@ struct AnimNode_BlendOverride : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BlendOverride, 0x128);
 } // namespace anim
+using animAnimNode_BlendOverride = anim::AnimNode_BlendOverride;
 } // namespace RED4ext
 
 // clang-format on

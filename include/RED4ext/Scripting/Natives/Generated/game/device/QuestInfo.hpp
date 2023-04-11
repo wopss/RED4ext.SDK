@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct QuestInfo
 {
     static constexpr const char* NAME = "gamedeviceQuestInfo";
@@ -22,6 +23,7 @@ struct QuestInfo
 };
 RED4EXT_ASSERT_SIZE(QuestInfo, 0x10);
 } // namespace game::device
+using gamedeviceQuestInfo = game::device::QuestInfo;
 using QuestInfo = game::device::QuestInfo;
 } // namespace RED4ext
 

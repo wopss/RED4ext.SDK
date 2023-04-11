@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ItemDropStorageManager
 {
     static constexpr const char* NAME = "gameItemDropStorageManager";
@@ -19,6 +20,7 @@ struct ItemDropStorageManager
 };
 RED4EXT_ASSERT_SIZE(ItemDropStorageManager, 0xB0);
 } // namespace game
+using gameItemDropStorageManager = game::ItemDropStorageManager;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeAutoFocusPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "gamePhotoModeAutoFocusPositionProvider";
@@ -20,6 +21,7 @@ struct PhotoModeAutoFocusPositionProvider : ent::IPositionProvider
 };
 RED4EXT_ASSERT_SIZE(PhotoModeAutoFocusPositionProvider, 0x60);
 } // namespace game
+using gamePhotoModeAutoFocusPositionProvider = game::PhotoModeAutoFocusPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

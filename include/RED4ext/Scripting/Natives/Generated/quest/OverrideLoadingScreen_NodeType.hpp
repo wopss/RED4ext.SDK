@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace quest { 
+namespace quest
+{
 struct OverrideLoadingScreen_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questOverrideLoadingScreen_NodeType";
@@ -34,6 +35,7 @@ struct OverrideLoadingScreen_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(OverrideLoadingScreen_NodeType, 0x78);
 } // namespace quest
+using questOverrideLoadingScreen_NodeType = quest::OverrideLoadingScreen_NodeType;
 } // namespace RED4ext
 
 // clang-format on

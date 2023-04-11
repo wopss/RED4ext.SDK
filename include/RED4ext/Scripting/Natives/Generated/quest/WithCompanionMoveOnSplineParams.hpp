@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct WithCompanionMoveOnSplineParams
 {
     static constexpr const char* NAME = "questWithCompanionMoveOnSplineParams";
@@ -46,6 +47,7 @@ struct WithCompanionMoveOnSplineParams
 };
 RED4EXT_ASSERT_SIZE(WithCompanionMoveOnSplineParams, 0x70);
 } // namespace quest
+using questWithCompanionMoveOnSplineParams = quest::WithCompanionMoveOnSplineParams;
 } // namespace RED4ext
 
 // clang-format on

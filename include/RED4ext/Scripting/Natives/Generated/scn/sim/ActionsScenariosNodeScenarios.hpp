@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn::sim { struct IActionScenario; }
 
-namespace scn::sim { 
+namespace scn::sim
+{
 struct ActionsScenariosNodeScenarios
 {
     static constexpr const char* NAME = "scnsimActionsScenariosNodeScenarios";
@@ -27,6 +28,7 @@ struct ActionsScenariosNodeScenarios
 };
 RED4EXT_ASSERT_SIZE(ActionsScenariosNodeScenarios, 0x28);
 } // namespace scn::sim
+using scnsimActionsScenariosNodeScenarios = scn::sim::ActionsScenariosNodeScenarios;
 } // namespace RED4ext
 
 // clang-format on

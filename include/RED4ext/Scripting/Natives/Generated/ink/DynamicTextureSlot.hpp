@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct DynamicTexture;
 
-namespace ink { 
+namespace ink
+{
 struct DynamicTextureSlot
 {
     static constexpr const char* NAME = "inkDynamicTextureSlot";
@@ -25,6 +26,7 @@ struct DynamicTextureSlot
 };
 RED4EXT_ASSERT_SIZE(DynamicTextureSlot, 0x18);
 } // namespace ink
+using inkDynamicTextureSlot = ink::DynamicTextureSlot;
 } // namespace RED4ext
 
 // clang-format on

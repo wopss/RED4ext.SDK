@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct RuntimePointOfInterestMappinData : game::mappins::IRuntimeMappinData
 {
     static constexpr const char* NAME = "gamemappinsRuntimePointOfInterestMappinData";
@@ -20,6 +21,7 @@ struct RuntimePointOfInterestMappinData : game::mappins::IRuntimeMappinData
 };
 RED4EXT_ASSERT_SIZE(RuntimePointOfInterestMappinData, 0x58);
 } // namespace game::mappins
+using gamemappinsRuntimePointOfInterestMappinData = game::mappins::RuntimePointOfInterestMappinData;
 } // namespace RED4ext
 
 // clang-format on

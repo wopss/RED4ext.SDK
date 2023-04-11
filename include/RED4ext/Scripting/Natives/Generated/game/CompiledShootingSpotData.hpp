@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CompiledShootingSpotData : game::CompiledCoverData
 {
     static constexpr const char* NAME = "gameCompiledShootingSpotData";
@@ -19,6 +20,7 @@ struct CompiledShootingSpotData : game::CompiledCoverData
 };
 RED4EXT_ASSERT_SIZE(CompiledShootingSpotData, 0x60);
 } // namespace game
+using gameCompiledShootingSpotData = game::CompiledShootingSpotData;
 } // namespace RED4ext
 
 // clang-format on

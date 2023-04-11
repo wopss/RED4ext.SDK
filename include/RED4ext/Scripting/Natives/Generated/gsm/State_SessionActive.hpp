@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State_SessionActive : gsm::State_SessionStreamingAware
 {
     static constexpr const char* NAME = "gsmState_SessionActive";
@@ -20,6 +21,7 @@ struct State_SessionActive : gsm::State_SessionStreamingAware
 };
 RED4EXT_ASSERT_SIZE(State_SessionActive, 0x108);
 } // namespace gsm
+using gsmState_SessionActive = gsm::State_SessionActive;
 } // namespace RED4ext
 
 // clang-format on

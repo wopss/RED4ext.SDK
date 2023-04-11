@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct TaskProgressMessage
 {
     static constexpr const char* NAME = "redTaskProgressMessage";
@@ -21,6 +22,7 @@ struct TaskProgressMessage
 };
 RED4EXT_ASSERT_SIZE(TaskProgressMessage, 0xC);
 } // namespace red
+using redTaskProgressMessage = red::TaskProgressMessage;
 } // namespace RED4ext
 
 // clang-format on

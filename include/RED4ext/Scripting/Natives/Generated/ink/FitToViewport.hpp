@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FitToViewport : ink::UserData
 {
     static constexpr const char* NAME = "inkFitToViewport";
@@ -19,6 +20,7 @@ struct FitToViewport : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(FitToViewport, 0x40);
 } // namespace ink
+using inkFitToViewport = ink::FitToViewport;
 } // namespace RED4ext
 
 // clang-format on

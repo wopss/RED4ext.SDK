@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VariantState
 {
     static constexpr const char* NAME = "questVariantState";
@@ -22,6 +23,7 @@ struct VariantState
 };
 RED4EXT_ASSERT_SIZE(VariantState, 0x10);
 } // namespace quest
+using questVariantState = quest::VariantState;
 } // namespace RED4ext
 
 // clang-format on

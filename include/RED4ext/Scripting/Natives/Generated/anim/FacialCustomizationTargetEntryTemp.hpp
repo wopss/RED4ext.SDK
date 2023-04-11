@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct FacialSetup; }
 
-namespace anim { 
+namespace anim
+{
 struct FacialCustomizationTargetEntryTemp
 {
     static constexpr const char* NAME = "animFacialCustomizationTargetEntryTemp";
@@ -25,6 +26,7 @@ struct FacialCustomizationTargetEntryTemp
 };
 RED4EXT_ASSERT_SIZE(FacialCustomizationTargetEntryTemp, 0x18);
 } // namespace anim
+using animFacialCustomizationTargetEntryTemp = anim::FacialCustomizationTargetEntryTemp;
 } // namespace RED4ext
 
 // clang-format on

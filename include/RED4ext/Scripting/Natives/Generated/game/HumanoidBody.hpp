@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HumanoidBody : ent::IComponent
 {
     static constexpr const char* NAME = "gameHumanoidBody";
@@ -26,6 +27,7 @@ struct HumanoidBody : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(HumanoidBody, 0xE0);
 } // namespace game
+using gameHumanoidBody = game::HumanoidBody;
 } // namespace RED4ext
 
 // clang-format on

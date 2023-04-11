@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::interactions { struct CLinkedLayersDefinition; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CHotSpotDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCHotSpotDefinition";
@@ -25,6 +26,7 @@ struct CHotSpotDefinition
 };
 RED4EXT_ASSERT_SIZE(CHotSpotDefinition, 0xB0);
 } // namespace game::interactions
+using gameinteractionsCHotSpotDefinition = game::interactions::CHotSpotDefinition;
 } // namespace RED4ext
 
 // clang-format on

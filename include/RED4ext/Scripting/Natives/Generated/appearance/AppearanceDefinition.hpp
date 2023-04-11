@@ -21,7 +21,8 @@ namespace RED4ext
 struct CMesh;
 struct CResource;
 
-namespace appearance { 
+namespace appearance
+{
 struct AppearanceDefinition : ISerializable
 {
     static constexpr const char* NAME = "appearanceAppearanceDefinition";
@@ -49,6 +50,7 @@ struct AppearanceDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AppearanceDefinition, 0x1D8);
 } // namespace appearance
+using appearanceAppearanceDefinition = appearance::AppearanceDefinition;
 } // namespace RED4ext
 
 // clang-format on

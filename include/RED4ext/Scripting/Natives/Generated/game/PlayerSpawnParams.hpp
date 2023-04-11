@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerSpawnParams
 {
     static constexpr const char* NAME = "gamePlayerSpawnParams";
@@ -31,6 +32,7 @@ struct PlayerSpawnParams
 };
 RED4EXT_ASSERT_SIZE(PlayerSpawnParams, 0x70);
 } // namespace game
+using gamePlayerSpawnParams = game::PlayerSpawnParams;
 } // namespace RED4ext
 
 // clang-format on

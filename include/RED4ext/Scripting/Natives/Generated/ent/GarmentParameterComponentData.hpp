@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct GarmentParameterComponentData
 {
     static constexpr const char* NAME = "entGarmentParameterComponentData";
@@ -46,6 +47,7 @@ struct GarmentParameterComponentData
 };
 RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0x98);
 } // namespace ent
+using entGarmentParameterComponentData = ent::GarmentParameterComponentData;
 } // namespace RED4ext
 
 // clang-format on

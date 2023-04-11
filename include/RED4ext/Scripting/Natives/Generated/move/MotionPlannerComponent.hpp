@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct MotionPlannerComponent : move::IMotionPlannerComponent
 {
     static constexpr const char* NAME = "moveMotionPlannerComponent";
@@ -22,6 +23,7 @@ struct MotionPlannerComponent : move::IMotionPlannerComponent
 };
 RED4EXT_ASSERT_SIZE(MotionPlannerComponent, 0x1F8);
 } // namespace move
+using moveMotionPlannerComponent = move::MotionPlannerComponent;
 } // namespace RED4ext
 
 // clang-format on

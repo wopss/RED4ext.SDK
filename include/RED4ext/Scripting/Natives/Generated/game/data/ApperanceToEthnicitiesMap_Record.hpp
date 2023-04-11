@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ApperanceToEthnicitiesMap_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataApperanceToEthnicitiesMap_Record";
@@ -20,6 +21,7 @@ struct ApperanceToEthnicitiesMap_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ApperanceToEthnicitiesMap_Record, 0x50);
 } // namespace game::data
+using gamedataApperanceToEthnicitiesMap_Record = game::data::ApperanceToEthnicitiesMap_Record;
 using ApperanceToEthnicitiesMap_Record = game::data::ApperanceToEthnicitiesMap_Record;
 } // namespace RED4ext
 

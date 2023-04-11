@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RootInstance : quest::PhaseInstance
 {
     static constexpr const char* NAME = "questRootInstance";
@@ -19,6 +20,7 @@ struct RootInstance : quest::PhaseInstance
 };
 RED4EXT_ASSERT_SIZE(RootInstance, 0x110);
 } // namespace quest
+using questRootInstance = quest::RootInstance;
 } // namespace RED4ext
 
 // clang-format on

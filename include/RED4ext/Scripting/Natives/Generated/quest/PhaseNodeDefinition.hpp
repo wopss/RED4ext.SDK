@@ -17,7 +17,8 @@ namespace RED4ext
 namespace quest { struct GraphDefinition; }
 namespace quest { struct QuestPhaseResource; }
 
-namespace quest { 
+namespace quest
+{
 struct PhaseNodeDefinition : quest::EmbeddedGraphNodeDefinition
 {
     static constexpr const char* NAME = "questPhaseNodeDefinition";
@@ -33,6 +34,7 @@ struct PhaseNodeDefinition : quest::EmbeddedGraphNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PhaseNodeDefinition, 0x98);
 } // namespace quest
+using questPhaseNodeDefinition = quest::PhaseNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

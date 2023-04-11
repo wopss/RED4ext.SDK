@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::ui { struct IChoiceVisualizer; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CSharedDataDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCSharedDataDefinition";
@@ -25,6 +26,7 @@ struct CSharedDataDefinition
 };
 RED4EXT_ASSERT_SIZE(CSharedDataDefinition, 0x20);
 } // namespace game::interactions
+using gameinteractionsCSharedDataDefinition = game::interactions::CSharedDataDefinition;
 } // namespace RED4ext
 
 // clang-format on

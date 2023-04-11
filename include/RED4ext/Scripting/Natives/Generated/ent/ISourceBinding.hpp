@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ISourceBinding : ent::IBinding
 {
     static constexpr const char* NAME = "entISourceBinding";
@@ -19,6 +20,7 @@ struct ISourceBinding : ent::IBinding
 };
 RED4EXT_ASSERT_SIZE(ISourceBinding, 0x70);
 } // namespace ent
+using entISourceBinding = ent::ISourceBinding;
 } // namespace RED4ext
 
 // clang-format on

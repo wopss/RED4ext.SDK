@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct NpcGunChoirSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioNpcGunChoirSettings";
@@ -22,6 +23,7 @@ struct NpcGunChoirSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(NpcGunChoirSettings, 0x48);
 } // namespace audio
+using audioNpcGunChoirSettings = audio::NpcGunChoirSettings;
 } // namespace RED4ext
 
 // clang-format on

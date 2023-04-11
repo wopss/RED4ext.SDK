@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct CurvePathAnimControllerPreset
 {
     static constexpr const char* NAME = "animCurvePathAnimControllerPreset";
@@ -23,6 +24,7 @@ struct CurvePathAnimControllerPreset
 };
 RED4EXT_ASSERT_SIZE(CurvePathAnimControllerPreset, 0x20);
 } // namespace anim
+using animCurvePathAnimControllerPreset = anim::CurvePathAnimControllerPreset;
 } // namespace RED4ext
 
 // clang-format on

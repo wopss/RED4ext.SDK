@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ActiveLayerData
 {
     static constexpr const char* NAME = "gameinteractionsActiveLayerData";
@@ -25,6 +26,7 @@ struct ActiveLayerData
 };
 RED4EXT_ASSERT_SIZE(ActiveLayerData, 0x20);
 } // namespace game::interactions
+using gameinteractionsActiveLayerData = game::interactions::ActiveLayerData;
 } // namespace RED4ext
 
 // clang-format on

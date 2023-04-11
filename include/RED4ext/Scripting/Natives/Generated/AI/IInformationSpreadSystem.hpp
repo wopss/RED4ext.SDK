@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct IInformationSpreadSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "AIIInformationSpreadSystem";
@@ -19,6 +20,7 @@ struct IInformationSpreadSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IInformationSpreadSystem, 0x48);
 } // namespace AI
+using AIIInformationSpreadSystem = AI::IInformationSpreadSystem;
 } // namespace RED4ext
 
 // clang-format on

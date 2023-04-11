@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ItemObjectToCheck_Record : game::data::ObjectToCheck_Record
 {
     static constexpr const char* NAME = "gamedataItemObjectToCheck_Record";
@@ -20,6 +21,7 @@ struct ItemObjectToCheck_Record : game::data::ObjectToCheck_Record
 };
 RED4EXT_ASSERT_SIZE(ItemObjectToCheck_Record, 0x50);
 } // namespace game::data
+using gamedataItemObjectToCheck_Record = game::data::ItemObjectToCheck_Record;
 using ItemObjectToCheck_Record = game::data::ItemObjectToCheck_Record;
 } // namespace RED4ext
 

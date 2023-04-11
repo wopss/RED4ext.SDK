@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace gen { 
+namespace gen
+{
 struct LevelRandomizerEntry
 {
     static constexpr const char* NAME = "genLevelRandomizerEntry";
@@ -25,6 +26,7 @@ struct LevelRandomizerEntry
 };
 RED4EXT_ASSERT_SIZE(LevelRandomizerEntry, 0x38);
 } // namespace gen
+using genLevelRandomizerEntry = gen::LevelRandomizerEntry;
 } // namespace RED4ext
 
 // clang-format on

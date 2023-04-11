@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FPPCameraComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "gameFPPCameraComponentReplicatedState";
@@ -23,6 +24,7 @@ struct FPPCameraComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(FPPCameraComponentReplicatedState, 0x30);
 } // namespace game
+using gameFPPCameraComponentReplicatedState = game::FPPCameraComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

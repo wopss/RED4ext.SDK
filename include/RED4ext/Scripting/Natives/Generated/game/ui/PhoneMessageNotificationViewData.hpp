@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhoneMessageNotificationViewData : game::ui::QuestUpdateNotificationViewData
 {
     static constexpr const char* NAME = "gameuiPhoneMessageNotificationViewData";
@@ -21,6 +22,7 @@ struct PhoneMessageNotificationViewData : game::ui::QuestUpdateNotificationViewD
 };
 RED4EXT_ASSERT_SIZE(PhoneMessageNotificationViewData, 0xE8);
 } // namespace game::ui
+using gameuiPhoneMessageNotificationViewData = game::ui::PhoneMessageNotificationViewData;
 using PhoneMessageNotificationViewData = game::ui::PhoneMessageNotificationViewData;
 } // namespace RED4ext
 

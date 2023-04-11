@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace loc { 
+namespace loc
+{
 struct VoiceoverMap : ISerializable
 {
     static constexpr const char* NAME = "locVoiceoverMap";
@@ -22,6 +23,7 @@ struct VoiceoverMap : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VoiceoverMap, 0x40);
 } // namespace loc
+using locVoiceoverMap = loc::VoiceoverMap;
 } // namespace RED4ext
 
 // clang-format on

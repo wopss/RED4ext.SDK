@@ -15,7 +15,8 @@ namespace RED4ext
 namespace anim { struct Animation; }
 namespace anim { struct EventsContainer; }
 
-namespace scn { 
+namespace scn
+{
 struct AnimationRid
 {
     static constexpr const char* NAME = "scnAnimationRid";
@@ -33,6 +34,7 @@ struct AnimationRid
 };
 RED4EXT_ASSERT_SIZE(AnimationRid, 0x80);
 } // namespace scn
+using scnAnimationRid = scn::AnimationRid;
 } // namespace RED4ext
 
 // clang-format on

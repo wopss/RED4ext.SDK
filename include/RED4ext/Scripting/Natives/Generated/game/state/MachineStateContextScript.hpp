@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineStateContextScript : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineStateContextScript";
@@ -20,6 +21,7 @@ struct MachineStateContextScript : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineStateContextScript, 0x48);
 } // namespace game::state
+using gamestateMachineStateContextScript = game::state::MachineStateContextScript;
 using StateContext = game::state::MachineStateContextScript;
 } // namespace RED4ext
 

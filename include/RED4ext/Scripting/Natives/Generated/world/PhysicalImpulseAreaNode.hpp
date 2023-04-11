@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PhysicalImpulseAreaNode : world::PhysicalTriggerAreaNode
 {
     static constexpr const char* NAME = "worldPhysicalImpulseAreaNode";
@@ -22,6 +23,7 @@ struct PhysicalImpulseAreaNode : world::PhysicalTriggerAreaNode
 };
 RED4EXT_ASSERT_SIZE(PhysicalImpulseAreaNode, 0x90);
 } // namespace world
+using worldPhysicalImpulseAreaNode = world::PhysicalImpulseAreaNode;
 } // namespace RED4ext
 
 // clang-format on

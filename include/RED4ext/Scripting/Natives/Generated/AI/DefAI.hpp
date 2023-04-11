@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct DefAI : AI::ResourceReference
 {
     static constexpr const char* NAME = "AIDefAI";
@@ -19,6 +20,7 @@ struct DefAI : AI::ResourceReference
 };
 RED4EXT_ASSERT_SIZE(DefAI, 0x70);
 } // namespace AI
+using AIDefAI = AI::DefAI;
 } // namespace RED4ext
 
 // clang-format on

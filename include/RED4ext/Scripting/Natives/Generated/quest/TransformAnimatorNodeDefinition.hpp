@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace quest { struct TransformAnimatorNode_ActionType; }
 
-namespace quest { 
+namespace quest
+{
 struct TransformAnimatorNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questTransformAnimatorNodeDefinition";
@@ -27,6 +28,7 @@ struct TransformAnimatorNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TransformAnimatorNodeDefinition, 0x98);
 } // namespace quest
+using questTransformAnimatorNodeDefinition = quest::TransformAnimatorNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

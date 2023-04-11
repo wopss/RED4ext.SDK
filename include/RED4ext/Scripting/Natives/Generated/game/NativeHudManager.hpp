@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct NativeHudManager : game::ScriptableSystem
 {
     static constexpr const char* NAME = "gameNativeHudManager";
@@ -20,6 +21,7 @@ struct NativeHudManager : game::ScriptableSystem
 };
 RED4EXT_ASSERT_SIZE(NativeHudManager, 0x348);
 } // namespace game
+using gameNativeHudManager = game::NativeHudManager;
 using NativeHudManager = game::NativeHudManager;
 } // namespace RED4ext
 

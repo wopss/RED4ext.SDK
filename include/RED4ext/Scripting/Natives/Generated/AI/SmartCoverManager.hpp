@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SmartCoverManager : AI::ISmartCoverManager
 {
     static constexpr const char* NAME = "AISmartCoverManager";
@@ -20,6 +21,7 @@ struct SmartCoverManager : AI::ISmartCoverManager
 };
 RED4EXT_ASSERT_SIZE(SmartCoverManager, 0x228);
 } // namespace AI
+using AISmartCoverManager = AI::SmartCoverManager;
 using CoverManager = AI::SmartCoverManager;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FacialMixerSlot : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_FacialMixerSlot";
@@ -23,6 +24,7 @@ struct AnimNode_FacialMixerSlot : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FacialMixerSlot, 0x2E8);
 } // namespace anim
+using animAnimNode_FacialMixerSlot = anim::AnimNode_FacialMixerSlot;
 } // namespace RED4ext
 
 // clang-format on

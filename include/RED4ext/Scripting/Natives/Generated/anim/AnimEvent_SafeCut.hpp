@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimEvent_SafeCut : anim::AnimEvent
 {
     static constexpr const char* NAME = "animAnimEvent_SafeCut";
@@ -19,6 +20,7 @@ struct AnimEvent_SafeCut : anim::AnimEvent
 };
 RED4EXT_ASSERT_SIZE(AnimEvent_SafeCut, 0x40);
 } // namespace anim
+using animAnimEvent_SafeCut = anim::AnimEvent_SafeCut;
 } // namespace RED4ext
 
 // clang-format on

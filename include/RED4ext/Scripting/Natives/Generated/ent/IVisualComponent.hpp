@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct IVisualComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entIVisualComponent";
@@ -25,6 +26,7 @@ struct IVisualComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(IVisualComponent, 0x140);
 } // namespace ent
+using entIVisualComponent = ent::IVisualComponent;
 using IVisualComponent = ent::IVisualComponent;
 } // namespace RED4ext
 

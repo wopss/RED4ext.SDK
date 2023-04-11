@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IMovingPlatformMovementInitData
 {
     static constexpr const char* NAME = "gameIMovingPlatformMovementInitData";
@@ -21,6 +22,7 @@ struct IMovingPlatformMovementInitData
 };
 RED4EXT_ASSERT_SIZE(IMovingPlatformMovementInitData, 0x8);
 } // namespace game
+using gameIMovingPlatformMovementInitData = game::IMovingPlatformMovementInitData;
 } // namespace RED4ext
 
 // clang-format on

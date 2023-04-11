@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace vehicle { struct PortalsList; }
 
-namespace AI { 
+namespace AI
+{
 struct VehicleToNodeCommand : AI::VehicleCommand
 {
     static constexpr const char* NAME = "AIVehicleToNodeCommand";
@@ -37,6 +38,7 @@ struct VehicleToNodeCommand : AI::VehicleCommand
 };
 RED4EXT_ASSERT_SIZE(VehicleToNodeCommand, 0xA0);
 } // namespace AI
+using AIVehicleToNodeCommand = AI::VehicleToNodeCommand;
 } // namespace RED4ext
 
 // clang-format on

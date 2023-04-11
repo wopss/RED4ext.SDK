@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct Socket : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsSocket";
@@ -22,6 +23,7 @@ struct Socket : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(Socket, 0x60);
 } // namespace scn::events
+using scneventsSocket = scn::events::Socket;
 } // namespace RED4ext
 
 // clang-format on

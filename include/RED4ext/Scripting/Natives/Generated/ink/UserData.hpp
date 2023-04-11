@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct UserData : IScriptable
 {
     static constexpr const char* NAME = "inkUserData";
@@ -19,6 +20,7 @@ struct UserData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(UserData, 0x40);
 } // namespace ink
+using inkUserData = ink::UserData;
 } // namespace RED4ext
 
 // clang-format on

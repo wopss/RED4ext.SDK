@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct JournalEntryState_ConditionType : quest::IJournalConditionType
 {
     static constexpr const char* NAME = "questJournalEntryState_ConditionType";
@@ -27,6 +28,7 @@ struct JournalEntryState_ConditionType : quest::IJournalConditionType
 };
 RED4EXT_ASSERT_SIZE(JournalEntryState_ConditionType, 0x50);
 } // namespace quest
+using questJournalEntryState_ConditionType = quest::JournalEntryState_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

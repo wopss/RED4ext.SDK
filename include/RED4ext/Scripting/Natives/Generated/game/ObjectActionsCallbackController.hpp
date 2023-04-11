@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectActionsCallbackController : IScriptable
 {
     static constexpr const char* NAME = "gameObjectActionsCallbackController";
@@ -20,6 +21,7 @@ struct ObjectActionsCallbackController : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ObjectActionsCallbackController, 0xB8);
 } // namespace game
+using gameObjectActionsCallbackController = game::ObjectActionsCallbackController;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace user { 
+namespace user
+{
 struct SettingsGroup : IScriptable
 {
     static constexpr const char* NAME = "userSettingsGroup";
@@ -20,6 +21,7 @@ struct SettingsGroup : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SettingsGroup, 0x48);
 } // namespace user
+using userSettingsGroup = user::SettingsGroup;
 using ConfigGroup = user::SettingsGroup;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct FinalBoardsGoToMainMenu : red::Event
 {
     static constexpr const char* NAME = "gameuiFinalBoardsGoToMainMenu";
@@ -19,6 +20,7 @@ struct FinalBoardsGoToMainMenu : red::Event
 };
 RED4EXT_ASSERT_SIZE(FinalBoardsGoToMainMenu, 0x40);
 } // namespace game::ui
+using gameuiFinalBoardsGoToMainMenu = game::ui::FinalBoardsGoToMainMenu;
 } // namespace RED4ext
 
 // clang-format on

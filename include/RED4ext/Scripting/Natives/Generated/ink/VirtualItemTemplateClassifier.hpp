@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualItemTemplateClassifier
 {
     static constexpr const char* NAME = "inkVirtualItemTemplateClassifier";
@@ -19,6 +20,7 @@ struct VirtualItemTemplateClassifier
 };
 RED4EXT_ASSERT_SIZE(VirtualItemTemplateClassifier, 0x8);
 } // namespace ink
+using inkVirtualItemTemplateClassifier = ink::VirtualItemTemplateClassifier;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace ent { struct IComponent; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct BroadPhaseHitEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileBroadPhaseHitEvent";
@@ -29,6 +30,7 @@ struct BroadPhaseHitEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BroadPhaseHitEvent, 0xD0);
 } // namespace game::projectile
+using gameprojectileBroadPhaseHitEvent = game::projectile::BroadPhaseHitEvent;
 } // namespace RED4ext
 
 // clang-format on

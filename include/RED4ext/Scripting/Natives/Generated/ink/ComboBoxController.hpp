@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ComboBoxController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkComboBoxController";
@@ -24,6 +25,7 @@ struct ComboBoxController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(ComboBoxController, 0xE8);
 } // namespace ink
+using inkComboBoxController = ink::ComboBoxController;
 } // namespace RED4ext
 
 // clang-format on

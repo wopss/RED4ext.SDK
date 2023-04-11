@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatModifierGroup
 {
     static constexpr const char* NAME = "gameStatModifierGroup";
@@ -27,6 +28,7 @@ struct StatModifierGroup
 };
 RED4EXT_ASSERT_SIZE(StatModifierGroup, 0x20);
 } // namespace game
+using gameStatModifierGroup = game::StatModifierGroup;
 } // namespace RED4ext
 
 // clang-format on

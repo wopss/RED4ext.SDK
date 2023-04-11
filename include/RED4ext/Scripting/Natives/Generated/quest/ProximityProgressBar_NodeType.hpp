@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ProximityProgressBar_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questProximityProgressBar_NodeType";
@@ -33,6 +34,7 @@ struct ProximityProgressBar_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ProximityProgressBar_NodeType, 0xC8);
 } // namespace quest
+using questProximityProgressBar_NodeType = quest::ProximityProgressBar_NodeType;
 } // namespace RED4ext
 
 // clang-format on

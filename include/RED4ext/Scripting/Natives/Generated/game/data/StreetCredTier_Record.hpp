@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct StreetCredTier_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataStreetCredTier_Record";
@@ -20,6 +21,7 @@ struct StreetCredTier_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(StreetCredTier_Record, 0x50);
 } // namespace game::data
+using gamedataStreetCredTier_Record = game::data::StreetCredTier_Record;
 using StreetCredTier_Record = game::data::StreetCredTier_Record;
 } // namespace RED4ext
 

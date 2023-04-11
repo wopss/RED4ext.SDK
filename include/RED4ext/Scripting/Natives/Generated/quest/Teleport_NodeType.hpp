@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Teleport_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questTeleport_NodeType";
@@ -23,6 +24,7 @@ struct Teleport_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(Teleport_NodeType, 0x88);
 } // namespace quest
+using questTeleport_NodeType = quest::Teleport_NodeType;
 } // namespace RED4ext
 
 // clang-format on

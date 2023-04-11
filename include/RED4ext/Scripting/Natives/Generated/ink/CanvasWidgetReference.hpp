@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CanvasWidgetReference : ink::CompoundWidgetReference
 {
     static constexpr const char* NAME = "inkCanvasWidgetReference";
@@ -19,6 +20,7 @@ struct CanvasWidgetReference : ink::CompoundWidgetReference
 };
 RED4EXT_ASSERT_SIZE(CanvasWidgetReference, 0x18);
 } // namespace ink
+using inkCanvasWidgetReference = ink::CanvasWidgetReference;
 using inkCanvasRef = ink::CanvasWidgetReference;
 } // namespace RED4ext
 

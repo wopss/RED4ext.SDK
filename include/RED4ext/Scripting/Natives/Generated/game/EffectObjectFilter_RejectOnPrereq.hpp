@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct IPrereq; }
 
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_RejectOnPrereq : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_RejectOnPrereq";
@@ -23,6 +24,7 @@ struct EffectObjectFilter_RejectOnPrereq : game::EffectObjectSingleFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_RejectOnPrereq, 0x50);
 } // namespace game
+using gameEffectObjectFilter_RejectOnPrereq = game::EffectObjectFilter_RejectOnPrereq;
 } // namespace RED4ext
 
 // clang-format on

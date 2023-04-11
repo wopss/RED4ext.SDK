@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Effects : game::TransformAnimationTrackItemImpl
 {
     static constexpr const char* NAME = "gameTransformAnimation_Effects";
@@ -19,6 +20,7 @@ struct TransformAnimation_Effects : game::TransformAnimationTrackItemImpl
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Effects, 0x30);
 } // namespace game
+using gameTransformAnimation_Effects = game::TransformAnimation_Effects;
 } // namespace RED4ext
 
 // clang-format on

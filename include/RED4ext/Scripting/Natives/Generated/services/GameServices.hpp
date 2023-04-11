@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace services { 
+namespace services
+{
 struct GameServices : services::GameServicesGalaxy
 {
     static constexpr const char* NAME = "servicesGameServices";
@@ -20,6 +21,7 @@ struct GameServices : services::GameServicesGalaxy
 };
 RED4EXT_ASSERT_SIZE(GameServices, 0x620);
 } // namespace services
+using servicesGameServices = services::GameServices;
 } // namespace RED4ext
 
 // clang-format on

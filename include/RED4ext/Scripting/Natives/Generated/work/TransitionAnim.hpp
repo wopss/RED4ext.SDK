@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct TransitionAnim
 {
     static constexpr const char* NAME = "workTransitionAnim";
@@ -23,6 +24,7 @@ struct TransitionAnim
 };
 RED4EXT_ASSERT_SIZE(TransitionAnim, 0x20);
 } // namespace work
+using workTransitionAnim = work::TransitionAnim;
 } // namespace RED4ext
 
 // clang-format on

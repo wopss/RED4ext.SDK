@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct GuardAreaNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "worldGuardAreaNodeInstance";
@@ -20,6 +21,7 @@ struct GuardAreaNodeInstance : world::AreaShapeNodeInstance
 };
 RED4EXT_ASSERT_SIZE(GuardAreaNodeInstance, 0xE0);
 } // namespace world
+using worldGuardAreaNodeInstance = world::GuardAreaNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

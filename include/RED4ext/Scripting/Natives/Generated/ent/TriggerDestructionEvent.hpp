@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TriggerDestructionEvent : red::Event
 {
     static constexpr const char* NAME = "entTriggerDestructionEvent";
@@ -19,6 +20,7 @@ struct TriggerDestructionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TriggerDestructionEvent, 0x40);
 } // namespace ent
+using entTriggerDestructionEvent = ent::TriggerDestructionEvent;
 } // namespace RED4ext
 
 // clang-format on

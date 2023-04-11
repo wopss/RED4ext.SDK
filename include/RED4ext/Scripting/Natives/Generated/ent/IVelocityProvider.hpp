@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct IVelocityProvider : IScriptable
 {
     static constexpr const char* NAME = "entIVelocityProvider";
@@ -19,6 +20,7 @@ struct IVelocityProvider : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IVelocityProvider, 0x40);
 } // namespace ent
+using entIVelocityProvider = ent::IVelocityProvider;
 using IVelocityProvider = ent::IVelocityProvider;
 } // namespace RED4ext
 

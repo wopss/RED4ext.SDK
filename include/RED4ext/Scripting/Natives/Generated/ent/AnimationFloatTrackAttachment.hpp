@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimationFloatTrackAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "entAnimationFloatTrackAttachment";
@@ -20,6 +21,7 @@ struct AnimationFloatTrackAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(AnimationFloatTrackAttachment, 0x68);
 } // namespace ent
+using entAnimationFloatTrackAttachment = ent::AnimationFloatTrackAttachment;
 } // namespace RED4ext
 
 // clang-format on

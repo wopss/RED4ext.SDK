@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StreamingBlock : CResource
 {
     static constexpr const char* NAME = "worldStreamingBlock";
@@ -24,6 +25,7 @@ struct StreamingBlock : CResource
 };
 RED4EXT_ASSERT_SIZE(StreamingBlock, 0x58);
 } // namespace world
+using worldStreamingBlock = world::StreamingBlock;
 } // namespace RED4ext
 
 // clang-format on

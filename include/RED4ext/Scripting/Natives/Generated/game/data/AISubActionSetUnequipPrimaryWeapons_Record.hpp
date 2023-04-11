@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionSetUnequipPrimaryWeapons_Record : game::data::AISubActionCharacterRecordUnequip_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionSetUnequipPrimaryWeapons_Record";
@@ -19,6 +20,7 @@ struct AISubActionSetUnequipPrimaryWeapons_Record : game::data::AISubActionChara
 };
 RED4EXT_ASSERT_SIZE(AISubActionSetUnequipPrimaryWeapons_Record, 0x50);
 } // namespace game::data
+using gamedataAISubActionSetUnequipPrimaryWeapons_Record = game::data::AISubActionSetUnequipPrimaryWeapons_Record;
 using AISubActionSetUnequipPrimaryWeapons_Record = game::data::AISubActionSetUnequipPrimaryWeapons_Record;
 } // namespace RED4ext
 

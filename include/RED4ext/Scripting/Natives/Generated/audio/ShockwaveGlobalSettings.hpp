@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ShockwaveGlobalSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioShockwaveGlobalSettings";
@@ -23,6 +24,7 @@ struct ShockwaveGlobalSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(ShockwaveGlobalSettings, 0x48);
 } // namespace audio
+using audioShockwaveGlobalSettings = audio::ShockwaveGlobalSettings;
 } // namespace RED4ext
 
 // clang-format on

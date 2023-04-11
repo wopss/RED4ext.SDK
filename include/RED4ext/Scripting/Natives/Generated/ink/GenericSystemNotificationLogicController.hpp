@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GenericSystemNotificationLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkGenericSystemNotificationLogicController";
@@ -32,6 +33,7 @@ struct GenericSystemNotificationLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(GenericSystemNotificationLogicController, 0x1A0);
 } // namespace ink
+using inkGenericSystemNotificationLogicController = ink::GenericSystemNotificationLogicController;
 } // namespace RED4ext
 
 // clang-format on

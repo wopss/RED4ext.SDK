@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ShowInitializeUserScreen : IScriptable
 {
     static constexpr const char* NAME = "inkShowInitializeUserScreen";
@@ -21,6 +22,7 @@ struct ShowInitializeUserScreen : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ShowInitializeUserScreen, 0x48);
 } // namespace ink
+using inkShowInitializeUserScreen = ink::ShowInitializeUserScreen;
 using ShowInitializeUserScreen = ink::ShowInitializeUserScreen;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MinimapDeviceMappinController : game::ui::BaseMinimapMappinController
 {
     static constexpr const char* NAME = "gameuiMinimapDeviceMappinController";
@@ -22,6 +23,7 @@ struct MinimapDeviceMappinController : game::ui::BaseMinimapMappinController
 };
 RED4EXT_ASSERT_SIZE(MinimapDeviceMappinController, 0x240);
 } // namespace game::ui
+using gameuiMinimapDeviceMappinController = game::ui::MinimapDeviceMappinController;
 using MinimapDeviceMappinController = game::ui::MinimapDeviceMappinController;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ShouldJoinTrafficDefinition : AI::behavior::VehicleExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorShouldJoinTrafficDefinition";
@@ -19,6 +20,7 @@ struct ShouldJoinTrafficDefinition : AI::behavior::VehicleExpressionDefinition
 };
 RED4EXT_ASSERT_SIZE(ShouldJoinTrafficDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorShouldJoinTrafficDefinition = AI::behavior::ShouldJoinTrafficDefinition;
 } // namespace RED4ext
 
 // clang-format on

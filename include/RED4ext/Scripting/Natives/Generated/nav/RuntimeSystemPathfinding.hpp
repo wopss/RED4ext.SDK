@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace nav { 
+namespace nav
+{
 struct RuntimeSystemPathfinding : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "navRuntimeSystemPathfinding";
@@ -20,6 +21,7 @@ struct RuntimeSystemPathfinding : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemPathfinding, 0xD8);
 } // namespace nav
+using navRuntimeSystemPathfinding = nav::RuntimeSystemPathfinding;
 } // namespace RED4ext
 
 // clang-format on

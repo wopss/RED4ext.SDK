@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ExtendedWorkspotInfo : IScriptable
 {
     static constexpr const char* NAME = "gameExtendedWorkspotInfo";
@@ -26,6 +27,7 @@ struct ExtendedWorkspotInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ExtendedWorkspotInfo, 0x48);
 } // namespace game
+using gameExtendedWorkspotInfo = game::ExtendedWorkspotInfo;
 using ExtendedWorkspotInfo = game::ExtendedWorkspotInfo;
 } // namespace RED4ext
 

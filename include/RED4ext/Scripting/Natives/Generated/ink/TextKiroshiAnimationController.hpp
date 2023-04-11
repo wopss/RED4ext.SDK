@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TextKiroshiAnimationController : ink::TextAnimationController
 {
     static constexpr const char* NAME = "inkTextKiroshiAnimationController";
@@ -31,6 +32,7 @@ struct TextKiroshiAnimationController : ink::TextAnimationController
 };
 RED4EXT_ASSERT_SIZE(TextKiroshiAnimationController, 0x230);
 } // namespace ink
+using inkTextKiroshiAnimationController = ink::TextKiroshiAnimationController;
 using inkTextKiroshiAnimController = ink::TextKiroshiAnimationController;
 } // namespace RED4ext
 

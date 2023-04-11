@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TypographyResource : CResource
 {
     static constexpr const char* NAME = "inkTypographyResource";
@@ -22,6 +23,7 @@ struct TypographyResource : CResource
 };
 RED4EXT_ASSERT_SIZE(TypographyResource, 0x50);
 } // namespace ink
+using inkTypographyResource = ink::TypographyResource;
 } // namespace RED4ext
 
 // clang-format on

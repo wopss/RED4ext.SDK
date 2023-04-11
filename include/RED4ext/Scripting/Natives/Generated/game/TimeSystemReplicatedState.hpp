@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TimeSystemReplicatedState : game::IGameSystemReplicatedState
 {
     static constexpr const char* NAME = "gameTimeSystemReplicatedState";
@@ -23,6 +24,7 @@ struct TimeSystemReplicatedState : game::IGameSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(TimeSystemReplicatedState, 0x48);
 } // namespace game
+using gameTimeSystemReplicatedState = game::TimeSystemReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

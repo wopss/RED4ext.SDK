@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SettingsSelectorController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkSettingsSelectorController";
@@ -20,6 +21,7 @@ struct SettingsSelectorController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(SettingsSelectorController, 0xC8);
 } // namespace ink
+using inkSettingsSelectorController = ink::SettingsSelectorController;
 using SettingsSelectorController = ink::SettingsSelectorController;
 } // namespace RED4ext
 

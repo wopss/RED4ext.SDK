@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DebugSystem : ink::IDebugSystem
 {
     static constexpr const char* NAME = "inkDebugSystem";
@@ -20,6 +21,7 @@ struct DebugSystem : ink::IDebugSystem
 };
 RED4EXT_ASSERT_SIZE(DebugSystem, 0x70);
 } // namespace ink
+using inkDebugSystem = ink::DebugSystem;
 } // namespace RED4ext
 
 // clang-format on

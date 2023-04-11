@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ITransformAttachment : ent::IAttachment
 {
     static constexpr const char* NAME = "entITransformAttachment";
@@ -20,6 +21,7 @@ struct ITransformAttachment : ent::IAttachment
 };
 RED4EXT_ASSERT_SIZE(ITransformAttachment, 0x58);
 } // namespace ent
+using entITransformAttachment = ent::ITransformAttachment;
 } // namespace RED4ext
 
 // clang-format on

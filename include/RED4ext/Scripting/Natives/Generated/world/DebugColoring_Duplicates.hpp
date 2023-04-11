@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world { struct Prefab; }
 
-namespace world { 
+namespace world
+{
 struct DebugColoring_Duplicates : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_Duplicates";
@@ -28,6 +29,7 @@ struct DebugColoring_Duplicates : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_Duplicates, 0x90);
 } // namespace world
+using worldDebugColoring_Duplicates = world::DebugColoring_Duplicates;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace vehicle { 
+namespace vehicle
+{
 struct FinishedMountingEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleFinishedMountingEvent";
@@ -27,6 +28,7 @@ struct FinishedMountingEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(FinishedMountingEvent, 0x60);
 } // namespace vehicle
+using vehicleFinishedMountingEvent = vehicle::FinishedMountingEvent;
 using VehicleFinishedMountingEvent = vehicle::FinishedMountingEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VehicleEngageMovingFasterInterpolationData
 {
     static constexpr const char* NAME = "audioVehicleEngageMovingFasterInterpolationData";
@@ -23,6 +24,7 @@ struct VehicleEngageMovingFasterInterpolationData
 };
 RED4EXT_ASSERT_SIZE(VehicleEngageMovingFasterInterpolationData, 0x10);
 } // namespace audio
+using audioVehicleEngageMovingFasterInterpolationData = audio::VehicleEngageMovingFasterInterpolationData;
 } // namespace RED4ext
 
 // clang-format on

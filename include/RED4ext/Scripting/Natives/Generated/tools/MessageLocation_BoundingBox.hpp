@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct MessageLocation_BoundingBox : tools::IMessageLocation
 {
     static constexpr const char* NAME = "toolsMessageLocation_BoundingBox";
@@ -24,6 +25,7 @@ struct MessageLocation_BoundingBox : tools::IMessageLocation
 };
 RED4EXT_ASSERT_SIZE(MessageLocation_BoundingBox, 0x60);
 } // namespace tools
+using toolsMessageLocation_BoundingBox = tools::MessageLocation_BoundingBox;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TimeSkipFinishedEvent : red::Event
 {
     static constexpr const char* NAME = "gameTimeSkipFinishedEvent";
@@ -19,6 +20,7 @@ struct TimeSkipFinishedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TimeSkipFinishedEvent, 0x40);
 } // namespace game
+using gameTimeSkipFinishedEvent = game::TimeSkipFinishedEvent;
 using TimeSkipFinishedEvent = game::TimeSkipFinishedEvent;
 } // namespace RED4ext
 

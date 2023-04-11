@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIDirectorScheduleSpawningDesc_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAIDirectorScheduleSpawningDesc_Record";
@@ -20,6 +21,7 @@ struct AIDirectorScheduleSpawningDesc_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AIDirectorScheduleSpawningDesc_Record, 0x58);
 } // namespace game::data
+using gamedataAIDirectorScheduleSpawningDesc_Record = game::data::AIDirectorScheduleSpawningDesc_Record;
 using AIDirectorScheduleSpawningDesc_Record = game::data::AIDirectorScheduleSpawningDesc_Record;
 } // namespace RED4ext
 

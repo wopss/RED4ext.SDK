@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work::workspot { 
+namespace work::workspot
+{
 struct AnimObjectDebugger : work::DebuggingTool
 {
     static constexpr const char* NAME = "workworkspotAnimObjectDebugger";
@@ -20,6 +21,7 @@ struct AnimObjectDebugger : work::DebuggingTool
 };
 RED4EXT_ASSERT_SIZE(AnimObjectDebugger, 0x50);
 } // namespace work::workspot
+using workworkspotAnimObjectDebugger = work::workspot::AnimObjectDebugger;
 } // namespace RED4ext
 
 // clang-format on

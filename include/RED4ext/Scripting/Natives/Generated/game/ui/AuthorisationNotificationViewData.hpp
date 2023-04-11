@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct AuthorisationNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiAuthorisationNotificationViewData";
@@ -22,6 +23,7 @@ struct AuthorisationNotificationViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(AuthorisationNotificationViewData, 0x98);
 } // namespace game::ui
+using gameuiAuthorisationNotificationViewData = game::ui::AuthorisationNotificationViewData;
 using AuthorisationNotificationViewData = game::ui::AuthorisationNotificationViewData;
 } // namespace RED4ext
 

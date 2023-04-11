@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ChangeVoicesetStateEvent : red::Event
 {
     static constexpr const char* NAME = "entChangeVoicesetStateEvent";
@@ -25,6 +26,7 @@ struct ChangeVoicesetStateEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ChangeVoicesetStateEvent, 0x58);
 } // namespace ent
+using entChangeVoicesetStateEvent = ent::ChangeVoicesetStateEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficPersistentLaneConnectionsResource : res::StreamedResource
 {
     static constexpr const char* NAME = "worldTrafficPersistentLaneConnectionsResource";
@@ -20,6 +21,7 @@ struct TrafficPersistentLaneConnectionsResource : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(TrafficPersistentLaneConnectionsResource, 0x70);
 } // namespace world
+using worldTrafficPersistentLaneConnectionsResource = world::TrafficPersistentLaneConnectionsResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct ActionMoveToPositionState : game::ActionReplicatedState
 {
     static constexpr const char* NAME = "gameActionMoveToPositionState";
@@ -32,6 +33,7 @@ struct ActionMoveToPositionState : game::ActionReplicatedState
 };
 RED4EXT_ASSERT_SIZE(ActionMoveToPositionState, 0x50);
 } // namespace game
+using gameActionMoveToPositionState = game::ActionMoveToPositionState;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct FreeReservedWorkspotNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorFreeReservedWorkspotNodeDefinition";
@@ -19,6 +20,7 @@ struct FreeReservedWorkspotNodeDefinition : AI::behavior::DecoratorNodeDefinitio
 };
 RED4EXT_ASSERT_SIZE(FreeReservedWorkspotNodeDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorFreeReservedWorkspotNodeDefinition = AI::behavior::FreeReservedWorkspotNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

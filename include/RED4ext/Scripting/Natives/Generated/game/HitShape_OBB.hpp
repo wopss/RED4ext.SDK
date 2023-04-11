@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HitShape_OBB : game::HitShapeBase
 {
     static constexpr const char* NAME = "gameHitShape_OBB";
@@ -22,6 +23,7 @@ struct HitShape_OBB : game::HitShapeBase
 };
 RED4EXT_ASSERT_SIZE(HitShape_OBB, 0xA0);
 } // namespace game
+using gameHitShape_OBB = game::HitShape_OBB;
 using HitShape_OBB = game::HitShape_OBB;
 } // namespace RED4ext
 

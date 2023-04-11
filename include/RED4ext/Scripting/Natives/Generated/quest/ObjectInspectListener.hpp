@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ObjectInspectListener : quest::IInspectListener
 {
     static constexpr const char* NAME = "questObjectInspectListener";
@@ -20,6 +21,7 @@ struct ObjectInspectListener : quest::IInspectListener
 };
 RED4EXT_ASSERT_SIZE(ObjectInspectListener, 0x50);
 } // namespace quest
+using questObjectInspectListener = quest::ObjectInspectListener;
 using ObjectInspectListener = quest::ObjectInspectListener;
 } // namespace RED4ext
 

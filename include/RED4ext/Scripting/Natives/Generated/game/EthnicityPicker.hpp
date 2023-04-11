@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EthnicityPicker
 {
     static constexpr const char* NAME = "gameEthnicityPicker";
@@ -19,6 +20,7 @@ struct EthnicityPicker
 };
 RED4EXT_ASSERT_SIZE(EthnicityPicker, 0x40);
 } // namespace game
+using gameEthnicityPicker = game::EthnicityPicker;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BlendSpace_InternalsBlendSpace
 {
     static constexpr const char* NAME = "animAnimNode_BlendSpace_InternalsBlendSpace";
@@ -42,6 +43,7 @@ struct AnimNode_BlendSpace_InternalsBlendSpace
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BlendSpace_InternalsBlendSpace, 0x1C8);
 } // namespace anim
+using animAnimNode_BlendSpace_InternalsBlendSpace = anim::AnimNode_BlendSpace_InternalsBlendSpace;
 } // namespace RED4ext
 
 // clang-format on

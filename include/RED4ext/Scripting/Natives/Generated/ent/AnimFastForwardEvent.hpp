@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimFastForwardEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimFastForwardEvent";
@@ -19,6 +20,7 @@ struct AnimFastForwardEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AnimFastForwardEvent, 0x40);
 } // namespace ent
+using entAnimFastForwardEvent = ent::AnimFastForwardEvent;
 using AnimFastForwardEvent = ent::AnimFastForwardEvent;
 } // namespace RED4ext
 

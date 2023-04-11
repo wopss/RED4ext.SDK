@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GeneralVoiceGruntSettings
 {
     static constexpr const char* NAME = "audioGeneralVoiceGruntSettings";
@@ -48,6 +49,7 @@ struct GeneralVoiceGruntSettings
 };
 RED4EXT_ASSERT_SIZE(GeneralVoiceGruntSettings, 0xF0);
 } // namespace audio
+using audioGeneralVoiceGruntSettings = audio::GeneralVoiceGruntSettings;
 } // namespace RED4ext
 
 // clang-format on

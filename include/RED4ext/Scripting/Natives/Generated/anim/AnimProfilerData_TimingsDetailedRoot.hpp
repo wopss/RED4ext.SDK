@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimProfilerData_TimingsDetailedRoot : ISerializable
 {
     static constexpr const char* NAME = "animAnimProfilerData_TimingsDetailedRoot";
@@ -24,6 +25,7 @@ struct AnimProfilerData_TimingsDetailedRoot : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimProfilerData_TimingsDetailedRoot, 0x50);
 } // namespace anim
+using animAnimProfilerData_TimingsDetailedRoot = anim::AnimProfilerData_TimingsDetailedRoot;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraIssueTransition
 {
     static constexpr const char* NAME = "toolsJiraIssueTransition";
@@ -20,6 +21,7 @@ struct JiraIssueTransition
 };
 RED4EXT_ASSERT_SIZE(JiraIssueTransition, 0x20);
 } // namespace tools
+using toolsJiraIssueTransition = tools::JiraIssueTransition;
 } // namespace RED4ext
 
 // clang-format on

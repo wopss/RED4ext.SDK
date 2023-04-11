@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct NetrunnerPrototypeSpawnCompletedEvent : red::Event
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeSpawnCompletedEvent";
@@ -23,6 +24,7 @@ struct NetrunnerPrototypeSpawnCompletedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(NetrunnerPrototypeSpawnCompletedEvent, 0x50);
 } // namespace game
+using gameNetrunnerPrototypeSpawnCompletedEvent = game::NetrunnerPrototypeSpawnCompletedEvent;
 using NetrunnerPrototypeSpawnCompletedEvent = game::NetrunnerPrototypeSpawnCompletedEvent;
 } // namespace RED4ext
 

@@ -15,7 +15,8 @@ namespace RED4ext
 namespace game::damage { struct ServerHitData; }
 namespace game::damage { struct ServerKillData; }
 
-namespace game { 
+namespace game
+{
 struct DamageSystemSharedState : game::IGameSystemReplicatedState
 {
     static constexpr const char* NAME = "gameDamageSystemSharedState";
@@ -28,6 +29,7 @@ struct DamageSystemSharedState : game::IGameSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(DamageSystemSharedState, 0x70);
 } // namespace game
+using gameDamageSystemSharedState = game::DamageSystemSharedState;
 } // namespace RED4ext
 
 // clang-format on

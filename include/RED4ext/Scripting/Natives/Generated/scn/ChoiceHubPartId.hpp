@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceHubPartId
 {
     static constexpr const char* NAME = "scnChoiceHubPartId";
@@ -19,6 +20,7 @@ struct ChoiceHubPartId
 };
 RED4EXT_ASSERT_SIZE(ChoiceHubPartId, 0x4);
 } // namespace scn
+using scnChoiceHubPartId = scn::ChoiceHubPartId;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Weather_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questWeather_ConditionType";
@@ -23,6 +24,7 @@ struct Weather_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(Weather_ConditionType, 0x48);
 } // namespace quest
+using questWeather_ConditionType = quest::Weather_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

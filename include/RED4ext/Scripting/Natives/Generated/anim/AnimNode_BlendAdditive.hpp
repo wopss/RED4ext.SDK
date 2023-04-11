@@ -20,7 +20,8 @@ namespace RED4ext
 namespace anim { struct IAnimNode_PostProcess; }
 namespace anim { struct ISyncMethod; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BlendAdditive : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_BlendAdditive";
@@ -46,6 +47,7 @@ struct AnimNode_BlendAdditive : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BlendAdditive, 0x148);
 } // namespace anim
+using animAnimNode_BlendAdditive = anim::AnimNode_BlendAdditive;
 } // namespace RED4ext
 
 // clang-format on

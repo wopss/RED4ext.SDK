@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_StreamingCullingFlag : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_StreamingCullingFlag";
@@ -24,6 +25,7 @@ struct DebugColoring_StreamingCullingFlag : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_StreamingCullingFlag, 0x40);
 } // namespace world
+using worldDebugColoring_StreamingCullingFlag = world::DebugColoring_StreamingCullingFlag;
 } // namespace RED4ext
 
 // clang-format on

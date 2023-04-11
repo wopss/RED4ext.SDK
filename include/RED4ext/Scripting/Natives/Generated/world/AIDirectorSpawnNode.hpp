@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AIDirectorSpawnNode : world::Node
 {
     static constexpr const char* NAME = "worldAIDirectorSpawnNode";
@@ -21,6 +22,7 @@ struct AIDirectorSpawnNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(AIDirectorSpawnNode, 0x48);
 } // namespace world
+using worldAIDirectorSpawnNode = world::AIDirectorSpawnNode;
 } // namespace RED4ext
 
 // clang-format on

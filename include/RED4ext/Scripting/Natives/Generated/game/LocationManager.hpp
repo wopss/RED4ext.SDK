@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LocationManager : game::ILocationManager
 {
     static constexpr const char* NAME = "gameLocationManager";
@@ -20,6 +21,7 @@ struct LocationManager : game::ILocationManager
 };
 RED4EXT_ASSERT_SIZE(LocationManager, 0x58);
 } // namespace game
+using gameLocationManager = game::LocationManager;
 using LocationManager = game::LocationManager;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Rumble_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 {
     static constexpr const char* NAME = "questRumble_NodeType";
@@ -25,6 +26,7 @@ struct Rumble_NodeType : quest::IGameManagerNonSignalStoppingNodeType
 };
 RED4EXT_ASSERT_SIZE(Rumble_NodeType, 0x80);
 } // namespace quest
+using questRumble_NodeType = quest::Rumble_NodeType;
 } // namespace RED4ext
 
 // clang-format on

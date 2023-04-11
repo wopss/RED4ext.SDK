@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct MappinManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questMappinManagerNodeDefinition";
@@ -25,6 +26,7 @@ struct MappinManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(MappinManagerNodeDefinition, 0x60);
 } // namespace quest
+using questMappinManagerNodeDefinition = quest::MappinManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

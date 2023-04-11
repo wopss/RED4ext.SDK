@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ClearLineOfSightCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataClearLineOfSightCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct ClearLineOfSightCoverSelectionParameters_Record : game::data::CoverSelect
 };
 RED4EXT_ASSERT_SIZE(ClearLineOfSightCoverSelectionParameters_Record, 0x60);
 } // namespace game::data
+using gamedataClearLineOfSightCoverSelectionParameters_Record = game::data::ClearLineOfSightCoverSelectionParameters_Record;
 using ClearLineOfSightCoverSelectionParameters_Record = game::data::ClearLineOfSightCoverSelectionParameters_Record;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerObstacleSystem : IScriptable
 {
     static constexpr const char* NAME = "gamePlayerObstacleSystem";
@@ -20,6 +21,7 @@ struct PlayerObstacleSystem : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PlayerObstacleSystem, 0x20E0);
 } // namespace game
+using gamePlayerObstacleSystem = game::PlayerObstacleSystem;
 using PlayerObstacleSystem = game::PlayerObstacleSystem;
 } // namespace RED4ext
 

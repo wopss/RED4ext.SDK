@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "gameScanningComponentReplicatedState";
@@ -26,6 +27,7 @@ struct ScanningComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(ScanningComponentReplicatedState, 0x38);
 } // namespace game
+using gameScanningComponentReplicatedState = game::ScanningComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

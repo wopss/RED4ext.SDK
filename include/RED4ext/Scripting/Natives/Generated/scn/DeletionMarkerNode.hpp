@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct DeletionMarkerNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnDeletionMarkerNode";
@@ -19,6 +20,7 @@ struct DeletionMarkerNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(DeletionMarkerNode, 0x48);
 } // namespace scn
+using scnDeletionMarkerNode = scn::DeletionMarkerNode;
 } // namespace RED4ext
 
 // clang-format on

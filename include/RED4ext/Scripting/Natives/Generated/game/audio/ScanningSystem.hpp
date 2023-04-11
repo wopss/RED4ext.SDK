@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct ScanningSystem : game::audio::IScanningSystem
 {
     static constexpr const char* NAME = "gameaudioScanningSystem";
@@ -20,6 +21,7 @@ struct ScanningSystem : game::audio::IScanningSystem
 };
 RED4EXT_ASSERT_SIZE(ScanningSystem, 0x80);
 } // namespace game::audio
+using gameaudioScanningSystem = game::audio::ScanningSystem;
 } // namespace RED4ext
 
 // clang-format on

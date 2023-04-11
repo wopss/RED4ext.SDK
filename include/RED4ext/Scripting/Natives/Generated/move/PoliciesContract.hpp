@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct PoliciesContract : ISerializable
 {
     static constexpr const char* NAME = "movePoliciesContract";
@@ -20,6 +21,7 @@ struct PoliciesContract : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PoliciesContract, 0x58);
 } // namespace move
+using movePoliciesContract = move::PoliciesContract;
 } // namespace RED4ext
 
 // clang-format on

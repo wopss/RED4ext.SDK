@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VehicleSpecificCommandParams : ISerializable
 {
     static constexpr const char* NAME = "questVehicleSpecificCommandParams";
@@ -23,6 +24,7 @@ struct VehicleSpecificCommandParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VehicleSpecificCommandParams, 0x38);
 } // namespace quest
+using questVehicleSpecificCommandParams = quest::VehicleSpecificCommandParams;
 } // namespace RED4ext
 
 // clang-format on

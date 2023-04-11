@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeLadderDescription : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeLadderDescription";
@@ -31,6 +32,7 @@ struct MachineparameterTypeLadderDescription : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeLadderDescription, 0x90);
 } // namespace game::state
+using gamestateMachineparameterTypeLadderDescription = game::state::MachineparameterTypeLadderDescription;
 using LadderDescription = game::state::MachineparameterTypeLadderDescription;
 } // namespace RED4ext
 

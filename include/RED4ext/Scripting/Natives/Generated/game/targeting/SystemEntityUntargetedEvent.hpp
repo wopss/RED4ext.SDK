@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemEntityUntargetedEvent : red::Event
 {
     static constexpr const char* NAME = "gametargetingSystemEntityUntargetedEvent";
@@ -23,6 +24,7 @@ struct SystemEntityUntargetedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SystemEntityUntargetedEvent, 0x50);
 } // namespace game::targeting
+using gametargetingSystemEntityUntargetedEvent = game::targeting::SystemEntityUntargetedEvent;
 using EntityUntargetedEvent = game::targeting::SystemEntityUntargetedEvent;
 } // namespace RED4ext
 

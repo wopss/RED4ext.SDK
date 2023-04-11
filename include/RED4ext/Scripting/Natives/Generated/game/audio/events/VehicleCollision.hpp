@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events
+{
 struct VehicleCollision : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsVehicleCollision";
@@ -20,6 +21,7 @@ struct VehicleCollision : red::Event
 };
 RED4EXT_ASSERT_SIZE(VehicleCollision, 0x60);
 } // namespace game::audio::events
+using gameaudioeventsVehicleCollision = game::audio::events::VehicleCollision;
 } // namespace RED4ext
 
 // clang-format on

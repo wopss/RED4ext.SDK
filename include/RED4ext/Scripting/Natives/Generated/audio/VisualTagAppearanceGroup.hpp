@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VisualTagAppearanceGroup
 {
     static constexpr const char* NAME = "audioVisualTagAppearanceGroup";
@@ -22,6 +23,7 @@ struct VisualTagAppearanceGroup
 };
 RED4EXT_ASSERT_SIZE(VisualTagAppearanceGroup, 0x20);
 } // namespace audio
+using audioVisualTagAppearanceGroup = audio::VisualTagAppearanceGroup;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace quest { struct IBaseCondition; }
 
-namespace quest { 
+namespace quest
+{
 struct LogicalCondition : quest::Condition
 {
     static constexpr const char* NAME = "questLogicalCondition";
@@ -27,6 +28,7 @@ struct LogicalCondition : quest::Condition
 };
 RED4EXT_ASSERT_SIZE(LogicalCondition, 0x50);
 } // namespace quest
+using questLogicalCondition = quest::LogicalCondition;
 } // namespace RED4ext
 
 // clang-format on

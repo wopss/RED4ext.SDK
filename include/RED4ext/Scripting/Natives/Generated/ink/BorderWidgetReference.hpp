@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct BorderWidgetReference : ink::LeafWidgetReference
 {
     static constexpr const char* NAME = "inkBorderWidgetReference";
@@ -19,6 +20,7 @@ struct BorderWidgetReference : ink::LeafWidgetReference
 };
 RED4EXT_ASSERT_SIZE(BorderWidgetReference, 0x18);
 } // namespace ink
+using inkBorderWidgetReference = ink::BorderWidgetReference;
 using inkBorderRef = ink::BorderWidgetReference;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct GodModeSaveEntityData
 {
     static constexpr const char* NAME = "gameGodModeSaveEntityData";
@@ -22,6 +23,7 @@ struct GodModeSaveEntityData
 };
 RED4EXT_ASSERT_SIZE(GodModeSaveEntityData, 0x28);
 } // namespace game
+using gameGodModeSaveEntityData = game::GodModeSaveEntityData;
 } // namespace RED4ext
 
 // clang-format on

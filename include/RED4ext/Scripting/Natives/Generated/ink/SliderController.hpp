@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SliderController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkSliderController";
@@ -44,6 +45,7 @@ struct SliderController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(SliderController, 0x200);
 } // namespace ink
+using inkSliderController = ink::SliderController;
 } // namespace RED4ext
 
 // clang-format on

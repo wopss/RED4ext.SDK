@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ElevatorSettings : audio::EntitySettings
 {
     static constexpr const char* NAME = "audioElevatorSettings";
@@ -27,6 +28,7 @@ struct ElevatorSettings : audio::EntitySettings
 };
 RED4EXT_ASSERT_SIZE(ElevatorSettings, 0xD8);
 } // namespace audio
+using audioElevatorSettings = audio::ElevatorSettings;
 } // namespace RED4ext
 
 // clang-format on

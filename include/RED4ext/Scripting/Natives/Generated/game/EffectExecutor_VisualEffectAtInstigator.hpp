@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace game { 
+namespace game
+{
 struct EffectExecutor_VisualEffectAtInstigator : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_VisualEffectAtInstigator";
@@ -23,6 +24,7 @@ struct EffectExecutor_VisualEffectAtInstigator : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_VisualEffectAtInstigator, 0x50);
 } // namespace game
+using gameEffectExecutor_VisualEffectAtInstigator = game::EffectExecutor_VisualEffectAtInstigator;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NodeDefinition : graph::GraphNodeDefinition
 {
     static constexpr const char* NAME = "questNodeDefinition";
@@ -21,6 +22,7 @@ struct NodeDefinition : graph::GraphNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(NodeDefinition, 0x48);
 } // namespace quest
+using questNodeDefinition = quest::NodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

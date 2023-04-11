@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::camera { 
+namespace game::camera
+{
 struct SettingManager : game::camera::ISettingManager
 {
     static constexpr const char* NAME = "gamecameraSettingManager";
@@ -20,6 +21,7 @@ struct SettingManager : game::camera::ISettingManager
 };
 RED4EXT_ASSERT_SIZE(SettingManager, 0xA0);
 } // namespace game::camera
+using gamecameraSettingManager = game::camera::SettingManager;
 } // namespace RED4ext
 
 // clang-format on

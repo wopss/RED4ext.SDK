@@ -17,7 +17,8 @@ namespace RED4ext
 {
 struct IMaterial;
 
-namespace ent { 
+namespace ent
+{
 struct DecalComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entDecalComponent";
@@ -43,6 +44,7 @@ struct DecalComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(DecalComponent, 0x1A0);
 } // namespace ent
+using entDecalComponent = ent::DecalComponent;
 } // namespace RED4ext
 
 // clang-format on

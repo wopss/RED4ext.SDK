@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SBehaviorConstraintNodeFloorIKDebugTrace
 {
     static constexpr const char* NAME = "animSBehaviorConstraintNodeFloorIKDebugTrace";
@@ -19,6 +20,7 @@ struct SBehaviorConstraintNodeFloorIKDebugTrace
 };
 RED4EXT_ASSERT_SIZE(SBehaviorConstraintNodeFloorIKDebugTrace, 0x12D0);
 } // namespace anim
+using animSBehaviorConstraintNodeFloorIKDebugTrace = anim::SBehaviorConstraintNodeFloorIKDebugTrace;
 } // namespace RED4ext
 
 // clang-format on

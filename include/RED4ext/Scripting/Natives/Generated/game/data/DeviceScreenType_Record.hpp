@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DeviceScreenType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataDeviceScreenType_Record";
@@ -20,6 +21,7 @@ struct DeviceScreenType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(DeviceScreenType_Record, 0x58);
 } // namespace game::data
+using gamedataDeviceScreenType_Record = game::data::DeviceScreenType_Record;
 using DeviceScreenType_Record = game::data::DeviceScreenType_Record;
 } // namespace RED4ext
 

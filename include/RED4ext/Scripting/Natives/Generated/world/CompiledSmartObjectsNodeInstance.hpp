@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CompiledSmartObjectsNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldCompiledSmartObjectsNodeInstance";
@@ -20,6 +21,7 @@ struct CompiledSmartObjectsNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(CompiledSmartObjectsNodeInstance, 0xC0);
 } // namespace world
+using worldCompiledSmartObjectsNodeInstance = world::CompiledSmartObjectsNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

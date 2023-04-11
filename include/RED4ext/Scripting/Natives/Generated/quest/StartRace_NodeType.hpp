@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StartRace_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questStartRace_NodeType";
@@ -19,6 +20,7 @@ struct StartRace_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(StartRace_NodeType, 0x30);
 } // namespace quest
+using questStartRace_NodeType = quest::StartRace_NodeType;
 } // namespace RED4ext
 
 // clang-format on

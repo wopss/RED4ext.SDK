@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionForceHitReaction_Record : game::data::AISubAction_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionForceHitReaction_Record";
@@ -20,6 +21,7 @@ struct AISubActionForceHitReaction_Record : game::data::AISubAction_Record
 };
 RED4EXT_ASSERT_SIZE(AISubActionForceHitReaction_Record, 0x68);
 } // namespace game::data
+using gamedataAISubActionForceHitReaction_Record = game::data::AISubActionForceHitReaction_Record;
 using AISubActionForceHitReaction_Record = game::data::AISubActionForceHitReaction_Record;
 } // namespace RED4ext
 

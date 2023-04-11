@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeInfo : IScriptable
 {
     static constexpr const char* NAME = "worldRuntimeInfo";
@@ -20,6 +21,7 @@ struct RuntimeInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(RuntimeInfo, 0x80);
 } // namespace world
+using worldRuntimeInfo = world::RuntimeInfo;
 using RuntimeInfo = world::RuntimeInfo;
 } // namespace RED4ext
 

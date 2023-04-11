@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficSpotDefinition : ISerializable
 {
     static constexpr const char* NAME = "worldTrafficSpotDefinition";
@@ -24,6 +25,7 @@ struct TrafficSpotDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TrafficSpotDefinition, 0x48);
 } // namespace world
+using worldTrafficSpotDefinition = world::TrafficSpotDefinition;
 } // namespace RED4ext
 
 // clang-format on

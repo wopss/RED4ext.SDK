@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NonLinearAccuracy_Record : game::data::Accuracy_Record
 {
     static constexpr const char* NAME = "gamedataNonLinearAccuracy_Record";
@@ -20,6 +21,7 @@ struct NonLinearAccuracy_Record : game::data::Accuracy_Record
 };
 RED4EXT_ASSERT_SIZE(NonLinearAccuracy_Record, 0x58);
 } // namespace game::data
+using gamedataNonLinearAccuracy_Record = game::data::NonLinearAccuracy_Record;
 using NonLinearAccuracy_Record = game::data::NonLinearAccuracy_Record;
 } // namespace RED4ext
 

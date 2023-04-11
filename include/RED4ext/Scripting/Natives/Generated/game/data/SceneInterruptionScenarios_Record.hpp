@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct SceneInterruptionScenarios_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataSceneInterruptionScenarios_Record";
@@ -20,6 +21,7 @@ struct SceneInterruptionScenarios_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(SceneInterruptionScenarios_Record, 0x50);
 } // namespace game::data
+using gamedataSceneInterruptionScenarios_Record = game::data::SceneInterruptionScenarios_Record;
 using SceneInterruptionScenarios_Record = game::data::SceneInterruptionScenarios_Record;
 } // namespace RED4ext
 

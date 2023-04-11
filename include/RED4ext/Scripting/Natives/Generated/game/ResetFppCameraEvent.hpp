@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ResetFppCameraEvent : red::Event
 {
     static constexpr const char* NAME = "gameResetFppCameraEvent";
@@ -21,6 +22,7 @@ struct ResetFppCameraEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ResetFppCameraEvent, 0x48);
 } // namespace game
+using gameResetFppCameraEvent = game::ResetFppCameraEvent;
 using ResetFppCameraEvent = game::ResetFppCameraEvent;
 } // namespace RED4ext
 

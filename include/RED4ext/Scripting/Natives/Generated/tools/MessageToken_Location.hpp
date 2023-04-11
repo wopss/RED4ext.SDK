@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace tools { struct IMessageLocation; }
 
-namespace tools { 
+namespace tools
+{
 struct MessageToken_Location : tools::IMessageToken
 {
     static constexpr const char* NAME = "toolsMessageToken_Location";
@@ -23,6 +24,7 @@ struct MessageToken_Location : tools::IMessageToken
 };
 RED4EXT_ASSERT_SIZE(MessageToken_Location, 0x40);
 } // namespace tools
+using toolsMessageToken_Location = tools::MessageToken_Location;
 } // namespace RED4ext
 
 // clang-format on

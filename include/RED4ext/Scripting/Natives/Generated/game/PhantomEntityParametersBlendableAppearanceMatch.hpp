@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhantomEntityParametersBlendableAppearanceMatch
 {
     static constexpr const char* NAME = "gamePhantomEntityParametersBlendableAppearanceMatch";
@@ -21,6 +22,7 @@ struct PhantomEntityParametersBlendableAppearanceMatch
 };
 RED4EXT_ASSERT_SIZE(PhantomEntityParametersBlendableAppearanceMatch, 0x10);
 } // namespace game
+using gamePhantomEntityParametersBlendableAppearanceMatch = game::PhantomEntityParametersBlendableAppearanceMatch;
 } // namespace RED4ext
 
 // clang-format on

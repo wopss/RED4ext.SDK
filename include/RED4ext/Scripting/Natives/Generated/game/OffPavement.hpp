@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct OffPavement : red::Event
 {
     static constexpr const char* NAME = "gameOffPavement";
@@ -19,6 +20,7 @@ struct OffPavement : red::Event
 };
 RED4EXT_ASSERT_SIZE(OffPavement, 0x40);
 } // namespace game
+using gameOffPavement = game::OffPavement;
 using OffPavement = game::OffPavement;
 } // namespace RED4ext
 

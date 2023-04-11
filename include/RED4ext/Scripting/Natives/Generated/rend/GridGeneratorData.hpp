@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct GridGeneratorData
 {
     static constexpr const char* NAME = "rendGridGeneratorData";
@@ -29,6 +30,7 @@ struct GridGeneratorData
 };
 RED4EXT_ASSERT_SIZE(GridGeneratorData, 0x60);
 } // namespace rend
+using rendGridGeneratorData = rend::GridGeneratorData;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct InternalCached_StopCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workInternalCached_StopCommandData";
@@ -20,6 +21,7 @@ struct InternalCached_StopCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(InternalCached_StopCommandData, 0x38);
 } // namespace work
+using workInternalCached_StopCommandData = work::InternalCached_StopCommandData;
 } // namespace RED4ext
 
 // clang-format on

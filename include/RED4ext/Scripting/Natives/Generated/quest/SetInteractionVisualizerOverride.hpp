@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetInteractionVisualizerOverride : quest::IInteractiveObjectManagerNodeType
 {
     static constexpr const char* NAME = "questSetInteractionVisualizerOverride";
@@ -24,6 +25,7 @@ struct SetInteractionVisualizerOverride : quest::IInteractiveObjectManagerNodeTy
 };
 RED4EXT_ASSERT_SIZE(SetInteractionVisualizerOverride, 0x40);
 } // namespace quest
+using questSetInteractionVisualizerOverride = quest::SetInteractionVisualizerOverride;
 } // namespace RED4ext
 
 // clang-format on

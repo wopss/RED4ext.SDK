@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CTreeNodeFSMDefinition : AI::CTreeNodeCompositeDefinition
 {
     static constexpr const char* NAME = "AICTreeNodeFSMDefinition";
@@ -31,6 +32,7 @@ struct CTreeNodeFSMDefinition : AI::CTreeNodeCompositeDefinition
 };
 RED4EXT_ASSERT_SIZE(CTreeNodeFSMDefinition, 0x90);
 } // namespace AI
+using AICTreeNodeFSMDefinition = AI::CTreeNodeFSMDefinition;
 } // namespace RED4ext
 
 // clang-format on

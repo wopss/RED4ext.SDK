@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DrawArea
 {
     static constexpr const char* NAME = "inkDrawArea";
@@ -24,6 +25,7 @@ struct DrawArea
 };
 RED4EXT_ASSERT_SIZE(DrawArea, 0x4C);
 } // namespace ink
+using inkDrawArea = ink::DrawArea;
 } // namespace RED4ext
 
 // clang-format on

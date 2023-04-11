@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct UncontrolledMovementStartEvent : red::Event
 {
     static constexpr const char* NAME = "entUncontrolledMovementStartEvent";
@@ -23,6 +24,7 @@ struct UncontrolledMovementStartEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UncontrolledMovementStartEvent, 0x48);
 } // namespace ent
+using entUncontrolledMovementStartEvent = ent::UncontrolledMovementStartEvent;
 using UncontrolledMovementStartEvent = ent::UncontrolledMovementStartEvent;
 } // namespace RED4ext
 

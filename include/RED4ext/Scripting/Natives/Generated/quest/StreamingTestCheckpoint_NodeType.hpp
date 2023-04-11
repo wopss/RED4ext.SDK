@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StreamingTestCheckpoint_NodeType : quest::IWorldDataManagerNodeType
 {
     static constexpr const char* NAME = "questStreamingTestCheckpoint_NodeType";
@@ -22,6 +23,7 @@ struct StreamingTestCheckpoint_NodeType : quest::IWorldDataManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(StreamingTestCheckpoint_NodeType, 0x40);
 } // namespace quest
+using questStreamingTestCheckpoint_NodeType = quest::StreamingTestCheckpoint_NodeType;
 } // namespace RED4ext
 
 // clang-format on

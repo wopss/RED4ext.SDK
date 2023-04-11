@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Device_ConditionFunctionParameter
 {
     static constexpr const char* NAME = "questDevice_ConditionFunctionParameter";
@@ -22,6 +23,7 @@ struct Device_ConditionFunctionParameter
 };
 RED4EXT_ASSERT_SIZE(Device_ConditionFunctionParameter, 0x20);
 } // namespace quest
+using questDevice_ConditionFunctionParameter = quest::Device_ConditionFunctionParameter;
 } // namespace RED4ext
 
 // clang-format on

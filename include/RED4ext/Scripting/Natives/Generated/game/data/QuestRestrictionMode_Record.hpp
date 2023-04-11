@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct QuestRestrictionMode_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataQuestRestrictionMode_Record";
@@ -20,6 +21,7 @@ struct QuestRestrictionMode_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(QuestRestrictionMode_Record, 0x50);
 } // namespace game::data
+using gamedataQuestRestrictionMode_Record = game::data::QuestRestrictionMode_Record;
 using QuestRestrictionMode_Record = game::data::QuestRestrictionMode_Record;
 } // namespace RED4ext
 

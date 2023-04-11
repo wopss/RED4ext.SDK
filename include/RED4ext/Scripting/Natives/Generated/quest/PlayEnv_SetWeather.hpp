@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlayEnv_SetWeather : quest::IEnvironmentManagerNodeType
 {
     static constexpr const char* NAME = "questPlayEnv_SetWeather";
@@ -28,6 +29,7 @@ struct PlayEnv_SetWeather : quest::IEnvironmentManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PlayEnv_SetWeather, 0x50);
 } // namespace quest
+using questPlayEnv_SetWeather = quest::PlayEnv_SetWeather;
 } // namespace RED4ext
 
 // clang-format on

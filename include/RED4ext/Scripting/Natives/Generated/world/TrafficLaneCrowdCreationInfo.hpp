@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficLaneCrowdCreationInfo
 {
     static constexpr const char* NAME = "worldTrafficLaneCrowdCreationInfo";
@@ -21,6 +22,7 @@ struct TrafficLaneCrowdCreationInfo
 };
 RED4EXT_ASSERT_SIZE(TrafficLaneCrowdCreationInfo, 0x10);
 } // namespace world
+using worldTrafficLaneCrowdCreationInfo = world::TrafficLaneCrowdCreationInfo;
 } // namespace RED4ext
 
 // clang-format on

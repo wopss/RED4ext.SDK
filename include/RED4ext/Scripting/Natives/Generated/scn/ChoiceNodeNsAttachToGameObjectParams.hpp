@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsAttachToGameObjectParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsAttachToGameObjectParams";
@@ -23,6 +24,7 @@ struct ChoiceNodeNsAttachToGameObjectParams
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsAttachToGameObjectParams, 0x10);
 } // namespace scn
+using scnChoiceNodeNsAttachToGameObjectParams = scn::ChoiceNodeNsAttachToGameObjectParams;
 } // namespace RED4ext
 
 // clang-format on

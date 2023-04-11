@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NodeVisibilityMapArrayElement
 {
     static constexpr const char* NAME = "questNodeVisibilityMapArrayElement";
@@ -22,6 +23,7 @@ struct NodeVisibilityMapArrayElement
 };
 RED4EXT_ASSERT_SIZE(NodeVisibilityMapArrayElement, 0x10);
 } // namespace quest
+using questNodeVisibilityMapArrayElement = quest::NodeVisibilityMapArrayElement;
 } // namespace RED4ext
 
 // clang-format on

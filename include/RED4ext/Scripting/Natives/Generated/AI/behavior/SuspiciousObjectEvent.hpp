@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SuspiciousObjectEvent : red::Event
 {
     static constexpr const char* NAME = "AIbehaviorSuspiciousObjectEvent";
@@ -25,6 +26,7 @@ struct SuspiciousObjectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SuspiciousObjectEvent, 0x58);
 } // namespace AI::behavior
+using AIbehaviorSuspiciousObjectEvent = AI::behavior::SuspiciousObjectEvent;
 using SuspiciousObjectEvent = AI::behavior::SuspiciousObjectEvent;
 } // namespace RED4ext
 

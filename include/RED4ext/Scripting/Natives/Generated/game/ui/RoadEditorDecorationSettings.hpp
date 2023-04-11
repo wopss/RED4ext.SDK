@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct RoadEditorDecorationSettings
 {
     static constexpr const char* NAME = "gameuiRoadEditorDecorationSettings";
@@ -24,6 +25,7 @@ struct RoadEditorDecorationSettings
 };
 RED4EXT_ASSERT_SIZE(RoadEditorDecorationSettings, 0x18);
 } // namespace game::ui
+using gameuiRoadEditorDecorationSettings = game::ui::RoadEditorDecorationSettings;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct PlayerDetector_PseudoDevice : game::Object
 {
     static constexpr const char* NAME = "cpPlayerDetector_PseudoDevice";
@@ -21,6 +22,7 @@ struct PlayerDetector_PseudoDevice : game::Object
 };
 RED4EXT_ASSERT_SIZE(PlayerDetector_PseudoDevice, 0x248);
 } // namespace cp
+using cpPlayerDetector_PseudoDevice = cp::PlayerDetector_PseudoDevice;
 } // namespace RED4ext
 
 // clang-format on

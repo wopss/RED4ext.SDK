@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIWeaponLockedOnTargetCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIWeaponLockedOnTargetCond_Record";
@@ -20,6 +21,7 @@ struct AIWeaponLockedOnTargetCond_Record : game::data::AIActionSubCondition_Reco
 };
 RED4EXT_ASSERT_SIZE(AIWeaponLockedOnTargetCond_Record, 0x58);
 } // namespace game::data
+using gamedataAIWeaponLockedOnTargetCond_Record = game::data::AIWeaponLockedOnTargetCond_Record;
 using AIWeaponLockedOnTargetCond_Record = game::data::AIWeaponLockedOnTargetCond_Record;
 } // namespace RED4ext
 

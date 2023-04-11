@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DamageIndicatorPartLogicController : game::ui::BaseDirectionalIndicatorPartLogicController
 {
     static constexpr const char* NAME = "gameuiDamageIndicatorPartLogicController";
@@ -22,6 +23,7 @@ struct DamageIndicatorPartLogicController : game::ui::BaseDirectionalIndicatorPa
 };
 RED4EXT_ASSERT_SIZE(DamageIndicatorPartLogicController, 0x100);
 } // namespace game::ui
+using gameuiDamageIndicatorPartLogicController = game::ui::DamageIndicatorPartLogicController;
 using DamageIndicatorPartLogicController = game::ui::DamageIndicatorPartLogicController;
 } // namespace RED4ext
 

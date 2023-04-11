@@ -13,7 +13,8 @@ namespace RED4ext
 struct CMesh;
 namespace anim { struct Rig; }
 
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct DebrisResourceItem
 {
     static constexpr const char* NAME = "entdismembermentDebrisResourceItem";
@@ -24,6 +25,7 @@ struct DebrisResourceItem
 };
 RED4EXT_ASSERT_SIZE(DebrisResourceItem, 0x30);
 } // namespace ent::dismemberment
+using entdismembermentDebrisResourceItem = ent::dismemberment::DebrisResourceItem;
 } // namespace RED4ext
 
 // clang-format on

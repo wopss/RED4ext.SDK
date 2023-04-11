@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CreditsForceStopped_ConditionType : quest::IUIConditionType
 {
     static constexpr const char* NAME = "questCreditsForceStopped_ConditionType";
@@ -19,6 +20,7 @@ struct CreditsForceStopped_ConditionType : quest::IUIConditionType
 };
 RED4EXT_ASSERT_SIZE(CreditsForceStopped_ConditionType, 0x38);
 } // namespace quest
+using questCreditsForceStopped_ConditionType = quest::CreditsForceStopped_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

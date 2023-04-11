@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SyncMethodLocomotion : anim::ISyncMethod
 {
     static constexpr const char* NAME = "animSyncMethodLocomotion";
@@ -23,6 +24,7 @@ struct SyncMethodLocomotion : anim::ISyncMethod
 };
 RED4EXT_ASSERT_SIZE(SyncMethodLocomotion, 0x50);
 } // namespace anim
+using animSyncMethodLocomotion = anim::SyncMethodLocomotion;
 } // namespace RED4ext
 
 // clang-format on

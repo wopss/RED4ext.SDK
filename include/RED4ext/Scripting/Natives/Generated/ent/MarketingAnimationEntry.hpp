@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct MarketingAnimationEntry
 {
     static constexpr const char* NAME = "entMarketingAnimationEntry";
@@ -22,6 +23,7 @@ struct MarketingAnimationEntry
 };
 RED4EXT_ASSERT_SIZE(MarketingAnimationEntry, 0x10);
 } // namespace ent
+using entMarketingAnimationEntry = ent::MarketingAnimationEntry;
 } // namespace RED4ext
 
 // clang-format on

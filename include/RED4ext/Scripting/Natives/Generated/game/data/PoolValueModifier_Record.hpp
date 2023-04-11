@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct PoolValueModifier_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataPoolValueModifier_Record";
@@ -20,6 +21,7 @@ struct PoolValueModifier_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(PoolValueModifier_Record, 0x60);
 } // namespace game::data
+using gamedataPoolValueModifier_Record = game::data::PoolValueModifier_Record;
 using PoolValueModifier_Record = game::data::PoolValueModifier_Record;
 } // namespace RED4ext
 

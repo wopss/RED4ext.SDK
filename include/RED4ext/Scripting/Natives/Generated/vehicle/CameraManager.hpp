@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct CameraManager : IScriptable
 {
     static constexpr const char* NAME = "vehicleCameraManager";
@@ -20,6 +21,7 @@ struct CameraManager : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CameraManager, 0x370);
 } // namespace vehicle
+using vehicleCameraManager = vehicle::CameraManager;
 using VehicleCameraManager = vehicle::CameraManager;
 } // namespace RED4ext
 

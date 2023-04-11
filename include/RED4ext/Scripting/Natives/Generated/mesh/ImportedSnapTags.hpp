@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct ImportedSnapTags
 {
     static constexpr const char* NAME = "meshImportedSnapTags";
@@ -22,6 +23,7 @@ struct ImportedSnapTags
 };
 RED4EXT_ASSERT_SIZE(ImportedSnapTags, 0x20);
 } // namespace mesh
+using meshImportedSnapTags = mesh::ImportedSnapTags;
 } // namespace RED4ext
 
 // clang-format on

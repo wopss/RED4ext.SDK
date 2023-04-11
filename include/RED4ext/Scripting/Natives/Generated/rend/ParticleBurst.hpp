@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct ParticleBurst
 {
     static constexpr const char* NAME = "rendParticleBurst";
@@ -22,6 +23,7 @@ struct ParticleBurst
 };
 RED4EXT_ASSERT_SIZE(ParticleBurst, 0x10);
 } // namespace rend
+using rendParticleBurst = rend::ParticleBurst;
 } // namespace RED4ext
 
 // clang-format on

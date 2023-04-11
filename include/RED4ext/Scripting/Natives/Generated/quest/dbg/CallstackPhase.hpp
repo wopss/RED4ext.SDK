@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest::dbg { 
+namespace quest::dbg
+{
 struct CallstackPhase : quest::dbg::CallstackBlock
 {
     static constexpr const char* NAME = "questdbgCallstackPhase";
@@ -22,6 +23,7 @@ struct CallstackPhase : quest::dbg::CallstackBlock
 };
 RED4EXT_ASSERT_SIZE(CallstackPhase, 0x38);
 } // namespace quest::dbg
+using questdbgCallstackPhase = quest::dbg::CallstackPhase;
 } // namespace RED4ext
 
 // clang-format on

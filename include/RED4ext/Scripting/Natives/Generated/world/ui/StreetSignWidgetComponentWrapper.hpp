@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct StreetSignWidgetComponentWrapper : ink::IStreetSignWidgetComponentWrapper
 {
     static constexpr const char* NAME = "worlduiStreetSignWidgetComponentWrapper";
@@ -20,6 +21,7 @@ struct StreetSignWidgetComponentWrapper : ink::IStreetSignWidgetComponentWrapper
 };
 RED4EXT_ASSERT_SIZE(StreetSignWidgetComponentWrapper, 0x60);
 } // namespace world::ui
+using worlduiStreetSignWidgetComponentWrapper = world::ui::StreetSignWidgetComponentWrapper;
 } // namespace RED4ext
 
 // clang-format on

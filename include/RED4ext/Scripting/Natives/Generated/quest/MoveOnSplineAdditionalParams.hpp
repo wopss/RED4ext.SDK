@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MoveOnSplineAdditionalParams : ISerializable
 {
     static constexpr const char* NAME = "questMoveOnSplineAdditionalParams";
@@ -28,6 +29,7 @@ struct MoveOnSplineAdditionalParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MoveOnSplineAdditionalParams, 0x108);
 } // namespace quest
+using questMoveOnSplineAdditionalParams = quest::MoveOnSplineAdditionalParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LookAtEyesProperties
 {
     static constexpr const char* NAME = "scnLookAtEyesProperties";
@@ -21,6 +22,7 @@ struct LookAtEyesProperties
 };
 RED4EXT_ASSERT_SIZE(LookAtEyesProperties, 0xC);
 } // namespace scn
+using scnLookAtEyesProperties = scn::LookAtEyesProperties;
 } // namespace RED4ext
 
 // clang-format on

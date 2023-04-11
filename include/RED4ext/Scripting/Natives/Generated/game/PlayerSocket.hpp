@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PlayerSocket
 {
     static constexpr const char* NAME = "gamePlayerSocket";
@@ -19,6 +20,7 @@ struct PlayerSocket
 };
 RED4EXT_ASSERT_SIZE(PlayerSocket, 0x28);
 } // namespace game
+using gamePlayerSocket = game::PlayerSocket;
 } // namespace RED4ext
 
 // clang-format on

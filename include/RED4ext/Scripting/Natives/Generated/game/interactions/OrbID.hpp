@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct OrbID
 {
     static constexpr const char* NAME = "gameinteractionsOrbID";
@@ -19,6 +20,7 @@ struct OrbID
 };
 RED4EXT_ASSERT_SIZE(OrbID, 0x4);
 } // namespace game::interactions
+using gameinteractionsOrbID = game::interactions::OrbID;
 } // namespace RED4ext
 
 // clang-format on

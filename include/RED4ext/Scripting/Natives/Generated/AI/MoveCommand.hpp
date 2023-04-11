@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct MoveCommand : AI::Command
 {
     static constexpr const char* NAME = "AIMoveCommand";
@@ -24,6 +25,7 @@ struct MoveCommand : AI::Command
 };
 RED4EXT_ASSERT_SIZE(MoveCommand, 0x68);
 } // namespace AI
+using AIMoveCommand = AI::MoveCommand;
 } // namespace RED4ext
 
 // clang-format on

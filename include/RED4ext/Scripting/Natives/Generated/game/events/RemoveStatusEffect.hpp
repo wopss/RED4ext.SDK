@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct RemoveStatusEffect : game::events::StatusEffectEvent
 {
     static constexpr const char* NAME = "gameeventsRemoveStatusEffect";
@@ -21,6 +22,7 @@ struct RemoveStatusEffect : game::events::StatusEffectEvent
 };
 RED4EXT_ASSERT_SIZE(RemoveStatusEffect, 0x68);
 } // namespace game::events
+using gameeventsRemoveStatusEffect = game::events::RemoveStatusEffect;
 using RemoveStatusEffect = game::events::RemoveStatusEffect;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectPostAction_BeamVFX : game::EffectPostAction
 {
     static constexpr const char* NAME = "gameEffectPostAction_BeamVFX";
@@ -19,6 +20,7 @@ struct EffectPostAction_BeamVFX : game::EffectPostAction
 };
 RED4EXT_ASSERT_SIZE(EffectPostAction_BeamVFX, 0x40);
 } // namespace game
+using gameEffectPostAction_BeamVFX = game::EffectPostAction_BeamVFX;
 } // namespace RED4ext
 
 // clang-format on

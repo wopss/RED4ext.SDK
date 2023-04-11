@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BlackboardUpdateProxy : game::IBlackboardUpdateProxy
 {
     static constexpr const char* NAME = "gameBlackboardUpdateProxy";
@@ -19,6 +20,7 @@ struct BlackboardUpdateProxy : game::IBlackboardUpdateProxy
 };
 RED4EXT_ASSERT_SIZE(BlackboardUpdateProxy, 0x48);
 } // namespace game
+using gameBlackboardUpdateProxy = game::BlackboardUpdateProxy;
 using BlackboardUpdateProxy = game::BlackboardUpdateProxy;
 } // namespace RED4ext
 

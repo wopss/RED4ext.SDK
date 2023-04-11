@@ -15,7 +15,8 @@ namespace RED4ext
 struct CBitmapTexture;
 namespace ink { struct TextureAtlas; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct HDRSettingsGameController : game::ui::MenuGameController
 {
     static constexpr const char* NAME = "gameuiHDRSettingsGameController";
@@ -29,6 +30,7 @@ struct HDRSettingsGameController : game::ui::MenuGameController
 };
 RED4EXT_ASSERT_SIZE(HDRSettingsGameController, 0x148);
 } // namespace game::ui
+using gameuiHDRSettingsGameController = game::ui::HDRSettingsGameController;
 using HDRSettingsGameController = game::ui::HDRSettingsGameController;
 } // namespace RED4ext
 

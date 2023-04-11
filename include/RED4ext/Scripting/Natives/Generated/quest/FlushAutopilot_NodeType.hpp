@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FlushAutopilot_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questFlushAutopilot_NodeType";
@@ -23,6 +24,7 @@ struct FlushAutopilot_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(FlushAutopilot_NodeType, 0x70);
 } // namespace quest
+using questFlushAutopilot_NodeType = quest::FlushAutopilot_NodeType;
 } // namespace RED4ext
 
 // clang-format on

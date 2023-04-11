@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RecordSelector : ISerializable
 {
     static constexpr const char* NAME = "questRecordSelector";
@@ -28,6 +29,7 @@ struct RecordSelector : ISerializable
 };
 RED4EXT_ASSERT_SIZE(RecordSelector, 0x50);
 } // namespace quest
+using questRecordSelector = quest::RecordSelector;
 } // namespace RED4ext
 
 // clang-format on

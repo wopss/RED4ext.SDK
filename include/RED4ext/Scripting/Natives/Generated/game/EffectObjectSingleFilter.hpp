@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectSingleFilter : game::EffectObjectFilter
 {
     static constexpr const char* NAME = "gameEffectObjectSingleFilter";
@@ -19,6 +20,7 @@ struct EffectObjectSingleFilter : game::EffectObjectFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectSingleFilter, 0x40);
 } // namespace game
+using gameEffectObjectSingleFilter = game::EffectObjectSingleFilter;
 using EffectObjectSingleFilter = game::EffectObjectSingleFilter;
 } // namespace RED4ext
 

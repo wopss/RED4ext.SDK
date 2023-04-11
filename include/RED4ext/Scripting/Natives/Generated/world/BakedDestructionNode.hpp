@@ -19,7 +19,8 @@ struct CMesh;
 namespace physics { struct FilterData; }
 namespace world { struct Effect; }
 
-namespace world { 
+namespace world
+{
 struct BakedDestructionNode : world::MeshNode
 {
     static constexpr const char* NAME = "worldBakedDestructionNode";
@@ -49,6 +50,7 @@ struct BakedDestructionNode : world::MeshNode
 };
 RED4EXT_ASSERT_SIZE(BakedDestructionNode, 0xE0);
 } // namespace world
+using worldBakedDestructionNode = world::BakedDestructionNode;
 } // namespace RED4ext
 
 // clang-format on

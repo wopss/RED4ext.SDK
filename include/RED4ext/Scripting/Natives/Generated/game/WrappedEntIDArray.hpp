@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WrappedEntIDArray
 {
     static constexpr const char* NAME = "gameWrappedEntIDArray";
@@ -21,6 +22,7 @@ struct WrappedEntIDArray
 };
 RED4EXT_ASSERT_SIZE(WrappedEntIDArray, 0x10);
 } // namespace game
+using gameWrappedEntIDArray = game::WrappedEntIDArray;
 using WrappedEntIDArray = game::WrappedEntIDArray;
 } // namespace RED4ext
 

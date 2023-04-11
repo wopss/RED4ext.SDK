@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EnableAimAssist : red::Event
 {
     static constexpr const char* NAME = "gameEnableAimAssist";
@@ -19,6 +20,7 @@ struct EnableAimAssist : red::Event
 };
 RED4EXT_ASSERT_SIZE(EnableAimAssist, 0x40);
 } // namespace game
+using gameEnableAimAssist = game::EnableAimAssist;
 using EnableAimAssist = game::EnableAimAssist;
 } // namespace RED4ext
 

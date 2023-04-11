@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeActionLocomotionBraindanceParameters : game::state::MachineparameterTypeActionLocomotionParameters
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeActionLocomotionBraindanceParameters";
@@ -20,6 +21,7 @@ struct MachineparameterTypeActionLocomotionBraindanceParameters : game::state::M
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeActionLocomotionBraindanceParameters, 0xA0);
 } // namespace game::state
+using gamestateMachineparameterTypeActionLocomotionBraindanceParameters = game::state::MachineparameterTypeActionLocomotionBraindanceParameters;
 using LocomotionBraindanceParameters = game::state::MachineparameterTypeActionLocomotionBraindanceParameters;
 } // namespace RED4ext
 

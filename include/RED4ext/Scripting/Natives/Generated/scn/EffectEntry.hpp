@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct EffectEntry
 {
     static constexpr const char* NAME = "scnEffectEntry";
@@ -22,6 +23,7 @@ struct EffectEntry
 };
 RED4EXT_ASSERT_SIZE(EffectEntry, 0x10);
 } // namespace scn
+using scnEffectEntry = scn::EffectEntry;
 } // namespace RED4ext
 
 // clang-format on

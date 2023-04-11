@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CoverObject : game::Object
 {
     static constexpr const char* NAME = "gameCoverObject";
@@ -30,6 +31,7 @@ struct CoverObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(CoverObject, 0x270);
 } // namespace game
+using gameCoverObject = game::CoverObject;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace nav { struct LocomotionPath; }
 
-namespace nav { 
+namespace nav
+{
 struct LocomotionPathResource : CResource
 {
     static constexpr const char* NAME = "navLocomotionPathResource";
@@ -25,6 +26,7 @@ struct LocomotionPathResource : CResource
 };
 RED4EXT_ASSERT_SIZE(LocomotionPathResource, 0x80);
 } // namespace nav
+using navLocomotionPathResource = nav::LocomotionPathResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficPersistentNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldTrafficPersistentNodeInstance";
@@ -20,6 +21,7 @@ struct TrafficPersistentNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(TrafficPersistentNodeInstance, 0xA0);
 } // namespace world
+using worldTrafficPersistentNodeInstance = world::TrafficPersistentNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

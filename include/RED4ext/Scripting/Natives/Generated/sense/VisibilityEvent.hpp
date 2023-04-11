@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace sense { 
+namespace sense
+{
 struct VisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "senseVisibilityEvent";
@@ -29,6 +30,7 @@ struct VisibilityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisibilityEvent, 0x68);
 } // namespace sense
+using senseVisibilityEvent = sense::VisibilityEvent;
 using SenseVisibilityEvent = sense::VisibilityEvent;
 } // namespace RED4ext
 

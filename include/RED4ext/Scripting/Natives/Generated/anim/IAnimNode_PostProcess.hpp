@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IAnimNode_PostProcess : ISerializable
 {
     static constexpr const char* NAME = "animIAnimNode_PostProcess";
@@ -21,6 +22,7 @@ struct IAnimNode_PostProcess : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IAnimNode_PostProcess, 0x38);
 } // namespace anim
+using animIAnimNode_PostProcess = anim::IAnimNode_PostProcess;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_PostProcess_Footlock : anim::IAnimNode_PostProcess
 {
     static constexpr const char* NAME = "animAnimNode_PostProcess_Footlock";
@@ -20,6 +21,7 @@ struct AnimNode_PostProcess_Footlock : anim::IAnimNode_PostProcess
 };
 RED4EXT_ASSERT_SIZE(AnimNode_PostProcess_Footlock, 0x78);
 } // namespace anim
+using animAnimNode_PostProcess_Footlock = anim::AnimNode_PostProcess_Footlock;
 } // namespace RED4ext
 
 // clang-format on

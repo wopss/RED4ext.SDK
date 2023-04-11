@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace scn { 
+namespace scn
+{
 struct GameplayAnimSetSRRef
 {
     static constexpr const char* NAME = "scnGameplayAnimSetSRRef";
@@ -22,6 +23,7 @@ struct GameplayAnimSetSRRef
 };
 RED4EXT_ASSERT_SIZE(GameplayAnimSetSRRef, 0x8);
 } // namespace scn
+using scnGameplayAnimSetSRRef = scn::GameplayAnimSetSRRef;
 } // namespace RED4ext
 
 // clang-format on

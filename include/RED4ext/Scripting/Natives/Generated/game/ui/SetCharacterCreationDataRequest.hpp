@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SetCharacterCreationDataRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameuiSetCharacterCreationDataRequest";
@@ -24,6 +25,7 @@ struct SetCharacterCreationDataRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(SetCharacterCreationDataRequest, 0x70);
 } // namespace game::ui
+using gameuiSetCharacterCreationDataRequest = game::ui::SetCharacterCreationDataRequest;
 } // namespace RED4ext
 
 // clang-format on

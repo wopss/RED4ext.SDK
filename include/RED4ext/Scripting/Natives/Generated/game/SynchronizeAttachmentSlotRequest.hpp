@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SynchronizeAttachmentSlotRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameSynchronizeAttachmentSlotRequest";
@@ -21,6 +22,7 @@ struct SynchronizeAttachmentSlotRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(SynchronizeAttachmentSlotRequest, 0x60);
 } // namespace game
+using gameSynchronizeAttachmentSlotRequest = game::SynchronizeAttachmentSlotRequest;
 using SynchronizeAttachmentSlotRequest = game::SynchronizeAttachmentSlotRequest;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior::condition { struct Script; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorScriptConditionDefinition";
@@ -25,6 +26,7 @@ struct ScriptConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(ScriptConditionDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorScriptConditionDefinition = AI::behavior::ScriptConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

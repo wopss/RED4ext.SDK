@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LootBag : game::Object
 {
     static constexpr const char* NAME = "gameLootBag";
@@ -20,6 +21,7 @@ struct LootBag : game::Object
 };
 RED4EXT_ASSERT_SIZE(LootBag, 0x250);
 } // namespace game
+using gameLootBag = game::LootBag;
 } // namespace RED4ext
 
 // clang-format on

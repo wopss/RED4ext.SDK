@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct DynamicActorRepellingComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entDynamicActorRepellingComponent";
@@ -37,6 +38,7 @@ struct DynamicActorRepellingComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(DynamicActorRepellingComponent, 0x1E0);
 } // namespace ent
+using entDynamicActorRepellingComponent = ent::DynamicActorRepellingComponent;
 } // namespace RED4ext
 
 // clang-format on

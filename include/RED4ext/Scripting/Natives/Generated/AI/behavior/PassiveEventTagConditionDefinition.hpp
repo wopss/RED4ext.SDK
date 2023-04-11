@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct PassiveEventTagConditionDefinition : AI::behavior::PassiveConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorPassiveEventTagConditionDefinition";
@@ -23,6 +24,7 @@ struct PassiveEventTagConditionDefinition : AI::behavior::PassiveConditionDefini
 };
 RED4EXT_ASSERT_SIZE(PassiveEventTagConditionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorPassiveEventTagConditionDefinition = AI::behavior::PassiveEventTagConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

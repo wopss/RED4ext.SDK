@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GenericGameplayEventOccurredASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioGenericGameplayEventOccurredASTCD";
@@ -21,6 +22,7 @@ struct GenericGameplayEventOccurredASTCD : audio::AudioStateTransitionConditionD
 };
 RED4EXT_ASSERT_SIZE(GenericGameplayEventOccurredASTCD, 0x40);
 } // namespace audio
+using audioGenericGameplayEventOccurredASTCD = audio::GenericGameplayEventOccurredASTCD;
 } // namespace RED4ext
 
 // clang-format on

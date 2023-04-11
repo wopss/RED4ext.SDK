@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JournalQuestMultiMapPin : game::JournalQuestMapPinBase
 {
     static constexpr const char* NAME = "gameJournalQuestMultiMapPin";
@@ -22,6 +23,7 @@ struct JournalQuestMultiMapPin : game::JournalQuestMapPinBase
 };
 RED4EXT_ASSERT_SIZE(JournalQuestMultiMapPin, 0x120);
 } // namespace game
+using gameJournalQuestMultiMapPin = game::JournalQuestMultiMapPin;
 using JournalQuestMultiMapPin = game::JournalQuestMultiMapPin;
 } // namespace RED4ext
 

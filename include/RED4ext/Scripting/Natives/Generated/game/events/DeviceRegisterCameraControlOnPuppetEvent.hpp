@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct DeviceCameraControlComponent; }
 
-namespace game::events { 
+namespace game::events
+{
 struct DeviceRegisterCameraControlOnPuppetEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsDeviceRegisterCameraControlOnPuppetEvent";
@@ -25,6 +26,7 @@ struct DeviceRegisterCameraControlOnPuppetEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeviceRegisterCameraControlOnPuppetEvent, 0x58);
 } // namespace game::events
+using gameeventsDeviceRegisterCameraControlOnPuppetEvent = game::events::DeviceRegisterCameraControlOnPuppetEvent;
 } // namespace RED4ext
 
 // clang-format on

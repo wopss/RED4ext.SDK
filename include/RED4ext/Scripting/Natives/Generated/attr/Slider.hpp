@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Slider : attr::Attribute
 {
     static constexpr const char* NAME = "attrSlider";
@@ -21,6 +22,7 @@ struct Slider : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(Slider, 0x38);
 } // namespace attr
+using attrSlider = attr::Slider;
 } // namespace RED4ext
 
 // clang-format on

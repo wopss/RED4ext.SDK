@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectParameter_QuatEvaluator_Value : game::IEffectParameter_QuatEvaluator
 {
     static constexpr const char* NAME = "gameEffectParameter_QuatEvaluator_Value";
@@ -21,6 +22,7 @@ struct EffectParameter_QuatEvaluator_Value : game::IEffectParameter_QuatEvaluato
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_QuatEvaluator_Value, 0x40);
 } // namespace game
+using gameEffectParameter_QuatEvaluator_Value = game::EffectParameter_QuatEvaluator_Value;
 } // namespace RED4ext
 
 // clang-format on

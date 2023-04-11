@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RainEvent : red::Event
 {
     static constexpr const char* NAME = "worldRainEvent";
@@ -22,6 +23,7 @@ struct RainEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RainEvent, 0x48);
 } // namespace world
+using worldRainEvent = world::RainEvent;
 using RainEvent = world::RainEvent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SnappableNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldSnappableNodeInstance";
@@ -19,6 +20,7 @@ struct SnappableNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(SnappableNodeInstance, 0x90);
 } // namespace world
+using worldSnappableNodeInstance = world::SnappableNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

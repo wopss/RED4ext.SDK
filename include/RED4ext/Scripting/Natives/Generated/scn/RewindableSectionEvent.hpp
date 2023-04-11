@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct RewindableSectionEvent : red::Event
 {
     static constexpr const char* NAME = "scnRewindableSectionEvent";
@@ -21,6 +22,7 @@ struct RewindableSectionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RewindableSectionEvent, 0x48);
 } // namespace scn
+using scnRewindableSectionEvent = scn::RewindableSectionEvent;
 } // namespace RED4ext
 
 // clang-format on

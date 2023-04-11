@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActivateTriggerDestructionComponentEvent : red::Event
 {
     static constexpr const char* NAME = "gameActivateTriggerDestructionComponentEvent";
@@ -19,6 +20,7 @@ struct ActivateTriggerDestructionComponentEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ActivateTriggerDestructionComponentEvent, 0x40);
 } // namespace game
+using gameActivateTriggerDestructionComponentEvent = game::ActivateTriggerDestructionComponentEvent;
 using ActivateTriggerDestructionComponentEvent = game::ActivateTriggerDestructionComponentEvent;
 } // namespace RED4ext
 

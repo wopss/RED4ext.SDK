@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct JournalChangeMappinPhase_NodeType : quest::IJournal_NodeType
 {
     static constexpr const char* NAME = "questJournalChangeMappinPhase_NodeType";
@@ -23,6 +24,7 @@ struct JournalChangeMappinPhase_NodeType : quest::IJournal_NodeType
 };
 RED4EXT_ASSERT_SIZE(JournalChangeMappinPhase_NodeType, 0x50);
 } // namespace quest
+using questJournalChangeMappinPhase_NodeType = quest::JournalChangeMappinPhase_NodeType;
 } // namespace RED4ext
 
 // clang-format on

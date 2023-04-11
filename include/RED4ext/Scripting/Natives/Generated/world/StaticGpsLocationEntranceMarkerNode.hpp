@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticGpsLocationEntranceMarkerNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticGpsLocationEntranceMarkerNode";
@@ -19,6 +20,7 @@ struct StaticGpsLocationEntranceMarkerNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticGpsLocationEntranceMarkerNode, 0x38);
 } // namespace world
+using worldStaticGpsLocationEntranceMarkerNode = world::StaticGpsLocationEntranceMarkerNode;
 } // namespace RED4ext
 
 // clang-format on

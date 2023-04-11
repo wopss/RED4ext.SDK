@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace world { 
+namespace world
+{
 struct TerrainMeshNode : world::Node
 {
     static constexpr const char* NAME = "worldTerrainMeshNode";
@@ -26,6 +27,7 @@ struct TerrainMeshNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(TerrainMeshNode, 0x60);
 } // namespace world
+using worldTerrainMeshNode = world::TerrainMeshNode;
 } // namespace RED4ext
 
 // clang-format on

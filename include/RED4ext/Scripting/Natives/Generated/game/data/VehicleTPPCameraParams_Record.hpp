@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct VehicleTPPCameraParams_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataVehicleTPPCameraParams_Record";
@@ -20,6 +21,7 @@ struct VehicleTPPCameraParams_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(VehicleTPPCameraParams_Record, 0xC8);
 } // namespace game::data
+using gamedataVehicleTPPCameraParams_Record = game::data::VehicleTPPCameraParams_Record;
 using VehicleTPPCameraParams_Record = game::data::VehicleTPPCameraParams_Record;
 } // namespace RED4ext
 

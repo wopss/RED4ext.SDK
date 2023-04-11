@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct GeometryKey
 {
     static constexpr const char* NAME = "physicsGeometryKey";
@@ -22,6 +23,7 @@ struct GeometryKey
 };
 RED4EXT_ASSERT_SIZE(GeometryKey, 0x10);
 } // namespace physics
+using physicsGeometryKey = physics::GeometryKey;
 } // namespace RED4ext
 
 // clang-format on

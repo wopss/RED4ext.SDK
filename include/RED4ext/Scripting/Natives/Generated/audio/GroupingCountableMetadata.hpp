@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GroupingCountableMetadata : audio::EmitterMetadata
 {
     static constexpr const char* NAME = "audioGroupingCountableMetadata";
@@ -21,6 +22,7 @@ struct GroupingCountableMetadata : audio::EmitterMetadata
 };
 RED4EXT_ASSERT_SIZE(GroupingCountableMetadata, 0x40);
 } // namespace audio
+using audioGroupingCountableMetadata = audio::GroupingCountableMetadata;
 } // namespace RED4ext
 
 // clang-format on

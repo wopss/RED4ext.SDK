@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ProgressBar_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questProgressBar_NodeType";
@@ -24,6 +25,7 @@ struct ProgressBar_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ProgressBar_NodeType, 0x68);
 } // namespace quest
+using questProgressBar_NodeType = quest::ProgressBar_NodeType;
 } // namespace RED4ext
 
 // clang-format on

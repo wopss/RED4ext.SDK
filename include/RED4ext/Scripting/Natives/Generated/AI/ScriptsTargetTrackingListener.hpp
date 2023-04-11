@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ScriptsTargetTrackingListener : AI::ITargetTrackingListener
 {
     static constexpr const char* NAME = "AIScriptsTargetTrackingListener";
@@ -20,6 +21,7 @@ struct ScriptsTargetTrackingListener : AI::ITargetTrackingListener
 };
 RED4EXT_ASSERT_SIZE(ScriptsTargetTrackingListener, 0x98);
 } // namespace AI
+using AIScriptsTargetTrackingListener = AI::ScriptsTargetTrackingListener;
 } // namespace RED4ext
 
 // clang-format on

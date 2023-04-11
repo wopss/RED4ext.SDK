@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SnapToTerrainIkRequest
 {
     static constexpr const char* NAME = "animSnapToTerrainIkRequest";
@@ -26,6 +27,7 @@ struct SnapToTerrainIkRequest
 };
 RED4EXT_ASSERT_SIZE(SnapToTerrainIkRequest, 0x120);
 } // namespace anim
+using animSnapToTerrainIkRequest = anim::SnapToTerrainIkRequest;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::mappins { 
+namespace game::mappins
+{
 struct IMappinData
 {
     static constexpr const char* NAME = "gamemappinsIMappinData";
@@ -19,6 +20,7 @@ struct IMappinData
 };
 RED4EXT_ASSERT_SIZE(IMappinData, 0x8);
 } // namespace game::mappins
+using gamemappinsIMappinData = game::mappins::IMappinData;
 using IMappinData = game::mappins::IMappinData;
 } // namespace RED4ext
 

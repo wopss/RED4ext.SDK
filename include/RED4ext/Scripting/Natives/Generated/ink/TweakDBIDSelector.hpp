@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TweakDBIDSelector : IScriptable
 {
     static constexpr const char* NAME = "inkTweakDBIDSelector";
@@ -21,6 +22,7 @@ struct TweakDBIDSelector : IScriptable
 };
 RED4EXT_ASSERT_SIZE(TweakDBIDSelector, 0x48);
 } // namespace ink
+using inkTweakDBIDSelector = ink::TweakDBIDSelector;
 using TweakDBIDSelector = ink::TweakDBIDSelector;
 } // namespace RED4ext
 

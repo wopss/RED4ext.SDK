@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BlendFromPose : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_BlendFromPose";
@@ -30,6 +31,7 @@ struct AnimNode_BlendFromPose : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BlendFromPose, 0xF8);
 } // namespace anim
+using animAnimNode_BlendFromPose = anim::AnimNode_BlendFromPose;
 } // namespace RED4ext
 
 // clang-format on

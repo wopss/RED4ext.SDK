@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct MaterialListDescriptor
 {
     static constexpr const char* NAME = "interopMaterialListDescriptor";
@@ -32,6 +33,7 @@ struct MaterialListDescriptor
 };
 RED4EXT_ASSERT_SIZE(MaterialListDescriptor, 0xA0);
 } // namespace interop
+using interopMaterialListDescriptor = interop::MaterialListDescriptor;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct FoliagePopulationSpanInfo
 {
     static constexpr const char* NAME = "worldFoliagePopulationSpanInfo";
@@ -22,6 +23,7 @@ struct FoliagePopulationSpanInfo
 };
 RED4EXT_ASSERT_SIZE(FoliagePopulationSpanInfo, 0x10);
 } // namespace world
+using worldFoliagePopulationSpanInfo = world::FoliagePopulationSpanInfo;
 } // namespace RED4ext
 
 // clang-format on

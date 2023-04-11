@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::state { struct MachineFunctor; }
 
-namespace game::state { 
+namespace game::state
+{
 struct MachineTransition : graph::GraphConnectionDefinition
 {
     static constexpr const char* NAME = "gamestateMachineTransition";
@@ -25,6 +26,7 @@ struct MachineTransition : graph::GraphConnectionDefinition
 };
 RED4EXT_ASSERT_SIZE(MachineTransition, 0x88);
 } // namespace game::state
+using gamestateMachineTransition = game::state::MachineTransition;
 } // namespace RED4ext
 
 // clang-format on

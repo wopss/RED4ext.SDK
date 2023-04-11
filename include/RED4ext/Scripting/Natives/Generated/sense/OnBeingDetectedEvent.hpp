@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace sense { struct SensorObject; }
 
-namespace sense { 
+namespace sense
+{
 struct OnBeingDetectedEvent : red::Event
 {
     static constexpr const char* NAME = "senseOnBeingDetectedEvent";
@@ -27,6 +28,7 @@ struct OnBeingDetectedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnBeingDetectedEvent, 0x60);
 } // namespace sense
+using senseOnBeingDetectedEvent = sense::OnBeingDetectedEvent;
 using OnBeingDetectedEvent = sense::OnBeingDetectedEvent;
 } // namespace RED4ext
 

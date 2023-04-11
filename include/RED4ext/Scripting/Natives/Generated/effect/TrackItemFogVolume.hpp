@@ -15,7 +15,8 @@ struct IEvaluatorColor;
 struct IEvaluatorFloat;
 struct IEvaluatorVector;
 
-namespace effect { 
+namespace effect
+{
 struct TrackItemFogVolume : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemFogVolume";
@@ -32,6 +33,7 @@ struct TrackItemFogVolume : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemFogVolume, 0x98);
 } // namespace effect
+using effectTrackItemFogVolume = effect::TrackItemFogVolume;
 } // namespace RED4ext
 
 // clang-format on

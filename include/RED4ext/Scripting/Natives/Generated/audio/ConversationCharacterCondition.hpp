@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct ConversationCharacterCondition
 {
     static constexpr const char* NAME = "audioConversationCharacterCondition";
@@ -23,6 +24,7 @@ struct ConversationCharacterCondition
 };
 RED4EXT_ASSERT_SIZE(ConversationCharacterCondition, 0x20);
 } // namespace audio
+using audioConversationCharacterCondition = audio::ConversationCharacterCondition;
 } // namespace RED4ext
 
 // clang-format on

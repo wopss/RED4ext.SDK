@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct TalkInteractionListener : ISerializable
 {
     static constexpr const char* NAME = "scnTalkInteractionListener";
@@ -20,6 +21,7 @@ struct TalkInteractionListener : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TalkInteractionListener, 0x38);
 } // namespace scn
+using scnTalkInteractionListener = scn::TalkInteractionListener;
 } // namespace RED4ext
 
 // clang-format on

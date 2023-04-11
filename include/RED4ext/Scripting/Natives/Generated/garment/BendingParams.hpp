@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace garment { 
+namespace garment
+{
 struct BendingParams
 {
     static constexpr const char* NAME = "garmentBendingParams";
@@ -19,6 +20,7 @@ struct BendingParams
 };
 RED4EXT_ASSERT_SIZE(BendingParams, 0x4);
 } // namespace garment
+using garmentBendingParams = garment::BendingParams;
 } // namespace RED4ext
 
 // clang-format on

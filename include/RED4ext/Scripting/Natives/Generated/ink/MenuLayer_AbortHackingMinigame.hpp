@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuLayer_AbortHackingMinigame : red::Event
 {
     static constexpr const char* NAME = "inkMenuLayer_AbortHackingMinigame";
@@ -19,6 +20,7 @@ struct MenuLayer_AbortHackingMinigame : red::Event
 };
 RED4EXT_ASSERT_SIZE(MenuLayer_AbortHackingMinigame, 0x40);
 } // namespace ink
+using inkMenuLayer_AbortHackingMinigame = ink::MenuLayer_AbortHackingMinigame;
 } // namespace RED4ext
 
 // clang-format on

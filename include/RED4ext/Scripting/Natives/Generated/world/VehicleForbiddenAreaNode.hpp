@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct VehicleForbiddenAreaNode : world::TriggerAreaNode
 {
     static constexpr const char* NAME = "worldVehicleForbiddenAreaNode";
@@ -19,6 +20,7 @@ struct VehicleForbiddenAreaNode : world::TriggerAreaNode
 };
 RED4EXT_ASSERT_SIZE(VehicleForbiddenAreaNode, 0x70);
 } // namespace world
+using worldVehicleForbiddenAreaNode = world::VehicleForbiddenAreaNode;
 } // namespace RED4ext
 
 // clang-format on

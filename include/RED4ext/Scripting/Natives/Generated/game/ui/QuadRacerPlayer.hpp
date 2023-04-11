@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct QuadRacerPlayer : game::ui::SideScrollerMiniGamePlayerController
 {
     static constexpr const char* NAME = "gameuiQuadRacerPlayer";
@@ -30,6 +31,7 @@ struct QuadRacerPlayer : game::ui::SideScrollerMiniGamePlayerController
 };
 RED4EXT_ASSERT_SIZE(QuadRacerPlayer, 0x130);
 } // namespace game::ui
+using gameuiQuadRacerPlayer = game::ui::QuadRacerPlayer;
 using QuadRacerPlayer = game::ui::QuadRacerPlayer;
 } // namespace RED4ext
 

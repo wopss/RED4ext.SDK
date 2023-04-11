@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_MeshLod : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_MeshLod";
@@ -19,6 +20,7 @@ struct DebugColoring_MeshLod : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_MeshLod, 0x30);
 } // namespace world
+using worldDebugColoring_MeshLod = world::DebugColoring_MeshLod;
 } // namespace RED4ext
 
 // clang-format on

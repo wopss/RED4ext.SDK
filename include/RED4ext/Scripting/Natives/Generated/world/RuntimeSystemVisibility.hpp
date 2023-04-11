@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemVisibility : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemVisibility";
@@ -20,6 +21,7 @@ struct RuntimeSystemVisibility : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemVisibility, 0x100);
 } // namespace world
+using worldRuntimeSystemVisibility = world::RuntimeSystemVisibility;
 } // namespace RED4ext
 
 // clang-format on

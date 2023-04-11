@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vg { 
+namespace vg
+{
 struct AttributeTypeValuePair : ISerializable
 {
     static constexpr const char* NAME = "vgAttributeTypeValuePair";
@@ -24,6 +25,7 @@ struct AttributeTypeValuePair : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AttributeTypeValuePair, 0x50);
 } // namespace vg
+using vgAttributeTypeValuePair = vg::AttributeTypeValuePair;
 } // namespace RED4ext
 
 // clang-format on

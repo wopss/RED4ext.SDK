@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace save { 
+namespace save
+{
 struct Metadata : save::GameMetadata
 {
     static constexpr const char* NAME = "saveMetadata";
@@ -41,6 +42,7 @@ struct Metadata : save::GameMetadata
 };
 RED4EXT_ASSERT_SIZE(Metadata, 0x3B0);
 } // namespace save
+using saveMetadata = save::Metadata;
 } // namespace RED4ext
 
 // clang-format on

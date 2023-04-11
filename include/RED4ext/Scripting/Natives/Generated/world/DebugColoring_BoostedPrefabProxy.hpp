@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_BoostedPrefabProxy : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_BoostedPrefabProxy";
@@ -19,6 +20,7 @@ struct DebugColoring_BoostedPrefabProxy : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_BoostedPrefabProxy, 0x30);
 } // namespace world
+using worldDebugColoring_BoostedPrefabProxy = world::DebugColoring_BoostedPrefabProxy;
 } // namespace RED4ext
 
 // clang-format on

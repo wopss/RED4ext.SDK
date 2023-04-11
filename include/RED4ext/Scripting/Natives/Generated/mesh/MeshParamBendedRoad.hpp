@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamBendedRoad : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamBendedRoad";
@@ -36,6 +37,7 @@ struct MeshParamBendedRoad : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamBendedRoad, 0xF0);
 } // namespace mesh
+using meshMeshParamBendedRoad = mesh::MeshParamBendedRoad;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct WorkspotItemOverridePropOverride
 {
     static constexpr const char* NAME = "workWorkspotItemOverridePropOverride";
@@ -21,6 +22,7 @@ struct WorkspotItemOverridePropOverride
 };
 RED4EXT_ASSERT_SIZE(WorkspotItemOverridePropOverride, 0x10);
 } // namespace work
+using workWorkspotItemOverridePropOverride = work::WorkspotItemOverridePropOverride;
 } // namespace RED4ext
 
 // clang-format on

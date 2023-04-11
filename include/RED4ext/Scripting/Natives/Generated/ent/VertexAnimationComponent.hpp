@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct ISourceBinding; }
 
-namespace ent { 
+namespace ent
+{
 struct VertexAnimationComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entVertexAnimationComponent";
@@ -26,6 +27,7 @@ struct VertexAnimationComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(VertexAnimationComponent, 0xB8);
 } // namespace ent
+using entVertexAnimationComponent = ent::VertexAnimationComponent;
 } // namespace RED4ext
 
 // clang-format on

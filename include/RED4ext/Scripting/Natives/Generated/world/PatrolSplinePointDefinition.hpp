@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PatrolSplinePointDefinition : ISerializable
 {
     static constexpr const char* NAME = "worldPatrolSplinePointDefinition";
@@ -26,6 +27,7 @@ struct PatrolSplinePointDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PatrolSplinePointDefinition, 0x78);
 } // namespace world
+using worldPatrolSplinePointDefinition = world::PatrolSplinePointDefinition;
 } // namespace RED4ext
 
 // clang-format on

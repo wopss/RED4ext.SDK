@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineGameScriptInterface : game::state::MachineScriptInterface
 {
     static constexpr const char* NAME = "gamestateMachineGameScriptInterface";
@@ -20,6 +21,7 @@ struct MachineGameScriptInterface : game::state::MachineScriptInterface
 };
 RED4EXT_ASSERT_SIZE(MachineGameScriptInterface, 0x208);
 } // namespace game::state
+using gamestateMachineGameScriptInterface = game::state::MachineGameScriptInterface;
 using StateGameScriptInterface = game::state::MachineGameScriptInterface;
 } // namespace RED4ext
 

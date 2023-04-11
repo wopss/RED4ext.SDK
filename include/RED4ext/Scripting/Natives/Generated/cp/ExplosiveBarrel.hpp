@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct ExplosiveBarrel : game::DestructibleObject
 {
     static constexpr const char* NAME = "cpExplosiveBarrel";
@@ -23,6 +24,7 @@ struct ExplosiveBarrel : game::DestructibleObject
 };
 RED4EXT_ASSERT_SIZE(ExplosiveBarrel, 0x270);
 } // namespace cp
+using cpExplosiveBarrel = cp::ExplosiveBarrel;
 } // namespace RED4ext
 
 // clang-format on

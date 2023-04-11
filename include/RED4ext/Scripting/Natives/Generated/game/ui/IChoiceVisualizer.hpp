@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IChoiceVisualizer : ISerializable
 {
     static constexpr const char* NAME = "gameuiIChoiceVisualizer";
@@ -19,6 +20,7 @@ struct IChoiceVisualizer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IChoiceVisualizer, 0x30);
 } // namespace game::ui
+using gameuiIChoiceVisualizer = game::ui::IChoiceVisualizer;
 } // namespace RED4ext
 
 // clang-format on

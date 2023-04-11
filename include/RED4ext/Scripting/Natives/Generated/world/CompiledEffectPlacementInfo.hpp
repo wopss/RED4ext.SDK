@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CompiledEffectPlacementInfo
 {
     static constexpr const char* NAME = "worldCompiledEffectPlacementInfo";
@@ -22,6 +23,7 @@ struct CompiledEffectPlacementInfo
 };
 RED4EXT_ASSERT_SIZE(CompiledEffectPlacementInfo, 0x4);
 } // namespace world
+using worldCompiledEffectPlacementInfo = world::CompiledEffectPlacementInfo;
 } // namespace RED4ext
 
 // clang-format on

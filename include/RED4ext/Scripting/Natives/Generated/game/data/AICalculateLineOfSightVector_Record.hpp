@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AICalculateLineOfSightVector_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAICalculateLineOfSightVector_Record";
@@ -20,6 +21,7 @@ struct AICalculateLineOfSightVector_Record : game::data::AIActionSubCondition_Re
 };
 RED4EXT_ASSERT_SIZE(AICalculateLineOfSightVector_Record, 0x60);
 } // namespace game::data
+using gamedataAICalculateLineOfSightVector_Record = game::data::AICalculateLineOfSightVector_Record;
 using AICalculateLineOfSightVector_Record = game::data::AICalculateLineOfSightVector_Record;
 } // namespace RED4ext
 

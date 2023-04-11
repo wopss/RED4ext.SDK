@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent::events { 
+namespace ent::events
+{
 struct SetPlaneSetting : red::Event
 {
     static constexpr const char* NAME = "enteventsSetPlaneSetting";
@@ -20,6 +21,7 @@ struct SetPlaneSetting : red::Event
 };
 RED4EXT_ASSERT_SIZE(SetPlaneSetting, 0x50);
 } // namespace ent::events
+using enteventsSetPlaneSetting = ent::events::SetPlaneSetting;
 } // namespace RED4ext
 
 // clang-format on

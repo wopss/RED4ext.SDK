@@ -17,7 +17,8 @@ namespace RED4ext
 {
 struct CParticleSystem;
 
-namespace effect { 
+namespace effect
+{
 struct TrackItemParticles : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemParticles";
@@ -36,6 +37,7 @@ struct TrackItemParticles : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemParticles, 0x100);
 } // namespace effect
+using effectTrackItemParticles = effect::TrackItemParticles;
 } // namespace RED4ext
 
 // clang-format on

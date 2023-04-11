@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace shared { 
+namespace shared
+{
 struct MenuCollection
 {
     static constexpr const char* NAME = "sharedMenuCollection";
@@ -21,6 +22,7 @@ struct MenuCollection
 };
 RED4EXT_ASSERT_SIZE(MenuCollection, 0x10);
 } // namespace shared
+using sharedMenuCollection = shared::MenuCollection;
 } // namespace RED4ext
 
 // clang-format on

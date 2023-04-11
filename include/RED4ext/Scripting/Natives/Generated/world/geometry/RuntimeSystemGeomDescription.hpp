@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::geometry { 
+namespace world::geometry
+{
 struct RuntimeSystemGeomDescription : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldgeometryRuntimeSystemGeomDescription";
@@ -20,6 +21,7 @@ struct RuntimeSystemGeomDescription : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemGeomDescription, 0x50);
 } // namespace world::geometry
+using worldgeometryRuntimeSystemGeomDescription = world::geometry::RuntimeSystemGeomDescription;
 } // namespace RED4ext
 
 // clang-format on

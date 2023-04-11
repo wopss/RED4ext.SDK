@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PersistentStateDataResource : CResource
 {
     static constexpr const char* NAME = "gamePersistentStateDataResource";
@@ -21,6 +22,7 @@ struct PersistentStateDataResource : CResource
 };
 RED4EXT_ASSERT_SIZE(PersistentStateDataResource, 0x68);
 } // namespace game
+using gamePersistentStateDataResource = game::PersistentStateDataResource;
 } // namespace RED4ext
 
 // clang-format on

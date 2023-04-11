@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SceneRecordingNodeFilter
 {
     static constexpr const char* NAME = "worldSceneRecordingNodeFilter";
@@ -24,6 +25,7 @@ struct SceneRecordingNodeFilter
 };
 RED4EXT_ASSERT_SIZE(SceneRecordingNodeFilter, 0x30);
 } // namespace world
+using worldSceneRecordingNodeFilter = world::SceneRecordingNodeFilter;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VisualTagToNPCMetadata
 {
     static constexpr const char* NAME = "audioVisualTagToNPCMetadata";
@@ -22,6 +23,7 @@ struct VisualTagToNPCMetadata
 };
 RED4EXT_ASSERT_SIZE(VisualTagToNPCMetadata, 0x18);
 } // namespace audio
+using audioVisualTagToNPCMetadata = audio::VisualTagToNPCMetadata;
 } // namespace RED4ext
 
 // clang-format on

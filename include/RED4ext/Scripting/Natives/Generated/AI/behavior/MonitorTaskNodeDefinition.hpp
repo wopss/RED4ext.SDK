@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MonitorTaskNodeDefinition : AI::behavior::TaskNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorMonitorTaskNodeDefinition";
@@ -21,6 +22,7 @@ struct MonitorTaskNodeDefinition : AI::behavior::TaskNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(MonitorTaskNodeDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorMonitorTaskNodeDefinition = AI::behavior::MonitorTaskNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

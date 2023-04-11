@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct QuestsSystemReplicatedState : game::IGameSystemReplicatedState
 {
     static constexpr const char* NAME = "questQuestsSystemReplicatedState";
@@ -22,6 +23,7 @@ struct QuestsSystemReplicatedState : game::IGameSystemReplicatedState
 };
 RED4EXT_ASSERT_SIZE(QuestsSystemReplicatedState, 0x50);
 } // namespace quest
+using questQuestsSystemReplicatedState = quest::QuestsSystemReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

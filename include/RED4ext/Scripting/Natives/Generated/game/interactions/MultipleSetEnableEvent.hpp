@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct MultipleSetEnableEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsMultipleSetEnableEvent";
@@ -26,6 +27,7 @@ struct MultipleSetEnableEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MultipleSetEnableEvent, 0x98);
 } // namespace game::interactions
+using gameinteractionsMultipleSetEnableEvent = game::interactions::MultipleSetEnableEvent;
 using InteractionMultipleSetEnableEvent = game::interactions::MultipleSetEnableEvent;
 } // namespace RED4ext
 

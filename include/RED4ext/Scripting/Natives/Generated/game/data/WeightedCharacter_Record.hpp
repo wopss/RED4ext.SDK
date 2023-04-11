@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct WeightedCharacter_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWeightedCharacter_Record";
@@ -20,6 +21,7 @@ struct WeightedCharacter_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(WeightedCharacter_Record, 0x50);
 } // namespace game::data
+using gamedataWeightedCharacter_Record = game::data::WeightedCharacter_Record;
 using WeightedCharacter_Record = game::data::WeightedCharacter_Record;
 } // namespace RED4ext
 

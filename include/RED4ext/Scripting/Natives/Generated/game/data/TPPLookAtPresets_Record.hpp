@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct TPPLookAtPresets_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataTPPLookAtPresets_Record";
@@ -20,6 +21,7 @@ struct TPPLookAtPresets_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(TPPLookAtPresets_Record, 0x58);
 } // namespace game::data
+using gamedataTPPLookAtPresets_Record = game::data::TPPLookAtPresets_Record;
 using TPPLookAtPresets_Record = game::data::TPPLookAtPresets_Record;
 } // namespace RED4ext
 

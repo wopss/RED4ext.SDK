@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISquadContainsSelfCheck_Record : game::data::AITicketCheck_Record
 {
     static constexpr const char* NAME = "gamedataAISquadContainsSelfCheck_Record";
@@ -19,6 +20,7 @@ struct AISquadContainsSelfCheck_Record : game::data::AITicketCheck_Record
 };
 RED4EXT_ASSERT_SIZE(AISquadContainsSelfCheck_Record, 0x58);
 } // namespace game::data
+using gamedataAISquadContainsSelfCheck_Record = game::data::AISquadContainsSelfCheck_Record;
 using AISquadContainsSelfCheck_Record = game::data::AISquadContainsSelfCheck_Record;
 } // namespace RED4ext
 

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn::screenplay { 
+namespace scn::screenplay
+{
 struct ChoiceOption
 {
     static constexpr const char* NAME = "scnscreenplayChoiceOption";
@@ -25,6 +26,7 @@ struct ChoiceOption
 };
 RED4EXT_ASSERT_SIZE(ChoiceOption, 0x10);
 } // namespace scn::screenplay
+using scnscreenplayChoiceOption = scn::screenplay::ChoiceOption;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MuppetInputHandlerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameMuppetInputHandlerComponent";
@@ -19,6 +20,7 @@ struct MuppetInputHandlerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(MuppetInputHandlerComponent, 0x90);
 } // namespace game
+using gameMuppetInputHandlerComponent = game::MuppetInputHandlerComponent;
 using MuppetInputHandlerComponent = game::MuppetInputHandlerComponent;
 } // namespace RED4ext
 

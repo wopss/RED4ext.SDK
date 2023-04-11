@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IFactsDBManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct FactsDBManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questFactsDBManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct FactsDBManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(FactsDBManagerNodeDefinition, 0x58);
 } // namespace quest
+using questFactsDBManagerNodeDefinition = quest::FactsDBManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

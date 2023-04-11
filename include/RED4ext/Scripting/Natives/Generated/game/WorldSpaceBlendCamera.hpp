@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WorldSpaceBlendCamera : ent::BaseCameraComponent
 {
     static constexpr const char* NAME = "gameWorldSpaceBlendCamera";
@@ -20,6 +21,7 @@ struct WorldSpaceBlendCamera : ent::BaseCameraComponent
 };
 RED4EXT_ASSERT_SIZE(WorldSpaceBlendCamera, 0x240);
 } // namespace game
+using gameWorldSpaceBlendCamera = game::WorldSpaceBlendCamera;
 } // namespace RED4ext
 
 // clang-format on

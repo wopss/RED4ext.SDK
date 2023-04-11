@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckPlayerTargetNodeDistanceReturnCondition : scn::IReturnCondition
 {
     static constexpr const char* NAME = "scnCheckPlayerTargetNodeDistanceReturnCondition";
@@ -21,6 +22,7 @@ struct CheckPlayerTargetNodeDistanceReturnCondition : scn::IReturnCondition
 };
 RED4EXT_ASSERT_SIZE(CheckPlayerTargetNodeDistanceReturnCondition, 0x48);
 } // namespace scn
+using scnCheckPlayerTargetNodeDistanceReturnCondition = scn::CheckPlayerTargetNodeDistanceReturnCondition;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct AnimFeature_VehicleProceduralCamera : anim::AnimFeature
 {
     static constexpr const char* NAME = "vehicleAnimFeature_VehicleProceduralCamera";
@@ -25,6 +26,7 @@ struct AnimFeature_VehicleProceduralCamera : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_VehicleProceduralCamera, 0x70);
 } // namespace vehicle
+using vehicleAnimFeature_VehicleProceduralCamera = vehicle::AnimFeature_VehicleProceduralCamera;
 } // namespace RED4ext
 
 // clang-format on

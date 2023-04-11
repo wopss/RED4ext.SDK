@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct SizeInterpolator : ink::anim::Interpolator
 {
     static constexpr const char* NAME = "inkanimSizeInterpolator";
@@ -22,6 +23,7 @@ struct SizeInterpolator : ink::anim::Interpolator
 };
 RED4EXT_ASSERT_SIZE(SizeInterpolator, 0x78);
 } // namespace ink::anim
+using inkanimSizeInterpolator = ink::anim::SizeInterpolator;
 using inkAnimSize = ink::anim::SizeInterpolator;
 } // namespace RED4ext
 

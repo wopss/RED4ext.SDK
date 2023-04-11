@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IBaseCondition; }
 
-namespace quest { 
+namespace quest
+{
 struct ConditionNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questConditionNodeDefinition";
@@ -23,6 +24,7 @@ struct ConditionNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(ConditionNodeDefinition, 0x58);
 } // namespace quest
+using questConditionNodeDefinition = quest::ConditionNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

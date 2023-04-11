@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NetworkPingingParameteres_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNetworkPingingParameteres_Record";
@@ -20,6 +21,7 @@ struct NetworkPingingParameteres_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(NetworkPingingParameteres_Record, 0x90);
 } // namespace game::data
+using gamedataNetworkPingingParameteres_Record = game::data::NetworkPingingParameteres_Record;
 using NetworkPingingParameteres_Record = game::data::NetworkPingingParameteres_Record;
 } // namespace RED4ext
 

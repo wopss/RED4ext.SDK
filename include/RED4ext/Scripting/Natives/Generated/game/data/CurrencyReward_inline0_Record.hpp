@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CurrencyReward_inline0_Record : game::data::ConstantStatModifier_Record
 {
     static constexpr const char* NAME = "gamedataCurrencyReward_inline0_Record";
@@ -19,6 +20,7 @@ struct CurrencyReward_inline0_Record : game::data::ConstantStatModifier_Record
 };
 RED4EXT_ASSERT_SIZE(CurrencyReward_inline0_Record, 0x58);
 } // namespace game::data
+using gamedataCurrencyReward_inline0_Record = game::data::CurrencyReward_inline0_Record;
 using CurrencyReward_inline0_Record = game::data::CurrencyReward_inline0_Record;
 } // namespace RED4ext
 

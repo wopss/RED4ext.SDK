@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScreenProjectionCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkScreenProjectionCallback";
@@ -20,6 +21,7 @@ struct ScreenProjectionCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(ScreenProjectionCallback, 0x38);
 } // namespace ink
+using inkScreenProjectionCallback = ink::ScreenProjectionCallback;
 } // namespace RED4ext
 
 // clang-format on

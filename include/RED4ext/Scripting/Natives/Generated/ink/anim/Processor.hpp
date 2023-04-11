@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Processor : ISerializable
 {
     static constexpr const char* NAME = "inkanimProcessor";
@@ -20,6 +21,7 @@ struct Processor : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Processor, 0xA8);
 } // namespace ink::anim
+using inkanimProcessor = ink::anim::Processor;
 } // namespace RED4ext
 
 // clang-format on

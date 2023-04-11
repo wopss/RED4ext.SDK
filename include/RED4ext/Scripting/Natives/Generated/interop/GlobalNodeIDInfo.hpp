@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct GlobalNodeIDInfo
 {
     static constexpr const char* NAME = "interopGlobalNodeIDInfo";
@@ -24,6 +25,7 @@ struct GlobalNodeIDInfo
 };
 RED4EXT_ASSERT_SIZE(GlobalNodeIDInfo, 0x50);
 } // namespace interop
+using interopGlobalNodeIDInfo = interop::GlobalNodeIDInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JournalPath : IScriptable
 {
     static constexpr const char* NAME = "gameJournalPath";
@@ -26,6 +27,7 @@ struct JournalPath : IScriptable
 };
 RED4EXT_ASSERT_SIZE(JournalPath, 0x90);
 } // namespace game
+using gameJournalPath = game::JournalPath;
 } // namespace RED4ext
 
 // clang-format on

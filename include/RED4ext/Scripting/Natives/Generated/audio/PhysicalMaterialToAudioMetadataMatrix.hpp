@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct PhysicalMaterialToAudioMetadataMatrix : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioPhysicalMaterialToAudioMetadataMatrix";
@@ -23,6 +24,7 @@ struct PhysicalMaterialToAudioMetadataMatrix : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(PhysicalMaterialToAudioMetadataMatrix, 0x70);
 } // namespace audio
+using audioPhysicalMaterialToAudioMetadataMatrix = audio::PhysicalMaterialToAudioMetadataMatrix;
 } // namespace RED4ext
 
 // clang-format on

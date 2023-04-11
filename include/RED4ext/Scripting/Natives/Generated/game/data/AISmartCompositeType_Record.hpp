@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISmartCompositeType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAISmartCompositeType_Record";
@@ -20,6 +21,7 @@ struct AISmartCompositeType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AISmartCompositeType_Record, 0x60);
 } // namespace game::data
+using gamedataAISmartCompositeType_Record = game::data::AISmartCompositeType_Record;
 using AISmartCompositeType_Record = game::data::AISmartCompositeType_Record;
 } // namespace RED4ext
 

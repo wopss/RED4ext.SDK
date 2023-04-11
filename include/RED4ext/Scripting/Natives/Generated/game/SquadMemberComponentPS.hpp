@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SquadMemberComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameSquadMemberComponentPS";
@@ -22,6 +23,7 @@ struct SquadMemberComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(SquadMemberComponentPS, 0x78);
 } // namespace game
+using gameSquadMemberComponentPS = game::SquadMemberComponentPS;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct QuestUpdateNotificationViewData : game::ui::GenericNotificationViewData
 {
     static constexpr const char* NAME = "gameuiQuestUpdateNotificationViewData";
@@ -26,6 +27,7 @@ struct QuestUpdateNotificationViewData : game::ui::GenericNotificationViewData
 };
 RED4EXT_ASSERT_SIZE(QuestUpdateNotificationViewData, 0xE0);
 } // namespace game::ui
+using gameuiQuestUpdateNotificationViewData = game::ui::QuestUpdateNotificationViewData;
 using QuestUpdateNotificationViewData = game::ui::QuestUpdateNotificationViewData;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SystemNotificationsLayer : ink::FullScreenLayer
 {
     static constexpr const char* NAME = "inkSystemNotificationsLayer";
@@ -20,6 +21,7 @@ struct SystemNotificationsLayer : ink::FullScreenLayer
 };
 RED4EXT_ASSERT_SIZE(SystemNotificationsLayer, 0x600);
 } // namespace ink
+using inkSystemNotificationsLayer = ink::SystemNotificationsLayer;
 } // namespace RED4ext
 
 // clang-format on

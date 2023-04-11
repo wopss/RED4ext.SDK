@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace scn { 
+namespace scn
+{
 struct ScenesVersionsSceneChanges
 {
     static constexpr const char* NAME = "scnScenesVersionsSceneChanges";
@@ -25,6 +26,7 @@ struct ScenesVersionsSceneChanges
 };
 RED4EXT_ASSERT_SIZE(ScenesVersionsSceneChanges, 0x18);
 } // namespace scn
+using scnScenesVersionsSceneChanges = scn::ScenesVersionsSceneChanges;
 } // namespace RED4ext
 
 // clang-format on

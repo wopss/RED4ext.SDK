@@ -19,7 +19,8 @@ namespace anim { struct AnimVariableQuaternion; }
 namespace anim { struct AnimVariableTransform; }
 namespace anim { struct AnimVariableVector; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimVariableContainer : ISerializable
 {
     static constexpr const char* NAME = "animAnimVariableContainer";
@@ -36,6 +37,7 @@ struct AnimVariableContainer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AnimVariableContainer, 0x248);
 } // namespace anim
+using animAnimVariableContainer = anim::AnimVariableContainer;
 } // namespace RED4ext
 
 // clang-format on

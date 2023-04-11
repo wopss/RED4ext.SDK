@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct ConditionStatusEffectListener : game::IStatusEffectListener
 {
     static constexpr const char* NAME = "AIbehaviortweakConditionStatusEffectListener";
@@ -20,6 +21,7 @@ struct ConditionStatusEffectListener : game::IStatusEffectListener
 };
 RED4EXT_ASSERT_SIZE(ConditionStatusEffectListener, 0x68);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakConditionStatusEffectListener = AI::behavior::tweak::ConditionStatusEffectListener;
 } // namespace RED4ext
 
 // clang-format on

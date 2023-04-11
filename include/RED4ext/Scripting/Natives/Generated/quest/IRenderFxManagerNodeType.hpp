@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IRenderFxManagerNodeType : quest::INodeType
 {
     static constexpr const char* NAME = "questIRenderFxManagerNodeType";
@@ -20,6 +21,7 @@ struct IRenderFxManagerNodeType : quest::INodeType
 };
 RED4EXT_ASSERT_SIZE(IRenderFxManagerNodeType, 0x38);
 } // namespace quest
+using questIRenderFxManagerNodeType = quest::IRenderFxManagerNodeType;
 } // namespace RED4ext
 
 // clang-format on

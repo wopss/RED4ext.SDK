@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WorldID
 {
     static constexpr const char* NAME = "worldWorldID";
@@ -19,6 +20,7 @@ struct WorldID
 };
 RED4EXT_ASSERT_SIZE(WorldID, 0x38);
 } // namespace world
+using worldWorldID = world::WorldID;
 } // namespace RED4ext
 
 // clang-format on

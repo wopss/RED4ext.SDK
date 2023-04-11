@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct EntityPreviewGameObject : game::Object
 {
     static constexpr const char* NAME = "gameuiEntityPreviewGameObject";
@@ -22,6 +23,7 @@ struct EntityPreviewGameObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(EntityPreviewGameObject, 0x2B8);
 } // namespace game::ui
+using gameuiEntityPreviewGameObject = game::ui::EntityPreviewGameObject;
 } // namespace RED4ext
 
 // clang-format on

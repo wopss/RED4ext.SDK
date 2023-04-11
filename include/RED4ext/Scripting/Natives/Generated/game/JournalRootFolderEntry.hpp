@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct JournalDescriptorResource; }
 
-namespace game { 
+namespace game
+{
 struct JournalRootFolderEntry : game::JournalFolderEntry
 {
     static constexpr const char* NAME = "gameJournalRootFolderEntry";
@@ -23,6 +24,7 @@ struct JournalRootFolderEntry : game::JournalFolderEntry
 };
 RED4EXT_ASSERT_SIZE(JournalRootFolderEntry, 0xA0);
 } // namespace game
+using gameJournalRootFolderEntry = game::JournalRootFolderEntry;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TPPRepresentationCustomizationStateUpdater : game::ui::ICustomizationStateUpdater
 {
     static constexpr const char* NAME = "gameTPPRepresentationCustomizationStateUpdater";
@@ -20,6 +21,7 @@ struct TPPRepresentationCustomizationStateUpdater : game::ui::ICustomizationStat
 };
 RED4EXT_ASSERT_SIZE(TPPRepresentationCustomizationStateUpdater, 0x68);
 } // namespace game
+using gameTPPRepresentationCustomizationStateUpdater = game::TPPRepresentationCustomizationStateUpdater;
 } // namespace RED4ext
 
 // clang-format on

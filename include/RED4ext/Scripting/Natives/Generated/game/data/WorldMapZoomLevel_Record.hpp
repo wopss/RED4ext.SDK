@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct WorldMapZoomLevel_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataWorldMapZoomLevel_Record";
@@ -20,6 +21,7 @@ struct WorldMapZoomLevel_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(WorldMapZoomLevel_Record, 0x68);
 } // namespace game::data
+using gamedataWorldMapZoomLevel_Record = game::data::WorldMapZoomLevel_Record;
 using WorldMapZoomLevel_Record = game::data::WorldMapZoomLevel_Record;
 } // namespace RED4ext
 

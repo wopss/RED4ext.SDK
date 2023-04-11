@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct BehaviorComponentDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorBehaviorComponentDefinition";
@@ -19,6 +20,7 @@ struct BehaviorComponentDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BehaviorComponentDefinition, 0x30);
 } // namespace AI::behavior
+using AIbehaviorBehaviorComponentDefinition = AI::behavior::BehaviorComponentDefinition;
 } // namespace RED4ext
 
 // clang-format on

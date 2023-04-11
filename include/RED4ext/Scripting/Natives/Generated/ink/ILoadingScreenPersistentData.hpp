@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ILoadingScreenPersistentData : ink::ILoadingScreenData
 {
     static constexpr const char* NAME = "inkILoadingScreenPersistentData";
@@ -19,6 +20,7 @@ struct ILoadingScreenPersistentData : ink::ILoadingScreenData
 };
 RED4EXT_ASSERT_SIZE(ILoadingScreenPersistentData, 0x8);
 } // namespace ink
+using inkILoadingScreenPersistentData = ink::ILoadingScreenPersistentData;
 } // namespace RED4ext
 
 // clang-format on

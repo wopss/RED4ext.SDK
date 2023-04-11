@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct InterruptionHandlerDenyDefinition : AI::InterruptionHandlerDefinition
 {
     static constexpr const char* NAME = "AIInterruptionHandlerDenyDefinition";
@@ -19,6 +20,7 @@ struct InterruptionHandlerDenyDefinition : AI::InterruptionHandlerDefinition
 };
 RED4EXT_ASSERT_SIZE(InterruptionHandlerDenyDefinition, 0x48);
 } // namespace AI
+using AIInterruptionHandlerDenyDefinition = AI::InterruptionHandlerDenyDefinition;
 } // namespace RED4ext
 
 // clang-format on

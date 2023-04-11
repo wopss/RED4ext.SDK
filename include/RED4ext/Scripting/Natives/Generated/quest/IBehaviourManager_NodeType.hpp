@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IBehaviourManager_NodeType : quest::IRetNodeType
 {
     static constexpr const char* NAME = "questIBehaviourManager_NodeType";
@@ -22,6 +23,7 @@ struct IBehaviourManager_NodeType : quest::IRetNodeType
 };
 RED4EXT_ASSERT_SIZE(IBehaviourManager_NodeType, 0x70);
 } // namespace quest
+using questIBehaviourManager_NodeType = quest::IBehaviourManager_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LocomotionSlideEvent : red::Event
 {
     static constexpr const char* NAME = "entLocomotionSlideEvent";
@@ -19,6 +20,7 @@ struct LocomotionSlideEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(LocomotionSlideEvent, 0x40);
 } // namespace ent
+using entLocomotionSlideEvent = ent::LocomotionSlideEvent;
 } // namespace RED4ext
 
 // clang-format on

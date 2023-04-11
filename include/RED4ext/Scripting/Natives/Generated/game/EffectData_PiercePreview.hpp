@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectData_PiercePreview
 {
     static constexpr const char* NAME = "gameEffectData_PiercePreview";
@@ -19,6 +20,7 @@ struct EffectData_PiercePreview
 };
 RED4EXT_ASSERT_SIZE(EffectData_PiercePreview, 0x10);
 } // namespace game
+using gameEffectData_PiercePreview = game::EffectData_PiercePreview;
 } // namespace RED4ext
 
 // clang-format on

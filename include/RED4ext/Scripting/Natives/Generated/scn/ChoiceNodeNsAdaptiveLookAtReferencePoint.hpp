@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsAdaptiveLookAtReferencePoint
 {
     static constexpr const char* NAME = "scnChoiceNodeNsAdaptiveLookAtReferencePoint";
@@ -21,6 +22,7 @@ struct ChoiceNodeNsAdaptiveLookAtReferencePoint
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsAdaptiveLookAtReferencePoint, 0x8);
 } // namespace scn
+using scnChoiceNodeNsAdaptiveLookAtReferencePoint = scn::ChoiceNodeNsAdaptiveLookAtReferencePoint;
 } // namespace RED4ext
 
 // clang-format on

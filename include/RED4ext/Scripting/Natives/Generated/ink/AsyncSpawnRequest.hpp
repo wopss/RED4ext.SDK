@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct AsyncSpawnRequest : IScriptable
 {
     static constexpr const char* NAME = "inkAsyncSpawnRequest";
@@ -20,6 +21,7 @@ struct AsyncSpawnRequest : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AsyncSpawnRequest, 0x188);
 } // namespace ink
+using inkAsyncSpawnRequest = ink::AsyncSpawnRequest;
 } // namespace RED4ext
 
 // clang-format on

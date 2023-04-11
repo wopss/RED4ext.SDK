@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ForbiddenAreaState
 {
     static constexpr const char* NAME = "vehicleForbiddenAreaState";
@@ -22,6 +23,7 @@ struct ForbiddenAreaState
 };
 RED4EXT_ASSERT_SIZE(ForbiddenAreaState, 0x10);
 } // namespace vehicle
+using vehicleForbiddenAreaState = vehicle::ForbiddenAreaState;
 } // namespace RED4ext
 
 // clang-format on

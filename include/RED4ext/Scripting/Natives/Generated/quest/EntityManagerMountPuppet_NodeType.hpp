@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerMountPuppet_NodeType : quest::IEntityManager_NodeType
 {
     static constexpr const char* NAME = "questEntityManagerMountPuppet_NodeType";
@@ -33,6 +34,7 @@ struct EntityManagerMountPuppet_NodeType : quest::IEntityManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(EntityManagerMountPuppet_NodeType, 0xC0);
 } // namespace quest
+using questEntityManagerMountPuppet_NodeType = quest::EntityManagerMountPuppet_NodeType;
 } // namespace RED4ext
 
 // clang-format on

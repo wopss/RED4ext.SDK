@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ExcludedGesturesData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workExcludedGesturesData";
@@ -20,6 +21,7 @@ struct ExcludedGesturesData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(ExcludedGesturesData, 0x18);
 } // namespace work
+using workExcludedGesturesData = work::ExcludedGesturesData;
 } // namespace RED4ext
 
 // clang-format on

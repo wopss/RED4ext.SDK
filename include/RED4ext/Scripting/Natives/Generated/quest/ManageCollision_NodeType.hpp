@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ManageCollision_NodeType : quest::IWorldDataManagerNodeType
 {
     static constexpr const char* NAME = "questManageCollision_NodeType";
@@ -22,6 +23,7 @@ struct ManageCollision_NodeType : quest::IWorldDataManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ManageCollision_NodeType, 0x48);
 } // namespace quest
+using questManageCollision_NodeType = quest::ManageCollision_NodeType;
 } // namespace RED4ext
 
 // clang-format on

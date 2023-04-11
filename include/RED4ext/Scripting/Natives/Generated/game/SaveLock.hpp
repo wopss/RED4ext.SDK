@@ -19,7 +19,8 @@ using gameSaveLock = game::SaveLock;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct SaveLock
 {
     static constexpr const char* NAME = "gameSaveLock";
@@ -30,6 +31,7 @@ struct SaveLock
 };
 RED4EXT_ASSERT_SIZE(SaveLock, 0x28);
 } // namespace game
+using gameSaveLock = game::SaveLock;
 } // namespace RED4ext
 */
 

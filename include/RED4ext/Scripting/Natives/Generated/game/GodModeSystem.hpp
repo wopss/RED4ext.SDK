@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct GodModeSystem : game::IGodModeSystem
 {
     static constexpr const char* NAME = "gameGodModeSystem";
@@ -20,6 +21,7 @@ struct GodModeSystem : game::IGodModeSystem
 };
 RED4EXT_ASSERT_SIZE(GodModeSystem, 0xD8);
 } // namespace game
+using gameGodModeSystem = game::GodModeSystem;
 using GodModeSystem = game::GodModeSystem;
 } // namespace RED4ext
 

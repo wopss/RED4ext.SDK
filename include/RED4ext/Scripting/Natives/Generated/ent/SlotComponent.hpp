@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct SlotComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entSlotComponent";
@@ -25,6 +26,7 @@ struct SlotComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SlotComponent, 0x1A0);
 } // namespace ent
+using entSlotComponent = ent::SlotComponent;
 using SlotComponent = ent::SlotComponent;
 } // namespace RED4ext
 

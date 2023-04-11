@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct ITimeManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct TimeManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questTimeManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct TimeManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(TimeManagerNodeDefinition, 0x58);
 } // namespace quest
+using questTimeManagerNodeDefinition = quest::TimeManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct SmartObjectDefinition; }
 
-namespace world { 
+namespace world
+{
 struct SmartObjectNode : world::Node
 {
     static constexpr const char* NAME = "worldSmartObjectNode";
@@ -23,6 +24,7 @@ struct SmartObjectNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(SmartObjectNode, 0x48);
 } // namespace world
+using worldSmartObjectNode = world::SmartObjectNode;
 } // namespace RED4ext
 
 // clang-format on

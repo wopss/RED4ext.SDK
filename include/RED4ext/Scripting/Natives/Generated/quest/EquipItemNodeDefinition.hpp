@@ -14,7 +14,8 @@ namespace RED4ext
 namespace quest { struct EquipItemParams; }
 namespace quest { struct ObservableUniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct EquipItemNodeDefinition : quest::AICommandNodeBase
 {
     static constexpr const char* NAME = "questEquipItemNodeDefinition";
@@ -26,6 +27,7 @@ struct EquipItemNodeDefinition : quest::AICommandNodeBase
 };
 RED4EXT_ASSERT_SIZE(EquipItemNodeDefinition, 0x70);
 } // namespace quest
+using questEquipItemNodeDefinition = quest::EquipItemNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

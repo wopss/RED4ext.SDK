@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct ErrorResult
 {
     static constexpr const char* NAME = "redErrorResult";
@@ -21,6 +22,7 @@ struct ErrorResult
 };
 RED4EXT_ASSERT_SIZE(ErrorResult, 0x38);
 } // namespace red
+using redErrorResult = red::ErrorResult;
 } // namespace RED4ext
 
 // clang-format on

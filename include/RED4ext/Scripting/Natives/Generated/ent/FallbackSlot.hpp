@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct FallbackSlot
 {
     static constexpr const char* NAME = "entFallbackSlot";
@@ -21,6 +22,7 @@ struct FallbackSlot
 };
 RED4EXT_ASSERT_SIZE(FallbackSlot, 0x10);
 } // namespace ent
+using entFallbackSlot = ent::FallbackSlot;
 } // namespace RED4ext
 
 // clang-format on

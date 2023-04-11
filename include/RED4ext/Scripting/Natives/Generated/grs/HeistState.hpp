@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace grs { 
+namespace grs
+{
 struct HeistState
 {
     static constexpr const char* NAME = "grsHeistState";
@@ -29,6 +30,7 @@ struct HeistState
 };
 RED4EXT_ASSERT_SIZE(HeistState, 0x3D0);
 } // namespace grs
+using grsHeistState = grs::HeistState;
 } // namespace RED4ext
 
 // clang-format on

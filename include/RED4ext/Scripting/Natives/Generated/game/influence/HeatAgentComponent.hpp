@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence
+{
 struct HeatAgentComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceHeatAgentComponent";
@@ -20,6 +21,7 @@ struct HeatAgentComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(HeatAgentComponent, 0x180);
 } // namespace game::influence
+using gameinfluenceHeatAgentComponent = game::influence::HeatAgentComponent;
 using HeatAgentComponent = game::influence::HeatAgentComponent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct State : IScriptable
 {
     static constexpr const char* NAME = "gsmState";
@@ -20,6 +21,7 @@ struct State : IScriptable
 };
 RED4EXT_ASSERT_SIZE(State, 0xB8);
 } // namespace gsm
+using gsmState = gsm::State;
 } // namespace RED4ext
 
 // clang-format on

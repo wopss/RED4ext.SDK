@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CharacterCustomizationSystem_OnRandomizeCompleteEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationSystem_OnRandomizeCompleteEvent";
@@ -19,6 +20,7 @@ struct CharacterCustomizationSystem_OnRandomizeCompleteEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationSystem_OnRandomizeCompleteEvent, 0x40);
 } // namespace game::ui
+using gameuiCharacterCustomizationSystem_OnRandomizeCompleteEvent = game::ui::CharacterCustomizationSystem_OnRandomizeCompleteEvent;
 } // namespace RED4ext
 
 // clang-format on

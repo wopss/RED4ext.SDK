@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct IUIObjectsLoaderSystemListener : ISerializable
 {
     static constexpr const char* NAME = "gameuiIUIObjectsLoaderSystemListener";
@@ -19,6 +20,7 @@ struct IUIObjectsLoaderSystemListener : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IUIObjectsLoaderSystemListener, 0x30);
 } // namespace game::ui
+using gameuiIUIObjectsLoaderSystemListener = game::ui::IUIObjectsLoaderSystemListener;
 } // namespace RED4ext
 
 // clang-format on

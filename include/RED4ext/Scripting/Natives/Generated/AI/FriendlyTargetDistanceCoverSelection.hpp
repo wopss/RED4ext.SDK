@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct FriendlyTargetDistanceCoverSelection : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIFriendlyTargetDistanceCoverSelection";
@@ -20,6 +21,7 @@ struct FriendlyTargetDistanceCoverSelection : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(FriendlyTargetDistanceCoverSelection, 0x30);
 } // namespace AI
+using AIFriendlyTargetDistanceCoverSelection = AI::FriendlyTargetDistanceCoverSelection;
 } // namespace RED4ext
 
 // clang-format on

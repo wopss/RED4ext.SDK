@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ShapePresetWraper : ISerializable
 {
     static constexpr const char* NAME = "inkShapePresetWraper";
@@ -22,6 +23,7 @@ struct ShapePresetWraper : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ShapePresetWraper, 0x78);
 } // namespace ink
+using inkShapePresetWraper = ink::ShapePresetWraper;
 } // namespace RED4ext
 
 // clang-format on

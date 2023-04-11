@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace grs { 
+namespace grs
+{
 struct GatherAreaReplicatedInfo
 {
     static constexpr const char* NAME = "grsGatherAreaReplicatedInfo";
@@ -25,6 +26,7 @@ struct GatherAreaReplicatedInfo
 };
 RED4EXT_ASSERT_SIZE(GatherAreaReplicatedInfo, 0x14);
 } // namespace grs
+using grsGatherAreaReplicatedInfo = grs::GatherAreaReplicatedInfo;
 } // namespace RED4ext
 
 // clang-format on

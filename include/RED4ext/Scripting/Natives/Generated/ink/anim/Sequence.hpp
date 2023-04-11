@@ -16,7 +16,8 @@ namespace RED4ext
 namespace ink::anim { struct Definition; }
 namespace ink::anim { struct SequenceTargetInfo; }
 
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Sequence : IScriptable
 {
     static constexpr const char* NAME = "inkanimSequence";
@@ -28,6 +29,7 @@ struct Sequence : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Sequence, 0x68);
 } // namespace ink::anim
+using inkanimSequence = ink::anim::Sequence;
 using inkAnimSequence = ink::anim::Sequence;
 } // namespace RED4ext
 

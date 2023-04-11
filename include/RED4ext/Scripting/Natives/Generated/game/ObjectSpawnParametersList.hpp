@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct ObjectSpawnParameter; }
 
-namespace game { 
+namespace game
+{
 struct ObjectSpawnParametersList : game::ObjectSpawnParameter
 {
     static constexpr const char* NAME = "gameObjectSpawnParametersList";
@@ -24,6 +25,7 @@ struct ObjectSpawnParametersList : game::ObjectSpawnParameter
 };
 RED4EXT_ASSERT_SIZE(ObjectSpawnParametersList, 0x40);
 } // namespace game
+using gameObjectSpawnParametersList = game::ObjectSpawnParametersList;
 } // namespace RED4ext
 
 // clang-format on

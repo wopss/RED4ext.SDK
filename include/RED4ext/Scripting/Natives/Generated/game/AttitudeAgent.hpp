@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttitudeAgent : game::Component
 {
     static constexpr const char* NAME = "gameAttitudeAgent";
@@ -23,6 +24,7 @@ struct AttitudeAgent : game::Component
 };
 RED4EXT_ASSERT_SIZE(AttitudeAgent, 0xD8);
 } // namespace game
+using gameAttitudeAgent = game::AttitudeAgent;
 using AttitudeAgent = game::AttitudeAgent;
 } // namespace RED4ext
 

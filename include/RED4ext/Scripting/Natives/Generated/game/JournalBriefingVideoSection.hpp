@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace game { 
+namespace game
+{
 struct JournalBriefingVideoSection : game::JournalBriefingBaseSection
 {
     static constexpr const char* NAME = "gameJournalBriefingVideoSection";
@@ -23,6 +24,7 @@ struct JournalBriefingVideoSection : game::JournalBriefingBaseSection
 };
 RED4EXT_ASSERT_SIZE(JournalBriefingVideoSection, 0x68);
 } // namespace game
+using gameJournalBriefingVideoSection = game::JournalBriefingVideoSection;
 using JournalBriefingVideoSection = game::JournalBriefingVideoSection;
 } // namespace RED4ext
 

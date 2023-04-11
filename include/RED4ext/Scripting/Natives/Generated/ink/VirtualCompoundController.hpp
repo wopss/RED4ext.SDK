@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualCompoundController : ink::DiscreteNavigationController
 {
     static constexpr const char* NAME = "inkVirtualCompoundController";
@@ -26,6 +27,7 @@ struct VirtualCompoundController : ink::DiscreteNavigationController
 };
 RED4EXT_ASSERT_SIZE(VirtualCompoundController, 0x1F0);
 } // namespace ink
+using inkVirtualCompoundController = ink::VirtualCompoundController;
 } // namespace RED4ext
 
 // clang-format on

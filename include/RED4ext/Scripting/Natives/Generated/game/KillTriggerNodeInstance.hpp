@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct KillTriggerNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "gameKillTriggerNodeInstance";
@@ -20,6 +21,7 @@ struct KillTriggerNodeInstance : world::AreaShapeNodeInstance
 };
 RED4EXT_ASSERT_SIZE(KillTriggerNodeInstance, 0x100);
 } // namespace game
+using gameKillTriggerNodeInstance = game::KillTriggerNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

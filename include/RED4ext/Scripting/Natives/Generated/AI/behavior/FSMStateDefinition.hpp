@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct TreeNodeDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct FSMStateDefinition : AI::behavior::TreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorFSMStateDefinition";
@@ -28,6 +29,7 @@ struct FSMStateDefinition : AI::behavior::TreeNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(FSMStateDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorFSMStateDefinition = AI::behavior::FSMStateDefinition;
 } // namespace RED4ext
 
 // clang-format on

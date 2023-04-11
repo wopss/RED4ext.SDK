@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct MenuLayer_SetMenuModeEvent : red::Event
 {
     static constexpr const char* NAME = "inkMenuLayer_SetMenuModeEvent";
@@ -20,6 +21,7 @@ struct MenuLayer_SetMenuModeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MenuLayer_SetMenuModeEvent, 0x48);
 } // namespace ink
+using inkMenuLayer_SetMenuModeEvent = ink::MenuLayer_SetMenuModeEvent;
 } // namespace RED4ext
 
 // clang-format on

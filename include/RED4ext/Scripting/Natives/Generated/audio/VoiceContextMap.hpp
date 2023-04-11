@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoiceContextMap : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioVoiceContextMap";
@@ -24,6 +25,7 @@ struct VoiceContextMap : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(VoiceContextMap, 0x58);
 } // namespace audio
+using audioVoiceContextMap = audio::VoiceContextMap;
 } // namespace RED4ext
 
 // clang-format on

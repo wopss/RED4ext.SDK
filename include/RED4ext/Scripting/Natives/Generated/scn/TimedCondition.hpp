@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct TimedCondition : ISerializable
 {
     static constexpr const char* NAME = "scnTimedCondition";
@@ -25,6 +26,7 @@ struct TimedCondition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TimedCondition, 0x50);
 } // namespace scn
+using scnTimedCondition = scn::TimedCondition;
 } // namespace RED4ext
 
 // clang-format on

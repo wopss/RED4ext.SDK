@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectFilter_ReachableByNavigation : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectFilter_ReachableByNavigation";
@@ -21,6 +22,7 @@ struct EffectFilter_ReachableByNavigation : game::EffectObjectSingleFilter
 };
 RED4EXT_ASSERT_SIZE(EffectFilter_ReachableByNavigation, 0x58);
 } // namespace game
+using gameEffectFilter_ReachableByNavigation = game::EffectFilter_ReachableByNavigation;
 } // namespace RED4ext
 
 // clang-format on

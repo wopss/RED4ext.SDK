@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Target : AI::ITarget
 {
     static constexpr const char* NAME = "AITarget";
@@ -20,6 +21,7 @@ struct Target : AI::ITarget
 };
 RED4EXT_ASSERT_SIZE(Target, 0x18);
 } // namespace AI
+using AITarget = AI::Target;
 } // namespace RED4ext
 
 // clang-format on

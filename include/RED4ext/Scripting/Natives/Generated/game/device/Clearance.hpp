@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct Clearance : IScriptable
 {
     static constexpr const char* NAME = "gamedeviceClearance";
@@ -21,6 +22,7 @@ struct Clearance : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Clearance, 0x48);
 } // namespace game::device
+using gamedeviceClearance = game::device::Clearance;
 using Clearance = game::device::Clearance;
 } // namespace RED4ext
 

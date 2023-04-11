@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct PlayerDetectionChangedEvent : red::Event
 {
     static constexpr const char* NAME = "sensePlayerDetectionChangedEvent";
@@ -21,6 +22,7 @@ struct PlayerDetectionChangedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PlayerDetectionChangedEvent, 0x48);
 } // namespace sense
+using sensePlayerDetectionChangedEvent = sense::PlayerDetectionChangedEvent;
 using PlayerDetectionChangedEvent = sense::PlayerDetectionChangedEvent;
 } // namespace RED4ext
 

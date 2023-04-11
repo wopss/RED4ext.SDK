@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct HistogramBias
 {
     static constexpr const char* NAME = "rendHistogramBias";
@@ -21,6 +22,7 @@ struct HistogramBias
 };
 RED4EXT_ASSERT_SIZE(HistogramBias, 0x18);
 } // namespace rend
+using rendHistogramBias = rend::HistogramBias;
 } // namespace RED4ext
 
 // clang-format on

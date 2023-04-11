@@ -15,7 +15,8 @@ namespace RED4ext
 namespace ink::anim { struct Event; }
 namespace ink::anim { struct Interpolator; }
 
-namespace ink::anim { 
+namespace ink::anim
+{
 struct Definition : IScriptable
 {
     static constexpr const char* NAME = "inkanimDefinition";
@@ -26,6 +27,7 @@ struct Definition : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Definition, 0x60);
 } // namespace ink::anim
+using inkanimDefinition = ink::anim::Definition;
 using inkAnimDef = ink::anim::Definition;
 } // namespace RED4ext
 

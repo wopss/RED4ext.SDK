@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game::ui { struct MinigameState; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct OnGameFinishEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiOnGameFinishEvent";
@@ -25,6 +26,7 @@ struct OnGameFinishEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnGameFinishEvent, 0x58);
 } // namespace game::ui
+using gameuiOnGameFinishEvent = game::ui::OnGameFinishEvent;
 using GameFinishEvent = game::ui::OnGameFinishEvent;
 } // namespace RED4ext
 

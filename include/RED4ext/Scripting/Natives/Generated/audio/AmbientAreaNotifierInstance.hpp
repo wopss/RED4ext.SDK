@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AmbientAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 {
     static constexpr const char* NAME = "audioAmbientAreaNotifierInstance";
@@ -20,6 +21,7 @@ struct AmbientAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 };
 RED4EXT_ASSERT_SIZE(AmbientAreaNotifierInstance, 0x100);
 } // namespace audio
+using audioAmbientAreaNotifierInstance = audio::AmbientAreaNotifierInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleBrokenTire_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleBrokenTire_NodeType";
@@ -24,6 +25,7 @@ struct ToggleBrokenTire_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleBrokenTire_NodeType, 0x70);
 } // namespace quest
+using questToggleBrokenTire_NodeType = quest::ToggleBrokenTire_NodeType;
 } // namespace RED4ext
 
 // clang-format on

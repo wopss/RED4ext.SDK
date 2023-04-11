@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraPriority
 {
     static constexpr const char* NAME = "toolsJiraPriority";
@@ -20,6 +21,7 @@ struct JiraPriority
 };
 RED4EXT_ASSERT_SIZE(JiraPriority, 0x20);
 } // namespace tools
+using toolsJiraPriority = tools::JiraPriority;
 } // namespace RED4ext
 
 // clang-format on

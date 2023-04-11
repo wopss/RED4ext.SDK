@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_CurveFloatValue : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_CurveFloatValue";
@@ -23,6 +24,7 @@ struct AnimNode_CurveFloatValue : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_CurveFloatValue, 0xA0);
 } // namespace anim
+using animAnimNode_CurveFloatValue = anim::AnimNode_CurveFloatValue;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_ObjectTagExt : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_ObjectTagExt";
@@ -23,6 +24,7 @@ struct DebugColoring_ObjectTagExt : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_ObjectTagExt, 0x38);
 } // namespace world
+using worldDebugColoring_ObjectTagExt = world::DebugColoring_ObjectTagExt;
 } // namespace RED4ext
 
 // clang-format on

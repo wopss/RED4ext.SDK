@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct EffectTriggerEffectDesc; }
 
-namespace game { 
+namespace game
+{
 struct EffectTriggerNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "gameEffectTriggerNode";
@@ -24,6 +25,7 @@ struct EffectTriggerNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(EffectTriggerNode, 0x70);
 } // namespace game
+using gameEffectTriggerNode = game::EffectTriggerNode;
 } // namespace RED4ext
 
 // clang-format on

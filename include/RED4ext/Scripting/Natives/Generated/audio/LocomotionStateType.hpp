@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LocomotionStateType : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioLocomotionStateType";
@@ -21,6 +22,7 @@ struct LocomotionStateType : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(LocomotionStateType, 0x40);
 } // namespace audio
+using audioLocomotionStateType = audio::LocomotionStateType;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TrialPeriodTimerController : ink::GenericSystemNotificationLogicController
 {
     static constexpr const char* NAME = "gameuiTrialPeriodTimerController";
@@ -23,6 +24,7 @@ struct TrialPeriodTimerController : ink::GenericSystemNotificationLogicControlle
 };
 RED4EXT_ASSERT_SIZE(TrialPeriodTimerController, 0x1D8);
 } // namespace game::ui
+using gameuiTrialPeriodTimerController = game::ui::TrialPeriodTimerController;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::interactions::vis { struct BluelineDescription; }
 
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ChoiceCaptionBluelinePart : game::interactions::ChoiceCaptionPart
 {
     static constexpr const char* NAME = "gameinteractionsChoiceCaptionBluelinePart";
@@ -23,6 +24,7 @@ struct ChoiceCaptionBluelinePart : game::interactions::ChoiceCaptionPart
 };
 RED4EXT_ASSERT_SIZE(ChoiceCaptionBluelinePart, 0x50);
 } // namespace game::interactions
+using gameinteractionsChoiceCaptionBluelinePart = game::interactions::ChoiceCaptionBluelinePart;
 using InteractionChoiceCaptionBluelinePart = game::interactions::ChoiceCaptionBluelinePart;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PrereqParams
 {
     static constexpr const char* NAME = "gamePrereqParams";
@@ -23,6 +24,7 @@ struct PrereqParams
 };
 RED4EXT_ASSERT_SIZE(PrereqParams, 0x38);
 } // namespace game
+using gamePrereqParams = game::PrereqParams;
 using PrereqParams = game::PrereqParams;
 } // namespace RED4ext
 

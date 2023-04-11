@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DistrictTriggerData
 {
     static constexpr const char* NAME = "gameuiDistrictTriggerData";
@@ -24,6 +25,7 @@ struct DistrictTriggerData
 };
 RED4EXT_ASSERT_SIZE(DistrictTriggerData, 0x20);
 } // namespace game::ui
+using gameuiDistrictTriggerData = game::ui::DistrictTriggerData;
 } // namespace RED4ext
 
 // clang-format on

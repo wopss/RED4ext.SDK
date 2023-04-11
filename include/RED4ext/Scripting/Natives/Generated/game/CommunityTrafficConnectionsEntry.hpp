@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CommunityTrafficConnectionsEntry
 {
     static constexpr const char* NAME = "gameCommunityTrafficConnectionsEntry";
@@ -19,6 +20,7 @@ struct CommunityTrafficConnectionsEntry
 };
 RED4EXT_ASSERT_SIZE(CommunityTrafficConnectionsEntry, 0x1);
 } // namespace game
+using gameCommunityTrafficConnectionsEntry = game::CommunityTrafficConnectionsEntry;
 } // namespace RED4ext
 
 // clang-format on

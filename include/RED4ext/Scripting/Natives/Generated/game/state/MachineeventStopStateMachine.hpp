@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineeventStopStateMachine : red::Event
 {
     static constexpr const char* NAME = "gamestateMachineeventStopStateMachine";
@@ -21,6 +22,7 @@ struct MachineeventStopStateMachine : red::Event
 };
 RED4EXT_ASSERT_SIZE(MachineeventStopStateMachine, 0x50);
 } // namespace game::state
+using gamestateMachineeventStopStateMachine = game::state::MachineeventStopStateMachine;
 using PSMStopStateMachine = game::state::MachineeventStopStateMachine;
 } // namespace RED4ext
 

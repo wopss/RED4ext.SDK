@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SceneTier : sense::StimuliData
 {
     static constexpr const char* NAME = "gameSceneTier";
@@ -20,6 +21,7 @@ struct SceneTier : sense::StimuliData
 };
 RED4EXT_ASSERT_SIZE(SceneTier, 0x50);
 } // namespace game
+using gameSceneTier = game::SceneTier;
 using SceneTier = game::SceneTier;
 } // namespace RED4ext
 

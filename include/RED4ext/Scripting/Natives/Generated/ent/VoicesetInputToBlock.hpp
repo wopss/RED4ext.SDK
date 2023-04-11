@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct VoicesetInputToBlock
 {
     static constexpr const char* NAME = "entVoicesetInputToBlock";
@@ -23,6 +24,7 @@ struct VoicesetInputToBlock
 };
 RED4EXT_ASSERT_SIZE(VoicesetInputToBlock, 0x10);
 } // namespace ent
+using entVoicesetInputToBlock = ent::VoicesetInputToBlock;
 } // namespace RED4ext
 
 // clang-format on

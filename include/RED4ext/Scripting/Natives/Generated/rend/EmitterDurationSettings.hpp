@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct EmitterDurationSettings
 {
     static constexpr const char* NAME = "rendEmitterDurationSettings";
@@ -22,6 +23,7 @@ struct EmitterDurationSettings
 };
 RED4EXT_ASSERT_SIZE(EmitterDurationSettings, 0xC);
 } // namespace rend
+using rendEmitterDurationSettings = rend::EmitterDurationSettings;
 } // namespace RED4ext
 
 // clang-format on

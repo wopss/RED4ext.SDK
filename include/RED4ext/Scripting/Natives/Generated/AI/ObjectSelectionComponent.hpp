@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ObjectSelectionComponent : ent::IComponent
 {
     static constexpr const char* NAME = "AIObjectSelectionComponent";
@@ -20,6 +21,7 @@ struct ObjectSelectionComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(ObjectSelectionComponent, 0x140);
 } // namespace AI
+using AIObjectSelectionComponent = AI::ObjectSelectionComponent;
 using ObjectSelectionComponent = AI::ObjectSelectionComponent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WorldAttachedEvt : red::Event
 {
     static constexpr const char* NAME = "inkWorldAttachedEvt";
@@ -19,6 +20,7 @@ struct WorldAttachedEvt : red::Event
 };
 RED4EXT_ASSERT_SIZE(WorldAttachedEvt, 0x40);
 } // namespace ink
+using inkWorldAttachedEvt = ink::WorldAttachedEvt;
 } // namespace RED4ext
 
 // clang-format on

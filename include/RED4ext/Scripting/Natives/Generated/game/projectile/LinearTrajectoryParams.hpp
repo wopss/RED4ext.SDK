@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct LinearTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileLinearTrajectoryParams";
@@ -21,6 +22,7 @@ struct LinearTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(LinearTrajectoryParams, 0x48);
 } // namespace game::projectile
+using gameprojectileLinearTrajectoryParams = game::projectile::LinearTrajectoryParams;
 using LinearTrajectoryParams = game::projectile::LinearTrajectoryParams;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TimeskipGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiTimeskipGameController";
@@ -19,6 +20,7 @@ struct TimeskipGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(TimeskipGameController, 0xE0);
 } // namespace game::ui
+using gameuiTimeskipGameController = game::ui::TimeskipGameController;
 using TimeskipGameController = game::ui::TimeskipGameController;
 } // namespace RED4ext
 

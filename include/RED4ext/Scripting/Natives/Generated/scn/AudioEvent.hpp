@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AudioEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnAudioEvent";
@@ -29,6 +30,7 @@ struct AudioEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(AudioEvent, 0x80);
 } // namespace scn
+using scnAudioEvent = scn::AudioEvent;
 } // namespace RED4ext
 
 // clang-format on

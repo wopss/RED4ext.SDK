@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CoverDemandHolder : IScriptable
 {
     static constexpr const char* NAME = "AICoverDemandHolder";
@@ -20,6 +21,7 @@ struct CoverDemandHolder : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CoverDemandHolder, 0x58);
 } // namespace AI
+using AICoverDemandHolder = AI::CoverDemandHolder;
 using CoverDemandHolder = AI::CoverDemandHolder;
 } // namespace RED4ext
 

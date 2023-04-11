@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckPlayerTargetNodeDistanceInterruptCondition : scn::IInterruptCondition
 {
     static constexpr const char* NAME = "scnCheckPlayerTargetNodeDistanceInterruptCondition";
@@ -21,6 +22,7 @@ struct CheckPlayerTargetNodeDistanceInterruptCondition : scn::IInterruptConditio
 };
 RED4EXT_ASSERT_SIZE(CheckPlayerTargetNodeDistanceInterruptCondition, 0x48);
 } // namespace scn
+using scnCheckPlayerTargetNodeDistanceInterruptCondition = scn::CheckPlayerTargetNodeDistanceInterruptCondition;
 } // namespace RED4ext
 
 // clang-format on

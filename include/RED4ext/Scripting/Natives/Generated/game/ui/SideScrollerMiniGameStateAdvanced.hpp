@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SideScrollerMiniGameStateAdvanced : IScriptable
 {
     static constexpr const char* NAME = "gameuiSideScrollerMiniGameStateAdvanced";
@@ -26,6 +27,7 @@ struct SideScrollerMiniGameStateAdvanced : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SideScrollerMiniGameStateAdvanced, 0xA0);
 } // namespace game::ui
+using gameuiSideScrollerMiniGameStateAdvanced = game::ui::SideScrollerMiniGameStateAdvanced;
 using MinigameStateAdvanced = game::ui::SideScrollerMiniGameStateAdvanced;
 } // namespace RED4ext
 

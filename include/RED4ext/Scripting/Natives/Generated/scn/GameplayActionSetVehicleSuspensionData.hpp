@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct GameplayActionSetVehicleSuspensionData : scn::IGameplayActionData
 {
     static constexpr const char* NAME = "scnGameplayActionSetVehicleSuspensionData";
@@ -22,6 +23,7 @@ struct GameplayActionSetVehicleSuspensionData : scn::IGameplayActionData
 };
 RED4EXT_ASSERT_SIZE(GameplayActionSetVehicleSuspensionData, 0x38);
 } // namespace scn
+using scnGameplayActionSetVehicleSuspensionData = scn::GameplayActionSetVehicleSuspensionData;
 } // namespace RED4ext
 
 // clang-format on

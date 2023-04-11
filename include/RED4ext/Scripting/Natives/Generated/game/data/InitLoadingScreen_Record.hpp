@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct InitLoadingScreen_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataInitLoadingScreen_Record";
@@ -20,6 +21,7 @@ struct InitLoadingScreen_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(InitLoadingScreen_Record, 0x70);
 } // namespace game::data
+using gamedataInitLoadingScreen_Record = game::data::InitLoadingScreen_Record;
 using InitLoadingScreen_Record = game::data::InitLoadingScreen_Record;
 } // namespace RED4ext
 

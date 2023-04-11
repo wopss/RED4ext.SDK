@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RagdollComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entRagdollComponent";
@@ -20,6 +21,7 @@ struct RagdollComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(RagdollComponent, 0x210);
 } // namespace ent
+using entRagdollComponent = ent::RagdollComponent;
 using RagdollComponent = ent::RagdollComponent;
 } // namespace RED4ext
 

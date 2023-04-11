@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct QueryPresetResource : ISerializable
 {
     static constexpr const char* NAME = "physicsQueryPresetResource";
@@ -22,6 +23,7 @@ struct QueryPresetResource : ISerializable
 };
 RED4EXT_ASSERT_SIZE(QueryPresetResource, 0x40);
 } // namespace physics
+using physicsQueryPresetResource = physics::QueryPresetResource;
 } // namespace RED4ext
 
 // clang-format on

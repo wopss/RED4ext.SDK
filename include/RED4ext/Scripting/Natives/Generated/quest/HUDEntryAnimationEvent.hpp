@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct HUDEntryAnimationEvent
 {
     static constexpr const char* NAME = "questHUDEntryAnimationEvent";
@@ -23,6 +24,7 @@ struct HUDEntryAnimationEvent
 };
 RED4EXT_ASSERT_SIZE(HUDEntryAnimationEvent, 0x18);
 } // namespace quest
+using questHUDEntryAnimationEvent = quest::HUDEntryAnimationEvent;
 } // namespace RED4ext
 
 // clang-format on

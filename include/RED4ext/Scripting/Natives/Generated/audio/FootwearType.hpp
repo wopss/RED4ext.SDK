@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct FootwearType : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioFootwearType";
@@ -22,6 +23,7 @@ struct FootwearType : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(FootwearType, 0x48);
 } // namespace audio
+using audioFootwearType = audio::FootwearType;
 } // namespace RED4ext
 
 // clang-format on

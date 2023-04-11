@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshImportedSnapPoint : ISerializable
 {
     static constexpr const char* NAME = "meshMeshImportedSnapPoint";
@@ -27,6 +28,7 @@ struct MeshImportedSnapPoint : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MeshImportedSnapPoint, 0xA0);
 } // namespace mesh
+using meshMeshImportedSnapPoint = mesh::MeshImportedSnapPoint;
 } // namespace RED4ext
 
 // clang-format on

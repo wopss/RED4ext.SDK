@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TransformAnimatorNode_ActionType : quest::IBaseNodeType
 {
     static constexpr const char* NAME = "questTransformAnimatorNode_ActionType";
@@ -19,6 +20,7 @@ struct TransformAnimatorNode_ActionType : quest::IBaseNodeType
 };
 RED4EXT_ASSERT_SIZE(TransformAnimatorNode_ActionType, 0x30);
 } // namespace quest
+using questTransformAnimatorNode_ActionType = quest::TransformAnimatorNode_ActionType;
 } // namespace RED4ext
 
 // clang-format on

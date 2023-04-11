@@ -12,7 +12,8 @@ namespace RED4ext
 {
 struct CResource;
 
-namespace red {
+namespace red
+{
 struct ResourceReferenceScriptToken
 {
     static constexpr const char* NAME = "redResourceReferenceScriptToken";

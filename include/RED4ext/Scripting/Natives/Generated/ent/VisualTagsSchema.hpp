@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct VisualTagsSchema : ISerializable
 {
     static constexpr const char* NAME = "entVisualTagsSchema";
@@ -23,6 +24,7 @@ struct VisualTagsSchema : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VisualTagsSchema, 0x48);
 } // namespace ent
+using entVisualTagsSchema = ent::VisualTagsSchema;
 } // namespace RED4ext
 
 // clang-format on

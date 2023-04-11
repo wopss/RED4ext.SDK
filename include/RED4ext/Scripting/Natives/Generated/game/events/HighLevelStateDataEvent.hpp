@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct HighLevelStateDataEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsHighLevelStateDataEvent";
@@ -24,6 +25,7 @@ struct HighLevelStateDataEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HighLevelStateDataEvent, 0x50);
 } // namespace game::events
+using gameeventsHighLevelStateDataEvent = game::events::HighLevelStateDataEvent;
 using gameHighLevelStateDataEvent = game::events::HighLevelStateDataEvent;
 } // namespace RED4ext
 

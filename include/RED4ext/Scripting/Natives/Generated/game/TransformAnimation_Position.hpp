@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Position : ISerializable
 {
     static constexpr const char* NAME = "gameTransformAnimation_Position";
@@ -19,6 +20,7 @@ struct TransformAnimation_Position : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Position, 0x30);
 } // namespace game
+using gameTransformAnimation_Position = game::TransformAnimation_Position;
 } // namespace RED4ext
 
 // clang-format on

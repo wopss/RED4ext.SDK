@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace game { 
+namespace game
+{
 struct BodyTriggerDestructionComponent : game::ITriggerDestructionComponent
 {
     static constexpr const char* NAME = "gameBodyTriggerDestructionComponent";
@@ -28,6 +29,7 @@ struct BodyTriggerDestructionComponent : game::ITriggerDestructionComponent
 };
 RED4EXT_ASSERT_SIZE(BodyTriggerDestructionComponent, 0x120);
 } // namespace game
+using gameBodyTriggerDestructionComponent = game::BodyTriggerDestructionComponent;
 } // namespace RED4ext
 
 // clang-format on

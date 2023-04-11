@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IBaseCondition; }
 
-namespace quest { 
+namespace quest
+{
 struct PauseConditionNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questPauseConditionNodeDefinition";
@@ -23,6 +24,7 @@ struct PauseConditionNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PauseConditionNodeDefinition, 0x58);
 } // namespace quest
+using questPauseConditionNodeDefinition = quest::PauseConditionNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

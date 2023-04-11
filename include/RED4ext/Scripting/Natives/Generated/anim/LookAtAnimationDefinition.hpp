@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtAnimationDefinition
 {
     static constexpr const char* NAME = "animLookAtAnimationDefinition";
@@ -25,6 +26,7 @@ struct LookAtAnimationDefinition
 };
 RED4EXT_ASSERT_SIZE(LookAtAnimationDefinition, 0x20);
 } // namespace anim
+using animLookAtAnimationDefinition = anim::LookAtAnimationDefinition;
 } // namespace RED4ext
 
 // clang-format on

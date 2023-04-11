@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ChatterHelperRadius_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataChatterHelperRadius_Record";
@@ -20,6 +21,7 @@ struct ChatterHelperRadius_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ChatterHelperRadius_Record, 0x50);
 } // namespace game::data
+using gamedataChatterHelperRadius_Record = game::data::ChatterHelperRadius_Record;
 using ChatterHelperRadius_Record = game::data::ChatterHelperRadius_Record;
 } // namespace RED4ext
 

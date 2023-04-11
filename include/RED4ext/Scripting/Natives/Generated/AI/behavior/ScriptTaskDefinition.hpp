@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior::task { struct Script; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorScriptTaskDefinition";
@@ -25,6 +26,7 @@ struct ScriptTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(ScriptTaskDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorScriptTaskDefinition = AI::behavior::ScriptTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct GridDestructionEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleGridDestructionEvent";
@@ -23,6 +24,7 @@ struct GridDestructionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(GridDestructionEvent, 0x100);
 } // namespace vehicle
+using vehicleGridDestructionEvent = vehicle::GridDestructionEvent;
 using VehicleGridDestructionEvent = vehicle::GridDestructionEvent;
 } // namespace RED4ext
 

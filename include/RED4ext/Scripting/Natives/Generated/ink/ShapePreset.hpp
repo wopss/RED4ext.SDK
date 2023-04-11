@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ShapePreset
 {
     static constexpr const char* NAME = "inkShapePreset";
@@ -23,6 +24,7 @@ struct ShapePreset
 };
 RED4EXT_ASSERT_SIZE(ShapePreset, 0x18);
 } // namespace ink
+using inkShapePreset = ink::ShapePreset;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LocalizationStringComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entLocalizationStringComponent";
@@ -22,6 +23,7 @@ struct LocalizationStringComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(LocalizationStringComponent, 0xA0);
 } // namespace ent
+using entLocalizationStringComponent = ent::LocalizationStringComponent;
 using LocalizationStringComponent = ent::LocalizationStringComponent;
 } // namespace RED4ext
 

@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace world::geometry { 
+namespace world::geometry
+{
 struct DescriptionResult : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryDescriptionResult";
@@ -51,6 +52,7 @@ struct DescriptionResult : IScriptable
 };
 RED4EXT_ASSERT_SIZE(DescriptionResult, 0x140);
 } // namespace world::geometry
+using worldgeometryDescriptionResult = world::geometry::DescriptionResult;
 using GeometryDescriptionResult = world::geometry::DescriptionResult;
 } // namespace RED4ext
 

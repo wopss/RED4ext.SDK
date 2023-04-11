@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace graph { struct GraphDefinition; }
 
-namespace graph { 
+namespace graph
+{
 struct GraphResource : CResource
 {
     static constexpr const char* NAME = "graphGraphResource";
@@ -23,6 +24,7 @@ struct GraphResource : CResource
 };
 RED4EXT_ASSERT_SIZE(GraphResource, 0x50);
 } // namespace graph
+using graphGraphResource = graph::GraphResource;
 } // namespace RED4ext
 
 // clang-format on

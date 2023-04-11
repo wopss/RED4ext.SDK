@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct LookAtAddEvent : ent::AnimTargetAddEvent
 {
     static constexpr const char* NAME = "entLookAtAddEvent";
@@ -23,6 +24,7 @@ struct LookAtAddEvent : ent::AnimTargetAddEvent
 };
 RED4EXT_ASSERT_SIZE(LookAtAddEvent, 0xD8);
 } // namespace ent
+using entLookAtAddEvent = ent::LookAtAddEvent;
 using LookAtAddEvent = ent::LookAtAddEvent;
 } // namespace RED4ext
 

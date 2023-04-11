@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TemplateComponentResolveSettings
 {
     static constexpr const char* NAME = "entTemplateComponentResolveSettings";
@@ -24,6 +25,7 @@ struct TemplateComponentResolveSettings
 };
 RED4EXT_ASSERT_SIZE(TemplateComponentResolveSettings, 0x18);
 } // namespace ent
+using entTemplateComponentResolveSettings = ent::TemplateComponentResolveSettings;
 } // namespace RED4ext
 
 // clang-format on

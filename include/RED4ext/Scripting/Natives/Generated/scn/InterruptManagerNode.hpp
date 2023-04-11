@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace scn { struct IInterruptionOperation; }
 
-namespace scn { 
+namespace scn
+{
 struct InterruptManagerNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnInterruptManagerNode";
@@ -25,6 +26,7 @@ struct InterruptManagerNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(InterruptManagerNode, 0x68);
 } // namespace scn
+using scnInterruptManagerNode = scn::InterruptManagerNode;
 } // namespace RED4ext
 
 // clang-format on

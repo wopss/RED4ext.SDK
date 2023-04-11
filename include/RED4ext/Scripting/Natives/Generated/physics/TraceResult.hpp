@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct TraceResult
 {
     static constexpr const char* NAME = "physicsTraceResult";
@@ -24,6 +25,7 @@ struct TraceResult
 };
 RED4EXT_ASSERT_SIZE(TraceResult, 0x60);
 } // namespace physics
+using physicsTraceResult = physics::TraceResult;
 using TraceResult = physics::TraceResult;
 } // namespace RED4ext
 

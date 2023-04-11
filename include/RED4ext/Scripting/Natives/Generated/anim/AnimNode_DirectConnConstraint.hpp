@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct IAnimNodeSourceChannel_QsTransform; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_DirectConnConstraint : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_DirectConnConstraint";
@@ -42,6 +43,7 @@ struct AnimNode_DirectConnConstraint : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_DirectConnConstraint, 0xE8);
 } // namespace anim
+using animAnimNode_DirectConnConstraint = anim::AnimNode_DirectConnConstraint;
 } // namespace RED4ext
 
 // clang-format on

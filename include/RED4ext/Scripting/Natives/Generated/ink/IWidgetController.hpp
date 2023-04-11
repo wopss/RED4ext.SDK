@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IWidgetController : IScriptable
 {
     static constexpr const char* NAME = "inkIWidgetController";
@@ -23,6 +24,7 @@ struct IWidgetController : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IWidgetController, 0xA8);
 } // namespace ink
+using inkIWidgetController = ink::IWidgetController;
 using inkIGameController = ink::IWidgetController;
 } // namespace RED4ext
 

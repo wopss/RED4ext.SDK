@@ -16,7 +16,8 @@ namespace RED4ext
 {
 namespace game { struct DeviceReplicatedState; }
 
-namespace game { 
+namespace game
+{
 struct DeviceBaseReplicationProxy : net::IEntityState
 {
     static constexpr const char* NAME = "gameDeviceBaseReplicationProxy";
@@ -31,6 +32,7 @@ struct DeviceBaseReplicationProxy : net::IEntityState
 };
 RED4EXT_ASSERT_SIZE(DeviceBaseReplicationProxy, 0x88);
 } // namespace game
+using gameDeviceBaseReplicationProxy = game::DeviceBaseReplicationProxy;
 } // namespace RED4ext
 
 // clang-format on

@@ -19,7 +19,8 @@ using inkLayerProxy = ink::LayerProxy;
 
 namespace RED4ext
 {
-namespace ink {
+namespace ink
+{
 struct LayerProxy : ISerializable
 {
     static constexpr const char* NAME = "inkLayerProxy";
@@ -29,6 +30,7 @@ struct LayerProxy : ISerializable
 };
 RED4EXT_ASSERT_SIZE(LayerProxy, 0x68);
 } // namespace ink
+using inkLayerProxy = ink::LayerProxy;
 } // namespace RED4ext
 */
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ink { struct HudEntriesResource; }
 
-namespace ink { 
+namespace ink
+{
 struct RequestNewHudEvent : red::Event
 {
     static constexpr const char* NAME = "inkRequestNewHudEvent";
@@ -23,6 +24,7 @@ struct RequestNewHudEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RequestNewHudEvent, 0x58);
 } // namespace ink
+using inkRequestNewHudEvent = ink::RequestNewHudEvent;
 using RequestNewHudEvent = ink::RequestNewHudEvent;
 } // namespace RED4ext
 

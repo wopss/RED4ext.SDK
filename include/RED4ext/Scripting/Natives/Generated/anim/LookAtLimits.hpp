@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtLimits
 {
     static constexpr const char* NAME = "animLookAtLimits";
@@ -22,6 +23,7 @@ struct LookAtLimits
 };
 RED4EXT_ASSERT_SIZE(LookAtLimits, 0x10);
 } // namespace anim
+using animLookAtLimits = anim::LookAtLimits;
 using LookAtLimits = anim::LookAtLimits;
 } // namespace RED4ext
 

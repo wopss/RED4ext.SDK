@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct IndexBufferChunk
 {
     static constexpr const char* NAME = "rendIndexBufferChunk";
@@ -22,6 +23,7 @@ struct IndexBufferChunk
 };
 RED4EXT_ASSERT_SIZE(IndexBufferChunk, 0x8);
 } // namespace rend
+using rendIndexBufferChunk = rend::IndexBufferChunk;
 } // namespace RED4ext
 
 // clang-format on

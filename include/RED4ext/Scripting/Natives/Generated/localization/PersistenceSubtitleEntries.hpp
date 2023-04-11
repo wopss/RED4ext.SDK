@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace localization { 
+namespace localization
+{
 struct PersistenceSubtitleEntries : ISerializable
 {
     static constexpr const char* NAME = "localizationPersistenceSubtitleEntries";
@@ -22,6 +23,7 @@ struct PersistenceSubtitleEntries : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PersistenceSubtitleEntries, 0x40);
 } // namespace localization
+using localizationPersistenceSubtitleEntries = localization::PersistenceSubtitleEntries;
 } // namespace RED4ext
 
 // clang-format on

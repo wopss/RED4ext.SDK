@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct EdgeConditionDefinition : AI::behavior::UnaryConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorEdgeConditionDefinition";
@@ -24,6 +25,7 @@ struct EdgeConditionDefinition : AI::behavior::UnaryConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(EdgeConditionDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorEdgeConditionDefinition = AI::behavior::EdgeConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

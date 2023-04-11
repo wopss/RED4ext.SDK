@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct LanguageFontMapper : ISerializable
 {
     static constexpr const char* NAME = "inkLanguageFontMapper";
@@ -22,6 +23,7 @@ struct LanguageFontMapper : ISerializable
 };
 RED4EXT_ASSERT_SIZE(LanguageFontMapper, 0x40);
 } // namespace ink
+using inkLanguageFontMapper = ink::LanguageFontMapper;
 } // namespace RED4ext
 
 // clang-format on

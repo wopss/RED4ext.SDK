@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct SpawnerPreviewEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileSpawnerPreviewEvent";
@@ -21,6 +22,7 @@ struct SpawnerPreviewEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SpawnerPreviewEvent, 0x48);
 } // namespace game::projectile
+using gameprojectileSpawnerPreviewEvent = game::projectile::SpawnerPreviewEvent;
 } // namespace RED4ext
 
 // clang-format on

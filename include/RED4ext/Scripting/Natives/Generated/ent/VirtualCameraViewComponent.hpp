@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct VirtualCameraViewComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entVirtualCameraViewComponent";
@@ -24,6 +25,7 @@ struct VirtualCameraViewComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(VirtualCameraViewComponent, 0x170);
 } // namespace ent
+using entVirtualCameraViewComponent = ent::VirtualCameraViewComponent;
 using VirtualCameraViewComponent = ent::VirtualCameraViewComponent;
 } // namespace RED4ext
 

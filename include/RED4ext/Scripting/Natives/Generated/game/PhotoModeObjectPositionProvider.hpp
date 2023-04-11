@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhotoModeObjectPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "gamePhotoModeObjectPositionProvider";
@@ -20,6 +21,7 @@ struct PhotoModeObjectPositionProvider : ent::IPositionProvider
 };
 RED4EXT_ASSERT_SIZE(PhotoModeObjectPositionProvider, 0x70);
 } // namespace game
+using gamePhotoModeObjectPositionProvider = game::PhotoModeObjectPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

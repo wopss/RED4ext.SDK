@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AISubActionShootToPoint_Record : game::data::AISubActionShootWithWeapon_Record
 {
     static constexpr const char* NAME = "gamedataAISubActionShootToPoint_Record";
@@ -20,6 +21,7 @@ struct AISubActionShootToPoint_Record : game::data::AISubActionShootWithWeapon_R
 };
 RED4EXT_ASSERT_SIZE(AISubActionShootToPoint_Record, 0x88);
 } // namespace game::data
+using gamedataAISubActionShootToPoint_Record = game::data::AISubActionShootToPoint_Record;
 using AISubActionShootToPoint_Record = game::data::AISubActionShootToPoint_Record;
 } // namespace RED4ext
 

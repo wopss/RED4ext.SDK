@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScanningEventForInstigator : game::ScanningEvent
 {
     static constexpr const char* NAME = "gameScanningEventForInstigator";
@@ -19,6 +20,7 @@ struct ScanningEventForInstigator : game::ScanningEvent
 };
 RED4EXT_ASSERT_SIZE(ScanningEventForInstigator, 0x48);
 } // namespace game
+using gameScanningEventForInstigator = game::ScanningEventForInstigator;
 using ScanningEventForInstigator = game::ScanningEventForInstigator;
 } // namespace RED4ext
 

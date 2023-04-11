@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct AnimGraphCustomDataEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimGraphCustomDataEvent";
@@ -20,6 +21,7 @@ struct AnimGraphCustomDataEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AnimGraphCustomDataEvent, 0x50);
 } // namespace ent
+using entAnimGraphCustomDataEvent = ent::AnimGraphCustomDataEvent;
 } // namespace RED4ext
 
 // clang-format on

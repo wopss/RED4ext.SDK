@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim
+{
 struct ExecuteControllerFunctionEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimExecuteControllerFunctionEvent";
@@ -24,6 +25,7 @@ struct ExecuteControllerFunctionEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(ExecuteControllerFunctionEvent, 0x78);
 } // namespace ink::anim
+using inkanimExecuteControllerFunctionEvent = ink::anim::ExecuteControllerFunctionEvent;
 } // namespace RED4ext
 
 // clang-format on

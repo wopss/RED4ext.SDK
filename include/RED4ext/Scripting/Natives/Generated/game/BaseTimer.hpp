@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BaseTimer : IScriptable
 {
     static constexpr const char* NAME = "gameBaseTimer";
@@ -20,6 +21,7 @@ struct BaseTimer : IScriptable
 };
 RED4EXT_ASSERT_SIZE(BaseTimer, 0x90);
 } // namespace game
+using gameBaseTimer = game::BaseTimer;
 } // namespace RED4ext
 
 // clang-format on

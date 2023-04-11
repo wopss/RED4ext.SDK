@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PauseTime_NodeType : quest::ITimeManagerNodeType
 {
     static constexpr const char* NAME = "questPauseTime_NodeType";
@@ -21,6 +22,7 @@ struct PauseTime_NodeType : quest::ITimeManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PauseTime_NodeType, 0x40);
 } // namespace quest
+using questPauseTime_NodeType = quest::PauseTime_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct Widget; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetClipboardData : ISerializable
 {
     static constexpr const char* NAME = "inkWidgetClipboardData";
@@ -25,6 +26,7 @@ struct WidgetClipboardData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WidgetClipboardData, 0x50);
 } // namespace ink
+using inkWidgetClipboardData = ink::WidgetClipboardData;
 } // namespace RED4ext
 
 // clang-format on

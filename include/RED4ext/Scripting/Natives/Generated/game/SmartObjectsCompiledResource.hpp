@@ -19,7 +19,8 @@ namespace game { struct SmartObjectPropertyDictionary; }
 namespace game { struct SmartObjectTransformDictionary; }
 namespace game { struct SmartObjectTransformSequenceDictionary; }
 
-namespace game { 
+namespace game
+{
 struct SmartObjectsCompiledResource : res::StreamedResource
 {
     static constexpr const char* NAME = "gameSmartObjectsCompiledResource";
@@ -35,6 +36,7 @@ struct SmartObjectsCompiledResource : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(SmartObjectsCompiledResource, 0xC0);
 } // namespace game
+using gameSmartObjectsCompiledResource = game::SmartObjectsCompiledResource;
 } // namespace RED4ext
 
 // clang-format on

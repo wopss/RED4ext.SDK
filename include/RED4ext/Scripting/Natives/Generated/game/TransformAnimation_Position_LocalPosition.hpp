@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Position_LocalPosition : game::TransformAnimation_Position
 {
     static constexpr const char* NAME = "gameTransformAnimation_Position_LocalPosition";
@@ -22,6 +23,7 @@ struct TransformAnimation_Position_LocalPosition : game::TransformAnimation_Posi
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Position_LocalPosition, 0x40);
 } // namespace game
+using gameTransformAnimation_Position_LocalPosition = game::TransformAnimation_Position_LocalPosition;
 } // namespace RED4ext
 
 // clang-format on

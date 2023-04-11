@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatformMountableComponent : game::mounting::MountableComponent
 {
     static constexpr const char* NAME = "gameMovingPlatformMountableComponent";
@@ -19,6 +20,7 @@ struct MovingPlatformMountableComponent : game::mounting::MountableComponent
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformMountableComponent, 0x98);
 } // namespace game
+using gameMovingPlatformMountableComponent = game::MovingPlatformMountableComponent;
 } // namespace RED4ext
 
 // clang-format on

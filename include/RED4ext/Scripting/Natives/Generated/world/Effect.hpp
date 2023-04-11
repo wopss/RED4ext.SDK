@@ -17,7 +17,8 @@ namespace RED4ext
 namespace effect { struct TrackGroup; }
 namespace effect { struct TrackItem; }
 
-namespace world { 
+namespace world
+{
 struct Effect : res::StreamedResource
 {
     static constexpr const char* NAME = "worldEffect";
@@ -33,6 +34,7 @@ struct Effect : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(Effect, 0x90);
 } // namespace world
+using worldEffect = world::Effect;
 } // namespace RED4ext
 
 // clang-format on

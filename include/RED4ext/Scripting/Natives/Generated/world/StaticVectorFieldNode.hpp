@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticVectorFieldNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticVectorFieldNode";
@@ -22,6 +23,7 @@ struct StaticVectorFieldNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticVectorFieldNode, 0x48);
 } // namespace world
+using worldStaticVectorFieldNode = world::StaticVectorFieldNode;
 } // namespace RED4ext
 
 // clang-format on

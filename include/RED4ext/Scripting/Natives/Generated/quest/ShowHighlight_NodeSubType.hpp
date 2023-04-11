@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowHighlight_NodeSubType : quest::ITutorial_NodeSubType
 {
     static constexpr const char* NAME = "questShowHighlight_NodeSubType";
@@ -23,6 +24,7 @@ struct ShowHighlight_NodeSubType : quest::ITutorial_NodeSubType
 };
 RED4EXT_ASSERT_SIZE(ShowHighlight_NodeSubType, 0x78);
 } // namespace quest
+using questShowHighlight_NodeSubType = quest::ShowHighlight_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

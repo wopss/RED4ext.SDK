@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ActionSlideToWorldPositionNodeDefinition : AI::behavior::ActionSlideNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorActionSlideToWorldPositionNodeDefinition";
@@ -25,6 +26,7 @@ struct ActionSlideToWorldPositionNodeDefinition : AI::behavior::ActionSlideNodeD
 };
 RED4EXT_ASSERT_SIZE(ActionSlideToWorldPositionNodeDefinition, 0x88);
 } // namespace AI::behavior
+using AIbehaviorActionSlideToWorldPositionNodeDefinition = AI::behavior::ActionSlideToWorldPositionNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct NPCCallbacks
 {
     static constexpr const char* NAME = "AIbehaviortweakNPCCallbacks";
@@ -19,6 +20,7 @@ struct NPCCallbacks
 };
 RED4EXT_ASSERT_SIZE(NPCCallbacks, 0x60);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakNPCCallbacks = AI::behavior::tweak::NPCCallbacks;
 } // namespace RED4ext
 
 // clang-format on

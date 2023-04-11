@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_Movement_CurveSet : game::TransformAnimation_Movement
 {
     static constexpr const char* NAME = "gameTransformAnimation_Movement_CurveSet";
@@ -20,6 +21,7 @@ struct TransformAnimation_Movement_CurveSet : game::TransformAnimation_Movement
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_Movement_CurveSet, 0x50);
 } // namespace game
+using gameTransformAnimation_Movement_CurveSet = game::TransformAnimation_Movement_CurveSet;
 } // namespace RED4ext
 
 // clang-format on

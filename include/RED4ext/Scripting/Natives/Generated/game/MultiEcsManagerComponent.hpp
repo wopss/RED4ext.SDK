@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MultiEcsManagerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameMultiEcsManagerComponent";
@@ -20,6 +21,7 @@ struct MultiEcsManagerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(MultiEcsManagerComponent, 0xC0);
 } // namespace game
+using gameMultiEcsManagerComponent = game::MultiEcsManagerComponent;
 using MultiEcsManagerComponent = game::MultiEcsManagerComponent;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct FlowControlNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questFlowControlNodeDefinition";
@@ -24,6 +25,7 @@ struct FlowControlNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(FlowControlNodeDefinition, 0x50);
 } // namespace quest
+using questFlowControlNodeDefinition = quest::FlowControlNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

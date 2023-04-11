@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct UnequipByContextRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "gameUnequipByContextRequest";
@@ -22,6 +23,7 @@ struct UnequipByContextRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(UnequipByContextRequest, 0x60);
 } // namespace game
+using gameUnequipByContextRequest = game::UnequipByContextRequest;
 using UnequipByContextRequest = game::UnequipByContextRequest;
 } // namespace RED4ext
 

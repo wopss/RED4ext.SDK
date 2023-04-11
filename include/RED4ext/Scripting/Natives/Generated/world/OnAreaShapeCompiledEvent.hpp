@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct OnAreaShapeCompiledEvent
 {
     static constexpr const char* NAME = "worldOnAreaShapeCompiledEvent";
@@ -19,6 +20,7 @@ struct OnAreaShapeCompiledEvent
 };
 RED4EXT_ASSERT_SIZE(OnAreaShapeCompiledEvent, 0x1);
 } // namespace world
+using worldOnAreaShapeCompiledEvent = world::OnAreaShapeCompiledEvent;
 } // namespace RED4ext
 
 // clang-format on

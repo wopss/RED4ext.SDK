@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TargetingComponentData
 {
     static constexpr const char* NAME = "gameTargetingComponentData";
@@ -19,6 +20,7 @@ struct TargetingComponentData
 };
 RED4EXT_ASSERT_SIZE(TargetingComponentData, 0x10);
 } // namespace game
+using gameTargetingComponentData = game::TargetingComponentData;
 } // namespace RED4ext
 
 // clang-format on

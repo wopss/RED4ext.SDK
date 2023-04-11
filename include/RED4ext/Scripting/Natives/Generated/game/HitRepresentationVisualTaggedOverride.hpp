@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct HitRepresentationVisualTaggedOverride : ISerializable
 {
     static constexpr const char* NAME = "gameHitRepresentationVisualTaggedOverride";
@@ -23,6 +24,7 @@ struct HitRepresentationVisualTaggedOverride : ISerializable
 };
 RED4EXT_ASSERT_SIZE(HitRepresentationVisualTaggedOverride, 0x88);
 } // namespace game
+using gameHitRepresentationVisualTaggedOverride = game::HitRepresentationVisualTaggedOverride;
 using HitRepresentationVisualTaggedOverride = game::HitRepresentationVisualTaggedOverride;
 } // namespace RED4ext
 

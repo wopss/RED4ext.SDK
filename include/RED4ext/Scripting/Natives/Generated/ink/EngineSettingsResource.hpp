@@ -20,7 +20,8 @@ namespace ink { struct FullscreenCompositionResource; }
 namespace ink { struct ShapeCollectionResource; }
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct EngineSettingsResource : CResource
 {
     static constexpr const char* NAME = "inkEngineSettingsResource";
@@ -45,6 +46,7 @@ struct EngineSettingsResource : CResource
 };
 RED4EXT_ASSERT_SIZE(EngineSettingsResource, 0x1B0);
 } // namespace ink
+using inkEngineSettingsResource = ink::EngineSettingsResource;
 } // namespace RED4ext
 
 // clang-format on

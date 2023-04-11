@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtAdditionalPreset_FullControl : anim::LookAtAdditionalPreset
 {
     static constexpr const char* NAME = "animLookAtAdditionalPreset_FullControl";
@@ -27,6 +28,7 @@ struct LookAtAdditionalPreset_FullControl : anim::LookAtAdditionalPreset
 };
 RED4EXT_ASSERT_SIZE(LookAtAdditionalPreset_FullControl, 0x60);
 } // namespace anim
+using animLookAtAdditionalPreset_FullControl = anim::LookAtAdditionalPreset_FullControl;
 } // namespace RED4ext
 
 // clang-format on

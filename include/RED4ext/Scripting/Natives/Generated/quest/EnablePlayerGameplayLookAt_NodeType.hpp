@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EnablePlayerGameplayLookAt_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questEnablePlayerGameplayLookAt_NodeType";
@@ -21,6 +22,7 @@ struct EnablePlayerGameplayLookAt_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(EnablePlayerGameplayLookAt_NodeType, 0x40);
 } // namespace quest
+using questEnablePlayerGameplayLookAt_NodeType = quest::EnablePlayerGameplayLookAt_NodeType;
 } // namespace RED4ext
 
 // clang-format on

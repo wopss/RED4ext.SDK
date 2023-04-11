@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct WeatherScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "worldWeatherScriptInterface";
@@ -20,6 +21,7 @@ struct WeatherScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(WeatherScriptInterface, 0x50);
 } // namespace world
+using worldWeatherScriptInterface = world::WeatherScriptInterface;
 using WeatherSystem = world::WeatherScriptInterface;
 } // namespace RED4ext
 

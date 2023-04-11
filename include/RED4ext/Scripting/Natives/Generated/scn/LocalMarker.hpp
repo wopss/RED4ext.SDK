@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LocalMarker
 {
     static constexpr const char* NAME = "scnLocalMarker";
@@ -23,6 +24,7 @@ struct LocalMarker
 };
 RED4EXT_ASSERT_SIZE(LocalMarker, 0x30);
 } // namespace scn
+using scnLocalMarker = scn::LocalMarker;
 } // namespace RED4ext
 
 // clang-format on

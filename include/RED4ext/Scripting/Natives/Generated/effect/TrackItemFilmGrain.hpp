@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemFilmGrain : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemFilmGrain";
@@ -25,6 +26,7 @@ struct TrackItemFilmGrain : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemFilmGrain, 0x88);
 } // namespace effect
+using effectTrackItemFilmGrain = effect::TrackItemFilmGrain;
 } // namespace RED4ext
 
 // clang-format on

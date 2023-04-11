@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TimeDilation_Operation : ISerializable
 {
     static constexpr const char* NAME = "questTimeDilation_Operation";
@@ -19,6 +20,7 @@ struct TimeDilation_Operation : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TimeDilation_Operation, 0x30);
 } // namespace quest
+using questTimeDilation_Operation = quest::TimeDilation_Operation;
 } // namespace RED4ext
 
 // clang-format on

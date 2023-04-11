@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_IdentityPoseTerminator : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_IdentityPoseTerminator";
@@ -19,6 +20,7 @@ struct AnimNode_IdentityPoseTerminator : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_IdentityPoseTerminator, 0x48);
 } // namespace anim
+using animAnimNode_IdentityPoseTerminator = anim::AnimNode_IdentityPoseTerminator;
 } // namespace RED4ext
 
 // clang-format on

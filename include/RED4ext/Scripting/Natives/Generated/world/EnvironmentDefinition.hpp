@@ -21,7 +21,8 @@ namespace world { struct EnvironmentAreaParameters; }
 namespace world { struct WeatherState; }
 namespace world { struct WeatherStateTransition; }
 
-namespace world { 
+namespace world
+{
 struct EnvironmentDefinition : CResource
 {
     static constexpr const char* NAME = "worldEnvironmentDefinition";
@@ -41,6 +42,7 @@ struct EnvironmentDefinition : CResource
 };
 RED4EXT_ASSERT_SIZE(EnvironmentDefinition, 0x1A8);
 } // namespace world
+using worldEnvironmentDefinition = world::EnvironmentDefinition;
 } // namespace RED4ext
 
 // clang-format on

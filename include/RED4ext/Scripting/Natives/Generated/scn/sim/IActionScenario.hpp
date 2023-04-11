@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn::sim { 
+namespace scn::sim
+{
 struct IActionScenario : ISerializable
 {
     static constexpr const char* NAME = "scnsimIActionScenario";
@@ -19,6 +20,7 @@ struct IActionScenario : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IActionScenario, 0x30);
 } // namespace scn::sim
+using scnsimIActionScenario = scn::sim::IActionScenario;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckSpeakersDistanceInterruptCondition : scn::IInterruptCondition
 {
     static constexpr const char* NAME = "scnCheckSpeakersDistanceInterruptCondition";
@@ -21,6 +22,7 @@ struct CheckSpeakersDistanceInterruptCondition : scn::IInterruptCondition
 };
 RED4EXT_ASSERT_SIZE(CheckSpeakersDistanceInterruptCondition, 0x38);
 } // namespace scn
+using scnCheckSpeakersDistanceInterruptCondition = scn::CheckSpeakersDistanceInterruptCondition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace text { 
+namespace text
+{
 struct TextParameterSet : IScriptable
 {
     static constexpr const char* NAME = "textTextParameterSet";
@@ -20,6 +21,7 @@ struct TextParameterSet : IScriptable
 };
 RED4EXT_ASSERT_SIZE(TextParameterSet, 0x8A8);
 } // namespace text
+using textTextParameterSet = text::TextParameterSet;
 using inkTextParams = text::TextParameterSet;
 } // namespace RED4ext
 

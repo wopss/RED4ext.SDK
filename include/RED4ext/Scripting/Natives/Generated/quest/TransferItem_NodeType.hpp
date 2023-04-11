@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TransferItem_NodeType : quest::IItemManagerNodeType
 {
     static constexpr const char* NAME = "questTransferItem_NodeType";
@@ -22,6 +23,7 @@ struct TransferItem_NodeType : quest::IItemManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(TransferItem_NodeType, 0x40);
 } // namespace quest
+using questTransferItem_NodeType = quest::TransferItem_NodeType;
 } // namespace RED4ext
 
 // clang-format on

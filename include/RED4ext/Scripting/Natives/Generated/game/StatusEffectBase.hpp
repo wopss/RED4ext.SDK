@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatusEffectBase : IScriptable
 {
     static constexpr const char* NAME = "gameStatusEffectBase";
@@ -21,6 +22,7 @@ struct StatusEffectBase : IScriptable
 };
 RED4EXT_ASSERT_SIZE(StatusEffectBase, 0x48);
 } // namespace game
+using gameStatusEffectBase = game::StatusEffectBase;
 using StatusEffectBase = game::StatusEffectBase;
 } // namespace RED4ext
 

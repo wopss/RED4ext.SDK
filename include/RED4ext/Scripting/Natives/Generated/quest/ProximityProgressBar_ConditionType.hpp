@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ProximityProgressBar_ConditionType : quest::IUIConditionType
 {
     static constexpr const char* NAME = "questProximityProgressBar_ConditionType";
@@ -22,6 +23,7 @@ struct ProximityProgressBar_ConditionType : quest::IUIConditionType
 };
 RED4EXT_ASSERT_SIZE(ProximityProgressBar_ConditionType, 0x40);
 } // namespace quest
+using questProximityProgressBar_ConditionType = quest::ProximityProgressBar_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

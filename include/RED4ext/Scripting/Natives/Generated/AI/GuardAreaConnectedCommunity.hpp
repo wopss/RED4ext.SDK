@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct GuardAreaConnectedCommunity
 {
     static constexpr const char* NAME = "AIGuardAreaConnectedCommunity";
@@ -22,6 +23,7 @@ struct GuardAreaConnectedCommunity
 };
 RED4EXT_ASSERT_SIZE(GuardAreaConnectedCommunity, 0x40);
 } // namespace AI
+using AIGuardAreaConnectedCommunity = AI::GuardAreaConnectedCommunity;
 } // namespace RED4ext
 
 // clang-format on

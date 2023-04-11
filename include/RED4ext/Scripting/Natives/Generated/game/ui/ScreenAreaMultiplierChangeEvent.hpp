@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ScreenAreaMultiplierChangeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiScreenAreaMultiplierChangeEvent";
@@ -21,6 +22,7 @@ struct ScreenAreaMultiplierChangeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ScreenAreaMultiplierChangeEvent, 0x48);
 } // namespace game::ui
+using gameuiScreenAreaMultiplierChangeEvent = game::ui::ScreenAreaMultiplierChangeEvent;
 } // namespace RED4ext
 
 // clang-format on

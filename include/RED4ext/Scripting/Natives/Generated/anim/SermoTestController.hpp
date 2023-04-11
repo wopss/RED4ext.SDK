@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SermoTestController
 {
     static constexpr const char* NAME = "animSermoTestController";
@@ -432,6 +433,7 @@ struct SermoTestController
 };
 RED4EXT_ASSERT_SIZE(SermoTestController, 0x678);
 } // namespace anim
+using animSermoTestController = anim::SermoTestController;
 } // namespace RED4ext
 
 // clang-format on

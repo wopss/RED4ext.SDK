@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct AugmentedRealitySignGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiAugmentedRealitySignGameController";
@@ -20,6 +21,7 @@ struct AugmentedRealitySignGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(AugmentedRealitySignGameController, 0x108);
 } // namespace game::ui
+using gameuiAugmentedRealitySignGameController = game::ui::AugmentedRealitySignGameController;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StepperChangedCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkStepperChangedCallback";
@@ -20,6 +21,7 @@ struct StepperChangedCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(StepperChangedCallback, 0x38);
 } // namespace ink
+using inkStepperChangedCallback = ink::StepperChangedCallback;
 } // namespace RED4ext
 
 // clang-format on

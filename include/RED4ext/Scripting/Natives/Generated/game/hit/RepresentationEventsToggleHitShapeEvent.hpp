@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::hit { 
+namespace game::hit
+{
 struct RepresentationEventsToggleHitShapeEvent : red::Event
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsToggleHitShapeEvent";
@@ -24,6 +25,7 @@ struct RepresentationEventsToggleHitShapeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RepresentationEventsToggleHitShapeEvent, 0x50);
 } // namespace game::hit
+using gamehitRepresentationEventsToggleHitShapeEvent = game::hit::RepresentationEventsToggleHitShapeEvent;
 using ToggleHitShapeEvent = game::hit::RepresentationEventsToggleHitShapeEvent;
 } // namespace RED4ext
 

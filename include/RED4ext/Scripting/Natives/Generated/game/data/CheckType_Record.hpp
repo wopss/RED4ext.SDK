@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CheckType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCheckType_Record";
@@ -20,6 +21,7 @@ struct CheckType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CheckType_Record, 0x58);
 } // namespace game::data
+using gamedataCheckType_Record = game::data::CheckType_Record;
 using CheckType_Record = game::data::CheckType_Record;
 } // namespace RED4ext
 

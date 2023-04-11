@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace game { 
+namespace game
+{
 struct EffectFilter_NotObstructed : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectFilter_NotObstructed";
@@ -28,6 +29,7 @@ struct EffectFilter_NotObstructed : game::EffectObjectSingleFilter
 };
 RED4EXT_ASSERT_SIZE(EffectFilter_NotObstructed, 0x70);
 } // namespace game
+using gameEffectFilter_NotObstructed = game::EffectFilter_NotObstructed;
 } // namespace RED4ext
 
 // clang-format on

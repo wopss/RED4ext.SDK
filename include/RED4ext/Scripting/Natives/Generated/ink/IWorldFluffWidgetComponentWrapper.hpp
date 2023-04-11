@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IWorldFluffWidgetComponentWrapper : ink::IWorldWidgetComponentWrapper
 {
     static constexpr const char* NAME = "inkIWorldFluffWidgetComponentWrapper";
@@ -19,6 +20,7 @@ struct IWorldFluffWidgetComponentWrapper : ink::IWorldWidgetComponentWrapper
 };
 RED4EXT_ASSERT_SIZE(IWorldFluffWidgetComponentWrapper, 0x8);
 } // namespace ink
+using inkIWorldFluffWidgetComponentWrapper = ink::IWorldFluffWidgetComponentWrapper;
 } // namespace RED4ext
 
 // clang-format on

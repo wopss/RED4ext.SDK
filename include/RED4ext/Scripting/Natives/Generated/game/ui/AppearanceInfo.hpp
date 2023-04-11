@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace appearance { struct AppearanceResource; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct AppearanceInfo : game::ui::CharacterCustomizationInfo
 {
     static constexpr const char* NAME = "gameuiAppearanceInfo";
@@ -28,6 +29,7 @@ struct AppearanceInfo : game::ui::CharacterCustomizationInfo
 };
 RED4EXT_ASSERT_SIZE(AppearanceInfo, 0xD8);
 } // namespace game::ui
+using gameuiAppearanceInfo = game::ui::AppearanceInfo;
 } // namespace RED4ext
 
 // clang-format on

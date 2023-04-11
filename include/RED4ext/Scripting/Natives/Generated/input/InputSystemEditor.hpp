@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace input { 
+namespace input
+{
 struct InputSystemEditor : input::InputSystemWin32Base
 {
     static constexpr const char* NAME = "inputInputSystemEditor";
@@ -20,6 +21,7 @@ struct InputSystemEditor : input::InputSystemWin32Base
 };
 RED4EXT_ASSERT_SIZE(InputSystemEditor, 0xE60);
 } // namespace input
+using inputInputSystemEditor = input::InputSystemEditor;
 } // namespace RED4ext
 
 // clang-format on

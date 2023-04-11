@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticOccluderMeshNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticOccluderMeshNodeInstance";
@@ -20,6 +21,7 @@ struct StaticOccluderMeshNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(StaticOccluderMeshNodeInstance, 0xC0);
 } // namespace world
+using worldStaticOccluderMeshNodeInstance = world::StaticOccluderMeshNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

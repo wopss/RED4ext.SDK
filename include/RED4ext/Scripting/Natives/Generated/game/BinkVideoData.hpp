@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BinkVideoData : ISerializable
 {
     static constexpr const char* NAME = "gameBinkVideoData";
@@ -22,6 +23,7 @@ struct BinkVideoData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BinkVideoData, 0x40);
 } // namespace game
+using gameBinkVideoData = game::BinkVideoData;
 } // namespace RED4ext
 
 // clang-format on

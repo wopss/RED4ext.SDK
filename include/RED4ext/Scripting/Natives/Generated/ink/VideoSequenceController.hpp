@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VideoSequenceController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkVideoSequenceController";
@@ -25,6 +26,7 @@ struct VideoSequenceController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(VideoSequenceController, 0xA8);
 } // namespace ink
+using inkVideoSequenceController = ink::VideoSequenceController;
 } // namespace RED4ext
 
 // clang-format on

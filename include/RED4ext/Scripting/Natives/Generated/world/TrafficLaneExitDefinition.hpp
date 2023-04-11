@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficLaneExitDefinition
 {
     static constexpr const char* NAME = "worldTrafficLaneExitDefinition";
@@ -28,6 +29,7 @@ struct TrafficLaneExitDefinition
 };
 RED4EXT_ASSERT_SIZE(TrafficLaneExitDefinition, 0x30);
 } // namespace world
+using worldTrafficLaneExitDefinition = world::TrafficLaneExitDefinition;
 } // namespace RED4ext
 
 // clang-format on

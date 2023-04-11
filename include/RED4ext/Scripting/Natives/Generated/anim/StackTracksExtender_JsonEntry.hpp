@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct StackTracksExtender_JsonEntry
 {
     static constexpr const char* NAME = "animStackTracksExtender_JsonEntry";
@@ -22,6 +23,7 @@ struct StackTracksExtender_JsonEntry
 };
 RED4EXT_ASSERT_SIZE(StackTracksExtender_JsonEntry, 0x10);
 } // namespace anim
+using animStackTracksExtender_JsonEntry = anim::StackTracksExtender_JsonEntry;
 } // namespace RED4ext
 
 // clang-format on

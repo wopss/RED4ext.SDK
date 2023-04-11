@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct OnscreenVOPlayerController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiOnscreenVOPlayerController";
@@ -32,6 +33,7 @@ struct OnscreenVOPlayerController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(OnscreenVOPlayerController, 0x150);
 } // namespace game::ui
+using gameuiOnscreenVOPlayerController = game::ui::OnscreenVOPlayerController;
 } // namespace RED4ext
 
 // clang-format on

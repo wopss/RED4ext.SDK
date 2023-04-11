@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct PhysicalBodyInterface : IScriptable
 {
     static constexpr const char* NAME = "entPhysicalBodyInterface";
@@ -20,6 +21,7 @@ struct PhysicalBodyInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PhysicalBodyInterface, 0x48);
 } // namespace ent
+using entPhysicalBodyInterface = ent::PhysicalBodyInterface;
 using PhysicalBodyInterface = ent::PhysicalBodyInterface;
 } // namespace RED4ext
 

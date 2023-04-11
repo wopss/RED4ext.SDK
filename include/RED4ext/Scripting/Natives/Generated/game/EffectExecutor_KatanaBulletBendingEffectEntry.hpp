@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace game { 
+namespace game
+{
 struct EffectExecutor_KatanaBulletBendingEffectEntry
 {
     static constexpr const char* NAME = "gameEffectExecutor_KatanaBulletBendingEffectEntry";
@@ -26,6 +27,7 @@ struct EffectExecutor_KatanaBulletBendingEffectEntry
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_KatanaBulletBendingEffectEntry, 0x18);
 } // namespace game
+using gameEffectExecutor_KatanaBulletBendingEffectEntry = game::EffectExecutor_KatanaBulletBendingEffectEntry;
 } // namespace RED4ext
 
 // clang-format on

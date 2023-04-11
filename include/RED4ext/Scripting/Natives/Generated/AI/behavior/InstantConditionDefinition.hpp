@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ConditionDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct InstantConditionDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorInstantConditionDefinition";
@@ -23,6 +24,7 @@ struct InstantConditionDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InstantConditionDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorInstantConditionDefinition = AI::behavior::InstantConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

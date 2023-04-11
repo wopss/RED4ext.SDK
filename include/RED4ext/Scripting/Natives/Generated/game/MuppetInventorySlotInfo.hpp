@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MuppetInventorySlotInfo
 {
     static constexpr const char* NAME = "gameMuppetInventorySlotInfo";
@@ -22,6 +23,7 @@ struct MuppetInventorySlotInfo
 };
 RED4EXT_ASSERT_SIZE(MuppetInventorySlotInfo, 0x1C);
 } // namespace game
+using gameMuppetInventorySlotInfo = game::MuppetInventorySlotInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace quest { struct SpawnManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct SpawnManagerNodeActionEntry
 {
     static constexpr const char* NAME = "questSpawnManagerNodeActionEntry";
@@ -22,6 +23,7 @@ struct SpawnManagerNodeActionEntry
 };
 RED4EXT_ASSERT_SIZE(SpawnManagerNodeActionEntry, 0x10);
 } // namespace quest
+using questSpawnManagerNodeActionEntry = quest::SpawnManagerNodeActionEntry;
 } // namespace RED4ext
 
 // clang-format on

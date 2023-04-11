@@ -17,7 +17,8 @@ namespace RED4ext
 namespace AI::behavior { struct BehaviorDelegate; }
 namespace AI::behavior { struct TreeNodeDefinition; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct Resource : CResource
 {
     static constexpr const char* NAME = "AIbehaviorResource";
@@ -30,6 +31,7 @@ struct Resource : CResource
 };
 RED4EXT_ASSERT_SIZE(Resource, 0x88);
 } // namespace AI::behavior
+using AIbehaviorResource = AI::behavior::Resource;
 } // namespace RED4ext
 
 // clang-format on

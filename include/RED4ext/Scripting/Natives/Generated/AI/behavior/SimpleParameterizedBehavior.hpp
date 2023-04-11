@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SimpleParameterizedBehavior : AI::behavior::ParameterizedBehavior
 {
     static constexpr const char* NAME = "AIbehaviorSimpleParameterizedBehavior";
@@ -19,6 +20,7 @@ struct SimpleParameterizedBehavior : AI::behavior::ParameterizedBehavior
 };
 RED4EXT_ASSERT_SIZE(SimpleParameterizedBehavior, 0x68);
 } // namespace AI::behavior
+using AIbehaviorSimpleParameterizedBehavior = AI::behavior::SimpleParameterizedBehavior;
 } // namespace RED4ext
 
 // clang-format on

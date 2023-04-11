@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CompanionDistancePreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCompanionDistancePreset_Record";
@@ -20,6 +21,7 @@ struct CompanionDistancePreset_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CompanionDistancePreset_Record, 0x58);
 } // namespace game::data
+using gamedataCompanionDistancePreset_Record = game::data::CompanionDistancePreset_Record;
 using CompanionDistancePreset_Record = game::data::CompanionDistancePreset_Record;
 } // namespace RED4ext
 

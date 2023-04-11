@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct InteractionScriptedCondition : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsInteractionScriptedCondition";
@@ -20,6 +21,7 @@ struct InteractionScriptedCondition : IScriptable
 };
 RED4EXT_ASSERT_SIZE(InteractionScriptedCondition, 0x48);
 } // namespace game::interactions
+using gameinteractionsInteractionScriptedCondition = game::interactions::InteractionScriptedCondition;
 using InteractionScriptedCondition = game::interactions::InteractionScriptedCondition;
 } // namespace RED4ext
 

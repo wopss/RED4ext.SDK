@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IgnoreSwapHorizontallyMode : ink::UserData
 {
     static constexpr const char* NAME = "inkIgnoreSwapHorizontallyMode";
@@ -19,6 +20,7 @@ struct IgnoreSwapHorizontallyMode : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(IgnoreSwapHorizontallyMode, 0x40);
 } // namespace ink
+using inkIgnoreSwapHorizontallyMode = ink::IgnoreSwapHorizontallyMode;
 } // namespace RED4ext
 
 // clang-format on

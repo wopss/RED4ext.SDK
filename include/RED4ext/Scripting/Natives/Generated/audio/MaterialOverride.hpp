@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MaterialOverride
 {
     static constexpr const char* NAME = "audioMaterialOverride";
@@ -21,6 +22,7 @@ struct MaterialOverride
 };
 RED4EXT_ASSERT_SIZE(MaterialOverride, 0x10);
 } // namespace audio
+using audioMaterialOverride = audio::MaterialOverride;
 } // namespace RED4ext
 
 // clang-format on

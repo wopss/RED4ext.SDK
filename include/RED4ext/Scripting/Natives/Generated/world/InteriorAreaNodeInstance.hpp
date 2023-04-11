@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct InteriorAreaNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "worldInteriorAreaNodeInstance";
@@ -19,6 +20,7 @@ struct InteriorAreaNodeInstance : world::TriggerAreaNodeInstance
 };
 RED4EXT_ASSERT_SIZE(InteriorAreaNodeInstance, 0x100);
 } // namespace world
+using worldInteriorAreaNodeInstance = world::InteriorAreaNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

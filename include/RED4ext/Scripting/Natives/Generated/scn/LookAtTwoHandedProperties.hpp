@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LookAtTwoHandedProperties
 {
     static constexpr const char* NAME = "scnLookAtTwoHandedProperties";
@@ -21,6 +22,7 @@ struct LookAtTwoHandedProperties
 };
 RED4EXT_ASSERT_SIZE(LookAtTwoHandedProperties, 0xC);
 } // namespace scn
+using scnLookAtTwoHandedProperties = scn::LookAtTwoHandedProperties;
 } // namespace RED4ext
 
 // clang-format on

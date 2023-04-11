@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FloatToBoolConverter : anim::AnimNode_BoolValue
 {
     static constexpr const char* NAME = "animAnimNode_FloatToBoolConverter";
@@ -21,6 +22,7 @@ struct AnimNode_FloatToBoolConverter : anim::AnimNode_BoolValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FloatToBoolConverter, 0x68);
 } // namespace anim
+using animAnimNode_FloatToBoolConverter = anim::AnimNode_FloatToBoolConverter;
 } // namespace RED4ext
 
 // clang-format on

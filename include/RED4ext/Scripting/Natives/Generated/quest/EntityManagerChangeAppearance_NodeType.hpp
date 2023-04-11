@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerChangeAppearance_NodeType : quest::IEntityManager_NodeType
 {
     static constexpr const char* NAME = "questEntityManagerChangeAppearance_NodeType";
@@ -25,6 +26,7 @@ struct EntityManagerChangeAppearance_NodeType : quest::IEntityManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(EntityManagerChangeAppearance_NodeType, 0x78);
 } // namespace quest
+using questEntityManagerChangeAppearance_NodeType = quest::EntityManagerChangeAppearance_NodeType;
 } // namespace RED4ext
 
 // clang-format on

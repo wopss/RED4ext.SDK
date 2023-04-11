@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct PackageTweakDBIDSerializer : red::PackageCustomTypeSerializer
 {
     static constexpr const char* NAME = "redPackageTweakDBIDSerializer";
@@ -19,6 +20,7 @@ struct PackageTweakDBIDSerializer : red::PackageCustomTypeSerializer
 };
 RED4EXT_ASSERT_SIZE(PackageTweakDBIDSerializer, 0x8);
 } // namespace red
+using redPackageTweakDBIDSerializer = red::PackageTweakDBIDSerializer;
 } // namespace RED4ext
 
 // clang-format on

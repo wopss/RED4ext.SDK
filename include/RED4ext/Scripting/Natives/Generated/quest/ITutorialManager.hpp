@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ITutorialManager : game::IGameSystem
 {
     static constexpr const char* NAME = "questITutorialManager";
@@ -19,6 +20,7 @@ struct ITutorialManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ITutorialManager, 0x48);
 } // namespace quest
+using questITutorialManager = quest::ITutorialManager;
 } // namespace RED4ext
 
 // clang-format on

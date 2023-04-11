@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScenePlayerAnimationParams
 {
     static constexpr const char* NAME = "gameScenePlayerAnimationParams";
@@ -19,6 +20,7 @@ struct ScenePlayerAnimationParams
 };
 RED4EXT_ASSERT_SIZE(ScenePlayerAnimationParams, 0x18);
 } // namespace game
+using gameScenePlayerAnimationParams = game::ScenePlayerAnimationParams;
 } // namespace RED4ext
 
 // clang-format on

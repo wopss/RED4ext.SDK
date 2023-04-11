@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct RadioTrack
 {
     static constexpr const char* NAME = "audioRadioTrack";
@@ -24,6 +25,7 @@ struct RadioTrack
 };
 RED4EXT_ASSERT_SIZE(RadioTrack, 0x20);
 } // namespace audio
+using audioRadioTrack = audio::RadioTrack;
 } // namespace RED4ext
 
 // clang-format on

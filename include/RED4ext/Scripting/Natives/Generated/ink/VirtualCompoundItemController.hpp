@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualCompoundItemController : ink::ButtonController
 {
     static constexpr const char* NAME = "inkVirtualCompoundItemController";
@@ -27,6 +28,7 @@ struct VirtualCompoundItemController : ink::ButtonController
 };
 RED4EXT_ASSERT_SIZE(VirtualCompoundItemController, 0x370);
 } // namespace ink
+using inkVirtualCompoundItemController = ink::VirtualCompoundItemController;
 } // namespace RED4ext
 
 // clang-format on

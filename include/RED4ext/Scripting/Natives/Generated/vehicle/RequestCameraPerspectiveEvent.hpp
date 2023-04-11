@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct RequestCameraPerspectiveEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleRequestCameraPerspectiveEvent";
@@ -22,6 +23,7 @@ struct RequestCameraPerspectiveEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RequestCameraPerspectiveEvent, 0x48);
 } // namespace vehicle
+using vehicleRequestCameraPerspectiveEvent = vehicle::RequestCameraPerspectiveEvent;
 } // namespace RED4ext
 
 // clang-format on

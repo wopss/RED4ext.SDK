@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct RadioSongNodeType : quest::IAudioNodeType
 {
     static constexpr const char* NAME = "questRadioSongNodeType";
@@ -23,6 +24,7 @@ struct RadioSongNodeType : quest::IAudioNodeType
 };
 RED4EXT_ASSERT_SIZE(RadioSongNodeType, 0x70);
 } // namespace quest
+using questRadioSongNodeType = quest::RadioSongNodeType;
 } // namespace RED4ext
 
 // clang-format on

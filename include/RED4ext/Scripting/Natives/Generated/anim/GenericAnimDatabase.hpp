@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct GenericAnimDatabase : CResource
 {
     static constexpr const char* NAME = "animGenericAnimDatabase";
@@ -23,6 +24,7 @@ struct GenericAnimDatabase : CResource
 };
 RED4EXT_ASSERT_SIZE(GenericAnimDatabase, 0x80);
 } // namespace anim
+using animGenericAnimDatabase = anim::GenericAnimDatabase;
 } // namespace RED4ext
 
 // clang-format on

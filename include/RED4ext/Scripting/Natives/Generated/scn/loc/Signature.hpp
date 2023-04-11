@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn::loc { 
+namespace scn::loc
+{
 struct Signature
 {
     static constexpr const char* NAME = "scnlocSignature";
@@ -19,6 +20,7 @@ struct Signature
 };
 RED4EXT_ASSERT_SIZE(Signature, 0x8);
 } // namespace scn::loc
+using scnlocSignature = scn::loc::Signature;
 } // namespace RED4ext
 
 // clang-format on

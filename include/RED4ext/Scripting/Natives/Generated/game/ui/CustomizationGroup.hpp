@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CustomizationGroup
 {
     static constexpr const char* NAME = "gameuiCustomizationGroup";
@@ -25,6 +26,7 @@ struct CustomizationGroup
 };
 RED4EXT_ASSERT_SIZE(CustomizationGroup, 0x28);
 } // namespace game::ui
+using gameuiCustomizationGroup = game::ui::CustomizationGroup;
 } // namespace RED4ext
 
 // clang-format on

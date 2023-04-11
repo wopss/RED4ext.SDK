@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ThreatPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "AIThreatPositionProvider";
@@ -20,6 +21,7 @@ struct ThreatPositionProvider : ent::IPositionProvider
 };
 RED4EXT_ASSERT_SIZE(ThreatPositionProvider, 0xA0);
 } // namespace AI
+using AIThreatPositionProvider = AI::ThreatPositionProvider;
 using ThreatPositionProvider = AI::ThreatPositionProvider;
 } // namespace RED4ext
 

@@ -17,7 +17,8 @@ namespace game { struct IAttack; }
 namespace game { struct Object; }
 namespace game::weapon { struct Object; }
 
-namespace game::damage { 
+namespace game::damage
+{
 struct AttackData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageAttackData";
@@ -38,6 +39,7 @@ struct AttackData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AttackData, 0xC0);
 } // namespace game::damage
+using gamedamageAttackData = game::damage::AttackData;
 using AttackData = game::damage::AttackData;
 } // namespace RED4ext
 

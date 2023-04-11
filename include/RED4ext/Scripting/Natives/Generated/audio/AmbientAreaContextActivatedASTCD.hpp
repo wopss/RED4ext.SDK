@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AmbientAreaContextActivatedASTCD : audio::AudioStateTransitionConditionData
 {
     static constexpr const char* NAME = "audioAmbientAreaContextActivatedASTCD";
@@ -21,6 +22,7 @@ struct AmbientAreaContextActivatedASTCD : audio::AudioStateTransitionConditionDa
 };
 RED4EXT_ASSERT_SIZE(AmbientAreaContextActivatedASTCD, 0x40);
 } // namespace audio
+using audioAmbientAreaContextActivatedASTCD = audio::AmbientAreaContextActivatedASTCD;
 } // namespace RED4ext
 
 // clang-format on

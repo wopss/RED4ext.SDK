@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ContainerObjectSingleItem : game::ContainerObjectBase
 {
     static constexpr const char* NAME = "gameContainerObjectSingleItem";
@@ -21,6 +22,7 @@ struct ContainerObjectSingleItem : game::ContainerObjectBase
 };
 RED4EXT_ASSERT_SIZE(ContainerObjectSingleItem, 0x2B0);
 } // namespace game
+using gameContainerObjectSingleItem = game::ContainerObjectSingleItem;
 using ContainerObjectSingleItem = game::ContainerObjectSingleItem;
 } // namespace RED4ext
 

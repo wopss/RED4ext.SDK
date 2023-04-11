@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_State : anim::AnimNode_Container
 {
     static constexpr const char* NAME = "animAnimNode_State";
@@ -27,6 +28,7 @@ struct AnimNode_State : anim::AnimNode_Container
 };
 RED4EXT_ASSERT_SIZE(AnimNode_State, 0x88);
 } // namespace anim
+using animAnimNode_State = anim::AnimNode_State;
 } // namespace RED4ext
 
 // clang-format on

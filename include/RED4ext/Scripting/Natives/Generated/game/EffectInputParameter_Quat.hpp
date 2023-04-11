@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace game { struct IEffectParameter_QuatEvaluator; }
 
-namespace game { 
+namespace game
+{
 struct EffectInputParameter_Quat
 {
     static constexpr const char* NAME = "gameEffectInputParameter_Quat";
@@ -23,6 +24,7 @@ struct EffectInputParameter_Quat
 };
 RED4EXT_ASSERT_SIZE(EffectInputParameter_Quat, 0x18);
 } // namespace game
+using gameEffectInputParameter_Quat = game::EffectInputParameter_Quat;
 using EffectInputParameter_Quat = game::EffectInputParameter_Quat;
 } // namespace RED4ext
 

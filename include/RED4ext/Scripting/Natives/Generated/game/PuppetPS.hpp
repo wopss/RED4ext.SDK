@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PuppetPS : game::ObjectPS
 {
     static constexpr const char* NAME = "gamePuppetPS";
@@ -27,6 +28,7 @@ struct PuppetPS : game::ObjectPS
 };
 RED4EXT_ASSERT_SIZE(PuppetPS, 0x78);
 } // namespace game
+using gamePuppetPS = game::PuppetPS;
 using GamePuppetPS = game::PuppetPS;
 } // namespace RED4ext
 

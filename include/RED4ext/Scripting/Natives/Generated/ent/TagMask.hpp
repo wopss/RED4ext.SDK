@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TagMask
 {
     static constexpr const char* NAME = "entTagMask";
@@ -22,6 +23,7 @@ struct TagMask
 };
 RED4EXT_ASSERT_SIZE(TagMask, 0x30);
 } // namespace ent
+using entTagMask = ent::TagMask;
 } // namespace RED4ext
 
 // clang-format on

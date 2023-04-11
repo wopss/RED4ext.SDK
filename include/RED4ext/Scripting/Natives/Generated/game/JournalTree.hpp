@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct JournalRootFolderEntry; }
 
-namespace game { 
+namespace game
+{
 struct JournalTree : ISerializable
 {
     static constexpr const char* NAME = "gameJournalTree";
@@ -26,6 +27,7 @@ struct JournalTree : ISerializable
 };
 RED4EXT_ASSERT_SIZE(JournalTree, 0xC8);
 } // namespace game
+using gameJournalTree = game::JournalTree;
 } // namespace RED4ext
 
 // clang-format on

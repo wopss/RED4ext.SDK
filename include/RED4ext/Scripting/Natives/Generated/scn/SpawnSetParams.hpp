@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SpawnSetParams
 {
     static constexpr const char* NAME = "scnSpawnSetParams";
@@ -24,6 +25,7 @@ struct SpawnSetParams
 };
 RED4EXT_ASSERT_SIZE(SpawnSetParams, 0x18);
 } // namespace scn
+using scnSpawnSetParams = scn::SpawnSetParams;
 } // namespace RED4ext
 
 // clang-format on

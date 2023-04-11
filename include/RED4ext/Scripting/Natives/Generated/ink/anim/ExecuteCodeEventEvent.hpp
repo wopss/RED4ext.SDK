@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace red { struct Event; }
 
-namespace ink::anim { 
+namespace ink::anim
+{
 struct ExecuteCodeEventEvent : ink::anim::Event
 {
     static constexpr const char* NAME = "inkanimExecuteCodeEventEvent";
@@ -23,6 +24,7 @@ struct ExecuteCodeEventEvent : ink::anim::Event
 };
 RED4EXT_ASSERT_SIZE(ExecuteCodeEventEvent, 0x58);
 } // namespace ink::anim
+using inkanimExecuteCodeEventEvent = ink::anim::ExecuteCodeEventEvent;
 } // namespace RED4ext
 
 // clang-format on

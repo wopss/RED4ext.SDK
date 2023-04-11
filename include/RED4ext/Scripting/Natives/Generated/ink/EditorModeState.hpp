@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct EditorModeState : ink::IStateMachineState
 {
     static constexpr const char* NAME = "inkEditorModeState";
@@ -19,6 +20,7 @@ struct EditorModeState : ink::IStateMachineState
 };
 RED4EXT_ASSERT_SIZE(EditorModeState, 0x10);
 } // namespace ink
+using inkEditorModeState = ink::EditorModeState;
 } // namespace RED4ext
 
 // clang-format on

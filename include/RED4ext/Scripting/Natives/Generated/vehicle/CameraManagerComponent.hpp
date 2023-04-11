@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct CameraManagerComponent : game::Component
 {
     static constexpr const char* NAME = "vehicleCameraManagerComponent";
@@ -20,6 +21,7 @@ struct CameraManagerComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(CameraManagerComponent, 0xB8);
 } // namespace vehicle
+using vehicleCameraManagerComponent = vehicle::CameraManagerComponent;
 using VehicleCameraManagerComponent = vehicle::CameraManagerComponent;
 } // namespace RED4ext
 

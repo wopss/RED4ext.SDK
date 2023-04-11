@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIActionSelector_Record : game::data::AINode_Record
 {
     static constexpr const char* NAME = "gamedataAIActionSelector_Record";
@@ -20,6 +21,7 @@ struct AIActionSelector_Record : game::data::AINode_Record
 };
 RED4EXT_ASSERT_SIZE(AIActionSelector_Record, 0x68);
 } // namespace game::data
+using gamedataAIActionSelector_Record = game::data::AIActionSelector_Record;
 using AIActionSelector_Record = game::data::AIActionSelector_Record;
 } // namespace RED4ext
 

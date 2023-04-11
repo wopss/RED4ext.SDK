@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeClimbParameters : game::state::MachineparameterTypeClimbParametersBase
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeClimbParameters";
@@ -20,6 +21,7 @@ struct MachineparameterTypeClimbParameters : game::state::MachineparameterTypeCl
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeClimbParameters, 0x120);
 } // namespace game::state
+using gamestateMachineparameterTypeClimbParameters = game::state::MachineparameterTypeClimbParameters;
 using ClimbParameters = game::state::MachineparameterTypeClimbParameters;
 } // namespace RED4ext
 

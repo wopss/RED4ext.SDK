@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct ScriptedAudioSignpostTrigger : IScriptable
 {
     static constexpr const char* NAME = "worldScriptedAudioSignpostTrigger";
@@ -19,6 +20,7 @@ struct ScriptedAudioSignpostTrigger : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptedAudioSignpostTrigger, 0x40);
 } // namespace world
+using worldScriptedAudioSignpostTrigger = world::ScriptedAudioSignpostTrigger;
 } // namespace RED4ext
 
 // clang-format on

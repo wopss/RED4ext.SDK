@@ -17,7 +17,8 @@ namespace RED4ext
 namespace quest { struct IVehicleMoveOnSpline_Overrides; }
 namespace vehicle { struct AudioVehicleCurveSet; }
 
-namespace quest { 
+namespace quest
+{
 struct MoveOnSpline_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questMoveOnSpline_NodeType";
@@ -40,6 +41,7 @@ struct MoveOnSpline_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(MoveOnSpline_NodeType, 0xC8);
 } // namespace quest
+using questMoveOnSpline_NodeType = quest::MoveOnSpline_NodeType;
 } // namespace RED4ext
 
 // clang-format on

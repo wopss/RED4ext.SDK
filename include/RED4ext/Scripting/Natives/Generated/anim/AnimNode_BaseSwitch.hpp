@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace anim { struct ISyncMethod; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BaseSwitch : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_BaseSwitch";
@@ -31,6 +32,7 @@ struct AnimNode_BaseSwitch : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BaseSwitch, 0xC8);
 } // namespace anim
+using animAnimNode_BaseSwitch = anim::AnimNode_BaseSwitch;
 } // namespace RED4ext
 
 // clang-format on

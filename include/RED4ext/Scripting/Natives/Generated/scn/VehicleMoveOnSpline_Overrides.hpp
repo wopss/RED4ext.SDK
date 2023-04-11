@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct VehicleMoveOnSpline_Overrides : quest::IVehicleMoveOnSpline_Overrides
 {
     static constexpr const char* NAME = "scnVehicleMoveOnSpline_Overrides";
@@ -31,6 +32,7 @@ struct VehicleMoveOnSpline_Overrides : quest::IVehicleMoveOnSpline_Overrides
 };
 RED4EXT_ASSERT_SIZE(VehicleMoveOnSpline_Overrides, 0x140);
 } // namespace scn
+using scnVehicleMoveOnSpline_Overrides = scn::VehicleMoveOnSpline_Overrides;
 } // namespace RED4ext
 
 // clang-format on

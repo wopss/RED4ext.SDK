@@ -18,7 +18,8 @@ namespace quest::vehicle { struct OnSplineParams; }
 namespace quest::vehicle { struct RacingParams; }
 namespace quest::vehicle { struct ToNodeParams; }
 
-namespace quest { 
+namespace quest
+{
 struct VehicleCommandParams : quest::AICommandParams
 {
     static constexpr const char* NAME = "questVehicleCommandParams";
@@ -34,6 +35,7 @@ struct VehicleCommandParams : quest::AICommandParams
 };
 RED4EXT_ASSERT_SIZE(VehicleCommandParams, 0x98);
 } // namespace quest
+using questVehicleCommandParams = quest::VehicleCommandParams;
 } // namespace RED4ext
 
 // clang-format on

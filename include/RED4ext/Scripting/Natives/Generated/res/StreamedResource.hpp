@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace res { 
+namespace res
+{
 struct StreamedResource : CResource
 {
     static constexpr const char* NAME = "resStreamedResource";
@@ -19,6 +20,7 @@ struct StreamedResource : CResource
 };
 RED4EXT_ASSERT_SIZE(StreamedResource, 0x40);
 } // namespace res
+using resStreamedResource = res::StreamedResource;
 } // namespace RED4ext
 
 // clang-format on

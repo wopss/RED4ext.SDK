@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace mp { 
+namespace mp
+{
 struct RemotePlayer : mp::Player
 {
     static constexpr const char* NAME = "mpRemotePlayer";
@@ -19,6 +20,7 @@ struct RemotePlayer : mp::Player
 };
 RED4EXT_ASSERT_SIZE(RemotePlayer, 0x68);
 } // namespace mp
+using mpRemotePlayer = mp::RemotePlayer;
 } // namespace RED4ext
 
 // clang-format on

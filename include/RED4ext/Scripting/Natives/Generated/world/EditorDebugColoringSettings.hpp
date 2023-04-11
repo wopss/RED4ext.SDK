@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct EditorDebugColoringSettings : ISerializable
 {
     static constexpr const char* NAME = "worldEditorDebugColoringSettings";
@@ -19,6 +20,7 @@ struct EditorDebugColoringSettings : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EditorDebugColoringSettings, 0x30);
 } // namespace world
+using worldEditorDebugColoringSettings = world::EditorDebugColoringSettings;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct DebugSymbols
 {
     static constexpr const char* NAME = "scnDebugSymbols";
@@ -27,6 +28,7 @@ struct DebugSymbols
 };
 RED4EXT_ASSERT_SIZE(DebugSymbols, 0x40);
 } // namespace scn
+using scnDebugSymbols = scn::DebugSymbols;
 } // namespace RED4ext
 
 // clang-format on

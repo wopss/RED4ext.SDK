@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SimpleBounce_JsonProperties : ISerializable
 {
     static constexpr const char* NAME = "animSimpleBounce_JsonProperties";
@@ -35,6 +36,7 @@ struct SimpleBounce_JsonProperties : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SimpleBounce_JsonProperties, 0xB0);
 } // namespace anim
+using animSimpleBounce_JsonProperties = anim::SimpleBounce_JsonProperties;
 } // namespace RED4ext
 
 // clang-format on

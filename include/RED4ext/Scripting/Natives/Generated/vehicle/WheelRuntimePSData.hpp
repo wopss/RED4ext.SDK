@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct WheelRuntimePSData
 {
     static constexpr const char* NAME = "vehicleWheelRuntimePSData";
@@ -24,6 +25,7 @@ struct WheelRuntimePSData
 };
 RED4EXT_ASSERT_SIZE(WheelRuntimePSData, 0x18);
 } // namespace vehicle
+using vehicleWheelRuntimePSData = vehicle::WheelRuntimePSData;
 } // namespace RED4ext
 
 // clang-format on

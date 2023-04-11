@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerToggleMirrorsArea_NodeType : quest::IEntityManager_NodeType
 {
     static constexpr const char* NAME = "questEntityManagerToggleMirrorsArea_NodeType";
@@ -23,6 +24,7 @@ struct EntityManagerToggleMirrorsArea_NodeType : quest::IEntityManager_NodeType
 };
 RED4EXT_ASSERT_SIZE(EntityManagerToggleMirrorsArea_NodeType, 0x70);
 } // namespace quest
+using questEntityManagerToggleMirrorsArea_NodeType = quest::EntityManagerToggleMirrorsArea_NodeType;
 } // namespace RED4ext
 
 // clang-format on

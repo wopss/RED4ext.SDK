@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct BoneTraceCondition : ISerializable
 {
     static constexpr const char* NAME = "animBoneTraceCondition";
@@ -26,6 +27,7 @@ struct BoneTraceCondition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(BoneTraceCondition, 0x40);
 } // namespace anim
+using animBoneTraceCondition = anim::BoneTraceCondition;
 } // namespace RED4ext
 
 // clang-format on

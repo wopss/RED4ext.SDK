@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TargetPointComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entTargetPointComponent";
@@ -19,6 +20,7 @@ struct TargetPointComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(TargetPointComponent, 0x120);
 } // namespace ent
+using entTargetPointComponent = ent::TargetPointComponent;
 using TargetPointComponent = ent::TargetPointComponent;
 } // namespace RED4ext
 

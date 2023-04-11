@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct CPOLoadoutBase_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataCPOLoadoutBase_Record";
@@ -20,6 +21,7 @@ struct CPOLoadoutBase_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(CPOLoadoutBase_Record, 0x50);
 } // namespace game::data
+using gamedataCPOLoadoutBase_Record = game::data::CPOLoadoutBase_Record;
 using CPOLoadoutBase_Record = game::data::CPOLoadoutBase_Record;
 } // namespace RED4ext
 

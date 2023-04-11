@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace nav::i { 
+namespace nav::i
+{
 struct INavmeshGenerationSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "naviINavmeshGenerationSystem";
@@ -19,6 +20,7 @@ struct INavmeshGenerationSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(INavmeshGenerationSystem, 0x48);
 } // namespace nav::i
+using naviINavmeshGenerationSystem = nav::i::INavmeshGenerationSystem;
 } // namespace RED4ext
 
 // clang-format on

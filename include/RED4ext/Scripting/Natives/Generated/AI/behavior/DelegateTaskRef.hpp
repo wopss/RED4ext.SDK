@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct DelegateTaskRef
 {
     static constexpr const char* NAME = "AIbehaviorDelegateTaskRef";
@@ -20,6 +21,7 @@ struct DelegateTaskRef
 };
 RED4EXT_ASSERT_SIZE(DelegateTaskRef, 0x8);
 } // namespace AI::behavior
+using AIbehaviorDelegateTaskRef = AI::behavior::DelegateTaskRef;
 using AIDelegateTaskRef = AI::behavior::DelegateTaskRef;
 } // namespace RED4ext
 

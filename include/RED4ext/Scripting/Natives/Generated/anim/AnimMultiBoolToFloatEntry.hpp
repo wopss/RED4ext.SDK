@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimMultiBoolToFloatEntry
 {
     static constexpr const char* NAME = "animAnimMultiBoolToFloatEntry";
@@ -21,6 +22,7 @@ struct AnimMultiBoolToFloatEntry
 };
 RED4EXT_ASSERT_SIZE(AnimMultiBoolToFloatEntry, 0x10);
 } // namespace anim
+using animAnimMultiBoolToFloatEntry = anim::AnimMultiBoolToFloatEntry;
 } // namespace RED4ext
 
 // clang-format on

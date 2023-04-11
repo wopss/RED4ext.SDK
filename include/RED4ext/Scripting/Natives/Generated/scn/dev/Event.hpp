@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn::dev { 
+namespace scn::dev
+{
 struct Event
 {
     static constexpr const char* NAME = "scndevEvent";
@@ -24,6 +25,7 @@ struct Event
 };
 RED4EXT_ASSERT_SIZE(Event, 0x28);
 } // namespace scn::dev
+using scndevEvent = scn::dev::Event;
 } // namespace RED4ext
 
 // clang-format on

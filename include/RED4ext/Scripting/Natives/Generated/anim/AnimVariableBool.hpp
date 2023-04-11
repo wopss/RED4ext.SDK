@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimVariableBool : anim::AnimVariable
 {
     static constexpr const char* NAME = "animAnimVariableBool";
@@ -22,6 +23,7 @@ struct AnimVariableBool : anim::AnimVariable
 };
 RED4EXT_ASSERT_SIZE(AnimVariableBool, 0x40);
 } // namespace anim
+using animAnimVariableBool = anim::AnimVariableBool;
 } // namespace RED4ext
 
 // clang-format on

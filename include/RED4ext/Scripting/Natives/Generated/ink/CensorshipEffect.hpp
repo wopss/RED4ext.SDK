@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CensorshipEffect : ink::GlitchEffect
 {
     static constexpr const char* NAME = "inkCensorshipEffect";
@@ -22,6 +23,7 @@ struct CensorshipEffect : ink::GlitchEffect
 };
 RED4EXT_ASSERT_SIZE(CensorshipEffect, 0x88);
 } // namespace ink
+using inkCensorshipEffect = ink::CensorshipEffect;
 } // namespace RED4ext
 
 // clang-format on

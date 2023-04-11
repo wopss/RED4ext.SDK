@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace sense { struct SensorObject; }
 
-namespace sense { 
+namespace sense
+{
 struct SensorObjectComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "senseSensorObjectComponent";
@@ -23,6 +24,7 @@ struct SensorObjectComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SensorObjectComponent, 0x130);
 } // namespace sense
+using senseSensorObjectComponent = sense::SensorObjectComponent;
 using SensorObjectComponent = sense::SensorObjectComponent;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DeleteInputHintBySourceEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiDeleteInputHintBySourceEvent";
@@ -22,6 +23,7 @@ struct DeleteInputHintBySourceEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeleteInputHintBySourceEvent, 0x50);
 } // namespace game::ui
+using gameuiDeleteInputHintBySourceEvent = game::ui::DeleteInputHintBySourceEvent;
 using DeleteInputHintBySourceEvent = game::ui::DeleteInputHintBySourceEvent;
 } // namespace RED4ext
 

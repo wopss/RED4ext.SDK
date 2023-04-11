@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct GarmentParameterChunkData
 {
     static constexpr const char* NAME = "entGarmentParameterChunkData";
@@ -22,6 +23,7 @@ struct GarmentParameterChunkData
 };
 RED4EXT_ASSERT_SIZE(GarmentParameterChunkData, 0x28);
 } // namespace ent
+using entGarmentParameterChunkData = ent::GarmentParameterChunkData;
 } // namespace RED4ext
 
 // clang-format on

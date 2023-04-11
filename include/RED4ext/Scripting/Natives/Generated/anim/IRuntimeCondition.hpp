@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IRuntimeCondition : ISerializable
 {
     static constexpr const char* NAME = "animIRuntimeCondition";
@@ -19,6 +20,7 @@ struct IRuntimeCondition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IRuntimeCondition, 0x30);
 } // namespace anim
+using animIRuntimeCondition = anim::IRuntimeCondition;
 } // namespace RED4ext
 
 // clang-format on

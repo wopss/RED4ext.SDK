@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct DetectionParams
 {
     static constexpr const char* NAME = "gameuiDetectionParams";
@@ -19,6 +20,7 @@ struct DetectionParams
 };
 RED4EXT_ASSERT_SIZE(DetectionParams, 0x4);
 } // namespace game::ui
+using gameuiDetectionParams = game::ui::DetectionParams;
 } // namespace RED4ext
 
 // clang-format on

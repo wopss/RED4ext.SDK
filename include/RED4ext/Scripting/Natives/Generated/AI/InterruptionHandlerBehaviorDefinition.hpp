@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct LibTreeINodeDefinition;
 
-namespace AI { 
+namespace AI
+{
 struct InterruptionHandlerBehaviorDefinition : AI::InterruptionHandlerDefinition
 {
     static constexpr const char* NAME = "AIInterruptionHandlerBehaviorDefinition";
@@ -28,6 +29,7 @@ struct InterruptionHandlerBehaviorDefinition : AI::InterruptionHandlerDefinition
 };
 RED4EXT_ASSERT_SIZE(InterruptionHandlerBehaviorDefinition, 0x68);
 } // namespace AI
+using AIInterruptionHandlerBehaviorDefinition = AI::InterruptionHandlerBehaviorDefinition;
 } // namespace RED4ext
 
 // clang-format on

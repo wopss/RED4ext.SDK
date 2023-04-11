@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DisplayMessageBox_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questDisplayMessageBox_NodeType";
@@ -24,6 +25,7 @@ struct DisplayMessageBox_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(DisplayMessageBox_NodeType, 0xC8);
 } // namespace quest
+using questDisplayMessageBox_NodeType = quest::DisplayMessageBox_NodeType;
 } // namespace RED4ext
 
 // clang-format on

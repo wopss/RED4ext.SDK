@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct AndNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnAndNode";
@@ -21,6 +22,7 @@ struct AndNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(AndNode, 0x50);
 } // namespace scn
+using scnAndNode = scn::AndNode;
 } // namespace RED4ext
 
 // clang-format on

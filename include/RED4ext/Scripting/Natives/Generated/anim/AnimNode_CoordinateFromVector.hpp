@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_CoordinateFromVector : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_CoordinateFromVector";
@@ -24,6 +25,7 @@ struct AnimNode_CoordinateFromVector : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_CoordinateFromVector, 0x70);
 } // namespace anim
+using animAnimNode_CoordinateFromVector = anim::AnimNode_CoordinateFromVector;
 } // namespace RED4ext
 
 // clang-format on

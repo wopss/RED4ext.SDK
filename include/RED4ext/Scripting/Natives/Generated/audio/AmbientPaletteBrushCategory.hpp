@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace audio { struct AmbientPaletteBrushDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct AmbientPaletteBrushCategory : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioAmbientPaletteBrushCategory";
@@ -23,6 +24,7 @@ struct AmbientPaletteBrushCategory : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(AmbientPaletteBrushCategory, 0x48);
 } // namespace audio
+using audioAmbientPaletteBrushCategory = audio::AmbientPaletteBrushCategory;
 } // namespace RED4ext
 
 // clang-format on

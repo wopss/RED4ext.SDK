@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct HumanComponentPS : AI::CommandQueuePS
 {
     static constexpr const char* NAME = "AIHumanComponentPS";
@@ -23,6 +24,7 @@ struct HumanComponentPS : AI::CommandQueuePS
 };
 RED4EXT_ASSERT_SIZE(HumanComponentPS, 0x3D8);
 } // namespace AI
+using AIHumanComponentPS = AI::HumanComponentPS;
 } // namespace RED4ext
 
 // clang-format on

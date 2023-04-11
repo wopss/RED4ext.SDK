@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TPPRepresentationPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "gameTPPRepresentationPositionProvider";
@@ -20,6 +21,7 @@ struct TPPRepresentationPositionProvider : ent::IPositionProvider
 };
 RED4EXT_ASSERT_SIZE(TPPRepresentationPositionProvider, 0x60);
 } // namespace game
+using gameTPPRepresentationPositionProvider = game::TPPRepresentationPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

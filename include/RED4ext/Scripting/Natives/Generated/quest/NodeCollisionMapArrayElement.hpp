@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct NodeCollisionMapArrayElement
 {
     static constexpr const char* NAME = "questNodeCollisionMapArrayElement";
@@ -23,6 +24,7 @@ struct NodeCollisionMapArrayElement
 };
 RED4EXT_ASSERT_SIZE(NodeCollisionMapArrayElement, 0x18);
 } // namespace quest
+using questNodeCollisionMapArrayElement = quest::NodeCollisionMapArrayElement;
 } // namespace RED4ext
 
 // clang-format on

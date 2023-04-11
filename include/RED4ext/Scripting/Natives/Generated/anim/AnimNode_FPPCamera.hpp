@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_FPPCamera : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_FPPCamera";
@@ -20,6 +21,7 @@ struct AnimNode_FPPCamera : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_FPPCamera, 0x5D8);
 } // namespace anim
+using animAnimNode_FPPCamera = anim::AnimNode_FPPCamera;
 } // namespace RED4ext
 
 // clang-format on

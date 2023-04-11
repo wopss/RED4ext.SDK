@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InkLayer : ISerializable
 {
     static constexpr const char* NAME = "inkInkLayer";
@@ -20,6 +21,7 @@ struct InkLayer : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InkLayer, 0x1D0);
 } // namespace ink
+using inkInkLayer = ink::InkLayer;
 } // namespace RED4ext
 
 // clang-format on

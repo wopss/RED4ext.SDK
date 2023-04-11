@@ -15,9 +15,9 @@
 
 namespace RED4ext
 {
-namespace AI { struct ArgumentMapping; }
 
-namespace AI { 
+namespace AI
+{
 struct ArgumentMapping : IScriptable
 {
     static constexpr const char* NAME = "AIArgumentMapping";
@@ -33,6 +33,7 @@ struct ArgumentMapping : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ArgumentMapping, 0x80);
 } // namespace AI
+using AIArgumentMapping = AI::ArgumentMapping;
 } // namespace RED4ext
 
 // clang-format on

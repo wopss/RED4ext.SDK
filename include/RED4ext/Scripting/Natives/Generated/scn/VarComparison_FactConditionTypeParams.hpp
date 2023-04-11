@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct VarComparison_FactConditionTypeParams
 {
     static constexpr const char* NAME = "scnVarComparison_FactConditionTypeParams";
@@ -23,6 +24,7 @@ struct VarComparison_FactConditionTypeParams
 };
 RED4EXT_ASSERT_SIZE(VarComparison_FactConditionTypeParams, 0x10);
 } // namespace scn
+using scnVarComparison_FactConditionTypeParams = scn::VarComparison_FactConditionTypeParams;
 } // namespace RED4ext
 
 // clang-format on

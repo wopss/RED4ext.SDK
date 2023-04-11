@@ -17,7 +17,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatPoolData
 {
     static constexpr const char* NAME = "gameStatPoolData";
@@ -45,6 +46,7 @@ struct StatPoolData
 };
 RED4EXT_ASSERT_SIZE(StatPoolData, 0x1A0);
 } // namespace game
+using gameStatPoolData = game::StatPoolData;
 } // namespace RED4ext
 
 // clang-format on

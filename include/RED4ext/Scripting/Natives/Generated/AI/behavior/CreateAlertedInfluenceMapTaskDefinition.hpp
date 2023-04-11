@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct CreateAlertedInfluenceMapTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorCreateAlertedInfluenceMapTaskDefinition";
@@ -19,6 +20,7 @@ struct CreateAlertedInfluenceMapTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(CreateAlertedInfluenceMapTaskDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorCreateAlertedInfluenceMapTaskDefinition = AI::behavior::CreateAlertedInfluenceMapTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

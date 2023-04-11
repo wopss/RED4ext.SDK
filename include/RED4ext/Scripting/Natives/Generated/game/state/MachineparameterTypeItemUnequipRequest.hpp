@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineparameterTypeItemUnequipRequest : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeItemUnequipRequest";
@@ -24,6 +25,7 @@ struct MachineparameterTypeItemUnequipRequest : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MachineparameterTypeItemUnequipRequest, 0x60);
 } // namespace game::state
+using gamestateMachineparameterTypeItemUnequipRequest = game::state::MachineparameterTypeItemUnequipRequest;
 using ItemUnequipRequest = game::state::MachineparameterTypeItemUnequipRequest;
 } // namespace RED4ext
 

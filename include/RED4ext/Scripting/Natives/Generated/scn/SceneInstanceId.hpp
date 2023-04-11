@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SceneInstanceId
 {
     static constexpr const char* NAME = "scnSceneInstanceId";
@@ -25,6 +26,7 @@ struct SceneInstanceId
 };
 RED4EXT_ASSERT_SIZE(SceneInstanceId, 0x20);
 } // namespace scn
+using scnSceneInstanceId = scn::SceneInstanceId;
 } // namespace RED4ext
 
 // clang-format on

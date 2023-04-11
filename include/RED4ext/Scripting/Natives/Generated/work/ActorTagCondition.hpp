@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ActorTagCondition : work::IWorkspotCondition
 {
     static constexpr const char* NAME = "workActorTagCondition";
@@ -21,6 +22,7 @@ struct ActorTagCondition : work::IWorkspotCondition
 };
 RED4EXT_ASSERT_SIZE(ActorTagCondition, 0x40);
 } // namespace work
+using workActorTagCondition = work::ActorTagCondition;
 } // namespace RED4ext
 
 // clang-format on

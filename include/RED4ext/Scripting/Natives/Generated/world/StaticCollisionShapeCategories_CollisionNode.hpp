@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticCollisionShapeCategories_CollisionNode
 {
     static constexpr const char* NAME = "worldStaticCollisionShapeCategories_CollisionNode";
@@ -19,6 +20,7 @@ struct StaticCollisionShapeCategories_CollisionNode
 };
 RED4EXT_ASSERT_SIZE(StaticCollisionShapeCategories_CollisionNode, 0x3C);
 } // namespace world
+using worldStaticCollisionShapeCategories_CollisionNode = world::StaticCollisionShapeCategories_CollisionNode;
 } // namespace RED4ext
 
 // clang-format on

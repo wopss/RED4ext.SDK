@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct DebugLogScope
 {
     static constexpr const char* NAME = "AIDebugLogScope";
@@ -20,6 +21,7 @@ struct DebugLogScope
 };
 RED4EXT_ASSERT_SIZE(DebugLogScope, 0x8);
 } // namespace AI
+using AIDebugLogScope = AI::DebugLogScope;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SBehaviorConstraintNodeFloorIKFrontBackWeightHandler
 {
     static constexpr const char* NAME = "animSBehaviorConstraintNodeFloorIKFrontBackWeightHandler";
@@ -19,6 +20,7 @@ struct SBehaviorConstraintNodeFloorIKFrontBackWeightHandler
 };
 RED4EXT_ASSERT_SIZE(SBehaviorConstraintNodeFloorIKFrontBackWeightHandler, 0x18);
 } // namespace anim
+using animSBehaviorConstraintNodeFloorIKFrontBackWeightHandler = anim::SBehaviorConstraintNodeFloorIKFrontBackWeightHandler;
 } // namespace RED4ext
 
 // clang-format on

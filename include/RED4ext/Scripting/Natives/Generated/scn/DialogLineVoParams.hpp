@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct DialogLineVoParams
 {
     static constexpr const char* NAME = "scnDialogLineVoParams";
@@ -30,6 +31,7 @@ struct DialogLineVoParams
 };
 RED4EXT_ASSERT_SIZE(DialogLineVoParams, 0x18);
 } // namespace scn
+using scnDialogLineVoParams = scn::DialogLineVoParams;
 } // namespace RED4ext
 
 // clang-format on

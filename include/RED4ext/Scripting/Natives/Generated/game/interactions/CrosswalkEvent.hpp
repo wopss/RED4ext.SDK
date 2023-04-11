@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CrosswalkEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsCrosswalkEvent";
@@ -24,6 +25,7 @@ struct CrosswalkEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(CrosswalkEvent, 0x50);
 } // namespace game::interactions
+using gameinteractionsCrosswalkEvent = game::interactions::CrosswalkEvent;
 using CrosswalkEvent = game::interactions::CrosswalkEvent;
 } // namespace RED4ext
 

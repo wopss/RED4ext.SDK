@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct EntryAnim : work::IEntry
 {
     static constexpr const char* NAME = "workEntryAnim";
@@ -33,6 +34,7 @@ struct EntryAnim : work::IEntry
 };
 RED4EXT_ASSERT_SIZE(EntryAnim, 0x90);
 } // namespace work
+using workEntryAnim = work::EntryAnim;
 } // namespace RED4ext
 
 // clang-format on

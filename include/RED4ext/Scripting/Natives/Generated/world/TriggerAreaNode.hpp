@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace world { struct ITriggerAreaNotifer; }
 
-namespace world { 
+namespace world
+{
 struct TriggerAreaNode : world::AreaShapeNode
 {
     static constexpr const char* NAME = "worldTriggerAreaNode";
@@ -24,6 +25,7 @@ struct TriggerAreaNode : world::AreaShapeNode
 };
 RED4EXT_ASSERT_SIZE(TriggerAreaNode, 0x70);
 } // namespace world
+using worldTriggerAreaNode = world::TriggerAreaNode;
 } // namespace RED4ext
 
 // clang-format on

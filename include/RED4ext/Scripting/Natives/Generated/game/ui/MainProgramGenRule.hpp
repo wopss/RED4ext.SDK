@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MainProgramGenRule : game::ui::MinigameGenerationRule
 {
     static constexpr const char* NAME = "gameuiMainProgramGenRule";
@@ -19,6 +20,7 @@ struct MainProgramGenRule : game::ui::MinigameGenerationRule
 };
 RED4EXT_ASSERT_SIZE(MainProgramGenRule, 0x50);
 } // namespace game::ui
+using gameuiMainProgramGenRule = game::ui::MainProgramGenRule;
 using MainProgramGenRule = game::ui::MainProgramGenRule;
 } // namespace RED4ext
 

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct RewindableSectionTimeJump_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questRewindableSectionTimeJump_NodeType";
@@ -29,6 +30,7 @@ struct RewindableSectionTimeJump_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(RewindableSectionTimeJump_NodeType, 0x50);
 } // namespace quest
+using questRewindableSectionTimeJump_NodeType = quest::RewindableSectionTimeJump_NodeType;
 } // namespace RED4ext
 
 // clang-format on

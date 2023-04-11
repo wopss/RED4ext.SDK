@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct FillMeshInfo : ent::dismemberment::MeshInfo
 {
     static constexpr const char* NAME = "entdismembermentFillMeshInfo";
@@ -26,6 +27,7 @@ struct FillMeshInfo : ent::dismemberment::MeshInfo
 };
 RED4EXT_ASSERT_SIZE(FillMeshInfo, 0xA0);
 } // namespace ent::dismemberment
+using entdismembermentFillMeshInfo = ent::dismemberment::FillMeshInfo;
 } // namespace RED4ext
 
 // clang-format on

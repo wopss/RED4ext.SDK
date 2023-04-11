@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct TopologyData
 {
     static constexpr const char* NAME = "rendTopologyData";
@@ -23,6 +24,7 @@ struct TopologyData
 };
 RED4EXT_ASSERT_SIZE(TopologyData, 0x28);
 } // namespace rend
+using rendTopologyData = rend::TopologyData;
 } // namespace RED4ext
 
 // clang-format on

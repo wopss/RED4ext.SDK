@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ForceModule_NodeType : quest::IVisionModeNodeType
 {
     static constexpr const char* NAME = "questForceModule_NodeType";
@@ -22,6 +23,7 @@ struct ForceModule_NodeType : quest::IVisionModeNodeType
 };
 RED4EXT_ASSERT_SIZE(ForceModule_NodeType, 0x40);
 } // namespace quest
+using questForceModule_NodeType = quest::ForceModule_NodeType;
 } // namespace RED4ext
 
 // clang-format on

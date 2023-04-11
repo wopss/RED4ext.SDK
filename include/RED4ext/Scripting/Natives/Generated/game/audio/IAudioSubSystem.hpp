@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::audio { 
+namespace game::audio
+{
 struct IAudioSubSystem : IScriptable
 {
     static constexpr const char* NAME = "gameaudioIAudioSubSystem";
@@ -20,6 +21,7 @@ struct IAudioSubSystem : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IAudioSubSystem, 0x48);
 } // namespace game::audio
+using gameaudioIAudioSubSystem = game::audio::IAudioSubSystem;
 } // namespace RED4ext
 
 // clang-format on

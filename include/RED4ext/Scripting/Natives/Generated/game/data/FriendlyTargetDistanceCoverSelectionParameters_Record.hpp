@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct FriendlyTargetDistanceCoverSelectionParameters_Record : game::data::CoverSelectionParameters_Record
 {
     static constexpr const char* NAME = "gamedataFriendlyTargetDistanceCoverSelectionParameters_Record";
@@ -20,6 +21,7 @@ struct FriendlyTargetDistanceCoverSelectionParameters_Record : game::data::Cover
 };
 RED4EXT_ASSERT_SIZE(FriendlyTargetDistanceCoverSelectionParameters_Record, 0x68);
 } // namespace game::data
+using gamedataFriendlyTargetDistanceCoverSelectionParameters_Record = game::data::FriendlyTargetDistanceCoverSelectionParameters_Record;
 using FriendlyTargetDistanceCoverSelectionParameters_Record = game::data::FriendlyTargetDistanceCoverSelectionParameters_Record;
 } // namespace RED4ext
 

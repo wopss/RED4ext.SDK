@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct DialogDisplayString
 {
     static constexpr const char* NAME = "scnDialogDisplayString";
@@ -26,6 +27,7 @@ struct DialogDisplayString
 };
 RED4EXT_ASSERT_SIZE(DialogDisplayString, 0x88);
 } // namespace scn
+using scnDialogDisplayString = scn::DialogDisplayString;
 } // namespace RED4ext
 
 // clang-format on

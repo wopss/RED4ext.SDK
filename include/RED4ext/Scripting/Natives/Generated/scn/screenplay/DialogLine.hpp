@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn::screenplay { 
+namespace scn::screenplay
+{
 struct DialogLine
 {
     static constexpr const char* NAME = "scnscreenplayDialogLine";
@@ -31,6 +32,7 @@ struct DialogLine
 };
 RED4EXT_ASSERT_SIZE(DialogLine, 0x28);
 } // namespace scn::screenplay
+using scnscreenplayDialogLine = scn::screenplay::DialogLine;
 } // namespace RED4ext
 
 // clang-format on

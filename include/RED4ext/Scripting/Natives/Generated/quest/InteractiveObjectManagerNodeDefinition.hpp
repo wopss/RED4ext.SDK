@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IInteractiveObjectManagerNodeType; }
 
-namespace quest { 
+namespace quest
+{
 struct InteractiveObjectManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questInteractiveObjectManagerNodeDefinition";
@@ -23,6 +24,7 @@ struct InteractiveObjectManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(InteractiveObjectManagerNodeDefinition, 0x58);
 } // namespace quest
+using questInteractiveObjectManagerNodeDefinition = quest::InteractiveObjectManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

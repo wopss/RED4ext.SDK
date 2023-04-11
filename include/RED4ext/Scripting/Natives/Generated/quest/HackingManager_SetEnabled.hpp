@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct HackingManager_SetEnabled : quest::HackingManager_ActionType
 {
     static constexpr const char* NAME = "questHackingManager_SetEnabled";
@@ -21,6 +22,7 @@ struct HackingManager_SetEnabled : quest::HackingManager_ActionType
 };
 RED4EXT_ASSERT_SIZE(HackingManager_SetEnabled, 0x38);
 } // namespace quest
+using questHackingManager_SetEnabled = quest::HackingManager_SetEnabled;
 } // namespace RED4ext
 
 // clang-format on

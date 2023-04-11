@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficScriptInterface : IScriptable
 {
     static constexpr const char* NAME = "worldTrafficScriptInterface";
@@ -20,6 +21,7 @@ struct TrafficScriptInterface : IScriptable
 };
 RED4EXT_ASSERT_SIZE(TrafficScriptInterface, 0x48);
 } // namespace world
+using worldTrafficScriptInterface = world::TrafficScriptInterface;
 using TrafficSystem = world::TrafficScriptInterface;
 } // namespace RED4ext
 

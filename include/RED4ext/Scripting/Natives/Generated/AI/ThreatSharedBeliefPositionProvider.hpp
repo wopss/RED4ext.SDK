@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ThreatSharedBeliefPositionProvider : AI::ThreatPositionProvider
 {
     static constexpr const char* NAME = "AIThreatSharedBeliefPositionProvider";
@@ -19,6 +20,7 @@ struct ThreatSharedBeliefPositionProvider : AI::ThreatPositionProvider
 };
 RED4EXT_ASSERT_SIZE(ThreatSharedBeliefPositionProvider, 0xA0);
 } // namespace AI
+using AIThreatSharedBeliefPositionProvider = AI::ThreatSharedBeliefPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct DangleConstraint_SimulationSpring : anim::DangleConstraint_SimulationSingleBone
 {
     static constexpr const char* NAME = "animDangleConstraint_SimulationSpring";
@@ -43,6 +44,7 @@ struct DangleConstraint_SimulationSpring : anim::DangleConstraint_SimulationSing
 };
 RED4EXT_ASSERT_SIZE(DangleConstraint_SimulationSpring, 0x170);
 } // namespace anim
+using animDangleConstraint_SimulationSpring = anim::DangleConstraint_SimulationSpring;
 } // namespace RED4ext
 
 // clang-format on

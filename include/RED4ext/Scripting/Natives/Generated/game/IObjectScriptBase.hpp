@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct IObjectScriptBase : IScriptable
 {
     static constexpr const char* NAME = "gameIObjectScriptBase";
@@ -24,6 +25,7 @@ struct IObjectScriptBase : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IObjectScriptBase, 0x58);
 } // namespace game
+using gameIObjectScriptBase = game::IObjectScriptBase;
 using IObjectScriptBase = game::IObjectScriptBase;
 } // namespace RED4ext
 

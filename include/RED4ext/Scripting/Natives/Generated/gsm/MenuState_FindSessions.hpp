@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct MenuState_FindSessions : gsm::MenuState
 {
     static constexpr const char* NAME = "gsmMenuState_FindSessions";
@@ -20,6 +21,7 @@ struct MenuState_FindSessions : gsm::MenuState
 };
 RED4EXT_ASSERT_SIZE(MenuState_FindSessions, 0x110);
 } // namespace gsm
+using gsmMenuState_FindSessions = gsm::MenuState_FindSessions;
 } // namespace RED4ext
 
 // clang-format on

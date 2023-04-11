@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct FuncOrientationProvider : ent::IOrientationProvider
 {
     static constexpr const char* NAME = "entFuncOrientationProvider";
@@ -20,6 +21,7 @@ struct FuncOrientationProvider : ent::IOrientationProvider
 };
 RED4EXT_ASSERT_SIZE(FuncOrientationProvider, 0x80);
 } // namespace ent
+using entFuncOrientationProvider = ent::FuncOrientationProvider;
 } // namespace RED4ext
 
 // clang-format on

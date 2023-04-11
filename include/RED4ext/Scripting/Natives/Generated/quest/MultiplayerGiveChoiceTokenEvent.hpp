@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MultiplayerGiveChoiceTokenEvent : red::Event
 {
     static constexpr const char* NAME = "questMultiplayerGiveChoiceTokenEvent";
@@ -23,6 +24,7 @@ struct MultiplayerGiveChoiceTokenEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MultiplayerGiveChoiceTokenEvent, 0x50);
 } // namespace quest
+using questMultiplayerGiveChoiceTokenEvent = quest::MultiplayerGiveChoiceTokenEvent;
 using MultiplayerGiveChoiceTokenEvent = quest::MultiplayerGiveChoiceTokenEvent;
 } // namespace RED4ext
 

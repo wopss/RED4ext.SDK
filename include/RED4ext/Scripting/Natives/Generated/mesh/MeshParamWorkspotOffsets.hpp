@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamWorkspotOffsets : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamWorkspotOffsets";
@@ -24,6 +25,7 @@ struct MeshParamWorkspotOffsets : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamWorkspotOffsets, 0x50);
 } // namespace mesh
+using meshMeshParamWorkspotOffsets = mesh::MeshParamWorkspotOffsets;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct PoliciesContractMoveToSmartObject : move::PoliciesContract
 {
     static constexpr const char* NAME = "movePoliciesContractMoveToSmartObject";
@@ -20,6 +21,7 @@ struct PoliciesContractMoveToSmartObject : move::PoliciesContract
 };
 RED4EXT_ASSERT_SIZE(PoliciesContractMoveToSmartObject, 0x110);
 } // namespace move
+using movePoliciesContractMoveToSmartObject = move::PoliciesContractMoveToSmartObject;
 } // namespace RED4ext
 
 // clang-format on

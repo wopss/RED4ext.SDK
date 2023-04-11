@@ -16,7 +16,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace ent { 
+namespace ent
+{
 struct StaticOccluderMeshComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entStaticOccluderMeshComponent";
@@ -31,6 +32,7 @@ struct StaticOccluderMeshComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(StaticOccluderMeshComponent, 0x160);
 } // namespace ent
+using entStaticOccluderMeshComponent = ent::StaticOccluderMeshComponent;
 } // namespace RED4ext
 
 // clang-format on

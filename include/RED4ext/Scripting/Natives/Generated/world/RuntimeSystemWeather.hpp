@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemWeather : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemWeather";
@@ -20,6 +21,7 @@ struct RuntimeSystemWeather : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemWeather, 0x230);
 } // namespace world
+using worldRuntimeSystemWeather = world::RuntimeSystemWeather;
 } // namespace RED4ext
 
 // clang-format on

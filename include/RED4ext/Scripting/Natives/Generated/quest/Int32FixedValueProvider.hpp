@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Int32FixedValueProvider : quest::IInt32ValueProvider
 {
     static constexpr const char* NAME = "questInt32FixedValueProvider";
@@ -21,6 +22,7 @@ struct Int32FixedValueProvider : quest::IInt32ValueProvider
 };
 RED4EXT_ASSERT_SIZE(Int32FixedValueProvider, 0x38);
 } // namespace quest
+using questInt32FixedValueProvider = quest::Int32FixedValueProvider;
 } // namespace RED4ext
 
 // clang-format on

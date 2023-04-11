@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PlatformSpecificTextController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkPlatformSpecificTextController";
@@ -25,6 +26,7 @@ struct PlatformSpecificTextController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(PlatformSpecificTextController, 0xA0);
 } // namespace ink
+using inkPlatformSpecificTextController = ink::PlatformSpecificTextController;
 using PlatformSpecificTextController = ink::PlatformSpecificTextController;
 } // namespace RED4ext
 

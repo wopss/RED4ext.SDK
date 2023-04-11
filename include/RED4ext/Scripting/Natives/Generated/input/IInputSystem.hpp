@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace input { 
+namespace input
+{
 struct IInputSystem
 {
     static constexpr const char* NAME = "inputIInputSystem";
@@ -19,6 +20,7 @@ struct IInputSystem
 };
 RED4EXT_ASSERT_SIZE(IInputSystem, 0x148);
 } // namespace input
+using inputIInputSystem = input::IInputSystem;
 } // namespace RED4ext
 
 // clang-format on

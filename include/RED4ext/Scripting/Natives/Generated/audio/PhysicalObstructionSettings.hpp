@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct PhysicalObstructionSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioPhysicalObstructionSettings";
@@ -21,6 +22,7 @@ struct PhysicalObstructionSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(PhysicalObstructionSettings, 0x40);
 } // namespace audio
+using audioPhysicalObstructionSettings = audio::PhysicalObstructionSettings;
 } // namespace RED4ext
 
 // clang-format on

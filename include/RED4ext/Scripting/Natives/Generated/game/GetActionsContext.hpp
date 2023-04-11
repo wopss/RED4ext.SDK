@@ -18,7 +18,8 @@ namespace RED4ext
 namespace game { struct Object; }
 namespace game::device { struct Clearance; }
 
-namespace game { 
+namespace game
+{
 struct GetActionsContext
 {
     static constexpr const char* NAME = "gameGetActionsContext";
@@ -38,6 +39,7 @@ struct GetActionsContext
 };
 RED4EXT_ASSERT_SIZE(GetActionsContext, 0x50);
 } // namespace game
+using gameGetActionsContext = game::GetActionsContext;
 using GetActionsContext = game::GetActionsContext;
 } // namespace RED4ext
 

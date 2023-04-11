@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::data { struct MiniGame_Trap_Record; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct TrapTooltipDisplayer : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTrapTooltipDisplayer";
@@ -23,6 +24,7 @@ struct TrapTooltipDisplayer : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(TrapTooltipDisplayer, 0x88);
 } // namespace game::ui
+using gameuiTrapTooltipDisplayer = game::ui::TrapTooltipDisplayer;
 using TrapTooltipDisplayer = game::ui::TrapTooltipDisplayer;
 } // namespace RED4ext
 

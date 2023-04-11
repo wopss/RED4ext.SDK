@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct GraphConnectionCreationData
 {
     static constexpr const char* NAME = "interopGraphConnectionCreationData";
@@ -22,6 +23,7 @@ struct GraphConnectionCreationData
 };
 RED4EXT_ASSERT_SIZE(GraphConnectionCreationData, 0x30);
 } // namespace interop
+using interopGraphConnectionCreationData = interop::GraphConnectionCreationData;
 } // namespace RED4ext
 
 // clang-format on

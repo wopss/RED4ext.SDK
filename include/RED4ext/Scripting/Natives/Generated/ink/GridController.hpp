@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GridController : ink::VirtualCompoundController
 {
     static constexpr const char* NAME = "inkGridController";
@@ -31,6 +32,7 @@ struct GridController : ink::VirtualCompoundController
 };
 RED4EXT_ASSERT_SIZE(GridController, 0x280);
 } // namespace ink
+using inkGridController = ink::GridController;
 } // namespace RED4ext
 
 // clang-format on

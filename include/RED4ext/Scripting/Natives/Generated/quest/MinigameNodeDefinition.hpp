@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MinigameNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questMinigameNodeDefinition";
@@ -24,6 +25,7 @@ struct MinigameNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(MinigameNodeDefinition, 0x88);
 } // namespace quest
+using questMinigameNodeDefinition = quest::MinigameNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

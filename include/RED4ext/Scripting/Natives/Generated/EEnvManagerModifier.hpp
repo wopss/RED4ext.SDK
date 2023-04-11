@@ -83,6 +83,15 @@ enum class EEnvManagerModifier : uint32_t
     EMM_PBRValidationBaseColor = 71,
     EMM_PBRValidationMetalness = 72,
     EMM_GreyPlayMode = 73,
+    EMM_RTXDIDiffuseRaw = 74,
+    EMM_RTXDISpecularRaw = 75,
+    EMM_RTXDIDiffuseDenoised = 76,
+    EMM_RTXDISpecularDenoised = 77,
+    EMM_RTXDIBRDFFactor = 78,
+    EMM_IndirectDiffuseRaw = 79,
+    EMM_IndirectSpecularRaw = 80,
+    EMM_IndirectDiffuseDenoised = 81,
+    EMM_IndirectSpecularDenoised = 82,
 };
 } // namespace RED4ext
 

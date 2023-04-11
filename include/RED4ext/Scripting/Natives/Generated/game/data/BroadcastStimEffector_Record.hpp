@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct BroadcastStimEffector_Record : game::data::ContinuousEffector_Record
 {
     static constexpr const char* NAME = "gamedataBroadcastStimEffector_Record";
@@ -20,6 +21,7 @@ struct BroadcastStimEffector_Record : game::data::ContinuousEffector_Record
 };
 RED4EXT_ASSERT_SIZE(BroadcastStimEffector_Record, 0x68);
 } // namespace game::data
+using gamedataBroadcastStimEffector_Record = game::data::BroadcastStimEffector_Record;
 using BroadcastStimEffector_Record = game::data::BroadcastStimEffector_Record;
 } // namespace RED4ext
 

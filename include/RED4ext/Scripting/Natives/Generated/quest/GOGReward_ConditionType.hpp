@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct GOGReward_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questGOGReward_ConditionType";
@@ -21,6 +22,7 @@ struct GOGReward_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(GOGReward_ConditionType, 0x40);
 } // namespace quest
+using questGOGReward_ConditionType = quest::GOGReward_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

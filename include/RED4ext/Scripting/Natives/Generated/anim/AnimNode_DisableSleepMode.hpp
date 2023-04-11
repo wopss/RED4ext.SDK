@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_DisableSleepMode : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_DisableSleepMode";
@@ -21,6 +22,7 @@ struct AnimNode_DisableSleepMode : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_DisableSleepMode, 0x68);
 } // namespace anim
+using animAnimNode_DisableSleepMode = anim::AnimNode_DisableSleepMode;
 } // namespace RED4ext
 
 // clang-format on

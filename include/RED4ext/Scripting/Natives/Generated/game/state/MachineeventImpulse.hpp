@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineeventImpulse : game::state::MachineeventBaseEvent
 {
     static constexpr const char* NAME = "gamestateMachineeventImpulse";
@@ -22,6 +23,7 @@ struct MachineeventImpulse : game::state::MachineeventBaseEvent
 };
 RED4EXT_ASSERT_SIZE(MachineeventImpulse, 0x60);
 } // namespace game::state
+using gamestateMachineeventImpulse = game::state::MachineeventImpulse;
 using PSMImpulse = game::state::MachineeventImpulse;
 } // namespace RED4ext
 

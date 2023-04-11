@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis
+{
 struct DialogVisualizerFamily : game::interactions::vis::FamilyBase
 {
     static constexpr const char* NAME = "gameinteractionsvisDialogVisualizerFamily";
@@ -20,6 +21,7 @@ struct DialogVisualizerFamily : game::interactions::vis::FamilyBase
 };
 RED4EXT_ASSERT_SIZE(DialogVisualizerFamily, 0x68);
 } // namespace game::interactions::vis
+using gameinteractionsvisDialogVisualizerFamily = game::interactions::vis::DialogVisualizerFamily;
 } // namespace RED4ext
 
 // clang-format on

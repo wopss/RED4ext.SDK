@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StreetCredTier_ConditionType : quest::IStatsConditionType
 {
     static constexpr const char* NAME = "questStreetCredTier_ConditionType";
@@ -24,6 +25,7 @@ struct StreetCredTier_ConditionType : quest::IStatsConditionType
 };
 RED4EXT_ASSERT_SIZE(StreetCredTier_ConditionType, 0x48);
 } // namespace quest
+using questStreetCredTier_ConditionType = quest::StreetCredTier_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

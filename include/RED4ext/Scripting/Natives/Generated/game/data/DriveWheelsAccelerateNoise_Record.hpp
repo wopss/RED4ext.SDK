@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DriveWheelsAccelerateNoise_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataDriveWheelsAccelerateNoise_Record";
@@ -20,6 +21,7 @@ struct DriveWheelsAccelerateNoise_Record : game::data::DriveHelper_Record
 };
 RED4EXT_ASSERT_SIZE(DriveWheelsAccelerateNoise_Record, 0x68);
 } // namespace game::data
+using gamedataDriveWheelsAccelerateNoise_Record = game::data::DriveWheelsAccelerateNoise_Record;
 using DriveWheelsAccelerateNoise_Record = game::data::DriveWheelsAccelerateNoise_Record;
 } // namespace RED4ext
 

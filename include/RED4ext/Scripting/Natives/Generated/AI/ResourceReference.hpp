@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ResourceReference : LibTreeCTreeReference
 {
     static constexpr const char* NAME = "AIResourceReference";
@@ -19,6 +20,7 @@ struct ResourceReference : LibTreeCTreeReference
 };
 RED4EXT_ASSERT_SIZE(ResourceReference, 0x70);
 } // namespace AI
+using AIResourceReference = AI::ResourceReference;
 } // namespace RED4ext
 
 // clang-format on

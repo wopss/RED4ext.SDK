@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct CircleWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkCircleWidget";
@@ -22,6 +23,7 @@ struct CircleWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(CircleWidget, 0x240);
 } // namespace ink
+using inkCircleWidget = ink::CircleWidget;
 using inkCircle = ink::CircleWidget;
 } // namespace RED4ext
 

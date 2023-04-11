@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct DiscreteNavigationController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkDiscreteNavigationController";
@@ -24,6 +25,7 @@ struct DiscreteNavigationController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(DiscreteNavigationController, 0xC0);
 } // namespace ink
+using inkDiscreteNavigationController = ink::DiscreteNavigationController;
 } // namespace RED4ext
 
 // clang-format on

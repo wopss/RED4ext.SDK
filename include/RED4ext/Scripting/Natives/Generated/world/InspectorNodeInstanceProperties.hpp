@@ -15,7 +15,8 @@ namespace RED4ext
 namespace world { struct InstancedMeshNode; }
 namespace world { struct MeshNode; }
 
-namespace world { 
+namespace world
+{
 struct InspectorNodeInstanceProperties : ISerializable
 {
     static constexpr const char* NAME = "worldInspectorNodeInstanceProperties";
@@ -30,6 +31,7 @@ struct InspectorNodeInstanceProperties : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InspectorNodeInstanceProperties, 0xE0);
 } // namespace world
+using worldInspectorNodeInstanceProperties = world::InspectorNodeInstanceProperties;
 } // namespace RED4ext
 
 // clang-format on

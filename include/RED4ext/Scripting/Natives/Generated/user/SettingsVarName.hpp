@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace user { 
+namespace user
+{
 struct SettingsVarName : user::SettingsVar
 {
     static constexpr const char* NAME = "userSettingsVarName";
@@ -19,6 +20,7 @@ struct SettingsVarName : user::SettingsVar
 };
 RED4EXT_ASSERT_SIZE(SettingsVarName, 0x48);
 } // namespace user
+using userSettingsVarName = user::SettingsVarName;
 using ConfigVarName = user::SettingsVarName;
 } // namespace RED4ext
 

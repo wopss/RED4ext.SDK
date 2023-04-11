@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AudioAttractAreaNodeSettings
 {
     static constexpr const char* NAME = "worldAudioAttractAreaNodeSettings";
@@ -20,6 +21,7 @@ struct AudioAttractAreaNodeSettings
 };
 RED4EXT_ASSERT_SIZE(AudioAttractAreaNodeSettings, 0x8);
 } // namespace world
+using worldAudioAttractAreaNodeSettings = world::AudioAttractAreaNodeSettings;
 } // namespace RED4ext
 
 // clang-format on

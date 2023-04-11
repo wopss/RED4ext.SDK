@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct VisionModeUpdateVisuals : red::Event
 {
     static constexpr const char* NAME = "gameVisionModeUpdateVisuals";
@@ -21,6 +22,7 @@ struct VisionModeUpdateVisuals : red::Event
 };
 RED4EXT_ASSERT_SIZE(VisionModeUpdateVisuals, 0x48);
 } // namespace game
+using gameVisionModeUpdateVisuals = game::VisionModeUpdateVisuals;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace world { struct Effect; }
 
-namespace game { 
+namespace game
+{
 struct FxResource
 {
     static constexpr const char* NAME = "gameFxResource";
@@ -22,6 +23,7 @@ struct FxResource
 };
 RED4EXT_ASSERT_SIZE(FxResource, 0x8);
 } // namespace game
+using gameFxResource = game::FxResource;
 using FxResource = game::FxResource;
 } // namespace RED4ext
 

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct FacialSetup_TracksMapping
 {
     static constexpr const char* NAME = "animFacialSetup_TracksMapping";
@@ -22,6 +23,7 @@ struct FacialSetup_TracksMapping
 };
 RED4EXT_ASSERT_SIZE(FacialSetup_TracksMapping, 0x8);
 } // namespace anim
+using animFacialSetup_TracksMapping = anim::FacialSetup_TracksMapping;
 } // namespace RED4ext
 
 // clang-format on

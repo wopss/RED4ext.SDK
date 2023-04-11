@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct NavigationSystemResult
 {
     static constexpr const char* NAME = "AINavigationSystemResult";
@@ -29,6 +30,7 @@ struct NavigationSystemResult
 };
 RED4EXT_ASSERT_SIZE(NavigationSystemResult, 0x48);
 } // namespace AI
+using AINavigationSystemResult = AI::NavigationSystemResult;
 } // namespace RED4ext
 
 // clang-format on

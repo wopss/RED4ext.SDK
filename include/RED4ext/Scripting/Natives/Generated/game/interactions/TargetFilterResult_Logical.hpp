@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct TargetFilterResult_Logical : game::targeting::SystemTargetFilterResult
 {
     static constexpr const char* NAME = "gameinteractionsTargetFilterResult_Logical";
@@ -20,6 +21,7 @@ struct TargetFilterResult_Logical : game::targeting::SystemTargetFilterResult
 };
 RED4EXT_ASSERT_SIZE(TargetFilterResult_Logical, 0xA8);
 } // namespace game::interactions
+using gameinteractionsTargetFilterResult_Logical = game::interactions::TargetFilterResult_Logical;
 using TargetFilterResult_Logical = game::interactions::TargetFilterResult_Logical;
 } // namespace RED4ext
 

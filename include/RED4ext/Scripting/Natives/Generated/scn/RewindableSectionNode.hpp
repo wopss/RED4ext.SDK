@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneEvent; }
 
-namespace scn { 
+namespace scn
+{
 struct RewindableSectionNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnRewindableSectionNode";
@@ -33,6 +34,7 @@ struct RewindableSectionNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(RewindableSectionNode, 0x90);
 } // namespace scn
+using scnRewindableSectionNode = scn::RewindableSectionNode;
 } // namespace RED4ext
 
 // clang-format on

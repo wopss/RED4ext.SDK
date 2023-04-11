@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace nav { struct LocomotionPathPointUserData; }
 
-namespace nav { 
+namespace nav
+{
 struct LocomotionPathPointUserDataEntry
 {
     static constexpr const char* NAME = "navLocomotionPathPointUserDataEntry";
@@ -24,6 +25,7 @@ struct LocomotionPathPointUserDataEntry
 };
 RED4EXT_ASSERT_SIZE(LocomotionPathPointUserDataEntry, 0x18);
 } // namespace nav
+using navLocomotionPathPointUserDataEntry = nav::LocomotionPathPointUserDataEntry;
 } // namespace RED4ext
 
 // clang-format on

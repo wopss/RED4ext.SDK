@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct FacialEmotionTransitionBaked
 {
     static constexpr const char* NAME = "animFacialEmotionTransitionBaked";
@@ -31,6 +32,7 @@ struct FacialEmotionTransitionBaked
 };
 RED4EXT_ASSERT_SIZE(FacialEmotionTransitionBaked, 0x40);
 } // namespace anim
+using animFacialEmotionTransitionBaked = anim::FacialEmotionTransitionBaked;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct PortalsList : IScriptable
 {
     static constexpr const char* NAME = "vehiclePortalsList";
@@ -22,6 +23,7 @@ struct PortalsList : IScriptable
 };
 RED4EXT_ASSERT_SIZE(PortalsList, 0x50);
 } // namespace vehicle
+using vehiclePortalsList = vehicle::PortalsList;
 } // namespace RED4ext
 
 // clang-format on

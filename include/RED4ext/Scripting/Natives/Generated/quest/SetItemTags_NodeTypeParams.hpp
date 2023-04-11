@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct UniversalRef; }
 
-namespace quest { 
+namespace quest
+{
 struct SetItemTags_NodeTypeParams
 {
     static constexpr const char* NAME = "questSetItemTags_NodeTypeParams";
@@ -28,6 +29,7 @@ struct SetItemTags_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(SetItemTags_NodeTypeParams, 0x20);
 } // namespace quest
+using questSetItemTags_NodeTypeParams = quest::SetItemTags_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

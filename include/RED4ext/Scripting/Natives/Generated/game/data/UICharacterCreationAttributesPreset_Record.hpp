@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct UICharacterCreationAttributesPreset_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataUICharacterCreationAttributesPreset_Record";
@@ -20,6 +21,7 @@ struct UICharacterCreationAttributesPreset_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(UICharacterCreationAttributesPreset_Record, 0x50);
 } // namespace game::data
+using gamedataUICharacterCreationAttributesPreset_Record = game::data::UICharacterCreationAttributesPreset_Record;
 using UICharacterCreationAttributesPreset_Record = game::data::UICharacterCreationAttributesPreset_Record;
 } // namespace RED4ext
 

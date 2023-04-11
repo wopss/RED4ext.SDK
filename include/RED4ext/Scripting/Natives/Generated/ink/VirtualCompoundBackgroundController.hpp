@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VirtualCompoundBackgroundController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkVirtualCompoundBackgroundController";
@@ -19,6 +20,7 @@ struct VirtualCompoundBackgroundController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(VirtualCompoundBackgroundController, 0x78);
 } // namespace ink
+using inkVirtualCompoundBackgroundController = ink::VirtualCompoundBackgroundController;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct TemplateComponentBackendDataOverrideInfo
 {
     static constexpr const char* NAME = "entTemplateComponentBackendDataOverrideInfo";
@@ -22,6 +23,7 @@ struct TemplateComponentBackendDataOverrideInfo
 };
 RED4EXT_ASSERT_SIZE(TemplateComponentBackendDataOverrideInfo, 0x10);
 } // namespace ent
+using entTemplateComponentBackendDataOverrideInfo = ent::TemplateComponentBackendDataOverrideInfo;
 } // namespace RED4ext
 
 // clang-format on

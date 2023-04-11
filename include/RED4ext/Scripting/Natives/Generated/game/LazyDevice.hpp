@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LazyDevice : IScriptable
 {
     static constexpr const char* NAME = "gameLazyDevice";
@@ -20,6 +21,7 @@ struct LazyDevice : IScriptable
 };
 RED4EXT_ASSERT_SIZE(LazyDevice, 0x58);
 } // namespace game
+using gameLazyDevice = game::LazyDevice;
 using LazyDevice = game::LazyDevice;
 } // namespace RED4ext
 

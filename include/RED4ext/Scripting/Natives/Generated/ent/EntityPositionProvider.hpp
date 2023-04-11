@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntityPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "entEntityPositionProvider";
@@ -20,6 +21,7 @@ struct EntityPositionProvider : ent::IPositionProvider
 };
 RED4EXT_ASSERT_SIZE(EntityPositionProvider, 0x80);
 } // namespace ent
+using entEntityPositionProvider = ent::EntityPositionProvider;
 } // namespace RED4ext
 
 // clang-format on

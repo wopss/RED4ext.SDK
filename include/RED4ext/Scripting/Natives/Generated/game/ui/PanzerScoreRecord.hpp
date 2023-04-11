@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PanzerScoreRecord : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiPanzerScoreRecord";
@@ -22,6 +23,7 @@ struct PanzerScoreRecord : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(PanzerScoreRecord, 0xA8);
 } // namespace game::ui
+using gameuiPanzerScoreRecord = game::ui::PanzerScoreRecord;
 using PanzerScoreRecord = game::ui::PanzerScoreRecord;
 } // namespace RED4ext
 

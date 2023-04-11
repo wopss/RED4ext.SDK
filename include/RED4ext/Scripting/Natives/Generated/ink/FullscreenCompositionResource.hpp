@@ -17,7 +17,8 @@ namespace RED4ext
 struct CBitmapTexture;
 namespace ink { struct CompositionPreviewSettings; }
 
-namespace ink { 
+namespace ink
+{
 struct FullscreenCompositionResource : CResource
 {
     static constexpr const char* NAME = "inkFullscreenCompositionResource";
@@ -30,6 +31,7 @@ struct FullscreenCompositionResource : CResource
 };
 RED4EXT_ASSERT_SIZE(FullscreenCompositionResource, 0x70);
 } // namespace ink
+using inkFullscreenCompositionResource = ink::FullscreenCompositionResource;
 } // namespace RED4ext
 
 // clang-format on

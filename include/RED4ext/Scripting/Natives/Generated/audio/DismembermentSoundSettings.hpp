@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DismembermentSoundSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioDismembermentSoundSettings";
@@ -23,6 +24,7 @@ struct DismembermentSoundSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(DismembermentSoundSettings, 0x50);
 } // namespace audio
+using audioDismembermentSoundSettings = audio::DismembermentSoundSettings;
 } // namespace RED4ext
 
 // clang-format on

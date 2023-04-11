@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_CookedResource : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_CookedResource";
@@ -21,6 +22,7 @@ struct DebugColoring_CookedResource : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_CookedResource, 0x38);
 } // namespace world
+using worldDebugColoring_CookedResource = world::DebugColoring_CookedResource;
 } // namespace RED4ext
 
 // clang-format on

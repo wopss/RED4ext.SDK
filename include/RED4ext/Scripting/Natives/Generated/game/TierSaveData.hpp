@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TierSaveData : ISerializable
 {
     static constexpr const char* NAME = "gameTierSaveData";
@@ -22,6 +23,7 @@ struct TierSaveData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TierSaveData, 0x40);
 } // namespace game
+using gameTierSaveData = game::TierSaveData;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct LayerActivatedPredicate : game::interactions::IPredicateType
 {
     static constexpr const char* NAME = "gameinteractionsLayerActivatedPredicate";
@@ -22,6 +23,7 @@ struct LayerActivatedPredicate : game::interactions::IPredicateType
 };
 RED4EXT_ASSERT_SIZE(LayerActivatedPredicate, 0x40);
 } // namespace game::interactions
+using gameinteractionsLayerActivatedPredicate = game::interactions::LayerActivatedPredicate;
 } // namespace RED4ext
 
 // clang-format on

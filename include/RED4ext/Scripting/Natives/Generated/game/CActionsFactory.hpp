@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CActionsFactory : game::IActionsFactory
 {
     static constexpr const char* NAME = "gameCActionsFactory";
@@ -20,6 +21,7 @@ struct CActionsFactory : game::IActionsFactory
 };
 RED4EXT_ASSERT_SIZE(CActionsFactory, 0x2D8);
 } // namespace game
+using gameCActionsFactory = game::CActionsFactory;
 } // namespace RED4ext
 
 // clang-format on

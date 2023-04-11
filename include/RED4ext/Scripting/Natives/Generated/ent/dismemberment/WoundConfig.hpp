@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct WoundConfig : ISerializable
 {
     static constexpr const char* NAME = "entdismembermentWoundConfig";
@@ -24,6 +25,7 @@ struct WoundConfig : ISerializable
 };
 RED4EXT_ASSERT_SIZE(WoundConfig, 0x40);
 } // namespace ent::dismemberment
+using entdismembermentWoundConfig = ent::dismemberment::WoundConfig;
 } // namespace RED4ext
 
 // clang-format on

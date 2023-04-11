@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct RenderHighlightEvent : red::Event
 {
     static constexpr const char* NAME = "entRenderHighlightEvent";
@@ -27,6 +28,7 @@ struct RenderHighlightEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RenderHighlightEvent, 0x58);
 } // namespace ent
+using entRenderHighlightEvent = ent::RenderHighlightEvent;
 } // namespace RED4ext
 
 // clang-format on

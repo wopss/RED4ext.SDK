@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct DroneMetadata : audio::CustomEmitterMetadata
 {
     static constexpr const char* NAME = "audioDroneMetadata";
@@ -41,6 +42,7 @@ struct DroneMetadata : audio::CustomEmitterMetadata
 };
 RED4EXT_ASSERT_SIZE(DroneMetadata, 0xD8);
 } // namespace audio
+using audioDroneMetadata = audio::DroneMetadata;
 } // namespace RED4ext
 
 // clang-format on

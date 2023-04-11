@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SkipPerformanceModeBegin : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_SkipPerformanceModeBegin";
@@ -19,6 +20,7 @@ struct AnimNode_SkipPerformanceModeBegin : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SkipPerformanceModeBegin, 0x60);
 } // namespace anim
+using animAnimNode_SkipPerformanceModeBegin = anim::AnimNode_SkipPerformanceModeBegin;
 } // namespace RED4ext
 
 // clang-format on

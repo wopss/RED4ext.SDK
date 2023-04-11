@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace ent { struct SkinningBinding; }
 
-namespace ent { 
+namespace ent
+{
 struct ISkinTargetComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entISkinTargetComponent";
@@ -27,6 +28,7 @@ struct ISkinTargetComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(ISkinTargetComponent, 0x1E0);
 } // namespace ent
+using entISkinTargetComponent = ent::ISkinTargetComponent;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace world { struct EffectBlackboard; }
 
-namespace ent { 
+namespace ent
+{
 struct SpawnEffectEvent : red::Event
 {
     static constexpr const char* NAME = "entSpawnEffectEvent";
@@ -34,6 +35,7 @@ struct SpawnEffectEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(SpawnEffectEvent, 0x88);
 } // namespace ent
+using entSpawnEffectEvent = ent::SpawnEffectEvent;
 } // namespace RED4ext
 
 // clang-format on

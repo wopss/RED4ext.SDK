@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ISubtitleHandlerSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameISubtitleHandlerSystem";
@@ -19,6 +20,7 @@ struct ISubtitleHandlerSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISubtitleHandlerSystem, 0x48);
 } // namespace game
+using gameISubtitleHandlerSystem = game::ISubtitleHandlerSystem;
 using ISubtitleHandlerSystem = game::ISubtitleHandlerSystem;
 } // namespace RED4ext
 

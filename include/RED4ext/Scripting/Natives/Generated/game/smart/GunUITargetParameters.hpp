@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::smart { 
+namespace game::smart
+{
 struct GunUITargetParameters
 {
     static constexpr const char* NAME = "gamesmartGunUITargetParameters";
@@ -32,6 +33,7 @@ struct GunUITargetParameters
 };
 RED4EXT_ASSERT_SIZE(GunUITargetParameters, 0x30);
 } // namespace game::smart
+using gamesmartGunUITargetParameters = game::smart::GunUITargetParameters;
 using smartGunUITargetParameters = game::smart::GunUITargetParameters;
 } // namespace RED4ext
 

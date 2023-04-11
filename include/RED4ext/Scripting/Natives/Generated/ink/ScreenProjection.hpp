@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScreenProjection : IScriptable
 {
     static constexpr const char* NAME = "inkScreenProjection";
@@ -25,6 +26,7 @@ struct ScreenProjection : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScreenProjection, 0x110);
 } // namespace ink
+using inkScreenProjection = ink::ScreenProjection;
 } // namespace RED4ext
 
 // clang-format on

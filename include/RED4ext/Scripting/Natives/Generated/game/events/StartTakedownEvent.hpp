@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct Object; }
 
-namespace game::events { 
+namespace game::events
+{
 struct StartTakedownEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsStartTakedownEvent";
@@ -25,6 +26,7 @@ struct StartTakedownEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(StartTakedownEvent, 0x58);
 } // namespace game::events
+using gameeventsStartTakedownEvent = game::events::StartTakedownEvent;
 using StartTakedownEvent = game::events::StartTakedownEvent;
 } // namespace RED4ext
 

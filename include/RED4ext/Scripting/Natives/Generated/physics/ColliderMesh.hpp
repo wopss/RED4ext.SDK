@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct ColliderMesh : physics::ICollider
 {
     static constexpr const char* NAME = "physicsColliderMesh";
@@ -26,6 +27,7 @@ struct ColliderMesh : physics::ICollider
 };
 RED4EXT_ASSERT_SIZE(ColliderMesh, 0x110);
 } // namespace physics
+using physicsColliderMesh = physics::ColliderMesh;
 } // namespace RED4ext
 
 // clang-format on

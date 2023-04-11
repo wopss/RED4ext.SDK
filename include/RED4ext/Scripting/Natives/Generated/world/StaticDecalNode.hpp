@@ -17,7 +17,8 @@ namespace RED4ext
 {
 struct IMaterial;
 
-namespace world { 
+namespace world
+{
 struct StaticDecalNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticDecalNode";
@@ -44,6 +45,7 @@ struct StaticDecalNode : world::Node
 };
 RED4EXT_ASSERT_SIZE(StaticDecalNode, 0x70);
 } // namespace world
+using worldStaticDecalNode = world::StaticDecalNode;
 } // namespace RED4ext
 
 // clang-format on

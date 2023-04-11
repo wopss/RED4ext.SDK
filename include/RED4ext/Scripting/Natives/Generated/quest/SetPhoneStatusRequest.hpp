@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetPhoneStatusRequest : game::ScriptableSystemRequest
 {
     static constexpr const char* NAME = "questSetPhoneStatusRequest";
@@ -21,6 +22,7 @@ struct SetPhoneStatusRequest : game::ScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(SetPhoneStatusRequest, 0x50);
 } // namespace quest
+using questSetPhoneStatusRequest = quest::SetPhoneStatusRequest;
 } // namespace RED4ext
 
 // clang-format on

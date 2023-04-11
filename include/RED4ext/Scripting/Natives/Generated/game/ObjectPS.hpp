@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ObjectPS : game::PersistentState
 {
     static constexpr const char* NAME = "gameObjectPS";
@@ -19,6 +20,7 @@ struct ObjectPS : game::PersistentState
 };
 RED4EXT_ASSERT_SIZE(ObjectPS, 0x68);
 } // namespace game
+using gameObjectPS = game::ObjectPS;
 using GameObjectPS = game::ObjectPS;
 } // namespace RED4ext
 

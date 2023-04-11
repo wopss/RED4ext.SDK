@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptExecutionContext
 {
     static constexpr const char* NAME = "AIbehaviorScriptExecutionContext";
@@ -19,6 +20,7 @@ struct ScriptExecutionContext
 };
 RED4EXT_ASSERT_SIZE(ScriptExecutionContext, 0x10);
 } // namespace AI::behavior
+using AIbehaviorScriptExecutionContext = AI::behavior::ScriptExecutionContext;
 using ScriptExecutionContext = AI::behavior::ScriptExecutionContext;
 } // namespace RED4ext
 

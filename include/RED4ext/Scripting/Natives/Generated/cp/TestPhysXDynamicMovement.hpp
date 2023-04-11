@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct TestPhysXDynamicMovement : game::Object
 {
     static constexpr const char* NAME = "cpTestPhysXDynamicMovement";
@@ -20,6 +21,7 @@ struct TestPhysXDynamicMovement : game::Object
 };
 RED4EXT_ASSERT_SIZE(TestPhysXDynamicMovement, 0x260);
 } // namespace cp
+using cpTestPhysXDynamicMovement = cp::TestPhysXDynamicMovement;
 } // namespace RED4ext
 
 // clang-format on

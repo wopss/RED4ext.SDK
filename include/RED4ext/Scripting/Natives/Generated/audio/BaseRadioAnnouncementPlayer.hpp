@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct BaseRadioAnnouncementPlayer
 {
     static constexpr const char* NAME = "audioBaseRadioAnnouncementPlayer";
@@ -19,6 +20,7 @@ struct BaseRadioAnnouncementPlayer
 };
 RED4EXT_ASSERT_SIZE(BaseRadioAnnouncementPlayer, 0x8);
 } // namespace audio
+using audioBaseRadioAnnouncementPlayer = audio::BaseRadioAnnouncementPlayer;
 } // namespace RED4ext
 
 // clang-format on

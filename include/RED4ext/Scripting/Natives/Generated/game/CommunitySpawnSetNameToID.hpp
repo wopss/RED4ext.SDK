@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CommunitySpawnSetNameToID
 {
     static constexpr const char* NAME = "gameCommunitySpawnSetNameToID";
@@ -21,6 +22,7 @@ struct CommunitySpawnSetNameToID
 };
 RED4EXT_ASSERT_SIZE(CommunitySpawnSetNameToID, 0x10);
 } // namespace game
+using gameCommunitySpawnSetNameToID = game::CommunitySpawnSetNameToID;
 } // namespace RED4ext
 
 // clang-format on

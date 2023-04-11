@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ReplAnimTransformPlayRequest : game::ReplAnimTransformRequestBase
 {
     static constexpr const char* NAME = "gameReplAnimTransformPlayRequest";
@@ -23,6 +24,7 @@ struct ReplAnimTransformPlayRequest : game::ReplAnimTransformRequestBase
 };
 RED4EXT_ASSERT_SIZE(ReplAnimTransformPlayRequest, 0x28);
 } // namespace game
+using gameReplAnimTransformPlayRequest = game::ReplAnimTransformPlayRequest;
 } // namespace RED4ext
 
 // clang-format on

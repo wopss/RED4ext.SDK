@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IEvaluatorVector;
 
-namespace effect { 
+namespace effect
+{
 struct EffectParameterEvaluatorVector
 {
     static constexpr const char* NAME = "effectEffectParameterEvaluatorVector";
@@ -24,6 +25,7 @@ struct EffectParameterEvaluatorVector
 };
 RED4EXT_ASSERT_SIZE(EffectParameterEvaluatorVector, 0x18);
 } // namespace effect
+using effectEffectParameterEvaluatorVector = effect::EffectParameterEvaluatorVector;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct DangleInfo
 {
     static constexpr const char* NAME = "entdismembermentDangleInfo";
@@ -23,6 +24,7 @@ struct DangleInfo
 };
 RED4EXT_ASSERT_SIZE(DangleInfo, 0x14);
 } // namespace ent::dismemberment
+using entdismembermentDangleInfo = ent::dismemberment::DangleInfo;
 } // namespace RED4ext
 
 // clang-format on

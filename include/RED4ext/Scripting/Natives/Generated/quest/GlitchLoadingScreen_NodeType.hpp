@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct GlitchLoadingScreen_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questGlitchLoadingScreen_NodeType";
@@ -19,6 +20,7 @@ struct GlitchLoadingScreen_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(GlitchLoadingScreen_NodeType, 0x38);
 } // namespace quest
+using questGlitchLoadingScreen_NodeType = quest::GlitchLoadingScreen_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct DriveSplineReverseEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleDriveSplineReverseEvent";
@@ -25,6 +26,7 @@ struct DriveSplineReverseEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(DriveSplineReverseEvent, 0x58);
 } // namespace vehicle
+using vehicleDriveSplineReverseEvent = vehicle::DriveSplineReverseEvent;
 } // namespace RED4ext
 
 // clang-format on

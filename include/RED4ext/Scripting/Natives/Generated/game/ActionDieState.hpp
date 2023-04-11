@@ -16,7 +16,8 @@ namespace ent { struct SlotComponent; }
 namespace game { struct Object; }
 namespace move { struct Component; }
 
-namespace game { 
+namespace game
+{
 struct ActionDieState : game::ActionReplicatedState
 {
     static constexpr const char* NAME = "gameActionDieState";
@@ -29,6 +30,7 @@ struct ActionDieState : game::ActionReplicatedState
 };
 RED4EXT_ASSERT_SIZE(ActionDieState, 0x68);
 } // namespace game
+using gameActionDieState = game::ActionDieState;
 } // namespace RED4ext
 
 // clang-format on

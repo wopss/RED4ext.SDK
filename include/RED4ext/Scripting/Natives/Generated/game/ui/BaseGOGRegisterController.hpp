@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct BaseGOGRegisterController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiBaseGOGRegisterController";
@@ -20,6 +21,7 @@ struct BaseGOGRegisterController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(BaseGOGRegisterController, 0xA0);
 } // namespace game::ui
+using gameuiBaseGOGRegisterController = game::ui::BaseGOGRegisterController;
 using BaseGOGRegisterController = game::ui::BaseGOGRegisterController;
 } // namespace RED4ext
 

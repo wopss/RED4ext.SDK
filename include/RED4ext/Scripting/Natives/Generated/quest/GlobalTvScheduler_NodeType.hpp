@@ -16,7 +16,8 @@ struct Bink;
 namespace ink { struct WidgetLibraryResource; }
 namespace scn { struct SceneResource; }
 
-namespace quest { 
+namespace quest
+{
 struct GlobalTvScheduler_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questGlobalTvScheduler_NodeType";
@@ -33,6 +34,7 @@ struct GlobalTvScheduler_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(GlobalTvScheduler_NodeType, 0x78);
 } // namespace quest
+using questGlobalTvScheduler_NodeType = quest::GlobalTvScheduler_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemDataMosh : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemDataMosh";
@@ -33,6 +34,7 @@ struct TrackItemDataMosh : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemDataMosh, 0xB8);
 } // namespace effect
+using effectTrackItemDataMosh = effect::TrackItemDataMosh;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct CameraOverrideSettings
 {
     static constexpr const char* NAME = "scneventsCameraOverrideSettings";
@@ -22,6 +23,7 @@ struct CameraOverrideSettings
 };
 RED4EXT_ASSERT_SIZE(CameraOverrideSettings, 0x4);
 } // namespace scn::events
+using scneventsCameraOverrideSettings = scn::events::CameraOverrideSettings;
 } // namespace RED4ext
 
 // clang-format on

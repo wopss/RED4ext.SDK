@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct PersistentData : game::Component
 {
     static constexpr const char* NAME = "vehiclePersistentData";
@@ -19,6 +20,7 @@ struct PersistentData : game::Component
 };
 RED4EXT_ASSERT_SIZE(PersistentData, 0xA8);
 } // namespace vehicle
+using vehiclePersistentData = vehicle::PersistentData;
 } // namespace RED4ext
 
 // clang-format on

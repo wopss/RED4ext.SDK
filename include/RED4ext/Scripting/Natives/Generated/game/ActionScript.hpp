@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionScript : game::IObjectScriptBase
 {
     static constexpr const char* NAME = "gameActionScript";
@@ -21,6 +22,7 @@ struct ActionScript : game::IObjectScriptBase
 };
 RED4EXT_ASSERT_SIZE(ActionScript, 0x60);
 } // namespace game
+using gameActionScript = game::ActionScript;
 using ActionScript = game::ActionScript;
 } // namespace RED4ext
 

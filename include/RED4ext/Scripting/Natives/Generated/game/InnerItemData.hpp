@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InnerItemData
 {
     static constexpr const char* NAME = "gameInnerItemData";
@@ -19,6 +20,7 @@ struct InnerItemData
 };
 RED4EXT_ASSERT_SIZE(InnerItemData, 0x50);
 } // namespace game
+using gameInnerItemData = game::InnerItemData;
 using InnerItemData = game::InnerItemData;
 } // namespace RED4ext
 

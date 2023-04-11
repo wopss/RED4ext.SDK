@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct ParticlesPlayData : effect::PlacedTrackItemPlayData
 {
     static constexpr const char* NAME = "effectParticlesPlayData";
@@ -20,6 +21,7 @@ struct ParticlesPlayData : effect::PlacedTrackItemPlayData
 };
 RED4EXT_ASSERT_SIZE(ParticlesPlayData, 0x90);
 } // namespace effect
+using effectParticlesPlayData = effect::ParticlesPlayData;
 } // namespace RED4ext
 
 // clang-format on

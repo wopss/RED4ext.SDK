@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DeviceInteractionManager : game::IDeviceInteractionManager
 {
     static constexpr const char* NAME = "gameDeviceInteractionManager";
@@ -20,6 +21,7 @@ struct DeviceInteractionManager : game::IDeviceInteractionManager
 };
 RED4EXT_ASSERT_SIZE(DeviceInteractionManager, 0xE8);
 } // namespace game
+using gameDeviceInteractionManager = game::DeviceInteractionManager;
 using DeviceInteractionManager = game::DeviceInteractionManager;
 } // namespace RED4ext
 

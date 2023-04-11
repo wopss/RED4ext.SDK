@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectFilter_ReachableByAcousticGraph : game::EffectObjectSingleFilter
 {
     static constexpr const char* NAME = "gameEffectFilter_ReachableByAcousticGraph";
@@ -21,6 +22,7 @@ struct EffectFilter_ReachableByAcousticGraph : game::EffectObjectSingleFilter
 };
 RED4EXT_ASSERT_SIZE(EffectFilter_ReachableByAcousticGraph, 0x58);
 } // namespace game
+using gameEffectFilter_ReachableByAcousticGraph = game::EffectFilter_ReachableByAcousticGraph;
 } // namespace RED4ext
 
 // clang-format on

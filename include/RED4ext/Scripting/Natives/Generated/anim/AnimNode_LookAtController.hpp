@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_LookAtController : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_LookAtController";
@@ -31,6 +32,7 @@ struct AnimNode_LookAtController : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_LookAtController, 0x158);
 } // namespace anim
+using animAnimNode_LookAtController = anim::AnimNode_LookAtController;
 } // namespace RED4ext
 
 // clang-format on

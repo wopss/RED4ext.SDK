@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DynamicDownforceHelper_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataDynamicDownforceHelper_Record";
@@ -20,6 +21,7 @@ struct DynamicDownforceHelper_Record : game::data::DriveHelper_Record
 };
 RED4EXT_ASSERT_SIZE(DynamicDownforceHelper_Record, 0x60);
 } // namespace game::data
+using gamedataDynamicDownforceHelper_Record = game::data::DynamicDownforceHelper_Record;
 using DynamicDownforceHelper_Record = game::data::DynamicDownforceHelper_Record;
 } // namespace RED4ext
 

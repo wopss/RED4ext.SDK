@@ -16,7 +16,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace game { struct Object; }
 
-namespace game { 
+namespace game
+{
 struct PingEntry
 {
     static constexpr const char* NAME = "gamePingEntry";
@@ -35,6 +36,7 @@ struct PingEntry
 };
 RED4EXT_ASSERT_SIZE(PingEntry, 0x80);
 } // namespace game
+using gamePingEntry = game::PingEntry;
 } // namespace RED4ext
 
 // clang-format on

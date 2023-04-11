@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct GrenadeThrowQuery
 {
     static constexpr const char* NAME = "gameGrenadeThrowQuery";
@@ -19,6 +20,7 @@ struct GrenadeThrowQuery
 };
 RED4EXT_ASSERT_SIZE(GrenadeThrowQuery, 0x1D0);
 } // namespace game
+using gameGrenadeThrowQuery = game::GrenadeThrowQuery;
 } // namespace RED4ext
 
 // clang-format on

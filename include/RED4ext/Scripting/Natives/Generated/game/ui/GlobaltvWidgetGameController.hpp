@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GlobaltvWidgetGameController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiGlobaltvWidgetGameController";
@@ -22,6 +23,7 @@ struct GlobaltvWidgetGameController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(GlobaltvWidgetGameController, 0x120);
 } // namespace game::ui
+using gameuiGlobaltvWidgetGameController = game::ui::GlobaltvWidgetGameController;
 } // namespace RED4ext
 
 // clang-format on

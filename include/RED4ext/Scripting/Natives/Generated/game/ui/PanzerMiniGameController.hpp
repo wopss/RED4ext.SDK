@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PanzerMiniGameController : game::ui::SideScrollerMiniGameControllerAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerMiniGameController";
@@ -19,6 +20,7 @@ struct PanzerMiniGameController : game::ui::SideScrollerMiniGameControllerAdvanc
 };
 RED4EXT_ASSERT_SIZE(PanzerMiniGameController, 0x110);
 } // namespace game::ui
+using gameuiPanzerMiniGameController = game::ui::PanzerMiniGameController;
 using PanzerMiniGameController = game::ui::PanzerMiniGameController;
 } // namespace RED4ext
 

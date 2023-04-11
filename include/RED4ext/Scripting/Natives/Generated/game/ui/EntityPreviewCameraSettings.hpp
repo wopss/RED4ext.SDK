@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct EntityPreviewCameraSettings
 {
     static constexpr const char* NAME = "gameuiEntityPreviewCameraSettings";
@@ -32,6 +33,7 @@ struct EntityPreviewCameraSettings
 };
 RED4EXT_ASSERT_SIZE(EntityPreviewCameraSettings, 0x4C);
 } // namespace game::ui
+using gameuiEntityPreviewCameraSettings = game::ui::EntityPreviewCameraSettings;
 using inkEntityPreviewCameraSettings = game::ui::EntityPreviewCameraSettings;
 } // namespace RED4ext
 

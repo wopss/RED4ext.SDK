@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct StaticOrientationProvider : ent::IOrientationProvider
 {
     static constexpr const char* NAME = "entStaticOrientationProvider";
@@ -21,6 +22,7 @@ struct StaticOrientationProvider : ent::IOrientationProvider
 };
 RED4EXT_ASSERT_SIZE(StaticOrientationProvider, 0x50);
 } // namespace ent
+using entStaticOrientationProvider = ent::StaticOrientationProvider;
 } // namespace RED4ext
 
 // clang-format on

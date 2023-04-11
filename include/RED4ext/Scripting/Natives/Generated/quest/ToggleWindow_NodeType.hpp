@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleWindow_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questToggleWindow_NodeType";
@@ -25,6 +26,7 @@ struct ToggleWindow_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleWindow_NodeType, 0x70);
 } // namespace quest
+using questToggleWindow_NodeType = quest::ToggleWindow_NodeType;
 } // namespace RED4ext
 
 // clang-format on

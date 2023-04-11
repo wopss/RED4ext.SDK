@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatusEffectComponentReplicatedState : net::IComponentState
 {
     static constexpr const char* NAME = "gameStatusEffectComponentReplicatedState";
@@ -23,6 +24,7 @@ struct StatusEffectComponentReplicatedState : net::IComponentState
 };
 RED4EXT_ASSERT_SIZE(StatusEffectComponentReplicatedState, 0x40);
 } // namespace game
+using gameStatusEffectComponentReplicatedState = game::StatusEffectComponentReplicatedState;
 } // namespace RED4ext
 
 // clang-format on

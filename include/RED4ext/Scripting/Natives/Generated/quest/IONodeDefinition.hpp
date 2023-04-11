@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IONodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questIONodeDefinition";
@@ -21,6 +22,7 @@ struct IONodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(IONodeDefinition, 0x50);
 } // namespace quest
+using questIONodeDefinition = quest::IONodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

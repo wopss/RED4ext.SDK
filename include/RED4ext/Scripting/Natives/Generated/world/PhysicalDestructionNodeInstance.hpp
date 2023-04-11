@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PhysicalDestructionNodeInstance : world::SnappableNodeInstance
 {
     static constexpr const char* NAME = "worldPhysicalDestructionNodeInstance";
@@ -20,6 +21,7 @@ struct PhysicalDestructionNodeInstance : world::SnappableNodeInstance
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionNodeInstance, 0x240);
 } // namespace world
+using worldPhysicalDestructionNodeInstance = world::PhysicalDestructionNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

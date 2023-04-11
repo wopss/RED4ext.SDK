@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct VORequestEvt : red::Event
 {
     static constexpr const char* NAME = "inkVORequestEvt";
@@ -20,6 +21,7 @@ struct VORequestEvt : red::Event
 };
 RED4EXT_ASSERT_SIZE(VORequestEvt, 0x68);
 } // namespace ink
+using inkVORequestEvt = ink::VORequestEvt;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_StackTransformsExtender : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_StackTransformsExtender";
@@ -33,6 +34,7 @@ struct AnimNode_StackTransformsExtender : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_StackTransformsExtender, 0xD8);
 } // namespace anim
+using animAnimNode_StackTransformsExtender = anim::AnimNode_StackTransformsExtender;
 } // namespace RED4ext
 
 // clang-format on

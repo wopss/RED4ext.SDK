@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ForceResetAmmoEvent : red::Event
 {
     static constexpr const char* NAME = "gameForceResetAmmoEvent";
@@ -20,6 +21,7 @@ struct ForceResetAmmoEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ForceResetAmmoEvent, 0x48);
 } // namespace game
+using gameForceResetAmmoEvent = game::ForceResetAmmoEvent;
 using ForceResetAmmoEvent = game::ForceResetAmmoEvent;
 } // namespace RED4ext
 

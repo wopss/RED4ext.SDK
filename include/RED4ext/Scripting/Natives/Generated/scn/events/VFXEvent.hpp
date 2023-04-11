@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct VFXEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsVFXEvent";
@@ -31,6 +32,7 @@ struct VFXEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(VFXEvent, 0x88);
 } // namespace scn::events
+using scneventsVFXEvent = scn::events::VFXEvent;
 } // namespace RED4ext
 
 // clang-format on

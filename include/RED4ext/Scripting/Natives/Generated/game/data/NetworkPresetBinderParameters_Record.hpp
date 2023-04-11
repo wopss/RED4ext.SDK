@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NetworkPresetBinderParameters_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNetworkPresetBinderParameters_Record";
@@ -20,6 +21,7 @@ struct NetworkPresetBinderParameters_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(NetworkPresetBinderParameters_Record, 0x50);
 } // namespace game::data
+using gamedataNetworkPresetBinderParameters_Record = game::data::NetworkPresetBinderParameters_Record;
 using NetworkPresetBinderParameters_Record = game::data::NetworkPresetBinderParameters_Record;
 } // namespace RED4ext
 

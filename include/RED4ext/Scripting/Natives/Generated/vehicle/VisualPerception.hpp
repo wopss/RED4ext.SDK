@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct VisualPerception
 {
     static constexpr const char* NAME = "vehicleVisualPerception";
@@ -19,6 +20,7 @@ struct VisualPerception
 };
 RED4EXT_ASSERT_SIZE(VisualPerception, 0x150);
 } // namespace vehicle
+using vehicleVisualPerception = vehicle::VisualPerception;
 } // namespace RED4ext
 
 // clang-format on

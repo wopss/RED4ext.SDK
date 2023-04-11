@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamGarmentSupport : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamGarmentSupport";
@@ -23,6 +24,7 @@ struct MeshParamGarmentSupport : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamGarmentSupport, 0x48);
 } // namespace mesh
+using meshMeshParamGarmentSupport = mesh::MeshParamGarmentSupport;
 } // namespace RED4ext
 
 // clang-format on

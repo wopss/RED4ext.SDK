@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct IMarker : ISerializable
 {
     static constexpr const char* NAME = "worldIMarker";
@@ -19,6 +20,7 @@ struct IMarker : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IMarker, 0x30);
 } // namespace world
+using worldIMarker = world::IMarker;
 } // namespace RED4ext
 
 // clang-format on

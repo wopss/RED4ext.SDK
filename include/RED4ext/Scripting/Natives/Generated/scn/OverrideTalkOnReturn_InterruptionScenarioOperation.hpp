@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct OverrideTalkOnReturn_InterruptionScenarioOperation : scn::IInterruptionScenarioOperation
 {
     static constexpr const char* NAME = "scnOverrideTalkOnReturn_InterruptionScenarioOperation";
@@ -21,6 +22,7 @@ struct OverrideTalkOnReturn_InterruptionScenarioOperation : scn::IInterruptionSc
 };
 RED4EXT_ASSERT_SIZE(OverrideTalkOnReturn_InterruptionScenarioOperation, 0x38);
 } // namespace scn
+using scnOverrideTalkOnReturn_InterruptionScenarioOperation = scn::OverrideTalkOnReturn_InterruptionScenarioOperation;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct AudioEventPrefetchNode : quest::IAudioNodeType
 {
     static constexpr const char* NAME = "questAudioEventPrefetchNode";
@@ -22,6 +23,7 @@ struct AudioEventPrefetchNode : quest::IAudioNodeType
 };
 RED4EXT_ASSERT_SIZE(AudioEventPrefetchNode, 0x50);
 } // namespace quest
+using questAudioEventPrefetchNode = quest::AudioEventPrefetchNode;
 } // namespace RED4ext
 
 // clang-format on

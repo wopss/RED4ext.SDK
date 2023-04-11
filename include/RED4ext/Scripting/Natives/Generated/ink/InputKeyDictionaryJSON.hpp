@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct InputKeyDictionaryJSON : ISerializable
 {
     static constexpr const char* NAME = "inkInputKeyDictionaryJSON";
@@ -22,6 +23,7 @@ struct InputKeyDictionaryJSON : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InputKeyDictionaryJSON, 0x40);
 } // namespace ink
+using inkInputKeyDictionaryJSON = ink::InputKeyDictionaryJSON;
 } // namespace RED4ext
 
 // clang-format on

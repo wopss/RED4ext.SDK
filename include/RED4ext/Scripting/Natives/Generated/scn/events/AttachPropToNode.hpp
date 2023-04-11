@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct AttachPropToNode : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsAttachPropToNode";
@@ -29,6 +30,7 @@ struct AttachPropToNode : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(AttachPropToNode, 0x90);
 } // namespace scn::events
+using scneventsAttachPropToNode = scn::events::AttachPropToNode;
 } // namespace RED4ext
 
 // clang-format on

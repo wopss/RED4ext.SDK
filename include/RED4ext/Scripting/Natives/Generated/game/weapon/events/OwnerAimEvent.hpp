@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::weapon::events { 
+namespace game::weapon::events
+{
 struct OwnerAimEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsOwnerAimEvent";
@@ -21,6 +22,7 @@ struct OwnerAimEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(OwnerAimEvent, 0x48);
 } // namespace game::weapon::events
+using gameweaponeventsOwnerAimEvent = game::weapon::events::OwnerAimEvent;
 } // namespace RED4ext
 
 // clang-format on

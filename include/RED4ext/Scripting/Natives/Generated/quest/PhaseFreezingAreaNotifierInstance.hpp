@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PhaseFreezingAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 {
     static constexpr const char* NAME = "questPhaseFreezingAreaNotifierInstance";
@@ -20,6 +21,7 @@ struct PhaseFreezingAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 };
 RED4EXT_ASSERT_SIZE(PhaseFreezingAreaNotifierInstance, 0x78);
 } // namespace quest
+using questPhaseFreezingAreaNotifierInstance = quest::PhaseFreezingAreaNotifierInstance;
 } // namespace RED4ext
 
 // clang-format on

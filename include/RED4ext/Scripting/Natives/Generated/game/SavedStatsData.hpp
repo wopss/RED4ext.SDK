@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct StatModifierData_Deprecated; }
 
-namespace game { 
+namespace game
+{
 struct SavedStatsData
 {
     static constexpr const char* NAME = "gameSavedStatsData";
@@ -30,6 +31,7 @@ struct SavedStatsData
 };
 RED4EXT_ASSERT_SIZE(SavedStatsData, 0x58);
 } // namespace game
+using gameSavedStatsData = game::SavedStatsData;
 } // namespace RED4ext
 
 // clang-format on

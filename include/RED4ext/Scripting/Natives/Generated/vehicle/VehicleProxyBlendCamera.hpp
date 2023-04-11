@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct VehicleProxyBlendCamera : game::CameraComponent
 {
     static constexpr const char* NAME = "vehicleVehicleProxyBlendCamera";
@@ -20,6 +21,7 @@ struct VehicleProxyBlendCamera : game::CameraComponent
 };
 RED4EXT_ASSERT_SIZE(VehicleProxyBlendCamera, 0x300);
 } // namespace vehicle
+using vehicleVehicleProxyBlendCamera = vehicle::VehicleProxyBlendCamera;
 } // namespace RED4ext
 
 // clang-format on

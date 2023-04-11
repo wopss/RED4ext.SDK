@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AdditionalTransformEntry : ISerializable
 {
     static constexpr const char* NAME = "animAdditionalTransformEntry";
@@ -23,6 +24,7 @@ struct AdditionalTransformEntry : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AdditionalTransformEntry, 0xA0);
 } // namespace anim
+using animAdditionalTransformEntry = anim::AdditionalTransformEntry;
 } // namespace RED4ext
 
 // clang-format on

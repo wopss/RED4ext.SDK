@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Cyberdrill_NodeTypeParams
 {
     static constexpr const char* NAME = "questCyberdrill_NodeTypeParams";
@@ -22,6 +23,7 @@ struct Cyberdrill_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(Cyberdrill_NodeTypeParams, 0x10);
 } // namespace quest
+using questCyberdrill_NodeTypeParams = quest::Cyberdrill_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

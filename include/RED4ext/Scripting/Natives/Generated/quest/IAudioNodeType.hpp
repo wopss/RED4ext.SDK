@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IAudioNodeType : ISerializable
 {
     static constexpr const char* NAME = "questIAudioNodeType";
@@ -20,6 +21,7 @@ struct IAudioNodeType : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IAudioNodeType, 0x40);
 } // namespace quest
+using questIAudioNodeType = quest::IAudioNodeType;
 } // namespace RED4ext
 
 // clang-format on

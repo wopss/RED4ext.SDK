@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ChoiceNodeNsLookAtParams : ISerializable
 {
     static constexpr const char* NAME = "scnChoiceNodeNsLookAtParams";
@@ -19,6 +20,7 @@ struct ChoiceNodeNsLookAtParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ChoiceNodeNsLookAtParams, 0x30);
 } // namespace scn
+using scnChoiceNodeNsLookAtParams = scn::ChoiceNodeNsLookAtParams;
 } // namespace RED4ext
 
 // clang-format on

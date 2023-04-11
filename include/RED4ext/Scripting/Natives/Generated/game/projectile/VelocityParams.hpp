@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct VelocityParams
 {
     static constexpr const char* NAME = "gameprojectileVelocityParams";
@@ -21,6 +22,7 @@ struct VelocityParams
 };
 RED4EXT_ASSERT_SIZE(VelocityParams, 0xC);
 } // namespace game::projectile
+using gameprojectileVelocityParams = game::projectile::VelocityParams;
 } // namespace RED4ext
 
 // clang-format on

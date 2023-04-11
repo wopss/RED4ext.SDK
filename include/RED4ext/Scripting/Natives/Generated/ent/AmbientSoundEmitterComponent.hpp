@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace audio { struct AmbientAreaSettings; }
 
-namespace ent { 
+namespace ent
+{
 struct AmbientSoundEmitterComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entAmbientSoundEmitterComponent";
@@ -30,6 +31,7 @@ struct AmbientSoundEmitterComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(AmbientSoundEmitterComponent, 0x150);
 } // namespace ent
+using entAmbientSoundEmitterComponent = ent::AmbientSoundEmitterComponent;
 } // namespace RED4ext
 
 // clang-format on

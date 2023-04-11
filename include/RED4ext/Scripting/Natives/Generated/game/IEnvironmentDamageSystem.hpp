@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IEnvironmentDamageSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIEnvironmentDamageSystem";
@@ -19,6 +20,7 @@ struct IEnvironmentDamageSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IEnvironmentDamageSystem, 0x48);
 } // namespace game
+using gameIEnvironmentDamageSystem = game::IEnvironmentDamageSystem;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamUICollisionData : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamUICollisionData";
@@ -25,6 +26,7 @@ struct MeshParamUICollisionData : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamUICollisionData, 0x60);
 } // namespace mesh
+using meshMeshParamUICollisionData = mesh::MeshParamUICollisionData;
 } // namespace RED4ext
 
 // clang-format on

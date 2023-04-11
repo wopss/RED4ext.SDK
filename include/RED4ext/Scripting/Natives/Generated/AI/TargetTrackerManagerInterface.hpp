@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TargetTrackerManagerInterface : game::IGameSystem
 {
     static constexpr const char* NAME = "AITargetTrackerManagerInterface";
@@ -19,6 +20,7 @@ struct TargetTrackerManagerInterface : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(TargetTrackerManagerInterface, 0x48);
 } // namespace AI
+using AITargetTrackerManagerInterface = AI::TargetTrackerManagerInterface;
 } // namespace RED4ext
 
 // clang-format on

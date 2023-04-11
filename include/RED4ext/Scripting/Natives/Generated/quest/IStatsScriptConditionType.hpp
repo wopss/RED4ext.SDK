@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace quest { 
+namespace quest
+{
 struct IStatsScriptConditionType : quest::IStatsConditionType
 {
     static constexpr const char* NAME = "questIStatsScriptConditionType";
@@ -24,6 +25,7 @@ struct IStatsScriptConditionType : quest::IStatsConditionType
 };
 RED4EXT_ASSERT_SIZE(IStatsScriptConditionType, 0x50);
 } // namespace quest
+using questIStatsScriptConditionType = quest::IStatsScriptConditionType;
 } // namespace RED4ext
 
 // clang-format on

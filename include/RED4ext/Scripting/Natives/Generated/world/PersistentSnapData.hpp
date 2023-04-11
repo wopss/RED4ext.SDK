@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct PersistentSnapData
 {
     static constexpr const char* NAME = "worldPersistentSnapData";
@@ -26,6 +27,7 @@ struct PersistentSnapData
 };
 RED4EXT_ASSERT_SIZE(PersistentSnapData, 0x28);
 } // namespace world
+using worldPersistentSnapData = world::PersistentSnapData;
 } // namespace RED4ext
 
 // clang-format on

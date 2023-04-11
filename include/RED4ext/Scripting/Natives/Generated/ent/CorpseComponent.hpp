@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace ent { 
+namespace ent
+{
 struct CorpseComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entCorpseComponent";
@@ -27,6 +28,7 @@ struct CorpseComponent : ent::ISkinableComponent
 };
 RED4EXT_ASSERT_SIZE(CorpseComponent, 0x180);
 } // namespace ent
+using entCorpseComponent = ent::CorpseComponent;
 using CorpseComponent = ent::CorpseComponent;
 } // namespace RED4ext
 

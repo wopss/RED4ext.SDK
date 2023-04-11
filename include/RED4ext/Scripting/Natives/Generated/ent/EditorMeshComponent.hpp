@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EditorMeshComponent : ent::MeshComponent
 {
     static constexpr const char* NAME = "entEditorMeshComponent";
@@ -19,6 +20,7 @@ struct EditorMeshComponent : ent::MeshComponent
 };
 RED4EXT_ASSERT_SIZE(EditorMeshComponent, 0x1E0);
 } // namespace ent
+using entEditorMeshComponent = ent::EditorMeshComponent;
 using EditorMeshComponent = ent::EditorMeshComponent;
 } // namespace RED4ext
 

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct EntityInstanceData : ISerializable
 {
     static constexpr const char* NAME = "entEntityInstanceData";
@@ -21,6 +22,7 @@ struct EntityInstanceData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EntityInstanceData, 0x58);
 } // namespace ent
+using entEntityInstanceData = ent::EntityInstanceData;
 } // namespace RED4ext
 
 // clang-format on

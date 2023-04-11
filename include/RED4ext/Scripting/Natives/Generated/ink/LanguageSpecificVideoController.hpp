@@ -15,7 +15,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace ink { 
+namespace ink
+{
 struct LanguageSpecificVideoController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkLanguageSpecificVideoController";
@@ -29,6 +30,7 @@ struct LanguageSpecificVideoController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(LanguageSpecificVideoController, 0xA0);
 } // namespace ink
+using inkLanguageSpecificVideoController = ink::LanguageSpecificVideoController;
 using LanguageSpecificVideoController = ink::LanguageSpecificVideoController;
 } // namespace RED4ext
 

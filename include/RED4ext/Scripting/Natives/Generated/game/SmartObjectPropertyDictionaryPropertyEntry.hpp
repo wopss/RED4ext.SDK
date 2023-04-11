@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SmartObjectPropertyDictionaryPropertyEntry
 {
     static constexpr const char* NAME = "gameSmartObjectPropertyDictionaryPropertyEntry";
@@ -34,6 +35,7 @@ struct SmartObjectPropertyDictionaryPropertyEntry
 };
 RED4EXT_ASSERT_SIZE(SmartObjectPropertyDictionaryPropertyEntry, 0x28);
 } // namespace game
+using gameSmartObjectPropertyDictionaryPropertyEntry = game::SmartObjectPropertyDictionaryPropertyEntry;
 } // namespace RED4ext
 
 // clang-format on

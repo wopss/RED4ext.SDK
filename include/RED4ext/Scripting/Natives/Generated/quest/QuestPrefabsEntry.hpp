@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct QuestPrefabsEntry
 {
     static constexpr const char* NAME = "questQuestPrefabsEntry";
@@ -23,6 +24,7 @@ struct QuestPrefabsEntry
 };
 RED4EXT_ASSERT_SIZE(QuestPrefabsEntry, 0x10);
 } // namespace quest
+using questQuestPrefabsEntry = quest::QuestPrefabsEntry;
 } // namespace RED4ext
 
 // clang-format on

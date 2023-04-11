@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ReplicatedAnimWrapperVars
 {
     static constexpr const char* NAME = "entReplicatedAnimWrapperVars";
@@ -24,6 +25,7 @@ struct ReplicatedAnimWrapperVars
 };
 RED4EXT_ASSERT_SIZE(ReplicatedAnimWrapperVars, 0x28);
 } // namespace ent
+using entReplicatedAnimWrapperVars = ent::ReplicatedAnimWrapperVars;
 } // namespace RED4ext
 
 // clang-format on

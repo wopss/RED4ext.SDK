@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SetupWorkspotActionEvent : sense::StimuliData
 {
     static constexpr const char* NAME = "gameSetupWorkspotActionEvent";
@@ -20,6 +21,7 @@ struct SetupWorkspotActionEvent : sense::StimuliData
 };
 RED4EXT_ASSERT_SIZE(SetupWorkspotActionEvent, 0x260);
 } // namespace game
+using gameSetupWorkspotActionEvent = game::SetupWorkspotActionEvent;
 using SetupWorkspotActionEvent = game::SetupWorkspotActionEvent;
 } // namespace RED4ext
 

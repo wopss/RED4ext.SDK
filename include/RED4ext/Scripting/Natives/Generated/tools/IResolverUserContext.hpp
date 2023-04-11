@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct IResolverUserContext : ISerializable
 {
     static constexpr const char* NAME = "toolsIResolverUserContext";
@@ -19,6 +20,7 @@ struct IResolverUserContext : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IResolverUserContext, 0x30);
 } // namespace tools
+using toolsIResolverUserContext = tools::IResolverUserContext;
 } // namespace RED4ext
 
 // clang-format on

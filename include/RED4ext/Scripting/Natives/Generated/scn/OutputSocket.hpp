@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct OutputSocket
 {
     static constexpr const char* NAME = "scnOutputSocket";
@@ -24,6 +25,7 @@ struct OutputSocket
 };
 RED4EXT_ASSERT_SIZE(OutputSocket, 0x18);
 } // namespace scn
+using scnOutputSocket = scn::OutputSocket;
 } // namespace RED4ext
 
 // clang-format on

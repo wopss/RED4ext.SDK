@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BinkVideoEvent : red::Event
 {
     static constexpr const char* NAME = "gameBinkVideoEvent";
@@ -24,6 +25,7 @@ struct BinkVideoEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(BinkVideoEvent, 0x68);
 } // namespace game
+using gameBinkVideoEvent = game::BinkVideoEvent;
 } // namespace RED4ext
 
 // clang-format on

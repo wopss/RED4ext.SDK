@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct FootPlantedEvent : red::Event
 {
     static constexpr const char* NAME = "entFootPlantedEvent";
@@ -24,6 +25,7 @@ struct FootPlantedEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(FootPlantedEvent, 0x50);
 } // namespace ent
+using entFootPlantedEvent = ent::FootPlantedEvent;
 } // namespace RED4ext
 
 // clang-format on

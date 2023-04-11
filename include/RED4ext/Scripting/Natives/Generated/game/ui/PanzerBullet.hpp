@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PanzerBullet : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 {
     static constexpr const char* NAME = "gameuiPanzerBullet";
@@ -19,6 +20,7 @@ struct PanzerBullet : game::ui::SideScrollerMiniGameDynObjectLogicAdvanced
 };
 RED4EXT_ASSERT_SIZE(PanzerBullet, 0xD0);
 } // namespace game::ui
+using gameuiPanzerBullet = game::ui::PanzerBullet;
 using PanzerBullet = game::ui::PanzerBullet;
 } // namespace RED4ext
 

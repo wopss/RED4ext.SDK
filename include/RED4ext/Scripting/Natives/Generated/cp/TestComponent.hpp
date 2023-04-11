@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct TestComponent : game::Component
 {
     static constexpr const char* NAME = "cpTestComponent";
@@ -21,6 +22,7 @@ struct TestComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(TestComponent, 0xB0);
 } // namespace cp
+using cpTestComponent = cp::TestComponent;
 } // namespace RED4ext
 
 // clang-format on

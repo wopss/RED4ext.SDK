@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct BehaviourSpotInstance : AI::SmartSpotInstance
 {
     static constexpr const char* NAME = "AIBehaviourSpotInstance";
@@ -20,6 +21,7 @@ struct BehaviourSpotInstance : AI::SmartSpotInstance
 };
 RED4EXT_ASSERT_SIZE(BehaviourSpotInstance, 0x28);
 } // namespace AI
+using AIBehaviourSpotInstance = AI::BehaviourSpotInstance;
 } // namespace RED4ext
 
 // clang-format on

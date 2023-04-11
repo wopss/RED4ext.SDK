@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace loc { 
+namespace loc
+{
 struct VoLanguageDataMap : ISerializable
 {
     static constexpr const char* NAME = "locVoLanguageDataMap";
@@ -22,6 +23,7 @@ struct VoLanguageDataMap : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VoLanguageDataMap, 0x40);
 } // namespace loc
+using locVoLanguageDataMap = loc::VoLanguageDataMap;
 } // namespace RED4ext
 
 // clang-format on

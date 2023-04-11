@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IComparisonPrereq : game::IPrereq
 {
     static constexpr const char* NAME = "gameIComparisonPrereq";
@@ -22,6 +23,7 @@ struct IComparisonPrereq : game::IPrereq
 };
 RED4EXT_ASSERT_SIZE(IComparisonPrereq, 0x48);
 } // namespace game
+using gameIComparisonPrereq = game::IComparisonPrereq;
 using IComparisonPrereq = game::IComparisonPrereq;
 } // namespace RED4ext
 

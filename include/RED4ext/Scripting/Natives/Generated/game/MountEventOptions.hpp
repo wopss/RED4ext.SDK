@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MountEventOptions : IScriptable
 {
     static constexpr const char* NAME = "gameMountEventOptions";
@@ -21,6 +22,7 @@ struct MountEventOptions : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MountEventOptions, 0x48);
 } // namespace game
+using gameMountEventOptions = game::MountEventOptions;
 using MountEventOptions = game::MountEventOptions;
 } // namespace RED4ext
 

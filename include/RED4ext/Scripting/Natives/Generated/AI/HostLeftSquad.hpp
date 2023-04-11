@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct SquadScriptInterface; }
 
-namespace AI { 
+namespace AI
+{
 struct HostLeftSquad : AI::AIEvent
 {
     static constexpr const char* NAME = "AIHostLeftSquad";
@@ -23,6 +24,7 @@ struct HostLeftSquad : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(HostLeftSquad, 0x60);
 } // namespace AI
+using AIHostLeftSquad = AI::HostLeftSquad;
 using HostLeftSquad = AI::HostLeftSquad;
 } // namespace RED4ext
 

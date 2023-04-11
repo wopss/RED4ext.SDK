@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct HudEntryInfo : ink::UserData
 {
     static constexpr const char* NAME = "inkHudEntryInfo";
@@ -22,6 +23,7 @@ struct HudEntryInfo : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(HudEntryInfo, 0x50);
 } // namespace ink
+using inkHudEntryInfo = ink::HudEntryInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_MathExpressionVector : anim::AnimNode_VectorValue
 {
     static constexpr const char* NAME = "animAnimNode_MathExpressionVector";
@@ -21,6 +22,7 @@ struct AnimNode_MathExpressionVector : anim::AnimNode_VectorValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_MathExpressionVector, 0x88);
 } // namespace anim
+using animAnimNode_MathExpressionVector = anim::AnimNode_MathExpressionVector;
 } // namespace RED4ext
 
 // clang-format on

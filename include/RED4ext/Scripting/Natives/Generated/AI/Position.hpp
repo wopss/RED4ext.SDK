@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct Position
 {
     static constexpr const char* NAME = "AIPosition";
@@ -22,6 +23,7 @@ struct Position
 };
 RED4EXT_ASSERT_SIZE(Position, 0x18);
 } // namespace AI
+using AIPosition = AI::Position;
 } // namespace RED4ext
 
 // clang-format on

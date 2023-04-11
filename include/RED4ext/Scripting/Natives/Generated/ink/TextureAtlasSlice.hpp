@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct TextureAtlasSlice
 {
     static constexpr const char* NAME = "inkTextureAtlasSlice";
@@ -22,6 +23,7 @@ struct TextureAtlasSlice
 };
 RED4EXT_ASSERT_SIZE(TextureAtlasSlice, 0x18);
 } // namespace ink
+using inkTextureAtlasSlice = ink::TextureAtlasSlice;
 } // namespace RED4ext
 
 // clang-format on

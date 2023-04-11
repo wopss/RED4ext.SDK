@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct MappinUICustomOpacityParams_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataMappinUICustomOpacityParams_Record";
@@ -20,6 +21,7 @@ struct MappinUICustomOpacityParams_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(MappinUICustomOpacityParams_Record, 0x58);
 } // namespace game::data
+using gamedataMappinUICustomOpacityParams_Record = game::data::MappinUICustomOpacityParams_Record;
 using MappinUICustomOpacityParams_Record = game::data::MappinUICustomOpacityParams_Record;
 } // namespace RED4ext
 

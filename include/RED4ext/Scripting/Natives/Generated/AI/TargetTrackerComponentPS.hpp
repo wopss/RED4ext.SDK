@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct TargetTrackerComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "AITargetTrackerComponentPS";
@@ -23,6 +24,7 @@ struct TargetTrackerComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(TargetTrackerComponentPS, 0x80);
 } // namespace AI
+using AITargetTrackerComponentPS = AI::TargetTrackerComponentPS;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct FacialSetup_OneSermoPoseBufferInfo
 {
     static constexpr const char* NAME = "animFacialSetup_OneSermoPoseBufferInfo";
@@ -24,6 +25,7 @@ struct FacialSetup_OneSermoPoseBufferInfo
 };
 RED4EXT_ASSERT_SIZE(FacialSetup_OneSermoPoseBufferInfo, 0x14);
 } // namespace anim
+using animFacialSetup_OneSermoPoseBufferInfo = anim::FacialSetup_OneSermoPoseBufferInfo;
 } // namespace RED4ext
 
 // clang-format on

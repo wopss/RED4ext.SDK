@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct ITimeConditionType; }
 
-namespace quest { 
+namespace quest
+{
 struct TimeCondition : quest::TypedCondition
 {
     static constexpr const char* NAME = "questTimeCondition";
@@ -23,6 +24,7 @@ struct TimeCondition : quest::TypedCondition
 };
 RED4EXT_ASSERT_SIZE(TimeCondition, 0x40);
 } // namespace quest
+using questTimeCondition = quest::TimeCondition;
 } // namespace RED4ext
 
 // clang-format on

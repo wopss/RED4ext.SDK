@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game { struct SceneTierData; }
 
-namespace game { 
+namespace game
+{
 struct GlobalTierSaveData
 {
     static constexpr const char* NAME = "gameGlobalTierSaveData";
@@ -25,6 +26,7 @@ struct GlobalTierSaveData
 };
 RED4EXT_ASSERT_SIZE(GlobalTierSaveData, 0x18);
 } // namespace game
+using gameGlobalTierSaveData = game::GlobalTierSaveData;
 } // namespace RED4ext
 
 // clang-format on

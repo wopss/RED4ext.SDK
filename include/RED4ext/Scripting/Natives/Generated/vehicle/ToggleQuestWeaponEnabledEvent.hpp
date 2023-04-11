@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct ToggleQuestWeaponEnabledEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleToggleQuestWeaponEnabledEvent";
@@ -20,6 +21,7 @@ struct ToggleQuestWeaponEnabledEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleQuestWeaponEnabledEvent, 0x48);
 } // namespace vehicle
+using vehicleToggleQuestWeaponEnabledEvent = vehicle::ToggleQuestWeaponEnabledEvent;
 using VehicleToggleQuestWeaponEnabledEvent = vehicle::ToggleQuestWeaponEnabledEvent;
 } // namespace RED4ext
 

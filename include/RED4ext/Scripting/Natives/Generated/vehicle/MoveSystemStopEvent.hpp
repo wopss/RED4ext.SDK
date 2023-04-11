@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct MoveSystemStopEvent : game::ActionEvent
 {
     static constexpr const char* NAME = "vehicleMoveSystemStopEvent";
@@ -19,6 +20,7 @@ struct MoveSystemStopEvent : game::ActionEvent
 };
 RED4EXT_ASSERT_SIZE(MoveSystemStopEvent, 0x68);
 } // namespace vehicle
+using vehicleMoveSystemStopEvent = vehicle::MoveSystemStopEvent;
 using MoveSystemStopEvent = vehicle::MoveSystemStopEvent;
 } // namespace RED4ext
 

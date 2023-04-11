@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_QuaternionValue : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_QuaternionValue";
@@ -19,6 +20,7 @@ struct AnimNode_QuaternionValue : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_QuaternionValue, 0x48);
 } // namespace anim
+using animAnimNode_QuaternionValue = anim::AnimNode_QuaternionValue;
 } // namespace RED4ext
 
 // clang-format on

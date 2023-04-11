@@ -30,10 +30,10 @@ namespace ink { struct IEffect; }
 namespace ink { struct PropertyManager; }
 namespace ink { struct StyleResourceWrapper; }
 namespace ink { struct UserData; }
-namespace ink { struct Widget; }
 namespace ink { struct WidgetLogicController; }
 
-namespace ink {
+namespace ink
+{
 struct Widget : IScriptable
 {
     static constexpr const char* NAME = "inkWidget";
@@ -70,6 +70,7 @@ struct Widget : IScriptable
 };
 RED4EXT_ASSERT_SIZE(Widget, 0x200);
 } // namespace ink
+using inkWidget = ink::Widget;
 } // namespace RED4ext
 */
 

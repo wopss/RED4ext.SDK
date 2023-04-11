@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct PathLengthCoverSelection : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIPathLengthCoverSelection";
@@ -20,6 +21,7 @@ struct PathLengthCoverSelection : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(PathLengthCoverSelection, 0x20);
 } // namespace AI
+using AIPathLengthCoverSelection = AI::PathLengthCoverSelection;
 } // namespace RED4ext
 
 // clang-format on

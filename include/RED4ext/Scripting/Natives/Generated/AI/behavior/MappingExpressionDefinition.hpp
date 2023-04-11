@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct MappingExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorMappingExpressionDefinition";
@@ -29,6 +30,7 @@ struct MappingExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 };
 RED4EXT_ASSERT_SIZE(MappingExpressionDefinition, 0x68);
 } // namespace AI::behavior
+using AIbehaviorMappingExpressionDefinition = AI::behavior::MappingExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

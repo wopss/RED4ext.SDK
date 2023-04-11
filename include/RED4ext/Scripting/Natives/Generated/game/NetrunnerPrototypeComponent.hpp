@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct NetrunnerPrototypeComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameNetrunnerPrototypeComponent";
@@ -23,6 +24,7 @@ struct NetrunnerPrototypeComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(NetrunnerPrototypeComponent, 0x118);
 } // namespace game
+using gameNetrunnerPrototypeComponent = game::NetrunnerPrototypeComponent;
 using NetrunnerPrototypeComponent = game::NetrunnerPrototypeComponent;
 } // namespace RED4ext
 

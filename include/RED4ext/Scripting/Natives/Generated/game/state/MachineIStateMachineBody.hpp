@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state
+{
 struct MachineIStateMachineBody : ISerializable
 {
     static constexpr const char* NAME = "gamestateMachineIStateMachineBody";
@@ -19,6 +20,7 @@ struct MachineIStateMachineBody : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MachineIStateMachineBody, 0x30);
 } // namespace game::state
+using gamestateMachineIStateMachineBody = game::state::MachineIStateMachineBody;
 } // namespace RED4ext
 
 // clang-format on

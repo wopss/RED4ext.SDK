@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PuppetAttachmentSlotsListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "gameuiPuppetAttachmentSlotsListener";
@@ -20,6 +21,7 @@ struct PuppetAttachmentSlotsListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(PuppetAttachmentSlotsListener, 0x68);
 } // namespace game::ui
+using gameuiPuppetAttachmentSlotsListener = game::ui::PuppetAttachmentSlotsListener;
 } // namespace RED4ext
 
 // clang-format on

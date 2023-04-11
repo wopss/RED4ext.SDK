@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DeviceDynamicConnectionChange : red::Event
 {
     static constexpr const char* NAME = "gameDeviceDynamicConnectionChange";
@@ -19,6 +20,7 @@ struct DeviceDynamicConnectionChange : red::Event
 };
 RED4EXT_ASSERT_SIZE(DeviceDynamicConnectionChange, 0x40);
 } // namespace game
+using gameDeviceDynamicConnectionChange = game::DeviceDynamicConnectionChange;
 using DeviceDynamicConnectionChange = game::DeviceDynamicConnectionChange;
 } // namespace RED4ext
 

@@ -16,7 +16,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct HackingMinigameLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiHackingMinigameLogicController";
@@ -90,6 +91,7 @@ struct HackingMinigameLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(HackingMinigameLogicController, 0x450);
 } // namespace game::ui
+using gameuiHackingMinigameLogicController = game::ui::HackingMinigameLogicController;
 } // namespace RED4ext
 
 // clang-format on

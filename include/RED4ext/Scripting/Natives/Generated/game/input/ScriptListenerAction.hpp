@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game::input { 
+namespace game::input
+{
 struct ScriptListenerAction
 {
     static constexpr const char* NAME = "gameinputScriptListenerAction";
@@ -19,6 +20,7 @@ struct ScriptListenerAction
 };
 RED4EXT_ASSERT_SIZE(ScriptListenerAction, 0x8);
 } // namespace game::input
+using gameinputScriptListenerAction = game::input::ScriptListenerAction;
 using ListenerAction = game::input::ScriptListenerAction;
 } // namespace RED4ext
 

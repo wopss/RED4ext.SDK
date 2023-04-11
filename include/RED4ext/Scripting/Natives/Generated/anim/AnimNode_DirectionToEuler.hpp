@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_DirectionToEuler : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_DirectionToEuler";
@@ -27,6 +28,7 @@ struct AnimNode_DirectionToEuler : anim::AnimNode_FloatValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_DirectionToEuler, 0x90);
 } // namespace anim
+using animAnimNode_DirectionToEuler = anim::AnimNode_DirectionToEuler;
 } // namespace RED4ext
 
 // clang-format on

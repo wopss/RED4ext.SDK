@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct PlaceholderComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entPlaceholderComponent";
@@ -19,6 +20,7 @@ struct PlaceholderComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(PlaceholderComponent, 0x120);
 } // namespace ent
+using entPlaceholderComponent = ent::PlaceholderComponent;
 } // namespace RED4ext
 
 // clang-format on

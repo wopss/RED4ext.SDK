@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence
+{
 struct SeparationAgent : game::influence::IAgent
 {
     static constexpr const char* NAME = "gameinfluenceSeparationAgent";
@@ -22,6 +23,7 @@ struct SeparationAgent : game::influence::IAgent
 };
 RED4EXT_ASSERT_SIZE(SeparationAgent, 0x2A0);
 } // namespace game::influence
+using gameinfluenceSeparationAgent = game::influence::SeparationAgent;
 using InfluenceSeparationAgent = game::influence::SeparationAgent;
 } // namespace RED4ext
 

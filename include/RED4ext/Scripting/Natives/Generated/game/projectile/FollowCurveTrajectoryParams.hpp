@@ -17,7 +17,8 @@ namespace RED4ext
 namespace ent { struct IPlacedComponent; }
 namespace game { struct Object; }
 
-namespace game::projectile { 
+namespace game::projectile
+{
 struct FollowCurveTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileFollowCurveTrajectoryParams";
@@ -51,6 +52,7 @@ struct FollowCurveTrajectoryParams : game::projectile::TrajectoryParams
 };
 RED4EXT_ASSERT_SIZE(FollowCurveTrajectoryParams, 0xE0);
 } // namespace game::projectile
+using gameprojectileFollowCurveTrajectoryParams = game::projectile::FollowCurveTrajectoryParams;
 using FollowCurveTrajectoryParams = game::projectile::FollowCurveTrajectoryParams;
 } // namespace RED4ext
 

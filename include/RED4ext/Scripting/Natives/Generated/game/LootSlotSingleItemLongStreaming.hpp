@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LootSlotSingleItemLongStreaming : game::LootSlotSingleItem
 {
     static constexpr const char* NAME = "gameLootSlotSingleItemLongStreaming";
@@ -19,6 +20,7 @@ struct LootSlotSingleItemLongStreaming : game::LootSlotSingleItem
 };
 RED4EXT_ASSERT_SIZE(LootSlotSingleItemLongStreaming, 0x2A0);
 } // namespace game
+using gameLootSlotSingleItemLongStreaming = game::LootSlotSingleItemLongStreaming;
 } // namespace RED4ext
 
 // clang-format on

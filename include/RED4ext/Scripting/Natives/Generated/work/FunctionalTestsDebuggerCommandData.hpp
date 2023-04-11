@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct FunctionalTestsDebuggerCommandData : work::DebuggerCommandData
 {
     static constexpr const char* NAME = "workFunctionalTestsDebuggerCommandData";
@@ -20,6 +21,7 @@ struct FunctionalTestsDebuggerCommandData : work::DebuggerCommandData
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestsDebuggerCommandData, 0x30);
 } // namespace work
+using workFunctionalTestsDebuggerCommandData = work::FunctionalTestsDebuggerCommandData;
 } // namespace RED4ext
 
 // clang-format on

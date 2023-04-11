@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NameColorPair
 {
     static constexpr const char* NAME = "worldNameColorPair";
@@ -23,6 +24,7 @@ struct NameColorPair
 };
 RED4EXT_ASSERT_SIZE(NameColorPair, 0x28);
 } // namespace world
+using worldNameColorPair = world::NameColorPair;
 } // namespace RED4ext
 
 // clang-format on

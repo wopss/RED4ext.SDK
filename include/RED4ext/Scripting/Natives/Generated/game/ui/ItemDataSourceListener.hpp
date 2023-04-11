@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ItemDataSourceListener : game::IInventoryListener
 {
     static constexpr const char* NAME = "gameuiItemDataSourceListener";
@@ -20,6 +21,7 @@ struct ItemDataSourceListener : game::IInventoryListener
 };
 RED4EXT_ASSERT_SIZE(ItemDataSourceListener, 0x48);
 } // namespace game::ui
+using gameuiItemDataSourceListener = game::ui::ItemDataSourceListener;
 } // namespace RED4ext
 
 // clang-format on

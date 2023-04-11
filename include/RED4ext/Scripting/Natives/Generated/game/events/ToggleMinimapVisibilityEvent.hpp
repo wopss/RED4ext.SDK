@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events
+{
 struct ToggleMinimapVisibilityEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsToggleMinimapVisibilityEvent";
@@ -21,6 +22,7 @@ struct ToggleMinimapVisibilityEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ToggleMinimapVisibilityEvent, 0x48);
 } // namespace game::events
+using gameeventsToggleMinimapVisibilityEvent = game::events::ToggleMinimapVisibilityEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CompiledEffectInfo
 {
     static constexpr const char* NAME = "worldCompiledEffectInfo";
@@ -31,6 +32,7 @@ struct CompiledEffectInfo
 };
 RED4EXT_ASSERT_SIZE(CompiledEffectInfo, 0x68);
 } // namespace world
+using worldCompiledEffectInfo = world::CompiledEffectInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LoSFinderParams : IScriptable
 {
     static constexpr const char* NAME = "gameLoSFinderParams";
@@ -20,6 +21,7 @@ struct LoSFinderParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(LoSFinderParams, 0x70);
 } // namespace game
+using gameLoSFinderParams = game::LoSFinderParams;
 using LoSFinderParams = game::LoSFinderParams;
 } // namespace RED4ext
 

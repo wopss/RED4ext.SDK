@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct RigTagCondition : anim::IStaticCondition
 {
     static constexpr const char* NAME = "animRigTagCondition";
@@ -21,6 +22,7 @@ struct RigTagCondition : anim::IStaticCondition
 };
 RED4EXT_ASSERT_SIZE(RigTagCondition, 0x38);
 } // namespace anim
+using animRigTagCondition = anim::RigTagCondition;
 } // namespace RED4ext
 
 // clang-format on

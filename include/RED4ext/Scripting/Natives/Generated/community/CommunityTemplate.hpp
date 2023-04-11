@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace community { struct CommunityTemplateData; }
 
-namespace community { 
+namespace community
+{
 struct CommunityTemplate : CResource
 {
     static constexpr const char* NAME = "communityCommunityTemplate";
@@ -23,6 +24,7 @@ struct CommunityTemplate : CResource
 };
 RED4EXT_ASSERT_SIZE(CommunityTemplate, 0x50);
 } // namespace community
+using communityCommunityTemplate = community::CommunityTemplate;
 } // namespace RED4ext
 
 // clang-format on

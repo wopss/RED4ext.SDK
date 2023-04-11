@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct InputSocketId
 {
     static constexpr const char* NAME = "scnInputSocketId";
@@ -22,6 +23,7 @@ struct InputSocketId
 };
 RED4EXT_ASSERT_SIZE(InputSocketId, 0x8);
 } // namespace scn
+using scnInputSocketId = scn::InputSocketId;
 } // namespace RED4ext
 
 // clang-format on

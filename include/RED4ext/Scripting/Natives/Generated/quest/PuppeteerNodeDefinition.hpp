@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct PuppetsEffector; }
 
-namespace quest { 
+namespace quest
+{
 struct PuppeteerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questPuppeteerNodeDefinition";
@@ -25,6 +26,7 @@ struct PuppeteerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(PuppeteerNodeDefinition, 0x90);
 } // namespace quest
+using questPuppeteerNodeDefinition = quest::PuppeteerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

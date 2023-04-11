@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowPointOfNoReturnPrompt_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questShowPointOfNoReturnPrompt_NodeType";
@@ -19,6 +20,7 @@ struct ShowPointOfNoReturnPrompt_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ShowPointOfNoReturnPrompt_NodeType, 0x38);
 } // namespace quest
+using questShowPointOfNoReturnPrompt_NodeType = quest::ShowPointOfNoReturnPrompt_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SaveTransferRequestUpdate : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkSaveTransferRequestUpdate";
@@ -20,6 +21,7 @@ struct SaveTransferRequestUpdate : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(SaveTransferRequestUpdate, 0x38);
 } // namespace ink
+using inkSaveTransferRequestUpdate = ink::SaveTransferRequestUpdate;
 } // namespace RED4ext
 
 // clang-format on

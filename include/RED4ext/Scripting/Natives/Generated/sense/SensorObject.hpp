@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace sense { 
+namespace sense
+{
 struct SensorObject : ISerializable
 {
     static constexpr const char* NAME = "senseSensorObject";
@@ -33,6 +34,7 @@ struct SensorObject : ISerializable
 };
 RED4EXT_ASSERT_SIZE(SensorObject, 0xA70);
 } // namespace sense
+using senseSensorObject = sense::SensorObject;
 using SensorObject = sense::SensorObject;
 } // namespace RED4ext
 

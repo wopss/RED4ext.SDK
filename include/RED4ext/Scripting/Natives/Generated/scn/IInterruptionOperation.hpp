@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct IInterruptionOperation : ISerializable
 {
     static constexpr const char* NAME = "scnIInterruptionOperation";
@@ -19,6 +20,7 @@ struct IInterruptionOperation : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IInterruptionOperation, 0x30);
 } // namespace scn
+using scnIInterruptionOperation = scn::IInterruptionOperation;
 } // namespace RED4ext
 
 // clang-format on

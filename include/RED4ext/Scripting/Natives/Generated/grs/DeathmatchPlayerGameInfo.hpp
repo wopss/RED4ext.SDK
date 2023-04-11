@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace grs { 
+namespace grs
+{
 struct DeathmatchPlayerGameInfo
 {
     static constexpr const char* NAME = "grsDeathmatchPlayerGameInfo";
@@ -29,6 +30,7 @@ struct DeathmatchPlayerGameInfo
 };
 RED4EXT_ASSERT_SIZE(DeathmatchPlayerGameInfo, 0x28);
 } // namespace grs
+using grsDeathmatchPlayerGameInfo = grs::DeathmatchPlayerGameInfo;
 } // namespace RED4ext
 
 // clang-format on

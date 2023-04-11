@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct DialogLineEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnDialogLineEvent";
@@ -29,6 +30,7 @@ struct DialogLineEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(DialogLineEvent, 0x98);
 } // namespace scn
+using scnDialogLineEvent = scn::DialogLineEvent;
 } // namespace RED4ext
 
 // clang-format on

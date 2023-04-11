@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct OnScannableBraindanceClueEnabledEvent : red::Event
 {
     static constexpr const char* NAME = "gameOnScannableBraindanceClueEnabledEvent";
@@ -19,6 +20,7 @@ struct OnScannableBraindanceClueEnabledEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(OnScannableBraindanceClueEnabledEvent, 0x40);
 } // namespace game
+using gameOnScannableBraindanceClueEnabledEvent = game::OnScannableBraindanceClueEnabledEvent;
 using OnScannableBraindanceClueEnabledEvent = game::OnScannableBraindanceClueEnabledEvent;
 } // namespace RED4ext
 

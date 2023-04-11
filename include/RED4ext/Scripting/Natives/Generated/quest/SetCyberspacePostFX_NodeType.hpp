@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetCyberspacePostFX_NodeType : quest::IRenderFxManagerNodeType
 {
     static constexpr const char* NAME = "questSetCyberspacePostFX_NodeType";
@@ -28,6 +29,7 @@ struct SetCyberspacePostFX_NodeType : quest::IRenderFxManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetCyberspacePostFX_NodeType, 0x50);
 } // namespace quest
+using questSetCyberspacePostFX_NodeType = quest::SetCyberspacePostFX_NodeType;
 } // namespace RED4ext
 
 // clang-format on

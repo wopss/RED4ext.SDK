@@ -18,7 +18,8 @@
 
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events
+{
 struct AttachPropToWorld : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsAttachPropToWorld";
@@ -39,6 +40,7 @@ struct AttachPropToWorld : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(AttachPropToWorld, 0xB0);
 } // namespace scn::events
+using scneventsAttachPropToWorld = scn::events::AttachPropToWorld;
 } // namespace RED4ext
 
 // clang-format on

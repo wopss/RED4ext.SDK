@@ -20,7 +20,8 @@ namespace RED4ext
 struct DynamicTexture;
 namespace world { struct EnvironmentAreaParameters; }
 
-namespace ent { 
+namespace ent
+{
 struct RenderToTextureCameraComponent : ent::BaseCameraComponent
 {
     static constexpr const char* NAME = "entRenderToTextureCameraComponent";
@@ -50,6 +51,7 @@ struct RenderToTextureCameraComponent : ent::BaseCameraComponent
 };
 RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0x980);
 } // namespace ent
+using entRenderToTextureCameraComponent = ent::RenderToTextureCameraComponent;
 } // namespace RED4ext
 
 // clang-format on

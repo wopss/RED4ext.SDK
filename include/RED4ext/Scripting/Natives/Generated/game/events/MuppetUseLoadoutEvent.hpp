@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace game::data { struct CPOLoadoutBase_Record; }
 
-namespace game::events { 
+namespace game::events
+{
 struct MuppetUseLoadoutEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsMuppetUseLoadoutEvent";
@@ -23,6 +24,7 @@ struct MuppetUseLoadoutEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MuppetUseLoadoutEvent, 0x50);
 } // namespace game::events
+using gameeventsMuppetUseLoadoutEvent = game::events::MuppetUseLoadoutEvent;
 } // namespace RED4ext
 
 // clang-format on

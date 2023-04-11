@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior::tweak { 
+namespace AI::behavior::tweak
+{
 struct TargetHelper
 {
     static constexpr const char* NAME = "AIbehaviortweakTargetHelper";
@@ -19,6 +20,7 @@ struct TargetHelper
 };
 RED4EXT_ASSERT_SIZE(TargetHelper, 0x30);
 } // namespace AI::behavior::tweak
+using AIbehaviortweakTargetHelper = AI::behavior::tweak::TargetHelper;
 } // namespace RED4ext
 
 // clang-format on

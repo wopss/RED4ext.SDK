@@ -19,7 +19,8 @@ namespace RED4ext
 {
 namespace ink { struct TextureAtlas; }
 
-namespace ink { 
+namespace ink
+{
 struct ImageWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkImageWidget";
@@ -42,6 +43,7 @@ struct ImageWidget : ink::LeafWidget
 };
 RED4EXT_ASSERT_SIZE(ImageWidget, 0x330);
 } // namespace ink
+using inkImageWidget = ink::ImageWidget;
 using inkImage = ink::ImageWidget;
 } // namespace RED4ext
 

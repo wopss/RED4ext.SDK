@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SystemVariableExpressionDefinition : AI::behavior::PassiveExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorSystemVariableExpressionDefinition";
@@ -22,6 +23,7 @@ struct SystemVariableExpressionDefinition : AI::behavior::PassiveExpressionDefin
 };
 RED4EXT_ASSERT_SIZE(SystemVariableExpressionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorSystemVariableExpressionDefinition = AI::behavior::SystemVariableExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

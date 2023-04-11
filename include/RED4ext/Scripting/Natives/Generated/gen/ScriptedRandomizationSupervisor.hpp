@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gen { 
+namespace gen
+{
 struct ScriptedRandomizationSupervisor : gen::IRandomizationSupervisor
 {
     static constexpr const char* NAME = "genScriptedRandomizationSupervisor";
@@ -19,6 +20,7 @@ struct ScriptedRandomizationSupervisor : gen::IRandomizationSupervisor
 };
 RED4EXT_ASSERT_SIZE(ScriptedRandomizationSupervisor, 0x40);
 } // namespace gen
+using genScriptedRandomizationSupervisor = gen::ScriptedRandomizationSupervisor;
 using ScriptedRandomizationSupervisor = gen::ScriptedRandomizationSupervisor;
 } // namespace RED4ext
 

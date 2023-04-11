@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct BaseDrivingParameters_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataBaseDrivingParameters_Record";
@@ -20,6 +21,7 @@ struct BaseDrivingParameters_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(BaseDrivingParameters_Record, 0x68);
 } // namespace game::data
+using gamedataBaseDrivingParameters_Record = game::data::BaseDrivingParameters_Record;
 using BaseDrivingParameters_Record = game::data::BaseDrivingParameters_Record;
 } // namespace RED4ext
 

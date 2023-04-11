@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct UseSceneWorkspotParamsV1 : quest::UseWorkspotParamsV1
 {
     static constexpr const char* NAME = "scnUseSceneWorkspotParamsV1";
@@ -26,6 +27,7 @@ struct UseSceneWorkspotParamsV1 : quest::UseWorkspotParamsV1
 };
 RED4EXT_ASSERT_SIZE(UseSceneWorkspotParamsV1, 0x100);
 } // namespace scn
+using scnUseSceneWorkspotParamsV1 = scn::UseSceneWorkspotParamsV1;
 } // namespace RED4ext
 
 // clang-format on

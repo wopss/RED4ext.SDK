@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PerformerSymbol
 {
     static constexpr const char* NAME = "scnPerformerSymbol";
@@ -25,6 +26,7 @@ struct PerformerSymbol
 };
 RED4EXT_ASSERT_SIZE(PerformerSymbol, 0x48);
 } // namespace scn
+using scnPerformerSymbol = scn::PerformerSymbol;
 } // namespace RED4ext
 
 // clang-format on

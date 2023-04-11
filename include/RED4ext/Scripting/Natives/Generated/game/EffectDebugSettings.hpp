@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectDebugSettings
 {
     static constexpr const char* NAME = "gameEffectDebugSettings";
@@ -23,6 +24,7 @@ struct EffectDebugSettings
 };
 RED4EXT_ASSERT_SIZE(EffectDebugSettings, 0xC);
 } // namespace game
+using gameEffectDebugSettings = game::EffectDebugSettings;
 } // namespace RED4ext
 
 // clang-format on

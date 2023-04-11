@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_SimpleSpline : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_SimpleSpline";
@@ -31,6 +32,7 @@ struct AnimNode_SimpleSpline : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_SimpleSpline, 0xE8);
 } // namespace anim
+using animAnimNode_SimpleSpline = anim::AnimNode_SimpleSpline;
 } // namespace RED4ext
 
 // clang-format on

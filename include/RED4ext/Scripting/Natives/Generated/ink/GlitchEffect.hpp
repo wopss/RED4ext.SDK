@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GlitchEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkGlitchEffect";
@@ -25,6 +26,7 @@ struct GlitchEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(GlitchEffect, 0x80);
 } // namespace ink
+using inkGlitchEffect = ink::GlitchEffect;
 } // namespace RED4ext
 
 // clang-format on

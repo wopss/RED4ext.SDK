@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ink { struct UserData; }
 
-namespace quest { 
+namespace quest
+{
 struct SwitchToScenario_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSwitchToScenario_NodeType";
@@ -28,6 +29,7 @@ struct SwitchToScenario_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SwitchToScenario_NodeType, 0x60);
 } // namespace quest
+using questSwitchToScenario_NodeType = quest::SwitchToScenario_NodeType;
 } // namespace RED4ext
 
 // clang-format on

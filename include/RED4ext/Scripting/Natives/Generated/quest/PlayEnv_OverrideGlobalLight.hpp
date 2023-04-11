@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PlayEnv_OverrideGlobalLight : quest::IEnvironmentManagerNodeType
 {
     static constexpr const char* NAME = "questPlayEnv_OverrideGlobalLight";
@@ -21,6 +22,7 @@ struct PlayEnv_OverrideGlobalLight : quest::IEnvironmentManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PlayEnv_OverrideGlobalLight, 0x60);
 } // namespace quest
+using questPlayEnv_OverrideGlobalLight = quest::PlayEnv_OverrideGlobalLight;
 } // namespace RED4ext
 
 // clang-format on

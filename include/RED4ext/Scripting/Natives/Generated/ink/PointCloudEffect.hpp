@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct PointCloudEffect : ink::IEffect
 {
     static constexpr const char* NAME = "inkPointCloudEffect";
@@ -27,6 +28,7 @@ struct PointCloudEffect : ink::IEffect
 };
 RED4EXT_ASSERT_SIZE(PointCloudEffect, 0x88);
 } // namespace ink
+using inkPointCloudEffect = ink::PointCloudEffect;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct FastExitCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workFastExitCommandData";
@@ -20,6 +21,7 @@ struct FastExitCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(FastExitCommandData, 0x20);
 } // namespace work
+using workFastExitCommandData = work::FastExitCommandData;
 } // namespace RED4ext
 
 // clang-format on

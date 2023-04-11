@@ -20,7 +20,8 @@ namespace RED4ext
 {
 struct CMesh;
 
-namespace ent { 
+namespace ent
+{
 struct MeshComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entMeshComponent";
@@ -51,6 +52,7 @@ struct MeshComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(MeshComponent, 0x1E0);
 } // namespace ent
+using entMeshComponent = ent::MeshComponent;
 using MeshComponent = ent::MeshComponent;
 } // namespace RED4ext
 

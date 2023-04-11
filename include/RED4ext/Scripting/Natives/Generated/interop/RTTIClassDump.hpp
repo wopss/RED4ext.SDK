@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace interop { 
+namespace interop
+{
 struct RTTIClassDump
 {
     static constexpr const char* NAME = "interopRTTIClassDump";
@@ -26,6 +27,7 @@ struct RTTIClassDump
 };
 RED4EXT_ASSERT_SIZE(RTTIClassDump, 0x40);
 } // namespace interop
+using interopRTTIClassDump = interop::RTTIClassDump;
 } // namespace RED4ext
 
 // clang-format on

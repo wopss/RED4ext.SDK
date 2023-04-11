@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct EntityReuseEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AIEntityReuseEvent";
@@ -21,6 +22,7 @@ struct EntityReuseEvent : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(EntityReuseEvent, 0x58);
 } // namespace AI
+using AIEntityReuseEvent = AI::EntityReuseEvent;
 } // namespace RED4ext
 
 // clang-format on

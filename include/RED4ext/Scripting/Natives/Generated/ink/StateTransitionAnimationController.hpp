@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StateTransitionAnimationController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkStateTransitionAnimationController";
@@ -24,6 +25,7 @@ struct StateTransitionAnimationController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(StateTransitionAnimationController, 0xA0);
 } // namespace ink
+using inkStateTransitionAnimationController = ink::StateTransitionAnimationController;
 } // namespace RED4ext
 
 // clang-format on

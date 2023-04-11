@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_NoPuppet : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_NoPuppet";
@@ -19,6 +20,7 @@ struct EffectObjectFilter_NoPuppet : game::EffectObjectGroupFilter
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_NoPuppet, 0x40);
 } // namespace game
+using gameEffectObjectFilter_NoPuppet = game::EffectObjectFilter_NoPuppet;
 } // namespace RED4ext
 
 // clang-format on

@@ -20,7 +20,8 @@ using PersistentID = game::PersistentID;
 
 namespace RED4ext
 {
-namespace game {
+namespace game
+{
 struct PersistentID
 {
     static constexpr const char* NAME = "gamePersistentID";
@@ -31,6 +32,7 @@ struct PersistentID
 };
 RED4EXT_ASSERT_SIZE(PersistentID, 0x10);
 } // namespace game
+using gamePersistentID = game::PersistentID;
 using PersistentID = game::PersistentID;
 } // namespace RED4ext
 */

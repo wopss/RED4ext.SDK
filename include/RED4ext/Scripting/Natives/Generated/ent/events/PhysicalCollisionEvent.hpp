@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace ent::events { 
+namespace ent::events
+{
 struct PhysicalCollisionEvent : red::Event
 {
     static constexpr const char* NAME = "enteventsPhysicalCollisionEvent";
@@ -31,6 +32,7 @@ struct PhysicalCollisionEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(PhysicalCollisionEvent, 0xB0);
 } // namespace ent::events
+using enteventsPhysicalCollisionEvent = ent::events::PhysicalCollisionEvent;
 using PhysicalCollisionEvent = ent::events::PhysicalCollisionEvent;
 } // namespace RED4ext
 

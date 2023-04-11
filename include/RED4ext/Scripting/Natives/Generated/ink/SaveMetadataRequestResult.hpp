@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SaveMetadataRequestResult : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkSaveMetadataRequestResult";
@@ -20,6 +21,7 @@ struct SaveMetadataRequestResult : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(SaveMetadataRequestResult, 0x38);
 } // namespace ink
+using inkSaveMetadataRequestResult = ink::SaveMetadataRequestResult;
 } // namespace RED4ext
 
 // clang-format on

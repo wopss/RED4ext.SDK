@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StepperController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkStepperController";
@@ -34,6 +35,7 @@ struct StepperController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(StepperController, 0x158);
 } // namespace ink
+using inkStepperController = ink::StepperController;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace move { 
+namespace move
+{
 struct CustomMoveEvent : game::ActionEvent
 {
     static constexpr const char* NAME = "moveCustomMoveEvent";
@@ -21,6 +22,7 @@ struct CustomMoveEvent : game::ActionEvent
 };
 RED4EXT_ASSERT_SIZE(CustomMoveEvent, 0x70);
 } // namespace move
+using moveCustomMoveEvent = move::CustomMoveEvent;
 using CustomMoveEvent = move::CustomMoveEvent;
 } // namespace RED4ext
 

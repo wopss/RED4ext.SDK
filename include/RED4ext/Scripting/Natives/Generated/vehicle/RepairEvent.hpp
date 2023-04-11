@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct RepairEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleRepairEvent";
@@ -19,6 +20,7 @@ struct RepairEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(RepairEvent, 0x40);
 } // namespace vehicle
+using vehicleRepairEvent = vehicle::RepairEvent;
 using VehicleRepairEvent = vehicle::RepairEvent;
 } // namespace RED4ext
 

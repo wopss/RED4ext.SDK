@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct QuestsHelper : quest::IQuestsHelper
 {
     static constexpr const char* NAME = "questQuestsHelper";
@@ -20,6 +21,7 @@ struct QuestsHelper : quest::IQuestsHelper
 };
 RED4EXT_ASSERT_SIZE(QuestsHelper, 0x190);
 } // namespace quest
+using questQuestsHelper = quest::QuestsHelper;
 } // namespace RED4ext
 
 // clang-format on

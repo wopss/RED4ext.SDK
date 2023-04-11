@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace ink { 
+namespace ink
+{
 struct StepperData
 {
     static constexpr const char* NAME = "inkStepperData";
@@ -25,6 +26,7 @@ struct StepperData
 };
 RED4EXT_ASSERT_SIZE(StepperData, 0x60);
 } // namespace ink
+using inkStepperData = ink::StepperData;
 } // namespace RED4ext
 
 // clang-format on

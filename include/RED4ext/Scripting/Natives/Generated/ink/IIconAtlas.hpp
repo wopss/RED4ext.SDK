@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct IIconAtlas : IScriptable
 {
     static constexpr const char* NAME = "inkIIconAtlas";
@@ -19,6 +20,7 @@ struct IIconAtlas : IScriptable
 };
 RED4EXT_ASSERT_SIZE(IIconAtlas, 0x40);
 } // namespace ink
+using inkIIconAtlas = ink::IIconAtlas;
 } // namespace RED4ext
 
 // clang-format on

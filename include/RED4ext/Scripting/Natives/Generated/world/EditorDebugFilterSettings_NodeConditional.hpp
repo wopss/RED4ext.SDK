@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct EditorDebugFilterSettings_NodeConditional : world::EditorDebugFilterSettings
 {
     static constexpr const char* NAME = "worldEditorDebugFilterSettings_NodeConditional";
@@ -23,6 +24,7 @@ struct EditorDebugFilterSettings_NodeConditional : world::EditorDebugFilterSetti
 };
 RED4EXT_ASSERT_SIZE(EditorDebugFilterSettings_NodeConditional, 0x38);
 } // namespace world
+using worldEditorDebugFilterSettings_NodeConditional = world::EditorDebugFilterSettings_NodeConditional;
 } // namespace RED4ext
 
 // clang-format on

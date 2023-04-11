@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace garment { 
+namespace garment
+{
 struct HiddenTrianglesRemovalParams
 {
     static constexpr const char* NAME = "garmentHiddenTrianglesRemovalParams";
@@ -24,6 +25,7 @@ struct HiddenTrianglesRemovalParams
 };
 RED4EXT_ASSERT_SIZE(HiddenTrianglesRemovalParams, 0x10);
 } // namespace garment
+using garmentHiddenTrianglesRemovalParams = garment::HiddenTrianglesRemovalParams;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TransformAnimation_BreakEffectLoop : game::TransformAnimation_Effects
 {
     static constexpr const char* NAME = "gameTransformAnimation_BreakEffectLoop";
@@ -21,6 +22,7 @@ struct TransformAnimation_BreakEffectLoop : game::TransformAnimation_Effects
 };
 RED4EXT_ASSERT_SIZE(TransformAnimation_BreakEffectLoop, 0x38);
 } // namespace game
+using gameTransformAnimation_BreakEffectLoop = game::TransformAnimation_BreakEffectLoop;
 } // namespace RED4ext
 
 // clang-format on

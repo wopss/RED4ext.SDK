@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct HandbrakeFrictionModifier_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataHandbrakeFrictionModifier_Record";
@@ -20,6 +21,7 @@ struct HandbrakeFrictionModifier_Record : game::data::DriveHelper_Record
 };
 RED4EXT_ASSERT_SIZE(HandbrakeFrictionModifier_Record, 0x60);
 } // namespace game::data
+using gamedataHandbrakeFrictionModifier_Record = game::data::HandbrakeFrictionModifier_Record;
 using HandbrakeFrictionModifier_Record = game::data::HandbrakeFrictionModifier_Record;
 } // namespace RED4ext
 

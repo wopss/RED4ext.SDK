@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct TargetTrackerComponent; }
 
-namespace AI { 
+namespace AI
+{
 struct RemovedAsHostileThreat : AI::AIEvent
 {
     static constexpr const char* NAME = "AIRemovedAsHostileThreat";
@@ -25,6 +26,7 @@ struct RemovedAsHostileThreat : AI::AIEvent
 };
 RED4EXT_ASSERT_SIZE(RemovedAsHostileThreat, 0x68);
 } // namespace AI
+using AIRemovedAsHostileThreat = AI::RemovedAsHostileThreat;
 using RemovedAsHostileThreat = AI::RemovedAsHostileThreat;
 } // namespace RED4ext
 

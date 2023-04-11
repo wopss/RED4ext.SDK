@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct LandingFxPackage_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataLandingFxPackage_Record";
@@ -20,6 +21,7 @@ struct LandingFxPackage_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(LandingFxPackage_Record, 0x50);
 } // namespace game::data
+using gamedataLandingFxPackage_Record = game::data::LandingFxPackage_Record;
 using LandingFxPackage_Record = game::data::LandingFxPackage_Record;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vg { 
+namespace vg
+{
 struct VectorGraphicShape_Circle : vg::BaseVectorGraphicShape
 {
     static constexpr const char* NAME = "vgVectorGraphicShape_Circle";
@@ -21,6 +22,7 @@ struct VectorGraphicShape_Circle : vg::BaseVectorGraphicShape
 };
 RED4EXT_ASSERT_SIZE(VectorGraphicShape_Circle, 0xD0);
 } // namespace vg
+using vgVectorGraphicShape_Circle = vg::VectorGraphicShape_Circle;
 } // namespace RED4ext
 
 // clang-format on

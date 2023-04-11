@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TogglePrefabVariant_NodeTypeParams
 {
     static constexpr const char* NAME = "questTogglePrefabVariant_NodeTypeParams";
@@ -23,6 +24,7 @@ struct TogglePrefabVariant_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(TogglePrefabVariant_NodeTypeParams, 0x18);
 } // namespace quest
+using questTogglePrefabVariant_NodeTypeParams = quest::TogglePrefabVariant_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

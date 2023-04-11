@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace scn { 
+namespace scn
+{
 struct BraindancePlaying_ConditionType : scn::IBraindanceConditionType
 {
     static constexpr const char* NAME = "scnBraindancePlaying_ConditionType";
@@ -29,6 +30,7 @@ struct BraindancePlaying_ConditionType : scn::IBraindanceConditionType
 };
 RED4EXT_ASSERT_SIZE(BraindancePlaying_ConditionType, 0x50);
 } // namespace scn
+using scnBraindancePlaying_ConditionType = scn::BraindancePlaying_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

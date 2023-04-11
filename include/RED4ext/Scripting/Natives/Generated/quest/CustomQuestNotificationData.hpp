@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct CustomQuestNotificationData
 {
     static constexpr const char* NAME = "questCustomQuestNotificationData";
@@ -24,6 +25,7 @@ struct CustomQuestNotificationData
 };
 RED4EXT_ASSERT_SIZE(CustomQuestNotificationData, 0x68);
 } // namespace quest
+using questCustomQuestNotificationData = quest::CustomQuestNotificationData;
 using CustomQuestNotificationData = quest::CustomQuestNotificationData;
 } // namespace RED4ext
 

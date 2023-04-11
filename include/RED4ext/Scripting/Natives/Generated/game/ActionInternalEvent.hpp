@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ActionInternalEvent : IScriptable
 {
     static constexpr const char* NAME = "gameActionInternalEvent";
@@ -19,6 +20,7 @@ struct ActionInternalEvent : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ActionInternalEvent, 0x40);
 } // namespace game
+using gameActionInternalEvent = game::ActionInternalEvent;
 using ActionInternalEvent = game::ActionInternalEvent;
 } // namespace RED4ext
 

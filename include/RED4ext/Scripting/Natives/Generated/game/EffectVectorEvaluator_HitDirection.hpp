@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectVectorEvaluator_HitDirection : game::EffectVectorEvaluator
 {
     static constexpr const char* NAME = "gameEffectVectorEvaluator_HitDirection";
@@ -19,6 +20,7 @@ struct EffectVectorEvaluator_HitDirection : game::EffectVectorEvaluator
 };
 RED4EXT_ASSERT_SIZE(EffectVectorEvaluator_HitDirection, 0x38);
 } // namespace game
+using gameEffectVectorEvaluator_HitDirection = game::EffectVectorEvaluator_HitDirection;
 } // namespace RED4ext
 
 // clang-format on

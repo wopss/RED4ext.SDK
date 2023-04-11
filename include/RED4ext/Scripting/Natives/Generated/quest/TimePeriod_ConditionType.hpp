@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TimePeriod_ConditionType : quest::ITimeConditionType
 {
     static constexpr const char* NAME = "questTimePeriod_ConditionType";
@@ -22,6 +23,7 @@ struct TimePeriod_ConditionType : quest::ITimeConditionType
 };
 RED4EXT_ASSERT_SIZE(TimePeriod_ConditionType, 0x40);
 } // namespace quest
+using questTimePeriod_ConditionType = quest::TimePeriod_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

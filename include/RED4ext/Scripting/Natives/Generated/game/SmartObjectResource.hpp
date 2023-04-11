@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct SmartObjectResource : CResource
 {
     static constexpr const char* NAME = "gameSmartObjectResource";
@@ -29,6 +30,7 @@ struct SmartObjectResource : CResource
 };
 RED4EXT_ASSERT_SIZE(SmartObjectResource, 0x88);
 } // namespace game
+using gameSmartObjectResource = game::SmartObjectResource;
 } // namespace RED4ext
 
 // clang-format on

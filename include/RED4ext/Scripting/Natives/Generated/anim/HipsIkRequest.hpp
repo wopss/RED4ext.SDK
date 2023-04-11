@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct HipsIkRequest
 {
     static constexpr const char* NAME = "animHipsIkRequest";
@@ -26,6 +27,7 @@ struct HipsIkRequest
 };
 RED4EXT_ASSERT_SIZE(HipsIkRequest, 0x78);
 } // namespace anim
+using animHipsIkRequest = anim::HipsIkRequest;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct VehicleForbiddenAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 {
     static constexpr const char* NAME = "worldVehicleForbiddenAreaNotifierInstance";
@@ -20,6 +21,7 @@ struct VehicleForbiddenAreaNotifierInstance : world::ITriggerAreaNotiferInstance
 };
 RED4EXT_ASSERT_SIZE(VehicleForbiddenAreaNotifierInstance, 0xC0);
 } // namespace world
+using worldVehicleForbiddenAreaNotifierInstance = world::VehicleForbiddenAreaNotifierInstance;
 } // namespace RED4ext
 
 // clang-format on

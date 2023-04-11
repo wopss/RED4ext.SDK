@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct JournalOnscreensStructuredGroup : IScriptable
 {
     static constexpr const char* NAME = "gameJournalOnscreensStructuredGroup";
@@ -20,6 +21,7 @@ struct JournalOnscreensStructuredGroup : IScriptable
 };
 RED4EXT_ASSERT_SIZE(JournalOnscreensStructuredGroup, 0x58);
 } // namespace game
+using gameJournalOnscreensStructuredGroup = game::JournalOnscreensStructuredGroup;
 using JournalOnscreensStructuredGroup = game::JournalOnscreensStructuredGroup;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct PlaylistTrackEventStruct
 {
     static constexpr const char* NAME = "audioPlaylistTrackEventStruct";
@@ -21,6 +22,7 @@ struct PlaylistTrackEventStruct
 };
 RED4EXT_ASSERT_SIZE(PlaylistTrackEventStruct, 0x10);
 } // namespace audio
+using audioPlaylistTrackEventStruct = audio::PlaylistTrackEventStruct;
 } // namespace RED4ext
 
 // clang-format on

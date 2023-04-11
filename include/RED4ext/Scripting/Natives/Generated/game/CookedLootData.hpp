@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CookedLootData : ISerializable
 {
     static constexpr const char* NAME = "gameCookedLootData";
@@ -23,6 +24,7 @@ struct CookedLootData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(CookedLootData, 0x48);
 } // namespace game
+using gameCookedLootData = game::CookedLootData;
 } // namespace RED4ext
 
 // clang-format on

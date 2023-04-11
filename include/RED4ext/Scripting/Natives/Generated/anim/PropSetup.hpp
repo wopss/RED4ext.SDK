@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct PropSetup
 {
     static constexpr const char* NAME = "animPropSetup";
@@ -19,6 +20,7 @@ struct PropSetup
 };
 RED4EXT_ASSERT_SIZE(PropSetup, 0x1);
 } // namespace anim
+using animPropSetup = anim::PropSetup;
 } // namespace RED4ext
 
 // clang-format on

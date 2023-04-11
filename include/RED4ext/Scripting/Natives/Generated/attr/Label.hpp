@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Label : attr::Attribute
 {
     static constexpr const char* NAME = "attrLabel";
@@ -21,6 +22,7 @@ struct Label : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(Label, 0x50);
 } // namespace attr
+using attrLabel = attr::Label;
 } // namespace RED4ext
 
 // clang-format on

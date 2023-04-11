@@ -17,7 +17,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace game { 
+namespace game
+{
 struct JournalPointOfInterestMappin : game::JournalEntry
 {
     static constexpr const char* NAME = "gameJournalPointOfInterestMappin";
@@ -35,6 +36,7 @@ struct JournalPointOfInterestMappin : game::JournalEntry
 };
 RED4EXT_ASSERT_SIZE(JournalPointOfInterestMappin, 0xF8);
 } // namespace game
+using gameJournalPointOfInterestMappin = game::JournalPointOfInterestMappin;
 using JournalPointOfInterestMappin = game::JournalPointOfInterestMappin;
 } // namespace RED4ext
 

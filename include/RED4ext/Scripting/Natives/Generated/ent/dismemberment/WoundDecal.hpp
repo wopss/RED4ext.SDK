@@ -14,7 +14,8 @@ namespace RED4ext
 {
 struct IMaterial;
 
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct WoundDecal
 {
     static constexpr const char* NAME = "entdismembermentWoundDecal";
@@ -31,6 +32,7 @@ struct WoundDecal
 };
 RED4EXT_ASSERT_SIZE(WoundDecal, 0x30);
 } // namespace ent::dismemberment
+using entdismembermentWoundDecal = ent::dismemberment::WoundDecal;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_StreamingPriority : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_StreamingPriority";
@@ -19,6 +20,7 @@ struct DebugColoring_StreamingPriority : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_StreamingPriority, 0x30);
 } // namespace world
+using worldDebugColoring_StreamingPriority = world::DebugColoring_StreamingPriority;
 } // namespace RED4ext
 
 // clang-format on

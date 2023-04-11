@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct SummonLogic
 {
     static constexpr const char* NAME = "vehicleSummonLogic";
@@ -19,6 +20,7 @@ struct SummonLogic
 };
 RED4EXT_ASSERT_SIZE(SummonLogic, 0xA8);
 } // namespace vehicle
+using vehicleSummonLogic = vehicle::SummonLogic;
 using SummonLogic = vehicle::SummonLogic;
 } // namespace RED4ext
 

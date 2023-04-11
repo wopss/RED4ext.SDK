@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct VehiclePanicCommand : AI::VehicleCommand
 {
     static constexpr const char* NAME = "AIVehiclePanicCommand";
@@ -19,6 +20,7 @@ struct VehiclePanicCommand : AI::VehicleCommand
 };
 RED4EXT_ASSERT_SIZE(VehiclePanicCommand, 0x68);
 } // namespace AI
+using AIVehiclePanicCommand = AI::VehiclePanicCommand;
 } // namespace RED4ext
 
 // clang-format on

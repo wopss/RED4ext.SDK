@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct UnableToStartPanicDriving : red::Event
 {
     static constexpr const char* NAME = "vehicleUnableToStartPanicDriving";
@@ -19,6 +20,7 @@ struct UnableToStartPanicDriving : red::Event
 };
 RED4EXT_ASSERT_SIZE(UnableToStartPanicDriving, 0x40);
 } // namespace vehicle
+using vehicleUnableToStartPanicDriving = vehicle::UnableToStartPanicDriving;
 using VehicleUnableToStartPanicDriving = vehicle::UnableToStartPanicDriving;
 } // namespace RED4ext
 

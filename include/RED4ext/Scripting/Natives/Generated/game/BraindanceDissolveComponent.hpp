@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct BraindanceDissolveComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameBraindanceDissolveComponent";
@@ -22,6 +23,7 @@ struct BraindanceDissolveComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(BraindanceDissolveComponent, 0xC8);
 } // namespace game
+using gameBraindanceDissolveComponent = game::BraindanceDissolveComponent;
 using BraindanceDissolveComponent = game::BraindanceDissolveComponent;
 } // namespace RED4ext
 

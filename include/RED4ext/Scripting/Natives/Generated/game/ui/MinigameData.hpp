@@ -15,7 +15,8 @@ namespace game::data { struct MiniGame_AllSymbols_Record; }
 namespace game::data { struct MiniGame_Trap_Record; }
 namespace game::ui { struct MinigameGenerationRule; }
 
-namespace game::ui { 
+namespace game::ui
+{
 struct MinigameData
 {
     static constexpr const char* NAME = "gameuiMinigameData";
@@ -33,6 +34,7 @@ struct MinigameData
 };
 RED4EXT_ASSERT_SIZE(MinigameData, 0x48);
 } // namespace game::ui
+using gameuiMinigameData = game::ui::MinigameData;
 using MinigameData = game::ui::MinigameData;
 } // namespace RED4ext
 

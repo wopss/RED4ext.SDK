@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct InCrowd : red::Event
 {
     static constexpr const char* NAME = "gameInCrowd";
@@ -19,6 +20,7 @@ struct InCrowd : red::Event
 };
 RED4EXT_ASSERT_SIZE(InCrowd, 0x40);
 } // namespace game
+using gameInCrowd = game::InCrowd;
 using InCrowd = game::InCrowd;
 } // namespace RED4ext
 

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct TOMLBaseValue : ISerializable
 {
     static constexpr const char* NAME = "redTOMLBaseValue";
@@ -20,6 +21,7 @@ struct TOMLBaseValue : ISerializable
 };
 RED4EXT_ASSERT_SIZE(TOMLBaseValue, 0x50);
 } // namespace red
+using redTOMLBaseValue = red::TOMLBaseValue;
 } // namespace RED4ext
 
 // clang-format on

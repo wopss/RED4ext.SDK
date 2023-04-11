@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace ent { struct Entity; }
 
-namespace game { 
+namespace game
+{
 struct RegisterNewAbilityCooldownRequest
 {
     static constexpr const char* NAME = "gameRegisterNewAbilityCooldownRequest";
@@ -34,6 +35,7 @@ struct RegisterNewAbilityCooldownRequest
 };
 RED4EXT_ASSERT_SIZE(RegisterNewAbilityCooldownRequest, 0x48);
 } // namespace game
+using gameRegisterNewAbilityCooldownRequest = game::RegisterNewAbilityCooldownRequest;
 using RegisterNewAbilityCooldownRequest = game::RegisterNewAbilityCooldownRequest;
 } // namespace RED4ext
 

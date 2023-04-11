@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle
+{
 struct CameraManagerFT : vehicle::CameraManager
 {
     static constexpr const char* NAME = "vehicleCameraManagerFT";
@@ -19,6 +20,7 @@ struct CameraManagerFT : vehicle::CameraManager
 };
 RED4EXT_ASSERT_SIZE(CameraManagerFT, 0x370);
 } // namespace vehicle
+using vehicleCameraManagerFT = vehicle::CameraManagerFT;
 using VehicleCameraManagerFT = vehicle::CameraManagerFT;
 } // namespace RED4ext
 

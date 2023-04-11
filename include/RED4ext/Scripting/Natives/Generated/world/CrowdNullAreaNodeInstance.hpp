@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct CrowdNullAreaNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "worldCrowdNullAreaNodeInstance";
@@ -19,6 +20,7 @@ struct CrowdNullAreaNodeInstance : world::AreaShapeNodeInstance
 };
 RED4EXT_ASSERT_SIZE(CrowdNullAreaNodeInstance, 0xD0);
 } // namespace world
+using worldCrowdNullAreaNodeInstance = world::CrowdNullAreaNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

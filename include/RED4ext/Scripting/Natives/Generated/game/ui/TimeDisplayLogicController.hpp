@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TimeDisplayLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTimeDisplayLogicController";
@@ -24,6 +25,7 @@ struct TimeDisplayLogicController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(TimeDisplayLogicController, 0xC0);
 } // namespace game::ui
+using gameuiTimeDisplayLogicController = game::ui::TimeDisplayLogicController;
 } // namespace RED4ext
 
 // clang-format on

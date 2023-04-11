@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace anim { struct FacialCustomizationSet; }
 
-namespace ent { 
+namespace ent
+{
 struct FacialCustomizationComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entFacialCustomizationComponent";
@@ -32,6 +33,7 @@ struct FacialCustomizationComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(FacialCustomizationComponent, 0x148);
 } // namespace ent
+using entFacialCustomizationComponent = ent::FacialCustomizationComponent;
 } // namespace RED4ext
 
 // clang-format on

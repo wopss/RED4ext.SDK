@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace audio { struct AudioFoliageMaterialDictionary; }
 
-namespace audio { 
+namespace audio
+{
 struct AudioFoliageMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioAudioFoliageMetadata";
@@ -33,6 +34,7 @@ struct AudioFoliageMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(AudioFoliageMetadata, 0x78);
 } // namespace audio
+using audioAudioFoliageMetadata = audio::AudioFoliageMetadata;
 } // namespace RED4ext
 
 // clang-format on

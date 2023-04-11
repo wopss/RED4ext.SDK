@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct TriggerIconGeneration_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questTriggerIconGeneration_NodeType";
@@ -19,6 +20,7 @@ struct TriggerIconGeneration_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(TriggerIconGeneration_NodeType, 0x38);
 } // namespace quest
+using questTriggerIconGeneration_NodeType = quest::TriggerIconGeneration_NodeType;
 } // namespace RED4ext
 
 // clang-format on

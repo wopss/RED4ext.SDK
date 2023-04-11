@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace scn { struct SceneResource; }
 
-namespace scn { 
+namespace scn
+{
 struct InterestingConversation_DEPRECATED
 {
     static constexpr const char* NAME = "scnInterestingConversation_DEPRECATED";
@@ -22,6 +23,7 @@ struct InterestingConversation_DEPRECATED
 };
 RED4EXT_ASSERT_SIZE(InterestingConversation_DEPRECATED, 0x8);
 } // namespace scn
+using scnInterestingConversation_DEPRECATED = scn::InterestingConversation_DEPRECATED;
 } // namespace RED4ext
 
 // clang-format on

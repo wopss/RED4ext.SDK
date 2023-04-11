@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemSmartObjects : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemSmartObjects";
@@ -20,6 +21,7 @@ struct RuntimeSystemSmartObjects : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemSmartObjects, 0x2F8);
 } // namespace world
+using worldRuntimeSystemSmartObjects = world::RuntimeSystemSmartObjects;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct ToggleScenario_InterruptionScenarioOperation : scn::IInterruptionScenarioOperation
 {
     static constexpr const char* NAME = "scnToggleScenario_InterruptionScenarioOperation";
@@ -21,6 +22,7 @@ struct ToggleScenario_InterruptionScenarioOperation : scn::IInterruptionScenario
 };
 RED4EXT_ASSERT_SIZE(ToggleScenario_InterruptionScenarioOperation, 0x38);
 } // namespace scn
+using scnToggleScenario_InterruptionScenarioOperation = scn::ToggleScenario_InterruptionScenarioOperation;
 } // namespace RED4ext
 
 // clang-format on

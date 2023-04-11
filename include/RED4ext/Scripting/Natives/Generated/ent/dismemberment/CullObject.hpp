@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct CullObject
 {
     static constexpr const char* NAME = "entdismembermentCullObject";
@@ -31,6 +32,7 @@ struct CullObject
 };
 RED4EXT_ASSERT_SIZE(CullObject, 0x50);
 } // namespace ent::dismemberment
+using entdismembermentCullObject = ent::dismemberment::CullObject;
 } // namespace RED4ext
 
 // clang-format on

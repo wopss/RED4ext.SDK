@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CameraLocation
 {
     static constexpr const char* NAME = "gameCameraLocation";
@@ -22,6 +23,7 @@ struct CameraLocation
 };
 RED4EXT_ASSERT_SIZE(CameraLocation, 0x18);
 } // namespace game
+using gameCameraLocation = game::CameraLocation;
 } // namespace RED4ext
 
 // clang-format on

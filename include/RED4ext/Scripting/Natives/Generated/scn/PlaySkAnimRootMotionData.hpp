@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PlaySkAnimRootMotionData
 {
     static constexpr const char* NAME = "scnPlaySkAnimRootMotionData";
@@ -39,6 +40,7 @@ struct PlaySkAnimRootMotionData
 };
 RED4EXT_ASSERT_SIZE(PlaySkAnimRootMotionData, 0xB0);
 } // namespace scn
+using scnPlaySkAnimRootMotionData = scn::PlaySkAnimRootMotionData;
 } // namespace RED4ext
 
 // clang-format on

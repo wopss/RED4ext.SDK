@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MenuState_ConditionType : quest::IUIConditionType
 {
     static constexpr const char* NAME = "questMenuState_ConditionType";
@@ -22,6 +23,7 @@ struct MenuState_ConditionType : quest::IUIConditionType
 };
 RED4EXT_ASSERT_SIZE(MenuState_ConditionType, 0x40);
 } // namespace quest
+using questMenuState_ConditionType = quest::MenuState_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

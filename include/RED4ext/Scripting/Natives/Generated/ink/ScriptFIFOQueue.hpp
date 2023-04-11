@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScriptFIFOQueue : IScriptable
 {
     static constexpr const char* NAME = "inkScriptFIFOQueue";
@@ -20,6 +21,7 @@ struct ScriptFIFOQueue : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptFIFOQueue, 0x60);
 } // namespace ink
+using inkScriptFIFOQueue = ink::ScriptFIFOQueue;
 using inkFIFOQueue = ink::ScriptFIFOQueue;
 } // namespace RED4ext
 

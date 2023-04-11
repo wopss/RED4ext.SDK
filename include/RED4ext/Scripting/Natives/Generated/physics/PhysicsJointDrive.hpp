@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct PhysicsJointDrive
 {
     static constexpr const char* NAME = "physicsPhysicsJointDrive";
@@ -23,6 +24,7 @@ struct PhysicsJointDrive
 };
 RED4EXT_ASSERT_SIZE(PhysicsJointDrive, 0x10);
 } // namespace physics
+using physicsPhysicsJointDrive = physics::PhysicsJointDrive;
 } // namespace RED4ext
 
 // clang-format on

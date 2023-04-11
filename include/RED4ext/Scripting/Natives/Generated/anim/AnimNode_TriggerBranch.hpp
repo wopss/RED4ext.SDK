@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TriggerBranch : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_TriggerBranch";
@@ -29,6 +30,7 @@ struct AnimNode_TriggerBranch : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TriggerBranch, 0xD8);
 } // namespace anim
+using animAnimNode_TriggerBranch = anim::AnimNode_TriggerBranch;
 } // namespace RED4ext
 
 // clang-format on

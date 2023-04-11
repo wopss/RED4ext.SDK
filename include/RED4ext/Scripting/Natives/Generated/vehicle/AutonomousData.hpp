@@ -18,7 +18,8 @@ namespace game { struct Object; }
 namespace vehicle { struct BaseObject; }
 namespace vehicle { struct PortalsList; }
 
-namespace vehicle { 
+namespace vehicle
+{
 struct AutonomousData : ISerializable
 {
     static constexpr const char* NAME = "vehicleAutonomousData";
@@ -69,6 +70,7 @@ struct AutonomousData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AutonomousData, 0x150);
 } // namespace vehicle
+using vehicleAutonomousData = vehicle::AutonomousData;
 } // namespace RED4ext
 
 // clang-format on

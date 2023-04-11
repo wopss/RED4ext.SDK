@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScriptableComponent : game::Component
 {
     static constexpr const char* NAME = "gameScriptableComponent";
@@ -22,6 +23,7 @@ struct ScriptableComponent : game::Component
 };
 RED4EXT_ASSERT_SIZE(ScriptableComponent, 0xB8);
 } // namespace game
+using gameScriptableComponent = game::ScriptableComponent;
 using ScriptableComponent = game::ScriptableComponent;
 } // namespace RED4ext
 

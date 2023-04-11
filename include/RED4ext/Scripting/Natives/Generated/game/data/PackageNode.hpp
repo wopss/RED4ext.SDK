@@ -17,7 +17,8 @@ namespace game::data { struct FileNode; }
 namespace game::data { struct GroupNode; }
 namespace game::data { struct VariableNode; }
 
-namespace game::data { 
+namespace game::data
+{
 struct PackageNode : ISerializable
 {
     static constexpr const char* NAME = "gamedataPackageNode";
@@ -31,6 +32,7 @@ struct PackageNode : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PackageNode, 0xD0);
 } // namespace game::data
+using gamedataPackageNode = game::data::PackageNode;
 } // namespace RED4ext
 
 // clang-format on

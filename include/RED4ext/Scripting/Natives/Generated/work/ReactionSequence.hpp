@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ReactionSequence : work::IContainerEntry
 {
     static constexpr const char* NAME = "workReactionSequence";
@@ -32,6 +33,7 @@ struct ReactionSequence : work::IContainerEntry
 };
 RED4EXT_ASSERT_SIZE(ReactionSequence, 0xA0);
 } // namespace work
+using workReactionSequence = work::ReactionSequence;
 } // namespace RED4ext
 
 // clang-format on

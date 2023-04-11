@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MovingPlatformBeforeArrivedAt : red::Event
 {
     static constexpr const char* NAME = "gameMovingPlatformBeforeArrivedAt";
@@ -19,6 +20,7 @@ struct MovingPlatformBeforeArrivedAt : red::Event
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformBeforeArrivedAt, 0x40);
 } // namespace game
+using gameMovingPlatformBeforeArrivedAt = game::MovingPlatformBeforeArrivedAt;
 using BeforeArrivedAt = game::MovingPlatformBeforeArrivedAt;
 } // namespace RED4ext
 

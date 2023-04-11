@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct FocusEventCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "inkFocusEventCallback";
@@ -20,6 +21,7 @@ struct FocusEventCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(FocusEventCallback, 0x38);
 } // namespace ink
+using inkFocusEventCallback = ink::FocusEventCallback;
 } // namespace RED4ext
 
 // clang-format on

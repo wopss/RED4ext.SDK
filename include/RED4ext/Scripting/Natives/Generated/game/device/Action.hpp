@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device
+{
 struct Action : red::Event
 {
     static constexpr const char* NAME = "gamedeviceAction";
@@ -26,6 +27,7 @@ struct Action : red::Event
 };
 RED4EXT_ASSERT_SIZE(Action, 0x88);
 } // namespace game::device
+using gamedeviceAction = game::device::Action;
 using DeviceAction = game::device::Action;
 } // namespace RED4ext
 

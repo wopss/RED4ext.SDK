@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct PassiveProficiencyBonusUIData_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataPassiveProficiencyBonusUIData_Record";
@@ -20,6 +21,7 @@ struct PassiveProficiencyBonusUIData_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(PassiveProficiencyBonusUIData_Record, 0x58);
 } // namespace game::data
+using gamedataPassiveProficiencyBonusUIData_Record = game::data::PassiveProficiencyBonusUIData_Record;
 using PassiveProficiencyBonusUIData_Record = game::data::PassiveProficiencyBonusUIData_Record;
 } // namespace RED4ext
 

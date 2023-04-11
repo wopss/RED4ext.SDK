@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TPPRepresentationComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameTPPRepresentationComponent";
@@ -27,6 +28,7 @@ struct TPPRepresentationComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(TPPRepresentationComponent, 0x1C0);
 } // namespace game
+using gameTPPRepresentationComponent = game::TPPRepresentationComponent;
 } // namespace RED4ext
 
 // clang-format on

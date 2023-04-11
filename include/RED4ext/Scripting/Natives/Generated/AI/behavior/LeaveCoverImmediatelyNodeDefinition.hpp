@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct LeaveCoverImmediatelyNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorLeaveCoverImmediatelyNodeDefinition";
@@ -19,6 +20,7 @@ struct LeaveCoverImmediatelyNodeDefinition : AI::behavior::DecoratorNodeDefiniti
 };
 RED4EXT_ASSERT_SIZE(LeaveCoverImmediatelyNodeDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorLeaveCoverImmediatelyNodeDefinition = AI::behavior::LeaveCoverImmediatelyNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

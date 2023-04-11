@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct OpenPhotoMode_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questOpenPhotoMode_NodeType";
@@ -25,6 +26,7 @@ struct OpenPhotoMode_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(OpenPhotoMode_NodeType, 0x60);
 } // namespace quest
+using questOpenPhotoMode_NodeType = quest::OpenPhotoMode_NodeType;
 } // namespace RED4ext
 
 // clang-format on

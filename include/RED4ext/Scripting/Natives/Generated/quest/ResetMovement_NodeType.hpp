@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ResetMovement_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questResetMovement_NodeType";
@@ -21,6 +22,7 @@ struct ResetMovement_NodeType : quest::IVehicleManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ResetMovement_NodeType, 0x68);
 } // namespace quest
+using questResetMovement_NodeType = quest::ResetMovement_NodeType;
 } // namespace RED4ext
 
 // clang-format on

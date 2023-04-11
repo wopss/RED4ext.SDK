@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::mounting { 
+namespace game::mounting
+{
 struct MountingPublisher : game::mounting::IMountingPublisher
 {
     static constexpr const char* NAME = "gamemountingMountingPublisher";
@@ -20,6 +21,7 @@ struct MountingPublisher : game::mounting::IMountingPublisher
 };
 RED4EXT_ASSERT_SIZE(MountingPublisher, 0x18C0);
 } // namespace game::mounting
+using gamemountingMountingPublisher = game::mounting::MountingPublisher;
 } // namespace RED4ext
 
 // clang-format on

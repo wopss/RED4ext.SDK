@@ -21,7 +21,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct Layer : SelfHandle<Layer>, ISerializable
+struct Layer : ISerializable
 {
     static constexpr const char* NAME = "inkLayer";
     static constexpr const char* ALIAS = NAME;

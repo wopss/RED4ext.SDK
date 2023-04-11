@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct StaticSoundEmitterNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticSoundEmitterNodeInstance";
@@ -20,6 +21,7 @@ struct StaticSoundEmitterNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(StaticSoundEmitterNodeInstance, 0xB0);
 } // namespace world
+using worldStaticSoundEmitterNodeInstance = world::StaticSoundEmitterNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct AppearanceMatch
 {
     static constexpr const char* NAME = "entdismembermentAppearanceMatch";
@@ -23,6 +24,7 @@ struct AppearanceMatch
 };
 RED4EXT_ASSERT_SIZE(AppearanceMatch, 0x18);
 } // namespace ent::dismemberment
+using entdismembermentAppearanceMatch = ent::dismemberment::AppearanceMatch;
 } // namespace RED4ext
 
 // clang-format on

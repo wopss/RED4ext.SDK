@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct ISkinableComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entISkinableComponent";
@@ -20,6 +21,7 @@ struct ISkinableComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(ISkinableComponent, 0x130);
 } // namespace ent
+using entISkinableComponent = ent::ISkinableComponent;
 using ISkinableComponent = ent::ISkinableComponent;
 } // namespace RED4ext
 

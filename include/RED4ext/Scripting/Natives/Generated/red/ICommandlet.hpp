@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace red { 
+namespace red
+{
 struct ICommandlet
 {
     static constexpr const char* NAME = "redICommandlet";
@@ -19,6 +20,7 @@ struct ICommandlet
 };
 RED4EXT_ASSERT_SIZE(ICommandlet, 0x10);
 } // namespace red
+using redICommandlet = red::ICommandlet;
 } // namespace RED4ext
 
 // clang-format on

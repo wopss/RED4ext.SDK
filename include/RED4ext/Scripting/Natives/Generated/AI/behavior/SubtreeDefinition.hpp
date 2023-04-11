@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior { struct ParameterizedBehavior; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct SubtreeDefinition : AI::behavior::NestedTreeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorSubtreeDefinition";
@@ -23,6 +24,7 @@ struct SubtreeDefinition : AI::behavior::NestedTreeDefinition
 };
 RED4EXT_ASSERT_SIZE(SubtreeDefinition, 0x58);
 } // namespace AI::behavior
+using AIbehaviorSubtreeDefinition = AI::behavior::SubtreeDefinition;
 } // namespace RED4ext
 
 // clang-format on

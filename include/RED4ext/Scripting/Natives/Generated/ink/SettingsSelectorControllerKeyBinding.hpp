@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SettingsSelectorControllerKeyBinding : ink::SettingsSelectorController
 {
     static constexpr const char* NAME = "inkSettingsSelectorControllerKeyBinding";
@@ -20,6 +21,7 @@ struct SettingsSelectorControllerKeyBinding : ink::SettingsSelectorController
 };
 RED4EXT_ASSERT_SIZE(SettingsSelectorControllerKeyBinding, 0xE0);
 } // namespace ink
+using inkSettingsSelectorControllerKeyBinding = ink::SettingsSelectorControllerKeyBinding;
 using SettingsSelectorControllerKeyBinding = ink::SettingsSelectorControllerKeyBinding;
 } // namespace RED4ext
 

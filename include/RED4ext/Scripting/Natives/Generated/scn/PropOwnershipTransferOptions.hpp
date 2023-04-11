@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PropOwnershipTransferOptions
 {
     static constexpr const char* NAME = "scnPropOwnershipTransferOptions";
@@ -23,6 +24,7 @@ struct PropOwnershipTransferOptions
 };
 RED4EXT_ASSERT_SIZE(PropOwnershipTransferOptions, 0x8);
 } // namespace scn
+using scnPropOwnershipTransferOptions = scn::PropOwnershipTransferOptions;
 } // namespace RED4ext
 
 // clang-format on

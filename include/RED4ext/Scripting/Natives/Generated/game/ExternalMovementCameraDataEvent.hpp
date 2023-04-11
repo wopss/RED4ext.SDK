@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ExternalMovementCameraDataEvent : red::Event
 {
     static constexpr const char* NAME = "gameExternalMovementCameraDataEvent";
@@ -20,6 +21,7 @@ struct ExternalMovementCameraDataEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ExternalMovementCameraDataEvent, 0x48);
 } // namespace game
+using gameExternalMovementCameraDataEvent = game::ExternalMovementCameraDataEvent;
 using ExternalMovementCameraDataEvent = game::ExternalMovementCameraDataEvent;
 } // namespace RED4ext
 

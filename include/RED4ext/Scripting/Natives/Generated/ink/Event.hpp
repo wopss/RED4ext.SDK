@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct Event : red::Event
 {
     static constexpr const char* NAME = "inkEvent";
@@ -20,6 +21,7 @@ struct Event : red::Event
 };
 RED4EXT_ASSERT_SIZE(Event, 0x68);
 } // namespace ink
+using inkEvent = ink::Event;
 } // namespace RED4ext
 
 // clang-format on

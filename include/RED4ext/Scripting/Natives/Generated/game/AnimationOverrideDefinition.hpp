@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimSet; }
 
-namespace game { 
+namespace game
+{
 struct AnimationOverrideDefinition
 {
     static constexpr const char* NAME = "gameAnimationOverrideDefinition";
@@ -25,6 +26,7 @@ struct AnimationOverrideDefinition
 };
 RED4EXT_ASSERT_SIZE(AnimationOverrideDefinition, 0x18);
 } // namespace game
+using gameAnimationOverrideDefinition = game::AnimationOverrideDefinition;
 } // namespace RED4ext
 
 // clang-format on

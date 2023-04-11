@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct AugmentedRealityWorldMarkers : ISerializable
 {
     static constexpr const char* NAME = "worldAugmentedRealityWorldMarkers";
@@ -22,6 +23,7 @@ struct AugmentedRealityWorldMarkers : ISerializable
 };
 RED4EXT_ASSERT_SIZE(AugmentedRealityWorldMarkers, 0x40);
 } // namespace world
+using worldAugmentedRealityWorldMarkers = world::AugmentedRealityWorldMarkers;
 } // namespace RED4ext
 
 // clang-format on

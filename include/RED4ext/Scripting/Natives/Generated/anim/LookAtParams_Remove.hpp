@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtParams_Remove : ISerializable
 {
     static constexpr const char* NAME = "animLookAtParams_Remove";
@@ -20,6 +21,7 @@ struct LookAtParams_Remove : ISerializable
 };
 RED4EXT_ASSERT_SIZE(LookAtParams_Remove, 0x48);
 } // namespace anim
+using animLookAtParams_Remove = anim::LookAtParams_Remove;
 } // namespace RED4ext
 
 // clang-format on

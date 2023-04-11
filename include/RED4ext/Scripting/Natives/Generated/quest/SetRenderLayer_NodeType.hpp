@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetRenderLayer_NodeType : quest::IRenderFxManagerNodeType
 {
     static constexpr const char* NAME = "questSetRenderLayer_NodeType";
@@ -22,6 +23,7 @@ struct SetRenderLayer_NodeType : quest::IRenderFxManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetRenderLayer_NodeType, 0x40);
 } // namespace quest
+using questSetRenderLayer_NodeType = quest::SetRenderLayer_NodeType;
 } // namespace RED4ext
 
 // clang-format on

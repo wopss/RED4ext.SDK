@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct MeleeRigTypeMeleeWeaponConfigurationMapItem
 {
     static constexpr const char* NAME = "audioMeleeRigTypeMeleeWeaponConfigurationMapItem";
@@ -21,6 +22,7 @@ struct MeleeRigTypeMeleeWeaponConfigurationMapItem
 };
 RED4EXT_ASSERT_SIZE(MeleeRigTypeMeleeWeaponConfigurationMapItem, 0x10);
 } // namespace audio
+using audioMeleeRigTypeMeleeWeaponConfigurationMapItem = audio::MeleeRigTypeMeleeWeaponConfigurationMapItem;
 } // namespace RED4ext
 
 // clang-format on

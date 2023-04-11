@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace anim { struct AnimNode_TransformValue; }
 
-namespace anim { 
+namespace anim
+{
 struct TransformLink
 {
     static constexpr const char* NAME = "animTransformLink";
@@ -24,6 +25,7 @@ struct TransformLink
 };
 RED4EXT_ASSERT_SIZE(TransformLink, 0x20);
 } // namespace anim
+using animTransformLink = anim::TransformLink;
 } // namespace RED4ext
 
 // clang-format on

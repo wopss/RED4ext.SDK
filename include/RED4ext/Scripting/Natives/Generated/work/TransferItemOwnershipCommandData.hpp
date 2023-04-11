@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct TransferItemOwnershipCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workTransferItemOwnershipCommandData";
@@ -20,6 +21,7 @@ struct TransferItemOwnershipCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(TransferItemOwnershipCommandData, 0x20);
 } // namespace work
+using workTransferItemOwnershipCommandData = work::TransferItemOwnershipCommandData;
 } // namespace RED4ext
 
 // clang-format on

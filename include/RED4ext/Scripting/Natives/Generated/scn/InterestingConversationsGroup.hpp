@@ -15,7 +15,8 @@ namespace RED4ext
 namespace quest { struct IBaseCondition; }
 namespace scn { struct InterestingConversationData; }
 
-namespace scn { 
+namespace scn
+{
 struct InterestingConversationsGroup : ISerializable
 {
     static constexpr const char* NAME = "scnInterestingConversationsGroup";
@@ -26,6 +27,7 @@ struct InterestingConversationsGroup : ISerializable
 };
 RED4EXT_ASSERT_SIZE(InterestingConversationsGroup, 0x50);
 } // namespace scn
+using scnInterestingConversationsGroup = scn::InterestingConversationsGroup;
 } // namespace RED4ext
 
 // clang-format on

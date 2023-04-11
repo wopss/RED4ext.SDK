@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct EntityManagerManageBinkComponent_NodeTypeParams
 {
     static constexpr const char* NAME = "questEntityManagerManageBinkComponent_NodeTypeParams";
@@ -25,6 +26,7 @@ struct EntityManagerManageBinkComponent_NodeTypeParams
 };
 RED4EXT_ASSERT_SIZE(EntityManagerManageBinkComponent_NodeTypeParams, 0x60);
 } // namespace quest
+using questEntityManagerManageBinkComponent_NodeTypeParams = quest::EntityManagerManageBinkComponent_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

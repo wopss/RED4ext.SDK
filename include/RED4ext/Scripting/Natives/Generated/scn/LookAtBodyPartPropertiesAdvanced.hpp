@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct LookAtBodyPartPropertiesAdvanced
 {
     static constexpr const char* NAME = "scnLookAtBodyPartPropertiesAdvanced";
@@ -20,6 +21,7 @@ struct LookAtBodyPartPropertiesAdvanced
 };
 RED4EXT_ASSERT_SIZE(LookAtBodyPartPropertiesAdvanced, 0x8);
 } // namespace scn
+using scnLookAtBodyPartPropertiesAdvanced = scn::LookAtBodyPartPropertiesAdvanced;
 } // namespace RED4ext
 
 // clang-format on

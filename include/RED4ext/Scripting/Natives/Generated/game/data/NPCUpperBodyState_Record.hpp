@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NPCUpperBodyState_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNPCUpperBodyState_Record";
@@ -20,6 +21,7 @@ struct NPCUpperBodyState_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(NPCUpperBodyState_Record, 0x58);
 } // namespace game::data
+using gamedataNPCUpperBodyState_Record = game::data::NPCUpperBodyState_Record;
 using NPCUpperBodyState_Record = game::data::NPCUpperBodyState_Record;
 } // namespace RED4ext
 

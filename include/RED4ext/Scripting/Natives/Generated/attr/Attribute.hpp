@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Attribute : ISerializable
 {
     static constexpr const char* NAME = "attrAttribute";
@@ -19,6 +20,7 @@ struct Attribute : ISerializable
 };
 RED4EXT_ASSERT_SIZE(Attribute, 0x30);
 } // namespace attr
+using attrAttribute = attr::Attribute;
 } // namespace RED4ext
 
 // clang-format on

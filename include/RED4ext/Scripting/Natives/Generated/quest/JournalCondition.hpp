@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IJournalConditionType; }
 
-namespace quest { 
+namespace quest
+{
 struct JournalCondition : quest::TypedCondition
 {
     static constexpr const char* NAME = "questJournalCondition";
@@ -23,6 +24,7 @@ struct JournalCondition : quest::TypedCondition
 };
 RED4EXT_ASSERT_SIZE(JournalCondition, 0x40);
 } // namespace quest
+using questJournalCondition = quest::JournalCondition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct DistanceFromScreenCenterPredicate : game::interactions::IPredicateType
 {
     static constexpr const char* NAME = "gameinteractionsDistanceFromScreenCenterPredicate";
@@ -23,6 +24,7 @@ struct DistanceFromScreenCenterPredicate : game::interactions::IPredicateType
 };
 RED4EXT_ASSERT_SIZE(DistanceFromScreenCenterPredicate, 0x40);
 } // namespace game::interactions
+using gameinteractionsDistanceFromScreenCenterPredicate = game::interactions::DistanceFromScreenCenterPredicate;
 } // namespace RED4ext
 
 // clang-format on

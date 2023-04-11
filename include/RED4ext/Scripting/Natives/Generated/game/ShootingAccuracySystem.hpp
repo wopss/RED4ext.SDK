@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ShootingAccuracySystem : game::IShootingAccuracySystem
 {
     static constexpr const char* NAME = "gameShootingAccuracySystem";
@@ -20,6 +21,7 @@ struct ShootingAccuracySystem : game::IShootingAccuracySystem
 };
 RED4EXT_ASSERT_SIZE(ShootingAccuracySystem, 0x60);
 } // namespace game
+using gameShootingAccuracySystem = game::ShootingAccuracySystem;
 } // namespace RED4ext
 
 // clang-format on

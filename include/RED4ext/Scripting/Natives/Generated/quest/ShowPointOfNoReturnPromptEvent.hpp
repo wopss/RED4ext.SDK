@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowPointOfNoReturnPromptEvent : red::Event
 {
     static constexpr const char* NAME = "questShowPointOfNoReturnPromptEvent";
@@ -19,6 +20,7 @@ struct ShowPointOfNoReturnPromptEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(ShowPointOfNoReturnPromptEvent, 0x40);
 } // namespace quest
+using questShowPointOfNoReturnPromptEvent = quest::ShowPointOfNoReturnPromptEvent;
 using ShowPointOfNoReturnPromptEvent = quest::ShowPointOfNoReturnPromptEvent;
 } // namespace RED4ext
 

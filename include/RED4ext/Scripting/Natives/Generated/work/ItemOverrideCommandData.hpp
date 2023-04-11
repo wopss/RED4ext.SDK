@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct ItemOverrideCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workItemOverrideCommandData";
@@ -20,6 +21,7 @@ struct ItemOverrideCommandData : work::IWorkspotCommandData
 };
 RED4EXT_ASSERT_SIZE(ItemOverrideCommandData, 0x28);
 } // namespace work
+using workItemOverrideCommandData = work::ItemOverrideCommandData;
 } // namespace RED4ext
 
 // clang-format on

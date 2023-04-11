@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct EquipmentMovementSound_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataEquipmentMovementSound_Record";
@@ -20,6 +21,7 @@ struct EquipmentMovementSound_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(EquipmentMovementSound_Record, 0x50);
 } // namespace game::data
+using gamedataEquipmentMovementSound_Record = game::data::EquipmentMovementSound_Record;
 using EquipmentMovementSound_Record = game::data::EquipmentMovementSound_Record;
 } // namespace RED4ext
 

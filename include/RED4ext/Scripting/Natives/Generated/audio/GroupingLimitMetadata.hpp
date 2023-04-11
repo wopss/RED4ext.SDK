@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GroupingLimitMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioGroupingLimitMetadata";
@@ -21,6 +22,7 @@ struct GroupingLimitMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(GroupingLimitMetadata, 0x40);
 } // namespace audio
+using audioGroupingLimitMetadata = audio::GroupingLimitMetadata;
 } // namespace RED4ext
 
 // clang-format on

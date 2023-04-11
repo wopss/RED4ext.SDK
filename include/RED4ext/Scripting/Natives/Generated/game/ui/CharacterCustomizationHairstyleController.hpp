@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CharacterCustomizationHairstyleController : game::ui::CharacterCustomizationBodyPartsController
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationHairstyleController";
@@ -22,6 +23,7 @@ struct CharacterCustomizationHairstyleController : game::ui::CharacterCustomizat
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationHairstyleController, 0x130);
 } // namespace game::ui
+using gameuiCharacterCustomizationHairstyleController = game::ui::CharacterCustomizationHairstyleController;
 } // namespace RED4ext
 
 // clang-format on

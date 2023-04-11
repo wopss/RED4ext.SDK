@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace quest { struct ParamRubberbanding; }
 
-namespace quest::vehicle { 
+namespace quest::vehicle
+{
 struct RacingParams : quest::VehicleSpecificCommandParams
 {
     static constexpr const char* NAME = "questvehicleRacingParams";
@@ -30,6 +31,7 @@ struct RacingParams : quest::VehicleSpecificCommandParams
 };
 RED4EXT_ASSERT_SIZE(RacingParams, 0x58);
 } // namespace quest::vehicle
+using questvehicleRacingParams = quest::vehicle::RacingParams;
 } // namespace RED4ext
 
 // clang-format on

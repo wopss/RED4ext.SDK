@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct IPositionProvider; }
 
-namespace ent { 
+namespace ent
+{
 struct AnimTargetAddEvent : red::Event
 {
     static constexpr const char* NAME = "entAnimTargetAddEvent";
@@ -25,6 +26,7 @@ struct AnimTargetAddEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(AnimTargetAddEvent, 0x58);
 } // namespace ent
+using entAnimTargetAddEvent = ent::AnimTargetAddEvent;
 using AnimTargetAddEvent = ent::AnimTargetAddEvent;
 } // namespace RED4ext
 

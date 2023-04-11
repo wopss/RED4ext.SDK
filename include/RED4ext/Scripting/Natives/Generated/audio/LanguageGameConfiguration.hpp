@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct LanguageGameConfiguration : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioLanguageGameConfiguration";
@@ -23,6 +24,7 @@ struct LanguageGameConfiguration : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(LanguageGameConfiguration, 0xC8);
 } // namespace audio
+using audioLanguageGameConfiguration = audio::LanguageGameConfiguration;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment
+{
 struct BodyMaterialConfig
 {
     static constexpr const char* NAME = "entdismembermentBodyMaterialConfig";
@@ -21,6 +22,7 @@ struct BodyMaterialConfig
 };
 RED4EXT_ASSERT_SIZE(BodyMaterialConfig, 0x8);
 } // namespace ent::dismemberment
+using entdismembermentBodyMaterialConfig = ent::dismemberment::BodyMaterialConfig;
 } // namespace RED4ext
 
 // clang-format on

@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AIDirectorTensionAnalyzer
 {
     static constexpr const char* NAME = "gameAIDirectorTensionAnalyzer";
@@ -19,6 +20,7 @@ struct AIDirectorTensionAnalyzer
 };
 RED4EXT_ASSERT_SIZE(AIDirectorTensionAnalyzer, 0x80);
 } // namespace game
+using gameAIDirectorTensionAnalyzer = game::AIDirectorTensionAnalyzer;
 } // namespace RED4ext
 
 // clang-format on

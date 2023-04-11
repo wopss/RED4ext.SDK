@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectObjectFilter_PlayerIgnoreFriendlyAndAlive : game::EffectObjectGroupFilter
 {
     static constexpr const char* NAME = "gameEffectObjectFilter_PlayerIgnoreFriendlyAndAlive";
@@ -21,6 +22,7 @@ struct EffectObjectFilter_PlayerIgnoreFriendlyAndAlive : game::EffectObjectGroup
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_PlayerIgnoreFriendlyAndAlive, 0x48);
 } // namespace game
+using gameEffectObjectFilter_PlayerIgnoreFriendlyAndAlive = game::EffectObjectFilter_PlayerIgnoreFriendlyAndAlive;
 } // namespace RED4ext
 
 // clang-format on

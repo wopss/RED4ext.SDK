@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_InputSwitch : anim::AnimNode_BaseSwitch
 {
     static constexpr const char* NAME = "animAnimNode_InputSwitch";
@@ -23,6 +24,7 @@ struct AnimNode_InputSwitch : anim::AnimNode_BaseSwitch
 };
 RED4EXT_ASSERT_SIZE(AnimNode_InputSwitch, 0x108);
 } // namespace anim
+using animAnimNode_InputSwitch = anim::AnimNode_InputSwitch;
 } // namespace RED4ext
 
 // clang-format on

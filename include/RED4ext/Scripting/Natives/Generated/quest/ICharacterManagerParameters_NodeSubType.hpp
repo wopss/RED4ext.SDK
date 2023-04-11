@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ICharacterManagerParameters_NodeSubType : quest::ICharacterManager_NodeSubType
 {
     static constexpr const char* NAME = "questICharacterManagerParameters_NodeSubType";
@@ -19,6 +20,7 @@ struct ICharacterManagerParameters_NodeSubType : quest::ICharacterManager_NodeSu
 };
 RED4EXT_ASSERT_SIZE(ICharacterManagerParameters_NodeSubType, 0x70);
 } // namespace quest
+using questICharacterManagerParameters_NodeSubType = quest::ICharacterManagerParameters_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

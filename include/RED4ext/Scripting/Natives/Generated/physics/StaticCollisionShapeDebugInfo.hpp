@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct StaticCollisionShapeDebugInfo
 {
     static constexpr const char* NAME = "physicsStaticCollisionShapeDebugInfo";
@@ -21,6 +22,7 @@ struct StaticCollisionShapeDebugInfo
 };
 RED4EXT_ASSERT_SIZE(StaticCollisionShapeDebugInfo, 0x18);
 } // namespace physics
+using physicsStaticCollisionShapeDebugInfo = physics::StaticCollisionShapeDebugInfo;
 } // namespace RED4ext
 
 // clang-format on

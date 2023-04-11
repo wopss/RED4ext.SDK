@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct StyleProperty
 {
     static constexpr const char* NAME = "inkStyleProperty";
@@ -23,6 +24,7 @@ struct StyleProperty
 };
 RED4EXT_ASSERT_SIZE(StyleProperty, 0x28);
 } // namespace ink
+using inkStyleProperty = ink::StyleProperty;
 } // namespace RED4ext
 
 // clang-format on

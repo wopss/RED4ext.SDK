@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WaitingMountCommandConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorWaitingMountCommandConditionDefinition";
@@ -25,6 +26,7 @@ struct WaitingMountCommandConditionDefinition : AI::behavior::ConditionDefinitio
 };
 RED4EXT_ASSERT_SIZE(WaitingMountCommandConditionDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorWaitingMountCommandConditionDefinition = AI::behavior::WaitingMountCommandConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

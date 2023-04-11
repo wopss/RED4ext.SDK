@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct PassiveConditionDefinition : ISerializable
 {
     static constexpr const char* NAME = "AIbehaviorPassiveConditionDefinition";
@@ -21,6 +22,7 @@ struct PassiveConditionDefinition : ISerializable
 };
 RED4EXT_ASSERT_SIZE(PassiveConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorPassiveConditionDefinition = AI::behavior::PassiveConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

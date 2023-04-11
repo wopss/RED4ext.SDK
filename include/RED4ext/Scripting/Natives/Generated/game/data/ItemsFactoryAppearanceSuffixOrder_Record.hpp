@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct ItemsFactoryAppearanceSuffixOrder_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataItemsFactoryAppearanceSuffixOrder_Record";
@@ -20,6 +21,7 @@ struct ItemsFactoryAppearanceSuffixOrder_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(ItemsFactoryAppearanceSuffixOrder_Record, 0x50);
 } // namespace game::data
+using gamedataItemsFactoryAppearanceSuffixOrder_Record = game::data::ItemsFactoryAppearanceSuffixOrder_Record;
 using ItemsFactoryAppearanceSuffixOrder_Record = game::data::ItemsFactoryAppearanceSuffixOrder_Record;
 } // namespace RED4ext
 

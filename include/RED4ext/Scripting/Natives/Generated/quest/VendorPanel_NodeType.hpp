@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct VendorPanel_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questVendorPanel_NodeType";
@@ -29,6 +30,7 @@ struct VendorPanel_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(VendorPanel_NodeType, 0xC8);
 } // namespace quest
+using questVendorPanel_NodeType = quest::VendorPanel_NodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct VoiceTriggerData
 {
     static constexpr const char* NAME = "audioVoiceTriggerData";
@@ -25,6 +26,7 @@ struct VoiceTriggerData
 };
 RED4EXT_ASSERT_SIZE(VoiceTriggerData, 0x18);
 } // namespace audio
+using audioVoiceTriggerData = audio::VoiceTriggerData;
 } // namespace RED4ext
 
 // clang-format on

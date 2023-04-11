@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tempshit { 
+namespace tempshit
+{
 struct JournalEntryNodeType : tempshit::IJournalNodeType
 {
     static constexpr const char* NAME = "tempshitJournalEntryNodeType";
@@ -19,6 +20,7 @@ struct JournalEntryNodeType : tempshit::IJournalNodeType
 };
 RED4EXT_ASSERT_SIZE(JournalEntryNodeType, 0x30);
 } // namespace tempshit
+using tempshitJournalEntryNodeType = tempshit::JournalEntryNodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderParticleBlobEmitterInfo
 {
     static constexpr const char* NAME = "rendRenderParticleBlobEmitterInfo";
@@ -68,6 +69,7 @@ struct RenderParticleBlobEmitterInfo
 };
 RED4EXT_ASSERT_SIZE(RenderParticleBlobEmitterInfo, 0xD0);
 } // namespace rend
+using rendRenderParticleBlobEmitterInfo = rend::RenderParticleBlobEmitterInfo;
 } // namespace RED4ext
 
 // clang-format on

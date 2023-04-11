@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct SwitcherOption
 {
     static constexpr const char* NAME = "gameuiSwitcherOption";
@@ -29,6 +30,7 @@ struct SwitcherOption
 };
 RED4EXT_ASSERT_SIZE(SwitcherOption, 0x58);
 } // namespace game::ui
+using gameuiSwitcherOption = game::ui::SwitcherOption;
 } // namespace RED4ext
 
 // clang-format on

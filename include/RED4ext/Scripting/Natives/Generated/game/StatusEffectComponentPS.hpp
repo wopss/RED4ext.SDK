@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace game { struct DelayedFunctionsScheduler; }
 
-namespace game { 
+namespace game
+{
 struct StatusEffectComponentPS : game::ComponentPS
 {
     static constexpr const char* NAME = "gameStatusEffectComponentPS";
@@ -30,6 +31,7 @@ struct StatusEffectComponentPS : game::ComponentPS
 };
 RED4EXT_ASSERT_SIZE(StatusEffectComponentPS, 0xA0);
 } // namespace game
+using gameStatusEffectComponentPS = game::StatusEffectComponentPS;
 } // namespace RED4ext
 
 // clang-format on

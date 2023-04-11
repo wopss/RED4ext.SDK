@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace gsm { 
+namespace gsm
+{
 struct StateObserver_RichPresence : gsm::IStateObserver
 {
     static constexpr const char* NAME = "gsmStateObserver_RichPresence";
@@ -20,6 +21,7 @@ struct StateObserver_RichPresence : gsm::IStateObserver
 };
 RED4EXT_ASSERT_SIZE(StateObserver_RichPresence, 0x20);
 } // namespace gsm
+using gsmStateObserver_RichPresence = gsm::StateObserver_RichPresence;
 } // namespace RED4ext
 
 // clang-format on

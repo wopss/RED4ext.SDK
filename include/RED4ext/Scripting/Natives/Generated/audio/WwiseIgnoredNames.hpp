@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct WwiseIgnoredNames : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioWwiseIgnoredNames";
@@ -22,6 +23,7 @@ struct WwiseIgnoredNames : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(WwiseIgnoredNames, 0x48);
 } // namespace audio
+using audioWwiseIgnoredNames = audio::WwiseIgnoredNames;
 } // namespace RED4ext
 
 // clang-format on

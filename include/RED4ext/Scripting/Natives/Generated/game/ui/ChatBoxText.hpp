@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct ChatBoxText
 {
     static constexpr const char* NAME = "gameuiChatBoxText";
@@ -23,6 +24,7 @@ struct ChatBoxText
 };
 RED4EXT_ASSERT_SIZE(ChatBoxText, 0x28);
 } // namespace game::ui
+using gameuiChatBoxText = game::ui::ChatBoxText;
 using ChatBoxText = game::ui::ChatBoxText;
 } // namespace RED4ext
 

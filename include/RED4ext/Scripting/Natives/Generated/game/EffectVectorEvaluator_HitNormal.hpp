@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectVectorEvaluator_HitNormal : game::EffectVectorEvaluator
 {
     static constexpr const char* NAME = "gameEffectVectorEvaluator_HitNormal";
@@ -19,6 +20,7 @@ struct EffectVectorEvaluator_HitNormal : game::EffectVectorEvaluator
 };
 RED4EXT_ASSERT_SIZE(EffectVectorEvaluator_HitNormal, 0x38);
 } // namespace game
+using gameEffectVectorEvaluator_HitNormal = game::EffectVectorEvaluator_HitNormal;
 } // namespace RED4ext
 
 // clang-format on

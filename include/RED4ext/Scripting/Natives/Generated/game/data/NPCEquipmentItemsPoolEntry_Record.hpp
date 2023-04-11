@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct NPCEquipmentItemsPoolEntry_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataNPCEquipmentItemsPoolEntry_Record";
@@ -20,6 +21,7 @@ struct NPCEquipmentItemsPoolEntry_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(NPCEquipmentItemsPoolEntry_Record, 0x58);
 } // namespace game::data
+using gamedataNPCEquipmentItemsPoolEntry_Record = game::data::NPCEquipmentItemsPoolEntry_Record;
 using NPCEquipmentItemsPoolEntry_Record = game::data::NPCEquipmentItemsPoolEntry_Record;
 } // namespace RED4ext
 

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ActionRotateToObjectTreeNodeDefinition : AI::behavior::ActionRotateBaseTreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorActionRotateToObjectTreeNodeDefinition";
@@ -23,6 +24,7 @@ struct ActionRotateToObjectTreeNodeDefinition : AI::behavior::ActionRotateBaseTr
 };
 RED4EXT_ASSERT_SIZE(ActionRotateToObjectTreeNodeDefinition, 0x90);
 } // namespace AI::behavior
+using AIbehaviorActionRotateToObjectTreeNodeDefinition = AI::behavior::ActionRotateToObjectTreeNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

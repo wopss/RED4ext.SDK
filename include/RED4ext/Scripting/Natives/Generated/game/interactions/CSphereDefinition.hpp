@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct CSphereDefinition : game::interactions::IShapeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCSphereDefinition";
@@ -23,6 +24,7 @@ struct CSphereDefinition : game::interactions::IShapeDefinition
 };
 RED4EXT_ASSERT_SIZE(CSphereDefinition, 0x50);
 } // namespace game::interactions
+using gameinteractionsCSphereDefinition = game::interactions::CSphereDefinition;
 } // namespace RED4ext
 
 // clang-format on

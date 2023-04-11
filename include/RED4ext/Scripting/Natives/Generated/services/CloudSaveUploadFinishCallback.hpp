@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace services { 
+namespace services
+{
 struct CloudSaveUploadFinishCallback : ink::CallbackBase
 {
     static constexpr const char* NAME = "servicesCloudSaveUploadFinishCallback";
@@ -20,6 +21,7 @@ struct CloudSaveUploadFinishCallback : ink::CallbackBase
 };
 RED4EXT_ASSERT_SIZE(CloudSaveUploadFinishCallback, 0x38);
 } // namespace services
+using servicesCloudSaveUploadFinishCallback = services::CloudSaveUploadFinishCallback;
 } // namespace RED4ext
 
 // clang-format on

@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct Language_ConditionType : quest::ISystemConditionType
 {
     static constexpr const char* NAME = "questLanguage_ConditionType";
@@ -26,6 +27,7 @@ struct Language_ConditionType : quest::ISystemConditionType
 };
 RED4EXT_ASSERT_SIZE(Language_ConditionType, 0x68);
 } // namespace quest
+using questLanguage_ConditionType = quest::Language_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

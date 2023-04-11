@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IEffectParameter_QuatEvaluator : ISerializable
 {
     static constexpr const char* NAME = "gameIEffectParameter_QuatEvaluator";
@@ -19,6 +20,7 @@ struct IEffectParameter_QuatEvaluator : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IEffectParameter_QuatEvaluator, 0x30);
 } // namespace game
+using gameIEffectParameter_QuatEvaluator = game::IEffectParameter_QuatEvaluator;
 } // namespace RED4ext
 
 // clang-format on

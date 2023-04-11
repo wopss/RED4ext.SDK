@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IUIManagerNodeType : quest::IRetNodeType
 {
     static constexpr const char* NAME = "questIUIManagerNodeType";
@@ -20,6 +21,7 @@ struct IUIManagerNodeType : quest::IRetNodeType
 };
 RED4EXT_ASSERT_SIZE(IUIManagerNodeType, 0x38);
 } // namespace quest
+using questIUIManagerNodeType = quest::IUIManagerNodeType;
 } // namespace RED4ext
 
 // clang-format on

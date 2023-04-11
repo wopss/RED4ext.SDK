@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct PhysicalDestructionListenerComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gamePhysicalDestructionListenerComponent";
@@ -23,6 +24,7 @@ struct PhysicalDestructionListenerComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalDestructionListenerComponent, 0xA8);
 } // namespace game
+using gamePhysicalDestructionListenerComponent = game::PhysicalDestructionListenerComponent;
 } // namespace RED4ext
 
 // clang-format on

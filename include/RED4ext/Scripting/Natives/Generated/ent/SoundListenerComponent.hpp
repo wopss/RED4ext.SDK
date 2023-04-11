@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct SoundListenerComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entSoundListenerComponent";
@@ -20,6 +21,7 @@ struct SoundListenerComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SoundListenerComponent, 0x130);
 } // namespace ent
+using entSoundListenerComponent = ent::SoundListenerComponent;
 } // namespace RED4ext
 
 // clang-format on

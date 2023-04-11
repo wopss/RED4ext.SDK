@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct VisualTagsGroup : ISerializable
 {
     static constexpr const char* NAME = "toolsVisualTagsGroup";
@@ -24,6 +25,7 @@ struct VisualTagsGroup : ISerializable
 };
 RED4EXT_ASSERT_SIZE(VisualTagsGroup, 0x48);
 } // namespace tools
+using toolsVisualTagsGroup = tools::VisualTagsGroup;
 } // namespace RED4ext
 
 // clang-format on

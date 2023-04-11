@@ -22,7 +22,8 @@ namespace game { struct EffectObjectProvider; }
 namespace game { struct EffectPostAction; }
 namespace game { struct EffectPreAction; }
 
-namespace game { 
+namespace game
+{
 struct EffectDefinition
 {
     static constexpr const char* NAME = "gameEffectDefinition";
@@ -41,6 +42,7 @@ struct EffectDefinition
 };
 RED4EXT_ASSERT_SIZE(EffectDefinition, 0x90);
 } // namespace game
+using gameEffectDefinition = game::EffectDefinition;
 } // namespace RED4ext
 
 // clang-format on

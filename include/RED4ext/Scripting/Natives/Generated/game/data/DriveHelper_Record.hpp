@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct DriveHelper_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataDriveHelper_Record";
@@ -20,6 +21,7 @@ struct DriveHelper_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(DriveHelper_Record, 0x50);
 } // namespace game::data
+using gamedataDriveHelper_Record = game::data::DriveHelper_Record;
 using DriveHelper_Record = game::data::DriveHelper_Record;
 } // namespace RED4ext
 

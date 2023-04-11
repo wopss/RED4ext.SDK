@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EffectExecutor_BulletImpact : game::EffectExecutor
 {
     static constexpr const char* NAME = "gameEffectExecutor_BulletImpact";
@@ -23,6 +24,7 @@ struct EffectExecutor_BulletImpact : game::EffectExecutor
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_BulletImpact, 0x50);
 } // namespace game
+using gameEffectExecutor_BulletImpact = game::EffectExecutor_BulletImpact;
 using EffectExecutor_BulletImpact = game::EffectExecutor_BulletImpact;
 } // namespace RED4ext
 

@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace community { 
+namespace community
+{
 struct PhaseTimePeriod : community::TimePeriod
 {
     static constexpr const char* NAME = "communityPhaseTimePeriod";
@@ -30,6 +31,7 @@ struct PhaseTimePeriod : community::TimePeriod
 };
 RED4EXT_ASSERT_SIZE(PhaseTimePeriod, 0x48);
 } // namespace community
+using communityPhaseTimePeriod = community::PhaseTimePeriod;
 } // namespace RED4ext
 
 // clang-format on

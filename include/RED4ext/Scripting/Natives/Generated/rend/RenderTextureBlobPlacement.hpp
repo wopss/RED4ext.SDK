@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace rend { 
+namespace rend
+{
 struct RenderTextureBlobPlacement
 {
     static constexpr const char* NAME = "rendRenderTextureBlobPlacement";
@@ -20,6 +21,7 @@ struct RenderTextureBlobPlacement
 };
 RED4EXT_ASSERT_SIZE(RenderTextureBlobPlacement, 0x8);
 } // namespace rend
+using rendRenderTextureBlobPlacement = rend::RenderTextureBlobPlacement;
 } // namespace RED4ext
 
 // clang-format on

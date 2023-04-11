@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct StatsDataSystem : game::IStatsDataSystem
 {
     static constexpr const char* NAME = "gameStatsDataSystem";
@@ -20,6 +21,7 @@ struct StatsDataSystem : game::IStatsDataSystem
 };
 RED4EXT_ASSERT_SIZE(StatsDataSystem, 0x130);
 } // namespace game
+using gameStatsDataSystem = game::StatsDataSystem;
 using StatsDataSystem = game::StatsDataSystem;
 } // namespace RED4ext
 

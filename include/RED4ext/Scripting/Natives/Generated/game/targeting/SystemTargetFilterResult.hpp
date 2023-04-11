@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace ent { struct IComponent; }
 
-namespace game::targeting { 
+namespace game::targeting
+{
 struct SystemTargetFilterResult : IScriptable
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilterResult";
@@ -25,6 +26,7 @@ struct SystemTargetFilterResult : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SystemTargetFilterResult, 0x58);
 } // namespace game::targeting
+using gametargetingSystemTargetFilterResult = game::targeting::SystemTargetFilterResult;
 using TargetFilterResult = game::targeting::SystemTargetFilterResult;
 } // namespace RED4ext
 

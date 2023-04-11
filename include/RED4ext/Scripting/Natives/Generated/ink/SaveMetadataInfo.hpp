@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct SaveMetadataInfo : IScriptable
 {
     static constexpr const char* NAME = "inkSaveMetadataInfo";
@@ -42,6 +43,7 @@ struct SaveMetadataInfo : IScriptable
 };
 RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x120);
 } // namespace ink
+using inkSaveMetadataInfo = ink::SaveMetadataInfo;
 using SaveMetadataInfo = ink::SaveMetadataInfo;
 } // namespace RED4ext
 

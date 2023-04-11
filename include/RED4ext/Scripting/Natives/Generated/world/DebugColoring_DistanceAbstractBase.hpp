@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_DistanceAbstractBase : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_DistanceAbstractBase";
@@ -24,6 +25,7 @@ struct DebugColoring_DistanceAbstractBase : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_DistanceAbstractBase, 0x40);
 } // namespace world
+using worldDebugColoring_DistanceAbstractBase = world::DebugColoring_DistanceAbstractBase;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,8 @@ namespace RED4ext
 {
 struct IScriptable;
 
-namespace quest { 
+namespace quest
+{
 struct EventManagerNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questEventManagerNodeDefinition";
@@ -32,6 +33,7 @@ struct EventManagerNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(EventManagerNodeDefinition, 0xC8);
 } // namespace quest
+using questEventManagerNodeDefinition = quest::EventManagerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

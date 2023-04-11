@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CharacterCustomizationSystem : game::ui::ICharacterCustomizationSystem
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationSystem";
@@ -20,6 +21,7 @@ struct CharacterCustomizationSystem : game::ui::ICharacterCustomizationSystem
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationSystem, 0x340);
 } // namespace game::ui
+using gameuiCharacterCustomizationSystem = game::ui::CharacterCustomizationSystem;
 } // namespace RED4ext
 
 // clang-format on

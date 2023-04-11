@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_BoolJoin : anim::AnimNode_BoolValue
 {
     static constexpr const char* NAME = "animAnimNode_BoolJoin";
@@ -22,6 +23,7 @@ struct AnimNode_BoolJoin : anim::AnimNode_BoolValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_BoolJoin, 0x88);
 } // namespace anim
+using animAnimNode_BoolJoin = anim::AnimNode_BoolJoin;
 } // namespace RED4ext
 
 // clang-format on

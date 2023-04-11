@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct NoChildren : ink::Children
 {
     static constexpr const char* NAME = "inkNoChildren";
@@ -19,6 +20,7 @@ struct NoChildren : ink::Children
 };
 RED4EXT_ASSERT_SIZE(NoChildren, 0x30);
 } // namespace ink
+using inkNoChildren = ink::NoChildren;
 } // namespace RED4ext
 
 // clang-format on

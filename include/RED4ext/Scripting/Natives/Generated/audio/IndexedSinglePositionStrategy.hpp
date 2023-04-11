@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct IndexedSinglePositionStrategy : audio::ApplySoundPositionStrategy
 {
     static constexpr const char* NAME = "audioIndexedSinglePositionStrategy";
@@ -19,6 +20,7 @@ struct IndexedSinglePositionStrategy : audio::ApplySoundPositionStrategy
 };
 RED4EXT_ASSERT_SIZE(IndexedSinglePositionStrategy, 0x8);
 } // namespace audio
+using audioIndexedSinglePositionStrategy = audio::IndexedSinglePositionStrategy;
 } // namespace RED4ext
 
 // clang-format on

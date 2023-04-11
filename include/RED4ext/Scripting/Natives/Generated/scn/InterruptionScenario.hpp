@@ -18,7 +18,8 @@ namespace scn { struct IInterruptCondition; }
 namespace scn { struct IReturnCondition; }
 namespace scn { struct InterruptFactConditionType; }
 
-namespace scn { 
+namespace scn
+{
 struct InterruptionScenario
 {
     static constexpr const char* NAME = "scnInterruptionScenario";
@@ -44,6 +45,7 @@ struct InterruptionScenario
 };
 RED4EXT_ASSERT_SIZE(InterruptionScenario, 0x68);
 } // namespace scn
+using scnInterruptionScenario = scn::InterruptionScenario;
 } // namespace RED4ext
 
 // clang-format on

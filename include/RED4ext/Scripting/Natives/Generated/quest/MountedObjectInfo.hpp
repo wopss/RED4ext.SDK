@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MountedObjectInfo : ISerializable
 {
     static constexpr const char* NAME = "questMountedObjectInfo";
@@ -29,6 +30,7 @@ struct MountedObjectInfo : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MountedObjectInfo, 0x80);
 } // namespace quest
+using questMountedObjectInfo = quest::MountedObjectInfo;
 } // namespace RED4ext
 
 // clang-format on

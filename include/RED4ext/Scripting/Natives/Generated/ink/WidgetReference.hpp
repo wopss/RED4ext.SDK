@@ -22,7 +22,8 @@ namespace RED4ext
 {
 namespace ink { struct Widget; }
 
-namespace ink {
+namespace ink
+{
 struct WidgetReference
 {
     static constexpr const char* NAME = "inkWidgetReference";
@@ -33,6 +34,7 @@ struct WidgetReference
 };
 RED4EXT_ASSERT_SIZE(WidgetReference, 0x18);
 } // namespace ink
+using inkWidgetReference = ink::WidgetReference;
 using inkWidgetRef = ink::WidgetReference;
 } // namespace RED4ext
 */

@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct ReactionPresetRecordSelector; }
 
-namespace quest { 
+namespace quest
+{
 struct CharacterManagerParameters_SetReactionPreset : quest::ICharacterManagerParameters_NodeSubType
 {
     static constexpr const char* NAME = "questCharacterManagerParameters_SetReactionPreset";
@@ -23,6 +24,7 @@ struct CharacterManagerParameters_SetReactionPreset : quest::ICharacterManagerPa
 };
 RED4EXT_ASSERT_SIZE(CharacterManagerParameters_SetReactionPreset, 0x80);
 } // namespace quest
+using questCharacterManagerParameters_SetReactionPreset = quest::CharacterManagerParameters_SetReactionPreset;
 } // namespace RED4ext
 
 // clang-format on

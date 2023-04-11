@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct Deprecated_GameplayEvent : red::Event
 {
     static constexpr const char* NAME = "gameDeprecated_GameplayEvent";
@@ -20,6 +21,7 @@ struct Deprecated_GameplayEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(Deprecated_GameplayEvent, 0x60);
 } // namespace game
+using gameDeprecated_GameplayEvent = game::Deprecated_GameplayEvent;
 } // namespace RED4ext
 
 // clang-format on

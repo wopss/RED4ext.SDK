@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct WeaponShellCasingSettings : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioWeaponShellCasingSettings";
@@ -28,6 +29,7 @@ struct WeaponShellCasingSettings : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(WeaponShellCasingSettings, 0x58);
 } // namespace audio
+using audioWeaponShellCasingSettings = audio::WeaponShellCasingSettings;
 } // namespace RED4ext
 
 // clang-format on

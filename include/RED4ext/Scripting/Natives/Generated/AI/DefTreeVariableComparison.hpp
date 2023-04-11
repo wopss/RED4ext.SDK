@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct DefTreeVariableComparison : LibTreeDefTreeVariableBoolBase
 {
     static constexpr const char* NAME = "AIDefTreeVariableComparison";
@@ -30,6 +31,7 @@ struct DefTreeVariableComparison : LibTreeDefTreeVariableBoolBase
 };
 RED4EXT_ASSERT_SIZE(DefTreeVariableComparison, 0x88);
 } // namespace AI
+using AIDefTreeVariableComparison = AI::DefTreeVariableComparison;
 } // namespace RED4ext
 
 // clang-format on

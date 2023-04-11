@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowOnscreen_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questShowOnscreen_NodeType";
@@ -25,6 +26,7 @@ struct ShowOnscreen_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ShowOnscreen_NodeType, 0x88);
 } // namespace quest
+using questShowOnscreen_NodeType = quest::ShowOnscreen_NodeType;
 } // namespace RED4ext
 
 // clang-format on

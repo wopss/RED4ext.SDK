@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics::cloth { 
+namespace physics::cloth
+{
 struct PhaseConfig
 {
     static constexpr const char* NAME = "physicsclothPhaseConfig";
@@ -22,6 +23,7 @@ struct PhaseConfig
 };
 RED4EXT_ASSERT_SIZE(PhaseConfig, 0x10);
 } // namespace physics::cloth
+using physicsclothPhaseConfig = physics::cloth::PhaseConfig;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct IEntityManagerSetDestructionState_NodeSubType : quest::IEntityManager_NodeSubType
 {
     static constexpr const char* NAME = "questIEntityManagerSetDestructionState_NodeSubType";
@@ -19,6 +20,7 @@ struct IEntityManagerSetDestructionState_NodeSubType : quest::IEntityManager_Nod
 };
 RED4EXT_ASSERT_SIZE(IEntityManagerSetDestructionState_NodeSubType, 0x30);
 } // namespace quest
+using questIEntityManagerSetDestructionState_NodeSubType = quest::IEntityManagerSetDestructionState_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

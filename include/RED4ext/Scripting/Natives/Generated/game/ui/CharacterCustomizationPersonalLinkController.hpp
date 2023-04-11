@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct CharacterCustomizationPersonalLinkController : game::ui::ICharacterCustomizationComponent
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationPersonalLinkController";
@@ -22,6 +23,7 @@ struct CharacterCustomizationPersonalLinkController : game::ui::ICharacterCustom
 };
 RED4EXT_ASSERT_SIZE(CharacterCustomizationPersonalLinkController, 0xC8);
 } // namespace game::ui
+using gameuiCharacterCustomizationPersonalLinkController = game::ui::CharacterCustomizationPersonalLinkController;
 } // namespace RED4ext
 
 // clang-format on

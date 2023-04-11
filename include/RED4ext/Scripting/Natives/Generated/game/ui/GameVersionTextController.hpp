@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct GameVersionTextController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiGameVersionTextController";
@@ -19,6 +20,7 @@ struct GameVersionTextController : ink::WidgetLogicController
 };
 RED4EXT_ASSERT_SIZE(GameVersionTextController, 0x78);
 } // namespace game::ui
+using gameuiGameVersionTextController = game::ui::GameVersionTextController;
 } // namespace RED4ext
 
 // clang-format on

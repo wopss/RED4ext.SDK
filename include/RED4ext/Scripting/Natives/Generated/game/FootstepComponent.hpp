@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FootstepComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameFootstepComponent";
@@ -25,6 +26,7 @@ struct FootstepComponent : ent::IComponent
 };
 RED4EXT_ASSERT_SIZE(FootstepComponent, 0xB0);
 } // namespace game
+using gameFootstepComponent = game::FootstepComponent;
 using FootstepComponent = game::FootstepComponent;
 } // namespace RED4ext
 

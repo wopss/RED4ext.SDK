@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace work { 
+namespace work
+{
 struct DebuggingTool
 {
     static constexpr const char* NAME = "workDebuggingTool";
@@ -19,6 +20,7 @@ struct DebuggingTool
 };
 RED4EXT_ASSERT_SIZE(DebuggingTool, 0x18);
 } // namespace work
+using workDebuggingTool = work::DebuggingTool;
 } // namespace RED4ext
 
 // clang-format on

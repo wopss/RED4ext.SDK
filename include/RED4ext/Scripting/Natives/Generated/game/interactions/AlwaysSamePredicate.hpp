@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct AlwaysSamePredicate : game::interactions::IPredicateType
 {
     static constexpr const char* NAME = "gameinteractionsAlwaysSamePredicate";
@@ -21,6 +22,7 @@ struct AlwaysSamePredicate : game::interactions::IPredicateType
 };
 RED4EXT_ASSERT_SIZE(AlwaysSamePredicate, 0x38);
 } // namespace game::interactions
+using gameinteractionsAlwaysSamePredicate = game::interactions::AlwaysSamePredicate;
 } // namespace RED4ext
 
 // clang-format on

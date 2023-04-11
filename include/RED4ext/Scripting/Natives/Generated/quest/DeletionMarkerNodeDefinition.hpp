@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DeletionMarkerNodeDefinition : quest::SignalStoppingNodeDefinition
 {
     static constexpr const char* NAME = "questDeletionMarkerNodeDefinition";
@@ -21,6 +22,7 @@ struct DeletionMarkerNodeDefinition : quest::SignalStoppingNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(DeletionMarkerNodeDefinition, 0x58);
 } // namespace quest
+using questDeletionMarkerNodeDefinition = quest::DeletionMarkerNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

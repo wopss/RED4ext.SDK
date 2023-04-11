@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct StatusEffectPrereq_Record : game::data::IPrereq_Record
 {
     static constexpr const char* NAME = "gamedataStatusEffectPrereq_Record";
@@ -20,6 +21,7 @@ struct StatusEffectPrereq_Record : game::data::IPrereq_Record
 };
 RED4EXT_ASSERT_SIZE(StatusEffectPrereq_Record, 0x60);
 } // namespace game::data
+using gamedataStatusEffectPrereq_Record = game::data::StatusEffectPrereq_Record;
 using StatusEffectPrereq_Record = game::data::StatusEffectPrereq_Record;
 } // namespace RED4ext
 

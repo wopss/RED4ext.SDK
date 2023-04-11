@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions
+{
 struct ReactionData : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsReactionData";
@@ -35,6 +36,7 @@ struct ReactionData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ReactionData, 0xB0);
 } // namespace game::interactions
+using gameinteractionsReactionData = game::interactions::ReactionData;
 using ReactionData = game::interactions::ReactionData;
 } // namespace RED4ext
 

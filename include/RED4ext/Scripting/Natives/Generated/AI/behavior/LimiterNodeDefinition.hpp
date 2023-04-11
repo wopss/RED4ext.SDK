@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct LimiterNodeDefinition : AI::behavior::DecoratorNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorLimiterNodeDefinition";
@@ -23,6 +24,7 @@ struct LimiterNodeDefinition : AI::behavior::DecoratorNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(LimiterNodeDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorLimiterNodeDefinition = AI::behavior::LimiterNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

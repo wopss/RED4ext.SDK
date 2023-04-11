@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct TrajectoryParams : IScriptable
 {
     static constexpr const char* NAME = "gameprojectileTrajectoryParams";
@@ -19,6 +20,7 @@ struct TrajectoryParams : IScriptable
 };
 RED4EXT_ASSERT_SIZE(TrajectoryParams, 0x40);
 } // namespace game::projectile
+using gameprojectileTrajectoryParams = game::projectile::TrajectoryParams;
 } // namespace RED4ext
 
 // clang-format on

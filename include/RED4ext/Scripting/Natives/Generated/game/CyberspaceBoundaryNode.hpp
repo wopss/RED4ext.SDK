@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CyberspaceBoundaryNode : world::TriggerAreaNode
 {
     static constexpr const char* NAME = "gameCyberspaceBoundaryNode";
@@ -22,6 +23,7 @@ struct CyberspaceBoundaryNode : world::TriggerAreaNode
 };
 RED4EXT_ASSERT_SIZE(CyberspaceBoundaryNode, 0x80);
 } // namespace game
+using gameCyberspaceBoundaryNode = game::CyberspaceBoundaryNode;
 } // namespace RED4ext
 
 // clang-format on

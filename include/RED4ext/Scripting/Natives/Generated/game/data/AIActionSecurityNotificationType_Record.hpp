@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIActionSecurityNotificationType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataAIActionSecurityNotificationType_Record";
@@ -20,6 +21,7 @@ struct AIActionSecurityNotificationType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(AIActionSecurityNotificationType_Record, 0x58);
 } // namespace game::data
+using gamedataAIActionSecurityNotificationType_Record = game::data::AIActionSecurityNotificationType_Record;
 using AIActionSecurityNotificationType_Record = game::data::AIActionSecurityNotificationType_Record;
 } // namespace RED4ext
 

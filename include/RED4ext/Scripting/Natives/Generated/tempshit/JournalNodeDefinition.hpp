@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace tempshit { 
+namespace tempshit
+{
 struct JournalNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "tempshitJournalNodeDefinition";
@@ -19,6 +20,7 @@ struct JournalNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(JournalNodeDefinition, 0x48);
 } // namespace tempshit
+using tempshitJournalNodeDefinition = tempshit::JournalNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

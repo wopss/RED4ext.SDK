@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemMarkers : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemMarkers";
@@ -20,6 +21,7 @@ struct RuntimeSystemMarkers : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemMarkers, 0x82060);
 } // namespace world
+using worldRuntimeSystemMarkers = world::RuntimeSystemMarkers;
 } // namespace RED4ext
 
 // clang-format on

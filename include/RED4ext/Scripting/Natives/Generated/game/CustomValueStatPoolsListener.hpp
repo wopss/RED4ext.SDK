@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CustomValueStatPoolsListener : game::ScriptStatPoolsListener
 {
     static constexpr const char* NAME = "gameCustomValueStatPoolsListener";
@@ -20,6 +21,7 @@ struct CustomValueStatPoolsListener : game::ScriptStatPoolsListener
 };
 RED4EXT_ASSERT_SIZE(CustomValueStatPoolsListener, 0x48);
 } // namespace game
+using gameCustomValueStatPoolsListener = game::CustomValueStatPoolsListener;
 using CustomValueStatPoolsListener = game::CustomValueStatPoolsListener;
 } // namespace RED4ext
 

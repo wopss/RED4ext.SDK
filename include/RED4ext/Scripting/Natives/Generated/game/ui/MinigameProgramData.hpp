@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct MinigameProgramData
 {
     static constexpr const char* NAME = "gameuiMinigameProgramData";
@@ -22,6 +23,7 @@ struct MinigameProgramData
 };
 RED4EXT_ASSERT_SIZE(MinigameProgramData, 0x10);
 } // namespace game::ui
+using gameuiMinigameProgramData = game::ui::MinigameProgramData;
 using MinigameProgramData = game::ui::MinigameProgramData;
 } // namespace RED4ext
 

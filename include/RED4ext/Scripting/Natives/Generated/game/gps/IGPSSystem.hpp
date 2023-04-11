@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::gps { 
+namespace game::gps
+{
 struct IGPSSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gamegpsIGPSSystem";
@@ -19,6 +20,7 @@ struct IGPSSystem : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IGPSSystem, 0x48);
 } // namespace game::gps
+using gamegpsIGPSSystem = game::gps::IGPSSystem;
 using IGPSSystem = game::gps::IGPSSystem;
 } // namespace RED4ext
 

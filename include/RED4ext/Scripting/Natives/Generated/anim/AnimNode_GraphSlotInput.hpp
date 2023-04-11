@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_GraphSlotInput : anim::AnimNode_Base
 {
     static constexpr const char* NAME = "animAnimNode_GraphSlotInput";
@@ -19,6 +20,7 @@ struct AnimNode_GraphSlotInput : anim::AnimNode_Base
 };
 RED4EXT_ASSERT_SIZE(AnimNode_GraphSlotInput, 0x48);
 } // namespace anim
+using animAnimNode_GraphSlotInput = anim::AnimNode_GraphSlotInput;
 } // namespace RED4ext
 
 // clang-format on

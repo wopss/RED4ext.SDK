@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace game::carry { 
+namespace game::carry
+{
 struct ReplicatedEntitySetAttachmentToNode : net::EntityAttachmentInterface
 {
     static constexpr const char* NAME = "gamecarryReplicatedEntitySetAttachmentToNode";
@@ -22,6 +23,7 @@ struct ReplicatedEntitySetAttachmentToNode : net::EntityAttachmentInterface
 };
 RED4EXT_ASSERT_SIZE(ReplicatedEntitySetAttachmentToNode, 0x40);
 } // namespace game::carry
+using gamecarryReplicatedEntitySetAttachmentToNode = game::carry::ReplicatedEntitySetAttachmentToNode;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct HostilesDetectedConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorHostilesDetectedConditionDefinition";
@@ -19,6 +20,7 @@ struct HostilesDetectedConditionDefinition : AI::behavior::ConditionDefinition
 };
 RED4EXT_ASSERT_SIZE(HostilesDetectedConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorHostilesDetectedConditionDefinition = AI::behavior::HostilesDetectedConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

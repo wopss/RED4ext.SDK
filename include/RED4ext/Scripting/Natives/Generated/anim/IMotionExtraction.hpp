@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct IMotionExtraction : ISerializable
 {
     static constexpr const char* NAME = "animIMotionExtraction";
@@ -19,6 +20,7 @@ struct IMotionExtraction : ISerializable
 };
 RED4EXT_ASSERT_SIZE(IMotionExtraction, 0x30);
 } // namespace anim
+using animIMotionExtraction = anim::IMotionExtraction;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct TextureMaxMipBiasChangeEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiTextureMaxMipBiasChangeEvent";
@@ -21,6 +22,7 @@ struct TextureMaxMipBiasChangeEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(TextureMaxMipBiasChangeEvent, 0x48);
 } // namespace game::ui
+using gameuiTextureMaxMipBiasChangeEvent = game::ui::TextureMaxMipBiasChangeEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct KeepCurrentCoverSelection : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIKeepCurrentCoverSelection";
@@ -20,6 +21,7 @@ struct KeepCurrentCoverSelection : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(KeepCurrentCoverSelection, 0x18);
 } // namespace AI
+using AIKeepCurrentCoverSelection = AI::KeepCurrentCoverSelection;
 } // namespace RED4ext
 
 // clang-format on

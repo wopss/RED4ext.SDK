@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ParallelNodeDefinition : AI::behavior::CompositeTreeNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorParallelNodeDefinition";
@@ -22,6 +23,7 @@ struct ParallelNodeDefinition : AI::behavior::CompositeTreeNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(ParallelNodeDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorParallelNodeDefinition = AI::behavior::ParallelNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

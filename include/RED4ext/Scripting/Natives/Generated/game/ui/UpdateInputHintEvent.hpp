@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct UpdateInputHintEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiUpdateInputHintEvent";
@@ -25,6 +26,7 @@ struct UpdateInputHintEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(UpdateInputHintEvent, 0xA0);
 } // namespace game::ui
+using gameuiUpdateInputHintEvent = game::ui::UpdateInputHintEvent;
 using UpdateInputHintEvent = game::ui::UpdateInputHintEvent;
 } // namespace RED4ext
 

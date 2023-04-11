@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct FriendlyFireSystem : game::IFriendlyFireSystem
 {
     static constexpr const char* NAME = "gameFriendlyFireSystem";
@@ -20,6 +21,7 @@ struct FriendlyFireSystem : game::IFriendlyFireSystem
 };
 RED4EXT_ASSERT_SIZE(FriendlyFireSystem, 0x160);
 } // namespace game
+using gameFriendlyFireSystem = game::FriendlyFireSystem;
 using FriendlyFireSystem = game::FriendlyFireSystem;
 } // namespace RED4ext
 

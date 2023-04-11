@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AttachmentSlotsFunctorListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "gameAttachmentSlotsFunctorListener";
@@ -20,6 +21,7 @@ struct AttachmentSlotsFunctorListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotsFunctorListener, 0x70);
 } // namespace game
+using gameAttachmentSlotsFunctorListener = game::AttachmentSlotsFunctorListener;
 } // namespace RED4ext
 
 // clang-format on

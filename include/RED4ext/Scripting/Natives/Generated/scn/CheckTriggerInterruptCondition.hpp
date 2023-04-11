@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct CheckTriggerInterruptCondition : scn::IInterruptCondition
 {
     static constexpr const char* NAME = "scnCheckTriggerInterruptCondition";
@@ -22,6 +23,7 @@ struct CheckTriggerInterruptCondition : scn::IInterruptCondition
 };
 RED4EXT_ASSERT_SIZE(CheckTriggerInterruptCondition, 0x70);
 } // namespace scn
+using scnCheckTriggerInterruptCondition = scn::CheckTriggerInterruptCondition;
 } // namespace RED4ext
 
 // clang-format on

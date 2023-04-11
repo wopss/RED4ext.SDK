@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace grs { 
+namespace grs
+{
 struct DeathmatchState
 {
     static constexpr const char* NAME = "grsDeathmatchState";
@@ -29,6 +30,7 @@ struct DeathmatchState
 };
 RED4EXT_ASSERT_SIZE(DeathmatchState, 0x150);
 } // namespace grs
+using grsDeathmatchState = grs::DeathmatchState;
 } // namespace RED4ext
 
 // clang-format on

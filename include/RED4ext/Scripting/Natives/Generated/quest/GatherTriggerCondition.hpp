@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct GatherTriggerCondition : quest::TriggerCondition
 {
     static constexpr const char* NAME = "questGatherTriggerCondition";
@@ -19,6 +20,7 @@ struct GatherTriggerCondition : quest::TriggerCondition
 };
 RED4EXT_ASSERT_SIZE(GatherTriggerCondition, 0x88);
 } // namespace quest
+using questGatherTriggerCondition = quest::GatherTriggerCondition;
 } // namespace RED4ext
 
 // clang-format on

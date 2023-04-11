@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace ent { 
+namespace ent
+{
 struct IKTargetRemoveEvent : red::Event
 {
     static constexpr const char* NAME = "entIKTargetRemoveEvent";
@@ -21,6 +22,7 @@ struct IKTargetRemoveEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(IKTargetRemoveEvent, 0x50);
 } // namespace ent
+using entIKTargetRemoveEvent = ent::IKTargetRemoveEvent;
 using IKTargetRemoveEvent = ent::IKTargetRemoveEvent;
 } // namespace RED4ext
 

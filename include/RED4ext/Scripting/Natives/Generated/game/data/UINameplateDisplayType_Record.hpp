@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct UINameplateDisplayType_Record : game::data::TweakDBRecord
 {
     static constexpr const char* NAME = "gamedataUINameplateDisplayType_Record";
@@ -20,6 +21,7 @@ struct UINameplateDisplayType_Record : game::data::TweakDBRecord
 };
 RED4EXT_ASSERT_SIZE(UINameplateDisplayType_Record, 0x58);
 } // namespace game::data
+using gamedataUINameplateDisplayType_Record = game::data::UINameplateDisplayType_Record;
 using UINameplateDisplayType_Record = game::data::UINameplateDisplayType_Record;
 } // namespace RED4ext
 

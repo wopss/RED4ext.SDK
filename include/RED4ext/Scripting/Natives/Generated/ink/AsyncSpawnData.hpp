@@ -15,7 +15,8 @@ namespace RED4ext
 struct IScriptable;
 namespace ink { struct CompoundWidget; }
 
-namespace ink { 
+namespace ink
+{
 struct AsyncSpawnData : IScriptable
 {
     static constexpr const char* NAME = "inkAsyncSpawnData";
@@ -33,6 +34,7 @@ struct AsyncSpawnData : IScriptable
 };
 RED4EXT_ASSERT_SIZE(AsyncSpawnData, 0xF0);
 } // namespace ink
+using inkAsyncSpawnData = ink::AsyncSpawnData;
 } // namespace RED4ext
 
 // clang-format on

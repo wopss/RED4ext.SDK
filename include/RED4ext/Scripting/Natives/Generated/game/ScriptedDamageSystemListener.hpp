@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct ScriptedDamageSystemListener : game::IDamageSystemListener
 {
     static constexpr const char* NAME = "gameScriptedDamageSystemListener";
@@ -20,6 +21,7 @@ struct ScriptedDamageSystemListener : game::IDamageSystemListener
 };
 RED4EXT_ASSERT_SIZE(ScriptedDamageSystemListener, 0x58);
 } // namespace game
+using gameScriptedDamageSystemListener = game::ScriptedDamageSystemListener;
 using ScriptedDamageSystemListener = game::ScriptedDamageSystemListener;
 } // namespace RED4ext
 

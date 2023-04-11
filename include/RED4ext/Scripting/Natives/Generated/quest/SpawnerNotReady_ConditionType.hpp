@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SpawnerNotReady_ConditionType : quest::ISpawnerConditionType
 {
     static constexpr const char* NAME = "questSpawnerNotReady_ConditionType";
@@ -24,6 +25,7 @@ struct SpawnerNotReady_ConditionType : quest::ISpawnerConditionType
 };
 RED4EXT_ASSERT_SIZE(SpawnerNotReady_ConditionType, 0x50);
 } // namespace quest
+using questSpawnerNotReady_ConditionType = quest::SpawnerNotReady_ConditionType;
 } // namespace RED4ext
 
 // clang-format on

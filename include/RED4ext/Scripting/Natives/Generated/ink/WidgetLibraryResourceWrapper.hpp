@@ -12,7 +12,8 @@ namespace RED4ext
 {
 namespace ink { struct WidgetLibraryResource; }
 
-namespace ink { 
+namespace ink
+{
 struct WidgetLibraryResourceWrapper
 {
     static constexpr const char* NAME = "inkWidgetLibraryResourceWrapper";
@@ -22,6 +23,7 @@ struct WidgetLibraryResourceWrapper
 };
 RED4EXT_ASSERT_SIZE(WidgetLibraryResourceWrapper, 0x8);
 } // namespace ink
+using inkWidgetLibraryResourceWrapper = ink::WidgetLibraryResourceWrapper;
 using inkWidgetLibraryResource = ink::WidgetLibraryResourceWrapper;
 } // namespace RED4ext
 

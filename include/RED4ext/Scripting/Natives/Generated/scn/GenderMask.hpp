@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct GenderMask
 {
     static constexpr const char* NAME = "scnGenderMask";
@@ -19,6 +20,7 @@ struct GenderMask
 };
 RED4EXT_ASSERT_SIZE(GenderMask, 0x1);
 } // namespace scn
+using scnGenderMask = scn::GenderMask;
 } // namespace RED4ext
 
 // clang-format on

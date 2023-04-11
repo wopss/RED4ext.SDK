@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimFeature_NPCState : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_NPCState";
@@ -21,6 +22,7 @@ struct AnimFeature_NPCState : anim::AnimFeature
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_NPCState, 0x48);
 } // namespace anim
+using animAnimFeature_NPCState = anim::AnimFeature_NPCState;
 using AnimFeature_NPCState = anim::AnimFeature_NPCState;
 } // namespace RED4ext
 

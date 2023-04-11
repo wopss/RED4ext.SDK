@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SApplyRotationIKSolver
 {
     static constexpr const char* NAME = "animSApplyRotationIKSolver";
@@ -19,6 +20,7 @@ struct SApplyRotationIKSolver
 };
 RED4EXT_ASSERT_SIZE(SApplyRotationIKSolver, 0x50);
 } // namespace anim
+using animSApplyRotationIKSolver = anim::SApplyRotationIKSolver;
 } // namespace RED4ext
 
 // clang-format on

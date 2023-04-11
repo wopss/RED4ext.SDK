@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemFOV : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemFOV";
@@ -21,6 +22,7 @@ struct TrackItemFOV : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemFOV, 0x68);
 } // namespace effect
+using effectTrackItemFOV = effect::TrackItemFOV;
 } // namespace RED4ext
 
 // clang-format on

@@ -21,7 +21,8 @@
 
 namespace RED4ext
 {
-namespace tools { 
+namespace tools
+{
 struct JiraIssueFields
 {
     static constexpr const char* NAME = "toolsJiraIssueFields";
@@ -53,6 +54,7 @@ struct JiraIssueFields
 };
 RED4EXT_ASSERT_SIZE(JiraIssueFields, 0x2F0);
 } // namespace tools
+using toolsJiraIssueFields = tools::JiraIssueFields;
 } // namespace RED4ext
 
 // clang-format on

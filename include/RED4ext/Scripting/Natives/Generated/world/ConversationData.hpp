@@ -17,7 +17,8 @@ namespace quest { struct IBaseCondition; }
 namespace scn { struct IInterruptionOperation; }
 namespace scn { struct SceneResource; }
 
-namespace world { 
+namespace world
+{
 struct ConversationData : ISerializable
 {
     static constexpr const char* NAME = "worldConversationData";
@@ -32,6 +33,7 @@ struct ConversationData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(ConversationData, 0x60);
 } // namespace world
+using worldConversationData = world::ConversationData;
 } // namespace RED4ext
 
 // clang-format on

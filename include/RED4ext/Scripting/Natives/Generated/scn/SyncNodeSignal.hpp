@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct SyncNodeSignal
 {
     static constexpr const char* NAME = "scnSyncNodeSignal";
@@ -24,6 +25,7 @@ struct SyncNodeSignal
 };
 RED4EXT_ASSERT_SIZE(SyncNodeSignal, 0x14);
 } // namespace scn
+using scnSyncNodeSignal = scn::SyncNodeSignal;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct SnapTags
 {
     static constexpr const char* NAME = "worldSnapTags";
@@ -22,6 +23,7 @@ struct SnapTags
 };
 RED4EXT_ASSERT_SIZE(SnapTags, 0x20);
 } // namespace world
+using worldSnapTags = world::SnapTags;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct LootVisualizer : game::ui::IChoiceVisualizer
 {
     static constexpr const char* NAME = "gameuiLootVisualizer";
@@ -19,6 +20,7 @@ struct LootVisualizer : game::ui::IChoiceVisualizer
 };
 RED4EXT_ASSERT_SIZE(LootVisualizer, 0x30);
 } // namespace game::ui
+using gameuiLootVisualizer = game::ui::LootVisualizer;
 } // namespace RED4ext
 
 // clang-format on

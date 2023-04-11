@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TutorialOverlayUserData : ink::UserData
 {
     static constexpr const char* NAME = "gameTutorialOverlayUserData";
@@ -22,6 +23,7 @@ struct TutorialOverlayUserData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(TutorialOverlayUserData, 0x48);
 } // namespace game
+using gameTutorialOverlayUserData = game::TutorialOverlayUserData;
 using TutorialOverlayUserData = game::TutorialOverlayUserData;
 } // namespace RED4ext
 

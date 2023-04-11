@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct GradientWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkGradientWidget";
@@ -28,6 +29,7 @@ struct GradientWidget : ink::BaseShapeWidget
 };
 RED4EXT_ASSERT_SIZE(GradientWidget, 0x270);
 } // namespace ink
+using inkGradientWidget = ink::GradientWidget;
 using inkGradient = ink::GradientWidget;
 } // namespace RED4ext
 

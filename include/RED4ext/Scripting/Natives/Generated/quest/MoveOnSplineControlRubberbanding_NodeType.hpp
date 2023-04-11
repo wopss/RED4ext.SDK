@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct MoveOnSplineControlRubberbanding_NodeType : quest::IVehicleManagerNodeType
 {
     static constexpr const char* NAME = "questMoveOnSplineControlRubberbanding_NodeType";
@@ -28,6 +29,7 @@ struct MoveOnSplineControlRubberbanding_NodeType : quest::IVehicleManagerNodeTyp
 };
 RED4EXT_ASSERT_SIZE(MoveOnSplineControlRubberbanding_NodeType, 0xB8);
 } // namespace quest
+using questMoveOnSplineControlRubberbanding_NodeType = quest::MoveOnSplineControlRubberbanding_NodeType;
 } // namespace RED4ext
 
 // clang-format on

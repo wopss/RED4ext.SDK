@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace cp { 
+namespace cp
+{
 struct ConveyorComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "cpConveyorComponent";
@@ -19,6 +20,7 @@ struct ConveyorComponent : ent::IVisualComponent
 };
 RED4EXT_ASSERT_SIZE(ConveyorComponent, 0x140);
 } // namespace cp
+using cpConveyorComponent = cp::ConveyorComponent;
 } // namespace RED4ext
 
 // clang-format on

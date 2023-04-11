@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct TPPRepresentationSlotListener : game::IAttachmentSlotsListener
 {
     static constexpr const char* NAME = "gameTPPRepresentationSlotListener";
@@ -20,6 +21,7 @@ struct TPPRepresentationSlotListener : game::IAttachmentSlotsListener
 };
 RED4EXT_ASSERT_SIZE(TPPRepresentationSlotListener, 0x48);
 } // namespace game
+using gameTPPRepresentationSlotListener = game::TPPRepresentationSlotListener;
 } // namespace RED4ext
 
 // clang-format on

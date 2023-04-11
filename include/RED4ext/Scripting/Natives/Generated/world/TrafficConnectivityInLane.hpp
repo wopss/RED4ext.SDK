@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct TrafficConnectivityInLane
 {
     static constexpr const char* NAME = "worldTrafficConnectivityInLane";
@@ -19,6 +20,7 @@ struct TrafficConnectivityInLane
 };
 RED4EXT_ASSERT_SIZE(TrafficConnectivityInLane, 0x10);
 } // namespace world
+using worldTrafficConnectivityInLane = world::TrafficConnectivityInLane;
 } // namespace RED4ext
 
 // clang-format on

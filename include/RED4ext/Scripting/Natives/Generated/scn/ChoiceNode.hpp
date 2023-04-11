@@ -35,7 +35,8 @@ namespace scn { struct InteractionShapeParams; }
 namespace scn { struct ReminderCondition; }
 namespace scn { struct TimedCondition; }
 
-namespace scn { 
+namespace scn
+{
 struct ChoiceNode : scn::SceneGraphNode
 {
     static constexpr const char* NAME = "scnChoiceNode";
@@ -76,6 +77,7 @@ struct ChoiceNode : scn::SceneGraphNode
 };
 RED4EXT_ASSERT_SIZE(ChoiceNode, 0x1C0);
 } // namespace scn
+using scnChoiceNode = scn::ChoiceNode;
 } // namespace RED4ext
 
 // clang-format on

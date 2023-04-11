@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct WorldWidgetComponentUserData : ink::UserData
 {
     static constexpr const char* NAME = "inkWorldWidgetComponentUserData";
@@ -20,6 +21,7 @@ struct WorldWidgetComponentUserData : ink::UserData
 };
 RED4EXT_ASSERT_SIZE(WorldWidgetComponentUserData, 0x50);
 } // namespace ink
+using inkWorldWidgetComponentUserData = ink::WorldWidgetComponentUserData;
 } // namespace RED4ext
 
 // clang-format on

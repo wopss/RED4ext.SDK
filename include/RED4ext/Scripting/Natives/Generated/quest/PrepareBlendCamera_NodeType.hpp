@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct PrepareBlendCamera_NodeType : quest::ISceneManagerNodeType
 {
     static constexpr const char* NAME = "questPrepareBlendCamera_NodeType";
@@ -19,6 +20,7 @@ struct PrepareBlendCamera_NodeType : quest::ISceneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(PrepareBlendCamera_NodeType, 0x38);
 } // namespace quest
+using questPrepareBlendCamera_NodeType = quest::PrepareBlendCamera_NodeType;
 } // namespace RED4ext
 
 // clang-format on

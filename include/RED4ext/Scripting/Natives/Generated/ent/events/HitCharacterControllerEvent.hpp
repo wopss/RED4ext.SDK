@@ -14,7 +14,8 @@ namespace RED4ext
 namespace ent { struct Entity; }
 namespace ent { struct IComponent; }
 
-namespace ent::events { 
+namespace ent::events
+{
 struct HitCharacterControllerEvent : red::Event
 {
     static constexpr const char* NAME = "enteventsHitCharacterControllerEvent";
@@ -25,6 +26,7 @@ struct HitCharacterControllerEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(HitCharacterControllerEvent, 0x60);
 } // namespace ent::events
+using enteventsHitCharacterControllerEvent = ent::events::HitCharacterControllerEvent;
 using HitCharacterControllerEvent = ent::events::HitCharacterControllerEvent;
 } // namespace RED4ext
 

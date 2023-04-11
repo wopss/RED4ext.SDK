@@ -16,7 +16,8 @@
 
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui
+{
 struct PhotoModeStickersController : game::ui::WidgetGameController
 {
     static constexpr const char* NAME = "gameuiPhotoModeStickersController";
@@ -33,6 +34,7 @@ struct PhotoModeStickersController : game::ui::WidgetGameController
 };
 RED4EXT_ASSERT_SIZE(PhotoModeStickersController, 0x2B0);
 } // namespace game::ui
+using gameuiPhotoModeStickersController = game::ui::PhotoModeStickersController;
 } // namespace RED4ext
 
 // clang-format on

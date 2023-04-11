@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct DeviceResourceData : ISerializable
 {
     static constexpr const char* NAME = "gameDeviceResourceData";
@@ -22,6 +23,7 @@ struct DeviceResourceData : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DeviceResourceData, 0x68);
 } // namespace game
+using gameDeviceResourceData = game::DeviceResourceData;
 } // namespace RED4ext
 
 // clang-format on

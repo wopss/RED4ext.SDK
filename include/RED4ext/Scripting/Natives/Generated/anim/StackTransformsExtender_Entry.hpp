@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct StackTransformsExtender_Entry
 {
     static constexpr const char* NAME = "animStackTransformsExtender_Entry";
@@ -31,6 +32,7 @@ struct StackTransformsExtender_Entry
 };
 RED4EXT_ASSERT_SIZE(StackTransformsExtender_Entry, 0xB0);
 } // namespace anim
+using animStackTransformsExtender_Entry = anim::StackTransformsExtender_Entry;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui
+{
 struct WorldLayerWidget : ink::IWidgetComponentWrapper
 {
     static constexpr const char* NAME = "worlduiWorldLayerWidget";
@@ -20,6 +21,7 @@ struct WorldLayerWidget : ink::IWidgetComponentWrapper
 };
 RED4EXT_ASSERT_SIZE(WorldLayerWidget, 0x70);
 } // namespace world::ui
+using worlduiWorldLayerWidget = world::ui::WorldLayerWidget;
 } // namespace RED4ext
 
 // clang-format on

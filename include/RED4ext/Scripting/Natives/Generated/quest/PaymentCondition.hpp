@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace quest { struct IPayment_ConditionType; }
 
-namespace quest { 
+namespace quest
+{
 struct PaymentCondition : quest::TypedCondition
 {
     static constexpr const char* NAME = "questPaymentCondition";
@@ -23,6 +24,7 @@ struct PaymentCondition : quest::TypedCondition
 };
 RED4EXT_ASSERT_SIZE(PaymentCondition, 0x40);
 } // namespace quest
+using questPaymentCondition = quest::PaymentCondition;
 } // namespace RED4ext
 
 // clang-format on

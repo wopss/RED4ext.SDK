@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct InstantTaskNodeDefinition : AI::behavior::TaskNodeDefinition
 {
     static constexpr const char* NAME = "AIbehaviorInstantTaskNodeDefinition";
@@ -19,6 +20,7 @@ struct InstantTaskNodeDefinition : AI::behavior::TaskNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(InstantTaskNodeDefinition, 0x50);
 } // namespace AI::behavior
+using AIbehaviorInstantTaskNodeDefinition = AI::behavior::InstantTaskNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct EntityStubHandlerProviderSystem : AI::IEntityStubHandlerProviderSystem
 {
     static constexpr const char* NAME = "AIEntityStubHandlerProviderSystem";
@@ -20,6 +21,7 @@ struct EntityStubHandlerProviderSystem : AI::IEntityStubHandlerProviderSystem
 };
 RED4EXT_ASSERT_SIZE(EntityStubHandlerProviderSystem, 0x160);
 } // namespace AI
+using AIEntityStubHandlerProviderSystem = AI::EntityStubHandlerProviderSystem;
 using EntityStubHandlerProviderSystem = AI::EntityStubHandlerProviderSystem;
 } // namespace RED4ext
 

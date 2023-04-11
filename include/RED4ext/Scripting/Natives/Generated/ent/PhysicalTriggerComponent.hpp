@@ -15,7 +15,8 @@ namespace RED4ext
 {
 namespace physics { struct FilterData; }
 
-namespace ent { 
+namespace ent
+{
 struct PhysicalTriggerComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entPhysicalTriggerComponent";
@@ -29,6 +30,7 @@ struct PhysicalTriggerComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(PhysicalTriggerComponent, 0x180);
 } // namespace ent
+using entPhysicalTriggerComponent = ent::PhysicalTriggerComponent;
 using PhysicalTriggerComponent = ent::PhysicalTriggerComponent;
 } // namespace RED4ext
 

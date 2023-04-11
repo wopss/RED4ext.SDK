@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SpotInstance
 {
     static constexpr const char* NAME = "AISpotInstance";
@@ -19,6 +20,7 @@ struct SpotInstance
 };
 RED4EXT_ASSERT_SIZE(SpotInstance, 0x18);
 } // namespace AI
+using AISpotInstance = AI::SpotInstance;
 } // namespace RED4ext
 
 // clang-format on

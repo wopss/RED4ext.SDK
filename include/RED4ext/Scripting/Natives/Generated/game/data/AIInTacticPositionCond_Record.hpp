@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct AIInTacticPositionCond_Record : game::data::AIActionSubCondition_Record
 {
     static constexpr const char* NAME = "gamedataAIInTacticPositionCond_Record";
@@ -20,6 +21,7 @@ struct AIInTacticPositionCond_Record : game::data::AIActionSubCondition_Record
 };
 RED4EXT_ASSERT_SIZE(AIInTacticPositionCond_Record, 0x58);
 } // namespace game::data
+using gamedataAIInTacticPositionCond_Record = game::data::AIInTacticPositionCond_Record;
 using AIInTacticPositionCond_Record = game::data::AIInTacticPositionCond_Record;
 } // namespace RED4ext
 

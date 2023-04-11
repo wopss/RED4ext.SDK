@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ISafeAreaManager : game::IGameSystem
 {
     static constexpr const char* NAME = "AIISafeAreaManager";
@@ -19,6 +20,7 @@ struct ISafeAreaManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(ISafeAreaManager, 0x48);
 } // namespace AI
+using AIISafeAreaManager = AI::ISafeAreaManager;
 using ISafeAreaManager = AI::ISafeAreaManager;
 } // namespace RED4ext
 

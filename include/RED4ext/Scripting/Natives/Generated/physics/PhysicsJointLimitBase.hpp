@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace physics { 
+namespace physics
+{
 struct PhysicsJointLimitBase
 {
     static constexpr const char* NAME = "physicsPhysicsJointLimitBase";
@@ -25,6 +26,7 @@ struct PhysicsJointLimitBase
 };
 RED4EXT_ASSERT_SIZE(PhysicsJointLimitBase, 0x20);
 } // namespace physics
+using physicsPhysicsJointLimitBase = physics::PhysicsJointLimitBase;
 } // namespace RED4ext
 
 // clang-format on

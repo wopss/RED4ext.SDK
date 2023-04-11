@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetLifePathRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "questSetLifePathRequest";
@@ -21,6 +22,7 @@ struct SetLifePathRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(SetLifePathRequest, 0x60);
 } // namespace quest
+using questSetLifePathRequest = quest::SetLifePathRequest;
 } // namespace RED4ext
 
 // clang-format on

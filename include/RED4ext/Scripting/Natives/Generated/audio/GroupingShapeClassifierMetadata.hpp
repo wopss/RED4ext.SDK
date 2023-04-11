@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct GroupingShapeClassifierMetadata : audio::AudioMetadata
 {
     static constexpr const char* NAME = "audioGroupingShapeClassifierMetadata";
@@ -32,6 +33,7 @@ struct GroupingShapeClassifierMetadata : audio::AudioMetadata
 };
 RED4EXT_ASSERT_SIZE(GroupingShapeClassifierMetadata, 0x78);
 } // namespace audio
+using audioGroupingShapeClassifierMetadata = audio::GroupingShapeClassifierMetadata;
 } // namespace RED4ext
 
 // clang-format on

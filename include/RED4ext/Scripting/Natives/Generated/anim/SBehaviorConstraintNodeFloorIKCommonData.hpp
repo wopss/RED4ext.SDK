@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SBehaviorConstraintNodeFloorIKCommonData
 {
     static constexpr const char* NAME = "animSBehaviorConstraintNodeFloorIKCommonData";
@@ -26,6 +27,7 @@ struct SBehaviorConstraintNodeFloorIKCommonData
 };
 RED4EXT_ASSERT_SIZE(SBehaviorConstraintNodeFloorIKCommonData, 0x30);
 } // namespace anim
+using animSBehaviorConstraintNodeFloorIKCommonData = anim::SBehaviorConstraintNodeFloorIKCommonData;
 } // namespace RED4ext
 
 // clang-format on

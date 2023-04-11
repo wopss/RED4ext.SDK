@@ -16,7 +16,8 @@
 
 namespace RED4ext
 {
-namespace effect { 
+namespace effect
+{
 struct TrackItemPointLight : effect::TrackItem
 {
     static constexpr const char* NAME = "effectTrackItemPointLight";
@@ -44,6 +45,7 @@ struct TrackItemPointLight : effect::TrackItem
 };
 RED4EXT_ASSERT_SIZE(TrackItemPointLight, 0xD0);
 } // namespace effect
+using effectTrackItemPointLight = effect::TrackItemPointLight;
 } // namespace RED4ext
 
 // clang-format on

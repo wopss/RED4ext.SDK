@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct SyncMethodByFootPhase : anim::ISyncMethod
 {
     static constexpr const char* NAME = "animSyncMethodByFootPhase";
@@ -19,6 +20,7 @@ struct SyncMethodByFootPhase : anim::ISyncMethod
 };
 RED4EXT_ASSERT_SIZE(SyncMethodByFootPhase, 0x30);
 } // namespace anim
+using animSyncMethodByFootPhase = anim::SyncMethodByFootPhase;
 } // namespace RED4ext
 
 // clang-format on

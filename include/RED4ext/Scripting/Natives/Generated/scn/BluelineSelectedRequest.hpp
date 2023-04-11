@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct BluelineSelectedRequest : game::PlayerScriptableSystemRequest
 {
     static constexpr const char* NAME = "scnBluelineSelectedRequest";
@@ -19,6 +20,7 @@ struct BluelineSelectedRequest : game::PlayerScriptableSystemRequest
 };
 RED4EXT_ASSERT_SIZE(BluelineSelectedRequest, 0x58);
 } // namespace scn
+using scnBluelineSelectedRequest = scn::BluelineSelectedRequest;
 using BluelineSelectedRequest = scn::BluelineSelectedRequest;
 } // namespace RED4ext
 

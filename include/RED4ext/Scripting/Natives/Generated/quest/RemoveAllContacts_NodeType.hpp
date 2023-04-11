@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace game { struct JournalPath; }
 
-namespace quest { 
+namespace quest
+{
 struct RemoveAllContacts_NodeType : quest::IPhoneManagerNodeType
 {
     static constexpr const char* NAME = "questRemoveAllContacts_NodeType";
@@ -24,6 +25,7 @@ struct RemoveAllContacts_NodeType : quest::IPhoneManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(RemoveAllContacts_NodeType, 0x48);
 } // namespace quest
+using questRemoveAllContacts_NodeType = quest::RemoveAllContacts_NodeType;
 } // namespace RED4ext
 
 // clang-format on

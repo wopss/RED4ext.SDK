@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile
+{
 struct SpawnComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameprojectileSpawnComponent";
@@ -29,6 +30,7 @@ struct SpawnComponent : ent::IPlacedComponent
 };
 RED4EXT_ASSERT_SIZE(SpawnComponent, 0x2E0);
 } // namespace game::projectile
+using gameprojectileSpawnComponent = game::projectile::SpawnComponent;
 using ProjectileSpawnComponent = game::projectile::SpawnComponent;
 } // namespace RED4ext
 

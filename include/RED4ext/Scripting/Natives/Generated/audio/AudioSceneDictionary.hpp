@@ -13,7 +13,8 @@
 
 namespace RED4ext
 {
-namespace audio { 
+namespace audio
+{
 struct AudioSceneDictionary : audio::InlinedAudioMetadata
 {
     static constexpr const char* NAME = "audioAudioSceneDictionary";
@@ -25,6 +26,7 @@ struct AudioSceneDictionary : audio::InlinedAudioMetadata
 };
 RED4EXT_ASSERT_SIZE(AudioSceneDictionary, 0x88);
 } // namespace audio
+using audioAudioSceneDictionary = audio::AudioSceneDictionary;
 } // namespace RED4ext
 
 // clang-format on

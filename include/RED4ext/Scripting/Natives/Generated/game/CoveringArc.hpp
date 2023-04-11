@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct CoveringArc
 {
     static constexpr const char* NAME = "gameCoveringArc";
@@ -21,6 +22,7 @@ struct CoveringArc
 };
 RED4EXT_ASSERT_SIZE(CoveringArc, 0xC);
 } // namespace game
+using gameCoveringArc = game::CoveringArc;
 } // namespace RED4ext
 
 // clang-format on

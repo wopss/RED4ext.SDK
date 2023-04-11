@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace attr { 
+namespace attr
+{
 struct Tooltip : attr::Attribute
 {
     static constexpr const char* NAME = "attrTooltip";
@@ -21,6 +22,7 @@ struct Tooltip : attr::Attribute
 };
 RED4EXT_ASSERT_SIZE(Tooltip, 0x50);
 } // namespace attr
+using attrTooltip = attr::Tooltip;
 } // namespace RED4ext
 
 // clang-format on

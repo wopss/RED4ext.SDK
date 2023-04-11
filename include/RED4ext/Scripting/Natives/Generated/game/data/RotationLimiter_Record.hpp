@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data
+{
 struct RotationLimiter_Record : game::data::DriveHelper_Record
 {
     static constexpr const char* NAME = "gamedataRotationLimiter_Record";
@@ -20,6 +21,7 @@ struct RotationLimiter_Record : game::data::DriveHelper_Record
 };
 RED4EXT_ASSERT_SIZE(RotationLimiter_Record, 0x70);
 } // namespace game::data
+using gamedataRotationLimiter_Record = game::data::RotationLimiter_Record;
 using RotationLimiter_Record = game::data::RotationLimiter_Record;
 } // namespace RED4ext
 

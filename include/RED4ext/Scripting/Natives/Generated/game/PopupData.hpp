@@ -13,7 +13,8 @@ namespace RED4ext
 {
 struct Bink;
 
-namespace game { 
+namespace game
+{
 struct PopupData
 {
     static constexpr const char* NAME = "gamePopupData";
@@ -29,6 +30,7 @@ struct PopupData
 };
 RED4EXT_ASSERT_SIZE(PopupData, 0x58);
 } // namespace game
+using gamePopupData = game::PopupData;
 using PopupData = game::PopupData;
 } // namespace RED4ext
 

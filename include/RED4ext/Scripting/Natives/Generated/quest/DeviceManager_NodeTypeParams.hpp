@@ -15,7 +15,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct DeviceManager_NodeTypeParams : ISerializable
 {
     static constexpr const char* NAME = "questDeviceManager_NodeTypeParams";
@@ -30,6 +31,7 @@ struct DeviceManager_NodeTypeParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(DeviceManager_NodeTypeParams, 0x98);
 } // namespace quest
+using questDeviceManager_NodeTypeParams = quest::DeviceManager_NodeTypeParams;
 } // namespace RED4ext
 
 // clang-format on

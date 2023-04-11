@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct LightChannelVolumeNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldLightChannelVolumeNodeInstance";
@@ -20,6 +21,7 @@ struct LightChannelVolumeNodeInstance : world::INodeInstance
 };
 RED4EXT_ASSERT_SIZE(LightChannelVolumeNodeInstance, 0xA0);
 } // namespace world
+using worldLightChannelVolumeNodeInstance = world::LightChannelVolumeNodeInstance;
 } // namespace RED4ext
 
 // clang-format on

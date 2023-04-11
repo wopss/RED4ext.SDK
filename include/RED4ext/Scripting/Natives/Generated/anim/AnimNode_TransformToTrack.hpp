@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_TransformToTrack : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_TransformToTrack";
@@ -35,6 +36,7 @@ struct AnimNode_TransformToTrack : anim::AnimNode_OnePoseInput
 };
 RED4EXT_ASSERT_SIZE(AnimNode_TransformToTrack, 0x110);
 } // namespace anim
+using animAnimNode_TransformToTrack = anim::AnimNode_TransformToTrack;
 } // namespace RED4ext
 
 // clang-format on

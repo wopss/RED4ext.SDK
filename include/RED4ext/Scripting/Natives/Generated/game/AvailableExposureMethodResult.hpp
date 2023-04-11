@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct AvailableExposureMethodResult
 {
     static constexpr const char* NAME = "gameAvailableExposureMethodResult";
@@ -23,6 +24,7 @@ struct AvailableExposureMethodResult
 };
 RED4EXT_ASSERT_SIZE(AvailableExposureMethodResult, 0x30);
 } // namespace game
+using gameAvailableExposureMethodResult = game::AvailableExposureMethodResult;
 } // namespace RED4ext
 
 // clang-format on

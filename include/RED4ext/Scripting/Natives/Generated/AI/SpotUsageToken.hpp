@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SpotUsageToken
 {
     static constexpr const char* NAME = "AISpotUsageToken";
@@ -23,6 +24,7 @@ struct SpotUsageToken
 };
 RED4EXT_ASSERT_SIZE(SpotUsageToken, 0x18);
 } // namespace AI
+using AISpotUsageToken = AI::SpotUsageToken;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct CrowdSettingsNameVehicleExpressionDefinition : AI::behavior::VehicleExpressionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorCrowdSettingsNameVehicleExpressionDefinition";
@@ -21,6 +22,7 @@ struct CrowdSettingsNameVehicleExpressionDefinition : AI::behavior::VehicleExpre
 };
 RED4EXT_ASSERT_SIZE(CrowdSettingsNameVehicleExpressionDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorCrowdSettingsNameVehicleExpressionDefinition = AI::behavior::CrowdSettingsNameVehicleExpressionDefinition;
 } // namespace RED4ext
 
 // clang-format on

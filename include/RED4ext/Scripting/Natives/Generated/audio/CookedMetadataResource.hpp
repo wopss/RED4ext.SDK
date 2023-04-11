@@ -14,7 +14,8 @@ namespace RED4ext
 {
 namespace audio { struct AudioMetadata; }
 
-namespace audio { 
+namespace audio
+{
 struct CookedMetadataResource : CResource
 {
     static constexpr const char* NAME = "audioCookedMetadataResource";
@@ -24,6 +25,7 @@ struct CookedMetadataResource : CResource
 };
 RED4EXT_ASSERT_SIZE(CookedMetadataResource, 0x50);
 } // namespace audio
+using audioCookedMetadataResource = audio::CookedMetadataResource;
 } // namespace RED4ext
 
 // clang-format on

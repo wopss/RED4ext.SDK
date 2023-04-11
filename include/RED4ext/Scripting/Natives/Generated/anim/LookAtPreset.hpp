@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct LookAtPreset : IScriptable
 {
     static constexpr const char* NAME = "animLookAtPreset";
@@ -19,6 +20,7 @@ struct LookAtPreset : IScriptable
 };
 RED4EXT_ASSERT_SIZE(LookAtPreset, 0x40);
 } // namespace anim
+using animLookAtPreset = anim::LookAtPreset;
 } // namespace RED4ext
 
 // clang-format on

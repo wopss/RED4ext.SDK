@@ -17,7 +17,8 @@ namespace game::data { struct GroupNode; }
 namespace game::data { struct PackageNode; }
 namespace game::data { struct VariableNode; }
 
-namespace game::data { 
+namespace game::data
+{
 struct FileNode : game::data::DataNode
 {
     static constexpr const char* NAME = "gamedataFileNode";
@@ -34,6 +35,7 @@ struct FileNode : game::data::DataNode
 };
 RED4EXT_ASSERT_SIZE(FileNode, 0x428);
 } // namespace game::data
+using gamedataFileNode = game::data::FileNode;
 } // namespace RED4ext
 
 // clang-format on

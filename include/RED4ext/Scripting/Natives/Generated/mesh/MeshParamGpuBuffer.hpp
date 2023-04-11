@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace mesh { 
+namespace mesh
+{
 struct MeshParamGpuBuffer : mesh::MeshParameter
 {
     static constexpr const char* NAME = "meshMeshParamGpuBuffer";
@@ -23,6 +24,7 @@ struct MeshParamGpuBuffer : mesh::MeshParameter
 };
 RED4EXT_ASSERT_SIZE(MeshParamGpuBuffer, 0x60);
 } // namespace mesh
+using meshMeshParamGpuBuffer = mesh::MeshParamGpuBuffer;
 } // namespace RED4ext
 
 // clang-format on

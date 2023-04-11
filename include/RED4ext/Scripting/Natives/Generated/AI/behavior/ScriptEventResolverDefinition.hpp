@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI::behavior::event { struct ResolverScript; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct ScriptEventResolverDefinition : AI::behavior::EventResolverDefinition
 {
     static constexpr const char* NAME = "AIbehaviorScriptEventResolverDefinition";
@@ -23,6 +24,7 @@ struct ScriptEventResolverDefinition : AI::behavior::EventResolverDefinition
 };
 RED4EXT_ASSERT_SIZE(ScriptEventResolverDefinition, 0x40);
 } // namespace AI::behavior
+using AIbehaviorScriptEventResolverDefinition = AI::behavior::ScriptEventResolverDefinition;
 } // namespace RED4ext
 
 // clang-format on

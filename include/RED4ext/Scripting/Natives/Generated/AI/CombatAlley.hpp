@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CombatAlley : IScriptable
 {
     static constexpr const char* NAME = "AICombatAlley";
@@ -20,6 +21,7 @@ struct CombatAlley : IScriptable
 };
 RED4EXT_ASSERT_SIZE(CombatAlley, 0xD0);
 } // namespace AI
+using AICombatAlley = AI::CombatAlley;
 using CombatAlley = AI::CombatAlley;
 } // namespace RED4ext
 

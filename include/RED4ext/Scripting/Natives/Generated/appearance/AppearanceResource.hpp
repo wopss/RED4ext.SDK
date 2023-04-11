@@ -23,7 +23,8 @@ namespace ent { struct EntityTemplate; }
 namespace ent::dismemberment { struct EffectResource; }
 namespace ent::dismemberment { struct WoundResource; }
 
-namespace appearance { 
+namespace appearance
+{
 struct AppearanceResource : res::StreamedResource
 {
     static constexpr const char* NAME = "appearanceAppearanceResource";
@@ -51,6 +52,7 @@ struct AppearanceResource : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(AppearanceResource, 0xF8);
 } // namespace appearance
+using appearanceAppearanceResource = appearance::AppearanceResource;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct MakeInventoryShareableEvent : red::Event
 {
     static constexpr const char* NAME = "gameMakeInventoryShareableEvent";
@@ -19,6 +20,7 @@ struct MakeInventoryShareableEvent : red::Event
 };
 RED4EXT_ASSERT_SIZE(MakeInventoryShareableEvent, 0x40);
 } // namespace game
+using gameMakeInventoryShareableEvent = game::MakeInventoryShareableEvent;
 using MakeInventoryShareableEvent = game::MakeInventoryShareableEvent;
 } // namespace RED4ext
 

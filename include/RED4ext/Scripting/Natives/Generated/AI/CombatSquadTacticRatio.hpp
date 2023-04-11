@@ -9,7 +9,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct CombatSquadTacticRatio
 {
     static constexpr const char* NAME = "AICombatSquadTacticRatio";
@@ -21,6 +22,7 @@ struct CombatSquadTacticRatio
 };
 RED4EXT_ASSERT_SIZE(CombatSquadTacticRatio, 0xC);
 } // namespace AI
+using AICombatSquadTacticRatio = AI::CombatSquadTacticRatio;
 using TacticRatio = AI::CombatSquadTacticRatio;
 } // namespace RED4ext
 

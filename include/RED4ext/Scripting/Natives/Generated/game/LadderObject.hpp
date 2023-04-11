@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct LadderObject : game::Object
 {
     static constexpr const char* NAME = "gameLadderObject";
@@ -29,6 +30,7 @@ struct LadderObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(LadderObject, 0x268);
 } // namespace game
+using gameLadderObject = game::LadderObject;
 } // namespace RED4ext
 
 // clang-format on

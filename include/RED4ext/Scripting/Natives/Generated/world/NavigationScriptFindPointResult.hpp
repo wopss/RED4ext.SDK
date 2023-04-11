@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct NavigationScriptFindPointResult
 {
     static constexpr const char* NAME = "worldNavigationScriptFindPointResult";
@@ -23,6 +24,7 @@ struct NavigationScriptFindPointResult
 };
 RED4EXT_ASSERT_SIZE(NavigationScriptFindPointResult, 0x20);
 } // namespace world
+using worldNavigationScriptFindPointResult = world::NavigationScriptFindPointResult;
 using NavigationFindPointResult = world::NavigationScriptFindPointResult;
 } // namespace RED4ext
 

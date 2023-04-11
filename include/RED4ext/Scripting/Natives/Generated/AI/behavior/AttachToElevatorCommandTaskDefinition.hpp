@@ -13,7 +13,8 @@ namespace RED4ext
 {
 namespace AI { struct ArgumentMapping; }
 
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct AttachToElevatorCommandTaskDefinition : AI::behavior::TaskDefinition
 {
     static constexpr const char* NAME = "AIbehaviorAttachToElevatorCommandTaskDefinition";
@@ -23,6 +24,7 @@ struct AttachToElevatorCommandTaskDefinition : AI::behavior::TaskDefinition
 };
 RED4EXT_ASSERT_SIZE(AttachToElevatorCommandTaskDefinition, 0x48);
 } // namespace AI::behavior
+using AIbehaviorAttachToElevatorCommandTaskDefinition = AI::behavior::AttachToElevatorCommandTaskDefinition;
 } // namespace RED4ext
 
 // clang-format on

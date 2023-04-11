@@ -14,7 +14,8 @@
 
 namespace RED4ext
 {
-namespace scn { 
+namespace scn
+{
 struct PlayDefaultMountedSlotWorkspotEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnPlayDefaultMountedSlotWorkspotEvent";
@@ -29,6 +30,7 @@ struct PlayDefaultMountedSlotWorkspotEvent : scn::SceneEvent
 };
 RED4EXT_ASSERT_SIZE(PlayDefaultMountedSlotWorkspotEvent, 0xA8);
 } // namespace scn
+using scnPlayDefaultMountedSlotWorkspotEvent = scn::PlayDefaultMountedSlotWorkspotEvent;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct WeakspotObject : game::Object
 {
     static constexpr const char* NAME = "gameWeakspotObject";
@@ -20,6 +21,7 @@ struct WeakspotObject : game::Object
 };
 RED4EXT_ASSERT_SIZE(WeakspotObject, 0x288);
 } // namespace game
+using gameWeakspotObject = game::WeakspotObject;
 using WeakspotObject = game::WeakspotObject;
 } // namespace RED4ext
 

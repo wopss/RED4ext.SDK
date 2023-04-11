@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct MixerSlotAddIdleParams : ISerializable
 {
     static constexpr const char* NAME = "animMixerSlotAddIdleParams";
@@ -20,6 +21,7 @@ struct MixerSlotAddIdleParams : ISerializable
 };
 RED4EXT_ASSERT_SIZE(MixerSlotAddIdleParams, 0x40);
 } // namespace anim
+using animMixerSlotAddIdleParams = anim::MixerSlotAddIdleParams;
 } // namespace RED4ext
 
 // clang-format on

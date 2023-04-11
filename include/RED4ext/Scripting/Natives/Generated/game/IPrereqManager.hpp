@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IPrereqManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPrereqManager";
@@ -19,6 +20,7 @@ struct IPrereqManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IPrereqManager, 0x48);
 } // namespace game
+using gameIPrereqManager = game::IPrereqManager;
 using IPrereqManager = game::IPrereqManager;
 } // namespace RED4ext
 

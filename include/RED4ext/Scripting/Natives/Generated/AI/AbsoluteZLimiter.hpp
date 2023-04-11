@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct AbsoluteZLimiter : AI::CoverSelectionParameters
 {
     static constexpr const char* NAME = "AIAbsoluteZLimiter";
@@ -20,6 +21,7 @@ struct AbsoluteZLimiter : AI::CoverSelectionParameters
 };
 RED4EXT_ASSERT_SIZE(AbsoluteZLimiter, 0x18);
 } // namespace AI
+using AIAbsoluteZLimiter = AI::AbsoluteZLimiter;
 } // namespace RED4ext
 
 // clang-format on

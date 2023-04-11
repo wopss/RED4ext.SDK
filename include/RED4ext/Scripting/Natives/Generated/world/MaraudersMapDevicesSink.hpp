@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct MaraudersMapDevicesSink : IScriptable
 {
     static constexpr const char* NAME = "worldMaraudersMapDevicesSink";
@@ -20,6 +21,7 @@ struct MaraudersMapDevicesSink : IScriptable
 };
 RED4EXT_ASSERT_SIZE(MaraudersMapDevicesSink, 0x58);
 } // namespace world
+using worldMaraudersMapDevicesSink = world::MaraudersMapDevicesSink;
 using MaraudersMapDevicesSink = world::MaraudersMapDevicesSink;
 } // namespace RED4ext
 

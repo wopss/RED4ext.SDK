@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct SharedVarDefinition
 {
     static constexpr const char* NAME = "AISharedVarDefinition";
@@ -23,6 +24,7 @@ struct SharedVarDefinition
 };
 RED4EXT_ASSERT_SIZE(SharedVarDefinition, 0x10);
 } // namespace AI
+using AISharedVarDefinition = AI::SharedVarDefinition;
 } // namespace RED4ext
 
 // clang-format on

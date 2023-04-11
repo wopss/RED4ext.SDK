@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct EntityTemplateDefaultAppearancePreset : ISerializable
 {
     static constexpr const char* NAME = "gameEntityTemplateDefaultAppearancePreset";
@@ -23,6 +24,7 @@ struct EntityTemplateDefaultAppearancePreset : ISerializable
 };
 RED4EXT_ASSERT_SIZE(EntityTemplateDefaultAppearancePreset, 0x70);
 } // namespace game
+using gameEntityTemplateDefaultAppearancePreset = game::EntityTemplateDefaultAppearancePreset;
 } // namespace RED4ext
 
 // clang-format on

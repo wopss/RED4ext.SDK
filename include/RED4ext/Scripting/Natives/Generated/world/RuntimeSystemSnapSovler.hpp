@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct RuntimeSystemSnapSovler : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemSnapSovler";
@@ -20,6 +21,7 @@ struct RuntimeSystemSnapSovler : world::IRuntimeSystem
 };
 RED4EXT_ASSERT_SIZE(RuntimeSystemSnapSovler, 0x98);
 } // namespace world
+using worldRuntimeSystemSnapSovler = world::RuntimeSystemSnapSovler;
 } // namespace RED4ext
 
 // clang-format on

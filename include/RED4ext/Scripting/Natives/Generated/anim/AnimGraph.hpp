@@ -20,7 +20,8 @@ namespace anim { struct AnimNode_Root; }
 namespace anim { struct AnimVariableContainer; }
 namespace anim { struct Rig; }
 
-namespace anim { 
+namespace anim
+{
 struct AnimGraph : CResource
 {
     static constexpr const char* NAME = "animAnimGraph";
@@ -51,6 +52,7 @@ struct AnimGraph : CResource
 };
 RED4EXT_ASSERT_SIZE(AnimGraph, 0x120);
 } // namespace anim
+using animAnimGraph = anim::AnimGraph;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct SetBriefingAlignment_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questSetBriefingAlignment_NodeType";
@@ -22,6 +23,7 @@ struct SetBriefingAlignment_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(SetBriefingAlignment_NodeType, 0x40);
 } // namespace quest
+using questSetBriefingAlignment_NodeType = quest::SetBriefingAlignment_NodeType;
 } // namespace RED4ext
 
 // clang-format on

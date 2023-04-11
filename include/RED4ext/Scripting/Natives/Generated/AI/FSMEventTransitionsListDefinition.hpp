@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct FSMEventTransitionsListDefinition
 {
     static constexpr const char* NAME = "AIFSMEventTransitionsListDefinition";
@@ -23,6 +24,7 @@ struct FSMEventTransitionsListDefinition
 };
 RED4EXT_ASSERT_SIZE(FSMEventTransitionsListDefinition, 0x10);
 } // namespace AI
+using AIFSMEventTransitionsListDefinition = AI::FSMEventTransitionsListDefinition;
 } // namespace RED4ext
 
 // clang-format on

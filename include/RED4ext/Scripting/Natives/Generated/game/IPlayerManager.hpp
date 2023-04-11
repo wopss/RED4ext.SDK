@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace game { 
+namespace game
+{
 struct IPlayerManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIPlayerManager";
@@ -19,6 +20,7 @@ struct IPlayerManager : game::IGameSystem
 };
 RED4EXT_ASSERT_SIZE(IPlayerManager, 0x48);
 } // namespace game
+using gameIPlayerManager = game::IPlayerManager;
 } // namespace RED4ext
 
 // clang-format on

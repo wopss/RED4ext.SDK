@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior
+{
 struct WaitingKeepMountedCommandConditionDefinition : AI::behavior::ConditionDefinition
 {
     static constexpr const char* NAME = "AIbehaviorWaitingKeepMountedCommandConditionDefinition";
@@ -19,6 +20,7 @@ struct WaitingKeepMountedCommandConditionDefinition : AI::behavior::ConditionDef
 };
 RED4EXT_ASSERT_SIZE(WaitingKeepMountedCommandConditionDefinition, 0x38);
 } // namespace AI::behavior
+using AIbehaviorWaitingKeepMountedCommandConditionDefinition = AI::behavior::WaitingKeepMountedCommandConditionDefinition;
 } // namespace RED4ext
 
 // clang-format on

@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ToggleStealthMappinVisibility_NodeSubType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questToggleStealthMappinVisibility_NodeSubType";
@@ -23,6 +24,7 @@ struct ToggleStealthMappinVisibility_NodeSubType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ToggleStealthMappinVisibility_NodeSubType, 0x78);
 } // namespace quest
+using questToggleStealthMappinVisibility_NodeSubType = quest::ToggleStealthMappinVisibility_NodeSubType;
 } // namespace RED4ext
 
 // clang-format on

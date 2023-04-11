@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace ink { 
+namespace ink
+{
 struct ScriptDynArray : IScriptable
 {
     static constexpr const char* NAME = "inkScriptDynArray";
@@ -20,6 +21,7 @@ struct ScriptDynArray : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ScriptDynArray, 0x58);
 } // namespace ink
+using inkScriptDynArray = ink::ScriptDynArray;
 using inkArray = ink::ScriptDynArray;
 } // namespace RED4ext
 

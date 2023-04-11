@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct ShowCustomTooltip_NodeType : quest::IUIManagerNodeType
 {
     static constexpr const char* NAME = "questShowCustomTooltip_NodeType";
@@ -28,6 +29,7 @@ struct ShowCustomTooltip_NodeType : quest::IUIManagerNodeType
 };
 RED4EXT_ASSERT_SIZE(ShowCustomTooltip_NodeType, 0x90);
 } // namespace quest
+using questShowCustomTooltip_NodeType = quest::ShowCustomTooltip_NodeType;
 } // namespace RED4ext
 
 // clang-format on

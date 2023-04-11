@@ -12,7 +12,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_DampVector : anim::AnimNode_VectorValue
 {
     static constexpr const char* NAME = "animAnimNode_DampVector";
@@ -31,6 +32,7 @@ struct AnimNode_DampVector : anim::AnimNode_VectorValue
 };
 RED4EXT_ASSERT_SIZE(AnimNode_DampVector, 0x100);
 } // namespace anim
+using animAnimNode_DampVector = anim::AnimNode_DampVector;
 } // namespace RED4ext
 
 // clang-format on

@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace AI { 
+namespace AI
+{
 struct ITargetTrackingListener : IScriptable
 {
     static constexpr const char* NAME = "AIITargetTrackingListener";
@@ -20,6 +21,7 @@ struct ITargetTrackingListener : IScriptable
 };
 RED4EXT_ASSERT_SIZE(ITargetTrackingListener, 0x48);
 } // namespace AI
+using AIITargetTrackingListener = AI::ITargetTrackingListener;
 } // namespace RED4ext
 
 // clang-format on

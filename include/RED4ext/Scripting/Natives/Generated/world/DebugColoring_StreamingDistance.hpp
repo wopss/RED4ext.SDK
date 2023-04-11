@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace world { 
+namespace world
+{
 struct DebugColoring_StreamingDistance : world::EditorDebugColoringSettings
 {
     static constexpr const char* NAME = "worldDebugColoring_StreamingDistance";
@@ -20,6 +21,7 @@ struct DebugColoring_StreamingDistance : world::EditorDebugColoringSettings
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_StreamingDistance, 0x40);
 } // namespace world
+using worldDebugColoring_StreamingDistance = world::DebugColoring_StreamingDistance;
 } // namespace RED4ext
 
 // clang-format on

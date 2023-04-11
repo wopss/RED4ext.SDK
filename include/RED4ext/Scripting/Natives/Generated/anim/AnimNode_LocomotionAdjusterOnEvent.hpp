@@ -11,7 +11,8 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim
+{
 struct AnimNode_LocomotionAdjusterOnEvent : anim::AnimNode_LocomotionAdjuster
 {
     static constexpr const char* NAME = "animAnimNode_LocomotionAdjusterOnEvent";
@@ -25,6 +26,7 @@ struct AnimNode_LocomotionAdjusterOnEvent : anim::AnimNode_LocomotionAdjuster
 };
 RED4EXT_ASSERT_SIZE(AnimNode_LocomotionAdjusterOnEvent, 0x110);
 } // namespace anim
+using animAnimNode_LocomotionAdjusterOnEvent = anim::AnimNode_LocomotionAdjusterOnEvent;
 } // namespace RED4ext
 
 // clang-format on

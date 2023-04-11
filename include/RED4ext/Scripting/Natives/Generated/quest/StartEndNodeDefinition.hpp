@@ -10,7 +10,8 @@
 
 namespace RED4ext
 {
-namespace quest { 
+namespace quest
+{
 struct StartEndNodeDefinition : quest::DisableableNodeDefinition
 {
     static constexpr const char* NAME = "questStartEndNodeDefinition";
@@ -19,6 +20,7 @@ struct StartEndNodeDefinition : quest::DisableableNodeDefinition
 };
 RED4EXT_ASSERT_SIZE(StartEndNodeDefinition, 0x48);
 } // namespace quest
+using questStartEndNodeDefinition = quest::StartEndNodeDefinition;
 } // namespace RED4ext
 
 // clang-format on
