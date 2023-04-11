@@ -91,7 +91,7 @@ struct HashMap
                 else
                 {
                     Node* node = &nodes[nextIdx];
-                    nextIdx = -1;
+                    nextIdx = static_cast<uint32_t>(-1);
                     return node;
                 }
             }
@@ -334,7 +334,7 @@ struct HashMap
 
         for (uint32_t i = 0; i != aSize; ++i)
         {
-            newIndexTable[i] = -1;
+            newIndexTable[i] = static_cast<uint32_t>(-1);
         }
 
         if (capacity != 0)
@@ -360,7 +360,7 @@ struct HashMap
                         oldNode->~Node();
                     }
 
-                    indexTable[i] = -1;
+                    indexTable[i] = static_cast<uint32_t>(-1);
                 }
             }
 
