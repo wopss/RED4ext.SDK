@@ -2,6 +2,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <cstdint>
+#include <string_view>
 
 namespace RED4ext
 {
@@ -14,6 +15,9 @@ struct CString
 {
     CString(Memory::IAllocator* aAllocator = nullptr);
     CString(const char* aText, Memory::IAllocator* aAllocator = nullptr);
+    CString(const char* aText, uint32_t aLength, Memory::IAllocator* aAllocator = nullptr);
+    CString(const std::string& aText, Memory::IAllocator* aAllocator = nullptr);
+    CString(const std::string_view& aText, Memory::IAllocator* aAllocator = nullptr);
 
     CString(const CString& aOther);
     CString(CString&& aOther) noexcept;
@@ -36,10 +40,25 @@ struct CString
         return !(*this == aRhs);
     }
 
+    inline const char& operator[](size_t aIndex) const
+    {
+        return c_str()[aIndex];
+    }
+
     [[nodiscard]] bool IsInline() const noexcept;
 
     [[nodiscard]] const char* c_str() const noexcept;
     [[nodiscard]] uint32_t Length() const noexcept;
+
+    [[nodiscard]] const char* begin() const
+    {
+        return c_str();
+    }
+
+    [[nodiscard]] const char* end() const
+    {
+        return c_str() + Length();
+    }
 
 #pragma pack(push, 4)
     union
