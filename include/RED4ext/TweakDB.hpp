@@ -11,6 +11,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/Natives/gamedataTweakDBRecord.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/SharedMutex.hpp>
 #include <RED4ext/SortedArray.hpp>
@@ -27,14 +28,6 @@ namespace RED4ext
 //    An int (or any type) value of '1' exist only once in TweakDB::flatDataBuffer. Modifying it will affect all records
 //    Implementing a value pool here is pointless. the lib isn't a shared library. Pool won't be shared between dlls
 //    Could abuse the alignment gaps in TweakDB to store custom data in the class.. like a pointer to the pool? >_>
-
-struct gamedataTweakDBRecord : IScriptable
-{
-    virtual void sub_110() = 0;
-    virtual uint32_t GetTweakBaseHash() const = 0; // Murmur3
-
-    TweakDBID recordID;
-};
 
 struct TweakDB
 {
