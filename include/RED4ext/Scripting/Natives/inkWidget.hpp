@@ -20,9 +20,7 @@ struct StyleResourceWrapper;
 struct UserData;
 struct WidgetLogicController;
 
-struct Widget
-    : SelfHandle<Widget>
-    , IScriptable
+struct Widget : IScriptable
 {
     static constexpr const char* NAME = "inkWidget";
     static constexpr const char* ALIAS = NAME;

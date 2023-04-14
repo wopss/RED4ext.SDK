@@ -17,9 +17,7 @@ struct SpawningProcessor;
 struct VirtualWindow;
 struct WidgetLibraryItemInstance;
 
-struct Layer
-    : SelfHandle<Layer>
-    , ISerializable
+struct Layer : ISerializable
 {
     static constexpr const char* NAME = "inkLayer";
     static constexpr const char* ALIAS = NAME;

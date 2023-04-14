@@ -10,9 +10,7 @@ namespace RED4ext::ink
 {
 struct Widget;
 
-struct IWidgetLogicController
-    : SelfHandle<IWidgetLogicController>
-    , IScriptable
+struct IWidgetLogicController : IScriptable
 {
     static constexpr const char* NAME = "inkIWidgetLogicController";
     static constexpr const char* ALIAS = "inkILogicController";

@@ -1062,14 +1062,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
     if (!parent.empty())
     {
-        o << " : ";
-
-        if (usedAsHandle)
-        {
-            o << "SelfHandle<" << name << ">, ";
-        }
-
-        o << parentQualified;
+        o << " : "<< parentQualified;
     }
     o << std::endl;
     o << "{" << std::endl;

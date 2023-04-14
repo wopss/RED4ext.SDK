@@ -5,9 +5,7 @@
 
 namespace RED4ext::game
 {
-struct PersistentState
-    : SelfHandle<PersistentState>
-    , IScriptable
+struct PersistentState : IScriptable
 {
     static constexpr const char* NAME = "gamePersistentState";
     static constexpr const char* ALIAS = "PersistentState";
