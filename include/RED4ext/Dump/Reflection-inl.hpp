@@ -452,8 +452,9 @@ RED4EXT_INLINE EnumFileDescriptor::EnumFileDescriptor(const RED4ext::CEnum* pEnu
     trueName = enumName.ToString();
     directory = aTypeToPath(pEnum);
 
-    auto aliasName = RED4ext::CRTTISystem::Get()->nativeToScript.Get(enumName);
-    if (aliasName)
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto aliasName = rtti->nativeToScript.Get(enumName);
+    if (aliasName && !rtti->types.Get(*aliasName))
     {
         alias = aliasName->ToString();
     }
@@ -597,6 +598,11 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
         o << "} // namespace " << ns << std::endl;
     }
 
+    if (name != trueName)
+    {
+        o << "using " << trueName << " = " << nameQualified << ";" << std::endl;
+    }
+
     if (!alias.empty() && alias != trueName)
     {
         o << "using " << alias << " = " << nameQualified << ";" << std::endl;
@@ -618,8 +624,9 @@ RED4EXT_INLINE BitfieldFileDescriptor::BitfieldFileDescriptor(const RED4ext::CBi
     trueName = bitfieldName.ToString();
     directory = aTypeToPath(pBitfield);
 
-    auto aliasName = RED4ext::CRTTISystem::Get()->nativeToScript.Get(bitfieldName);
-    if (aliasName)
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto aliasName = rtti->nativeToScript.Get(bitfieldName);
+    if (aliasName && !rtti->types.Get(*aliasName))
     {
         alias = aliasName->ToString();
     }
@@ -746,8 +753,9 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
     aFd.name = aNameTransformer(pType);
     aFd.nameQualified = aQualifiedTransformer(pType);
 
-    auto aliasName = RED4ext::CRTTISystem::Get()->nativeToScript.Get(name);
-    if (aliasName)
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto aliasName = rtti->nativeToScript.Get(name);
+    if (aliasName && !rtti->types.Get(*aliasName))
     {
         aFd.alias = aliasName->ToString();
     }
@@ -1062,14 +1070,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
     if (!parent.empty())
     {
-        o << " : ";
-
-        if (usedAsHandle)
-        {
-            o << "SelfHandle<" << name << ">, ";
-        }
-
-        o << parentQualified;
+        o << " : " << parentQualified;
     }
     o << std::endl;
     o << "{" << std::endl;

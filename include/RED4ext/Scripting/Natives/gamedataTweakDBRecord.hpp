@@ -1,20 +1,7 @@
 #pragma once
 
-// clang-format off
-
-// This file is generated from the Game's Reflection data
-
-#include <RED4ext/Scripting/Natives/gamedataTweakDBRecord.hpp>
-
-namespace RED4ext
-{
-RED4EXT_ASSERT_SIZE(game::data::TweakDBRecord, 0x48);
-using gamedataTweakDBRecord = game::data::TweakDBRecord;
-using TweakDBRecord = game::data::TweakDBRecord;
-} // namespace RED4ext
-
-/*
 #include <cstdint>
+
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 
@@ -27,13 +14,13 @@ struct TweakDBRecord : IScriptable
     static constexpr const char* NAME = "gamedataTweakDBRecord";
     static constexpr const char* ALIAS = "TweakDBRecord";
 
-    uint8_t unk40[0x48 - 0x40]; // 40
+    virtual void sub_110() = 0;                    // 110
+    virtual uint32_t GetTweakBaseHash() const = 0; // 118 - Murmur3 of record type name
+
+    TweakDBID recordID;
 };
 RED4EXT_ASSERT_SIZE(TweakDBRecord, 0x48);
 } // namespace game::data
 using gamedataTweakDBRecord = game::data::TweakDBRecord;
 using TweakDBRecord = game::data::TweakDBRecord;
 } // namespace RED4ext
-*/
-
-// clang-format on

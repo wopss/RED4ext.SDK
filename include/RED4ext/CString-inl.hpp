@@ -19,8 +19,29 @@ RED4EXT_INLINE RED4ext::CString::CString(Memory::IAllocator* aAllocator)
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor);
+    RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor_str);
     func(this, aText);
+}
+
+RED4EXT_INLINE RED4ext::CString::CString(const char* aText, uint32_t aLength, Memory::IAllocator* aAllocator)
+    : CString(aAllocator)
+{
+    RelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Addresses::CString_ctor_span);
+    func(this, aText, aLength);
+}
+
+RED4EXT_INLINE RED4ext::CString::CString(const std::string& aText, Memory::IAllocator* aAllocator)
+    : CString(aAllocator)
+{
+    RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor_str);
+    func(this, aText.data());
+}
+
+RED4EXT_INLINE RED4ext::CString::CString(const std::string_view& aText, Memory::IAllocator* aAllocator)
+    : CString(aAllocator)
+{
+    RelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Addresses::CString_ctor_span);
+    func(this, aText.data(), static_cast<uint32_t>(aText.size()));
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const CString& aOther)

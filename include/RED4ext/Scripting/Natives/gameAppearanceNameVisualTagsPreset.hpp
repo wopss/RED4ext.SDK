@@ -9,9 +9,7 @@
 
 namespace RED4ext::game
 {
-struct AppearanceNameVisualTagsPreset
-    : SelfHandle<AppearanceNameVisualTagsPreset>
-    , ISerializable
+struct AppearanceNameVisualTagsPreset : ISerializable
 {
     static constexpr const char* NAME = "gameAppearanceNameVisualTagsPreset";
     static constexpr const char* ALIAS = NAME;

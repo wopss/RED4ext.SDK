@@ -8,9 +8,7 @@ namespace RED4ext::ink
 {
 struct Widget;
 
-struct Children
-    : SelfHandle<Children>
-    , ISerializable
+struct Children : ISerializable
 {
     static constexpr const char* NAME = "inkChildren";
     static constexpr const char* ALIAS = NAME;

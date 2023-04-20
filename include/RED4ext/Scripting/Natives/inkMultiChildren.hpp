@@ -9,9 +9,7 @@ namespace RED4ext::ink
 {
 struct Widget;
 
-struct MultiChildren
-    : SelfHandle<MultiChildren>
-    , Children
+struct MultiChildren : Children
 {
     static constexpr const char* NAME = "inkMultiChildren";
     static constexpr const char* ALIAS = NAME;

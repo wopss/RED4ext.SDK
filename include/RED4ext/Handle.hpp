@@ -179,29 +179,6 @@ public:
 };
 RED4EXT_ASSERT_SIZE(WeakHandle<ISerializable>, 0x10);
 
-template<typename T>
-struct SelfHandle
-{
-    operator const WeakHandle<T>&() const noexcept
-    {
-        auto& self = static_cast<const T*>(this)->ref;
-        return *reinterpret_cast<const WeakHandle<T>*>(&self);
-    }
-
-    operator Handle<T>() noexcept
-    {
-        auto& self = static_cast<T*>(this)->ref;
-        if (self.instance)
-        {
-            return *reinterpret_cast<const WeakHandle<T>*>(&self);
-        }
-        else
-        {
-            return Handle<T>(static_cast<T*>(this));
-        }
-    }
-};
-
 template<typename T, typename... Args>
 inline Handle<T> MakeHandle(Args&&... args)
 {

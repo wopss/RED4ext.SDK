@@ -7,9 +7,7 @@
 
 namespace RED4ext
 {
-struct CResource
-    : SelfHandle<CResource>
-    , ISerializable
+struct CResource : ISerializable
 {
     static constexpr const char* NAME = "CResource";
     static constexpr const char* ALIAS = NAME;
