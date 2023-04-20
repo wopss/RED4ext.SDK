@@ -16,6 +16,7 @@ enum class PlayerPossesion : uint32_t
     Invalid = 3,
 };
 } // namespace game::data
+using gamedataPlayerPossesion = game::data::PlayerPossesion;
 } // namespace RED4ext
 
 // clang-format on

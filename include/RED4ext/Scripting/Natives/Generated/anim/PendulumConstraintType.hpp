@@ -15,6 +15,7 @@ enum class PendulumConstraintType : uint32_t
     HalfCone = 2,
 };
 } // namespace anim
+using animPendulumConstraintType = anim::PendulumConstraintType;
 } // namespace RED4ext
 
 // clang-format on

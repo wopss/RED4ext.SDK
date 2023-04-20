@@ -16,6 +16,7 @@ enum class AvailableVehicleType : uint32_t
     SpecificVehicle = 3,
 };
 } // namespace quest
+using questAvailableVehicleType = quest::AvailableVehicleType;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,6 +17,7 @@ enum class SaveType : uint8_t
     EndGameSave = 4,
 };
 } // namespace ink
+using inkSaveType = ink::SaveType;
 } // namespace RED4ext
 
 // clang-format on

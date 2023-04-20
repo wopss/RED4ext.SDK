@@ -16,6 +16,7 @@ enum class HackingMinigameState : uint32_t
     Failed = 3,
 };
 } // namespace game::ui
+using gameuiHackingMinigameState = game::ui::HackingMinigameState;
 using HackingMinigameState = game::ui::HackingMinigameState;
 } // namespace RED4ext
 

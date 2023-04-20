@@ -19,6 +19,7 @@ enum class ItemEquipContexts : uint32_t
     Fists = 6,
 };
 } // namespace game
+using gameItemEquipContexts = game::ItemEquipContexts;
 } // namespace RED4ext
 
 // clang-format on

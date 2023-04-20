@@ -14,6 +14,7 @@ enum class EBlurDimension : uint32_t
     Vertical = 1,
 };
 } // namespace ink
+using inkEBlurDimension = ink::EBlurDimension;
 } // namespace RED4ext
 
 // clang-format on

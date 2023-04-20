@@ -15,6 +15,7 @@ enum class ELaunchMode : uint32_t
     FromVisuals = 2,
 };
 } // namespace game::projectile
+using gameprojectileELaunchMode = game::projectile::ELaunchMode;
 } // namespace RED4ext
 
 // clang-format on

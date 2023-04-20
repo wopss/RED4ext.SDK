@@ -17,6 +17,7 @@ enum class ScreenshotMode : uint32_t
     HIGH_RESOLUTION_LAYERED = 5,
 };
 } // namespace rend
+using rendScreenshotMode = rend::ScreenshotMode;
 } // namespace RED4ext
 
 // clang-format on

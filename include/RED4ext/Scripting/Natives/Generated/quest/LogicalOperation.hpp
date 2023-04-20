@@ -18,6 +18,7 @@ enum class LogicalOperation : uint8_t
     NXOR = 5,
 };
 } // namespace quest
+using questLogicalOperation = quest::LogicalOperation;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class EBinaryOperator : uint32_t
     EBinaryOperator_or = 1,
 };
 } // namespace game::interactions
+using gameinteractionsEBinaryOperator = game::interactions::EBinaryOperator;
 } // namespace RED4ext
 
 // clang-format on

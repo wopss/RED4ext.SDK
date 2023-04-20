@@ -15,6 +15,7 @@ enum class PropOwnershipTransferOptionsType : uint32_t
     DisposeAfterScene = 2,
 };
 } // namespace scn
+using scnPropOwnershipTransferOptionsType = scn::PropOwnershipTransferOptionsType;
 } // namespace RED4ext
 
 // clang-format on

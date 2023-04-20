@@ -18,6 +18,7 @@ enum class PuppetVehicleState : uint8_t
     GunnerSlot = 5,
 };
 } // namespace scn
+using scnPuppetVehicleState = scn::PuppetVehicleState;
 } // namespace RED4ext
 
 // clang-format on

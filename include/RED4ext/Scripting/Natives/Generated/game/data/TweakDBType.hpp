@@ -26,6 +26,7 @@ enum class TweakDBType : uint32_t
     Quaternion = 13,
 };
 } // namespace game::data
+using gamedataTweakDBType = game::data::TweakDBType;
 } // namespace RED4ext
 
 // clang-format on

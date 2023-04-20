@@ -15,6 +15,7 @@ enum class MountingRelationshipType : uint32_t
     Invalid = 4294967295,
 };
 } // namespace game
+using gameMountingRelationshipType = game::MountingRelationshipType;
 } // namespace RED4ext
 
 // clang-format on

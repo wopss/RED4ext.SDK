@@ -14,6 +14,7 @@ enum class ScanningState : uint32_t
     Scanned = 1,
 };
 } // namespace quest
+using questScanningState = quest::ScanningState;
 } // namespace RED4ext
 
 // clang-format on

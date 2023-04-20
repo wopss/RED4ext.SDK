@@ -18,6 +18,7 @@ enum class DebugNodeStatus : uint8_t
     Failure = 5,
 };
 } // namespace AI::behavior
+using AIbehaviorDebugNodeStatus = AI::behavior::DebugNodeStatus;
 } // namespace RED4ext
 
 // clang-format on

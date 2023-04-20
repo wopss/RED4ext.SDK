@@ -15,6 +15,7 @@ enum class AdvertIndoorFilter : uint32_t
     OnlyOutdoor = 2,
 };
 } // namespace audio
+using audioAdvertIndoorFilter = audio::AdvertIndoorFilter;
 } // namespace RED4ext
 
 // clang-format on

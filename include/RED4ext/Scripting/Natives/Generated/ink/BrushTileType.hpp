@@ -16,6 +16,7 @@ enum class BrushTileType : uint8_t
     Both = 3,
 };
 } // namespace ink
+using inkBrushTileType = ink::BrushTileType;
 } // namespace RED4ext
 
 // clang-format on

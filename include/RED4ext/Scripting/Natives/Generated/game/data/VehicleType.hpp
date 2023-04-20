@@ -17,6 +17,7 @@ enum class VehicleType : uint32_t
     Invalid = 4,
 };
 } // namespace game::data
+using gamedataVehicleType = game::data::VehicleType;
 } // namespace RED4ext
 
 // clang-format on

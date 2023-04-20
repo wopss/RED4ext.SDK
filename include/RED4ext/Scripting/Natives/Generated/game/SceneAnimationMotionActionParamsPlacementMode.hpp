@@ -15,6 +15,7 @@ enum class SceneAnimationMotionActionParamsPlacementMode : uint32_t
     PlayAtActorPosition = 2,
 };
 } // namespace game
+using gameSceneAnimationMotionActionParamsPlacementMode = game::SceneAnimationMotionActionParamsPlacementMode;
 } // namespace RED4ext
 
 // clang-format on

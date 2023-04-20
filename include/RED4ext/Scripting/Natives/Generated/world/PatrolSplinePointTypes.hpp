@@ -15,6 +15,7 @@ enum class PatrolSplinePointTypes : uint32_t
     ClearLookAt = 2,
 };
 } // namespace world
+using worldPatrolSplinePointTypes = world::PatrolSplinePointTypes;
 } // namespace RED4ext
 
 // clang-format on

@@ -26,6 +26,7 @@ enum class ArgumentType : uint32_t
     TweakDBID = 13,
 };
 } // namespace AI
+using AIArgumentType = AI::ArgumentType;
 } // namespace RED4ext
 
 // clang-format on

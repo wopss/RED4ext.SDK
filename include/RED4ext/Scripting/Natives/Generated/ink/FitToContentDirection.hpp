@@ -15,6 +15,7 @@ enum class FitToContentDirection : uint32_t
     Horizontal = 2,
 };
 } // namespace ink
+using inkFitToContentDirection = ink::FitToContentDirection;
 } // namespace RED4ext
 
 // clang-format on

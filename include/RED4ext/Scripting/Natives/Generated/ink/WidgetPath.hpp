@@ -16,7 +16,7 @@ namespace ink
 struct WidgetPath
 {
     static constexpr const char* NAME = "inkWidgetPath";
-    static constexpr const char* ALIAS = "inkWidgetPath";
+    static constexpr const char* ALIAS = NAME;
 
     DynArray<CName> names; // 00
 };

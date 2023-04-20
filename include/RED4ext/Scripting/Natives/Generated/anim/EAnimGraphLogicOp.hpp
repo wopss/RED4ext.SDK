@@ -14,6 +14,7 @@ enum class EAnimGraphLogicOp : uint32_t
     AGLO_And = 1,
 };
 } // namespace anim
+using animEAnimGraphLogicOp = anim::EAnimGraphLogicOp;
 } // namespace RED4ext
 
 // clang-format on

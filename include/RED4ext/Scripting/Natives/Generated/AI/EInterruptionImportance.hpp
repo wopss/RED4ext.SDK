@@ -17,6 +17,7 @@ enum class EInterruptionImportance : uint32_t
     ForcedImmediate = 4,
 };
 } // namespace AI
+using AIEInterruptionImportance = AI::EInterruptionImportance;
 } // namespace RED4ext
 
 // clang-format on

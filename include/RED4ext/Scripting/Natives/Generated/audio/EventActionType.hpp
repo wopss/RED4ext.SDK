@@ -25,6 +25,7 @@ enum class EventActionType : uint32_t
     RemoveContainerStreamingPrefetch = 12,
 };
 } // namespace audio
+using audioEventActionType = audio::EventActionType;
 } // namespace RED4ext
 
 // clang-format on

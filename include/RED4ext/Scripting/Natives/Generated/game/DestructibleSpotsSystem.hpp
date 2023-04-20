@@ -15,7 +15,7 @@ namespace game
 struct DestructibleSpotsSystem : world::IDestructibleSpotsSystem
 {
     static constexpr const char* NAME = "gameDestructibleSpotsSystem";
-    static constexpr const char* ALIAS = "gameDestructibleSpotsSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x80 - 0x48]; // 48
 };

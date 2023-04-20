@@ -15,6 +15,7 @@ enum class ParentStaticSwitchBranch : uint32_t
     FalseBranch = 2,
 };
 } // namespace anim
+using animParentStaticSwitchBranch = anim::ParentStaticSwitchBranch;
 } // namespace RED4ext
 
 // clang-format on

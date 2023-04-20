@@ -17,6 +17,7 @@ enum class EnemyState : uint8_t
     Dead = 4,
 };
 } // namespace audio
+using audioEnemyState = audio::EnemyState;
 } // namespace RED4ext
 
 // clang-format on

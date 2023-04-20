@@ -17,6 +17,7 @@ enum class StatModifierType : uint32_t
     Invalid = 4,
 };
 } // namespace game
+using gameStatModifierType = game::StatModifierType;
 } // namespace RED4ext
 
 // clang-format on

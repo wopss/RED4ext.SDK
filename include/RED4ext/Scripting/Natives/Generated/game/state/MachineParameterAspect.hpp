@@ -15,6 +15,7 @@ enum class MachineParameterAspect : uint32_t
     Conditional = 2,
 };
 } // namespace game::state
+using gamestateMachineParameterAspect = game::state::MachineParameterAspect;
 } // namespace RED4ext
 
 // clang-format on

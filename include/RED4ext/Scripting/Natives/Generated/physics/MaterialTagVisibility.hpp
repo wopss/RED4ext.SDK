@@ -16,6 +16,7 @@ enum class MaterialTagVisibility : uint8_t
     Ignore = 3,
 };
 } // namespace physics
+using physicsMaterialTagVisibility = physics::MaterialTagVisibility;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class AudioEventPrefetchMode : uint8_t
     RemoveEventPrefetch = 1,
 };
 } // namespace quest
+using questAudioEventPrefetchMode = quest::AudioEventPrefetchMode;
 } // namespace RED4ext
 
 // clang-format on

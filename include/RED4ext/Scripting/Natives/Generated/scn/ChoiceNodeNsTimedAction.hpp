@@ -15,6 +15,7 @@ enum class ChoiceNodeNsTimedAction : uint8_t
     disappearFading = 2,
 };
 } // namespace scn
+using scnChoiceNodeNsTimedAction = scn::ChoiceNodeNsTimedAction;
 } // namespace RED4ext
 
 // clang-format on

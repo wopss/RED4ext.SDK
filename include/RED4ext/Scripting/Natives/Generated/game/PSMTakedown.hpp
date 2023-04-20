@@ -18,6 +18,7 @@ enum class PSMTakedown : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMTakedown = game::PSMTakedown;
 } // namespace RED4ext
 
 // clang-format on

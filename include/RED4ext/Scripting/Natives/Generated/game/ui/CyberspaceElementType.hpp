@@ -14,6 +14,7 @@ enum class CyberspaceElementType : uint32_t
     CyberspaceFakeObject = 1,
 };
 } // namespace game::ui
+using gameuiCyberspaceElementType = game::ui::CyberspaceElementType;
 } // namespace RED4ext
 
 // clang-format on

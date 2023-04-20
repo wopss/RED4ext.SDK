@@ -18,6 +18,7 @@ enum class EStyleAttributeType : uint32_t
     FontSize = 5,
 };
 } // namespace vg
+using vgEStyleAttributeType = vg::EStyleAttributeType;
 } // namespace RED4ext
 
 // clang-format on

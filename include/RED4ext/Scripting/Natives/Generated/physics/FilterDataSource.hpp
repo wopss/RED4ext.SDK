@@ -16,6 +16,7 @@ enum class FilterDataSource : uint8_t
     Component = Parent,
 };
 } // namespace physics
+using physicsFilterDataSource = physics::FilterDataSource;
 } // namespace RED4ext
 
 // clang-format on

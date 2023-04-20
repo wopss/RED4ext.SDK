@@ -15,6 +15,7 @@ enum class VFXActionType : uint32_t
     Kill = 2,
 };
 } // namespace scn::events
+using scneventsVFXActionType = scn::events::VFXActionType;
 } // namespace RED4ext
 
 // clang-format on

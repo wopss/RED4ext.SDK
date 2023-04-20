@@ -29,6 +29,7 @@ enum class ResourceSetE : uint8_t
     NONE = 16,
 };
 } // namespace ent::dismemberment
+using entdismembermentResourceSetE = ent::dismemberment::ResourceSetE;
 } // namespace RED4ext
 
 // clang-format on

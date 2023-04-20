@@ -18,6 +18,7 @@ enum class PopupPosition : uint32_t
     Center = 5,
 };
 } // namespace game
+using gamePopupPosition = game::PopupPosition;
 using PopupPosition = game::PopupPosition;
 } // namespace RED4ext
 

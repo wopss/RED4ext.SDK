@@ -15,6 +15,7 @@ enum class ContactShadowReciever : uint8_t
     CSR_All = 3,
 };
 } // namespace rend
+using rendContactShadowReciever = rend::ContactShadowReciever;
 } // namespace RED4ext
 
 // clang-format on

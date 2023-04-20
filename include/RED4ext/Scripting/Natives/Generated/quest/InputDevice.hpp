@@ -18,6 +18,7 @@ enum class InputDevice : uint32_t
     NintendoGamepad = 5,
 };
 } // namespace quest
+using questInputDevice = quest::InputDevice;
 } // namespace RED4ext
 
 // clang-format on

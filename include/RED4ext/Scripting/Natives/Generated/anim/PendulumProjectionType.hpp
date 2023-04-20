@@ -15,6 +15,7 @@ enum class PendulumProjectionType : uint32_t
     DirectedRotational = 2,
 };
 } // namespace anim
+using animPendulumProjectionType = anim::PendulumProjectionType;
 } // namespace RED4ext
 
 // clang-format on

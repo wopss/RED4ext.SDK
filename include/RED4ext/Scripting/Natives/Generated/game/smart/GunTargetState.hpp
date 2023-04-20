@@ -17,6 +17,7 @@ enum class GunTargetState : uint32_t
     Unlocking = 4,
 };
 } // namespace game::smart
+using gamesmartGunTargetState = game::smart::GunTargetState;
 } // namespace RED4ext
 
 // clang-format on

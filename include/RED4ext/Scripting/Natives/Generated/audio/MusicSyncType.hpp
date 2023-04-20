@@ -19,6 +19,7 @@ enum class MusicSyncType : uint32_t
     ExitCue = 6,
 };
 } // namespace audio
+using audioMusicSyncType = audio::MusicSyncType;
 } // namespace RED4ext
 
 // clang-format on

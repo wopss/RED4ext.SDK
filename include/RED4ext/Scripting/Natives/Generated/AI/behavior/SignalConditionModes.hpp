@@ -17,6 +17,7 @@ enum class SignalConditionModes : uint32_t
     AnyEdge = 4,
 };
 } // namespace AI::behavior
+using AIbehaviorSignalConditionModes = AI::behavior::SignalConditionModes;
 } // namespace RED4ext
 
 // clang-format on

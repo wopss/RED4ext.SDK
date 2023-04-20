@@ -15,6 +15,7 @@ enum class InterruptReturnLinesBehavior : uint8_t
     Holocall = 2,
 };
 } // namespace scn
+using scnInterruptReturnLinesBehavior = scn::InterruptReturnLinesBehavior;
 } // namespace RED4ext
 
 // clang-format on

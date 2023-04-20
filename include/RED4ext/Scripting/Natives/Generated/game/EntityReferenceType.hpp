@@ -16,6 +16,7 @@ enum class EntityReferenceType : uint8_t
     SceneActorContextName = 3,
 };
 } // namespace game
+using gameEntityReferenceType = game::EntityReferenceType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class GodModeType : uint32_t
     Mortal = 2,
 };
 } // namespace game
+using gameGodModeType = game::GodModeType;
 } // namespace RED4ext
 
 // clang-format on

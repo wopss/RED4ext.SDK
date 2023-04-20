@@ -17,6 +17,7 @@ enum class ClassificationMethod : uint32_t
     HasAllEventTags = 4,
 };
 } // namespace audio
+using audioClassificationMethod = audio::ClassificationMethod;
 } // namespace RED4ext
 
 // clang-format on

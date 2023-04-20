@@ -14,6 +14,7 @@ enum class MovingPlatformMovementInitializationType : uint32_t
     Speed = 1,
 };
 } // namespace game
+using gameMovingPlatformMovementInitializationType = game::MovingPlatformMovementInitializationType;
 } // namespace RED4ext
 
 // clang-format on

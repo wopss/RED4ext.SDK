@@ -15,6 +15,7 @@ enum class StatIDType : uint32_t
     Invalid = 2,
 };
 } // namespace game
+using gameStatIDType = game::StatIDType;
 } // namespace RED4ext
 
 // clang-format on

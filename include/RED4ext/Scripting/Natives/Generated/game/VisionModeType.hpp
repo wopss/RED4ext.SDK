@@ -14,6 +14,7 @@ enum class VisionModeType : uint32_t
     Focus = 1,
 };
 } // namespace game
+using gameVisionModeType = game::VisionModeType;
 } // namespace RED4ext
 
 // clang-format on

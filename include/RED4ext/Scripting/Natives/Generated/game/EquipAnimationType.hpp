@@ -15,6 +15,7 @@ enum class EquipAnimationType : uint32_t
     FirstEquip = 2,
 };
 } // namespace game
+using gameEquipAnimationType = game::EquipAnimationType;
 } // namespace RED4ext
 
 // clang-format on

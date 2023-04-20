@@ -15,6 +15,7 @@ enum class AudioDismembermentPart : uint32_t
     Arm = 2,
 };
 } // namespace ent
+using entAudioDismembermentPart = ent::AudioDismembermentPart;
 } // namespace RED4ext
 
 // clang-format on

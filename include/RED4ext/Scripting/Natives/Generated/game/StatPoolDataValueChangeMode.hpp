@@ -16,6 +16,7 @@ enum class StatPoolDataValueChangeMode : uint8_t
     NonZero = 3,
 };
 } // namespace game
+using gameStatPoolDataValueChangeMode = game::StatPoolDataValueChangeMode;
 } // namespace RED4ext
 
 // clang-format on

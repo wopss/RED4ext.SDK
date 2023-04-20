@@ -16,6 +16,7 @@ enum class WeaponShellCasingDirection : uint32_t
     leftBack = 3,
 };
 } // namespace audio
+using audioWeaponShellCasingDirection = audio::WeaponShellCasingDirection;
 } // namespace RED4ext
 
 // clang-format on

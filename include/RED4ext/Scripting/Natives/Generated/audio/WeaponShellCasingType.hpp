@@ -15,6 +15,7 @@ enum class WeaponShellCasingType : uint32_t
     cartridge = 2,
 };
 } // namespace audio
+using audioWeaponShellCasingType = audio::WeaponShellCasingType;
 } // namespace RED4ext
 
 // clang-format on

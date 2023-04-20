@@ -14,6 +14,7 @@ enum class NaryExpressionOperators : uint32_t
     LogicalOr = 1,
 };
 } // namespace AI::behavior
+using AIbehaviorNaryExpressionOperators = AI::behavior::NaryExpressionOperators;
 } // namespace RED4ext
 
 // clang-format on

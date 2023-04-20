@@ -15,6 +15,7 @@ enum class RainIntensity : uint32_t
     HeavyRain = 2,
 };
 } // namespace world
+using worldRainIntensity = world::RainIntensity;
 } // namespace RED4ext
 
 // clang-format on

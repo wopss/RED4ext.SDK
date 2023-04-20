@@ -14,6 +14,7 @@ enum class ConstraintWeightMode : uint32_t
     FloatTrack = 1,
 };
 } // namespace anim
+using animConstraintWeightMode = anim::ConstraintWeightMode;
 } // namespace RED4ext
 
 // clang-format on

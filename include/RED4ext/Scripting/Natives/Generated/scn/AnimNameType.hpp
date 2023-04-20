@@ -16,6 +16,7 @@ enum class AnimNameType : uint32_t
     dynamic = 3,
 };
 } // namespace scn
+using scnAnimNameType = scn::AnimNameType;
 } // namespace RED4ext
 
 // clang-format on

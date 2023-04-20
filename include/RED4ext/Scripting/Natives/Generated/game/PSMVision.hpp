@@ -15,6 +15,7 @@ enum class PSMVision : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMVision = game::PSMVision;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class VerticalAlignment : uint8_t
     Bottom = 2,
 };
 } // namespace text
+using textVerticalAlignment = text::VerticalAlignment;
 } // namespace RED4ext
 
 // clang-format on

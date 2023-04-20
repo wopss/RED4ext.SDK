@@ -22,6 +22,7 @@ enum class WeaponTailEnvironment : uint32_t
     ExteriorBadlandsCanyon = 9,
 };
 } // namespace audio
+using audioWeaponTailEnvironment = audio::WeaponTailEnvironment;
 } // namespace RED4ext
 
 // clang-format on

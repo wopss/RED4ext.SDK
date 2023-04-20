@@ -14,6 +14,7 @@ enum class EScrollDirection : uint32_t
     Horizontal = 1,
 };
 } // namespace ink
+using inkEScrollDirection = ink::EScrollDirection;
 } // namespace RED4ext
 
 // clang-format on

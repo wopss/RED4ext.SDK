@@ -17,6 +17,7 @@ enum class LookAtDrivenTurnsMode : uint32_t
     ForceStop = 4,
 };
 } // namespace quest
+using questLookAtDrivenTurnsMode = quest::LookAtDrivenTurnsMode;
 } // namespace RED4ext
 
 // clang-format on

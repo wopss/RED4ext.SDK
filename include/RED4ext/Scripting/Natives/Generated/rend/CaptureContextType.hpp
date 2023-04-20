@@ -14,6 +14,7 @@ enum class CaptureContextType : uint32_t
     AnimViewer = 1,
 };
 } // namespace rend
+using rendCaptureContextType = rend::CaptureContextType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class BinkVideoAction : uint8_t
     Stop = 2,
 };
 } // namespace game
+using gameBinkVideoAction = game::BinkVideoAction;
 } // namespace RED4ext
 
 // clang-format on

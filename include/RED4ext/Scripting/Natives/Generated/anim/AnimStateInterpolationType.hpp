@@ -16,6 +16,7 @@ enum class AnimStateInterpolationType : uint8_t
     EaseInOut = 3,
 };
 } // namespace anim
+using animAnimStateInterpolationType = anim::AnimStateInterpolationType;
 } // namespace RED4ext
 
 // clang-format on

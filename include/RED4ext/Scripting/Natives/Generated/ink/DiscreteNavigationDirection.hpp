@@ -16,6 +16,7 @@ enum class DiscreteNavigationDirection : uint8_t
     Left = 3,
 };
 } // namespace ink
+using inkDiscreteNavigationDirection = ink::DiscreteNavigationDirection;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class EventType : uint32_t
     NodeProgressSet = 2,
 };
 } // namespace scn::dev
+using scndevEventType = scn::dev::EventType;
 } // namespace RED4ext
 
 // clang-format on

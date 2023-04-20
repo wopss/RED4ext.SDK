@@ -14,6 +14,7 @@ enum class ProxyGroupingNormals : uint8_t
     Around_All_Axes = 1,
 };
 } // namespace world
+using worldProxyGroupingNormals = world::ProxyGroupingNormals;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class EffectObjectFilter_AxisRangeAxis : uint32_t
     Z = 2,
 };
 } // namespace game
+using gameEffectObjectFilter_AxisRangeAxis = game::EffectObjectFilter_AxisRangeAxis;
 } // namespace RED4ext
 
 // clang-format on

@@ -147,6 +147,7 @@ enum class MappinVariant : uint32_t
     Invalid = 134,
 };
 } // namespace game::data
+using gamedataMappinVariant = game::data::MappinVariant;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class CombatSpaceSize : uint32_t
     Huge = 3,
 };
 } // namespace AI
+using AICombatSpaceSize = AI::CombatSpaceSize;
 } // namespace RED4ext
 
 // clang-format on

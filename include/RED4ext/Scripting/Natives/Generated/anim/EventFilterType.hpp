@@ -16,6 +16,7 @@ enum class EventFilterType : uint32_t
     Mute = 3,
 };
 } // namespace anim
+using animEventFilterType = anim::EventFilterType;
 } // namespace RED4ext
 
 // clang-format on

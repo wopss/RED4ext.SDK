@@ -16,6 +16,7 @@ enum class PhoneStatus : uint32_t
     Minimized = 3,
 };
 } // namespace quest
+using questPhoneStatus = quest::PhoneStatus;
 } // namespace RED4ext
 
 // clang-format on

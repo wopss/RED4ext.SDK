@@ -14,6 +14,7 @@ enum class CompanionPositions : uint32_t
     InFront = 1,
 };
 } // namespace quest
+using questCompanionPositions = quest::CompanionPositions;
 } // namespace RED4ext
 
 // clang-format on

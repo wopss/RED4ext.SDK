@@ -16,6 +16,7 @@ enum class BlendOverride : uint32_t
     Custom_PitchYaw = 3,
 };
 } // namespace scn::fpp
+using scnfppBlendOverride = scn::fpp::BlendOverride;
 } // namespace RED4ext
 
 // clang-format on

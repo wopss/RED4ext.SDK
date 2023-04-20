@@ -15,6 +15,7 @@ enum class WindShapeAnchorPointHorz : uint32_t
     AP_LEFT = 2,
 };
 } // namespace rend
+using rendWindShapeAnchorPointHorz = rend::WindShapeAnchorPointHorz;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class LogicalOperation : uint8_t
     OR = 1,
 };
 } // namespace work
+using workLogicalOperation = work::LogicalOperation;
 } // namespace RED4ext
 
 // clang-format on

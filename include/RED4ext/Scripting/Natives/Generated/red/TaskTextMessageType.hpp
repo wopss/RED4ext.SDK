@@ -14,6 +14,7 @@ enum class TaskTextMessageType : uint32_t
     Error = 1,
 };
 } // namespace red
+using redTaskTextMessageType = red::TaskTextMessageType;
 } // namespace RED4ext
 
 // clang-format on

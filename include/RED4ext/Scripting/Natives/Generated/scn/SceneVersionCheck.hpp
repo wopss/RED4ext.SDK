@@ -14,6 +14,7 @@ enum class SceneVersionCheck : uint8_t
     Equal = 1,
 };
 } // namespace scn
+using scnSceneVersionCheck = scn::SceneVersionCheck;
 } // namespace RED4ext
 
 // clang-format on

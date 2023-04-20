@@ -14,6 +14,7 @@ enum class SharedInventoryTag : uint32_t
     PlayerStash = 1000000,
 };
 } // namespace game
+using gameSharedInventoryTag = game::SharedInventoryTag;
 } // namespace RED4ext
 
 // clang-format on

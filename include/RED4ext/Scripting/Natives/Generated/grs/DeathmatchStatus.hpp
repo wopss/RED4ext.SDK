@@ -18,6 +18,7 @@ enum class DeathmatchStatus : uint32_t
     Sumup = 5,
 };
 } // namespace grs
+using grsDeathmatchStatus = grs::DeathmatchStatus;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class Leg : uint32_t
     Right = 1,
 };
 } // namespace anim
+using animLeg = anim::Leg;
 } // namespace RED4ext
 
 // clang-format on

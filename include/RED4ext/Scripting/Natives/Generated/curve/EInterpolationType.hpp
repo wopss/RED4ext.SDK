@@ -17,6 +17,7 @@ enum class EInterpolationType : uint8_t
     EIT_Hermite = 4,
 };
 } // namespace curve
+using curveEInterpolationType = curve::EInterpolationType;
 } // namespace RED4ext
 
 // clang-format on

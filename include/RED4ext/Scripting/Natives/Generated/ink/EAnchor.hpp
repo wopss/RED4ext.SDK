@@ -28,6 +28,7 @@ enum class EAnchor : uint8_t
     Fill = 15,
 };
 } // namespace ink
+using inkEAnchor = ink::EAnchor;
 } // namespace RED4ext
 
 // clang-format on

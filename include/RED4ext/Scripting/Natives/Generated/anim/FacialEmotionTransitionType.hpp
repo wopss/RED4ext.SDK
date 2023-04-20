@@ -17,6 +17,7 @@ enum class FacialEmotionTransitionType : uint32_t
     Custom = 4,
 };
 } // namespace anim
+using animFacialEmotionTransitionType = anim::FacialEmotionTransitionType;
 } // namespace RED4ext
 
 // clang-format on

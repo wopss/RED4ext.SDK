@@ -14,6 +14,7 @@ enum class StreamingTestCheckpointType : uint32_t
     EndMove = 1,
 };
 } // namespace world
+using worldStreamingTestCheckpointType = world::StreamingTestCheckpointType;
 } // namespace RED4ext
 
 // clang-format on

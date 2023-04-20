@@ -14,6 +14,7 @@ enum class SectionInternalsActorBehaviorMode : uint32_t
     EvenIfDead = 1,
 };
 } // namespace scn
+using scnSectionInternalsActorBehaviorMode = scn::SectionInternalsActorBehaviorMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class ESlotState : uint32_t
     Available = 2,
 };
 } // namespace game
+using gameESlotState = game::ESlotState;
 using ESlotState = game::ESlotState;
 } // namespace RED4ext
 

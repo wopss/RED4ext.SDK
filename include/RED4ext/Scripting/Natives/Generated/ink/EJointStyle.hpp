@@ -15,6 +15,7 @@ enum class EJointStyle : uint32_t
     ROUND = 2,
 };
 } // namespace ink
+using inkEJointStyle = ink::EJointStyle;
 } // namespace RED4ext
 
 // clang-format on

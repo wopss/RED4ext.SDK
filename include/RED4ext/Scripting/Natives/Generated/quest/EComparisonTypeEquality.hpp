@@ -14,6 +14,7 @@ enum class EComparisonTypeEquality : uint32_t
     NotEqual = 1,
 };
 } // namespace quest
+using questEComparisonTypeEquality = quest::EComparisonTypeEquality;
 } // namespace RED4ext
 
 // clang-format on

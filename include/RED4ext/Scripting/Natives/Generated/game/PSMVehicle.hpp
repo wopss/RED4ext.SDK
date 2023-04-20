@@ -21,6 +21,7 @@ enum class PSMVehicle : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMVehicle = game::PSMVehicle;
 } // namespace RED4ext
 
 // clang-format on

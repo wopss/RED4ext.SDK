@@ -15,6 +15,7 @@ enum class ObjectTagExt : uint32_t
     None = 1701736270,
 };
 } // namespace world
+using worldObjectTagExt = world::ObjectTagExt;
 } // namespace RED4ext
 
 // clang-format on

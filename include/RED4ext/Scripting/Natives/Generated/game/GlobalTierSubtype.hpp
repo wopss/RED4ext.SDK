@@ -14,6 +14,7 @@ enum class GlobalTierSubtype : uint8_t
     Supervisor = 1,
 };
 } // namespace game
+using gameGlobalTierSubtype = game::GlobalTierSubtype;
 } // namespace RED4ext
 
 // clang-format on

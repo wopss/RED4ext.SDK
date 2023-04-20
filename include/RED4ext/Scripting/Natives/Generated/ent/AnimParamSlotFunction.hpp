@@ -14,6 +14,7 @@ enum class AnimParamSlotFunction : uint32_t
     Visibility = 1,
 };
 } // namespace ent
+using entAnimParamSlotFunction = ent::AnimParamSlotFunction;
 } // namespace RED4ext
 
 // clang-format on

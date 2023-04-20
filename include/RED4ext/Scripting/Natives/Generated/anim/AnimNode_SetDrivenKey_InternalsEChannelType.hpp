@@ -26,6 +26,7 @@ enum class AnimNode_SetDrivenKey_InternalsEChannelType : uint32_t
     RotQuatW = 13,
 };
 } // namespace anim
+using animAnimNode_SetDrivenKey_InternalsEChannelType = anim::AnimNode_SetDrivenKey_InternalsEChannelType;
 } // namespace RED4ext
 
 // clang-format on

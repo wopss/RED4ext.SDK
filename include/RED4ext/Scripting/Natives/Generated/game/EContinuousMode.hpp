@@ -15,6 +15,7 @@ enum class EContinuousMode : uint32_t
     Stop = 2,
 };
 } // namespace game
+using gameEContinuousMode = game::EContinuousMode;
 } // namespace RED4ext
 
 // clang-format on

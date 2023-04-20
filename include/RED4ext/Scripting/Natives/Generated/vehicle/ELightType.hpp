@@ -21,6 +21,7 @@ enum class ELightType : uint32_t
     Utility = 64,
 };
 } // namespace vehicle
+using vehicleELightType = vehicle::ELightType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class RenderToTextureMode : uint8_t
     GBufferOnly = 1,
 };
 } // namespace ent
+using entRenderToTextureMode = ent::RenderToTextureMode;
 } // namespace RED4ext
 
 // clang-format on

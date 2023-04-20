@@ -17,6 +17,7 @@ enum class ReflectionVariant : uint32_t
     FindingMaximumFaceAligment2Sides = 4,
 };
 } // namespace audio
+using audioReflectionVariant = audio::ReflectionVariant;
 } // namespace RED4ext
 
 // clang-format on

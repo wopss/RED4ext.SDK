@@ -22,6 +22,7 @@ enum class EVehicleSpeedConditionType : uint32_t
     CT_ABS_LESS_EQUAL = 9,
 };
 } // namespace vehicle
+using vehicleEVehicleSpeedConditionType = vehicle::EVehicleSpeedConditionType;
 } // namespace RED4ext
 
 // clang-format on

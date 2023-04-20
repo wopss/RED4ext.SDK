@@ -12,6 +12,7 @@ enum class EventType : uint32_t
 {
 };
 } // namespace scn
+using scnEventType = scn::EventType;
 } // namespace RED4ext
 
 // clang-format on

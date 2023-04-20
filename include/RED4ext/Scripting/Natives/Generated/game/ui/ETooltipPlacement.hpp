@@ -16,6 +16,7 @@ enum class ETooltipPlacement : uint8_t
     RightTop = 3,
 };
 } // namespace game::ui
+using gameuiETooltipPlacement = game::ui::ETooltipPlacement;
 } // namespace RED4ext
 
 // clang-format on

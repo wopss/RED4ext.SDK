@@ -16,6 +16,7 @@ enum class SquadType : uint32_t
     Unknown = 7,
 };
 } // namespace AI
+using AISquadType = AI::SquadType;
 } // namespace RED4ext
 
 // clang-format on

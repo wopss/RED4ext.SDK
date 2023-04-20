@@ -15,7 +15,7 @@ namespace game
 struct PlayerReleaseControlAsParent : red::Event
 {
     static constexpr const char* NAME = "gamePlayerReleaseControlAsParent";
-    static constexpr const char* ALIAS = "gamePlayerReleaseControlAsParent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };

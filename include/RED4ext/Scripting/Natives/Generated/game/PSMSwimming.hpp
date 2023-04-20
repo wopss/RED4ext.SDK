@@ -16,6 +16,7 @@ enum class PSMSwimming : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMSwimming = game::PSMSwimming;
 } // namespace RED4ext
 
 // clang-format on

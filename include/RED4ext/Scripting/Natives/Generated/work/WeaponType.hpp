@@ -34,6 +34,7 @@ enum class WeaponType : uint32_t
     TwoHandedClub = 22,
 };
 } // namespace work
+using workWeaponType = work::WeaponType;
 } // namespace RED4ext
 
 // clang-format on

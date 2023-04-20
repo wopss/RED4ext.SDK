@@ -17,6 +17,7 @@ enum class ProxyMeshTexRes : uint8_t
     RES_1024 = 4,
 };
 } // namespace world
+using worldProxyMeshTexRes = world::ProxyMeshTexRes;
 } // namespace RED4ext
 
 // clang-format on

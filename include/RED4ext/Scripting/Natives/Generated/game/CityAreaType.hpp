@@ -17,6 +17,7 @@ enum class CityAreaType : uint32_t
     DangerousZone = 4,
 };
 } // namespace game
+using gameCityAreaType = game::CityAreaType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class EInterpolationType : uint32_t
     Slerp = 1,
 };
 } // namespace anim
+using animEInterpolationType = anim::EInterpolationType;
 } // namespace RED4ext
 
 // clang-format on

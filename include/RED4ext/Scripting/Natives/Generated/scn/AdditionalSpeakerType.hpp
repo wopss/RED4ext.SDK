@@ -14,6 +14,7 @@ enum class AdditionalSpeakerType : uint32_t
     Holocall = 1,
 };
 } // namespace scn
+using scnAdditionalSpeakerType = scn::AdditionalSpeakerType;
 } // namespace RED4ext
 
 // clang-format on

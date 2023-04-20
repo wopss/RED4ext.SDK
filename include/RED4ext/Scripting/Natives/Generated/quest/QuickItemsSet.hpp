@@ -14,6 +14,7 @@ enum class QuickItemsSet : uint32_t
     Q003_All = 1,
 };
 } // namespace quest
+using questQuickItemsSet = quest::QuickItemsSet;
 } // namespace RED4ext
 
 // clang-format on

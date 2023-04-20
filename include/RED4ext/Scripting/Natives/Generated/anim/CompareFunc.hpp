@@ -18,6 +18,7 @@ enum class CompareFunc : uint32_t
     GreaterEqual = 5,
 };
 } // namespace anim
+using animCompareFunc = anim::CompareFunc;
 } // namespace RED4ext
 
 // clang-format on

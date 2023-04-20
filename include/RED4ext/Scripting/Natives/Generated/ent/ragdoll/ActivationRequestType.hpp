@@ -15,6 +15,7 @@ enum class ActivationRequestType : uint32_t
     Forced = 2,
 };
 } // namespace ent::ragdoll
+using entragdollActivationRequestType = ent::ragdoll::ActivationRequestType;
 } // namespace RED4ext
 
 // clang-format on

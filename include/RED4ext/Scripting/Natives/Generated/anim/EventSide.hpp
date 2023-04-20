@@ -14,6 +14,7 @@ enum class EventSide : uint32_t
     Right = 1,
 };
 } // namespace anim
+using animEventSide = anim::EventSide;
 } // namespace RED4ext
 
 // clang-format on

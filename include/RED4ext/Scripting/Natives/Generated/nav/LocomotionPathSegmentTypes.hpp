@@ -15,6 +15,7 @@ enum class LocomotionPathSegmentTypes : uint8_t
     OffMeshLink = 2,
 };
 } // namespace nav
+using navLocomotionPathSegmentTypes = nav::LocomotionPathSegmentTypes;
 } // namespace RED4ext
 
 // clang-format on

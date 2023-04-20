@@ -16,6 +16,7 @@ enum class UtilsNeighborMode : uint8_t
     eFILL_SURROUNDING = 3,
 };
 } // namespace env
+using envUtilsNeighborMode = env::UtilsNeighborMode;
 } // namespace RED4ext
 
 // clang-format on

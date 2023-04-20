@@ -36,6 +36,7 @@ enum class SmartObjectType : uint32_t
     Climb400cmDown = 23,
 };
 } // namespace game
+using gameSmartObjectType = game::SmartObjectType;
 } // namespace RED4ext
 
 // clang-format on

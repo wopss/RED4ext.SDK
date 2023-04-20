@@ -15,6 +15,7 @@ enum class MarkerType : uint32_t
     Entity = 2,
 };
 } // namespace scn
+using scnMarkerType = scn::MarkerType;
 } // namespace RED4ext
 
 // clang-format on

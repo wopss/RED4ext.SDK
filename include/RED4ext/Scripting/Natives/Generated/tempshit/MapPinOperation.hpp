@@ -15,6 +15,7 @@ enum class MapPinOperation : uint8_t
     Remove = 2,
 };
 } // namespace tempshit
+using tempshitMapPinOperation = tempshit::MapPinOperation;
 } // namespace RED4ext
 
 // clang-format on

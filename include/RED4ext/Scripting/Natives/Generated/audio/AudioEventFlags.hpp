@@ -17,6 +17,7 @@ enum class AudioEventFlags : uint32_t
     Metadata = 8,
 };
 } // namespace audio
+using audioAudioEventFlags = audio::AudioEventFlags;
 } // namespace RED4ext
 
 // clang-format on

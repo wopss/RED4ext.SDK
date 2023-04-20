@@ -16,6 +16,7 @@ enum class ImpulseMagnitude : uint32_t
     High = 3,
 };
 } // namespace quest
+using questImpulseMagnitude = quest::ImpulseMagnitude;
 } // namespace RED4ext
 
 // clang-format on

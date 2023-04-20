@@ -16,6 +16,7 @@ enum class PhoneCallPhase : uint32_t
     EndCall = 3,
 };
 } // namespace quest
+using questPhoneCallPhase = quest::PhoneCallPhase;
 } // namespace RED4ext
 
 // clang-format on

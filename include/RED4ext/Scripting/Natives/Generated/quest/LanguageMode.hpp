@@ -16,6 +16,7 @@ enum class LanguageMode : uint32_t
     TextLang = 3,
 };
 } // namespace quest
+using questLanguageMode = quest::LanguageMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class BraindancePerspective : uint8_t
     ThirdPerson = 1,
 };
 } // namespace scn
+using scnBraindancePerspective = scn::BraindancePerspective;
 } // namespace RED4ext
 
 // clang-format on

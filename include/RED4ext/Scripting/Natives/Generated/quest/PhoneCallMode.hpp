@@ -15,6 +15,7 @@ enum class PhoneCallMode : uint32_t
     Video = 2,
 };
 } // namespace quest
+using questPhoneCallMode = quest::PhoneCallMode;
 } // namespace RED4ext
 
 // clang-format on

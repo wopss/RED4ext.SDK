@@ -14,6 +14,7 @@ enum class EAnimGraphAdditiveType : uint32_t
     AGAT_Ref = 1,
 };
 } // namespace anim
+using animEAnimGraphAdditiveType = anim::EAnimGraphAdditiveType;
 } // namespace RED4ext
 
 // clang-format on

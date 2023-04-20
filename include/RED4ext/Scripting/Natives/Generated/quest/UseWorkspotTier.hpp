@@ -14,6 +14,7 @@ enum class UseWorkspotTier : uint32_t
     Tier4 = 1,
 };
 } // namespace quest
+using questUseWorkspotTier = quest::UseWorkspotTier;
 } // namespace RED4ext
 
 // clang-format on

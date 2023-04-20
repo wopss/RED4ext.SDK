@@ -14,6 +14,7 @@ enum class ExitType : uint8_t
     NonTerminating = 1,
 };
 } // namespace quest
+using questExitType = quest::ExitType;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class SimulationType : uint8_t
     Invalid = 3,
 };
 } // namespace physics
+using physicsSimulationType = physics::SimulationType;
 } // namespace RED4ext
 
 // clang-format on

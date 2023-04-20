@@ -26,6 +26,7 @@ enum class SaveLockReason : uint32_t
     PlayerOnMovingPlatform = 13,
 };
 } // namespace game
+using gameSaveLockReason = game::SaveLockReason;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class GroupNodeInheritanceState : uint32_t
     Resolved = 2,
 };
 } // namespace game::data
+using gamedataGroupNodeInheritanceState = game::data::GroupNodeInheritanceState;
 } // namespace RED4ext
 
 // clang-format on

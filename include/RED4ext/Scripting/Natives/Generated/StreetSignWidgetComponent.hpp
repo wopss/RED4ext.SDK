@@ -17,7 +17,7 @@ namespace ink { struct TweakDBIDSelector; }
 struct StreetSignWidgetComponent : IWorldWidgetComponent
 {
     static constexpr const char* NAME = "StreetSignWidgetComponent";
-    static constexpr const char* ALIAS = "StreetSignWidgetComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk2B0[0x2C8 - 0x2B0]; // 2B0
     TweakDBID streetSignTDBID; // 2C8

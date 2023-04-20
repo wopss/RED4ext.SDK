@@ -17,6 +17,7 @@ enum class ReactionState : uint32_t
     Canceling = 4,
 };
 } // namespace game::interactions
+using gameinteractionsReactionState = game::interactions::ReactionState;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,6 +18,7 @@ enum class DisplayMode : uint32_t
     Single = 5,
 };
 } // namespace ink
+using inkDisplayMode = ink::DisplayMode;
 } // namespace RED4ext
 
 // clang-format on

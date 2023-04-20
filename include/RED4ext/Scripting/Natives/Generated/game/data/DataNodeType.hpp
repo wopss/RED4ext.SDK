@@ -18,6 +18,7 @@ enum class DataNodeType : uint32_t
     ComplexValue = 5,
 };
 } // namespace game::data
+using gamedataDataNodeType = game::data::DataNodeType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class QuestGuidanceMarkerPathfindingType : uint32_t
     Traffic = 2,
 };
 } // namespace game
+using gameQuestGuidanceMarkerPathfindingType = game::QuestGuidanceMarkerPathfindingType;
 } // namespace RED4ext
 
 // clang-format on

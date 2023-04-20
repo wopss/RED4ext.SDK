@@ -91,6 +91,7 @@ enum class ItemType : uint32_t
     Invalid = 78,
 };
 } // namespace game::data
+using gamedataItemType = game::data::ItemType;
 } // namespace RED4ext
 
 // clang-format on

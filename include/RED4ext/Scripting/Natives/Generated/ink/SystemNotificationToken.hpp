@@ -15,7 +15,7 @@ namespace ink
 struct SystemNotificationToken : IScriptable
 {
     static constexpr const char* NAME = "inkSystemNotificationToken";
-    static constexpr const char* ALIAS = "inkSystemNotificationToken";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0xF0 - 0x40]; // 40
 };

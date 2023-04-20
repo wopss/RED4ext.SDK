@@ -15,6 +15,7 @@ enum class CharacterCustomization_BrokenNoseStage : uint32_t
     CCBN_Stage2 = 2,
 };
 } // namespace game::ui
+using gameuiCharacterCustomization_BrokenNoseStage = game::ui::CharacterCustomization_BrokenNoseStage;
 } // namespace RED4ext
 
 // clang-format on

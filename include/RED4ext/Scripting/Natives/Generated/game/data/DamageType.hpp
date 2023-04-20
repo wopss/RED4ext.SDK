@@ -18,6 +18,7 @@ enum class DamageType : uint32_t
     Invalid = 5,
 };
 } // namespace game::data
+using gamedataDamageType = game::data::DamageType;
 } // namespace RED4ext
 
 // clang-format on

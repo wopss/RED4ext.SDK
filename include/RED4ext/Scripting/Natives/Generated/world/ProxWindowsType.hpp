@@ -16,6 +16,7 @@ enum class ProxWindowsType : uint8_t
     BakeWindowsToBuffer = 3,
 };
 } // namespace world
+using worldProxWindowsType = world::ProxWindowsType;
 } // namespace RED4ext
 
 // clang-format on

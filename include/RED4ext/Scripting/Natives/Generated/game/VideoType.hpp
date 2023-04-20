@@ -17,6 +17,7 @@ enum class VideoType : uint8_t
     Unknown = 4,
 };
 } // namespace game
+using gameVideoType = game::VideoType;
 using VideoType = game::VideoType;
 } // namespace RED4ext
 

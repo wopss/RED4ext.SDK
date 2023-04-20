@@ -15,6 +15,7 @@ enum class EBumpPolicy : uint8_t
     Move = 2,
 };
 } // namespace AI::influence
+using AIinfluenceEBumpPolicy = AI::influence::EBumpPolicy;
 } // namespace RED4ext
 
 // clang-format on

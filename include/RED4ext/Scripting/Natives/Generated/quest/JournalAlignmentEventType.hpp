@@ -15,6 +15,7 @@ enum class JournalAlignmentEventType : uint32_t
     Right = 2,
 };
 } // namespace quest
+using questJournalAlignmentEventType = quest::JournalAlignmentEventType;
 } // namespace RED4ext
 
 // clang-format on

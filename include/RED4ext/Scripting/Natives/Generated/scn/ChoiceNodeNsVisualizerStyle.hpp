@@ -14,6 +14,7 @@ enum class ChoiceNodeNsVisualizerStyle : uint8_t
     inWorld = 1,
 };
 } // namespace scn
+using scnChoiceNodeNsVisualizerStyle = scn::ChoiceNodeNsVisualizerStyle;
 } // namespace RED4ext
 
 // clang-format on

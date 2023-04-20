@@ -19,6 +19,7 @@ enum class OnlineSystemErrors : uint32_t
     NotSignedInGame = 6,
 };
 } // namespace game
+using gameOnlineSystemErrors = game::OnlineSystemErrors;
 using GOGRewardsSystemErrors = game::OnlineSystemErrors;
 } // namespace RED4ext
 

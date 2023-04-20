@@ -15,6 +15,7 @@ enum class RootMotionAnimPlacementMode : uint32_t
     PlayAtActorPosition = 2,
 };
 } // namespace scn
+using scnRootMotionAnimPlacementMode = scn::RootMotionAnimPlacementMode;
 } // namespace RED4ext
 
 // clang-format on

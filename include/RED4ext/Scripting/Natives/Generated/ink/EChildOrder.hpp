@@ -14,6 +14,7 @@ enum class EChildOrder : uint8_t
     Backward = 1,
 };
 } // namespace ink
+using inkEChildOrder = ink::EChildOrder;
 } // namespace RED4ext
 
 // clang-format on

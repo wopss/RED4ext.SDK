@@ -15,6 +15,7 @@ enum class TextReplaceAnimationControllerWidgetTextUsage : uint8_t
     NoUsage = 2,
 };
 } // namespace ink
+using inkTextReplaceAnimationControllerWidgetTextUsage = ink::TextReplaceAnimationControllerWidgetTextUsage;
 } // namespace RED4ext
 
 // clang-format on

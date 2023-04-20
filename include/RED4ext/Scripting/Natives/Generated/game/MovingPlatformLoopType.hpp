@@ -15,6 +15,7 @@ enum class MovingPlatformLoopType : uint32_t
     Repeat = 2,
 };
 } // namespace game
+using gameMovingPlatformLoopType = game::MovingPlatformLoopType;
 } // namespace RED4ext
 
 // clang-format on

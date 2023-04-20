@@ -15,6 +15,7 @@ enum class CirclingDirection : uint32_t
     Right = 2,
 };
 } // namespace move
+using moveCirclingDirection = move::CirclingDirection;
 } // namespace RED4ext
 
 // clang-format on

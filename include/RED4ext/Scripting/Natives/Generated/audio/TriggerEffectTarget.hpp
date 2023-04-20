@@ -15,6 +15,7 @@ enum class TriggerEffectTarget : uint8_t
     Both = 2,
 };
 } // namespace audio
+using audioTriggerEffectTarget = audio::TriggerEffectTarget;
 } // namespace RED4ext
 
 // clang-format on

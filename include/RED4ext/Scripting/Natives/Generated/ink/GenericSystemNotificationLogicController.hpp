@@ -19,7 +19,7 @@ namespace ink
 struct GenericSystemNotificationLogicController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkGenericSystemNotificationLogicController";
-    static constexpr const char* ALIAS = "inkGenericSystemNotificationLogicController";
+    static constexpr const char* ALIAS = NAME;
 
     ink::EmptyCallback DataSetByToken; // 78
     ink::TextWidgetReference titleTextWidget; // B0

@@ -18,6 +18,7 @@ enum class ShapeType : uint8_t
     Invalid = 6,
 };
 } // namespace physics
+using physicsShapeType = physics::ShapeType;
 } // namespace RED4ext
 
 // clang-format on

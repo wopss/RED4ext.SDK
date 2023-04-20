@@ -19,6 +19,7 @@ enum class EffectTriggerPositioningType : uint32_t
     XYPlayerZTerrain = 6,
 };
 } // namespace game
+using gameEffectTriggerPositioningType = game::EffectTriggerPositioningType;
 } // namespace RED4ext
 
 // clang-format on

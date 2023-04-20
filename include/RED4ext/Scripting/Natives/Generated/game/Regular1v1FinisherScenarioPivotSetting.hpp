@@ -14,6 +14,7 @@ enum class Regular1v1FinisherScenarioPivotSetting : uint8_t
     AttackerStandsStill_TargetSlidesAndRotates = 1,
 };
 } // namespace game
+using gameRegular1v1FinisherScenarioPivotSetting = game::Regular1v1FinisherScenarioPivotSetting;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class IconResult : uint32_t
     PartNotFoundInAtlas = 3,
 };
 } // namespace ink
+using inkIconResult = ink::IconResult;
 } // namespace RED4ext
 
 // clang-format on

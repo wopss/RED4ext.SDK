@@ -16,6 +16,7 @@ enum class CommandResult : uint32_t
     Abort = 3,
 };
 } // namespace shared
+using sharedCommandResult = shared::CommandResult;
 } // namespace RED4ext
 
 // clang-format on

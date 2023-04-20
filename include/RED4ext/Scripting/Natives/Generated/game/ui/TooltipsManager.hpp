@@ -17,7 +17,7 @@ namespace game::ui
 struct TooltipsManager : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "gameuiTooltipsManager";
-    static constexpr const char* ALIAS = "gameuiTooltipsManager";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk78[0x7D - 0x78]; // 78
     bool flipX; // 7D

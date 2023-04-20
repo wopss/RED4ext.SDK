@@ -19,6 +19,7 @@ enum class TriggerConditionType : uint8_t
     AllOutsideMP = 6,
 };
 } // namespace quest
+using questTriggerConditionType = quest::TriggerConditionType;
 } // namespace RED4ext
 
 // clang-format on

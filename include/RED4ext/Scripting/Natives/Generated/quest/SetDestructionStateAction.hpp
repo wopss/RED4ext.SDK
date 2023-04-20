@@ -14,6 +14,7 @@ enum class SetDestructionStateAction : uint32_t
     Trigger = 1,
 };
 } // namespace quest
+using questSetDestructionStateAction = quest::SetDestructionStateAction;
 } // namespace RED4ext
 
 // clang-format on

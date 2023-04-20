@@ -17,6 +17,7 @@ enum class CharacterCustomizationActionType : uint32_t
     Refresh = 4,
 };
 } // namespace game::ui
+using gameuiCharacterCustomizationActionType = game::ui::CharacterCustomizationActionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,7 +15,7 @@ namespace AI
 struct PuppetSwappedEvent : red::Event
 {
     static constexpr const char* NAME = "AIPuppetSwappedEvent";
-    static constexpr const char* ALIAS = "AIPuppetSwappedEvent";
+    static constexpr const char* ALIAS = NAME;
 
 };
 RED4EXT_ASSERT_SIZE(PuppetSwappedEvent, 0x40);

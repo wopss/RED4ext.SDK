@@ -25,6 +25,7 @@ enum class EPrerequisiteType : uint32_t
     Count = 12,
 };
 } // namespace game
+using gameEPrerequisiteType = game::EPrerequisiteType;
 } // namespace RED4ext
 
 // clang-format on

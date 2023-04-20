@@ -16,6 +16,7 @@ enum class ESquadType : uint8_t
     Unknown = 3,
 };
 } // namespace community
+using communityESquadType = community::ESquadType;
 } // namespace RED4ext
 
 // clang-format on

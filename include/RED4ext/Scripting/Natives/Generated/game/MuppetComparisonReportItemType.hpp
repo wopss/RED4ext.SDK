@@ -15,6 +15,7 @@ enum class MuppetComparisonReportItemType : uint32_t
     Equal = 2,
 };
 } // namespace game
+using gameMuppetComparisonReportItemType = game::MuppetComparisonReportItemType;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class EMaterialZone : uint8_t
     Three = 3,
 };
 } // namespace game
+using gameEMaterialZone = game::EMaterialZone;
 } // namespace RED4ext
 
 // clang-format on

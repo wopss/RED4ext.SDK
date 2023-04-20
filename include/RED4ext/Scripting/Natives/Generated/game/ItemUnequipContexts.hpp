@@ -24,6 +24,7 @@ enum class ItemUnequipContexts : uint32_t
     AllItems = 11,
 };
 } // namespace game
+using gameItemUnequipContexts = game::ItemUnequipContexts;
 } // namespace RED4ext
 
 // clang-format on

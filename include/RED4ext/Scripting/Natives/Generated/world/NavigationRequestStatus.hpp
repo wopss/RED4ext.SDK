@@ -16,6 +16,7 @@ enum class NavigationRequestStatus : uint32_t
     OtherError = 3,
 };
 } // namespace world
+using worldNavigationRequestStatus = world::NavigationRequestStatus;
 } // namespace RED4ext
 
 // clang-format on

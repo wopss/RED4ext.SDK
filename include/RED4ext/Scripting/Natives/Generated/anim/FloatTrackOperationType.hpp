@@ -18,6 +18,7 @@ enum class FloatTrackOperationType : uint32_t
     WeightComplement = 5,
 };
 } // namespace anim
+using animFloatTrackOperationType = anim::FloatTrackOperationType;
 } // namespace RED4ext
 
 // clang-format on

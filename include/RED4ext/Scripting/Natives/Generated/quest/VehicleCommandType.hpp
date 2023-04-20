@@ -17,6 +17,7 @@ enum class VehicleCommandType : uint8_t
     Join_Traffic = 4, // Join Traffic
 };
 } // namespace quest
+using questVehicleCommandType = quest::VehicleCommandType;
 } // namespace RED4ext
 
 // clang-format on

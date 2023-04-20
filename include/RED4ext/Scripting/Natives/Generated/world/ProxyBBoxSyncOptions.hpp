@@ -15,6 +15,7 @@ enum class ProxyBBoxSyncOptions : uint8_t
     Pull_And_Delete = 2,
 };
 } // namespace world
+using worldProxyBBoxSyncOptions = world::ProxyBBoxSyncOptions;
 } // namespace RED4ext
 
 // clang-format on

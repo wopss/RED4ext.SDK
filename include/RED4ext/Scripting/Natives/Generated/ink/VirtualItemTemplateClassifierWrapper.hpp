@@ -15,14 +15,13 @@ namespace ink
 struct VirtualItemTemplateClassifierWrapper : IScriptable
 {
     static constexpr const char* NAME = "inkVirtualItemTemplateClassifierWrapper";
-    static constexpr const char* ALIAS = "inkVirtualItemTemplateClassifier";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(VirtualItemTemplateClassifierWrapper, 0x48);
 } // namespace ink
 using inkVirtualItemTemplateClassifierWrapper = ink::VirtualItemTemplateClassifierWrapper;
-using inkVirtualItemTemplateClassifier = ink::VirtualItemTemplateClassifierWrapper;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class InventoryItemShape : uint8_t
     DoubleSlot = 1,
 };
 } // namespace game
+using gameInventoryItemShape = game::InventoryItemShape;
 using EInventoryItemShape = game::InventoryItemShape;
 } // namespace RED4ext
 

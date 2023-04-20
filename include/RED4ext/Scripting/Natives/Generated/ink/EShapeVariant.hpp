@@ -15,6 +15,7 @@ enum class EShapeVariant : uint32_t
     FillAndBorder = 2,
 };
 } // namespace ink
+using inkEShapeVariant = ink::EShapeVariant;
 } // namespace RED4ext
 
 // clang-format on

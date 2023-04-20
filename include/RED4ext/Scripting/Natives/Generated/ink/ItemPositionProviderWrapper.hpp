@@ -15,14 +15,13 @@ namespace ink
 struct ItemPositionProviderWrapper : IScriptable
 {
     static constexpr const char* NAME = "inkItemPositionProviderWrapper";
-    static constexpr const char* ALIAS = "inkItemPositionProvider";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0x48 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(ItemPositionProviderWrapper, 0x48);
 } // namespace ink
 using inkItemPositionProviderWrapper = ink::ItemPositionProviderWrapper;
-using inkItemPositionProvider = ink::ItemPositionProviderWrapper;
 } // namespace RED4ext
 
 // clang-format on

@@ -1094,6 +1094,7 @@ enum class StatType : uint32_t
     Invalid = 1081,
 };
 } // namespace game::data
+using gamedataStatType = game::data::StatType;
 } // namespace RED4ext
 
 // clang-format on

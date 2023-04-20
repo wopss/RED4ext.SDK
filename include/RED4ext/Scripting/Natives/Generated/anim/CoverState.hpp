@@ -14,6 +14,7 @@ enum class CoverState : uint32_t
     HighCover = 2,
 };
 } // namespace anim
+using animCoverState = anim::CoverState;
 } // namespace RED4ext
 
 // clang-format on

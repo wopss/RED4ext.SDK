@@ -25,6 +25,7 @@ enum class AIRingType : uint32_t
     Invalid = 12,
 };
 } // namespace game::data
+using gamedataAIRingType = game::data::AIRingType;
 } // namespace RED4ext
 
 // clang-format on

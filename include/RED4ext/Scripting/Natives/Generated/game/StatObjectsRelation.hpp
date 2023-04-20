@@ -21,6 +21,7 @@ enum class StatObjectsRelation : uint32_t
     Invalid = 9,
 };
 } // namespace game
+using gameStatObjectsRelation = game::StatObjectsRelation;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,7 +16,7 @@ namespace game
 struct StatPoolPrereq : game::IComparisonPrereq
 {
     static constexpr const char* NAME = "gameStatPoolPrereq";
-    static constexpr const char* ALIAS = "StatPoolPrereq";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::StatPoolType statPoolType; // 48
     float valueToCheck; // 4C
@@ -24,7 +24,6 @@ struct StatPoolPrereq : game::IComparisonPrereq
 RED4EXT_ASSERT_SIZE(StatPoolPrereq, 0x50);
 } // namespace game
 using gameStatPoolPrereq = game::StatPoolPrereq;
-using StatPoolPrereq = game::StatPoolPrereq;
 } // namespace RED4ext
 
 // clang-format on

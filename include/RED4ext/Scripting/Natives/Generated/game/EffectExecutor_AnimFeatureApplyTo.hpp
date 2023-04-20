@@ -14,6 +14,7 @@ enum class EffectExecutor_AnimFeatureApplyTo : uint32_t
     Instigator = 1,
 };
 } // namespace game
+using gameEffectExecutor_AnimFeatureApplyTo = game::EffectExecutor_AnimFeatureApplyTo;
 } // namespace RED4ext
 
 // clang-format on

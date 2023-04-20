@@ -16,6 +16,7 @@ enum class LootTokenState : uint32_t
     Unsealed = 3,
 };
 } // namespace quest
+using questLootTokenState = quest::LootTokenState;
 } // namespace RED4ext
 
 // clang-format on

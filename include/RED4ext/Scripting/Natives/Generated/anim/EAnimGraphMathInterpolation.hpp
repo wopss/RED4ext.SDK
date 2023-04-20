@@ -15,6 +15,7 @@ enum class EAnimGraphMathInterpolation : uint32_t
     AGMI_BEZIER = 2,
 };
 } // namespace anim
+using animEAnimGraphMathInterpolation = anim::EAnimGraphMathInterpolation;
 } // namespace RED4ext
 
 // clang-format on

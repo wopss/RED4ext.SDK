@@ -16,6 +16,7 @@ enum class DynamicReverbType : uint32_t
     DynamicSource = 3,
 };
 } // namespace audio
+using audioDynamicReverbType = audio::DynamicReverbType;
 } // namespace RED4ext
 
 // clang-format on

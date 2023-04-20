@@ -15,6 +15,7 @@ enum class EBraindanceLayer : uint32_t
     Thermal = 2,
 };
 } // namespace game::ui
+using gameuiEBraindanceLayer = game::ui::EBraindanceLayer;
 } // namespace RED4ext
 
 // clang-format on

@@ -28,6 +28,7 @@ enum class CoverExposureMethod : uint32_t
     Count = 15,
 };
 } // namespace AI
+using AICoverExposureMethod = AI::CoverExposureMethod;
 } // namespace RED4ext
 
 // clang-format on

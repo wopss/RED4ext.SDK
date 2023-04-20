@@ -17,6 +17,7 @@ enum class PSMWeaponStates : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMWeaponStates = game::PSMWeaponStates;
 } // namespace RED4ext
 
 // clang-format on

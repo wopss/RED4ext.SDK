@@ -21,6 +21,7 @@ enum class VehicleWeaponQuestID : uint8_t
     All = 8,
 };
 } // namespace quest
+using questVehicleWeaponQuestID = quest::VehicleWeaponQuestID;
 } // namespace RED4ext
 
 // clang-format on

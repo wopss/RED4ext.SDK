@@ -16,6 +16,7 @@ enum class SetBoneTransformEntry_SetMethod : uint32_t
     RotationOnly = 3,
 };
 } // namespace anim
+using animSetBoneTransformEntry_SetMethod = anim::SetBoneTransformEntry_SetMethod;
 } // namespace RED4ext
 
 // clang-format on

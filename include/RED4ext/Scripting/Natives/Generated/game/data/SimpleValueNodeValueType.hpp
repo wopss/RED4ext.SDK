@@ -16,6 +16,7 @@ enum class SimpleValueNodeValueType : uint32_t
     Ident = 3,
 };
 } // namespace game::data
+using gamedataSimpleValueNodeValueType = game::data::SimpleValueNodeValueType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class ESliderDirection : uint32_t
     Vertical = 1,
 };
 } // namespace ink
+using inkESliderDirection = ink::ESliderDirection;
 } // namespace RED4ext
 
 // clang-format on

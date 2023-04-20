@@ -15,6 +15,7 @@ enum class EDirectionToEuler : uint32_t
     Roll = 2,
 };
 } // namespace anim
+using animEDirectionToEuler = anim::EDirectionToEuler;
 } // namespace RED4ext
 
 // clang-format on

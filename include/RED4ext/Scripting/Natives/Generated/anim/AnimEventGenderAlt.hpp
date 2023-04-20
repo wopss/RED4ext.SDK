@@ -15,6 +15,7 @@ enum class AnimEventGenderAlt : uint32_t
     Male = 2,
 };
 } // namespace anim
+using animAnimEventGenderAlt = anim::AnimEventGenderAlt;
 } // namespace RED4ext
 
 // clang-format on

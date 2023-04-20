@@ -15,6 +15,7 @@ enum class BlockAction : uint32_t
     UnblockAll = 2,
 };
 } // namespace quest
+using questBlockAction = quest::BlockAction;
 } // namespace RED4ext
 
 // clang-format on

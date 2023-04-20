@@ -17,6 +17,7 @@ enum class LifePath : uint32_t
     Invalid = 4,
 };
 } // namespace game::data
+using gamedataLifePath = game::data::LifePath;
 } // namespace RED4ext
 
 // clang-format on

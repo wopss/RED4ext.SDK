@@ -15,6 +15,7 @@ enum class FormationType : uint8_t
     FORMATION_QUINCUNX = 2,
 };
 } // namespace vehicle
+using vehicleFormationType = vehicle::FormationType;
 } // namespace RED4ext
 
 // clang-format on

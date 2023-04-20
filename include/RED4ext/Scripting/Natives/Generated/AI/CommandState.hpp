@@ -19,6 +19,7 @@ enum class CommandState : uint32_t
     Failure = 6,
 };
 } // namespace AI
+using AICommandState = AI::CommandState;
 } // namespace RED4ext
 
 // clang-format on

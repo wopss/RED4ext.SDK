@@ -20,6 +20,7 @@ enum class WeaponEvolution : uint32_t
     Invalid = 7,
 };
 } // namespace game::data
+using gamedataWeaponEvolution = game::data::WeaponEvolution;
 } // namespace RED4ext
 
 // clang-format on

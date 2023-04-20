@@ -20,6 +20,7 @@ enum class MeleeMaterialType : uint32_t
     Water = 7,
 };
 } // namespace audio
+using audioMeleeMaterialType = audio::MeleeMaterialType;
 } // namespace RED4ext
 
 // clang-format on

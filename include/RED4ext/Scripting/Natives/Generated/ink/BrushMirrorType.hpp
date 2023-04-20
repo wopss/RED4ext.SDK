@@ -16,6 +16,7 @@ enum class BrushMirrorType : uint8_t
     Both = 3,
 };
 } // namespace ink
+using inkBrushMirrorType = ink::BrushMirrorType;
 } // namespace RED4ext
 
 // clang-format on

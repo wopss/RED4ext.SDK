@@ -17,6 +17,7 @@ enum class EFootPhase : uint8_t
     NotConsidered = 4,
 };
 } // namespace anim
+using animEFootPhase = anim::EFootPhase;
 } // namespace RED4ext
 
 // clang-format on

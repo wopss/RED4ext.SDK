@@ -21,6 +21,7 @@ enum class PingType : uint32_t
     Invalid = 8,
 };
 } // namespace game::data
+using gamedataPingType = game::data::PingType;
 } // namespace RED4ext
 
 // clang-format on

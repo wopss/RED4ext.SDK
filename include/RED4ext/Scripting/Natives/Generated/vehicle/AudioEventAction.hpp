@@ -18,6 +18,7 @@ enum class AudioEventAction : uint32_t
     OnPlayerVehicleSummoned = 5,
 };
 } // namespace vehicle
+using vehicleAudioEventAction = vehicle::AudioEventAction;
 } // namespace RED4ext
 
 // clang-format on

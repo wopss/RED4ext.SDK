@@ -15,6 +15,7 @@ enum class ChoiceLookAtType : uint32_t
     Orb = 2,
 };
 } // namespace game::interactions
+using gameinteractionsChoiceLookAtType = game::interactions::ChoiceLookAtType;
 } // namespace RED4ext
 
 // clang-format on

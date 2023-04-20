@@ -15,6 +15,7 @@ enum class EClueDescriptorMode : uint32_t
     Finish = 2,
 };
 } // namespace game::ui
+using gameuiEClueDescriptorMode = game::ui::EClueDescriptorMode;
 } // namespace RED4ext
 
 // clang-format on

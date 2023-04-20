@@ -14,6 +14,7 @@ enum class InteractionType : uint8_t
     Proximity = 1,
 };
 } // namespace game::interactions::vis
+using gameinteractionsvisInteractionType = game::interactions::vis::InteractionType;
 } // namespace RED4ext
 
 // clang-format on

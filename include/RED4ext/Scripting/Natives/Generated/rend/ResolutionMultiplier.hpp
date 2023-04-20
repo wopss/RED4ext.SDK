@@ -15,6 +15,7 @@ enum class ResolutionMultiplier : uint32_t
     X4 = 4,
 };
 } // namespace rend
+using rendResolutionMultiplier = rend::ResolutionMultiplier;
 } // namespace RED4ext
 
 // clang-format on

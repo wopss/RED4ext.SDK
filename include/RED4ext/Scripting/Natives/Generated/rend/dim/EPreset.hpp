@@ -27,6 +27,7 @@ enum class EPreset : uint32_t
     _776x436 = 15, // 776x436
 };
 } // namespace rend::dim
+using renddimEPreset = rend::dim::EPreset;
 } // namespace RED4ext
 
 // clang-format on

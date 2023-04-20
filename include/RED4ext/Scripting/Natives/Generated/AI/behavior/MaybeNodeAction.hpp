@@ -15,6 +15,7 @@ enum class MaybeNodeAction : uint32_t
     RepeatChild = 2,
 };
 } // namespace AI::behavior
+using AIbehaviorMaybeNodeAction = AI::behavior::MaybeNodeAction;
 } // namespace RED4ext
 
 // clang-format on

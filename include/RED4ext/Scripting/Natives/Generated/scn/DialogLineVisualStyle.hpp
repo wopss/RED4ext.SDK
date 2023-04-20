@@ -21,6 +21,7 @@ enum class DialogLineVisualStyle : uint8_t
     globalTVAlwaysVisible = 8,
 };
 } // namespace scn
+using scnDialogLineVisualStyle = scn::DialogLineVisualStyle;
 } // namespace RED4ext
 
 // clang-format on

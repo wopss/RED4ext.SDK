@@ -16,6 +16,7 @@ enum class CharacterHitEventType : uint32_t
     Other = 3,
 };
 } // namespace quest
+using questCharacterHitEventType = quest::CharacterHitEventType;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class MultiplayerAIDirectorFunction : uint32_t
     SetCurrentShedule = 3,
 };
 } // namespace quest
+using questMultiplayerAIDirectorFunction = quest::MultiplayerAIDirectorFunction;
 } // namespace RED4ext
 
 // clang-format on

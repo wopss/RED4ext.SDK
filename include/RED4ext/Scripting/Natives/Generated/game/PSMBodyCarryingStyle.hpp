@@ -16,6 +16,7 @@ enum class PSMBodyCarryingStyle : uint32_t
     Strong = 3,
 };
 } // namespace game
+using gamePSMBodyCarryingStyle = game::PSMBodyCarryingStyle;
 } // namespace RED4ext
 
 // clang-format on

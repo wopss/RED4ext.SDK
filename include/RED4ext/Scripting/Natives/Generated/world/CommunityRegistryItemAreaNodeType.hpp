@@ -16,6 +16,7 @@ enum class CommunityRegistryItemAreaNodeType : uint8_t
     Count = 3,
 };
 } // namespace world
+using worldCommunityRegistryItemAreaNodeType = world::CommunityRegistryItemAreaNodeType;
 } // namespace RED4ext
 
 // clang-format on

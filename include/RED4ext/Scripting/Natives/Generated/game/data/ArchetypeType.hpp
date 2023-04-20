@@ -42,6 +42,7 @@ enum class ArchetypeType : uint32_t
     Invalid = 29,
 };
 } // namespace game::data
+using gamedataArchetypeType = game::data::ArchetypeType;
 } // namespace RED4ext
 
 // clang-format on

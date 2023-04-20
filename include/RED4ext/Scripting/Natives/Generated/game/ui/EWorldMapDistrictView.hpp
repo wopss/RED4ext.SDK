@@ -15,6 +15,7 @@ enum class EWorldMapDistrictView : uint32_t
     SubDistricts = 2,
 };
 } // namespace game::ui
+using gameuiEWorldMapDistrictView = game::ui::EWorldMapDistrictView;
 } // namespace RED4ext
 
 // clang-format on

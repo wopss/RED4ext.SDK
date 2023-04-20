@@ -14,6 +14,7 @@ enum class WrappingPolicy : uint8_t
     PerCharacter = 1,
 };
 } // namespace text
+using textWrappingPolicy = text::WrappingPolicy;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class LootItemType : uint8_t
     Shard = 2,
 };
 } // namespace game
+using gameLootItemType = game::LootItemType;
 using LootItemType = game::LootItemType;
 } // namespace RED4ext
 

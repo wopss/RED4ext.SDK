@@ -15,6 +15,7 @@ enum class AppearanceStatus : uint8_t
     Appearance = 2,
 };
 } // namespace ent
+using entAppearanceStatus = ent::AppearanceStatus;
 } // namespace RED4ext
 
 // clang-format on

@@ -24,6 +24,7 @@ enum class EffectType : uint8_t
     Multisampling = 11,
 };
 } // namespace ink
+using inkEffectType = ink::EffectType;
 } // namespace RED4ext
 
 // clang-format on

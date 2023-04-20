@@ -14,6 +14,7 @@ enum class ETimeShiftType : uint32_t
     ShiftToHour = 1,
 };
 } // namespace quest
+using questETimeShiftType = quest::ETimeShiftType;
 } // namespace RED4ext
 
 // clang-format on

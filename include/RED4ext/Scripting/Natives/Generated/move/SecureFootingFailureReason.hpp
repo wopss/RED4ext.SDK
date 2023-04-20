@@ -16,6 +16,7 @@ enum class SecureFootingFailureReason : uint32_t
     Ground = 3,
 };
 } // namespace move
+using moveSecureFootingFailureReason = move::SecureFootingFailureReason;
 } // namespace RED4ext
 
 // clang-format on

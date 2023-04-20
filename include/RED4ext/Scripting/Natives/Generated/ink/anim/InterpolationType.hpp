@@ -22,6 +22,7 @@ enum class InterpolationType : uint8_t
     Back = 9,
 };
 } // namespace ink::anim
+using inkanimInterpolationType = ink::anim::InterpolationType;
 } // namespace RED4ext
 
 // clang-format on

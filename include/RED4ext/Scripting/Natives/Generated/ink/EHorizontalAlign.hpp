@@ -16,6 +16,7 @@ enum class EHorizontalAlign : uint8_t
     Right = 3,
 };
 } // namespace ink
+using inkEHorizontalAlign = ink::EHorizontalAlign;
 } // namespace RED4ext
 
 // clang-format on

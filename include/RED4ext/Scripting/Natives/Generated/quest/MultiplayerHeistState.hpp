@@ -15,6 +15,7 @@ enum class MultiplayerHeistState : uint32_t
     Victory = 2,
 };
 } // namespace quest
+using questMultiplayerHeistState = quest::MultiplayerHeistState;
 } // namespace RED4ext
 
 // clang-format on

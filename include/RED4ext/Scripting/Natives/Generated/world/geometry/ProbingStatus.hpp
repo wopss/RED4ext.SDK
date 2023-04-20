@@ -16,6 +16,7 @@ enum class ProbingStatus : uint32_t
     Failure = 3,
 };
 } // namespace world::geometry
+using worldgeometryProbingStatus = world::geometry::ProbingStatus;
 } // namespace RED4ext
 
 // clang-format on

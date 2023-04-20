@@ -15,6 +15,7 @@ enum class BoolSignalAction : uint32_t
     TurnOff = 2,
 };
 } // namespace game
+using gameBoolSignalAction = game::BoolSignalAction;
 } // namespace RED4ext
 
 // clang-format on

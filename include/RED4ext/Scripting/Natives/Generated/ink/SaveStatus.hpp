@@ -17,6 +17,7 @@ enum class SaveStatus : uint8_t
     InSync = 4,
 };
 } // namespace ink
+using inkSaveStatus = ink::SaveStatus;
 } // namespace RED4ext
 
 // clang-format on

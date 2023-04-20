@@ -47,6 +47,7 @@ enum class StatPoolType : uint32_t
     Invalid = 34,
 };
 } // namespace game::data
+using gamedataStatPoolType = game::data::StatPoolType;
 } // namespace RED4ext
 
 // clang-format on

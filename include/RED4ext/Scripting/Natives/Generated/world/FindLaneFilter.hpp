@@ -16,6 +16,7 @@ enum class FindLaneFilter : uint32_t
     Pavement = 3,
 };
 } // namespace world
+using worldFindLaneFilter = world::FindLaneFilter;
 } // namespace RED4ext
 
 // clang-format on

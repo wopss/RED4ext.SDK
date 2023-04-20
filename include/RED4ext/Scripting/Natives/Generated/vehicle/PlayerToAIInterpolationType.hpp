@@ -31,6 +31,7 @@ enum class PlayerToAIInterpolationType : uint32_t
     PTAIT_EASE_IN_OUT_SIN_NON_SMOOTHED = 18,
 };
 } // namespace vehicle
+using vehiclePlayerToAIInterpolationType = vehicle::PlayerToAIInterpolationType;
 } // namespace RED4ext
 
 // clang-format on

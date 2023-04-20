@@ -14,6 +14,7 @@ enum class AudioFastForwardSupport : uint8_t
     DontMuteDuringFastForward = 2,
 };
 } // namespace scn
+using scnAudioFastForwardSupport = scn::AudioFastForwardSupport;
 } // namespace RED4ext
 
 // clang-format on

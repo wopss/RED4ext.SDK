@@ -14,6 +14,7 @@ enum class ControlCrowdAction : uint8_t
     Enable = 1,
 };
 } // namespace quest
+using questControlCrowdAction = quest::ControlCrowdAction;
 } // namespace RED4ext
 
 // clang-format on

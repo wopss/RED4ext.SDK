@@ -17,6 +17,7 @@ enum class EntitySpawnPriority : uint8_t
     Critical = 4,
 };
 } // namespace ent
+using entEntitySpawnPriority = ent::EntitySpawnPriority;
 } // namespace RED4ext
 
 // clang-format on

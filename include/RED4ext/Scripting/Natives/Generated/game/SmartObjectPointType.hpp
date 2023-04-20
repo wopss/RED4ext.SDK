@@ -15,6 +15,7 @@ enum class SmartObjectPointType : uint32_t
     Action = 2,
 };
 } // namespace game
+using gameSmartObjectPointType = game::SmartObjectPointType;
 } // namespace RED4ext
 
 // clang-format on

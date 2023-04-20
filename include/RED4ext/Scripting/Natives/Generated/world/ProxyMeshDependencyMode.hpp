@@ -15,6 +15,7 @@ enum class ProxyMeshDependencyMode : uint8_t
     Discard = 2,
 };
 } // namespace world
+using worldProxyMeshDependencyMode = world::ProxyMeshDependencyMode;
 } // namespace RED4ext
 
 // clang-format on

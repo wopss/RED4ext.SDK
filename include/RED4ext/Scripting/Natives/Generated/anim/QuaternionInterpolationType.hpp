@@ -14,6 +14,7 @@ enum class QuaternionInterpolationType : uint32_t
     Spherical = 1,
 };
 } // namespace anim
+using animQuaternionInterpolationType = anim::QuaternionInterpolationType;
 } // namespace RED4ext
 
 // clang-format on

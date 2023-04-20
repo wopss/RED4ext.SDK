@@ -15,6 +15,7 @@ enum class GameplayRestrictionAction : uint32_t
     RemoveAllRestrictions = 2,
 };
 } // namespace quest
+using questGameplayRestrictionAction = quest::GameplayRestrictionAction;
 } // namespace RED4ext
 
 // clang-format on

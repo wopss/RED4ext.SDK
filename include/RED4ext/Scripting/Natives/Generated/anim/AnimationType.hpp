@@ -17,6 +17,7 @@ enum class AnimationType : uint8_t
     AdditiveWithoutFirstFrame = 4,
 };
 } // namespace anim
+using animAnimationType = anim::AnimationType;
 } // namespace RED4ext
 
 // clang-format on

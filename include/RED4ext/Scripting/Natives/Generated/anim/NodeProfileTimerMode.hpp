@@ -14,6 +14,7 @@ enum class NodeProfileTimerMode : uint32_t
     End = 1,
 };
 } // namespace anim
+using animNodeProfileTimerMode = anim::NodeProfileTimerMode;
 } // namespace RED4ext
 
 // clang-format on

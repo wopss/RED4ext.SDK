@@ -17,6 +17,7 @@ enum class MaterialTagProjectilePenetration : uint8_t
     Never = 4,
 };
 } // namespace physics
+using physicsMaterialTagProjectilePenetration = physics::MaterialTagProjectilePenetration;
 } // namespace RED4ext
 
 // clang-format on

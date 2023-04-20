@@ -14,6 +14,7 @@ enum class PlayDirection : uint32_t
     Backward = 1,
 };
 } // namespace scn
+using scnPlayDirection = scn::PlayDirection;
 } // namespace RED4ext
 
 // clang-format on

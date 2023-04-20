@@ -15,6 +15,7 @@ enum class ETextureResolution : uint8_t
     HD_1280_720 = 2,
 };
 } // namespace ink
+using inkETextureResolution = ink::ETextureResolution;
 } // namespace RED4ext
 
 // clang-format on

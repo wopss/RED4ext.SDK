@@ -19,6 +19,7 @@ enum class FoleyItemPriority : uint8_t
     P6 = 6,
 };
 } // namespace audio
+using audioFoleyItemPriority = audio::FoleyItemPriority;
 } // namespace RED4ext
 
 // clang-format on

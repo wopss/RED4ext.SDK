@@ -15,6 +15,7 @@ enum class EntitySpawnerEventType : uint32_t
     Death = 4,
 };
 } // namespace game
+using gameEntitySpawnerEventType = game::EntitySpawnerEventType;
 } // namespace RED4ext
 
 // clang-format on

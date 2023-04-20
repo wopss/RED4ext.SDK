@@ -15,6 +15,7 @@ enum class PropAttachMethod : uint32_t
     Custom = 2,
 };
 } // namespace work
+using workPropAttachMethod = work::PropAttachMethod;
 } // namespace RED4ext
 
 // clang-format on

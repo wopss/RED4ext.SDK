@@ -14,6 +14,7 @@ enum class WidgetResourceVersion : uint8_t
     BrushToAtlas = 1,
 };
 } // namespace ink
+using inkWidgetResourceVersion = ink::WidgetResourceVersion;
 } // namespace RED4ext
 
 // clang-format on

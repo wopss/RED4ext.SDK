@@ -16,6 +16,7 @@ enum class ObjectInteractionEventType : uint8_t
     Executed = 3,
 };
 } // namespace quest
+using questObjectInteractionEventType = quest::ObjectInteractionEventType;
 } // namespace RED4ext
 
 // clang-format on

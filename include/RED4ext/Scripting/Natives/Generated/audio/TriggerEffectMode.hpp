@@ -16,6 +16,7 @@ enum class TriggerEffectMode : uint8_t
     Vibration = 3,
 };
 } // namespace audio
+using audioTriggerEffectMode = audio::TriggerEffectMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,6 +18,7 @@ enum class OnCollisionAction : uint32_t
     Pierce = 5,
 };
 } // namespace game::projectile
+using gameprojectileOnCollisionAction = game::projectile::OnCollisionAction;
 } // namespace RED4ext
 
 // clang-format on

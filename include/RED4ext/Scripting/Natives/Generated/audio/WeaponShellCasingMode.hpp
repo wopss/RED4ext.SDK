@@ -15,6 +15,7 @@ enum class WeaponShellCasingMode : uint32_t
     onReload = 2,
 };
 } // namespace audio
+using audioWeaponShellCasingMode = audio::WeaponShellCasingMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -20,6 +20,7 @@ enum class SpawnerObjectCtrlAction : uint8_t
     Spawn = Activate,
 };
 } // namespace population
+using populationSpawnerObjectCtrlAction = population::SpawnerObjectCtrlAction;
 } // namespace RED4ext
 
 // clang-format on

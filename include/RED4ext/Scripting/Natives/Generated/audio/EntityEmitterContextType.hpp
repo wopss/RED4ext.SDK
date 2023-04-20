@@ -14,6 +14,7 @@ enum class EntityEmitterContextType : uint32_t
     Radio_Emitter = 2, // Radio Emitter
 };
 } // namespace audio
+using audioEntityEmitterContextType = audio::EntityEmitterContextType;
 } // namespace RED4ext
 
 // clang-format on

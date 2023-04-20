@@ -16,6 +16,7 @@ enum class ChoiceNodeNsMappinLocation : uint8_t
     ObjectDefault = 4,
 };
 } // namespace scn
+using scnChoiceNodeNsMappinLocation = scn::ChoiceNodeNsMappinLocation;
 } // namespace RED4ext
 
 // clang-format on

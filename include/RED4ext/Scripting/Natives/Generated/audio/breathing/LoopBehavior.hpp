@@ -16,6 +16,7 @@ enum class LoopBehavior : uint8_t
     HoldingBreath = 3,
 };
 } // namespace audio::breathing
+using audiobreathingLoopBehavior = audio::breathing::LoopBehavior;
 } // namespace RED4ext
 
 // clang-format on

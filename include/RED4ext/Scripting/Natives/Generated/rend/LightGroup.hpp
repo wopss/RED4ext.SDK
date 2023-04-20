@@ -20,6 +20,7 @@ enum class LightGroup : uint8_t
     LG_Group7 = 7,
 };
 } // namespace rend
+using rendLightGroup = rend::LightGroup;
 } // namespace RED4ext
 
 // clang-format on

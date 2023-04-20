@@ -16,6 +16,7 @@ enum class PrefabStreamingOcclusion : uint8_t
     OpenInterior = 3,
 };
 } // namespace world
+using worldPrefabStreamingOcclusion = world::PrefabStreamingOcclusion;
 } // namespace RED4ext
 
 // clang-format on

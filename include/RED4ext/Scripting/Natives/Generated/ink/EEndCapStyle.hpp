@@ -16,6 +16,7 @@ enum class EEndCapStyle : uint32_t
     JOINED = 3,
 };
 } // namespace ink
+using inkEEndCapStyle = ink::EEndCapStyle;
 } // namespace RED4ext
 
 // clang-format on

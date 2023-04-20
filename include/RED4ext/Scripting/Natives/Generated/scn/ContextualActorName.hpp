@@ -17,6 +17,7 @@ enum class ContextualActorName : uint32_t
     ContextActorName = 4,
 };
 } // namespace scn
+using scnContextualActorName = scn::ContextualActorName;
 } // namespace RED4ext
 
 // clang-format on

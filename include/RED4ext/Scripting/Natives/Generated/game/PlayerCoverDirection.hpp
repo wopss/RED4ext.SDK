@@ -16,6 +16,7 @@ enum class PlayerCoverDirection : uint32_t
     None = 4294967295,
 };
 } // namespace game
+using gamePlayerCoverDirection = game::PlayerCoverDirection;
 } // namespace RED4ext
 
 // clang-format on

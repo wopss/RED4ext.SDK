@@ -16,6 +16,7 @@ enum class EAddRemoveItemType : uint32_t
     RemoveAll = 3,
 };
 } // namespace quest
+using questEAddRemoveItemType = quest::EAddRemoveItemType;
 } // namespace RED4ext
 
 // clang-format on

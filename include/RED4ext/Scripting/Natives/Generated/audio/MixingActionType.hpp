@@ -18,6 +18,7 @@ enum class MixingActionType : uint8_t
     GlobalParameter = 5,
 };
 } // namespace audio
+using audioMixingActionType = audio::MixingActionType;
 } // namespace RED4ext
 
 // clang-format on

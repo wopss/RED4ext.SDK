@@ -16,6 +16,7 @@ enum class RoadMaterial : uint32_t
     HardenedDirtDestroyed = 3,
 };
 } // namespace world
+using worldRoadMaterial = world::RoadMaterial;
 } // namespace RED4ext
 
 // clang-format on

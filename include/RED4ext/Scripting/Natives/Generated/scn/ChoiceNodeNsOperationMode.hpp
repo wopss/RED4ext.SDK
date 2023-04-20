@@ -17,6 +17,7 @@ enum class ChoiceNodeNsOperationMode : uint8_t
     attachToWorld = 4,
 };
 } // namespace scn
+using scnChoiceNodeNsOperationMode = scn::ChoiceNodeNsOperationMode;
 } // namespace RED4ext
 
 // clang-format on

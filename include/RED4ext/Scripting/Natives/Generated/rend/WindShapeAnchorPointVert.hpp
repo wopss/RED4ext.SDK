@@ -15,6 +15,7 @@ enum class WindShapeAnchorPointVert : uint32_t
     AP_BOTTOM = 2,
 };
 } // namespace rend
+using rendWindShapeAnchorPointVert = rend::WindShapeAnchorPointVert;
 } // namespace RED4ext
 
 // clang-format on

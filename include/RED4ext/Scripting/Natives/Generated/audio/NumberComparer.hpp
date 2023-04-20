@@ -18,6 +18,7 @@ enum class NumberComparer : uint8_t
     LowerOrEqual = 5,
 };
 } // namespace audio
+using audioNumberComparer = audio::NumberComparer;
 } // namespace RED4ext
 
 // clang-format on

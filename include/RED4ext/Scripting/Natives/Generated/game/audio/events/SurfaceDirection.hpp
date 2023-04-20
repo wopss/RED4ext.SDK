@@ -15,6 +15,7 @@ enum class SurfaceDirection : uint32_t
     WallRight = 2,
 };
 } // namespace game::audio::events
+using gameaudioeventsSurfaceDirection = game::audio::events::SurfaceDirection;
 } // namespace RED4ext
 
 // clang-format on

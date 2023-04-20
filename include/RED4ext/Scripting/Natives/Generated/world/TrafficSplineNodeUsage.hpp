@@ -14,6 +14,7 @@ enum class TrafficSplineNodeUsage : uint32_t
     Road = 1,
 };
 } // namespace world
+using worldTrafficSplineNodeUsage = world::TrafficSplineNodeUsage;
 } // namespace RED4ext
 
 // clang-format on

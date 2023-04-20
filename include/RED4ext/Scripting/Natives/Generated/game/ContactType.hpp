@@ -14,6 +14,7 @@ enum class ContactType : uint32_t
     Texter = 1,
 };
 } // namespace game
+using gameContactType = game::ContactType;
 } // namespace RED4ext
 
 // clang-format on

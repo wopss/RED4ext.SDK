@@ -16,6 +16,7 @@ enum class UseWorkspotNodeFunctions : uint32_t
     IdleOnlyMode = 3,
 };
 } // namespace quest
+using questUseWorkspotNodeFunctions = quest::UseWorkspotNodeFunctions;
 } // namespace RED4ext
 
 // clang-format on

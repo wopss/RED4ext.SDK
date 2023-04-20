@@ -15,6 +15,7 @@ enum class DrillingState : uint32_t
     Finished = 2,
 };
 } // namespace quest
+using questDrillingState = quest::DrillingState;
 } // namespace RED4ext
 
 // clang-format on

@@ -40,6 +40,7 @@ enum class ECommunitySpawnTime : uint8_t
     _23_00 = 27, // 23:00
 };
 } // namespace community
+using communityECommunitySpawnTime = community::ECommunitySpawnTime;
 } // namespace RED4ext
 
 // clang-format on

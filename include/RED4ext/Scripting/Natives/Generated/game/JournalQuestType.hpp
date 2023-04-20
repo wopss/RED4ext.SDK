@@ -20,6 +20,7 @@ enum class JournalQuestType : uint32_t
     ApartmentQuest = 7,
 };
 } // namespace game
+using gameJournalQuestType = game::JournalQuestType;
 } // namespace RED4ext
 
 // clang-format on

@@ -13,6 +13,7 @@ enum class SystemVariableExpressionTypes : uint32_t
     IsFPSLow = 0,
 };
 } // namespace AI::behavior
+using AIbehaviorSystemVariableExpressionTypes = AI::behavior::SystemVariableExpressionTypes;
 } // namespace RED4ext
 
 // clang-format on

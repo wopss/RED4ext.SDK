@@ -14,6 +14,7 @@ enum class AggregationType : uint32_t
     OR = 1,
 };
 } // namespace game
+using gameAggregationType = game::AggregationType;
 } // namespace RED4ext
 
 // clang-format on

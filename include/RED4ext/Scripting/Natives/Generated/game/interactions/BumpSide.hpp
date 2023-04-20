@@ -15,6 +15,7 @@ enum class BumpSide : uint32_t
     Right = 2,
 };
 } // namespace game::interactions
+using gameinteractionsBumpSide = game::interactions::BumpSide;
 } // namespace RED4ext
 
 // clang-format on

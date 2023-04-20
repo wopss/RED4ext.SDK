@@ -18,6 +18,7 @@ enum class MuppetMoveStyle : uint32_t
     GravityOnly = 5,
 };
 } // namespace game
+using gameMuppetMoveStyle = game::MuppetMoveStyle;
 } // namespace RED4ext
 
 // clang-format on

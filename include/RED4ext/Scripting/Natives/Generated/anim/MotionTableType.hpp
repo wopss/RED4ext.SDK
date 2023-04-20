@@ -17,6 +17,7 @@ enum class MotionTableType : uint32_t
     MTT_Custom = 4,
 };
 } // namespace anim
+using animMotionTableType = anim::MotionTableType;
 } // namespace RED4ext
 
 // clang-format on

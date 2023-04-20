@@ -14,6 +14,7 @@ enum class LookAtTargetType : uint32_t
     Prop = 1,
 };
 } // namespace scn
+using scnLookAtTargetType = scn::LookAtTargetType;
 } // namespace RED4ext
 
 // clang-format on

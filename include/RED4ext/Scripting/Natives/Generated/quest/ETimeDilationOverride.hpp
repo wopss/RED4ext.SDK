@@ -15,6 +15,7 @@ enum class ETimeDilationOverride : uint32_t
     Inherit = 2,
 };
 } // namespace quest
+using questETimeDilationOverride = quest::ETimeDilationOverride;
 } // namespace RED4ext
 
 // clang-format on

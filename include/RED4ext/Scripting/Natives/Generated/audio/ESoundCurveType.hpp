@@ -20,6 +20,7 @@ enum class ESoundCurveType : uint32_t
     Exp3 = 8,
 };
 } // namespace audio
+using audioESoundCurveType = audio::ESoundCurveType;
 } // namespace RED4ext
 
 // clang-format on

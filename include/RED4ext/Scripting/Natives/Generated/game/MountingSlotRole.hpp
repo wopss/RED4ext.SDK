@@ -18,6 +18,7 @@ enum class MountingSlotRole : uint32_t
     Invalid = 4294967295,
 };
 } // namespace game
+using gameMountingSlotRole = game::MountingSlotRole;
 } // namespace RED4ext
 
 // clang-format on

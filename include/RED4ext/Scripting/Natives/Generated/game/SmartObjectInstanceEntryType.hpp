@@ -14,6 +14,7 @@ enum class SmartObjectInstanceEntryType : uint32_t
     UseLocomotion = 1,
 };
 } // namespace game
+using gameSmartObjectInstanceEntryType = game::SmartObjectInstanceEntryType;
 } // namespace RED4ext
 
 // clang-format on

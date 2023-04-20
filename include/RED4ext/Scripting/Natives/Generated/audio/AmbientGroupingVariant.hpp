@@ -18,6 +18,7 @@ enum class AmbientGroupingVariant : uint32_t
     OutdoorAllDirections = 5,
 };
 } // namespace audio
+using audioAmbientGroupingVariant = audio::AmbientGroupingVariant;
 } // namespace RED4ext
 
 // clang-format on

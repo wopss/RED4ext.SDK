@@ -16,6 +16,7 @@ enum class Difficulty : uint32_t
     Story = 3,
 };
 } // namespace game
+using gameDifficulty = game::Difficulty;
 } // namespace RED4ext
 
 // clang-format on

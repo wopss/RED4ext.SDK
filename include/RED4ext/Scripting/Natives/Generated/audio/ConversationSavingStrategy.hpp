@@ -15,6 +15,7 @@ enum class ConversationSavingStrategy : uint32_t
     DontSave = 2,
 };
 } // namespace audio
+using audioConversationSavingStrategy = audio::ConversationSavingStrategy;
 } // namespace RED4ext
 
 // clang-format on

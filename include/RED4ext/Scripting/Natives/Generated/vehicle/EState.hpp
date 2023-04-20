@@ -16,6 +16,7 @@ enum class EState : uint32_t
     Destroyed = 4,
 };
 } // namespace vehicle
+using vehicleEState = vehicle::EState;
 } // namespace RED4ext
 
 // clang-format on

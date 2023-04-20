@@ -14,6 +14,7 @@ enum class EchoPositionType : uint32_t
     Simple = 1,
 };
 } // namespace audio
+using audioEchoPositionType = audio::EchoPositionType;
 } // namespace RED4ext
 
 // clang-format on

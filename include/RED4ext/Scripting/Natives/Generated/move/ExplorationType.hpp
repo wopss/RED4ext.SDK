@@ -19,6 +19,7 @@ enum class ExplorationType : uint32_t
     ThrusterJump = 6,
 };
 } // namespace move
+using moveExplorationType = move::ExplorationType;
 } // namespace RED4ext
 
 // clang-format on

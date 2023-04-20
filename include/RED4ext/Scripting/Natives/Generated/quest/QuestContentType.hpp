@@ -18,6 +18,7 @@ enum class QuestContentType : uint8_t
     MinorQuestAndSts = 5,
 };
 } // namespace quest
+using questQuestContentType = quest::QuestContentType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class InterruptCapability : uint32_t
     NotInterruptable = 2,
 };
 } // namespace scn
+using scnInterruptCapability = scn::InterruptCapability;
 } // namespace RED4ext
 
 // clang-format on

@@ -20,6 +20,7 @@ enum class CombinedStatOperation : uint32_t
     Invalid = 7,
 };
 } // namespace game
+using gameCombinedStatOperation = game::CombinedStatOperation;
 } // namespace RED4ext
 
 // clang-format on

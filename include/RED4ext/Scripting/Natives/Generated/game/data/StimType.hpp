@@ -75,6 +75,7 @@ enum class StimType : uint32_t
     Invalid = 62,
 };
 } // namespace game::data
+using gamedataStimType = game::data::StimType;
 } // namespace RED4ext
 
 // clang-format on

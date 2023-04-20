@@ -15,6 +15,7 @@ enum class LetterCase : uint8_t
     LowerCase = 2,
 };
 } // namespace text
+using textLetterCase = text::LetterCase;
 } // namespace RED4ext
 
 // clang-format on

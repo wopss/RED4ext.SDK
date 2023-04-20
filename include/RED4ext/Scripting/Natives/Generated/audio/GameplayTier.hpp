@@ -18,6 +18,7 @@ enum class GameplayTier : uint32_t
     Tier5_Cinematic = 5,
 };
 } // namespace audio
+using audioGameplayTier = audio::GameplayTier;
 } // namespace RED4ext
 
 // clang-format on

@@ -21,6 +21,7 @@ enum class SpeedSplineOrientationMarkerType : uint32_t
     KeepPitch_WorldSpaceYawRoll = 8,
 };
 } // namespace world
+using worldSpeedSplineOrientationMarkerType = world::SpeedSplineOrientationMarkerType;
 } // namespace RED4ext
 
 // clang-format on

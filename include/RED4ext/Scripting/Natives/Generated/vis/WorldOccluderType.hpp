@@ -18,6 +18,7 @@ enum class WorldOccluderType : uint8_t
     Exterior = 5,
 };
 } // namespace vis
+using visWorldOccluderType = vis::WorldOccluderType;
 } // namespace RED4ext
 
 // clang-format on

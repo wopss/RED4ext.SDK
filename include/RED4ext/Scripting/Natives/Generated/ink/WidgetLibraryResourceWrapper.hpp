@@ -17,7 +17,7 @@ namespace ink
 struct WidgetLibraryResourceWrapper
 {
     static constexpr const char* NAME = "inkWidgetLibraryResourceWrapper";
-    static constexpr const char* ALIAS = "inkWidgetLibraryResource";
+    static constexpr const char* ALIAS = NAME;
 
     RaRef<ink::WidgetLibraryResource> library; // 00
 };

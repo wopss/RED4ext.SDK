@@ -14,6 +14,7 @@ enum class ActionPropertyFlags : uint32_t
     IsUsedByQuest = 1,
 };
 } // namespace game::device
+using gamedeviceActionPropertyFlags = game::device::ActionPropertyFlags;
 } // namespace RED4ext
 
 // clang-format on

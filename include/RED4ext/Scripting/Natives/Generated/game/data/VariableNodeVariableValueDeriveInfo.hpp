@@ -14,6 +14,7 @@ enum class VariableNodeVariableValueDeriveInfo : uint8_t
     ArrayAddition = 1,
 };
 } // namespace game::data
+using gamedataVariableNodeVariableValueDeriveInfo = game::data::VariableNodeVariableValueDeriveInfo;
 } // namespace RED4ext
 
 // clang-format on

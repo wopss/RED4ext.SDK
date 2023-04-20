@@ -26,6 +26,7 @@ enum class SceneCategoryTag : uint8_t
     other = 13,
 };
 } // namespace scn
+using scnSceneCategoryTag = scn::SceneCategoryTag;
 } // namespace RED4ext
 
 // clang-format on

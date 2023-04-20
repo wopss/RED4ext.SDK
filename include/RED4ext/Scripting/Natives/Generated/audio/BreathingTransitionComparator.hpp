@@ -15,6 +15,7 @@ enum class BreathingTransitionComparator : uint32_t
     Greater = 2,
 };
 } // namespace audio
+using audioBreathingTransitionComparator = audio::BreathingTransitionComparator;
 } // namespace RED4ext
 
 // clang-format on

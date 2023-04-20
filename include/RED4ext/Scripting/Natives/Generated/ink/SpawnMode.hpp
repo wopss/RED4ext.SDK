@@ -15,6 +15,7 @@ enum class SpawnMode : uint32_t
     OnlyMultiplayer = 2,
 };
 } // namespace ink
+using inkSpawnMode = ink::SpawnMode;
 } // namespace RED4ext
 
 // clang-format on

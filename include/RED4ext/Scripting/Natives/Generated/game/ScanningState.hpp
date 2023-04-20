@@ -18,6 +18,7 @@ enum class ScanningState : uint32_t
     Reset = 5,
 };
 } // namespace game
+using gameScanningState = game::ScanningState;
 } // namespace RED4ext
 
 // clang-format on

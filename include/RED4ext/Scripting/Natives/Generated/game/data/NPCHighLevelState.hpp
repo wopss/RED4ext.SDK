@@ -23,6 +23,7 @@ enum class NPCHighLevelState : uint32_t
     Invalid = 10,
 };
 } // namespace game::data
+using gamedataNPCHighLevelState = game::data::NPCHighLevelState;
 } // namespace RED4ext
 
 // clang-format on

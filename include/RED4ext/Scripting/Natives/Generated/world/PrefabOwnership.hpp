@@ -21,6 +21,7 @@ enum class PrefabOwnership : uint8_t
     Cinematics = 8,
 };
 } // namespace world
+using worldPrefabOwnership = world::PrefabOwnership;
 } // namespace RED4ext
 
 // clang-format on

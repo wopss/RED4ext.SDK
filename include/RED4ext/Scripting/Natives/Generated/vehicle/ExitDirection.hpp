@@ -18,6 +18,7 @@ enum class ExitDirection : uint32_t
     NoDirection = 4294967295,
 };
 } // namespace vehicle
+using vehicleExitDirection = vehicle::ExitDirection;
 } // namespace RED4ext
 
 // clang-format on

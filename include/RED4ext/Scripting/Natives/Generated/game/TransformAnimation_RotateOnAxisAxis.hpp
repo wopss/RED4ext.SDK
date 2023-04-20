@@ -15,6 +15,7 @@ enum class TransformAnimation_RotateOnAxisAxis : uint32_t
     Z = 2,
 };
 } // namespace game
+using gameTransformAnimation_RotateOnAxisAxis = game::TransformAnimation_RotateOnAxisAxis;
 } // namespace RED4ext
 
 // clang-format on

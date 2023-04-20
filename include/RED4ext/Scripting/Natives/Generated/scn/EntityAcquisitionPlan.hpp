@@ -21,6 +21,7 @@ enum class EntityAcquisitionPlan : uint32_t
     findNetworkPlayer = 9,
 };
 } // namespace scn
+using scnEntityAcquisitionPlan = scn::EntityAcquisitionPlan;
 } // namespace RED4ext
 
 // clang-format on

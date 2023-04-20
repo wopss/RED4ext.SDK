@@ -133,6 +133,7 @@ enum class District : uint32_t
     Invalid = 120,
 };
 } // namespace game::data
+using gamedataDistrict = game::data::District;
 } // namespace RED4ext
 
 // clang-format on

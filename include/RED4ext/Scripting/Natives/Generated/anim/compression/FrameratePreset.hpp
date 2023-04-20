@@ -15,6 +15,7 @@ enum class FrameratePreset : uint8_t
     USE_10_HZ = 2,
 };
 } // namespace anim::compression
+using animcompressionFrameratePreset = anim::compression::FrameratePreset;
 } // namespace RED4ext
 
 // clang-format on

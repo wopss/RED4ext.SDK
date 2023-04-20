@@ -17,6 +17,7 @@ enum class MetaQuest : uint32_t
     Invalid = 4,
 };
 } // namespace game::data
+using gamedataMetaQuest = game::data::MetaQuest;
 } // namespace RED4ext
 
 // clang-format on

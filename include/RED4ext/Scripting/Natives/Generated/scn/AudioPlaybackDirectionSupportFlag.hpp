@@ -14,6 +14,7 @@ enum class AudioPlaybackDirectionSupportFlag : uint8_t
     Backward = 2,
 };
 } // namespace scn
+using scnAudioPlaybackDirectionSupportFlag = scn::AudioPlaybackDirectionSupportFlag;
 } // namespace RED4ext
 
 // clang-format on

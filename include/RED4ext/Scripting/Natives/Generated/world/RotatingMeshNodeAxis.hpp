@@ -15,6 +15,7 @@ enum class RotatingMeshNodeAxis : uint32_t
     Z = 2,
 };
 } // namespace world
+using worldRotatingMeshNodeAxis = world::RotatingMeshNodeAxis;
 } // namespace RED4ext
 
 // clang-format on

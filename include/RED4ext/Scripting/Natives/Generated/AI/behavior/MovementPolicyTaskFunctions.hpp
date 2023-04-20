@@ -18,6 +18,7 @@ enum class MovementPolicyTaskFunctions : uint32_t
     SetStrafingTarget = 5,
 };
 } // namespace AI::behavior
+using AIbehaviorMovementPolicyTaskFunctions = AI::behavior::MovementPolicyTaskFunctions;
 } // namespace RED4ext
 
 // clang-format on

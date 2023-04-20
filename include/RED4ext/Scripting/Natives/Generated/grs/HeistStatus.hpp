@@ -19,6 +19,7 @@ enum class HeistStatus : uint32_t
     Failure = 6,
 };
 } // namespace grs
+using grsHeistStatus = grs::HeistStatus;
 } // namespace RED4ext
 
 // clang-format on

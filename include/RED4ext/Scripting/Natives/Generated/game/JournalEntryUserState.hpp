@@ -19,6 +19,7 @@ enum class JournalEntryUserState : uint8_t
     Open = 6,
 };
 } // namespace game
+using gameJournalEntryUserState = game::JournalEntryUserState;
 } // namespace RED4ext
 
 // clang-format on

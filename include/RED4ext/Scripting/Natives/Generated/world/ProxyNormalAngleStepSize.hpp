@@ -16,6 +16,7 @@ enum class ProxyNormalAngleStepSize : uint8_t
     STEP_5 = 3,
 };
 } // namespace world
+using worldProxyNormalAngleStepSize = world::ProxyNormalAngleStepSize;
 } // namespace RED4ext
 
 // clang-format on

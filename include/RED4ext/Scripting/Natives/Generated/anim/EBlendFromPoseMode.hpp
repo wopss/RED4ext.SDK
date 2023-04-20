@@ -14,6 +14,7 @@ enum class EBlendFromPoseMode : uint32_t
     BFPM_RequestedByTag = 1,
 };
 } // namespace anim
+using animEBlendFromPoseMode = anim::EBlendFromPoseMode;
 } // namespace RED4ext
 
 // clang-format on

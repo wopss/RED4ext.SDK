@@ -18,6 +18,7 @@ enum class ChoiceNodeNsSizePreset : uint8_t
     Dialogue360 = 5,
 };
 } // namespace scn
+using scnChoiceNodeNsSizePreset = scn::ChoiceNodeNsSizePreset;
 } // namespace RED4ext
 
 // clang-format on

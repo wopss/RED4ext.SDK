@@ -16,6 +16,7 @@ enum class MenuItemType : uint8_t
     Separator = 3,
 };
 } // namespace shared
+using sharedMenuItemType = shared::MenuItemType;
 } // namespace RED4ext
 
 // clang-format on

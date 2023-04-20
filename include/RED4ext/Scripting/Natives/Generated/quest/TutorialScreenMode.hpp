@@ -15,6 +15,7 @@ enum class TutorialScreenMode : uint8_t
     Popup = 2,
 };
 } // namespace quest
+using questTutorialScreenMode = quest::TutorialScreenMode;
 } // namespace RED4ext
 
 // clang-format on

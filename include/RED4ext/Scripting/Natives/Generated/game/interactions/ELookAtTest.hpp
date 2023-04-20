@@ -14,6 +14,7 @@ enum class ELookAtTest : uint32_t
     Interaction = 1,
 };
 } // namespace game::interactions
+using gameinteractionsELookAtTest = game::interactions::ELookAtTest;
 } // namespace RED4ext
 
 // clang-format on

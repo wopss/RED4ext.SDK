@@ -15,6 +15,7 @@ enum class BumpLocation : uint32_t
     Back = 2,
 };
 } // namespace game::interactions
+using gameinteractionsBumpLocation = game::interactions::BumpLocation;
 } // namespace RED4ext
 
 // clang-format on

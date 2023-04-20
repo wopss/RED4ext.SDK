@@ -14,6 +14,7 @@ enum class BriefingType : uint32_t
     Hud = 1,
 };
 } // namespace quest
+using questBriefingType = quest::BriefingType;
 } // namespace RED4ext
 
 // clang-format on

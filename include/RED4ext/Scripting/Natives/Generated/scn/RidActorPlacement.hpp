@@ -15,6 +15,7 @@ enum class RidActorPlacement : uint32_t
     Player = 2,
 };
 } // namespace scn
+using scnRidActorPlacement = scn::RidActorPlacement;
 } // namespace RED4ext
 
 // clang-format on

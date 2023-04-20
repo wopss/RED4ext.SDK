@@ -19,6 +19,7 @@ enum class SceneAnimationMotionActionParamsEasingType : uint32_t
     CubicEaseOut = 6,
 };
 } // namespace game
+using gameSceneAnimationMotionActionParamsEasingType = game::SceneAnimationMotionActionParamsEasingType;
 } // namespace RED4ext
 
 // clang-format on

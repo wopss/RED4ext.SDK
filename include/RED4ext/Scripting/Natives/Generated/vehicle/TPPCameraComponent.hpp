@@ -15,7 +15,7 @@ namespace vehicle
 struct TPPCameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "vehicleTPPCameraComponent";
-    static constexpr const char* ALIAS = "vehicleTPPCameraComponent";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk2A0[0x5C0 - 0x2A0]; // 2A0
 };

@@ -14,6 +14,7 @@ enum class SpringProjectionType : uint32_t
     ShortestPath = 1,
 };
 } // namespace anim
+using animSpringProjectionType = anim::SpringProjectionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -24,6 +24,7 @@ enum class PSMLocomotionStates : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMLocomotionStates = game::PSMLocomotionStates;
 } // namespace RED4ext
 
 // clang-format on

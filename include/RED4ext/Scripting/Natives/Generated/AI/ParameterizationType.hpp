@@ -19,6 +19,7 @@ enum class ParameterizationType : uint32_t
     Delegate = 6,
 };
 } // namespace AI
+using AIParameterizationType = AI::ParameterizationType;
 } // namespace RED4ext
 
 // clang-format on

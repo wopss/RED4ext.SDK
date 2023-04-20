@@ -15,6 +15,7 @@ enum class EBlendTracksMode : uint32_t
     AGBT_Add = 2,
 };
 } // namespace anim
+using animEBlendTracksMode = anim::EBlendTracksMode;
 } // namespace RED4ext
 
 // clang-format on

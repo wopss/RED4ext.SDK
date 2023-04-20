@@ -20,6 +20,7 @@ enum class UICondition : uint32_t
     Invalid = 7,
 };
 } // namespace game::data
+using gamedataUICondition = game::data::UICondition;
 } // namespace RED4ext
 
 // clang-format on

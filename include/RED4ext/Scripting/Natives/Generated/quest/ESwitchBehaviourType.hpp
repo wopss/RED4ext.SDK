@@ -14,6 +14,7 @@ enum class ESwitchBehaviourType : uint32_t
     All_Fulfilled = 1, // All Fulfilled
 };
 } // namespace quest
+using questESwitchBehaviourType = quest::ESwitchBehaviourType;
 } // namespace RED4ext
 
 // clang-format on

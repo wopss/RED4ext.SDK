@@ -15,6 +15,7 @@ enum class StateCompletionStatus : uint32_t
     Success = 2,
 };
 } // namespace AI::behavior
+using AIbehaviorStateCompletionStatus = AI::behavior::StateCompletionStatus;
 } // namespace RED4ext
 
 // clang-format on

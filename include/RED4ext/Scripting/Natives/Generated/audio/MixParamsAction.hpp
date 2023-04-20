@@ -17,6 +17,7 @@ enum class MixParamsAction : uint32_t
     Add = 4,
 };
 } // namespace audio
+using audioMixParamsAction = audio::MixParamsAction;
 } // namespace RED4ext
 
 // clang-format on

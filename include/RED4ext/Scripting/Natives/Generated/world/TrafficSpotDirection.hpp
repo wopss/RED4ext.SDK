@@ -15,6 +15,7 @@ enum class TrafficSpotDirection : uint32_t
     Both = 2,
 };
 } // namespace world
+using worldTrafficSpotDirection = world::TrafficSpotDirection;
 } // namespace RED4ext
 
 // clang-format on

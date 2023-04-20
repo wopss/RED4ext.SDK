@@ -14,6 +14,7 @@ enum class EUnaryOperator : uint32_t
     EUnaryOperator_not = 1,
 };
 } // namespace game::interactions
+using gameinteractionsEUnaryOperator = game::interactions::EUnaryOperator;
 } // namespace RED4ext
 
 // clang-format on

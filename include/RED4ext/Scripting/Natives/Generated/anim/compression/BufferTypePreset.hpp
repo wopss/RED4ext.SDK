@@ -15,6 +15,7 @@ enum class BufferTypePreset : uint8_t
     TestRaw = 2,
 };
 } // namespace anim::compression
+using animcompressionBufferTypePreset = anim::compression::BufferTypePreset;
 } // namespace RED4ext
 
 // clang-format on

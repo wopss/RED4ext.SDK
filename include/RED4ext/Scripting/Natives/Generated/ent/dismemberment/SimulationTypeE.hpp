@@ -14,6 +14,7 @@ enum class SimulationTypeE : uint16_t
     DANGLE = 128,
 };
 } // namespace ent::dismemberment
+using entdismembermentSimulationTypeE = ent::dismemberment::SimulationTypeE;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class PositionProjectionType : uint32_t
     Directional = 2,
 };
 } // namespace anim
+using animPositionProjectionType = anim::PositionProjectionType;
 } // namespace RED4ext
 
 // clang-format on

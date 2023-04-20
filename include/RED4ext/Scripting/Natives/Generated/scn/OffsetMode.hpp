@@ -14,6 +14,7 @@ enum class OffsetMode : uint8_t
     useCustomOffset = 1,
 };
 } // namespace scn
+using scnOffsetMode = scn::OffsetMode;
 } // namespace RED4ext
 
 // clang-format on

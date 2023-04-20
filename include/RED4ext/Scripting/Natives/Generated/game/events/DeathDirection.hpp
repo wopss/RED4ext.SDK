@@ -17,6 +17,7 @@ enum class DeathDirection : uint32_t
     Forward = 4,
 };
 } // namespace game::events
+using gameeventsDeathDirection = game::events::DeathDirection;
 } // namespace RED4ext
 
 // clang-format on

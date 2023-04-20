@@ -21,6 +21,7 @@ enum class Quality : uint32_t
     Invalid = 8,
 };
 } // namespace game::data
+using gamedataQuality = game::data::Quality;
 } // namespace RED4ext
 
 // clang-format on

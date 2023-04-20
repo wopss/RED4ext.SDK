@@ -18,6 +18,7 @@ enum class VoBarkType : uint32_t
     Stealth_Curious = 5,
 };
 } // namespace audio
+using audioVoBarkType = audio::VoBarkType;
 } // namespace RED4ext
 
 // clang-format on

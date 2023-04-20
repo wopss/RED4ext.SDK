@@ -15,6 +15,7 @@ enum class ProxyMeshBuildType : uint8_t
     OnlyFromChildProxies = 2,
 };
 } // namespace world
+using worldProxyMeshBuildType = world::ProxyMeshBuildType;
 } // namespace RED4ext
 
 // clang-format on

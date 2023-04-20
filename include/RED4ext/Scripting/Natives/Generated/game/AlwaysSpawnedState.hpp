@@ -15,6 +15,7 @@ enum class AlwaysSpawnedState : uint8_t
     false_ = 2, // false
 };
 } // namespace game
+using gameAlwaysSpawnedState = game::AlwaysSpawnedState;
 } // namespace RED4ext
 
 // clang-format on

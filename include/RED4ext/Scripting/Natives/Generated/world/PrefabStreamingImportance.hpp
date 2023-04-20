@@ -18,6 +18,7 @@ enum class PrefabStreamingImportance : uint8_t
     P5 = 5,
 };
 } // namespace world
+using worldPrefabStreamingImportance = world::PrefabStreamingImportance;
 } // namespace RED4ext
 
 // clang-format on

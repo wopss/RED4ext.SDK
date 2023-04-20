@@ -20,6 +20,7 @@ enum class WorkspotCategory : uint32_t
     Invalid = 7,
 };
 } // namespace game::data
+using gamedataWorkspotCategory = game::data::WorkspotCategory;
 } // namespace RED4ext
 
 // clang-format on

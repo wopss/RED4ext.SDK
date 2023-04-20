@@ -20,6 +20,7 @@ enum class PrefabType : uint8_t
     Terrain = 7,
 };
 } // namespace world
+using worldPrefabType = world::PrefabType;
 } // namespace RED4ext
 
 // clang-format on

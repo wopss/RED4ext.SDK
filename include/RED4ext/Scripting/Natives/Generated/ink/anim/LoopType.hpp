@@ -15,6 +15,7 @@ enum class LoopType : uint8_t
     PingPong = 2,
 };
 } // namespace ink::anim
+using inkanimLoopType = ink::anim::LoopType;
 } // namespace RED4ext
 
 // clang-format on

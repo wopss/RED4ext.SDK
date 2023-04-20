@@ -14,6 +14,7 @@ enum class MountConditionType : uint8_t
     OnUnmount = 1,
 };
 } // namespace quest
+using questMountConditionType = quest::MountConditionType;
 } // namespace RED4ext
 
 // clang-format on

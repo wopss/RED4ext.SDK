@@ -19,6 +19,7 @@ enum class FastForwardStrategy : uint32_t
     block_on_end_if_activator_matched = 6,
 };
 } // namespace scn
+using scnFastForwardStrategy = scn::FastForwardStrategy;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class MuppetDebugCommand : uint32_t
     KillAll = 2,
 };
 } // namespace game
+using gameMuppetDebugCommand = game::MuppetDebugCommand;
 } // namespace RED4ext
 
 // clang-format on

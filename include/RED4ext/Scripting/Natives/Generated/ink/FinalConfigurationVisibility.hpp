@@ -14,6 +14,7 @@ enum class FinalConfigurationVisibility : uint32_t
     HiddenOnlyInFinal = 1,
 };
 } // namespace ink
+using inkFinalConfigurationVisibility = ink::FinalConfigurationVisibility;
 } // namespace RED4ext
 
 // clang-format on

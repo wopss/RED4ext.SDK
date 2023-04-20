@@ -14,6 +14,7 @@ enum class GradientMode : uint8_t
     Rectangular = 1,
 };
 } // namespace ink
+using inkGradientMode = ink::GradientMode;
 } // namespace RED4ext
 
 // clang-format on

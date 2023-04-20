@@ -14,6 +14,7 @@ enum class PatchIntro : uint32_t
     Patch1600 = 1,
 };
 } // namespace game::ui
+using gameuiPatchIntro = game::ui::PatchIntro;
 } // namespace RED4ext
 
 // clang-format on

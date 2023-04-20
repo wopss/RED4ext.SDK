@@ -16,6 +16,7 @@ enum class ProximityProgressBarAction : uint32_t
     WentOutOfRange = 3,
 };
 } // namespace quest
+using questProximityProgressBarAction = quest::ProximityProgressBarAction;
 using ProximityProgressBarAction = quest::ProximityProgressBarAction;
 } // namespace RED4ext
 

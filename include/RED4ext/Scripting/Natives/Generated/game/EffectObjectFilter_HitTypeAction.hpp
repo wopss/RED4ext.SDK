@@ -14,6 +14,7 @@ enum class EffectObjectFilter_HitTypeAction : uint32_t
     Reject = 1,
 };
 } // namespace game
+using gameEffectObjectFilter_HitTypeAction = game::EffectObjectFilter_HitTypeAction;
 } // namespace RED4ext
 
 // clang-format on

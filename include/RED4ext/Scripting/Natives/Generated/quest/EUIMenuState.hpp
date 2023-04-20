@@ -14,6 +14,7 @@ enum class EUIMenuState : uint32_t
     Closed = 1,
 };
 } // namespace quest
+using questEUIMenuState = quest::EUIMenuState;
 } // namespace RED4ext
 
 // clang-format on

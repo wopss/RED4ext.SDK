@@ -15,6 +15,7 @@ enum class TransformAnimation_MoveOnSplineRotationMode : uint32_t
     PitchAndYaw = 2,
 };
 } // namespace game
+using gameTransformAnimation_MoveOnSplineRotationMode = game::TransformAnimation_MoveOnSplineRotationMode;
 } // namespace RED4ext
 
 // clang-format on

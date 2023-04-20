@@ -14,6 +14,7 @@ enum class JournalSizeEventType : uint32_t
     Minimize = 1,
 };
 } // namespace quest
+using questJournalSizeEventType = quest::JournalSizeEventType;
 } // namespace RED4ext
 
 // clang-format on

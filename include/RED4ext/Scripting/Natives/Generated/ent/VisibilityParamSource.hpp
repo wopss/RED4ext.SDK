@@ -13,6 +13,7 @@ enum class VisibilityParamSource : uint8_t
     PhantomEntitySystem = 7,
 };
 } // namespace ent
+using entVisibilityParamSource = ent::VisibilityParamSource;
 } // namespace RED4ext
 
 // clang-format on

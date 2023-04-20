@@ -14,6 +14,7 @@ enum class MessageSender : uint32_t
     Player = 1,
 };
 } // namespace game
+using gameMessageSender = game::MessageSender;
 } // namespace RED4ext
 
 // clang-format on

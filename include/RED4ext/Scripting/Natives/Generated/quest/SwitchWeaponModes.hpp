@@ -14,6 +14,7 @@ enum class SwitchWeaponModes : uint32_t
     SecondaryWeapon = 1,
 };
 } // namespace quest
+using questSwitchWeaponModes = quest::SwitchWeaponModes;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class Elevator_ManageNPCAttachment_NodeTypeParamsAction : uint32_t
     Detach = 1,
 };
 } // namespace quest
+using questElevator_ManageNPCAttachment_NodeTypeParamsAction = quest::Elevator_ManageNPCAttachment_NodeTypeParamsAction;
 } // namespace RED4ext
 
 // clang-format on

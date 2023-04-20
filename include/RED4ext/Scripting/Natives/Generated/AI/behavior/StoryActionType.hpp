@@ -14,6 +14,7 @@ enum class StoryActionType : uint32_t
     Stop = 1,
 };
 } // namespace AI::behavior
+using AIbehaviorStoryActionType = AI::behavior::StoryActionType;
 } // namespace RED4ext
 
 // clang-format on

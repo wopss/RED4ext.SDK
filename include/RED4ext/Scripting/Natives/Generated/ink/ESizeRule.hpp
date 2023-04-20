@@ -14,6 +14,7 @@ enum class ESizeRule : uint8_t
     Stretch = 1,
 };
 } // namespace ink
+using inkESizeRule = ink::ESizeRule;
 } // namespace RED4ext
 
 // clang-format on

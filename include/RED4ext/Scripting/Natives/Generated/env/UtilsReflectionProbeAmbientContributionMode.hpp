@@ -15,6 +15,7 @@ enum class UtilsReflectionProbeAmbientContributionMode : uint8_t
     eOVERRIDE_GI_AMBIENT = 2,
 };
 } // namespace env
+using envUtilsReflectionProbeAmbientContributionMode = env::UtilsReflectionProbeAmbientContributionMode;
 } // namespace RED4ext
 
 // clang-format on

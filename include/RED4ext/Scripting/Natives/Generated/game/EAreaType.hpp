@@ -16,6 +16,7 @@ enum class EAreaType : uint16_t
     COUNT = 3,
 };
 } // namespace game
+using gameEAreaType = game::EAreaType;
 } // namespace RED4ext
 
 // clang-format on

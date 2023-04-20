@@ -21,6 +21,7 @@ enum class WardrobeClothingSetIndex : uint32_t
     INVALID = 8,
 };
 } // namespace game
+using gameWardrobeClothingSetIndex = game::WardrobeClothingSetIndex;
 } // namespace RED4ext
 
 // clang-format on

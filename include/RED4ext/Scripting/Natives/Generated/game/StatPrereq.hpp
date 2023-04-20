@@ -16,7 +16,7 @@ namespace game
 struct StatPrereq : game::IRPGPrereq
 {
     static constexpr const char* NAME = "gameStatPrereq";
-    static constexpr const char* ALIAS = "StatPrereq";
+    static constexpr const char* ALIAS = NAME;
 
     game::data::StatType statType; // 48
     float valueToCheck; // 4C
@@ -24,7 +24,6 @@ struct StatPrereq : game::IRPGPrereq
 RED4EXT_ASSERT_SIZE(StatPrereq, 0x50);
 } // namespace game
 using gameStatPrereq = game::StatPrereq;
-using StatPrereq = game::StatPrereq;
 } // namespace RED4ext
 
 // clang-format on

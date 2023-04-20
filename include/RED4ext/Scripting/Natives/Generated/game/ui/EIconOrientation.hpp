@@ -14,6 +14,7 @@ enum class EIconOrientation : uint32_t
     Entity = 1,
 };
 } // namespace game::ui
+using gameuiEIconOrientation = game::ui::EIconOrientation;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class LocoStateType : uint32_t
     LS_Loop = 1,
 };
 } // namespace anim
+using animLocoStateType = anim::LocoStateType;
 } // namespace RED4ext
 
 // clang-format on

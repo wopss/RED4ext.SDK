@@ -18,6 +18,7 @@ enum class TelemetryDamageSituation : uint32_t
     PlayerToPlayer = 5,
 };
 } // namespace game
+using gameTelemetryDamageSituation = game::TelemetryDamageSituation;
 } // namespace RED4ext
 
 // clang-format on

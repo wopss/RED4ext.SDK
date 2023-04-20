@@ -16,6 +16,7 @@ enum class DyngConstraintLinkType : uint32_t
     Closer = 3,
 };
 } // namespace anim
+using animDyngConstraintLinkType = anim::DyngConstraintLinkType;
 } // namespace RED4ext
 
 // clang-format on

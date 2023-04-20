@@ -14,6 +14,7 @@ enum class ELookAtTarget : uint32_t
     Component = 1,
 };
 } // namespace game::interactions
+using gameinteractionsELookAtTarget = game::interactions::ELookAtTarget;
 } // namespace RED4ext
 
 // clang-format on

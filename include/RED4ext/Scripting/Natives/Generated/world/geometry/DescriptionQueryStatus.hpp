@@ -15,6 +15,7 @@ enum class DescriptionQueryStatus : uint32_t
     UpVectorSameAsDirection = 2,
 };
 } // namespace world::geometry
+using worldgeometryDescriptionQueryStatus = world::geometry::DescriptionQueryStatus;
 } // namespace RED4ext
 
 // clang-format on

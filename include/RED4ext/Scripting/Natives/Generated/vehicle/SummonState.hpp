@@ -17,6 +17,7 @@ enum class SummonState : uint32_t
     Arrived = 4,
 };
 } // namespace vehicle
+using vehicleSummonState = vehicle::SummonState;
 } // namespace RED4ext
 
 // clang-format on

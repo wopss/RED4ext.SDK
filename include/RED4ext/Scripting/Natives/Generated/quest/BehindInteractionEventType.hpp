@@ -17,6 +17,7 @@ enum class BehindInteractionEventType : uint8_t
     IsNotBehind = 4,
 };
 } // namespace quest
+using questBehindInteractionEventType = quest::BehindInteractionEventType;
 } // namespace RED4ext
 
 // clang-format on

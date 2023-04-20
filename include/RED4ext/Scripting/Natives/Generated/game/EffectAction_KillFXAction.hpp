@@ -14,6 +14,7 @@ enum class EffectAction_KillFXAction : uint32_t
     BreakLoop = 1,
 };
 } // namespace game
+using gameEffectAction_KillFXAction = game::EffectAction_KillFXAction;
 } // namespace RED4ext
 
 // clang-format on

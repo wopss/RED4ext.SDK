@@ -15,6 +15,7 @@ enum class WindShapeAnchorPointDepth : uint32_t
     AP_BACK = 2,
 };
 } // namespace rend
+using rendWindShapeAnchorPointDepth = rend::WindShapeAnchorPointDepth;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class Platform : uint32_t
     CurrGenConsole = 3,
 };
 } // namespace quest
+using questPlatform = quest::Platform;
 } // namespace RED4ext
 
 // clang-format on

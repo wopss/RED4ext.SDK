@@ -14,6 +14,7 @@ enum class Storage : uint32_t
     Fast = 1,
 };
 } // namespace quest
+using questStorage = quest::Storage;
 } // namespace RED4ext
 
 // clang-format on

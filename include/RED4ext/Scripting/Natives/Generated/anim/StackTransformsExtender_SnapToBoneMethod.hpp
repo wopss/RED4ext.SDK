@@ -16,6 +16,7 @@ enum class StackTransformsExtender_SnapToBoneMethod : uint32_t
     RotationOnly = 3,
 };
 } // namespace anim
+using animStackTransformsExtender_SnapToBoneMethod = anim::StackTransformsExtender_SnapToBoneMethod;
 } // namespace RED4ext
 
 // clang-format on

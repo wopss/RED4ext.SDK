@@ -21,6 +21,7 @@ enum class SenseObjectType : uint32_t
     Invalid = 8,
 };
 } // namespace game::data
+using gamedataSenseObjectType = game::data::SenseObjectType;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,6 +18,7 @@ enum class MappinPhase : uint32_t
     Invalid = 5,
 };
 } // namespace game::data
+using gamedataMappinPhase = game::data::MappinPhase;
 } // namespace RED4ext
 
 // clang-format on

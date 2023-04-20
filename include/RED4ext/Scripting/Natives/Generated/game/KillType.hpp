@@ -14,6 +14,7 @@ enum class KillType : uint32_t
     Defeat = 1,
 };
 } // namespace game
+using gameKillType = game::KillType;
 } // namespace RED4ext
 
 // clang-format on

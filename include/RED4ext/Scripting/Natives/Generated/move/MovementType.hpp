@@ -17,6 +17,7 @@ enum class MovementType : uint32_t
     Stand = 4,
 };
 } // namespace move
+using moveMovementType = move::MovementType;
 } // namespace RED4ext
 
 // clang-format on

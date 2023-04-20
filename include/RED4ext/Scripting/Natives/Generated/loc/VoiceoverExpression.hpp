@@ -24,6 +24,7 @@ enum class VoiceoverExpression : uint8_t
     Vo_Expression_Helmet = 11,
 };
 } // namespace loc
+using locVoiceoverExpression = loc::VoiceoverExpression;
 } // namespace RED4ext
 
 // clang-format on

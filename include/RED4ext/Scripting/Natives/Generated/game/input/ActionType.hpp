@@ -23,6 +23,7 @@ enum class ActionType : uint32_t
     REPEAT = 10,
 };
 } // namespace game::input
+using gameinputActionType = game::input::ActionType;
 } // namespace RED4ext
 
 // clang-format on

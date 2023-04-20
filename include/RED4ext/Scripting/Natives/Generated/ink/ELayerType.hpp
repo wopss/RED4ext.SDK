@@ -28,6 +28,7 @@ enum class ELayerType : uint8_t
     MAX = 15,
 };
 } // namespace ink
+using inkELayerType = ink::ELayerType;
 } // namespace RED4ext
 
 // clang-format on

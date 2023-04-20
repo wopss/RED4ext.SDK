@@ -17,6 +17,7 @@ enum class StimTargets : uint32_t
     Invalid = 4,
 };
 } // namespace game::data
+using gamedataStimTargets = game::data::StimTargets;
 } // namespace RED4ext
 
 // clang-format on

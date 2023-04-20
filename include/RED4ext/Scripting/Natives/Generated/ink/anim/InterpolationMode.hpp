@@ -16,6 +16,7 @@ enum class InterpolationMode : uint8_t
     EasyOutIn = 3,
 };
 } // namespace ink::anim
+using inkanimInterpolationMode = ink::anim::InterpolationMode;
 } // namespace RED4ext
 
 // clang-format on

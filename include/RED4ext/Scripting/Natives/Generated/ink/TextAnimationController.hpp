@@ -16,7 +16,7 @@ namespace ink
 struct TextAnimationController : ink::WidgetLogicController
 {
     static constexpr const char* NAME = "inkTextAnimationController";
-    static constexpr const char* ALIAS = "inkTextAnimationController";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk78[0xA8 - 0x78]; // 78
     bool playOnInitialize; // A8

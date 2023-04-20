@@ -15,7 +15,7 @@ namespace ink
 struct MenusState : IScriptable
 {
     static constexpr const char* NAME = "inkMenusState";
-    static constexpr const char* ALIAS = "inkMenusState";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk40[0xB0 - 0x40]; // 40
 };

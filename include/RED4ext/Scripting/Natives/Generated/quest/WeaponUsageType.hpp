@@ -14,6 +14,7 @@ enum class WeaponUsageType : uint32_t
     Reload = 1,
 };
 } // namespace quest
+using questWeaponUsageType = quest::WeaponUsageType;
 } // namespace RED4ext
 
 // clang-format on

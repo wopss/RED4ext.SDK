@@ -15,6 +15,7 @@ enum class EParticleSortingMode : uint32_t
     PSM_Regular = 2,
 };
 } // namespace rend
+using rendEParticleSortingMode = rend::EParticleSortingMode;
 } // namespace RED4ext
 
 // clang-format on

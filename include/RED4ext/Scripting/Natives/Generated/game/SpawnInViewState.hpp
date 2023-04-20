@@ -15,6 +15,7 @@ enum class SpawnInViewState : uint8_t
     false_ = 2, // false
 };
 } // namespace game
+using gameSpawnInViewState = game::SpawnInViewState;
 } // namespace RED4ext
 
 // clang-format on

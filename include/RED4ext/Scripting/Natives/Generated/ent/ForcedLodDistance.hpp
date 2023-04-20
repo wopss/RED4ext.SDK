@@ -21,6 +21,7 @@ enum class ForcedLodDistance : uint8_t
     ConsoleLOD = 8,
 };
 } // namespace ent
+using entForcedLodDistance = ent::ForcedLodDistance;
 } // namespace RED4ext
 
 // clang-format on

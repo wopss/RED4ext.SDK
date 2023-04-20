@@ -17,6 +17,7 @@ enum class NumberOperation : uint8_t
     DivideBy = 4,
 };
 } // namespace audio
+using audioNumberOperation = audio::NumberOperation;
 } // namespace RED4ext
 
 // clang-format on

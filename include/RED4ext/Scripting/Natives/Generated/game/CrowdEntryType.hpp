@@ -15,6 +15,7 @@ enum class CrowdEntryType : uint8_t
     AV = 2,
 };
 } // namespace game
+using gameCrowdEntryType = game::CrowdEntryType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class EInteractionEventType : uint32_t
     EIET_deactivate = 1,
 };
 } // namespace game::interactions
+using gameinteractionsEInteractionEventType = game::interactions::EInteractionEventType;
 } // namespace RED4ext
 
 // clang-format on

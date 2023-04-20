@@ -15,6 +15,7 @@ enum class CacheMode : uint8_t
     ExternalDynamicTexture = 2,
 };
 } // namespace ink
+using inkCacheMode = ink::CacheMode;
 } // namespace RED4ext
 
 // clang-format on

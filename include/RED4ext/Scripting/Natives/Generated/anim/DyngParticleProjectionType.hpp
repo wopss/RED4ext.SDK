@@ -15,6 +15,7 @@ enum class DyngParticleProjectionType : uint32_t
     Directed = 2,
 };
 } // namespace anim
+using animDyngParticleProjectionType = anim::DyngParticleProjectionType;
 } // namespace RED4ext
 
 // clang-format on

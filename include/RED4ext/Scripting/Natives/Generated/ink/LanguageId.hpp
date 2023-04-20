@@ -32,6 +32,7 @@ enum class LanguageId : uint32_t
     DEBUG = 19,
 };
 } // namespace ink
+using inkLanguageId = ink::LanguageId;
 } // namespace RED4ext
 
 // clang-format on

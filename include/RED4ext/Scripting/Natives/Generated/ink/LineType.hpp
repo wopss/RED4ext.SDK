@@ -14,6 +14,7 @@ enum class LineType : uint8_t
     LoosePatternSpacing = 1,
 };
 } // namespace ink
+using inkLineType = ink::LineType;
 } // namespace RED4ext
 
 // clang-format on

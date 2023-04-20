@@ -17,6 +17,7 @@ enum class MoveType : uint32_t
     Follow = 4,
 };
 } // namespace quest
+using questMoveType = quest::MoveType;
 } // namespace RED4ext
 
 // clang-format on

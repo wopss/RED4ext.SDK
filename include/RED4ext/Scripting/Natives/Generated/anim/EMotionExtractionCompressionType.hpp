@@ -21,6 +21,7 @@ enum class EMotionExtractionCompressionType : uint32_t
     EMECT_UNCOMPRESSED_ALL_ANGLES_FALLBACKING = 9,
 };
 } // namespace anim
+using animEMotionExtractionCompressionType = anim::EMotionExtractionCompressionType;
 } // namespace RED4ext
 
 // clang-format on

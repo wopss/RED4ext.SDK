@@ -17,6 +17,7 @@ enum class VehicleCameraType : uint8_t
     FPP = PuppetFPP,
 };
 } // namespace quest
+using questVehicleCameraType = quest::VehicleCameraType;
 } // namespace RED4ext
 
 // clang-format on

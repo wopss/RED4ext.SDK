@@ -14,6 +14,7 @@ enum class RepellingShape : uint32_t
     Capsule = 1,
 };
 } // namespace ent
+using entRepellingShape = ent::RepellingShape;
 } // namespace RED4ext
 
 // clang-format on

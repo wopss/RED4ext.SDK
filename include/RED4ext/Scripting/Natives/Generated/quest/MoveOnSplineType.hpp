@@ -15,6 +15,7 @@ enum class MoveOnSplineType : uint32_t
     WithCompanion = 2,
 };
 } // namespace quest
+using questMoveOnSplineType = quest::MoveOnSplineType;
 } // namespace RED4ext
 
 // clang-format on

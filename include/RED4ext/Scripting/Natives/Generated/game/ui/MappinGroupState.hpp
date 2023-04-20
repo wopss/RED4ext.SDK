@@ -16,6 +16,7 @@ enum class MappinGroupState : uint32_t
     GroupedHidden = 3,
 };
 } // namespace game::ui
+using gameuiMappinGroupState = game::ui::MappinGroupState;
 } // namespace RED4ext
 
 // clang-format on

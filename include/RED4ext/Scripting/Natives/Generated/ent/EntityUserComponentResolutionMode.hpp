@@ -14,6 +14,7 @@ enum class EntityUserComponentResolutionMode : uint8_t
     Suppress = 1,
 };
 } // namespace ent
+using entEntityUserComponentResolutionMode = ent::EntityUserComponentResolutionMode;
 } // namespace RED4ext
 
 // clang-format on

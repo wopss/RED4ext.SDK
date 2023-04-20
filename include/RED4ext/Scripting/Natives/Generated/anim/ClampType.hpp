@@ -15,6 +15,7 @@ enum class ClampType : uint32_t
     WrappedClamp = 2,
 };
 } // namespace anim
+using animClampType = anim::ClampType;
 } // namespace RED4ext
 
 // clang-format on

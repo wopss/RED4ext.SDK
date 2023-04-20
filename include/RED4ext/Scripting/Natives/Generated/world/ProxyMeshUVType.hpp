@@ -14,6 +14,7 @@ enum class ProxyMeshUVType : uint8_t
     UvGenerateNew = 1,
 };
 } // namespace world
+using worldProxyMeshUVType = world::ProxyMeshUVType;
 } // namespace RED4ext
 
 // clang-format on

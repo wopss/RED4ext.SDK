@@ -14,6 +14,7 @@ enum class VehicleCameraPerspective : uint8_t
     FPP = 1,
 };
 } // namespace quest
+using questVehicleCameraPerspective = quest::VehicleCameraPerspective;
 } // namespace RED4ext
 
 // clang-format on

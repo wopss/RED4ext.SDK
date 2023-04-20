@@ -18,6 +18,7 @@ enum class CompanionDistancePreset : uint32_t
     Invalid = 5,
 };
 } // namespace game::data
+using gamedataCompanionDistancePreset = game::data::CompanionDistancePreset;
 } // namespace RED4ext
 
 // clang-format on

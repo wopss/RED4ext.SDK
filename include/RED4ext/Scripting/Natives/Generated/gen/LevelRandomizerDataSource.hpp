@@ -14,6 +14,7 @@ enum class LevelRandomizerDataSource : uint32_t
     Markers = 1,
 };
 } // namespace gen
+using genLevelRandomizerDataSource = gen::LevelRandomizerDataSource;
 } // namespace RED4ext
 
 // clang-format on

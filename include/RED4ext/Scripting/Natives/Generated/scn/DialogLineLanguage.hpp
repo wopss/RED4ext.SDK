@@ -21,6 +21,7 @@ enum class DialogLineLanguage : uint32_t
     Korean = 9,
 };
 } // namespace scn
+using scnDialogLineLanguage = scn::DialogLineLanguage;
 } // namespace RED4ext
 
 // clang-format on

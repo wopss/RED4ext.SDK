@@ -16,6 +16,7 @@ enum class ReminderConditionProcessStep : uint32_t
     Looping = 3,
 };
 } // namespace scn
+using scnReminderConditionProcessStep = scn::ReminderConditionProcessStep;
 } // namespace RED4ext
 
 // clang-format on

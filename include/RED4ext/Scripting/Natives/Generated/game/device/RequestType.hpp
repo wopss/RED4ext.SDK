@@ -17,6 +17,7 @@ enum class RequestType : uint32_t
     Internal = 4,
 };
 } // namespace game::device
+using gamedeviceRequestType = game::device::RequestType;
 } // namespace RED4ext
 
 // clang-format on

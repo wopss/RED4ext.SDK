@@ -15,6 +15,7 @@ enum class HorizontalAlignment : uint8_t
     Right = 2,
 };
 } // namespace text
+using textHorizontalAlignment = text::HorizontalAlignment;
 } // namespace RED4ext
 
 // clang-format on

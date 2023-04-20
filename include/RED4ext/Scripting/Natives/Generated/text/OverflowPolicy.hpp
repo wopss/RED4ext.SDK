@@ -18,6 +18,7 @@ enum class OverflowPolicy : uint8_t
     AdjustToSize = 5,
 };
 } // namespace text
+using textOverflowPolicy = text::OverflowPolicy;
 } // namespace RED4ext
 
 // clang-format on

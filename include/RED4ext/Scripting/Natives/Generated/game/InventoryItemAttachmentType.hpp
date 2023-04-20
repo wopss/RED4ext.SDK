@@ -14,6 +14,7 @@ enum class InventoryItemAttachmentType : uint32_t
     Dedicated = 1,
 };
 } // namespace game
+using gameInventoryItemAttachmentType = game::InventoryItemAttachmentType;
 using InventoryItemAttachmentType = game::InventoryItemAttachmentType;
 } // namespace RED4ext
 

@@ -129,6 +129,7 @@ enum class MeleeHitPerMaterialType : uint32_t
     Throw_Water = 116,
 };
 } // namespace audio
+using audioMeleeHitPerMaterialType = audio::MeleeHitPerMaterialType;
 } // namespace RED4ext
 
 // clang-format on

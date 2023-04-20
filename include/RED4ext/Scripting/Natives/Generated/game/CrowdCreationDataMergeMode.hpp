@@ -14,6 +14,7 @@ enum class CrowdCreationDataMergeMode : uint8_t
     Override = 1,
 };
 } // namespace game
+using gameCrowdCreationDataMergeMode = game::CrowdCreationDataMergeMode;
 } // namespace RED4ext
 
 // clang-format on

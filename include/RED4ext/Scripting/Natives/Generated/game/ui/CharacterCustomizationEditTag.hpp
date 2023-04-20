@@ -15,6 +15,7 @@ enum class CharacterCustomizationEditTag : uint32_t
     Ripperdoc = 2,
 };
 } // namespace game::ui
+using gameuiCharacterCustomizationEditTag = game::ui::CharacterCustomizationEditTag;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class MuppetInputActionType : uint32_t
     Press = 2,
 };
 } // namespace game
+using gameMuppetInputActionType = game::MuppetInputActionType;
 } // namespace RED4ext
 
 // clang-format on

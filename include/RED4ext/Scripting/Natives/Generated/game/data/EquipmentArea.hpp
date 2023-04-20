@@ -57,6 +57,7 @@ enum class EquipmentArea : uint32_t
     Invalid = 44,
 };
 } // namespace game::data
+using gamedataEquipmentArea = game::data::EquipmentArea;
 } // namespace RED4ext
 
 // clang-format on

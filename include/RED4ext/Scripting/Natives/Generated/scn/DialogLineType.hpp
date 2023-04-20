@@ -24,6 +24,7 @@ enum class DialogLineType : uint32_t
     GlobalTVAlwaysVisible = 12,
 };
 } // namespace scn
+using scnDialogLineType = scn::DialogLineType;
 } // namespace RED4ext
 
 // clang-format on

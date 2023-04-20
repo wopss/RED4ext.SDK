@@ -16,6 +16,7 @@ enum class VectorCoordinateType : uint32_t
     W = 3,
 };
 } // namespace anim
+using animVectorCoordinateType = anim::VectorCoordinateType;
 } // namespace RED4ext
 
 // clang-format on

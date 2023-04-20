@@ -20,6 +20,7 @@ enum class TriggerMode : uint32_t
     Invalid = 7,
 };
 } // namespace game::data
+using gamedataTriggerMode = game::data::TriggerMode;
 } // namespace RED4ext
 
 // clang-format on

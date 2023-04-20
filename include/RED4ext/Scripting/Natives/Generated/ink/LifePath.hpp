@@ -16,6 +16,7 @@ enum class LifePath : uint8_t
     Invalid = 3,
 };
 } // namespace ink
+using inkLifePath = ink::LifePath;
 } // namespace RED4ext
 
 // clang-format on

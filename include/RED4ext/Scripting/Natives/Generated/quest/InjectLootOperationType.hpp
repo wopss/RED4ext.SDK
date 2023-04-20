@@ -14,6 +14,7 @@ enum class InjectLootOperationType : uint32_t
     Remove = 1,
 };
 } // namespace quest
+using questInjectLootOperationType = quest::InjectLootOperationType;
 } // namespace RED4ext
 
 // clang-format on

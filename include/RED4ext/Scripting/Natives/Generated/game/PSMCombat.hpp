@@ -17,6 +17,7 @@ enum class PSMCombat : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMCombat = game::PSMCombat;
 } // namespace RED4ext
 
 // clang-format on

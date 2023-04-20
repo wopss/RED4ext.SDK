@@ -14,6 +14,7 @@ enum class MaterialTagVehicleTraction : uint8_t
     Gravel = 1,
 };
 } // namespace physics
+using physicsMaterialTagVehicleTraction = physics::MaterialTagVehicleTraction;
 } // namespace RED4ext
 
 // clang-format on

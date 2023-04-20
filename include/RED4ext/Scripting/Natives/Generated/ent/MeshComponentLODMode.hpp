@@ -15,6 +15,7 @@ enum class MeshComponentLODMode : uint8_t
     AppearanceProxy = 2,
 };
 } // namespace ent
+using entMeshComponentLODMode = ent::MeshComponentLODMode;
 } // namespace RED4ext
 
 // clang-format on

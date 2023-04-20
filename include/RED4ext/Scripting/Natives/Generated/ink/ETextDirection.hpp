@@ -15,6 +15,7 @@ enum class ETextDirection : uint32_t
     Mixed = 2,
 };
 } // namespace ink
+using inkETextDirection = ink::ETextDirection;
 } // namespace RED4ext
 
 // clang-format on

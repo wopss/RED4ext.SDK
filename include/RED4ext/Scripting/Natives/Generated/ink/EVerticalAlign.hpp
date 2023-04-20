@@ -16,6 +16,7 @@ enum class EVerticalAlign : uint8_t
     Bottom = 3,
 };
 } // namespace ink
+using inkEVerticalAlign = ink::EVerticalAlign;
 } // namespace RED4ext
 
 // clang-format on

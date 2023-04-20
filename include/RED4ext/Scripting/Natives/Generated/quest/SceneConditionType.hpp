@@ -17,6 +17,7 @@ enum class SceneConditionType : uint8_t
     Exited = 4,
 };
 } // namespace quest
+using questSceneConditionType = quest::SceneConditionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,6 +17,7 @@ enum class MountingObjectType : uint32_t
     Invalid = 4294967295,
 };
 } // namespace game
+using gameMountingObjectType = game::MountingObjectType;
 } // namespace RED4ext
 
 // clang-format on

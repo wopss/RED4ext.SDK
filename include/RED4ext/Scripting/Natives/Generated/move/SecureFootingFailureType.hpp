@@ -15,6 +15,7 @@ enum class SecureFootingFailureType : uint32_t
     Slope = 2,
 };
 } // namespace move
+using moveSecureFootingFailureType = move::SecureFootingFailureType;
 } // namespace RED4ext
 
 // clang-format on

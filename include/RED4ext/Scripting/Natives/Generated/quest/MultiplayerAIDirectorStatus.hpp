@@ -14,6 +14,7 @@ enum class MultiplayerAIDirectorStatus : uint32_t
     Disabled = 1,
 };
 } // namespace quest
+using questMultiplayerAIDirectorStatus = quest::MultiplayerAIDirectorStatus;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class ProxySyncNormalSource : uint8_t
     From_Face_Average = 1,
 };
 } // namespace world
+using worldProxySyncNormalSource = world::ProxySyncNormalSource;
 } // namespace RED4ext
 
 // clang-format on

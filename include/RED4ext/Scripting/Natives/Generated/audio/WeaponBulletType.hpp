@@ -20,6 +20,7 @@ enum class WeaponBulletType : uint32_t
     hmg = 7,
 };
 } // namespace audio
+using audioWeaponBulletType = audio::WeaponBulletType;
 } // namespace RED4ext
 
 // clang-format on

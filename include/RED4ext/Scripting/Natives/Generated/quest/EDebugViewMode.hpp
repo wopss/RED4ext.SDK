@@ -25,6 +25,7 @@ enum class EDebugViewMode : uint32_t
     OVERDRAW = 12,
 };
 } // namespace quest
+using questEDebugViewMode = quest::EDebugViewMode;
 } // namespace RED4ext
 
 // clang-format on

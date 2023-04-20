@@ -15,6 +15,7 @@ enum class EffectHitDataType : uint8_t
     Static = 2,
 };
 } // namespace game
+using gameEffectHitDataType = game::EffectHitDataType;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,6 +17,7 @@ enum class TickableEventState : uint32_t
     Canceled = 4,
 };
 } // namespace game
+using gameTickableEventState = game::TickableEventState;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class ProxyCoreAxis : uint8_t
     Z = 2,
 };
 } // namespace world
+using worldProxyCoreAxis = world::ProxyCoreAxis;
 } // namespace RED4ext
 
 // clang-format on

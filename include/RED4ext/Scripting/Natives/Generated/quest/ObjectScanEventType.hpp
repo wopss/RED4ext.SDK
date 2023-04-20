@@ -15,6 +15,7 @@ enum class ObjectScanEventType : uint8_t
     Finished = 2,
 };
 } // namespace quest
+using questObjectScanEventType = quest::ObjectScanEventType;
 } // namespace RED4ext
 
 // clang-format on

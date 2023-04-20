@@ -16,6 +16,7 @@ enum class StimPropagation : uint32_t
     Invalid = 3,
 };
 } // namespace game::data
+using gamedataStimPropagation = game::data::StimPropagation;
 } // namespace RED4ext
 
 // clang-format on

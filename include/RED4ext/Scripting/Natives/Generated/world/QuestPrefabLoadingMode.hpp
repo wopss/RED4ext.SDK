@@ -14,6 +14,7 @@ enum class QuestPrefabLoadingMode : uint8_t
     ForceLoad = 1,
 };
 } // namespace world
+using worldQuestPrefabLoadingMode = world::QuestPrefabLoadingMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class BriefingSequencePlayerFunction : uint32_t
     FinishSequence = 2,
 };
 } // namespace quest
+using questBriefingSequencePlayerFunction = quest::BriefingSequencePlayerFunction;
 } // namespace RED4ext
 
 // clang-format on

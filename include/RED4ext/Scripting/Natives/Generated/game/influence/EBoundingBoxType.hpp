@@ -14,6 +14,7 @@ enum class EBoundingBoxType : uint32_t
     Custom = 1,
 };
 } // namespace game::influence
+using gameinfluenceEBoundingBoxType = game::influence::EBoundingBoxType;
 } // namespace RED4ext
 
 // clang-format on

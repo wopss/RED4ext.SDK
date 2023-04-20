@@ -15,6 +15,7 @@ enum class DistractedConditionTarget : uint8_t
     SpeakerOrAddressee = 2,
 };
 } // namespace scn
+using scnDistractedConditionTarget = scn::DistractedConditionTarget;
 } // namespace RED4ext
 
 // clang-format on

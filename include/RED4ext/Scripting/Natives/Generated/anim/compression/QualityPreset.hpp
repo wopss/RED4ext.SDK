@@ -16,6 +16,7 @@ enum class QualityPreset : uint8_t
     CINEMATIC_HIGH = 3,
 };
 } // namespace anim::compression
+using animcompressionQualityPreset = anim::compression::QualityPreset;
 } // namespace RED4ext
 
 // clang-format on

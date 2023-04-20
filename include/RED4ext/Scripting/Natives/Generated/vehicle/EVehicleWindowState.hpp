@@ -14,6 +14,7 @@ enum class EVehicleWindowState : uint32_t
     Open = 1,
 };
 } // namespace vehicle
+using vehicleEVehicleWindowState = vehicle::EVehicleWindowState;
 using EVehicleWindowState = vehicle::EVehicleWindowState;
 } // namespace RED4ext
 

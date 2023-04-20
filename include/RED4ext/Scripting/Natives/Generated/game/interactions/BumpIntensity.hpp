@@ -17,6 +17,7 @@ enum class BumpIntensity : uint32_t
     Strafe = 4,
 };
 } // namespace game::interactions
+using gameinteractionsBumpIntensity = game::interactions::BumpIntensity;
 } // namespace RED4ext
 
 // clang-format on

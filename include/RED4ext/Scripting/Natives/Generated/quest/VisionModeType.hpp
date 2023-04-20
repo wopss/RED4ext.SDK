@@ -15,6 +15,7 @@ enum class VisionModeType : uint32_t
     EnhancedMode = 2,
 };
 } // namespace quest
+using questVisionModeType = quest::VisionModeType;
 } // namespace RED4ext
 
 // clang-format on

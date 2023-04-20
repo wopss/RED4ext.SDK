@@ -15,6 +15,7 @@ enum class EBlendTypeLBC : uint32_t
     CustomCurve = 2,
 };
 } // namespace anim
+using animEBlendTypeLBC = anim::EBlendTypeLBC;
 } // namespace RED4ext
 
 // clang-format on

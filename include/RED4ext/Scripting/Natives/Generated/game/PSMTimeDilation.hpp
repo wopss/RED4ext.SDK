@@ -15,6 +15,7 @@ enum class PSMTimeDilation : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMTimeDilation = game::PSMTimeDilation;
 } // namespace RED4ext
 
 // clang-format on

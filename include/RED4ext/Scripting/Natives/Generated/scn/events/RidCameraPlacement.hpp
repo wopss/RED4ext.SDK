@@ -15,6 +15,7 @@ enum class RidCameraPlacement : uint32_t
     Player = 2,
 };
 } // namespace scn::events
+using scneventsRidCameraPlacement = scn::events::RidCameraPlacement;
 } // namespace RED4ext
 
 // clang-format on

@@ -19,6 +19,7 @@ enum class EasingType : uint8_t
     CubicEaseOut = 6,
 };
 } // namespace scn
+using scnEasingType = scn::EasingType;
 } // namespace RED4ext
 
 // clang-format on

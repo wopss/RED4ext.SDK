@@ -16,6 +16,7 @@ enum class TrackedStatusType : uint32_t
     Hostile = 3,
 };
 } // namespace AI
+using AITrackedStatusType = AI::TrackedStatusType;
 } // namespace RED4ext
 
 // clang-format on

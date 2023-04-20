@@ -15,6 +15,7 @@ enum class ETransformAxis : uint32_t
     Z_Axis = 4,
 };
 } // namespace anim
+using animETransformAxis = anim::ETransformAxis;
 } // namespace RED4ext
 
 // clang-format on

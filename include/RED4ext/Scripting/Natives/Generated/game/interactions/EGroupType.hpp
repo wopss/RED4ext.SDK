@@ -15,6 +15,7 @@ enum class EGroupType : uint32_t
     EGT_hint = 2,
 };
 } // namespace game::interactions
+using gameinteractionsEGroupType = game::interactions::EGroupType;
 } // namespace RED4ext
 
 // clang-format on

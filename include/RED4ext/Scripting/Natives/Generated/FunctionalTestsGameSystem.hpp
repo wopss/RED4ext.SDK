@@ -13,7 +13,7 @@ namespace RED4ext
 struct FunctionalTestsGameSystem : FunctionalTestsIGameSystem
 {
     static constexpr const char* NAME = "FunctionalTestsGameSystem";
-    static constexpr const char* ALIAS = "FunctionalTestsGameSystem";
+    static constexpr const char* ALIAS = NAME;
 
     uint8_t unk48[0x130 - 0x48]; // 48
 };

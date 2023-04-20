@@ -16,6 +16,7 @@ enum class SpawnedVehicleType : uint32_t
     SpecificVehicle = 3,
 };
 } // namespace quest
+using questSpawnedVehicleType = quest::SpawnedVehicleType;
 } // namespace RED4ext
 
 // clang-format on

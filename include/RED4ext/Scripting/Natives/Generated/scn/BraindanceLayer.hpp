@@ -15,6 +15,7 @@ enum class BraindanceLayer : uint8_t
     Thermal = 2,
 };
 } // namespace scn
+using scnBraindanceLayer = scn::BraindanceLayer;
 } // namespace RED4ext
 
 // clang-format on

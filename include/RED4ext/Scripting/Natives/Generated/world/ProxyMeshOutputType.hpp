@@ -22,6 +22,7 @@ enum class ProxyMeshOutputType : uint8_t
     KeepCurrent = 127,
 };
 } // namespace world
+using worldProxyMeshOutputType = world::ProxyMeshOutputType;
 } // namespace RED4ext
 
 // clang-format on

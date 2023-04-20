@@ -17,6 +17,7 @@ enum class PlaySpeed : uint32_t
     VeryFast = 4,
 };
 } // namespace scn
+using scnPlaySpeed = scn::PlaySpeed;
 } // namespace RED4ext
 
 // clang-format on

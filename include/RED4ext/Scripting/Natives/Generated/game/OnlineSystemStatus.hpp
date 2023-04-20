@@ -18,6 +18,7 @@ enum class OnlineSystemStatus : uint32_t
     Error = 5,
 };
 } // namespace game
+using gameOnlineSystemStatus = game::OnlineSystemStatus;
 using GOGRewardsSystemStatus = game::OnlineSystemStatus;
 } // namespace RED4ext
 

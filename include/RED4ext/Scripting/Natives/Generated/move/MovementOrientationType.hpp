@@ -17,6 +17,7 @@ enum class MovementOrientationType : uint32_t
     Right = 4,
 };
 } // namespace move
+using moveMovementOrientationType = move::MovementOrientationType;
 } // namespace RED4ext
 
 // clang-format on

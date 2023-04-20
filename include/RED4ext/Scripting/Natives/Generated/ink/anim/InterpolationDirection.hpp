@@ -15,6 +15,7 @@ enum class InterpolationDirection : uint8_t
     FromTo = 2,
 };
 } // namespace ink::anim
+using inkanimInterpolationDirection = ink::anim::InterpolationDirection;
 } // namespace RED4ext
 
 // clang-format on

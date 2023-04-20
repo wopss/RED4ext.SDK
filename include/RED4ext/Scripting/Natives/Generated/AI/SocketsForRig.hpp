@@ -19,6 +19,7 @@ enum class SocketsForRig : uint32_t
     ChildMale = 6,
 };
 } // namespace AI
+using AISocketsForRig = AI::SocketsForRig;
 } // namespace RED4ext
 
 // clang-format on

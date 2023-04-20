@@ -16,6 +16,7 @@ enum class EdgeConditionAction : uint32_t
     TurnOff = 3,
 };
 } // namespace AI::behavior
+using AIbehaviorEdgeConditionAction = AI::behavior::EdgeConditionAction;
 } // namespace RED4ext
 
 // clang-format on

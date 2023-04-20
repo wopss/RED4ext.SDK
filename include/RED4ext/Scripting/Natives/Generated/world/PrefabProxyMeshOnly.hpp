@@ -15,6 +15,7 @@ enum class PrefabProxyMeshOnly : uint8_t
     Disabled = 2,
 };
 } // namespace world
+using worldPrefabProxyMeshOnly = world::PrefabProxyMeshOnly;
 } // namespace RED4ext
 
 // clang-format on

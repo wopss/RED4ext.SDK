@@ -18,6 +18,7 @@ enum class Axis : uint32_t
     NegativeZ = 5,
 };
 } // namespace anim
+using animAxis = anim::Axis;
 } // namespace RED4ext
 
 // clang-format on

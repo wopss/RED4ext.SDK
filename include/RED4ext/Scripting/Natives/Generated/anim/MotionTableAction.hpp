@@ -60,6 +60,7 @@ enum class MotionTableAction : uint32_t
     MTA_CrowdDirectionalStartFast = 47,
 };
 } // namespace anim
+using animMotionTableAction = anim::MotionTableAction;
 } // namespace RED4ext
 
 // clang-format on

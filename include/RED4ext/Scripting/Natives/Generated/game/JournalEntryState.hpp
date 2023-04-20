@@ -17,6 +17,7 @@ enum class JournalEntryState : uint32_t
     Failed = 4,
 };
 } // namespace game
+using gameJournalEntryState = game::JournalEntryState;
 } // namespace RED4ext
 
 // clang-format on

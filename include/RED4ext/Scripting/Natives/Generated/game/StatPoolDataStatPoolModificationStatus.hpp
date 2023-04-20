@@ -15,6 +15,7 @@ enum class StatPoolDataStatPoolModificationStatus : uint8_t
     NoModification = 2,
 };
 } // namespace game
+using gameStatPoolDataStatPoolModificationStatus = game::StatPoolDataStatPoolModificationStatus;
 } // namespace RED4ext
 
 // clang-format on

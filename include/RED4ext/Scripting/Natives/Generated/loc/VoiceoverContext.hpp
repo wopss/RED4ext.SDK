@@ -17,6 +17,7 @@ enum class VoiceoverContext : uint8_t
     Default_Vo_Context = 5,
 };
 } // namespace loc
+using locVoiceoverContext = loc::VoiceoverContext;
 } // namespace RED4ext
 
 // clang-format on

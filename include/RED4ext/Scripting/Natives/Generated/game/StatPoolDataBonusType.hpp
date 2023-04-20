@@ -15,6 +15,7 @@ enum class StatPoolDataBonusType : uint8_t
     NonPersistent = 2,
 };
 } // namespace game
+using gameStatPoolDataBonusType = game::StatPoolDataBonusType;
 } // namespace RED4ext
 
 // clang-format on

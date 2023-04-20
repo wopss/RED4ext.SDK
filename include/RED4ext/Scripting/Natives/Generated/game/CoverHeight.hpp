@@ -15,6 +15,7 @@ enum class CoverHeight : uint32_t
     High = 2,
 };
 } // namespace game
+using gameCoverHeight = game::CoverHeight;
 } // namespace RED4ext
 
 // clang-format on

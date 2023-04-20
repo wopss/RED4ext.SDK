@@ -15,6 +15,7 @@ enum class MaterialFriction : uint32_t
     Disabled = 2,
 };
 } // namespace physics
+using physicsMaterialFriction = physics::MaterialFriction;
 } // namespace RED4ext
 
 // clang-format on

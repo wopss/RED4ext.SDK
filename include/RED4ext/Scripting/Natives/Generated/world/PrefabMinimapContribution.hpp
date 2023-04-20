@@ -15,6 +15,7 @@ enum class PrefabMinimapContribution : uint8_t
     Discard = 2,
 };
 } // namespace world
+using worldPrefabMinimapContribution = world::PrefabMinimapContribution;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class MaterialHardnessOverride : uint32_t
     SetAsHard = 3,
 };
 } // namespace audio
+using audioMaterialHardnessOverride = audio::MaterialHardnessOverride;
 } // namespace RED4ext
 
 // clang-format on

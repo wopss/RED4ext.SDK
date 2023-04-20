@@ -15,6 +15,7 @@ enum class ScanningMode : uint32_t
     Heavy = 2,
 };
 } // namespace game
+using gameScanningMode = game::ScanningMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class BreathingTransitionType : uint32_t
     AnyEventTag = 3,
 };
 } // namespace audio
+using audioBreathingTransitionType = audio::BreathingTransitionType;
 } // namespace RED4ext
 
 // clang-format on

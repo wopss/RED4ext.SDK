@@ -15,7 +15,7 @@ namespace RED4ext
 struct AdvertisementWidgetComponent : IWorldWidgetComponent
 {
     static constexpr const char* NAME = "AdvertisementWidgetComponent";
-    static constexpr const char* ALIAS = "AdvertisementWidgetComponent";
+    static constexpr const char* ALIAS = NAME;
 
     AdvertisementFormat format; // 2B0
     uint8_t unk2B1[0x2B4 - 0x2B1]; // 2B1

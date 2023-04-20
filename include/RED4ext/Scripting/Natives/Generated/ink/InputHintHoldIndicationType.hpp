@@ -15,6 +15,7 @@ enum class InputHintHoldIndicationType : uint8_t
     FromInputConfig = 2,
 };
 } // namespace ink
+using inkInputHintHoldIndicationType = ink::InputHintHoldIndicationType;
 } // namespace RED4ext
 
 // clang-format on

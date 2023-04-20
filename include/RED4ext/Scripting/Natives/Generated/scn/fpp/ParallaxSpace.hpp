@@ -16,6 +16,7 @@ enum class ParallaxSpace : uint32_t
     Chest = 3,
 };
 } // namespace scn::fpp
+using scnfppParallaxSpace = scn::fpp::ParallaxSpace;
 } // namespace RED4ext
 
 // clang-format on

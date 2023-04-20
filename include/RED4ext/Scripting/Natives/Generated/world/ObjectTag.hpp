@@ -21,6 +21,7 @@ enum class ObjectTag : uint32_t
     Stairs = 1936880723,
 };
 } // namespace world
+using worldObjectTag = world::ObjectTag;
 } // namespace RED4ext
 
 // clang-format on

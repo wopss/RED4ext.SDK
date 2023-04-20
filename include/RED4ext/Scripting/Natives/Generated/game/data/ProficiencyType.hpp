@@ -28,6 +28,7 @@ enum class ProficiencyType : uint32_t
     Invalid = 15,
 };
 } // namespace game::data
+using gamedataProficiencyType = game::data::ProficiencyType;
 } // namespace RED4ext
 
 // clang-format on

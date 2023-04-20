@@ -16,6 +16,7 @@ enum class NodeSocketType : uint8_t
     Disabled = 3,
 };
 } // namespace world
+using worldNodeSocketType = world::NodeSocketType;
 } // namespace RED4ext
 
 // clang-format on

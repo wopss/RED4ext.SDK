@@ -15,6 +15,7 @@ enum class CharacterCustomizationPart : uint32_t
     Arms = 2,
 };
 } // namespace game::ui
+using gameuiCharacterCustomizationPart = game::ui::CharacterCustomizationPart;
 } // namespace RED4ext
 
 // clang-format on

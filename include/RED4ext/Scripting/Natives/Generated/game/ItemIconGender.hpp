@@ -14,6 +14,7 @@ enum class ItemIconGender : uint8_t
     Male = 1,
 };
 } // namespace game
+using gameItemIconGender = game::ItemIconGender;
 using ItemIconGender = game::ItemIconGender;
 } // namespace RED4ext
 

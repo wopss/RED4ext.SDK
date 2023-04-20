@@ -17,6 +17,7 @@ enum class SocketType : uint8_t
     CutDestination = 4,
 };
 } // namespace quest
+using questSocketType = quest::SocketType;
 } // namespace RED4ext
 
 // clang-format on

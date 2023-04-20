@@ -15,6 +15,7 @@ enum class BaseMenuGameControllerPuppetGenderInfo : uint32_t
     ShouldBeDetermined = 2,
 };
 } // namespace game::ui
+using gameuiBaseMenuGameControllerPuppetGenderInfo = game::ui::BaseMenuGameControllerPuppetGenderInfo;
 } // namespace RED4ext
 
 // clang-format on

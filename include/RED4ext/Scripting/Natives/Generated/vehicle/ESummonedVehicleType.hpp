@@ -15,6 +15,7 @@ enum class ESummonedVehicleType : uint32_t
     Motorcycle = 2,
 };
 } // namespace vehicle
+using vehicleESummonedVehicleType = vehicle::ESummonedVehicleType;
 } // namespace RED4ext
 
 // clang-format on

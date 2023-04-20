@@ -16,6 +16,7 @@ enum class GroupNodeGroupVariableDeriveInfo : uint8_t
     NotDerived = 3,
 };
 } // namespace game::data
+using gamedataGroupNodeGroupVariableDeriveInfo = game::data::GroupNodeGroupVariableDeriveInfo;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class EntityLODConditions : uint32_t
     WorkspotStatic = 2,
 };
 } // namespace AI::behavior
+using AIbehaviorEntityLODConditions = AI::behavior::EntityLODConditions;
 } // namespace RED4ext
 
 // clang-format on

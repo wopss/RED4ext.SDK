@@ -21,6 +21,7 @@ enum class OffMeshConnectionType : uint32_t
     Blockade = 8,
 };
 } // namespace world
+using worldOffMeshConnectionType = world::OffMeshConnectionType;
 } // namespace RED4ext
 
 // clang-format on

@@ -14,6 +14,7 @@ enum class SceneAnimationMotionActionParamsMotionType : uint32_t
     Anim = 1,
 };
 } // namespace game
+using gameSceneAnimationMotionActionParamsMotionType = game::SceneAnimationMotionActionParamsMotionType;
 } // namespace RED4ext
 
 // clang-format on

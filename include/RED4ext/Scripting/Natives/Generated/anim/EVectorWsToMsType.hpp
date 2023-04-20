@@ -14,6 +14,7 @@ enum class EVectorWsToMsType : uint32_t
     Direction = 1,
 };
 } // namespace anim
+using animEVectorWsToMsType = anim::EVectorWsToMsType;
 } // namespace RED4ext
 
 // clang-format on

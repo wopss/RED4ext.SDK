@@ -15,6 +15,7 @@ enum class VoGruntInterruptMode : uint32_t
     CanInterrupt = 2,
 };
 } // namespace audio
+using audioVoGruntInterruptMode = audio::VoGruntInterruptMode;
 } // namespace RED4ext
 
 // clang-format on

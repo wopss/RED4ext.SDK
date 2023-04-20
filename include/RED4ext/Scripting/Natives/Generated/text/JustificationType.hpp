@@ -15,6 +15,7 @@ enum class JustificationType : uint8_t
     Right = 2,
 };
 } // namespace text
+using textJustificationType = text::JustificationType;
 } // namespace RED4ext
 
 // clang-format on

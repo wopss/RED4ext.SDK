@@ -15,6 +15,7 @@ enum class ELightMode : uint32_t
     HighBeams = 2,
 };
 } // namespace vehicle
+using vehicleELightMode = vehicle::ELightMode;
 } // namespace RED4ext
 
 // clang-format on

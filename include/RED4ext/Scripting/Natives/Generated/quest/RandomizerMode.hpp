@@ -15,6 +15,7 @@ enum class RandomizerMode : uint8_t
     IgnoreAllUsed = 2,
 };
 } // namespace quest
+using questRandomizerMode = quest::RandomizerMode;
 } // namespace RED4ext
 
 // clang-format on

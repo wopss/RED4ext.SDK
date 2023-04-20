@@ -14,6 +14,7 @@ enum class AdditionalSpeakerRole : uint32_t
     OnlyLipsync = 1,
 };
 } // namespace scn
+using scnAdditionalSpeakerRole = scn::AdditionalSpeakerRole;
 } // namespace RED4ext
 
 // clang-format on

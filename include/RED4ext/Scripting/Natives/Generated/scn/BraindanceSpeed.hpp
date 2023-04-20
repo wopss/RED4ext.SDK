@@ -17,6 +17,7 @@ enum class BraindanceSpeed : uint8_t
     VeryFast = 4,
 };
 } // namespace scn
+using scnBraindanceSpeed = scn::BraindanceSpeed;
 } // namespace RED4ext
 
 // clang-format on

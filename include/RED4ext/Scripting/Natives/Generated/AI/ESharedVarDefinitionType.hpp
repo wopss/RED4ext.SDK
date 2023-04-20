@@ -20,6 +20,7 @@ enum class ESharedVarDefinitionType : uint32_t
     SVGlobalNodeRef = 7,
 };
 } // namespace AI
+using AIESharedVarDefinitionType = AI::ESharedVarDefinitionType;
 } // namespace RED4ext
 
 // clang-format on

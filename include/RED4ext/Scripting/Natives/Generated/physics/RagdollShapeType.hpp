@@ -15,6 +15,7 @@ enum class RagdollShapeType : uint8_t
     SPHERE = 2,
 };
 } // namespace physics
+using physicsRagdollShapeType = physics::RagdollShapeType;
 } // namespace RED4ext
 
 // clang-format on

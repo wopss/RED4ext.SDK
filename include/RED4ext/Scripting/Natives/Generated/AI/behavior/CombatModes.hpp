@@ -15,6 +15,7 @@ enum class CombatModes : uint8_t
     Background = 2,
 };
 } // namespace AI::behavior
+using AIbehaviorCombatModes = AI::behavior::CombatModes;
 } // namespace RED4ext
 
 // clang-format on

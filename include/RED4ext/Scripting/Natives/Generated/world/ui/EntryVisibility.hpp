@@ -15,6 +15,7 @@ enum class EntryVisibility : uint32_t
     ForceHide = 2,
 };
 } // namespace world::ui
+using worlduiEntryVisibility = world::ui::EntryVisibility;
 } // namespace RED4ext
 
 // clang-format on

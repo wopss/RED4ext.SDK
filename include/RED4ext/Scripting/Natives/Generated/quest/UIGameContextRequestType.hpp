@@ -15,6 +15,7 @@ enum class UIGameContextRequestType : uint32_t
     Reset = 2,
 };
 } // namespace quest
+using questUIGameContextRequestType = quest::UIGameContextRequestType;
 } // namespace RED4ext
 
 // clang-format on

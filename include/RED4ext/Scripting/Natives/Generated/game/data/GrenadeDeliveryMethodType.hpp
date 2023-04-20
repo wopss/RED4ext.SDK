@@ -17,6 +17,7 @@ enum class GrenadeDeliveryMethodType : uint32_t
     Invalid = 4,
 };
 } // namespace game::data
+using gamedataGrenadeDeliveryMethodType = game::data::GrenadeDeliveryMethodType;
 } // namespace RED4ext
 
 // clang-format on

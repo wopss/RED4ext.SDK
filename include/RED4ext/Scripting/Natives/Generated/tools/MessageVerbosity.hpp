@@ -14,6 +14,7 @@ enum class MessageVerbosity : uint32_t
     Verbose = 1,
 };
 } // namespace tools
+using toolsMessageVerbosity = tools::MessageVerbosity;
 } // namespace RED4ext
 
 // clang-format on

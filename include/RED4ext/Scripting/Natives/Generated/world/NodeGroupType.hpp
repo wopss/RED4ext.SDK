@@ -16,6 +16,7 @@ enum class NodeGroupType : uint8_t
     ProxyGroup = 3,
 };
 } // namespace world
+using worldNodeGroupType = world::NodeGroupType;
 } // namespace RED4ext
 
 // clang-format on

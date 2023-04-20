@@ -14,6 +14,7 @@ enum class MaskDataSource : uint8_t
     DynamicTexture = 1,
 };
 } // namespace ink
+using inkMaskDataSource = ink::MaskDataSource;
 } // namespace RED4ext
 
 // clang-format on

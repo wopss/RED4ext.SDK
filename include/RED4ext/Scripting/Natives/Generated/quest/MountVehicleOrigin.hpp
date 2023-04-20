@@ -15,6 +15,7 @@ enum class MountVehicleOrigin : uint32_t
     Stolen = 2,
 };
 } // namespace quest
+using questMountVehicleOrigin = quest::MountVehicleOrigin;
 } // namespace RED4ext
 
 // clang-format on

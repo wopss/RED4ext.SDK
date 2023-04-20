@@ -17,6 +17,7 @@ enum class HitType : uint32_t
     CriticalHit_x2 = 4,
 };
 } // namespace game::ui
+using gameuiHitType = game::ui::HitType;
 } // namespace RED4ext
 
 // clang-format on

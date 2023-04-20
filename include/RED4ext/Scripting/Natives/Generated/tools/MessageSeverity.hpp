@@ -16,6 +16,7 @@ enum class MessageSeverity : uint32_t
     Error = 3,
 };
 } // namespace tools
+using toolsMessageSeverity = tools::MessageSeverity;
 } // namespace RED4ext
 
 // clang-format on

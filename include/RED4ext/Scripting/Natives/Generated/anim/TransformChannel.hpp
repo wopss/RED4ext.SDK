@@ -21,6 +21,7 @@ enum class TransformChannel : uint32_t
     ScaleZ = 8,
 };
 } // namespace anim
+using animTransformChannel = anim::TransformChannel;
 } // namespace RED4ext
 
 // clang-format on

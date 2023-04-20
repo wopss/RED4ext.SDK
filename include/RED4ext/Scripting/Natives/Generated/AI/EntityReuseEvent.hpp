@@ -16,7 +16,7 @@ namespace AI
 struct EntityReuseEvent : AI::AIEvent
 {
     static constexpr const char* NAME = "AIEntityReuseEvent";
-    static constexpr const char* ALIAS = "AIEntityReuseEvent";
+    static constexpr const char* ALIAS = NAME;
 
     world::GlobalNodeID destination; // 50
 };

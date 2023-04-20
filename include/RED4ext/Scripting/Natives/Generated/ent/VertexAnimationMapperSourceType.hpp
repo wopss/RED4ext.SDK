@@ -20,6 +20,7 @@ enum class VertexAnimationMapperSourceType : uint32_t
     RotationQuatW = 7,
 };
 } // namespace ent
+using entVertexAnimationMapperSourceType = ent::VertexAnimationMapperSourceType;
 } // namespace RED4ext
 
 // clang-format on

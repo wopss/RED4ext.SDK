@@ -14,6 +14,7 @@ enum class WorldMarkerType : uint8_t
     NodeRef = 1,
 };
 } // namespace scn
+using scnWorldMarkerType = scn::WorldMarkerType;
 } // namespace RED4ext
 
 // clang-format on

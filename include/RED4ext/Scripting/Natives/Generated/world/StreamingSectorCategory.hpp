@@ -18,6 +18,7 @@ enum class StreamingSectorCategory : uint8_t
     Unknown = 255,
 };
 } // namespace world
+using worldStreamingSectorCategory = world::StreamingSectorCategory;
 } // namespace RED4ext
 
 // clang-format on

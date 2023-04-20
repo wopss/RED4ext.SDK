@@ -16,6 +16,7 @@ enum class ParallelNodeWaitFor : uint32_t
     AnyChild = 3,
 };
 } // namespace AI::behavior
+using AIbehaviorParallelNodeWaitFor = AI::behavior::ParallelNodeWaitFor;
 } // namespace RED4ext
 
 // clang-format on

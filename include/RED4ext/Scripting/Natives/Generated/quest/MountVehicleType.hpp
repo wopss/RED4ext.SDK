@@ -15,6 +15,7 @@ enum class MountVehicleType : uint32_t
     Motorcycle = 2,
 };
 } // namespace quest
+using questMountVehicleType = quest::MountVehicleType;
 } // namespace RED4ext
 
 // clang-format on

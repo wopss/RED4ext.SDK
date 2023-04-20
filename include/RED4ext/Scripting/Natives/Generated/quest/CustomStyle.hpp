@@ -14,6 +14,7 @@ enum class CustomStyle : uint32_t
     VideoCallInterupt = 1,
 };
 } // namespace quest
+using questCustomStyle = quest::CustomStyle;
 } // namespace RED4ext
 
 // clang-format on

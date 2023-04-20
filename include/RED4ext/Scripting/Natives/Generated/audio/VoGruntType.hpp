@@ -38,6 +38,7 @@ enum class VoGruntType : uint32_t
     None = 4294967295,
 };
 } // namespace audio
+using audioVoGruntType = audio::VoGruntType;
 } // namespace RED4ext
 
 // clang-format on

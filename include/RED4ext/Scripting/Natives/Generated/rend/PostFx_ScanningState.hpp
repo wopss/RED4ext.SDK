@@ -16,6 +16,7 @@ enum class PostFx_ScanningState : uint8_t
     Complete = 4,
 };
 } // namespace rend
+using rendPostFx_ScanningState = rend::PostFx_ScanningState;
 } // namespace RED4ext
 
 // clang-format on

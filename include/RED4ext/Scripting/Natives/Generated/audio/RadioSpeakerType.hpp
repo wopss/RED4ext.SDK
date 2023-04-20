@@ -15,6 +15,7 @@ enum class RadioSpeakerType : uint32_t
     PoliceDispatch = 2,
 };
 } // namespace audio
+using audioRadioSpeakerType = audio::RadioSpeakerType;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class LocaleId : uint8_t
     en_us = 2,
 };
 } // namespace scn::loc
+using scnlocLocaleId = scn::loc::LocaleId;
 } // namespace RED4ext
 
 // clang-format on

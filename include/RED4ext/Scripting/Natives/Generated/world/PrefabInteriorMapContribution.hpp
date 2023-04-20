@@ -15,6 +15,7 @@ enum class PrefabInteriorMapContribution : uint8_t
     Discard = 2,
 };
 } // namespace world
+using worldPrefabInteriorMapContribution = world::PrefabInteriorMapContribution;
 } // namespace RED4ext
 
 // clang-format on

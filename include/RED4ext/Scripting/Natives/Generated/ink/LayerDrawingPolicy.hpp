@@ -14,6 +14,7 @@ enum class LayerDrawingPolicy : uint32_t
     InParallel = 1,
 };
 } // namespace ink
+using inkLayerDrawingPolicy = ink::LayerDrawingPolicy;
 } // namespace RED4ext
 
 // clang-format on

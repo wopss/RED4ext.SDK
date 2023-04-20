@@ -14,6 +14,7 @@ enum class LightAttenuation : uint8_t
     LA_Linear = 1,
 };
 } // namespace rend
+using rendLightAttenuation = rend::LightAttenuation;
 } // namespace RED4ext
 
 // clang-format on

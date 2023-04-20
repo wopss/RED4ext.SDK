@@ -14,6 +14,7 @@ enum class EndNodeNsType : uint8_t
     NonTerminating = 1,
 };
 } // namespace scn
+using scnEndNodeNsType = scn::EndNodeNsType;
 } // namespace RED4ext
 
 // clang-format on

@@ -16,6 +16,7 @@ enum class RepellingType : uint8_t
     WaterImpulse = 3,
 };
 } // namespace ent
+using entRepellingType = ent::RepellingType;
 } // namespace RED4ext
 
 // clang-format on

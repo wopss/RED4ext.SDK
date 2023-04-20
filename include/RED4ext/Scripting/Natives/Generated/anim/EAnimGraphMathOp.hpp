@@ -21,6 +21,7 @@ enum class EAnimGraphMathOp : uint32_t
     AGMO_Abs = 8,
 };
 } // namespace anim
+using animEAnimGraphMathOp = anim::EAnimGraphMathOp;
 } // namespace RED4ext
 
 // clang-format on

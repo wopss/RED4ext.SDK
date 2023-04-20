@@ -14,6 +14,7 @@ enum class ChoiceListVisualizerType : uint32_t
     Dialog = 1,
 };
 } // namespace game::ui
+using gameuiChoiceListVisualizerType = game::ui::ChoiceListVisualizerType;
 } // namespace RED4ext
 
 // clang-format on

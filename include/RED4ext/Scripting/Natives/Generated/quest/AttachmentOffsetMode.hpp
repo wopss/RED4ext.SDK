@@ -14,6 +14,7 @@ enum class AttachmentOffsetMode : uint8_t
     UseCustomOffset = 1,
 };
 } // namespace quest
+using questAttachmentOffsetMode = quest::AttachmentOffsetMode;
 } // namespace RED4ext
 
 // clang-format on

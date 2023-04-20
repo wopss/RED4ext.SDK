@@ -21,6 +21,7 @@ enum class NPCStanceState : uint32_t
     Invalid = 8,
 };
 } // namespace game::data
+using gamedataNPCStanceState = game::data::NPCStanceState;
 } // namespace RED4ext
 
 // clang-format on

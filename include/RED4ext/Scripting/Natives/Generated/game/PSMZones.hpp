@@ -18,6 +18,7 @@ enum class PSMZones : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMZones = game::PSMZones;
 } // namespace RED4ext
 
 // clang-format on

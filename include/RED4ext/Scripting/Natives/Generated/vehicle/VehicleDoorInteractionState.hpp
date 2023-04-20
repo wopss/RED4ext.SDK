@@ -17,6 +17,7 @@ enum class VehicleDoorInteractionState : uint32_t
     Reserved = 4,
 };
 } // namespace vehicle
+using vehicleVehicleDoorInteractionState = vehicle::VehicleDoorInteractionState;
 using VehicleDoorInteractionState = vehicle::VehicleDoorInteractionState;
 } // namespace RED4ext
 

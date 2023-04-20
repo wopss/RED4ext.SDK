@@ -16,6 +16,7 @@ enum class Debug_ShapeType : uint8_t
     Cylinder = 3,
 };
 } // namespace ent
+using entDebug_ShapeType = ent::Debug_ShapeType;
 } // namespace RED4ext
 
 // clang-format on

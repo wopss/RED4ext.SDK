@@ -28,6 +28,7 @@ enum class AttackType : uint32_t
     Invalid = 15,
 };
 } // namespace game::data
+using gamedataAttackType = game::data::AttackType;
 } // namespace RED4ext
 
 // clang-format on

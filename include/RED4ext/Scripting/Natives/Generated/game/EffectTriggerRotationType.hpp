@@ -15,6 +15,7 @@ enum class EffectTriggerRotationType : uint32_t
     Continuous = 2,
 };
 } // namespace game
+using gameEffectTriggerRotationType = game::EffectTriggerRotationType;
 } // namespace RED4ext
 
 // clang-format on

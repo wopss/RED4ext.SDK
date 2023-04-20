@@ -15,6 +15,7 @@ enum class TextureType : uint8_t
     InvalidTexture = 2,
 };
 } // namespace ink
+using inkTextureType = ink::TextureType;
 } // namespace RED4ext
 
 // clang-format on

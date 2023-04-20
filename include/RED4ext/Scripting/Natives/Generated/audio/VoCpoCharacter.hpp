@@ -17,6 +17,7 @@ enum class VoCpoCharacter : uint32_t
     Netrunner = 4,
 };
 } // namespace audio
+using audioVoCpoCharacter = audio::VoCpoCharacter;
 } // namespace RED4ext
 
 // clang-format on

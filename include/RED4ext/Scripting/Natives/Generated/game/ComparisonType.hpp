@@ -18,6 +18,7 @@ enum class ComparisonType : uint32_t
     GREATER_OR_EQUAL = 5,
 };
 } // namespace game
+using gameComparisonType = game::ComparisonType;
 } // namespace RED4ext
 
 // clang-format on

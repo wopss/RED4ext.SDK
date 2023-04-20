@@ -15,6 +15,7 @@ enum class CameraPerspective : uint8_t
     TPPFar = 2,
 };
 } // namespace vehicle
+using vehicleCameraPerspective = vehicle::CameraPerspective;
 } // namespace RED4ext
 
 // clang-format on

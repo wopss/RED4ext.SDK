@@ -15,6 +15,7 @@ enum class CameraParallaxSpace : uint32_t
     Chest = 2,
 };
 } // namespace quest
+using questCameraParallaxSpace = quest::CameraParallaxSpace;
 } // namespace RED4ext
 
 // clang-format on

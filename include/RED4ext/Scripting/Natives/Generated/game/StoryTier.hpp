@@ -14,6 +14,7 @@ enum class StoryTier : uint8_t
     Cinematic = 1,
 };
 } // namespace game
+using gameStoryTier = game::StoryTier;
 } // namespace RED4ext
 
 // clang-format on

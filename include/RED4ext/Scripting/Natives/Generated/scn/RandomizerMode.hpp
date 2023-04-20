@@ -15,6 +15,7 @@ enum class RandomizerMode : uint8_t
     IgnoreAllUsed = 2,
 };
 } // namespace scn
+using scnRandomizerMode = scn::RandomizerMode;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class TemplateComponentResolveMode : uint8_t
     Suppress = 2,
 };
 } // namespace ent
+using entTemplateComponentResolveMode = ent::TemplateComponentResolveMode;
 } // namespace RED4ext
 
 // clang-format on

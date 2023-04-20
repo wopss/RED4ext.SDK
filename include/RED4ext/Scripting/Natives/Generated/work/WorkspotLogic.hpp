@@ -14,6 +14,7 @@ enum class WorkspotLogic : uint32_t
     Deny = 1,
 };
 } // namespace work
+using workWorkspotLogic = work::WorkspotLogic;
 } // namespace RED4ext
 
 // clang-format on

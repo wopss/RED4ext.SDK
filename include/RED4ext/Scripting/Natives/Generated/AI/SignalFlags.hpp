@@ -17,6 +17,7 @@ enum class SignalFlags : uint32_t
     AcceptsAdditives = 8,
 };
 } // namespace AI
+using AISignalFlags = AI::SignalFlags;
 } // namespace RED4ext
 
 // clang-format on

@@ -17,6 +17,7 @@ enum class CommandContextsType : uint32_t
     Aiming = 4,
 };
 } // namespace AI
+using AICommandContextsType = AI::CommandContextsType;
 } // namespace RED4ext
 
 // clang-format on

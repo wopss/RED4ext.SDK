@@ -14,6 +14,7 @@ enum class EOrientation : uint8_t
     Vertical = 1,
 };
 } // namespace ink
+using inkEOrientation = ink::EOrientation;
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,7 @@ enum class PhysicsJointMotion : uint8_t
     Free = 2,
 };
 } // namespace physics
+using physicsPhysicsJointMotion = physics::PhysicsJointMotion;
 } // namespace RED4ext
 
 // clang-format on

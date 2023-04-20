@@ -20,6 +20,7 @@ enum class PSMUpperBodyStates : uint32_t
     Any = 4294967295,
 };
 } // namespace game
+using gamePSMUpperBodyStates = game::PSMUpperBodyStates;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,6 +18,7 @@ enum class EAnimGraphCompareFunc : uint32_t
     AGCF_GreaterEqual = 5,
 };
 } // namespace anim
+using animEAnimGraphCompareFunc = anim::EAnimGraphCompareFunc;
 } // namespace RED4ext
 
 // clang-format on

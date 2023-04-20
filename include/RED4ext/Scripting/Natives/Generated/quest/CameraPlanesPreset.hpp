@@ -16,6 +16,7 @@ enum class CameraPlanesPreset : uint8_t
     Normal = 3,
 };
 } // namespace quest
+using questCameraPlanesPreset = quest::CameraPlanesPreset;
 } // namespace RED4ext
 
 // clang-format on

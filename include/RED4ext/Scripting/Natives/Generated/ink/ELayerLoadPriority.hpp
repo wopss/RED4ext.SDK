@@ -14,6 +14,7 @@ enum class ELayerLoadPriority : uint8_t
     High = 1,
 };
 } // namespace ink
+using inkELayerLoadPriority = ink::ELayerLoadPriority;
 } // namespace RED4ext
 
 // clang-format on

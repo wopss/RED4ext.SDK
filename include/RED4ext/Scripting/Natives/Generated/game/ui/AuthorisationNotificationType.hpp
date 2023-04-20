@@ -15,6 +15,7 @@ enum class AuthorisationNotificationType : uint32_t
     AccessGranted = 2,
 };
 } // namespace game::ui
+using gameuiAuthorisationNotificationType = game::ui::AuthorisationNotificationType;
 } // namespace RED4ext
 
 // clang-format on

@@ -29,6 +29,7 @@ enum class EventTag : uint8_t
     Standing_Event = 16,
 };
 } // namespace audio::breathing
+using audiobreathingEventTag = audio::breathing::EventTag;
 } // namespace RED4ext
 
 // clang-format on

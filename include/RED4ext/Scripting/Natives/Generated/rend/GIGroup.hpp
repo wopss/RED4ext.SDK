@@ -14,6 +14,7 @@ enum class GIGroup : uint8_t
     GI_Group1 = 1,
 };
 } // namespace rend
+using rendGIGroup = rend::GIGroup;
 } // namespace RED4ext
 
 // clang-format on

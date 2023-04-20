@@ -16,6 +16,7 @@ enum class TrafficLightColor : uint32_t
     INVALID = 3,
 };
 } // namespace world
+using worldTrafficLightColor = world::TrafficLightColor;
 } // namespace RED4ext
 
 // clang-format on

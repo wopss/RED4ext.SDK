@@ -16,6 +16,7 @@ enum class EQuestVehicleWindowState : uint32_t
     CloseAll = 3,
 };
 } // namespace vehicle
+using vehicleEQuestVehicleWindowState = vehicle::EQuestVehicleWindowState;
 using EQuestVehicleWindowState = vehicle::EQuestVehicleWindowState;
 } // namespace RED4ext
 

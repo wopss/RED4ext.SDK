@@ -15,6 +15,7 @@ enum class QuestType : uint8_t
     StreetStory = 2,
 };
 } // namespace world
+using worldQuestType = world::QuestType;
 } // namespace RED4ext
 
 // clang-format on

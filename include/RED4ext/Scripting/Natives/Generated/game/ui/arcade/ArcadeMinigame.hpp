@@ -13,6 +13,7 @@ enum class ArcadeMinigame : uint32_t
     RoachRace = 0,
 };
 } // namespace game::ui::arcade
+using gameuiarcadeArcadeMinigame = game::ui::arcade::ArcadeMinigame;
 } // namespace RED4ext
 
 // clang-format on

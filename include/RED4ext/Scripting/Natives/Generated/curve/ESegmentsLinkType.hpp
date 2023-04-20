@@ -15,6 +15,7 @@ enum class ESegmentsLinkType : uint8_t
     ESLT_SmoothSymmetric = 2,
 };
 } // namespace curve
+using curveESegmentsLinkType = curve::ESegmentsLinkType;
 } // namespace RED4ext
 
 // clang-format on

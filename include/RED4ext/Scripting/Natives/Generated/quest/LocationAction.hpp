@@ -14,6 +14,7 @@ enum class LocationAction : uint32_t
     Exited = 1,
 };
 } // namespace quest
+using questLocationAction = quest::LocationAction;
 } // namespace RED4ext
 
 // clang-format on
