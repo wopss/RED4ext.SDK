@@ -1070,7 +1070,7 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
     if (!parent.empty())
     {
-        o << " : "<< parentQualified;
+        o << " : " << parentQualified;
     }
     o << std::endl;
     o << "{" << std::endl;
