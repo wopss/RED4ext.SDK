@@ -24,7 +24,6 @@ struct WidgetLibraryResourceWrapper
 RED4EXT_ASSERT_SIZE(WidgetLibraryResourceWrapper, 0x8);
 } // namespace ink
 using inkWidgetLibraryResourceWrapper = ink::WidgetLibraryResourceWrapper;
-using inkWidgetLibraryResource = ink::WidgetLibraryResourceWrapper;
 } // namespace RED4ext
 
 // clang-format on
