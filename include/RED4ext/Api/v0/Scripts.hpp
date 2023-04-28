@@ -32,6 +32,6 @@ struct Scripts
      *     return true;
      * }
      */
-    bool (*Add)(PluginHandle aHandle, std::filesystem::path aPath);
+    bool (*Add)(PluginHandle aHandle, std::filesystem::path &aPath);
 };
 } // namespace RED4ext::v0
