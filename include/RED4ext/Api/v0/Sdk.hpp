@@ -4,6 +4,7 @@
 #include <RED4ext/Api/v0/GameStates.hpp>
 #include <RED4ext/Api/v0/Hooking.hpp>
 #include <RED4ext/Api/v0/Logger.hpp>
+#include <RED4ext/Api/v0/Scripts.hpp>
 
 namespace RED4ext::v0
 {
@@ -21,5 +22,6 @@ struct Sdk
     Logger* logger;
     Hooking* hooking;
     GameStates* gameStates;
+    Scripts* scripts;
 };
 } // namespace RED4ext::v0
