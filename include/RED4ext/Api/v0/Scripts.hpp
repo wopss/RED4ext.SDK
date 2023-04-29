@@ -18,13 +18,13 @@ struct Scripts
      * @example
      *
      * RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason, const
-     * RED4ext::RED4ext* aRED4ext)
+     * RED4ext::Sdk* aSdk)
      * {
      *     switch (aReason)
      *     {
      *     case RED4ext::EMainReason::Load:
      *     {
-     *         aRED4ext->scripts->Add(aHandle, "my_mod.reds");
+     *         aSdk->scripts->Add(aHandle, "my_mod.reds");
      *         break;
      *     }
      *     }
@@ -32,6 +32,6 @@ struct Scripts
      *     return true;
      * }
      */
-    bool (*Add)(PluginHandle aHandle, std::filesystem::path &aPath);
+    bool (*Add)(PluginHandle aHandle, const char *aPath);
 };
 } // namespace RED4ext::v0
