@@ -1,7 +1,8 @@
 #pragma once
 
-#include <filesystem>
 #include <RED4ext/Api/PluginHandle.hpp>
+#include <filesystem>
+
 
 namespace RED4ext::v0
 {
@@ -32,6 +33,6 @@ struct Scripts
      *     return true;
      * }
      */
-    bool (*Add)(PluginHandle aHandle, const char *aPath);
+    bool (*Add)(PluginHandle aHandle, const char* aPath);
 };
 } // namespace RED4ext::v0
