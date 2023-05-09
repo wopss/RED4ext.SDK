@@ -44,6 +44,11 @@ using GameStates = v0::GameStates;
  * @brief The latest game state type.
  */
 using GameState = v0::GameState;
+
+/**
+ * @brief The latest game state type.
+ */
+using Scripts = v0::Scripts;
 } // namespace RED4ext
 
 /*
