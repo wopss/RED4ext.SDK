@@ -3,7 +3,6 @@
 #include <RED4ext/Api/PluginHandle.hpp>
 #include <filesystem>
 
-
 namespace RED4ext::v0
 {
 struct Scripts
