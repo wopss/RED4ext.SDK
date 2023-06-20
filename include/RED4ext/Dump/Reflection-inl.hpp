@@ -297,7 +297,11 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     FixedTypeMapping fixedMapping = {{"ISerializable", "ISerializable"},
                                      {"IScriptable", "Scripting/IScriptable"},
                                      {"ScriptGameInstance", "Scripting/Natives/ScriptGameInstance"},
-                                     {"gameItemID", "NativeTypes"}};
+                                     {"gameItemID", "NativeTypes"},
+                                     {"CBaseEngine", "GameEngine"},
+                                     {"BaseGameEngine", "GameEngine"},
+                                     {"CGameEngine", "GameEngine"},
+                                     {"UpdateBucketEnum", "SystemUpdate"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
     std::regex invalidKeywords(INVALID_KEYWORDS);
@@ -351,6 +355,15 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
         for (auto& dep : builder.mDirect)
         {
+            // Don't emit files for the fixed mappings
+            auto depName = dep->GetName();
+
+            it = fixedMapping.find(depName);
+            if (it != fixedMapping.end())
+            {
+                continue;
+            }
+
             switch (dep->GetType())
             {
             case RED4ext::ERTTIType::Enum:

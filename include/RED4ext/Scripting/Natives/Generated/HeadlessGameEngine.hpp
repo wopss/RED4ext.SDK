@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/BaseGameEngine.hpp>
+#include <RED4ext/GameEngine.hpp>
 
 namespace RED4ext
 {

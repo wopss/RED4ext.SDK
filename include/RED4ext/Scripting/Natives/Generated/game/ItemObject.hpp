@@ -6,8 +6,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/UpdateBucketEnum.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/TimeDilatable.hpp>
+#include <RED4ext/SystemUpdate.hpp>
 
 namespace RED4ext
 {

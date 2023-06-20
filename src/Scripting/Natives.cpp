@@ -4,6 +4,7 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/GameEngine.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/ISerializable.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -152,12 +153,9 @@
 #include <RED4ext/Scripting/Natives/Generated/AI/influence/EBumpPolicy.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AbsolutePathSerializable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AdvertisementFormat.hpp>
-#include <RED4ext/Scripting/Natives/Generated/BaseGameEngine.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Box.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CActionScriptProxy.hpp>
-#include <RED4ext/Scripting/Natives/Generated/CBaseEngine.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CComStaticSkeletonDataEntry.hpp>
-#include <RED4ext/Scripting/Natives/Generated/CGameEngine.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CMaterialParameter.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CMesh.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CMeshMaterialEntry.hpp>
@@ -368,7 +366,6 @@
 #include <RED4ext/Scripting/Natives/Generated/Transform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/TriggerChannel.hpp>
 #include <RED4ext/Scripting/Natives/Generated/UIGameContext.hpp>
-#include <RED4ext/Scripting/Natives/Generated/UpdateBucketEnum.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
@@ -2943,3 +2940,4 @@
 #include <RED4ext/Scripting/Natives/Generated/world/ui/EntryVisibility.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/ui/IWidgetGameController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/ui/SceneWidgetProperties.hpp>
+#include <RED4ext/SystemUpdate.hpp>
