@@ -1837,6 +1837,8 @@
 #include <RED4ext/Scripting/Natives/Generated/gsm/State_Session.hpp>
 #include <RED4ext/Scripting/Natives/Generated/gsm/State_SessionStreamingAware.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/AbstractDataSourceWrapper.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentPurchaseCallback.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentStatusUpdateCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/BasePanelWidget.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/BasePanelWidgetReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/BaseScriptableDataSource.hpp>
@@ -1943,6 +1945,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/LanguageFont.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LanguageFontMapping.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LanguageId.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/LanguageSpecificImagData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/Layer.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LayerDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LayerDefinitionCollection.hpp>
@@ -2284,7 +2287,6 @@
 #include <RED4ext/Scripting/Natives/Generated/quest/IWorldStateSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ImpulseMagnitude.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/InjectLootOperationType.hpp>
-#include <RED4ext/Scripting/Natives/Generated/quest/InjectLoot_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/InjectLoot_NodeTypeParams_OperationData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/InputDevice.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/Int32ValueWrapper.hpp>

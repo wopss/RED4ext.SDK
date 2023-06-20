@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/UserData.hpp>
 
@@ -20,10 +21,11 @@ struct CursorInfo : ink::UserData
 
     uint8_t unk40[0x48 - 0x40]; // 40
     Vector2 pos; // 48
-    bool isVisible; // 50
-    uint8_t unk51[0x58 - 0x51]; // 51
+    CName cursorForDevice; // 50
+    bool isVisible; // 58
+    uint8_t unk59[0x60 - 0x59]; // 59
 };
-RED4EXT_ASSERT_SIZE(CursorInfo, 0x58);
+RED4EXT_ASSERT_SIZE(CursorInfo, 0x60);
 } // namespace ink
 using inkCursorInfo = ink::CursorInfo;
 } // namespace RED4ext

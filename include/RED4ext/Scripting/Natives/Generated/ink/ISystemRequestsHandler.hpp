@@ -7,6 +7,8 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentPurchaseCallback.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentStatusUpdateCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/CloudSaveUploadFinish.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/CloudSavesQueryStatusChange.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/DeleteRequestResult.hpp>
@@ -38,11 +40,13 @@ struct ISystemRequestsHandler : IScriptable
     ink::CloudSaveUploadFinish CloudSaveUploadFinish; // 1C8
     ink::DeleteRequestResult SaveDeleted; // 200
     ink::SaveTransferRequestUpdate SaveTransferUpdate; // 238
-    ink::UserIdResult UserIdResult; // 270
-    ink::UserIdResult UserChanged; // 2A8
-    ink::SystemServerRequesResult ServersSearchResult; // 2E0
+    ink::AdditionalContentPurchaseCallback AdditionalContentPurchaseResult; // 270
+    ink::AdditionalContentStatusUpdateCallback AdditionalContentStatusUpdateResult; // 2A8
+    ink::UserIdResult UserIdResult; // 2E0
+    ink::UserIdResult UserChanged; // 318
+    ink::SystemServerRequesResult ServersSearchResult; // 350
 };
-RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x318);
+RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x388);
 } // namespace ink
 using inkISystemRequestsHandler = ink::ISystemRequestsHandler;
 } // namespace RED4ext

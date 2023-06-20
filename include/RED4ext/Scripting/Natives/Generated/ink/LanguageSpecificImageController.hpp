@@ -9,7 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ink/LanguageId.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/LanguageSpecificImagData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetLogicController.hpp>
 
 namespace RED4ext
@@ -23,13 +23,11 @@ struct LanguageSpecificImageController : ink::WidgetLogicController
     static constexpr const char* NAME = "inkLanguageSpecificImageController";
     static constexpr const char* ALIAS = "LanguageSpecificImageController";
 
-    RaRef<ink::TextureAtlas> textureAtlasForLanguage; // 78
-    CName partNameForLanguage; // 80
-    DynArray<ink::LanguageId> languages; // 88
-    RaRef<ink::TextureAtlas> fallbackTextureAtlas; // 98
-    CName fallbackPartName; // A0
+    DynArray<ink::LanguageSpecificImagData> languages; // 78
+    RaRef<ink::TextureAtlas> fallbackTextureAtlas; // 88
+    CName fallbackPartName; // 90
 };
-RED4EXT_ASSERT_SIZE(LanguageSpecificImageController, 0xA8);
+RED4EXT_ASSERT_SIZE(LanguageSpecificImageController, 0x98);
 } // namespace ink
 using inkLanguageSpecificImageController = ink::LanguageSpecificImageController;
 using LanguageSpecificImageController = ink::LanguageSpecificImageController;
