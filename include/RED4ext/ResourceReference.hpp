@@ -166,6 +166,16 @@ struct ResourceAsyncReference
         return *this;
     }
 
+    bool operator==(const ResourceAsyncReference& aRhs) const noexcept
+    {
+        return path == aRhs.path;
+    }
+
+    bool operator!=(const ResourceAsyncReference& aRhs) const noexcept
+    {
+        return !(*this == aRhs);
+    }
+
     [[nodiscard]] ResourceReference<T> Resolve() const noexcept
     {
         return {path};
