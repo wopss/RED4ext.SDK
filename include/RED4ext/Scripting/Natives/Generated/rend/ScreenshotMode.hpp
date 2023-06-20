@@ -12,9 +12,10 @@ enum class ScreenshotMode : uint32_t
 {
     NONE = 0,
     NORMAL = 1,
-    LAYERED = 3,
-    HIGH_RESOLUTION = 4,
-    HIGH_RESOLUTION_LAYERED = 5,
+    NORMAL_MULTISAMPLE = 2,
+    LAYERED = 4,
+    HIGH_RESOLUTION = 5,
+    HIGH_RESOLUTION_LAYERED = 6,
 };
 } // namespace rend
 using rendScreenshotMode = rend::ScreenshotMode;

@@ -12,6 +12,7 @@ enum class InjectLootOperationType : uint32_t
 {
     Inject = 0,
     Remove = 1,
+    RemoveAll = 2,
 };
 } // namespace quest
 using questInjectLootOperationType = quest::InjectLootOperationType;
