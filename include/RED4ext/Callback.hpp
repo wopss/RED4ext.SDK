@@ -221,7 +221,7 @@ public:
     static_assert(InlineSize >= sizeof(void*), "Buffer size can't be less than pointer size");
 
     FlexCallback(R (*aFunc)(Args...))
-        : allocator(nullptr)
+        : allocator(0)
         , extendedSize(0)
     {
         using TargetType = Detail::UnboundFunctionTarget<R, Args...>;
@@ -233,7 +233,7 @@ public:
 
     template<typename C>
     FlexCallback(C* aContext, R (C::*aFunc)(Args...))
-        : allocator(nullptr)
+        : allocator(0)
         , extendedSize(0)
     {
         using TargetType = Detail::MemberFunctionTarget<C, R, Args...>;
@@ -246,7 +246,7 @@ public:
     template<typename L>
     requires Detail::IsClosure<L, R, Args...>
     FlexCallback(L&& aClosure)
-        : allocator(nullptr)
+        : allocator(0)
         , extendedSize(0)
     {
         using TargetType = Detail::ClosureTarget<L, R, Args...>;
@@ -311,7 +311,7 @@ public:
 
     uint8_t buffer[InlineSize];
     HandlerPtr handler;
-    Memory::IAllocator* allocator;
+    uint64_t allocator; // This is not a pointer to allocator, this is allocator instance that takes 8 bytes
     uint32_t extendedSize;
 
 protected:
@@ -344,17 +344,22 @@ protected:
         handler = nullptr;
     }
 
+    inline Memory::IAllocator* GetAllocator()
+    {
+        return reinterpret_cast<Memory::IAllocator*>(&allocator);
+    }
+
     void InitializeBuffer(uint32_t aSize)
     {
         if (aSize > InlineSize)
         {
             if (!allocator)
             {
-                allocator = AllocatorType::Get();
+                std::memcpy(&allocator, AllocatorType::Get(), sizeof(uint64_t));
             }
 
             auto bufferPtr = reinterpret_cast<void**>(buffer);
-            *bufferPtr = allocator->Alloc(aSize).memory;
+            *bufferPtr = reinterpret_cast<Memory::IAllocator*>(&allocator)->Alloc(aSize).memory;
 
             extendedSize = aSize;
             extendedSize |= ExtendedFlag;
@@ -365,7 +370,7 @@ protected:
         }
     }
 
-    void InitializeBuffer(uint32_t aSize, Memory::IAllocator* aAllocator)
+    void InitializeBuffer(uint32_t aSize, uint64_t aAllocator)
     {
         allocator = aAllocator;
 
@@ -406,7 +411,7 @@ protected:
     {
         if (IsExtendedMode())
         {
-            allocator->Free(GetBuffer());
+            reinterpret_cast<Memory::IAllocator*>(&allocator)->Free(GetBuffer());
             extendedSize = 0;
         }
     }
