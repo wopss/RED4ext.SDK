@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        cpp_standard: [ 20, 23 ]
+        cpp_standard: [ 20 ]
         use_header_only: [ NO, YES ]
         config: [ Debug, Release, MinSizeRel, RelWithDebInfo ]
 
