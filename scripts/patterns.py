@@ -184,7 +184,7 @@ def get_groups() -> List[Group]:
             Item(name='StaticFlatDataBuffer', pattern='48 89 1D ? ? ? ? 48 C1 E7 04', expected=1, index=0),
             Item(name='InitFlatValue_ExceptInt32', pattern='48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 41 56 41 57', expected=51, index=13),
             Item(name='FlatInt32ValueVftable', pattern='48 8D ? ? ? ? ? 0F 1F 84 00 00 00 00 00 48 8B 4D E7', expected=1, index=0),
-            Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 8D ? ? 48 89 06', expected=49, index=10),
+            Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 8D ? ? 48 89 06', expected=50, index=10),
             Item(name='CreateRecord', pattern='48 89 5C 24 08 ? 89 ? 24 18 57 48 83 EC 30 8B C2'),
         ]),
 
