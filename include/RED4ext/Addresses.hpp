@@ -25,7 +25,7 @@ constexpr uintptr_t CBaseFunction_Register = 0x140214EB0 - ImageBase; // 48 89 5
 constexpr uintptr_t CBaseRTTIType_sub_80 = 0x140202240 - ImageBase; // 40 53 55 57 41 55 41 56 48 83 EC 20 8B 41 70, expected: 1, index: 0
 constexpr uintptr_t CBaseRTTIType_sub_88 = 0x140208180 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B F9, expected: 25, index: 0
 constexpr uintptr_t CBaseRTTIType_sub_90 = 0x140207F70 - ImageBase; // 48 89 5C 24 08 48 89 74 24 10 57 48 81 EC ?, expected: 297, index: 1
-constexpr uintptr_t CBaseRTTIType_sub_98 = 0x141E32410 - ImageBase; // 40 53 55 57 48 83 EC 50 48 8B D9, expected: 2, index: 0
+constexpr uintptr_t CBaseRTTIType_sub_98 = 0x141E32540 - ImageBase; // 40 53 55 57 48 83 EC 50 48 8B D9, expected: 2, index: 0
 constexpr uintptr_t CBaseRTTIType_sub_A0 = 0x140207F40 - ImageBase; // 48 8B 02 4C 8D 05 ? ? ? ? 4C 8B CA 48 8B D1, expected: 1, index: 0
 #pragma endregion
 
@@ -68,7 +68,7 @@ constexpr uintptr_t CEnum_FromString = 0x140223C80 - ImageBase; // 48 89 5C 24 0
 #pragma endregion
 
 #pragma region CGameEngine
-constexpr uintptr_t CGameEngine = 0x144344210 - ImageBase; // 48 89 05 ? ? ? ? ? 8D ? 30 01 00 00, expected: 1, index: 0, offset: 3
+constexpr uintptr_t CGameEngine = 0x1443441D0 - ImageBase; // 48 89 05 ? ? ? ? ? 8D ? 30 01 00 00, expected: 1, index: 0, offset: 3
 #pragma endregion
 
 #pragma region CGlobalFunction
@@ -83,7 +83,7 @@ constexpr uintptr_t CNamePool_Get = 0x1401B3E40 - ImageBase; // 48 83 EC 38 48 8
 #pragma endregion
 
 #pragma region CRTTIRegistrator
-constexpr uintptr_t CRTTIRegistrator_RTTIAsyncId = 0x143ED8824 - ImageBase; // B8 01 00 00 00 F0 0F C1 05 ? ? ? ? FF C0 C3, expected: 1, index: 0, offset: 9
+constexpr uintptr_t CRTTIRegistrator_RTTIAsyncId = 0x143ED87E4 - ImageBase; // B8 01 00 00 00 F0 0F C1 05 ? ? ? ? FF C0 C3, expected: 1, index: 0, offset: 9
 constexpr uintptr_t CRTTIRegistrator_Add = 0x1401BA6E0 - ImageBase; // 48 89 5C 24 08 48 89 74 24 20 4C 89 44 24 18 48 89 54 24 10 57 48 83 EC 50 48 8B F1, expected: 1, index: 0
 #pragma endregion
 
@@ -131,22 +131,22 @@ constexpr uintptr_t ISerializable_sub_C0 = 0x1401BA230 - ImageBase; // 40 53 48 
 #pragma endregion
 
 #pragma region JobHandle
-constexpr uintptr_t JobHandle_ctor = 0x142C501B0 - ImageBase; // 40 53 48 83 EC 20 0F B7 02 48 8B D9 48 8B 0D ? ? ? ? 4D 8B C8 66 89 44 24 30 4C 8D 44 24 30, expected: 1, index: 0
-constexpr uintptr_t JobHandle_dtor = 0x142C501F0 - ImageBase; // 40 53 48 83 EC 20 48 8B 11 48 8B D9 48 85 D2 74 13 48 8B 0D ? ? ? ? E8 ? ? ? ?, expected: 1, index: 0
-constexpr uintptr_t JobHandle_Join = 0x142C50220 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 40 48 8B FA 48 8B D9 48 8B 12 48 8B 0D ? ? ? ? E8 ? ? ? ?, expected: 1, index: 0
+constexpr uintptr_t JobHandle_ctor = 0x142C50310 - ImageBase; // 40 53 48 83 EC 20 0F B7 02 48 8B D9 48 8B 0D ? ? ? ? 4D 8B C8 66 89 44 24 30 4C 8D 44 24 30, expected: 1, index: 0
+constexpr uintptr_t JobHandle_dtor = 0x142C50350 - ImageBase; // 40 53 48 83 EC 20 48 8B 11 48 8B D9 48 85 D2 74 13 48 8B 0D ? ? ? ? E8 ? ? ? ?, expected: 1, index: 0
+constexpr uintptr_t JobHandle_Join = 0x142C50380 - ImageBase; // 48 89 5C 24 08 57 48 83 EC 40 48 8B FA 48 8B D9 48 8B 12 48 8B 0D ? ? ? ? E8 ? ? ? ?, expected: 1, index: 0
 #pragma endregion
 
 #pragma region JobInternals
-constexpr uintptr_t JobInternals_SetLocalThreadParam = 0x142C51CD0 - ImageBase; // 8B 15 ? ? ? ? 65 48 8B 04 25 58 00 00 00 41 B8 ? ? ? ? 48 8B 04 D0 41 88 0C 00 C3, expected: 4, index: 2
-constexpr uintptr_t JobInternals_DispatchJob = 0x142C51B20 - ImageBase; // 4D 8B 08 4C 8B 02 48 8B D1 48 8B 0D ? ? ? ? E9 ? ? ? ?, expected: 2, index: 0
+constexpr uintptr_t JobInternals_SetLocalThreadParam = 0x142C51E30 - ImageBase; // 8B 15 ? ? ? ? 65 48 8B 04 25 58 00 00 00 41 B8 ? ? ? ? 48 8B 04 D0 41 88 0C 00 C3, expected: 4, index: 2
+constexpr uintptr_t JobInternals_DispatchJob = 0x142C51C80 - ImageBase; // 4D 8B 08 4C 8B 02 48 8B D1 48 8B 0D ? ? ? ? E9 ? ? ? ?, expected: 2, index: 0
 #pragma endregion
 
 #pragma region JobQueue
-constexpr uintptr_t JobQueue_ctor_FromGroup = 0x142C51CF0 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56 41 57 48 83 EC 20 0F B7 7A 30 4C 8B F1, expected: 1, index: 0
-constexpr uintptr_t JobQueue_ctor_FromParams = 0x142C51DD0 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 56 57 41 56 48 83 EC 20 48 8D 05 ? ? ? ? 49 8B D8 48 89 01, expected: 1, index: 0
-constexpr uintptr_t JobQueue_dtor = 0x142C51E90 - ImageBase; // 40 53 48 83 EC 20 80 79 30 00 48 8B D9 75 ? E8 ? ? ? ? 48 8D 4B 18 E8 ? ? ? ? 48 8D 4B 10, expected: 1, index: 0
-constexpr uintptr_t JobQueue_Capture = 0x142C51F40 - ImageBase; // 48 89 5C 24 18 57 48 83  EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 53 10 48 8B CF E8, expected: 1, index: 0
-constexpr uintptr_t JobQueue_SyncWait = 0x142C51EC0 - ImageBase; // 48 89 5C 24 18 57 48 83 EC 20 48 8B D9 48 83 C1 18 E8 ? ? ? ? 84 C0 75 ? 48 8D 4B 10, expected: 1, index: 0
+constexpr uintptr_t JobQueue_ctor_FromGroup = 0x142C51E50 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56 41 57 48 83 EC 20 0F B7 7A 30 4C 8B F1, expected: 1, index: 0
+constexpr uintptr_t JobQueue_ctor_FromParams = 0x142C51F30 - ImageBase; // 48 89 5C 24 10 48 89 6C 24 18 56 57 41 56 48 83 EC 20 48 8D 05 ? ? ? ? 49 8B D8 48 89 01, expected: 1, index: 0
+constexpr uintptr_t JobQueue_dtor = 0x142C51FF0 - ImageBase; // 40 53 48 83 EC 20 80 79 30 00 48 8B D9 75 ? E8 ? ? ? ? 48 8D 4B 18 E8 ? ? ? ? 48 8D 4B 10, expected: 1, index: 0
+constexpr uintptr_t JobQueue_Capture = 0x142C520A0 - ImageBase; // 48 89 5C 24 18 57 48 83  EC 20 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8D 53 10 48 8B CF E8, expected: 1, index: 0
+constexpr uintptr_t JobQueue_SyncWait = 0x142C52020 - ImageBase; // 48 89 5C 24 18 57 48 83 EC 20 48 8B D9 48 83 C1 18 E8 ? ? ? ? 84 C0 75 ? 48 8D 4B 10, expected: 1, index: 0
 #pragma endregion
 
 #pragma region Memory
@@ -165,11 +165,11 @@ constexpr uintptr_t OpcodeHandlers_Get = 0x1401CF63D - ImageBase; // 4C 8D 15 ? 
 #pragma endregion
 
 #pragma region ResourceDepot
-constexpr uintptr_t ResourceDepot = 0x143F68CE8 - ImageBase; // 48 89 0D ? ? ? ? C3, expected: 26, index: 2, offset: 3
+constexpr uintptr_t ResourceDepot = 0x143F68CA8 - ImageBase; // 48 89 0D ? ? ? ? C3, expected: 26, index: 2, offset: 3
 #pragma endregion
 
 #pragma region ResourceLoader
-constexpr uintptr_t ResourceLoader = 0x143ED8850 - ImageBase; // 48 8B 87 ? ? ? ? 48 8B 5C 24 ? 48 89 05 ? ? ? ? 48 83 C4 20 5F C3, expected: 1, index: 0, offset: 15
+constexpr uintptr_t ResourceLoader = 0x143ED8810 - ImageBase; // 48 8B 87 ? ? ? ? 48 8B 5C 24 ? 48 89 05 ? ? ? ? 48 83 C4 20 5F C3, expected: 1, index: 0, offset: 15
 constexpr uintptr_t ResourceLoader_FindToken = 0x14020BE80 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B F1 49 8B D8 48 83 C1 40 48 8B EA E8, expected: 1, index: 0
 constexpr uintptr_t ResourceLoader_LoadAsync = 0x14020C750 - ImageBase; // 4C 8B DC 49 89 5B 10 49 89 6B 18 49 89 73 20 57 48 83 EC 50 48 8B 69 48 33 C0 49 C7 43 D8 00 00 00 00, expected: 1, index: 0
 #pragma endregion
@@ -184,12 +184,12 @@ constexpr uintptr_t ResourceReference_Reset = 0x140256170 - ImageBase; // 48 83 
 constexpr uintptr_t ResourceToken_dtor = 0x140254780 - ImageBase; // 48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74, expected: 1, index: 0
 constexpr uintptr_t ResourceToken_Fetch = 0x140255BA0 - ImageBase; // 40 53 48 83 EC 40 8B 41 58 48 8B D9 0F 29 74 24 30 0F 29 7C 24 20 85 C0 74 0A, expected: 1, index: 0
 constexpr uintptr_t ResourceToken_OnLoaded = 0x140255290 - ImageBase; // 40 55 53 56 57 41 56 48 8D 6C 24 C9 48 81 EC F0 00 00 00 48 8B 41 08 0F 57 C0 49 8B F8 4C 8B F2, expected: 1, index: 0
-constexpr uintptr_t ResourceToken_CancelUnk38 = 0x142C02DC0 - ImageBase; // 40 53 48 83 EC 20 48 8B D9 B9 08 00 00 00 E8, expected: 1, index: 0
+constexpr uintptr_t ResourceToken_CancelUnk38 = 0x142C02F20 - ImageBase; // 40 53 48 83 EC 20 48 8B D9 B9 08 00 00 00 E8, expected: 1, index: 0
 constexpr uintptr_t ResourceToken_DestructUnk38 = 0x1401BF810 - ImageBase; // 40 53 48 83 EC 20 48 8B D9 48 8B 49 08 48 85 C9 74 ? B8 FF FF FF FF F0 0F C1 01 83 F8 01 75, expected: 73, index: 1
 #pragma endregion
 
 #pragma region Streams
-constexpr uintptr_t Streams_MemoryStream_ctor = 0x142C2F0D0 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
+constexpr uintptr_t Streams_MemoryStream_ctor = 0x142C2F230 - ImageBase; // 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B DA 49 8B E9, expected: 3, index: 1
 #pragma endregion
 
 #pragma region TTypedClass
