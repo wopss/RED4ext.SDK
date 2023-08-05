@@ -4,6 +4,16 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/gameAttachmentSlotData.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(AttachmentSlotData, 0x90);
+using gameAttachmentSlotData = game::AttachmentSlotData;
+using AttachmentSlotData = game::AttachmentSlotData;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
@@ -34,5 +44,6 @@ RED4EXT_ASSERT_SIZE(AttachmentSlotData, 0x90);
 using gameAttachmentSlotData = game::AttachmentSlotData;
 using AttachmentSlotData = game::AttachmentSlotData;
 } // namespace RED4ext
+*/
 
 // clang-format on
