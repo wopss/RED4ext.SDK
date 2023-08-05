@@ -6,10 +6,10 @@
 
 namespace RED4ext
 {
-namespace game { struct ItemObject; }
-
 namespace game
 {
+struct ItemObject;
+
 struct AttachmentSlotData
 {
     static constexpr const char* NAME = "gameAttachmentSlotData";
