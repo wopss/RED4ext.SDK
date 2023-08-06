@@ -109,6 +109,10 @@ struct ItemID
     uint16_t uniqueCounter; // 0C
     uint8_t structure;      // 0E -- gamedataItemStructure
     uint8_t flags;          // 0F -- gameEItemIDFlag
+
+    bool IsValid() const noexcept;
+
+    operator bool() const noexcept;
 };
 RED4EXT_ASSERT_SIZE(ItemID, 0x10);
 

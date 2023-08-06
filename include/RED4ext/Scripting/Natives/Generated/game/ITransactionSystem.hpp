@@ -4,6 +4,16 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/gameITransactionSystem.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(game::ITransactionSystem, 0x48);
+using gameITransactionSystem = game::ITransactionSystem;
+using ITransactionSystem = game::ITransactionSystem;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
@@ -23,5 +33,6 @@ RED4EXT_ASSERT_SIZE(ITransactionSystem, 0x48);
 using gameITransactionSystem = game::ITransactionSystem;
 using ITransactionSystem = game::ITransactionSystem;
 } // namespace RED4ext
+*/
 
 // clang-format on

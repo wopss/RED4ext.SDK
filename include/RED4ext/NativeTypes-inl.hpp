@@ -90,6 +90,16 @@ RED4EXT_INLINE bool RED4ext::TweakDBID::operator!=(const TweakDBID& aDBID) const
     return !(aDBID == *this);
 }
 
+RED4EXT_INLINE bool RED4ext::ItemID::IsValid() const noexcept
+{
+    return tdbid.IsValid() && rngSeed;
+}
+
+RED4EXT_INLINE RED4ext::ItemID::operator bool() const noexcept
+{
+    return IsValid();
+}
+
 RED4EXT_INLINE RED4ext::gamedataLocKeyWrapper::gamedataLocKeyWrapper() noexcept
     : primaryKey(0)
 {
