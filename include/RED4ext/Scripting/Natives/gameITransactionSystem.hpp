@@ -2,6 +2,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/AttachmentSlotData.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/IAttachmentSlotsListener.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ItemObject.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/Object.hpp>
@@ -22,7 +23,7 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_1B8() = 0;                                                                                  // 1B8
     virtual void sub_1C0() = 0;                                                                                  // 1C0
     virtual CName* GetItemAppearance(CName& aAppearance, IScriptable* aOwner, ItemID& aItemID) = 0;              // 1C8
-    virtual void sub_1D0() = 0;                                                                                  // 1D0
+    virtual void ResetItemAppearance(IScriptable* aOwner, ItemID& aItemID) = 0;                                  // 1D0
     virtual void sub_1D8() = 0;                                                                                  // 1D8
     virtual void sub_1E0() = 0;                                                                                  // 1E0
     virtual void sub_1E8() = 0;                                                                                  // 1E8
@@ -90,9 +91,9 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_3D8() = 0;                                                                                  // 3D8
     virtual void sub_3E0() = 0;                                                                                  // 3E0
     virtual void sub_3E8() = 0;                                                                                  // 3E8
-    virtual bool GetItemInSlot(IScriptable* aOwner, TweakDBID aSlotID, Handle<IScriptable>& aItem) = 0;          // 3F0
+    virtual bool GetItemInSlot(IScriptable* aOwner, TweakDBID aSlotID, const Handle<IScriptable>& aItem) = 0;    // 3F0
     virtual void sub_3F8() = 0;                                                                                  // 3F8
-    virtual void sub_400() = 0;                                                                                  // 400
+    virtual void GetSlotDataList(IScriptable* aOwner, DynArray<AttachmentSlotData>& aList) = 0;                  // 400
     virtual void sub_408() = 0;                                                                                  // 408
     virtual void sub_410() = 0;                                                                                  // 410
     virtual AttachmentSlotData* FindSlotData(IScriptable* aOwner, AttachmentSlotDataPredicate&& aPredicate) = 0; // 418
@@ -104,16 +105,16 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_448() = 0;                                                                                  // 448
     virtual void sub_450() = 0;                                                                                  // 450
     virtual void sub_458() = 0;                                                                                  // 458
-    virtual void sub_460() = 0;                                                                                  // 460
-    virtual void sub_468() = 0;                                                                                  // 468
+    virtual void RegisterSlotListener(IScriptable* aOwner, Handle<IAttachmentSlotsListener> aListener) = 0;      // 460
+    virtual void UnregisterSlotListener(IScriptable* aOwner, Handle<IAttachmentSlotsListener> aListener) = 0;    // 468
     virtual void sub_470() = 0;                                                                                  // 470
     virtual void sub_478() = 0;                                                                                  // 478
     virtual void sub_480() = 0;                                                                                  // 480
     virtual void sub_488() = 0;                                                                                  // 488
     virtual void sub_490() = 0;                                                                                  // 490
     virtual void sub_498() = 0;                                                                                  // 498
-    virtual bool MatchVisualTagByItemID(ItemID& aItemID, Handle<IScriptable>& aOwner, CName aTag) = 0;           // 4A0
-    virtual bool MatchVisualTag(Handle<IScriptable>& aItem, CName aTag, bool aUseDefaultAppearance) = 0;         // 4A8
+    virtual bool MatchVisualTagByItemID(ItemID& aItemID, const Handle<IScriptable>& aOwner, CName aTag) = 0;     // 4A0
+    virtual bool MatchVisualTag(const Handle<IScriptable>& aItem, CName aTag, bool aUseDefaultAppearance) = 0;   // 4A8
     virtual void sub_4B0() = 0;                                                                                  // 4B0
     virtual void sub_4B8() = 0;                                                                                  // 4B8
 };
