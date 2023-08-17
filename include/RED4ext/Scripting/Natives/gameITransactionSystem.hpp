@@ -22,8 +22,8 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_1B0() = 0;                                                                                  // 1B0
     virtual void sub_1B8() = 0;                                                                                  // 1B8
     virtual void sub_1C0() = 0;                                                                                  // 1C0
-    virtual CName* GetItemAppearance(CName& aAppearance, IScriptable* aOwner, ItemID& aItemID) = 0;              // 1C8
-    virtual void ResetItemAppearance(IScriptable* aOwner, ItemID& aItemID) = 0;                                  // 1D0
+    virtual CName* GetItemAppearance(CName& aAppearance, IScriptable* aOwner, const ItemID& aItemID) = 0;        // 1C8
+    virtual void ResetItemAppearance(IScriptable* aOwner, const ItemID& aItemID) = 0;                            // 1D0
     virtual void sub_1D8() = 0;                                                                                  // 1D8
     virtual void sub_1E0() = 0;                                                                                  // 1E0
     virtual void sub_1E8() = 0;                                                                                  // 1E8
@@ -113,10 +113,11 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_488() = 0;                                                                                  // 488
     virtual void sub_490() = 0;                                                                                  // 490
     virtual void sub_498() = 0;                                                                                  // 498
-    virtual bool MatchVisualTagByItemID(ItemID& aItemID, const Handle<IScriptable>& aOwner, CName aTag) = 0;     // 4A0
-    virtual bool MatchVisualTag(const Handle<IScriptable>& aItem, CName aTag, bool aUseDefaultAppearance) = 0;   // 4A8
-    virtual void sub_4B0() = 0;                                                                                  // 4B0
-    virtual void sub_4B8() = 0;                                                                                  // 4B8
+    virtual bool MatchVisualTagByItemID(const ItemID& aItemID, const Handle<IScriptable>& aOwner,
+                                        CName aTag) = 0;                                                       // 4A0
+    virtual bool MatchVisualTag(const Handle<IScriptable>& aItem, CName aTag, bool aUseDefaultAppearance) = 0; // 4A8
+    virtual void sub_4B0() = 0;                                                                                // 4B0
+    virtual void sub_4B8() = 0;                                                                                // 4B8
 };
 RED4EXT_ASSERT_SIZE(ITransactionSystem, 0x48);
 } // namespace game
