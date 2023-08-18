@@ -211,33 +211,23 @@ struct HashMap
 
     bool Remove(const K& aKey)
     {
-        // This function is guessed based on how the other functions are implemented
-        // Couldn't easily find it in the game -Sombra
-
         if (size == 0)
             return false;
 
         uint32_t hashedKey = Hasher{}(aKey);
-        uint32_t idx = indexTable[hashedKey % capacity];
-        while (idx != INVALID_INDEX)
+        uint32_t* idx = &indexTable[hashedKey % capacity];
+        while (*idx != INVALID_INDEX)
         {
-            Node* prevNode = nullptr;
-            Node* node = &nodeList.nodes[idx];
+            Node* node = &nodeList.nodes[*idx];
             if (node->hashedKey == hashedKey && node->key == aKey)
             {
-                if (prevNode == nullptr)
-                    indexTable[hashedKey % capacity] = node->next;
-                else
-                    prevNode->next = node->next;
-
-                node->next = nodeList.nextIdx;
-                nodeList.nextIdx = static_cast<uint32_t>(node - nodeList.nodes);
+                *idx = node->next;
                 node->~Node();
+                nodeList.nextIdx = static_cast<uint32_t>(node - nodeList.nodes);
                 --size;
                 return true;
             }
-            prevNode = node;
-            idx = node->next;
+            idx = &node->next;
         }
 
         return false;
