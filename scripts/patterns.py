@@ -207,7 +207,7 @@ def get_groups() -> List[Group]:
         Group(name='ResourceToken', functions=[
             Item(name='dtor', pattern='48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74'),
             Item(name='Fetch', pattern='40 53 48 83  EC 50 48 8B D9 E8 ? ? ? ? 84 C0 74 0A 48 8D 43 28'),
-            Item(name='OnLoaded', pattern='48 89 5C 24 18 48 89 74 24 20 55 57  41 56 48 8B EC 48 83 EC 60 48 8D 79 18 48 8B F1'), # different call than previous version
+            Item(name='OnLoaded', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 55 48 8D 68 ? 48 81 EC ? ? ? ?', expected=680, index=159),
             Item(name='CancelUnk38', pattern='F6 05 5D ? ? ? ? 75 07 48 83 79 68 FF 75 01 C3'),
             Item(name='DestructUnk38', pattern='40 53 48 83 EC 30 48 8B D9 E8 ? ? ? ? 84 C0 75 ? 48 83 C4 30 5B C3', expected=194, index=27)
         ]),
