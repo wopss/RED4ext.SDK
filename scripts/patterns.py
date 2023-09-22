@@ -29,68 +29,70 @@ def get_groups() -> List[Group]:
     return [
         Group(name='CBaseFunction', functions=[
             Item(name='ExecuteScripted', pattern='40 55 48 81 EC ? ? ? ? 48 8D 6C 24 ? 8B 81 ? ? ? ?', expected=1, index=0),
-            Item(name='ExecuteNative', pattern='48 89 5C 24 ? 57 48 81 EC ? ? ? ? 48 8B 02', expected=10, index=1),
-            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6', expected=1, index=0),
-            Item(name='Register', pattern='48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0 44 8B 4C 24 58 48 8B DA 41 83 C9 01', expected=1, index=0)
+            Item(name='ExecuteNative', pattern='48 89 5C 24 ? 48 89 7C 24 ? 55 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ?', expected=66, index=44),
+            Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6', expected=1, index=0)
+        ],
+        pointers=[
+            Item(name='Handlers', pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', expected=2, index=1, offset=3) # Not really related to CBaseFunction, but I'm too tired for this to move it.
         ]),
 
         Group(name='CBaseRTTIType', functions=[
-            Item(name='sub_80', pattern='40 53 55 57 41 55 41 56 48 83 EC 20 8B 41 70', expected=1, index=0),
-            Item(name='sub_88', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B F9', expected=25, index=0),
-            Item(name='sub_90', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 81 EC ?', expected=297, index=1),
-            Item(name='sub_98', pattern='40 53 55 57 48 83 EC 50 48 8B D9', expected=2, index=0),
-            Item(name='sub_A0', pattern='48 8B 02 4C 8D 05 ? ? ? ? 4C 8B CA 48 8B D1', expected=1, index=0)
+            Item(name='sub_80', pattern='48 8B C4 48 89 58 ? 57 48 83 EC ? 33 DB 4D 8B C8', expected=1, index=0),
+            Item(name='sub_88', pattern='48 8B C4 48 89 58 ? 48 89 70 10 57 48 83 EC ? 33 DB', expected=4, index=2),
+            Item(name='sub_90', pattern='48 89 5C 24 ? 48 89 7C 24 ? 55 48 8B EC 48 83 EC ? 41 F7 41 ? ? ? ? ?', expected=13, index=1),
+            Item(name='sub_98', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 41 F7 41 ? ? ? ? ?', expected=1, index=0),
+            Item(name='sub_A0', pattern='48 8B 02 4C 8D 05 ? ? ? ? 4C 8B CA', expected=1, index=0)
         ]),
 
         Group(name='CClass', functions=[
-            Item(name='Unserialize', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 49 8B F9', expected=2, index=0),
-            Item(name='ToString', pattern='48 8B C4 55 48 8D 68 ? 48 81 EC ? ? ? ?', expected=69, index=1),
-            Item(name='sub_80', pattern='40 53 55 57 41 55 41 56', expected=15, index=0),
-            Item(name='sub_88', pattern='48 89 5C 24 08 48 89 6C 24 18 56 57 41 56', expected=208, index=8),
-            Item(name='sub_90', pattern='48 89 5C 24 10 55 57 41 56 48 81 EC 80 00 00 00', expected=3, index=0),
-            Item(name='sub_98', pattern='48 89 5C 24 10 55 57 41 56 48 81 EC 80 00 00 00', expected=3, index=1),
-            Item(name='sub_A0', pattern='48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 20', expected=104, index=0),
-            Item(name='sub_B0', pattern='48 89 5C 24 ? 55 57 41 57 48 83 EC ?', expected=10, index=0),
-            Item(name='sub_C0', pattern='48 83 EC ? 48 89 5C 24 78 48 89 7C 24 60', expected=1, index=0),
-            Item(name='GetMaxAlignment', pattern='48 89 5C 24 10 57 48 83 EC 30 F6 41 70 0C 48 8B F9', expected=1, index=0),
-            Item(name='sub_D0', pattern='48 89 4C 24 08 53 56 48 83 EC 58', expected=1, index=0),
+            Item(name='Unserialize', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 4C 8B 15 ? ? ? ?', expected=1, index=0),
+            Item(name='ToString', pattern='48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8D 6C 24 ? 48 81 EC ? ? ? ?', expected=341, index=104),
+            Item(name='sub_80', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ?', expected=985, index=513),
+            Item(name='sub_88', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B 02', expected=65, index=34),
+            Item(name='sub_90', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?', expected=3, index=1),
+            Item(name='sub_98', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?', expected=3, index=2),
+            Item(name='sub_A0', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC', expected=537, index=354),
+            Item(name='sub_B0', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B 05 ? ? ? ?', expected=1, index=0),
+            Item(name='sub_C0', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?', expected=58, index=11),
+            Item(name='GetMaxAlignment', pattern='48 89 5C 24 ? 57 48 83 EC ? 8B 59 ?', expected=125, index=18),
+            Item(name='sub_D0', pattern='4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56', expected=34, index=26),
 
-            Item(name='CreateInstance', pattern='40 56 41 56 48 83 EC ? 41 0F B6 F0', expected=1, index=0),
-            Item(name='GetProperty', pattern='48 89 5C 24 18 56 48 83 EC 20 83 B9 F0 00 00 00 00', expected=1, index=0),
-            Item(name='GetProperties', pattern='48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 30 4C 8B F1 48 8B FA', expected=1, index=0),
-            Item(name='ClearScriptedData', pattern='48 89 5C 24 18 56 57 41 57 48 83 EC 40 80 A1 C9 02 00 00 EF', expected=1, index=0)
+            Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?', expected=422, index=7),
+            Item(name='GetProperty', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA', expected=4, index=0),
+            Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=30, index=6),
+            Item(name='ClearScriptedData', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ?', expected=115, index=35)
         ]),
 
         Group(name='TTypedClass', functions=[
-            Item(name='IsEqual', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 54 41 56 41 57', expected=425, index=5)
+            Item(name='IsEqual', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56', expected=892, index=27)
         ]),
 
         Group(name='CEnum', functions=[
-            Item(name='Unserialize', pattern='48 89 5C 24 08 48 89 74 24 18 57 48 83 EC ? 8B 42 ?', expected=1, index=0),
-            Item(name='ToString', pattern='40 ? 48 83 EC ? 44 0F B6 49 20 33 C0', expected=1, index=0),
-            Item(name='FromString', pattern='48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 48 8B F9 49 8B D8', expected=1, index=0)
+            Item(name='Unserialize', pattern='48 89 5C 24 ? 48 89 7C 24 ? 55 48 8B EC 48 83 EC ? F6 42 ? ?', expected=4, index=1),
+            Item(name='ToString', pattern='48 8B C4 53 48 83 EC ? 48 83 60 ? 00 49 8B D8 4C 8D 40 ?', expected=1, index=0),
+            Item(name='FromString', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B F2 48 8B F9', expected=188, index=40)
         ]),
 
         Group(name='CBitfield', functions=[
-            Item(name='Unserialize', pattern='48 89 5C 24 08 48 89 6C 24 18 56 57 41 55', expected=2, index=0),
-            Item(name='ToString', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 30 0F B6 41 20', expected=1, index=0),
-            Item(name='FromString', pattern='48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 40', expected=77, index=3)
+            Item(name='Unserialize', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? F6 42 ? 02', expected=1, index=0),
+            Item(name='ToString', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 56 57 41 56 48 83 EC ? 48 83 60 ? 00', expected=5, index=4),
+            Item(name='FromString', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 70 ? 55 48 8B EC 48 83 EC ? F2 41 0F 10 00', expected=2, index=0)
         ]),
 
         Group(name='CClassFunction', functions=[
-            Item(name='ctor', pattern='48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0', expected=3, index=1)
+            Item(name='ctor', pattern='40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?', expected=2, index=1)
         ]),
 
         Group(name='CClassStaticFunction', functions=[
-            Item(name='ctor', pattern='48 89 5C 24 08 57 48 83 EC 20 49 8B C1 4D 8B D0', expected=3)
-        ]),
-
-        Group(name='CGameEngine', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? ? 8D ? 30 01 00 00', offset=3)
+            Item(name='ctor', pattern='40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?', expected=2, index=0)
         ]),
 
         Group(name='CGlobalFunction', functions=[
-            Item(name='ctor', pattern='48 89 5C 24 08 57 48 83 EC 20 49 8B D9', expected=6)
+            Item(name='ctor', pattern='48 83 EC ? 4D 8B D1 41 B9 ? ? ? ? E8 ? ? ? ?', expected=1, index=0)
+        ]),
+
+        Group(name='CGameEngine', pointers=[
+            Item(pattern='48 89 05 ? ? ? ? 48 8B D8 48 8B 10 FF 92 ? ? ? ?', offset=3)
         ]),
 
         Group(name='CNamePool', functions=[
