@@ -173,6 +173,8 @@ struct CClass : CBaseRTTIType
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aShortName) const;
+
+    void InitializeProperties(ScriptInstance aInstance);
     void GetProperties(DynArray<CProperty*>& aProps);
 
     void RegisterFunction(CClassFunction* aFunc);

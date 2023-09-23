@@ -136,10 +136,10 @@ struct ResourceLoader
     template<typename T = CResource>
     SharedPtr<ResourceToken<T>> FindToken(ResourcePath aPath)
     {
-        using FindToken_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>*, ResourcePath);
-        RelocFunc<FindToken_t> func(Addresses::ResourceLoader_FindToken);
+        std::shared_lock<SharedMutex> _;
 
-        SharedPtr<ResourceToken<T>> token;
+        using FindToken_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>*, ResourcePath);
+        RelocFunc<FindToken_t> func(Addresses::ResourceLoader_FindTokenFast);
         func(this, &token, aPath);
 
         return token;

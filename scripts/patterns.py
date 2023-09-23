@@ -60,7 +60,9 @@ def get_groups() -> List[Group]:
             Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?', expected=422, index=7),
             Item(name='GetProperty', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA', expected=4, index=0),
             Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=30, index=6),
-            Item(name='ClearScriptedData', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ?', expected=115, index=35)
+
+            Item(name='InitializeProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?', expected=1, index=0),
+            Item(name='AssignDefaultValuesToProperties', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? 48 8B F9 48 8B EA', expected=2, index=0)
         ]),
 
         Group(name='TTypedClass', functions=[
@@ -113,8 +115,8 @@ def get_groups() -> List[Group]:
             Item(name='Get', pattern='48 83 EC ? 65 48 8B 04 25 ? ? ? ? BA ? ? ? ? 48 8B 08 8B 04 0A 39 05 ? ? ? ? 0F 8F ? ? ? ?', expected=5, index=1)
         ]),
 
-        Group(name='CStack', functions=[
-            Item(name='ctor', pattern='', expected=3, index=1) # TODO: inlined, vtbl at 1429DA7E8
+        Group(name='CStack', pointers=[
+            Item(name='vtbl', pattern='48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 45 ? 48 89 45 ? 66 0F 7F 45 ?', offset=3, expected=1, index=0)
         ]),
 
         Group(name='CString', functions=[
@@ -143,18 +145,16 @@ def get_groups() -> List[Group]:
 
         Group(name='IScriptable', functions=[
             Item(name='sub_D8', pattern='40 53 48 83 EC ? 48 8B 01 49 8B D8 FF 50 08', expected=1, index=0),
-            Item(name='GetValueHolder', pattern='', expected=2, index=1), # TODO: inlined at 14014E4B9
             Item(name='DestructValueHolder', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 83 79 ? ?', expected=3, index=0)
         ]),
 
         Group(name='JobHandle', functions=[
-            Item(name='ctor', pattern=''), # TODO: inlined at 14089F1A5 or in 140D32208 (a1 + 128)?
+            Item(name='ctor', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 41 54 48 83 EC ?', expected=1, index=0),
             Item(name='dtor', pattern='40 53 48 83 EC ? 48 8B 11 48 8B D9 48 85 D2', expected=6, index=0),
             Item(name='Join', pattern='48 83 EC ? 48 8B 02 4C 8B C2 8B 40 ?', expected=1, index=0)
         ]),
 
         Group(name='JobInternals', functions=[
-            Item(name='SetLocalThreadParam', pattern='', expected=4, index=2), # TODO: inlined at 140D1D9AC
             Item(name='DispatchJob', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54', expected=2, index=0)
         ]),
 
@@ -166,8 +166,10 @@ def get_groups() -> List[Group]:
             Item(name='SyncWait', pattern='48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8B EC 48 83 EC ? 48 8D 79 ? 48 8B F1', expected=1, index=0)
         ]),
 
-        Group(name='Memory', functions=[
-            Item(name='Vault::Get', pattern='', expected=1372, index=0), # TODO: inlined at 1432FE540
+        Group(name='Memory', pointers=[
+            Item(name='Vault', pattern='C6 04 0A 01 48 8D 0D ? ? ? ? 8B 50 ? 48 8B C1', offset=7, expected=2, index=0),
+        ],
+        functions=[
             Item(name='Vault::Alloc', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56 41 57', expected=892, index=5),
             Item(name='Vault::AllocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1038, index=8),
             Item(name='Vault::Realloc', pattern='40 53 48 83 EC ? 4D 8B D8 48 8B DA 4C 8B D1', expected=1, index=0),
@@ -194,7 +196,7 @@ def get_groups() -> List[Group]:
             Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=0)
         ],
         functions=[
-            Item(name='FindToken', pattern=''), # TODO: Inlined at 14066EA7E
+            Item(name='FindTokenFast', pattern='48 8B C4 4C 89 40 ? 53 48 83 EC ? 48 8B DA 4C 8D 40 ?', expected=2, index=0),
             Item(name='LoadAsync', pattern='48 89 5C 24 ? 55 48 8B EC 48 83 EC ? 83 4D E8 ? 33 C0', expected=1, index=0)
         ]),
 
@@ -205,9 +207,9 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='ResourceToken', functions=[
-            Item(name='dtor', pattern='48 89 5C 24 10 57 48 83 EC 20 8B 41 58 48 8B D9 85 C0 74'),
+            Item(name='dtor', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B D9 E8 ? ? ? ? 84 C0 74 36', expected=1, index=0),
             Item(name='Fetch', pattern='40 53 48 83  EC 50 48 8B D9 E8 ? ? ? ? 84 C0 74 0A 48 8D 43 28'),
-            Item(name='OnLoaded', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 55 48 8D 68 ? 48 81 EC ? ? ? ?', expected=680, index=159),
+            Item(name='OnLoaded', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 55 48 8D 68 ? 48 81 EC ? ? ? ? 48 8B F2 48 8B D9 48 8B D1', expected=2, index=0),
             Item(name='CancelUnk38', pattern='F6 05 5D ? ? ? ? 75 07 48 83 79 68 FF 75 01 C3'),
             Item(name='DestructUnk38', pattern='40 53 48 83 EC 30 48 8B D9 E8 ? ? ? ? 84 C0 75 ? 48 83 C4 30 5B C3', expected=194, index=27)
         ]),

@@ -51,8 +51,8 @@ struct IScriptable : ISerializable
         return ExecuteFunctionImpl<void>(aFunc, nullptr, std::forward<Args>(aArgs)...);
     }
 
-    CClass* unk30;     // 30
-    void* valueHolder; // 38
+    CClass* nativeType; // 30
+    void* valueHolder;  // 38
 
 protected:
     template<typename ReturnType, typename... Args>

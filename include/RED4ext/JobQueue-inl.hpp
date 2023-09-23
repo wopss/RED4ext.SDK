@@ -7,13 +7,12 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/Hashing/FNV1a.hpp>
 #include <RED4ext/Relocation.hpp>
+#include <RED4ext/TLS.hpp>
 
 RED4EXT_INLINE void RED4ext::JobInternals::SetLocalThreadParam(uint8_t aParam)
 {
-    using func_t = void (*)(uint8_t);
-    RelocFunc<func_t> func(Addresses::JobInternals_SetLocalThreadParam);
-
-    func(aParam);
+    auto tls = TLS::Get();
+    tls->jobParam = aParam;
 }
 
 RED4EXT_INLINE RED4ext::JobFamily::JobFamily(const char* aName) noexcept

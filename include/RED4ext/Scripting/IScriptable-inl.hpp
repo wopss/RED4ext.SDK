@@ -64,6 +64,20 @@ RED4EXT_INLINE void* RED4ext::IScriptable::GetValueHolder()
     using func_t = void* (*)(IScriptable*);
     RelocFunc<func_t> func(Addresses::IScriptable_GetValueHolder);
     return func(this);
+
+    if (valueHolder)
+    {
+        return valueHolder;
+    }
+
+    auto type = nativeType;
+    if (!type)
+    {
+        type = GetNativeType();
+    }
+
+    type->InitializeProperties(this);
+    return valueHolder;
 }
 
 RED4EXT_INLINE void RED4ext::IScriptable::DestructValueHolder()
