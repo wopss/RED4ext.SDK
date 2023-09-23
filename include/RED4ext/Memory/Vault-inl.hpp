@@ -10,5 +10,5 @@
 RED4EXT_INLINE RED4ext::Memory::Vault* RED4ext::Memory::Vault::Get()
 {
     RelocPtr<Vault*> ptr(Addresses::Memory_Vault);
-    return ptr;
+    return reinterpret_cast<Vault*>(ptr.GetAddr());
 }
