@@ -79,8 +79,8 @@ RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
 
 struct CStack : CBaseStack
 {
-    CStack(IScriptable* aContext = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
-           CStackType* aResult = nullptr, int64_t a6 = 0);
+    CStack(ScriptInstance aContext = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
+           CStackType* aResult = nullptr);
     ~CStack() = default;
 
     CStackType* args;   // 30

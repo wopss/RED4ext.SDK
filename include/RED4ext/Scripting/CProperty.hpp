@@ -7,6 +7,7 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Relocation.hpp>
+//#include <RED4ext/Scripting/IScriptable.hpp>
 
 namespace RED4ext
 {
@@ -109,10 +110,6 @@ struct CProperty
         {
             /*auto scriptable = static_cast<IScriptable*>(aInstance);
             holder = scriptable->GetValueHolder();*/
-
-            using func_t = void* (*)(ScriptInstance);
-            RelocFunc<func_t> func(Addresses::IScriptable_GetValueHolder);
-            holder = func(aInstance);
         }
 
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);

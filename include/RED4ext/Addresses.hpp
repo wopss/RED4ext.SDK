@@ -50,6 +50,7 @@ constexpr uintptr_t CClass_sub_D0 = 0x141FAE924 - ImageBase; // 4C 8B DC 49 89 5
 constexpr uintptr_t CClass_CreateInstance = 0x14014C550 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?, expected: 422, index: 7
 constexpr uintptr_t CClass_GetProperty = 0x14014D4D8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA, expected: 4, index: 0
 constexpr uintptr_t CClass_GetProperties = 0x1405FFDD0 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9, expected: 30, index: 6
+constexpr uintptr_t CClass_ClearScriptedData = 0x14060089C - ImageBase; // 48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ?, expected: 115, index: 35
 constexpr uintptr_t CClass_InitializeProperties = 0x14014CE14 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?, expected: 1, index: 0
 constexpr uintptr_t CClass_AssignDefaultValuesToProperties = 0x14014C6E8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? 48 8B F9 48 8B EA, expected: 2, index: 0
 #pragma endregion
@@ -159,6 +160,10 @@ constexpr uintptr_t Memory_Vault_Unk1 = 0x141F96F8C - ImageBase; // 4C 8B 81 ? ?
 constexpr uintptr_t Memory_PoolStorage_OOM = 0x141F96D90 - ImageBase; // 48 83 EC ? 48 8B C1 44 89 44 24 ? 4C 8B CA, expected: 1, index: 0
 #pragma endregion
 
+#pragma region OpcodeHandlers
+constexpr uintptr_t OpcodeHandlers = 0x14326CCB0 - ImageBase; // 4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?, expected: 2, index: 0, offset: 3
+#pragma endregion
+
 #pragma region ResourceDepot
 constexpr uintptr_t ResourceDepot = 0x1446DE478 - ImageBase; // 48 89 05 ? ? ? ? 49 8B 5B ? 49 8B 73 ?, expected: 1, index: 0, offset: 3
 #pragma endregion
@@ -189,8 +194,8 @@ constexpr uintptr_t TTypedClass_IsEqual = 0x140218000 - ImageBase; // 48 8B C4 4
 
 #pragma region TweakDB
 constexpr uintptr_t TweakDB_Get = 0x140124624 - ImageBase; // 48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 74 0C, expected: 1, index: 0
-#error Could not find pattern "", expected: 1, index: 0
-#error Could not find pattern "", expected: 51, index: 13
+constexpr uintptr_t TweakDB_StaticFlatDataBuffer = ImageBase;
+constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = ImageBase;
 constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x141039432 - ImageBase; // 48 8D 05 ? ? ? ? 48 83 C2 07 4C 8D 4C 24 ? 48 83 E2 ? 4C 8D 44 24 50, expected: 9, index: 5
 constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x1421CE864 - ImageBase; // 48 8D 05 ? ? ? ? 48 8B D3 48 89 07 E8 ? ? ? ?, expected: 29, index: 16
 constexpr uintptr_t TweakDB_CreateRecord = 0x14028C938 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 8B C2, expected: 6, index: 0

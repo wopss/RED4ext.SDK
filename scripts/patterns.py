@@ -33,7 +33,7 @@ def get_groups() -> List[Group]:
             Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6', expected=1, index=0)
         ],
         pointers=[
-            Item(name='Handlers', pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', expected=2, index=1, offset=3) # Not really related to CBaseFunction, but I'm too tired for this to move it.
+            Item(name='Handlers', pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', expected=2, index=1, offset=3)
         ]),
 
         Group(name='CBaseRTTIType', functions=[
@@ -60,6 +60,7 @@ def get_groups() -> List[Group]:
             Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?', expected=422, index=7),
             Item(name='GetProperty', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA', expected=4, index=0),
             Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=30, index=6),
+            Item(name='ClearScriptedData', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ?', expected=115, index=35),
 
             Item(name='InitializeProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?', expected=1, index=0),
             Item(name='AssignDefaultValuesToProperties', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? 48 8B F9 48 8B EA', expected=2, index=0)
@@ -90,7 +91,11 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='CGlobalFunction', functions=[
-            Item(name='ctor', pattern='48 83 EC ? 4D 8B D1 41 B9 ? ? ? ? E8 ? ? ? ?', expected=1, index=0)
+            Item(name='ctor', pattern='48 83 EC ? 4D 8B D1 41 B9 ? ? ? ? E8 ? ? ? ?', expected=1, index=0),
+        ]),
+
+        Group(name='OpcodeHandlers', pointers=[
+            Item(pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', offset=3, expected=2, index=0)
         ]),
 
         Group(name='CGameEngine', pointers=[

@@ -7,8 +7,8 @@
 #include <bit>
 
 #include <RED4ext/Addresses.hpp>
-#include <RED4ext/Relocation.hpp>
 #include <RED4ext/RTTISystem.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CBaseStack::CBaseStack(IScriptable* aContext) noexcept
     : unk08(0)
@@ -37,10 +37,10 @@ RED4EXT_INLINE RED4ext::CStackType::CStackType(CBaseRTTIType* aType, ScriptInsta
 {
 }
 
-RED4EXT_INLINE RED4ext::CStack::CStack(IScriptable* aContext, CStackType* aArgs, uint32_t aArgsCount,
-                                       CStackType* aResult, int64_t a6)
+RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aContext, CStackType* aArgs, uint32_t aArgsCount,
+                                       CStackType* aResult)
 
-    : CBaseStack(aContext)
+    : CBaseStack(static_cast<IScriptable*>(aContext))
     , args(aArgs)
     , argsCount(aArgsCount)
     , result(aResult)
