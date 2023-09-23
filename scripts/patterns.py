@@ -154,16 +154,16 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='JobInternals', functions=[
-            Item(name='SetLocalThreadParam', pattern='', expected=4, index=2),
-            Item(name='DispatchJob', pattern='', expected=2, index=0)
+            Item(name='SetLocalThreadParam', pattern='', expected=4, index=2), # TODO: inlined at 140D1D9AC
+            Item(name='DispatchJob', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54', expected=2, index=0)
         ]),
 
         Group(name='JobQueue', functions=[
-            Item(name='ctor_FromGroup', pattern=''),
-            Item(name='ctor_FromParams', pattern=''),
-            Item(name='dtor', pattern=''),
-            Item(name='Capture', pattern=''),
-            Item(name='SyncWait', pattern='')
+            Item(name='ctor_FromGroup', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B 42 ? 48 8B DA', expected=23, index=0),
+            Item(name='ctor_FromParams', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 49 8B D9', expected=65, index=0),
+            Item(name='dtor', pattern='40 53 48 83 EC ? 80 79 ? ? 48 8B D9 75 05', expected=1, index=0),
+            Item(name='Capture', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8B 43 ?', expected=6, index=0),
+            Item(name='SyncWait', pattern='48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8B EC 48 83 EC ? 48 8D 79 ? 48 8B F1', expected=1, index=0)
         ]),
 
         Group(name='Memory', functions=[
@@ -178,30 +178,30 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='TweakDB', functions=[
-            Item(name='Get', pattern='', expected=1, index=0),
-            Item(name='StaticFlatDataBuffer', pattern='', expected=1, index=0),
-            Item(name='InitFlatValue_ExceptInt32', pattern='', expected=51, index=13),
-            Item(name='FlatInt32ValueVftable', pattern='', expected=1, index=0),
-            Item(name='FlatArrayInt32ValueVftable', pattern='', expected=50, index=10),
-            Item(name='CreateRecord', pattern=''),
+            Item(name='Get', pattern='48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 74 0C', expected=1, index=0),
+            Item(name='StaticFlatDataBuffer', pattern='', expected=1, index=0), # TODO: Is this changed? See 140369D67, rcx seems to be this now. Additional note, seems to be the first element of TweakDB. No static flat data buffer anymore? See 140275EC6
+            Item(name='InitFlatValue_ExceptInt32', pattern='', expected=51, index=13), # TODO: Inlined at 14028C139 because why not
+            Item(name='FlatInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 83 C2 07 4C 8D 4C 24 ? 48 83 E2 ? 4C 8D 44 24 50', expected=9, index=5), # TODO: This can be a pointer
+            Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 8B D3 48 89 07 E8 ? ? ? ?', expected=29, index=16), # TODO: This can be a pointer
+            Item(name='CreateRecord', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 8B C2', expected=6, index=0),
         ]),
 
         Group(name='ResourceDepot', pointers=[
-            Item(pattern="", offset=3, expected=26, index=2)
+            Item(pattern="48 89 05 ? ? ? ? 49 8B 5B ? 49 8B 73 ?", offset=3, expected=1, index=0)
         ]),
 
         Group(name='ResourceLoader', pointers=[
-            Item(pattern='', offset=15)
+            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=0)
         ],
         functions=[
-            Item(name='FindToken', pattern=''),
-            Item(name='LoadAsync', pattern='')
+            Item(name='FindToken', pattern=''), # TODO: Inlined at 14066EA7E
+            Item(name='LoadAsync', pattern='48 89 5C 24 ? 55 48 8B EC 48 83 EC ? 83 4D E8 ? 33 C0', expected=1, index=0)
         ]),
 
         Group(name='ResourceReference', functions=[
-            Item(name='Load', pattern=''),
-            Item(name='Fetch', pattern=''),
-            Item(name='Reset', pattern='')
+            Item(name='Load', pattern='40 53 48 83 EC ? 48 8D 59 ? 4C 8B C1 48 8B 0B', expected=1, index=0),
+            Item(name='Fetch', pattern='40 53 48 83 EC ? 48 8B D9 E8 ? ? ? ? 48 8B 43 ? 48 85 C0', expected=2, index=0),
+            Item(name='Reset', pattern='48 83 EC ? 48 8B 41 ? 48 83 61 ? ? 48 89 44 24 ? 48 8B 01 48 83 21 ?', expected=27, index=5)
         ]),
 
         Group(name='ResourceToken', functions=[
