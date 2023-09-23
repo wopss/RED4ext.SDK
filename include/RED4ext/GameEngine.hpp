@@ -27,6 +27,30 @@ enum class EEngineState : int32_t
     Running = 3
 };
 
+struct GameInstance
+{
+    virtual ~GameInstance() = 0;                                    // 00
+    virtual IScriptable* GetSystem(const CBaseRTTIType* aType) = 0; // 08
+    virtual void Unk_10() = 0;                                      // 10
+    virtual void Unk_18() = 0;                                      // 18
+    virtual void Unk_20() = 0;                                      // 20
+    virtual void Unk_28() = 0;                                      // 28
+    virtual void Unk_30() = 0;                                      // 30
+    virtual void Unk_38() = 0;                                      // 38
+    virtual void Unk_40() = 0;                                      // 40
+    virtual void Unk_48() = 0;                                      // 48
+    virtual void Unk_50() = 0;                                      // 50
+    virtual void Unk_58() = 0;                                      // 58
+    virtual void Unk_60() = 0;                                      // 60
+    virtual void Unk_68() = 0;                                      // 68
+
+    HashMap<CBaseRTTIType*, Handle<IScriptable>> systemMap;        // 08 - Maps implementation type to instance
+    DynArray<Handle<IScriptable>> systemInstances;                 // 38
+    HashMap<CBaseRTTIType*, CBaseRTTIType*> systemImplementations; // 48 - Maps interface type to implementation type
+    uintptr_t unk78[(0x138 - 0x78) >> 3];                          // 78
+};
+RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
+
 struct CBaseEngine
 {
     // https://github.com/yamashi/RED4ext/commit/2d30f32826276458f86da8b4c26940924044564d
@@ -163,52 +187,30 @@ struct CBaseEngine
     int64_t unk2A8;                            // 2A8
     int64_t unk2B0;                            // 2B0
     int64_t unk2B8;                            // 2B8
-    int32_t unk2C0;                            // 2B0
+    int32_t unk2C0;                            // 2C0
+    int64_t unk2C8;                            // 2C8
+    int64_t unk2D0;                            // 2D0
 };
-RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2C8);
+RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2D8);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, unkC0, 0xC0);
 
 struct BaseGameEngine : CBaseEngine
 {
-    int64_t unk2C8;         // 2C8
-    int64_t unk2D0;         // 2D0
-    int64_t watchdogThread; // 2D8
+    int64_t unk2D8; // 2D8
 };
 RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x2E0);
-RED4EXT_ASSERT_OFFSET(BaseGameEngine, watchdogThread, 0x2D8);
-
-struct GameInstance
-{
-    virtual ~GameInstance() = 0;                                    // 00
-    virtual IScriptable* GetSystem(const CBaseRTTIType* aType) = 0; // 08
-    virtual void Unk_10() = 0;                                      // 10
-    virtual void Unk_18() = 0;                                      // 18
-    virtual void Unk_20() = 0;                                      // 20
-    virtual void Unk_28() = 0;                                      // 28
-    virtual void Unk_30() = 0;                                      // 30
-    virtual void Unk_38() = 0;                                      // 38
-    virtual void Unk_40() = 0;                                      // 40
-    virtual void Unk_48() = 0;                                      // 48
-    virtual void Unk_50() = 0;                                      // 50
-    virtual void Unk_58() = 0;                                      // 58
-    virtual void Unk_60() = 0;                                      // 60
-    virtual void Unk_68() = 0;                                      // 68
-
-    HashMap<CBaseRTTIType*, Handle<IScriptable>> systemMap;        // 08 - Maps implementation type to instance
-    DynArray<Handle<IScriptable>> systemInstances;                 // 38
-    HashMap<CBaseRTTIType*, CBaseRTTIType*> systemImplementations; // 48 - Maps interface type to implementation type
-    uintptr_t unk78[(0x138 - 0x78) >> 3];                          // 78
-};
-RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
 
 struct CGameEngine : BaseGameEngine
 {
     struct CGameFramework
     {
-        int8_t unk00[0x10];         // 00
+        uintptr_t unk00;            // 00
+        uintptr_t unk08;            // 08
         GameInstance* gameInstance; // 10
+        uintptr_t unk18;            // 18
+        uintptr_t unk120;           // 20
     };
-    RED4EXT_ASSERT_SIZE(CGameFramework, 0x18);
+    RED4EXT_ASSERT_SIZE(CGameFramework, 0x28);
     RED4EXT_ASSERT_OFFSET(CGameFramework, gameInstance, 0x10);
 
     static CGameEngine* Get();
@@ -216,10 +218,10 @@ struct CGameEngine : BaseGameEngine
     int64_t unk2E0;            // 2E0
     int64_t unk2E8;            // 2E8
     int64_t unk2F0;            // 2F0
-    CGameFramework* framework; // 2F8
+    int64_t unk2F8;            // 2F8
     int32_t unk300;            // 300
     int32_t unk304;            // 304
-    int64_t unk308;            // 308
+    CGameFramework* framework; // 308
     int64_t unk310;            // 310
     int64_t unk318;            // 318
     int64_t unk320;            // 320
@@ -227,9 +229,10 @@ struct CGameEngine : BaseGameEngine
     int64_t unk330;            // 330
     int64_t unk338;            // 338
     int32_t unk340;            // 340
+    int64_t unk348;            // 348
 };
-RED4EXT_ASSERT_SIZE(CGameEngine, 0x348);
-RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x2F8);
+RED4EXT_ASSERT_SIZE(CGameEngine, 0x350);
+RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x308);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

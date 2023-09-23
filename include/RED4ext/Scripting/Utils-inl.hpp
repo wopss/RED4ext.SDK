@@ -46,9 +46,9 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
 RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs)
 {
     auto engine = CGameEngine::Get();
-    auto game = engine->framework->gameInstance;
+    auto gameInstance = engine->framework->gameInstance;
 
-    Handle<IScriptable> instance(game->GetSystem(aContext));
+    Handle<IScriptable> instance(gameInstance->GetSystem(aContext));
     return ExecuteFunction(instance, aFunc, aOut, aArgs);
 }
 
