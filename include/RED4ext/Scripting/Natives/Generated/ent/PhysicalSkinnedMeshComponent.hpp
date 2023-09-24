@@ -24,15 +24,15 @@ struct PhysicalSkinnedMeshComponent : ent::SkinnedMeshComponent
 
     uint8_t unk270[0x2A8 - 0x270]; // 270
     Handle<physics::FilterData> filterData; // 2A8
-    uint8_t unk2B8[0x2CC - 0x2B8]; // 2B8
-    physics::SimulationType simulationType; // 2CC
-    physics::FilterDataSource filterDataSource; // 2CD
-    bool startInactive; // 2CE
-    uint8_t unk2CF[0x2D0 - 0x2CF]; // 2CF
-    bool useResourceSimulationType; // 2D0
-    uint8_t unk2D1[0x2E0 - 0x2D1]; // 2D1
+    uint8_t unk2B8[0x2C4 - 0x2B8]; // 2B8
+    physics::SimulationType simulationType; // 2C4
+    physics::FilterDataSource filterDataSource; // 2C5
+    bool startInactive; // 2C6
+    uint8_t unk2C7[0x2C8 - 0x2C7]; // 2C7
+    bool useResourceSimulationType; // 2C8
+    uint8_t unk2C9[0x2D0 - 0x2C9]; // 2C9
 };
-RED4EXT_ASSERT_SIZE(PhysicalSkinnedMeshComponent, 0x2E0);
+RED4EXT_ASSERT_SIZE(PhysicalSkinnedMeshComponent, 0x2D0);
 } // namespace ent
 using entPhysicalSkinnedMeshComponent = ent::PhysicalSkinnedMeshComponent;
 using PhysicalSkinnedMeshComponent = ent::PhysicalSkinnedMeshComponent;

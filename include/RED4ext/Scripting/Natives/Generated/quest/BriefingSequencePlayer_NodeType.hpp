@@ -10,6 +10,7 @@
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/anim/LoopType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/BriefingPlayerType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/BriefingSequencePlayerFunction.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/BriefingType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/IUIManagerNodeType.hpp>
@@ -36,9 +37,12 @@ struct BriefingSequencePlayer_NodeType : quest::IUIManagerNodeType
     CName endMarkerName; // 70
     ink::anim::LoopType loopType; // 78
     uint8_t unk79[0x7C - 0x79]; // 79
-    quest::BriefingType briefingType; // 7C
+    quest::BriefingPlayerType briefingPlayerType; // 7C
+    quest::BriefingType briefingType; // 80
+    bool enableScanner; // 84
+    uint8_t unk85[0x88 - 0x85]; // 85
 };
-RED4EXT_ASSERT_SIZE(BriefingSequencePlayer_NodeType, 0x80);
+RED4EXT_ASSERT_SIZE(BriefingSequencePlayer_NodeType, 0x88);
 } // namespace quest
 using questBriefingSequencePlayer_NodeType = quest::BriefingSequencePlayer_NodeType;
 } // namespace RED4ext

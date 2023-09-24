@@ -17,9 +17,9 @@ struct WorkspotCategory_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataWorkspotCategory_Record";
     static constexpr const char* ALIAS = "WorkspotCategory_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(WorkspotCategory_Record, 0x58);
+RED4EXT_ASSERT_SIZE(WorkspotCategory_Record, 0x68);
 } // namespace game::data
 using gamedataWorkspotCategory_Record = game::data::WorkspotCategory_Record;
 using WorkspotCategory_Record = game::data::WorkspotCategory_Record;

@@ -15,12 +15,13 @@ namespace game
 struct IContainerManager : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIContainerManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IContainerManager";
 
 };
 RED4EXT_ASSERT_SIZE(IContainerManager, 0x48);
 } // namespace game
 using gameIContainerManager = game::IContainerManager;
+using IContainerManager = game::IContainerManager;
 } // namespace RED4ext
 
 // clang-format on

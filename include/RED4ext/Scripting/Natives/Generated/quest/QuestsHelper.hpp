@@ -17,9 +17,9 @@ struct QuestsHelper : quest::IQuestsHelper
     static constexpr const char* NAME = "questQuestsHelper";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x190 - 0x48]; // 48
+    uint8_t unk90[0x180 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(QuestsHelper, 0x190);
+RED4EXT_ASSERT_SIZE(QuestsHelper, 0x180);
 } // namespace quest
 using questQuestsHelper = quest::QuestsHelper;
 } // namespace RED4ext

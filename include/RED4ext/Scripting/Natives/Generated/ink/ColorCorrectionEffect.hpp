@@ -17,12 +17,12 @@ struct ColorCorrectionEffect : ink::IEffect
     static constexpr const char* NAME = "inkColorCorrectionEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float brightness; // 68
-    float contrast; // 6C
-    float saturation; // 70
-    uint8_t unk74[0x78 - 0x74]; // 74
+    float brightness; // 50
+    float contrast; // 54
+    float saturation; // 58
+    uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
-RED4EXT_ASSERT_SIZE(ColorCorrectionEffect, 0x78);
+RED4EXT_ASSERT_SIZE(ColorCorrectionEffect, 0x60);
 } // namespace ink
 using inkColorCorrectionEffect = ink::ColorCorrectionEffect;
 } // namespace RED4ext

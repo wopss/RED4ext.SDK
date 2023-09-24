@@ -17,9 +17,9 @@ struct AISubActionScaleDurationWithDistance_Record : game::data::AISubAction_Rec
     static constexpr const char* NAME = "gamedataAISubActionScaleDurationWithDistance_Record";
     static constexpr const char* ALIAS = "AISubActionScaleDurationWithDistance_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionScaleDurationWithDistance_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionScaleDurationWithDistance_Record, 0x78);
 } // namespace game::data
 using gamedataAISubActionScaleDurationWithDistance_Record = game::data::AISubActionScaleDurationWithDistance_Record;
 using AISubActionScaleDurationWithDistance_Record = game::data::AISubActionScaleDurationWithDistance_Record;

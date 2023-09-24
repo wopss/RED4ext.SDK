@@ -18,15 +18,15 @@ struct JournalQuestObjectiveBase : game::JournalContainerEntry
     static constexpr const char* NAME = "gameJournalQuestObjectiveBase";
     static constexpr const char* ALIAS = "JournalQuestObjectiveBase";
 
-    LocalizationString description; // 78
-    uint32_t counter; // A0
-    bool optional; // A4
-    uint8_t unkA5[0xA8 - 0xA5]; // A5
-    NodeRef locationPrefabRef; // A8
-    CString districtID; // B0
-    TweakDBID itemID; // D0
+    LocalizationString description; // 88
+    uint32_t counter; // B0
+    bool optional; // B4
+    uint8_t unkB5[0xB8 - 0xB5]; // B5
+    NodeRef locationPrefabRef; // B8
+    CString districtID; // C0
+    TweakDBID itemID; // E0
 };
-RED4EXT_ASSERT_SIZE(JournalQuestObjectiveBase, 0xD8);
+RED4EXT_ASSERT_SIZE(JournalQuestObjectiveBase, 0xE8);
 } // namespace game
 using gameJournalQuestObjectiveBase = game::JournalQuestObjectiveBase;
 using JournalQuestObjectiveBase = game::JournalQuestObjectiveBase;

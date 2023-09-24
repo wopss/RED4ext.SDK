@@ -21,9 +21,9 @@ struct UniversalRef : ISerializable
     game::EntityReference entityReference; // 30
     bool refLocalPlayer; // 68
     bool mainPlayerObject; // 69
-    uint8_t unk6A[0x70 - 0x6A]; // 6A
+    uint8_t unk6A[0x78 - 0x6A]; // 6A
 };
-RED4EXT_ASSERT_SIZE(UniversalRef, 0x70);
+RED4EXT_ASSERT_SIZE(UniversalRef, 0x78);
 } // namespace quest
 using questUniversalRef = quest::UniversalRef;
 } // namespace RED4ext

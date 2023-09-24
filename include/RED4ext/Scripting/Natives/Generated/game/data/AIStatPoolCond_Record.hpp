@@ -17,9 +17,9 @@ struct AIStatPoolCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIStatPoolCond_Record";
     static constexpr const char* ALIAS = "AIStatPoolCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x88 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIStatPoolCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIStatPoolCond_Record, 0x88);
 } // namespace game::data
 using gamedataAIStatPoolCond_Record = game::data::AIStatPoolCond_Record;
 using AIStatPoolCond_Record = game::data::AIStatPoolCond_Record;

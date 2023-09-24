@@ -17,9 +17,9 @@ struct AngleDistanceCoverSelectionParameters_Record : game::data::CoverSelection
     static constexpr const char* NAME = "gamedataAngleDistanceCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "AngleDistanceCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x70 - 0x50]; // 50
+    uint8_t unk60[0xD0 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AngleDistanceCoverSelectionParameters_Record, 0x70);
+RED4EXT_ASSERT_SIZE(AngleDistanceCoverSelectionParameters_Record, 0xD0);
 } // namespace game::data
 using gamedataAngleDistanceCoverSelectionParameters_Record = game::data::AngleDistanceCoverSelectionParameters_Record;
 using AngleDistanceCoverSelectionParameters_Record = game::data::AngleDistanceCoverSelectionParameters_Record;

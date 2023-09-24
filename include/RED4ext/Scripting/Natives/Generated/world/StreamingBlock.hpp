@@ -8,6 +8,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/StreamingBlockIndex.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/StreamingSectorDescriptor.hpp>
 
 namespace RED4ext
@@ -20,8 +21,7 @@ struct StreamingBlock : CResource
     static constexpr const char* ALIAS = NAME;
 
     DynArray<world::StreamingSectorDescriptor> descriptors; // 40
-    uint32_t index; // 50
-    uint8_t unk54[0x58 - 0x54]; // 54
+    world::StreamingBlockIndex index; // 50
 };
 RED4EXT_ASSERT_SIZE(StreamingBlock, 0x58);
 } // namespace world

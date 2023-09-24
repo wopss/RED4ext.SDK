@@ -17,14 +17,14 @@ struct InnerGlowEffect : ink::IEffect
     static constexpr const char* NAME = "inkInnerGlowEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float colorR; // 68
-    float colorG; // 6C
-    float colorB; // 70
-    float colorA; // 74
-    float offsetX; // 78
-    float offsetY; // 7C
+    float colorR; // 50
+    float colorG; // 54
+    float colorB; // 58
+    float colorA; // 5C
+    float offsetX; // 60
+    float offsetY; // 64
 };
-RED4EXT_ASSERT_SIZE(InnerGlowEffect, 0x80);
+RED4EXT_ASSERT_SIZE(InnerGlowEffect, 0x68);
 } // namespace ink
 using inkInnerGlowEffect = ink::InnerGlowEffect;
 } // namespace RED4ext

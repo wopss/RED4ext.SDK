@@ -19,11 +19,11 @@ struct StreetCredTier_ConditionType : quest::IStatsConditionType
     static constexpr const char* NAME = "questStreetCredTier_ConditionType";
     static constexpr const char* ALIAS = NAME;
 
-    EComparisonType comparisonType; // 38
-    TweakDBID tierID; // 3C
-    uint8_t unk44[0x48 - 0x44]; // 44
+    EComparisonType comparisonType; // 48
+    TweakDBID tierID; // 4C
+    uint8_t unk54[0x58 - 0x54]; // 54
 };
-RED4EXT_ASSERT_SIZE(StreetCredTier_ConditionType, 0x48);
+RED4EXT_ASSERT_SIZE(StreetCredTier_ConditionType, 0x58);
 } // namespace quest
 using questStreetCredTier_ConditionType = quest::StreetCredTier_ConditionType;
 } // namespace RED4ext

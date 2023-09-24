@@ -17,9 +17,9 @@ struct IMarketSystem : game::ScriptableSystem
     static constexpr const char* NAME = "gameIMarketSystem";
     static constexpr const char* ALIAS = "IMarketSystem";
 
-    uint8_t unk2D8[0x360 - 0x2D8]; // 2D8
+    uint8_t unk530[0x5B8 - 0x530]; // 530
 };
-RED4EXT_ASSERT_SIZE(IMarketSystem, 0x360);
+RED4EXT_ASSERT_SIZE(IMarketSystem, 0x5B8);
 } // namespace game
 using gameIMarketSystem = game::IMarketSystem;
 using IMarketSystem = game::IMarketSystem;

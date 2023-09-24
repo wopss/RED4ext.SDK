@@ -18,7 +18,7 @@ struct ReactionPresetGanger_Record : game::data::ReactionPreset_Record
     static constexpr const char* ALIAS = "ReactionPresetGanger_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ReactionPresetGanger_Record, 0x68);
+RED4EXT_ASSERT_SIZE(ReactionPresetGanger_Record, 0xB8);
 } // namespace game::data
 using gamedataReactionPresetGanger_Record = game::data::ReactionPresetGanger_Record;
 using ReactionPresetGanger_Record = game::data::ReactionPresetGanger_Record;

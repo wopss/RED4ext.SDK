@@ -18,7 +18,7 @@ struct ReactionPresetCorpo_Record : game::data::ReactionPreset_Record
     static constexpr const char* ALIAS = "ReactionPresetCorpo_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ReactionPresetCorpo_Record, 0x68);
+RED4EXT_ASSERT_SIZE(ReactionPresetCorpo_Record, 0xB8);
 } // namespace game::data
 using gamedataReactionPresetCorpo_Record = game::data::ReactionPresetCorpo_Record;
 using ReactionPresetCorpo_Record = game::data::ReactionPresetCorpo_Record;

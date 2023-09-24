@@ -18,16 +18,16 @@ struct RandomList : work::IContainerEntry
     static constexpr const char* NAME = "workRandomList";
     static constexpr const char* ALIAS = NAME;
 
-    int8_t minClips; // 50
-    int8_t maxClips; // 51
-    int8_t dontRepeatLastAnims; // 52
-    uint8_t unk53[0x54 - 0x53]; // 53
-    float pauseBetweenLength; // 54
-    float pauseLengthDeviation; // 58
-    float pauseBlendOutTime; // 5C
-    DynArray<float> weights; // 60
+    int8_t minClips; // 58
+    int8_t maxClips; // 59
+    int8_t dontRepeatLastAnims; // 5A
+    uint8_t unk5B[0x5C - 0x5B]; // 5B
+    float pauseBetweenLength; // 5C
+    float pauseLengthDeviation; // 60
+    float pauseBlendOutTime; // 64
+    DynArray<float> weights; // 68
 };
-RED4EXT_ASSERT_SIZE(RandomList, 0x70);
+RED4EXT_ASSERT_SIZE(RandomList, 0x78);
 } // namespace work
 using workRandomList = work::RandomList;
 } // namespace RED4ext

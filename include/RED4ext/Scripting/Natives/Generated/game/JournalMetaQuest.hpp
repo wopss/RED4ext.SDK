@@ -18,9 +18,9 @@ struct JournalMetaQuest : game::JournalFileEntry
     static constexpr const char* NAME = "gameJournalMetaQuest";
     static constexpr const char* ALIAS = "JournalMetaQuest";
 
-    LocalizationString title; // 90
+    LocalizationString title; // A0
 };
-RED4EXT_ASSERT_SIZE(JournalMetaQuest, 0xB8);
+RED4EXT_ASSERT_SIZE(JournalMetaQuest, 0xC8);
 } // namespace game
 using gameJournalMetaQuest = game::JournalMetaQuest;
 using JournalMetaQuest = game::JournalMetaQuest;

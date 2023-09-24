@@ -17,9 +17,9 @@ struct RoachRacePowerUpList_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataRoachRacePowerUpList_Record";
     static constexpr const char* ALIAS = "RoachRacePowerUpList_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RoachRacePowerUpList_Record, 0x50);
+RED4EXT_ASSERT_SIZE(RoachRacePowerUpList_Record, 0x58);
 } // namespace game::data
 using gamedataRoachRacePowerUpList_Record = game::data::RoachRacePowerUpList_Record;
 using RoachRacePowerUpList_Record = game::data::RoachRacePowerUpList_Record;

@@ -17,9 +17,9 @@ struct MiniGame_Trap_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataMiniGame_Trap_Record";
     static constexpr const char* ALIAS = "MiniGame_Trap_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(MiniGame_Trap_Record, 0x60);
+RED4EXT_ASSERT_SIZE(MiniGame_Trap_Record, 0x90);
 } // namespace game::data
 using gamedataMiniGame_Trap_Record = game::data::MiniGame_Trap_Record;
 using MiniGame_Trap_Record = game::data::MiniGame_Trap_Record;

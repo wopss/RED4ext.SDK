@@ -17,9 +17,9 @@ struct AISlotCond_Record : game::data::AIItemCond_Record
     static constexpr const char* NAME = "gamedataAISlotCond_Record";
     static constexpr const char* ALIAS = "AISlotCond_Record";
 
-    uint8_t unk68[0x78 - 0x68]; // 68
+    uint8_t unkB8[0xE8 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(AISlotCond_Record, 0x78);
+RED4EXT_ASSERT_SIZE(AISlotCond_Record, 0xE8);
 } // namespace game::data
 using gamedataAISlotCond_Record = game::data::AISlotCond_Record;
 using AISlotCond_Record = game::data::AISlotCond_Record;

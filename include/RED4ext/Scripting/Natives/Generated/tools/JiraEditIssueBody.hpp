@@ -20,9 +20,9 @@ struct JiraEditIssueBody : ISerializable
 
     uint8_t unk30[0x90 - 0x30]; // 30
     tools::JiraIssueFields fields; // 90
-    uint8_t unk380[0x3C0 - 0x380]; // 380
+    uint8_t unk4E8[0x528 - 0x4E8]; // 4E8
 };
-RED4EXT_ASSERT_SIZE(JiraEditIssueBody, 0x3C0);
+RED4EXT_ASSERT_SIZE(JiraEditIssueBody, 0x528);
 } // namespace tools
 using toolsJiraEditIssueBody = tools::JiraEditIssueBody;
 } // namespace RED4ext

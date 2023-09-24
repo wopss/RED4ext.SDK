@@ -17,9 +17,9 @@ struct Perk_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPerk_Record";
     static constexpr const char* ALIAS = "Perk_Record";
 
-    uint8_t unk48[0x70 - 0x48]; // 48
+    uint8_t unk48[0xC8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Perk_Record, 0x70);
+RED4EXT_ASSERT_SIZE(Perk_Record, 0xC8);
 } // namespace game::data
 using gamedataPerk_Record = game::data::Perk_Record;
 using Perk_Record = game::data::Perk_Record;

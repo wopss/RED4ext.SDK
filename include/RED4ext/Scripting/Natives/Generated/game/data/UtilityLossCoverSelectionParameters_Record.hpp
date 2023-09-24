@@ -17,9 +17,9 @@ struct UtilityLossCoverSelectionParameters_Record : game::data::CoverSelectionPa
     static constexpr const char* NAME = "gamedataUtilityLossCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "UtilityLossCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk60[0xB8 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(UtilityLossCoverSelectionParameters_Record, 0x68);
+RED4EXT_ASSERT_SIZE(UtilityLossCoverSelectionParameters_Record, 0xB8);
 } // namespace game::data
 using gamedataUtilityLossCoverSelectionParameters_Record = game::data::UtilityLossCoverSelectionParameters_Record;
 using UtilityLossCoverSelectionParameters_Record = game::data::UtilityLossCoverSelectionParameters_Record;

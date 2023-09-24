@@ -21,10 +21,11 @@ struct ValueNode : game::data::DataNode
     static constexpr const char* NAME = "gamedataValueNode";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<game::data::ValueDataNode> data; // 98
-    Handle<game::data::GroupNode> group; // A8
+    uint8_t unk98[0x118 - 0x98]; // 98
+    Handle<game::data::ValueDataNode> data; // 118
+    Handle<game::data::GroupNode> group; // 128
 };
-RED4EXT_ASSERT_SIZE(ValueNode, 0xB8);
+RED4EXT_ASSERT_SIZE(ValueNode, 0x138);
 } // namespace game::data
 using gamedataValueNode = game::data::ValueNode;
 } // namespace RED4ext

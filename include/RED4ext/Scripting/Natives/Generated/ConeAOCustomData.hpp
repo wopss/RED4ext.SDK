@@ -15,9 +15,9 @@ struct ConeAOCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "ConeAOCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x198 - 0x18]; // 18
+    uint8_t unk18[0x1C8 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(ConeAOCustomData, 0x198);
+RED4EXT_ASSERT_SIZE(ConeAOCustomData, 0x1C8);
 } // namespace RED4ext
 
 // clang-format on

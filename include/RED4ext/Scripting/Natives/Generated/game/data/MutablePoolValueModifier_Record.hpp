@@ -17,9 +17,9 @@ struct MutablePoolValueModifier_Record : game::data::PoolValueModifier_Record
     static constexpr const char* NAME = "gamedataMutablePoolValueModifier_Record";
     static constexpr const char* ALIAS = "MutablePoolValueModifier_Record";
 
-    uint8_t unk60[0x78 - 0x60]; // 60
+    uint8_t unkA0[0xE8 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(MutablePoolValueModifier_Record, 0x78);
+RED4EXT_ASSERT_SIZE(MutablePoolValueModifier_Record, 0xE8);
 } // namespace game::data
 using gamedataMutablePoolValueModifier_Record = game::data::MutablePoolValueModifier_Record;
 using MutablePoolValueModifier_Record = game::data::MutablePoolValueModifier_Record;

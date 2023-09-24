@@ -11,14 +11,20 @@ namespace game::data {
 enum class Quality : uint32_t
 {
     Common = 0,
-    Epic = 1,
-    Iconic = 2,
-    Legendary = 3,
-    Random = 4,
-    Rare = 5,
-    Uncommon = 6,
-    Count = 7,
-    Invalid = 8,
+    CommonPlus = 1,
+    Epic = 2,
+    EpicPlus = 3,
+    Iconic = 4,
+    Legendary = 5,
+    LegendaryPlus = 6,
+    LegendaryPlusPlus = 7,
+    Random = 8,
+    Rare = 9,
+    RarePlus = 10,
+    Uncommon = 11,
+    UncommonPlus = 12,
+    Count = 13,
+    Invalid = 14,
 };
 } // namespace game::data
 using gamedataQuality = game::data::Quality;

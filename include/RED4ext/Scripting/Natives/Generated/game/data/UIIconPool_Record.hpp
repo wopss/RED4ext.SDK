@@ -17,9 +17,9 @@ struct UIIconPool_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataUIIconPool_Record";
     static constexpr const char* ALIAS = "UIIconPool_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(UIIconPool_Record, 0x50);
+RED4EXT_ASSERT_SIZE(UIIconPool_Record, 0x58);
 } // namespace game::data
 using gamedataUIIconPool_Record = game::data::UIIconPool_Record;
 using UIIconPool_Record = game::data::UIIconPool_Record;

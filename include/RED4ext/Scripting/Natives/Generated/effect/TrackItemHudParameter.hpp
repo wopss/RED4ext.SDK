@@ -24,8 +24,11 @@ struct TrackItemHudParameter : effect::TrackItem
     float scale1; // 68
     uint8_t unk6C[0x70 - 0x6C]; // 6C
     effect::EffectParameterEvaluator glitchParameter1; // 70
+    float blackwallScale; // 88
+    uint8_t unk8C[0x90 - 0x8C]; // 8C
+    effect::EffectParameterEvaluator blackwallParameter; // 90
 };
-RED4EXT_ASSERT_SIZE(TrackItemHudParameter, 0x88);
+RED4EXT_ASSERT_SIZE(TrackItemHudParameter, 0xA8);
 } // namespace effect
 using effectTrackItemHudParameter = effect::TrackItemHudParameter;
 } // namespace RED4ext

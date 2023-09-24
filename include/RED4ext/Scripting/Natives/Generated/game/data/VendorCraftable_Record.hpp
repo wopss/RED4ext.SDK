@@ -17,9 +17,9 @@ struct VendorCraftable_Record : game::data::VendorWare_Record
     static constexpr const char* NAME = "gamedataVendorCraftable_Record";
     static constexpr const char* ALIAS = "VendorCraftable_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk78[0x88 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(VendorCraftable_Record, 0x60);
+RED4EXT_ASSERT_SIZE(VendorCraftable_Record, 0x88);
 } // namespace game::data
 using gamedataVendorCraftable_Record = game::data::VendorCraftable_Record;
 using VendorCraftable_Record = game::data::VendorCraftable_Record;

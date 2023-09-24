@@ -20,13 +20,13 @@ struct TargetingComponent : ent::IPlacedComponent
     static constexpr const char* ALIAS = "TargetingComponent";
 
     DynArray<TweakDBID> aimAssistData; // 120
-    uint8_t unk130[0x158 - 0x130]; // 130
-    bool isPrimary; // 158
-    bool alwaysInTestRange; // 159
-    bool isDirectional; // 15A
-    uint8_t unk15B[0x160 - 0x15B]; // 15B
+    uint8_t unk130[0x1B0 - 0x130]; // 130
+    bool isPrimary; // 1B0
+    bool alwaysInTestRange; // 1B1
+    bool isDirectional; // 1B2
+    uint8_t unk1B3[0x1C0 - 0x1B3]; // 1B3
 };
-RED4EXT_ASSERT_SIZE(TargetingComponent, 0x160);
+RED4EXT_ASSERT_SIZE(TargetingComponent, 0x1C0);
 } // namespace game
 using gameTargetingComponent = game::TargetingComponent;
 using TargetingComponent = game::TargetingComponent;

@@ -17,9 +17,9 @@ struct StimTargets_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataStimTargets_Record";
     static constexpr const char* ALIAS = "StimTargets_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StimTargets_Record, 0x58);
+RED4EXT_ASSERT_SIZE(StimTargets_Record, 0x68);
 } // namespace game::data
 using gamedataStimTargets_Record = game::data::StimTargets_Record;
 using StimTargets_Record = game::data::StimTargets_Record;

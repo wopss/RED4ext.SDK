@@ -17,9 +17,9 @@ struct BakedDestructionNodeInstance : world::MeshNodeInstance
     static constexpr const char* NAME = "worldBakedDestructionNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk100[0x1E0 - 0x100]; // 100
+    uint8_t unk100[0x1D0 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(BakedDestructionNodeInstance, 0x1E0);
+RED4EXT_ASSERT_SIZE(BakedDestructionNodeInstance, 0x1D0);
 } // namespace world
 using worldBakedDestructionNodeInstance = world::BakedDestructionNodeInstance;
 } // namespace RED4ext

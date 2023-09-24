@@ -17,9 +17,9 @@ struct AddStatusEffectToAttackEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataAddStatusEffectToAttackEffector_Record";
     static constexpr const char* ALIAS = "AddStatusEffectToAttackEffector_Record";
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk88[0xB8 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(AddStatusEffectToAttackEffector_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AddStatusEffectToAttackEffector_Record, 0xB8);
 } // namespace game::data
 using gamedataAddStatusEffectToAttackEffector_Record = game::data::AddStatusEffectToAttackEffector_Record;
 using AddStatusEffectToAttackEffector_Record = game::data::AddStatusEffectToAttackEffector_Record;

@@ -17,9 +17,9 @@ struct TPPCameraComponent : game::CameraComponent
     static constexpr const char* NAME = "vehicleTPPCameraComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk2A0[0x5C0 - 0x2A0]; // 2A0
+    uint8_t unk320[0x680 - 0x320]; // 320
 };
-RED4EXT_ASSERT_SIZE(TPPCameraComponent, 0x5C0);
+RED4EXT_ASSERT_SIZE(TPPCameraComponent, 0x680);
 } // namespace vehicle
 using vehicleTPPCameraComponent = vehicle::TPPCameraComponent;
 } // namespace RED4ext

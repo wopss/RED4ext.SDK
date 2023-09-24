@@ -13,6 +13,7 @@
 
 namespace RED4ext
 {
+struct CurveSet;
 namespace world { struct Effect; }
 
 namespace game
@@ -36,14 +37,16 @@ struct LightComponent : ent::LightComponent
     float loopTime; // 230
     uint8_t unk234[0x238 - 0x234]; // 234
     CName loopCurve; // 238
-    bool isDestructible; // 240
-    uint8_t unk241[0x248 - 0x241]; // 241
+    bool synchronizedLoop; // 240
+    bool isDestructible; // 241
+    uint8_t unk242[0x248 - 0x242]; // 242
     CName colliderName; // 248
     CName colliderTag; // 250
     RaRef<world::Effect> destructionEffect; // 258
-    uint8_t unk260[0x2F0 - 0x260]; // 260
+    Ref<CurveSet> genericCurveSetOverride; // 260
+    uint8_t unk278[0x310 - 0x278]; // 278
 };
-RED4EXT_ASSERT_SIZE(LightComponent, 0x2F0);
+RED4EXT_ASSERT_SIZE(LightComponent, 0x310);
 } // namespace game
 using gameLightComponent = game::LightComponent;
 } // namespace RED4ext

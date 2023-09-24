@@ -18,7 +18,7 @@ struct JournalEmailGroup : game::JournalFileEntry
     static constexpr const char* ALIAS = "JournalEmailGroup";
 
 };
-RED4EXT_ASSERT_SIZE(JournalEmailGroup, 0x90);
+RED4EXT_ASSERT_SIZE(JournalEmailGroup, 0xA0);
 } // namespace game
 using gameJournalEmailGroup = game::JournalEmailGroup;
 using JournalEmailGroup = game::JournalEmailGroup;

@@ -22,13 +22,15 @@ struct SceneWidgetProperties
     Vector3 faceVector; // 00
     Vector2 projectionPlaneSize; // 0C
     float maxInteractionDistance; // 14
-    ERenderingPlane renderingPlane; // 18
-    bool useCustomFaceVector; // 1C
-    bool isInteractable; // 1D
-    bool isInteractableFromBehind; // 1E
-    bool isAlwaysVisible; // 1F
+    bool overrideMaxInteractionDistance; // 18
+    uint8_t unk19[0x1C - 0x19]; // 19
+    ERenderingPlane renderingPlane; // 1C
+    bool useCustomFaceVector; // 20
+    bool isInteractable; // 21
+    bool isInteractableFromBehind; // 22
+    bool isAlwaysVisible; // 23
 };
-RED4EXT_ASSERT_SIZE(SceneWidgetProperties, 0x20);
+RED4EXT_ASSERT_SIZE(SceneWidgetProperties, 0x24);
 } // namespace world::ui
 using worlduiSceneWidgetProperties = world::ui::SceneWidgetProperties;
 } // namespace RED4ext

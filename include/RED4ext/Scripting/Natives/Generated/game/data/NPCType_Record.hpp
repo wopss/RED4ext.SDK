@@ -17,9 +17,9 @@ struct NPCType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataNPCType_Record";
     static constexpr const char* ALIAS = "NPCType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(NPCType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(NPCType_Record, 0x68);
 } // namespace game::data
 using gamedataNPCType_Record = game::data::NPCType_Record;
 using NPCType_Record = game::data::NPCType_Record;

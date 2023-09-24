@@ -22,13 +22,14 @@ struct PhysicalTriggerComponent : ent::IPlacedComponent
     static constexpr const char* NAME = "entPhysicalTriggerComponent";
     static constexpr const char* ALIAS = "PhysicalTriggerComponent";
 
-    Handle<physics::FilterData> filterData; // 120
-    physics::SimulationType simulationType; // 130
-    uint8_t unk131[0x140 - 0x131]; // 131
-    physics::TriggerShape shape; // 140
-    uint8_t unk170[0x180 - 0x170]; // 170
+    uint8_t unk120[0x130 - 0x120]; // 120
+    Handle<physics::FilterData> filterData; // 130
+    physics::SimulationType simulationType; // 140
+    uint8_t unk141[0x150 - 0x141]; // 141
+    physics::TriggerShape shape; // 150
+    uint8_t unk180[0x190 - 0x180]; // 180
 };
-RED4EXT_ASSERT_SIZE(PhysicalTriggerComponent, 0x180);
+RED4EXT_ASSERT_SIZE(PhysicalTriggerComponent, 0x190);
 } // namespace ent
 using entPhysicalTriggerComponent = ent::PhysicalTriggerComponent;
 using PhysicalTriggerComponent = ent::PhysicalTriggerComponent;

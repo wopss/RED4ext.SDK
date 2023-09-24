@@ -17,10 +17,10 @@ struct TargetDamageEvent : game::events::TargetHitEvent
     static constexpr const char* NAME = "gameeventsTargetDamageEvent";
     static constexpr const char* ALIAS = "gameTargetDamageEvent";
 
-    float damage; // F0
-    uint8_t unkF4[0x100 - 0xF4]; // F4
+    float damage; // 100
+    uint8_t unk104[0x110 - 0x104]; // 104
 };
-RED4EXT_ASSERT_SIZE(TargetDamageEvent, 0x100);
+RED4EXT_ASSERT_SIZE(TargetDamageEvent, 0x110);
 } // namespace game::events
 using gameeventsTargetDamageEvent = game::events::TargetDamageEvent;
 using gameTargetDamageEvent = game::events::TargetDamageEvent;

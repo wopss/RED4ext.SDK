@@ -20,10 +20,11 @@ struct OnCarHitPlayer : red::Event
     static constexpr const char* ALIAS = "OnCarHitPlayer";
 
     Vector4 hitDirection; // 40
-    ent::EntityID carId; // 50
-    uint8_t unk58[0x60 - 0x58]; // 58
+    Vector4 seperationImpulse; // 50
+    ent::EntityID carId; // 60
+    uint8_t unk68[0x70 - 0x68]; // 68
 };
-RED4EXT_ASSERT_SIZE(OnCarHitPlayer, 0x60);
+RED4EXT_ASSERT_SIZE(OnCarHitPlayer, 0x70);
 } // namespace game
 using gameOnCarHitPlayer = game::OnCarHitPlayer;
 using OnCarHitPlayer = game::OnCarHitPlayer;

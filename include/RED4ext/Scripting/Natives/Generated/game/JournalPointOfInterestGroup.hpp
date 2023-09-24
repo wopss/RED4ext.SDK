@@ -18,7 +18,7 @@ struct JournalPointOfInterestGroup : game::JournalFileEntry
     static constexpr const char* ALIAS = "JournalPointOfInterestGroup";
 
 };
-RED4EXT_ASSERT_SIZE(JournalPointOfInterestGroup, 0x90);
+RED4EXT_ASSERT_SIZE(JournalPointOfInterestGroup, 0xA0);
 } // namespace game
 using gameJournalPointOfInterestGroup = game::JournalPointOfInterestGroup;
 using JournalPointOfInterestGroup = game::JournalPointOfInterestGroup;

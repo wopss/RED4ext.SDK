@@ -18,10 +18,10 @@ struct PhysicalImpulseAreaComponent : ent::PhysicalTriggerComponent
     static constexpr const char* NAME = "entPhysicalImpulseAreaComponent";
     static constexpr const char* ALIAS = NAME;
 
-    Vector3 impulse; // 180
-    float impulseRadius; // 18C
+    Vector3 impulse; // 190
+    float impulseRadius; // 19C
 };
-RED4EXT_ASSERT_SIZE(PhysicalImpulseAreaComponent, 0x190);
+RED4EXT_ASSERT_SIZE(PhysicalImpulseAreaComponent, 0x1A0);
 } // namespace ent
 using entPhysicalImpulseAreaComponent = ent::PhysicalImpulseAreaComponent;
 } // namespace RED4ext

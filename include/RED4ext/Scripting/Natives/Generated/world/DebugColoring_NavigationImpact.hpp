@@ -22,10 +22,10 @@ struct DebugColoring_NavigationImpact : world::EditorDebugColoringSettings
     Color ignored; // 34
     Color blocking; // 38
     Color road; // 3C
-    Color crowd_walkable; // 40 -- crowd walkable
-    Color staris_walkable; // 44 -- staris walkable
-    Color drones; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    Color stairs_walkable; // 40 -- stairs walkable
+    Color drones; // 44
+    Color terrain; // 48
+    Color everything_else; // 4C -- everything else
 };
 RED4EXT_ASSERT_SIZE(DebugColoring_NavigationImpact, 0x50);
 } // namespace world

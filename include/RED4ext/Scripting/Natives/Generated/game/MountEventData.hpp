@@ -28,11 +28,16 @@ struct MountEventData : IScriptable
     CName slotName; // 68
     CName entryAnimName; // 70
     bool isInstant; // 78
-    uint8_t unk79[0x88 - 0x79]; // 79
+    uint8_t unk79[0x80 - 0x79]; // 79
+    CName entrySlotName; // 80
     bool setEntityVisibleWhenMountFinish; // 88
     bool removePitchRollRotationOnDismount; // 89
     bool ignoreHLS; // 8A
-    uint8_t unk8B[0x90 - 0x8B]; // 8B
+    bool switchRenderPlane; // 8B
+    bool isJustAttached; // 8C
+    bool isCarrying; // 8D
+    bool allowFailsafeTeleport; // 8E
+    uint8_t unk8F[0x90 - 0x8F]; // 8F
     Handle<game::MountEventOptions> mountEventOptions; // 90
 };
 RED4EXT_ASSERT_SIZE(MountEventData, 0xA0);

@@ -17,9 +17,9 @@ struct UniqueItemData : game::ItemData
     static constexpr const char* NAME = "gameUniqueItemData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk78[0xE8 - 0x78]; // 78
+    uint8_t unk78[0x100 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(UniqueItemData, 0xE8);
+RED4EXT_ASSERT_SIZE(UniqueItemData, 0x100);
 } // namespace game
 using gameUniqueItemData = game::UniqueItemData;
 } // namespace RED4ext

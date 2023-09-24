@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PhantomEntityParametersBlendableAppearanceMatch.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/PhantomEntityState.hpp>
 
 namespace RED4ext
 {
@@ -23,9 +24,10 @@ struct PhantomEntityParameters
     CName teleportEndEffect; // 08
     CName spawnEffect; // 10
     CName glitchEffect; // 18
-    DynArray<game::PhantomEntityParametersBlendableAppearanceMatch> blendableAppearanceMatches; // 20
+    DynArray<game::PhantomEntityState> phantomVisibleStates; // 20
+    DynArray<game::PhantomEntityParametersBlendableAppearanceMatch> blendableAppearanceMatches; // 30
 };
-RED4EXT_ASSERT_SIZE(PhantomEntityParameters, 0x30);
+RED4EXT_ASSERT_SIZE(PhantomEntityParameters, 0x40);
 } // namespace game
 using gamePhantomEntityParameters = game::PhantomEntityParameters;
 } // namespace RED4ext

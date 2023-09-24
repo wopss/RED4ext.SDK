@@ -17,9 +17,9 @@ struct AIGoToCoverCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIGoToCoverCond_Record";
     static constexpr const char* ALIAS = "AIGoToCoverCond_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk58[0xA0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIGoToCoverCond_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AIGoToCoverCond_Record, 0xA0);
 } // namespace game::data
 using gamedataAIGoToCoverCond_Record = game::data::AIGoToCoverCond_Record;
 using AIGoToCoverCond_Record = game::data::AIGoToCoverCond_Record;

@@ -20,18 +20,19 @@ struct AudioMaterialMetadataMapItem : audio::AudioMetadata
     static constexpr const char* ALIAS = NAME;
 
     CName footstepsMetadata; // 38
-    CName ragdollMetadata; // 40
-    CName physicalMaterial; // 48
-    CName obstructionData; // 50
-    CName reflectionParams; // 58
-    CName meleeMaterialName; // 60
-    CName vehicleMaterialName; // 68
-    CName foliageMaterialName; // 70
-    CName foliagePaletteTag; // 78
-    audio::MeleeMaterialType meleeMaterialType; // 80
-    uint8_t unk84[0xB0 - 0x84]; // 84
+    CName npcFootstepsMetadata; // 40
+    CName ragdollMetadata; // 48
+    CName physicalMaterial; // 50
+    CName obstructionData; // 58
+    CName reflectionParams; // 60
+    CName meleeMaterialName; // 68
+    CName vehicleMaterialName; // 70
+    CName foliageMaterialName; // 78
+    CName foliagePaletteTag; // 80
+    audio::MeleeMaterialType meleeMaterialType; // 88
+    uint8_t unk8C[0xC0 - 0x8C]; // 8C
 };
-RED4EXT_ASSERT_SIZE(AudioMaterialMetadataMapItem, 0xB0);
+RED4EXT_ASSERT_SIZE(AudioMaterialMetadataMapItem, 0xC0);
 } // namespace audio
 using audioAudioMaterialMetadataMapItem = audio::AudioMaterialMetadataMapItem;
 } // namespace RED4ext

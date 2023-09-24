@@ -17,9 +17,9 @@ struct AISubActionAddFact_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionAddFact_Record";
     static constexpr const char* ALIAS = "AISubActionAddFact_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionAddFact_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionAddFact_Record, 0x70);
 } // namespace game::data
 using gamedataAISubActionAddFact_Record = game::data::AISubActionAddFact_Record;
 using AISubActionAddFact_Record = game::data::AISubActionAddFact_Record;

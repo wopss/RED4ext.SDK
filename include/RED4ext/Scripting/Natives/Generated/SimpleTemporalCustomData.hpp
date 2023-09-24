@@ -15,9 +15,9 @@ struct SimpleTemporalCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "SimpleTemporalCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x98 - 0x18]; // 18
+    uint8_t unk18[0xA8 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(SimpleTemporalCustomData, 0x98);
+RED4EXT_ASSERT_SIZE(SimpleTemporalCustomData, 0xA8);
 } // namespace RED4ext
 
 // clang-format on

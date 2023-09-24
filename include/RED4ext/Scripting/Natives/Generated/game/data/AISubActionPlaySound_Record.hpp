@@ -17,9 +17,9 @@ struct AISubActionPlaySound_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionPlaySound_Record";
     static constexpr const char* ALIAS = "AISubActionPlaySound_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionPlaySound_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionPlaySound_Record, 0x70);
 } // namespace game::data
 using gamedataAISubActionPlaySound_Record = game::data::AISubActionPlaySound_Record;
 using AISubActionPlaySound_Record = game::data::AISubActionPlaySound_Record;

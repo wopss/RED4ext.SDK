@@ -17,9 +17,9 @@ struct AISquadParams_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAISquadParams_Record";
     static constexpr const char* ALIAS = "AISquadParams_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISquadParams_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISquadParams_Record, 0x70);
 } // namespace game::data
 using gamedataAISquadParams_Record = game::data::AISquadParams_Record;
 using AISquadParams_Record = game::data::AISquadParams_Record;

@@ -31,9 +31,9 @@ struct WorldWidgetComponent : IWorldWidgetComponent
     bool limitedSpawnDistanceFromVehicle; // 2FC
     uint8_t unk2FD[0x300 - 0x2FD]; // 2FD
     world::ui::SceneWidgetProperties sceneWidgetProperties; // 300
-    uint8_t unk320[0x390 - 0x320]; // 320
+    uint8_t unk324[0x3A0 - 0x324]; // 324
 };
-RED4EXT_ASSERT_SIZE(WorldWidgetComponent, 0x390);
+RED4EXT_ASSERT_SIZE(WorldWidgetComponent, 0x3A0);
 } // namespace RED4ext
 
 // clang-format on

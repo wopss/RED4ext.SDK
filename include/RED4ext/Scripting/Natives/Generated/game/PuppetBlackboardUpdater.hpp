@@ -17,9 +17,9 @@ struct PuppetBlackboardUpdater : IScriptable
     static constexpr const char* NAME = "gamePuppetBlackboardUpdater";
     static constexpr const char* ALIAS = "PuppetBlackboardUpdater";
 
-    uint8_t unk40[0x1F8 - 0x40]; // 40
+    uint8_t unk40[0x248 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(PuppetBlackboardUpdater, 0x1F8);
+RED4EXT_ASSERT_SIZE(PuppetBlackboardUpdater, 0x248);
 } // namespace game
 using gamePuppetBlackboardUpdater = game::PuppetBlackboardUpdater;
 using PuppetBlackboardUpdater = game::PuppetBlackboardUpdater;

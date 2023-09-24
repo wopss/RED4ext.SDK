@@ -18,7 +18,7 @@ struct VirtualGridController : ink::VirtualListController
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(VirtualGridController, 0x260);
+RED4EXT_ASSERT_SIZE(VirtualGridController, 0x278);
 } // namespace ink
 using inkVirtualGridController = ink::VirtualGridController;
 } // namespace RED4ext

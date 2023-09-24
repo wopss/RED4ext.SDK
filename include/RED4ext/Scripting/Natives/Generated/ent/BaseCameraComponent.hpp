@@ -28,9 +28,9 @@ struct BaseCameraComponent : ent::IPlacedComponent
     float motionBlurScale; // 16C
     uint8_t unk170[0x174 - 0x170]; // 170
     SWeaponPlaneParams weaponPlane; // 174
-    uint8_t unk190[0x1D0 - 0x190]; // 190
+    uint8_t unk190[0x1E0 - 0x190]; // 190
 };
-RED4EXT_ASSERT_SIZE(BaseCameraComponent, 0x1D0);
+RED4EXT_ASSERT_SIZE(BaseCameraComponent, 0x1E0);
 } // namespace ent
 using entBaseCameraComponent = ent::BaseCameraComponent;
 using entCameraComponent = ent::BaseCameraComponent;

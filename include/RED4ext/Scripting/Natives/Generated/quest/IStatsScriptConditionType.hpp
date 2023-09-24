@@ -20,10 +20,10 @@ struct IStatsScriptConditionType : quest::IStatsConditionType
     static constexpr const char* NAME = "questIStatsScriptConditionType";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<IScriptable> scriptCondition; // 38
-    uint8_t unk48[0x50 - 0x48]; // 48
+    Handle<IScriptable> scriptCondition; // 48
+    uint8_t unk58[0x60 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(IStatsScriptConditionType, 0x50);
+RED4EXT_ASSERT_SIZE(IStatsScriptConditionType, 0x60);
 } // namespace quest
 using questIStatsScriptConditionType = quest::IStatsScriptConditionType;
 } // namespace RED4ext

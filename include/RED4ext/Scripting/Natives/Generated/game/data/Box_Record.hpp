@@ -17,9 +17,9 @@ struct Box_Record : game::data::SenseShape_Record
     static constexpr const char* NAME = "gamedataBox_Record";
     static constexpr const char* ALIAS = "Box_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x78 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(Box_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Box_Record, 0x78);
 } // namespace game::data
 using gamedataBox_Record = game::data::Box_Record;
 using Box_Record = game::data::Box_Record;

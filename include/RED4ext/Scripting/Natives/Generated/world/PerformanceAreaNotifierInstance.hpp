@@ -17,9 +17,9 @@ struct PerformanceAreaNotifierInstance : world::ITriggerAreaNotiferInstance
     static constexpr const char* NAME = "worldPerformanceAreaNotifierInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0x88 - 0x58]; // 58
+    uint8_t unk58[0x90 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(PerformanceAreaNotifierInstance, 0x88);
+RED4EXT_ASSERT_SIZE(PerformanceAreaNotifierInstance, 0x90);
 } // namespace world
 using worldPerformanceAreaNotifierInstance = world::PerformanceAreaNotifierInstance;
 } // namespace RED4ext

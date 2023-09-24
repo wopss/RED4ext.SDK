@@ -20,9 +20,9 @@ struct JournalQuestMapPinLink : game::JournalEntry
     static constexpr const char* NAME = "gameJournalQuestMapPinLink";
     static constexpr const char* ALIAS = "JournalQuestMapPinLink";
 
-    Handle<game::JournalPath> path; // 60
+    Handle<game::JournalPath> path; // 70
 };
-RED4EXT_ASSERT_SIZE(JournalQuestMapPinLink, 0x70);
+RED4EXT_ASSERT_SIZE(JournalQuestMapPinLink, 0x80);
 } // namespace game
 using gameJournalQuestMapPinLink = game::JournalQuestMapPinLink;
 using JournalQuestMapPinLink = game::JournalQuestMapPinLink;

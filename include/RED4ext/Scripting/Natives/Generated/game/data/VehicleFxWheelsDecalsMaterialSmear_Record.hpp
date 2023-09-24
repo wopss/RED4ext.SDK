@@ -17,9 +17,9 @@ struct VehicleFxWheelsDecalsMaterialSmear_Record : game::data::VehicleFxWheelsDe
     static constexpr const char* NAME = "gamedataVehicleFxWheelsDecalsMaterialSmear_Record";
     static constexpr const char* ALIAS = "VehicleFxWheelsDecalsMaterialSmear_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk70[0x80 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(VehicleFxWheelsDecalsMaterialSmear_Record, 0x60);
+RED4EXT_ASSERT_SIZE(VehicleFxWheelsDecalsMaterialSmear_Record, 0x80);
 } // namespace game::data
 using gamedataVehicleFxWheelsDecalsMaterialSmear_Record = game::data::VehicleFxWheelsDecalsMaterialSmear_Record;
 using VehicleFxWheelsDecalsMaterialSmear_Record = game::data::VehicleFxWheelsDecalsMaterialSmear_Record;

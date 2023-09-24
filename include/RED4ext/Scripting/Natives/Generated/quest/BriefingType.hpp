@@ -12,6 +12,7 @@ enum class BriefingType : uint32_t
 {
     Fullscreen = 0,
     Hud = 1,
+    World = 2,
 };
 } // namespace quest
 using questBriefingType = quest::BriefingType;

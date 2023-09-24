@@ -17,9 +17,9 @@ struct RangedAttack_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataRangedAttack_Record";
     static constexpr const char* ALIAS = "RangedAttack_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RangedAttack_Record, 0x58);
+RED4EXT_ASSERT_SIZE(RangedAttack_Record, 0x90);
 } // namespace game::data
 using gamedataRangedAttack_Record = game::data::RangedAttack_Record;
 using RangedAttack_Record = game::data::RangedAttack_Record;

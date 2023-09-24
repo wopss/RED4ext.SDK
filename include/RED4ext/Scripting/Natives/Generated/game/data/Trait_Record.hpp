@@ -17,9 +17,9 @@ struct Trait_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataTrait_Record";
     static constexpr const char* ALIAS = "Trait_Record";
 
-    uint8_t unk48[0x68 - 0x48]; // 48
+    uint8_t unk48[0xB0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Trait_Record, 0x68);
+RED4EXT_ASSERT_SIZE(Trait_Record, 0xB0);
 } // namespace game::data
 using gamedataTrait_Record = game::data::Trait_Record;
 using Trait_Record = game::data::Trait_Record;

@@ -23,9 +23,9 @@ struct VirtualCompoundController : ink::DiscreteNavigationController
     ink::VirtualCompoundControllerCallback ItemSelected; // D0
     ink::VirtualCompoundControllerCallback ItemActivated; // 108
     ink::EmptyCallback AllElementsSpawned; // 140
-    uint8_t unk178[0x1F0 - 0x178]; // 178
+    uint8_t unk178[0x208 - 0x178]; // 178
 };
-RED4EXT_ASSERT_SIZE(VirtualCompoundController, 0x1F0);
+RED4EXT_ASSERT_SIZE(VirtualCompoundController, 0x208);
 } // namespace ink
 using inkVirtualCompoundController = ink::VirtualCompoundController;
 } // namespace RED4ext

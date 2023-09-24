@@ -19,6 +19,7 @@ enum class UIGameContext : uint32_t
     ModalPopup = 7,
     RadialWheel = 8,
     VehicleRace = 9,
+    Berserk = 10,
 };
 } // namespace RED4ext
 

@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/InputHintHoldIndicationType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/InputHintKeyCombinationType.hpp>
 
 namespace RED4ext
 {
@@ -27,11 +28,12 @@ struct InputHintData
     int32_t queuePriority; // 40
     int32_t sortingPriority; // 44
     int32_t tutorialActionCount; // 48
-    bool enableHoldAnimation; // 4C
-    ink::InputHintHoldIndicationType holdIndicationType; // 4D
-    uint8_t unk4E[0x50 - 0x4E]; // 4E
+    ink::InputHintKeyCombinationType inputHintKeyCombinationType; // 4C
+    bool enableHoldAnimation; // 50
+    ink::InputHintHoldIndicationType holdIndicationType; // 51
+    uint8_t unk52[0x58 - 0x52]; // 52
 };
-RED4EXT_ASSERT_SIZE(InputHintData, 0x50);
+RED4EXT_ASSERT_SIZE(InputHintData, 0x58);
 } // namespace game::ui
 using gameuiInputHintData = game::ui::InputHintData;
 using InputHintData = game::ui::InputHintData;

@@ -17,9 +17,9 @@ struct Footstep_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataFootstep_Record";
     static constexpr const char* ALIAS = "Footstep_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Footstep_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Footstep_Record, 0x70);
 } // namespace game::data
 using gamedataFootstep_Record = game::data::Footstep_Record;
 using Footstep_Record = game::data::Footstep_Record;

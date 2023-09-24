@@ -24,11 +24,11 @@ struct TeleportPuppetParamsV1 : quest::AICommandParams
     Handle<quest::UniversalRef> destinationRef; // 40
     Vector3 destinationOffset; // 50
     bool doNavTest; // 5C
-    bool resetLookAt; // 5D
-    bool useFastTravelMechanism; // 5E
-    bool healAtTeleport; // 5F
+    bool useFastTravelMechanism; // 5D
+    bool healAtTeleport; // 5E
+    uint8_t unk5F[0x68 - 0x5F]; // 5F
 };
-RED4EXT_ASSERT_SIZE(TeleportPuppetParamsV1, 0x60);
+RED4EXT_ASSERT_SIZE(TeleportPuppetParamsV1, 0x68);
 } // namespace quest
 using questTeleportPuppetParamsV1 = quest::TeleportPuppetParamsV1;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ struct JournalQuestPointOfInterestMapPin : game::JournalQuestMapPinBase
     static constexpr const char* ALIAS = "JournalQuestPointOfInterestMapPin";
 
 };
-RED4EXT_ASSERT_SIZE(JournalQuestPointOfInterestMapPin, 0x110);
+RED4EXT_ASSERT_SIZE(JournalQuestPointOfInterestMapPin, 0x120);
 } // namespace game
 using gameJournalQuestPointOfInterestMapPin = game::JournalQuestPointOfInterestMapPin;
 using JournalQuestPointOfInterestMapPin = game::JournalQuestPointOfInterestMapPin;

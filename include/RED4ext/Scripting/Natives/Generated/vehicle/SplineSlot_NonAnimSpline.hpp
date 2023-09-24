@@ -16,9 +16,9 @@ struct SplineSlot_NonAnimSpline
     static constexpr const char* NAME = "vehicleSplineSlot_NonAnimSpline";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x14F0 - 0x0]; // 0
+    uint8_t unk00[0x1F0 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(SplineSlot_NonAnimSpline, 0x14F0);
+RED4EXT_ASSERT_SIZE(SplineSlot_NonAnimSpline, 0x1F0);
 } // namespace vehicle
 using vehicleSplineSlot_NonAnimSpline = vehicle::SplineSlot_NonAnimSpline;
 } // namespace RED4ext

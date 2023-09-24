@@ -18,12 +18,12 @@ struct WaterPatchNode : world::MeshNode
     static constexpr const char* NAME = "worldWaterPatchNode";
     static constexpr const char* ALIAS = NAME;
 
-    world::WaterPatchNodeType type; // 58
-    float depth; // 68
-    bool generateNavmesh; // 6C
-    uint8_t unk6D[0x70 - 0x6D]; // 6D
+    world::WaterPatchNodeType type; // 60
+    float depth; // 70
+    bool generateNavmesh; // 74
+    uint8_t unk75[0x78 - 0x75]; // 75
 };
-RED4EXT_ASSERT_SIZE(WaterPatchNode, 0x70);
+RED4EXT_ASSERT_SIZE(WaterPatchNode, 0x78);
 } // namespace world
 using worldWaterPatchNode = world::WaterPatchNode;
 } // namespace RED4ext

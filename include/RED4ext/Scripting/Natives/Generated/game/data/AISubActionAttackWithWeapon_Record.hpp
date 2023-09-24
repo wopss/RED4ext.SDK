@@ -17,9 +17,9 @@ struct AISubActionAttackWithWeapon_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionAttackWithWeapon_Record";
     static constexpr const char* ALIAS = "AISubActionAttackWithWeapon_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x100 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionAttackWithWeapon_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AISubActionAttackWithWeapon_Record, 0x100);
 } // namespace game::data
 using gamedataAISubActionAttackWithWeapon_Record = game::data::AISubActionAttackWithWeapon_Record;
 using AISubActionAttackWithWeapon_Record = game::data::AISubActionAttackWithWeapon_Record;

@@ -17,9 +17,9 @@ struct HUD_Preset_Entry_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataHUD_Preset_Entry_Record";
     static constexpr const char* ALIAS = "HUD_Preset_Entry_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(HUD_Preset_Entry_Record, 0x50);
+RED4EXT_ASSERT_SIZE(HUD_Preset_Entry_Record, 0x58);
 } // namespace game::data
 using gamedataHUD_Preset_Entry_Record = game::data::HUD_Preset_Entry_Record;
 using HUD_Preset_Entry_Record = game::data::HUD_Preset_Entry_Record;

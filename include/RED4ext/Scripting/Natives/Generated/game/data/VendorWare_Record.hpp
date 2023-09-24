@@ -17,9 +17,9 @@ struct VendorWare_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVendorWare_Record";
     static constexpr const char* ALIAS = "VendorWare_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VendorWare_Record, 0x58);
+RED4EXT_ASSERT_SIZE(VendorWare_Record, 0x78);
 } // namespace game::data
 using gamedataVendorWare_Record = game::data::VendorWare_Record;
 using VendorWare_Record = game::data::VendorWare_Record;

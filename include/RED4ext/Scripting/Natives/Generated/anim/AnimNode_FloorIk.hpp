@@ -20,9 +20,9 @@ struct AnimNode_FloorIk : anim::AnimNode_FloorIkBase
     static constexpr const char* NAME = "animAnimNode_FloorIk";
     static constexpr const char* ALIAS = NAME;
 
-    anim::SBehaviorConstraintNodeFloorIKVerticalBoneData pelvis; // 110
-    anim::SBehaviorConstraintNodeFloorIKLegsData legs; // 140
-    uint8_t unk16C[0x170 - 0x16C]; // 16C
+    anim::SBehaviorConstraintNodeFloorIKVerticalBoneData pelvis; // 108
+    anim::SBehaviorConstraintNodeFloorIKLegsData legs; // 138
+    uint8_t unk164[0x170 - 0x164]; // 164
     anim::STwoBonesIKSolverData leftLegIK; // 170
     anim::STwoBonesIKSolverData rightLegIK; // 2A0
     uint8_t unk3D0[0x440 - 0x3D0]; // 3D0

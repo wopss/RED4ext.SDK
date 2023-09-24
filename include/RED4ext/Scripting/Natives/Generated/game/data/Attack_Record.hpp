@@ -17,9 +17,9 @@ struct Attack_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAttack_Record";
     static constexpr const char* ALIAS = "Attack_Record";
 
-    uint8_t unk48[0x70 - 0x48]; // 48
+    uint8_t unk48[0x108 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Attack_Record, 0x70);
+RED4EXT_ASSERT_SIZE(Attack_Record, 0x108);
 } // namespace game::data
 using gamedataAttack_Record = game::data::Attack_Record;
 using Attack_Record = game::data::Attack_Record;

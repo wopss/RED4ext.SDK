@@ -17,9 +17,9 @@ struct RoachRaceLevel_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataRoachRaceLevel_Record";
     static constexpr const char* ALIAS = "RoachRaceLevel_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RoachRaceLevel_Record, 0x58);
+RED4EXT_ASSERT_SIZE(RoachRaceLevel_Record, 0x88);
 } // namespace game::data
 using gamedataRoachRaceLevel_Record = game::data::RoachRaceLevel_Record;
 using RoachRaceLevel_Record = game::data::RoachRaceLevel_Record;

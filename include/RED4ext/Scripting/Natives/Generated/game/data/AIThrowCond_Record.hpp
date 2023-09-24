@@ -17,9 +17,9 @@ struct AIThrowCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIThrowCond_Record";
     static constexpr const char* ALIAS = "AIThrowCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x98 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIThrowCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIThrowCond_Record, 0x98);
 } // namespace game::data
 using gamedataAIThrowCond_Record = game::data::AIThrowCond_Record;
 using AIThrowCond_Record = game::data::AIThrowCond_Record;

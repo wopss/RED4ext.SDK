@@ -18,7 +18,7 @@ struct ThumbnailWidgetDefinition_Record : game::data::WidgetDefinition_Record
     static constexpr const char* ALIAS = "ThumbnailWidgetDefinition_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ThumbnailWidgetDefinition_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ThumbnailWidgetDefinition_Record, 0x88);
 } // namespace game::data
 using gamedataThumbnailWidgetDefinition_Record = game::data::ThumbnailWidgetDefinition_Record;
 using ThumbnailWidgetDefinition_Record = game::data::ThumbnailWidgetDefinition_Record;

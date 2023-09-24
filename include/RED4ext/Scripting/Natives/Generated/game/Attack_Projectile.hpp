@@ -17,9 +17,9 @@ struct Attack_Projectile : game::IAttack
     static constexpr const char* NAME = "gameAttack_Projectile";
     static constexpr const char* ALIAS = "Attack_Projectile";
 
-    uint8_t unkD8[0xF8 - 0xD8]; // D8
+    uint8_t unk128[0x148 - 0x128]; // 128
 };
-RED4EXT_ASSERT_SIZE(Attack_Projectile, 0xF8);
+RED4EXT_ASSERT_SIZE(Attack_Projectile, 0x148);
 } // namespace game
 using gameAttack_Projectile = game::Attack_Projectile;
 using Attack_Projectile = game::Attack_Projectile;

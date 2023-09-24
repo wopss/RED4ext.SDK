@@ -19,6 +19,7 @@ enum class DialogLineVisualStyle : uint8_t
     overHeadAlwaysVisible = 6,
     alwaysCinematicNoSpeaker = 7,
     globalTVAlwaysVisible = 8,
+    narrator = 9,
 };
 } // namespace scn
 using scnDialogLineVisualStyle = scn::DialogLineVisualStyle;

@@ -17,9 +17,9 @@ struct PrereqCheck_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPrereqCheck_Record";
     static constexpr const char* ALIAS = "PrereqCheck_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PrereqCheck_Record, 0x58);
+RED4EXT_ASSERT_SIZE(PrereqCheck_Record, 0x78);
 } // namespace game::data
 using gamedataPrereqCheck_Record = game::data::PrereqCheck_Record;
 using PrereqCheck_Record = game::data::PrereqCheck_Record;

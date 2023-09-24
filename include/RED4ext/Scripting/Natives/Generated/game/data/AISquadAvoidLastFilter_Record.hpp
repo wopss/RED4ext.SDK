@@ -18,7 +18,7 @@ struct AISquadAvoidLastFilter_Record : game::data::AITicketFilter_Record
     static constexpr const char* ALIAS = "AISquadAvoidLastFilter_Record";
 
 };
-RED4EXT_ASSERT_SIZE(AISquadAvoidLastFilter_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AISquadAvoidLastFilter_Record, 0x80);
 } // namespace game::data
 using gamedataAISquadAvoidLastFilter_Record = game::data::AISquadAvoidLastFilter_Record;
 using AISquadAvoidLastFilter_Record = game::data::AISquadAvoidLastFilter_Record;

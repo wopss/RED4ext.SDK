@@ -19,13 +19,13 @@ struct JournalQuest : game::JournalFileEntry
     static constexpr const char* NAME = "gameJournalQuest";
     static constexpr const char* ALIAS = "JournalQuest";
 
-    LocalizationString title; // 90
-    game::JournalQuestType type; // B8
-    TweakDBID recommendedLevelID; // BC
-    uint8_t unkC4[0xC8 - 0xC4]; // C4
-    CString districtID; // C8
+    LocalizationString title; // A0
+    game::JournalQuestType type; // C8
+    TweakDBID recommendedLevelID; // CC
+    uint8_t unkD4[0xD8 - 0xD4]; // D4
+    CString districtID; // D8
 };
-RED4EXT_ASSERT_SIZE(JournalQuest, 0xE8);
+RED4EXT_ASSERT_SIZE(JournalQuest, 0xF8);
 } // namespace game
 using gameJournalQuest = game::JournalQuest;
 using JournalQuest = game::JournalQuest;

@@ -17,9 +17,9 @@ struct AimAssistConfigPreset_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAimAssistConfigPreset_Record";
     static constexpr const char* ALIAS = "AimAssistConfigPreset_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AimAssistConfigPreset_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AimAssistConfigPreset_Record, 0x90);
 } // namespace game::data
 using gamedataAimAssistConfigPreset_Record = game::data::AimAssistConfigPreset_Record;
 using AimAssistConfigPreset_Record = game::data::AimAssistConfigPreset_Record;

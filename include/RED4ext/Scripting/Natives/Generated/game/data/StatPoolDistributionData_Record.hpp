@@ -17,9 +17,9 @@ struct StatPoolDistributionData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataStatPoolDistributionData_Record";
     static constexpr const char* ALIAS = "StatPoolDistributionData_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StatPoolDistributionData_Record, 0x50);
+RED4EXT_ASSERT_SIZE(StatPoolDistributionData_Record, 0x60);
 } // namespace game::data
 using gamedataStatPoolDistributionData_Record = game::data::StatPoolDistributionData_Record;
 using StatPoolDistributionData_Record = game::data::StatPoolDistributionData_Record;

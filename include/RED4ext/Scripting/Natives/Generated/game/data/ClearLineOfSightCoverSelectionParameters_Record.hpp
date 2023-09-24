@@ -17,9 +17,9 @@ struct ClearLineOfSightCoverSelectionParameters_Record : game::data::CoverSelect
     static constexpr const char* NAME = "gamedataClearLineOfSightCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "ClearLineOfSightCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(ClearLineOfSightCoverSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(ClearLineOfSightCoverSelectionParameters_Record, 0x90);
 } // namespace game::data
 using gamedataClearLineOfSightCoverSelectionParameters_Record = game::data::ClearLineOfSightCoverSelectionParameters_Record;
 using ClearLineOfSightCoverSelectionParameters_Record = game::data::ClearLineOfSightCoverSelectionParameters_Record;

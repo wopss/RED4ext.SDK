@@ -16,6 +16,9 @@ enum class AmbientGroupingVariant : uint32_t
     AllEntitiesAllDirections = 3,
     IndoorAllDirections = 4,
     OutdoorAllDirections = 5,
+    SameRoomEntities = 6,
+    DifferentRoomEntities = 7,
+    DistanceExclusion = 8,
 };
 } // namespace audio
 using audioAmbientGroupingVariant = audio::AmbientGroupingVariant;

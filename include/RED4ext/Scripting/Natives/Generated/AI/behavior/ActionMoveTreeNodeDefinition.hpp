@@ -32,8 +32,10 @@ struct ActionMoveTreeNodeDefinition : AI::behavior::ActionTreeNodeDefinition
     Handle<AI::ArgumentMapping> startTangent; // D0
     Handle<AI::ArgumentMapping> spotReservation; // E0
     Handle<AI::ArgumentMapping> ignoreRestrictedArea; // F0
+    Handle<AI::ArgumentMapping> ignoreCollisionsWhenCloseToTarget; // 100
+    Handle<AI::ArgumentMapping> failWhenStoppedByCollision; // 110
 };
-RED4EXT_ASSERT_SIZE(ActionMoveTreeNodeDefinition, 0x100);
+RED4EXT_ASSERT_SIZE(ActionMoveTreeNodeDefinition, 0x120);
 } // namespace AI::behavior
 using AIbehaviorActionMoveTreeNodeDefinition = AI::behavior::ActionMoveTreeNodeDefinition;
 } // namespace RED4ext

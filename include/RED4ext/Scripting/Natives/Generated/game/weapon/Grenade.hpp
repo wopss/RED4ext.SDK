@@ -19,12 +19,12 @@ struct Grenade : game::ItemObject
     static constexpr const char* NAME = "gameweaponGrenade";
     static constexpr const char* ALIAS = "WeaponGrenade";
 
-    Vector4 lastHitNormal; // 2C0
-    uint8_t unk2D0[0x2E0 - 0x2D0]; // 2D0
-    game::data::GrenadeDeliveryMethodType deliveryMethod; // 2E0
-    uint8_t unk2E4[0x2F0 - 0x2E4]; // 2E4
+    Vector4 lastHitNormal; // 2D0
+    uint8_t unk2E0[0x2F0 - 0x2E0]; // 2E0
+    game::data::GrenadeDeliveryMethodType deliveryMethod; // 2F0
+    uint8_t unk2F4[0x300 - 0x2F4]; // 2F4
 };
-RED4EXT_ASSERT_SIZE(Grenade, 0x2F0);
+RED4EXT_ASSERT_SIZE(Grenade, 0x300);
 } // namespace game::weapon
 using gameweaponGrenade = game::weapon::Grenade;
 using WeaponGrenade = game::weapon::Grenade;

@@ -19,8 +19,10 @@ struct BuffInfo
 
     TweakDBID buffID; // 00
     float timeRemaining; // 08
+    float timeTotal; // 0C
+    uint32_t stackCount; // 10
 };
-RED4EXT_ASSERT_SIZE(BuffInfo, 0xC);
+RED4EXT_ASSERT_SIZE(BuffInfo, 0x14);
 } // namespace game::ui
 using gameuiBuffInfo = game::ui::BuffInfo;
 using BuffInfo = game::ui::BuffInfo;

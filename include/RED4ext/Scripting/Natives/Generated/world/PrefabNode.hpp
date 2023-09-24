@@ -39,7 +39,7 @@ struct PrefabNode : world::Node
     Vector3 proxyScale; // 6C
     bool canBeToggledInGame; // 78
     uint8_t unk79[0x7A - 0x79]; // 79
-    bool noCollision; // 7A
+    bool noCollisions; // 7A
     bool applyMaxStreamingDistance; // 7B
     bool ignoreMeshEmbeddedOccluders; // 7C
     bool ignoreAllOccluders; // 7D

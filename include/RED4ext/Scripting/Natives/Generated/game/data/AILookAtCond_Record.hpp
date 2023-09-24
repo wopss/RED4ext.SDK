@@ -17,9 +17,9 @@ struct AILookAtCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAILookAtCond_Record";
     static constexpr const char* ALIAS = "AILookAtCond_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x70 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AILookAtCond_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AILookAtCond_Record, 0x70);
 } // namespace game::data
 using gamedataAILookAtCond_Record = game::data::AILookAtCond_Record;
 using AILookAtCond_Record = game::data::AILookAtCond_Record;

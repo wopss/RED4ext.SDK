@@ -42,9 +42,9 @@ struct Prefab : res::StreamedResource
     RaRef<world::AutoFoliageMapping> foliageBrushToTerrainLayerMapping; // 50
     RaRef<CMesh> proxyMesh; // 58
     Vector3 proxyScale; // 60
-    float proxyDistanceFactor; // 6C
-    float averageNodeDiagonal; // 70
-    uint8_t unk74[0x78 - 0x74]; // 74
+    float maxProxyStreamingDistance; // 6C
+    float proxyDistanceFactor; // 70
+    float averageNodeDiagonal; // 74
     RaRef<world::Prefab> booleanProxyHelper; // 78
     RaRef<world::Prefab> proxyLimiterHelper; // 80
     RaRef<CMesh> customProxyMeshHelper; // 88
@@ -62,14 +62,16 @@ struct Prefab : res::StreamedResource
     bool isMerged; // 1F0
     bool isProxyMeshOnly; // 1F1
     bool boostInnerNodesToProxyDistance; // 1F2
-    uint8_t unk1F3[0x1F4 - 0x1F3]; // 1F3
-    bool ignoreMeshEmbeddedOccluders; // 1F4
-    bool ignoreAllOccluders; // 1F5
-    bool isTerrainPrefab; // 1F6
-    bool excludeOnConsole; // 1F7
-    world::PrefabMinimapContribution minimapContribution; // 1F8
-    world::PrefabInteriorMapContribution interiorMapContribution; // 1F9
-    uint8_t unk1FA[0x210 - 0x1FA]; // 1FA
+    bool overrideStreamingPosWithBBoxCenter; // 1F3
+    uint8_t unk1F4[0x1F5 - 0x1F4]; // 1F4
+    bool ignoreMeshEmbeddedOccluders; // 1F5
+    bool ignoreAllOccluders; // 1F6
+    bool isTerrainPrefab; // 1F7
+    bool excludeOnConsole; // 1F8
+    bool excludeOnNextGenConsoles; // 1F9
+    world::PrefabMinimapContribution minimapContribution; // 1FA
+    world::PrefabInteriorMapContribution interiorMapContribution; // 1FB
+    uint8_t unk1FC[0x210 - 0x1FC]; // 1FC
     CRUID prefabUniqueId; // 210
     uint8_t unk218[0x2B0 - 0x218]; // 218
     DynArray<Handle<world::PrefabMetadata>> metadataArray; // 2B0

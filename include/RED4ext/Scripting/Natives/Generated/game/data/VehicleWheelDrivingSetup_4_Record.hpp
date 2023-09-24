@@ -17,9 +17,9 @@ struct VehicleWheelDrivingSetup_4_Record : game::data::VehicleWheelDrivingSetup_
     static constexpr const char* NAME = "gamedataVehicleWheelDrivingSetup_4_Record";
     static constexpr const char* ALIAS = "VehicleWheelDrivingSetup_4_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(VehicleWheelDrivingSetup_4_Record, 0x60);
+RED4EXT_ASSERT_SIZE(VehicleWheelDrivingSetup_4_Record, 0x90);
 } // namespace game::data
 using gamedataVehicleWheelDrivingSetup_4_Record = game::data::VehicleWheelDrivingSetup_4_Record;
 using VehicleWheelDrivingSetup_4_Record = game::data::VehicleWheelDrivingSetup_4_Record;

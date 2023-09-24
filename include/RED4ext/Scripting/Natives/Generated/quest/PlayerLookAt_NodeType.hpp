@@ -20,24 +20,26 @@ struct PlayerLookAt_NodeType : quest::ISceneManagerNodeType
     static constexpr const char* NAME = "questPlayerLookAt_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    game::EntityReference objectRef; // 38
-    CName slotName; // 70
-    Vector3 offsetPos; // 78
-    float duration; // 84
-    bool adjustPitch; // 88
-    bool adjustYaw; // 89
-    bool endOnTargetReached; // 8A
-    bool endOnCameraInputApplied; // 8B
-    bool endOnTimeExceeded; // 8C
-    uint8_t unk8D[0x90 - 0x8D]; // 8D
-    float cameraInputMagToBreak; // 90
-    float precision; // 94
-    float maxDuration; // 98
-    bool easeIn; // 9C
-    bool easeOut; // 9D
-    uint8_t unk9E[0xA0 - 0x9E]; // 9E
+    bool useOffsetToPlayer; // 38
+    uint8_t unk39[0x40 - 0x39]; // 39
+    game::EntityReference objectRef; // 40
+    CName slotName; // 78
+    Vector3 offsetPos; // 80
+    float duration; // 8C
+    bool adjustPitch; // 90
+    bool adjustYaw; // 91
+    bool endOnTargetReached; // 92
+    bool endOnCameraInputApplied; // 93
+    bool endOnTimeExceeded; // 94
+    uint8_t unk95[0x98 - 0x95]; // 95
+    float cameraInputMagToBreak; // 98
+    float precision; // 9C
+    float maxDuration; // A0
+    bool easeIn; // A4
+    bool easeOut; // A5
+    uint8_t unkA6[0xA8 - 0xA6]; // A6
 };
-RED4EXT_ASSERT_SIZE(PlayerLookAt_NodeType, 0xA0);
+RED4EXT_ASSERT_SIZE(PlayerLookAt_NodeType, 0xA8);
 } // namespace quest
 using questPlayerLookAt_NodeType = quest::PlayerLookAt_NodeType;
 } // namespace RED4ext

@@ -15,6 +15,7 @@ enum class MoveType : uint32_t
     RotateTo = 2,
     Patrol = 3,
     Follow = 4,
+    JoinCrowd = 5,
 };
 } // namespace quest
 using questMoveType = quest::MoveType;

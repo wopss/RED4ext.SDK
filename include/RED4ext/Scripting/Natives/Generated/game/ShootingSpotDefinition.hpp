@@ -18,7 +18,7 @@ struct ShootingSpotDefinition : game::CoverDefinition
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(ShootingSpotDefinition, 0xA8);
+RED4EXT_ASSERT_SIZE(ShootingSpotDefinition, 0xB0);
 } // namespace game
 using gameShootingSpotDefinition = game::ShootingSpotDefinition;
 } // namespace RED4ext

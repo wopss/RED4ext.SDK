@@ -17,9 +17,9 @@ struct AICooldownCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAICooldownCond_Record";
     static constexpr const char* ALIAS = "AICooldownCond_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x68 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AICooldownCond_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AICooldownCond_Record, 0x68);
 } // namespace game::data
 using gamedataAICooldownCond_Record = game::data::AICooldownCond_Record;
 using AICooldownCond_Record = game::data::AICooldownCond_Record;

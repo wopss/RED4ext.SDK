@@ -17,9 +17,9 @@ struct VehicleWheelRole_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleWheelRole_Record";
     static constexpr const char* ALIAS = "VehicleWheelRole_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleWheelRole_Record, 0x58);
+RED4EXT_ASSERT_SIZE(VehicleWheelRole_Record, 0x70);
 } // namespace game::data
 using gamedataVehicleWheelRole_Record = game::data::VehicleWheelRole_Record;
 using VehicleWheelRole_Record = game::data::VehicleWheelRole_Record;

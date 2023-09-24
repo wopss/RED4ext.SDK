@@ -23,14 +23,15 @@ struct SmartObjectDefinition : ISerializable
     static constexpr const char* NAME = "gameSmartObjectDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    Ref<game::SmartObjectResource> resource; // 30
-    Ref<anim::ActionAnimDatabase> motionActionDatabase; // 48
-    DynArray<CName> actions; // 60
-    bool enabled; // 70
-    bool overrideGeneratedParameters; // 71
-    uint8_t unk72[0x78 - 0x72]; // 72
+    bool overrideGeneratedParameters; // 30
+    uint8_t unk31[0x38 - 0x31]; // 31
+    Ref<game::SmartObjectResource> resource; // 38
+    Ref<anim::ActionAnimDatabase> motionActionDatabase; // 50
+    DynArray<CName> actions; // 68
+    bool enabled; // 78
+    uint8_t unk79[0x80 - 0x79]; // 79
 };
-RED4EXT_ASSERT_SIZE(SmartObjectDefinition, 0x78);
+RED4EXT_ASSERT_SIZE(SmartObjectDefinition, 0x80);
 } // namespace game
 using gameSmartObjectDefinition = game::SmartObjectDefinition;
 } // namespace RED4ext

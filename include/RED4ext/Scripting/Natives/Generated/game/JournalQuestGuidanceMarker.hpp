@@ -19,12 +19,12 @@ struct JournalQuestGuidanceMarker : game::JournalEntry
     static constexpr const char* NAME = "gameJournalQuestGuidanceMarker";
     static constexpr const char* ALIAS = "JournalQuestGuidanceMarker";
 
-    NodeRef nodeRef; // 60
-    game::QuestGuidanceMarkerPathfindingType pathfindingType; // 68
-    bool isPortal; // 6C
-    uint8_t unk6D[0x70 - 0x6D]; // 6D
+    NodeRef nodeRef; // 70
+    game::QuestGuidanceMarkerPathfindingType pathfindingType; // 78
+    bool isPortal; // 7C
+    uint8_t unk7D[0x80 - 0x7D]; // 7D
 };
-RED4EXT_ASSERT_SIZE(JournalQuestGuidanceMarker, 0x70);
+RED4EXT_ASSERT_SIZE(JournalQuestGuidanceMarker, 0x80);
 } // namespace game
 using gameJournalQuestGuidanceMarker = game::JournalQuestGuidanceMarker;
 using JournalQuestGuidanceMarker = game::JournalQuestGuidanceMarker;

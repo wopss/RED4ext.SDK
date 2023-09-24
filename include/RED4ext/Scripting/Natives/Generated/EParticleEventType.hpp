@@ -13,7 +13,8 @@ enum class EParticleEventType : uint32_t
     PET_OverLife = 1,
     PET_OverDistance = 2,
     PET_Collision = 3,
-    PET_Any = 4,
+    PET_PlayOneShotSoundOnSpawn = 4,
+    PET_Any = 5,
 };
 } // namespace RED4ext
 

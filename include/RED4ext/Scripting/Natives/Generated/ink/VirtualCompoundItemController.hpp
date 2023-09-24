@@ -19,14 +19,14 @@ struct VirtualCompoundItemController : ink::ButtonController
     static constexpr const char* NAME = "inkVirtualCompoundItemController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::VirtualCompoundItemControllerCallback Added; // 1F8
-    ink::VirtualCompoundItemControllerCallback ToggledOn; // 230
-    ink::VirtualCompoundItemControllerCallback ToggledOff; // 268
-    ink::VirtualCompoundItemSelectControllerCallback Selected; // 2A0
-    ink::VirtualCompoundItemControllerCallback Deselected; // 2D8
-    uint8_t unk310[0x370 - 0x310]; // 310
+    ink::VirtualCompoundItemControllerCallback Added; // 240
+    ink::VirtualCompoundItemControllerCallback ToggledOn; // 278
+    ink::VirtualCompoundItemControllerCallback ToggledOff; // 2B0
+    ink::VirtualCompoundItemSelectControllerCallback Selected; // 2E8
+    ink::VirtualCompoundItemControllerCallback Deselected; // 320
+    uint8_t unk358[0x3B8 - 0x358]; // 358
 };
-RED4EXT_ASSERT_SIZE(VirtualCompoundItemController, 0x370);
+RED4EXT_ASSERT_SIZE(VirtualCompoundItemController, 0x3B8);
 } // namespace ink
 using inkVirtualCompoundItemController = ink::VirtualCompoundItemController;
 } // namespace RED4ext

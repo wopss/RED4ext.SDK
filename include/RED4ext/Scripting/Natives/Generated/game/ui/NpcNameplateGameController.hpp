@@ -18,10 +18,10 @@ struct NpcNameplateGameController : game::ui::ProjectedHUDGameController
     static constexpr const char* NAME = "gameuiNpcNameplateGameController";
     static constexpr const char* ALIAS = "NpcNameplateGameController";
 
-    uint8_t unk148[0x178 - 0x148]; // 148
-    ink::WidgetReference projection; // 178
+    uint8_t unk160[0x190 - 0x160]; // 160
+    ink::WidgetReference projection; // 190
 };
-RED4EXT_ASSERT_SIZE(NpcNameplateGameController, 0x190);
+RED4EXT_ASSERT_SIZE(NpcNameplateGameController, 0x1A8);
 } // namespace game::ui
 using gameuiNpcNameplateGameController = game::ui::NpcNameplateGameController;
 using NpcNameplateGameController = game::ui::NpcNameplateGameController;

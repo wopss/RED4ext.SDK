@@ -23,7 +23,7 @@ struct PerformanceAreaNode : world::TriggerAreaNode
     DynArray<world::QualitySetting> qualitySettingsArray; // 70
     CName disableCrowdUniqueName; // 80
     float globalStreamingDistanceScale; // 88
-    uint8_t unk8C[0x90 - 0x8C]; // 8C
+    float globalEntityLODDistanceScale; // 8C
 };
 RED4EXT_ASSERT_SIZE(PerformanceAreaNode, 0x90);
 } // namespace world

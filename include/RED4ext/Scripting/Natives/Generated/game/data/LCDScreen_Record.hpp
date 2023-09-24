@@ -17,9 +17,9 @@ struct LCDScreen_Record : game::data::BaseSign_Record
     static constexpr const char* NAME = "gamedataLCDScreen_Record";
     static constexpr const char* ALIAS = "LCDScreen_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk70[0x80 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(LCDScreen_Record, 0x60);
+RED4EXT_ASSERT_SIZE(LCDScreen_Record, 0x80);
 } // namespace game::data
 using gamedataLCDScreen_Record = game::data::LCDScreen_Record;
 using LCDScreen_Record = game::data::LCDScreen_Record;

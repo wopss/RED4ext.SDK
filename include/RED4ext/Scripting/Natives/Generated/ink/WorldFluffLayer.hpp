@@ -17,9 +17,9 @@ struct WorldFluffLayer : ink::Layer
     static constexpr const char* NAME = "inkWorldFluffLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk150[0x200 - 0x150]; // 150
+    uint8_t unk150[0x2D0 - 0x150]; // 150
 };
-RED4EXT_ASSERT_SIZE(WorldFluffLayer, 0x200);
+RED4EXT_ASSERT_SIZE(WorldFluffLayer, 0x2D0);
 } // namespace ink
 using inkWorldFluffLayer = ink::WorldFluffLayer;
 } // namespace RED4ext

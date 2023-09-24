@@ -23,8 +23,9 @@ struct ExtractMountDataTaskDefinition : AI::behavior::TaskDefinition
     Handle<AI::ArgumentMapping> mountEventData; // 38
     Handle<AI::ArgumentMapping> outWorkspotData; // 48
     Handle<AI::ArgumentMapping> outIsInstant; // 58
+    Handle<AI::ArgumentMapping> outAllowFailsafeTeleport; // 68
 };
-RED4EXT_ASSERT_SIZE(ExtractMountDataTaskDefinition, 0x68);
+RED4EXT_ASSERT_SIZE(ExtractMountDataTaskDefinition, 0x78);
 } // namespace AI::behavior
 using AIbehaviorExtractMountDataTaskDefinition = AI::behavior::ExtractMountDataTaskDefinition;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct AIRingTicket_Record : game::data::AITicket_Record
     static constexpr const char* NAME = "gamedataAIRingTicket_Record";
     static constexpr const char* ALIAS = "AIRingTicket_Record";
 
-    uint8_t unk80[0x88 - 0x80]; // 80
+    uint8_t unk138[0x148 - 0x138]; // 138
 };
-RED4EXT_ASSERT_SIZE(AIRingTicket_Record, 0x88);
+RED4EXT_ASSERT_SIZE(AIRingTicket_Record, 0x148);
 } // namespace game::data
 using gamedataAIRingTicket_Record = game::data::AIRingTicket_Record;
 using AIRingTicket_Record = game::data::AIRingTicket_Record;

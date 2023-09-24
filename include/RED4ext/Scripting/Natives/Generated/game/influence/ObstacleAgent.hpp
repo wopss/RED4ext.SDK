@@ -17,13 +17,13 @@ struct ObstacleAgent : game::influence::IAgent
     static constexpr const char* NAME = "gameinfluenceObstacleAgent";
     static constexpr const char* ALIAS = "InfluenceObstacleAgent";
 
-    uint8_t unk08[0x70 - 0x8]; // 8
-    float radius; // 70
-    uint8_t unk74[0x75 - 0x74]; // 74
-    bool useMeshes; // 75
-    uint8_t unk76[0xB0 - 0x76]; // 76
+    uint8_t unk08[0x78 - 0x8]; // 8
+    float radius; // 78
+    uint8_t unk7C[0x7D - 0x7C]; // 7C
+    bool useMeshes; // 7D
+    uint8_t unk7E[0xC0 - 0x7E]; // 7E
 };
-RED4EXT_ASSERT_SIZE(ObstacleAgent, 0xB0);
+RED4EXT_ASSERT_SIZE(ObstacleAgent, 0xC0);
 } // namespace game::influence
 using gameinfluenceObstacleAgent = game::influence::ObstacleAgent;
 using InfluenceObstacleAgent = game::influence::ObstacleAgent;

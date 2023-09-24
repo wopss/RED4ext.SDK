@@ -10,11 +10,11 @@ namespace RED4ext
 namespace game::smart { 
 enum class GunTargetState : uint32_t
 {
-    Visible = 0,
-    Targetable = 1,
-    Locking = 2,
-    Locked = 3,
-    Unlocking = 4,
+    Visible = 1,
+    Targetable = 2,
+    Locking = 4,
+    Unlocking = 8,
+    Locked = 16,
 };
 } // namespace game::smart
 using gamesmartGunTargetState = game::smart::GunTargetState;

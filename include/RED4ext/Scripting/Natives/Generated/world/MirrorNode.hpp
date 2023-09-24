@@ -18,10 +18,10 @@ struct MirrorNode : world::MeshNode
     static constexpr const char* NAME = "worldMirrorNode";
     static constexpr const char* ALIAS = NAME;
 
-    Vector3 cullingBoxExtents; // 58
-    Vector3 cullingBoxOffset; // 64
+    Vector3 cullingBoxExtents; // 60
+    Vector3 cullingBoxOffset; // 6C
 };
-RED4EXT_ASSERT_SIZE(MirrorNode, 0x70);
+RED4EXT_ASSERT_SIZE(MirrorNode, 0x78);
 } // namespace world
 using worldMirrorNode = world::MirrorNode;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct Weakspot_Record : game::data::SpawnableObject_Record
     static constexpr const char* NAME = "gamedataWeakspot_Record";
     static constexpr const char* ALIAS = "Weakspot_Record";
 
-    uint8_t unk78[0x88 - 0x78]; // 78
+    uint8_t unkF8[0x128 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(Weakspot_Record, 0x88);
+RED4EXT_ASSERT_SIZE(Weakspot_Record, 0x128);
 } // namespace game::data
 using gamedataWeakspot_Record = game::data::Weakspot_Record;
 using Weakspot_Record = game::data::Weakspot_Record;

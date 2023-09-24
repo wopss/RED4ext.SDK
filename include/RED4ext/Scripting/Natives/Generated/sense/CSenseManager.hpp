@@ -17,9 +17,9 @@ struct CSenseManager : sense::ISenseManager
     static constexpr const char* NAME = "senseCSenseManager";
     static constexpr const char* ALIAS = "SenseManager";
 
-    uint8_t unk48[0x188 - 0x48]; // 48
+    uint8_t unk48[0x1A0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CSenseManager, 0x188);
+RED4EXT_ASSERT_SIZE(CSenseManager, 0x1A0);
 } // namespace sense
 using senseCSenseManager = sense::CSenseManager;
 using SenseManager = sense::CSenseManager;

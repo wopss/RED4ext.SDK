@@ -14,9 +14,11 @@
 #include <RED4ext/Scripting/Natives/Generated/ELightType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ELightUnit.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/ContactShadowReciever.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/EPathTracingLightUsage.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/LightAttenuation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/LightChannel.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/LightGroup.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/RayTracedShadowsPlatform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/SLightFlickering.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/Node.hpp>
 
@@ -36,61 +38,60 @@ struct StaticLightNode : world::Node
     float radius; // 40
     ELightUnit unit; // 44
     float intensity; // 48
-    float rayTracingIntensityScale; // 4C
-    bool rtxdiOverrideGlobalRayOffset; // 50
-    uint8_t unk51[0x54 - 0x51]; // 51
-    float rtxdiRayOffsetMin; // 54
-    float rtxdiRayOffsetMax; // 58
-    float rtxdiRayScale; // 5C
-    bool rtxdiEnableLight; // 60
-    uint8_t unk61[0x64 - 0x61]; // 61
-    float EV; // 64
-    ELightType type; // 68
-    uint8_t scaleGI; // 6C
-    uint8_t scaleEnvProbes; // 6D
-    uint8_t sceneSpecularScale; // 6E
-    uint8_t scaleVolFog; // 6F
-    int8_t roughnessBias; // 70
-    bool useInTransparents; // 71
-    bool useInParticles; // 72
-    bool sceneDiffuse; // 73
-    bool directional; // 74
-    bool clampAttenuation; // 75
-    rend::LightChannel lightChannel; // 76
-    rend::LightGroup group; // 78
-    rend::LightAttenuation attenuation; // 79
-    bool enableLocalShadows; // 7A
-    bool enableLocalShadowsForceStaticsOnly; // 7B
-    rend::ContactShadowReciever contactShadows; // 7C
-    uint8_t unk7D[0x80 - 0x7D]; // 7D
-    float shadowFadeDistance; // 80
-    float shadowFadeRange; // 84
-    ELightShadowSoftnessMode shadowSoftnessMode; // 88
-    float rayTracingLightSourceRadius; // 8C
-    float rayTracingContactShadowRange; // 90
-    rend::SLightFlickering flicker; // 94
-    EEnvColorGroup envColorGroup; // A0
-    uint8_t colorGroupSaturation; // A1
-    uint8_t portalAngleCutoff; // A2
-    bool allowDistantLight; // A3
-    float innerAngle; // A4
-    float outerAngle; // A8
-    float shadowAngle; // AC
-    float shadowRadius; // B0
-    float softness; // B4
-    EAreaLightShape areaShape; // B8
-    bool areaTwoSided; // BC
-    bool spotCapsule; // BD
-    uint8_t unkBE[0xC0 - 0xBE]; // BE
-    float sourceRadius; // C0
-    float capsuleLength; // C4
-    float areaRectSideA; // C8
-    float areaRectSideB; // CC
-    RaRef<CIESDataResource> iesProfile; // D0
-    float autoHideDistance; // D8
-    uint8_t unkDC[0xE0 - 0xDC]; // DC
+    float EV; // 4C
+    ELightType type; // 50
+    uint8_t scaleGI; // 54
+    uint8_t scaleEnvProbes; // 55
+    uint8_t sceneSpecularScale; // 56
+    uint8_t scaleVolFog; // 57
+    int8_t roughnessBias; // 58
+    bool useInTransparents; // 59
+    bool useInParticles; // 5A
+    bool sceneDiffuse; // 5B
+    bool directional; // 5C
+    bool clampAttenuation; // 5D
+    rend::LightChannel lightChannel; // 5E
+    rend::LightGroup group; // 60
+    rend::LightAttenuation attenuation; // 61
+    bool enableLocalShadows; // 62
+    bool enableLocalShadowsForceStaticsOnly; // 63
+    rend::ContactShadowReciever contactShadows; // 64
+    uint8_t unk65[0x68 - 0x65]; // 65
+    float shadowFadeDistance; // 68
+    float shadowFadeRange; // 6C
+    ELightShadowSoftnessMode shadowSoftnessMode; // 70
+    rend::RayTracedShadowsPlatform rayTracedShadowsPlatform; // 74
+    uint8_t unk75[0x78 - 0x75]; // 75
+    float rayTracingLightSourceRadius; // 78
+    float rayTracingContactShadowRange; // 7C
+    rend::SLightFlickering flicker; // 80
+    EEnvColorGroup envColorGroup; // 8C
+    uint8_t colorGroupSaturation; // 8D
+    uint8_t portalAngleCutoff; // 8E
+    bool allowDistantLight; // 8F
+    rend::EPathTracingLightUsage pathTracingLightUsage; // 90
+    bool pathTracingOverrideScaleGI; // 91
+    uint8_t unk92[0x94 - 0x92]; // 92
+    float rayTracingIntensityScale; // 94
+    float rtxdiShadowStartingDistance; // 98
+    float innerAngle; // 9C
+    float outerAngle; // A0
+    float shadowAngle; // A4
+    float shadowRadius; // A8
+    float softness; // AC
+    EAreaLightShape areaShape; // B0
+    bool areaTwoSided; // B4
+    bool spotCapsule; // B5
+    uint8_t unkB6[0xB8 - 0xB6]; // B6
+    float sourceRadius; // B8
+    float capsuleLength; // BC
+    float areaRectSideA; // C0
+    float areaRectSideB; // C4
+    RaRef<CIESDataResource> iesProfile; // C8
+    float autoHideDistance; // D0
+    uint8_t unkD4[0xD8 - 0xD4]; // D4
 };
-RED4EXT_ASSERT_SIZE(StaticLightNode, 0xE0);
+RED4EXT_ASSERT_SIZE(StaticLightNode, 0xD8);
 } // namespace world
 using worldStaticLightNode = world::StaticLightNode;
 } // namespace RED4ext

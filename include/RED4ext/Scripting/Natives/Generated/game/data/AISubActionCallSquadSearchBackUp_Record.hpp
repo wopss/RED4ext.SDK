@@ -17,9 +17,9 @@ struct AISubActionCallSquadSearchBackUp_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionCallSquadSearchBackUp_Record";
     static constexpr const char* ALIAS = "AISubActionCallSquadSearchBackUp_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionCallSquadSearchBackUp_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionCallSquadSearchBackUp_Record, 0x88);
 } // namespace game::data
 using gamedataAISubActionCallSquadSearchBackUp_Record = game::data::AISubActionCallSquadSearchBackUp_Record;
 using AISubActionCallSquadSearchBackUp_Record = game::data::AISubActionCallSquadSearchBackUp_Record;

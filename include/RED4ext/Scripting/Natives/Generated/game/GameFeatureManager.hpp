@@ -17,9 +17,9 @@ struct GameFeatureManager : IScriptable
     static constexpr const char* NAME = "gameGameFeatureManager";
     static constexpr const char* ALIAS = "GameFeatureManager";
 
-    uint8_t unk40[0x60 - 0x40]; // 40
+    uint8_t unk40[0x68 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(GameFeatureManager, 0x60);
+RED4EXT_ASSERT_SIZE(GameFeatureManager, 0x68);
 } // namespace game
 using gameGameFeatureManager = game::GameFeatureManager;
 using GameFeatureManager = game::GameFeatureManager;

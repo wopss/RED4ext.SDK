@@ -13,9 +13,10 @@ enum class NavGenNavmeshImpact : uint16_t
     Ignored = 1,
     Blocking = 2,
     Road = 3,
-    CrowdWalkable = 4,
-    Stairs = 5,
-    Drones = 6,
+    Stairs = 4,
+    Drones = 5,
+    Terrain = 6,
+    CrowdWalkable = Walkable,
 };
 } // namespace RED4ext
 

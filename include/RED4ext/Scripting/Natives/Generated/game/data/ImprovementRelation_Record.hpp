@@ -17,9 +17,9 @@ struct ImprovementRelation_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataImprovementRelation_Record";
     static constexpr const char* ALIAS = "ImprovementRelation_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ImprovementRelation_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ImprovementRelation_Record, 0x68);
 } // namespace game::data
 using gamedataImprovementRelation_Record = game::data::ImprovementRelation_Record;
 using ImprovementRelation_Record = game::data::ImprovementRelation_Record;

@@ -27,10 +27,10 @@ struct PlaySkAnimEvent : scn::PlayFPPControlAnimEvent
     Handle<scn::EventBlendWorkspotSetupParameters> poseBlendOutWorkspot; // 108
     uint8_t unk118[0x120 - 0x118]; // 118
     scn::PlaySkAnimRootMotionData rootMotionData; // 120
-    scn::PlayerAnimData playerData; // 1D0
-    uint8_t unk1E8[0x1F0 - 0x1E8]; // 1E8
+    scn::PlayerAnimData playerData; // 1E0
+    uint8_t unk1F8[0x200 - 0x1F8]; // 1F8
 };
-RED4EXT_ASSERT_SIZE(PlaySkAnimEvent, 0x1F0);
+RED4EXT_ASSERT_SIZE(PlaySkAnimEvent, 0x200);
 } // namespace scn
 using scnPlaySkAnimEvent = scn::PlaySkAnimEvent;
 } // namespace RED4ext

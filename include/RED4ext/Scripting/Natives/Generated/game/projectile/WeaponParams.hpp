@@ -32,12 +32,13 @@ struct WeaponParams
     Vector4 hitPlaneOffset; // 40
     float shootingOffset; // 50
     bool ignoreWeaponOwnerCollision; // 54
-    uint8_t unk55[0x58 - 0x55]; // 55
+    bool ignoreMountedVehicleCollision; // 55
+    uint8_t unk56[0x58 - 0x56]; // 56
     float range; // 58
-    uint8_t unk5C[0x88 - 0x5C]; // 5C
-    game::RicochetData ricochetData; // 88
+    uint8_t unk5C[0xA8 - 0x5C]; // 5C
+    game::RicochetData ricochetData; // A8
 };
-RED4EXT_ASSERT_SIZE(WeaponParams, 0xA0);
+RED4EXT_ASSERT_SIZE(WeaponParams, 0xC0);
 } // namespace game::projectile
 using gameprojectileWeaponParams = game::projectile::WeaponParams;
 } // namespace RED4ext

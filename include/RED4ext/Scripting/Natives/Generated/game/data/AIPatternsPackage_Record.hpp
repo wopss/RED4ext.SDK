@@ -17,9 +17,9 @@ struct AIPatternsPackage_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIPatternsPackage_Record";
     static constexpr const char* ALIAS = "AIPatternsPackage_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIPatternsPackage_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AIPatternsPackage_Record, 0x60);
 } // namespace game::data
 using gamedataAIPatternsPackage_Record = game::data::AIPatternsPackage_Record;
 using AIPatternsPackage_Record = game::data::AIPatternsPackage_Record;

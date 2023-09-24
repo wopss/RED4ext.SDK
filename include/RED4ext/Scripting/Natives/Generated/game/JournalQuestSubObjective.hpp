@@ -18,7 +18,7 @@ struct JournalQuestSubObjective : game::JournalQuestObjectiveBase
     static constexpr const char* ALIAS = "JournalQuestSubObjective";
 
 };
-RED4EXT_ASSERT_SIZE(JournalQuestSubObjective, 0xD8);
+RED4EXT_ASSERT_SIZE(JournalQuestSubObjective, 0xE8);
 } // namespace game
 using gameJournalQuestSubObjective = game::JournalQuestSubObjective;
 using JournalQuestSubObjective = game::JournalQuestSubObjective;

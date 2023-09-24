@@ -18,7 +18,7 @@ struct WorkspotStatusEffect_Record : game::data::StatusEffect_Record
     static constexpr const char* ALIAS = "WorkspotStatusEffect_Record";
 
 };
-RED4EXT_ASSERT_SIZE(WorkspotStatusEffect_Record, 0x90);
+RED4EXT_ASSERT_SIZE(WorkspotStatusEffect_Record, 0x160);
 } // namespace game::data
 using gamedataWorkspotStatusEffect_Record = game::data::WorkspotStatusEffect_Record;
 using WorkspotStatusEffect_Record = game::data::WorkspotStatusEffect_Record;

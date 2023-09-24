@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/audio/AudioMetadata.hpp>
@@ -31,11 +32,19 @@ struct LocomotionWaterSettings : audio::AudioMetadata
     audio::LocomotionWaterContextSettings shallowSettings; // 48
     audio::LocomotionWaterContextSettings intermediateSettings; // 58
     audio::LocomotionWaterContextSettings deepSettings; // 68
-    RaRef<CResource> defaultLegVfx; // 78
-    Handle<audio::LocomotionStateVfxDictionary> locomotionStatesLegVfx; // 80
-    Handle<audio::LocomotionCustomActionVfxDictionary> customActionLegVfx; // 90
+    float minHeelDepthToSpawnFallFx; // 78
+    float minDownwardSpeedForRegularFall; // 7C
+    float minDownwardSpeedForFastFall; // 80
+    uint8_t unk84[0x88 - 0x84]; // 84
+    RaRef<CResource> defaultLegVfx; // 88
+    RaRef<CResource> regularFallVfx; // 90
+    RaRef<CResource> fastFallVfx; // 98
+    CName regularFallEvent; // A0
+    CName fastFallEvent; // A8
+    Handle<audio::LocomotionStateVfxDictionary> locomotionStatesLegVfx; // B0
+    Handle<audio::LocomotionCustomActionVfxDictionary> customActionLegVfx; // C0
 };
-RED4EXT_ASSERT_SIZE(LocomotionWaterSettings, 0xA0);
+RED4EXT_ASSERT_SIZE(LocomotionWaterSettings, 0xD0);
 } // namespace audio
 using audioLocomotionWaterSettings = audio::LocomotionWaterSettings;
 } // namespace RED4ext

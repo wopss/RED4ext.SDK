@@ -17,9 +17,9 @@ struct DynamicDownforceHelper_Record : game::data::DriveHelper_Record
     static constexpr const char* NAME = "gamedataDynamicDownforceHelper_Record";
     static constexpr const char* ALIAS = "DynamicDownforceHelper_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x88 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(DynamicDownforceHelper_Record, 0x60);
+RED4EXT_ASSERT_SIZE(DynamicDownforceHelper_Record, 0x88);
 } // namespace game::data
 using gamedataDynamicDownforceHelper_Record = game::data::DynamicDownforceHelper_Record;
 using DynamicDownforceHelper_Record = game::data::DynamicDownforceHelper_Record;

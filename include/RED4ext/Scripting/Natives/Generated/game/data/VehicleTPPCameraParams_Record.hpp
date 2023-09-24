@@ -17,9 +17,9 @@ struct VehicleTPPCameraParams_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleTPPCameraParams_Record";
     static constexpr const char* ALIAS = "VehicleTPPCameraParams_Record";
 
-    uint8_t unk48[0xC8 - 0x48]; // 48
+    uint8_t unk48[0x238 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleTPPCameraParams_Record, 0xC8);
+RED4EXT_ASSERT_SIZE(VehicleTPPCameraParams_Record, 0x238);
 } // namespace game::data
 using gamedataVehicleTPPCameraParams_Record = game::data::VehicleTPPCameraParams_Record;
 using VehicleTPPCameraParams_Record = game::data::VehicleTPPCameraParams_Record;

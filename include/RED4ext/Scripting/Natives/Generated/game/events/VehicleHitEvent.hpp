@@ -18,10 +18,10 @@ struct VehicleHitEvent : game::events::HitEvent
     static constexpr const char* NAME = "gameeventsVehicleHitEvent";
     static constexpr const char* ALIAS = "gameVehicleHitEvent";
 
-    Vector4 vehicleVelocity; // E0
-    Vector4 preyVelocity; // F0
+    Vector4 vehicleVelocity; // F0
+    Vector4 preyVelocity; // 100
 };
-RED4EXT_ASSERT_SIZE(VehicleHitEvent, 0x100);
+RED4EXT_ASSERT_SIZE(VehicleHitEvent, 0x110);
 } // namespace game::events
 using gameeventsVehicleHitEvent = game::events::VehicleHitEvent;
 using gameVehicleHitEvent = game::events::VehicleHitEvent;

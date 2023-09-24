@@ -17,9 +17,9 @@ struct DriveHelperType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataDriveHelperType_Record";
     static constexpr const char* ALIAS = "DriveHelperType_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DriveHelperType_Record, 0x50);
+RED4EXT_ASSERT_SIZE(DriveHelperType_Record, 0x58);
 } // namespace game::data
 using gamedataDriveHelperType_Record = game::data::DriveHelperType_Record;
 using DriveHelperType_Record = game::data::DriveHelperType_Record;

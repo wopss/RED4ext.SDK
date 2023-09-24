@@ -18,7 +18,7 @@ struct JournalOnscreenGroup : game::JournalFileEntry
     static constexpr const char* ALIAS = "JournalOnscreenGroup";
 
 };
-RED4EXT_ASSERT_SIZE(JournalOnscreenGroup, 0x90);
+RED4EXT_ASSERT_SIZE(JournalOnscreenGroup, 0xA0);
 } // namespace game
 using gameJournalOnscreenGroup = game::JournalOnscreenGroup;
 using JournalOnscreenGroup = game::JournalOnscreenGroup;

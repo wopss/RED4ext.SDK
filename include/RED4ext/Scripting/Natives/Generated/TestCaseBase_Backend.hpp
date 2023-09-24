@@ -15,9 +15,9 @@ struct TestCaseBase_Backend : IScriptable
     static constexpr const char* NAME = "TestCaseBase_Backend";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x130 - 0x40]; // 40
+    uint8_t unk40[0x110 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(TestCaseBase_Backend, 0x130);
+RED4EXT_ASSERT_SIZE(TestCaseBase_Backend, 0x110);
 } // namespace RED4ext
 
 // clang-format on

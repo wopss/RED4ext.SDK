@@ -17,9 +17,9 @@ struct AIActionSlideData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIActionSlideData_Record";
     static constexpr const char* ALIAS = "AIActionSlideData_Record";
 
-    uint8_t unk48[0x78 - 0x48]; // 48
+    uint8_t unk48[0x108 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIActionSlideData_Record, 0x78);
+RED4EXT_ASSERT_SIZE(AIActionSlideData_Record, 0x108);
 } // namespace game::data
 using gamedataAIActionSlideData_Record = game::data::AIActionSlideData_Record;
 using AIActionSlideData_Record = game::data::AIActionSlideData_Record;

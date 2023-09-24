@@ -30,35 +30,35 @@ struct InstancedDestructibleMeshNode : world::MeshNode
     static constexpr const char* NAME = "worldInstancedDestructibleMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    NavGenNavigationSetting navigationSetting; // 58
-    uint8_t unk5A[0x60 - 0x5A]; // 5A
-    world::TransformBuffer cookedInstanceTransforms; // 60
-    physics::SimulationType simulationType; // 78
-    uint8_t unk79[0x80 - 0x79]; // 79
-    Handle<physics::FilterData> filterData; // 80
-    physics::FilterDataSource filterDataSource; // 90
-    uint8_t unk91[0x98 - 0x91]; // 91
-    RaRef<world::Effect> fracturingEffect; // 98
-    RaRef<world::Effect> idleEffect; // A0
-    RaRef<CMesh> staticMesh; // A8
-    CName staticMeshAppearance; // B0
-    float impulseToDamage; // B8
-    float damageThreshold; // BC
-    float damageEndurance; // C0
-    bool useAggregate; // C4
-    bool enableSelfCollisionInAggregate; // C5
-    bool startInactive; // C6
-    bool turnDynamicOnImpulse; // C7
-    bool isDestructible; // C8
-    bool accumulateDamage; // C9
-    bool isPierceable; // CA
-    bool isWorkspot; // CB
-    bool useMeshNavmeshSettings; // CC
-    uint8_t unkCD[0xCE - 0xCD]; // CD
-    uint16_t systemsToNotifyFlags; // CE
-    DynArray<Transform> instanceTransforms; // D0
+    NavGenNavigationSetting navigationSetting; // 60
+    uint8_t unk62[0x68 - 0x62]; // 62
+    world::TransformBuffer cookedInstanceTransforms; // 68
+    physics::SimulationType simulationType; // 80
+    uint8_t unk81[0x88 - 0x81]; // 81
+    Handle<physics::FilterData> filterData; // 88
+    physics::FilterDataSource filterDataSource; // 98
+    uint8_t unk99[0xA0 - 0x99]; // 99
+    RaRef<world::Effect> fracturingEffect; // A0
+    RaRef<world::Effect> idleEffect; // A8
+    RaRef<CMesh> staticMesh; // B0
+    CName staticMeshAppearance; // B8
+    float impulseToDamage; // C0
+    float damageThreshold; // C4
+    float damageEndurance; // C8
+    bool useAggregate; // CC
+    bool enableSelfCollisionInAggregate; // CD
+    bool startInactive; // CE
+    bool turnDynamicOnImpulse; // CF
+    bool isDestructible; // D0
+    bool accumulateDamage; // D1
+    bool isPierceable; // D2
+    bool isWorkspot; // D3
+    bool useMeshNavmeshSettings; // D4
+    uint8_t unkD5[0xD6 - 0xD5]; // D5
+    uint16_t systemsToNotifyFlags; // D6
+    DynArray<Transform> instanceTransforms; // D8
 };
-RED4EXT_ASSERT_SIZE(InstancedDestructibleMeshNode, 0xE0);
+RED4EXT_ASSERT_SIZE(InstancedDestructibleMeshNode, 0xE8);
 } // namespace world
 using worldInstancedDestructibleMeshNode = world::InstancedDestructibleMeshNode;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct AISubActionChangeAttitude_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionChangeAttitude_Record";
     static constexpr const char* ALIAS = "AISubActionChangeAttitude_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionChangeAttitude_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionChangeAttitude_Record, 0x70);
 } // namespace game::data
 using gamedataAISubActionChangeAttitude_Record = game::data::AISubActionChangeAttitude_Record;
 using AISubActionChangeAttitude_Record = game::data::AISubActionChangeAttitude_Record;

@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-RED4EXT_ASSERT_SIZE(game::AppearanceNameVisualTagsPreset, 0x70);
+RED4EXT_ASSERT_SIZE(game::AppearanceNameVisualTagsPreset, 0x40);
 using gameAppearanceNameVisualTagsPreset = game::AppearanceNameVisualTagsPreset;
 } // namespace RED4ext
 
@@ -29,9 +29,8 @@ struct AppearanceNameVisualTagsPreset : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     DynArray<game::AppearanceNameVisualTagsPreset_Entity> presets; // 30
-    uint8_t unk40[0x70 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(AppearanceNameVisualTagsPreset, 0x70);
+RED4EXT_ASSERT_SIZE(AppearanceNameVisualTagsPreset, 0x40);
 } // namespace game
 using gameAppearanceNameVisualTagsPreset = game::AppearanceNameVisualTagsPreset;
 } // namespace RED4ext

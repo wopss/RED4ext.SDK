@@ -20,9 +20,9 @@ struct AnimNode_FacialMixerSlot : anim::AnimNode_OnePoseInput
     static constexpr const char* ALIAS = NAME;
 
     DynArray<anim::LookAtAnimationDefinition> lookAtDefinitions; // 60
-    uint8_t unk70[0x2E8 - 0x70]; // 70
+    uint8_t unk70[0x2D8 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(AnimNode_FacialMixerSlot, 0x2E8);
+RED4EXT_ASSERT_SIZE(AnimNode_FacialMixerSlot, 0x2D8);
 } // namespace anim
 using animAnimNode_FacialMixerSlot = anim::AnimNode_FacialMixerSlot;
 } // namespace RED4ext

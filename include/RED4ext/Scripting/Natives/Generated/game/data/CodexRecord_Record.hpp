@@ -17,9 +17,9 @@ struct CodexRecord_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataCodexRecord_Record";
     static constexpr const char* ALIAS = "CodexRecord_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CodexRecord_Record, 0x58);
+RED4EXT_ASSERT_SIZE(CodexRecord_Record, 0x78);
 } // namespace game::data
 using gamedataCodexRecord_Record = game::data::CodexRecord_Record;
 using CodexRecord_Record = game::data::CodexRecord_Record;

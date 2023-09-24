@@ -18,7 +18,7 @@ struct ComputerScreenType_Record : game::data::DeviceScreenType_Record
     static constexpr const char* ALIAS = "ComputerScreenType_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ComputerScreenType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ComputerScreenType_Record, 0x70);
 } // namespace game::data
 using gamedataComputerScreenType_Record = game::data::ComputerScreenType_Record;
 using ComputerScreenType_Record = game::data::ComputerScreenType_Record;

@@ -17,9 +17,9 @@ struct OwnerDistanceCoverSelectionParameters_Record : game::data::CoverSelection
     static constexpr const char* NAME = "gamedataOwnerDistanceCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "OwnerDistanceCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(OwnerDistanceCoverSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(OwnerDistanceCoverSelectionParameters_Record, 0x90);
 } // namespace game::data
 using gamedataOwnerDistanceCoverSelectionParameters_Record = game::data::OwnerDistanceCoverSelectionParameters_Record;
 using OwnerDistanceCoverSelectionParameters_Record = game::data::OwnerDistanceCoverSelectionParameters_Record;

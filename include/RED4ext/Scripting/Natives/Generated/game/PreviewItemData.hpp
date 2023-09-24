@@ -18,7 +18,7 @@ struct PreviewItemData : game::UniqueItemData
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(PreviewItemData, 0xE8);
+RED4EXT_ASSERT_SIZE(PreviewItemData, 0x100);
 } // namespace game
 using gamePreviewItemData = game::PreviewItemData;
 } // namespace RED4ext

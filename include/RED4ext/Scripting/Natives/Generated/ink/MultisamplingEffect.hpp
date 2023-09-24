@@ -18,7 +18,7 @@ struct MultisamplingEffect : ink::IEffect
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(MultisamplingEffect, 0x68);
+RED4EXT_ASSERT_SIZE(MultisamplingEffect, 0x50);
 } // namespace ink
 using inkMultisamplingEffect = ink::MultisamplingEffect;
 } // namespace RED4ext

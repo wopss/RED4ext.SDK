@@ -8,6 +8,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 
 namespace RED4ext
@@ -30,8 +31,11 @@ struct ScreenProjectionData
     Vector4 staticWorldPosition; // 30
     Vector4 fixedWorldOffset; // 40
     WeakHandle<IScriptable> userData; // 50
+    bool adjustWithDistance; // 60
+    uint8_t unk61[0x64 - 0x61]; // 61
+    Vector3 extraOffsetAtMaxDistance; // 64
 };
-RED4EXT_ASSERT_SIZE(ScreenProjectionData, 0x60);
+RED4EXT_ASSERT_SIZE(ScreenProjectionData, 0x70);
 } // namespace ink
 using inkScreenProjectionData = ink::ScreenProjectionData;
 } // namespace RED4ext

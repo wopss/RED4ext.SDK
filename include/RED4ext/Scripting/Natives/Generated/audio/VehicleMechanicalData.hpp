@@ -26,17 +26,18 @@ struct VehicleMechanicalData
     CName throttleOnEvent; // 30
     CName throttleOffEvent; // 38
     CName suspensionSqueekEvent; // 40
-    CName acelleration; // 48
-    CName speed; // 50
-    CName gear; // 58
-    CName brake; // 60
-    CName rpm; // 68
-    CName throttle; // 70
-    CName sidewaysThrottle; // 78
-    CName thrust; // 80
-    CName temperature; // 88
+    CName fullThrottleAppliedEvent; // 48
+    CName acelleration; // 50
+    CName speed; // 58
+    CName gear; // 60
+    CName brake; // 68
+    CName rpm; // 70
+    CName throttle; // 78
+    CName sidewaysThrottle; // 80
+    CName thrust; // 88
+    CName temperature; // 90
 };
-RED4EXT_ASSERT_SIZE(VehicleMechanicalData, 0x90);
+RED4EXT_ASSERT_SIZE(VehicleMechanicalData, 0x98);
 } // namespace audio
 using audioVehicleMechanicalData = audio::VehicleMechanicalData;
 } // namespace RED4ext

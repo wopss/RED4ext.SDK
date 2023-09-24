@@ -12,10 +12,10 @@ struct FractureFieldType
 {
     uint16_t FF_Default : 1; // 0
     uint16_t FF_Locomotion : 1; // 1
-    uint16_t b2 : 1; // 2
-    uint16_t b3 : 1; // 3
-    uint16_t b4 : 1; // 4
-    uint16_t b5 : 1; // 5
+    uint16_t FF_TriggerDestructionEvent : 1; // 2
+    uint16_t FF_FractureFieldNode : 1; // 3
+    uint16_t FF_FractureFieldGameEffect : 1; // 4
+    uint16_t FF_FractureFieldComponent : 1; // 5
     uint16_t b6 : 1; // 6
     uint16_t b7 : 1; // 7
     uint16_t b8 : 1; // 8

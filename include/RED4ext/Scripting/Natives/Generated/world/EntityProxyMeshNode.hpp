@@ -18,11 +18,11 @@ struct EntityProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* NAME = "worldEntityProxyMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    world::GlobalNodeID ownerGlobalId; // 60
-    float entityAttachDistance; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    world::GlobalNodeID ownerGlobalId; // 68
+    float entityAttachDistance; // 70
+    uint8_t unk74[0x78 - 0x74]; // 74
 };
-RED4EXT_ASSERT_SIZE(EntityProxyMeshNode, 0x70);
+RED4EXT_ASSERT_SIZE(EntityProxyMeshNode, 0x78);
 } // namespace world
 using worldEntityProxyMeshNode = world::EntityProxyMeshNode;
 } // namespace RED4ext

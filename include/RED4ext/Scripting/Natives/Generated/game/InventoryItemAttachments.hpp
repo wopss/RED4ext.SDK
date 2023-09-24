@@ -22,11 +22,11 @@ struct InventoryItemAttachments : IScriptable
 
     TweakDBID SlotID; // 40
     game::InventoryItemData ItemData; // 48
-    CString SlotName; // 280
-    game::InventoryItemAttachmentType SlotType; // 2A0
-    uint8_t unk2A4[0x2A8 - 0x2A4]; // 2A4
+    CString SlotName; // 2A0
+    game::InventoryItemAttachmentType SlotType; // 2C0
+    uint8_t unk2C4[0x2C8 - 0x2C4]; // 2C4
 };
-RED4EXT_ASSERT_SIZE(InventoryItemAttachments, 0x2A8);
+RED4EXT_ASSERT_SIZE(InventoryItemAttachments, 0x2C8);
 } // namespace game
 using gameInventoryItemAttachments = game::InventoryItemAttachments;
 using InventoryItemAttachments = game::InventoryItemAttachments;

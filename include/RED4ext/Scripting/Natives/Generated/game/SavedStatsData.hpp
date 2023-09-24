@@ -24,12 +24,14 @@ struct SavedStatsData
 
     DynArray<Handle<game::StatModifierData_Deprecated>> statModifiers; // 00
     DataBuffer modifiersBuffer; // 10
-    DynArray<game::data::StatType> inactiveStats; // 38
-    TweakDBID recordID; // 48
-    uint32_t seed; // 50
-    uint8_t unk54[0x58 - 0x54]; // 54
+    DataBuffer forcedModifiersBuffer; // 38
+    DataBuffer savedModifierGroupStatTypesBuffer; // 60
+    DynArray<game::data::StatType> inactiveStats; // 88
+    TweakDBID recordID; // 98
+    uint32_t seed; // A0
+    uint8_t unkA4[0xA8 - 0xA4]; // A4
 };
-RED4EXT_ASSERT_SIZE(SavedStatsData, 0x58);
+RED4EXT_ASSERT_SIZE(SavedStatsData, 0xA8);
 } // namespace game
 using gameSavedStatsData = game::SavedStatsData;
 } // namespace RED4ext

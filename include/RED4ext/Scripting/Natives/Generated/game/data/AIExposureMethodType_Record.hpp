@@ -17,9 +17,9 @@ struct AIExposureMethodType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIExposureMethodType_Record";
     static constexpr const char* ALIAS = "AIExposureMethodType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIExposureMethodType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIExposureMethodType_Record, 0x70);
 } // namespace game::data
 using gamedataAIExposureMethodType_Record = game::data::AIExposureMethodType_Record;
 using AIExposureMethodType_Record = game::data::AIExposureMethodType_Record;

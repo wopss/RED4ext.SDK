@@ -18,7 +18,7 @@ struct AISubActionSetEquipPrimaryWeapons_Record : game::data::AISubActionCharact
     static constexpr const char* ALIAS = "AISubActionSetEquipPrimaryWeapons_Record";
 
 };
-RED4EXT_ASSERT_SIZE(AISubActionSetEquipPrimaryWeapons_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionSetEquipPrimaryWeapons_Record, 0x58);
 } // namespace game::data
 using gamedataAISubActionSetEquipPrimaryWeapons_Record = game::data::AISubActionSetEquipPrimaryWeapons_Record;
 using AISubActionSetEquipPrimaryWeapons_Record = game::data::AISubActionSetEquipPrimaryWeapons_Record;

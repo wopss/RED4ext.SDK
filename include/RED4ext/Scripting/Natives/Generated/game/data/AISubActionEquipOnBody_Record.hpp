@@ -18,7 +18,7 @@ struct AISubActionEquipOnBody_Record : game::data::AISubActionCharacterRecordEqu
     static constexpr const char* ALIAS = "AISubActionEquipOnBody_Record";
 
 };
-RED4EXT_ASSERT_SIZE(AISubActionEquipOnBody_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionEquipOnBody_Record, 0x58);
 } // namespace game::data
 using gamedataAISubActionEquipOnBody_Record = game::data::AISubActionEquipOnBody_Record;
 using AISubActionEquipOnBody_Record = game::data::AISubActionEquipOnBody_Record;

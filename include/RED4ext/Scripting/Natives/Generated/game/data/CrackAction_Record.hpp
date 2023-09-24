@@ -17,9 +17,9 @@ struct CrackAction_Record : game::data::ItemAction_Record
     static constexpr const char* NAME = "gamedataCrackAction_Record";
     static constexpr const char* ALIAS = "CrackAction_Record";
 
-    uint8_t unk88[0x90 - 0x88]; // 88
+    uint8_t unk150[0x160 - 0x150]; // 150
 };
-RED4EXT_ASSERT_SIZE(CrackAction_Record, 0x90);
+RED4EXT_ASSERT_SIZE(CrackAction_Record, 0x160);
 } // namespace game::data
 using gamedataCrackAction_Record = game::data::CrackAction_Record;
 using CrackAction_Record = game::data::CrackAction_Record;

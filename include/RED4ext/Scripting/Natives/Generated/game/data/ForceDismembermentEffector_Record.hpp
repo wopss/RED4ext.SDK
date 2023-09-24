@@ -17,9 +17,9 @@ struct ForceDismembermentEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataForceDismembermentEffector_Record";
     static constexpr const char* ALIAS = "ForceDismembermentEffector_Record";
 
-    uint8_t unk58[0x70 - 0x58]; // 58
+    uint8_t unk88[0xD0 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(ForceDismembermentEffector_Record, 0x70);
+RED4EXT_ASSERT_SIZE(ForceDismembermentEffector_Record, 0xD0);
 } // namespace game::data
 using gamedataForceDismembermentEffector_Record = game::data::ForceDismembermentEffector_Record;
 using ForceDismembermentEffector_Record = game::data::ForceDismembermentEffector_Record;

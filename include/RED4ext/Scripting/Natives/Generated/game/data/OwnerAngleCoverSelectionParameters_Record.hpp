@@ -17,9 +17,9 @@ struct OwnerAngleCoverSelectionParameters_Record : game::data::CoverSelectionPar
     static constexpr const char* NAME = "gamedataOwnerAngleCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "OwnerAngleCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x78 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(OwnerAngleCoverSelectionParameters_Record, 0x58);
+RED4EXT_ASSERT_SIZE(OwnerAngleCoverSelectionParameters_Record, 0x78);
 } // namespace game::data
 using gamedataOwnerAngleCoverSelectionParameters_Record = game::data::OwnerAngleCoverSelectionParameters_Record;
 using OwnerAngleCoverSelectionParameters_Record = game::data::OwnerAngleCoverSelectionParameters_Record;

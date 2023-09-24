@@ -17,9 +17,9 @@ struct FxActionType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataFxActionType_Record";
     static constexpr const char* ALIAS = "FxActionType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(FxActionType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(FxActionType_Record, 0x68);
 } // namespace game::data
 using gamedataFxActionType_Record = game::data::FxActionType_Record;
 using FxActionType_Record = game::data::FxActionType_Record;

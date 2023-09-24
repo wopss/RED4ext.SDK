@@ -18,7 +18,7 @@ struct DestructibleObject_Record : game::data::BaseObject_Record
     static constexpr const char* ALIAS = "DestructibleObject_Record";
 
 };
-RED4EXT_ASSERT_SIZE(DestructibleObject_Record, 0x60);
+RED4EXT_ASSERT_SIZE(DestructibleObject_Record, 0xA0);
 } // namespace game::data
 using gamedataDestructibleObject_Record = game::data::DestructibleObject_Record;
 using DestructibleObject_Record = game::data::DestructibleObject_Record;

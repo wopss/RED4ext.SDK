@@ -26,24 +26,26 @@ struct AssistAimRequest
     bool endOnAimingStopped; // 09
     uint8_t unk0A[0xC - 0xA]; // A
     float cameraInputMagToBreak; // 0C
-    float precision; // 10
-    float maxDuration; // 14
-    bool easeIn; // 18
-    bool easeOut; // 19
-    bool checkRange; // 1A
-    uint8_t unk1B[0x20 - 0x1B]; // 1B
-    Vector4 lookAtTarget; // 20
-    bool processAsInput; // 30
-    uint8_t unk31[0x32 - 0x31]; // 31
-    bool bodyPartsTracking; // 32
-    uint8_t unk33[0x34 - 0x33]; // 33
-    float bptMaxDot; // 34
-    float bptMaxSwitches; // 38
-    float bptMinInputMag; // 3C
-    float bptMinResetInputMag; // 40
-    uint8_t unk44[0xE0 - 0x44]; // 44
+    float cameraMouseInputMagToBreak; // 10
+    float precision; // 14
+    float maxDuration; // 18
+    bool easeIn; // 1C
+    bool easeOut; // 1D
+    bool checkRange; // 1E
+    uint8_t unk1F[0x30 - 0x1F]; // 1F
+    Vector4 lookAtTarget; // 30
+    bool processAsInput; // 40
+    uint8_t unk41[0x42 - 0x41]; // 41
+    bool bodyPartsTracking; // 42
+    uint8_t unk43[0x44 - 0x43]; // 43
+    float bptMaxDot; // 44
+    float bptMaxSwitches; // 48
+    float bptMinInputMag; // 4C
+    uint8_t unk50[0x54 - 0x50]; // 50
+    float bptMinResetInputMag; // 54
+    uint8_t unk58[0x100 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AssistAimRequest, 0xE0);
+RED4EXT_ASSERT_SIZE(AssistAimRequest, 0x100);
 } // namespace game::aim
 using gameaimAssistAimRequest = game::aim::AssistAimRequest;
 using AimRequest = game::aim::AssistAimRequest;

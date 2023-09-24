@@ -7,7 +7,6 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
 
 namespace RED4ext
@@ -20,10 +19,8 @@ struct MovingPlatformTeleportTo : red::Event
     static constexpr const char* ALIAS = "TeleportTo";
 
     NodeRef destinationNode; // 40
-    uint8_t unk48[0x50 - 0x48]; // 48
-    Vector4 rootEntityPosition; // 50
 };
-RED4EXT_ASSERT_SIZE(MovingPlatformTeleportTo, 0x60);
+RED4EXT_ASSERT_SIZE(MovingPlatformTeleportTo, 0x48);
 } // namespace game
 using gameMovingPlatformTeleportTo = game::MovingPlatformTeleportTo;
 using TeleportTo = game::MovingPlatformTeleportTo;

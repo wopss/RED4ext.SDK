@@ -17,9 +17,9 @@ struct StatPoolUpdate_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataStatPoolUpdate_Record";
     static constexpr const char* ALIAS = "StatPoolUpdate_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StatPoolUpdate_Record, 0x50);
+RED4EXT_ASSERT_SIZE(StatPoolUpdate_Record, 0x70);
 } // namespace game::data
 using gamedataStatPoolUpdate_Record = game::data::StatPoolUpdate_Record;
 using StatPoolUpdate_Record = game::data::StatPoolUpdate_Record;

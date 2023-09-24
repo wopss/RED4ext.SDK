@@ -17,9 +17,9 @@ struct DeviceVisualizerLogic : game::interactions::vis::IGroupedVisualizerLogic
     static constexpr const char* NAME = "gameinteractionsvisDeviceVisualizerLogic";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x80 - 0x30]; // 30
+    uint8_t unk30[0x88 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(DeviceVisualizerLogic, 0x80);
+RED4EXT_ASSERT_SIZE(DeviceVisualizerLogic, 0x88);
 } // namespace game::interactions::vis
 using gameinteractionsvisDeviceVisualizerLogic = game::interactions::vis::DeviceVisualizerLogic;
 } // namespace RED4ext

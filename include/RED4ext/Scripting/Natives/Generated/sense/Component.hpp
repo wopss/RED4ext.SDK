@@ -24,7 +24,8 @@ struct Component : ent::IPlacedComponent
     Handle<sense::SensorObject> sensorObject; // 120
     Handle<sense::VisibleObject> visibleObject; // 130
     bool enableBeingDetectable; // 140
-    uint8_t unk141[0x1A0 - 0x141]; // 141
+    bool forceDisableUI; // 141
+    uint8_t unk142[0x1A0 - 0x142]; // 142
 };
 RED4EXT_ASSERT_SIZE(Component, 0x1A0);
 } // namespace sense

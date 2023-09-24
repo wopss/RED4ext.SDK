@@ -17,9 +17,9 @@ struct SmartGunTargetSortData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataSmartGunTargetSortData_Record";
     static constexpr const char* ALIAS = "SmartGunTargetSortData_Record";
 
-    uint8_t unk48[0x68 - 0x48]; // 48
+    uint8_t unk48[0xB8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SmartGunTargetSortData_Record, 0x68);
+RED4EXT_ASSERT_SIZE(SmartGunTargetSortData_Record, 0xB8);
 } // namespace game::data
 using gamedataSmartGunTargetSortData_Record = game::data::SmartGunTargetSortData_Record;
 using SmartGunTargetSortData_Record = game::data::SmartGunTargetSortData_Record;

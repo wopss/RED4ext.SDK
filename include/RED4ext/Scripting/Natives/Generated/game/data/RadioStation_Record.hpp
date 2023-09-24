@@ -17,9 +17,9 @@ struct RadioStation_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataRadioStation_Record";
     static constexpr const char* ALIAS = "RadioStation_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RadioStation_Record, 0x58);
+RED4EXT_ASSERT_SIZE(RadioStation_Record, 0x70);
 } // namespace game::data
 using gamedataRadioStation_Record = game::data::RadioStation_Record;
 using RadioStation_Record = game::data::RadioStation_Record;

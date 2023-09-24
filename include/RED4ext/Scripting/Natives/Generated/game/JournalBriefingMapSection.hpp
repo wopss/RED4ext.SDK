@@ -18,10 +18,10 @@ struct JournalBriefingMapSection : game::JournalBriefingBaseSection
     static constexpr const char* NAME = "gameJournalBriefingMapSection";
     static constexpr const char* ALIAS = "JournalBriefingMapSection";
 
-    Vector3 mapLocation; // 60
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    Vector3 mapLocation; // 70
+    uint8_t unk7C[0x80 - 0x7C]; // 7C
 };
-RED4EXT_ASSERT_SIZE(JournalBriefingMapSection, 0x70);
+RED4EXT_ASSERT_SIZE(JournalBriefingMapSection, 0x80);
 } // namespace game
 using gameJournalBriefingMapSection = game::JournalBriefingMapSection;
 using JournalBriefingMapSection = game::JournalBriefingMapSection;

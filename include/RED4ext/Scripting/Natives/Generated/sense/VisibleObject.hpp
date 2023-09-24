@@ -25,9 +25,9 @@ struct VisibleObject : IScriptable
     float visibilityDistance; // 7C
     uint8_t unk80[0x8C - 0x80]; // 80
     game::data::SenseObjectType visibleObjectType; // 8C
-    uint8_t unk90[0xC8 - 0x90]; // 90
+    uint8_t unk90[0xD0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(VisibleObject, 0xC8);
+RED4EXT_ASSERT_SIZE(VisibleObject, 0xD0);
 } // namespace sense
 using senseVisibleObject = sense::VisibleObject;
 using VisibleObject = sense::VisibleObject;

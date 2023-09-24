@@ -17,9 +17,9 @@ struct CharacterList_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataCharacterList_Record";
     static constexpr const char* ALIAS = "CharacterList_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CharacterList_Record, 0x50);
+RED4EXT_ASSERT_SIZE(CharacterList_Record, 0x58);
 } // namespace game::data
 using gamedataCharacterList_Record = game::data::CharacterList_Record;
 using CharacterList_Record = game::data::CharacterList_Record;

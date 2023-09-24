@@ -18,7 +18,7 @@ struct JournalBriefing : game::JournalFileEntry
     static constexpr const char* ALIAS = "JournalBriefing";
 
 };
-RED4EXT_ASSERT_SIZE(JournalBriefing, 0x90);
+RED4EXT_ASSERT_SIZE(JournalBriefing, 0xA0);
 } // namespace game
 using gameJournalBriefing = game::JournalBriefing;
 using JournalBriefing = game::JournalBriefing;

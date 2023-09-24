@@ -18,7 +18,7 @@ struct InvalidProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(InvalidProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(InvalidProxyMeshNode, 0x68);
 } // namespace world
 using worldInvalidProxyMeshNode = world::InvalidProxyMeshNode;
 } // namespace RED4ext

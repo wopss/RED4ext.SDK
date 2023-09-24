@@ -17,9 +17,9 @@ struct AISubActionForceEquip_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionForceEquip_Record";
     static constexpr const char* ALIAS = "AISubActionForceEquip_Record";
 
-    uint8_t unk48[0x68 - 0x48]; // 48
+    uint8_t unk48[0xB8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionForceEquip_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AISubActionForceEquip_Record, 0xB8);
 } // namespace game::data
 using gamedataAISubActionForceEquip_Record = game::data::AISubActionForceEquip_Record;
 using AISubActionForceEquip_Record = game::data::AISubActionForceEquip_Record;

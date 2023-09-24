@@ -17,9 +17,9 @@ struct StatPoolCost_Record : game::data::ObjectActionCost_Record
     static constexpr const char* NAME = "gamedataStatPoolCost_Record";
     static constexpr const char* ALIAS = "StatPoolCost_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x68 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(StatPoolCost_Record, 0x58);
+RED4EXT_ASSERT_SIZE(StatPoolCost_Record, 0x68);
 } // namespace game::data
 using gamedataStatPoolCost_Record = game::data::StatPoolCost_Record;
 using StatPoolCost_Record = game::data::StatPoolCost_Record;

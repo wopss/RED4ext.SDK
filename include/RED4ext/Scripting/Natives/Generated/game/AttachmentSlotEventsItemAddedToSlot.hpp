@@ -17,8 +17,9 @@ struct AttachmentSlotEventsItemAddedToSlot : game::AttachmentSlotEventsItemAdded
     static constexpr const char* NAME = "gameAttachmentSlotEventsItemAddedToSlot";
     static constexpr const char* ALIAS = "ItemAddedToSlot";
 
+    uint8_t unk68[0x70 - 0x68]; // 68
 };
-RED4EXT_ASSERT_SIZE(AttachmentSlotEventsItemAddedToSlot, 0x68);
+RED4EXT_ASSERT_SIZE(AttachmentSlotEventsItemAddedToSlot, 0x70);
 } // namespace game
 using gameAttachmentSlotEventsItemAddedToSlot = game::AttachmentSlotEventsItemAddedToSlot;
 using ItemAddedToSlot = game::AttachmentSlotEventsItemAddedToSlot;

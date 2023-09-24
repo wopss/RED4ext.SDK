@@ -22,6 +22,7 @@ enum class EffectType : uint8_t
     InnerGlow = 9,
     ColorCorrection = 10,
     Multisampling = 11,
+    Blackwall = 12,
 };
 } // namespace ink
 using inkEffectType = ink::EffectType;

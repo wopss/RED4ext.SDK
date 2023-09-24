@@ -18,7 +18,7 @@ struct Pierce_Record : game::data::ProjectileCollision_Record
     static constexpr const char* ALIAS = "Pierce_Record";
 
 };
-RED4EXT_ASSERT_SIZE(Pierce_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Pierce_Record, 0x70);
 } // namespace game::data
 using gamedataPierce_Record = game::data::Pierce_Record;
 using Pierce_Record = game::data::Pierce_Record;

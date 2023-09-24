@@ -16,9 +16,9 @@ struct CompiledNodeInstanceSetupInfo
     static constexpr const char* NAME = "worldCompiledNodeInstanceSetupInfo";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x80 - 0x0]; // 0
+    uint8_t unk00[0x90 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(CompiledNodeInstanceSetupInfo, 0x80);
+RED4EXT_ASSERT_SIZE(CompiledNodeInstanceSetupInfo, 0x90);
 } // namespace world
 using worldCompiledNodeInstanceSetupInfo = world::CompiledNodeInstanceSetupInfo;
 } // namespace RED4ext

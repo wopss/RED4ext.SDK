@@ -17,9 +17,9 @@ struct AITacticTicket_Record : game::data::AITicket_Record
     static constexpr const char* NAME = "gamedataAITacticTicket_Record";
     static constexpr const char* ALIAS = "AITacticTicket_Record";
 
-    uint8_t unk80[0x90 - 0x80]; // 80
+    uint8_t unk138[0x160 - 0x138]; // 138
 };
-RED4EXT_ASSERT_SIZE(AITacticTicket_Record, 0x90);
+RED4EXT_ASSERT_SIZE(AITacticTicket_Record, 0x160);
 } // namespace game::data
 using gamedataAITacticTicket_Record = game::data::AITacticTicket_Record;
 using AITacticTicket_Record = game::data::AITacticTicket_Record;

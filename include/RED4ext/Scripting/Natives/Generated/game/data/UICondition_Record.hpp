@@ -17,9 +17,9 @@ struct UICondition_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataUICondition_Record";
     static constexpr const char* ALIAS = "UICondition_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(UICondition_Record, 0x58);
+RED4EXT_ASSERT_SIZE(UICondition_Record, 0x70);
 } // namespace game::data
 using gamedataUICondition_Record = game::data::UICondition_Record;
 using UICondition_Record = game::data::UICondition_Record;

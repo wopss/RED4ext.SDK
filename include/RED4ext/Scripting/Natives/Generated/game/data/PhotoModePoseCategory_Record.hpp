@@ -17,9 +17,9 @@ struct PhotoModePoseCategory_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPhotoModePoseCategory_Record";
     static constexpr const char* ALIAS = "PhotoModePoseCategory_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PhotoModePoseCategory_Record, 0x50);
+RED4EXT_ASSERT_SIZE(PhotoModePoseCategory_Record, 0x60);
 } // namespace game::data
 using gamedataPhotoModePoseCategory_Record = game::data::PhotoModePoseCategory_Record;
 using PhotoModePoseCategory_Record = game::data::PhotoModePoseCategory_Record;

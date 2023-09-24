@@ -17,9 +17,9 @@ struct MappinUIRuntimeProfile_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataMappinUIRuntimeProfile_Record";
     static constexpr const char* ALIAS = "MappinUIRuntimeProfile_Record";
 
-    uint8_t unk48[0x98 - 0x48]; // 48
+    uint8_t unk48[0x180 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(MappinUIRuntimeProfile_Record, 0x98);
+RED4EXT_ASSERT_SIZE(MappinUIRuntimeProfile_Record, 0x180);
 } // namespace game::data
 using gamedataMappinUIRuntimeProfile_Record = game::data::MappinUIRuntimeProfile_Record;
 using MappinUIRuntimeProfile_Record = game::data::MappinUIRuntimeProfile_Record;

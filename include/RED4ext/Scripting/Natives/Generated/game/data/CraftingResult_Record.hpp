@@ -17,9 +17,9 @@ struct CraftingResult_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataCraftingResult_Record";
     static constexpr const char* ALIAS = "CraftingResult_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CraftingResult_Record, 0x50);
+RED4EXT_ASSERT_SIZE(CraftingResult_Record, 0x60);
 } // namespace game::data
 using gamedataCraftingResult_Record = game::data::CraftingResult_Record;
 using CraftingResult_Record = game::data::CraftingResult_Record;

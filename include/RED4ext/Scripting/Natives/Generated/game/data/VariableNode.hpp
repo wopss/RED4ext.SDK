@@ -31,9 +31,9 @@ struct VariableNode : game::data::DataNode
     bool isAddition; // E3
     game::data::TweakDBType typeEnum; // E4
     DynArray<game::data::VariableNodeVariableValue> values; // E8
-    uint8_t unkF8[0x168 - 0xF8]; // F8
+    uint8_t unkF8[0x218 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(VariableNode, 0x168);
+RED4EXT_ASSERT_SIZE(VariableNode, 0x218);
 } // namespace game::data
 using gamedataVariableNode = game::data::VariableNode;
 } // namespace RED4ext

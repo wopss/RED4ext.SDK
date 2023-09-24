@@ -17,9 +17,9 @@ struct AdvertisementNodeInstance : world::StaticMeshNodeInstance
     static constexpr const char* NAME = "worldAdvertisementNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk100[0x1E0 - 0x100]; // 100
+    uint8_t unk100[0x1F0 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(AdvertisementNodeInstance, 0x1E0);
+RED4EXT_ASSERT_SIZE(AdvertisementNodeInstance, 0x1F0);
 } // namespace world
 using worldAdvertisementNodeInstance = world::AdvertisementNodeInstance;
 } // namespace RED4ext

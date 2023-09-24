@@ -17,9 +17,9 @@ struct TVBase_Record : game::data::Device_Record
     static constexpr const char* NAME = "gamedataTVBase_Record";
     static constexpr const char* ALIAS = "TVBase_Record";
 
-    uint8_t unk68[0x70 - 0x68]; // 68
+    uint8_t unkB8[0xC8 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(TVBase_Record, 0x70);
+RED4EXT_ASSERT_SIZE(TVBase_Record, 0xC8);
 } // namespace game::data
 using gamedataTVBase_Record = game::data::TVBase_Record;
 using TVBase_Record = game::data::TVBase_Record;

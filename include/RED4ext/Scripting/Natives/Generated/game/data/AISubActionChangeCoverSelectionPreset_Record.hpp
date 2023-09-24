@@ -17,9 +17,9 @@ struct AISubActionChangeCoverSelectionPreset_Record : game::data::AISubAction_Re
     static constexpr const char* NAME = "gamedataAISubActionChangeCoverSelectionPreset_Record";
     static constexpr const char* ALIAS = "AISubActionChangeCoverSelectionPreset_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionChangeCoverSelectionPreset_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AISubActionChangeCoverSelectionPreset_Record, 0x90);
 } // namespace game::data
 using gamedataAISubActionChangeCoverSelectionPreset_Record = game::data::AISubActionChangeCoverSelectionPreset_Record;
 using AISubActionChangeCoverSelectionPreset_Record = game::data::AISubActionChangeCoverSelectionPreset_Record;

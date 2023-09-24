@@ -17,9 +17,9 @@ struct ItemPartConnection_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataItemPartConnection_Record";
     static constexpr const char* ALIAS = "ItemPartConnection_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ItemPartConnection_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ItemPartConnection_Record, 0x70);
 } // namespace game::data
 using gamedataItemPartConnection_Record = game::data::ItemPartConnection_Record;
 using ItemPartConnection_Record = game::data::ItemPartConnection_Record;

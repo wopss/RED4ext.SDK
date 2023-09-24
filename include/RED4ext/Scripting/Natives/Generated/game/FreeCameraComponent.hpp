@@ -17,9 +17,9 @@ struct FreeCameraComponent : game::CameraComponent
     static constexpr const char* NAME = "gameFreeCameraComponent";
     static constexpr const char* ALIAS = "FreeCameraComponent";
 
-    uint8_t unk2A0[0x420 - 0x2A0]; // 2A0
+    uint8_t unk320[0x4F0 - 0x320]; // 320
 };
-RED4EXT_ASSERT_SIZE(FreeCameraComponent, 0x420);
+RED4EXT_ASSERT_SIZE(FreeCameraComponent, 0x4F0);
 } // namespace game
 using gameFreeCameraComponent = game::FreeCameraComponent;
 using FreeCameraComponent = game::FreeCameraComponent;

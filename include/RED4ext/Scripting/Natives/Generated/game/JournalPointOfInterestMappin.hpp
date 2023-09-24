@@ -24,17 +24,17 @@ struct JournalPointOfInterestMappin : game::JournalEntry
     static constexpr const char* NAME = "gameJournalPointOfInterestMappin";
     static constexpr const char* ALIAS = "JournalPointOfInterestMappin";
 
-    NodeRef staticNodeRef; // 60
-    game::EntityReference dynamicEntityRef; // 68
-    NodeRef securityAreaRef; // A0
-    game::mappins::PointOfInterestMappinData mappinData; // A8
-    Vector3 offset; // C8
-    uint8_t unkD4[0xD8 - 0xD4]; // D4
-    Handle<game::JournalPath> questPath; // D8
-    TweakDBID recommendedLevelID; // E8
-    NodeRef notificationTriggerAreaRef; // F0
+    NodeRef staticNodeRef; // 70
+    game::EntityReference dynamicEntityRef; // 78
+    NodeRef securityAreaRef; // B0
+    game::mappins::PointOfInterestMappinData mappinData; // B8
+    Vector3 offset; // 100
+    uint8_t unk10C[0x110 - 0x10C]; // 10C
+    Handle<game::JournalPath> questPath; // 110
+    TweakDBID recommendedLevelID; // 120
+    NodeRef notificationTriggerAreaRef; // 128
 };
-RED4EXT_ASSERT_SIZE(JournalPointOfInterestMappin, 0xF8);
+RED4EXT_ASSERT_SIZE(JournalPointOfInterestMappin, 0x130);
 } // namespace game
 using gameJournalPointOfInterestMappin = game::JournalPointOfInterestMappin;
 using JournalPointOfInterestMappin = game::JournalPointOfInterestMappin;

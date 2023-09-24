@@ -38,11 +38,12 @@ struct InventoryItemData
     TweakDBID SlotID; // 10
     CString Name; // 18
     CName Quality; // 38
-    int32_t Quantity; // 40
-    int32_t Ammo; // 44
-    game::InventoryItemShape Shape; // 48
-    game::InventoryItemShape ItemShape; // 49
-    uint8_t unk4A[0x50 - 0x4A]; // 4A
+    float QualityF; // 40
+    int32_t Quantity; // 44
+    int32_t Ammo; // 48
+    game::InventoryItemShape Shape; // 4C
+    game::InventoryItemShape ItemShape; // 4D
+    uint8_t unk4E[0x50 - 0x4E]; // 4E
     CString IconPath; // 50
     CString CategoryName; // 70
     game::data::ItemType ItemType; // 90
@@ -50,55 +51,57 @@ struct InventoryItemData
     CString LocalizedItemType; // 98
     CString Description; // B8
     CString AdditionalDescription; // D8
-    float Price; // F8
-    float BuyPrice; // FC
-    float UnlockProgress; // 100
-    int32_t RequiredLevel; // 104
-    int32_t ItemLevel; // 108
-    game::data::DamageType DamageType; // 10C
-    game::data::EquipmentArea EquipmentArea; // 110
-    game::data::Quality ComparedQuality; // 114
-    bool Empty; // 118
-    bool IsPart; // 119
-    bool IsCraftingMaterial; // 11A
-    bool IsEquipped; // 11B
-    bool IsNew; // 11C
-    bool IsAvailable; // 11D
-    bool IsVendorItem; // 11E
-    bool IsBroken; // 11F
-    int32_t SlotIndex; // 120
-    uint32_t PositionInBackpack; // 124
-    game::ItemIconGender IconGender; // 128
-    uint8_t unk129[0x130 - 0x129]; // 129
-    WeakHandle<game::ItemData> GameItemData; // 130
-    bool HasPlayerSmartGunLink; // 140
-    uint8_t unk141[0x144 - 0x141]; // 141
-    int32_t PlayerLevel; // 144
-    int32_t PlayerStrength; // 148
-    int32_t PlayerReflexes; // 14C
-    int32_t PlayerStreetCred; // 150
-    bool IsRequirementMet; // 154
-    bool IsEquippable; // 155
-    bool IsVisualsEquipped; // 156
-    uint8_t unk157[0x158 - 0x157]; // 157
-    game::SItemStackRequirementData Requirement; // 158
-    game::SItemStackRequirementData EquipRequirement; // 160
-    DynArray<game::SItemStackRequirementData> EquipRequirements; // 168
-    game::LootItemType LootItemType; // 178
-    uint8_t unk179[0x180 - 0x179]; // 179
-    DynArray<Handle<game::InventoryItemAttachments>> Attachments; // 180
-    DynArray<game::InventoryItemAbility> Abilities; // 190
-    DynArray<TweakDBID> PlacementSlots; // 1A0
-    DynArray<game::StatViewData> PrimaryStats; // 1B0
-    DynArray<game::StatViewData> SecondaryStats; // 1C0
-    game::InventoryItemSortData SortData; // 1D0
-    bool IsPerkRequired; // 208
-    uint8_t unk209[0x210 - 0x209]; // 209
-    CString PerkRequiredName; // 210
-    bool IsCrafted; // 230
-    uint8_t unk231[0x238 - 0x231]; // 231
+    CString GameplayDescription; // F8
+    float Price; // 118
+    float BuyPrice; // 11C
+    float UnlockProgress; // 120
+    int32_t RequiredLevel; // 124
+    int32_t ItemLevel; // 128
+    game::data::DamageType DamageType; // 12C
+    game::data::EquipmentArea EquipmentArea; // 130
+    game::data::Quality ComparedQuality; // 134
+    bool Empty; // 138
+    bool IsPart; // 139
+    bool IsCraftingMaterial; // 13A
+    bool IsEquipped; // 13B
+    bool IsNew; // 13C
+    bool IsAvailable; // 13D
+    bool IsVendorItem; // 13E
+    bool IsBroken; // 13F
+    int32_t SlotIndex; // 140
+    uint32_t PositionInBackpack; // 144
+    game::ItemIconGender IconGender; // 148
+    uint8_t unk149[0x150 - 0x149]; // 149
+    WeakHandle<game::ItemData> GameItemData; // 150
+    bool HasPlayerSmartGunLink; // 160
+    uint8_t unk161[0x164 - 0x161]; // 161
+    int32_t PlayerLevel; // 164
+    int32_t PlayerStrength; // 168
+    int32_t PlayerReflexes; // 16C
+    int32_t PlayerStreetCred; // 170
+    bool IsRequirementMet; // 174
+    bool IsEquippable; // 175
+    bool IsVisualsEquipped; // 176
+    uint8_t unk177[0x178 - 0x177]; // 177
+    game::SItemStackRequirementData Requirement; // 178
+    game::SItemStackRequirementData EquipRequirement; // 180
+    DynArray<game::SItemStackRequirementData> EquipRequirements; // 188
+    game::LootItemType LootItemType; // 198
+    uint8_t unk199[0x1A0 - 0x199]; // 199
+    DynArray<Handle<game::InventoryItemAttachments>> Attachments; // 1A0
+    DynArray<game::InventoryItemAbility> Abilities; // 1B0
+    DynArray<TweakDBID> PlacementSlots; // 1C0
+    DynArray<game::StatViewData> PrimaryStats; // 1D0
+    DynArray<game::StatViewData> SecondaryStats; // 1E0
+    game::InventoryItemSortData SortData; // 1F0
+    bool IsPerkRequired; // 228
+    uint8_t unk229[0x230 - 0x229]; // 229
+    CString PerkRequiredName; // 230
+    bool IsCrafted; // 250
+    bool IsIconic; // 251
+    uint8_t unk252[0x258 - 0x252]; // 252
 };
-RED4EXT_ASSERT_SIZE(InventoryItemData, 0x238);
+RED4EXT_ASSERT_SIZE(InventoryItemData, 0x258);
 } // namespace game
 using gameInventoryItemData = game::InventoryItemData;
 using InventoryItemData = game::InventoryItemData;

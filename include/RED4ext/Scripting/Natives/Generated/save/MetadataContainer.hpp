@@ -20,7 +20,7 @@ struct MetadataContainer : ISerializable
 
     save::Metadata metadata; // 30
 };
-RED4EXT_ASSERT_SIZE(MetadataContainer, 0x3E0);
+RED4EXT_ASSERT_SIZE(MetadataContainer, 0x400);
 } // namespace save
 using saveMetadataContainer = save::MetadataContainer;
 } // namespace RED4ext

@@ -17,8 +17,9 @@ struct ParamData
 
     CString name; // 00
     CString type; // 20
+    Variant defaultValue; // 40
 };
-RED4EXT_ASSERT_SIZE(ParamData, 0x40);
+RED4EXT_ASSERT_SIZE(ParamData, 0x58);
 } // namespace RED4ext
 
 // clang-format on

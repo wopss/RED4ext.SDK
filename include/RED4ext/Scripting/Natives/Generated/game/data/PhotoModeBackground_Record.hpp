@@ -17,9 +17,9 @@ struct PhotoModeBackground_Record : game::data::PhotoModeItem_Record
     static constexpr const char* NAME = "gamedataPhotoModeBackground_Record";
     static constexpr const char* ALIAS = "PhotoModeBackground_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x70 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(PhotoModeBackground_Record, 0x58);
+RED4EXT_ASSERT_SIZE(PhotoModeBackground_Record, 0x70);
 } // namespace game::data
 using gamedataPhotoModeBackground_Record = game::data::PhotoModeBackground_Record;
 using PhotoModeBackground_Record = game::data::PhotoModeBackground_Record;

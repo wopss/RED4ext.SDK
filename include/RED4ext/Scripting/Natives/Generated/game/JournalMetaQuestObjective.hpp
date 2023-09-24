@@ -18,12 +18,12 @@ struct JournalMetaQuestObjective : game::JournalEntry
     static constexpr const char* NAME = "gameJournalMetaQuestObjective";
     static constexpr const char* ALIAS = "JournalMetaQuestObjective";
 
-    LocalizationString description; // 60
-    uint32_t progressPercent; // 88
-    TweakDBID iconID; // 8C
-    uint8_t unk94[0x98 - 0x94]; // 94
+    LocalizationString description; // 70
+    uint32_t progressPercent; // 98
+    TweakDBID iconID; // 9C
+    uint8_t unkA4[0xA8 - 0xA4]; // A4
 };
-RED4EXT_ASSERT_SIZE(JournalMetaQuestObjective, 0x98);
+RED4EXT_ASSERT_SIZE(JournalMetaQuestObjective, 0xA8);
 } // namespace game
 using gameJournalMetaQuestObjective = game::JournalMetaQuestObjective;
 using JournalMetaQuestObjective = game::JournalMetaQuestObjective;

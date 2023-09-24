@@ -20,11 +20,13 @@ struct TaskTextMessage
 
     uint32_t taskId; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString text; // 08
-    red::TaskTextMessageType type; // 28
-    uint8_t unk2C[0x30 - 0x2C]; // 2C
+    uint32_t parent; // 08
+    uint8_t unk0C[0x10 - 0xC]; // C
+    CString text; // 10
+    red::TaskTextMessageType type; // 30
+    uint8_t unk34[0x38 - 0x34]; // 34
 };
-RED4EXT_ASSERT_SIZE(TaskTextMessage, 0x30);
+RED4EXT_ASSERT_SIZE(TaskTextMessage, 0x38);
 } // namespace red
 using redTaskTextMessage = red::TaskTextMessage;
 } // namespace RED4ext

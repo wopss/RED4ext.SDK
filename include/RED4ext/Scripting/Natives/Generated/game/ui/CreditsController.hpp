@@ -36,7 +36,10 @@ struct CreditsController : game::ui::WidgetGameController
     CName closeVideoScreenAnimName; // 200
     CName swapBackgroundVideoAnimName; // 208
     CName singleAnimName; // 210
-    uint8_t unk218[0x244 - 0x218]; // 218
+    uint8_t unk218[0x241 - 0x218]; // 218
+    bool isPreVideoFinished; // 241
+    bool isEp1CreditsImplementation; // 242
+    uint8_t unk243[0x244 - 0x243]; // 243
     float exitNotificationDisplayTime; // 244
     uint8_t unk248[0x24D - 0x248]; // 248
     bool shouldShowRewardPrompt; // 24D

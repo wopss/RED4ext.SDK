@@ -20,7 +20,8 @@ struct UnassignAll_NodeType : quest::IVehicleManagerNodeType
 
     game::EntityReference vehicleRef; // 30
     bool isInstant; // 68
-    uint8_t unk69[0x70 - 0x69]; // 69
+    bool clearAssignedVehicleId; // 69
+    uint8_t unk6A[0x70 - 0x6A]; // 6A
 };
 RED4EXT_ASSERT_SIZE(UnassignAll_NodeType, 0x70);
 } // namespace quest

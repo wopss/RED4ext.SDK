@@ -17,9 +17,9 @@ struct StreetSignsLayer : ink::WorldFluffLayer
     static constexpr const char* NAME = "inkStreetSignsLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk200[0x258 - 0x200]; // 200
+    uint8_t unk2D0[0x330 - 0x2D0]; // 2D0
 };
-RED4EXT_ASSERT_SIZE(StreetSignsLayer, 0x258);
+RED4EXT_ASSERT_SIZE(StreetSignsLayer, 0x330);
 } // namespace ink
 using inkStreetSignsLayer = ink::StreetSignsLayer;
 } // namespace RED4ext

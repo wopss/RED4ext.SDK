@@ -39,8 +39,9 @@ struct HitEvent : red::Event
     bool hasPiercedTechSurface; // CC
     uint8_t unkCD[0xD0 - 0xCD]; // CD
     Handle<game::AttackComputed> attackComputed; // D0
+    uint8_t unkE0[0xF0 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(HitEvent, 0xE0);
+RED4EXT_ASSERT_SIZE(HitEvent, 0xF0);
 } // namespace game::events
 using gameeventsHitEvent = game::events::HitEvent;
 using gameHitEvent = game::events::HitEvent;

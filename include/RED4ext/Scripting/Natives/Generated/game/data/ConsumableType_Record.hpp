@@ -17,9 +17,9 @@ struct ConsumableType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataConsumableType_Record";
     static constexpr const char* ALIAS = "ConsumableType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ConsumableType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ConsumableType_Record, 0x68);
 } // namespace game::data
 using gamedataConsumableType_Record = game::data::ConsumableType_Record;
 using ConsumableType_Record = game::data::ConsumableType_Record;

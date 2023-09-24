@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-RED4EXT_ASSERT_SIZE(AttachmentSlotData, 0x90);
+RED4EXT_ASSERT_SIZE(game::AttachmentSlotData, 0x90);
 using gameAttachmentSlotData = game::AttachmentSlotData;
 using AttachmentSlotData = game::AttachmentSlotData;
 } // namespace RED4ext

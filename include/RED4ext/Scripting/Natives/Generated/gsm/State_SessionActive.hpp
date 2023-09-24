@@ -17,9 +17,9 @@ struct State_SessionActive : gsm::State_SessionStreamingAware
     static constexpr const char* NAME = "gsmState_SessionActive";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkC0[0x108 - 0xC0]; // C0
+    uint8_t unkC0[0x110 - 0xC0]; // C0
 };
-RED4EXT_ASSERT_SIZE(State_SessionActive, 0x108);
+RED4EXT_ASSERT_SIZE(State_SessionActive, 0x110);
 } // namespace gsm
 using gsmState_SessionActive = gsm::State_SessionActive;
 } // namespace RED4ext

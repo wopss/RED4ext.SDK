@@ -17,9 +17,9 @@ struct AISubActionLeaveCover_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionLeaveCover_Record";
     static constexpr const char* ALIAS = "AISubActionLeaveCover_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionLeaveCover_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionLeaveCover_Record, 0x60);
 } // namespace game::data
 using gamedataAISubActionLeaveCover_Record = game::data::AISubActionLeaveCover_Record;
 using AISubActionLeaveCover_Record = game::data::AISubActionLeaveCover_Record;

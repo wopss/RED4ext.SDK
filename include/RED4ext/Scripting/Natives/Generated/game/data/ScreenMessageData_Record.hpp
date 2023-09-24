@@ -17,9 +17,9 @@ struct ScreenMessageData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataScreenMessageData_Record";
     static constexpr const char* ALIAS = "ScreenMessageData_Record";
 
-    uint8_t unk48[0x88 - 0x48]; // 48
+    uint8_t unk48[0x130 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ScreenMessageData_Record, 0x88);
+RED4EXT_ASSERT_SIZE(ScreenMessageData_Record, 0x130);
 } // namespace game::data
 using gamedataScreenMessageData_Record = game::data::ScreenMessageData_Record;
 using ScreenMessageData_Record = game::data::ScreenMessageData_Record;

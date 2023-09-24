@@ -20,13 +20,13 @@ struct JournalFile : game::JournalEntry
     static constexpr const char* NAME = "gameJournalFile";
     static constexpr const char* ALIAS = "JournalFile";
 
-    LocalizationString title; // 60
-    LocalizationString content; // 88
-    RaRef<Bink> videoResource; // B0
-    CString PictureFilename_legacy_; // B8 -- PictureFilename(legacy)
-    TweakDBID pictureTweak; // D8
+    LocalizationString title; // 70
+    LocalizationString content; // 98
+    RaRef<Bink> videoResource; // C0
+    CString PictureFilename_legacy_; // C8 -- PictureFilename(legacy)
+    TweakDBID pictureTweak; // E8
 };
-RED4EXT_ASSERT_SIZE(JournalFile, 0xE0);
+RED4EXT_ASSERT_SIZE(JournalFile, 0xF0);
 } // namespace game
 using gameJournalFile = game::JournalFile;
 using JournalFile = game::JournalFile;

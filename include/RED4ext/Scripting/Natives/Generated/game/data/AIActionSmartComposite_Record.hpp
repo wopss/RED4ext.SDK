@@ -17,9 +17,9 @@ struct AIActionSmartComposite_Record : game::data::AIRecord_Record
     static constexpr const char* NAME = "gamedataAIActionSmartComposite_Record";
     static constexpr const char* ALIAS = "AIActionSmartComposite_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0xA8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIActionSmartComposite_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIActionSmartComposite_Record, 0xA8);
 } // namespace game::data
 using gamedataAIActionSmartComposite_Record = game::data::AIActionSmartComposite_Record;
 using AIActionSmartComposite_Record = game::data::AIActionSmartComposite_Record;

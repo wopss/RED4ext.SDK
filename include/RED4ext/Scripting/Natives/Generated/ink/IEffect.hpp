@@ -18,13 +18,12 @@ struct IEffect : ISerializable
     static constexpr const char* NAME = "inkIEffect";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x48 - 0x30]; // 30
-    bool isEnabled; // 48
-    uint8_t unk49[0x50 - 0x49]; // 49
-    CName effectName; // 50
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk30[0x40 - 0x30]; // 30
+    bool isEnabled; // 40
+    uint8_t unk41[0x48 - 0x41]; // 41
+    CName effectName; // 48
 };
-RED4EXT_ASSERT_SIZE(IEffect, 0x68);
+RED4EXT_ASSERT_SIZE(IEffect, 0x50);
 } // namespace ink
 using inkIEffect = ink::IEffect;
 } // namespace RED4ext

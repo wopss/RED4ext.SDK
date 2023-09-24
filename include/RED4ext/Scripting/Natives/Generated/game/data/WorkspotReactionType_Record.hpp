@@ -17,9 +17,9 @@ struct WorkspotReactionType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataWorkspotReactionType_Record";
     static constexpr const char* ALIAS = "WorkspotReactionType_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(WorkspotReactionType_Record, 0x50);
+RED4EXT_ASSERT_SIZE(WorkspotReactionType_Record, 0x58);
 } // namespace game::data
 using gamedataWorkspotReactionType_Record = game::data::WorkspotReactionType_Record;
 using WorkspotReactionType_Record = game::data::WorkspotReactionType_Record;

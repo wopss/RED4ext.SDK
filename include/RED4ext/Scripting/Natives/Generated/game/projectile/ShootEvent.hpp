@@ -20,13 +20,13 @@ struct ShootEvent : game::projectile::SetUpEvent
     static constexpr const char* NAME = "gameprojectileShootEvent";
     static constexpr const char* ALIAS = NAME;
 
-    Matrix localToWorld; // A0
-    Vector4 startPoint; // E0
-    Vector4 startVelocity; // F0
-    Vector4 weaponVelocity; // 100
-    game::projectile::WeaponParams params; // 110
+    Matrix localToWorld; // B0
+    Vector4 startPoint; // F0
+    Vector4 startVelocity; // 100
+    Vector4 weaponVelocity; // 110
+    game::projectile::WeaponParams params; // 120
 };
-RED4EXT_ASSERT_SIZE(ShootEvent, 0x1B0);
+RED4EXT_ASSERT_SIZE(ShootEvent, 0x1E0);
 } // namespace game::projectile
 using gameprojectileShootEvent = game::projectile::ShootEvent;
 } // namespace RED4ext

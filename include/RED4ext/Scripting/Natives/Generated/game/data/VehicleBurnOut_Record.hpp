@@ -17,9 +17,9 @@ struct VehicleBurnOut_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleBurnOut_Record";
     static constexpr const char* ALIAS = "VehicleBurnOut_Record";
 
-    uint8_t unk48[0x78 - 0x48]; // 48
+    uint8_t unk48[0x100 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleBurnOut_Record, 0x78);
+RED4EXT_ASSERT_SIZE(VehicleBurnOut_Record, 0x100);
 } // namespace game::data
 using gamedataVehicleBurnOut_Record = game::data::VehicleBurnOut_Record;
 using VehicleBurnOut_Record = game::data::VehicleBurnOut_Record;

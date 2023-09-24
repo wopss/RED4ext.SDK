@@ -18,7 +18,7 @@ struct RandomRatioCoverSelectionParameters_Record : game::data::CoverSelectionPa
     static constexpr const char* ALIAS = "RandomRatioCoverSelectionParameters_Record";
 
 };
-RED4EXT_ASSERT_SIZE(RandomRatioCoverSelectionParameters_Record, 0x50);
+RED4EXT_ASSERT_SIZE(RandomRatioCoverSelectionParameters_Record, 0x60);
 } // namespace game::data
 using gamedataRandomRatioCoverSelectionParameters_Record = game::data::RandomRatioCoverSelectionParameters_Record;
 using RandomRatioCoverSelectionParameters_Record = game::data::RandomRatioCoverSelectionParameters_Record;

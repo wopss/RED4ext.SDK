@@ -17,9 +17,9 @@ struct AsyncSpawnRequest : IScriptable
     static constexpr const char* NAME = "inkAsyncSpawnRequest";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x188 - 0x40]; // 40
+    uint8_t unk40[0x1B0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(AsyncSpawnRequest, 0x188);
+RED4EXT_ASSERT_SIZE(AsyncSpawnRequest, 0x1B0);
 } // namespace ink
 using inkAsyncSpawnRequest = ink::AsyncSpawnRequest;
 } // namespace RED4ext

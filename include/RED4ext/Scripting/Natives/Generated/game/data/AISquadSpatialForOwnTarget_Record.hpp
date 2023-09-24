@@ -17,9 +17,9 @@ struct AISquadSpatialForOwnTarget_Record : game::data::AITicketFilter_Record
     static constexpr const char* NAME = "gamedataAISquadSpatialForOwnTarget_Record";
     static constexpr const char* ALIAS = "AISquadSpatialForOwnTarget_Record";
 
-    uint8_t unk60[0x68 - 0x60]; // 60
+    uint8_t unk80[0x90 - 0x80]; // 80
 };
-RED4EXT_ASSERT_SIZE(AISquadSpatialForOwnTarget_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AISquadSpatialForOwnTarget_Record, 0x90);
 } // namespace game::data
 using gamedataAISquadSpatialForOwnTarget_Record = game::data::AISquadSpatialForOwnTarget_Record;
 using AISquadSpatialForOwnTarget_Record = game::data::AISquadSpatialForOwnTarget_Record;

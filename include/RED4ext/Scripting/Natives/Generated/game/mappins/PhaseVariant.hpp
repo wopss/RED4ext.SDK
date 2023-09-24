@@ -19,10 +19,10 @@ struct PhaseVariant : game::mappins::IPointOfInterestVariant
     static constexpr const char* NAME = "gamemappinsPhaseVariant";
     static constexpr const char* ALIAS = NAME;
 
-    game::data::MappinPhase phase; // 38
-    game::data::MappinVariant variant; // 3C
+    game::data::MappinPhase phase; // 30
+    game::data::MappinVariant variant; // 34
 };
-RED4EXT_ASSERT_SIZE(PhaseVariant, 0x40);
+RED4EXT_ASSERT_SIZE(PhaseVariant, 0x38);
 } // namespace game::mappins
 using gamemappinsPhaseVariant = game::mappins::PhaseVariant;
 } // namespace RED4ext

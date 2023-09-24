@@ -20,34 +20,36 @@ struct DestructionParams
 
     float debrisTimeoutMin; // 00
     float debrisTimeoutMax; // 04
-    float debrisMaxSeparation; // 08
-    float maxAngularVelocity; // 0C
-    float fadeOutTime; // 10
-    float impulseToDamage; // 14
-    float contactToDamage; // 18
-    float damageThreshold; // 1C
-    float damageEndurance; // 20
-    float bondEndurance; // 24
-    float impulseChildPropagationFactor; // 28
-    float impulsePropagationFactor; // 2C
-    float impulseDiminishingFactor; // 30
-    float maxContactImpulseRatio; // 34
-    physics::FractureFieldType fractureFieldMask; // 38
-    bool debrisTimeout; // 3A
-    bool accumulateDamage; // 3B
-    bool visualsRemain; // 3C
-    bool startInactive; // 3D
-    bool debrisDestructible; // 3E
-    bool supportDamage; // 3F
-    bool breakBonds; // 40
-    bool markEdgeChunks; // 41
-    bool useAggregatesForClusters; // 42
-    bool turnDynamicOnImpulse; // 43
-    bool buildConvexForClusters; // 44
-    physics::SimulationType simulationType; // 45
-    uint8_t unk46[0x48 - 0x46]; // 46
+    float debrisTimeoutThreshold; // 08
+    float debrisInstantRemovalThreshold; // 0C
+    float debrisMaxSeparation; // 10
+    float maxAngularVelocity; // 14
+    float fadeOutTime; // 18
+    float impulseToDamage; // 1C
+    float contactToDamage; // 20
+    float damageThreshold; // 24
+    float damageEndurance; // 28
+    float bondEndurance; // 2C
+    float impulseChildPropagationFactor; // 30
+    float impulsePropagationFactor; // 34
+    float impulseDiminishingFactor; // 38
+    float maxContactImpulseRatio; // 3C
+    physics::FractureFieldType fractureFieldMask; // 40
+    bool debrisTimeout; // 42
+    bool accumulateDamage; // 43
+    bool visualsRemain; // 44
+    bool startInactive; // 45
+    bool debrisDestructible; // 46
+    bool supportDamage; // 47
+    bool breakBonds; // 48
+    bool markEdgeChunks; // 49
+    bool useAggregatesForClusters; // 4A
+    bool turnDynamicOnImpulse; // 4B
+    bool buildConvexForClusters; // 4C
+    physics::SimulationType simulationType; // 4D
+    uint8_t unk4E[0x50 - 0x4E]; // 4E
 };
-RED4EXT_ASSERT_SIZE(DestructionParams, 0x48);
+RED4EXT_ASSERT_SIZE(DestructionParams, 0x50);
 } // namespace physics
 using physicsDestructionParams = physics::DestructionParams;
 } // namespace RED4ext

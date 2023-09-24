@@ -12,6 +12,7 @@
 namespace RED4ext
 {
 namespace quest { struct ComparisonParam; }
+namespace quest { struct UniversalRef; }
 
 namespace quest
 {
@@ -21,12 +22,13 @@ struct CharacterKilled_ConditionType : quest::ICharacterConditionType
     static constexpr const char* ALIAS = NAME;
 
     Handle<quest::ComparisonParam> comparisonParams; // 78
-    bool killed; // 88
-    bool unconscious; // 89
-    bool defeated; // 8A
-    uint8_t unk8B[0x90 - 0x8B]; // 8B
+    Handle<quest::UniversalRef> source; // 88
+    bool killed; // 98
+    bool unconscious; // 99
+    bool defeated; // 9A
+    uint8_t unk9B[0xA0 - 0x9B]; // 9B
 };
-RED4EXT_ASSERT_SIZE(CharacterKilled_ConditionType, 0x90);
+RED4EXT_ASSERT_SIZE(CharacterKilled_ConditionType, 0xA0);
 } // namespace quest
 using questCharacterKilled_ConditionType = quest::CharacterKilled_ConditionType;
 } // namespace RED4ext

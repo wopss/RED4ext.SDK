@@ -17,9 +17,9 @@ struct TankBaseObject : vehicle::BaseObject
     static constexpr const char* NAME = "vehicleTankBaseObject";
     static constexpr const char* ALIAS = "TankObject";
 
-    uint8_t unk980[0x9E0 - 0x980]; // 980
+    uint8_t unkBA0[0xC00 - 0xBA0]; // BA0
 };
-RED4EXT_ASSERT_SIZE(TankBaseObject, 0x9E0);
+RED4EXT_ASSERT_SIZE(TankBaseObject, 0xC00);
 } // namespace vehicle
 using vehicleTankBaseObject = vehicle::TankBaseObject;
 using TankObject = vehicle::TankBaseObject;

@@ -17,9 +17,9 @@ struct LoSFinderSystem : game::LoSIFinderSystem
     static constexpr const char* NAME = "gameLoSFinderSystem";
     static constexpr const char* ALIAS = "LoSFinderSystem";
 
-    uint8_t unk48[0x128 - 0x48]; // 48
+    uint8_t unk48[0x130 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(LoSFinderSystem, 0x128);
+RED4EXT_ASSERT_SIZE(LoSFinderSystem, 0x130);
 } // namespace game
 using gameLoSFinderSystem = game::LoSFinderSystem;
 using LoSFinderSystem = game::LoSFinderSystem;

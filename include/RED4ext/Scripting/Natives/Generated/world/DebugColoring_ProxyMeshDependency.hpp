@@ -18,10 +18,12 @@ struct DebugColoring_ProxyMeshDependency : world::EditorDebugColoringSettings
     static constexpr const char* NAME = "worldDebugColoring_ProxyMeshDependency";
     static constexpr const char* ALIAS = NAME;
 
-    Color autoColor; // 30
-    Color discardColor; // 34
+    Color noneColor; // 30
+    Color hasProxyColor; // 34
+    Color discardColor; // 38
+    uint8_t unk3C[0x40 - 0x3C]; // 3C
 };
-RED4EXT_ASSERT_SIZE(DebugColoring_ProxyMeshDependency, 0x38);
+RED4EXT_ASSERT_SIZE(DebugColoring_ProxyMeshDependency, 0x40);
 } // namespace world
 using worldDebugColoring_ProxyMeshDependency = world::DebugColoring_ProxyMeshDependency;
 } // namespace RED4ext

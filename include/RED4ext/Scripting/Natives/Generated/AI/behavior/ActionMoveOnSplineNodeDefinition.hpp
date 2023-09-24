@@ -27,16 +27,19 @@ struct ActionMoveOnSplineNodeDefinition : AI::behavior::ActionTreeNodeDefinition
     Handle<AI::ArgumentMapping> snapToTerrain; // 80
     Handle<AI::ArgumentMapping> rotateEntity; // 90
     Handle<AI::ArgumentMapping> startFromClosestPoint; // A0
-    Handle<AI::ArgumentMapping> useStart; // B0
-    Handle<AI::ArgumentMapping> useStop; // C0
-    Handle<AI::ArgumentMapping> reverse; // D0
-    uint8_t unkE0[0xF0 - 0xE0]; // E0
-    Handle<AI::ArgumentMapping> isBackAndForth; // F0
-    Handle<AI::ArgumentMapping> isInfinite; // 100
-    Handle<AI::ArgumentMapping> numberOfLoops; // 110
-    Handle<AI::ArgumentMapping> useOffMeshLinkReservation; // 120
+    Handle<AI::ArgumentMapping> splineRecalculation; // B0
+    Handle<AI::ArgumentMapping> useStart; // C0
+    Handle<AI::ArgumentMapping> useStop; // D0
+    Handle<AI::ArgumentMapping> reverse; // E0
+    uint8_t unkF0[0x100 - 0xF0]; // F0
+    Handle<AI::ArgumentMapping> isBackAndForth; // 100
+    Handle<AI::ArgumentMapping> isInfinite; // 110
+    Handle<AI::ArgumentMapping> numberOfLoops; // 120
+    Handle<AI::ArgumentMapping> useOffMeshLinkReservation; // 130
+    Handle<AI::ArgumentMapping> disableFootIK; // 140
+    Handle<AI::ArgumentMapping> allowCrowdOnPath; // 150
 };
-RED4EXT_ASSERT_SIZE(ActionMoveOnSplineNodeDefinition, 0x130);
+RED4EXT_ASSERT_SIZE(ActionMoveOnSplineNodeDefinition, 0x160);
 } // namespace AI::behavior
 using AIbehaviorActionMoveOnSplineNodeDefinition = AI::behavior::ActionMoveOnSplineNodeDefinition;
 } // namespace RED4ext

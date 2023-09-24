@@ -17,9 +17,9 @@ struct EquipmentMovementSound_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataEquipmentMovementSound_Record";
     static constexpr const char* ALIAS = "EquipmentMovementSound_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(EquipmentMovementSound_Record, 0x50);
+RED4EXT_ASSERT_SIZE(EquipmentMovementSound_Record, 0x60);
 } // namespace game::data
 using gamedataEquipmentMovementSound_Record = game::data::EquipmentMovementSound_Record;
 using EquipmentMovementSound_Record = game::data::EquipmentMovementSound_Record;

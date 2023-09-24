@@ -17,9 +17,9 @@ struct InventoryItemSet_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataInventoryItemSet_Record";
     static constexpr const char* ALIAS = "InventoryItemSet_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(InventoryItemSet_Record, 0x50);
+RED4EXT_ASSERT_SIZE(InventoryItemSet_Record, 0x58);
 } // namespace game::data
 using gamedataInventoryItemSet_Record = game::data::InventoryItemSet_Record;
 using InventoryItemSet_Record = game::data::InventoryItemSet_Record;

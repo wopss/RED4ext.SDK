@@ -17,10 +17,10 @@ struct PrefabProxyMeshNode : world::MeshNode
     static constexpr const char* NAME = "worldPrefabProxyMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    uint32_t nbNodesUnderProxy; // 58
-    float nearAutoHideDistance; // 5C
+    uint32_t nbNodesUnderProxy; // 60
+    float nearAutoHideDistance; // 64
 };
-RED4EXT_ASSERT_SIZE(PrefabProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(PrefabProxyMeshNode, 0x68);
 } // namespace world
 using worldPrefabProxyMeshNode = world::PrefabProxyMeshNode;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct FriendlyTargetAngleDistanceCoverSelectionParameters_Record : game::data::
     static constexpr const char* NAME = "gamedataFriendlyTargetAngleDistanceCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "FriendlyTargetAngleDistanceCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0xA0 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(FriendlyTargetAngleDistanceCoverSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(FriendlyTargetAngleDistanceCoverSelectionParameters_Record, 0xA0);
 } // namespace game::data
 using gamedataFriendlyTargetAngleDistanceCoverSelectionParameters_Record = game::data::FriendlyTargetAngleDistanceCoverSelectionParameters_Record;
 using FriendlyTargetAngleDistanceCoverSelectionParameters_Record = game::data::FriendlyTargetAngleDistanceCoverSelectionParameters_Record;

@@ -19,12 +19,12 @@ struct JournalOnscreen : game::JournalEntry
     static constexpr const char* NAME = "gameJournalOnscreen";
     static constexpr const char* ALIAS = "JournalOnscreen";
 
-    CName tag; // 60
-    LocalizationString title; // 68
-    LocalizationString description; // 90
-    TweakDBID iconID; // B8
+    CName tag; // 70
+    LocalizationString title; // 78
+    LocalizationString description; // A0
+    TweakDBID iconID; // C8
 };
-RED4EXT_ASSERT_SIZE(JournalOnscreen, 0xC0);
+RED4EXT_ASSERT_SIZE(JournalOnscreen, 0xD0);
 } // namespace game
 using gameJournalOnscreen = game::JournalOnscreen;
 using JournalOnscreen = game::JournalOnscreen;

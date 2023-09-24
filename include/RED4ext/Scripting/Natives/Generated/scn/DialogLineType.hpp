@@ -22,6 +22,7 @@ enum class DialogLineType : uint32_t
     OwnerlessRegular = 10,
     AlwaysCinematicNoSpeaker = 11,
     GlobalTVAlwaysVisible = 12,
+    Narrator = 13,
 };
 } // namespace scn
 using scnDialogLineType = scn::DialogLineType;

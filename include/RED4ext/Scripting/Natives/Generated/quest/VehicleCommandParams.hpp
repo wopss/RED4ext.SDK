@@ -12,9 +12,11 @@
 
 namespace RED4ext
 {
+namespace quest::vehicle { struct ChaseParams; }
 namespace quest::vehicle { struct FollowParams; }
 namespace quest::vehicle { struct JoinTrafficParams; }
 namespace quest::vehicle { struct OnSplineParams; }
+namespace quest::vehicle { struct PanicParams; }
 namespace quest::vehicle { struct RacingParams; }
 namespace quest::vehicle { struct ToNodeParams; }
 
@@ -32,8 +34,10 @@ struct VehicleCommandParams : quest::AICommandParams
     Handle<quest::vehicle::ToNodeParams> additionalParamsToNode; // 68
     Handle<quest::vehicle::RacingParams> additionalParamsRacing; // 78
     Handle<quest::vehicle::JoinTrafficParams> additionalParamsJoinTraffic; // 88
+    Handle<quest::vehicle::PanicParams> additionalParamsPanic; // 98
+    Handle<quest::vehicle::ChaseParams> additionalParamsChase; // A8
 };
-RED4EXT_ASSERT_SIZE(VehicleCommandParams, 0x98);
+RED4EXT_ASSERT_SIZE(VehicleCommandParams, 0xB8);
 } // namespace quest
 using questVehicleCommandParams = quest::VehicleCommandParams;
 } // namespace RED4ext

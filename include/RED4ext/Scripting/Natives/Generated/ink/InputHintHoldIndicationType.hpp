@@ -10,9 +10,9 @@ namespace RED4ext
 namespace ink { 
 enum class InputHintHoldIndicationType : uint8_t
 {
-    Press = 0,
-    Hold = 1,
-    FromInputConfig = 2,
+    FromInputConfig = 0,
+    Press = 1,
+    Hold = 2,
 };
 } // namespace ink
 using inkInputHintHoldIndicationType = ink::InputHintHoldIndicationType;

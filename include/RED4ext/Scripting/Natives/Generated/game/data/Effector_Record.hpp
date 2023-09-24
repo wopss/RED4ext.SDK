@@ -17,9 +17,9 @@ struct Effector_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataEffector_Record";
     static constexpr const char* ALIAS = "Effector_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Effector_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Effector_Record, 0x88);
 } // namespace game::data
 using gamedataEffector_Record = game::data::Effector_Record;
 using Effector_Record = game::data::Effector_Record;

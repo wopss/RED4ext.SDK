@@ -17,9 +17,9 @@ struct Proficiency_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataProficiency_Record";
     static constexpr const char* ALIAS = "Proficiency_Record";
 
-    uint8_t unk48[0x80 - 0x48]; // 48
+    uint8_t unk48[0x100 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Proficiency_Record, 0x80);
+RED4EXT_ASSERT_SIZE(Proficiency_Record, 0x100);
 } // namespace game::data
 using gamedataProficiency_Record = game::data::Proficiency_Record;
 using Proficiency_Record = game::data::Proficiency_Record;

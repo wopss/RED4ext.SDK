@@ -17,9 +17,9 @@ struct UIIconCensorFlag_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataUIIconCensorFlag_Record";
     static constexpr const char* ALIAS = "UIIconCensorFlag_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(UIIconCensorFlag_Record, 0x58);
+RED4EXT_ASSERT_SIZE(UIIconCensorFlag_Record, 0x68);
 } // namespace game::data
 using gamedataUIIconCensorFlag_Record = game::data::UIIconCensorFlag_Record;
 using UIIconCensorFlag_Record = game::data::UIIconCensorFlag_Record;

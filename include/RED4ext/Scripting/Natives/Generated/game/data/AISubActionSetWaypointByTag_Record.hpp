@@ -18,7 +18,7 @@ struct AISubActionSetWaypointByTag_Record : game::data::AISubActionSetTargetByTa
     static constexpr const char* ALIAS = "AISubActionSetWaypointByTag_Record";
 
 };
-RED4EXT_ASSERT_SIZE(AISubActionSetWaypointByTag_Record, 0x70);
+RED4EXT_ASSERT_SIZE(AISubActionSetWaypointByTag_Record, 0xD0);
 } // namespace game::data
 using gamedataAISubActionSetWaypointByTag_Record = game::data::AISubActionSetWaypointByTag_Record;
 using AISubActionSetWaypointByTag_Record = game::data::AISubActionSetWaypointByTag_Record;

@@ -23,9 +23,11 @@ struct RewardPack
     CString title; // 20
     CString reason; // 40
     CName iconSlot; // 60
-    DynArray<uint64_t> rewards; // 68
+    CName group; // 68
+    CName slotType; // 70
+    DynArray<uint64_t> rewards; // 78
 };
-RED4EXT_ASSERT_SIZE(RewardPack, 0x78);
+RED4EXT_ASSERT_SIZE(RewardPack, 0x88);
 } // namespace game
 using gameRewardPack = game::RewardPack;
 using GOGRewardPack = game::RewardPack;

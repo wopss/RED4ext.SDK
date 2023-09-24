@@ -17,9 +17,9 @@ struct WorkspotSystem : world::IWorkspotSystem
     static constexpr const char* NAME = "workWorkspotSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0xAD0 - 0x48]; // 48
+    uint8_t unk48[0xAE0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(WorkspotSystem, 0xAD0);
+RED4EXT_ASSERT_SIZE(WorkspotSystem, 0xAE0);
 } // namespace work
 using workWorkspotSystem = work::WorkspotSystem;
 } // namespace RED4ext

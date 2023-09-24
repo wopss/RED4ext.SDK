@@ -21,10 +21,11 @@ struct LevelUpData
     game::data::ProficiencyType type; // 04
     int32_t perkPoints; // 08
     int32_t attributePoints; // 0C
-    bool disableAction; // 10
-    uint8_t unk11[0x14 - 0x11]; // 11
+    int32_t espionagePoints; // 10
+    bool disableAction; // 14
+    uint8_t unk15[0x18 - 0x15]; // 15
 };
-RED4EXT_ASSERT_SIZE(LevelUpData, 0x14);
+RED4EXT_ASSERT_SIZE(LevelUpData, 0x18);
 } // namespace quest
 using questLevelUpData = quest::LevelUpData;
 using LevelUpData = quest::LevelUpData;

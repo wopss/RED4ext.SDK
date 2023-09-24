@@ -30,7 +30,7 @@ struct DescriptionQuery : IScriptable
     float raycastStartDistance; // 98
     float probingPrecision; // 9C
     float probingMaxDistanceDiff; // A0
-    uint8_t unkA4[0xA8 - 0xA4]; // A4
+    float probingMaxHeight; // A4
     uint32_t maxProbes; // A8
     uint8_t unkAC[0xB0 - 0xAC]; // AC
     Vector4 probeDimensions; // B0

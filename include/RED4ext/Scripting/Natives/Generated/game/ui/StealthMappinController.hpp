@@ -18,7 +18,7 @@ struct StealthMappinController : game::ui::InteractionMappinController
     static constexpr const char* ALIAS = "StealthMappinController";
 
 };
-RED4EXT_ASSERT_SIZE(StealthMappinController, 0x2B0);
+RED4EXT_ASSERT_SIZE(StealthMappinController, 0x2C0);
 } // namespace game::ui
 using gameuiStealthMappinController = game::ui::StealthMappinController;
 using StealthMappinController = game::ui::StealthMappinController;

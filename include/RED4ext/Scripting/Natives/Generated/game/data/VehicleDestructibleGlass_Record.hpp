@@ -17,9 +17,9 @@ struct VehicleDestructibleGlass_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleDestructibleGlass_Record";
     static constexpr const char* ALIAS = "VehicleDestructibleGlass_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleDestructibleGlass_Record, 0x60);
+RED4EXT_ASSERT_SIZE(VehicleDestructibleGlass_Record, 0x90);
 } // namespace game::data
 using gamedataVehicleDestructibleGlass_Record = game::data::VehicleDestructibleGlass_Record;
 using VehicleDestructibleGlass_Record = game::data::VehicleDestructibleGlass_Record;

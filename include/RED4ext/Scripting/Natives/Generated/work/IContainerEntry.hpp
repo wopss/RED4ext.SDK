@@ -22,10 +22,12 @@ struct IContainerEntry : work::IEntry
     static constexpr const char* NAME = "workIContainerEntry";
     static constexpr const char* ALIAS = NAME;
 
-    CName idleAnim; // 38
-    DynArray<Handle<work::IEntry>> list; // 40
+    bool disableAutoTransition; // 38
+    uint8_t unk39[0x40 - 0x39]; // 39
+    CName idleAnim; // 40
+    DynArray<Handle<work::IEntry>> list; // 48
 };
-RED4EXT_ASSERT_SIZE(IContainerEntry, 0x50);
+RED4EXT_ASSERT_SIZE(IContainerEntry, 0x58);
 } // namespace work
 using workIContainerEntry = work::IContainerEntry;
 } // namespace RED4ext

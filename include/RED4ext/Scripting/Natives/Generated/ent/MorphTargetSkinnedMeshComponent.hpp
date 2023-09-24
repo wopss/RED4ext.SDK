@@ -10,6 +10,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/ISkinTargetComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
+#include <RED4ext/Scripting/Natives/Generated/shadows/ShadowCastingMode.hpp>
 
 namespace RED4ext
 {
@@ -33,11 +34,12 @@ struct MorphTargetSkinnedMeshComponent : ent::ISkinTargetComponent
     uint8_t unk2F8[0x308 - 0x2F8]; // 2F8
     red::TagList tags; // 308
     uint8_t unk318[0x35C - 0x318]; // 318
-    bool castShadows; // 35C
-    bool acceptDismemberment; // 35D
-    bool HACK_isMaterialPriorityBumped; // 35E
-    bool castLocalShadows; // 35F
-    uint8_t unk360[0x370 - 0x360]; // 360
+    shadows::ShadowCastingMode castShadows; // 35C
+    shadows::ShadowCastingMode castLocalShadows; // 35D
+    bool acceptDismemberment; // 35E
+    uint8_t unk35F[0x361 - 0x35F]; // 35F
+    uint8_t version; // 361
+    uint8_t unk362[0x370 - 0x362]; // 362
 };
 RED4EXT_ASSERT_SIZE(MorphTargetSkinnedMeshComponent, 0x370);
 } // namespace ent

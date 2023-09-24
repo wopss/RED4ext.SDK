@@ -17,9 +17,9 @@ struct AIDodgeCountCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIDodgeCountCond_Record";
     static constexpr const char* ALIAS = "AIDodgeCountCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x80 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIDodgeCountCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIDodgeCountCond_Record, 0x80);
 } // namespace game::data
 using gamedataAIDodgeCountCond_Record = game::data::AIDodgeCountCond_Record;
 using AIDodgeCountCond_Record = game::data::AIDodgeCountCond_Record;

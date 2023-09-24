@@ -17,9 +17,9 @@ struct Component : ent::IPlacedComponent
     static constexpr const char* NAME = "gameinfluenceComponent";
     static constexpr const char* ALIAS = "InfluenceComponent";
 
-    uint8_t unk120[0x420 - 0x120]; // 120
+    uint8_t unk120[0x450 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(Component, 0x420);
+RED4EXT_ASSERT_SIZE(Component, 0x450);
 } // namespace game::influence
 using gameinfluenceComponent = game::influence::Component;
 using InfluenceComponent = game::influence::Component;

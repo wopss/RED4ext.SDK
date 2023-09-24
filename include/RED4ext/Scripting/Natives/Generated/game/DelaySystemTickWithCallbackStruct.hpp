@@ -17,9 +17,9 @@ struct DelaySystemTickWithCallbackStruct : game::DelaySystemTickStruct
     static constexpr const char* NAME = "gameDelaySystemTickWithCallbackStruct";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk38[0x80 - 0x38]; // 38
+    uint8_t unk40[0x88 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(DelaySystemTickWithCallbackStruct, 0x80);
+RED4EXT_ASSERT_SIZE(DelaySystemTickWithCallbackStruct, 0x88);
 } // namespace game
 using gameDelaySystemTickWithCallbackStruct = game::DelaySystemTickWithCallbackStruct;
 } // namespace RED4ext

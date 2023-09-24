@@ -17,9 +17,9 @@ struct AIInTacticPositionCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIInTacticPositionCond_Record";
     static constexpr const char* ALIAS = "AIInTacticPositionCond_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x70 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIInTacticPositionCond_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIInTacticPositionCond_Record, 0x70);
 } // namespace game::data
 using gamedataAIInTacticPositionCond_Record = game::data::AIInTacticPositionCond_Record;
 using AIInTacticPositionCond_Record = game::data::AIInTacticPositionCond_Record;

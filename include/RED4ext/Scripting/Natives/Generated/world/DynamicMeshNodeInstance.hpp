@@ -17,9 +17,9 @@ struct DynamicMeshNodeInstance : world::MeshNodeInstance
     static constexpr const char* NAME = "worldDynamicMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk100[0x1C0 - 0x100]; // 100
+    uint8_t unk100[0x1B0 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(DynamicMeshNodeInstance, 0x1C0);
+RED4EXT_ASSERT_SIZE(DynamicMeshNodeInstance, 0x1B0);
 } // namespace world
 using worldDynamicMeshNodeInstance = world::DynamicMeshNodeInstance;
 } // namespace RED4ext

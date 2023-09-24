@@ -17,9 +17,9 @@ struct AISubActionQueueAIEvent_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionQueueAIEvent_Record";
     static constexpr const char* ALIAS = "AISubActionQueueAIEvent_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionQueueAIEvent_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionQueueAIEvent_Record, 0x60);
 } // namespace game::data
 using gamedataAISubActionQueueAIEvent_Record = game::data::AISubActionQueueAIEvent_Record;
 using AISubActionQueueAIEvent_Record = game::data::AISubActionQueueAIEvent_Record;

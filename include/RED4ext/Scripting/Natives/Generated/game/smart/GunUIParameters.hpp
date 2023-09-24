@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
@@ -29,8 +30,10 @@ struct GunUIParameters : IScriptable
     float timeToRemoveOccludedTarget; // 74
     float timeToLock; // 78
     float timeToUnlock; // 7C
+    DynArray<CName> smartAudioEvents; // 80
+    DynArray<float> smartAudioEventsDelays; // 90
 };
-RED4EXT_ASSERT_SIZE(GunUIParameters, 0x80);
+RED4EXT_ASSERT_SIZE(GunUIParameters, 0xA0);
 } // namespace game::smart
 using gamesmartGunUIParameters = game::smart::GunUIParameters;
 using smartGunUIParameters = game::smart::GunUIParameters;

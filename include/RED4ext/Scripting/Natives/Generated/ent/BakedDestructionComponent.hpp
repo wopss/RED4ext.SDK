@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/PhysicalMeshComponent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/FractureFieldType.hpp>
 
 namespace RED4ext
 {
@@ -28,22 +29,22 @@ struct BakedDestructionComponent : ent::PhysicalMeshComponent
     uint8_t unk270[0x2A0 - 0x270]; // 270
     CName audioMetadata; // 2A0
     CName meshFracturedAppearance; // 2A8
-    uint8_t unk2B0[0x328 - 0x2B0]; // 2B0
-    DataBuffer compiledBufferFractured; // 328
-    float damageThreshold; // 350
-    float damageEndurance; // 354
-    float impulseToDamage; // 358
-    float contactToDamage; // 35C
-    uint8_t unk360[0x368 - 0x360]; // 360
-    float numFrames; // 368
-    float frameRate; // 36C
-    bool playOnlyOnce; // 370
-    bool restartOnTrigger; // 371
-    bool disableCollidersOnTrigger; // 372
-    bool accumulateDamage; // 373
-    uint8_t unk374[0x380 - 0x374]; // 374
+    uint8_t unk2B0[0x320 - 0x2B0]; // 2B0
+    float damageThreshold; // 320
+    float damageEndurance; // 324
+    float impulseToDamage; // 328
+    float contactToDamage; // 32C
+    uint8_t unk330[0x338 - 0x330]; // 330
+    float numFrames; // 338
+    float frameRate; // 33C
+    physics::FractureFieldType fractureFieldMask; // 340
+    bool playOnlyOnce; // 342
+    bool restartOnTrigger; // 343
+    bool disableCollidersOnTrigger; // 344
+    bool accumulateDamage; // 345
+    uint8_t unk346[0x350 - 0x346]; // 346
 };
-RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x380);
+RED4EXT_ASSERT_SIZE(BakedDestructionComponent, 0x350);
 } // namespace ent
 using entBakedDestructionComponent = ent::BakedDestructionComponent;
 using BakedDestructionComponent = ent::BakedDestructionComponent;

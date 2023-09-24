@@ -18,7 +18,7 @@ struct JournalTarotGroup : game::JournalFileEntry
     static constexpr const char* ALIAS = "JournalTarotGroup";
 
 };
-RED4EXT_ASSERT_SIZE(JournalTarotGroup, 0x90);
+RED4EXT_ASSERT_SIZE(JournalTarotGroup, 0xA0);
 } // namespace game
 using gameJournalTarotGroup = game::JournalTarotGroup;
 using JournalTarotGroup = game::JournalTarotGroup;

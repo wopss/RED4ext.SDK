@@ -22,11 +22,13 @@ struct AnimNode_LookAtPose360 : anim::AnimNode_Base
     CName animation; // 48
     float speedInDegreesPerSecond; // 50
     float durationCut; // 54
-    uint8_t unk58[0xA8 - 0x58]; // 58
-    anim::FloatLink targetAngleOffsetNode; // A8
-    anim::FloatLink angleOffsetNode; // C8
+    CName animEndEventName; // 58
+    uint8_t unk60[0xB0 - 0x60]; // 60
+    anim::FloatLink targetAngleOffsetNode; // B0
+    anim::FloatLink angleOffsetNode; // D0
+    anim::FloatLink weightNode; // F0
 };
-RED4EXT_ASSERT_SIZE(AnimNode_LookAtPose360, 0xE8);
+RED4EXT_ASSERT_SIZE(AnimNode_LookAtPose360, 0x110);
 } // namespace anim
 using animAnimNode_LookAtPose360 = anim::AnimNode_LookAtPose360;
 } // namespace RED4ext

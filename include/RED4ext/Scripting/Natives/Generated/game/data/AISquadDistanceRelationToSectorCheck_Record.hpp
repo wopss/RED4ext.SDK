@@ -17,9 +17,9 @@ struct AISquadDistanceRelationToSectorCheck_Record : game::data::AITicketCheck_R
     static constexpr const char* NAME = "gamedataAISquadDistanceRelationToSectorCheck_Record";
     static constexpr const char* ALIAS = "AISquadDistanceRelationToSectorCheck_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk68[0x78 - 0x68]; // 68
 };
-RED4EXT_ASSERT_SIZE(AISquadDistanceRelationToSectorCheck_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AISquadDistanceRelationToSectorCheck_Record, 0x78);
 } // namespace game::data
 using gamedataAISquadDistanceRelationToSectorCheck_Record = game::data::AISquadDistanceRelationToSectorCheck_Record;
 using AISquadDistanceRelationToSectorCheck_Record = game::data::AISquadDistanceRelationToSectorCheck_Record;

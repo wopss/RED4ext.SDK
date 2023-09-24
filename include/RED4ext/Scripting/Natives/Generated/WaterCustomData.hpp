@@ -15,9 +15,9 @@ struct WaterCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "WaterCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x270 - 0x18]; // 18
+    uint8_t unk18[0x280 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(WaterCustomData, 0x270);
+RED4EXT_ASSERT_SIZE(WaterCustomData, 0x280);
 } // namespace RED4ext
 
 // clang-format on

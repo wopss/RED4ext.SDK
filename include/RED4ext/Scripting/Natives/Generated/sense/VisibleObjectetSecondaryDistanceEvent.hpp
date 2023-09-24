@@ -18,7 +18,7 @@ struct VisibleObjectetSecondaryDistanceEvent : red::Event
     static constexpr const char* ALIAS = "VisibleObjectetSecondaryDistanceEvent";
 
     float distance; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
+    float extraEvaluationDistance; // 44
 };
 RED4EXT_ASSERT_SIZE(VisibleObjectetSecondaryDistanceEvent, 0x48);
 } // namespace sense

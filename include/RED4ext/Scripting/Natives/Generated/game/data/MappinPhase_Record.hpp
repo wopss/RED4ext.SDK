@@ -17,9 +17,9 @@ struct MappinPhase_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataMappinPhase_Record";
     static constexpr const char* ALIAS = "MappinPhase_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(MappinPhase_Record, 0x58);
+RED4EXT_ASSERT_SIZE(MappinPhase_Record, 0x68);
 } // namespace game::data
 using gamedataMappinPhase_Record = game::data::MappinPhase_Record;
 using MappinPhase_Record = game::data::MappinPhase_Record;

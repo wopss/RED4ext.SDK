@@ -18,7 +18,7 @@ struct LocalPlayer : mp::Player
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(LocalPlayer, 0x68);
+RED4EXT_ASSERT_SIZE(LocalPlayer, 0x88);
 } // namespace mp
 using mpLocalPlayer = mp::LocalPlayer;
 } // namespace RED4ext

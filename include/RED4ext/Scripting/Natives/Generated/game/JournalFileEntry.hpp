@@ -17,9 +17,9 @@ struct JournalFileEntry : game::JournalContainerEntry
     static constexpr const char* NAME = "gameJournalFileEntry";
     static constexpr const char* ALIAS = "JournalFileEntry";
 
-    uint8_t unk78[0x90 - 0x78]; // 78
+    uint8_t unk88[0xA0 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(JournalFileEntry, 0x90);
+RED4EXT_ASSERT_SIZE(JournalFileEntry, 0xA0);
 } // namespace game
 using gameJournalFileEntry = game::JournalFileEntry;
 using JournalFileEntry = game::JournalFileEntry;

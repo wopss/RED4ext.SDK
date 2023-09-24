@@ -17,9 +17,9 @@ struct Prop_Record : game::data::SpawnableObject_Record
     static constexpr const char* NAME = "gamedataProp_Record";
     static constexpr const char* ALIAS = "Prop_Record";
 
-    uint8_t unk78[0x80 - 0x78]; // 78
+    uint8_t unkF8[0x108 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(Prop_Record, 0x80);
+RED4EXT_ASSERT_SIZE(Prop_Record, 0x108);
 } // namespace game::data
 using gamedataProp_Record = game::data::Prop_Record;
 using Prop_Record = game::data::Prop_Record;

@@ -18,7 +18,7 @@ struct TerminalScreenType_Record : game::data::DeviceScreenType_Record
     static constexpr const char* ALIAS = "TerminalScreenType_Record";
 
 };
-RED4EXT_ASSERT_SIZE(TerminalScreenType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(TerminalScreenType_Record, 0x70);
 } // namespace game::data
 using gamedataTerminalScreenType_Record = game::data::TerminalScreenType_Record;
 using TerminalScreenType_Record = game::data::TerminalScreenType_Record;

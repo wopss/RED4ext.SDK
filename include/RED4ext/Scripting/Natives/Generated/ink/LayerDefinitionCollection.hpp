@@ -26,15 +26,15 @@ struct LayerDefinitionCollection
     ink::MenuLayerDefinition menuLayer; // 00
     ink::MenuLayerDefinition menuLayerMP; // 68
     ink::HUDLayerDefinition hudLayer; // D0
-    uint8_t unk120[0x178 - 0x120]; // 120
-    ink::VideoLayerDefinition videoLayer; // 178
-    ink::OffscreenLayerDefinition offscreenLayer; // 1B0
-    ink::GameNotificationsLayerDefinition gameNotificationsLayer; // 1E8
-    uint8_t unk238[0x2A8 - 0x238]; // 238
-    ink::PhotoModeLayerDefinition photoModeLayer; // 2A8
-    ink::DebugLayerDefinition debugLayer; // 328
+    uint8_t unk120[0x180 - 0x120]; // 120
+    ink::VideoLayerDefinition videoLayer; // 180
+    ink::OffscreenLayerDefinition offscreenLayer; // 1B8
+    ink::GameNotificationsLayerDefinition gameNotificationsLayer; // 1F0
+    uint8_t unk240[0x2B0 - 0x240]; // 240
+    ink::PhotoModeLayerDefinition photoModeLayer; // 2B0
+    ink::DebugLayerDefinition debugLayer; // 330
 };
-RED4EXT_ASSERT_SIZE(LayerDefinitionCollection, 0x370);
+RED4EXT_ASSERT_SIZE(LayerDefinitionCollection, 0x378);
 } // namespace ink
 using inkLayerDefinitionCollection = ink::LayerDefinitionCollection;
 } // namespace RED4ext

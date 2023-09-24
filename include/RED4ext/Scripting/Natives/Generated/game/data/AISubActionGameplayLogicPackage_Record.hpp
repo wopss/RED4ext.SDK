@@ -17,9 +17,9 @@ struct AISubActionGameplayLogicPackage_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionGameplayLogicPackage_Record";
     static constexpr const char* ALIAS = "AISubActionGameplayLogicPackage_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionGameplayLogicPackage_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionGameplayLogicPackage_Record, 0x58);
 } // namespace game::data
 using gamedataAISubActionGameplayLogicPackage_Record = game::data::AISubActionGameplayLogicPackage_Record;
 using AISubActionGameplayLogicPackage_Record = game::data::AISubActionGameplayLogicPackage_Record;

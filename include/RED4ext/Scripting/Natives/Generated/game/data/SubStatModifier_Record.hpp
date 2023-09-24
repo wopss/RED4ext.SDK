@@ -17,9 +17,9 @@ struct SubStatModifier_Record : game::data::StatModifier_Record
     static constexpr const char* NAME = "gamedataSubStatModifier_Record";
     static constexpr const char* ALIAS = "SubStatModifier_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x78 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(SubStatModifier_Record, 0x58);
+RED4EXT_ASSERT_SIZE(SubStatModifier_Record, 0x78);
 } // namespace game::data
 using gamedataSubStatModifier_Record = game::data::SubStatModifier_Record;
 using SubStatModifier_Record = game::data::SubStatModifier_Record;

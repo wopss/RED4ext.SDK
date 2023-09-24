@@ -17,9 +17,9 @@ struct LootManager : game::ILootManager
     static constexpr const char* NAME = "gameLootManager";
     static constexpr const char* ALIAS = "LootManager";
 
-    uint8_t unk48[0x220 - 0x48]; // 48
+    uint8_t unk48[0x278 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(LootManager, 0x220);
+RED4EXT_ASSERT_SIZE(LootManager, 0x278);
 } // namespace game
 using gameLootManager = game::LootManager;
 using LootManager = game::LootManager;

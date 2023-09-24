@@ -19,11 +19,11 @@ struct TrafficLaneCrowdFragment
     static constexpr const char* ALIAS = NAME;
 
     StaticArray<world::DesiredSlotsCountInfo, 4> desiredSlotCountsPerTimePeriod; // 00
-    uint32_t crowdCreationDataIndex; // 24
-    float laneX1; // 28
-    float laneX2; // 2C
+    uint32_t crowdCreationDataIndex; // 34
+    float laneX1; // 38
+    float laneX2; // 3C
 };
-RED4EXT_ASSERT_SIZE(TrafficLaneCrowdFragment, 0x30);
+RED4EXT_ASSERT_SIZE(TrafficLaneCrowdFragment, 0x40);
 } // namespace world
 using worldTrafficLaneCrowdFragment = world::TrafficLaneCrowdFragment;
 } // namespace RED4ext

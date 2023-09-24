@@ -26,8 +26,10 @@ struct SetHUDEntryForcedVisibility_NodeType : quest::IUIManagerNodeType
     bool usePreset; // 50
     uint8_t unk51[0x54 - 0x51]; // 51
     world::ui::EntryVisibility visibility; // 54
+    bool skipAnimation; // 58
+    uint8_t unk59[0x60 - 0x59]; // 59
 };
-RED4EXT_ASSERT_SIZE(SetHUDEntryForcedVisibility_NodeType, 0x58);
+RED4EXT_ASSERT_SIZE(SetHUDEntryForcedVisibility_NodeType, 0x60);
 } // namespace quest
 using questSetHUDEntryForcedVisibility_NodeType = quest::SetHUDEntryForcedVisibility_NodeType;
 } // namespace RED4ext

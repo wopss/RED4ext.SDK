@@ -17,12 +17,12 @@ struct MaskEffect : ink::IEffect
     static constexpr const char* NAME = "inkMaskEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float angle; // 68
-    float opacity; // 6C
-    bool invert; // 70
-    uint8_t unk71[0x78 - 0x71]; // 71
+    float angle; // 50
+    float opacity; // 54
+    bool invert; // 58
+    uint8_t unk59[0x60 - 0x59]; // 59
 };
-RED4EXT_ASSERT_SIZE(MaskEffect, 0x78);
+RED4EXT_ASSERT_SIZE(MaskEffect, 0x60);
 } // namespace ink
 using inkMaskEffect = ink::MaskEffect;
 } // namespace RED4ext

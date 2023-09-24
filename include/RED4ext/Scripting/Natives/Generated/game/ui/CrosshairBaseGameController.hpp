@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/WidgetGameController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/WidgetReference.hpp>
 
 namespace RED4ext
 {
@@ -17,9 +18,12 @@ struct CrosshairBaseGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiCrosshairBaseGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE0[0xF0 - 0xE0]; // E0
+    ink::WidgetReference details; // E0
+    uint8_t unkF8[0x108 - 0xF8]; // F8
+    bool isActive; // 108
+    uint8_t unk109[0x110 - 0x109]; // 109
 };
-RED4EXT_ASSERT_SIZE(CrosshairBaseGameController, 0xF0);
+RED4EXT_ASSERT_SIZE(CrosshairBaseGameController, 0x110);
 } // namespace game::ui
 using gameuiCrosshairBaseGameController = game::ui::CrosshairBaseGameController;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct LevelAssignmentSystem : game::ILevelAssignmentSystem
     static constexpr const char* NAME = "gameLevelAssignmentSystem";
     static constexpr const char* ALIAS = "LevelAssignmentSystem";
 
-    uint8_t unk48[0xB0 - 0x48]; // 48
+    uint8_t unk48[0xC0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(LevelAssignmentSystem, 0xB0);
+RED4EXT_ASSERT_SIZE(LevelAssignmentSystem, 0xC0);
 } // namespace game
 using gameLevelAssignmentSystem = game::LevelAssignmentSystem;
 using LevelAssignmentSystem = game::LevelAssignmentSystem;

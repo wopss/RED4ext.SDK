@@ -23,9 +23,9 @@ struct PopupsManager : game::ui::WidgetGameController
     ink::CompoundWidgetReference bracketsContainer; // 138
     ink::CompoundWidgetReference tutorialOverlayContainer; // 150
     CName bracketLibraryID; // 168
-    uint8_t unk170[0x1A0 - 0x170]; // 170
+    uint8_t unk170[0x1B0 - 0x170]; // 170
 };
-RED4EXT_ASSERT_SIZE(PopupsManager, 0x1A0);
+RED4EXT_ASSERT_SIZE(PopupsManager, 0x1B0);
 } // namespace game::ui
 using gameuiPopupsManager = game::ui::PopupsManager;
 using PopupsManager = game::ui::PopupsManager;

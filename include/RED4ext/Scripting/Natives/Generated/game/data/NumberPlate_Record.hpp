@@ -18,7 +18,7 @@ struct NumberPlate_Record : game::data::LCDScreen_Record
     static constexpr const char* ALIAS = "NumberPlate_Record";
 
 };
-RED4EXT_ASSERT_SIZE(NumberPlate_Record, 0x60);
+RED4EXT_ASSERT_SIZE(NumberPlate_Record, 0x80);
 } // namespace game::data
 using gamedataNumberPlate_Record = game::data::NumberPlate_Record;
 using NumberPlate_Record = game::data::NumberPlate_Record;

@@ -17,9 +17,9 @@ struct AIHitCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIHitCond_Record";
     static constexpr const char* ALIAS = "AIHitCond_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk58[0xB8 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIHitCond_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AIHitCond_Record, 0xB8);
 } // namespace game::data
 using gamedataAIHitCond_Record = game::data::AIHitCond_Record;
 using AIHitCond_Record = game::data::AIHitCond_Record;

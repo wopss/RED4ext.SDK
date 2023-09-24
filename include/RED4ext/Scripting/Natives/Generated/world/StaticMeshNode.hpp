@@ -18,7 +18,7 @@ struct StaticMeshNode : world::MeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(StaticMeshNode, 0x58);
+RED4EXT_ASSERT_SIZE(StaticMeshNode, 0x60);
 } // namespace world
 using worldStaticMeshNode = world::StaticMeshNode;
 } // namespace RED4ext

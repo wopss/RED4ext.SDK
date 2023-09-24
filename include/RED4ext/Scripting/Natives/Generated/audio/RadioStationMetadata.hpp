@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/audio/AudioMetadata.hpp>
+#include <RED4ext/Scripting/Natives/Generated/audio/RadioBlip.hpp>
 #include <RED4ext/Scripting/Natives/Generated/audio/RadioSpeakerType.hpp>
 
 namespace RED4ext
@@ -21,10 +22,11 @@ struct RadioStationMetadata : audio::AudioMetadata
     static constexpr const char* ALIAS = NAME;
 
     DynArray<CName> tracks; // 38
-    audio::RadioSpeakerType speaker; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    DynArray<audio::RadioBlip> blips; // 48
+    audio::RadioSpeakerType speaker; // 58
+    uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
-RED4EXT_ASSERT_SIZE(RadioStationMetadata, 0x50);
+RED4EXT_ASSERT_SIZE(RadioStationMetadata, 0x60);
 } // namespace audio
 using audioRadioStationMetadata = audio::RadioStationMetadata;
 } // namespace RED4ext

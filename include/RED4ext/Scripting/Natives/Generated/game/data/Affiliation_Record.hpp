@@ -17,9 +17,9 @@ struct Affiliation_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAffiliation_Record";
     static constexpr const char* ALIAS = "Affiliation_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Affiliation_Record, 0x60);
+RED4EXT_ASSERT_SIZE(Affiliation_Record, 0x88);
 } // namespace game::data
 using gamedataAffiliation_Record = game::data::Affiliation_Record;
 using Affiliation_Record = game::data::Affiliation_Record;

@@ -17,9 +17,9 @@ struct StatsFolder_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataStatsFolder_Record";
     static constexpr const char* ALIAS = "StatsFolder_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StatsFolder_Record, 0x58);
+RED4EXT_ASSERT_SIZE(StatsFolder_Record, 0x70);
 } // namespace game::data
 using gamedataStatsFolder_Record = game::data::StatsFolder_Record;
 using StatsFolder_Record = game::data::StatsFolder_Record;

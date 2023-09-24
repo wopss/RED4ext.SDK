@@ -17,9 +17,9 @@ struct HitPrereqConditionType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataHitPrereqConditionType_Record";
     static constexpr const char* ALIAS = "HitPrereqConditionType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(HitPrereqConditionType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(HitPrereqConditionType_Record, 0x68);
 } // namespace game::data
 using gamedataHitPrereqConditionType_Record = game::data::HitPrereqConditionType_Record;
 using HitPrereqConditionType_Record = game::data::HitPrereqConditionType_Record;

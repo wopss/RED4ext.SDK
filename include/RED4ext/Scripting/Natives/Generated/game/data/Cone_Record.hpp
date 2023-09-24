@@ -17,9 +17,9 @@ struct Cone_Record : game::data::SenseShape_Record
     static constexpr const char* NAME = "gamedataCone_Record";
     static constexpr const char* ALIAS = "Cone_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(Cone_Record, 0x60);
+RED4EXT_ASSERT_SIZE(Cone_Record, 0x90);
 } // namespace game::data
 using gamedataCone_Record = game::data::Cone_Record;
 using Cone_Record = game::data::Cone_Record;

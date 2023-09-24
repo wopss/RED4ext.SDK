@@ -17,9 +17,9 @@ struct AIWorkspotCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIWorkspotCond_Record";
     static constexpr const char* ALIAS = "AIWorkspotCond_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x70 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIWorkspotCond_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIWorkspotCond_Record, 0x70);
 } // namespace game::data
 using gamedataAIWorkspotCond_Record = game::data::AIWorkspotCond_Record;
 using AIWorkspotCond_Record = game::data::AIWorkspotCond_Record;

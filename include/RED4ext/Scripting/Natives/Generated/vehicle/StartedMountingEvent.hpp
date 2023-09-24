@@ -22,14 +22,15 @@ struct StartedMountingEvent : red::Event
     static constexpr const char* ALIAS = "VehicleStartedMountingEvent";
 
     CName slotID; // 40
-    bool isMounting; // 48
-    uint8_t unk49[0x50 - 0x49]; // 49
-    WeakHandle<game::Object> character; // 50
-    bool instant; // 60
-    bool silent; // 61
-    uint8_t unk62[0x68 - 0x62]; // 62
+    CName animationSlotName; // 48
+    bool isMounting; // 50
+    uint8_t unk51[0x58 - 0x51]; // 51
+    WeakHandle<game::Object> character; // 58
+    bool instant; // 68
+    bool silent; // 69
+    uint8_t unk6A[0x70 - 0x6A]; // 6A
 };
-RED4EXT_ASSERT_SIZE(StartedMountingEvent, 0x68);
+RED4EXT_ASSERT_SIZE(StartedMountingEvent, 0x70);
 } // namespace vehicle
 using vehicleStartedMountingEvent = vehicle::StartedMountingEvent;
 using VehicleStartedMountingEvent = vehicle::StartedMountingEvent;

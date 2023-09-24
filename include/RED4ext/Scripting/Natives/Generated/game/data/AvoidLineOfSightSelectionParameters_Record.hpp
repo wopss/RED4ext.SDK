@@ -17,9 +17,9 @@ struct AvoidLineOfSightSelectionParameters_Record : game::data::CoverSelectionPa
     static constexpr const char* NAME = "gamedataAvoidLineOfSightSelectionParameters_Record";
     static constexpr const char* ALIAS = "AvoidLineOfSightSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AvoidLineOfSightSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AvoidLineOfSightSelectionParameters_Record, 0x90);
 } // namespace game::data
 using gamedataAvoidLineOfSightSelectionParameters_Record = game::data::AvoidLineOfSightSelectionParameters_Record;
 using AvoidLineOfSightSelectionParameters_Record = game::data::AvoidLineOfSightSelectionParameters_Record;

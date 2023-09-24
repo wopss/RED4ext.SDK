@@ -27,37 +27,36 @@ struct WorldMapMenuGameController : game::ui::MappinsContainerController
     static constexpr const char* NAME = "gameuiWorldMapMenuGameController";
     static constexpr const char* ALIAS = "WorldMapMenuGameController";
 
-    uint8_t unk2D0[0x2F8 - 0x2D0]; // 2D0
-    WeakHandle<game::ui::BaseWorldMapMappinController> selectedMappin; // 2F8
-    uint8_t unk308[0x350 - 0x308]; // 308
-    bool isZoomToMappinEnabled; // 350
-    uint8_t unk351[0x398 - 0x351]; // 351
-    bool canChangeCustomFilter; // 398
-    uint8_t unk399[0x40C - 0x399]; // 399
-    TweakDBID settingsRecordID; // 40C
-    uint8_t unk414[0x418 - 0x414]; // 414
-    CName entityPreviewLibraryID; // 418
-    ink::CompoundWidgetReference entityPreviewSpawnContainer; // 420
-    ink::CompoundWidgetReference floorPlanSpawnContainer; // 438
-    ink::WidgetReference compassWidget; // 450
-    ink::CompoundWidgetReference tooltipContainer; // 468
-    ink::Margin tooltipOffset; // 480
-    ink::Margin tooltipDistrictOffset; // 490
-    ink::CompoundWidgetReference districtsContainer; // 4A0
-    ink::CompoundWidgetReference subdistrictsContainer; // 4B8
-    bool playerOnTop; // 4D0
-    uint8_t unk4D1[0x4D8 - 0x4D1]; // 4D1
-    ink::CompoundWidgetReference mappinOutlinesContainer; // 4D8
-    ink::CompoundWidgetReference groupOutlinesContainer; // 4F0
-    uint8_t unk508[0x548 - 0x508]; // 508
-    game::data::District hoveredDistrict; // 548
-    game::data::District hoveredSubDistrict; // 54C
-    game::data::District selectedDistrict; // 550
-    uint8_t unk554[0x55C - 0x554]; // 554
-    game::ui::EWorldMapDistrictView districtView; // 55C
-    uint8_t unk560[0x630 - 0x560]; // 560
+    uint8_t unk2E8[0x310 - 0x2E8]; // 2E8
+    WeakHandle<game::ui::BaseWorldMapMappinController> selectedMappin; // 310
+    uint8_t unk320[0x368 - 0x320]; // 320
+    bool isZoomToMappinEnabled; // 368
+    uint8_t unk369[0x3B0 - 0x369]; // 369
+    bool canChangeCustomFilter; // 3B0
+    uint8_t unk3B1[0x430 - 0x3B1]; // 3B1
+    TweakDBID settingsRecordID; // 430
+    CName entityPreviewLibraryID; // 438
+    ink::CompoundWidgetReference entityPreviewSpawnContainer; // 440
+    ink::CompoundWidgetReference floorPlanSpawnContainer; // 458
+    ink::WidgetReference compassWidget; // 470
+    ink::CompoundWidgetReference tooltipContainer; // 488
+    ink::Margin tooltipOffset; // 4A0
+    ink::Margin tooltipDistrictOffset; // 4B0
+    ink::CompoundWidgetReference districtsContainer; // 4C0
+    ink::CompoundWidgetReference subdistrictsContainer; // 4D8
+    bool playerOnTop; // 4F0
+    uint8_t unk4F1[0x4F8 - 0x4F1]; // 4F1
+    ink::CompoundWidgetReference mappinOutlinesContainer; // 4F8
+    ink::CompoundWidgetReference groupOutlinesContainer; // 510
+    uint8_t unk528[0x568 - 0x528]; // 528
+    game::data::District hoveredDistrict; // 568
+    game::data::District hoveredSubDistrict; // 56C
+    game::data::District selectedDistrict; // 570
+    uint8_t unk574[0x57C - 0x574]; // 574
+    game::ui::EWorldMapDistrictView districtView; // 57C
+    uint8_t unk580[0x650 - 0x580]; // 580
 };
-RED4EXT_ASSERT_SIZE(WorldMapMenuGameController, 0x630);
+RED4EXT_ASSERT_SIZE(WorldMapMenuGameController, 0x650);
 } // namespace game::ui
 using gameuiWorldMapMenuGameController = game::ui::WorldMapMenuGameController;
 using WorldMapMenuGameController = game::ui::WorldMapMenuGameController;

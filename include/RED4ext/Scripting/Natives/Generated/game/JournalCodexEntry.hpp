@@ -18,11 +18,11 @@ struct JournalCodexEntry : game::JournalContainerEntry
     static constexpr const char* NAME = "gameJournalCodexEntry";
     static constexpr const char* ALIAS = "JournalCodexEntry";
 
-    LocalizationString title; // 78
-    TweakDBID imageId; // A0
-    TweakDBID linkImageId; // A8
+    LocalizationString title; // 88
+    TweakDBID imageId; // B0
+    TweakDBID linkImageId; // B8
 };
-RED4EXT_ASSERT_SIZE(JournalCodexEntry, 0xB0);
+RED4EXT_ASSERT_SIZE(JournalCodexEntry, 0xC0);
 } // namespace game
 using gameJournalCodexEntry = game::JournalCodexEntry;
 using JournalCodexEntry = game::JournalCodexEntry;

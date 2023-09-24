@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AbsolutePathSerializable.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/EStreamingObserverMode.hpp>
 
 namespace RED4ext
 {
@@ -21,8 +22,11 @@ struct ScreenshotBatchData
     AbsolutePathSerializable batchPositionsPath; // 30
     float delayTime; // 50
     uint32_t numberOfCoordinatesToDump; // 54
+    rend::EStreamingObserverMode streamingObserverMode; // 58
+    bool mergeScreenshots; // 59
+    uint8_t unk5A[0x60 - 0x5A]; // 5A
 };
-RED4EXT_ASSERT_SIZE(ScreenshotBatchData, 0x58);
+RED4EXT_ASSERT_SIZE(ScreenshotBatchData, 0x60);
 } // namespace rend
 using rendScreenshotBatchData = rend::ScreenshotBatchData;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ struct CarriableObject_Record : game::data::SpawnableObject_Record
     static constexpr const char* ALIAS = "CarriableObject_Record";
 
 };
-RED4EXT_ASSERT_SIZE(CarriableObject_Record, 0x78);
+RED4EXT_ASSERT_SIZE(CarriableObject_Record, 0xF8);
 } // namespace game::data
 using gamedataCarriableObject_Record = game::data::CarriableObject_Record;
 using CarriableObject_Record = game::data::CarriableObject_Record;

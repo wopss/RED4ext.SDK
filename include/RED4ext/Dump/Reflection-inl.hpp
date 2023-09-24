@@ -46,6 +46,12 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
             i = 2;
         }
 
+        // Special case of "in", this will break directory layout for "ink", "interop", etc..
+        if (aInput.starts_with("inGame"))
+        {
+            return "";
+        }
+
         for (; i < aInput.size(); ++i)
         {
             if (isupper(aInput[i]))

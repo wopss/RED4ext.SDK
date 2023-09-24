@@ -22,11 +22,16 @@ struct StatModifierGroup
     DynArray<game::StatModifierHandle> statModifierArray; // 00
     int32_t statModifiersLimit; // 10
     TweakDBID statModifiersLimitModifier; // 14
-    uint8_t unk1C[0x1E - 0x1C]; // 1C
-    bool drawBasedOnStatType; // 1E
-    uint8_t unk1F[0x20 - 0x1F]; // 1F
+    uint8_t unk1C[0x20 - 0x1C]; // 1C
+    DynArray<TweakDBID> relatedModifierGroups; // 20
+    TweakDBID statModifierGroupRecordID; // 30
+    uint16_t stackCount; // 38
+    bool drawBasedOnStatType; // 3A
+    bool saveBasedOnStatType; // 3B
+    bool optimiseCombinedModifiers; // 3C
+    uint8_t unk3D[0x40 - 0x3D]; // 3D
 };
-RED4EXT_ASSERT_SIZE(StatModifierGroup, 0x20);
+RED4EXT_ASSERT_SIZE(StatModifierGroup, 0x40);
 } // namespace game
 using gameStatModifierGroup = game::StatModifierGroup;
 } // namespace RED4ext

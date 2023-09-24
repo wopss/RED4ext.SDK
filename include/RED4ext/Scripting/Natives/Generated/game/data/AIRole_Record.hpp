@@ -17,9 +17,9 @@ struct AIRole_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIRole_Record";
     static constexpr const char* ALIAS = "AIRole_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIRole_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIRole_Record, 0x70);
 } // namespace game::data
 using gamedataAIRole_Record = game::data::AIRole_Record;
 using AIRole_Record = game::data::AIRole_Record;

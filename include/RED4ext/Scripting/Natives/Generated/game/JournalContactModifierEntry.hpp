@@ -18,7 +18,7 @@ struct JournalContactModifierEntry : game::JournalEntry
     static constexpr const char* ALIAS = "JournalContactModifierEntry";
 
 };
-RED4EXT_ASSERT_SIZE(JournalContactModifierEntry, 0x60);
+RED4EXT_ASSERT_SIZE(JournalContactModifierEntry, 0x70);
 } // namespace game
 using gameJournalContactModifierEntry = game::JournalContactModifierEntry;
 using JournalContactModifierEntry = game::JournalContactModifierEntry;

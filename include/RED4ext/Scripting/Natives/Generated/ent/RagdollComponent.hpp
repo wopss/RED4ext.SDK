@@ -17,9 +17,9 @@ struct RagdollComponent : ent::IComponent
     static constexpr const char* NAME = "entRagdollComponent";
     static constexpr const char* ALIAS = "RagdollComponent";
 
-    uint8_t unk90[0x210 - 0x90]; // 90
+    uint8_t unk90[0x220 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(RagdollComponent, 0x210);
+RED4EXT_ASSERT_SIZE(RagdollComponent, 0x220);
 } // namespace ent
 using entRagdollComponent = ent::RagdollComponent;
 using RagdollComponent = ent::RagdollComponent;

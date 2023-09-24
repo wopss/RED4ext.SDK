@@ -18,7 +18,7 @@ struct Record : game::data::ScannableData_Record
     static constexpr const char* ALIAS = "npc_scanning_data_Record";
 
 };
-RED4EXT_ASSERT_SIZE(Record, 0x58);
+RED4EXT_ASSERT_SIZE(Record, 0x88);
 } // namespace game::data::npc_scanning_data_
 using gamedatanpc_scanning_data_Record = game::data::npc_scanning_data_::Record;
 using npc_scanning_data_Record = game::data::npc_scanning_data_::Record;

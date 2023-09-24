@@ -17,9 +17,9 @@ struct ObjectActionEffect_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataObjectActionEffect_Record";
     static constexpr const char* ALIAS = "ObjectActionEffect_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ObjectActionEffect_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ObjectActionEffect_Record, 0x70);
 } // namespace game::data
 using gamedataObjectActionEffect_Record = game::data::ObjectActionEffect_Record;
 using ObjectActionEffect_Record = game::data::ObjectActionEffect_Record;

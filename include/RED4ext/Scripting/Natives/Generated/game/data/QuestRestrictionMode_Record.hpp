@@ -17,9 +17,9 @@ struct QuestRestrictionMode_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataQuestRestrictionMode_Record";
     static constexpr const char* ALIAS = "QuestRestrictionMode_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(QuestRestrictionMode_Record, 0x50);
+RED4EXT_ASSERT_SIZE(QuestRestrictionMode_Record, 0x58);
 } // namespace game::data
 using gamedataQuestRestrictionMode_Record = game::data::QuestRestrictionMode_Record;
 using QuestRestrictionMode_Record = game::data::QuestRestrictionMode_Record;

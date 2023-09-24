@@ -26,9 +26,9 @@ struct SpawnComponent : ent::IPlacedComponent
     Vector3 spawnOffset; // 150
     uint8_t unk15C[0x160 - 0x15C]; // 15C
     CName slotName; // 160
-    uint8_t unk168[0x2E0 - 0x168]; // 168
+    uint8_t unk168[0x300 - 0x168]; // 168
 };
-RED4EXT_ASSERT_SIZE(SpawnComponent, 0x2E0);
+RED4EXT_ASSERT_SIZE(SpawnComponent, 0x300);
 } // namespace game::projectile
 using gameprojectileSpawnComponent = game::projectile::SpawnComponent;
 using ProjectileSpawnComponent = game::projectile::SpawnComponent;

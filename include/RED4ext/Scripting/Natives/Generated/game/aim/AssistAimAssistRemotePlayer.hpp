@@ -16,9 +16,9 @@ struct AssistAimAssistRemotePlayer
     static constexpr const char* NAME = "gameaimAssistAimAssistRemotePlayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0xC70 - 0x0]; // 0
+    uint8_t unk00[0xD30 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(AssistAimAssistRemotePlayer, 0xC70);
+RED4EXT_ASSERT_SIZE(AssistAimAssistRemotePlayer, 0xD30);
 } // namespace game::aim
 using gameaimAssistAimAssistRemotePlayer = game::aim::AssistAimAssistRemotePlayer;
 } // namespace RED4ext

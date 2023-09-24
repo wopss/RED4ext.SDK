@@ -21,11 +21,11 @@ struct LayersResource : CResource
     static constexpr const char* ALIAS = NAME;
 
     ink::LayerDefinitionCollection layerDefinitions; // 40
-    ink::LayerDefinitionCollection preGameLayerDefinitions; // 3B0
-    ink::PermanentLayerDefinitionCollection permanentLayerDefinitions; // 720
-    ink::LayerDefinitionsSet layerDefinitionsSet; // 868
+    ink::LayerDefinitionCollection preGameLayerDefinitions; // 3B8
+    ink::PermanentLayerDefinitionCollection permanentLayerDefinitions; // 730
+    ink::LayerDefinitionsSet layerDefinitionsSet; // 878
 };
-RED4EXT_ASSERT_SIZE(LayersResource, 0x888);
+RED4EXT_ASSERT_SIZE(LayersResource, 0x898);
 } // namespace ink
 using inkLayersResource = ink::LayersResource;
 } // namespace RED4ext

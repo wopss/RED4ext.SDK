@@ -17,8 +17,9 @@ struct VehicleMappin : game::mappins::RuntimeMappin
     static constexpr const char* NAME = "gamemappinsVehicleMappin";
     static constexpr const char* ALIAS = "VehicleMappin";
 
+    uint8_t unk108[0x148 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(VehicleMappin, 0x108);
+RED4EXT_ASSERT_SIZE(VehicleMappin, 0x148);
 } // namespace game::mappins
 using gamemappinsVehicleMappin = game::mappins::VehicleMappin;
 using VehicleMappin = game::mappins::VehicleMappin;

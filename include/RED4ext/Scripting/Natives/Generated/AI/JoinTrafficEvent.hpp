@@ -17,9 +17,9 @@ struct JoinTrafficEvent : AI::AIEvent
     static constexpr const char* NAME = "AIJoinTrafficEvent";
     static constexpr const char* ALIAS = "JoinTrafficEvent";
 
-    uint8_t unk50[0xF8 - 0x50]; // 50
+    uint8_t unk50[0x100 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(JoinTrafficEvent, 0xF8);
+RED4EXT_ASSERT_SIZE(JoinTrafficEvent, 0x100);
 } // namespace AI
 using AIJoinTrafficEvent = AI::JoinTrafficEvent;
 using JoinTrafficEvent = AI::JoinTrafficEvent;

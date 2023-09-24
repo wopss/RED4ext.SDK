@@ -27,7 +27,7 @@ struct FollowCurveTrajectoryParams : game::projectile::TrajectoryParams
     WeakHandle<game::Object> target; // 40
     CName componentName; // 50
     WeakHandle<ent::IPlacedComponent> targetComponent; // 58
-    uint8_t unk68[0x70 - 0x68]; // 68
+    CName targetSlotName; // 68
     Vector4 targetPosition; // 70
     float startVelocity; // 80
     float linearTimeRatio; // 84
@@ -44,11 +44,12 @@ struct FollowCurveTrajectoryParams : game::projectile::TrajectoryParams
     float angleInterpolationDuration; // AC
     float snapRadius; // B0
     float accuracy; // B4
-    uint8_t unkB8[0xC0 - 0xB8]; // B8
+    bool sendFollowEvent; // B8
+    bool startVelocityDirectionCheck; // B9
+    uint8_t unkBA[0xC0 - 0xBA]; // BA
     Vector4 offset; // C0
     Vector3 offsetInPlane; // D0
-    bool sendFollowEvent; // DC
-    uint8_t unkDD[0xE0 - 0xDD]; // DD
+    uint8_t unkDC[0xE0 - 0xDC]; // DC
 };
 RED4EXT_ASSERT_SIZE(FollowCurveTrajectoryParams, 0xE0);
 } // namespace game::projectile

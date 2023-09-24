@@ -17,9 +17,9 @@ struct VisualTagsPrereq_Record : game::data::IPrereq_Record
     static constexpr const char* NAME = "gamedataVisualTagsPrereq_Record";
     static constexpr const char* ALIAS = "VisualTagsPrereq_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x70 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(VisualTagsPrereq_Record, 0x58);
+RED4EXT_ASSERT_SIZE(VisualTagsPrereq_Record, 0x70);
 } // namespace game::data
 using gamedataVisualTagsPrereq_Record = game::data::VisualTagsPrereq_Record;
 using VisualTagsPrereq_Record = game::data::VisualTagsPrereq_Record;

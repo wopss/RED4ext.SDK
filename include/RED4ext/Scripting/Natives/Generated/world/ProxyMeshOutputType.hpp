@@ -19,6 +19,7 @@ enum class ProxyMeshOutputType : uint8_t
     FromConvexHull = 6,
     BoundsCombine = 7,
     BlobCrowd = 8,
+    ReduceTarps = 9,
     KeepCurrent = 127,
 };
 } // namespace world

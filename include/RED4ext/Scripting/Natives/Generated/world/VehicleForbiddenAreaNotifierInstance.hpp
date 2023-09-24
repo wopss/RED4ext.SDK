@@ -17,9 +17,9 @@ struct VehicleForbiddenAreaNotifierInstance : world::ITriggerAreaNotiferInstance
     static constexpr const char* NAME = "worldVehicleForbiddenAreaNotifierInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0xC0 - 0x58]; // 58
+    uint8_t unk58[0xD0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(VehicleForbiddenAreaNotifierInstance, 0xC0);
+RED4EXT_ASSERT_SIZE(VehicleForbiddenAreaNotifierInstance, 0xD0);
 } // namespace world
 using worldVehicleForbiddenAreaNotifierInstance = world::VehicleForbiddenAreaNotifierInstance;
 } // namespace RED4ext

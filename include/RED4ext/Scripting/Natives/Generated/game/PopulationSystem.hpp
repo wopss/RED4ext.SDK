@@ -17,9 +17,9 @@ struct PopulationSystem : game::IPopulationSystem
     static constexpr const char* NAME = "gamePopulationSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x1460 - 0x48]; // 48
+    uint8_t unk48[0x2050 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PopulationSystem, 0x1460);
+RED4EXT_ASSERT_SIZE(PopulationSystem, 0x2050);
 } // namespace game
 using gamePopulationSystem = game::PopulationSystem;
 } // namespace RED4ext

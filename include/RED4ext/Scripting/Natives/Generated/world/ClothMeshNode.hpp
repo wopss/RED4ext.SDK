@@ -18,11 +18,11 @@ struct ClothMeshNode : world::MeshNode
     static constexpr const char* NAME = "worldClothMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    bool affectedByWind; // 58
-    uint8_t unk59[0x5C - 0x59]; // 59
-    physics::EClothCollisionMaskEnum collisionMask; // 5C
+    bool affectedByWind; // 60
+    uint8_t unk61[0x64 - 0x61]; // 61
+    physics::EClothCollisionMaskEnum collisionMask; // 64
 };
-RED4EXT_ASSERT_SIZE(ClothMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(ClothMeshNode, 0x68);
 } // namespace world
 using worldClothMeshNode = world::ClothMeshNode;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ struct ProjectedHitEvent : game::events::HitEvent
     static constexpr const char* ALIAS = "gameProjectedHitEvent";
 
 };
-RED4EXT_ASSERT_SIZE(ProjectedHitEvent, 0xE0);
+RED4EXT_ASSERT_SIZE(ProjectedHitEvent, 0xF0);
 } // namespace game::events
 using gameeventsProjectedHitEvent = game::events::ProjectedHitEvent;
 using gameProjectedHitEvent = game::events::ProjectedHitEvent;

@@ -24,12 +24,14 @@ struct WorldLayerDefinition : ink::LayerDefinition
     Vector2 projectionPlaneSize; // 44
     ERenderingPlane renderingPlane; // 4C
     float maxInteractionDistance; // 50
-    bool useCustomFaceVector; // 54
-    uint8_t unk55[0x56 - 0x55]; // 55
-    bool isInteractableFromBehind; // 56
-    bool isAlwaysVisible; // 57
+    bool overrideMaxInteractionDistance; // 54
+    bool useCustomFaceVector; // 55
+    uint8_t unk56[0x57 - 0x56]; // 56
+    bool isInteractableFromBehind; // 57
+    bool isAlwaysVisible; // 58
+    uint8_t unk59[0x60 - 0x59]; // 59
 };
-RED4EXT_ASSERT_SIZE(WorldLayerDefinition, 0x58);
+RED4EXT_ASSERT_SIZE(WorldLayerDefinition, 0x60);
 } // namespace ink
 using inkWorldLayerDefinition = ink::WorldLayerDefinition;
 } // namespace RED4ext

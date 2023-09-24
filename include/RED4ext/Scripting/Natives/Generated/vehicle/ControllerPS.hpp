@@ -27,7 +27,7 @@ struct ControllerPS : game::ComponentPS
     bool isAlarmOn; // 1F4
     uint8_t unk1F5[0x1F8 - 0x1F5]; // 1F5
     vehicle::ELightMode lightMode; // 1F8
-    uint8_t unk1FC[0x200 - 0x1FC]; // 1FC
+    int32_t lightTypeMask; // 1FC
 };
 RED4EXT_ASSERT_SIZE(ControllerPS, 0x200);
 } // namespace vehicle

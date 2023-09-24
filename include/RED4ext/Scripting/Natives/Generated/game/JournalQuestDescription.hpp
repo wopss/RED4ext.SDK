@@ -18,9 +18,9 @@ struct JournalQuestDescription : game::JournalEntry
     static constexpr const char* NAME = "gameJournalQuestDescription";
     static constexpr const char* ALIAS = "JournalQuestDescription";
 
-    LocalizationString description; // 60
+    LocalizationString description; // 70
 };
-RED4EXT_ASSERT_SIZE(JournalQuestDescription, 0x88);
+RED4EXT_ASSERT_SIZE(JournalQuestDescription, 0x98);
 } // namespace game
 using gameJournalQuestDescription = game::JournalQuestDescription;
 using JournalQuestDescription = game::JournalQuestDescription;

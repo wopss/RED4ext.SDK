@@ -17,9 +17,9 @@ struct AINodeMap_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAINodeMap_Record";
     static constexpr const char* ALIAS = "AINodeMap_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AINodeMap_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AINodeMap_Record, 0x58);
 } // namespace game::data
 using gamedataAINodeMap_Record = game::data::AINodeMap_Record;
 using AINodeMap_Record = game::data::AINodeMap_Record;

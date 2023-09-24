@@ -15,12 +15,13 @@ namespace game
 struct IProjectileSystem : game::IGameSystem
 {
     static constexpr const char* NAME = "gameIProjectileSystem";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "IProjectileSystem";
 
 };
 RED4EXT_ASSERT_SIZE(IProjectileSystem, 0x48);
 } // namespace game
 using gameIProjectileSystem = game::IProjectileSystem;
+using IProjectileSystem = game::IProjectileSystem;
 } // namespace RED4ext
 
 // clang-format on

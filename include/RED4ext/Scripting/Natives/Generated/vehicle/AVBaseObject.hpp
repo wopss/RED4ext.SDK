@@ -18,7 +18,7 @@ struct AVBaseObject : vehicle::BaseObject
     static constexpr const char* ALIAS = "AVObject";
 
 };
-RED4EXT_ASSERT_SIZE(AVBaseObject, 0x980);
+RED4EXT_ASSERT_SIZE(AVBaseObject, 0xBA0);
 } // namespace vehicle
 using vehicleAVBaseObject = vehicle::AVBaseObject;
 using AVObject = vehicle::AVBaseObject;

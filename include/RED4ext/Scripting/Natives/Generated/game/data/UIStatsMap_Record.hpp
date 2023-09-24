@@ -17,9 +17,9 @@ struct UIStatsMap_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataUIStatsMap_Record";
     static constexpr const char* ALIAS = "UIStatsMap_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(UIStatsMap_Record, 0x58);
+RED4EXT_ASSERT_SIZE(UIStatsMap_Record, 0x88);
 } // namespace game::data
 using gamedataUIStatsMap_Record = game::data::UIStatsMap_Record;
 using UIStatsMap_Record = game::data::UIStatsMap_Record;

@@ -20,8 +20,10 @@ struct AnimFeature_ConsumableAnimation : anim::AnimFeature
     int32_t consumableType; // 40
     bool useConsumable; // 44
     uint8_t unk45[0x48 - 0x45]; // 45
+    float animationScale; // 48
+    uint8_t unk4C[0x50 - 0x4C]; // 4C
 };
-RED4EXT_ASSERT_SIZE(AnimFeature_ConsumableAnimation, 0x48);
+RED4EXT_ASSERT_SIZE(AnimFeature_ConsumableAnimation, 0x50);
 } // namespace anim
 using animAnimFeature_ConsumableAnimation = anim::AnimFeature_ConsumableAnimation;
 using AnimFeature_ConsumableAnimation = anim::AnimFeature_ConsumableAnimation;

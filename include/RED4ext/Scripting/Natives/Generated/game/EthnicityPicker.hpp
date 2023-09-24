@@ -16,9 +16,9 @@ struct EthnicityPicker
     static constexpr const char* NAME = "gameEthnicityPicker";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x40 - 0x0]; // 0
+    uint8_t unk00[0x50 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(EthnicityPicker, 0x40);
+RED4EXT_ASSERT_SIZE(EthnicityPicker, 0x50);
 } // namespace game
 using gameEthnicityPicker = game::EthnicityPicker;
 } // namespace RED4ext

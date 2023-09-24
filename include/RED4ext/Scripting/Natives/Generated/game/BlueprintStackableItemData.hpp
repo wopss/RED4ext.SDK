@@ -17,9 +17,9 @@ struct BlueprintStackableItemData : game::ItemData
     static constexpr const char* NAME = "gameBlueprintStackableItemData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk78[0xF0 - 0x78]; // 78
+    uint8_t unk78[0x108 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(BlueprintStackableItemData, 0xF0);
+RED4EXT_ASSERT_SIZE(BlueprintStackableItemData, 0x108);
 } // namespace game
 using gameBlueprintStackableItemData = game::BlueprintStackableItemData;
 } // namespace RED4ext

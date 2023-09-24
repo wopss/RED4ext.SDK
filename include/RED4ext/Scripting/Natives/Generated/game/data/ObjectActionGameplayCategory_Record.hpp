@@ -18,7 +18,7 @@ struct ObjectActionGameplayCategory_Record : game::data::ScannableData_Record
     static constexpr const char* ALIAS = "ObjectActionGameplayCategory_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ObjectActionGameplayCategory_Record, 0x58);
+RED4EXT_ASSERT_SIZE(ObjectActionGameplayCategory_Record, 0x88);
 } // namespace game::data
 using gamedataObjectActionGameplayCategory_Record = game::data::ObjectActionGameplayCategory_Record;
 using ObjectActionGameplayCategory_Record = game::data::ObjectActionGameplayCategory_Record;

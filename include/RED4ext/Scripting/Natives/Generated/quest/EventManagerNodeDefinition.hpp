@@ -28,8 +28,9 @@ struct EventManagerNodeDefinition : quest::DisableableNodeDefinition
     CName PSClassName; // A0
     CName componentName; // A8
     Handle<IScriptable> event; // B0
-    bool isObjectPlayer; // C0
-    uint8_t unkC1[0xC8 - 0xC1]; // C1
+    bool isUiEvent; // C0
+    bool isObjectPlayer; // C1
+    uint8_t unkC2[0xC8 - 0xC2]; // C2
 };
 RED4EXT_ASSERT_SIZE(EventManagerNodeDefinition, 0xC8);
 } // namespace quest

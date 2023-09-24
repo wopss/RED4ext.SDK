@@ -15,6 +15,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ent/ForcedLodDistance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IVisualComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/MeshComponentLODMode.hpp>
+#include <RED4ext/Scripting/Natives/Generated/shadows/ShadowCastingMode.hpp>
 
 namespace RED4ext
 {
@@ -41,14 +42,17 @@ struct MeshComponent : ent::IVisualComponent
     ent::MeshComponentLODMode LODMode; // 1A8
     uint8_t unk1A9[0x1AB - 0x1A9]; // 1A9
     uint8_t order; // 1AB
-    bool castShadows; // 1AC
-    bool castLocalShadows; // 1AD
-    uint8_t unk1AE[0x1B0 - 0x1AE]; // 1AE
-    ent::ForcedLodDistance forcedLodDistance; // 1B0
-    uint8_t unk1B1[0x1D1 - 0x1B1]; // 1B1
+    shadows::ShadowCastingMode castShadows; // 1AC
+    shadows::ShadowCastingMode castLocalShadows; // 1AD
+    shadows::ShadowCastingMode castRayTracedGlobalShadows; // 1AE
+    shadows::ShadowCastingMode castRayTracedLocalShadows; // 1AF
+    uint8_t unk1B0[0x1B2 - 0x1B0]; // 1B0
+    ent::ForcedLodDistance forcedLodDistance; // 1B2
+    uint8_t unk1B3[0x1D1 - 0x1B3]; // 1B3
     bool overrideMeshNavigationImpact; // 1D1
     NavGenNavigationSetting navigationImpact; // 1D2
-    uint8_t unk1D4[0x1E0 - 0x1D4]; // 1D4
+    uint8_t version; // 1D4
+    uint8_t unk1D5[0x1E0 - 0x1D5]; // 1D5
 };
 RED4EXT_ASSERT_SIZE(MeshComponent, 0x1E0);
 } // namespace ent

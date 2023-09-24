@@ -11,6 +11,8 @@ namespace game::ui::arcade {
 enum class ArcadeMinigame : uint32_t
 {
     RoachRace = 0,
+    Shooter = 1,
+    Tank = 2,
 };
 } // namespace game::ui::arcade
 using gameuiarcadeArcadeMinigame = game::ui::arcade::ArcadeMinigame;

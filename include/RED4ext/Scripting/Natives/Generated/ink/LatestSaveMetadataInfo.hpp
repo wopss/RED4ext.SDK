@@ -6,6 +6,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LifePath.hpp>
@@ -27,8 +29,9 @@ struct LatestSaveMetadataInfo : IScriptable
     double playTime; // A8
     double playthroughTime; // B0
     uint64_t initialLoadingScreenID; // B8
+    DynArray<CName> additionalContentIds; // C0
 };
-RED4EXT_ASSERT_SIZE(LatestSaveMetadataInfo, 0xC0);
+RED4EXT_ASSERT_SIZE(LatestSaveMetadataInfo, 0xD0);
 } // namespace ink
 using inkLatestSaveMetadataInfo = ink::LatestSaveMetadataInfo;
 using LatestSaveMetadataInfo = ink::LatestSaveMetadataInfo;

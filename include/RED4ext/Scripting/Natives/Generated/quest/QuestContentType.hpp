@@ -10,12 +10,15 @@ namespace RED4ext
 namespace quest { 
 enum class QuestContentType : uint8_t
 {
-    Fixer = 0,
-    MainQuest = 1,
-    SideQuest_MainPath = 2,
-    SideQuest_Romance = 3,
-    SideQuest_Standalone = 4,
-    MinorQuestAndSts = 5,
+    EP1_MainQuest = 0,
+    EP1_SideQuest = 1,
+    EP1_Minor = 2,
+    Fixer = 3,
+    MainQuest = 4,
+    SideQuest_MainPath = 5,
+    SideQuest_Romance = 6,
+    SideQuest_Standalone = 7,
+    MinorQuestAndSts = 8,
 };
 } // namespace quest
 using questQuestContentType = quest::QuestContentType;

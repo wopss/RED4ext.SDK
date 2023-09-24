@@ -17,9 +17,9 @@ struct TargetHitEvent : game::events::HitEvent
     static constexpr const char* NAME = "gameeventsTargetHitEvent";
     static constexpr const char* ALIAS = "gameTargetHitEvent";
 
-    uint8_t unkE0[0xF0 - 0xE0]; // E0
+    uint8_t unkF0[0x100 - 0xF0]; // F0
 };
-RED4EXT_ASSERT_SIZE(TargetHitEvent, 0xF0);
+RED4EXT_ASSERT_SIZE(TargetHitEvent, 0x100);
 } // namespace game::events
 using gameeventsTargetHitEvent = game::events::TargetHitEvent;
 using gameTargetHitEvent = game::events::TargetHitEvent;

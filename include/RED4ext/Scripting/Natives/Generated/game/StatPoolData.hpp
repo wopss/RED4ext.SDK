@@ -34,17 +34,18 @@ struct StatPoolData
     uint8_t unk68[0x78 - 0x68]; // 68
     NativeArray<game::StatPoolModifier, 2> modifiers; // 78
     NativeArray<TweakDBID, 2> alternativeModifierRecords; // 178
-    float maxValue; // 188
-    float customLimitValue; // 18C
-    float currentValue; // 190
-    float bonus; // 194
-    float modificationDelay; // 198
-    game::StatPoolDataValueChangeMode changeMode; // 19C
-    game::StatPoolDataBonusType bonusType; // 19D
-    game::StatPoolDataStatPoolModificationStatus modificationStatus; // 19E
-    uint8_t unk19F[0x1A0 - 0x19F]; // 19F
+    uint8_t unk188[0x198 - 0x188]; // 188
+    float maxValue; // 198
+    float customLimitValue; // 19C
+    float currentValue; // 1A0
+    float bonus; // 1A4
+    float modificationDelay; // 1A8
+    game::StatPoolDataValueChangeMode changeMode; // 1AC
+    game::StatPoolDataBonusType bonusType; // 1AD
+    game::StatPoolDataStatPoolModificationStatus modificationStatus; // 1AE
+    uint8_t unk1AF[0x1B0 - 0x1AF]; // 1AF
 };
-RED4EXT_ASSERT_SIZE(StatPoolData, 0x1A0);
+RED4EXT_ASSERT_SIZE(StatPoolData, 0x1B0);
 } // namespace game
 using gameStatPoolData = game::StatPoolData;
 } // namespace RED4ext

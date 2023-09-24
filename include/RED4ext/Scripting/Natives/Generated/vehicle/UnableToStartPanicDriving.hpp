@@ -17,8 +17,10 @@ struct UnableToStartPanicDriving : red::Event
     static constexpr const char* NAME = "vehicleUnableToStartPanicDriving";
     static constexpr const char* ALIAS = "VehicleUnableToStartPanicDriving";
 
+    bool forceExitVehicle; // 40
+    uint8_t unk41[0x48 - 0x41]; // 41
 };
-RED4EXT_ASSERT_SIZE(UnableToStartPanicDriving, 0x40);
+RED4EXT_ASSERT_SIZE(UnableToStartPanicDriving, 0x48);
 } // namespace vehicle
 using vehicleUnableToStartPanicDriving = vehicle::UnableToStartPanicDriving;
 using VehicleUnableToStartPanicDriving = vehicle::UnableToStartPanicDriving;

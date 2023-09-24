@@ -20,11 +20,11 @@ struct UpdateInputHintEvent : red::Event
     static constexpr const char* ALIAS = "UpdateInputHintEvent";
 
     game::ui::InputHintData data; // 40
-    bool show; // 90
-    uint8_t unk91[0x98 - 0x91]; // 91
-    CName targetHintContainer; // 98
+    bool show; // 98
+    uint8_t unk99[0xA0 - 0x99]; // 99
+    CName targetHintContainer; // A0
 };
-RED4EXT_ASSERT_SIZE(UpdateInputHintEvent, 0xA0);
+RED4EXT_ASSERT_SIZE(UpdateInputHintEvent, 0xA8);
 } // namespace game::ui
 using gameuiUpdateInputHintEvent = game::ui::UpdateInputHintEvent;
 using UpdateInputHintEvent = game::ui::UpdateInputHintEvent;

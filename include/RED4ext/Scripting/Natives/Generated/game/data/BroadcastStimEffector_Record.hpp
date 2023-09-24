@@ -17,9 +17,9 @@ struct BroadcastStimEffector_Record : game::data::ContinuousEffector_Record
     static constexpr const char* NAME = "gamedataBroadcastStimEffector_Record";
     static constexpr const char* ALIAS = "BroadcastStimEffector_Record";
 
-    uint8_t unk60[0x68 - 0x60]; // 60
+    uint8_t unkA0[0xB8 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(BroadcastStimEffector_Record, 0x68);
+RED4EXT_ASSERT_SIZE(BroadcastStimEffector_Record, 0xB8);
 } // namespace game::data
 using gamedataBroadcastStimEffector_Record = game::data::BroadcastStimEffector_Record;
 using BroadcastStimEffector_Record = game::data::BroadcastStimEffector_Record;

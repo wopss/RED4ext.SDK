@@ -20,16 +20,17 @@ struct WeaponTailSettings : audio::AudioMetadata
 
     CName interiorDefault; // 38
     CName interiorWide; // 40
-    CName exteriorWide; // 48
-    CName exteriorUrbanNarrow; // 50
-    CName exteriorUrbanStreet; // 58
-    CName exteriorUrbanStreetWide; // 60
-    CName exteriorUrbanOpen; // 68
-    CName exteriorUrbanEnclosed; // 70
-    CName exteriorBadlandsOpen; // 78
-    CName exteriorBadlandsCanyon; // 80
+    CName interiorCar; // 48
+    CName exteriorWide; // 50
+    CName exteriorUrbanNarrow; // 58
+    CName exteriorUrbanStreet; // 60
+    CName exteriorUrbanStreetWide; // 68
+    CName exteriorUrbanOpen; // 70
+    CName exteriorUrbanEnclosed; // 78
+    CName exteriorBadlandsOpen; // 80
+    CName exteriorBadlandsCanyon; // 88
 };
-RED4EXT_ASSERT_SIZE(WeaponTailSettings, 0x88);
+RED4EXT_ASSERT_SIZE(WeaponTailSettings, 0x90);
 } // namespace audio
 using audioWeaponTailSettings = audio::WeaponTailSettings;
 } // namespace RED4ext

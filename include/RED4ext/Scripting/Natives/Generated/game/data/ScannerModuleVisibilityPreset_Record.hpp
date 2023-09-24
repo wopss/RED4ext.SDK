@@ -17,9 +17,9 @@ struct ScannerModuleVisibilityPreset_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataScannerModuleVisibilityPreset_Record";
     static constexpr const char* ALIAS = "ScannerModuleVisibilityPreset_Record";
 
-    uint8_t unk48[0x70 - 0x48]; // 48
+    uint8_t unk48[0xE8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ScannerModuleVisibilityPreset_Record, 0x70);
+RED4EXT_ASSERT_SIZE(ScannerModuleVisibilityPreset_Record, 0xE8);
 } // namespace game::data
 using gamedataScannerModuleVisibilityPreset_Record = game::data::ScannerModuleVisibilityPreset_Record;
 using ScannerModuleVisibilityPreset_Record = game::data::ScannerModuleVisibilityPreset_Record;

@@ -17,9 +17,9 @@ struct NPCEquipmentItem_Record : game::data::NPCEquipmentGroupEntry_Record
     static constexpr const char* NAME = "gamedataNPCEquipmentItem_Record";
     static constexpr const char* ALIAS = "NPCEquipmentItem_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(NPCEquipmentItem_Record, 0x58);
+RED4EXT_ASSERT_SIZE(NPCEquipmentItem_Record, 0x88);
 } // namespace game::data
 using gamedataNPCEquipmentItem_Record = game::data::NPCEquipmentItem_Record;
 using NPCEquipmentItem_Record = game::data::NPCEquipmentItem_Record;

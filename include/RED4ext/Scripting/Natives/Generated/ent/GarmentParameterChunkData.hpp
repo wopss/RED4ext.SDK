@@ -20,8 +20,9 @@ struct GarmentParameterChunkData
     DynArray<uint8_t> morphOffsetScales; // 00
     uint64_t morphOffsetScalesHash; // 10
     DynArray<uint16_t> visibleTriangleInds; // 18
+    DynArray<uint32_t> vertexTbn; // 28
 };
-RED4EXT_ASSERT_SIZE(GarmentParameterChunkData, 0x28);
+RED4EXT_ASSERT_SIZE(GarmentParameterChunkData, 0x38);
 } // namespace ent
 using entGarmentParameterChunkData = ent::GarmentParameterChunkData;
 } // namespace RED4ext

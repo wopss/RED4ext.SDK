@@ -27,32 +27,32 @@ struct Component : ent::IPlacedComponent
     static constexpr const char* NAME = "gameprojectileComponent";
     static constexpr const char* ALIAS = "ProjectileComponent";
 
-    uint8_t unk120[0x749 - 0x120]; // 120
-    bool deriveOwnerVelocity; // 749
-    uint8_t unk74A[0x74C - 0x74A]; // 74A
-    game::projectile::OnCollisionAction onCollisionAction; // 74C
-    bool useSweepCollision; // 750
-    uint8_t unk751[0x754 - 0x751]; // 751
-    float sweepCollisionRadius; // 754
-    uint8_t unk758[0x75C - 0x758]; // 758
-    bool collisionsFilterClosest; // 75C
-    uint8_t unk75D[0x770 - 0x75D]; // 75D
-    game::projectile::VelocityParams derivedVelocityParams; // 770
-    uint8_t unk77C[0x7A0 - 0x77C]; // 77C
-    Handle<physics::FilterData> filterData; // 7A0
-    physics::QueryPreset queryPreset; // 7B0
-    uint8_t unk7B8[0x7C0 - 0x7B8]; // 7B8
-    game::EffectRef gameEffectRef; // 7C0
-    uint8_t unk7E8[0x810 - 0x7E8]; // 7E8
-    RaRef<world::Effect> previewEffect; // 810
-    RaRef<world::Effect> bouncePreviewEffect; // 818
-    RaRef<world::Effect> explosionPreviewEffect; // 820
-    float explosionPreviewTime; // 828
-    uint8_t unk82C[0x830 - 0x82C]; // 82C
-    Quaternion rotationOffset; // 830
-    uint8_t unk840[0x8B0 - 0x840]; // 840
+    uint8_t unk120[0x7A9 - 0x120]; // 120
+    bool deriveOwnerVelocity; // 7A9
+    uint8_t unk7AA[0x7AC - 0x7AA]; // 7AA
+    game::projectile::OnCollisionAction onCollisionAction; // 7AC
+    bool useSweepCollision; // 7B0
+    uint8_t unk7B1[0x7B4 - 0x7B1]; // 7B1
+    float sweepCollisionRadius; // 7B4
+    uint8_t unk7B8[0x7BC - 0x7B8]; // 7B8
+    bool collisionsFilterClosest; // 7BC
+    uint8_t unk7BD[0x7D0 - 0x7BD]; // 7BD
+    game::projectile::VelocityParams derivedVelocityParams; // 7D0
+    uint8_t unk7DC[0x800 - 0x7DC]; // 7DC
+    Handle<physics::FilterData> filterData; // 800
+    physics::QueryPreset queryPreset; // 810
+    uint8_t unk818[0x820 - 0x818]; // 818
+    game::EffectRef gameEffectRef; // 820
+    uint8_t unk848[0x878 - 0x848]; // 848
+    RaRef<world::Effect> previewEffect; // 878
+    RaRef<world::Effect> bouncePreviewEffect; // 880
+    RaRef<world::Effect> explosionPreviewEffect; // 888
+    float explosionPreviewTime; // 890
+    uint8_t unk894[0x8A0 - 0x894]; // 894
+    Quaternion rotationOffset; // 8A0
+    uint8_t unk8B0[0x920 - 0x8B0]; // 8B0
 };
-RED4EXT_ASSERT_SIZE(Component, 0x8B0);
+RED4EXT_ASSERT_SIZE(Component, 0x920);
 } // namespace game::projectile
 using gameprojectileComponent = game::projectile::Component;
 using ProjectileComponent = game::projectile::Component;

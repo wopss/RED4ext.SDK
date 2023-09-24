@@ -22,43 +22,47 @@ struct MeleeAttackData : IScriptable
     static constexpr const char* ALIAS = "MeleeAttackData";
 
     CString trailAttackSide; // 40
-    Vector4 startPosition; // 60
-    Vector4 endPosition; // 70
-    Vector3 ikOffset; // 80
-    uint8_t unk8C[0x90 - 0x8C]; // 8C
-    CName attackName; // 90
-    CName attackEffectDirection; // 98
-    CName impactFxSlot; // A0
-    float attackSpeed; // A8
-    float attackWindowOpen; // AC
-    float attackWindowClosed; // B0
-    float idleTransitionTime; // B4
-    float holdTransitionTime; // B8
-    float blockTransitionTime; // BC
-    float attackEffectDuration; // C0
-    float attackEffectDelay; // C4
-    float impulseDelay; // C8
-    float cameraSpaceImpulse; // CC
-    float forwardImpulse; // D0
-    float upImpulse; // D4
-    float staminaCost; // D8
-    float weaponChargeCost; // DC
-    float trailStartDelay; // E0
-    float trailStopDelay; // E4
-    float startupDuration; // E8
-    float activeDuration; // EC
-    float recoverDuration; // F0
-    float activeHitDuration; // F4
-    float recoverHitDuration; // F8
-    float standUpDelay; // FC
-    bool incrementsCombo; // 100
-    bool hasDeflectAnim; // 101
-    bool hasHitAnim; // 102
-    bool useAdjustmentInsteadOfImpulse; // 103
-    bool enableAdjustingPlayerPositionToTarget; // 104
-    uint8_t unk105[0x110 - 0x105]; // 105
+    bool isThrust; // 60
+    bool useMiddlePosition; // 61
+    uint8_t unk62[0x70 - 0x62]; // 62
+    Vector4 startPosition; // 70
+    Vector4 middlePosition; // 80
+    Vector4 endPosition; // 90
+    Vector3 ikOffset; // A0
+    uint8_t unkAC[0xB0 - 0xAC]; // AC
+    CName attackName; // B0
+    CName attackEffectDirection; // B8
+    CName impactFxSlot; // C0
+    float attackSpeed; // C8
+    float attackWindowOpen; // CC
+    float attackWindowClosed; // D0
+    float idleTransitionTime; // D4
+    float holdTransitionTime; // D8
+    float blockTransitionTime; // DC
+    float attackEffectDuration; // E0
+    float attackEffectDelay; // E4
+    float impulseDelay; // E8
+    float cameraSpaceImpulse; // EC
+    float forwardImpulse; // F0
+    float upImpulse; // F4
+    float staminaCost; // F8
+    float weaponChargeCost; // FC
+    float trailStartDelay; // 100
+    float trailStopDelay; // 104
+    float startupDuration; // 108
+    float activeDuration; // 10C
+    float recoverDuration; // 110
+    float activeHitDuration; // 114
+    float recoverHitDuration; // 118
+    float standUpDelay; // 11C
+    bool incrementsCombo; // 120
+    bool hasDeflectAnim; // 121
+    bool hasHitAnim; // 122
+    bool useAdjustmentInsteadOfImpulse; // 123
+    bool enableAdjustingPlayerPositionToTarget; // 124
+    uint8_t unk125[0x130 - 0x125]; // 125
 };
-RED4EXT_ASSERT_SIZE(MeleeAttackData, 0x110);
+RED4EXT_ASSERT_SIZE(MeleeAttackData, 0x130);
 } // namespace game
 using gameMeleeAttackData = game::MeleeAttackData;
 using MeleeAttackData = game::MeleeAttackData;

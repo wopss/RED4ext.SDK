@@ -10,6 +10,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ScriptableSystemRequest.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallPhase.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallVisuals.hpp>
 
 namespace RED4ext
 {
@@ -26,7 +27,9 @@ struct TriggerCallRequest : game::ScriptableSystemRequest
     quest::PhoneCallMode callMode; // 5C
     bool isPlayerTriggered; // 60
     bool isRejectable; // 61
-    uint8_t unk62[0x68 - 0x62]; // 62
+    bool showAvatar; // 62
+    uint8_t unk63[0x64 - 0x63]; // 63
+    quest::PhoneCallVisuals visuals; // 64
 };
 RED4EXT_ASSERT_SIZE(TriggerCallRequest, 0x68);
 } // namespace quest

@@ -17,9 +17,9 @@ struct EquipmentArea_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataEquipmentArea_Record";
     static constexpr const char* ALIAS = "EquipmentArea_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x80 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(EquipmentArea_Record, 0x60);
+RED4EXT_ASSERT_SIZE(EquipmentArea_Record, 0x80);
 } // namespace game::data
 using gamedataEquipmentArea_Record = game::data::EquipmentArea_Record;
 using EquipmentArea_Record = game::data::EquipmentArea_Record;

@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/Natives/Generated/EComparisonType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EntityReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/IUIManagerNodeType.hpp>
@@ -31,8 +32,9 @@ struct ProximityProgressBar_NodeType : quest::IUIManagerNodeType
     bool isPlayerActivator; // 88
     uint8_t unk89[0x90 - 0x89]; // 89
     game::EntityReference activator; // 90
+    CName appearance; // C8
 };
-RED4EXT_ASSERT_SIZE(ProximityProgressBar_NodeType, 0xC8);
+RED4EXT_ASSERT_SIZE(ProximityProgressBar_NodeType, 0xD0);
 } // namespace quest
 using questProximityProgressBar_NodeType = quest::ProximityProgressBar_NodeType;
 } // namespace RED4ext

@@ -18,11 +18,11 @@ struct VoicesetComponent : game::Component
     static constexpr const char* NAME = "scnVoicesetComponent";
     static constexpr const char* ALIAS = "VoicesetComponent";
 
-    uint8_t unkA8[0x258 - 0xA8]; // A8
-    CName combatVoSettingsName; // 258
-    uint8_t unk260[0x330 - 0x260]; // 260
+    uint8_t unkA8[0x220 - 0xA8]; // A8
+    CName combatVoSettingsName; // 220
+    uint8_t unk228[0x2F8 - 0x228]; // 228
 };
-RED4EXT_ASSERT_SIZE(VoicesetComponent, 0x330);
+RED4EXT_ASSERT_SIZE(VoicesetComponent, 0x2F8);
 } // namespace scn
 using scnVoicesetComponent = scn::VoicesetComponent;
 using VoicesetComponent = scn::VoicesetComponent;

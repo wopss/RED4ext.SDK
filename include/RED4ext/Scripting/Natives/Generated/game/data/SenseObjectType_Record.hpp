@@ -17,9 +17,9 @@ struct SenseObjectType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataSenseObjectType_Record";
     static constexpr const char* ALIAS = "SenseObjectType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SenseObjectType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(SenseObjectType_Record, 0x68);
 } // namespace game::data
 using gamedataSenseObjectType_Record = game::data::SenseObjectType_Record;
 using SenseObjectType_Record = game::data::SenseObjectType_Record;

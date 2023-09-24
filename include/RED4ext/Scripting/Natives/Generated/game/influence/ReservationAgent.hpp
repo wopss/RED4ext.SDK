@@ -17,11 +17,11 @@ struct ReservationAgent : game::influence::IAgent
     static constexpr const char* NAME = "gameinfluenceReservationAgent";
     static constexpr const char* ALIAS = "InfluenceReservationAgent";
 
-    uint8_t unk08[0x44 - 0x8]; // 8
-    float radius; // 44
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk08[0x4C - 0x8]; // 8
+    float radius; // 4C
+    uint8_t unk50[0x58 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(ReservationAgent, 0x50);
+RED4EXT_ASSERT_SIZE(ReservationAgent, 0x58);
 } // namespace game::influence
 using gameinfluenceReservationAgent = game::influence::ReservationAgent;
 using InfluenceReservationAgent = game::influence::ReservationAgent;

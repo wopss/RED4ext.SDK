@@ -17,9 +17,9 @@ struct PhysicalTriggerAreaNodeInstance : world::INodeInstance
     static constexpr const char* NAME = "worldPhysicalTriggerAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xA0 - 0x90]; // 90
+    uint8_t unk90[0xB0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(PhysicalTriggerAreaNodeInstance, 0xA0);
+RED4EXT_ASSERT_SIZE(PhysicalTriggerAreaNodeInstance, 0xB0);
 } // namespace world
 using worldPhysicalTriggerAreaNodeInstance = world::PhysicalTriggerAreaNodeInstance;
 } // namespace RED4ext

@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -27,22 +28,26 @@ struct ChoiceNodeOption
     static constexpr const char* ALIAS = NAME;
 
     scn::screenplay::ItemId screenplayOptionId; // 00
-    bool blueline; // 04
-    bool isSingleChoice; // 05
-    uint8_t unk06[0x8 - 0x6]; // 6
-    game::interactions::ChoiceTypeWrapper type; // 08
-    uint8_t unk0C[0x10 - 0xC]; // C
-    Handle<scn::ChoiceNodeNsTimedParams> timedParams; // 10
-    Handle<quest::IBaseCondition> questCondition; // 20
-    Handle<quest::IBaseCondition> triggerCondition; // 30
-    Handle<quest::IBaseCondition> bluelineCondition; // 40
-    TweakDBID gameplayAction; // 50
-    DynArray<TweakDBID> iconTagIds; // 58
-    uint32_t exDataFlags; // 68
-    scn::ReferencePointId mappinReferencePointId; // 6C
-    Handle<scn::TimedCondition> timedCondition; // 70
+    uint8_t unk04[0x8 - 0x4]; // 4
+    CName caption; // 08
+    bool blueline; // 10
+    bool isFixedAsRead; // 11
+    bool isSingleChoice; // 12
+    uint8_t unk13[0x14 - 0x13]; // 13
+    game::interactions::ChoiceTypeWrapper type; // 14
+    Handle<scn::ChoiceNodeNsTimedParams> timedParams; // 18
+    Handle<quest::IBaseCondition> questCondition; // 28
+    Handle<quest::IBaseCondition> triggerCondition; // 38
+    Handle<quest::IBaseCondition> bluelineCondition; // 48
+    Handle<quest::IBaseCondition> emphasisCondition; // 58
+    Handle<quest::IBaseCondition> iconCondition; // 68
+    TweakDBID gameplayAction; // 78
+    DynArray<TweakDBID> iconTagIds; // 80
+    uint32_t exDataFlags; // 90
+    scn::ReferencePointId mappinReferencePointId; // 94
+    Handle<scn::TimedCondition> timedCondition; // 98
 };
-RED4EXT_ASSERT_SIZE(ChoiceNodeOption, 0x80);
+RED4EXT_ASSERT_SIZE(ChoiceNodeOption, 0xA8);
 } // namespace scn
 using scnChoiceNodeOption = scn::ChoiceNodeOption;
 } // namespace RED4ext

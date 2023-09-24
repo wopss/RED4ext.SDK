@@ -17,9 +17,9 @@ struct LifePath_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataLifePath_Record";
     static constexpr const char* ALIAS = "LifePath_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(LifePath_Record, 0x60);
+RED4EXT_ASSERT_SIZE(LifePath_Record, 0x88);
 } // namespace game::data
 using gamedataLifePath_Record = game::data::LifePath_Record;
 using LifePath_Record = game::data::LifePath_Record;

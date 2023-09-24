@@ -17,9 +17,9 @@ struct HomingParameters_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataHomingParameters_Record";
     static constexpr const char* ALIAS = "HomingParameters_Record";
 
-    uint8_t unk48[0x78 - 0x48]; // 48
+    uint8_t unk48[0xF0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(HomingParameters_Record, 0x78);
+RED4EXT_ASSERT_SIZE(HomingParameters_Record, 0xF0);
 } // namespace game::data
 using gamedataHomingParameters_Record = game::data::HomingParameters_Record;
 using HomingParameters_Record = game::data::HomingParameters_Record;

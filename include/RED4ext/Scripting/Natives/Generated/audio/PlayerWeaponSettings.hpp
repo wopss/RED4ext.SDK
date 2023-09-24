@@ -8,6 +8,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/Scripting/Natives/Generated/audio/PerfectChargePerkSounds.hpp>
 #include <RED4ext/Scripting/Natives/Generated/audio/WeaponSettings.hpp>
 
 namespace RED4ext
@@ -44,8 +45,9 @@ struct PlayerWeaponSettings : audio::WeaponSettings
     float padVibrationReloadGain; // 150
     uint8_t unk154[0x158 - 0x154]; // 154
     Handle<audio::WeaponEventOverrides> animEventOverrides; // 158
+    audio::PerfectChargePerkSounds perfectChargePerkSounds; // 168
 };
-RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x168);
+RED4EXT_ASSERT_SIZE(PlayerWeaponSettings, 0x180);
 } // namespace audio
 using audioPlayerWeaponSettings = audio::PlayerWeaponSettings;
 } // namespace RED4ext

@@ -17,10 +17,10 @@ struct LinearWipeEffect : ink::IEffect
     static constexpr const char* NAME = "inkLinearWipeEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float angle; // 68
-    float transition; // 6C
+    float angle; // 50
+    float transition; // 54
 };
-RED4EXT_ASSERT_SIZE(LinearWipeEffect, 0x70);
+RED4EXT_ASSERT_SIZE(LinearWipeEffect, 0x58);
 } // namespace ink
 using inkLinearWipeEffect = ink::LinearWipeEffect;
 } // namespace RED4ext

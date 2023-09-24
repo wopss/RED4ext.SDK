@@ -8,6 +8,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/IItemManagerNodeType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/WeaponUsageType.hpp>
 
@@ -26,8 +27,10 @@ struct UseWeapon_NodeType : quest::IItemManagerNodeType
     uint8_t unk34[0x38 - 0x34]; // 34
     Handle<quest::UniversalRef> objectRef; // 38
     CName overrideShootEffect; // 48
+    CName weaponSlotName; // 50
+    TweakDBID attackTDBID; // 58
 };
-RED4EXT_ASSERT_SIZE(UseWeapon_NodeType, 0x50);
+RED4EXT_ASSERT_SIZE(UseWeapon_NodeType, 0x60);
 } // namespace quest
 using questUseWeapon_NodeType = quest::UseWeapon_NodeType;
 } // namespace RED4ext

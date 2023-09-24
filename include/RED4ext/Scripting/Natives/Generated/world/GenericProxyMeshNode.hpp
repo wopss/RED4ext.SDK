@@ -18,7 +18,7 @@ struct GenericProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(GenericProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(GenericProxyMeshNode, 0x68);
 } // namespace world
 using worldGenericProxyMeshNode = world::GenericProxyMeshNode;
 } // namespace RED4ext

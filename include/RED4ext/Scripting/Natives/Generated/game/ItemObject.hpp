@@ -20,9 +20,9 @@ struct ItemObject : game::TimeDilatable
 
     uint8_t unk260[0x2B8 - 0x260]; // 260
     UpdateBucketEnum updateBucket; // 2B8
-    uint8_t unk2B9[0x2C0 - 0x2B9]; // 2B9
+    uint8_t unk2B9[0x2D0 - 0x2B9]; // 2B9
 };
-RED4EXT_ASSERT_SIZE(ItemObject, 0x2C0);
+RED4EXT_ASSERT_SIZE(ItemObject, 0x2D0);
 } // namespace game
 using gameItemObject = game::ItemObject;
 using ItemObject = game::ItemObject;

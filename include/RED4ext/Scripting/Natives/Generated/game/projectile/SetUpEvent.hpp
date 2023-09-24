@@ -25,9 +25,9 @@ struct SetUpEvent : red::Event
     WeakHandle<game::Object> weapon; // 50
     Handle<game::projectile::TrajectoryParams> trajectoryParams; // 60
     float lerpMultiplier; // 70
-    uint8_t unk74[0xA0 - 0x74]; // 74
+    uint8_t unk74[0xB0 - 0x74]; // 74
 };
-RED4EXT_ASSERT_SIZE(SetUpEvent, 0xA0);
+RED4EXT_ASSERT_SIZE(SetUpEvent, 0xB0);
 } // namespace game::projectile
 using gameprojectileSetUpEvent = game::projectile::SetUpEvent;
 } // namespace RED4ext

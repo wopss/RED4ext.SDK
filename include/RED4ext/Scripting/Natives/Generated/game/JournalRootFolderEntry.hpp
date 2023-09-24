@@ -20,9 +20,9 @@ struct JournalRootFolderEntry : game::JournalFolderEntry
     static constexpr const char* NAME = "gameJournalRootFolderEntry";
     static constexpr const char* ALIAS = NAME;
 
-    RaRef<game::JournalDescriptorResource> descriptor; // 98
+    RaRef<game::JournalDescriptorResource> descriptor; // A8
 };
-RED4EXT_ASSERT_SIZE(JournalRootFolderEntry, 0xA0);
+RED4EXT_ASSERT_SIZE(JournalRootFolderEntry, 0xB0);
 } // namespace game
 using gameJournalRootFolderEntry = game::JournalRootFolderEntry;
 } // namespace RED4ext

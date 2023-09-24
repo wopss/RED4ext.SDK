@@ -15,9 +15,9 @@ struct CRenderStateManagerData : ICameraStorageCustomData
     static constexpr const char* NAME = "CRenderStateManagerData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x28 - 0x18]; // 18
+    uint8_t unk18[0x30 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CRenderStateManagerData, 0x28);
+RED4EXT_ASSERT_SIZE(CRenderStateManagerData, 0x30);
 } // namespace RED4ext
 
 // clang-format on

@@ -15,6 +15,8 @@ enum class VehicleCommandType : uint8_t
     Move_To = 2, // Move To
     Racing = 3,
     Join_Traffic = 4, // Join Traffic
+    Panic = 5,
+    Chase = 6,
 };
 } // namespace quest
 using questVehicleCommandType = quest::VehicleCommandType;

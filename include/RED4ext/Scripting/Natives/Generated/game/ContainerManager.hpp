@@ -15,13 +15,14 @@ namespace game
 struct ContainerManager : game::IContainerManager
 {
     static constexpr const char* NAME = "gameContainerManager";
-    static constexpr const char* ALIAS = NAME;
+    static constexpr const char* ALIAS = "ContainerManager";
 
-    uint8_t unk48[0x158 - 0x48]; // 48
+    uint8_t unk48[0x270 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ContainerManager, 0x158);
+RED4EXT_ASSERT_SIZE(ContainerManager, 0x270);
 } // namespace game
 using gameContainerManager = game::ContainerManager;
+using ContainerManager = game::ContainerManager;
 } // namespace RED4ext
 
 // clang-format on

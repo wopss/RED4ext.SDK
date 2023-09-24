@@ -31,25 +31,26 @@ struct NodeEditorData : ISerializable
     bool isGlobalNameLocked; // 98
     bool isAlternativeGlobalNameLocked; // 99
     uint8_t unk9A[0xA0 - 0x9A]; // 9A
-    world::NodeTransform transform; // A0
-    Transform pivotTransform; // D0
-    uint8_t unkF0[0x100 - 0xF0]; // F0
-    uint32_t variantId; // 100
-    uint8_t unk104[0x108 - 0x104]; // 104
-    uint64_t questPrefabRefHash; // 108
-    bool isInterior; // 110
-    bool isDestructibleNode; // 111
-    bool shouldSkipStreamingInEditor; // 112
-    bool isDiscarded; // 113
-    bool isSnapSource; // 114
-    bool isSnapTarget; // 115
-    uint8_t unk116[0x119 - 0x116]; // 116
-    bool excludeOnConsole; // 119
-    world::ProxyMeshDependencyMode proxyMeshDependency; // 11A
-    uint8_t unk11B[0x11C - 0x11B]; // 11B
-    float maxStreamingDistance; // 11C
+    CString initialGlobalNameHash; // A0
+    world::NodeTransform transform; // C0
+    Transform pivotTransform; // F0
+    uint8_t unk110[0x120 - 0x110]; // 110
+    uint32_t variantId; // 120
+    uint8_t unk124[0x128 - 0x124]; // 124
+    uint64_t questPrefabRefHash; // 128
+    bool isInterior; // 130
+    bool isDestructibleNode; // 131
+    bool shouldSkipStreamingInEditor; // 132
+    bool isDiscarded; // 133
+    bool isSnapSource; // 134
+    bool isSnapTarget; // 135
+    uint8_t unk136[0x139 - 0x136]; // 136
+    bool excludeOnConsole; // 139
+    bool excludeOnNextGenConsoles; // 13A
+    world::ProxyMeshDependencyMode proxyMeshDependency; // 13B
+    float maxStreamingDistance; // 13C
 };
-RED4EXT_ASSERT_SIZE(NodeEditorData, 0x120);
+RED4EXT_ASSERT_SIZE(NodeEditorData, 0x140);
 } // namespace world
 using worldNodeEditorData = world::NodeEditorData;
 } // namespace RED4ext

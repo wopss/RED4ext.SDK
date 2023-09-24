@@ -17,9 +17,9 @@ struct ThreatDistanceCoverSelectionParameters_Record : game::data::CoverSelectio
     static constexpr const char* NAME = "gamedataThreatDistanceCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "ThreatDistanceCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x70 - 0x50]; // 50
+    uint8_t unk60[0xD0 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(ThreatDistanceCoverSelectionParameters_Record, 0x70);
+RED4EXT_ASSERT_SIZE(ThreatDistanceCoverSelectionParameters_Record, 0xD0);
 } // namespace game::data
 using gamedataThreatDistanceCoverSelectionParameters_Record = game::data::ThreatDistanceCoverSelectionParameters_Record;
 using ThreatDistanceCoverSelectionParameters_Record = game::data::ThreatDistanceCoverSelectionParameters_Record;

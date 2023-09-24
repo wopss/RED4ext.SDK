@@ -17,9 +17,9 @@ struct CoverSelectionParameters_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "CoverSelectionParameters_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CoverSelectionParameters_Record, 0x50);
+RED4EXT_ASSERT_SIZE(CoverSelectionParameters_Record, 0x60);
 } // namespace game::data
 using gamedataCoverSelectionParameters_Record = game::data::CoverSelectionParameters_Record;
 using CoverSelectionParameters_Record = game::data::CoverSelectionParameters_Record;

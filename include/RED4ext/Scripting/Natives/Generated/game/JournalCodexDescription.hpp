@@ -18,10 +18,10 @@ struct JournalCodexDescription : game::JournalEntry
     static constexpr const char* NAME = "gameJournalCodexDescription";
     static constexpr const char* ALIAS = "JournalCodexDescription";
 
-    LocalizationString subTitle; // 60
-    LocalizationString textContent; // 88
+    LocalizationString subTitle; // 70
+    LocalizationString textContent; // 98
 };
-RED4EXT_ASSERT_SIZE(JournalCodexDescription, 0xB0);
+RED4EXT_ASSERT_SIZE(JournalCodexDescription, 0xC0);
 } // namespace game
 using gameJournalCodexDescription = game::JournalCodexDescription;
 using JournalCodexDescription = game::JournalCodexDescription;

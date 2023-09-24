@@ -17,9 +17,9 @@ struct MappinUISettings_Record : game::data::MappinUIRuntimeProfile_Record
     static constexpr const char* NAME = "gamedataMappinUISettings_Record";
     static constexpr const char* ALIAS = "MappinUISettings_Record";
 
-    uint8_t unk98[0xA0 - 0x98]; // 98
+    uint8_t unk180[0x198 - 0x180]; // 180
 };
-RED4EXT_ASSERT_SIZE(MappinUISettings_Record, 0xA0);
+RED4EXT_ASSERT_SIZE(MappinUISettings_Record, 0x198);
 } // namespace game::data
 using gamedataMappinUISettings_Record = game::data::MappinUISettings_Record;
 using MappinUISettings_Record = game::data::MappinUISettings_Record;

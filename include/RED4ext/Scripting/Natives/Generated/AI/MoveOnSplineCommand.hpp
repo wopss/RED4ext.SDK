@@ -35,16 +35,18 @@ struct MoveOnSplineCommand : AI::MoveCommand
     bool teleportToCompanion; // B9
     bool useMatchForSpeedForPlayer; // BA
     bool startFromClosestPoint; // BB
-    bool ignoreNavigation; // BC
-    bool snapToTerrain; // BD
-    bool ignoreLineOfSightCheck; // BE
-    bool useAlertedState; // BF
-    bool useStart; // C0
-    bool useStop; // C1
-    bool useCombatState; // C2
-    bool reverse; // C3
-    bool useOMLReservation; // C4
-    uint8_t unkC5[0xC8 - 0xC5]; // C5
+    bool splineRecalculation; // BC
+    bool ignoreNavigation; // BD
+    bool snapToTerrain; // BE
+    bool ignoreLineOfSightCheck; // BF
+    bool useAlertedState; // C0
+    bool useStart; // C1
+    bool useStop; // C2
+    bool useCombatState; // C3
+    bool reverse; // C4
+    bool useOMLReservation; // C5
+    bool disableFootIK; // C6
+    bool allowCrowdOnPath; // C7
     WeakHandle<game::Object> lookAtTarget; // C8
     float minSearchAngle; // D8
     float maxSearchAngle; // DC

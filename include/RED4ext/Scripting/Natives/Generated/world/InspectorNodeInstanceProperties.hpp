@@ -23,13 +23,13 @@ struct InspectorNodeInstanceProperties : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     world::CompiledNodeInstanceSetupInfo setupInfo; // 30
-    Handle<world::MeshNode> meshNode; // B0
-    Handle<world::InstancedMeshNode> instancedMeshNode; // C0
-    float lastObserverDistanceToStreamingPoint; // D0
-    float lastObserverDistanceToSecondaryReferencePoint; // D4
-    uint64_t renderProxyAddressForDebug; // D8
+    Handle<world::MeshNode> meshNode; // C0
+    Handle<world::InstancedMeshNode> instancedMeshNode; // D0
+    float lastObserverDistanceToStreamingPoint; // E0
+    float lastObserverDistanceToSecondaryReferencePoint; // E4
+    uint64_t renderProxyAddressForDebug; // E8
 };
-RED4EXT_ASSERT_SIZE(InspectorNodeInstanceProperties, 0xE0);
+RED4EXT_ASSERT_SIZE(InspectorNodeInstanceProperties, 0xF0);
 } // namespace world
 using worldInspectorNodeInstanceProperties = world::InspectorNodeInstanceProperties;
 } // namespace RED4ext

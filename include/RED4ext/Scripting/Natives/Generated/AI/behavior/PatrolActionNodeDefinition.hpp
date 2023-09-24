@@ -26,10 +26,13 @@ struct PatrolActionNodeDefinition : AI::behavior::ActionTreeNodeDefinition
     Handle<AI::ArgumentMapping> dependentWorkspotData; // 70
     Handle<AI::ArgumentMapping> lookAtTarget; // 80
     Handle<AI::ArgumentMapping> startFromClosestPoint; // 90
-    Handle<AI::ArgumentMapping> playStartAnimation; // A0
-    Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // B0
+    Handle<AI::ArgumentMapping> patrolContinuationPolicy; // A0
+    Handle<AI::ArgumentMapping> playStartAnimation; // B0
+    Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // C0
+    Handle<AI::ArgumentMapping> useOffMeshLinkReservation; // D0
+    Handle<AI::ArgumentMapping> usePathContext; // E0
 };
-RED4EXT_ASSERT_SIZE(PatrolActionNodeDefinition, 0xC0);
+RED4EXT_ASSERT_SIZE(PatrolActionNodeDefinition, 0xF0);
 } // namespace AI::behavior
 using AIbehaviorPatrolActionNodeDefinition = AI::behavior::PatrolActionNodeDefinition;
 } // namespace RED4ext

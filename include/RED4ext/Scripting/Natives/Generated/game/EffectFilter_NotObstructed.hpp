@@ -25,7 +25,8 @@ struct EffectFilter_NotObstructed : game::EffectObjectSingleFilter
     physics::QueryPreset queryPreset; // 50
     uint8_t unk58[0x68 - 0x58]; // 58
     float forwardOffset; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    bool playerUseCameraPositionForCheck; // 6C
+    uint8_t unk6D[0x70 - 0x6D]; // 6D
 };
 RED4EXT_ASSERT_SIZE(EffectFilter_NotObstructed, 0x70);
 } // namespace game

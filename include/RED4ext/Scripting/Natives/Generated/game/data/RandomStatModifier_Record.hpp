@@ -17,9 +17,9 @@ struct RandomStatModifier_Record : game::data::StatModifier_Record
     static constexpr const char* NAME = "gamedataRandomStatModifier_Record";
     static constexpr const char* ALIAS = "RandomStatModifier_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x88 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(RandomStatModifier_Record, 0x60);
+RED4EXT_ASSERT_SIZE(RandomStatModifier_Record, 0x88);
 } // namespace game::data
 using gamedataRandomStatModifier_Record = game::data::RandomStatModifier_Record;
 using RandomStatModifier_Record = game::data::RandomStatModifier_Record;

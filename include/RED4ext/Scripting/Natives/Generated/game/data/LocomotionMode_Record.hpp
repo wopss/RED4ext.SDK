@@ -17,9 +17,9 @@ struct LocomotionMode_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataLocomotionMode_Record";
     static constexpr const char* ALIAS = "LocomotionMode_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(LocomotionMode_Record, 0x58);
+RED4EXT_ASSERT_SIZE(LocomotionMode_Record, 0x68);
 } // namespace game::data
 using gamedataLocomotionMode_Record = game::data::LocomotionMode_Record;
 using LocomotionMode_Record = game::data::LocomotionMode_Record;

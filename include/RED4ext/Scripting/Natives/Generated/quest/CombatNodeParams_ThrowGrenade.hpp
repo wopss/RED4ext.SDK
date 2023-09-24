@@ -24,7 +24,8 @@ struct CombatNodeParams_ThrowGrenade : quest::CombatNodeParams
     float duration; // 80
     bool once; // 84
     bool immediately; // 85
-    uint8_t unk86[0x88 - 0x86]; // 86
+    bool force; // 86
+    uint8_t unk87[0x88 - 0x87]; // 87
 };
 RED4EXT_ASSERT_SIZE(CombatNodeParams_ThrowGrenade, 0x88);
 } // namespace quest

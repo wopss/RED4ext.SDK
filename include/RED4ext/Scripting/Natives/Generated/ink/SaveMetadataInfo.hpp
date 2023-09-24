@@ -6,6 +6,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LifePath.hpp>
@@ -40,8 +42,9 @@ struct SaveMetadataInfo : IScriptable
     bool isModded; // F9
     uint8_t unkFA[0x100 - 0xFA]; // FA
     CString platform; // 100
+    DynArray<CName> additionalContentIds; // 120
 };
-RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x120);
+RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x130);
 } // namespace ink
 using inkSaveMetadataInfo = ink::SaveMetadataInfo;
 using SaveMetadataInfo = ink::SaveMetadataInfo;

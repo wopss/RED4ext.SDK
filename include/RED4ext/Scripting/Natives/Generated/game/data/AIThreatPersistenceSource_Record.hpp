@@ -17,9 +17,9 @@ struct AIThreatPersistenceSource_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIThreatPersistenceSource_Record";
     static constexpr const char* ALIAS = "AIThreatPersistenceSource_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIThreatPersistenceSource_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIThreatPersistenceSource_Record, 0x70);
 } // namespace game::data
 using gamedataAIThreatPersistenceSource_Record = game::data::AIThreatPersistenceSource_Record;
 using AIThreatPersistenceSource_Record = game::data::AIThreatPersistenceSource_Record;

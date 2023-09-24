@@ -26,18 +26,18 @@ struct PhysicalDestructionNode : world::Node
     static constexpr const char* ALIAS = "PhysicalDestructionNode";
 
     physics::DestructionParams destructionParams; // 38
-    DynArray<physics::DestructionLevelData> destructionLevelData; // 80
-    RaRef<CMesh> mesh; // 90
-    CName meshAppearance; // 98
-    CName audioMetadata; // A0
-    float forceAutoHideDistance; // A8
-    int32_t forceLODLevel; // AC
-    NavGenNavigationSetting navigationSetting; // B0
-    uint16_t systemsToNotifyFlags; // B2
-    bool useMeshNavmeshSettings; // B4
-    uint8_t unkB5[0xB8 - 0xB5]; // B5
+    DynArray<physics::DestructionLevelData> destructionLevelData; // 88
+    RaRef<CMesh> mesh; // 98
+    CName meshAppearance; // A0
+    CName audioMetadata; // A8
+    float forceAutoHideDistance; // B0
+    int32_t forceLODLevel; // B4
+    NavGenNavigationSetting navigationSetting; // B8
+    uint16_t systemsToNotifyFlags; // BA
+    bool useMeshNavmeshSettings; // BC
+    uint8_t unkBD[0xC0 - 0xBD]; // BD
 };
-RED4EXT_ASSERT_SIZE(PhysicalDestructionNode, 0xB8);
+RED4EXT_ASSERT_SIZE(PhysicalDestructionNode, 0xC0);
 } // namespace world
 using worldPhysicalDestructionNode = world::PhysicalDestructionNode;
 using PhysicalDestructionNode = world::PhysicalDestructionNode;

@@ -22,12 +22,15 @@ struct ExitAnim : work::IEntry
 
     CName animName; // 38
     CName slotName; // 40
-    CName idleAnim; // 48
-    bool isSynchronized; // 50
-    bool stayOnNavmesh; // 51
-    bool snapZToNavmesh; // 52
-    bool disableRandomExit; // 53
-    uint8_t unk54[0x60 - 0x54]; // 54
+    bool disableAutoTransition; // 48
+    uint8_t unk49[0x50 - 0x49]; // 49
+    CName idleAnim; // 50
+    bool isSynchronized; // 58
+    bool stayOnNavmesh; // 59
+    bool snapZToNavmesh; // 5A
+    bool forceNoZSnap; // 5B
+    bool disableRandomExit; // 5C
+    uint8_t unk5D[0x60 - 0x5D]; // 5D
     Transform syncOffset; // 60
     move::MovementType movementType; // 80
     uint8_t unk84[0x90 - 0x84]; // 84

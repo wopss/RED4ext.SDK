@@ -18,7 +18,7 @@ struct ReactionPresetPolice_Record : game::data::ReactionPreset_Record
     static constexpr const char* ALIAS = "ReactionPresetPolice_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ReactionPresetPolice_Record, 0x68);
+RED4EXT_ASSERT_SIZE(ReactionPresetPolice_Record, 0xB8);
 } // namespace game::data
 using gamedataReactionPresetPolice_Record = game::data::ReactionPresetPolice_Record;
 using ReactionPresetPolice_Record = game::data::ReactionPresetPolice_Record;

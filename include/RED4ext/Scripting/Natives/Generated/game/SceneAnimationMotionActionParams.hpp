@@ -40,15 +40,15 @@ struct SceneAnimationMotionActionParams : IScriptable
     float endTime; // B8
     float initialDt; // BC
     float globalTimeToAnimTime; // C0
-    uint8_t unkC4[0xC8 - 0xC4]; // C4
-    DynArray<scn::AnimationMotionSample> trajectoryLOD; // C8
-    game::ScenePlayerAnimationParams playerParams; // D8
-    uint8_t unkF0[0x110 - 0xF0]; // F0
-    game::MountDescriptor mountDescriptor; // 110
-    uint64_t dynamicAnimSetupHash; // 150
-    uint8_t unk158[0x160 - 0x158]; // 158
+    uint8_t unkC4[0xD8 - 0xC4]; // C4
+    DynArray<scn::AnimationMotionSample> trajectoryLOD; // D8
+    game::ScenePlayerAnimationParams playerParams; // E8
+    uint8_t unk100[0x120 - 0x100]; // 100
+    game::MountDescriptor mountDescriptor; // 120
+    uint64_t dynamicAnimSetupHash; // 160
+    uint8_t unk168[0x170 - 0x168]; // 168
 };
-RED4EXT_ASSERT_SIZE(SceneAnimationMotionActionParams, 0x160);
+RED4EXT_ASSERT_SIZE(SceneAnimationMotionActionParams, 0x170);
 } // namespace game
 using gameSceneAnimationMotionActionParams = game::SceneAnimationMotionActionParams;
 using SceneAnimationMotionActionParams = game::SceneAnimationMotionActionParams;

@@ -26,10 +26,13 @@ struct EffectPostAction_BeamVFX_Custom : game::EffectPostAction_BeamVFX
     bool attached; // 60
     bool breakLoopOnDetach; // 61
     bool invert; // 62
-    uint8_t unk63[0x68 - 0x63]; // 63
-    CName effectTag; // 68
+    uint8_t unk63[0x64 - 0x63]; // 63
+    float maxRange; // 64
+    float maxRangeTPP; // 68
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    CName effectTag; // 70
 };
-RED4EXT_ASSERT_SIZE(EffectPostAction_BeamVFX_Custom, 0x70);
+RED4EXT_ASSERT_SIZE(EffectPostAction_BeamVFX_Custom, 0x78);
 } // namespace game
 using gameEffectPostAction_BeamVFX_Custom = game::EffectPostAction_BeamVFX_Custom;
 } // namespace RED4ext

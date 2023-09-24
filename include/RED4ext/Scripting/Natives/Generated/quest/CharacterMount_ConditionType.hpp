@@ -9,6 +9,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EntityReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MountingSlotRole.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/Affiliation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ICharacterConditionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/MountConditionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/MountVehicleOrigin.hpp>
@@ -30,14 +31,16 @@ struct CharacterMount_ConditionType : quest::ICharacterConditionType
     game::MountingSlotRole role; // B4
     quest::MountVehicleType vehicleType; // B8
     quest::MountVehicleOrigin vehicleOrigin; // BC
-    CString playerVehicleName; // C0
-    bool usePlayersVehicle; // E0
-    bool anyParent; // E1
-    bool anyChild; // E2
-    bool enterAnimationFinished; // E3
-    uint8_t unkE4[0xE8 - 0xE4]; // E4
+    game::data::Affiliation vehicleAfiliation; // C0
+    uint8_t unkC4[0xC8 - 0xC4]; // C4
+    CString playerVehicleName; // C8
+    bool usePlayersVehicle; // E8
+    bool anyParent; // E9
+    bool anyChild; // EA
+    bool enterAnimationFinished; // EB
+    uint8_t unkEC[0xF0 - 0xEC]; // EC
 };
-RED4EXT_ASSERT_SIZE(CharacterMount_ConditionType, 0xE8);
+RED4EXT_ASSERT_SIZE(CharacterMount_ConditionType, 0xF0);
 } // namespace quest
 using questCharacterMount_ConditionType = quest::CharacterMount_ConditionType;
 } // namespace RED4ext

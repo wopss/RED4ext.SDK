@@ -20,9 +20,9 @@ struct BreathingSubSystem : game::audio::ISoundComponentSubSystem
 
     uint8_t unk48[0x68 - 0x48]; // 48
     CName metadataName; // 68
-    uint8_t unk70[0x78 - 0x70]; // 70
+    uint8_t unk70[0x88 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(BreathingSubSystem, 0x78);
+RED4EXT_ASSERT_SIZE(BreathingSubSystem, 0x88);
 } // namespace game::audio
 using gameaudioBreathingSubSystem = game::audio::BreathingSubSystem;
 } // namespace RED4ext

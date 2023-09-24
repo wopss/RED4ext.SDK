@@ -18,6 +18,8 @@ enum class JournalQuestType : uint32_t
     Contract = 5,
     VehicleQuest = 6,
     ApartmentQuest = 7,
+    CourierQuest = 8,
+    CourierSideQuest = 9,
 };
 } // namespace game
 using gameJournalQuestType = game::JournalQuestType;

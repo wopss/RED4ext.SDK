@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/MountingObjectSubType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MountingObjectType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/MountingRelationshipType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/mounting/MountingSlotId.hpp>
@@ -23,7 +24,7 @@ struct MountingRelationship
     static constexpr const char* ALIAS = "MountingRelationship";
 
     game::MountingObjectType otherMountableType; // 00
-    uint8_t unk04[0x8 - 0x4]; // 4
+    game::MountingObjectSubType otherMountableSubType; // 04
     WeakHandle<game::Object> otherObject; // 08
     game::MountingRelationshipType relationshipType; // 18
     uint8_t unk1C[0x20 - 0x1C]; // 1C
