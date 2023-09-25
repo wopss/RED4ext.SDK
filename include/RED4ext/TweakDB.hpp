@@ -48,36 +48,29 @@ struct TweakDB
 
     struct FlatValue
     {
-        // ToValueOffset here is the 3bytes stored in records.
-        // those 3 bytes **ARE NOT** TweakDBID::Offset. tweak's offset point to this class and not the value.
-
         virtual ~FlatValue() = default;
-        virtual bool ToValueOffset_array_TweakDBID(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_TweakDBID(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Quaternion(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Quaternion(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_EulerAngles(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_EulerAngles(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Vector3(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Vector3(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Vector2(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Vector2(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Color(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Color(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_raRef_CResource(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_raRef_CResource(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_CName(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_CName(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Bool(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Bool(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_String(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_String(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Float(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Float(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Int32(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Int32(uint32_t* aValueOffset) const = 0;
+
+        // GetValueOffset sets 3 bytes offset to the data
+        // Those **ARE NOT** TweakDBID::tdbOffsetBE that point to this class and not the date
+
+#define RED4EXT_TDB_FLAT_VALUE_GETTER(N)                                                                               \
+    virtual bool GetValueOffset_array_##N(TweakDBID* aFlat) const = 0;                                                 \
+    virtual bool GetValueOffset_##N(TweakDBID* aFlat) const = 0;
+
+        RED4EXT_TDB_FLAT_VALUE_GETTER(TweakDBID);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Quaternion);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(EulerAngles);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Vector3);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Vector2);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Color);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(gamedataLocKeyWrapper);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(raRefCResource);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(CName);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Bool);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(String);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Float);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Int32);
+
         virtual CStackType GetValue() = 0;
         virtual CName* GetTypeName(CName* aName) = 0;
         virtual void* GetDataPtr() = 0;
@@ -99,34 +92,31 @@ struct TweakDB
         {
         }
 
-        // clang-format off
-        bool ToValueOffset_array_TweakDBID(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_TweakDBID(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Quaternion(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Quaternion(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_EulerAngles(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_EulerAngles(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Vector3(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Vector3(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Vector2(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Vector2(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Color(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Color(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_raRef_CResource(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_raRef_CResource(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_CName(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_CName(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Bool(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Bool(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_String(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_String(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Float(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Float(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_array_Int32(uint32_t* /*aValueOffset*/) const override { return false; }
-        bool ToValueOffset_Int32(uint32_t* /*aValueOffset*/) const override { return false; }
-        // clang-format on
+#define RED4EXT_TDB_FLAT_VALUE_IMPL(N)                                                                                 \
+    bool GetValueOffset_array_##N(TweakDBID* aFlat) const override                                                     \
+    {                                                                                                                  \
+        aFlat->SetTDBOffset(ToTDBOffset() + offsetof(FlatValueImpl, data));                                            \
+        return true;                                                                                                   \
+    }                                                                                                                  \
+    bool GetValueOffset_##N(TweakDBID* aFlat) const override                                                           \
+    {                                                                                                                  \
+        aFlat->SetTDBOffset(ToTDBOffset() + offsetof(FlatValueImpl, data));                                            \
+        return true;                                                                                                   \
+    }
+
+        RED4EXT_TDB_FLAT_VALUE_IMPL(TweakDBID);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Quaternion);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(EulerAngles);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Vector3);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Vector2);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Color);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(gamedataLocKeyWrapper);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(raRefCResource);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(CName);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Bool);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(String);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Float);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Int32);
 
         CStackType GetValue() override
         {
