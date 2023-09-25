@@ -23,7 +23,6 @@ struct IScriptable : ISerializable
     virtual void sub_F0();                       // F0
     virtual void sub_F8();                       // F8
     virtual void sub_100();                      // 100
-    virtual void sub_108();                      // 108
 
     operator const WeakHandle<IScriptable>&() const noexcept;
     operator Handle<IScriptable>() noexcept;

@@ -56,10 +56,6 @@ RED4EXT_INLINE void RED4ext::IScriptable::sub_100()
 {
 }
 
-RED4EXT_INLINE void RED4ext::IScriptable::sub_108()
-{
-}
-
 RED4EXT_INLINE void* RED4ext::IScriptable::GetValueHolder()
 {
     if (valueHolder)
