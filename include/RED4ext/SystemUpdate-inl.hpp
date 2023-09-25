@@ -7,7 +7,7 @@
 #include <RED4ext/Addresses.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Relocation.hpp>
-#include <RED4ext/Scripting/Natives/IUpdatableSystem.hpp>
+#include <RED4ext/Scripting/Natives/Generated/IUpdatableSystem.hpp>
 
 RED4EXT_INLINE void RED4ext::UpdateRegistrar::RegisterUpdate(UpdateTickGroup aGroup, IUpdatableSystem* aSystem,
                                                              const char* aName, GroupUpdateCallback&& aCallback)
