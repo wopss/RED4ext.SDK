@@ -17,3 +17,7 @@ struct TLS
 RED4EXT_ASSERT_SIZE(TLS, 0x14B);
 RED4EXT_ASSERT_OFFSET(TLS, jobParam, 0x14A);
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/TLS-inl.hpp>
+#endif
