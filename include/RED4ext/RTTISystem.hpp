@@ -36,32 +36,34 @@ struct IRTTISystem
     virtual void GetDerivedClasses(CClass* aBaseClass, DynArray<CClass*>& aClasses) = 0;      // 78
     virtual void RegisterType(CBaseRTTIType* aType, uint32_t aAsyncId) = 0;                   // 80
     virtual void sub_88() = 0;                                                                // 88
-    virtual void UnregisterType(CBaseRTTIType* aType) = 0;                                    // 90
-    virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                // 98
-    virtual void UnregisterFunction(CGlobalFunction* aFunc) = 0;                              // A0
-    virtual void sub_A8() = 0;                                                                // A8
-    virtual void AddRegisterCallback(Callback<void (*)()>) = 0;                               // B0
-    virtual void AddPostRegisterCallback(Callback<void (*)()>) = 0;                           // B8
-    virtual void sub_C0() = 0;                                                                // C0
-    virtual void sub_C8() = 0;                                                                // C8
-    virtual void CreateScriptedClass(CName aName, CClass::Flags aFlags, CClass* aParent) = 0; // D0
+    virtual void sub_90() = 0;                                                                // 90 - added in 2.0
+    virtual void UnregisterType(CBaseRTTIType* aType) = 0;                                    // 98
+    virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                // A0
+    virtual void UnregisterFunction(CGlobalFunction* aFunc) = 0;                              // A8
+    virtual void sub_B0() = 0;                                                                // B0
+    virtual void sub_B8() = 0;                                                                // B8 - added in 2.0
+    virtual void AddRegisterCallback(Callback<void (*)()>) = 0;                               // C0
+    virtual void AddPostRegisterCallback(Callback<void (*)()>) = 0;                           // C8
+    virtual void sub_D0() = 0;                                                                // D0
+    virtual void sub_D8() = 0;                                                                // D8
+    virtual void CreateScriptedClass(CName aName, CClass::Flags aFlags, CClass* aParent) = 0; // E0
     virtual void CreateScriptedEnum(
         CName aName, int8_t aSize,
-        DynArray<uint64_t>& aMembers) = 0; // D8 - The members array is not of type "uint64_t", it is a struct
+        DynArray<uint64_t>& aMembers) = 0; // E8 - The members array is not of type "uint64_t", it is a struct
                                            // containing the name and the value of the enumerator.
     virtual void CreateScriptedBitfield(
-        CName aName, DynArray<uint64_t>& aBits) = 0; // E0 - The bits array is not of type "uint64_t", it is a struct
+        CName aName, DynArray<uint64_t>& aBits) = 0; // F0 - The bits array is not of type "uint64_t", it is a struct
                                                      // containing the name and the bit.
-    virtual void InitializeScriptRuntime() = 0;      // E8 - Called by script loader at the very end
-    virtual void RegisterScriptName(CName aNativeName, CName aScriptedName) = 0; // F0
-    virtual CClass* GetClassByScriptName(CName aName) = 0;        // F8
-    virtual CEnum* GetEnumByScriptName(CName aName) = 0;          // 100
-    virtual CName ConvertNativeToScriptName(CName aName) = 0;     // 108
-    virtual CName ConvertScriptToNativeName(CName aName) = 0;     // 110
-    virtual CString* GetStringConst(uint32_t aIndex) = 0;         // 118 - Used by StringConst opcode (0x10)
-    virtual void SetStringTable(DynArray<CString>& aStrings) = 0; // 120 - Called by script loader
+    virtual void InitializeScriptRuntime() = 0;      // F8 - Called by script loader at the very end
+    virtual void RegisterScriptName(CName aNativeName, CName aScriptedName) = 0; // 100
+    virtual CClass* GetClassByScriptName(CName aName) = 0;        // 108
+    virtual CEnum* GetEnumByScriptName(CName aName) = 0;          // 110
+    virtual CName ConvertNativeToScriptName(CName aName) = 0;     // 118
+    virtual CName ConvertScriptToNativeName(CName aName) = 0;     // 120
+    virtual CString* GetStringConst(uint32_t aIndex) = 0;         // 128 - Used by StringConst opcode (0x10)
+    virtual void SetStringTable(DynArray<CString>& aStrings) = 0; // 130 - Called by script loader
 
-    virtual ~IRTTISystem() = 0; // 128
+    virtual ~IRTTISystem() = 0; // 138
 };
 RED4EXT_ASSERT_SIZE(IRTTISystem, 0x8);
 
