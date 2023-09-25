@@ -9,8 +9,8 @@
 
 RED4EXT_INLINE RED4ext::OpcodeHandlers::Handler_t RED4ext::OpcodeHandlers::Get(uint8_t aOpcode)
 {
-    RelocPtr<Handler_t*> opcodes(Addresses::OpcodeHandlers);
-    return opcodes[aOpcode];
+    RelocPtr<Handler_t> opcodes(Addresses::OpcodeHandlers);
+    return opcodes.GetAddr()[aOpcode];
 }
 
 RED4EXT_INLINE void RED4ext::OpcodeHandlers::Run(uint8_t aOpcode, RED4ext::IScriptable* aScriptable,

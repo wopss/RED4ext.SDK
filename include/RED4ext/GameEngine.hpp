@@ -54,7 +54,7 @@ RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
 struct CBaseEngine
 {
     // https://github.com/yamashi/RED4ext/commit/2d30f32826276458f86da8b4c26940924044564d
-    struct UnkC0
+    struct UnkD0
     {
         uint8_t pad0[0x140];
         uint32_t unk140;
@@ -66,10 +66,10 @@ struct CBaseEngine
         uint8_t pad170[0x9];
         uint8_t isClipped;
     };
-    RED4EXT_ASSERT_OFFSET(UnkC0, unk154, 0x154);
-    RED4EXT_ASSERT_OFFSET(UnkC0, unk164, 0x164);
-    RED4EXT_ASSERT_OFFSET(UnkC0, hWnd, 0x168);
-    RED4EXT_ASSERT_OFFSET(UnkC0, isClipped, 0x179);
+    RED4EXT_ASSERT_OFFSET(UnkD0, unk154, 0x154);
+    RED4EXT_ASSERT_OFFSET(UnkD0, unk164, 0x164);
+    RED4EXT_ASSERT_OFFSET(UnkD0, hWnd, 0x168);
+    RED4EXT_ASSERT_OFFSET(UnkD0, isClipped, 0x179);
 
     struct Unk108
     {
@@ -150,55 +150,59 @@ struct CBaseEngine
     int8_t unk58;                              // 58
     int16_t unk5A;                             // 5A
     int32_t interopStartingPort;               // 5C
-    CString scriptsCompilationErrors;          // 60
-    DynArray<CString> scriptsValidationErrors; // 80
-    int64_t unk90;                             // 90
-    int64_t unk98;                             // 98
+    int64_t unk60;                             // 60
+    int64_t unk68;                             // 68
+    CString scriptsCompilationErrors;          // 70
+    DynArray<CString> scriptsValidationErrors; // 90
     int64_t unkA0;                             // A0
     int64_t unkA8;                             // A8
     int64_t unkB0;                             // B0
     int64_t unkB8;                             // B8
-    UnkC0* unkC0;                              // C0
-    double unkC8;                              // C8
-    double unkD0;                              // D0
-    int32_t unkD8;                             // D8
-    int64_t unkE0;                             // E0
-    int64_t unkE8;                             // E8
+    uint8_t padC0[0x10];                       // C0
+    UnkD0* unkD0;                              // D0
+    double unkD8;                              // D8
+    double unkE0;                              // E0
+    int32_t unkE8;                             // E8
     int64_t unkF0;                             // F0
-    volatile EEngineState engineState;         // F8
-    int32_t unkFC;                             // FC
-    int32_t unk100;                            // 100
-    Unk108* unk108;                            // 108
-    Unk110 unk110;                             // 110
-    CString buildString;                       // 120
-    CString scriptsBlobPath;                   // 140
-    int32_t unk160;                            // 160
-    int8_t unk164;                             // 164
-    int64_t unk168;                            // 168
-    int64_t unk170;                            // 170
+    int64_t unkF8;                             // F8
+    int64_t unk100;                            // 100
+    volatile EEngineState engineState;         // 108
+    int32_t unk10C;                            // 10C
+    int32_t unk110;                            // 110
+    Unk108* unk118;                            // 118
+    Unk110 unk120;                             // 120
+    CString buildString;                       // 130
+    CString scriptsBlobPath;                   // 150
+    int32_t unk170;                            // 170
+    int8_t unk174;                             // 174
     int64_t unk178;                            // 178
     int64_t unk180;                            // 180
-    int8_t unk188[178];                        // 188
-    int32_t unk23C;                            // 23C
-    int8_t unk240[64];                         // 240
-    DynArray<void*> unk280;                    // 280
+    int64_t unk188;                            // 188
+    int64_t unk190;                            // 190
+    int8_t unk198[178];                        // 198
+    int32_t unk24C;                            // 24C
+    int8_t unk250[64];                         // 250
     DynArray<void*> unk290;                    // 290
-    int64_t unk2A0;                            // 2A0
-    int64_t unk2A8;                            // 2A8
+    DynArray<void*> unk2A0;                    // 2A0
     int64_t unk2B0;                            // 2B0
     int64_t unk2B8;                            // 2B8
-    int32_t unk2C0;                            // 2C0
+    int64_t unk2C0;                            // 2C0
     int64_t unk2C8;                            // 2C8
-    int64_t unk2D0;                            // 2D0
+    int32_t unk2D0;                            // 2D0
+    int64_t unk2D8;                            // 2D8
+    int64_t unk2E0;                            // 2E0
 };
-RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2D8);
-RED4EXT_ASSERT_OFFSET(CBaseEngine, unkC0, 0xC0);
+RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2E8);
+RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsLoaded, 0x54);
+RED4EXT_ASSERT_OFFSET(CBaseEngine, unkD0, 0xD0);
+RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsValidationErrors, 0x90);
+RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsBlobPath, 0x150);
 
 struct BaseGameEngine : CBaseEngine
 {
-    int64_t unk2D8; // 2D8
+    int64_t unk2E8; // 2E8
 };
-RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x2E0);
+RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x2F0);
 
 struct CGameEngine : BaseGameEngine
 {
@@ -215,8 +219,6 @@ struct CGameEngine : BaseGameEngine
 
     static CGameEngine* Get();
 
-    int64_t unk2E0;            // 2E0
-    int64_t unk2E8;            // 2E8
     int64_t unk2F0;            // 2F0
     int64_t unk2F8;            // 2F8
     int32_t unk300;            // 300
