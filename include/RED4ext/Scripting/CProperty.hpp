@@ -7,7 +7,7 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Relocation.hpp>
-//#include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/IScriptable.hpp>
 
 namespace RED4ext
 {
@@ -108,8 +108,8 @@ struct CProperty
         void* holder = aInstance;
         if (flags.inValueHolder)
         {
-            /*auto scriptable = static_cast<IScriptable*>(aInstance);
-            holder = scriptable->GetValueHolder();*/
+            auto scriptable = static_cast<IScriptable*>(aInstance);
+            holder = scriptable->GetValueHolder();
         }
 
         return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(holder) + valueOffset);
