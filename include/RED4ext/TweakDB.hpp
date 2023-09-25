@@ -99,32 +99,34 @@ struct TweakDB
         {
         }
 
-        bool ToValueOffset_array_TweakDBID(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_TweakDBID(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Quaternion(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Quaternion(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_EulerAngles(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_EulerAngles(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Vector3(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Vector3(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Vector2(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Vector2(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Color(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Color(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_raRef_CResource(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_raRef_CResource(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_CName(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_CName(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Bool(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Bool(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_String(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_String(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Float(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Float(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_array_Int32(uint32_t* aValueOffset) const override { return false; }
-        bool ToValueOffset_Int32(uint32_t* aValueOffset) const override { return false; }
+        // clang-format off
+        bool ToValueOffset_array_TweakDBID(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_TweakDBID(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Quaternion(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Quaternion(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_EulerAngles(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_EulerAngles(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Vector3(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Vector3(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Vector2(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Vector2(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Color(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Color(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_raRef_CResource(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_raRef_CResource(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_CName(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_CName(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Bool(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Bool(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_String(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_String(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Float(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Float(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_array_Int32(uint32_t* /*aValueOffset*/) const override { return false; }
+        bool ToValueOffset_Int32(uint32_t* /*aValueOffset*/) const override { return false; }
+        // clang-format on
 
         CStackType GetValue() override
         {
