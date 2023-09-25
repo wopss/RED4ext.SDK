@@ -186,10 +186,6 @@ def get_groups() -> List[Group]:
 
         Group(name='TweakDB', functions=[
             Item(name='Get', pattern='48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 74 0C', expected=1, index=0),
-            Item(name='StaticFlatDataBuffer', pattern='', expected=1, index=0), # TODO: Is this changed? See 140369D67, rcx seems to be this now. Additional note, seems to be the first element of TweakDB. No static flat data buffer anymore? See 140275EC6
-            Item(name='InitFlatValue_ExceptInt32', pattern='', expected=51, index=13), # TODO: Inlined at 14028C139 because why not
-            Item(name='FlatInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 83 C2 07 4C 8D 4C 24 ? 48 83 E2 ? 4C 8D 44 24 50', expected=9, index=5), # TODO: This can be a pointer
-            Item(name='FlatArrayInt32ValueVftable', pattern='48 8D 05 ? ? ? ? 48 8B D3 48 89 07 E8 ? ? ? ?', expected=29, index=16), # TODO: This can be a pointer
             Item(name='CreateRecord', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 8B C2', expected=6, index=0),
         ]),
 

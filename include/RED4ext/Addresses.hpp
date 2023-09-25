@@ -194,10 +194,6 @@ constexpr uintptr_t TTypedClass_IsEqual = 0x140218000 - ImageBase; // 48 8B C4 4
 
 #pragma region TweakDB
 constexpr uintptr_t TweakDB_Get = 0x140124624 - ImageBase; // 48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 74 0C, expected: 1, index: 0
-constexpr uintptr_t TweakDB_StaticFlatDataBuffer = ImageBase;
-constexpr uintptr_t TweakDB_InitFlatValue_ExceptInt32 = ImageBase;
-constexpr uintptr_t TweakDB_FlatInt32ValueVftable = 0x141039432 - ImageBase; // 48 8D 05 ? ? ? ? 48 83 C2 07 4C 8D 4C 24 ? 48 83 E2 ? 4C 8D 44 24 50, expected: 9, index: 5
-constexpr uintptr_t TweakDB_FlatArrayInt32ValueVftable = 0x1421CE864 - ImageBase; // 48 8D 05 ? ? ? ? 48 8B D3 48 89 07 E8 ? ? ? ?, expected: 29, index: 16
 constexpr uintptr_t TweakDB_CreateRecord = 0x14028C938 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 8B C2, expected: 6, index: 0
 #pragma endregion
 
