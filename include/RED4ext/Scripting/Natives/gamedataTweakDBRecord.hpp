@@ -14,6 +14,7 @@ struct TweakDBRecord : IScriptable
     static constexpr const char* NAME = "gamedataTweakDBRecord";
     static constexpr const char* ALIAS = "TweakDBRecord";
 
+    virtual void sub_108() = 0;                    // 108
     virtual uint32_t GetTweakBaseHash() const = 0; // 110 - Murmur3 of record type name
 
     TweakDBID recordID;
