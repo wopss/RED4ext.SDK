@@ -22,8 +22,8 @@ struct IGameSystem : IUpdatableSystem
     static constexpr const char* NAME = "gameIGameSystem";
     static constexpr const char* ALIAS = "IGameSystem";
 
-    virtual void OnWorldAttached(world::RuntimeScene* aScene);                                                // 108
-    virtual void OnBeforeWorldDetach(world::RuntimeScene* aScene);                                            // 110
+    virtual void OnWorldAttached(world::RuntimeScene* aScene);                                                // 110
+    virtual void OnBeforeWorldDetach(world::RuntimeScene* aScene);                                            // 118
     virtual void OnWorldDetached(world::RuntimeScene* aScene);                                                // 120
     virtual void OnAfterWorldDetach();                                                                        // 128
     virtual uint32_t OnBeforeGameSave(const JobGroup& aJobGroup, void* a2);                                   // 130
