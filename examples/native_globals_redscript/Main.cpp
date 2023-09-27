@@ -31,13 +31,14 @@ void SummonVehiclePlease(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* a
         auto getQuickSlotsManagerFunc = playerPuppetCls->GetFunction("GetQuickSlotsManager");
 
         RED4ext::Handle<RED4ext::IScriptable> quickSlotManager;
+
         // Execute the function on our Player instance
-        RED4ext::ExecuteFunction(handle, getQuickSlotsManagerFunc, &quickSlotManager, {});
+        RED4ext::ExecuteFunction(handle, getQuickSlotsManagerFunc, &quickSlotManager);
 
         auto quickSlotsManagerCls = rtti->GetClass("QuickSlotsManager ");
         auto summonVehicleFunc = quickSlotsManagerCls->GetFunction("SummonVehicle");
 
-        RED4ext::ExecuteFunction(quickSlotManager, summonVehicleFunc, nullptr, {});
+        RED4ext::ExecuteFunction(quickSlotManager, summonVehicleFunc, nullptr);
     }
 }
 

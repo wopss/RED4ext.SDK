@@ -134,6 +134,7 @@ struct TweakDB
             return &data;
         }
 
+#pragma warning(suppress : 4324)
         T data;
     };
     using QuaternionFlatValue = FlatValueImpl<Quaternion, CName("Quaternion")>;
