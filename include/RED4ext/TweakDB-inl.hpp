@@ -320,9 +320,14 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
 
 RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStackType)
 {
-    auto typeAlignment = aStackType.type->GetAlignment() - 1;
-    auto flatValueSize = 8 /* vftable */ + ((typeAlignment + aStackType.type->GetSize()) & ~typeAlignment);
-    auto flatDataBufferEnd_Aligned = (7 + flatDataBufferEnd) & ~7; // 8 aligned
+    uintptr_t flatAlignment = aStackType.type->GetAlignment();
+    if (flatAlignment < 8)
+    {
+        flatAlignment = 8;
+    }
+
+    uintptr_t flatValueSize = RED4ext::AlignUp(8ull /* vftable */ + aStackType.type->GetSize(), flatAlignment);
+    uintptr_t flatDataBufferEnd_Aligned = RED4ext::AlignUp(flatDataBufferEnd, flatAlignment);
 
     {
         std::lock_guard<SharedMutex> _(mutex00);
