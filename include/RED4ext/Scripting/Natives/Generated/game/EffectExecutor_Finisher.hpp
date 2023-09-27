@@ -24,7 +24,8 @@ struct EffectExecutor_Finisher : game::EffectExecutor
     DynArray<Handle<game::IFinisherScenario>> finisherScenarios; // 48
     bool alwaysUseEntryAnims; // 58
     bool allowCameraMovement; // 59
-    uint8_t unk5A[0x60 - 0x5A]; // 5A
+    bool InfluencedByPlayerCostBlock; // 5A
+    uint8_t unk5B[0x60 - 0x5B]; // 5B
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_Finisher, 0x60);
 } // namespace game

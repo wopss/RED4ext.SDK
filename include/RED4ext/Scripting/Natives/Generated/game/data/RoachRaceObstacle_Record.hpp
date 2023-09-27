@@ -17,9 +17,9 @@ struct RoachRaceObstacle_Record : game::data::RoachRaceObject_Record
     static constexpr const char* NAME = "gamedataRoachRaceObstacle_Record";
     static constexpr const char* ALIAS = "RoachRaceObstacle_Record";
 
-    uint8_t unk70[0x80 - 0x70]; // 70
+    uint8_t unkE0[0x110 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(RoachRaceObstacle_Record, 0x80);
+RED4EXT_ASSERT_SIZE(RoachRaceObstacle_Record, 0x110);
 } // namespace game::data
 using gamedataRoachRaceObstacle_Record = game::data::RoachRaceObstacle_Record;
 using RoachRaceObstacle_Record = game::data::RoachRaceObstacle_Record;

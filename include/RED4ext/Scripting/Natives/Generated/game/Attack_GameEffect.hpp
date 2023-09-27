@@ -17,9 +17,9 @@ struct Attack_GameEffect : game::IAttack
     static constexpr const char* NAME = "gameAttack_GameEffect";
     static constexpr const char* ALIAS = "Attack_GameEffect";
 
-    uint8_t unkD8[0x100 - 0xD8]; // D8
+    uint8_t unk128[0x150 - 0x128]; // 128
 };
-RED4EXT_ASSERT_SIZE(Attack_GameEffect, 0x100);
+RED4EXT_ASSERT_SIZE(Attack_GameEffect, 0x150);
 } // namespace game
 using gameAttack_GameEffect = game::Attack_GameEffect;
 using Attack_GameEffect = game::Attack_GameEffect;

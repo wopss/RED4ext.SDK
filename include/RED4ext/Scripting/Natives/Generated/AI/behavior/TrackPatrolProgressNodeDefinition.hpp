@@ -23,12 +23,13 @@ struct TrackPatrolProgressNodeDefinition : AI::behavior::DecoratorNodeDefinition
     Handle<AI::ArgumentMapping> pathParameters; // 40
     Handle<AI::ArgumentMapping> patrolProgress; // 50
     Handle<AI::ArgumentMapping> startFromClosestPoint; // 60
-    Handle<AI::ArgumentMapping> teleportPositionAfterTimeSkipping; // 70
-    Handle<AI::ArgumentMapping> teleportRotationAfterTimeSkipping; // 80
-    Handle<AI::ArgumentMapping> handleTeleportRequest; // 90
-    Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // A0
+    Handle<AI::ArgumentMapping> patrolContinuationPolicy; // 70
+    Handle<AI::ArgumentMapping> teleportPositionAfterTimeSkipping; // 80
+    Handle<AI::ArgumentMapping> teleportRotationAfterTimeSkipping; // 90
+    Handle<AI::ArgumentMapping> handleTeleportRequest; // A0
+    Handle<AI::ArgumentMapping> fastForwardAfterTeleport; // B0
 };
-RED4EXT_ASSERT_SIZE(TrackPatrolProgressNodeDefinition, 0xB0);
+RED4EXT_ASSERT_SIZE(TrackPatrolProgressNodeDefinition, 0xC0);
 } // namespace AI::behavior
 using AIbehaviorTrackPatrolProgressNodeDefinition = AI::behavior::TrackPatrolProgressNodeDefinition;
 } // namespace RED4ext

@@ -8,6 +8,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 
 namespace RED4ext
 {
@@ -20,14 +21,17 @@ struct MovingPlatformSavedData
     static constexpr const char* NAME = "gameMovingPlatformSavedData";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<game::IMovingPlatformMovement> movement; // 00
-    CName destinationName; // 10
-    int32_t destinationData; // 18
-    float time; // 1C
-    float maxTime; // 20
-    uint32_t mountedPlayerEntityID; // 24
+    Vector4 currentLocalPosition; // 00
+    Handle<game::IMovingPlatformMovement> movement; // 10
+    CName destinationName; // 20
+    int32_t destinationData; // 28
+    float time; // 2C
+    float maxTime; // 30
+    uint32_t mountedPlayerEntityID; // 34
+    bool isPaused; // 38
+    uint8_t unk39[0x40 - 0x39]; // 39
 };
-RED4EXT_ASSERT_SIZE(MovingPlatformSavedData, 0x28);
+RED4EXT_ASSERT_SIZE(MovingPlatformSavedData, 0x40);
 } // namespace game
 using gameMovingPlatformSavedData = game::MovingPlatformSavedData;
 } // namespace RED4ext

@@ -16,9 +16,9 @@ struct ItemDropStorageManager
     static constexpr const char* NAME = "gameItemDropStorageManager";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0xB0 - 0x0]; // 0
+    uint8_t unk00[0xD0 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(ItemDropStorageManager, 0xB0);
+RED4EXT_ASSERT_SIZE(ItemDropStorageManager, 0xD0);
 } // namespace game
 using gameItemDropStorageManager = game::ItemDropStorageManager;
 } // namespace RED4ext

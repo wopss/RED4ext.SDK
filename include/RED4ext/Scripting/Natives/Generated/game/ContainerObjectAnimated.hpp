@@ -18,9 +18,9 @@ struct ContainerObjectAnimated : game::ContainerObjectBase
     static constexpr const char* NAME = "gameContainerObjectAnimated";
     static constexpr const char* ALIAS = NAME;
 
-    CName animFeatureName; // 2A8
+    CName animFeatureName; // 2B0
 };
-RED4EXT_ASSERT_SIZE(ContainerObjectAnimated, 0x2B0);
+RED4EXT_ASSERT_SIZE(ContainerObjectAnimated, 0x2B8);
 } // namespace game
 using gameContainerObjectAnimated = game::ContainerObjectAnimated;
 } // namespace RED4ext

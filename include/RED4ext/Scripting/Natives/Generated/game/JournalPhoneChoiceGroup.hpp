@@ -18,7 +18,7 @@ struct JournalPhoneChoiceGroup : game::JournalContainerEntry
     static constexpr const char* ALIAS = "JournalPhoneChoiceGroup";
 
 };
-RED4EXT_ASSERT_SIZE(JournalPhoneChoiceGroup, 0x78);
+RED4EXT_ASSERT_SIZE(JournalPhoneChoiceGroup, 0x88);
 } // namespace game
 using gameJournalPhoneChoiceGroup = game::JournalPhoneChoiceGroup;
 using JournalPhoneChoiceGroup = game::JournalPhoneChoiceGroup;

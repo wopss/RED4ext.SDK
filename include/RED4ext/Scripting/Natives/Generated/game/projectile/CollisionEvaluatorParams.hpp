@@ -25,14 +25,16 @@ struct CollisionEvaluatorParams : IScriptable
     WeakHandle<game::Object> target; // 40
     bool isPiercableSurface; // 50
     bool isWaterSurface; // 51
-    uint8_t unk52[0x54 - 0x52]; // 52
+    bool isAutoBounceSurface; // 52
+    uint8_t unk53[0x54 - 0x53]; // 53
     float angle; // 54
     uint32_t numBounces; // 58
     uint8_t unk5C[0x60 - 0x5C]; // 5C
     Vector4 position; // 60
     CName projectilePenetration; // 70
     bool isTechPiercing; // 78
-    uint8_t unk79[0x80 - 0x79]; // 79
+    bool isDestructible; // 79
+    uint8_t unk7A[0x80 - 0x7A]; // 7A
 };
 RED4EXT_ASSERT_SIZE(CollisionEvaluatorParams, 0x80);
 } // namespace game::projectile

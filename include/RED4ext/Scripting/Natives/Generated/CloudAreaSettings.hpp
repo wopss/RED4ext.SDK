@@ -9,6 +9,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/HDRColor.hpp>
 #include <RED4ext/Scripting/Natives/Generated/IAreaSettings.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
 
 namespace RED4ext
 {
@@ -53,8 +54,9 @@ struct CloudAreaSettings : IAreaSettings
     float volNoiseWindInfluence; // 444
     float volDetailWindInfluence; // 448
     float volDistantFogOpacity; // 44C
+    Vector2 volCoverageOffset; // 450
 };
-RED4EXT_ASSERT_SIZE(CloudAreaSettings, 0x450);
+RED4EXT_ASSERT_SIZE(CloudAreaSettings, 0x458);
 } // namespace RED4ext
 
 // clang-format on

@@ -20,8 +20,9 @@ struct HUDEntryVisibilityEvent : red::Event
     static constexpr const char* ALIAS = NAME;
 
     DynArray<quest::HUDEntryVisibilityData> dataEntries; // 40
+    uint8_t unk50[0x58 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(HUDEntryVisibilityEvent, 0x50);
+RED4EXT_ASSERT_SIZE(HUDEntryVisibilityEvent, 0x58);
 } // namespace quest
 using questHUDEntryVisibilityEvent = quest::HUDEntryVisibilityEvent;
 } // namespace RED4ext

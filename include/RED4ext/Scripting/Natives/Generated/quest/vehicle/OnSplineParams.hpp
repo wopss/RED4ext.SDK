@@ -14,6 +14,7 @@ namespace RED4ext
 {
 namespace quest { struct ParamKeepDistance; }
 namespace quest { struct ParamRubberbanding; }
+namespace vehicle { struct AudioCurvesParam; }
 
 namespace quest::vehicle
 {
@@ -36,8 +37,9 @@ struct OnSplineParams : quest::VehicleSpecificCommandParams
     bool rubberBanding; // 60
     uint8_t unk61[0x68 - 0x61]; // 61
     Handle<quest::ParamRubberbanding> rubberBandingParam; // 68
+    Handle<vehicle::AudioCurvesParam> audioCurvesParam; // 78
 };
-RED4EXT_ASSERT_SIZE(OnSplineParams, 0x78);
+RED4EXT_ASSERT_SIZE(OnSplineParams, 0x88);
 } // namespace quest::vehicle
 using questvehicleOnSplineParams = quest::vehicle::OnSplineParams;
 } // namespace RED4ext

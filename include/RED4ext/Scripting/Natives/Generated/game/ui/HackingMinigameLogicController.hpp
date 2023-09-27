@@ -87,9 +87,9 @@ struct HackingMinigameLogicController : ink::WidgetLogicController
     CName programEntryNoteWidgetRelativePath; // 390
     CName programEntryInstructionContainerRelativePath; // 398
     CName programEntryIconPath; // 3A0
-    uint8_t unk3A8[0x450 - 0x3A8]; // 3A8
+    uint8_t unk3A8[0x458 - 0x3A8]; // 3A8
 };
-RED4EXT_ASSERT_SIZE(HackingMinigameLogicController, 0x450);
+RED4EXT_ASSERT_SIZE(HackingMinigameLogicController, 0x458);
 } // namespace game::ui
 using gameuiHackingMinigameLogicController = game::ui::HackingMinigameLogicController;
 } // namespace RED4ext

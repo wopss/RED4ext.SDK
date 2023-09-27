@@ -19,9 +19,9 @@ struct JournalQuestMultiMapPin : game::JournalQuestMapPinBase
     static constexpr const char* NAME = "gameJournalQuestMultiMapPin";
     static constexpr const char* ALIAS = "JournalQuestMultiMapPin";
 
-    DynArray<NodeRef> references; // 110
+    DynArray<NodeRef> references; // 120
 };
-RED4EXT_ASSERT_SIZE(JournalQuestMultiMapPin, 0x120);
+RED4EXT_ASSERT_SIZE(JournalQuestMultiMapPin, 0x130);
 } // namespace game
 using gameJournalQuestMultiMapPin = game::JournalQuestMultiMapPin;
 using JournalQuestMultiMapPin = game::JournalQuestMultiMapPin;

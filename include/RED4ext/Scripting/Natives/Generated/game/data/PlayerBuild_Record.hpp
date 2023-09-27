@@ -17,9 +17,9 @@ struct PlayerBuild_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPlayerBuild_Record";
     static constexpr const char* ALIAS = "PlayerBuild_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PlayerBuild_Record, 0x60);
+RED4EXT_ASSERT_SIZE(PlayerBuild_Record, 0x88);
 } // namespace game::data
 using gamedataPlayerBuild_Record = game::data::PlayerBuild_Record;
 using PlayerBuild_Record = game::data::PlayerBuild_Record;

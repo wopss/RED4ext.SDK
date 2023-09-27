@@ -17,9 +17,9 @@ struct PhotoModeSticker_Record : game::data::PhotoModeItem_Record
     static constexpr const char* NAME = "gamedataPhotoModeSticker_Record";
     static constexpr const char* ALIAS = "PhotoModeSticker_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x78 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(PhotoModeSticker_Record, 0x58);
+RED4EXT_ASSERT_SIZE(PhotoModeSticker_Record, 0x78);
 } // namespace game::data
 using gamedataPhotoModeSticker_Record = game::data::PhotoModeSticker_Record;
 using PhotoModeSticker_Record = game::data::PhotoModeSticker_Record;

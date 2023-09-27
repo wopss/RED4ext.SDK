@@ -17,9 +17,9 @@ struct StatPrereq_Record : game::data::IPrereq_Record
     static constexpr const char* NAME = "gamedataStatPrereq_Record";
     static constexpr const char* ALIAS = "StatPrereq_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0xB0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(StatPrereq_Record, 0x60);
+RED4EXT_ASSERT_SIZE(StatPrereq_Record, 0xB0);
 } // namespace game::data
 using gamedataStatPrereq_Record = game::data::StatPrereq_Record;
 using StatPrereq_Record = game::data::StatPrereq_Record;

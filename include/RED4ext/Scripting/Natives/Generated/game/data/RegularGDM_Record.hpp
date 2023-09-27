@@ -18,7 +18,7 @@ struct RegularGDM_Record : game::data::GrenadeDeliveryMethod_Record
     static constexpr const char* ALIAS = "RegularGDM_Record";
 
 };
-RED4EXT_ASSERT_SIZE(RegularGDM_Record, 0x60);
+RED4EXT_ASSERT_SIZE(RegularGDM_Record, 0xA0);
 } // namespace game::data
 using gamedataRegularGDM_Record = game::data::RegularGDM_Record;
 using RegularGDM_Record = game::data::RegularGDM_Record;

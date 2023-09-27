@@ -17,9 +17,9 @@ struct AIIsOnNavmeshCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIIsOnNavmeshCond_Record";
     static constexpr const char* ALIAS = "AIIsOnNavmeshCond_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk58[0x70 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIIsOnNavmeshCond_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIIsOnNavmeshCond_Record, 0x70);
 } // namespace game::data
 using gamedataAIIsOnNavmeshCond_Record = game::data::AIIsOnNavmeshCond_Record;
 using AIIsOnNavmeshCond_Record = game::data::AIIsOnNavmeshCond_Record;

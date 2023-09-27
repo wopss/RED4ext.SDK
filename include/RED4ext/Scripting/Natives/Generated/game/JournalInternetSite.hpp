@@ -23,14 +23,14 @@ struct JournalInternetSite : game::JournalFileEntry
     static constexpr const char* NAME = "gameJournalInternetSite";
     static constexpr const char* ALIAS = "JournalInternetSite";
 
-    LocalizationString shortName; // 90
-    Handle<game::JournalPath> mainPagePath; // B8
-    bool ignoredAtDesktop; // C8
-    uint8_t unkC9[0xD0 - 0xC9]; // C9
-    RaRef<ink::TextureAtlas> textureAtlas; // D0
-    CName texturePart; // D8
+    LocalizationString shortName; // A0
+    Handle<game::JournalPath> mainPagePath; // C8
+    bool ignoredAtDesktop; // D8
+    uint8_t unkD9[0xE0 - 0xD9]; // D9
+    RaRef<ink::TextureAtlas> textureAtlas; // E0
+    CName texturePart; // E8
 };
-RED4EXT_ASSERT_SIZE(JournalInternetSite, 0xE0);
+RED4EXT_ASSERT_SIZE(JournalInternetSite, 0xF0);
 } // namespace game
 using gameJournalInternetSite = game::JournalInternetSite;
 using JournalInternetSite = game::JournalInternetSite;

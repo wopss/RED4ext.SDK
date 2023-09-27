@@ -19,14 +19,14 @@ struct DynamicMeshNode : world::MeshNode
     static constexpr const char* NAME = "worldDynamicMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    TrafficGenDynamicTrafficSetting dynamicTrafficSetting; // 58
-    NavGenNavigationSetting navigationSetting; // 5A
-    bool startAsleep; // 5C
-    bool isDebris; // 5D
-    bool initialGuess; // 5E
-    bool useMeshNavmeshSettings; // 5F
+    TrafficGenDynamicTrafficSetting dynamicTrafficSetting; // 60
+    NavGenNavigationSetting navigationSetting; // 62
+    bool startAsleep; // 64
+    bool isDebris; // 65
+    bool initialGuess; // 66
+    bool useMeshNavmeshSettings; // 67
 };
-RED4EXT_ASSERT_SIZE(DynamicMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(DynamicMeshNode, 0x68);
 } // namespace world
 using worldDynamicMeshNode = world::DynamicMeshNode;
 } // namespace RED4ext

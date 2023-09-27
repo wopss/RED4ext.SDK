@@ -18,7 +18,7 @@ struct DeviceAreaAttack_Record : game::data::Attack_GameEffect_Record
     static constexpr const char* ALIAS = "DeviceAreaAttack_Record";
 
 };
-RED4EXT_ASSERT_SIZE(DeviceAreaAttack_Record, 0x88);
+RED4EXT_ASSERT_SIZE(DeviceAreaAttack_Record, 0x150);
 } // namespace game::data
 using gamedataDeviceAreaAttack_Record = game::data::DeviceAreaAttack_Record;
 using DeviceAreaAttack_Record = game::data::DeviceAreaAttack_Record;

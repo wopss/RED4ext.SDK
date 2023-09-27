@@ -17,9 +17,9 @@ struct DriveWheelsAccelerateNoise_Record : game::data::DriveHelper_Record
     static constexpr const char* NAME = "gamedataDriveWheelsAccelerateNoise_Record";
     static constexpr const char* ALIAS = "DriveWheelsAccelerateNoise_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk58[0xB8 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(DriveWheelsAccelerateNoise_Record, 0x68);
+RED4EXT_ASSERT_SIZE(DriveWheelsAccelerateNoise_Record, 0xB8);
 } // namespace game::data
 using gamedataDriveWheelsAccelerateNoise_Record = game::data::DriveWheelsAccelerateNoise_Record;
 using DriveWheelsAccelerateNoise_Record = game::data::DriveWheelsAccelerateNoise_Record;

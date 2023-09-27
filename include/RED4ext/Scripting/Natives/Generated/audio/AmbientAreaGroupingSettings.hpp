@@ -23,8 +23,8 @@ struct AmbientAreaGroupingSettings
     CName GroupAvgDistanceRtpc; // 10
     float MinDistance; // 18
     float MaxDistance; // 1C
-    audio::AmbientGroupingVariant groupingVariant; // 20
-    uint8_t unk24[0x28 - 0x24]; // 24
+    float GroupingVerticallimit; // 20
+    audio::AmbientGroupingVariant groupingVariant; // 24
 };
 RED4EXT_ASSERT_SIZE(AmbientAreaGroupingSettings, 0x28);
 } // namespace audio

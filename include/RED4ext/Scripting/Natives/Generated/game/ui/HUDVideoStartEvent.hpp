@@ -21,16 +21,18 @@ struct HUDVideoStartEvent
     uint64_t videoPathHash; // 08
     uint8_t unk10[0x1A - 0x10]; // 10
     bool fullScreen; // 1A
-    uint8_t unk1B[0x1C - 0x1B]; // 1B
-    Vector2 position; // 1C
-    Vector2 size; // 24
-    bool skippable; // 2C
-    bool isLooped; // 2D
-    bool forceVideoFrameRate; // 2E
-    bool playOnHud; // 2F
-    uint8_t unk30[0x70 - 0x30]; // 30
+    bool useFullscreenVideoState; // 1B
+    bool keepWidescreenAspectRatio; // 1C
+    uint8_t unk1D[0x20 - 0x1D]; // 1D
+    Vector2 position; // 20
+    Vector2 size; // 28
+    bool skippable; // 30
+    bool isLooped; // 31
+    bool forceVideoFrameRate; // 32
+    bool playOnHud; // 33
+    uint8_t unk34[0x78 - 0x34]; // 34
 };
-RED4EXT_ASSERT_SIZE(HUDVideoStartEvent, 0x70);
+RED4EXT_ASSERT_SIZE(HUDVideoStartEvent, 0x78);
 } // namespace game::ui
 using gameuiHUDVideoStartEvent = game::ui::HUDVideoStartEvent;
 } // namespace RED4ext

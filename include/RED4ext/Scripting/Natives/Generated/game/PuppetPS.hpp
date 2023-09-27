@@ -20,11 +20,12 @@ struct PuppetPS : game::ObjectPS
 
     CName gender; // 68
     bool wasQuickHacked; // 70
-    uint8_t unk71[0x73 - 0x71]; // 71
-    bool hasAlternativeName; // 73
-    bool isCrouch; // 74
-    bool allowVehicleCollisionRagdoll; // 75
-    uint8_t unk76[0x78 - 0x76]; // 76
+    bool hasQuickHackBegunUpload; // 71
+    uint8_t unk72[0x74 - 0x72]; // 72
+    bool hasAlternativeName; // 74
+    bool isCrouch; // 75
+    bool allowVehicleCollisionRagdoll; // 76
+    uint8_t unk77[0x78 - 0x77]; // 77
 };
 RED4EXT_ASSERT_SIZE(PuppetPS, 0x78);
 } // namespace game

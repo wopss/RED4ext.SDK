@@ -20,16 +20,14 @@ struct AnimNode_FloorIkBase : anim::AnimNode_OnePoseInput
     static constexpr const char* ALIAS = NAME;
 
     anim::SBehaviorConstraintNodeFloorIKCommonData common; // 60
-    bool canBeDisabledDueToFrameRate; // 90
-    uint8_t unk91[0x98 - 0x91]; // 91
-    CName requiredAnimEvent; // 98
-    CName blockAnimEvent; // A0
-    bool useFixedVersion; // A8
-    uint8_t unkA9[0xAC - 0xA9]; // A9
-    float slopeAngleDamp; // AC
-    uint8_t unkB0[0x110 - 0xB0]; // B0
+    CName requiredAnimEvent; // 90
+    CName blockAnimEvent; // 98
+    float slopeAngleDamp; // A0
+    bool useFixedVersion; // A4
+    bool canBeDisabledDueToFrameRate; // A5
+    uint8_t unkA6[0x108 - 0xA6]; // A6
 };
-RED4EXT_ASSERT_SIZE(AnimNode_FloorIkBase, 0x110);
+RED4EXT_ASSERT_SIZE(AnimNode_FloorIkBase, 0x108);
 } // namespace anim
 using animAnimNode_FloorIkBase = anim::AnimNode_FloorIkBase;
 } // namespace RED4ext

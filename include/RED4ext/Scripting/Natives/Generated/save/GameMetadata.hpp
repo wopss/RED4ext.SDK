@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/Difficulty.hpp>
@@ -46,27 +47,28 @@ struct GameMetadata
     CString bodyGender; // 1F8
     CString brainGender; // 218
     game::Difficulty difficulty; // 238
-    float level; // 23C
-    float streetCred; // 240
-    float gunslinger; // 244
-    float assault; // 248
-    float demolition; // 24C
-    float athletics; // 250
-    float brawling; // 254
-    float coldBlood; // 258
-    float stealth; // 25C
-    float engineering; // 260
-    float crafting; // 264
-    float hacking; // 268
-    float combatHacking; // 26C
-    float strength; // 270
-    float intelligence; // 274
-    float reflexes; // 278
-    float technicalAbility; // 27C
-    float cool; // 280
-    uint8_t unk284[0x288 - 0x284]; // 284
+    uint8_t unk23C[0x240 - 0x23C]; // 23C
+    DynArray<CString> facts; // 240
+    float level; // 250
+    float streetCred; // 254
+    float gunslinger; // 258
+    float assault; // 25C
+    float demolition; // 260
+    float athletics; // 264
+    float brawling; // 268
+    float coldBlood; // 26C
+    float stealth; // 270
+    float engineering; // 274
+    float crafting; // 278
+    float hacking; // 27C
+    float combatHacking; // 280
+    float strength; // 284
+    float intelligence; // 288
+    float reflexes; // 28C
+    float technicalAbility; // 290
+    float cool; // 294
 };
-RED4EXT_ASSERT_SIZE(GameMetadata, 0x288);
+RED4EXT_ASSERT_SIZE(GameMetadata, 0x298);
 } // namespace save
 using saveGameMetadata = save::GameMetadata;
 } // namespace RED4ext

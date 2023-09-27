@@ -18,9 +18,9 @@ struct JournalPhoneConversation : game::JournalContainerEntry
     static constexpr const char* NAME = "gameJournalPhoneConversation";
     static constexpr const char* ALIAS = "JournalPhoneConversation";
 
-    LocalizationString title; // 78
+    LocalizationString title; // 88
 };
-RED4EXT_ASSERT_SIZE(JournalPhoneConversation, 0xA0);
+RED4EXT_ASSERT_SIZE(JournalPhoneConversation, 0xB0);
 } // namespace game
 using gameJournalPhoneConversation = game::JournalPhoneConversation;
 using JournalPhoneConversation = game::JournalPhoneConversation;

@@ -18,7 +18,7 @@ struct JournalPrimaryFolderEntry : game::JournalFolderEntry
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(JournalPrimaryFolderEntry, 0x98);
+RED4EXT_ASSERT_SIZE(JournalPrimaryFolderEntry, 0xA8);
 } // namespace game
 using gameJournalPrimaryFolderEntry = game::JournalPrimaryFolderEntry;
 } // namespace RED4ext

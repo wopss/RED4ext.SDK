@@ -21,8 +21,10 @@ struct TrafficNullAreaDynamicBlockade
     uint64_t areaID; // 00
     DynArray<uint64_t> offmeshLinks; // 08
     DynArray<world::TrafficLaneUID> affectedTrafficLanes; // 18
+    bool permanentlyEnabledByDefault; // 28
+    uint8_t unk29[0x30 - 0x29]; // 29
 };
-RED4EXT_ASSERT_SIZE(TrafficNullAreaDynamicBlockade, 0x28);
+RED4EXT_ASSERT_SIZE(TrafficNullAreaDynamicBlockade, 0x30);
 } // namespace world
 using worldTrafficNullAreaDynamicBlockade = world::TrafficNullAreaDynamicBlockade;
 } // namespace RED4ext

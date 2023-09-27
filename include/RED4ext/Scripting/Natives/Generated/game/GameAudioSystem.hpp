@@ -17,9 +17,9 @@ struct GameAudioSystem : game::IGameAudioSystem
     static constexpr const char* NAME = "gameGameAudioSystem";
     static constexpr const char* ALIAS = "AudioSystem";
 
-    uint8_t unk48[0x3E0 - 0x48]; // 48
+    uint8_t unk48[0x420 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GameAudioSystem, 0x3E0);
+RED4EXT_ASSERT_SIZE(GameAudioSystem, 0x420);
 } // namespace game
 using gameGameAudioSystem = game::GameAudioSystem;
 using AudioSystem = game::GameAudioSystem;

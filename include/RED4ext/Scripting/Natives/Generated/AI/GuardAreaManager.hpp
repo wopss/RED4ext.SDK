@@ -17,9 +17,9 @@ struct GuardAreaManager : AI::IGuardAreaManager
     static constexpr const char* NAME = "AIGuardAreaManager";
     static constexpr const char* ALIAS = "RestrictMovementAreaManager";
 
-    uint8_t unk48[0x160 - 0x48]; // 48
+    uint8_t unk48[0x1C8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GuardAreaManager, 0x160);
+RED4EXT_ASSERT_SIZE(GuardAreaManager, 0x1C8);
 } // namespace AI
 using AIGuardAreaManager = AI::GuardAreaManager;
 using RestrictMovementAreaManager = AI::GuardAreaManager;

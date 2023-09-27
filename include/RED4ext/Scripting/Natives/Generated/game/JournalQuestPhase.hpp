@@ -18,9 +18,9 @@ struct JournalQuestPhase : game::JournalContainerEntry
     static constexpr const char* NAME = "gameJournalQuestPhase";
     static constexpr const char* ALIAS = "JournalQuestPhase";
 
-    NodeRef locationPrefabRef; // 78
+    NodeRef locationPrefabRef; // 88
 };
-RED4EXT_ASSERT_SIZE(JournalQuestPhase, 0x80);
+RED4EXT_ASSERT_SIZE(JournalQuestPhase, 0x90);
 } // namespace game
 using gameJournalQuestPhase = game::JournalQuestPhase;
 using JournalQuestPhase = game::JournalQuestPhase;

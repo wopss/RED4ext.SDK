@@ -17,9 +17,9 @@ struct AISubActionSetItemAsTarget_Record : game::data::AISubActionSetTargetByTag
     static constexpr const char* NAME = "gamedataAISubActionSetItemAsTarget_Record";
     static constexpr const char* ALIAS = "AISubActionSetItemAsTarget_Record";
 
-    uint8_t unk70[0x78 - 0x70]; // 70
+    uint8_t unkD0[0xE8 - 0xD0]; // D0
 };
-RED4EXT_ASSERT_SIZE(AISubActionSetItemAsTarget_Record, 0x78);
+RED4EXT_ASSERT_SIZE(AISubActionSetItemAsTarget_Record, 0xE8);
 } // namespace game::data
 using gamedataAISubActionSetItemAsTarget_Record = game::data::AISubActionSetItemAsTarget_Record;
 using AISubActionSetItemAsTarget_Record = game::data::AISubActionSetItemAsTarget_Record;

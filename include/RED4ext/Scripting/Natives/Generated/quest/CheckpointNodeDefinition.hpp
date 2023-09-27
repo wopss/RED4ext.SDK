@@ -23,7 +23,8 @@ struct CheckpointNodeDefinition : quest::SignalStoppingNodeDefinition
     bool ignoreSaveLocks; // 49
     bool pointOfNoReturn; // 4A
     bool endGameSave; // 4B
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    bool retryOnFailure; // 4C
+    uint8_t unk4D[0x50 - 0x4D]; // 4D
     DynArray<TweakDBID> additionalEndGameRewardsTweak; // 50
     CString debugString; // 60
 };

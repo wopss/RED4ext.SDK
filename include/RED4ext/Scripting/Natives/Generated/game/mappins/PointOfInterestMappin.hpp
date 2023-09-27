@@ -17,9 +17,9 @@ struct PointOfInterestMappin : game::mappins::IMappin
     static constexpr const char* NAME = "gamemappinsPointOfInterestMappin";
     static constexpr const char* ALIAS = "PointOfInterestMappin";
 
-    uint8_t unk88[0xF8 - 0x88]; // 88
+    uint8_t unk88[0x100 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(PointOfInterestMappin, 0xF8);
+RED4EXT_ASSERT_SIZE(PointOfInterestMappin, 0x100);
 } // namespace game::mappins
 using gamemappinsPointOfInterestMappin = game::mappins::PointOfInterestMappin;
 using PointOfInterestMappin = game::mappins::PointOfInterestMappin;

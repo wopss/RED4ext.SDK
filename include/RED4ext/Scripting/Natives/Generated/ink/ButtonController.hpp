@@ -11,31 +11,31 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/ButtonProgressChangedCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/ButtonSelectionCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/ButtonStateChangeCallback.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ink/WidgetLogicController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/DiscreteNavigationController.hpp>
 
 namespace RED4ext
 {
 namespace ink
 {
-struct ButtonController : ink::WidgetLogicController
+struct ButtonController : ink::DiscreteNavigationController
 {
     static constexpr const char* NAME = "inkButtonController";
     static constexpr const char* ALIAS = NAME;
 
-    ink::ButtonClickCallback ButtonClick; // 78
-    ink::ButtonHoldCompleteCallback ButtonHoldComplete; // B0
-    ink::ButtonStateChangeCallback ButtonStateChanged; // E8
-    ink::ButtonProgressChangedCallback ButtonHoldProgressChanged; // 120
-    ink::ButtonSelectionCallback ButtonSelectionChanged; // 158
-    uint8_t unk190[0x19C - 0x190]; // 190
-    bool selectable; // 19C
-    bool selected; // 19D
-    uint8_t unk19E[0x1A0 - 0x19E]; // 19E
-    bool canHold; // 1A0
-    bool autoUpdateWidgetState; // 1A1
-    uint8_t unk1A2[0x1F8 - 0x1A2]; // 1A2
+    ink::ButtonClickCallback ButtonClick; // C0
+    ink::ButtonHoldCompleteCallback ButtonHoldComplete; // F8
+    ink::ButtonStateChangeCallback ButtonStateChanged; // 130
+    ink::ButtonProgressChangedCallback ButtonHoldProgressChanged; // 168
+    ink::ButtonSelectionCallback ButtonSelectionChanged; // 1A0
+    uint8_t unk1D8[0x1E4 - 0x1D8]; // 1D8
+    bool selectable; // 1E4
+    bool selected; // 1E5
+    uint8_t unk1E6[0x1E8 - 0x1E6]; // 1E6
+    bool canHold; // 1E8
+    bool autoUpdateWidgetState; // 1E9
+    uint8_t unk1EA[0x240 - 0x1EA]; // 1EA
 };
-RED4EXT_ASSERT_SIZE(ButtonController, 0x1F8);
+RED4EXT_ASSERT_SIZE(ButtonController, 0x240);
 } // namespace ink
 using inkButtonController = ink::ButtonController;
 } // namespace RED4ext

@@ -25,19 +25,37 @@ struct JiraIssueFieldsResult
     CString issuetype; // 60
     CString priority; // 80
     CString flagPosition; // A0
-    CString cameraLocation; // C0
+    CString customfield_10013; // C0
     CString customfield_18373; // E0
     CString customfield_13009; // 100
     CString customfield_10505; // 120
-    uint8_t unk140[0x160 - 0x140]; // 140
-    CString assignee; // 160
-    CString customfield_25500; // 180
-    DynArray<CString> labels; // 1A0
-    DynArray<tools::JiraAttachment> attachment; // 1B0
-    DynArray<CString> customfield_15306; // 1C0
-    DynArray<CString> fixVersions; // 1D0
+    CString customfield_29900; // 140
+    CString customfield_18006; // 160
+    CString assignee; // 180
+    CString customfield_10006; // 1A0
+    CString customfield_25500; // 1C0
+    CString labels; // 1E0
+    DynArray<tools::JiraAttachment> attachments; // 200
+    CString customfield_15306; // 210
+    CString fixVersions; // 230
+    CString versions; // 250
+    CString customfield_10002; // 270
+    CString customfield_10005; // 290
+    CString customfield_24700; // 2B0
+    CString customfield_10606; // 2D0
+    CString customfield_33701; // 2F0
+    CString customfield_10503; // 310
+    CString customfield_10502; // 330
+    CString customfield_34100; // 350
+    CString customfield_17400; // 370
+    CString customfield_15808; // 390
+    CString customfield_34718; // 3B0
+    CString customfield_34706; // 3D0
+    CString customfield_10603; // 3F0
+    CString customfield_36106; // 410
+    CString components; // 430
 };
-RED4EXT_ASSERT_SIZE(JiraIssueFieldsResult, 0x1E0);
+RED4EXT_ASSERT_SIZE(JiraIssueFieldsResult, 0x450);
 } // namespace tools
 using toolsJiraIssueFieldsResult = tools::JiraIssueFieldsResult;
 } // namespace RED4ext

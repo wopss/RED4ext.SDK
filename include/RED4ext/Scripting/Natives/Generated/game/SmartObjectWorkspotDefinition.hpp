@@ -20,9 +20,9 @@ struct SmartObjectWorkspotDefinition : game::SmartObjectDefinition
     static constexpr const char* NAME = "gameSmartObjectWorkspotDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    Ref<work::WorkspotResource> workspotTemplate; // 78
+    Ref<work::WorkspotResource> workspotTemplate; // 80
 };
-RED4EXT_ASSERT_SIZE(SmartObjectWorkspotDefinition, 0x90);
+RED4EXT_ASSERT_SIZE(SmartObjectWorkspotDefinition, 0x98);
 } // namespace game
 using gameSmartObjectWorkspotDefinition = game::SmartObjectWorkspotDefinition;
 } // namespace RED4ext

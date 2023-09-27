@@ -17,9 +17,9 @@ struct Effector : IScriptable
     static constexpr const char* NAME = "gameEffector";
     static constexpr const char* ALIAS = "Effector";
 
-    uint8_t unk40[0xA0 - 0x40]; // 40
+    uint8_t unk40[0xA8 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(Effector, 0xA0);
+RED4EXT_ASSERT_SIZE(Effector, 0xA8);
 } // namespace game
 using gameEffector = game::Effector;
 using Effector = game::Effector;

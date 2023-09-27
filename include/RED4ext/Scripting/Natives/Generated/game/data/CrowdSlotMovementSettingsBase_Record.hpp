@@ -17,9 +17,9 @@ struct CrowdSlotMovementSettingsBase_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataCrowdSlotMovementSettingsBase_Record";
     static constexpr const char* ALIAS = "CrowdSlotMovementSettingsBase_Record";
 
-    uint8_t unk48[0xE0 - 0x48]; // 48
+    uint8_t unk48[0x2A0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CrowdSlotMovementSettingsBase_Record, 0xE0);
+RED4EXT_ASSERT_SIZE(CrowdSlotMovementSettingsBase_Record, 0x2A0);
 } // namespace game::data
 using gamedataCrowdSlotMovementSettingsBase_Record = game::data::CrowdSlotMovementSettingsBase_Record;
 using CrowdSlotMovementSettingsBase_Record = game::data::CrowdSlotMovementSettingsBase_Record;

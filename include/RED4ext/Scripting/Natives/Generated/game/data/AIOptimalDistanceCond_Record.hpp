@@ -17,9 +17,9 @@ struct AIOptimalDistanceCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIOptimalDistanceCond_Record";
     static constexpr const char* ALIAS = "AIOptimalDistanceCond_Record";
 
-    uint8_t unk50[0x70 - 0x50]; // 50
+    uint8_t unk58[0xD0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIOptimalDistanceCond_Record, 0x70);
+RED4EXT_ASSERT_SIZE(AIOptimalDistanceCond_Record, 0xD0);
 } // namespace game::data
 using gamedataAIOptimalDistanceCond_Record = game::data::AIOptimalDistanceCond_Record;
 using AIOptimalDistanceCond_Record = game::data::AIOptimalDistanceCond_Record;

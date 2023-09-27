@@ -30,22 +30,23 @@ struct AnimSet : CResource
     DynArray<anim::AnimDataChunk> animationDataChunks; // 50
     uint8_t unk60[0x68 - 0x60]; // 60
     DataBuffer fallbackAnimDataBuffer; // 68
-    uint8_t unk90[0xA0 - 0x90]; // 90
-    DynArray<anim::AnimFallbackFrameDesc> fallbackAnimFrameDescs; // A0
-    uint8_t unkB0[0xC0 - 0xB0]; // B0
-    DynArray<uint16_t> fallbackDataAddresses; // C0
-    DynArray<uint8_t> fallbackAnimDescIndexes; // D0
-    DynArray<uint8_t> fallbackDataAddressIndexes; // E0
-    uint16_t fallbackNumPositionData; // F0
-    uint16_t fallbackNumRotationData; // F2
-    uint8_t unkF4[0x128 - 0xF4]; // F4
-    Ref<anim::Rig> rig; // 128
-    red::TagList tags; // 140
-    uint8_t unk150[0x1D8 - 0x150]; // 150
-    uint32_t version; // 1D8
-    uint8_t unk1DC[0x1E0 - 0x1DC]; // 1DC
+    uint8_t unk90[0xA8 - 0x90]; // 90
+    DynArray<anim::AnimFallbackFrameDesc> fallbackAnimFrameDescs; // A8
+    uint8_t unkB8[0xC8 - 0xB8]; // B8
+    DynArray<uint16_t> fallbackDataAddresses; // C8
+    DynArray<uint8_t> fallbackAnimDescIndexes; // D8
+    DynArray<uint8_t> fallbackDataAddressIndexes; // E8
+    uint16_t fallbackNumPositionData; // F8
+    uint16_t fallbackNumRotationData; // FA
+    uint16_t fallbackNumFloatTrackData; // FC
+    uint8_t unkFE[0x130 - 0xFE]; // FE
+    Ref<anim::Rig> rig; // 130
+    red::TagList tags; // 148
+    uint8_t unk158[0x1E8 - 0x158]; // 158
+    uint32_t version; // 1E8
+    uint8_t unk1EC[0x1F0 - 0x1EC]; // 1EC
 };
-RED4EXT_ASSERT_SIZE(AnimSet, 0x1E0);
+RED4EXT_ASSERT_SIZE(AnimSet, 0x1F0);
 } // namespace anim
 using animAnimSet = anim::AnimSet;
 } // namespace RED4ext

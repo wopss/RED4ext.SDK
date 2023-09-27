@@ -17,9 +17,9 @@ struct PlayerObstacleSystem : IScriptable
     static constexpr const char* NAME = "gamePlayerObstacleSystem";
     static constexpr const char* ALIAS = "PlayerObstacleSystem";
 
-    uint8_t unk40[0x20E0 - 0x40]; // 40
+    uint8_t unk40[0x2710 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(PlayerObstacleSystem, 0x20E0);
+RED4EXT_ASSERT_SIZE(PlayerObstacleSystem, 0x2710);
 } // namespace game
 using gamePlayerObstacleSystem = game::PlayerObstacleSystem;
 using PlayerObstacleSystem = game::PlayerObstacleSystem;

@@ -84,6 +84,10 @@ RED4EXT_INLINE void RED4ext::game::IGameSystem::OnStreamingWorldLoaded(RED4ext::
     RED4EXT_UNUSED_PARAMETER(aJobGroup);
 }
 
+RED4EXT_INLINE void RED4ext::game::IGameSystem::sub_180()
+{
+}
+
 RED4EXT_INLINE void RED4ext::game::IGameSystem::sub_188()
 {
 }

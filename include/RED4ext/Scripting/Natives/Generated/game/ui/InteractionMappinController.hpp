@@ -25,9 +25,9 @@ struct InteractionMappinController : game::ui::MappinBaseController
     uint8_t unk290[0x2A0 - 0x290]; // 290
     bool isCurrentlyClamped; // 2A0
     bool isUnderCrosshair; // 2A1
-    uint8_t unk2A2[0x2B0 - 0x2A2]; // 2A2
+    uint8_t unk2A2[0x2C0 - 0x2A2]; // 2A2
 };
-RED4EXT_ASSERT_SIZE(InteractionMappinController, 0x2B0);
+RED4EXT_ASSERT_SIZE(InteractionMappinController, 0x2C0);
 } // namespace game::ui
 using gameuiInteractionMappinController = game::ui::InteractionMappinController;
 using BaseInteractionMappinController = game::ui::InteractionMappinController;

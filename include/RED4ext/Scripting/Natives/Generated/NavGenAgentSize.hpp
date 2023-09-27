@@ -10,6 +10,8 @@ namespace RED4ext
 enum class NavGenAgentSize : uint32_t
 {
     Human = 0,
+    Vehicle = 1,
+    AgentSize_Count = 2,
 };
 } // namespace RED4ext
 

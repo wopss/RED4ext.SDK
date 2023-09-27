@@ -18,7 +18,8 @@ struct EffectObjectFilter_OnlyNearest_Pierce : game::EffectObjectFilter_OnlyNear
     static constexpr const char* ALIAS = NAME;
 
     bool alwaysApplyFullWeaponCharge; // 48
-    uint8_t unk49[0x50 - 0x49]; // 49
+    bool includePierced; // 49
+    uint8_t unk4A[0x50 - 0x4A]; // 4A
 };
 RED4EXT_ASSERT_SIZE(EffectObjectFilter_OnlyNearest_Pierce, 0x50);
 } // namespace game

@@ -17,9 +17,9 @@ struct AdvertisementWidgetComponentWrapper : ink::IAdvertisementWidgetComponentW
     static constexpr const char* NAME = "worlduiAdvertisementWidgetComponentWrapper";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk08[0x50 - 0x8]; // 8
+    uint8_t unk10[0x60 - 0x10]; // 10
 };
-RED4EXT_ASSERT_SIZE(AdvertisementWidgetComponentWrapper, 0x50);
+RED4EXT_ASSERT_SIZE(AdvertisementWidgetComponentWrapper, 0x60);
 } // namespace world::ui
 using worlduiAdvertisementWidgetComponentWrapper = world::ui::AdvertisementWidgetComponentWrapper;
 } // namespace RED4ext

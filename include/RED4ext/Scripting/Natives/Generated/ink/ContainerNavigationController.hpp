@@ -21,9 +21,9 @@ struct ContainerNavigationController : ink::DiscreteNavigationController
 
     DynArray<ink::NavigationOverrideEntry> overrideEntries; // C0
     bool useGlobalInput; // D0
-    uint8_t unkD1[0xF8 - 0xD1]; // D1
+    uint8_t unkD1[0x130 - 0xD1]; // D1
 };
-RED4EXT_ASSERT_SIZE(ContainerNavigationController, 0xF8);
+RED4EXT_ASSERT_SIZE(ContainerNavigationController, 0x130);
 } // namespace ink
 using inkContainerNavigationController = ink::ContainerNavigationController;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct VirtualUniformGridController : ink::VirtualUniformListController
     static constexpr const char* NAME = "inkVirtualUniformGridController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk218[0x220 - 0x218]; // 218
+    uint8_t unk230[0x238 - 0x230]; // 230
 };
-RED4EXT_ASSERT_SIZE(VirtualUniformGridController, 0x220);
+RED4EXT_ASSERT_SIZE(VirtualUniformGridController, 0x238);
 } // namespace ink
 using inkVirtualUniformGridController = ink::VirtualUniformGridController;
 } // namespace RED4ext

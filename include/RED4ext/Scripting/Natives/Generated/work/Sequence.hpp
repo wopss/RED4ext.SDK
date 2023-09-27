@@ -18,12 +18,12 @@ struct Sequence : work::IContainerEntry
     static constexpr const char* NAME = "workSequence";
     static constexpr const char* ALIAS = NAME;
 
-    bool previousLoopInfinitely; // 50
-    bool loopInfinitely; // 51
-    uint8_t unk52[0x54 - 0x52]; // 52
-    game::data::WorkspotCategory category; // 54
+    bool previousLoopInfinitely; // 58
+    bool loopInfinitely; // 59
+    uint8_t unk5A[0x5C - 0x5A]; // 5A
+    game::data::WorkspotCategory category; // 5C
 };
-RED4EXT_ASSERT_SIZE(Sequence, 0x58);
+RED4EXT_ASSERT_SIZE(Sequence, 0x60);
 } // namespace work
 using workSequence = work::Sequence;
 } // namespace RED4ext

@@ -20,7 +20,7 @@ struct Context
     uint32_t ModalPopup : 1; // 7
     uint32_t RadialWheel : 1; // 8
     uint32_t VehicleRace : 1; // 9
-    uint32_t b10 : 1; // 10
+    uint32_t Berserk : 1; // 10
     uint32_t b11 : 1; // 11
     uint32_t b12 : 1; // 12
     uint32_t b13 : 1; // 13

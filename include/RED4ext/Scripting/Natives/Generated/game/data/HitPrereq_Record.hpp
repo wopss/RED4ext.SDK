@@ -17,9 +17,9 @@ struct HitPrereq_Record : game::data::IPrereq_Record
     static constexpr const char* NAME = "gamedataHitPrereq_Record";
     static constexpr const char* ALIAS = "HitPrereq_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0xA0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(HitPrereq_Record, 0x60);
+RED4EXT_ASSERT_SIZE(HitPrereq_Record, 0xA0);
 } // namespace game::data
 using gamedataHitPrereq_Record = game::data::HitPrereq_Record;
 using HitPrereq_Record = game::data::HitPrereq_Record;

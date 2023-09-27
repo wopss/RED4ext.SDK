@@ -17,9 +17,9 @@ struct DelaySystemTickOnEventStruct : game::DelaySystemTickStruct
     static constexpr const char* NAME = "gameDelaySystemTickOnEventStruct";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk38[0x58 - 0x38]; // 38
+    uint8_t unk40[0x60 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(DelaySystemTickOnEventStruct, 0x58);
+RED4EXT_ASSERT_SIZE(DelaySystemTickOnEventStruct, 0x60);
 } // namespace game
 using gameDelaySystemTickOnEventStruct = game::DelaySystemTickOnEventStruct;
 } // namespace RED4ext

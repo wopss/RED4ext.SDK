@@ -17,9 +17,9 @@ struct ApplyLightPresetEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataApplyLightPresetEffector_Record";
     static constexpr const char* ALIAS = "ApplyLightPresetEffector_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk88[0x98 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(ApplyLightPresetEffector_Record, 0x60);
+RED4EXT_ASSERT_SIZE(ApplyLightPresetEffector_Record, 0x98);
 } // namespace game::data
 using gamedataApplyLightPresetEffector_Record = game::data::ApplyLightPresetEffector_Record;
 using ApplyLightPresetEffector_Record = game::data::ApplyLightPresetEffector_Record;

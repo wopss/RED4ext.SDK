@@ -21,7 +21,8 @@ struct AnimFeature_EquipUnequipItem : anim::AnimFeature
     int32_t itemState; // 44
     int32_t itemType; // 48
     bool firstEquip; // 4C
-    uint8_t unk4D[0x50 - 0x4D]; // 4D
+    bool swappingWeapons; // 4D
+    uint8_t unk4E[0x50 - 0x4E]; // 4E
 };
 RED4EXT_ASSERT_SIZE(AnimFeature_EquipUnequipItem, 0x50);
 } // namespace anim

@@ -17,9 +17,9 @@ struct AISpatialCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAISpatialCond_Record";
     static constexpr const char* ALIAS = "AISpatialCond_Record";
 
-    uint8_t unk50[0x70 - 0x50]; // 50
+    uint8_t unk58[0xE0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AISpatialCond_Record, 0x70);
+RED4EXT_ASSERT_SIZE(AISpatialCond_Record, 0xE0);
 } // namespace game::data
 using gamedataAISpatialCond_Record = game::data::AISpatialCond_Record;
 using AISpatialCond_Record = game::data::AISpatialCond_Record;

@@ -21,10 +21,10 @@ struct JournalContainerEntry : game::JournalEntry
     static constexpr const char* NAME = "gameJournalContainerEntry";
     static constexpr const char* ALIAS = "JournalContainerEntry";
 
-    uint8_t unk60[0x68 - 0x60]; // 60
-    DynArray<Handle<game::JournalEntry>> entries; // 68
+    uint8_t unk70[0x78 - 0x70]; // 70
+    DynArray<Handle<game::JournalEntry>> entries; // 78
 };
-RED4EXT_ASSERT_SIZE(JournalContainerEntry, 0x78);
+RED4EXT_ASSERT_SIZE(JournalContainerEntry, 0x88);
 } // namespace game
 using gameJournalContainerEntry = game::JournalContainerEntry;
 using JournalContainerEntry = game::JournalContainerEntry;

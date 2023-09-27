@@ -19,13 +19,13 @@ struct JournalTarot : game::JournalEntry
     static constexpr const char* NAME = "gameJournalTarot";
     static constexpr const char* ALIAS = "JournalTarot";
 
-    int32_t index; // 60
-    uint8_t unk64[0x68 - 0x64]; // 64
-    LocalizationString name; // 68
-    LocalizationString description; // 90
-    CName imagePart; // B8
+    int32_t index; // 70
+    uint8_t unk74[0x78 - 0x74]; // 74
+    LocalizationString name; // 78
+    LocalizationString description; // A0
+    CName imagePart; // C8
 };
-RED4EXT_ASSERT_SIZE(JournalTarot, 0xC0);
+RED4EXT_ASSERT_SIZE(JournalTarot, 0xD0);
 } // namespace game
 using gameJournalTarot = game::JournalTarot;
 using JournalTarot = game::JournalTarot;

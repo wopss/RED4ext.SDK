@@ -18,13 +18,13 @@ struct QuestMappinController : game::ui::InteractionMappinController
     static constexpr const char* NAME = "gameuiQuestMappinController";
     static constexpr const char* ALIAS = "BaseQuestMappinController";
 
-    uint8_t unk2B0[0x2C8 - 0x2B0]; // 2B0
-    bool nameplateVisible; // 2C8
-    uint8_t unk2C9[0x2D0 - 0x2C9]; // 2C9
-    ink::TextWidgetReference distanceText; // 2D0
-    ink::TextWidgetReference displayName; // 2E8
+    uint8_t unk2C0[0x2D8 - 0x2C0]; // 2C0
+    bool nameplateVisible; // 2D8
+    uint8_t unk2D9[0x2E0 - 0x2D9]; // 2D9
+    ink::TextWidgetReference distanceText; // 2E0
+    ink::TextWidgetReference displayName; // 2F8
 };
-RED4EXT_ASSERT_SIZE(QuestMappinController, 0x300);
+RED4EXT_ASSERT_SIZE(QuestMappinController, 0x310);
 } // namespace game::ui
 using gameuiQuestMappinController = game::ui::QuestMappinController;
 using BaseQuestMappinController = game::ui::QuestMappinController;

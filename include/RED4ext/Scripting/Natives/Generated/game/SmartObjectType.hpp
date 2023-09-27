@@ -34,6 +34,8 @@ enum class SmartObjectType : uint32_t
     ThrusterJumpUp = 21,
     ThrusterJumpDown = 22,
     Climb400cmDown = 23,
+    Jump4mDown = 24,
+    VaultJump7mDown = 25,
 };
 } // namespace game
 using gameSmartObjectType = game::SmartObjectType;

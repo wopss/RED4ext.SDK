@@ -17,9 +17,9 @@ struct Transgression_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataTransgression_Record";
     static constexpr const char* ALIAS = "Transgression_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Transgression_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Transgression_Record, 0x70);
 } // namespace game::data
 using gamedataTransgression_Record = game::data::Transgression_Record;
 using Transgression_Record = game::data::Transgression_Record;

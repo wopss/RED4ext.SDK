@@ -17,9 +17,9 @@ struct AISubActionMeleeAttackAttemptEvent_Record : game::data::AISubAction_Recor
     static constexpr const char* NAME = "gamedataAISubActionMeleeAttackAttemptEvent_Record";
     static constexpr const char* ALIAS = "AISubActionMeleeAttackAttemptEvent_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionMeleeAttackAttemptEvent_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionMeleeAttackAttemptEvent_Record, 0x60);
 } // namespace game::data
 using gamedataAISubActionMeleeAttackAttemptEvent_Record = game::data::AISubActionMeleeAttackAttemptEvent_Record;
 using AISubActionMeleeAttackAttemptEvent_Record = game::data::AISubActionMeleeAttackAttemptEvent_Record;

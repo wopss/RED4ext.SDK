@@ -10,6 +10,7 @@
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/AttackType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/TriggerMode.hpp>
 
 namespace RED4ext
 {
@@ -34,10 +35,12 @@ struct AttackData : IScriptable
     Vector4 attackPosition; // 90
     float weaponCharge; // A0
     int32_t numRicochetBounces; // A4
-    float attackTime; // A8
-    uint8_t unkAC[0xC0 - 0xAC]; // AC
+    int32_t numAttackSpread; // A8
+    float attackTime; // AC
+    game::data::TriggerMode triggerMode; // B0
+    uint8_t unkB4[0xD0 - 0xB4]; // B4
 };
-RED4EXT_ASSERT_SIZE(AttackData, 0xC0);
+RED4EXT_ASSERT_SIZE(AttackData, 0xD0);
 } // namespace game::damage
 using gamedamageAttackData = game::damage::AttackData;
 using AttackData = game::damage::AttackData;

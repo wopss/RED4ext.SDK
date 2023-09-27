@@ -17,9 +17,9 @@ struct VisionGroup_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVisionGroup_Record";
     static constexpr const char* ALIAS = "VisionGroup_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VisionGroup_Record, 0x50);
+RED4EXT_ASSERT_SIZE(VisionGroup_Record, 0x60);
 } // namespace game::data
 using gamedataVisionGroup_Record = game::data::VisionGroup_Record;
 using VisionGroup_Record = game::data::VisionGroup_Record;

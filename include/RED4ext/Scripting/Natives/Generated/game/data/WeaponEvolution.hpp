@@ -16,8 +16,9 @@ enum class WeaponEvolution : uint32_t
     Power = 3,
     Smart = 4,
     Tech = 5,
-    Count = 6,
-    Invalid = 7,
+    Throwable = 6,
+    Count = 7,
+    Invalid = 8,
 };
 } // namespace game::data
 using gamedataWeaponEvolution = game::data::WeaponEvolution;

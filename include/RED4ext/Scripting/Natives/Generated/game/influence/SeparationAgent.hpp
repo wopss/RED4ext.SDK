@@ -17,11 +17,11 @@ struct SeparationAgent : game::influence::IAgent
     static constexpr const char* NAME = "gameinfluenceSeparationAgent";
     static constexpr const char* ALIAS = "InfluenceSeparationAgent";
 
-    uint8_t unk08[0x258 - 0x8]; // 8
-    float radius; // 258
-    uint8_t unk25C[0x2A0 - 0x25C]; // 25C
+    uint8_t unk08[0x268 - 0x8]; // 8
+    float radius; // 268
+    uint8_t unk26C[0x2C0 - 0x26C]; // 26C
 };
-RED4EXT_ASSERT_SIZE(SeparationAgent, 0x2A0);
+RED4EXT_ASSERT_SIZE(SeparationAgent, 0x2C0);
 } // namespace game::influence
 using gameinfluenceSeparationAgent = game::influence::SeparationAgent;
 using InfluenceSeparationAgent = game::influence::SeparationAgent;

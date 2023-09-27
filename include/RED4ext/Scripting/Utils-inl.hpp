@@ -11,8 +11,14 @@
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut)
+{
+    StackArgs_t args;
+    return ExecuteFunction(aInstance, aFunc, aOut, args);
+}
+
 RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
-                                             StackArgs_t aArgs)
+                                             StackArgs_t& aArgs)
 {
     CStackType result;
     if (aFunc->returnType)
@@ -43,16 +49,16 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
     return aFunc->Execute(&stack);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t& aArgs)
 {
     auto engine = CGameEngine::Get();
-    auto game = engine->framework->gameInstance;
+    auto gameInstance = engine->framework->gameInstance;
 
-    Handle<IScriptable> instance(game->GetSystem(aContext));
+    Handle<IScriptable> instance(gameInstance->GetSystem(aContext));
     return ExecuteFunction(instance, aFunc, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t& aArgs)
 {
     auto func = aContext->GetFunction(aFunc);
     if (!func)
@@ -63,7 +69,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(CClass* aContext, CName aFunc, void
     return ExecuteFunction(aContext, func, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t& aArgs)
 {
     auto rtti = CRTTISystem::Get();
     auto type = rtti->GetClass(aContext);
@@ -75,7 +81,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(CName aContext, CName aFunc, void* 
     return ExecuteFunction(type, aFunc, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t& aArgs)
 {
     auto rtti = CRTTISystem::Get();
     auto func = rtti->GetFunction(aFunc);
@@ -87,7 +93,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CClass* aContext, CName aFunc
     return ExecuteFunction(aContext, func, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, void* aOut, StackArgs_t& aArgs)
 {
     auto rtti = CRTTISystem::Get();
     auto type = rtti->GetClass(aContext);
@@ -99,7 +105,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aContext, CName aFunc, 
     return ExecuteGlobalFunction(type, aFunc, aOut, aArgs);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, StackArgs_t aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteGlobalFunction(CName aFunc, void* aOut, StackArgs_t& aArgs)
 {
     return ExecuteGlobalFunction("cpPlayerSystem", aFunc, aOut, aArgs);
 }

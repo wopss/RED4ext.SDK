@@ -22,10 +22,11 @@ struct LookAtDrivenTurnsNode : quest::SignalStoppingNodeDefinition
     quest::LookAtDrivenTurnsMode mode; // 48
     uint8_t unk4C[0x50 - 0x4C]; // 4C
     game::EntityReference puppetRef; // 50
-    bool canLookAtDrivenTurnsInterruptGesture; // 88
-    uint8_t unk89[0x90 - 0x89]; // 89
+    game::EntityReference targetRef; // 88
+    bool canLookAtDrivenTurnsInterruptGesture; // C0
+    uint8_t unkC1[0xC8 - 0xC1]; // C1
 };
-RED4EXT_ASSERT_SIZE(LookAtDrivenTurnsNode, 0x90);
+RED4EXT_ASSERT_SIZE(LookAtDrivenTurnsNode, 0xC8);
 } // namespace quest
 using questLookAtDrivenTurnsNode = quest::LookAtDrivenTurnsNode;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct ScriptableSystem : game::IScriptableSystem
     static constexpr const char* NAME = "gameScriptableSystem";
     static constexpr const char* ALIAS = "ScriptableSystem";
 
-    uint8_t unk40[0x2D8 - 0x40]; // 40
+    uint8_t unk40[0x530 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(ScriptableSystem, 0x2D8);
+RED4EXT_ASSERT_SIZE(ScriptableSystem, 0x530);
 } // namespace game
 using gameScriptableSystem = game::ScriptableSystem;
 using ScriptableSystem = game::ScriptableSystem;

@@ -40,9 +40,9 @@ struct ColliderComponent : ent::IPlacedComponent
     Transform comOffset; // 170
     Handle<physics::FilterData> filterData; // 190
     TrafficGenDynamicTrafficSetting dynamicTrafficSetting; // 1A0
-    uint8_t unk1A2[0x1D0 - 0x1A2]; // 1A2
+    uint8_t unk1A2[0x1C0 - 0x1A2]; // 1A2
 };
-RED4EXT_ASSERT_SIZE(ColliderComponent, 0x1D0);
+RED4EXT_ASSERT_SIZE(ColliderComponent, 0x1C0);
 } // namespace ent
 using entColliderComponent = ent::ColliderComponent;
 using ColliderComponent = ent::ColliderComponent;

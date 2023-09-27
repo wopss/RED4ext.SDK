@@ -9,6 +9,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/Object.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/ContainerType.hpp>
 
 namespace RED4ext
 {
@@ -24,10 +25,12 @@ struct LootContainerBase : game::Object
     uint8_t unk251[0x254 - 0x251]; // 251
     TweakDBID contentAssignment; // 254
     bool isIllegal; // 25C
-    bool wasLootInitalized; // 25D
-    uint8_t unk25E[0x260 - 0x25E]; // 25E
+    uint8_t unk25D[0x260 - 0x25D]; // 25D
+    game::data::ContainerType containerType; // 260
+    bool wasLootInitalized; // 264
+    uint8_t unk265[0x268 - 0x265]; // 265
 };
-RED4EXT_ASSERT_SIZE(LootContainerBase, 0x260);
+RED4EXT_ASSERT_SIZE(LootContainerBase, 0x268);
 } // namespace game
 using gameLootContainerBase = game::LootContainerBase;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct ProgressionBuild_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataProgressionBuild_Record";
     static constexpr const char* ALIAS = "ProgressionBuild_Record";
 
-    uint8_t unk48[0x88 - 0x48]; // 48
+    uint8_t unk48[0x148 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ProgressionBuild_Record, 0x88);
+RED4EXT_ASSERT_SIZE(ProgressionBuild_Record, 0x148);
 } // namespace game::data
 using gamedataProgressionBuild_Record = game::data::ProgressionBuild_Record;
 using ProgressionBuild_Record = game::data::ProgressionBuild_Record;

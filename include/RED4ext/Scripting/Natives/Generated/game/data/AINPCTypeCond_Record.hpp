@@ -17,9 +17,9 @@ struct AINPCTypeCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAINPCTypeCond_Record";
     static constexpr const char* ALIAS = "AINPCTypeCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x98 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AINPCTypeCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AINPCTypeCond_Record, 0x98);
 } // namespace game::data
 using gamedataAINPCTypeCond_Record = game::data::AINPCTypeCond_Record;
 using AINPCTypeCond_Record = game::data::AINPCTypeCond_Record;

@@ -17,7 +17,6 @@ struct ObservableUniversalRef : quest::UniversalRef
     static constexpr const char* NAME = "questObservableUniversalRef";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk70[0x78 - 0x70]; // 70
 };
 RED4EXT_ASSERT_SIZE(ObservableUniversalRef, 0x78);
 } // namespace quest

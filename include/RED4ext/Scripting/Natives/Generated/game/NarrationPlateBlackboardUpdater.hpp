@@ -17,9 +17,9 @@ struct NarrationPlateBlackboardUpdater : ISerializable
     static constexpr const char* NAME = "gameNarrationPlateBlackboardUpdater";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x50 - 0x30]; // 30
+    uint8_t unk30[0x60 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(NarrationPlateBlackboardUpdater, 0x50);
+RED4EXT_ASSERT_SIZE(NarrationPlateBlackboardUpdater, 0x60);
 } // namespace game
 using gameNarrationPlateBlackboardUpdater = game::NarrationPlateBlackboardUpdater;
 } // namespace RED4ext

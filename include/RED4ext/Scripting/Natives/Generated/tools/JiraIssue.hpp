@@ -23,7 +23,7 @@ struct JiraIssue
     CString self; // 40
     tools::JiraIssueFields fields; // 60
 };
-RED4EXT_ASSERT_SIZE(JiraIssue, 0x350);
+RED4EXT_ASSERT_SIZE(JiraIssue, 0x4B8);
 } // namespace tools
 using toolsJiraIssue = tools::JiraIssue;
 } // namespace RED4ext

@@ -26,10 +26,10 @@ struct AnimationControllerComponent : ent::IComponent
     uint8_t unk90[0xF8 - 0x90]; // 90
     Ref<anim::ActionAnimDatabase> actionAnimDatabaseRef; // F8
     anim::AnimDatabaseCollection animDatabaseCollection; // 110
-    uint8_t unk120[0x1C0 - 0x120]; // 120
-    Handle<ent::AnimationControlBinding> controlBinding; // 1C0
+    uint8_t unk120[0x1E0 - 0x120]; // 120
+    Handle<ent::AnimationControlBinding> controlBinding; // 1E0
 };
-RED4EXT_ASSERT_SIZE(AnimationControllerComponent, 0x1D0);
+RED4EXT_ASSERT_SIZE(AnimationControllerComponent, 0x1F0);
 } // namespace ent
 using entAnimationControllerComponent = ent::AnimationControllerComponent;
 using AnimationControllerComponent = ent::AnimationControllerComponent;

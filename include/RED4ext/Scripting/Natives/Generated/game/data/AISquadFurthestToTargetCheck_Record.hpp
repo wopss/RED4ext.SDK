@@ -18,7 +18,7 @@ struct AISquadFurthestToTargetCheck_Record : game::data::AISquadDistanceRelation
     static constexpr const char* ALIAS = "AISquadFurthestToTargetCheck_Record";
 
 };
-RED4EXT_ASSERT_SIZE(AISquadFurthestToTargetCheck_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AISquadFurthestToTargetCheck_Record, 0x80);
 } // namespace game::data
 using gamedataAISquadFurthestToTargetCheck_Record = game::data::AISquadFurthestToTargetCheck_Record;
 using AISquadFurthestToTargetCheck_Record = game::data::AISquadFurthestToTargetCheck_Record;

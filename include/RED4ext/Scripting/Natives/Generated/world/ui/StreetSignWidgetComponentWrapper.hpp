@@ -17,7 +17,7 @@ struct StreetSignWidgetComponentWrapper : ink::IStreetSignWidgetComponentWrapper
     static constexpr const char* NAME = "worlduiStreetSignWidgetComponentWrapper";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk08[0x60 - 0x8]; // 8
+    uint8_t unk10[0x60 - 0x10]; // 10
 };
 RED4EXT_ASSERT_SIZE(StreetSignWidgetComponentWrapper, 0x60);
 } // namespace world::ui

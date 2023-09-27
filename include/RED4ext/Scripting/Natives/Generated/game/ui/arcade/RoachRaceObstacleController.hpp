@@ -18,10 +18,10 @@ struct RoachRaceObstacleController : game::ui::arcade::ArcadeObjectController
     static constexpr const char* NAME = "gameuiarcadeRoachRaceObstacleController";
     static constexpr const char* ALIAS = NAME;
 
-    game::ui::arcade::BoundingRect collider; // F0
-    uint8_t unk120[0x138 - 0x120]; // 120
+    game::ui::arcade::BoundingRect collider; // 100
+    uint8_t unk168[0x178 - 0x168]; // 168
 };
-RED4EXT_ASSERT_SIZE(RoachRaceObstacleController, 0x138);
+RED4EXT_ASSERT_SIZE(RoachRaceObstacleController, 0x178);
 } // namespace game::ui::arcade
 using gameuiarcadeRoachRaceObstacleController = game::ui::arcade::RoachRaceObstacleController;
 } // namespace RED4ext

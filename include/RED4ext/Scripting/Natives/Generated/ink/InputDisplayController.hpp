@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/CompoundWidgetReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/InputHintHoldIndicationType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/TextWidgetReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetLibraryReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetLogicController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/WidgetReference.hpp>
@@ -25,19 +26,19 @@ struct InputDisplayController : ink::WidgetLogicController
     ink::WidgetReference iconRef; // 78
     ink::WidgetReference nameRef; // 90
     ink::WidgetReference canvasRef; // A8
-    ink::CompoundWidgetReference holdIndicatorContainerRef; // C0
-    ink::WidgetLibraryReference gamepadHoldIndicatorLibraryRef; // D8
-    ink::WidgetLibraryReference keyboardHoldIndicatorLibraryRef; // E8
-    uint8_t unkF8[0x108 - 0xF8]; // F8
-    float fixedIconHeight; // 108
-    uint8_t unk10C[0x110 - 0x10C]; // 10C
-    CName inputActionName; // 110
-    uint8_t unk118[0x132 - 0x118]; // 118
-    bool supportAnimatedHoldIndicator; // 132
-    ink::InputHintHoldIndicationType holdIndicationType; // 133
-    uint8_t unk134[0x138 - 0x134]; // 134
+    ink::TextWidgetReference iconAND; // C0
+    ink::CompoundWidgetReference holdIndicatorContainerRef; // D8
+    ink::WidgetLibraryReference gamepadHoldIndicatorLibraryRef; // F0
+    ink::WidgetLibraryReference keyboardHoldIndicatorLibraryRef; // 100
+    uint8_t unk110[0x120 - 0x110]; // 110
+    float fixedIconHeight; // 120
+    uint8_t unk124[0x128 - 0x124]; // 124
+    CName inputActionName; // 128
+    uint8_t unk130[0x14B - 0x130]; // 130
+    ink::InputHintHoldIndicationType holdIndicationType; // 14B
+    uint8_t unk14C[0x150 - 0x14C]; // 14C
 };
-RED4EXT_ASSERT_SIZE(InputDisplayController, 0x138);
+RED4EXT_ASSERT_SIZE(InputDisplayController, 0x150);
 } // namespace ink
 using inkInputDisplayController = ink::InputDisplayController;
 } // namespace RED4ext

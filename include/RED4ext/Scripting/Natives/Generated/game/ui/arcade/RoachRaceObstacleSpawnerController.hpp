@@ -17,21 +17,21 @@ struct RoachRaceObstacleSpawnerController : game::ui::arcade::ArcadeSpawnerContr
     static constexpr const char* NAME = "gameuiarcadeRoachRaceObstacleSpawnerController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkD0[0x134 - 0xD0]; // D0
-    float initialMinimumSpawnTime; // 134
-    uint8_t unk138[0x13C - 0x138]; // 138
-    float spawnRateIncreasePerCycle; // 13C
-    float doubleSpawnDelay; // 140
-    float initialDoubleSpawnChance; // 144
-    float doubleSpawnChanceIncreasePerLevel; // 148
-    uint8_t unk14C[0x160 - 0x14C]; // 14C
-    float powerupSpawnTimeDelayMultiplier; // 160
-    float carrotSpawnTime; // 164
-    uint8_t unk168[0x16C - 0x168]; // 168
-    float appleSpawnTime; // 16C
-    uint8_t unk170[0x180 - 0x170]; // 170
+    uint8_t unkD0[0x13C - 0xD0]; // D0
+    float initialMinimumSpawnTime; // 13C
+    uint8_t unk140[0x144 - 0x140]; // 140
+    float spawnRateIncreasePerCycle; // 144
+    float doubleSpawnDelay; // 148
+    float initialDoubleSpawnChance; // 14C
+    float doubleSpawnChanceIncreasePerLevel; // 150
+    uint8_t unk154[0x168 - 0x154]; // 154
+    float powerupSpawnTimeDelayMultiplier; // 168
+    float carrotSpawnTime; // 16C
+    uint8_t unk170[0x174 - 0x170]; // 170
+    float appleSpawnTime; // 174
+    uint8_t unk178[0x188 - 0x178]; // 178
 };
-RED4EXT_ASSERT_SIZE(RoachRaceObstacleSpawnerController, 0x180);
+RED4EXT_ASSERT_SIZE(RoachRaceObstacleSpawnerController, 0x188);
 } // namespace game::ui::arcade
 using gameuiarcadeRoachRaceObstacleSpawnerController = game::ui::arcade::RoachRaceObstacleSpawnerController;
 } // namespace RED4ext

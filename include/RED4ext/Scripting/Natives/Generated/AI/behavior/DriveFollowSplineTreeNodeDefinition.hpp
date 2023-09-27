@@ -38,8 +38,9 @@ struct DriveFollowSplineTreeNodeDefinition : AI::behavior::DriveTreeNodeDefiniti
     Handle<AI::ArgumentMapping> rubberBandingMaxDistance; // 130
     Handle<AI::ArgumentMapping> rubberBandingStopAndWait; // 140
     Handle<AI::ArgumentMapping> rubberBandingTeleportToCatchUp; // 150
+    Handle<AI::ArgumentMapping> audioCurvesParam; // 160
 };
-RED4EXT_ASSERT_SIZE(DriveFollowSplineTreeNodeDefinition, 0x160);
+RED4EXT_ASSERT_SIZE(DriveFollowSplineTreeNodeDefinition, 0x170);
 } // namespace AI::behavior
 using AIbehaviorDriveFollowSplineTreeNodeDefinition = AI::behavior::DriveFollowSplineTreeNodeDefinition;
 } // namespace RED4ext

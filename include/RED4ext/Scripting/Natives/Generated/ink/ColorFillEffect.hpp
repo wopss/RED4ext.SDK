@@ -17,14 +17,14 @@ struct ColorFillEffect : ink::IEffect
     static constexpr const char* NAME = "inkColorFillEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float colorR; // 68
-    float colorG; // 6C
-    float colorB; // 70
-    float colorA; // 74
-    float saturation; // 78
-    uint8_t unk7C[0x80 - 0x7C]; // 7C
+    float colorR; // 50
+    float colorG; // 54
+    float colorB; // 58
+    float colorA; // 5C
+    float saturation; // 60
+    uint8_t unk64[0x68 - 0x64]; // 64
 };
-RED4EXT_ASSERT_SIZE(ColorFillEffect, 0x80);
+RED4EXT_ASSERT_SIZE(ColorFillEffect, 0x68);
 } // namespace ink
 using inkColorFillEffect = ink::ColorFillEffect;
 } // namespace RED4ext

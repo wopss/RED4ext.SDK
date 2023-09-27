@@ -17,9 +17,9 @@ struct CombinedStatModifier_Record : game::data::StatModifier_Record
     static constexpr const char* NAME = "gamedataCombinedStatModifier_Record";
     static constexpr const char* ALIAS = "CombinedStatModifier_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(CombinedStatModifier_Record, 0x60);
+RED4EXT_ASSERT_SIZE(CombinedStatModifier_Record, 0x90);
 } // namespace game::data
 using gamedataCombinedStatModifier_Record = game::data::CombinedStatModifier_Record;
 using CombinedStatModifier_Record = game::data::CombinedStatModifier_Record;

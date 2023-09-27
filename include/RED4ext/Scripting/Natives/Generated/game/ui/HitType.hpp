@@ -15,6 +15,7 @@ enum class HitType : uint32_t
     Hit = 2,
     CriticalHit = 3,
     CriticalHit_x2 = 4,
+    Special = 5,
 };
 } // namespace game::ui
 using gameuiHitType = game::ui::HitType;

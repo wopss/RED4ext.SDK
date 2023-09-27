@@ -31,9 +31,9 @@ struct PersistentDataPS : game::ComponentPS
     Transform questEnforcedTransform; // E0
     vehicle::DestructionPSData destruction; // 100
     vehicle::AudioPSData audio; // 1A8
-    uint8_t unk1B8[0x1C0 - 0x1B8]; // 1B8
+    uint8_t unk1F8[0x220 - 0x1F8]; // 1F8
 };
-RED4EXT_ASSERT_SIZE(PersistentDataPS, 0x1C0);
+RED4EXT_ASSERT_SIZE(PersistentDataPS, 0x220);
 } // namespace vehicle
 using vehiclePersistentDataPS = vehicle::PersistentDataPS;
 } // namespace RED4ext

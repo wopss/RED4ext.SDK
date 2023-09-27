@@ -18,9 +18,9 @@ struct JournalCodexCategory : game::JournalFileEntry
     static constexpr const char* NAME = "gameJournalCodexCategory";
     static constexpr const char* ALIAS = "JournalCodexCategory";
 
-    LocalizationString categoryName; // 90
+    LocalizationString categoryName; // A0
 };
-RED4EXT_ASSERT_SIZE(JournalCodexCategory, 0xB8);
+RED4EXT_ASSERT_SIZE(JournalCodexCategory, 0xC8);
 } // namespace game
 using gameJournalCodexCategory = game::JournalCodexCategory;
 using JournalCodexCategory = game::JournalCodexCategory;

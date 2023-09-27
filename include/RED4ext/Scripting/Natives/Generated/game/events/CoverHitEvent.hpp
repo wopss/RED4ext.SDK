@@ -20,9 +20,9 @@ struct CoverHitEvent : game::events::HitEvent
     static constexpr const char* NAME = "gameeventsCoverHitEvent";
     static constexpr const char* ALIAS = "gameCoverHitEvent";
 
-    WeakHandle<game::Object> cover; // E0
+    WeakHandle<game::Object> cover; // F0
 };
-RED4EXT_ASSERT_SIZE(CoverHitEvent, 0xF0);
+RED4EXT_ASSERT_SIZE(CoverHitEvent, 0x100);
 } // namespace game::events
 using gameeventsCoverHitEvent = game::events::CoverHitEvent;
 using gameCoverHitEvent = game::events::CoverHitEvent;

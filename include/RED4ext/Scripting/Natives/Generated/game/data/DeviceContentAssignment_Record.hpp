@@ -18,7 +18,7 @@ struct DeviceContentAssignment_Record : game::data::ContentAssignment_Record
     static constexpr const char* ALIAS = "DeviceContentAssignment_Record";
 
 };
-RED4EXT_ASSERT_SIZE(DeviceContentAssignment_Record, 0x50);
+RED4EXT_ASSERT_SIZE(DeviceContentAssignment_Record, 0x60);
 } // namespace game::data
 using gamedataDeviceContentAssignment_Record = game::data::DeviceContentAssignment_Record;
 using DeviceContentAssignment_Record = game::data::DeviceContentAssignment_Record;

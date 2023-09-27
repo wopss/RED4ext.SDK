@@ -17,16 +17,16 @@ struct PointCloudEffect : ink::IEffect
     static constexpr const char* NAME = "inkPointCloudEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float repeat; // 68
-    float offsetX; // 6C
-    float offsetY; // 70
-    float angle; // 74
-    float fovScale; // 78
-    float parallaxDepth; // 7C
-    float depthToOpacity; // 80
-    float depthToBrightness; // 84
+    float repeat; // 50
+    float offsetX; // 54
+    float offsetY; // 58
+    float angle; // 5C
+    float fovScale; // 60
+    float parallaxDepth; // 64
+    float depthToOpacity; // 68
+    float depthToBrightness; // 6C
 };
-RED4EXT_ASSERT_SIZE(PointCloudEffect, 0x88);
+RED4EXT_ASSERT_SIZE(PointCloudEffect, 0x70);
 } // namespace ink
 using inkPointCloudEffect = ink::PointCloudEffect;
 } // namespace RED4ext

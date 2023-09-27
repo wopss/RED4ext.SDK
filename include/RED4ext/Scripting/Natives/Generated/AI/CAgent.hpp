@@ -17,9 +17,9 @@ struct CAgent : game::Component
     static constexpr const char* NAME = "AICAgent";
     static constexpr const char* ALIAS = "AIComponent";
 
-    uint8_t unkA8[0x4E8 - 0xA8]; // A8
+    uint8_t unkA8[0x4F0 - 0xA8]; // A8
 };
-RED4EXT_ASSERT_SIZE(CAgent, 0x4E8);
+RED4EXT_ASSERT_SIZE(CAgent, 0x4F0);
 } // namespace AI
 using AICAgent = AI::CAgent;
 using AIComponent = AI::CAgent;

@@ -17,9 +17,9 @@ struct TutorialBracketLogicController : ink::WidgetLogicController
     static constexpr const char* NAME = "gameuiTutorialBracketLogicController";
     static constexpr const char* ALIAS = "TutorialBracketLogicController";
 
-    uint8_t unk78[0x98 - 0x78]; // 78
+    uint8_t unk78[0xC0 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(TutorialBracketLogicController, 0x98);
+RED4EXT_ASSERT_SIZE(TutorialBracketLogicController, 0xC0);
 } // namespace game::ui
 using gameuiTutorialBracketLogicController = game::ui::TutorialBracketLogicController;
 using TutorialBracketLogicController = game::ui::TutorialBracketLogicController;

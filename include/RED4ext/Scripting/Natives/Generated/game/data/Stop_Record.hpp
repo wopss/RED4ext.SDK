@@ -18,7 +18,7 @@ struct Stop_Record : game::data::ProjectileCollision_Record
     static constexpr const char* ALIAS = "Stop_Record";
 
 };
-RED4EXT_ASSERT_SIZE(Stop_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Stop_Record, 0x70);
 } // namespace game::data
 using gamedataStop_Record = game::data::Stop_Record;
 using Stop_Record = game::data::Stop_Record;

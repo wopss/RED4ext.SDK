@@ -17,9 +17,9 @@ struct AISubActionForceDeath_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionForceDeath_Record";
     static constexpr const char* ALIAS = "AISubActionForceDeath_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionForceDeath_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionForceDeath_Record, 0x88);
 } // namespace game::data
 using gamedataAISubActionForceDeath_Record = game::data::AISubActionForceDeath_Record;
 using AISubActionForceDeath_Record = game::data::AISubActionForceDeath_Record;

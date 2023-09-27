@@ -17,9 +17,9 @@ struct LoSFinderParams : IScriptable
     static constexpr const char* NAME = "gameLoSFinderParams";
     static constexpr const char* ALIAS = "LoSFinderParams";
 
-    uint8_t unk40[0x70 - 0x40]; // 40
+    uint8_t unk40[0x80 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(LoSFinderParams, 0x70);
+RED4EXT_ASSERT_SIZE(LoSFinderParams, 0x80);
 } // namespace game
 using gameLoSFinderParams = game::LoSFinderParams;
 using LoSFinderParams = game::LoSFinderParams;

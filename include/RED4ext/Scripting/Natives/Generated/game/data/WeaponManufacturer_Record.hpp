@@ -17,9 +17,9 @@ struct WeaponManufacturer_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataWeaponManufacturer_Record";
     static constexpr const char* ALIAS = "WeaponManufacturer_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(WeaponManufacturer_Record, 0x50);
+RED4EXT_ASSERT_SIZE(WeaponManufacturer_Record, 0x58);
 } // namespace game::data
 using gamedataWeaponManufacturer_Record = game::data::WeaponManufacturer_Record;
 using WeaponManufacturer_Record = game::data::WeaponManufacturer_Record;

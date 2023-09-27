@@ -14,6 +14,7 @@ enum class PSMBodyCarryingStyle : uint32_t
     Default = 1,
     Friendly = 2,
     Strong = 3,
+    WoundedSoldier = 4,
 };
 } // namespace game
 using gamePSMBodyCarryingStyle = game::PSMBodyCarryingStyle;

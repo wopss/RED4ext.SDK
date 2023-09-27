@@ -17,9 +17,9 @@ struct DeviceScreenType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataDeviceScreenType_Record";
     static constexpr const char* ALIAS = "DeviceScreenType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DeviceScreenType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(DeviceScreenType_Record, 0x70);
 } // namespace game::data
 using gamedataDeviceScreenType_Record = game::data::DeviceScreenType_Record;
 using DeviceScreenType_Record = game::data::DeviceScreenType_Record;

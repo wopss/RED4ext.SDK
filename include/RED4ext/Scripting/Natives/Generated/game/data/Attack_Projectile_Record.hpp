@@ -17,9 +17,9 @@ struct Attack_Projectile_Record : game::data::Attack_Record
     static constexpr const char* NAME = "gamedataAttack_Projectile_Record";
     static constexpr const char* ALIAS = "Attack_Projectile_Record";
 
-    uint8_t unk70[0x78 - 0x70]; // 70
+    uint8_t unk108[0x120 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(Attack_Projectile_Record, 0x78);
+RED4EXT_ASSERT_SIZE(Attack_Projectile_Record, 0x120);
 } // namespace game::data
 using gamedataAttack_Projectile_Record = game::data::Attack_Projectile_Record;
 using Attack_Projectile_Record = game::data::Attack_Projectile_Record;

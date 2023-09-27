@@ -17,9 +17,9 @@ struct StatusEffect_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataStatusEffect_Record";
     static constexpr const char* ALIAS = "StatusEffect_Record";
 
-    uint8_t unk48[0x90 - 0x48]; // 48
+    uint8_t unk48[0x160 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StatusEffect_Record, 0x90);
+RED4EXT_ASSERT_SIZE(StatusEffect_Record, 0x160);
 } // namespace game::data
 using gamedataStatusEffect_Record = game::data::StatusEffect_Record;
 using StatusEffect_Record = game::data::StatusEffect_Record;

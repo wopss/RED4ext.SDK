@@ -24,7 +24,7 @@ struct LODDefinition : ISerializable
     StaticArray<float, 4> vehicleDistanceLODs; // 6C
     StaticArray<float, 4> cinematicVehicleDistanceLODs; // 80
     StaticArray<float, 4> vehicleInteriorDistanceLODs; // 94
-    StaticArray<float, 4> largeVehicleInteriorDistanceLODs; // A8
+    StaticArray<float, 4> vehicleDecorationDistanceLODs; // A8
     StaticArray<float, 4> consoleDistanceLODs; // BC
 };
 RED4EXT_ASSERT_SIZE(LODDefinition, 0xD0);

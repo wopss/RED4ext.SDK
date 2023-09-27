@@ -22,11 +22,11 @@ struct ConditionalSequence : work::Sequence
     static constexpr const char* NAME = "workConditionalSequence";
     static constexpr const char* ALIAS = NAME;
 
-    work::LogicalOperation multipleConditionOperator; // 58
-    uint8_t unk59[0x60 - 0x59]; // 59
-    DynArray<Handle<work::IWorkspotCondition>> conditionList; // 60
+    work::LogicalOperation multipleConditionOperator; // 60
+    uint8_t unk61[0x68 - 0x61]; // 61
+    DynArray<Handle<work::IWorkspotCondition>> conditionList; // 68
 };
-RED4EXT_ASSERT_SIZE(ConditionalSequence, 0x70);
+RED4EXT_ASSERT_SIZE(ConditionalSequence, 0x78);
 } // namespace work
 using workConditionalSequence = work::ConditionalSequence;
 } // namespace RED4ext

@@ -15,9 +15,9 @@ struct VRSCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "VRSCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x58 - 0x18]; // 18
+    uint8_t unk18[0x60 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(VRSCustomData, 0x58);
+RED4EXT_ASSERT_SIZE(VRSCustomData, 0x60);
 } // namespace RED4ext
 
 // clang-format on

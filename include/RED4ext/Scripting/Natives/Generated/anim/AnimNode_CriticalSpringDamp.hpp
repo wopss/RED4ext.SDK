@@ -23,10 +23,12 @@ struct AnimNode_CriticalSpringDamp : anim::AnimNode_FloatValue
     uint8_t unk4D[0x50 - 0x4D]; // 4D
     float rangeMin; // 50
     float rangeMax; // 54
-    anim::FloatLink inputNode; // 58
-    uint8_t unk78[0x98 - 0x78]; // 78
+    bool useRawTime; // 58
+    uint8_t unk59[0x60 - 0x59]; // 59
+    anim::FloatLink inputNode; // 60
+    uint8_t unk80[0xA0 - 0x80]; // 80
 };
-RED4EXT_ASSERT_SIZE(AnimNode_CriticalSpringDamp, 0x98);
+RED4EXT_ASSERT_SIZE(AnimNode_CriticalSpringDamp, 0xA0);
 } // namespace anim
 using animAnimNode_CriticalSpringDamp = anim::AnimNode_CriticalSpringDamp;
 } // namespace RED4ext

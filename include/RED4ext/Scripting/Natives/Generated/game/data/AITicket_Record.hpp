@@ -17,9 +17,9 @@ struct AITicket_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAITicket_Record";
     static constexpr const char* ALIAS = "AITicket_Record";
 
-    uint8_t unk48[0x80 - 0x48]; // 48
+    uint8_t unk48[0x138 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AITicket_Record, 0x80);
+RED4EXT_ASSERT_SIZE(AITicket_Record, 0x138);
 } // namespace game::data
 using gamedataAITicket_Record = game::data::AITicket_Record;
 using AITicket_Record = game::data::AITicket_Record;

@@ -20,32 +20,34 @@ struct GarmentParameterComponentData
     static constexpr const char* ALIAS = NAME;
 
     DataBuffer compiledTriangleIndsData; // 00
-    CRUID componentID; // 28
-    uint64_t meshGeometryHash; // 30
-    uint64_t visibleTrangleIndexBufferHash; // 38
-    uint32_t chunksCount; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
-    DynArray<ent::GarmentParameterChunkData> chunks; // 48
-    uint8_t unk58[0x60 - 0x58]; // 58
-    bool hideComponent; // 60
-    bool removeHiddenTriangles; // 61
-    uint8_t unk62[0x63 - 0x62]; // 62
-    bool disableGarment; // 63
-    bool mergeWithInnerLayer; // 64
-    uint8_t unk65[0x68 - 0x65]; // 65
-    float bendPowerMultiplier; // 68
-    float bendPowerOffset; // 6C
-    float smoothingStrength; // 70
-    float smoothingThreshold; // 74
-    float smoothingExponent; // 78
-    uint32_t smoothingNumNeighbours; // 7C
-    float garmentBorderThreshold; // 80
-    uint8_t unk84[0x8C - 0x84]; // 84
-    uint32_t numIndices; // 8C
-    uint32_t numOffsets; // 90
-    uint8_t unk94[0x98 - 0x94]; // 94
+    DataBuffer compiledVertexTbnData; // 28
+    CRUID componentID; // 50
+    uint64_t meshGeometryHash; // 58
+    uint64_t visibleTrangleIndexBufferHash; // 60
+    uint32_t chunksCount; // 68
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    DynArray<ent::GarmentParameterChunkData> chunks; // 70
+    uint8_t unk80[0x88 - 0x80]; // 80
+    bool hideComponent; // 88
+    bool removeHiddenTriangles; // 89
+    uint8_t unk8A[0x8B - 0x8A]; // 8A
+    bool disableGarment; // 8B
+    bool mergeWithInnerLayer; // 8C
+    bool smoothNormalsEnabled; // 8D
+    uint8_t unk8E[0x90 - 0x8E]; // 8E
+    float bendPowerMultiplier; // 90
+    float bendPowerOffset; // 94
+    float smoothingStrength; // 98
+    float smoothingThreshold; // 9C
+    float smoothingExponent; // A0
+    uint32_t smoothingNumNeighbours; // A4
+    float garmentBorderThreshold; // A8
+    uint8_t unkAC[0xB4 - 0xAC]; // AC
+    uint32_t numIndices; // B4
+    uint32_t numOffsets; // B8
+    uint8_t unkBC[0xC0 - 0xBC]; // BC
 };
-RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0x98);
+RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0xC0);
 } // namespace ent
 using entGarmentParameterComponentData = ent::GarmentParameterComponentData;
 } // namespace RED4ext

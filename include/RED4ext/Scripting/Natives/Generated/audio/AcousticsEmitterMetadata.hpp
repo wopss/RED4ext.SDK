@@ -26,7 +26,7 @@ struct AcousticsEmitterMetadata : audio::EmitterMetadata
     bool postDopplerFactor; // 40
     bool enableOutdoorness; // 41
     bool elevateSource; // 42
-    uint8_t unk43[0x44 - 0x43]; // 43
+    bool leakingFloorHack; // 43
     float ignoreOcclusionRadius; // 44
     uint8_t unk48[0x50 - 0x48]; // 48
     CName dopplerParameter; // 50

@@ -25,8 +25,11 @@ struct DriveChaseTargetTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinitio
     Handle<AI::ArgumentMapping> distanceMax; // 60
     Handle<AI::ArgumentMapping> forcedStartSpeed; // 70
     Handle<AI::ArgumentMapping> needDriver; // 80
+    Handle<AI::ArgumentMapping> aggressiveRammingEnabled; // 90
+    Handle<AI::ArgumentMapping> ignoreChaseVehiclesLimit; // A0
+    Handle<AI::ArgumentMapping> boostDrivingStats; // B0
 };
-RED4EXT_ASSERT_SIZE(DriveChaseTargetTreeNodeDefinition, 0x90);
+RED4EXT_ASSERT_SIZE(DriveChaseTargetTreeNodeDefinition, 0xC0);
 } // namespace AI::behavior
 using AIbehaviorDriveChaseTargetTreeNodeDefinition = AI::behavior::DriveChaseTargetTreeNodeDefinition;
 } // namespace RED4ext

@@ -23,20 +23,21 @@ struct MoveOnSplineParams : quest::AICommandParams
 
     NodeRef splineNodeRef; // 40
     bool startFromClosestPoint; // 48
-    bool useStart; // 49
-    bool useStop; // 4A
-    bool reverse; // 4B
-    bool useAlertedState; // 4C
-    bool useCombatState; // 4D
-    bool executeWhileDespawned; // 4E
-    bool removeAfterCombat; // 4F
-    bool ignoreInCombat; // 50
-    bool alwaysUseStealth; // 51
-    bool repeatCommandOnInterrupt; // 52
-    uint8_t unk53[0x54 - 0x53]; // 53
-    float noWaitToEndDistance; // 54
-    float noWaitToEndCompanionDistance; // 58
-    uint8_t unk5C[0x60 - 0x5C]; // 5C
+    bool splineRecalculation; // 49
+    bool useStart; // 4A
+    bool useStop; // 4B
+    bool reverse; // 4C
+    bool useAlertedState; // 4D
+    bool useCombatState; // 4E
+    bool executeWhileDespawned; // 4F
+    bool removeAfterCombat; // 50
+    bool ignoreInCombat; // 51
+    bool alwaysUseStealth; // 52
+    bool disableFootIK; // 53
+    bool repeatCommandOnInterrupt; // 54
+    uint8_t unk55[0x58 - 0x55]; // 55
+    float noWaitToEndDistance; // 58
+    float noWaitToEndCompanionDistance; // 5C
     Handle<quest::MoveOnSplineAdditionalParams> additionalParams; // 60
 };
 RED4EXT_ASSERT_SIZE(MoveOnSplineParams, 0x70);

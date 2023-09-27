@@ -17,9 +17,9 @@ struct AimAssistMelee_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAimAssistMelee_Record";
     static constexpr const char* ALIAS = "AimAssistMelee_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0xA8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AimAssistMelee_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AimAssistMelee_Record, 0xA8);
 } // namespace game::data
 using gamedataAimAssistMelee_Record = game::data::AimAssistMelee_Record;
 using AimAssistMelee_Record = game::data::AimAssistMelee_Record;

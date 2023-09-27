@@ -55,9 +55,11 @@ struct CMesh : res::StreamedResource
     DynArray<Handle<mesh::MeshAppearance>> appearances; // 1E0
     uint8_t unk1F0[0x1F8 - 0x1F0]; // 1F0
     Handle<IRenderResourceBlob> renderResourceBlob; // 1F8
-    uint8_t unk208[0x211 - 0x208]; // 208
-    ERenderObjectType objectType; // 211
-    uint8_t unk212[0x230 - 0x212]; // 212
+    bool useRayTracingShadowLODBias; // 208
+    bool castsRayTracedShadowsFromOriginalGeometry; // 209
+    uint8_t unk20A[0x219 - 0x20A]; // 20A
+    ERenderObjectType objectType; // 219
+    uint8_t unk21A[0x230 - 0x21A]; // 21A
 };
 RED4EXT_ASSERT_SIZE(CMesh, 0x230);
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct AISubActionDisableAimAssist_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionDisableAimAssist_Record";
     static constexpr const char* ALIAS = "AISubActionDisableAimAssist_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionDisableAimAssist_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionDisableAimAssist_Record, 0x70);
 } // namespace game::data
 using gamedataAISubActionDisableAimAssist_Record = game::data::AISubActionDisableAimAssist_Record;
 using AISubActionDisableAimAssist_Record = game::data::AISubActionDisableAimAssist_Record;

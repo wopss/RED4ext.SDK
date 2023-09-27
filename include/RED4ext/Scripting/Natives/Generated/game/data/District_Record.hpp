@@ -17,9 +17,9 @@ struct District_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataDistrict_Record";
     static constexpr const char* ALIAS = "District_Record";
 
-    uint8_t unk48[0x70 - 0x48]; // 48
+    uint8_t unk48[0xE8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(District_Record, 0x70);
+RED4EXT_ASSERT_SIZE(District_Record, 0xE8);
 } // namespace game::data
 using gamedataDistrict_Record = game::data::District_Record;
 using District_Record = game::data::District_Record;

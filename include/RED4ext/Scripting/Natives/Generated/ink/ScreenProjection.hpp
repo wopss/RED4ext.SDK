@@ -18,13 +18,13 @@ struct ScreenProjection : IScriptable
     static constexpr const char* NAME = "inkScreenProjection";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0xF4 - 0x40]; // 40
-    float distanceToCamera; // F4
-    Vector2 previousPosition; // F8
-    Vector2 currentPosition; // 100
-    Vector2 uvPosition; // 108
+    uint8_t unk40[0x104 - 0x40]; // 40
+    float distanceToCamera; // 104
+    Vector2 previousPosition; // 108
+    Vector2 currentPosition; // 110
+    Vector2 uvPosition; // 118
 };
-RED4EXT_ASSERT_SIZE(ScreenProjection, 0x110);
+RED4EXT_ASSERT_SIZE(ScreenProjection, 0x120);
 } // namespace ink
 using inkScreenProjection = ink::ScreenProjection;
 } // namespace RED4ext

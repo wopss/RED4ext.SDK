@@ -13,6 +13,7 @@
 namespace RED4ext
 {
 namespace game { struct Object; }
+namespace vehicle { struct AudioCurvesParam; }
 
 namespace AI
 {
@@ -42,8 +43,9 @@ struct VehicleOnSplineCommand : AI::VehicleCommand
     bool rubberBandingTeleportToCatchUp; // B1
     bool rubberBandingStayInFront; // B2
     uint8_t unkB3[0xB8 - 0xB3]; // B3
+    WeakHandle<vehicle::AudioCurvesParam> audioCurvesParam; // B8
 };
-RED4EXT_ASSERT_SIZE(VehicleOnSplineCommand, 0xB8);
+RED4EXT_ASSERT_SIZE(VehicleOnSplineCommand, 0xC8);
 } // namespace AI
 using AIVehicleOnSplineCommand = AI::VehicleOnSplineCommand;
 } // namespace RED4ext

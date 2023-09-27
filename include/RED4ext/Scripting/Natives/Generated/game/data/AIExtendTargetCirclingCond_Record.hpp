@@ -17,9 +17,9 @@ struct AIExtendTargetCirclingCond_Record : game::data::AIActionSubCondition_Reco
     static constexpr const char* NAME = "gamedataAIExtendTargetCirclingCond_Record";
     static constexpr const char* ALIAS = "AIExtendTargetCirclingCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x80 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIExtendTargetCirclingCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIExtendTargetCirclingCond_Record, 0x80);
 } // namespace game::data
 using gamedataAIExtendTargetCirclingCond_Record = game::data::AIExtendTargetCirclingCond_Record;
 using AIExtendTargetCirclingCond_Record = game::data::AIExtendTargetCirclingCond_Record;

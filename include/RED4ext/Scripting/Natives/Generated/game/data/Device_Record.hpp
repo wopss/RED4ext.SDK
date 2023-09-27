@@ -17,9 +17,9 @@ struct Device_Record : game::data::BaseObject_Record
     static constexpr const char* NAME = "gamedataDevice_Record";
     static constexpr const char* ALIAS = "Device_Record";
 
-    uint8_t unk60[0x68 - 0x60]; // 60
+    uint8_t unkA0[0xB8 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(Device_Record, 0x68);
+RED4EXT_ASSERT_SIZE(Device_Record, 0xB8);
 } // namespace game::data
 using gamedataDevice_Record = game::data::Device_Record;
 using Device_Record = game::data::Device_Record;

@@ -17,9 +17,9 @@ struct VendorExperience_Record : game::data::VendorWare_Record
     static constexpr const char* NAME = "gamedataVendorExperience_Record";
     static constexpr const char* ALIAS = "VendorExperience_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk78[0x90 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(VendorExperience_Record, 0x60);
+RED4EXT_ASSERT_SIZE(VendorExperience_Record, 0x90);
 } // namespace game::data
 using gamedataVendorExperience_Record = game::data::VendorExperience_Record;
 using VendorExperience_Record = game::data::VendorExperience_Record;

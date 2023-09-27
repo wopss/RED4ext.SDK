@@ -17,9 +17,9 @@ struct CManager : game::interactions::IManager
     static constexpr const char* NAME = "gameinteractionsCManager";
     static constexpr const char* ALIAS = "InteractionManager";
 
-    uint8_t unk48[0x108 - 0x48]; // 48
+    uint8_t unk48[0x110 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CManager, 0x108);
+RED4EXT_ASSERT_SIZE(CManager, 0x110);
 } // namespace game::interactions
 using gameinteractionsCManager = game::interactions::CManager;
 using InteractionManager = game::interactions::CManager;

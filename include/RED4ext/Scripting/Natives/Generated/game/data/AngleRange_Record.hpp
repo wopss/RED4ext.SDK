@@ -17,9 +17,9 @@ struct AngleRange_Record : game::data::SenseShape_Record
     static constexpr const char* NAME = "gamedataAngleRange_Record";
     static constexpr const char* ALIAS = "AngleRange_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x90 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AngleRange_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AngleRange_Record, 0x90);
 } // namespace game::data
 using gamedataAngleRange_Record = game::data::AngleRange_Record;
 using AngleRange_Record = game::data::AngleRange_Record;

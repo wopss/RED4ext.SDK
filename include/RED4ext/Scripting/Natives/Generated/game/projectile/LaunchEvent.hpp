@@ -27,9 +27,9 @@ struct LaunchEvent : red::Event
     WeakHandle<game::Object> weapon; // A8
     uint8_t unkB8[0xC0 - 0xB8]; // B8
     game::projectile::WeaponParams projectileParams; // C0
-    uint8_t unk160[0x180 - 0x160]; // 160
+    uint8_t unk180[0x1A0 - 0x180]; // 180
 };
-RED4EXT_ASSERT_SIZE(LaunchEvent, 0x180);
+RED4EXT_ASSERT_SIZE(LaunchEvent, 0x1A0);
 } // namespace game::projectile
 using gameprojectileLaunchEvent = game::projectile::LaunchEvent;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ struct TrafficSpotNodeInstance : world::AISpotNodeInstance
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(TrafficSpotNodeInstance, 0xE0);
+RED4EXT_ASSERT_SIZE(TrafficSpotNodeInstance, 0xF0);
 } // namespace world
 using worldTrafficSpotNodeInstance = world::TrafficSpotNodeInstance;
 } // namespace RED4ext

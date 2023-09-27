@@ -21,6 +21,8 @@ enum class PSMLocomotionStates : uint32_t
     Workspot = 9,
     Slide = 10,
     SlideFall = 11,
+    CrouchSprint = 12,
+    CrouchDodge = 13,
     Any = 4294967295,
 };
 } // namespace game

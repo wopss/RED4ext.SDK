@@ -18,7 +18,7 @@ struct DecorationProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(DecorationProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(DecorationProxyMeshNode, 0x68);
 } // namespace world
 using worldDecorationProxyMeshNode = world::DecorationProxyMeshNode;
 } // namespace RED4ext

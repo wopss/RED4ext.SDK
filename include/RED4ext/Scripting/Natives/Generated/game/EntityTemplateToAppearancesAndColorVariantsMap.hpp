@@ -20,9 +20,8 @@ struct EntityTemplateToAppearancesAndColorVariantsMap : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     DynArray<game::EntityToAppearancesAndColorVariantsMapEntry> entries; // 30
-    uint8_t unk40[0x80 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(EntityTemplateToAppearancesAndColorVariantsMap, 0x80);
+RED4EXT_ASSERT_SIZE(EntityTemplateToAppearancesAndColorVariantsMap, 0x40);
 } // namespace game
 using gameEntityTemplateToAppearancesAndColorVariantsMap = game::EntityTemplateToAppearancesAndColorVariantsMap;
 } // namespace RED4ext

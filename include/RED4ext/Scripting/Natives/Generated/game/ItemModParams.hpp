@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 
 namespace RED4ext
@@ -21,8 +22,9 @@ struct ItemModParams
     ItemID itemID; // 08
     int32_t quantity; // 18
     uint8_t unk1C[0x50 - 0x1C]; // 1C
+    DynArray<ItemID> customPartsToInstall; // 50
 };
-RED4EXT_ASSERT_SIZE(ItemModParams, 0x50);
+RED4EXT_ASSERT_SIZE(ItemModParams, 0x60);
 } // namespace game
 using gameItemModParams = game::ItemModParams;
 using ItemModParams = game::ItemModParams;

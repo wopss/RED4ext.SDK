@@ -20,12 +20,14 @@ struct PlayFX_NodeTypeParams
 
     game::EntityReference objectRef; // 00
     CName effectName; // 38
-    uint32_t sequenceShift; // 40
-    bool isPlayer; // 44
-    bool play; // 45
-    uint8_t unk46[0x48 - 0x46]; // 46
+    CName effectInstanceName; // 40
+    uint32_t sequenceShift; // 48
+    bool isPlayer; // 4C
+    bool play; // 4D
+    bool save; // 4E
+    uint8_t unk4F[0x50 - 0x4F]; // 4F
 };
-RED4EXT_ASSERT_SIZE(PlayFX_NodeTypeParams, 0x48);
+RED4EXT_ASSERT_SIZE(PlayFX_NodeTypeParams, 0x50);
 } // namespace quest
 using questPlayFX_NodeTypeParams = quest::PlayFX_NodeTypeParams;
 } // namespace RED4ext

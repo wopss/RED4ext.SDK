@@ -15,9 +15,9 @@ struct TXAACustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "TXAACustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x190 - 0x18]; // 18
+    uint8_t unk18[0x1C0 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(TXAACustomData, 0x190);
+RED4EXT_ASSERT_SIZE(TXAACustomData, 0x1C0);
 } // namespace RED4ext
 
 // clang-format on

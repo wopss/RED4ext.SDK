@@ -13,6 +13,7 @@ enum class EquipAnimationType : uint32_t
     Default = 0,
     Instant = 1,
     FirstEquip = 2,
+    HACK_ForceInstantEquip = 3,
 };
 } // namespace game
 using gameEquipAnimationType = game::EquipAnimationType;

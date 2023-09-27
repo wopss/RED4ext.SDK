@@ -17,9 +17,9 @@ struct RewardSet_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataRewardSet_Record";
     static constexpr const char* ALIAS = "RewardSet_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RewardSet_Record, 0x50);
+RED4EXT_ASSERT_SIZE(RewardSet_Record, 0x58);
 } // namespace game::data
 using gamedataRewardSet_Record = game::data::RewardSet_Record;
 using RewardSet_Record = game::data::RewardSet_Record;

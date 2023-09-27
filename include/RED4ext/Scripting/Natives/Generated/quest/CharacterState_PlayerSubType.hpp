@@ -7,12 +7,12 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMLocomotionStates.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/PSMRangedWeaponStates.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMSwimming.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMTakedown.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMTimeDilation.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMUpperBodyStates.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/PSMVehicle.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/PSMWeaponStates.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/EComparisonTypeEquality.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ICharacterConditionSubType.hpp>
 
@@ -30,7 +30,7 @@ struct CharacterState_PlayerSubType : quest::ICharacterConditionSubType
     quest::EComparisonTypeEquality upperBodyComparisonType; // 38
     game::PSMUpperBodyStates upperBodyState; // 3C
     quest::EComparisonTypeEquality weaponComparisonType; // 40
-    game::PSMWeaponStates weaponState; // 44
+    game::PSMRangedWeaponStates weaponState; // 44
     quest::EComparisonTypeEquality timeDilationComparisonType; // 48
     game::PSMTimeDilation timeDilationState; // 4C
     quest::EComparisonTypeEquality vehicleComparisonType; // 50

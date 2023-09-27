@@ -18,7 +18,7 @@ struct JournalIcon_Record : game::data::UIIcon_Record
     static constexpr const char* ALIAS = "JournalIcon_Record";
 
 };
-RED4EXT_ASSERT_SIZE(JournalIcon_Record, 0x50);
+RED4EXT_ASSERT_SIZE(JournalIcon_Record, 0x60);
 } // namespace game::data
 using gamedataJournalIcon_Record = game::data::JournalIcon_Record;
 using JournalIcon_Record = game::data::JournalIcon_Record;

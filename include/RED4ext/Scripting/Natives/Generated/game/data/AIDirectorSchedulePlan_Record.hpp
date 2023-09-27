@@ -17,9 +17,9 @@ struct AIDirectorSchedulePlan_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIDirectorSchedulePlan_Record";
     static constexpr const char* ALIAS = "AIDirectorSchedulePlan_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIDirectorSchedulePlan_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AIDirectorSchedulePlan_Record, 0x60);
 } // namespace game::data
 using gamedataAIDirectorSchedulePlan_Record = game::data::AIDirectorSchedulePlan_Record;
 using AIDirectorSchedulePlan_Record = game::data::AIDirectorSchedulePlan_Record;

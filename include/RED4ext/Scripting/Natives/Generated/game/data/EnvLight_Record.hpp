@@ -17,9 +17,9 @@ struct EnvLight_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataEnvLight_Record";
     static constexpr const char* ALIAS = "EnvLight_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(EnvLight_Record, 0x58);
+RED4EXT_ASSERT_SIZE(EnvLight_Record, 0x78);
 } // namespace game::data
 using gamedataEnvLight_Record = game::data::EnvLight_Record;
 using EnvLight_Record = game::data::EnvLight_Record;

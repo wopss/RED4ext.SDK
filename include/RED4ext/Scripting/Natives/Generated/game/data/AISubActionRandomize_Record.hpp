@@ -17,9 +17,9 @@ struct AISubActionRandomize_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionRandomize_Record";
     static constexpr const char* ALIAS = "AISubActionRandomize_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionRandomize_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionRandomize_Record, 0x58);
 } // namespace game::data
 using gamedataAISubActionRandomize_Record = game::data::AISubActionRandomize_Record;
 using AISubActionRandomize_Record = game::data::AISubActionRandomize_Record;

@@ -17,8 +17,9 @@ struct VehicleAgent : AI::CAgent
     static constexpr const char* NAME = "AIVehicleAgent";
     static constexpr const char* ALIAS = NAME;
 
+    uint8_t unk4F0[0x570 - 0x4F0]; // 4F0
 };
-RED4EXT_ASSERT_SIZE(VehicleAgent, 0x4E8);
+RED4EXT_ASSERT_SIZE(VehicleAgent, 0x570);
 } // namespace AI
 using AIVehicleAgent = AI::VehicleAgent;
 } // namespace RED4ext

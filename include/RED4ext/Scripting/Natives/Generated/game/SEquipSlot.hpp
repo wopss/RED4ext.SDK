@@ -6,10 +6,13 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 
 namespace RED4ext
 {
+namespace game { struct IPrereq; }
+
 namespace game
 {
 struct SEquipSlot
@@ -18,10 +21,12 @@ struct SEquipSlot
     static constexpr const char* ALIAS = "SEquipSlot";
 
     ItemID itemID; // 00
-    bool isLocked; // 10
-    uint8_t unk11[0x14 - 0x11]; // 11
+    TweakDBID slotID; // 10
+    Handle<game::IPrereq> unlockPrereq; // 18
+    bool visibleWhenLocked; // 28
+    uint8_t unk29[0x30 - 0x29]; // 29
 };
-RED4EXT_ASSERT_SIZE(SEquipSlot, 0x14);
+RED4EXT_ASSERT_SIZE(SEquipSlot, 0x30);
 } // namespace game
 using gameSEquipSlot = game::SEquipSlot;
 using SEquipSlot = game::SEquipSlot;

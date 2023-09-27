@@ -9,6 +9,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Box.hpp>
+#include <RED4ext/Scripting/Natives/Generated/world/StreamingBlockIndex.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/StreamingSectorCategory.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/StreamingSectorVariant.hpp>
 
@@ -28,12 +29,13 @@ struct StreamingSectorDescriptor
     NodeRef questPrefabNodeRef; // 28
     DynArray<world::StreamingSectorVariant> variants; // 30
     uint32_t numNodeRanges; // 40
-    uint32_t blockIndex; // 44
-    uint8_t level; // 48
-    world::StreamingSectorCategory category; // 49
-    uint8_t unk4A[0x50 - 0x4A]; // 4A
+    uint8_t unk44[0x48 - 0x44]; // 44
+    world::StreamingBlockIndex blockIndex; // 48
+    uint8_t level; // 50
+    world::StreamingSectorCategory category; // 51
+    uint8_t unk52[0x60 - 0x52]; // 52
 };
-RED4EXT_ASSERT_SIZE(StreamingSectorDescriptor, 0x50);
+RED4EXT_ASSERT_SIZE(StreamingSectorDescriptor, 0x60);
 } // namespace world
 using worldStreamingSectorDescriptor = world::StreamingSectorDescriptor;
 } // namespace RED4ext

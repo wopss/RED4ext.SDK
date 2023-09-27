@@ -17,9 +17,9 @@ struct PresetMapper_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPresetMapper_Record";
     static constexpr const char* ALIAS = "PresetMapper_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PresetMapper_Record, 0x50);
+RED4EXT_ASSERT_SIZE(PresetMapper_Record, 0x60);
 } // namespace game::data
 using gamedataPresetMapper_Record = game::data::PresetMapper_Record;
 using PresetMapper_Record = game::data::PresetMapper_Record;

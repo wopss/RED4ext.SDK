@@ -17,9 +17,9 @@ struct HUDLayer : ink::FullScreenLayer
     static constexpr const char* NAME = "inkHUDLayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk150[0x1C0 - 0x150]; // 150
+    uint8_t unk150[0x1E0 - 0x150]; // 150
 };
-RED4EXT_ASSERT_SIZE(HUDLayer, 0x1C0);
+RED4EXT_ASSERT_SIZE(HUDLayer, 0x1E0);
 } // namespace ink
 using inkHUDLayer = ink::HUDLayer;
 } // namespace RED4ext

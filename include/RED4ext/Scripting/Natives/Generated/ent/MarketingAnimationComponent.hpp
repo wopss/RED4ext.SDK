@@ -27,10 +27,12 @@ struct MarketingAnimationComponent : ent::IPlacedComponent
     bool enableLookAt; // 131
     uint8_t unk132[0x138 - 0x132]; // 132
     Handle<anim::LookAtPreset_FullControl> lookAtSettings; // 138
-    float lookAtOrbitDistance; // 148
-    float lookAtTargetPitch; // 14C
-    float lookAtTargetYaw; // 150
-    uint8_t unk154[0x170 - 0x154]; // 154
+    bool lookAtCamera; // 148
+    uint8_t unk149[0x14C - 0x149]; // 149
+    float lookAtOrbitDistance; // 14C
+    float lookAtTargetPitch; // 150
+    float lookAtTargetYaw; // 154
+    uint8_t unk158[0x170 - 0x158]; // 158
 };
 RED4EXT_ASSERT_SIZE(MarketingAnimationComponent, 0x170);
 } // namespace ent

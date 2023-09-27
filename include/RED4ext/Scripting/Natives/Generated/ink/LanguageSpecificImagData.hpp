@@ -21,10 +21,10 @@ struct LanguageSpecificImagData
     static constexpr const char* NAME = "inkLanguageSpecificImagData";
     static constexpr const char* ALIAS = "LanguageSpecificImagData";
 
-    RaRef<ink::TextureAtlas> textureAtlasForLanguage; // 00
-    CName partNameForLanguage; // 08
-    ink::LanguageId languageID; // 10
-    uint8_t unk14[0x18 - 0x14]; // 14
+    ink::LanguageId languageID; // 00
+    uint8_t unk04[0x8 - 0x4]; // 4
+    RaRef<ink::TextureAtlas> textureAtlasForLanguage; // 08
+    CName partNameForLanguage; // 10
 };
 RED4EXT_ASSERT_SIZE(LanguageSpecificImagData, 0x18);
 } // namespace ink

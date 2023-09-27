@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/RenderToTextureFeaturesPlatform.hpp>
 
 namespace RED4ext
 {
@@ -19,11 +20,13 @@ struct RenderToTextureFeatures
     bool renderDecals; // 00
     bool renderParticles; // 01
     bool renderForwardNoTXAA; // 02
-    bool antiAliasing; // 03
+    ent::RenderToTextureFeaturesPlatform antiAliasing; // 03
     bool contactShadows; // 04
     bool localShadows; // 05
+    ent::RenderToTextureFeaturesPlatform SSAO; // 06
+    ent::RenderToTextureFeaturesPlatform reflections; // 07
 };
-RED4EXT_ASSERT_SIZE(RenderToTextureFeatures, 0x6);
+RED4EXT_ASSERT_SIZE(RenderToTextureFeatures, 0x8);
 } // namespace ent
 using entRenderToTextureFeatures = ent::RenderToTextureFeatures;
 } // namespace RED4ext

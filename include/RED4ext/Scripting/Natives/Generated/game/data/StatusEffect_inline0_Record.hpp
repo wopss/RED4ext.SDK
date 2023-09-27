@@ -18,7 +18,7 @@ struct StatusEffect_inline0_Record : game::data::StatModifierGroup_Record
     static constexpr const char* ALIAS = "StatusEffect_inline0_Record";
 
 };
-RED4EXT_ASSERT_SIZE(StatusEffect_inline0_Record, 0x58);
+RED4EXT_ASSERT_SIZE(StatusEffect_inline0_Record, 0xA0);
 } // namespace game::data
 using gamedataStatusEffect_inline0_Record = game::data::StatusEffect_inline0_Record;
 using StatusEffect_inline0_Record = game::data::StatusEffect_inline0_Record;

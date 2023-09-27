@@ -40,9 +40,9 @@ struct GroupNode : game::data::DataNode
     uint8_t unk178[0x1E8 - 0x178]; // 178
     DynArray<game::data::GroupNodeGroupVariable> serializedVariables; // 1E8
     DynArray<CName> tags; // 1F8
-    uint8_t unk208[0x228 - 0x208]; // 208
+    uint8_t unk208[0x278 - 0x208]; // 208
 };
-RED4EXT_ASSERT_SIZE(GroupNode, 0x228);
+RED4EXT_ASSERT_SIZE(GroupNode, 0x278);
 } // namespace game::data
 using gamedataGroupNode = game::data::GroupNode;
 } // namespace RED4ext

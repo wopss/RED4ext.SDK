@@ -18,7 +18,7 @@ struct Selector : work::RandomList
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(Selector, 0x70);
+RED4EXT_ASSERT_SIZE(Selector, 0x78);
 } // namespace work
 using workSelector = work::Selector;
 } // namespace RED4ext

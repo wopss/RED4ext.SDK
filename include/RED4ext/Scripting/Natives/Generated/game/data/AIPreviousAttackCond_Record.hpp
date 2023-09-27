@@ -17,9 +17,9 @@ struct AIPreviousAttackCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIPreviousAttackCond_Record";
     static constexpr const char* ALIAS = "AIPreviousAttackCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x80 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIPreviousAttackCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIPreviousAttackCond_Record, 0x80);
 } // namespace game::data
 using gamedataAIPreviousAttackCond_Record = game::data::AIPreviousAttackCond_Record;
 using AIPreviousAttackCond_Record = game::data::AIPreviousAttackCond_Record;

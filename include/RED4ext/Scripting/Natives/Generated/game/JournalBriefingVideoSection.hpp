@@ -20,9 +20,9 @@ struct JournalBriefingVideoSection : game::JournalBriefingBaseSection
     static constexpr const char* NAME = "gameJournalBriefingVideoSection";
     static constexpr const char* ALIAS = "JournalBriefingVideoSection";
 
-    RaRef<Bink> videoResource; // 60
+    RaRef<Bink> videoResource; // 70
 };
-RED4EXT_ASSERT_SIZE(JournalBriefingVideoSection, 0x68);
+RED4EXT_ASSERT_SIZE(JournalBriefingVideoSection, 0x78);
 } // namespace game
 using gameJournalBriefingVideoSection = game::JournalBriefingVideoSection;
 using JournalBriefingVideoSection = game::JournalBriefingVideoSection;

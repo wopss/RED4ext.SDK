@@ -18,7 +18,7 @@ struct LootSlotSingleItemLongStreaming : game::LootSlotSingleItem
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(LootSlotSingleItemLongStreaming, 0x2A0);
+RED4EXT_ASSERT_SIZE(LootSlotSingleItemLongStreaming, 0x2A8);
 } // namespace game
 using gameLootSlotSingleItemLongStreaming = game::LootSlotSingleItemLongStreaming;
 } // namespace RED4ext

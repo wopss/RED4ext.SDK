@@ -25,10 +25,11 @@ struct LevelUpNotificationViewData : game::ui::GenericNotificationViewData
     bool canBeMerged; // 90
     uint8_t unk91[0x94 - 0x91]; // 91
     quest::LevelUpData levelupdata; // 94
-    Handle<game::data::Proficiency_Record> proficiencyRecord; // A8
-    CString profString; // B8
+    uint8_t unkAC[0xB0 - 0xAC]; // AC
+    Handle<game::data::Proficiency_Record> proficiencyRecord; // B0
+    CString profString; // C0
 };
-RED4EXT_ASSERT_SIZE(LevelUpNotificationViewData, 0xD8);
+RED4EXT_ASSERT_SIZE(LevelUpNotificationViewData, 0xE0);
 } // namespace game::ui
 using gameuiLevelUpNotificationViewData = game::ui::LevelUpNotificationViewData;
 using LevelUpNotificationViewData = game::ui::LevelUpNotificationViewData;

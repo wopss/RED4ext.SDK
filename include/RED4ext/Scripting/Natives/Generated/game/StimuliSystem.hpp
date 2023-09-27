@@ -17,9 +17,9 @@ struct StimuliSystem : game::IStimuliSystem
     static constexpr const char* NAME = "gameStimuliSystem";
     static constexpr const char* ALIAS = "StimuliSystem";
 
-    uint8_t unk48[0x6200 - 0x48]; // 48
+    uint8_t unk48[0x6280 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StimuliSystem, 0x6200);
+RED4EXT_ASSERT_SIZE(StimuliSystem, 0x6280);
 } // namespace game
 using gameStimuliSystem = game::StimuliSystem;
 using StimuliSystem = game::StimuliSystem;

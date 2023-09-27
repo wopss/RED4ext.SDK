@@ -16,9 +16,9 @@ struct SmartObjectWorkspotInstance
     static constexpr const char* NAME = "gameSmartObjectWorkspotInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x78 - 0x0]; // 0
+    uint8_t unk00[0x80 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(SmartObjectWorkspotInstance, 0x78);
+RED4EXT_ASSERT_SIZE(SmartObjectWorkspotInstance, 0x80);
 } // namespace game
 using gameSmartObjectWorkspotInstance = game::SmartObjectWorkspotInstance;
 } // namespace RED4ext

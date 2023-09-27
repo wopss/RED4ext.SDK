@@ -17,11 +17,11 @@ struct TargetTrackerComponent : game::Component
     static constexpr const char* NAME = "AITargetTrackerComponent";
     static constexpr const char* ALIAS = "TargetTrackerComponent";
 
-    uint8_t unkA8[0x17D - 0xA8]; // A8
-    bool TriggersCombat; // 17D
-    uint8_t unk17E[0x210 - 0x17E]; // 17E
+    uint8_t unkA8[0x1FD - 0xA8]; // A8
+    bool TriggersCombat; // 1FD
+    uint8_t unk1FE[0x290 - 0x1FE]; // 1FE
 };
-RED4EXT_ASSERT_SIZE(TargetTrackerComponent, 0x210);
+RED4EXT_ASSERT_SIZE(TargetTrackerComponent, 0x290);
 } // namespace AI
 using AITargetTrackerComponent = AI::TargetTrackerComponent;
 using TargetTrackerComponent = AI::TargetTrackerComponent;

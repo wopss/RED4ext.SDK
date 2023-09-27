@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/NativeTypes.hpp>
 
 namespace RED4ext
 {
@@ -19,10 +20,13 @@ struct AudioPSData
 
     CName activeRadioStation; // 00
     float acousticIsolationFactor; // 08
-    bool isPlayerVehicleSummoned; // 0C
-    uint8_t unk0D[0x10 - 0xD]; // D
+    float glassAcousticIsolationFactor; // 0C
+    bool isPlayerVehicleSummoned; // 10
+    uint8_t unk11[0x18 - 0x11]; // 11
+#pragma warning(suppress : 4324)
+    alignas(8) StaticArray<CName, 6> openedWindows; // 18
 };
-RED4EXT_ASSERT_SIZE(AudioPSData, 0x10);
+RED4EXT_ASSERT_SIZE(AudioPSData, 0x50);
 } // namespace vehicle
 using vehicleAudioPSData = vehicle::AudioPSData;
 } // namespace RED4ext

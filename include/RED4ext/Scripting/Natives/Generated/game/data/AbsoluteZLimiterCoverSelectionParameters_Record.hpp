@@ -17,9 +17,9 @@ struct AbsoluteZLimiterCoverSelectionParameters_Record : game::data::CoverSelect
     static constexpr const char* NAME = "gamedataAbsoluteZLimiterCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "AbsoluteZLimiterCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x70 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AbsoluteZLimiterCoverSelectionParameters_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AbsoluteZLimiterCoverSelectionParameters_Record, 0x70);
 } // namespace game::data
 using gamedataAbsoluteZLimiterCoverSelectionParameters_Record = game::data::AbsoluteZLimiterCoverSelectionParameters_Record;
 using AbsoluteZLimiterCoverSelectionParameters_Record = game::data::AbsoluteZLimiterCoverSelectionParameters_Record;

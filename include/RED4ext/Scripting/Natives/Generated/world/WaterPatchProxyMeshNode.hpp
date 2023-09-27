@@ -18,7 +18,7 @@ struct WaterPatchProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(WaterPatchProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(WaterPatchProxyMeshNode, 0x68);
 } // namespace world
 using worldWaterPatchProxyMeshNode = world::WaterPatchProxyMeshNode;
 } // namespace RED4ext

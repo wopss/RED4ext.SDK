@@ -21,7 +21,7 @@ struct ScenesVersions : CResource
 
     uint32_t currentVersion; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
-    DynArray<scn::ScenesVersionsSceneChanges> scenesChanges; // 48
+    DynArray<scn::ScenesVersionsSceneChanges> scenes; // 48
 };
 RED4EXT_ASSERT_SIZE(ScenesVersions, 0x58);
 } // namespace scn

@@ -18,7 +18,7 @@ struct ReactionPresetMechanical_Record : game::data::ReactionPreset_Record
     static constexpr const char* ALIAS = "ReactionPresetMechanical_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ReactionPresetMechanical_Record, 0x68);
+RED4EXT_ASSERT_SIZE(ReactionPresetMechanical_Record, 0xB8);
 } // namespace game::data
 using gamedataReactionPresetMechanical_Record = game::data::ReactionPresetMechanical_Record;
 using ReactionPresetMechanical_Record = game::data::ReactionPresetMechanical_Record;

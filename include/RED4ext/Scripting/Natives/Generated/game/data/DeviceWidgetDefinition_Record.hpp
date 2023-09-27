@@ -18,7 +18,7 @@ struct DeviceWidgetDefinition_Record : game::data::WidgetDefinition_Record
     static constexpr const char* ALIAS = "DeviceWidgetDefinition_Record";
 
 };
-RED4EXT_ASSERT_SIZE(DeviceWidgetDefinition_Record, 0x58);
+RED4EXT_ASSERT_SIZE(DeviceWidgetDefinition_Record, 0x88);
 } // namespace game::data
 using gamedataDeviceWidgetDefinition_Record = game::data::DeviceWidgetDefinition_Record;
 using DeviceWidgetDefinition_Record = game::data::DeviceWidgetDefinition_Record;

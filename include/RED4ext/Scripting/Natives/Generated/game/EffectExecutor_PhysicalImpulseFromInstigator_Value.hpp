@@ -18,7 +18,8 @@ struct EffectExecutor_PhysicalImpulseFromInstigator_Value : game::EffectExecutor
     static constexpr const char* ALIAS = NAME;
 
     float magnitude; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    bool forceUseHitPosition; // 4C
+    uint8_t unk4D[0x50 - 0x4D]; // 4D
 };
 RED4EXT_ASSERT_SIZE(EffectExecutor_PhysicalImpulseFromInstigator_Value, 0x50);
 } // namespace game

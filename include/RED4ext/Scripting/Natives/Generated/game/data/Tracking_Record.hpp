@@ -17,9 +17,9 @@ struct Tracking_Record : game::data::ProjectileLaunch_Record
     static constexpr const char* NAME = "gamedataTracking_Record";
     static constexpr const char* ALIAS = "Tracking_Record";
 
-    uint8_t unk58[0x70 - 0x58]; // 58
+    uint8_t unk70[0xD0 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(Tracking_Record, 0x70);
+RED4EXT_ASSERT_SIZE(Tracking_Record, 0xD0);
 } // namespace game::data
 using gamedataTracking_Record = game::data::Tracking_Record;
 using Tracking_Record = game::data::Tracking_Record;

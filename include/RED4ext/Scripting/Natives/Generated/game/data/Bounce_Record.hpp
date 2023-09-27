@@ -18,7 +18,7 @@ struct Bounce_Record : game::data::ProjectileCollision_Record
     static constexpr const char* ALIAS = "Bounce_Record";
 
 };
-RED4EXT_ASSERT_SIZE(Bounce_Record, 0x58);
+RED4EXT_ASSERT_SIZE(Bounce_Record, 0x70);
 } // namespace game::data
 using gamedataBounce_Record = game::data::Bounce_Record;
 using Bounce_Record = game::data::Bounce_Record;

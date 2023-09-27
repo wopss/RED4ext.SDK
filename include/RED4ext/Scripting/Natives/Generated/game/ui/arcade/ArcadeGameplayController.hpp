@@ -21,9 +21,9 @@ struct ArcadeGameplayController : game::ui::arcade::IArcadeScreenController
     uint8_t unk98[0xD0 - 0x98]; // 98
     ink::WidgetReference score; // D0
     ink::WidgetReference pauseText; // E8
-    uint8_t unk100[0x110 - 0x100]; // 100
+    uint8_t unk100[0x118 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(ArcadeGameplayController, 0x110);
+RED4EXT_ASSERT_SIZE(ArcadeGameplayController, 0x118);
 } // namespace game::ui::arcade
 using gameuiarcadeArcadeGameplayController = game::ui::arcade::ArcadeGameplayController;
 } // namespace RED4ext

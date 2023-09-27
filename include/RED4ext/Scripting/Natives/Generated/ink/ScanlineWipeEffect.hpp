@@ -17,12 +17,12 @@ struct ScanlineWipeEffect : ink::IEffect
     static constexpr const char* NAME = "inkScanlineWipeEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float angle; // 68
-    float transition; // 6C
-    float width; // 70
-    uint8_t unk74[0x78 - 0x74]; // 74
+    float angle; // 50
+    float transition; // 54
+    float width; // 58
+    uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
-RED4EXT_ASSERT_SIZE(ScanlineWipeEffect, 0x78);
+RED4EXT_ASSERT_SIZE(ScanlineWipeEffect, 0x60);
 } // namespace ink
 using inkScanlineWipeEffect = ink::ScanlineWipeEffect;
 } // namespace RED4ext

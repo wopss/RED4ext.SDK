@@ -17,9 +17,9 @@ struct MovementPolicy_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataMovementPolicy_Record";
     static constexpr const char* ALIAS = "MovementPolicy_Record";
 
-    uint8_t unk48[0xD8 - 0x48]; // 48
+    uint8_t unk48[0x288 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(MovementPolicy_Record, 0xD8);
+RED4EXT_ASSERT_SIZE(MovementPolicy_Record, 0x288);
 } // namespace game::data
 using gamedataMovementPolicy_Record = game::data::MovementPolicy_Record;
 using MovementPolicy_Record = game::data::MovementPolicy_Record;

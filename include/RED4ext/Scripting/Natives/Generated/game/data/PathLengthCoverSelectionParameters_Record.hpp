@@ -17,9 +17,9 @@ struct PathLengthCoverSelectionParameters_Record : game::data::CoverSelectionPar
     static constexpr const char* NAME = "gamedataPathLengthCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "PathLengthCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0xA0 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(PathLengthCoverSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(PathLengthCoverSelectionParameters_Record, 0xA0);
 } // namespace game::data
 using gamedataPathLengthCoverSelectionParameters_Record = game::data::PathLengthCoverSelectionParameters_Record;
 using PathLengthCoverSelectionParameters_Record = game::data::PathLengthCoverSelectionParameters_Record;

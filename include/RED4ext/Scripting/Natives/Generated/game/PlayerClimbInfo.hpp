@@ -23,11 +23,12 @@ struct PlayerClimbInfo : IScriptable
 
     Handle<world::geometry::DescriptionResult> descResult; // 40
     Vector4 obstacleEnd; // 50
-    bool climbValid; // 60
-    bool vaultValid; // 61
-    uint8_t unk62[0x70 - 0x62]; // 62
+    Vector4 inputDirection; // 60
+    bool climbValid; // 70
+    bool vaultValid; // 71
+    uint8_t unk72[0x80 - 0x72]; // 72
 };
-RED4EXT_ASSERT_SIZE(PlayerClimbInfo, 0x70);
+RED4EXT_ASSERT_SIZE(PlayerClimbInfo, 0x80);
 } // namespace game
 using gamePlayerClimbInfo = game::PlayerClimbInfo;
 using PlayerClimbInfo = game::PlayerClimbInfo;

@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallPhase.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallVisuals.hpp>
 
 namespace RED4ext
 {
@@ -28,7 +29,9 @@ struct PhoneCallInformation
     uint8_t unk12[0x14 - 0x12]; // 12
     quest::PhoneCallPhase callPhase; // 14
     bool isRejectable; // 18
-    uint8_t unk19[0x20 - 0x19]; // 19
+    bool showAvatar; // 19
+    uint8_t unk1A[0x1C - 0x1A]; // 1A
+    quest::PhoneCallVisuals visuals; // 1C
 };
 RED4EXT_ASSERT_SIZE(PhoneCallInformation, 0x20);
 } // namespace quest

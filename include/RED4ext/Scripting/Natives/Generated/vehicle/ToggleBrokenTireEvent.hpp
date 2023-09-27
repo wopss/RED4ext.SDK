@@ -17,7 +17,9 @@ struct ToggleBrokenTireEvent : red::Event
     static constexpr const char* NAME = "vehicleToggleBrokenTireEvent";
     static constexpr const char* ALIAS = "VehicleToggleBrokenTireEvent";
 
-    uint8_t unk40[0x48 - 0x40]; // 40
+    uint32_t tireIndex; // 40
+    bool toggle; // 44
+    uint8_t unk45[0x48 - 0x45]; // 45
 };
 RED4EXT_ASSERT_SIZE(ToggleBrokenTireEvent, 0x48);
 } // namespace vehicle

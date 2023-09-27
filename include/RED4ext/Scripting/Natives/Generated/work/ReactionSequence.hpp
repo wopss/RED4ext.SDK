@@ -20,18 +20,18 @@ struct ReactionSequence : work::IContainerEntry
     static constexpr const char* NAME = "workReactionSequence";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk50[0x58 - 0x50]; // 50
-    DynArray<TweakDBID> reactionTypes; // 58
-    float forcedBlendIn; // 68
-    float facialKeyWeight; // 6C
-    CName mainEmotionalState; // 70
-    CName emotionalExpression; // 78
-    CName facialIdleMaleAnimation; // 80
-    CName facialIdleKey_MaleAnimation; // 88
-    CName facialIdleFemaleAnimation; // 90
-    CName facialIdleKey_FemaleAnimation; // 98
+    uint8_t unk58[0x60 - 0x58]; // 58
+    DynArray<TweakDBID> reactionTypes; // 60
+    float forcedBlendIn; // 70
+    float facialKeyWeight; // 74
+    CName mainEmotionalState; // 78
+    CName emotionalExpression; // 80
+    CName facialIdleMaleAnimation; // 88
+    CName facialIdleKey_MaleAnimation; // 90
+    CName facialIdleFemaleAnimation; // 98
+    CName facialIdleKey_FemaleAnimation; // A0
 };
-RED4EXT_ASSERT_SIZE(ReactionSequence, 0xA0);
+RED4EXT_ASSERT_SIZE(ReactionSequence, 0xA8);
 } // namespace work
 using workReactionSequence = work::ReactionSequence;
 } // namespace RED4ext

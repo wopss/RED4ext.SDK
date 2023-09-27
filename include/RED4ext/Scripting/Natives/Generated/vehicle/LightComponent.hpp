@@ -19,15 +19,15 @@ struct LightComponent : game::LightComponent
     static constexpr const char* NAME = "vehicleLightComponent";
     static constexpr const char* ALIAS = NAME;
 
-    vehicle::ELightType lightType; // 2F0
-    float highBeamPitchAngle; // 2F4
-    float highBeamRadiusMultiplier; // 2F8
-    float highBeamConeMultiplier; // 2FC
-    Color emissiveColor; // 300
-    bool allowSeparateEmissiveColor; // 304
-    uint8_t unk305[0x330 - 0x305]; // 305
+    vehicle::ELightType lightType; // 310
+    float highBeamPitchAngle; // 314
+    float highBeamRadiusMultiplier; // 318
+    float highBeamConeMultiplier; // 31C
+    Color emissiveColor; // 320
+    bool allowSeparateEmissiveColor; // 324
+    uint8_t unk325[0x350 - 0x325]; // 325
 };
-RED4EXT_ASSERT_SIZE(LightComponent, 0x330);
+RED4EXT_ASSERT_SIZE(LightComponent, 0x350);
 } // namespace vehicle
 using vehicleLightComponent = vehicle::LightComponent;
 } // namespace RED4ext

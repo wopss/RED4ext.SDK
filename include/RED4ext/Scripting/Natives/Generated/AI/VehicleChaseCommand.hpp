@@ -24,7 +24,10 @@ struct VehicleChaseCommand : AI::VehicleCommand
     float distanceMin; // 78
     float distanceMax; // 7C
     float forcedStartSpeed; // 80
-    uint8_t unk84[0x88 - 0x84]; // 84
+    bool aggressiveRamming; // 84
+    bool ignoreChaseVehiclesLimit; // 85
+    bool boostDrivingStats; // 86
+    uint8_t unk87[0x88 - 0x87]; // 87
 };
 RED4EXT_ASSERT_SIZE(VehicleChaseCommand, 0x88);
 } // namespace AI

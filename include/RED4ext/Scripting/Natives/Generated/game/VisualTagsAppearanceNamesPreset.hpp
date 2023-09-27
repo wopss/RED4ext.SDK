@@ -20,9 +20,8 @@ struct VisualTagsAppearanceNamesPreset : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     DynArray<game::VisualTagsAppearanceNamesPreset_Entity> presets; // 30
-    uint8_t unk40[0x70 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(VisualTagsAppearanceNamesPreset, 0x70);
+RED4EXT_ASSERT_SIZE(VisualTagsAppearanceNamesPreset, 0x40);
 } // namespace game
 using gameVisualTagsAppearanceNamesPreset = game::VisualTagsAppearanceNamesPreset;
 } // namespace RED4ext

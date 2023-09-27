@@ -17,9 +17,9 @@ struct DistanceFromOthersCoverSelectionParameters_Record : game::data::CoverSele
     static constexpr const char* NAME = "gamedataDistanceFromOthersCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "DistanceFromOthersCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x88 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(DistanceFromOthersCoverSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(DistanceFromOthersCoverSelectionParameters_Record, 0x88);
 } // namespace game::data
 using gamedataDistanceFromOthersCoverSelectionParameters_Record = game::data::DistanceFromOthersCoverSelectionParameters_Record;
 using DistanceFromOthersCoverSelectionParameters_Record = game::data::DistanceFromOthersCoverSelectionParameters_Record;

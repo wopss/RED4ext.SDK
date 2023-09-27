@@ -18,10 +18,10 @@ struct CommonVariant : game::mappins::IPointOfInterestVariant
     static constexpr const char* NAME = "gamemappinsCommonVariant";
     static constexpr const char* ALIAS = NAME;
 
-    game::data::MappinVariant variant; // 38
-    uint8_t unk3C[0x40 - 0x3C]; // 3C
+    game::data::MappinVariant variant; // 30
+    uint8_t unk34[0x38 - 0x34]; // 34
 };
-RED4EXT_ASSERT_SIZE(CommonVariant, 0x40);
+RED4EXT_ASSERT_SIZE(CommonVariant, 0x38);
 } // namespace game::mappins
 using gamemappinsCommonVariant = game::mappins::CommonVariant;
 } // namespace RED4ext

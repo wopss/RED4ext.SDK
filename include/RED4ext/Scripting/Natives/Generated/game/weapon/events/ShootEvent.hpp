@@ -17,9 +17,9 @@ struct ShootEvent : red::Event
     static constexpr const char* NAME = "gameweaponeventsShootEvent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x1B0 - 0x40]; // 40
+    uint8_t unk40[0x1E0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(ShootEvent, 0x1B0);
+RED4EXT_ASSERT_SIZE(ShootEvent, 0x1E0);
 } // namespace game::weapon::events
 using gameweaponeventsShootEvent = game::weapon::events::ShootEvent;
 } // namespace RED4ext

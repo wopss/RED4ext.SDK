@@ -17,9 +17,9 @@ struct WeaponFxPackage_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataWeaponFxPackage_Record";
     static constexpr const char* ALIAS = "WeaponFxPackage_Record";
 
-    uint8_t unk48[0x250 - 0x48]; // 48
+    uint8_t unk48[0x9A0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(WeaponFxPackage_Record, 0x250);
+RED4EXT_ASSERT_SIZE(WeaponFxPackage_Record, 0x9A0);
 } // namespace game::data
 using gamedataWeaponFxPackage_Record = game::data::WeaponFxPackage_Record;
 using WeaponFxPackage_Record = game::data::WeaponFxPackage_Record;

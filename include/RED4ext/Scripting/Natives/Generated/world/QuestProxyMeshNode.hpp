@@ -18,7 +18,7 @@ struct QuestProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(QuestProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(QuestProxyMeshNode, 0x68);
 } // namespace world
 using worldQuestProxyMeshNode = world::QuestProxyMeshNode;
 } // namespace RED4ext

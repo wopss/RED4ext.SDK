@@ -27,6 +27,8 @@ enum class ERenderObjectType : uint8_t
     ROT_Weapon = 25,
     ROT_Particle = 26,
     ROT_Enemy = 27,
+    ROT_Blackwall1 = 28,
+    ROT_Blackwall2 = 29,
 };
 } // namespace RED4ext
 

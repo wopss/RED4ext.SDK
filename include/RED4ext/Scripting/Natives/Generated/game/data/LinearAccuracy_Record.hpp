@@ -17,9 +17,9 @@ struct LinearAccuracy_Record : game::data::Accuracy_Record
     static constexpr const char* NAME = "gamedataLinearAccuracy_Record";
     static constexpr const char* ALIAS = "LinearAccuracy_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x70 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(LinearAccuracy_Record, 0x58);
+RED4EXT_ASSERT_SIZE(LinearAccuracy_Record, 0x70);
 } // namespace game::data
 using gamedataLinearAccuracy_Record = game::data::LinearAccuracy_Record;
 using LinearAccuracy_Record = game::data::LinearAccuracy_Record;

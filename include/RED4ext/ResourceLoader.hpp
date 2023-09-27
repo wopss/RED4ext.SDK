@@ -137,7 +137,9 @@ struct ResourceLoader
     SharedPtr<ResourceToken<T>> FindToken(ResourcePath aPath)
     {
         using FindToken_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>*, ResourcePath);
-        RelocFunc<FindToken_t> func(Addresses::ResourceLoader_FindToken);
+        RelocFunc<FindToken_t> func(Addresses::ResourceLoader_FindTokenFast);
+
+        std::shared_lock<SharedMutex> _;
 
         SharedPtr<ResourceToken<T>> token;
         func(this, &token, aPath);

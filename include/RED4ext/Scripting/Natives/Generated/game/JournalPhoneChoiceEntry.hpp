@@ -18,11 +18,11 @@ struct JournalPhoneChoiceEntry : game::JournalEntry
     static constexpr const char* NAME = "gameJournalPhoneChoiceEntry";
     static constexpr const char* ALIAS = "JournalPhoneChoiceEntry";
 
-    LocalizationString text; // 60
-    bool isQuestImportant; // 88
-    uint8_t unk89[0x90 - 0x89]; // 89
+    LocalizationString text; // 70
+    bool isQuestImportant; // 98
+    uint8_t unk99[0xA0 - 0x99]; // 99
 };
-RED4EXT_ASSERT_SIZE(JournalPhoneChoiceEntry, 0x90);
+RED4EXT_ASSERT_SIZE(JournalPhoneChoiceEntry, 0xA0);
 } // namespace game
 using gameJournalPhoneChoiceEntry = game::JournalPhoneChoiceEntry;
 using JournalPhoneChoiceEntry = game::JournalPhoneChoiceEntry;

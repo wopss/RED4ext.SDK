@@ -17,9 +17,9 @@ struct SpreadInitEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataSpreadInitEffector_Record";
     static constexpr const char* ALIAS = "SpreadInitEffector_Record";
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk88[0xC8 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(SpreadInitEffector_Record, 0x68);
+RED4EXT_ASSERT_SIZE(SpreadInitEffector_Record, 0xC8);
 } // namespace game::data
 using gamedataSpreadInitEffector_Record = game::data::SpreadInitEffector_Record;
 using SpreadInitEffector_Record = game::data::SpreadInitEffector_Record;

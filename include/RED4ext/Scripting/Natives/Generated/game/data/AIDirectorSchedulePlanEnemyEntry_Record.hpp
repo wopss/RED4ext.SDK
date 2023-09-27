@@ -17,9 +17,9 @@ struct AIDirectorSchedulePlanEnemyEntry_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIDirectorSchedulePlanEnemyEntry_Record";
     static constexpr const char* ALIAS = "AIDirectorSchedulePlanEnemyEntry_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x78 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIDirectorSchedulePlanEnemyEntry_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIDirectorSchedulePlanEnemyEntry_Record, 0x78);
 } // namespace game::data
 using gamedataAIDirectorSchedulePlanEnemyEntry_Record = game::data::AIDirectorSchedulePlanEnemyEntry_Record;
 using AIDirectorSchedulePlanEnemyEntry_Record = game::data::AIDirectorSchedulePlanEnemyEntry_Record;

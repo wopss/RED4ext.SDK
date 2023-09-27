@@ -30,7 +30,9 @@ struct PlaybackOptions
     CName toMarker; // 20
     bool oneSegment; // 28
     bool dependsOnTimeDilation; // 29
-    uint8_t unk2A[0x30 - 0x2A]; // 2A
+    bool applyCustomTimeDilation; // 2A
+    uint8_t unk2B[0x2C - 0x2B]; // 2B
+    float customTimeDilation; // 2C
 };
 RED4EXT_ASSERT_SIZE(PlaybackOptions, 0x30);
 } // namespace ink::anim

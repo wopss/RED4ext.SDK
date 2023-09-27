@@ -17,9 +17,9 @@ struct JournalManager : game::IJournalManager
     static constexpr const char* NAME = "gameJournalManager";
     static constexpr const char* ALIAS = "JournalManager";
 
-    uint8_t unk58[0x248 - 0x58]; // 58
+    uint8_t unk58[0x2E0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(JournalManager, 0x248);
+RED4EXT_ASSERT_SIZE(JournalManager, 0x2E0);
 } // namespace game
 using gameJournalManager = game::JournalManager;
 using JournalManager = game::JournalManager;

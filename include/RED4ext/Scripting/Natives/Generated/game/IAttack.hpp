@@ -17,9 +17,9 @@ struct IAttack : IScriptable
     static constexpr const char* NAME = "gameIAttack";
     static constexpr const char* ALIAS = "IAttack";
 
-    uint8_t unk40[0xD8 - 0x40]; // 40
+    uint8_t unk40[0x128 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(IAttack, 0xD8);
+RED4EXT_ASSERT_SIZE(IAttack, 0x128);
 } // namespace game
 using gameIAttack = game::IAttack;
 using IAttack = game::IAttack;

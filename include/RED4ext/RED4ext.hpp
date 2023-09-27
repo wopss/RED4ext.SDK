@@ -19,7 +19,6 @@
 #include <RED4ext/Memory/SharedPtr.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>
-#include <RED4ext/IO/MemoryStream.hpp>
 
 #include <RED4ext/ISerializable.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>

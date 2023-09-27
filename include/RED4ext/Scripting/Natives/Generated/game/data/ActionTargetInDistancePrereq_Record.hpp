@@ -17,9 +17,9 @@ struct ActionTargetInDistancePrereq_Record : game::data::IPrereq_Record
     static constexpr const char* NAME = "gamedataActionTargetInDistancePrereq_Record";
     static constexpr const char* ALIAS = "ActionTargetInDistancePrereq_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x88 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(ActionTargetInDistancePrereq_Record, 0x60);
+RED4EXT_ASSERT_SIZE(ActionTargetInDistancePrereq_Record, 0x88);
 } // namespace game::data
 using gamedataActionTargetInDistancePrereq_Record = game::data::ActionTargetInDistancePrereq_Record;
 using ActionTargetInDistancePrereq_Record = game::data::ActionTargetInDistancePrereq_Record;

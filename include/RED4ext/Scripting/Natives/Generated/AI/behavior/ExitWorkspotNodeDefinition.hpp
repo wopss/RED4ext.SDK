@@ -26,9 +26,10 @@ struct ExitWorkspotNodeDefinition : AI::behavior::DecoratorNodeDefinition
     Handle<AI::ArgumentMapping> stayInWorkspotIfExitFails; // 70
     Handle<AI::ArgumentMapping> tryBlendFastExitToWalk; // 80
     Handle<AI::ArgumentMapping> dontRequestExit; // 90
-    Handle<AI::ArgumentMapping> target; // A0
+    Handle<AI::ArgumentMapping> cancelQueuedCommand; // A0
+    Handle<AI::ArgumentMapping> target; // B0
 };
-RED4EXT_ASSERT_SIZE(ExitWorkspotNodeDefinition, 0xB0);
+RED4EXT_ASSERT_SIZE(ExitWorkspotNodeDefinition, 0xC0);
 } // namespace AI::behavior
 using AIbehaviorExitWorkspotNodeDefinition = AI::behavior::ExitWorkspotNodeDefinition;
 } // namespace RED4ext

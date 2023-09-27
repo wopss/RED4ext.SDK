@@ -17,7 +17,7 @@ enum class ForcedLodDistance : uint8_t
     Vehicle = 4,
     CinematicVehicle = 5,
     VehicleInterior = 6,
-    LargeVehicleInterior = 7,
+    VehicleDecoration = 7,
     ConsoleLOD = 8,
 };
 } // namespace ent

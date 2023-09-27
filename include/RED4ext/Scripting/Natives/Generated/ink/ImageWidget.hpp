@@ -33,15 +33,17 @@ struct ImageWidget : ink::LeafWidget
     ink::EVerticalAlign contentVAlign; // 219
     ink::BrushMirrorType mirrorType; // 21A
     ink::BrushTileType tileType; // 21B
-    bool useExternalDynamicTexture; // 21C
-    bool useNineSliceScale; // 21D
-    uint8_t unk21E[0x220 - 0x21E]; // 21E
-    ink::Margin nineSliceScale; // 220
-    ink::EHorizontalAlign tileHAlign; // 230
-    ink::EVerticalAlign tileVAlign; // 231
-    uint8_t unk232[0x330 - 0x232]; // 232
+    float horizontalTileCrop; // 21C
+    float verticalTileCrop; // 220
+    bool useExternalDynamicTexture; // 224
+    bool useNineSliceScale; // 225
+    uint8_t unk226[0x228 - 0x226]; // 226
+    ink::Margin nineSliceScale; // 228
+    ink::EHorizontalAlign tileHAlign; // 238
+    ink::EVerticalAlign tileVAlign; // 239
+    uint8_t unk23A[0x340 - 0x23A]; // 23A
 };
-RED4EXT_ASSERT_SIZE(ImageWidget, 0x330);
+RED4EXT_ASSERT_SIZE(ImageWidget, 0x340);
 } // namespace ink
 using inkImageWidget = ink::ImageWidget;
 using inkImage = ink::ImageWidget;

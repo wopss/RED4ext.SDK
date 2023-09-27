@@ -18,7 +18,7 @@ struct ReactionPresetNoReaction_Record : game::data::ReactionPreset_Record
     static constexpr const char* ALIAS = "ReactionPresetNoReaction_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ReactionPresetNoReaction_Record, 0x68);
+RED4EXT_ASSERT_SIZE(ReactionPresetNoReaction_Record, 0xB8);
 } // namespace game::data
 using gamedataReactionPresetNoReaction_Record = game::data::ReactionPresetNoReaction_Record;
 using ReactionPresetNoReaction_Record = game::data::ReactionPresetNoReaction_Record;

@@ -17,9 +17,9 @@ struct RuntimePointOfInterestMappinData : game::mappins::IRuntimeMappinData
     static constexpr const char* NAME = "gamemappinsRuntimePointOfInterestMappinData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk50[0x70 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(RuntimePointOfInterestMappinData, 0x58);
+RED4EXT_ASSERT_SIZE(RuntimePointOfInterestMappinData, 0x70);
 } // namespace game::mappins
 using gamemappinsRuntimePointOfInterestMappinData = game::mappins::RuntimePointOfInterestMappinData;
 } // namespace RED4ext

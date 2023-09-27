@@ -17,9 +17,9 @@ struct StatModifier_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataStatModifier_Record";
     static constexpr const char* ALIAS = "StatModifier_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StatModifier_Record, 0x50);
+RED4EXT_ASSERT_SIZE(StatModifier_Record, 0x60);
 } // namespace game::data
 using gamedataStatModifier_Record = game::data::StatModifier_Record;
 using StatModifier_Record = game::data::StatModifier_Record;

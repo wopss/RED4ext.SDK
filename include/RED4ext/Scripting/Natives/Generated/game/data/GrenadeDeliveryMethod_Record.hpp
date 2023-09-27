@@ -17,9 +17,9 @@ struct GrenadeDeliveryMethod_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataGrenadeDeliveryMethod_Record";
     static constexpr const char* ALIAS = "GrenadeDeliveryMethod_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0xA0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GrenadeDeliveryMethod_Record, 0x60);
+RED4EXT_ASSERT_SIZE(GrenadeDeliveryMethod_Record, 0xA0);
 } // namespace game::data
 using gamedataGrenadeDeliveryMethod_Record = game::data::GrenadeDeliveryMethod_Record;
 using GrenadeDeliveryMethod_Record = game::data::GrenadeDeliveryMethod_Record;

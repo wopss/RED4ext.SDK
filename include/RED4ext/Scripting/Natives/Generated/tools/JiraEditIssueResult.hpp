@@ -23,7 +23,7 @@ struct JiraEditIssueResult : ISerializable
     DynArray<CString> errorMessages; // 30
     tools::JiraIssueFieldsResult errors; // 40
 };
-RED4EXT_ASSERT_SIZE(JiraEditIssueResult, 0x220);
+RED4EXT_ASSERT_SIZE(JiraEditIssueResult, 0x490);
 } // namespace tools
 using toolsJiraEditIssueResult = tools::JiraEditIssueResult;
 } // namespace RED4ext

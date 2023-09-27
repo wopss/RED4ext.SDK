@@ -17,9 +17,9 @@ struct VehicleDriveModelData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleDriveModelData_Record";
     static constexpr const char* ALIAS = "VehicleDriveModelData_Record";
 
-    uint8_t unk48[0x120 - 0x48]; // 48
+    uint8_t unk48[0x3B8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleDriveModelData_Record, 0x120);
+RED4EXT_ASSERT_SIZE(VehicleDriveModelData_Record, 0x3B8);
 } // namespace game::data
 using gamedataVehicleDriveModelData_Record = game::data::VehicleDriveModelData_Record;
 using VehicleDriveModelData_Record = game::data::VehicleDriveModelData_Record;

@@ -6,22 +6,19 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/CName.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationBodyPartsController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationHeadPartsController.hpp>
 
 namespace RED4ext
 {
 namespace game::ui
 {
-struct CharacterCustomizationHairstyleController : game::ui::CharacterCustomizationBodyPartsController
+struct CharacterCustomizationHairstyleController : game::ui::CharacterCustomizationHeadPartsController
 {
     static constexpr const char* NAME = "gameuiCharacterCustomizationHairstyleController";
     static constexpr const char* ALIAS = NAME;
 
-    CName headGroupName; // C0
-    uint8_t unkC8[0x130 - 0xC8]; // C8
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationHairstyleController, 0x130);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationHairstyleController, 0x120);
 } // namespace game::ui
 using gameuiCharacterCustomizationHairstyleController = game::ui::CharacterCustomizationHairstyleController;
 } // namespace RED4ext

@@ -36,12 +36,14 @@ struct StatusEffect : game::StatusEffectBase
     float lastApplicationTimestamp; // AC
     ent::EntityID instigatorEntityID; // B0
     TweakDBID instigatorRecordID; // B8
-    Vector4 direction; // C0
-    bool removeAllStacksWhenDurationEnds; // D0
-    uint8_t unkD1[0xD8 - 0xD1]; // D1
-    CName applicationSource; // D8
+    ent::EntityID proxyEntityID; // C0
+    uint8_t unkC8[0xD0 - 0xC8]; // C8
+    Vector4 direction; // D0
+    bool removeAllStacksWhenDurationEnds; // E0
+    uint8_t unkE1[0xE8 - 0xE1]; // E1
+    CName applicationSource; // E8
 };
-RED4EXT_ASSERT_SIZE(StatusEffect, 0xE0);
+RED4EXT_ASSERT_SIZE(StatusEffect, 0xF0);
 } // namespace game
 using gameStatusEffect = game::StatusEffect;
 using StatusEffect = game::StatusEffect;

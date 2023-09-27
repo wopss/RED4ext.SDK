@@ -17,9 +17,9 @@ struct GenericHighwaySign_Record : game::data::BaseSign_Record
     static constexpr const char* NAME = "gamedataGenericHighwaySign_Record";
     static constexpr const char* ALIAS = "GenericHighwaySign_Record";
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk70[0x98 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(GenericHighwaySign_Record, 0x68);
+RED4EXT_ASSERT_SIZE(GenericHighwaySign_Record, 0x98);
 } // namespace game::data
 using gamedataGenericHighwaySign_Record = game::data::GenericHighwaySign_Record;
 using GenericHighwaySign_Record = game::data::GenericHighwaySign_Record;

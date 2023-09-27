@@ -17,9 +17,9 @@ struct AIActionSelector_Record : game::data::AINode_Record
     static constexpr const char* NAME = "gamedataAIActionSelector_Record";
     static constexpr const char* ALIAS = "AIActionSelector_Record";
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk78[0xA8 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(AIActionSelector_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AIActionSelector_Record, 0xA8);
 } // namespace game::data
 using gamedataAIActionSelector_Record = game::data::AIActionSelector_Record;
 using AIActionSelector_Record = game::data::AIActionSelector_Record;

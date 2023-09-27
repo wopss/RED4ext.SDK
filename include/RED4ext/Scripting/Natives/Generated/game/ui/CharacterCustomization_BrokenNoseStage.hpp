@@ -13,6 +13,7 @@ enum class CharacterCustomization_BrokenNoseStage : uint32_t
     CCBN_Disabled = 0,
     CCBN_Stage1 = 1,
     CCBN_Stage2 = 2,
+    CCBN_FinalScene = 3,
 };
 } // namespace game::ui
 using gameuiCharacterCustomization_BrokenNoseStage = game::ui::CharacterCustomization_BrokenNoseStage;

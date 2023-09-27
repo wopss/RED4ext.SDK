@@ -17,9 +17,9 @@ struct GenericStreetNameSign_Record : game::data::BaseSign_Record
     static constexpr const char* NAME = "gamedataGenericStreetNameSign_Record";
     static constexpr const char* ALIAS = "GenericStreetNameSign_Record";
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk70[0x98 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(GenericStreetNameSign_Record, 0x68);
+RED4EXT_ASSERT_SIZE(GenericStreetNameSign_Record, 0x98);
 } // namespace game::data
 using gamedataGenericStreetNameSign_Record = game::data::GenericStreetNameSign_Record;
 using GenericStreetNameSign_Record = game::data::GenericStreetNameSign_Record;

@@ -11,6 +11,7 @@ namespace game {
 enum class TargetingSet : uint32_t
 {
     Visible = 0,
+    ClearlyVisible = 1,
     Frustum = 2,
     Complete = 3,
     None = 4,

@@ -17,9 +17,9 @@ struct DelaySystemTickStruct : ISerializable
     static constexpr const char* NAME = "gameDelaySystemTickStruct";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x38 - 0x30]; // 30
+    uint8_t unk30[0x40 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(DelaySystemTickStruct, 0x38);
+RED4EXT_ASSERT_SIZE(DelaySystemTickStruct, 0x40);
 } // namespace game
 using gameDelaySystemTickStruct = game::DelaySystemTickStruct;
 } // namespace RED4ext

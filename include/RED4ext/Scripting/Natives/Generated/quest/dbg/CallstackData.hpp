@@ -23,11 +23,12 @@ struct CallstackData
     DynArray<quest::dbg::CallstackBlock> blocks; // 08
     DynArray<quest::dbg::CallstackPhase> phases; // 18
     DynArray<uint64_t> executed; // 28
-    DynArray<uint64_t> failed; // 38
-    uint32_t callstackRevision; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    DynArray<uint64_t> executedHistory; // 38
+    DynArray<uint64_t> failed; // 48
+    uint32_t callstackRevision; // 58
+    uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
-RED4EXT_ASSERT_SIZE(CallstackData, 0x50);
+RED4EXT_ASSERT_SIZE(CallstackData, 0x60);
 } // namespace quest::dbg
 using questdbgCallstackData = quest::dbg::CallstackData;
 } // namespace RED4ext

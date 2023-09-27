@@ -17,9 +17,9 @@ struct AIActionSecurityAreaType_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIActionSecurityAreaType_Record";
     static constexpr const char* ALIAS = "AIActionSecurityAreaType_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIActionSecurityAreaType_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIActionSecurityAreaType_Record, 0x68);
 } // namespace game::data
 using gamedataAIActionSecurityAreaType_Record = game::data::AIActionSecurityAreaType_Record;
 using AIActionSecurityAreaType_Record = game::data::AIActionSecurityAreaType_Record;

@@ -17,9 +17,9 @@ struct ChoiceCaptionIconPart_Record : game::data::ChoiceCaptionPart_Record
     static constexpr const char* NAME = "gamedataChoiceCaptionIconPart_Record";
     static constexpr const char* ALIAS = "ChoiceCaptionIconPart_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x88 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(ChoiceCaptionIconPart_Record, 0x60);
+RED4EXT_ASSERT_SIZE(ChoiceCaptionIconPart_Record, 0x88);
 } // namespace game::data
 using gamedataChoiceCaptionIconPart_Record = game::data::ChoiceCaptionIconPart_Record;
 using ChoiceCaptionIconPart_Record = game::data::ChoiceCaptionIconPart_Record;

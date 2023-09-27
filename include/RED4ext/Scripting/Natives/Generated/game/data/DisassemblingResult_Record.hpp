@@ -17,9 +17,9 @@ struct DisassemblingResult_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataDisassemblingResult_Record";
     static constexpr const char* ALIAS = "DisassemblingResult_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DisassemblingResult_Record, 0x50);
+RED4EXT_ASSERT_SIZE(DisassemblingResult_Record, 0x58);
 } // namespace game::data
 using gamedataDisassemblingResult_Record = game::data::DisassemblingResult_Record;
 using DisassemblingResult_Record = game::data::DisassemblingResult_Record;

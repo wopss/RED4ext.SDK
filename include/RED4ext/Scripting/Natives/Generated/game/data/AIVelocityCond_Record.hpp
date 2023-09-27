@@ -17,9 +17,9 @@ struct AIVelocityCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIVelocityCond_Record";
     static constexpr const char* ALIAS = "AIVelocityCond_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk58[0x80 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIVelocityCond_Record, 0x60);
+RED4EXT_ASSERT_SIZE(AIVelocityCond_Record, 0x80);
 } // namespace game::data
 using gamedataAIVelocityCond_Record = game::data::AIVelocityCond_Record;
 using AIVelocityCond_Record = game::data::AIVelocityCond_Record;

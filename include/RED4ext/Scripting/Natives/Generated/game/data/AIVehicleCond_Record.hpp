@@ -17,9 +17,9 @@ struct AIVehicleCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIVehicleCond_Record";
     static constexpr const char* ALIAS = "AIVehicleCond_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk58[0xA0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIVehicleCond_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AIVehicleCond_Record, 0xA0);
 } // namespace game::data
 using gamedataAIVehicleCond_Record = game::data::AIVehicleCond_Record;
 using AIVehicleCond_Record = game::data::AIVehicleCond_Record;

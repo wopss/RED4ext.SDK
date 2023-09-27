@@ -41,12 +41,12 @@ struct AutonomousData : ISerializable
     float distanceMin; // E0
     float distanceMax; // E4
     bool wantToStop; // E8
-    uint8_t unkE9[0xEA - 0xE9]; // E9
-    bool stopHasReachedTarget; // EA
-    bool driveBackwards; // EB
-    bool reverseSpline; // EC
-    bool startFromClosest; // ED
-    uint8_t unkEE[0xFC - 0xEE]; // EE
+    uint8_t unkE9[0xEB - 0xE9]; // E9
+    bool stopHasReachedTarget; // EB
+    bool driveBackwards; // EC
+    bool reverseSpline; // ED
+    bool startFromClosest; // EE
+    uint8_t unkEF[0xFC - 0xEF]; // EF
     bool canClearActions; // FC
     uint8_t unkFD[0xFE - 0xFD]; // FD
     bool keepDistanceParamBool; // FE
@@ -61,14 +61,30 @@ struct AutonomousData : ISerializable
     bool rubberBandingStopAndWait; // 130
     bool rubberBandingTeleportToCatchUp; // 131
     bool rubberBandingStayInFront; // 132
-    uint8_t unk133[0x134 - 0x133]; // 133
-    float secureTimeOut; // 134
-    Handle<vehicle::PortalsList> portalsList; // 138
-    bool trafficTryNeighborsForStart; // 148
-    bool trafficTryNeighborsForEnd; // 149
-    uint8_t unk14A[0x150 - 0x14A]; // 14A
+    uint8_t unk133[0x148 - 0x133]; // 133
+    float secureTimeOut; // 148
+    uint8_t unk14C[0x150 - 0x14C]; // 14C
+    Handle<vehicle::PortalsList> portalsList; // 150
+    bool trafficTryNeighborsForStart; // 160
+    bool trafficTryNeighborsForEnd; // 161
+    uint8_t unk162[0x163 - 0x162]; // 162
+    bool allowSimplifiedMovement; // 163
+    bool ignoreTickets; // 164
+    bool disableStuckDetection; // 165
+    bool useSpeedBasedLookupRange; // 166
+    bool tryDriveAwayFromPlayer; // 167
+    uint8_t unk168[0x170 - 0x168]; // 168
+    bool clearTrafficOnPath; // 170
+    uint8_t unk171[0x1A0 - 0x171]; // 171
+    bool emergencyPatrol; // 1A0
+    uint8_t unk1A1[0x1A4 - 0x1A1]; // 1A1
+    uint32_t numPatrolLoops; // 1A4
+    bool aggressiveRammingEnabled; // 1A8
+    bool ignoreChaseVehiclesLimit; // 1A9
+    bool boostDrivingStats; // 1AA
+    uint8_t unk1AB[0x1B0 - 0x1AB]; // 1AB
 };
-RED4EXT_ASSERT_SIZE(AutonomousData, 0x150);
+RED4EXT_ASSERT_SIZE(AutonomousData, 0x1B0);
 } // namespace vehicle
 using vehicleAutonomousData = vehicle::AutonomousData;
 } // namespace RED4ext

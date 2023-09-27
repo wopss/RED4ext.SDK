@@ -24,9 +24,9 @@ struct AnimNode_AddSnapToTerrainIkRequest : anim::AnimNode_OnePoseInput
     anim::SnapToTerrainIkRequest leftFootRequest; // 80
     anim::SnapToTerrainIkRequest rightFootRequest; // 1A0
     anim::HipsIkRequest hipsRequest; // 2C0
-    uint8_t unk338[0x3C8 - 0x338]; // 338
+    uint8_t unk338[0x3E8 - 0x338]; // 338
 };
-RED4EXT_ASSERT_SIZE(AnimNode_AddSnapToTerrainIkRequest, 0x3C8);
+RED4EXT_ASSERT_SIZE(AnimNode_AddSnapToTerrainIkRequest, 0x3E8);
 } // namespace anim
 using animAnimNode_AddSnapToTerrainIkRequest = anim::AnimNode_AddSnapToTerrainIkRequest;
 } // namespace RED4ext

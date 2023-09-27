@@ -17,9 +17,9 @@ struct AdjustAndPlayCommandData : work::IWorkspotCommandData
     static constexpr const char* NAME = "workAdjustAndPlayCommandData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk08[0x40 - 0x8]; // 8
+    uint8_t unk08[0x60 - 0x8]; // 8
 };
-RED4EXT_ASSERT_SIZE(AdjustAndPlayCommandData, 0x40);
+RED4EXT_ASSERT_SIZE(AdjustAndPlayCommandData, 0x60);
 } // namespace work
 using workAdjustAndPlayCommandData = work::AdjustAndPlayCommandData;
 } // namespace RED4ext

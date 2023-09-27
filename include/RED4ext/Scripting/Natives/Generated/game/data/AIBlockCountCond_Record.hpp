@@ -17,9 +17,9 @@ struct AIBlockCountCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAIBlockCountCond_Record";
     static constexpr const char* ALIAS = "AIBlockCountCond_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk58[0xA0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AIBlockCountCond_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AIBlockCountCond_Record, 0xA0);
 } // namespace game::data
 using gamedataAIBlockCountCond_Record = game::data::AIBlockCountCond_Record;
 using AIBlockCountCond_Record = game::data::AIBlockCountCond_Record;

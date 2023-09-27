@@ -35,9 +35,10 @@ struct HitInstance
     game::QueryResult hitRepresentationResult; // D8
     uint8_t unkE8[0xEC - 0xE8]; // E8
     int32_t numRicochetBounces; // EC
-    bool isWaterSurfaceImpact; // F0
-    bool hitThroughWaterSurface; // F1
-    uint8_t unkF2[0x100 - 0xF2]; // F2
+    uint8_t unkF0[0xF4 - 0xF0]; // F0
+    bool isWaterSurfaceImpact; // F4
+    bool hitThroughWaterSurface; // F5
+    uint8_t unkF6[0x100 - 0xF6]; // F6
 };
 RED4EXT_ASSERT_SIZE(HitInstance, 0x100);
 } // namespace game::projectile

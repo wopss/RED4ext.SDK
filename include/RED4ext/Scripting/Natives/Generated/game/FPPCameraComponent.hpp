@@ -18,20 +18,21 @@ struct FPPCameraComponent : game::CameraComponent
     static constexpr const char* NAME = "gameFPPCameraComponent";
     static constexpr const char* ALIAS = "FPPCameraComponent";
 
-    uint8_t unk2A0[0x360 - 0x2A0]; // 2A0
-    float pitchMin; // 360
-    float pitchMax; // 364
-    float yawMaxLeft; // 368
-    float yawMaxRight; // 36C
-    bool headingLocked; // 370
-    uint8_t unk371[0x464 - 0x371]; // 371
-    float sensitivityMultX; // 464
-    float sensitivityMultY; // 468
-    uint8_t unk46C[0x478 - 0x46C]; // 46C
-    CName timeDilationCurveName; // 478
-    uint8_t unk480[0x4D0 - 0x480]; // 480
+    uint8_t unk320[0x3E0 - 0x320]; // 320
+    float pitchMin; // 3E0
+    float pitchMax; // 3E4
+    float yawMaxLeft; // 3E8
+    float yawMaxRight; // 3EC
+    uint8_t unk3F0[0x3F6 - 0x3F0]; // 3F0
+    bool headingLocked; // 3F6
+    uint8_t unk3F7[0x498 - 0x3F7]; // 3F7
+    float sensitivityMultX; // 498
+    float sensitivityMultY; // 49C
+    uint8_t unk4A0[0x4B0 - 0x4A0]; // 4A0
+    CName timeDilationCurveName; // 4B0
+    uint8_t unk4B8[0x510 - 0x4B8]; // 4B8
 };
-RED4EXT_ASSERT_SIZE(FPPCameraComponent, 0x4D0);
+RED4EXT_ASSERT_SIZE(FPPCameraComponent, 0x510);
 } // namespace game
 using gameFPPCameraComponent = game::FPPCameraComponent;
 using FPPCameraComponent = game::FPPCameraComponent;

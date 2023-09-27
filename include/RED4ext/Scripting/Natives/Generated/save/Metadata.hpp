@@ -6,6 +6,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/save/GameMetadata.hpp>
 
@@ -18,29 +20,30 @@ struct Metadata : save::GameMetadata
     static constexpr const char* NAME = "saveMetadata";
     static constexpr const char* ALIAS = NAME;
 
-    uint32_t saveVersion; // 288
-    uint32_t gameVersion; // 28C
-    uint8_t unk290[0x298 - 0x290]; // 290
-    CString timestampString; // 298
-    CString name; // 2B8
-    uint8_t unk2D8[0x2F8 - 0x2D8]; // 2D8
-    CString userName; // 2F8
-    CString buildID; // 318
-    CString platform; // 338
-    CString censorFlags; // 358
-    CString buildConfiguration; // 378
-    uint32_t fileSize; // 398
-    bool isForced; // 39C
-    bool isCheckpoint; // 39D
-    uint8_t unk39E[0x39F - 0x39E]; // 39E
-    bool isModded; // 39F
-    uint64_t initialLoadingScreenID; // 3A0
-    bool isStoryMode; // 3A8
-    bool isPointOfNoReturn; // 3A9
-    bool isEndGameSave; // 3AA
-    uint8_t unk3AB[0x3B0 - 0x3AB]; // 3AB
+    uint32_t saveVersion; // 298
+    uint32_t gameVersion; // 29C
+    uint8_t unk2A0[0x2A8 - 0x2A0]; // 2A0
+    CString timestampString; // 2A8
+    CString name; // 2C8
+    uint8_t unk2E8[0x308 - 0x2E8]; // 2E8
+    CString userName; // 308
+    CString buildID; // 328
+    CString platform; // 348
+    CString censorFlags; // 368
+    CString buildConfiguration; // 388
+    uint32_t fileSize; // 3A8
+    bool isForced; // 3AC
+    bool isCheckpoint; // 3AD
+    uint8_t unk3AE[0x3AF - 0x3AE]; // 3AE
+    bool isModded; // 3AF
+    uint64_t initialLoadingScreenID; // 3B0
+    bool isStoryMode; // 3B8
+    bool isPointOfNoReturn; // 3B9
+    bool isEndGameSave; // 3BA
+    uint8_t unk3BB[0x3C0 - 0x3BB]; // 3BB
+    DynArray<CName> additionalContentIds; // 3C0
 };
-RED4EXT_ASSERT_SIZE(Metadata, 0x3B0);
+RED4EXT_ASSERT_SIZE(Metadata, 0x3D0);
 } // namespace save
 using saveMetadata = save::Metadata;
 } // namespace RED4ext

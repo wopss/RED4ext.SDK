@@ -17,9 +17,9 @@ struct ChannelData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataChannelData_Record";
     static constexpr const char* ALIAS = "ChannelData_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ChannelData_Record, 0x60);
+RED4EXT_ASSERT_SIZE(ChannelData_Record, 0x90);
 } // namespace game::data
 using gamedataChannelData_Record = game::data::ChannelData_Record;
 using ChannelData_Record = game::data::ChannelData_Record;

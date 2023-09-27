@@ -19,9 +19,9 @@ struct JiraCreateIssueBody : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     tools::JiraIssueFields fields; // 30
-    uint8_t unk320[0x360 - 0x320]; // 320
+    uint8_t unk488[0x4C8 - 0x488]; // 488
 };
-RED4EXT_ASSERT_SIZE(JiraCreateIssueBody, 0x360);
+RED4EXT_ASSERT_SIZE(JiraCreateIssueBody, 0x4C8);
 } // namespace tools
 using toolsJiraCreateIssueBody = tools::JiraCreateIssueBody;
 } // namespace RED4ext

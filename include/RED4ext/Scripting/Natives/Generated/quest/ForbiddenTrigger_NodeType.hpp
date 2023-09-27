@@ -21,7 +21,8 @@ struct ForbiddenTrigger_NodeType : quest::IVehicleManagerNodeType
     NodeRef triggerNodeRef; // 30
     bool activate; // 38
     bool dismount; // 39
-    uint8_t unk3A[0x40 - 0x3A]; // 3A
+    bool blockCombat; // 3A
+    uint8_t unk3B[0x40 - 0x3B]; // 3B
 };
 RED4EXT_ASSERT_SIZE(ForbiddenTrigger_NodeType, 0x40);
 } // namespace quest

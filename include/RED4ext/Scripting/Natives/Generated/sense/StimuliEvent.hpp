@@ -38,7 +38,8 @@ struct StimuliEvent : sense::BaseStimuliEvent
     uint8_t unk11C[0x120 - 0x11C]; // 11C
     Handle<sense::StimuliData> data; // 120
     game::data::StimType stimType; // 130
-    uint8_t unk134[0x140 - 0x134]; // 134
+    bool purelyDirect; // 134
+    uint8_t unk135[0x140 - 0x135]; // 135
 };
 RED4EXT_ASSERT_SIZE(StimuliEvent, 0x140);
 } // namespace sense

@@ -16,9 +16,9 @@ struct DynArrayBlackboardStorage
     static constexpr const char* NAME = "gamebbDynArrayBlackboardStorage";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x80 - 0x0]; // 0
+    uint8_t unk00[0x90 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(DynArrayBlackboardStorage, 0x80);
+RED4EXT_ASSERT_SIZE(DynArrayBlackboardStorage, 0x90);
 } // namespace game::bb
 using gamebbDynArrayBlackboardStorage = game::bb::DynArrayBlackboardStorage;
 } // namespace RED4ext

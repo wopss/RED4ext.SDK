@@ -26,10 +26,10 @@ struct PhysicalDestructionComponent : ent::IVisualComponent
 
     uint8_t unk140[0x1E8 - 0x140]; // 140
     physics::DestructionParams destructionParams; // 1E8
-    DynArray<physics::DestructionLevelData> destructionLevelData; // 230
-    uint8_t unk240[0x290 - 0x240]; // 240
-    RaRef<CMesh> mesh; // 290
-    uint8_t unk298[0x300 - 0x298]; // 298
+    DynArray<physics::DestructionLevelData> destructionLevelData; // 238
+    uint8_t unk248[0x298 - 0x248]; // 248
+    RaRef<CMesh> mesh; // 298
+    uint8_t unk2A0[0x300 - 0x2A0]; // 2A0
     CName audioMetadata; // 300
     CName meshAppearance; // 308
     uint8_t unk310[0x328 - 0x310]; // 310

@@ -20,10 +20,12 @@ struct AudioSignpostTriggerNode : world::TriggerAreaNode
 
     CName enterSignpost; // 70
     CName exitSignpost; // 78
-    float exitCooldown; // 80
-    uint8_t unk84[0x88 - 0x84]; // 84
+    CName reEnterSignpost; // 80
+    CName preExitSignpost; // 88
+    float exitCooldown; // 90
+    uint8_t unk94[0x98 - 0x94]; // 94
 };
-RED4EXT_ASSERT_SIZE(AudioSignpostTriggerNode, 0x88);
+RED4EXT_ASSERT_SIZE(AudioSignpostTriggerNode, 0x98);
 } // namespace world
 using worldAudioSignpostTriggerNode = world::AudioSignpostTriggerNode;
 } // namespace RED4ext

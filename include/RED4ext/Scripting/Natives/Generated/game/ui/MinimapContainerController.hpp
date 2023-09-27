@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/MappinsContainerController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/CacheWidgetReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/CanvasWidgetReference.hpp>
@@ -16,6 +17,8 @@
 
 namespace RED4ext
 {
+namespace game { struct MinimapSettings; }
+
 namespace game::ui
 {
 struct MinimapContainerController : game::ui::MappinsContainerController
@@ -23,25 +26,20 @@ struct MinimapContainerController : game::ui::MappinsContainerController
     static constexpr const char* NAME = "gameuiMinimapContainerController";
     static constexpr const char* ALIAS = "MinimapContainerController";
 
-    uint8_t unk2D0[0x360 - 0x2D0]; // 2D0
-    float visionRadiusVehicle; // 360
-    float visionRadiusCombat; // 364
-    float visionRadiusQuestArea; // 368
-    float visionRadiusSecurityArea; // 36C
-    float visionRadiusInterior; // 370
-    float visionRadiusExterior; // 374
-    ink::CompoundWidgetReference clampedMappinContainer; // 378
-    ink::CompoundWidgetReference unclampedMappinContainer; // 390
-    ink::CacheWidgetReference worldGeometryCache; // 3A8
-    ink::CanvasWidgetReference worldGeometryContainer; // 3C0
-    ink::WidgetReference playerIconWidget; // 3D8
-    ink::WidgetReference compassWidget; // 3F0
-    ink::MaskWidgetReference maskWidget; // 408
-    CName geometryLibraryID; // 420
-    uint8_t unk428[0x470 - 0x428]; // 428
-    ink::CompoundWidgetReference timeDisplayWidget; // 470
+    uint8_t unk2E8[0x3E8 - 0x2E8]; // 2E8
+    Handle<game::MinimapSettings> settings; // 3E8
+    ink::CompoundWidgetReference clampedMappinContainer; // 3F8
+    ink::CompoundWidgetReference unclampedMappinContainer; // 410
+    ink::CacheWidgetReference worldGeometryCache; // 428
+    ink::CanvasWidgetReference worldGeometryContainer; // 440
+    ink::WidgetReference playerIconWidget; // 458
+    ink::WidgetReference compassWidget; // 470
+    ink::MaskWidgetReference maskWidget; // 488
+    CName geometryLibraryID; // 4A0
+    uint8_t unk4A8[0x508 - 0x4A8]; // 4A8
+    ink::CompoundWidgetReference timeDisplayWidget; // 508
 };
-RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x488);
+RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x520);
 } // namespace game::ui
 using gameuiMinimapContainerController = game::ui::MinimapContainerController;
 using MinimapContainerController = game::ui::MinimapContainerController;

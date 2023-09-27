@@ -18,7 +18,7 @@ struct RaceCheckpoint_Record : game::data::LCDScreen_Record
     static constexpr const char* ALIAS = "RaceCheckpoint_Record";
 
 };
-RED4EXT_ASSERT_SIZE(RaceCheckpoint_Record, 0x60);
+RED4EXT_ASSERT_SIZE(RaceCheckpoint_Record, 0x80);
 } // namespace game::data
 using gamedataRaceCheckpoint_Record = game::data::RaceCheckpoint_Record;
 using RaceCheckpoint_Record = game::data::RaceCheckpoint_Record;

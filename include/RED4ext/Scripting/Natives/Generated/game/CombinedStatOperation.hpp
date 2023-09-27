@@ -16,8 +16,9 @@ enum class CombinedStatOperation : uint32_t
     Division = 3,
     Modulo = 4,
     Invert = 5,
-    Count = 6,
-    Invalid = 7,
+    ComplementMultiplication = 6,
+    Count = 7,
+    Invalid = 8,
 };
 } // namespace game
 using gameCombinedStatOperation = game::CombinedStatOperation;

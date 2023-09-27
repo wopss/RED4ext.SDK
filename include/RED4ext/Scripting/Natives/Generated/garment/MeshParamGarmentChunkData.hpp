@@ -25,8 +25,9 @@ struct MeshParamGarmentChunkData
     DataBuffer indices; // 30
     DataBuffer morphOffsets; // 58
     DataBuffer garmentFlags; // 80
+    DataBuffer uv; // A8
 };
-RED4EXT_ASSERT_SIZE(MeshParamGarmentChunkData, 0xA8);
+RED4EXT_ASSERT_SIZE(MeshParamGarmentChunkData, 0xD0);
 } // namespace garment
 using garmentMeshParamGarmentChunkData = garment::MeshParamGarmentChunkData;
 } // namespace RED4ext

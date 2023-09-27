@@ -17,9 +17,9 @@ struct TacticLimiterCoverSelectionParameters_Record : game::data::CoverSelection
     static constexpr const char* NAME = "gamedataTacticLimiterCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "TacticLimiterCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x58 - 0x50]; // 50
+    uint8_t unk60[0x70 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(TacticLimiterCoverSelectionParameters_Record, 0x58);
+RED4EXT_ASSERT_SIZE(TacticLimiterCoverSelectionParameters_Record, 0x70);
 } // namespace game::data
 using gamedataTacticLimiterCoverSelectionParameters_Record = game::data::TacticLimiterCoverSelectionParameters_Record;
 using TacticLimiterCoverSelectionParameters_Record = game::data::TacticLimiterCoverSelectionParameters_Record;

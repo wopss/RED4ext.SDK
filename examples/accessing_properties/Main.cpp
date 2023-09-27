@@ -93,7 +93,7 @@ void PrintScannerStatus(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aF
         auto getHudManagerFunc = playerPuppetCls->GetFunction("GetHudManager");
 
         RED4ext::Handle<RED4ext::IScriptable> hudManager;
-        RED4ext::ExecuteFunction(handle, getHudManagerFunc, &hudManager, {});
+        RED4ext::ExecuteFunction(handle, getHudManagerFunc, &hudManager);
 
         auto hudManagerCls = rtti->GetClass("HUDManager");
 

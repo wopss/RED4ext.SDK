@@ -19,6 +19,9 @@ enum class DialogLineLanguage : uint32_t
     Brasilian = 7,
     English = 8,
     Korean = 9,
+    Swahili = 10,
+    French = 11,
+    Polish = 12,
 };
 } // namespace scn
 using scnDialogLineLanguage = scn::DialogLineLanguage;

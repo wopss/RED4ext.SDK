@@ -17,9 +17,9 @@ struct VehicleWheelDrivingPreset_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleWheelDrivingPreset_Record";
     static constexpr const char* ALIAS = "VehicleWheelDrivingPreset_Record";
 
-    uint8_t unk48[0x90 - 0x48]; // 48
+    uint8_t unk48[0x168 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleWheelDrivingPreset_Record, 0x90);
+RED4EXT_ASSERT_SIZE(VehicleWheelDrivingPreset_Record, 0x168);
 } // namespace game::data
 using gamedataVehicleWheelDrivingPreset_Record = game::data::VehicleWheelDrivingPreset_Record;
 using VehicleWheelDrivingPreset_Record = game::data::VehicleWheelDrivingPreset_Record;

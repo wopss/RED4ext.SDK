@@ -18,7 +18,7 @@ struct ShootTargetEvent : game::projectile::ShootEvent
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(ShootTargetEvent, 0x1B0);
+RED4EXT_ASSERT_SIZE(ShootTargetEvent, 0x1E0);
 } // namespace game::projectile
 using gameprojectileShootTargetEvent = game::projectile::ShootTargetEvent;
 } // namespace RED4ext

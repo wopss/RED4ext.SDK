@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/SimpleMessageType.hpp>
 
 namespace RED4ext
 {
@@ -22,7 +23,8 @@ struct SimpleScreenMessage
     float duration; // 04
     CString message; // 08
     bool isInstant; // 28
-    uint8_t unk29[0x30 - 0x29]; // 29
+    uint8_t unk29[0x2C - 0x29]; // 29
+    game::SimpleMessageType type; // 2C
 };
 RED4EXT_ASSERT_SIZE(SimpleScreenMessage, 0x30);
 } // namespace game

@@ -12,7 +12,7 @@ struct IUpdatableSystem : IScriptable
     static constexpr const char* NAME = "IUpdatableSystem";
     static constexpr const char* ALIAS = NAME;
 
-    virtual void OnRegisterUpdates(UpdateRegistrar* aRegistrar); // 110
+    virtual void OnRegisterUpdates(UpdateRegistrar* aRegistrar); // 108
 };
 RED4EXT_ASSERT_SIZE(IUpdatableSystem, 0x40);
 } // namespace RED4ext

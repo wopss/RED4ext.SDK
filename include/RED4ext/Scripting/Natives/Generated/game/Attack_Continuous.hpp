@@ -18,7 +18,7 @@ struct Attack_Continuous : game::Attack_GameEffect
     static constexpr const char* ALIAS = "Attack_Continuous";
 
 };
-RED4EXT_ASSERT_SIZE(Attack_Continuous, 0x100);
+RED4EXT_ASSERT_SIZE(Attack_Continuous, 0x150);
 } // namespace game
 using gameAttack_Continuous = game::Attack_Continuous;
 using Attack_Continuous = game::Attack_Continuous;

@@ -17,9 +17,9 @@ struct InteractionBase_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataInteractionBase_Record";
     static constexpr const char* ALIAS = "InteractionBase_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(InteractionBase_Record, 0x60);
+RED4EXT_ASSERT_SIZE(InteractionBase_Record, 0x90);
 } // namespace game::data
 using gamedataInteractionBase_Record = game::data::InteractionBase_Record;
 using InteractionBase_Record = game::data::InteractionBase_Record;

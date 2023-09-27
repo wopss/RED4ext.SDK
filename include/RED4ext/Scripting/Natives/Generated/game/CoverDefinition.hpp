@@ -18,15 +18,15 @@ struct CoverDefinition : game::SmartObjectWorkspotDefinition
     static constexpr const char* NAME = "gameCoverDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    bool overrideGeneratedCoverAngles; // 90
-    uint8_t unk91[0x94 - 0x91]; // 91
-    float overridenCoveringFOVDegrees; // 94
-    float overridenCoveringVerticalFOVDegrees; // 98
-    float fovExposureDegrees; // 9C
-    game::CoverHeight overridenHeight; // A0
-    uint8_t unkA4[0xA8 - 0xA4]; // A4
+    bool overrideGeneratedCoverAngles; // 98
+    uint8_t unk99[0x9C - 0x99]; // 99
+    float overridenCoveringFOVDegrees; // 9C
+    float overridenCoveringVerticalFOVDegrees; // A0
+    float fovExposureDegrees; // A4
+    game::CoverHeight overridenHeight; // A8
+    uint8_t unkAC[0xB0 - 0xAC]; // AC
 };
-RED4EXT_ASSERT_SIZE(CoverDefinition, 0xA8);
+RED4EXT_ASSERT_SIZE(CoverDefinition, 0xB0);
 } // namespace game
 using gameCoverDefinition = game::CoverDefinition;
 } // namespace RED4ext

@@ -18,7 +18,7 @@ struct Record : game::data::ScannableData_Record
     static constexpr const char* ALIAS = "device_gameplay_role_Record";
 
 };
-RED4EXT_ASSERT_SIZE(Record, 0x58);
+RED4EXT_ASSERT_SIZE(Record, 0x88);
 } // namespace game::data::device_gameplay_role_
 using gamedatadevice_gameplay_role_Record = game::data::device_gameplay_role_::Record;
 using device_gameplay_role_Record = game::data::device_gameplay_role_::Record;

@@ -17,9 +17,9 @@ struct ItemFactorySystem : game::IItemFactorySystem
     static constexpr const char* NAME = "gameItemFactorySystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x9050 - 0x48]; // 48
+    uint8_t unk48[0x9060 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ItemFactorySystem, 0x9050);
+RED4EXT_ASSERT_SIZE(ItemFactorySystem, 0x9060);
 } // namespace game
 using gameItemFactorySystem = game::ItemFactorySystem;
 } // namespace RED4ext

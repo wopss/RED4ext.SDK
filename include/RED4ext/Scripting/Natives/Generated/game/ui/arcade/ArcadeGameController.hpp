@@ -25,13 +25,13 @@ struct ArcadeGameController : game::ui::WidgetGameController
     ink::WidgetReference menu; // 148
     ink::WidgetReference gameplay; // 160
     ink::WidgetReference scoreboard; // 178
-    uint8_t unk190[0x1E0 - 0x190]; // 190
-    float defaultScreenTransitionTotalTime; // 1E0
-    uint8_t unk1E4[0x1F8 - 0x1E4]; // 1E4
-    game::ui::arcade::ArcadeMinigame minigame; // 1F8
-    uint8_t unk1FC[0x200 - 0x1FC]; // 1FC
+    uint8_t unk190[0x204 - 0x190]; // 190
+    float defaultScreenTransitionTotalTime; // 204
+    uint8_t unk208[0x228 - 0x208]; // 208
+    game::ui::arcade::ArcadeMinigame minigame; // 228
+    uint8_t unk22C[0x238 - 0x22C]; // 22C
 };
-RED4EXT_ASSERT_SIZE(ArcadeGameController, 0x200);
+RED4EXT_ASSERT_SIZE(ArcadeGameController, 0x238);
 } // namespace game::ui::arcade
 using gameuiarcadeArcadeGameController = game::ui::arcade::ArcadeGameController;
 } // namespace RED4ext

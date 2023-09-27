@@ -17,9 +17,9 @@ struct PhotoModeFrame_Record : game::data::PhotoModeItem_Record
     static constexpr const char* NAME = "gamedataPhotoModeFrame_Record";
     static constexpr const char* ALIAS = "PhotoModeFrame_Record";
 
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk60[0xA8 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(PhotoModeFrame_Record, 0x68);
+RED4EXT_ASSERT_SIZE(PhotoModeFrame_Record, 0xA8);
 } // namespace game::data
 using gamedataPhotoModeFrame_Record = game::data::PhotoModeFrame_Record;
 using PhotoModeFrame_Record = game::data::PhotoModeFrame_Record;

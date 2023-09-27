@@ -17,9 +17,9 @@ struct VehicleStoppingSettings_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleStoppingSettings_Record";
     static constexpr const char* ALIAS = "VehicleStoppingSettings_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleStoppingSettings_Record, 0x58);
+RED4EXT_ASSERT_SIZE(VehicleStoppingSettings_Record, 0x88);
 } // namespace game::data
 using gamedataVehicleStoppingSettings_Record = game::data::VehicleStoppingSettings_Record;
 using VehicleStoppingSettings_Record = game::data::VehicleStoppingSettings_Record;

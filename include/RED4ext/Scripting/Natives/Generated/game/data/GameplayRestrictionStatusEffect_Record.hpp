@@ -17,9 +17,9 @@ struct GameplayRestrictionStatusEffect_Record : game::data::StatusEffect_Record
     static constexpr const char* NAME = "gamedataGameplayRestrictionStatusEffect_Record";
     static constexpr const char* ALIAS = "GameplayRestrictionStatusEffect_Record";
 
-    uint8_t unk90[0x98 - 0x90]; // 90
+    uint8_t unk160[0x170 - 0x160]; // 160
 };
-RED4EXT_ASSERT_SIZE(GameplayRestrictionStatusEffect_Record, 0x98);
+RED4EXT_ASSERT_SIZE(GameplayRestrictionStatusEffect_Record, 0x170);
 } // namespace game::data
 using gamedataGameplayRestrictionStatusEffect_Record = game::data::GameplayRestrictionStatusEffect_Record;
 using GameplayRestrictionStatusEffect_Record = game::data::GameplayRestrictionStatusEffect_Record;

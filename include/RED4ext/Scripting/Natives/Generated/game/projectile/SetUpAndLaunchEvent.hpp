@@ -20,11 +20,11 @@ struct SetUpAndLaunchEvent : game::projectile::LaunchEvent
     static constexpr const char* NAME = "gameprojectileSetUpAndLaunchEvent";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<game::projectile::TrajectoryParams> trajectoryParams; // 180
-    float lerpMultiplier; // 190
-    uint8_t unk194[0x1A0 - 0x194]; // 194
+    Handle<game::projectile::TrajectoryParams> trajectoryParams; // 1A0
+    float lerpMultiplier; // 1B0
+    uint8_t unk1B4[0x1C0 - 0x1B4]; // 1B4
 };
-RED4EXT_ASSERT_SIZE(SetUpAndLaunchEvent, 0x1A0);
+RED4EXT_ASSERT_SIZE(SetUpAndLaunchEvent, 0x1C0);
 } // namespace game::projectile
 using gameprojectileSetUpAndLaunchEvent = game::projectile::SetUpAndLaunchEvent;
 } // namespace RED4ext

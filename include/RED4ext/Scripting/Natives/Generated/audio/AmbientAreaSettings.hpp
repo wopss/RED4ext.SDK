@@ -35,26 +35,27 @@ struct AmbientAreaSettings : audio::AudioMetadata
     CName Reverb; // 98
     CName VoReverb; // A0
     CName FootstepMaterialOverride; // A8
-    CName MetadataParent; // B0
-    CName EmitterDecorator; // B8
-    audio::AmbientAreaGroupingSettings groupingSettings; // C0
-    audio::QuadEmitterSettings quadSettings; // E8
-    CName eventOverrides; // 120
-    CName mixingContext; // 128
-    DynArray<audio::AmbientPaletteEntry> ambientPaletteEntries; // 130
-    uint8_t unk140[0x174 - 0x140]; // 140
-    float outerDistance; // 174
-    float verticalOuterDistance; // 178
-    float insideSourceDistance; // 17C
-    float outdoorness; // 180
-    float reverbTransitionTime; // 184
-    int32_t Priority; // 188
-    bool isMusic; // 18C
-    bool mergeRoomsWithinArea; // 18D
-    bool outdoornessOverride; // 18E
-    uint8_t unk18F[0x190 - 0x18F]; // 18F
+    CName soundsLimitingSettings; // B0
+    CName MetadataParent; // B8
+    CName EmitterDecorator; // C0
+    audio::AmbientAreaGroupingSettings groupingSettings; // C8
+    audio::QuadEmitterSettings quadSettings; // F0
+    CName eventOverrides; // 128
+    CName mixingContext; // 130
+    DynArray<audio::AmbientPaletteEntry> ambientPaletteEntries; // 138
+    uint8_t unk148[0x17C - 0x148]; // 148
+    float outerDistance; // 17C
+    float verticalOuterDistance; // 180
+    float insideSourceDistance; // 184
+    float outdoorness; // 188
+    float reverbTransitionTime; // 18C
+    int32_t Priority; // 190
+    bool isMusic; // 194
+    bool mergeRoomsWithinArea; // 195
+    bool outdoornessOverride; // 196
+    uint8_t unk197[0x198 - 0x197]; // 197
 };
-RED4EXT_ASSERT_SIZE(AmbientAreaSettings, 0x190);
+RED4EXT_ASSERT_SIZE(AmbientAreaSettings, 0x198);
 } // namespace audio
 using audioAmbientAreaSettings = audio::AmbientAreaSettings;
 } // namespace RED4ext

@@ -20,9 +20,9 @@ struct JournalQuestCodexLink : game::JournalEntry
     static constexpr const char* NAME = "gameJournalQuestCodexLink";
     static constexpr const char* ALIAS = "JournalQuestCodexLink";
 
-    Handle<game::JournalPath> path; // 60
+    Handle<game::JournalPath> path; // 70
 };
-RED4EXT_ASSERT_SIZE(JournalQuestCodexLink, 0x70);
+RED4EXT_ASSERT_SIZE(JournalQuestCodexLink, 0x80);
 } // namespace game
 using gameJournalQuestCodexLink = game::JournalQuestCodexLink;
 using JournalQuestCodexLink = game::JournalQuestCodexLink;

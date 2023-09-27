@@ -17,9 +17,9 @@ struct MappinsGroup_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataMappinsGroup_Record";
     static constexpr const char* ALIAS = "MappinsGroup_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(MappinsGroup_Record, 0x58);
+RED4EXT_ASSERT_SIZE(MappinsGroup_Record, 0x70);
 } // namespace game::data
 using gamedataMappinsGroup_Record = game::data::MappinsGroup_Record;
 using MappinsGroup_Record = game::data::MappinsGroup_Record;

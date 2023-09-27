@@ -11,7 +11,10 @@ namespace quest {
 enum class WeaponUsageType : uint32_t
 {
     Shoot = 0,
-    Reload = 1,
+    StopShooting = 1,
+    Reload = 2,
+    StartAttack = 3,
+    StopAttack = 4,
 };
 } // namespace quest
 using questWeaponUsageType = quest::WeaponUsageType;

@@ -17,9 +17,9 @@ struct CoverTypeCoverSelectionParameters_Record : game::data::CoverSelectionPara
     static constexpr const char* NAME = "gamedataCoverTypeCoverSelectionParameters_Record";
     static constexpr const char* ALIAS = "CoverTypeCoverSelectionParameters_Record";
 
-    uint8_t unk50[0x60 - 0x50]; // 50
+    uint8_t unk60[0x88 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(CoverTypeCoverSelectionParameters_Record, 0x60);
+RED4EXT_ASSERT_SIZE(CoverTypeCoverSelectionParameters_Record, 0x88);
 } // namespace game::data
 using gamedataCoverTypeCoverSelectionParameters_Record = game::data::CoverTypeCoverSelectionParameters_Record;
 using CoverTypeCoverSelectionParameters_Record = game::data::CoverTypeCoverSelectionParameters_Record;

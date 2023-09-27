@@ -28,7 +28,8 @@ struct AssignCharacter_NodeType : quest::IVehicleManagerNodeType
     CName entrySlotName; // B8
     bool assign; // C0
     bool isInstant; // C1
-    uint8_t unkC2[0xC8 - 0xC2]; // C2
+    bool clearAssignedVehicleIdWhenUnmounting; // C2
+    uint8_t unkC3[0xC8 - 0xC3]; // C3
 };
 RED4EXT_ASSERT_SIZE(AssignCharacter_NodeType, 0xC8);
 } // namespace quest

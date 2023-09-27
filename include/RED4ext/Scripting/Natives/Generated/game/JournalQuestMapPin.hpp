@@ -18,10 +18,10 @@ struct JournalQuestMapPin : game::JournalQuestMapPinBase
     static constexpr const char* NAME = "gameJournalQuestMapPin";
     static constexpr const char* ALIAS = "JournalQuestMapPin";
 
-    game::EntityReference reference; // 110
-    uint8_t unk148[0x150 - 0x148]; // 148
+    game::EntityReference reference; // 120
+    uint8_t unk158[0x160 - 0x158]; // 158
 };
-RED4EXT_ASSERT_SIZE(JournalQuestMapPin, 0x150);
+RED4EXT_ASSERT_SIZE(JournalQuestMapPin, 0x160);
 } // namespace game
 using gameJournalQuestMapPin = game::JournalQuestMapPin;
 using JournalQuestMapPin = game::JournalQuestMapPin;

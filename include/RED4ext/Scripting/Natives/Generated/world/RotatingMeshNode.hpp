@@ -18,12 +18,12 @@ struct RotatingMeshNode : world::MeshNode
     static constexpr const char* NAME = "worldRotatingMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    world::RotatingMeshNodeAxis rotationAxis; // 58
-    float fullRotationTime; // 5C
-    bool reverseDirection; // 60
-    uint8_t unk61[0x68 - 0x61]; // 61
+    world::RotatingMeshNodeAxis rotationAxis; // 60
+    float fullRotationTime; // 64
+    bool reverseDirection; // 68
+    uint8_t unk69[0x70 - 0x69]; // 69
 };
-RED4EXT_ASSERT_SIZE(RotatingMeshNode, 0x68);
+RED4EXT_ASSERT_SIZE(RotatingMeshNode, 0x70);
 } // namespace world
 using worldRotatingMeshNode = world::RotatingMeshNode;
 } // namespace RED4ext

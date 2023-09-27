@@ -17,9 +17,9 @@ struct HackingMiniGame_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataHackingMiniGame_Record";
     static constexpr const char* ALIAS = "HackingMiniGame_Record";
 
-    uint8_t unk48[0x88 - 0x48]; // 48
+    uint8_t unk48[0x138 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(HackingMiniGame_Record, 0x88);
+RED4EXT_ASSERT_SIZE(HackingMiniGame_Record, 0x138);
 } // namespace game::data
 using gamedataHackingMiniGame_Record = game::data::HackingMiniGame_Record;
 using HackingMiniGame_Record = game::data::HackingMiniGame_Record;

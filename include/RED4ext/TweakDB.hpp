@@ -9,8 +9,14 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Map.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Color.hpp>
+#include <RED4ext/Scripting/Natives/Generated/EulerAngles.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/gamedataTweakDBRecord.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
 #include <RED4ext/SharedMutex.hpp>
@@ -42,70 +48,120 @@ struct TweakDB
 
     struct FlatValue
     {
-        // ToValueOffset here is the 3bytes stored in records.
-        // those 3 bytes **ARE NOT** TweakDBID::Offset. tweak's offset point to this class and not the value.
+        virtual ~FlatValue() = default;
 
-        virtual ~FlatValue() = 0;
-        virtual bool ToValueOffset_array_TweakDBID(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_TweakDBID(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Quaternion(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Quaternion(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_EulerAngles(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_EulerAngles(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Vector3(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Vector3(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Vector2(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Vector2(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Color(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Color(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_gamedataLocKeyWrapper(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_gamedataLocKeyWrapper(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_raRef_CResource(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_raRef_CResource(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_CName(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_CName(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Bool(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Bool(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_String(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_String(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Float(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Float(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_array_Int32(uint32_t* aValueOffset) const = 0;
-        virtual bool ToValueOffset_Int32(uint32_t* aValueOffset) const = 0;
-        virtual CStackType GetValue() const = 0;
+        // GetValueOffset sets 3 bytes offset to the data
+        // Those **ARE NOT** TweakDBID::tdbOffsetBE that point to this class and not the date
+
+#define RED4EXT_TDB_FLAT_VALUE_GETTER(N)                                                                               \
+    virtual bool GetValueOffset_array_##N(TweakDBID* aFlat) const = 0;                                                 \
+    virtual bool GetValueOffset_##N(TweakDBID* aFlat) const = 0;
+
+        RED4EXT_TDB_FLAT_VALUE_GETTER(TweakDBID);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Quaternion);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(EulerAngles);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Vector3);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Vector2);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Color);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(gamedataLocKeyWrapper);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(raRefCResource);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(CName);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Bool);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(String);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Float);
+        RED4EXT_TDB_FLAT_VALUE_GETTER(Int32);
+
+        virtual CStackType GetValue() = 0;
+        virtual CName* GetTypeName(CName* aName) = 0;
+        virtual void* GetDataPtr() = 0;
 
         template<typename T>
-        T* GetValue() const
+        T* GetValue()
         {
             return reinterpret_cast<T*>(GetValue().value);
         }
 
-        // [Warning] FlatValues are pooled.
-        bool SetValue(const CStackType& aStackType);
-
-        // [Warning] FlatValues are pooled.
-        void SetValue(ScriptInstance aValue);
-
         int32_t ToTDBOffset() const;
-
-        // value here
     };
 
-    SharedMutex mutex00; // 00 - used with flats, flatDataBuffer* and defaultValues
-    SharedMutex mutex01; // 01 - used with recordsByID, recordsByType, queries and groups
-    void* unk08;         // 08 - class - 264 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
-    void* unk10;         // 10 - class - 208 bytes
-    bool unk18;          // 18
-    SortedUniqueArray<TweakDBID> flats;                                   // 20
-    HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                  // 38
-    HashMap<CBaseRTTIType*, DynArray<Handle<IScriptable>>> recordsByType; // 68
-    Map<TweakDBID, DynArray<TweakDBID>> queries;                          // 98
-    Map<TweakDBID, GroupTag> groups;                                      // C0
-    HashMap<CName, FlatValue*> defaultValues;                             // E8
-    DynArray<CString> unk118;                                             // 118 - empty - maybe not CString
-    uintptr_t flatDataBuffer;                                             // 128
-    uint32_t flatDataBufferCapacity;                                      // 130
-    uintptr_t flatDataBufferEnd;                                          // 138
+    template<typename T, auto N>
+    struct FlatValueImpl : FlatValue
+    {
+        explicit FlatValueImpl(T&& aData)
+            : data(std::forward<T>(aData))
+        {
+        }
+
+#define RED4EXT_TDB_FLAT_VALUE_IMPL(N)                                                                                 \
+    bool GetValueOffset_array_##N(TweakDBID* aFlat) const override                                                     \
+    {                                                                                                                  \
+        aFlat->SetTDBOffset(ToTDBOffset() + offsetof(FlatValueImpl, data));                                            \
+        return true;                                                                                                   \
+    }                                                                                                                  \
+    bool GetValueOffset_##N(TweakDBID* aFlat) const override                                                           \
+    {                                                                                                                  \
+        aFlat->SetTDBOffset(ToTDBOffset() + offsetof(FlatValueImpl, data));                                            \
+        return true;                                                                                                   \
+    }
+
+        RED4EXT_TDB_FLAT_VALUE_IMPL(TweakDBID);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Quaternion);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(EulerAngles);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Vector3);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Vector2);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Color);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(gamedataLocKeyWrapper);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(raRefCResource);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(CName);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Bool);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(String);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Float);
+        RED4EXT_TDB_FLAT_VALUE_IMPL(Int32);
+
+        CStackType GetValue() override
+        {
+            return {CRTTISystem::Get()->GetType(N), &data};
+        }
+
+        virtual CName* GetTypeName(CName* aName) override
+        {
+            *aName = N;
+            return aName;
+        }
+
+        virtual void* GetDataPtr() override
+        {
+            return &data;
+        }
+
+#pragma warning(suppress : 4324)
+        T data;
+    };
+    using QuaternionFlatValue = FlatValueImpl<Quaternion, CName("Quaternion")>;
+    RED4EXT_ASSERT_OFFSET(QuaternionFlatValue, data, 0x10);
+    RED4EXT_ASSERT_SIZE(QuaternionFlatValue, 0x20);
+
+    uintptr_t staticFlatDataBuffer; // 00 - same as flatDataBuffer, used for direct access
+    uint64_t unk08;                 // 08
+    void* unkF0;                    // F0
+    void* unkF8;                    // F8
+    SharedMutex mutex00;            // 20 - used with flats, flatDataBuffer* and defaultValues
+    SharedMutex mutex01;            // 21 - used with recordsByID, recordsByType, queries and groups
+    void* unk28;                    // 28 - class - 344 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
+    void* unk30;                    // 30 - class - 248 bytes
+    bool unk38;                     // 38
+    SortedUniqueArray<TweakDBID> flats;                                   // 40
+    HashMap<TweakDBID, Handle<IScriptable>> recordsByID;                  // 58
+    HashMap<CBaseRTTIType*, DynArray<Handle<IScriptable>>> recordsByType; // 88
+    Map<TweakDBID, DynArray<TweakDBID>> queries;                          // B8
+    Map<TweakDBID, GroupTag> groups;                                      // E0
+    HashMap<CName, FlatValue*> defaultValues;                             // 108
+    DynArray<CString> unk138;                                             // 138 - empty - maybe not CString
+    uintptr_t flatDataBuffer;                                             // 148
+    uint32_t flatDataBufferCapacity;                                      // 150
+    uintptr_t flatDataBufferEnd;                                          // 158
+    uint8_t unk160;                                                       // 160
+    uint32_t unk164;                                                      // 164
 
     template<typename T>
     T GetValue(TweakDBID aDBID)
@@ -173,12 +229,13 @@ struct TweakDB
 private:
     // Multithreads may lead to undefined behavior
     void SetFlatDataBuffer(void* aBuffer, uint32_t aSize, uint32_t aCapacity);
+    bool AllocateFlatValue(void* aBuffer, const CStackType& aStackType);
 };
-RED4EXT_ASSERT_OFFSET(TweakDB, mutex01, 0x01);
-RED4EXT_ASSERT_OFFSET(TweakDB, unk08, 0x08);
-RED4EXT_ASSERT_OFFSET(TweakDB, flats, 0x20);
-RED4EXT_ASSERT_OFFSET(TweakDB, flatDataBufferEnd, 0x138);
-RED4EXT_ASSERT_SIZE(TweakDB, 0x140);
+RED4EXT_ASSERT_OFFSET(TweakDB, mutex00, 0x20);
+RED4EXT_ASSERT_OFFSET(TweakDB, flats, 0x40);
+RED4EXT_ASSERT_OFFSET(TweakDB, flatDataBuffer, 0x148);
+RED4EXT_ASSERT_OFFSET(TweakDB, unk160, 0x160);
+RED4EXT_ASSERT_SIZE(TweakDB, 0x168);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

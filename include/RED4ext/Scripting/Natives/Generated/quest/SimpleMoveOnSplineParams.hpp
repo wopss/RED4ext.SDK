@@ -26,7 +26,8 @@ struct SimpleMoveOnSplineParams
     bool rotateEntityTowardsFacingTarget; // 18
     bool snapToTerrain; // 19
     bool useOffMeshLinkReservation; // 1A
-    uint8_t unk1B[0x20 - 0x1B]; // 1B
+    bool allowCrowdOnPath; // 1B
+    uint8_t unk1C[0x20 - 0x1C]; // 1C
 };
 RED4EXT_ASSERT_SIZE(SimpleMoveOnSplineParams, 0x20);
 } // namespace quest

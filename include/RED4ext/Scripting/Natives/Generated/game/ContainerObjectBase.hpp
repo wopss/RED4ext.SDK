@@ -17,9 +17,11 @@ struct ContainerObjectBase : game::LootContainerBase
     static constexpr const char* NAME = "gameContainerObjectBase";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk260[0x2A8 - 0x260]; // 260
+    uint8_t unk268[0x28D - 0x268]; // 268
+    bool giveHandicapAmmo; // 28D
+    uint8_t unk28E[0x2B0 - 0x28E]; // 28E
 };
-RED4EXT_ASSERT_SIZE(ContainerObjectBase, 0x2A8);
+RED4EXT_ASSERT_SIZE(ContainerObjectBase, 0x2B0);
 } // namespace game
 using gameContainerObjectBase = game::ContainerObjectBase;
 } // namespace RED4ext

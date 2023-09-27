@@ -11,6 +11,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/NavGenNavigationSetting.hpp>
 #include <RED4ext/Scripting/Natives/Generated/physics/FilterDataSource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/physics/FractureFieldType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/MeshNode.hpp>
 
 namespace RED4ext
@@ -26,29 +27,30 @@ struct BakedDestructionNode : world::MeshNode
     static constexpr const char* NAME = "worldBakedDestructionNode";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<physics::FilterData> filterData; // 58
-    RaRef<world::Effect> destructionEffect; // 68
-    RaRef<CMesh> meshFractured; // 70
-    CName audioMetadata; // 78
-    CName meshFracturedAppearance; // 80
-    physics::FilterDataSource filterDataSource; // 88
-    uint8_t unk89[0x8C - 0x89]; // 89
-    float damageThreshold; // 8C
-    float damageEndurance; // 90
-    float impulseToDamage; // 94
-    float contactToDamage; // 98
-    float numFrames; // 9C
-    float frameRate; // A0
-    bool playOnlyOnce; // A4
-    bool restartOnTrigger; // A5
-    bool disableCollidersOnTrigger; // A6
-    bool useMeshNavmeshSettings; // A7
-    bool accumulateDamage; // A8
-    uint8_t unkA9[0xD8 - 0xA9]; // A9
-    NavGenNavigationSetting navigationSetting; // D8
-    uint8_t unkDA[0xE0 - 0xDA]; // DA
+    Handle<physics::FilterData> filterData; // 60
+    RaRef<world::Effect> destructionEffect; // 70
+    RaRef<CMesh> meshFractured; // 78
+    CName audioMetadata; // 80
+    CName meshFracturedAppearance; // 88
+    physics::FilterDataSource filterDataSource; // 90
+    uint8_t unk91[0x94 - 0x91]; // 91
+    float damageThreshold; // 94
+    float damageEndurance; // 98
+    float impulseToDamage; // 9C
+    float contactToDamage; // A0
+    float numFrames; // A4
+    float frameRate; // A8
+    physics::FractureFieldType fractureFieldMask; // AC
+    bool playOnlyOnce; // AE
+    bool restartOnTrigger; // AF
+    bool disableCollidersOnTrigger; // B0
+    bool useMeshNavmeshSettings; // B1
+    bool accumulateDamage; // B2
+    uint8_t unkB3[0xB4 - 0xB3]; // B3
+    NavGenNavigationSetting navigationSetting; // B4
+    uint8_t unkB6[0xB8 - 0xB6]; // B6
 };
-RED4EXT_ASSERT_SIZE(BakedDestructionNode, 0xE0);
+RED4EXT_ASSERT_SIZE(BakedDestructionNode, 0xB8);
 } // namespace world
 using worldBakedDestructionNode = world::BakedDestructionNode;
 } // namespace RED4ext

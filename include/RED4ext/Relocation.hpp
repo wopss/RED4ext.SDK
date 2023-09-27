@@ -64,6 +64,27 @@ private:
     T* m_address;
 };
 
+/**
+ * @brief Represent a native virtual table, use this to relocate its address at runtime.
+ * @tparam T The type.
+ */
+class RelocVtbl : private RelocBase
+{
+public:
+    RelocVtbl(uintptr_t aOffset)
+        : m_address(reinterpret_cast<uintptr_t*>(aOffset + GetImageBase()))
+    {
+    }
+
+    inline operator uintptr_t*() const
+    {
+        return m_address;
+    }
+
+private:
+    uintptr_t* m_address;
+};
+
 template<typename T>
 class [[deprecated("Use 'RelocFunc' instead.")]] REDfunc : public RelocFunc<T>
 {

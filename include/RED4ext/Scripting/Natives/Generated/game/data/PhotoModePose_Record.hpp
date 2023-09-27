@@ -17,9 +17,9 @@ struct PhotoModePose_Record : game::data::PhotoModeItem_Record
     static constexpr const char* NAME = "gamedataPhotoModePose_Record";
     static constexpr const char* ALIAS = "PhotoModePose_Record";
 
-    uint8_t unk50[0x78 - 0x50]; // 50
+    uint8_t unk60[0xF0 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(PhotoModePose_Record, 0x78);
+RED4EXT_ASSERT_SIZE(PhotoModePose_Record, 0xF0);
 } // namespace game::data
 using gamedataPhotoModePose_Record = game::data::PhotoModePose_Record;
 using PhotoModePose_Record = game::data::PhotoModePose_Record;

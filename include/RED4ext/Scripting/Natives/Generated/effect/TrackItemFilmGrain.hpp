@@ -6,6 +6,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ERenderObjectType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/effect/EffectParameterEvaluatorFloat.hpp>
 #include <RED4ext/Scripting/Natives/Generated/effect/EffectParameterEvaluatorVector.hpp>
 #include <RED4ext/Scripting/Natives/Generated/effect/TrackItem.hpp>
@@ -19,12 +21,15 @@ struct TrackItemFilmGrain : effect::TrackItem
     static constexpr const char* NAME = "effectTrackItemFilmGrain";
     static constexpr const char* ALIAS = NAME;
 
-    effect::EffectParameterEvaluatorFloat luminanceBias; // 48
-    effect::EffectParameterEvaluatorVector strength; // 68
-    bool override; // 80
-    uint8_t unk81[0x88 - 0x81]; // 81
+    uint8_t unk48[0x50 - 0x48]; // 48
+    DynArray<ERenderObjectType> mask; // 50
+    uint8_t unk60[0x68 - 0x60]; // 60
+    effect::EffectParameterEvaluatorFloat luminanceBias; // 68
+    effect::EffectParameterEvaluatorVector strength; // 88
+    bool override; // A0
+    uint8_t unkA1[0xA8 - 0xA1]; // A1
 };
-RED4EXT_ASSERT_SIZE(TrackItemFilmGrain, 0x88);
+RED4EXT_ASSERT_SIZE(TrackItemFilmGrain, 0xA8);
 } // namespace effect
 using effectTrackItemFilmGrain = effect::TrackItemFilmGrain;
 } // namespace RED4ext

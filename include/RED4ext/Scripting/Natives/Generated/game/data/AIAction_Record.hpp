@@ -17,9 +17,9 @@ struct AIAction_Record : game::data::AINode_Record
     static constexpr const char* NAME = "gamedataAIAction_Record";
     static constexpr const char* ALIAS = "AIAction_Record";
 
-    uint8_t unk58[0xB8 - 0x58]; // 58
+    uint8_t unk78[0x1F0 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(AIAction_Record, 0xB8);
+RED4EXT_ASSERT_SIZE(AIAction_Record, 0x1F0);
 } // namespace game::data
 using gamedataAIAction_Record = game::data::AIAction_Record;
 using AIAction_Record = game::data::AIAction_Record;

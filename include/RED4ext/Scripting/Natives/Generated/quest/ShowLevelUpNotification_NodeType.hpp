@@ -19,7 +19,6 @@ struct ShowLevelUpNotification_NodeType : quest::IUIManagerNodeType
     static constexpr const char* ALIAS = NAME;
 
     quest::LevelUpData levelUpData; // 38
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
 };
 RED4EXT_ASSERT_SIZE(ShowLevelUpNotification_NodeType, 0x50);
 } // namespace quest

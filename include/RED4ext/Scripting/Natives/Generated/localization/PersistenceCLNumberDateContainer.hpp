@@ -7,7 +7,9 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/ISerializable.hpp>
+#include <RED4ext/NativeTypes.hpp>
 
 namespace RED4ext
 {
@@ -20,8 +22,9 @@ struct PersistenceCLNumberDateContainer : ISerializable
 
     CName clNumber; // 30
     CName clTimestamp; // 38
+    DynArray<CString> clGeneratedIds; // 40
 };
-RED4EXT_ASSERT_SIZE(PersistenceCLNumberDateContainer, 0x40);
+RED4EXT_ASSERT_SIZE(PersistenceCLNumberDateContainer, 0x50);
 } // namespace localization
 using localizationPersistenceCLNumberDateContainer = localization::PersistenceCLNumberDateContainer;
 } // namespace RED4ext

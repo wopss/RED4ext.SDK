@@ -17,9 +17,9 @@ struct SmartObjectManager : AI::ISmartObjectManager
     static constexpr const char* NAME = "AISmartObjectManager";
     static constexpr const char* ALIAS = "SmartObjectManager";
 
-    uint8_t unk48[0x128 - 0x48]; // 48
+    uint8_t unk48[0x158 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SmartObjectManager, 0x128);
+RED4EXT_ASSERT_SIZE(SmartObjectManager, 0x158);
 } // namespace AI
 using AISmartObjectManager = AI::SmartObjectManager;
 using SmartObjectManager = AI::SmartObjectManager;

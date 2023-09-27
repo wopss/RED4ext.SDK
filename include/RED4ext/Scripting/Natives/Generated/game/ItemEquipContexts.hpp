@@ -17,6 +17,7 @@ enum class ItemEquipContexts : uint32_t
     MeleeCyberware = 4,
     LauncherCyberware = 5,
     Fists = 6,
+    TutorialCyberware = 7,
 };
 } // namespace game
 using gameItemEquipContexts = game::ItemEquipContexts;

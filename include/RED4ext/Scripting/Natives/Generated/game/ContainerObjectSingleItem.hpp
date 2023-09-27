@@ -18,9 +18,9 @@ struct ContainerObjectSingleItem : game::ContainerObjectBase
     static constexpr const char* NAME = "gameContainerObjectSingleItem";
     static constexpr const char* ALIAS = "ContainerObjectSingleItem";
 
-    TweakDBID itemTDBID; // 2A8
+    TweakDBID itemTDBID; // 2B0
 };
-RED4EXT_ASSERT_SIZE(ContainerObjectSingleItem, 0x2B0);
+RED4EXT_ASSERT_SIZE(ContainerObjectSingleItem, 0x2B8);
 } // namespace game
 using gameContainerObjectSingleItem = game::ContainerObjectSingleItem;
 using ContainerObjectSingleItem = game::ContainerObjectSingleItem;

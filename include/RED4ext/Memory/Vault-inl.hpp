@@ -9,6 +9,6 @@
 
 RED4EXT_INLINE RED4ext::Memory::Vault* RED4ext::Memory::Vault::Get()
 {
-    RelocFunc<Vault* (*)()> func(Addresses::Memory_Vault_Get);
-    return func();
+    RelocPtr<Vault*> ptr(Addresses::Memory_Vault);
+    return reinterpret_cast<Vault*>(ptr.GetAddr());
 }

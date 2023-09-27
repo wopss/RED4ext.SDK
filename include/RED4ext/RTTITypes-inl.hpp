@@ -358,6 +358,16 @@ RED4EXT_INLINE RED4ext::CProperty* RED4ext::CClass::GetProperty(CName aName)
     return func(this, aName);
 }
 
+RED4EXT_INLINE void RED4ext::CClass::InitializeProperties(ScriptInstance aInstance)
+{
+    RelocFunc<void (*)(CClass*, ScriptInstance)> initializeProperties(Addresses::CClass_InitializeProperties);
+    initializeProperties(this, aInstance);
+
+    RelocFunc<void (*)(CClass*, ScriptInstance)> assignDefaultValuesToProperties(
+        Addresses::CClass_AssignDefaultValuesToProperties);
+    assignDefaultValuesToProperties(this, aInstance);
+}
+
 RED4EXT_INLINE void RED4ext::CClass::GetProperties(DynArray<CProperty*>& aProps)
 {
     using func_t = CProperty* (*)(CClass*, DynArray<CProperty*>&);

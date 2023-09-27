@@ -18,9 +18,9 @@ struct JournalQuestTitleModifier : game::JournalEntry
     static constexpr const char* NAME = "gameJournalQuestTitleModifier";
     static constexpr const char* ALIAS = "JournalQuestTitleModifier";
 
-    LocalizationString title; // 60
+    LocalizationString title; // 70
 };
-RED4EXT_ASSERT_SIZE(JournalQuestTitleModifier, 0x88);
+RED4EXT_ASSERT_SIZE(JournalQuestTitleModifier, 0x98);
 } // namespace game
 using gameJournalQuestTitleModifier = game::JournalQuestTitleModifier;
 using JournalQuestTitleModifier = game::JournalQuestTitleModifier;

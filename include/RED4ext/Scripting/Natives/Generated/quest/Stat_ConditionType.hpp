@@ -7,7 +7,6 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/EComparisonType.hpp>
-#include <RED4ext/Scripting/Natives/Generated/game/EntityReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/StatType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/IStatsConditionType.hpp>
 
@@ -20,14 +19,12 @@ struct Stat_ConditionType : quest::IStatsConditionType
     static constexpr const char* NAME = "questStat_ConditionType";
     static constexpr const char* ALIAS = NAME;
 
-    game::EntityReference objectRef; // 38
-    game::data::StatType statType; // 70
-    float value; // 74
-    EComparisonType comparisonType; // 78
-    bool isPlayer; // 7C
-    uint8_t unk7D[0x80 - 0x7D]; // 7D
+    game::data::StatType statType; // 48
+    float value; // 4C
+    EComparisonType comparisonType; // 50
+    uint8_t unk54[0x58 - 0x54]; // 54
 };
-RED4EXT_ASSERT_SIZE(Stat_ConditionType, 0x80);
+RED4EXT_ASSERT_SIZE(Stat_ConditionType, 0x58);
 } // namespace quest
 using questStat_ConditionType = quest::Stat_ConditionType;
 } // namespace RED4ext

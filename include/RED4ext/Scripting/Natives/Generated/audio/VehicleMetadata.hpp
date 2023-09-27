@@ -45,14 +45,14 @@ struct VehicleMetadata : audio::CustomEmitterMetadata
     float radioPlaysWhenEngineStartsProbability; // 98
     uint8_t unk9C[0xA0 - 0x9C]; // 9C
     audio::VehicleGeneralData generalData; // A0
-    audio::VehicleMechanicalData mechanicalData; // 1D8
-    audio::VehicleWheelData wheelData; // 268
-    audio::VehicleEmitterPositionData emitterPositionData; // 2C0
-    uint8_t unk32C[0x330 - 0x32C]; // 32C
-    DynArray<CName> gearSweeteners; // 330
-    uint8_t unk340[0x350 - 0x340]; // 340
+    audio::VehicleMechanicalData mechanicalData; // 228
+    audio::VehicleWheelData wheelData; // 2C0
+    audio::VehicleEmitterPositionData emitterPositionData; // 318
+    uint8_t unk384[0x388 - 0x384]; // 384
+    DynArray<CName> gearSweeteners; // 388
+    uint8_t unk398[0x3A8 - 0x398]; // 398
 };
-RED4EXT_ASSERT_SIZE(VehicleMetadata, 0x350);
+RED4EXT_ASSERT_SIZE(VehicleMetadata, 0x3A8);
 } // namespace audio
 using audioVehicleMetadata = audio::VehicleMetadata;
 } // namespace RED4ext

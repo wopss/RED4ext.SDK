@@ -22,7 +22,8 @@ struct PlayerAnimData
     Handle<game::SceneTierData> tierData; // 00
     bool useZSnapping; // 10
     bool unmountBodyCarry; // 11
-    uint8_t unk12[0x18 - 0x12]; // 12
+    bool isEndOfCarryingAnimation; // 12
+    uint8_t unk13[0x18 - 0x13]; // 13
 };
 RED4EXT_ASSERT_SIZE(PlayerAnimData, 0x18);
 } // namespace scn

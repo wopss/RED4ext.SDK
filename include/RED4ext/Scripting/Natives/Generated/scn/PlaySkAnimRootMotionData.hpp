@@ -31,14 +31,19 @@ struct PlaySkAnimRootMotionData
     bool removePitchRollRotation; // 90
     bool meshDissolvingEnabled; // 91
     uint8_t unk92[0x94 - 0x92]; // 92
-    float customBlendInTime; // 94
-    scn::EasingType customBlendInCurve; // 98
-    bool vehicleEnabledPhysicsOnEnd; // 99
-    bool vehicleChangePhysicsState; // 9A
-    uint8_t unk9B[0xA0 - 0x9B]; // 9B
-    DynArray<scn::AnimationMotionSample> trajectoryLOD; // A0
+    float snapToGroundStart; // 94
+    float snapToGroundEnd; // 98
+    bool snapToGround; // 9C
+    uint8_t unk9D[0xA0 - 0x9D]; // 9D
+    float customBlendInTime; // A0
+    scn::EasingType customBlendInCurve; // A4
+    bool vehicleEnabledPhysicsOnEnd; // A5
+    bool vehicleChangePhysicsState; // A6
+    uint8_t unkA7[0xA8 - 0xA7]; // A7
+    DynArray<scn::AnimationMotionSample> trajectoryLOD; // A8
+    uint8_t unkB8[0xC0 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(PlaySkAnimRootMotionData, 0xB0);
+RED4EXT_ASSERT_SIZE(PlaySkAnimRootMotionData, 0xC0);
 } // namespace scn
 using scnPlaySkAnimRootMotionData = scn::PlaySkAnimRootMotionData;
 } // namespace RED4ext

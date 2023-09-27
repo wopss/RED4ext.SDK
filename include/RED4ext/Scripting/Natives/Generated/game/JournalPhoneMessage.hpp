@@ -22,13 +22,13 @@ struct JournalPhoneMessage : game::JournalEntry
     static constexpr const char* NAME = "gameJournalPhoneMessage";
     static constexpr const char* ALIAS = "JournalPhoneMessage";
 
-    LocalizationString text; // 60
-    Handle<game::JournalPath> attachment; // 88
-    TweakDBID imageId; // 98
-    game::MessageSender sender; // A0
-    float delay; // A4
+    LocalizationString text; // 70
+    Handle<game::JournalPath> attachment; // 98
+    TweakDBID imageId; // A8
+    game::MessageSender sender; // B0
+    float delay; // B4
 };
-RED4EXT_ASSERT_SIZE(JournalPhoneMessage, 0xA8);
+RED4EXT_ASSERT_SIZE(JournalPhoneMessage, 0xB8);
 } // namespace game
 using gameJournalPhoneMessage = game::JournalPhoneMessage;
 using JournalPhoneMessage = game::JournalPhoneMessage;

@@ -20,14 +20,14 @@ struct JournalEmail : game::JournalEntry
     static constexpr const char* NAME = "gameJournalEmail";
     static constexpr const char* ALIAS = "JournalEmail";
 
-    LocalizationString sender; // 60
-    LocalizationString addressee; // 88
-    LocalizationString title; // B0
-    LocalizationString content; // D8
-    RaRef<Bink> videoResource; // 100
-    TweakDBID pictureTweak; // 108
+    LocalizationString sender; // 70
+    LocalizationString addressee; // 98
+    LocalizationString title; // C0
+    LocalizationString content; // E8
+    RaRef<Bink> videoResource; // 110
+    TweakDBID pictureTweak; // 118
 };
-RED4EXT_ASSERT_SIZE(JournalEmail, 0x110);
+RED4EXT_ASSERT_SIZE(JournalEmail, 0x120);
 } // namespace game
 using gameJournalEmail = game::JournalEmail;
 using JournalEmail = game::JournalEmail;

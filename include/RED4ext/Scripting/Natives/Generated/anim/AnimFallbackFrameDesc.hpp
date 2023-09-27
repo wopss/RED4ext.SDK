@@ -18,8 +18,9 @@ struct AnimFallbackFrameDesc
 
     uint16_t mPositions; // 00
     uint16_t mRotations; // 02
+    uint16_t mFloatTracks; // 04
 };
-RED4EXT_ASSERT_SIZE(AnimFallbackFrameDesc, 0x4);
+RED4EXT_ASSERT_SIZE(AnimFallbackFrameDesc, 0x6);
 } // namespace anim
 using animAnimFallbackFrameDesc = anim::AnimFallbackFrameDesc;
 } // namespace RED4ext

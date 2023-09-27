@@ -17,9 +17,9 @@ struct AISubActionCustomEffectors_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionCustomEffectors_Record";
     static constexpr const char* ALIAS = "AISubActionCustomEffectors_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionCustomEffectors_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionCustomEffectors_Record, 0x88);
 } // namespace game::data
 using gamedataAISubActionCustomEffectors_Record = game::data::AISubActionCustomEffectors_Record;
 using AISubActionCustomEffectors_Record = game::data::AISubActionCustomEffectors_Record;

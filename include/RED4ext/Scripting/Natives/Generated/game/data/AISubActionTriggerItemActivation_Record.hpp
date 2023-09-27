@@ -17,9 +17,9 @@ struct AISubActionTriggerItemActivation_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionTriggerItemActivation_Record";
     static constexpr const char* ALIAS = "AISubActionTriggerItemActivation_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionTriggerItemActivation_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionTriggerItemActivation_Record, 0x70);
 } // namespace game::data
 using gamedataAISubActionTriggerItemActivation_Record = game::data::AISubActionTriggerItemActivation_Record;
 using AISubActionTriggerItemActivation_Record = game::data::AISubActionTriggerItemActivation_Record;

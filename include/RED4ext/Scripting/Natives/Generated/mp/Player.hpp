@@ -17,9 +17,9 @@ struct Player : game::Player
     static constexpr const char* NAME = "mpPlayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk78[0x88 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(Player, 0x68);
+RED4EXT_ASSERT_SIZE(Player, 0x88);
 } // namespace mp
 using mpPlayer = mp::Player;
 } // namespace RED4ext

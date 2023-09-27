@@ -17,9 +17,9 @@ struct SlotItemPartListElement_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataSlotItemPartListElement_Record";
     static constexpr const char* ALIAS = "SlotItemPartListElement_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(SlotItemPartListElement_Record, 0x58);
+RED4EXT_ASSERT_SIZE(SlotItemPartListElement_Record, 0x70);
 } // namespace game::data
 using gamedataSlotItemPartListElement_Record = game::data::SlotItemPartListElement_Record;
 using SlotItemPartListElement_Record = game::data::SlotItemPartListElement_Record;

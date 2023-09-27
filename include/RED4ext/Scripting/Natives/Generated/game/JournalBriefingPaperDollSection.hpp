@@ -18,7 +18,7 @@ struct JournalBriefingPaperDollSection : game::JournalBriefingBaseSection
     static constexpr const char* ALIAS = "JournalBriefingPaperDollSection";
 
 };
-RED4EXT_ASSERT_SIZE(JournalBriefingPaperDollSection, 0x60);
+RED4EXT_ASSERT_SIZE(JournalBriefingPaperDollSection, 0x70);
 } // namespace game
 using gameJournalBriefingPaperDollSection = game::JournalBriefingPaperDollSection;
 using JournalBriefingPaperDollSection = game::JournalBriefingPaperDollSection;

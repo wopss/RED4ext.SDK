@@ -18,7 +18,7 @@ struct AreaProxyMeshNode : world::PrefabProxyMeshNode
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(AreaProxyMeshNode, 0x60);
+RED4EXT_ASSERT_SIZE(AreaProxyMeshNode, 0x68);
 } // namespace world
 using worldAreaProxyMeshNode = world::AreaProxyMeshNode;
 } // namespace RED4ext

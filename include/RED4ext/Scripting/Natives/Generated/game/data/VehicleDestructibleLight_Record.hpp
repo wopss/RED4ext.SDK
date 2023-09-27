@@ -17,9 +17,9 @@ struct VehicleDestructibleLight_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleDestructibleLight_Record";
     static constexpr const char* ALIAS = "VehicleDestructibleLight_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleDestructibleLight_Record, 0x58);
+RED4EXT_ASSERT_SIZE(VehicleDestructibleLight_Record, 0x70);
 } // namespace game::data
 using gamedataVehicleDestructibleLight_Record = game::data::VehicleDestructibleLight_Record;
 using VehicleDestructibleLight_Record = game::data::VehicleDestructibleLight_Record;

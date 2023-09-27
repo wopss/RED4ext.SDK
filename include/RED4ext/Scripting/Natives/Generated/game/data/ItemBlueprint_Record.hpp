@@ -17,9 +17,9 @@ struct ItemBlueprint_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataItemBlueprint_Record";
     static constexpr const char* ALIAS = "ItemBlueprint_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ItemBlueprint_Record, 0x50);
+RED4EXT_ASSERT_SIZE(ItemBlueprint_Record, 0x58);
 } // namespace game::data
 using gamedataItemBlueprint_Record = game::data::ItemBlueprint_Record;
 using ItemBlueprint_Record = game::data::ItemBlueprint_Record;

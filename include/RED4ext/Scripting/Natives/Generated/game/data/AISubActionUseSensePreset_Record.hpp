@@ -17,9 +17,9 @@ struct AISubActionUseSensePreset_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionUseSensePreset_Record";
     static constexpr const char* ALIAS = "AISubActionUseSensePreset_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionUseSensePreset_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionUseSensePreset_Record, 0x60);
 } // namespace game::data
 using gamedataAISubActionUseSensePreset_Record = game::data::AISubActionUseSensePreset_Record;
 using AISubActionUseSensePreset_Record = game::data::AISubActionUseSensePreset_Record;

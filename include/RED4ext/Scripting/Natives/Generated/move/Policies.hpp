@@ -51,30 +51,30 @@ struct Policies : IScriptable
     float strafingRotationOffset; // 120
     uint8_t unk124[0x140 - 0x124]; // 124
     move::MovementType movementType; // 140
-    uint8_t unk144[0x14C - 0x144]; // 144
-    move::CirclingDirection circlingDirection; // 14C
-    bool stopOnObstacle; // 150
-    bool avoidObstacleWithinTolerance; // 151
-    bool useCollisionAvoidance; // 152
-    bool useDestReservation; // 153
-    uint8_t unk154[0x155 - 0x154]; // 154
-    bool inRestrictedArea; // 155
-    uint8_t unk156[0x164 - 0x156]; // 156
-    bool isSpline; // 164
-    uint8_t unk165[0x166 - 0x165]; // 165
-    bool startFromClosestPoint; // 166
-    uint8_t unk167[0x178 - 0x167]; // 167
-    bool ignoreNavigation; // 178
-    bool useStart; // 179
-    bool useStop; // 17A
-    uint8_t unk17B[0x17C - 0x17B]; // 17B
-    bool isEvaluated; // 17C
-    uint8_t unk17D[0x184 - 0x17D]; // 17D
-    bool useOffMeshAllowedTags; // 184
-    bool useOffMeshBlockedTags; // 185
-    uint8_t unk186[0x220 - 0x186]; // 186
+    uint8_t unk144[0x150 - 0x144]; // 144
+    move::CirclingDirection circlingDirection; // 150
+    bool stopOnObstacle; // 154
+    bool avoidObstacleWithinTolerance; // 155
+    bool useCollisionAvoidance; // 156
+    bool useDestReservation; // 157
+    uint8_t unk158[0x159 - 0x158]; // 158
+    bool inRestrictedArea; // 159
+    uint8_t unk15A[0x168 - 0x15A]; // 15A
+    bool isSpline; // 168
+    uint8_t unk169[0x16A - 0x169]; // 169
+    bool startFromClosestPoint; // 16A
+    uint8_t unk16B[0x180 - 0x16B]; // 16B
+    bool ignoreNavigation; // 180
+    bool useStart; // 181
+    bool useStop; // 182
+    uint8_t unk183[0x184 - 0x183]; // 183
+    bool isEvaluated; // 184
+    uint8_t unk185[0x18C - 0x185]; // 185
+    bool useOffMeshAllowedTags; // 18C
+    bool useOffMeshBlockedTags; // 18D
+    uint8_t unk18E[0x228 - 0x18E]; // 18E
 };
-RED4EXT_ASSERT_SIZE(Policies, 0x220);
+RED4EXT_ASSERT_SIZE(Policies, 0x228);
 } // namespace move
 using movePolicies = move::Policies;
 using MovePolicies = move::Policies;

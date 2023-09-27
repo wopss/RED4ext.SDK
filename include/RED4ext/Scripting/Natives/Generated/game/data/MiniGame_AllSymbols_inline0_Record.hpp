@@ -18,7 +18,7 @@ struct MiniGame_AllSymbols_inline0_Record : game::data::MiniGame_SymbolsWithRari
     static constexpr const char* ALIAS = "MiniGame_AllSymbols_inline0_Record";
 
 };
-RED4EXT_ASSERT_SIZE(MiniGame_AllSymbols_inline0_Record, 0x58);
+RED4EXT_ASSERT_SIZE(MiniGame_AllSymbols_inline0_Record, 0x70);
 } // namespace game::data
 using gamedataMiniGame_AllSymbols_inline0_Record = game::data::MiniGame_AllSymbols_inline0_Record;
 using MiniGame_AllSymbols_inline0_Record = game::data::MiniGame_AllSymbols_inline0_Record;

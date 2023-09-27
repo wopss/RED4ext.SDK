@@ -17,9 +17,9 @@ struct UncontrolledMovementEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataUncontrolledMovementEffector_Record";
     static constexpr const char* ALIAS = "UncontrolledMovementEffector_Record";
 
-    uint8_t unk58[0x68 - 0x58]; // 58
+    uint8_t unk88[0xB0 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(UncontrolledMovementEffector_Record, 0x68);
+RED4EXT_ASSERT_SIZE(UncontrolledMovementEffector_Record, 0xB0);
 } // namespace game::data
 using gamedataUncontrolledMovementEffector_Record = game::data::UncontrolledMovementEffector_Record;
 using UncontrolledMovementEffector_Record = game::data::UncontrolledMovementEffector_Record;

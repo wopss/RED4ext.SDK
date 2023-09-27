@@ -29,7 +29,8 @@ enum class LanguageId : uint32_t
     TR = 16,
     TH = 17,
     HT = 18,
-    DEBUG = 19,
+    UA = 20,
+    DEBUG = 21,
 };
 } // namespace ink
 using inkLanguageId = ink::LanguageId;

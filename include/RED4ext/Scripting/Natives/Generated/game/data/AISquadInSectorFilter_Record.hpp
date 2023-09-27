@@ -17,9 +17,9 @@ struct AISquadInSectorFilter_Record : game::data::AITicketFilter_Record
     static constexpr const char* NAME = "gamedataAISquadInSectorFilter_Record";
     static constexpr const char* ALIAS = "AISquadInSectorFilter_Record";
 
-    uint8_t unk60[0x68 - 0x60]; // 60
+    uint8_t unk80[0x90 - 0x80]; // 80
 };
-RED4EXT_ASSERT_SIZE(AISquadInSectorFilter_Record, 0x68);
+RED4EXT_ASSERT_SIZE(AISquadInSectorFilter_Record, 0x90);
 } // namespace game::data
 using gamedataAISquadInSectorFilter_Record = game::data::AISquadInSectorFilter_Record;
 using AISquadInSectorFilter_Record = game::data::AISquadInSectorFilter_Record;

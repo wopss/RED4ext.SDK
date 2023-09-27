@@ -17,9 +17,9 @@ struct PlayerSystem : game::IPlayerSystem
     static constexpr const char* NAME = "gamePlayerSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x68 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PlayerSystem, 0x68);
+RED4EXT_ASSERT_SIZE(PlayerSystem, 0x70);
 } // namespace game
 using gamePlayerSystem = game::PlayerSystem;
 } // namespace RED4ext

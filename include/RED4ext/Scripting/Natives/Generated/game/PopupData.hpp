@@ -6,12 +6,15 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/VideoType.hpp>
 
 namespace RED4ext
 {
 struct Bink;
+namespace game { struct JournalEntryOverrideData; }
 
 namespace game
 {
@@ -22,13 +25,14 @@ struct PopupData
 
     CString title; // 00
     CString message; // 20
-    TweakDBID iconID; // 40
-    bool isModal; // 48
-    game::VideoType videoType; // 49
-    uint8_t unk4A[0x50 - 0x4A]; // 4A
-    RaRef<Bink> video; // 50
+    DynArray<Handle<game::JournalEntryOverrideData>> messageOverrideDataList; // 40
+    TweakDBID iconID; // 50
+    bool isModal; // 58
+    game::VideoType videoType; // 59
+    uint8_t unk5A[0x60 - 0x5A]; // 5A
+    RaRef<Bink> video; // 60
 };
-RED4EXT_ASSERT_SIZE(PopupData, 0x58);
+RED4EXT_ASSERT_SIZE(PopupData, 0x68);
 } // namespace game
 using gamePopupData = game::PopupData;
 using PopupData = game::PopupData;

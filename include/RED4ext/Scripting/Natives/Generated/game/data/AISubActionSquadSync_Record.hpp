@@ -17,9 +17,9 @@ struct AISubActionSquadSync_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionSquadSync_Record";
     static constexpr const char* ALIAS = "AISubActionSquadSync_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionSquadSync_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionSquadSync_Record, 0x60);
 } // namespace game::data
 using gamedataAISubActionSquadSync_Record = game::data::AISubActionSquadSync_Record;
 using AISubActionSquadSync_Record = game::data::AISubActionSquadSync_Record;

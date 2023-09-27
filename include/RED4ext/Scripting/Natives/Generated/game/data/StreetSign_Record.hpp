@@ -18,7 +18,7 @@ struct StreetSign_Record : game::data::BaseSign_Record
     static constexpr const char* ALIAS = "StreetSign_Record";
 
 };
-RED4EXT_ASSERT_SIZE(StreetSign_Record, 0x58);
+RED4EXT_ASSERT_SIZE(StreetSign_Record, 0x70);
 } // namespace game::data
 using gamedataStreetSign_Record = game::data::StreetSign_Record;
 using StreetSign_Record = game::data::StreetSign_Record;

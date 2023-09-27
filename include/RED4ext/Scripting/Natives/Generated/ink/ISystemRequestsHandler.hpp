@@ -7,6 +7,10 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentDataInvalid.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentDataReloadProgress.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentInstallRequestedCallback.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentInstalledCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentPurchaseCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentStatusUpdateCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/CloudSaveUploadFinish.hpp>
@@ -41,12 +45,16 @@ struct ISystemRequestsHandler : IScriptable
     ink::DeleteRequestResult SaveDeleted; // 200
     ink::SaveTransferRequestUpdate SaveTransferUpdate; // 238
     ink::AdditionalContentPurchaseCallback AdditionalContentPurchaseResult; // 270
-    ink::AdditionalContentStatusUpdateCallback AdditionalContentStatusUpdateResult; // 2A8
-    ink::UserIdResult UserIdResult; // 2E0
-    ink::UserIdResult UserChanged; // 318
-    ink::SystemServerRequesResult ServersSearchResult; // 350
+    ink::AdditionalContentInstallRequestedCallback AdditionalContentInstallationRequestResult; // 2A8
+    ink::AdditionalContentInstalledCallback AdditionalContentInstallationResult; // 2E0
+    ink::AdditionalContentStatusUpdateCallback AdditionalContentStatusUpdateResult; // 318
+    ink::AdditionalContentDataReloadProgress AdditionalContentDataReloadProgressCallback; // 350
+    ink::AdditionalContentDataInvalid AdditionalDataInvalidCallback; // 388
+    ink::UserIdResult UserIdResult; // 3C0
+    ink::UserIdResult UserChanged; // 3F8
+    ink::SystemServerRequesResult ServersSearchResult; // 430
 };
-RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x388);
+RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x468);
 } // namespace ink
 using inkISystemRequestsHandler = ink::ISystemRequestsHandler;
 } // namespace RED4ext

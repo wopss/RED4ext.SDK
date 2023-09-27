@@ -18,7 +18,7 @@ struct LifePath_ConditionType : quest::IStatsScriptConditionType
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(LifePath_ConditionType, 0x50);
+RED4EXT_ASSERT_SIZE(LifePath_ConditionType, 0x60);
 } // namespace quest
 using questLifePath_ConditionType = quest::LifePath_ConditionType;
 } // namespace RED4ext

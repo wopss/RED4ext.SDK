@@ -17,9 +17,9 @@ struct Ping_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPing_Record";
     static constexpr const char* ALIAS = "Ping_Record";
 
-    uint8_t unk48[0x68 - 0x48]; // 48
+    uint8_t unk48[0xA0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Ping_Record, 0x68);
+RED4EXT_ASSERT_SIZE(Ping_Record, 0xA0);
 } // namespace game::data
 using gamedataPing_Record = game::data::Ping_Record;
 using Ping_Record = game::data::Ping_Record;

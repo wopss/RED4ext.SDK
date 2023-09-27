@@ -18,7 +18,7 @@ struct BoundingCircle : game::ui::arcade::BoundingShape
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(BoundingCircle, 0x30);
+RED4EXT_ASSERT_SIZE(BoundingCircle, 0x68);
 } // namespace game::ui::arcade
 using gameuiarcadeBoundingCircle = game::ui::arcade::BoundingCircle;
 } // namespace RED4ext

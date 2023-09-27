@@ -27,7 +27,8 @@ struct HitDebugData : IScriptable
 
     Vector4 sourceHitPosition; // 40
     Vector4 targetHitPosition; // 50
-    uint8_t unk60[0x68 - 0x60]; // 60
+    uint8_t unk60[0x64 - 0x60]; // 60
+    float attackTime; // 64
     WeakHandle<game::Object> instigator; // 68
     WeakHandle<game::Object> source; // 78
     WeakHandle<game::Object> target; // 88

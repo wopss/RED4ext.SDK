@@ -4,9 +4,21 @@
 #include <RED4ext/Scripting/Stack.hpp>
 #endif
 
+#include <bit>
+
 #include <RED4ext/Addresses.hpp>
+#include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Relocation.hpp>
 
+RED4EXT_INLINE RED4ext::CBaseStack::CBaseStack(IScriptable* aContext) noexcept
+    : unk08(0)
+    , unk10(0)
+    , context18(aContext)
+    , context20(aContext)
+{
+    auto rtti = CRTTISystem::Get();
+    unk28 = rtti->GetClass("IScriptable");
+}
 
 RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CBaseStack::GetContext() const
 {
@@ -25,13 +37,16 @@ RED4EXT_INLINE RED4ext::CStackType::CStackType(CBaseRTTIType* aType, ScriptInsta
 {
 }
 
-RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aInstance, CStackType* aArgs, uint32_t aArgsCount,
-                                       CStackType* aResult, int64_t a6)
-{
-    using func_t = CStack* (*)(CStack*, ScriptInstance, CStackType*, uint32_t, CStackType*, int64_t);
-    RelocFunc<func_t> func(Addresses::CStack_ctor);
+RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aContext, CStackType* aArgs, uint32_t aArgsCount,
+                                       CStackType* aResult)
 
-    func(this, aInstance, aArgs, aArgsCount, aResult, a6);
+    : CBaseStack(static_cast<IScriptable*>(aContext))
+    , args(aArgs)
+    , argsCount(aArgsCount)
+    , result(aResult)
+{
+    RelocVtbl vtbl(Addresses::CStack_vtbl);
+    *reinterpret_cast<uintptr_t**>(this) = vtbl;
 }
 
 RED4EXT_INLINE RED4ext::CStackFrame::CStackFrame(IScriptable* aContext, char* aCode, void* aUnk)

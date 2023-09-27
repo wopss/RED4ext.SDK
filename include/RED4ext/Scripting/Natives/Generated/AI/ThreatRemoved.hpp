@@ -25,7 +25,8 @@ struct ThreatRemoved : AI::AIEvent
     bool isHostile; // 70
     bool isEnemy; // 71
     bool isDead; // 72
-    uint8_t unk73[0x78 - 0x73]; // 73
+    bool distanceBasedInstantDrop; // 73
+    uint8_t unk74[0x78 - 0x74]; // 74
 };
 RED4EXT_ASSERT_SIZE(ThreatRemoved, 0x78);
 } // namespace AI

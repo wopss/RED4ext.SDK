@@ -17,9 +17,9 @@ struct AIDirectorScheduleSpawningDesc_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAIDirectorScheduleSpawningDesc_Record";
     static constexpr const char* ALIAS = "AIDirectorScheduleSpawningDesc_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AIDirectorScheduleSpawningDesc_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AIDirectorScheduleSpawningDesc_Record, 0x88);
 } // namespace game::data
 using gamedataAIDirectorScheduleSpawningDesc_Record = game::data::AIDirectorScheduleSpawningDesc_Record;
 using AIDirectorScheduleSpawningDesc_Record = game::data::AIDirectorScheduleSpawningDesc_Record;

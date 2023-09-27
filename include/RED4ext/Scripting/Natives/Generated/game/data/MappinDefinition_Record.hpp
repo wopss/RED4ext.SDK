@@ -17,9 +17,9 @@ struct MappinDefinition_Record : game::data::Base_MappinDefinition_Record
     static constexpr const char* NAME = "gamedataMappinDefinition_Record";
     static constexpr const char* ALIAS = "MappinDefinition_Record";
 
-    uint8_t unk58[0x60 - 0x58]; // 58
+    uint8_t unk78[0x88 - 0x78]; // 78
 };
-RED4EXT_ASSERT_SIZE(MappinDefinition_Record, 0x60);
+RED4EXT_ASSERT_SIZE(MappinDefinition_Record, 0x88);
 } // namespace game::data
 using gamedataMappinDefinition_Record = game::data::MappinDefinition_Record;
 using MappinDefinition_Record = game::data::MappinDefinition_Record;

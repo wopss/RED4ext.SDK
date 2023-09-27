@@ -18,10 +18,10 @@ struct JournalImageEntry : game::JournalEntry
     static constexpr const char* NAME = "gameJournalImageEntry";
     static constexpr const char* ALIAS = "JournalImageEntry";
 
-    TweakDBID imageId; // 60
-    TweakDBID thumbnailImageId; // 68
+    TweakDBID imageId; // 70
+    TweakDBID thumbnailImageId; // 78
 };
-RED4EXT_ASSERT_SIZE(JournalImageEntry, 0x70);
+RED4EXT_ASSERT_SIZE(JournalImageEntry, 0x80);
 } // namespace game
 using gameJournalImageEntry = game::JournalImageEntry;
 using JournalImageEntry = game::JournalImageEntry;

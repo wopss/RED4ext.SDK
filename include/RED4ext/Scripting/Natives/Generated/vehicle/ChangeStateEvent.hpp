@@ -18,10 +18,11 @@ struct ChangeStateEvent : red::Event
     static constexpr const char* NAME = "vehicleChangeStateEvent";
     static constexpr const char* ALIAS = NAME;
 
-    vehicle::EState state; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
+    vehicle::EState newState; // 40
+    vehicle::EState oldState; // 44
+    uint8_t unk48[0x50 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ChangeStateEvent, 0x48);
+RED4EXT_ASSERT_SIZE(ChangeStateEvent, 0x50);
 } // namespace vehicle
 using vehicleChangeStateEvent = vehicle::ChangeStateEvent;
 } // namespace RED4ext

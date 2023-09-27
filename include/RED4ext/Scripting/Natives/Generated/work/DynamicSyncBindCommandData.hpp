@@ -7,13 +7,13 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
-#include <RED4ext/Scripting/Natives/Generated/work/IWorkspotCommandData.hpp>
+#include <RED4ext/Scripting/Natives/Generated/work/SyncBindBaseCommandData.hpp>
 
 namespace RED4ext
 {
 namespace work
 {
-struct DynamicSyncBindCommandData : work::IWorkspotCommandData
+struct DynamicSyncBindCommandData : work::SyncBindBaseCommandData
 {
     static constexpr const char* NAME = "workDynamicSyncBindCommandData";
     static constexpr const char* ALIAS = NAME;

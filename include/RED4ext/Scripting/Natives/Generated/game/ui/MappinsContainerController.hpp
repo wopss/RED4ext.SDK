@@ -23,19 +23,19 @@ struct MappinsContainerController : game::ui::ProjectedHUDGameController
     static constexpr const char* NAME = "gameuiMappinsContainerController";
     static constexpr const char* ALIAS = "MappinsContainerController";
 
-    uint8_t unk148[0x160 - 0x148]; // 148
-    ink::WidgetPath spawnContainerPath; // 160
-    uint8_t unk170[0x180 - 0x170]; // 170
-    ink::LinePatternWidgetReference gpsQuestPathWidget; // 180
-    ink::LinePatternWidgetReference gpsPlayerTrackedPathWidget; // 198
-    uint8_t unk1B0[0x270 - 0x1B0]; // 1B0
-    game::PSMVision psmVision; // 270
-    game::PSMCombat psmCombat; // 274
-    game::PSMZones psmZone; // 278
-    GameplayTier tier; // 27C
-    uint8_t unk280[0x2D0 - 0x280]; // 280
+    uint8_t unk160[0x178 - 0x160]; // 160
+    ink::WidgetPath spawnContainerPath; // 178
+    uint8_t unk188[0x198 - 0x188]; // 188
+    ink::LinePatternWidgetReference gpsQuestPathWidget; // 198
+    ink::LinePatternWidgetReference gpsPlayerTrackedPathWidget; // 1B0
+    uint8_t unk1C8[0x288 - 0x1C8]; // 1C8
+    game::PSMVision psmVision; // 288
+    game::PSMCombat psmCombat; // 28C
+    game::PSMZones psmZone; // 290
+    GameplayTier tier; // 294
+    uint8_t unk298[0x2E8 - 0x298]; // 298
 };
-RED4EXT_ASSERT_SIZE(MappinsContainerController, 0x2D0);
+RED4EXT_ASSERT_SIZE(MappinsContainerController, 0x2E8);
 } // namespace game::ui
 using gameuiMappinsContainerController = game::ui::MappinsContainerController;
 using MappinsContainerController = game::ui::MappinsContainerController;

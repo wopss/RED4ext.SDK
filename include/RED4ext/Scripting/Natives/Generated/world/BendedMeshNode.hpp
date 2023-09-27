@@ -12,6 +12,7 @@
 #include <RED4ext/Scripting/Natives/Generated/Box.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Matrix.hpp>
 #include <RED4ext/Scripting/Natives/Generated/NavGenNavigationSetting.hpp>
+#include <RED4ext/Scripting/Natives/Generated/shadows/ShadowCastingMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/Node.hpp>
 
 namespace RED4ext
@@ -29,14 +30,15 @@ struct BendedMeshNode : world::Node
     DynArray<Matrix> deformationData; // 40
     Box deformedBox; // 50
     bool isBendedRoad; // 70
-    bool castShadows; // 71
-    bool castLocalShadows; // 72
+    shadows::ShadowCastingMode castShadows; // 71
+    shadows::ShadowCastingMode castLocalShadows; // 72
     uint8_t unk73[0x78 - 0x73]; // 73
     CName meshAppearance; // 78
     uint8_t unk80[0x98 - 0x80]; // 80
     NavGenNavigationSetting navigationSetting; // 98
     bool removeFromRainMap; // 9A
-    uint8_t unk9B[0xA0 - 0x9B]; // 9B
+    uint8_t version; // 9B
+    uint8_t unk9C[0xA0 - 0x9C]; // 9C
 };
 RED4EXT_ASSERT_SIZE(BendedMeshNode, 0xA0);
 } // namespace world

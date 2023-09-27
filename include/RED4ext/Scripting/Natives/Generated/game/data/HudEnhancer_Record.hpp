@@ -17,9 +17,9 @@ struct HudEnhancer_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataHudEnhancer_Record";
     static constexpr const char* ALIAS = "HudEnhancer_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(HudEnhancer_Record, 0x50);
+RED4EXT_ASSERT_SIZE(HudEnhancer_Record, 0x58);
 } // namespace game::data
 using gamedataHudEnhancer_Record = game::data::HudEnhancer_Record;
 using HudEnhancer_Record = game::data::HudEnhancer_Record;

@@ -14,6 +14,7 @@
 
 namespace RED4ext
 {
+namespace game { struct JournalInternetCanvas; }
 namespace game { struct JournalInternetImage; }
 namespace game { struct JournalInternetRectangle; }
 namespace game { struct JournalInternetText; }
@@ -27,19 +28,21 @@ struct JournalInternetPage : game::JournalEntry
     static constexpr const char* NAME = "gameJournalInternetPage";
     static constexpr const char* ALIAS = "JournalInternetPage";
 
-    CString address; // 60
-    DynArray<game::JournalFactNameValue> factsToSet; // 80
-    RaRef<ink::WidgetLibraryResource> widgetFile; // 90
-    float scale; // 98
-    uint8_t unk9C[0xA0 - 0x9C]; // 9C
-    DynArray<Handle<game::JournalInternetText>> texts; // A0
-    DynArray<Handle<game::JournalInternetRectangle>> rectangles; // B0
-    DynArray<Handle<game::JournalInternetImage>> images; // C0
-    DynArray<Handle<game::JournalInternetVideo>> videos; // D0
-    bool additionallyFilledFromScripts; // E0
-    uint8_t unkE1[0xE8 - 0xE1]; // E1
+    CString address; // 70
+    DynArray<game::JournalFactNameValue> factsToSet; // 90
+    RaRef<ink::WidgetLibraryResource> widgetFile; // A0
+    float scale; // A8
+    uint8_t unkAC[0xB0 - 0xAC]; // AC
+    DynArray<Handle<game::JournalInternetText>> texts; // B0
+    DynArray<Handle<game::JournalInternetRectangle>> rectangles; // C0
+    DynArray<Handle<game::JournalInternetImage>> images; // D0
+    DynArray<Handle<game::JournalInternetVideo>> videos; // E0
+    DynArray<Handle<game::JournalInternetCanvas>> canvases; // F0
+    bool additionallyFilledFromScripts; // 100
+    bool reloadOnZoomIn; // 101
+    uint8_t unk102[0x108 - 0x102]; // 102
 };
-RED4EXT_ASSERT_SIZE(JournalInternetPage, 0xE8);
+RED4EXT_ASSERT_SIZE(JournalInternetPage, 0x108);
 } // namespace game
 using gameJournalInternetPage = game::JournalInternetPage;
 using JournalInternetPage = game::JournalInternetPage;

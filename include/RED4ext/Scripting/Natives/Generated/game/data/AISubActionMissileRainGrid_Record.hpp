@@ -17,9 +17,9 @@ struct AISubActionMissileRainGrid_Record : game::data::AISubActionShootWithWeapo
     static constexpr const char* NAME = "gamedataAISubActionMissileRainGrid_Record";
     static constexpr const char* ALIAS = "AISubActionMissileRainGrid_Record";
 
-    uint8_t unk78[0x80 - 0x78]; // 78
+    uint8_t unk118[0x128 - 0x118]; // 118
 };
-RED4EXT_ASSERT_SIZE(AISubActionMissileRainGrid_Record, 0x80);
+RED4EXT_ASSERT_SIZE(AISubActionMissileRainGrid_Record, 0x128);
 } // namespace game::data
 using gamedataAISubActionMissileRainGrid_Record = game::data::AISubActionMissileRainGrid_Record;
 using AISubActionMissileRainGrid_Record = game::data::AISubActionMissileRainGrid_Record;

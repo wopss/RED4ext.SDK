@@ -15,9 +15,9 @@ struct IWidgetLogicController : IScriptable
     static constexpr const char* NAME = "inkIWidgetLogicController";
     static constexpr const char* ALIAS = "inkILogicController";
 
-    virtual void OnInitialize() = 0;              // 110
-    virtual void OnUninitialize() = 0;            // 118
-    virtual void OnArrangeChildrenComplete() = 0; // 120
+    virtual void OnInitialize() = 0;              // 108
+    virtual void OnUninitialize() = 0;            // 110
+    virtual void OnArrangeChildrenComplete() = 0; // 118
 
     WeakHandle<Widget> widget;         // 40
     WeakHandle<LayerProxy> layerProxy; // 50

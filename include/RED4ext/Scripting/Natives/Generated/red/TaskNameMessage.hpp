@@ -19,7 +19,7 @@ struct TaskNameMessage
     static constexpr const char* ALIAS = NAME;
 
     uint32_t id; // 00
-    uint8_t unk04[0x8 - 0x4]; // 4
+    uint32_t parent; // 04
     CString title; // 08
     CName uniqueName; // 28
 };

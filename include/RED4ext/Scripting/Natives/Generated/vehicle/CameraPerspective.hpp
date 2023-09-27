@@ -12,7 +12,11 @@ enum class CameraPerspective : uint8_t
 {
     FPP = 0,
     TPPClose = 1,
-    TPPFar = 2,
+    TPPMedium = 2,
+    TPPFar = 3,
+    DriverCombatClose = 4,
+    DriverCombatMedium = 5,
+    DriverCombatFar = 6,
 };
 } // namespace vehicle
 using vehicleCameraPerspective = vehicle::CameraPerspective;

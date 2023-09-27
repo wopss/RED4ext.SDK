@@ -19,7 +19,8 @@ struct ForbiddenAreaState
     uint64_t globalNodeIDHash; // 00
     bool enabled; // 08
     bool dismount; // 09
-    uint8_t unk0A[0x10 - 0xA]; // A
+    bool blockCombat; // 0A
+    uint8_t unk0B[0x10 - 0xB]; // B
 };
 RED4EXT_ASSERT_SIZE(ForbiddenAreaState, 0x10);
 } // namespace vehicle

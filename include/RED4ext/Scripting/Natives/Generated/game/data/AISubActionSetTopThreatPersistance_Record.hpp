@@ -17,9 +17,9 @@ struct AISubActionSetTopThreatPersistance_Record : game::data::AISubAction_Recor
     static constexpr const char* NAME = "gamedataAISubActionSetTopThreatPersistance_Record";
     static constexpr const char* ALIAS = "AISubActionSetTopThreatPersistance_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionSetTopThreatPersistance_Record, 0x50);
+RED4EXT_ASSERT_SIZE(AISubActionSetTopThreatPersistance_Record, 0x58);
 } // namespace game::data
 using gamedataAISubActionSetTopThreatPersistance_Record = game::data::AISubActionSetTopThreatPersistance_Record;
 using AISubActionSetTopThreatPersistance_Record = game::data::AISubActionSetTopThreatPersistance_Record;

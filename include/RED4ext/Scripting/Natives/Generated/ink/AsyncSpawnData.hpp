@@ -25,14 +25,14 @@ struct AsyncSpawnData : IScriptable
     uint8_t unk40[0x58 - 0x40]; // 40
     CName libraryID; // 58
     WeakHandle<ink::CompoundWidget> parentWidget; // 60
-    uint8_t unk70[0xC0 - 0x70]; // 70
-    bool triggerCallbackAsync; // C0
-    uint8_t unkC1[0xC8 - 0xC1]; // C1
-    Handle<IScriptable> userData; // C8
-    uint8_t unkD8[0xE8 - 0xD8]; // D8
-    CName introAnimation; // E8
+    uint8_t unk70[0xD8 - 0x70]; // 70
+    bool triggerCallbackAsync; // D8
+    uint8_t unkD9[0xE0 - 0xD9]; // D9
+    Handle<IScriptable> userData; // E0
+    uint8_t unkF0[0x100 - 0xF0]; // F0
+    CName introAnimation; // 100
 };
-RED4EXT_ASSERT_SIZE(AsyncSpawnData, 0xF0);
+RED4EXT_ASSERT_SIZE(AsyncSpawnData, 0x108);
 } // namespace ink
 using inkAsyncSpawnData = ink::AsyncSpawnData;
 } // namespace RED4ext

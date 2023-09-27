@@ -17,9 +17,9 @@ struct HackCategory_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataHackCategory_Record";
     static constexpr const char* ALIAS = "HackCategory_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(HackCategory_Record, 0x58);
+RED4EXT_ASSERT_SIZE(HackCategory_Record, 0x70);
 } // namespace game::data
 using gamedataHackCategory_Record = game::data::HackCategory_Record;
 using HackCategory_Record = game::data::HackCategory_Record;

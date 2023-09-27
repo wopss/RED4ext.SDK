@@ -23,8 +23,10 @@ struct UnmountingRequest : IScriptable
 
     game::mounting::MountingInfo lowLevelMountingInfo; // 40
     Handle<game::MountEventData> mountData; // 58
+    float delay; // 68
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
-RED4EXT_ASSERT_SIZE(UnmountingRequest, 0x68);
+RED4EXT_ASSERT_SIZE(UnmountingRequest, 0x70);
 } // namespace game::mounting
 using gamemountingUnmountingRequest = game::mounting::UnmountingRequest;
 using UnmountingRequest = game::mounting::UnmountingRequest;

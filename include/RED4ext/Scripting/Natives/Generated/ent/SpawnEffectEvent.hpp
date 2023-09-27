@@ -25,15 +25,16 @@ struct SpawnEffectEvent : red::Event
     uint32_t e3hackDeferCount; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
     Handle<world::EffectBlackboard> blackboard; // 48
-    CName effectName; // 58
-    CRUID idForRandomizedEffect; // 60
-    CName effectInstanceName; // 68
-    bool persistOnDetach; // 70
-    bool breakAllLoops; // 71
-    bool breakAllOnDestroy; // 72
-    uint8_t unk73[0x88 - 0x73]; // 73
+    uint8_t unk58[0x68 - 0x58]; // 58
+    CName effectName; // 68
+    CRUID idForRandomizedEffect; // 70
+    CName effectInstanceName; // 78
+    bool persistOnDetach; // 80
+    bool breakAllLoops; // 81
+    bool breakAllOnDestroy; // 82
+    uint8_t unk83[0x98 - 0x83]; // 83
 };
-RED4EXT_ASSERT_SIZE(SpawnEffectEvent, 0x88);
+RED4EXT_ASSERT_SIZE(SpawnEffectEvent, 0x98);
 } // namespace ent
 using entSpawnEffectEvent = ent::SpawnEffectEvent;
 } // namespace RED4ext

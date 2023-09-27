@@ -40,9 +40,10 @@ struct WorkspotTree : ISerializable
     uint8_t unk70[0x90 - 0x70]; // 70
     DynArray<work::WorkspotGlobalProp> globalProps; // 90
     DynArray<Handle<work::IWorkspotItemAction>> initialActions; // A0
-    bool dontInjectWorkspotGraph; // B0
-    bool frezeAtTheLastFrame_UseWithCaution; // B1
-    uint8_t unkB2[0xB4 - 0xB2]; // B2
+    bool initialCanUseExits; // B0
+    bool propsPlaySyncAnim; // B1
+    bool dontInjectWorkspotGraph; // B2
+    bool frezeAtTheLastFrame_UseWithCaution; // B3
     float blendOutTime; // B4
     CName animGraphSlotName; // B8
     float inertializationDurationEnter; // C0

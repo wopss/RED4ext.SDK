@@ -18,7 +18,7 @@ struct PhysicalImpulseAreaNodeInstance : world::PhysicalTriggerAreaNodeInstance
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(PhysicalImpulseAreaNodeInstance, 0xA0);
+RED4EXT_ASSERT_SIZE(PhysicalImpulseAreaNodeInstance, 0xB0);
 } // namespace world
 using worldPhysicalImpulseAreaNodeInstance = world::PhysicalImpulseAreaNodeInstance;
 } // namespace RED4ext

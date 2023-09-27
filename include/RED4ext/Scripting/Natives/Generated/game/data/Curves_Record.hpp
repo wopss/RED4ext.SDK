@@ -17,9 +17,9 @@ struct Curves_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataCurves_Record";
     static constexpr const char* ALIAS = "Curves_Record";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Curves_Record, 0x50);
+RED4EXT_ASSERT_SIZE(Curves_Record, 0x58);
 } // namespace game::data
 using gamedataCurves_Record = game::data::Curves_Record;
 using Curves_Record = game::data::Curves_Record;

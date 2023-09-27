@@ -17,9 +17,9 @@ struct WorldMappinsContainerController : game::ui::MappinsContainerController
     static constexpr const char* NAME = "gameuiWorldMappinsContainerController";
     static constexpr const char* ALIAS = "WorldMappinsContainerController";
 
-    uint8_t unk2D0[0x368 - 0x2D0]; // 2D0
+    uint8_t unk2E8[0x380 - 0x2E8]; // 2E8
 };
-RED4EXT_ASSERT_SIZE(WorldMappinsContainerController, 0x368);
+RED4EXT_ASSERT_SIZE(WorldMappinsContainerController, 0x380);
 } // namespace game::ui
 using gameuiWorldMappinsContainerController = game::ui::WorldMappinsContainerController;
 using WorldMappinsContainerController = game::ui::WorldMappinsContainerController;

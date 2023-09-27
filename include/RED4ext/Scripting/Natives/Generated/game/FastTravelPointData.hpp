@@ -22,8 +22,10 @@ struct FastTravelPointData : IScriptable
     TweakDBID pointRecord; // 40
     NodeRef markerRef; // 48
     ent::EntityID requesterID; // 50
+    bool isEP1; // 58
+    uint8_t unk59[0x60 - 0x59]; // 59
 };
-RED4EXT_ASSERT_SIZE(FastTravelPointData, 0x58);
+RED4EXT_ASSERT_SIZE(FastTravelPointData, 0x60);
 } // namespace game
 using gameFastTravelPointData = game::FastTravelPointData;
 using FastTravelPointData = game::FastTravelPointData;

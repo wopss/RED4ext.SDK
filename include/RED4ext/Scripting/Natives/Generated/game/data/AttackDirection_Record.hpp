@@ -17,9 +17,9 @@ struct AttackDirection_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAttackDirection_Record";
     static constexpr const char* ALIAS = "AttackDirection_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AttackDirection_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AttackDirection_Record, 0x90);
 } // namespace game::data
 using gamedataAttackDirection_Record = game::data::AttackDirection_Record;
 using AttackDirection_Record = game::data::AttackDirection_Record;

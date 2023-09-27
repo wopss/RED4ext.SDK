@@ -11,6 +11,7 @@
 #include <RED4ext/Scripting/Natives/Generated/quest/IPhoneManagerNodeType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallPhase.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/PhoneCallVisuals.hpp>
 
 namespace RED4ext
 {
@@ -30,7 +31,9 @@ struct CallContact_NodeType : quest::IPhoneManagerNodeType
     NodeRef prefabNodeRef; // 60
     bool applyPhoneRestriction; // 68
     bool isRejectable; // 69
-    uint8_t unk6A[0x70 - 0x6A]; // 6A
+    bool showAvatar; // 6A
+    uint8_t unk6B[0x6C - 0x6B]; // 6B
+    quest::PhoneCallVisuals visuals; // 6C
 };
 RED4EXT_ASSERT_SIZE(CallContact_NodeType, 0x70);
 } // namespace quest

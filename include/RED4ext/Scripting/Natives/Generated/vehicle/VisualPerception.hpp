@@ -16,9 +16,9 @@ struct VisualPerception
     static constexpr const char* NAME = "vehicleVisualPerception";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x150 - 0x0]; // 0
+    uint8_t unk00[0x158 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(VisualPerception, 0x150);
+RED4EXT_ASSERT_SIZE(VisualPerception, 0x158);
 } // namespace vehicle
 using vehicleVisualPerception = vehicle::VisualPerception;
 } // namespace RED4ext

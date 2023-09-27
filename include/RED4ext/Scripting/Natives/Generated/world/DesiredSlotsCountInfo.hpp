@@ -18,8 +18,9 @@ struct DesiredSlotsCountInfo
 
     float siredSlotsCount; // 00
     float nCoeff; // 04
+    float nCoeffWhenMounted; // 08
 };
-RED4EXT_ASSERT_SIZE(DesiredSlotsCountInfo, 0x8);
+RED4EXT_ASSERT_SIZE(DesiredSlotsCountInfo, 0xC);
 } // namespace world
 using worldDesiredSlotsCountInfo = world::DesiredSlotsCountInfo;
 } // namespace RED4ext

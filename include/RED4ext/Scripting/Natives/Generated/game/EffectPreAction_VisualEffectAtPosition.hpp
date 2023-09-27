@@ -24,7 +24,8 @@ struct EffectPreAction_VisualEffectAtPosition : game::EffectPreAction
     RaRef<world::Effect> effect; // 40
     bool attached; // 48
     bool breakLoopOnDetach; // 49
-    uint8_t unk4A[0x50 - 0x4A]; // 4A
+    bool vertical; // 4A
+    uint8_t unk4B[0x50 - 0x4B]; // 4B
     CName effectTag; // 50
 };
 RED4EXT_ASSERT_SIZE(EffectPreAction_VisualEffectAtPosition, 0x58);

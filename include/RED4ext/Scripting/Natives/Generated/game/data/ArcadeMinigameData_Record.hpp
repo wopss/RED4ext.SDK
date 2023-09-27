@@ -17,9 +17,9 @@ struct ArcadeMinigameData_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataArcadeMinigameData_Record";
     static constexpr const char* ALIAS = "ArcadeMinigameData_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0xA0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ArcadeMinigameData_Record, 0x60);
+RED4EXT_ASSERT_SIZE(ArcadeMinigameData_Record, 0xA0);
 } // namespace game::data
 using gamedataArcadeMinigameData_Record = game::data::ArcadeMinigameData_Record;
 using ArcadeMinigameData_Record = game::data::ArcadeMinigameData_Record;

@@ -17,9 +17,9 @@ struct AICoverCond_Record : game::data::AIActionSubCondition_Record
     static constexpr const char* NAME = "gamedataAICoverCond_Record";
     static constexpr const char* ALIAS = "AICoverCond_Record";
 
-    uint8_t unk50[0x80 - 0x50]; // 50
+    uint8_t unk58[0x118 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(AICoverCond_Record, 0x80);
+RED4EXT_ASSERT_SIZE(AICoverCond_Record, 0x118);
 } // namespace game::data
 using gamedataAICoverCond_Record = game::data::AICoverCond_Record;
 using AICoverCond_Record = game::data::AICoverCond_Record;

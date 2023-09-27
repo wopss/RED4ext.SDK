@@ -18,11 +18,11 @@ struct StatsUnit : ISerializable
     static constexpr const char* NAME = "gameStatsUnit";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x70 - 0x30]; // 30
-    TweakDBID recordID; // 70
-    uint8_t unk78[0x80 - 0x78]; // 78
+    uint8_t unk30[0x80 - 0x30]; // 30
+    TweakDBID recordID; // 80
+    uint8_t unk88[0x90 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(StatsUnit, 0x80);
+RED4EXT_ASSERT_SIZE(StatsUnit, 0x90);
 } // namespace game
 using gameStatsUnit = game::StatsUnit;
 } // namespace RED4ext

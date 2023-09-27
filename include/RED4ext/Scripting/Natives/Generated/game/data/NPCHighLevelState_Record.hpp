@@ -17,9 +17,9 @@ struct NPCHighLevelState_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataNPCHighLevelState_Record";
     static constexpr const char* ALIAS = "NPCHighLevelState_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x68 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(NPCHighLevelState_Record, 0x58);
+RED4EXT_ASSERT_SIZE(NPCHighLevelState_Record, 0x68);
 } // namespace game::data
 using gamedataNPCHighLevelState_Record = game::data::NPCHighLevelState_Record;
 using NPCHighLevelState_Record = game::data::NPCHighLevelState_Record;

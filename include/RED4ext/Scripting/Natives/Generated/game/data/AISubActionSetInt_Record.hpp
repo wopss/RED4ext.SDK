@@ -17,9 +17,9 @@ struct AISubActionSetInt_Record : game::data::AISubAction_Record
     static constexpr const char* NAME = "gamedataAISubActionSetInt_Record";
     static constexpr const char* ALIAS = "AISubActionSetInt_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AISubActionSetInt_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AISubActionSetInt_Record, 0x70);
 } // namespace game::data
 using gamedataAISubActionSetInt_Record = game::data::AISubActionSetInt_Record;
 using AISubActionSetInt_Record = game::data::AISubActionSetInt_Record;

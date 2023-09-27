@@ -17,9 +17,9 @@ struct DeviceInteractionManager : game::IDeviceInteractionManager
     static constexpr const char* NAME = "gameDeviceInteractionManager";
     static constexpr const char* ALIAS = "DeviceInteractionManager";
 
-    uint8_t unk48[0xE8 - 0x48]; // 48
+    uint8_t unk48[0xF8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DeviceInteractionManager, 0xE8);
+RED4EXT_ASSERT_SIZE(DeviceInteractionManager, 0xF8);
 } // namespace game
 using gameDeviceInteractionManager = game::DeviceInteractionManager;
 using DeviceInteractionManager = game::DeviceInteractionManager;

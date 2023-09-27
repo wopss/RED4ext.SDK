@@ -17,9 +17,9 @@ struct AdvertisementGroup_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAdvertisementGroup_Record";
     static constexpr const char* ALIAS = "AdvertisementGroup_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x88 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AdvertisementGroup_Record, 0x58);
+RED4EXT_ASSERT_SIZE(AdvertisementGroup_Record, 0x88);
 } // namespace game::data
 using gamedataAdvertisementGroup_Record = game::data::AdvertisementGroup_Record;
 using AdvertisementGroup_Record = game::data::AdvertisementGroup_Record;

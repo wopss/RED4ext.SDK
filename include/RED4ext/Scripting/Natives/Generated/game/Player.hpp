@@ -18,12 +18,12 @@ struct Player
     static constexpr const char* NAME = "gamePlayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x30 - 0x0]; // 0
-    net::PeerID peerID; // 30
-    uint8_t unk31[0x38 - 0x31]; // 31
-    CString nickname; // 38
+    uint8_t unk00[0x50 - 0x0]; // 0
+    net::PeerID peerID; // 50
+    uint8_t unk51[0x58 - 0x51]; // 51
+    CString nickname; // 58
 };
-RED4EXT_ASSERT_SIZE(Player, 0x58);
+RED4EXT_ASSERT_SIZE(Player, 0x78);
 } // namespace game
 using gamePlayer = game::Player;
 } // namespace RED4ext

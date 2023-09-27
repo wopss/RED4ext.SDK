@@ -17,9 +17,9 @@ struct ArcadeSystem : game::IGameSystem
     static constexpr const char* NAME = "gameuiarcadeArcadeSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ArcadeSystem, 0x50);
+RED4EXT_ASSERT_SIZE(ArcadeSystem, 0x58);
 } // namespace game::ui::arcade
 using gameuiarcadeArcadeSystem = game::ui::arcade::ArcadeSystem;
 } // namespace RED4ext

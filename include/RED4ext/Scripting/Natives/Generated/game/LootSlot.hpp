@@ -18,13 +18,13 @@ struct LootSlot : game::LootContainerBase
     static constexpr const char* NAME = "gameLootSlot";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk260[0x288 - 0x260]; // 260
-    float dropChance; // 288
-    bool immovableAfterDrop; // 28C
-    game::LootSlotState lootState; // 28D
-    uint8_t unk28E[0x298 - 0x28E]; // 28E
+    uint8_t unk268[0x290 - 0x268]; // 268
+    float dropChance; // 290
+    bool immovableAfterDrop; // 294
+    game::LootSlotState lootState; // 295
+    uint8_t unk296[0x2A0 - 0x296]; // 296
 };
-RED4EXT_ASSERT_SIZE(LootSlot, 0x298);
+RED4EXT_ASSERT_SIZE(LootSlot, 0x2A0);
 } // namespace game
 using gameLootSlot = game::LootSlot;
 } // namespace RED4ext

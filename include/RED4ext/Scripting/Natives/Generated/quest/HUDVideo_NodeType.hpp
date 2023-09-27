@@ -33,9 +33,11 @@ struct HUDVideo_NodeType : quest::IUIManagerNodeType
     bool forceVideoFrameRate; // 5C
     bool playOnHud; // 5D
     bool fullScreen; // 5E
-    uint8_t unk5F[0x60 - 0x5F]; // 5F
+    bool useFullscreenVideoState; // 5F
+    bool keepWidescreenAspectRatio; // 60
+    uint8_t unk61[0x68 - 0x61]; // 61
 };
-RED4EXT_ASSERT_SIZE(HUDVideo_NodeType, 0x60);
+RED4EXT_ASSERT_SIZE(HUDVideo_NodeType, 0x68);
 } // namespace quest
 using questHUDVideo_NodeType = quest::HUDVideo_NodeType;
 } // namespace RED4ext

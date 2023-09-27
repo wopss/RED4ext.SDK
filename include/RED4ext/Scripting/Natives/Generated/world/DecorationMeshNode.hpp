@@ -21,12 +21,12 @@ struct DecorationMeshNode : world::MeshNode
     static constexpr const char* NAME = "worldDecorationMeshNode";
     static constexpr const char* ALIAS = NAME;
 
-    Handle<physics::FilterData> filterData; // 58
-    physics::FilterDataSource filterDataSource; // 68
-    bool startAsleep; // 69
-    uint8_t unk6A[0x70 - 0x6A]; // 6A
+    Handle<physics::FilterData> filterData; // 60
+    physics::FilterDataSource filterDataSource; // 70
+    bool startAsleep; // 71
+    uint8_t unk72[0x78 - 0x72]; // 72
 };
-RED4EXT_ASSERT_SIZE(DecorationMeshNode, 0x70);
+RED4EXT_ASSERT_SIZE(DecorationMeshNode, 0x78);
 } // namespace world
 using worldDecorationMeshNode = world::DecorationMeshNode;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct PassiveProficiencyBonus_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataPassiveProficiencyBonus_Record";
     static constexpr const char* ALIAS = "PassiveProficiencyBonus_Record";
 
-    uint8_t unk48[0x58 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PassiveProficiencyBonus_Record, 0x58);
+RED4EXT_ASSERT_SIZE(PassiveProficiencyBonus_Record, 0x70);
 } // namespace game::data
 using gamedataPassiveProficiencyBonus_Record = game::data::PassiveProficiencyBonus_Record;
 using PassiveProficiencyBonus_Record = game::data::PassiveProficiencyBonus_Record;
