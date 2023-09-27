@@ -136,6 +136,9 @@ struct TweakDB
 
         T data;
     };
+    using QuaternionFlatValue = FlatValueImpl<Quaternion, CName("Quaternion")>;
+    RED4EXT_ASSERT_OFFSET(QuaternionFlatValue, data, 0x10);
+    RED4EXT_ASSERT_SIZE(QuaternionFlatValue, 0x20);
 
     uintptr_t staticFlatDataBuffer; // 00 - same as flatDataBuffer, used for direct access
     uint64_t unk08;                 // 08

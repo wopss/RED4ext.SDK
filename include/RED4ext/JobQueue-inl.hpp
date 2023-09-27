@@ -74,10 +74,10 @@ RED4EXT_INLINE RED4ext::JobQueue::JobQueue(const JobGroup& aGroup)
 
 RED4EXT_INLINE RED4ext::JobQueue::JobQueue(JobParamSet aParams, uintptr_t aUnk)
 {
-    using func_t = JobQueue* (*)(JobQueue*, JobParamSet&, uint64_t);
+    using func_t = JobQueue* (*)(JobQueue*, uint8_t, uint8_t, uint64_t);
     RelocFunc<func_t> func(Addresses::JobQueue_ctor_FromParams);
 
-    func(this, aParams, aUnk);
+    func(this, aParams.unk00, aParams.unk01, aUnk);
 }
 
 RED4EXT_INLINE RED4ext::JobQueue::~JobQueue()
@@ -106,10 +106,11 @@ RED4EXT_INLINE [[nodiscard]] RED4ext::JobHandle RED4ext::JobQueue::Capture()
 
 RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
 {
-    using func_t = void (*)(const JobInstance&, JobHandle&, JobHandle&);
-    RelocFunc<func_t> func(Addresses::JobInternals_DispatchJob);
+    using func_t = uint32_t (*)(void*, const JobInstance&, uint8_t, JobHandle, JobHandle);
+    RelocFunc<func_t> func(Addresses::JobDispatcher_DispatchJob);
+    RelocPtr<void*> dispatcher(Addresses::JobDispatcher);
 
-    func(aJob, unk10, unk18);
+    func(dispatcher, aJob, params.unk00, unk10, unk18);
 }
 
 RED4EXT_INLINE void RED4ext::JobQueue::SyncWait()

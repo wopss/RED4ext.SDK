@@ -700,6 +700,8 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aOutP
         o << "struct " << nameQualified;
     }
 
+    // TODO: Struct alignment: __declspec(align(X))
+
     o << std::endl;
     o << "{" << std::endl;
 

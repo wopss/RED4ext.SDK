@@ -131,14 +131,15 @@ constexpr uintptr_t ISerializable_sub_A0 = 0x1409F3728 - ImageBase; // 48 83 EC 
 constexpr uintptr_t ISerializable_sub_C0 = 0x140390FBC - ImageBase; // 40 53 48 83 EC ? 48 8B DA E8 ? ? ? ? 48 85 C0, expected: 17, index: 0
 #pragma endregion
 
+#pragma region JobDispatcher
+constexpr uintptr_t JobDispatcher = 0x1432FE3F0 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 3, offset: 3
+constexpr uintptr_t JobDispatcher_DispatchJob = 0x140157368 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55, expected: 2, index: 0
+#pragma endregion
+
 #pragma region JobHandle
 constexpr uintptr_t JobHandle_ctor = 0x140158DEC - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 41 54 48 83 EC ?, expected: 1, index: 0
 constexpr uintptr_t JobHandle_dtor = 0x1401587D4 - ImageBase; // 40 53 48 83 EC ? 48 8B 11 48 8B D9 48 85 D2, expected: 6, index: 0
 constexpr uintptr_t JobHandle_Join = 0x140156B4C - ImageBase; // 48 83 EC ? 48 8B 02 4C 8B C2 8B 40 ?, expected: 1, index: 0
-#pragma endregion
-
-#pragma region JobInternals
-constexpr uintptr_t JobInternals_DispatchJob = 0x140157368 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54, expected: 2, index: 0
 #pragma endregion
 
 #pragma region JobQueue
@@ -165,7 +166,7 @@ constexpr uintptr_t OpcodeHandlers = 0x14326CCB0 - ImageBase; // 4C 8D 05 ? ? ? 
 #pragma endregion
 
 #pragma region ResourceDepot
-constexpr uintptr_t ResourceDepot = 0x1446DE478 - ImageBase; // 48 89 05 ? ? ? ? 49 8B 5B ? 49 8B 73 ?, expected: 1, index: 0, offset: 3
+constexpr uintptr_t ResourceDepot = 0x1446DE478 - ImageBase; // 48 89 05 ? ? ? ? 49 8B 5B ? 49 8B 73, expected: 1, index: 0, offset: 3
 #pragma endregion
 
 #pragma region ResourceLoader

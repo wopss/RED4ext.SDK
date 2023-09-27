@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-struct Quaternion
+struct __declspec(align(16)) Quaternion
 {
     static constexpr const char* NAME = "Quaternion";
     static constexpr const char* ALIAS = NAME;

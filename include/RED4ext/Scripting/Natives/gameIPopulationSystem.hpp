@@ -47,9 +47,9 @@ struct IPopulationSystem : IGameSystem
     virtual bool IsSpawning(EntityID aEntityID) = 0;                               // 1C8
     virtual void sub_1D0() = 0;                                                    // 1D0
     virtual void sub_1D8() = 0;                                                    // 1D8
-    virtual bool RegisterEntity(PopulationEntityRegisterRequest& aRequest) = 0;    // 1E0
-    virtual void RemoveEntity(EntityID aEntityID, const char* aReason) = 0;        // 1E8
-    virtual void sub_1F0() = 0;                                                    // 1F0
+    virtual void sub_1E0() = 0;                                                    // 1E0
+    virtual bool RegisterEntity(PopulationEntityRegisterRequest& aRequest) = 0;    // 1E8
+    virtual void RemoveEntity(uint32_t aEntityID, uint64_t a2) = 0;                // 1F0
     virtual void sub_1F8() = 0;                                                    // 1F8
     virtual void sub_200() = 0;                                                    // 200
     virtual void sub_208() = 0;                                                    // 208
@@ -83,6 +83,9 @@ struct IPopulationSystem : IGameSystem
     virtual void sub_2E8() = 0;                                                    // 2E8
     virtual void sub_2F0() = 0;                                                    // 2F0
     virtual void sub_2F8() = 0;                                                    // 2F8
+    virtual void sub_300() = 0;                                                    // 300
+    virtual void sub_308() = 0;                                                    // 308
+    virtual void sub_310() = 0;                                                    // 310
 };
 RED4EXT_ASSERT_SIZE(IPopulationSystem, 0x48);
 } // namespace game

@@ -96,7 +96,7 @@ struct EntityStubCreateRequest
     WorldTransform transform; // 10
     TweakDBID recordID;       // 30
 };
-RED4EXT_ASSERT_SIZE(EntityStubCreateRequest, 0x38);
+RED4EXT_ASSERT_SIZE(EntityStubCreateRequest, 0x40);
 RED4EXT_ASSERT_OFFSET(EntityStubCreateRequest, entityID, 0x00);
 RED4EXT_ASSERT_OFFSET(EntityStubCreateRequest, transform, 0x10);
 RED4EXT_ASSERT_OFFSET(EntityStubCreateRequest, recordID, 0x30);
