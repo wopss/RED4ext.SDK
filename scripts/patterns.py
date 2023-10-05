@@ -29,7 +29,7 @@ def get_groups() -> List[Group]:
     return [
         Group(name='CBaseFunction', functions=[
             Item(name='ExecuteScripted', pattern='40 55 48 81 EC ? ? ? ? 48 8D 6C 24 ? 8B 81 ? ? ? ?', expected=1, index=0),
-            Item(name='ExecuteNative', pattern='48 89 5C 24 ? 48 89 7C 24 ? 55 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ?', expected=66, index=44),
+            Item(name='ExecuteNative', pattern='48 89 5C 24 ? 48 89 7C 24 ? 55 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ?', expected=67, index=45),
             Item(name='InternalExecute', pattern='40 55 41 54 41 55 41 56 41 57 48 81 EC C0 01 00 00 48 8D 6C 24 40 F6', expected=1, index=0)
         ],
         pointers=[
@@ -47,19 +47,19 @@ def get_groups() -> List[Group]:
         Group(name='CClass', functions=[
             Item(name='Unserialize', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 4C 8B 15 ? ? ? ?', expected=1, index=0),
             Item(name='ToString', pattern='48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8D 6C 24 ? 48 81 EC ? ? ? ?', expected=341, index=104),
-            Item(name='sub_80', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ?', expected=985, index=513),
+            Item(name='sub_80', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ?', expected=987, index=514),
             Item(name='sub_88', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B 02', expected=65, index=34),
             Item(name='sub_90', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?', expected=3, index=1),
             Item(name='sub_98', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?', expected=3, index=2),
-            Item(name='sub_A0', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC', expected=537, index=354),
+            Item(name='sub_A0', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC', expected=538, index=354),
             Item(name='sub_B0', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B 05 ? ? ? ?', expected=1, index=0),
             Item(name='sub_C0', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?', expected=58, index=11),
-            Item(name='GetMaxAlignment', pattern='48 89 5C 24 ? 57 48 83 EC ? 8B 59 ?', expected=125, index=18),
-            Item(name='sub_D0', pattern='4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56', expected=34, index=26),
+            Item(name='GetMaxAlignment', pattern='48 89 5C 24 ? 57 48 83 EC ? 8B 59 ?', expected=126, index=18),
+            Item(name='sub_D0', pattern='4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56', expected=33, index=26),
 
-            Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?', expected=422, index=7),
+            Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?', expected=421, index=7),
             Item(name='GetProperty', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA', expected=4, index=0),
-            Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=30, index=6),
+            Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=31, index=5),
             Item(name='ClearScriptedData', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ?', expected=115, index=35),
 
             Item(name='InitializeProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?', expected=1, index=0),
@@ -67,7 +67,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='TTypedClass', functions=[
-            Item(name='IsEqual', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56', expected=892, index=27)
+            Item(name='IsEqual', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56', expected=878, index=28)
         ]),
 
         Group(name='CEnum', functions=[
@@ -113,7 +113,7 @@ def get_groups() -> List[Group]:
             Item(name='RTTIAsyncId', pattern='F0 0F C1 05 ? ? ? ? FF C0 48 8D 0D ? ? ? ? 89 05 ? ? ? ? E8 ? ? ? ?', expected=11822, index=0, offset=4)
         ],
         functions=[
-            Item(name='Add', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 4C 89 40 ? 48 89 50 ? 57', expected=40, index=7)
+            Item(name='Add', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 4C 89 40 ? 48 89 50 ? 57', expected=41, index=8)
         ]),
 
         Group(name='CRTTISystem', functions=[
@@ -178,10 +178,10 @@ def get_groups() -> List[Group]:
             Item(name='Vault', pattern='C6 04 0A 01 48 8D 0D ? ? ? ? 8B 50 ? 48 8B C1', offset=7, expected=2, index=0),
         ],
         functions=[
-            Item(name='Vault::Alloc', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56 41 57', expected=892, index=5),
-            Item(name='Vault::AllocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1038, index=8),
+            Item(name='Vault::Alloc', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56 41 57', expected=878, index=5),
+            Item(name='Vault::AllocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1040, index=8),
             Item(name='Vault::Realloc', pattern='40 53 48 83 EC ? 4D 8B D8 48 8B DA 4C 8B D1', expected=1, index=0),
-            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1038, index=10),
+            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1040, index=10),
             Item(name='Vault::Free', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 4C 8B 81 ? ? ? ?', expected=4, index=0),
             Item(name='Vault::Unk1', pattern='4C 8B 81 ? ? ? ? 48 8B C2 4C 8B 89 ? ? ? ? 49 2B C0', expected=3, index=2),
             Item(name='PoolStorage::OOM', pattern='48 83 EC ? 48 8B C1 44 89 44 24 ? 4C 8B CA', expected=1, index=0)
@@ -214,7 +214,7 @@ def get_groups() -> List[Group]:
             Item(name='dtor', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B D9 E8 ? ? ? ? 84 C0 74 36', expected=1, index=0),
             Item(name='Fetch', pattern='40 53 48 83  EC 50 48 8B D9 E8 ? ? ? ? 84 C0 74 0A 48 8D 43 28'),
             Item(name='OnLoaded', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 55 48 8D 68 ? 48 81 EC ? ? ? ? 48 8B F2 48 8B D9 48 8B D1', expected=2, index=0),
-            Item(name='CancelUnk38', pattern='F6 05 5D ? ? ? ? 75 07 48 83 79 68 FF 75 01 C3'),
+            Item(name='CancelUnk38', pattern='F6 05 ? ? ? ? ? 75 ? 48 83 79 68 FF 75 ? C3'),
             Item(name='DestructUnk38', pattern='40 53 48 83 EC 30 48 8B D9 E8 ? ? ? ? 84 C0 75 ? 48 83 C4 30 5B C3', expected=194, index=27)
         ]),
 
