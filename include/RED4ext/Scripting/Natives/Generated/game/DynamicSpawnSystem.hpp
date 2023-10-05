@@ -17,9 +17,9 @@ struct DynamicSpawnSystem : game::IDynamicSpawnSystem
     static constexpr const char* NAME = "gameDynamicSpawnSystem";
     static constexpr const char* ALIAS = "DynamicSpawnSystem";
 
-    uint8_t unk48[0x120 - 0x48]; // 48
+    uint8_t unk48[0x130 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(DynamicSpawnSystem, 0x120);
+RED4EXT_ASSERT_SIZE(DynamicSpawnSystem, 0x130);
 } // namespace game
 using gameDynamicSpawnSystem = game::DynamicSpawnSystem;
 using DynamicSpawnSystem = game::DynamicSpawnSystem;

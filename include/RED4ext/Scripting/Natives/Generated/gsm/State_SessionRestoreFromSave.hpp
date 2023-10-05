@@ -17,9 +17,9 @@ struct State_SessionRestoreFromSave : gsm::State
     static constexpr const char* NAME = "gsmState_SessionRestoreFromSave";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkB8[0x2A0 - 0xB8]; // B8
+    uint8_t unkB8[0x2B0 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(State_SessionRestoreFromSave, 0x2A0);
+RED4EXT_ASSERT_SIZE(State_SessionRestoreFromSave, 0x2B0);
 } // namespace gsm
 using gsmState_SessionRestoreFromSave = gsm::State_SessionRestoreFromSave;
 } // namespace RED4ext

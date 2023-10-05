@@ -25,8 +25,10 @@ struct MovingPlatformMoveTo : red::Event
     CName destinationName; // 50
     int32_t data; // 58
     uint8_t unk5C[0x60 - 0x5C]; // 5C
+    bool isElevator; // 60
+    uint8_t unk61[0x68 - 0x61]; // 61
 };
-RED4EXT_ASSERT_SIZE(MovingPlatformMoveTo, 0x60);
+RED4EXT_ASSERT_SIZE(MovingPlatformMoveTo, 0x68);
 } // namespace game
 using gameMovingPlatformMoveTo = game::MovingPlatformMoveTo;
 using MoveTo = game::MovingPlatformMoveTo;

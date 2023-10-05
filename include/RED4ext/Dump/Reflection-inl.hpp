@@ -700,8 +700,6 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aOutP
         o << "struct " << nameQualified;
     }
 
-    // TODO: Struct alignment: __declspec(align(X))
-
     o << std::endl;
     o << "{" << std::endl;
 
@@ -783,6 +781,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
 
     aFd.trueName = name.ToString();
     aFd.size = pType->GetSize();
+    aFd.alignment = pType->GetAlignment();
     aFd.directory = aTypeToPath(pType);
     aFd.override = aTypeToOverride(pType);
     aFd.usedAsHandle = aHandleCompatChecker(pType);
@@ -1082,11 +1081,22 @@ RED4EXT_INLINE void ClassFileDescriptor::EmitFile(std::filesystem::path aOutPath
 
         o << "namespace " << ns << std::endl;
         o << "{" << std::endl;
-        o << "struct " << name;
+    }
+
+    o << "struct ";
+
+    if (alignment == 0x10)
+    {
+        o << "__declspec(align(0x" << std::hex << std::uppercase << alignment << ")) ";
+    }
+
+    if (nsIndex != std::string::npos)
+    {
+        o << name;
     }
     else
     {
-        o << "struct " << nameQualified;
+        o << nameQualified;
     }
 
     if (!parent.empty())
