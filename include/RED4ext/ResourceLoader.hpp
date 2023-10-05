@@ -139,7 +139,7 @@ struct ResourceLoader
         using FindToken_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>*, ResourcePath);
         RelocFunc<FindToken_t> func(Addresses::ResourceLoader_FindTokenFast);
 
-        std::shared_lock<SharedMutex> _;
+        std::shared_lock<SharedMutex> _(tokenLock);
 
         SharedPtr<ResourceToken<T>> token;
         func(this, &token, aPath);
