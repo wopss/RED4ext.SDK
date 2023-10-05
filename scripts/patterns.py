@@ -126,7 +126,7 @@ def get_groups() -> List[Group]:
 
         Group(name='CString', functions=[
             Item(name='ctor_str', pattern='48 85 D2 74 15 48 83 C8 FF 48 FF C0', expected=1, index=0),
-            Item(name='ctor_span', pattern='40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ?', expected=6, index=3),
+            Item(name='ctor_span', pattern='40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ? 88 01 89 41 ? E8', expected=3, index=2),
             Item(name='copy', pattern='B8 ? ? ? ? 39 41 ? 73 19 39 42 ?', expected=1, index=0),
             Item(name='dtor', pattern='40 53 48 83 EC ? 8B 41 ? 48 8B D9 C1 E8 ?', expected=2, index=0)
         ]),

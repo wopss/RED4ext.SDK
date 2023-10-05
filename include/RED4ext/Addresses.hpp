@@ -104,7 +104,7 @@ constexpr uintptr_t CStack_vtbl = 0x142A08238 - ImageBase; // 48 8D 05 ? ? ? ? 4
 
 #pragma region CString
 constexpr uintptr_t CString_ctor_str = 0x140251288 - ImageBase; // 48 85 D2 74 15 48 83 C8 FF 48 FF C0, expected: 1, index: 0
-constexpr uintptr_t CString_ctor_span = 0x140678644 - ImageBase; // 40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ?, expected: 6, index: 3
+constexpr uintptr_t CString_ctor_span = 0x1409394E4 - ImageBase; // 40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ? 88 01 89 41 ? E8, expected: 3, index: 2
 constexpr uintptr_t CString_copy = 0x14011DA8C - ImageBase; // B8 ? ? ? ? 39 41 ? 73 19 39 42 ?, expected: 1, index: 0
 constexpr uintptr_t CString_dtor = 0x14014A704 - ImageBase; // 40 53 48 83 EC ? 8B 41 ? 48 8B D9 C1 E8 ?, expected: 2, index: 0
 #pragma endregion
