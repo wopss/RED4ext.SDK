@@ -23,12 +23,12 @@ struct MovingPlatform : ent::IPlacedComponent
     CName soundPositionName; // 1A8
     uint8_t unk1B0[0x1DC - 0x1B0]; // 1B0
     game::MovingPlatformLoopType loopType; // 1DC
-    uint8_t unk1E0[0x1E3 - 0x1E0]; // 1E0
-    bool supportLegacyUnalignedMarkers; // 1E3
-    bool enableWaterInteractions; // 1E4
-    uint8_t unk1E5[0x1F0 - 0x1E5]; // 1E5
+    uint8_t unk1E0[0x1E8 - 0x1E0]; // 1E0
+    bool supportLegacyUnalignedMarkers; // 1E8
+    bool enableWaterInteractions; // 1E9
+    uint8_t unk1EA[0x200 - 0x1EA]; // 1EA
 };
-RED4EXT_ASSERT_SIZE(MovingPlatform, 0x1F0);
+RED4EXT_ASSERT_SIZE(MovingPlatform, 0x200);
 } // namespace game
 using gameMovingPlatform = game::MovingPlatform;
 using MovingPlatform = game::MovingPlatform;

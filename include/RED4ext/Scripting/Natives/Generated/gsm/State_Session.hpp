@@ -17,9 +17,9 @@ struct State_Session : gsm::State
     static constexpr const char* NAME = "gsmState_Session";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkB8[0x320 - 0xB8]; // B8
+    uint8_t unkB8[0x330 - 0xB8]; // B8
 };
-RED4EXT_ASSERT_SIZE(State_Session, 0x320);
+RED4EXT_ASSERT_SIZE(State_Session, 0x330);
 } // namespace gsm
 using gsmState_Session = gsm::State_Session;
 } // namespace RED4ext

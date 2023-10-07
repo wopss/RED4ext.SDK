@@ -49,6 +49,7 @@ struct ClassFileDescriptor
     std::string override;
     bool usedAsHandle;
     size_t size = 0;
+    size_t alignment = 0;
     size_t parentSize = 0;
 
     struct PropertyDescriptor

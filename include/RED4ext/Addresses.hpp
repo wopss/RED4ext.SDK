@@ -40,13 +40,13 @@ constexpr uintptr_t CClass_Unserialize = 0x14014CCE4 - ImageBase; // 48 89 5C 24
 constexpr uintptr_t CClass_ToString = 0x140920280 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8D 6C 24 ? 48 81 EC ? ? ? ?, expected: 341, index: 104
 constexpr uintptr_t CClass_sub_80 = 0x141FAE574 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ?, expected: 987, index: 514
 constexpr uintptr_t CClass_sub_88 = 0x141FAE4C8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B 02, expected: 65, index: 34
-constexpr uintptr_t CClass_sub_90 = 0x1409581C0 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?, expected: 3, index: 1
+constexpr uintptr_t CClass_sub_90 = 0x140760AD0 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?, expected: 3, index: 0
 constexpr uintptr_t CClass_sub_98 = 0x141FAF750 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?, expected: 3, index: 2
 constexpr uintptr_t CClass_sub_A0 = 0x141FAED84 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC, expected: 538, index: 354
 constexpr uintptr_t CClass_sub_B0 = 0x14087C070 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B 05 ? ? ? ?, expected: 1, index: 0
-constexpr uintptr_t CClass_sub_C0 = 0x140547E70 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?, expected: 58, index: 11
+constexpr uintptr_t CClass_sub_C0 = 0x140558740 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?, expected: 58, index: 12
 constexpr uintptr_t CClass_GetMaxAlignment = 0x1405586C4 - ImageBase; // 48 89 5C 24 ? 57 48 83 EC ? 8B 59 ?, expected: 126, index: 18
-constexpr uintptr_t CClass_sub_D0 = 0x14208CE88 - ImageBase; // 4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56, expected: 33, index: 26
+constexpr uintptr_t CClass_sub_D0 = 0x141FAF420 - ImageBase; // 4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56, expected: 33, index: 25
 constexpr uintptr_t CClass_CreateInstance = 0x14014C660 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?, expected: 421, index: 7
 constexpr uintptr_t CClass_GetProperty = 0x14014D5E8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA, expected: 4, index: 0
 constexpr uintptr_t CClass_GetProperties = 0x140558850 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9, expected: 31, index: 5
@@ -104,7 +104,7 @@ constexpr uintptr_t CStack_vtbl = 0x142A08238 - ImageBase; // 48 8D 05 ? ? ? ? 4
 
 #pragma region CString
 constexpr uintptr_t CString_ctor_str = 0x140251288 - ImageBase; // 48 85 D2 74 15 48 83 C8 FF 48 FF C0, expected: 1, index: 0
-constexpr uintptr_t CString_ctor_span = 0x140678644 - ImageBase; // 40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ?, expected: 6, index: 3
+constexpr uintptr_t CString_ctor_span = 0x1409394E4 - ImageBase; // 40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ? 88 01 89 41 ? E8, expected: 3, index: 2
 constexpr uintptr_t CString_copy = 0x14011DA8C - ImageBase; // B8 ? ? ? ? 39 41 ? 73 19 39 42 ?, expected: 1, index: 0
 constexpr uintptr_t CString_dtor = 0x14014A704 - ImageBase; // 40 53 48 83 EC ? 8B 41 ? 48 8B D9 C1 E8 ?, expected: 2, index: 0
 #pragma endregion
@@ -170,7 +170,7 @@ constexpr uintptr_t ResourceDepot = 0x1446DF9C8 - ImageBase; // 48 89 05 ? ? ? ?
 #pragma endregion
 
 #pragma region ResourceLoader
-constexpr uintptr_t ResourceLoader = 0x143811B08 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 0, offset: 3
+constexpr uintptr_t ResourceLoader = 0x1432EDC78 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 1, offset: 3
 constexpr uintptr_t ResourceLoader_FindTokenFast = 0x140151C5C - ImageBase; // 48 8B C4 4C 89 40 ? 53 48 83 EC ? 48 8B DA 4C 8D 40 ?, expected: 2, index: 0
 constexpr uintptr_t ResourceLoader_LoadAsync = 0x140608484 - ImageBase; // 48 89 5C 24 ? 55 48 8B EC 48 83 EC ? 83 4D E8 ? 33 C0, expected: 1, index: 0
 #pragma endregion

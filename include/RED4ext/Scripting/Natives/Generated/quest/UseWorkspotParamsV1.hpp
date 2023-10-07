@@ -52,7 +52,7 @@ struct UseWorkspotParamsV1 : quest::AICommandParams
     bool repeatCommandOnInterrupt; // CC
     bool continueInCombat; // CD
     bool meshDissolvingEnabled; // CE
-    uint8_t unkCF[0xD0 - 0xCF]; // CF
+    bool dangleResetSimulation; // CF
 };
 RED4EXT_ASSERT_SIZE(UseWorkspotParamsV1, 0xD0);
 } // namespace quest

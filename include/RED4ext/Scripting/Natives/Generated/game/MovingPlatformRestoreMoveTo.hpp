@@ -17,7 +17,7 @@ struct MovingPlatformRestoreMoveTo : game::MovingPlatformMoveTo
     static constexpr const char* NAME = "gameMovingPlatformRestoreMoveTo";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk60[0x90 - 0x60]; // 60
+    uint8_t unk68[0x90 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(MovingPlatformRestoreMoveTo, 0x90);
 } // namespace game
