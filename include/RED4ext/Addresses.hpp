@@ -50,7 +50,7 @@ constexpr uintptr_t CClass_sub_D0 = 0x141FAF420 - ImageBase; // 4C 8B DC 49 89 5
 constexpr uintptr_t CClass_CreateInstance = 0x14014C660 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?, expected: 421, index: 7
 constexpr uintptr_t CClass_GetProperty = 0x14014D5E8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA, expected: 4, index: 0
 constexpr uintptr_t CClass_GetProperties = 0x140558850 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9, expected: 31, index: 5
-constexpr uintptr_t CClass_ClearScriptedData = 0x140567E40 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ?, expected: 115, index: 35
+constexpr uintptr_t CClass_ClearScriptedData = 0x140559518 - ImageBase;
 constexpr uintptr_t CClass_InitializeProperties = 0x14014CF24 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?, expected: 1, index: 0
 constexpr uintptr_t CClass_AssignDefaultValuesToProperties = 0x14014C7F8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? 48 8B F9 48 8B EA, expected: 2, index: 0
 #pragma endregion
