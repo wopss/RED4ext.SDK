@@ -245,7 +245,7 @@ struct TTypedClass : CClass
     static_assert(std::is_default_constructible_v<T>, "T must be default-constructible");
     static_assert(std::is_destructible_v<T>, "T must be destructible");
 
-    TTypedClass(CName aName, CClass::Flags aFlags = {2})
+    TTypedClass(CName aName, CClass::Flags aFlags = {.isNative = true})
         : CClass(aName, sizeof(T), aFlags)
     {
     }
