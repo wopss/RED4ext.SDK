@@ -40,16 +40,16 @@ constexpr uintptr_t CClass_Unserialize = 0x14015A654 - ImageBase; // 48 89 5C 24
 constexpr uintptr_t CClass_ToString = 0x140845CA8 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8D 6C 24 ? 48 81 EC ? ? ? ?, expected: 341, index: 104
 constexpr uintptr_t CClass_sub_80 = 0x141FBFEA8 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? F6 41 70 ?, expected: 1, index: 0
 constexpr uintptr_t CClass_sub_88 = 0x141FBFDFC - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B 02, expected: 65, index: 34
-constexpr uintptr_t CClass_sub_90 = 0x14094F400 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?, expected: 3, index: 0
+constexpr uintptr_t CClass_sub_90 = 0x140B27B88 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?, expected: 3, index: 1
 constexpr uintptr_t CClass_sub_98 = 0x141FC1084 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?, expected: 3, index: 2
 constexpr uintptr_t CClass_sub_A0 = 0x141FC06B8 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC 48 83 EC 70 41 F7 40 14 FF FF FF 3F, expected: 1, index: 0
 constexpr uintptr_t CClass_sub_B0 = 0x1408F5524 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B 05 ? ? ? ?, expected: 1, index: 0
-constexpr uintptr_t CClass_sub_C0 = 0x1404DD0B4 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?, expected: 58, index: 12
+constexpr uintptr_t CClass_sub_C0 = 0x1405836E0 - ImageBase; // 48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?, expected: 58, index: 15
 constexpr uintptr_t CClass_GetMaxAlignment = 0x140583664 - ImageBase; // 48 89 5C 24 ? 57 48 83 EC ? 8B 59 ? E8 ? ? ? ?, expected: 1, index: 0
 constexpr uintptr_t CClass_sub_D0 = 0x141FC0D54 - ImageBase; // 4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56, expected: 33, index: 25
 constexpr uintptr_t CClass_CreateInstance = 0x140159FD0 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ? 48 8B F1, expected: 4, index: 0
 constexpr uintptr_t CClass_GetProperty = 0x14015AF58 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA, expected: 4, index: 0
-constexpr uintptr_t CClass_GetProperties = 0x14047DB70 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9, expected: 31, index: 5
+constexpr uintptr_t CClass_GetProperties = 0x1405837F0 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9, expected: 31, index: 8
 constexpr uintptr_t CClass_ClearScriptedData = 0x1405844B8 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ? 80 A1 ? ? ? ? ? 48 8D 99 ? ? ? ? 48 8B F9 48 8B CB E8, expected: 1, index: 0
 constexpr uintptr_t CClass_InitializeProperties = 0x14015A894 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?, expected: 1, index: 0
 constexpr uintptr_t CClass_AssignDefaultValuesToProperties = 0x14015A168 - ImageBase; // 48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? 48 8B F9 48 8B EA, expected: 2, index: 0
@@ -132,7 +132,7 @@ constexpr uintptr_t ISerializable_sub_C0 = 0x14049137C - ImageBase; // 40 53 48 
 #pragma endregion
 
 #pragma region JobDispatcher
-constexpr uintptr_t JobDispatcher = 0x14367B6B0 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 3, offset: 3
+constexpr uintptr_t JobDispatcher = 0x1432FEEB8 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 2, offset: 3
 constexpr uintptr_t JobDispatcher_DispatchJob = 0x140164DB0 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55, expected: 2, index: 0
 #pragma endregion
 
@@ -170,7 +170,7 @@ constexpr uintptr_t ResourceDepot = 0x144773B18 - ImageBase; // 48 89 05 ? ? ? ?
 #pragma endregion
 
 #pragma region ResourceLoader
-constexpr uintptr_t ResourceLoader = 0x143310640 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 1, offset: 3
+constexpr uintptr_t ResourceLoader = 0x1432FEEB8 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 2, offset: 3
 constexpr uintptr_t ResourceLoader_FindTokenFast = 0x14015F598 - ImageBase; // 48 8B C4 4C 89 40 ? 53 48 83 EC ? 48 8B DA 4C 8D 40 ?, expected: 2, index: 0
 constexpr uintptr_t ResourceLoader_LoadAsync = 0x140694794 - ImageBase; // 48 89 5C 24 ? 55 48 8B EC 48 83 EC ? 83 4D E8 ? 33 C0, expected: 1, index: 0
 #pragma endregion
