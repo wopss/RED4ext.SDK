@@ -67,7 +67,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='TTypedClass', functions=[
-            Item(name='IsEqual', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56', expected=878, index=28)
+            Item(name='IsEqual', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56', expected=876, index=27)
         ]),
 
         Group(name='CEnum', functions=[
@@ -137,7 +137,7 @@ def get_groups() -> List[Group]:
 
         Group(name='Handle', functions=[
             Item(name='ctor', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 48 8B EC 48 83 EC ? 48 83 61 ? ?', expected=1, index=0),
-            Item(name='DecWeakRef', pattern='40 53 48 83 EC ? 48 8B D9 48 8B 49 ? 48 85 C9', expected=123, index=9)
+            Item(name='DecWeakRef', pattern='40 53 48 83 EC ? 48 8B D9 48 8B 49 ? 48 85 C9', expected=124, index=12)
         ]),
 
         Group(name='ISerializable', functions=[
@@ -178,10 +178,10 @@ def get_groups() -> List[Group]:
             Item(name='Vault', pattern='C6 04 0A 01 48 8D 0D ? ? ? ? 8B 50 ? 48 8B C1', offset=7, expected=2, index=0),
         ],
         functions=[
-            Item(name='Vault::Alloc', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56 41 57', expected=878, index=5),
-            Item(name='Vault::AllocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1040, index=8),
+            Item(name='Vault::Alloc', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 54 41 56 41 57', expected=876, index=9),
+            Item(name='Vault::AllocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1039, index=14),
             Item(name='Vault::Realloc', pattern='40 53 48 83 EC ? 4D 8B D8 48 8B DA 4C 8B D1', expected=1, index=0),
-            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1040, index=10),
+            Item(name='Vault::ReallocAligned', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57', expected=1039, index=16),
             Item(name='Vault::Free', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 4C 8B 81 ? ? ? ?', expected=4, index=0),
             Item(name='Vault::Unk1', pattern='4C 8B 81 ? ? ? ? 48 8B C2 4C 8B 89 ? ? ? ? 49 2B C0', expected=3, index=2),
             Item(name='PoolStorage::OOM', pattern='48 83 EC ? 48 8B C1 44 89 44 24 ? 4C 8B CA', expected=1, index=0)
