@@ -223,6 +223,7 @@ struct HashMap
             {
                 *idx = node->next;
                 node->~Node();
+                node->next = nodeList.nextIdx;
                 nodeList.nextIdx = static_cast<uint32_t>(node - nodeList.nodes);
                 --size;
                 return true;
