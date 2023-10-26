@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct CompiledNodeInstanceSetupInfo
+struct __declspec(align(0x10)) CompiledNodeInstanceSetupInfo
 {
     static constexpr const char* NAME = "worldCompiledNodeInstanceSetupInfo";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace AI
 {
-struct CombatAlley : IScriptable
+struct __declspec(align(0x10)) CombatAlley : IScriptable
 {
     static constexpr const char* NAME = "AICombatAlley";
     static constexpr const char* ALIAS = "CombatAlley";

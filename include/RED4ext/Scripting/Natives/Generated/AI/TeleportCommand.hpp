@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace AI
 {
-struct TeleportCommand : AI::Command
+struct __declspec(align(0x10)) TeleportCommand : AI::Command
 {
     static constexpr const char* NAME = "AITeleportCommand";
     static constexpr const char* ALIAS = NAME;

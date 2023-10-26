@@ -16,7 +16,7 @@ namespace ink { struct TextureAtlas; }
 
 namespace ink
 {
-struct QuadShapeWidget : ink::BaseShapeWidget
+struct __declspec(align(0x10)) QuadShapeWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkQuadShapeWidget";
     static constexpr const char* ALIAS = "inkQuadShape";

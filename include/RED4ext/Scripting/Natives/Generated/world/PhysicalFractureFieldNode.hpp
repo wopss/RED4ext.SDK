@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct PhysicalFractureFieldNode : world::Node
+struct __declspec(align(0x10)) PhysicalFractureFieldNode : world::Node
 {
     static constexpr const char* NAME = "worldPhysicalFractureFieldNode";
     static constexpr const char* ALIAS = "PhysicalFractureFieldNode";

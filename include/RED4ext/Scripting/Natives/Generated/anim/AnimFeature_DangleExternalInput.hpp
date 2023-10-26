@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimFeature_DangleExternalInput : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_DangleExternalInput : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_DangleExternalInput";
     static constexpr const char* ALIAS = NAME;

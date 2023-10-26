@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNodeSourceChannel_StaticQsTransform : anim::IAnimNodeSourceChannel_QsTransform
+struct __declspec(align(0x10)) AnimNodeSourceChannel_StaticQsTransform : anim::IAnimNodeSourceChannel_QsTransform
 {
     static constexpr const char* NAME = "animAnimNodeSourceChannel_StaticQsTransform";
     static constexpr const char* ALIAS = NAME;

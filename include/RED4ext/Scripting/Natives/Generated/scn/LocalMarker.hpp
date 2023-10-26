@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct LocalMarker
+struct __declspec(align(0x10)) LocalMarker
 {
     static constexpr const char* NAME = "scnLocalMarker";
     static constexpr const char* ALIAS = NAME;

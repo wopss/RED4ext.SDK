@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct ChoiceNodeNsAttachToWorldParams
+struct __declspec(align(0x10)) ChoiceNodeNsAttachToWorldParams
 {
     static constexpr const char* NAME = "scnChoiceNodeNsAttachToWorldParams";
     static constexpr const char* ALIAS = NAME;

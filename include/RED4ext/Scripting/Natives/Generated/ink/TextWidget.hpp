@@ -26,7 +26,7 @@ namespace rend { struct Font; }
 
 namespace ink
 {
-struct TextWidget : ink::LeafWidget
+struct __declspec(align(0x10)) TextWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkTextWidget";
     static constexpr const char* ALIAS = "inkText";

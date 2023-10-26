@@ -17,7 +17,7 @@ namespace ent { struct Entity; }
 
 namespace AI
 {
-struct TrackedLocation
+struct __declspec(align(0x10)) TrackedLocation
 {
     static constexpr const char* NAME = "AITrackedLocation";
     static constexpr const char* ALIAS = "TrackedLocation";

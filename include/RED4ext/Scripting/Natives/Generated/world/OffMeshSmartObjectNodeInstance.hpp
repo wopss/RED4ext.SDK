@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct OffMeshSmartObjectNodeInstance : world::OffMeshConnectionNodeInstance
+struct __declspec(align(0x10)) OffMeshSmartObjectNodeInstance : world::OffMeshConnectionNodeInstance
 {
     static constexpr const char* NAME = "worldOffMeshSmartObjectNodeInstance";
     static constexpr const char* ALIAS = NAME;

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct HitShape_ColliderComponent : game::HitShapeBase
+struct __declspec(align(0x10)) HitShape_ColliderComponent : game::HitShapeBase
 {
     static constexpr const char* NAME = "gameHitShape_ColliderComponent";
     static constexpr const char* ALIAS = "HitShape_ColliderComponent";

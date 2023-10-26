@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct NavigationDeniedAreaNodeInstance : world::AreaShapeNodeInstance
+struct __declspec(align(0x10)) NavigationDeniedAreaNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "worldNavigationDeniedAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;

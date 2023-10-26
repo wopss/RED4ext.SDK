@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct TransformAnimation_Rotation_LocalRotation : game::TransformAnimation_Rotation
+struct __declspec(align(0x10)) TransformAnimation_Rotation_LocalRotation : game::TransformAnimation_Rotation
 {
     static constexpr const char* NAME = "gameTransformAnimation_Rotation_LocalRotation";
     static constexpr const char* ALIAS = NAME;

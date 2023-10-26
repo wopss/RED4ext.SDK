@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::influence
 {
-struct BumpAgent : ISerializable
+struct __declspec(align(0x10)) BumpAgent : ISerializable
 {
     static constexpr const char* NAME = "gameinfluenceBumpAgent";
     static constexpr const char* ALIAS = "BumpAgent";

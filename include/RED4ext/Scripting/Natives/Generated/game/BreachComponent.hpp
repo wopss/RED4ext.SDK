@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct BreachComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) BreachComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameBreachComponent";
     static constexpr const char* ALIAS = "BreachComponent";

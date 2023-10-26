@@ -18,7 +18,7 @@ namespace world { struct Effect; }
 
 namespace game
 {
-struct LightComponent : ent::LightComponent
+struct __declspec(align(0x10)) LightComponent : ent::LightComponent
 {
     static constexpr const char* NAME = "gameLightComponent";
     static constexpr const char* ALIAS = NAME;

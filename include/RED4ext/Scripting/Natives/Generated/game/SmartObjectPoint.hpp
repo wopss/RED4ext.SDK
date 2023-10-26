@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct SmartObjectPoint
+struct __declspec(align(0x10)) SmartObjectPoint
 {
     static constexpr const char* NAME = "gameSmartObjectPoint";
     static constexpr const char* ALIAS = NAME;

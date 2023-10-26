@@ -15,7 +15,7 @@ namespace game { struct CompiledSmartObjectData; }
 
 namespace game
 {
-struct CompiledSmartObjectNode
+struct __declspec(align(0x10)) CompiledSmartObjectNode
 {
     static constexpr const char* NAME = "gameCompiledSmartObjectNode";
     static constexpr const char* ALIAS = NAME;

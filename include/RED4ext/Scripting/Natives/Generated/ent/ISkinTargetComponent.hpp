@@ -15,7 +15,7 @@ namespace ent { struct SkinningBinding; }
 
 namespace ent
 {
-struct ISkinTargetComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) ISkinTargetComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entISkinTargetComponent";
     static constexpr const char* ALIAS = NAME;

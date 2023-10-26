@@ -19,7 +19,7 @@ namespace ent { struct Entity; }
 
 namespace world::geometry
 {
-struct DescriptionResult : IScriptable
+struct __declspec(align(0x10)) DescriptionResult : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryDescriptionResult";
     static constexpr const char* ALIAS = "GeometryDescriptionResult";

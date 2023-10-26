@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct IKChainSettings
+struct __declspec(align(0x10)) IKChainSettings
 {
     static constexpr const char* NAME = "animIKChainSettings";
     static constexpr const char* ALIAS = "IKChainSettings";

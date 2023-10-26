@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::influence
 {
-struct HeatAgentComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) HeatAgentComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceHeatAgentComponent";
     static constexpr const char* ALIAS = "HeatAgentComponent";

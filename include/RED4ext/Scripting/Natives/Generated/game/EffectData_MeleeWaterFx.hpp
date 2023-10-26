@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct EffectData_MeleeWaterFx
+struct __declspec(align(0x10)) EffectData_MeleeWaterFx
 {
     static constexpr const char* NAME = "gameEffectData_MeleeWaterFx";
     static constexpr const char* ALIAS = NAME;

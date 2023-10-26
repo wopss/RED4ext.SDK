@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct EditorMeshComponent : ent::MeshComponent
+struct __declspec(align(0x10)) EditorMeshComponent : ent::MeshComponent
 {
     static constexpr const char* NAME = "entEditorMeshComponent";
     static constexpr const char* ALIAS = "EditorMeshComponent";

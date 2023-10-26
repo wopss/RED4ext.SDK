@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PopulationSystem : game::IPopulationSystem
+struct __declspec(align(0x10)) PopulationSystem : game::IPopulationSystem
 {
     static constexpr const char* NAME = "gamePopulationSystem";
     static constexpr const char* ALIAS = NAME;

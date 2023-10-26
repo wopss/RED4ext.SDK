@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct DynamicActorRepellingComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) DynamicActorRepellingComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entDynamicActorRepellingComponent";
     static constexpr const char* ALIAS = NAME;

@@ -16,7 +16,7 @@ struct GeometryShape;
 
 namespace ent
 {
-struct LightChannelComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) LightChannelComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightChannelComponent";
     static constexpr const char* ALIAS = "LightChannelComponent";

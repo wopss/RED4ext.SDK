@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct AnimationSystem : world::IRuntimeSystem
+struct __declspec(align(0x10)) AnimationSystem : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldAnimationSystem";
     static constexpr const char* ALIAS = NAME;

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct LightComponent : game::LightComponent
+struct __declspec(align(0x10)) LightComponent : game::LightComponent
 {
     static constexpr const char* NAME = "vehicleLightComponent";
     static constexpr const char* ALIAS = NAME;

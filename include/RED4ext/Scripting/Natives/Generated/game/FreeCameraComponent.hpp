@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct FreeCameraComponent : game::CameraComponent
+struct __declspec(align(0x10)) FreeCameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "gameFreeCameraComponent";
     static constexpr const char* ALIAS = "FreeCameraComponent";

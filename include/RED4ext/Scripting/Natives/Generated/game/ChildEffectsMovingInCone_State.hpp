@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct ChildEffectsMovingInCone_State
+struct __declspec(align(0x10)) ChildEffectsMovingInCone_State
 {
     static constexpr const char* NAME = "gameChildEffectsMovingInCone_State";
     static constexpr const char* ALIAS = NAME;

@@ -17,7 +17,7 @@ namespace game { struct TransformAnimation_Movement; }
 
 namespace game
 {
-struct TransformAnimation_MoveOnSpline : game::TransformAnimationTrackItemImpl
+struct __declspec(align(0x10)) TransformAnimation_MoveOnSpline : game::TransformAnimationTrackItemImpl
 {
     static constexpr const char* NAME = "gameTransformAnimation_MoveOnSpline";
     static constexpr const char* ALIAS = NAME;

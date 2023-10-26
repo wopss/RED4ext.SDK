@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace vg
 {
-struct VectorGraphicShape_Circle : vg::BaseVectorGraphicShape
+struct __declspec(align(0x10)) VectorGraphicShape_Circle : vg::BaseVectorGraphicShape
 {
     static constexpr const char* NAME = "vgVectorGraphicShape_Circle";
     static constexpr const char* ALIAS = NAME;

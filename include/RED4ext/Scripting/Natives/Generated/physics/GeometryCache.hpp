@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace physics
 {
-struct GeometryCache : CResource
+struct __declspec(align(0x10)) GeometryCache : CResource
 {
     static constexpr const char* NAME = "physicsGeometryCache";
     static constexpr const char* ALIAS = NAME;

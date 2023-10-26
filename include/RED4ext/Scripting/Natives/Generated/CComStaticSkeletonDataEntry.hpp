@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct CComStaticSkeletonDataEntry
+struct __declspec(align(0x10)) CComStaticSkeletonDataEntry
 {
     static constexpr const char* NAME = "CComStaticSkeletonDataEntry";
     static constexpr const char* ALIAS = NAME;

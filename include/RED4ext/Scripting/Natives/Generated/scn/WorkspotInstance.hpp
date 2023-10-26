@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct WorkspotInstance
+struct __declspec(align(0x10)) WorkspotInstance
 {
     static constexpr const char* NAME = "scnWorkspotInstance";
     static constexpr const char* ALIAS = NAME;

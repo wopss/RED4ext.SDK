@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNode_FootStepAdjuster : anim::AnimNode_OnePoseInput
+struct __declspec(align(0x10)) AnimNode_FootStepAdjuster : anim::AnimNode_OnePoseInput
 {
     static constexpr const char* NAME = "animAnimNode_FootStepAdjuster";
     static constexpr const char* ALIAS = NAME;

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct EffectObjectProvider_Laser : game::EffectObjectProvider_PhysicalRay
+struct __declspec(align(0x10)) EffectObjectProvider_Laser : game::EffectObjectProvider_PhysicalRay
 {
     static constexpr const char* NAME = "gameEffectObjectProvider_Laser";
     static constexpr const char* ALIAS = NAME;

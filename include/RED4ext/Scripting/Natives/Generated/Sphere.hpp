@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct Sphere
+struct __declspec(align(0x10)) Sphere
 {
     static constexpr const char* NAME = "Sphere";
     static constexpr const char* ALIAS = NAME;

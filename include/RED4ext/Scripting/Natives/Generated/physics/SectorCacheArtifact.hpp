@@ -18,7 +18,7 @@ namespace physics { struct GeometryCacheArtifact; }
 
 namespace physics
 {
-struct SectorCacheArtifact : CResource
+struct __declspec(align(0x10)) SectorCacheArtifact : CResource
 {
     static constexpr const char* NAME = "physicsSectorCacheArtifact";
     static constexpr const char* ALIAS = NAME;

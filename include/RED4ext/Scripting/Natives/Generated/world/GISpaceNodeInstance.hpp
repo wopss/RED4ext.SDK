@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct GISpaceNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) GISpaceNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldGISpaceNodeInstance";
     static constexpr const char* ALIAS = NAME;

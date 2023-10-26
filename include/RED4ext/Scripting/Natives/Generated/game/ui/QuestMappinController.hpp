@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::ui
 {
-struct QuestMappinController : game::ui::InteractionMappinController
+struct __declspec(align(0x10)) QuestMappinController : game::ui::InteractionMappinController
 {
     static constexpr const char* NAME = "gameuiQuestMappinController";
     static constexpr const char* ALIAS = "BaseQuestMappinController";

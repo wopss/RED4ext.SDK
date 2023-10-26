@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PlayerManager : game::IPlayerManager
+struct __declspec(align(0x10)) PlayerManager : game::IPlayerManager
 {
     static constexpr const char* NAME = "gamePlayerManager";
     static constexpr const char* ALIAS = NAME;

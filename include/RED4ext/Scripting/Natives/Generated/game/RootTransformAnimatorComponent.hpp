@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct RootTransformAnimatorComponent : ent::IMoverComponent
+struct __declspec(align(0x10)) RootTransformAnimatorComponent : ent::IMoverComponent
 {
     static constexpr const char* NAME = "gameRootTransformAnimatorComponent";
     static constexpr const char* ALIAS = NAME;

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct IVisualComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) IVisualComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entIVisualComponent";
     static constexpr const char* ALIAS = "IVisualComponent";

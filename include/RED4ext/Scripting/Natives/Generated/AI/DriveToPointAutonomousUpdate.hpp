@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace AI
 {
-struct DriveToPointAutonomousUpdate : AI::DriveCommandUpdate
+struct __declspec(align(0x10)) DriveToPointAutonomousUpdate : AI::DriveCommandUpdate
 {
     static constexpr const char* NAME = "AIDriveToPointAutonomousUpdate";
     static constexpr const char* ALIAS = "DriveToPointAutonomousUpdate";

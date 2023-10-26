@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct MuppetReplicatedState : net::IEntityState
+struct __declspec(align(0x10)) MuppetReplicatedState : net::IEntityState
 {
     static constexpr const char* NAME = "gameMuppetReplicatedState";
     static constexpr const char* ALIAS = NAME;

@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace nav::gendebug
 {
-struct Heightfield : ISerializable
+struct __declspec(align(0x10)) Heightfield : ISerializable
 {
     static constexpr const char* NAME = "navgendebugHeightfield";
     static constexpr const char* ALIAS = NAME;

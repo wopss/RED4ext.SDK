@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct CoverVisualData : game::SmartObjectVisualData
+struct __declspec(align(0x10)) CoverVisualData : game::SmartObjectVisualData
 {
     static constexpr const char* NAME = "gameCoverVisualData";
     static constexpr const char* ALIAS = NAME;

@@ -17,7 +17,7 @@ namespace RED4ext
 struct CParticleEmitter;
 struct ParticleDamage;
 
-struct CParticleSystem : res::StreamedResource
+struct __declspec(align(0x10)) CParticleSystem : res::StreamedResource
 {
     static constexpr const char* NAME = "CParticleSystem";
     static constexpr const char* ALIAS = NAME;

@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct RayTracingCustomData : ICameraStorageCustomData
+struct __declspec(align(0x10)) RayTracingCustomData : ICameraStorageCustomData
 {
     static constexpr const char* NAME = "RayTracingCustomData";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct SlowExitCommandData : work::IWorkspotCommandData
+struct __declspec(align(0x10)) SlowExitCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workSlowExitCommandData";
     static constexpr const char* ALIAS = NAME;

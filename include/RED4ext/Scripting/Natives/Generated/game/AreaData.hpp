@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct AreaData
+struct __declspec(align(0x10)) AreaData
 {
     static constexpr const char* NAME = "gameAreaData";
     static constexpr const char* ALIAS = NAME;

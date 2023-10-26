@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PatrolSplineControlPoint
+struct __declspec(align(0x10)) PatrolSplineControlPoint
 {
     static constexpr const char* NAME = "gamePatrolSplineControlPoint";
     static constexpr const char* ALIAS = NAME;

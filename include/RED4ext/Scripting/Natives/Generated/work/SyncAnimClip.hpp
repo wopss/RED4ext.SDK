@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct SyncAnimClip : work::AnimClip
+struct __declspec(align(0x10)) SyncAnimClip : work::AnimClip
 {
     static constexpr const char* NAME = "workSyncAnimClip";
     static constexpr const char* ALIAS = NAME;

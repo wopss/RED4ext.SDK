@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct GridWidget : ink::CompoundWidget
+struct __declspec(align(0x10)) GridWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkGridWidget";
     static constexpr const char* ALIAS = "inkGrid";

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace grs
 {
-struct HeistPlayerGameInfo
+struct __declspec(align(0x10)) HeistPlayerGameInfo
 {
     static constexpr const char* NAME = "grsHeistPlayerGameInfo";
     static constexpr const char* ALIAS = NAME;

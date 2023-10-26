@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct MinimapConfigAreaNodeInstance : world::AreaShapeNodeInstance
+struct __declspec(align(0x10)) MinimapConfigAreaNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "worldMinimapConfigAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;

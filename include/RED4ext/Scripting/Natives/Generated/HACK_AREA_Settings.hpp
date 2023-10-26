@@ -12,7 +12,7 @@
 
 namespace RED4ext
 {
-struct HACK_AREA_Settings : IAreaSettings
+struct __declspec(align(0x10)) HACK_AREA_Settings : IAreaSettings
 {
     static constexpr const char* NAME = "HACK_AREA_Settings";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace sense
 {
-struct VisionBlockerShape_BasicCapsule : sense::IVisionBlockerShape
+struct __declspec(align(0x10)) VisionBlockerShape_BasicCapsule : sense::IVisionBlockerShape
 {
     static constexpr const char* NAME = "senseVisionBlockerShape_BasicCapsule";
     static constexpr const char* ALIAS = "VisionBlockerShape_BasicCapsule";

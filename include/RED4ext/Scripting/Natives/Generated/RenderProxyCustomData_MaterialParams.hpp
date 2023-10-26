@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct RenderProxyCustomData_MaterialParams : IRenderProxyCustomData
+struct __declspec(align(0x10)) RenderProxyCustomData_MaterialParams : IRenderProxyCustomData
 {
     static constexpr const char* NAME = "RenderProxyCustomData_MaterialParams";
     static constexpr const char* ALIAS = NAME;

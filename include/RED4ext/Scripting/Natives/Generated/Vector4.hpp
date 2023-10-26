@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-struct Vector4
+struct __declspec(align(0x10)) Vector4
 {
     static constexpr const char* NAME = "Vector4";
     static constexpr const char* ALIAS = NAME;

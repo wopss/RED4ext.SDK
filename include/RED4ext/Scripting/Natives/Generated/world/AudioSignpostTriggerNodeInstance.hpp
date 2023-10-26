@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct AudioSignpostTriggerNodeInstance : world::TriggerAreaNodeInstance
+struct __declspec(align(0x10)) AudioSignpostTriggerNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "worldAudioSignpostTriggerNodeInstance";
     static constexpr const char* ALIAS = NAME;

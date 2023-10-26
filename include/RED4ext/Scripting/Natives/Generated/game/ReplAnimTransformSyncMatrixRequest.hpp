@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct ReplAnimTransformSyncMatrixRequest : game::ReplAnimTransformRequestBase
+struct __declspec(align(0x10)) ReplAnimTransformSyncMatrixRequest : game::ReplAnimTransformRequestBase
 {
     static constexpr const char* NAME = "gameReplAnimTransformSyncMatrixRequest";
     static constexpr const char* ALIAS = NAME;

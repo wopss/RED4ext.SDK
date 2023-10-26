@@ -17,7 +17,7 @@ namespace game { struct Object; }
 
 namespace game::projectile
 {
-struct FollowTrajectoryParams : game::projectile::TrajectoryParams
+struct __declspec(align(0x10)) FollowTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileFollowTrajectoryParams";
     static constexpr const char* ALIAS = "FollowTrajectoryParams";

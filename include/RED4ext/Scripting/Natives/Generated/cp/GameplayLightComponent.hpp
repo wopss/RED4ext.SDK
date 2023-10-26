@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace cp
 {
-struct GameplayLightComponent : ent::LightComponent
+struct __declspec(align(0x10)) GameplayLightComponent : ent::LightComponent
 {
     static constexpr const char* NAME = "cpGameplayLightComponent";
     static constexpr const char* ALIAS = NAME;

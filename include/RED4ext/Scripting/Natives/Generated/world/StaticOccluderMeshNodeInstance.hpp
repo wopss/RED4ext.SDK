@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticOccluderMeshNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticOccluderMeshNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticOccluderMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;

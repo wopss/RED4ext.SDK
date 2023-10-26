@@ -12,14 +12,14 @@ namespace RED4ext
 {
 namespace game
 {
-struct TargetShootComponent : ent::IComponent
+struct __declspec(align(0x10)) TargetShootComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameTargetShootComponent";
     static constexpr const char* ALIAS = "TargetShootComponent";
 
-    uint8_t unk90[0x340 - 0x90]; // 90
+    uint8_t unk90[0x270 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(TargetShootComponent, 0x340);
+RED4EXT_ASSERT_SIZE(TargetShootComponent, 0x270);
 } // namespace game
 using gameTargetShootComponent = game::TargetShootComponent;
 using TargetShootComponent = game::TargetShootComponent;

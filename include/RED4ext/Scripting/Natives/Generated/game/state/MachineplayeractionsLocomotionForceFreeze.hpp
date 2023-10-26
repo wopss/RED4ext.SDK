@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineplayeractionsLocomotionForceFreeze : game::state::MachineplayeractionsLocomotionBase
+struct __declspec(align(0x10)) MachineplayeractionsLocomotionForceFreeze : game::state::MachineplayeractionsLocomotionBase
 {
     static constexpr const char* NAME = "gamestateMachineplayeractionsLocomotionForceFreeze";
     static constexpr const char* ALIAS = NAME;

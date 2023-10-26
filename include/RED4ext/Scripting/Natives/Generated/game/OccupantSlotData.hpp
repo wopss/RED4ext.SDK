@@ -17,7 +17,7 @@ namespace work { struct WorkspotResource; }
 
 namespace game
 {
-struct OccupantSlotData
+struct __declspec(align(0x10)) OccupantSlotData
 {
     static constexpr const char* NAME = "gameOccupantSlotData";
     static constexpr const char* ALIAS = NAME;

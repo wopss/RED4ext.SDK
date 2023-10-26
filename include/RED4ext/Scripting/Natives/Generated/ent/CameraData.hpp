@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct CameraData
+struct __declspec(align(0x10)) CameraData
 {
     static constexpr const char* NAME = "entCameraData";
     static constexpr const char* ALIAS = "CameraData";

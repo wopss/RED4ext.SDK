@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::projectile
 {
-struct AcceleratedMovementEvent : game::projectile::LinearMovementEvent
+struct __declspec(align(0x10)) AcceleratedMovementEvent : game::projectile::LinearMovementEvent
 {
     static constexpr const char* NAME = "gameprojectileAcceleratedMovementEvent";
     static constexpr const char* ALIAS = NAME;

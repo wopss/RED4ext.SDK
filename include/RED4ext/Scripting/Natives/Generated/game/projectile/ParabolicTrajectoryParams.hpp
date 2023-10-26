@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::projectile
 {
-struct ParabolicTrajectoryParams : game::projectile::TrajectoryParams
+struct __declspec(align(0x10)) ParabolicTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileParabolicTrajectoryParams";
     static constexpr const char* ALIAS = "ParabolicTrajectoryParams";

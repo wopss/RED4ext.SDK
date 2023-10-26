@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace nav::gendebug
 {
-struct InputGeometry
+struct __declspec(align(0x10)) InputGeometry
 {
     static constexpr const char* NAME = "navgendebugInputGeometry";
     static constexpr const char* ALIAS = NAME;

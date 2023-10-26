@@ -26,20 +26,20 @@ struct MinimapContainerController : game::ui::MappinsContainerController
     static constexpr const char* NAME = "gameuiMinimapContainerController";
     static constexpr const char* ALIAS = "MinimapContainerController";
 
-    uint8_t unk2E8[0x3E8 - 0x2E8]; // 2E8
-    Handle<game::MinimapSettings> settings; // 3E8
-    ink::CompoundWidgetReference clampedMappinContainer; // 3F8
-    ink::CompoundWidgetReference unclampedMappinContainer; // 410
-    ink::CacheWidgetReference worldGeometryCache; // 428
-    ink::CanvasWidgetReference worldGeometryContainer; // 440
-    ink::WidgetReference playerIconWidget; // 458
-    ink::WidgetReference compassWidget; // 470
-    ink::MaskWidgetReference maskWidget; // 488
-    CName geometryLibraryID; // 4A0
-    uint8_t unk4A8[0x508 - 0x4A8]; // 4A8
-    ink::CompoundWidgetReference timeDisplayWidget; // 508
+    uint8_t unk2E8[0x450 - 0x2E8]; // 2E8
+    Handle<game::MinimapSettings> settings; // 450
+    ink::CompoundWidgetReference clampedMappinContainer; // 460
+    ink::CompoundWidgetReference unclampedMappinContainer; // 478
+    ink::CacheWidgetReference worldGeometryCache; // 490
+    ink::CanvasWidgetReference worldGeometryContainer; // 4A8
+    ink::WidgetReference playerIconWidget; // 4C0
+    ink::WidgetReference compassWidget; // 4D8
+    ink::MaskWidgetReference maskWidget; // 4F0
+    CName geometryLibraryID; // 508
+    uint8_t unk510[0x570 - 0x510]; // 510
+    ink::CompoundWidgetReference timeDisplayWidget; // 570
 };
-RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x520);
+RED4EXT_ASSERT_SIZE(MinimapContainerController, 0x588);
 } // namespace game::ui
 using gameuiMinimapContainerController = game::ui::MinimapContainerController;
 using MinimapContainerController = game::ui::MinimapContainerController;

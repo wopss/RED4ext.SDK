@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct AttackDebugData
+struct __declspec(align(0x10)) AttackDebugData
 {
     static constexpr const char* NAME = "gameAttackDebugData";
     static constexpr const char* ALIAS = "AttackDebugData";

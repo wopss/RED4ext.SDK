@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct RuntimeSystemStreamingQuery : world::IRuntimeSystem
+struct __declspec(align(0x10)) RuntimeSystemStreamingQuery : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemStreamingQuery";
     static constexpr const char* ALIAS = NAME;

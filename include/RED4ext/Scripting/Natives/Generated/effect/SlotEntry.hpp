@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace effect
 {
-struct SlotEntry
+struct __declspec(align(0x10)) SlotEntry
 {
     static constexpr const char* NAME = "effectSlotEntry";
     static constexpr const char* ALIAS = NAME;

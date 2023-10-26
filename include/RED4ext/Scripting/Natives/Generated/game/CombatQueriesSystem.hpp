@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct CombatQueriesSystem : game::ICombatQueriesSystem
+struct __declspec(align(0x10)) CombatQueriesSystem : game::ICombatQueriesSystem
 {
     static constexpr const char* NAME = "gameCombatQueriesSystem";
     static constexpr const char* ALIAS = NAME;

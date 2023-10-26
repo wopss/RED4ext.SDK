@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ink { struct TweakDBIDSelector; }
 
-struct StreetSignWidgetComponent : IWorldWidgetComponent
+struct __declspec(align(0x10)) StreetSignWidgetComponent : IWorldWidgetComponent
 {
     static constexpr const char* NAME = "StreetSignWidgetComponent";
     static constexpr const char* ALIAS = NAME;

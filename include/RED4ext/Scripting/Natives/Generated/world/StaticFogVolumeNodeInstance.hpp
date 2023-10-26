@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticFogVolumeNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticFogVolumeNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticFogVolumeNodeInstance";
     static constexpr const char* ALIAS = NAME;

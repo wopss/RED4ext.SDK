@@ -32,7 +32,7 @@ namespace world { struct PrefabVariantsList; }
 
 namespace world
 {
-struct Prefab : res::StreamedResource
+struct __declspec(align(0x10)) Prefab : res::StreamedResource
 {
     static constexpr const char* NAME = "worldPrefab";
     static constexpr const char* ALIAS = NAME;

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineparameterTypeAdjustTransform : IScriptable
+struct __declspec(align(0x10)) MachineparameterTypeAdjustTransform : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeAdjustTransform";
     static constexpr const char* ALIAS = "AdjustTransform";

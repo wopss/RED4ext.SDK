@@ -16,7 +16,7 @@ namespace ent { struct Entity; }
 
 namespace game::state
 {
-struct MachineparameterTypeInteractionDescription : IScriptable
+struct __declspec(align(0x10)) MachineparameterTypeInteractionDescription : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeInteractionDescription";
     static constexpr const char* ALIAS = NAME;

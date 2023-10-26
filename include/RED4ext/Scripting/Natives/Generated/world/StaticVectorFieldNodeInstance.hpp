@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticVectorFieldNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticVectorFieldNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticVectorFieldNodeInstance";
     static constexpr const char* ALIAS = NAME;

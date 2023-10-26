@@ -22,7 +22,7 @@ namespace world { struct Effect; }
 
 namespace game::projectile
 {
-struct Component : ent::IPlacedComponent
+struct __declspec(align(0x10)) Component : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameprojectileComponent";
     static constexpr const char* ALIAS = "ProjectileComponent";

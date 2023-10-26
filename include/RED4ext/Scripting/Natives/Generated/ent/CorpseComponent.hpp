@@ -16,7 +16,7 @@ namespace physics { struct FilterData; }
 
 namespace ent
 {
-struct CorpseComponent : ent::ISkinableComponent
+struct __declspec(align(0x10)) CorpseComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entCorpseComponent";
     static constexpr const char* ALIAS = "CorpseComponent";

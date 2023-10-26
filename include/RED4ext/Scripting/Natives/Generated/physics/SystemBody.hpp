@@ -19,7 +19,7 @@ namespace physics { struct ICollider; }
 
 namespace physics
 {
-struct SystemBody : physics::ISystemObject
+struct __declspec(align(0x10)) SystemBody : physics::ISystemObject
 {
     static constexpr const char* NAME = "physicsSystemBody";
     static constexpr const char* ALIAS = NAME;

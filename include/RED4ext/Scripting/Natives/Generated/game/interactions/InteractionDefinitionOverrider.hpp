@@ -16,7 +16,7 @@ namespace game::interactions { struct IShapeDefinition; }
 
 namespace game::interactions
 {
-struct InteractionDefinitionOverrider
+struct __declspec(align(0x10)) InteractionDefinitionOverrider
 {
     static constexpr const char* NAME = "gameinteractionsInteractionDefinitionOverrider";
     static constexpr const char* ALIAS = NAME;

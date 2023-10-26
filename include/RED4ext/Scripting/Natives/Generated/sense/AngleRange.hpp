@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace sense
 {
-struct AngleRange : sense::IShape
+struct __declspec(align(0x10)) AngleRange : sense::IShape
 {
     static constexpr const char* NAME = "senseAngleRange";
     static constexpr const char* ALIAS = "SenseAngleRange";

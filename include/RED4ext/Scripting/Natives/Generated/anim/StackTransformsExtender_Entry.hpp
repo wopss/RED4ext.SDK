@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct StackTransformsExtender_Entry
+struct __declspec(align(0x10)) StackTransformsExtender_Entry
 {
     static constexpr const char* NAME = "animStackTransformsExtender_Entry";
     static constexpr const char* ALIAS = NAME;

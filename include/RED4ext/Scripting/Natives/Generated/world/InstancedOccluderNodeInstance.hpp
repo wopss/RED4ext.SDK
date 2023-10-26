@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct InstancedOccluderNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) InstancedOccluderNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldInstancedOccluderNodeInstance";
     static constexpr const char* ALIAS = NAME;

@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace game::interactions
 {
-struct ReactionData : IScriptable
+struct __declspec(align(0x10)) ReactionData : IScriptable
 {
     static constexpr const char* NAME = "gameinteractionsReactionData";
     static constexpr const char* ALIAS = "ReactionData";

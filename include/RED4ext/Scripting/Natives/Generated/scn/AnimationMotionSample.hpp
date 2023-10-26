@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct AnimationMotionSample
+struct __declspec(align(0x10)) AnimationMotionSample
 {
     static constexpr const char* NAME = "scnAnimationMotionSample";
     static constexpr const char* ALIAS = NAME;

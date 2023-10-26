@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct Quad
+struct __declspec(align(0x10)) Quad
 {
     static constexpr const char* NAME = "Quad";
     static constexpr const char* ALIAS = NAME;

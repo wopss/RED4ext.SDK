@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace vis
 {
-struct OccluderMeshResource : vis::IOccluderResource
+struct __declspec(align(0x10)) OccluderMeshResource : vis::IOccluderResource
 {
     static constexpr const char* NAME = "visOccluderMeshResource";
     static constexpr const char* ALIAS = NAME;

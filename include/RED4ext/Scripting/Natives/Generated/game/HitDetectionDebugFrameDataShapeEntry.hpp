@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct HitDetectionDebugFrameDataShapeEntry
+struct __declspec(align(0x10)) HitDetectionDebugFrameDataShapeEntry
 {
     static constexpr const char* NAME = "gameHitDetectionDebugFrameDataShapeEntry";
     static constexpr const char* ALIAS = NAME;

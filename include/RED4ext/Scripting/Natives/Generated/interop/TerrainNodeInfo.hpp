@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace interop
 {
-struct TerrainNodeInfo
+struct __declspec(align(0x10)) TerrainNodeInfo
 {
     static constexpr const char* NAME = "interopTerrainNodeInfo";
     static constexpr const char* ALIAS = NAME;

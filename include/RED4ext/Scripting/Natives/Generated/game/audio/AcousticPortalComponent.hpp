@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::audio
 {
-struct AcousticPortalComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) AcousticPortalComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameaudioAcousticPortalComponent";
     static constexpr const char* ALIAS = "AcousticPortalComponent";

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::projectile
 {
-struct SlideTrajectoryParams : game::projectile::TrajectoryParams
+struct __declspec(align(0x10)) SlideTrajectoryParams : game::projectile::TrajectoryParams
 {
     static constexpr const char* NAME = "gameprojectileSlideTrajectoryParams";
     static constexpr const char* ALIAS = "SlideTrajectoryParams";

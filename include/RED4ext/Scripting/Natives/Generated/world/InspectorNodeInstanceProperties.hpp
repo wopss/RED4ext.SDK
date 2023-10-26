@@ -17,7 +17,7 @@ namespace world { struct MeshNode; }
 
 namespace world
 {
-struct InspectorNodeInstanceProperties : ISerializable
+struct __declspec(align(0x10)) InspectorNodeInstanceProperties : ISerializable
 {
     static constexpr const char* NAME = "worldInspectorNodeInstanceProperties";
     static constexpr const char* ALIAS = NAME;

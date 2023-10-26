@@ -17,7 +17,7 @@ namespace ent { struct Entity; }
 
 namespace game::carry
 {
-struct ReplicatedEntitySetAttachmentToEntity : net::EntityAttachmentInterface
+struct __declspec(align(0x10)) ReplicatedEntitySetAttachmentToEntity : net::EntityAttachmentInterface
 {
     static constexpr const char* NAME = "gamecarryReplicatedEntitySetAttachmentToEntity";
     static constexpr const char* ALIAS = NAME;

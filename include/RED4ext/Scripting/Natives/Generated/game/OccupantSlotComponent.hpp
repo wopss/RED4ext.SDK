@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct OccupantSlotComponent : ent::SlotComponent
+struct __declspec(align(0x10)) OccupantSlotComponent : ent::SlotComponent
 {
     static constexpr const char* NAME = "gameOccupantSlotComponent";
     static constexpr const char* ALIAS = NAME;

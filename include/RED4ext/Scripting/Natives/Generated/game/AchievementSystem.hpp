@@ -17,9 +17,9 @@ struct AchievementSystem : game::IAchievementSystem
     static constexpr const char* NAME = "gameAchievementSystem";
     static constexpr const char* ALIAS = "AchievementSystem";
 
-    uint8_t unk48[0x68 - 0x48]; // 48
+    uint8_t unk48[0x60 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(AchievementSystem, 0x68);
+RED4EXT_ASSERT_SIZE(AchievementSystem, 0x60);
 } // namespace game
 using gameAchievementSystem = game::AchievementSystem;
 using AchievementSystem = game::AchievementSystem;

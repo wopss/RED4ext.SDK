@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct AnimFeature_VehicleProceduralCamera : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_VehicleProceduralCamera : anim::AnimFeature
 {
     static constexpr const char* NAME = "vehicleAnimFeature_VehicleProceduralCamera";
     static constexpr const char* ALIAS = NAME;

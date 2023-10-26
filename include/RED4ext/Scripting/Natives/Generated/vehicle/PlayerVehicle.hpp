@@ -28,8 +28,10 @@ struct PlayerVehicle
     uint8_t unk38[0x3C - 0x38]; // 38
     bool isUnlocked; // 3C
     uint8_t unk3D[0x40 - 0x3D]; // 3D
+    int32_t uiFavoriteIndex; // 40
+    uint8_t unk44[0x48 - 0x44]; // 44
 };
-RED4EXT_ASSERT_SIZE(PlayerVehicle, 0x40);
+RED4EXT_ASSERT_SIZE(PlayerVehicle, 0x48);
 } // namespace vehicle
 using vehiclePlayerVehicle = vehicle::PlayerVehicle;
 using PlayerVehicle = vehicle::PlayerVehicle;

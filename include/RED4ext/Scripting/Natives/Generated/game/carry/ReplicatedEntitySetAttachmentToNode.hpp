@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::carry
 {
-struct ReplicatedEntitySetAttachmentToNode : net::EntityAttachmentInterface
+struct __declspec(align(0x10)) ReplicatedEntitySetAttachmentToNode : net::EntityAttachmentInterface
 {
     static constexpr const char* NAME = "gamecarryReplicatedEntitySetAttachmentToNode";
     static constexpr const char* ALIAS = NAME;

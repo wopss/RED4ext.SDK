@@ -16,7 +16,7 @@ namespace game { struct EnvironmentDamageReceiverShape; }
 
 namespace game
 {
-struct EnvironmentDamageReceiverComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) EnvironmentDamageReceiverComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameEnvironmentDamageReceiverComponent";
     static constexpr const char* ALIAS = "EnvironmentDamageReceiverComponent";

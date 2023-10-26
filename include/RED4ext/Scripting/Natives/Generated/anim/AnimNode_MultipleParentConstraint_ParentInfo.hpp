@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNode_MultipleParentConstraint_ParentInfo
+struct __declspec(align(0x10)) AnimNode_MultipleParentConstraint_ParentInfo
 {
     static constexpr const char* NAME = "animAnimNode_MultipleParentConstraint_ParentInfo";
     static constexpr const char* ALIAS = NAME;

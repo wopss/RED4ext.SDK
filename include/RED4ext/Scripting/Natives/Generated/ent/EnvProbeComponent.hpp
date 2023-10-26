@@ -19,7 +19,7 @@ struct CReflectionProbeDataResource;
 
 namespace ent
 {
-struct EnvProbeComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) EnvProbeComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entEnvProbeComponent";
     static constexpr const char* ALIAS = "EnvProbeComponent";

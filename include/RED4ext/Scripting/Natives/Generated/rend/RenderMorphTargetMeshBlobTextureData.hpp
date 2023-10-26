@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace rend
 {
-struct RenderMorphTargetMeshBlobTextureData
+struct __declspec(align(0x10)) RenderMorphTargetMeshBlobTextureData
 {
     static constexpr const char* NAME = "rendRenderMorphTargetMeshBlobTextureData";
     static constexpr const char* ALIAS = NAME;

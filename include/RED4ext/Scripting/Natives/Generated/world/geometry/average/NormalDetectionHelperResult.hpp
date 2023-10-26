@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world::geometry::average
 {
-struct NormalDetectionHelperResult : IScriptable
+struct __declspec(align(0x10)) NormalDetectionHelperResult : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryaverageNormalDetectionHelperResult";
     static constexpr const char* ALIAS = "AverageNormalResult";

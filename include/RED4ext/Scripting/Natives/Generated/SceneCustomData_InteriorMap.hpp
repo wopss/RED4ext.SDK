@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct SceneCustomData_InteriorMap : ISceneStorageCustomData
+struct __declspec(align(0x10)) SceneCustomData_InteriorMap : ISceneStorageCustomData
 {
     static constexpr const char* NAME = "SceneCustomData_InteriorMap";
     static constexpr const char* ALIAS = NAME;

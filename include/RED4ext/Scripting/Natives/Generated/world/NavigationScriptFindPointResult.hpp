@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct NavigationScriptFindPointResult
+struct __declspec(align(0x10)) NavigationScriptFindPointResult
 {
     static constexpr const char* NAME = "worldNavigationScriptFindPointResult";
     static constexpr const char* ALIAS = "NavigationFindPointResult";

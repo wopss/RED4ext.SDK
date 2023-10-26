@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct CameraManager : IScriptable
+struct __declspec(align(0x10)) CameraManager : IScriptable
 {
     static constexpr const char* NAME = "vehicleCameraManager";
     static constexpr const char* ALIAS = "VehicleCameraManager";

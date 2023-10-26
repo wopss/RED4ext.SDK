@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct MovingPlatform : ent::IPlacedComponent
+struct __declspec(align(0x10)) MovingPlatform : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameMovingPlatform";
     static constexpr const char* ALIAS = "MovingPlatform";

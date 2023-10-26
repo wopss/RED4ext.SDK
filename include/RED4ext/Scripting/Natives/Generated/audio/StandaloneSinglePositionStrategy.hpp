@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace audio
 {
-struct StandaloneSinglePositionStrategy : audio::ApplySoundPositionStrategy
+struct __declspec(align(0x10)) StandaloneSinglePositionStrategy : audio::ApplySoundPositionStrategy
 {
     static constexpr const char* NAME = "audioStandaloneSinglePositionStrategy";
     static constexpr const char* ALIAS = NAME;

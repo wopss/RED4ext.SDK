@@ -22,7 +22,7 @@ namespace sense { struct StimuliData; }
 
 namespace sense
 {
-struct StimuliEvent : sense::BaseStimuliEvent
+struct __declspec(align(0x10)) StimuliEvent : sense::BaseStimuliEvent
 {
     static constexpr const char* NAME = "senseStimuliEvent";
     static constexpr const char* ALIAS = "StimuliEvent";

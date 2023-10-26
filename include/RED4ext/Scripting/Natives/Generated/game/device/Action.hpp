@@ -24,8 +24,10 @@ struct Action : red::Event
     int32_t clearanceLevel; // 60
     uint8_t unk64[0x68 - 0x64]; // 64
     CString localizedObjectName; // 68
+    int32_t paymentQuantity; // 88
+    uint8_t unk8C[0x90 - 0x8C]; // 8C
 };
-RED4EXT_ASSERT_SIZE(Action, 0x88);
+RED4EXT_ASSERT_SIZE(Action, 0x90);
 } // namespace game::device
 using gamedeviceAction = game::device::Action;
 using DeviceAction = game::device::Action;

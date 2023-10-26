@@ -17,7 +17,7 @@ namespace physics { struct FilterData; }
 
 namespace world
 {
-struct PhysicalTriggerAreaNode : world::Node
+struct __declspec(align(0x10)) PhysicalTriggerAreaNode : world::Node
 {
     static constexpr const char* NAME = "worldPhysicalTriggerAreaNode";
     static constexpr const char* ALIAS = NAME;

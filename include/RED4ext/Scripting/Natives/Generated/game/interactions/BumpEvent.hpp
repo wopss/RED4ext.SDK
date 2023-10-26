@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace game::interactions
 {
-struct BumpEvent : red::Event
+struct __declspec(align(0x10)) BumpEvent : red::Event
 {
     static constexpr const char* NAME = "gameinteractionsBumpEvent";
     static constexpr const char* ALIAS = "BumpEvent";

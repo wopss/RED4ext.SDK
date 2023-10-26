@@ -16,7 +16,7 @@ namespace ent { struct ITransformBinding; }
 
 namespace ent
 {
-struct IPlacedComponent : ent::IComponent
+struct __declspec(align(0x10)) IPlacedComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entIPlacedComponent";
     static constexpr const char* ALIAS = "IPlacedComponent";

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct TransformComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) TransformComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entTransformComponent";
     static constexpr const char* ALIAS = NAME;

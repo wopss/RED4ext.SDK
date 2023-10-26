@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineeventImpulse : game::state::MachineeventBaseEvent
+struct __declspec(align(0x10)) MachineeventImpulse : game::state::MachineeventBaseEvent
 {
     static constexpr const char* NAME = "gamestateMachineeventImpulse";
     static constexpr const char* ALIAS = "PSMImpulse";

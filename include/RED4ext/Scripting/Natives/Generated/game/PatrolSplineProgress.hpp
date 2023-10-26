@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PatrolSplineProgress : IScriptable
+struct __declspec(align(0x10)) PatrolSplineProgress : IScriptable
 {
     static constexpr const char* NAME = "gamePatrolSplineProgress";
     static constexpr const char* ALIAS = "PatrolSplineProgress";

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace AI
 {
-struct Enemy : ISerializable
+struct __declspec(align(0x10)) Enemy : ISerializable
 {
     static constexpr const char* NAME = "AIEnemy";
     static constexpr const char* ALIAS = NAME;

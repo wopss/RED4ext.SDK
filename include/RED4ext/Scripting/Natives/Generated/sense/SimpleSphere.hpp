@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace sense
 {
-struct SimpleSphere : sense::IShape
+struct __declspec(align(0x10)) SimpleSphere : sense::IShape
 {
     static constexpr const char* NAME = "senseSimpleSphere";
     static constexpr const char* ALIAS = "SenseSphere";

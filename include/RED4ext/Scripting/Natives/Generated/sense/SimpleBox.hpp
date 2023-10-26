@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace sense
 {
-struct SimpleBox : sense::IShape
+struct __declspec(align(0x10)) SimpleBox : sense::IShape
 {
     static constexpr const char* NAME = "senseSimpleBox";
     static constexpr const char* ALIAS = "SenseBox";

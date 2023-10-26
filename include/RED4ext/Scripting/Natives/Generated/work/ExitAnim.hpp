@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct ExitAnim : work::IEntry
+struct __declspec(align(0x10)) ExitAnim : work::IEntry
 {
     static constexpr const char* NAME = "workExitAnim";
     static constexpr const char* ALIAS = NAME;

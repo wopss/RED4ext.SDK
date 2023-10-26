@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct AreaVolume : game::Object
+struct __declspec(align(0x10)) AreaVolume : game::Object
 {
     static constexpr const char* NAME = "gameAreaVolume";
     static constexpr const char* ALIAS = NAME;

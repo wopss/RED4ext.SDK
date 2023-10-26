@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct TargetPointComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) TargetPointComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entTargetPointComponent";
     static constexpr const char* ALIAS = "TargetPointComponent";

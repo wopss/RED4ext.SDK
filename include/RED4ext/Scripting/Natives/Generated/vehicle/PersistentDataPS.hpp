@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct PersistentDataPS : game::ComponentPS
+struct __declspec(align(0x10)) PersistentDataPS : game::ComponentPS
 {
     static constexpr const char* NAME = "vehiclePersistentDataPS";
     static constexpr const char* ALIAS = NAME;
@@ -25,7 +25,8 @@ struct PersistentDataPS : game::ComponentPS
     uint32_t flags; // 68
     float autopilotPos; // 6C
     float autopilotCurrentSpeed; // 70
-    uint8_t unk74[0x78 - 0x74]; // 74
+    bool isHackable; // 74
+    uint8_t unk75[0x78 - 0x75]; // 75
 #pragma warning(suppress : 4324)
     alignas(8) StaticArray<vehicle::WheelRuntimePSData, 4> wheelRuntimeData; // 78
     Transform questEnforcedTransform; // E0

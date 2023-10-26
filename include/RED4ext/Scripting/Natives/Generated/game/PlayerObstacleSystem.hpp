@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PlayerObstacleSystem : IScriptable
+struct __declspec(align(0x10)) PlayerObstacleSystem : IScriptable
 {
     static constexpr const char* NAME = "gamePlayerObstacleSystem";
     static constexpr const char* ALIAS = "PlayerObstacleSystem";

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace scn::events
 {
-struct CameraPlacementEvent : scn::SceneEvent
+struct __declspec(align(0x10)) CameraPlacementEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsCameraPlacementEvent";
     static constexpr const char* ALIAS = NAME;

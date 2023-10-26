@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct CurvePathNodeInstance : world::SplineNodeInstance
+struct __declspec(align(0x10)) CurvePathNodeInstance : world::SplineNodeInstance
 {
     static constexpr const char* NAME = "worldCurvePathNodeInstance";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct CableMeshNodeInstance : world::BendedMeshNodeInstance
+struct __declspec(align(0x10)) CableMeshNodeInstance : world::BendedMeshNodeInstance
 {
     static constexpr const char* NAME = "worldCableMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;

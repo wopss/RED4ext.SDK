@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace AI
 {
-struct GuardArea
+struct __declspec(align(0x10)) GuardArea
 {
     static constexpr const char* NAME = "AIGuardArea";
     static constexpr const char* ALIAS = NAME;

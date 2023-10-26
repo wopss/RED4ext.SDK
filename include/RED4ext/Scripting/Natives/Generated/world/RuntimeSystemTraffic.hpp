@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct RuntimeSystemTraffic : world::IRuntimeSystem
+struct __declspec(align(0x10)) RuntimeSystemTraffic : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemTraffic";
     static constexpr const char* ALIAS = NAME;

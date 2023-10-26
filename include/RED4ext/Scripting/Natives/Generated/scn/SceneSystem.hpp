@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct SceneSystem : scn::ISceneSystem
+struct __declspec(align(0x10)) SceneSystem : scn::ISceneSystem
 {
     static constexpr const char* NAME = "scnSceneSystem";
     static constexpr const char* ALIAS = NAME;

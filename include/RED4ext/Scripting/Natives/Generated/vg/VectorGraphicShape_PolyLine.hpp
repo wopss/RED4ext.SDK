@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace vg
 {
-struct VectorGraphicShape_PolyLine : vg::BaseVectorGraphicShape
+struct __declspec(align(0x10)) VectorGraphicShape_PolyLine : vg::BaseVectorGraphicShape
 {
     static constexpr const char* NAME = "vgVectorGraphicShape_PolyLine";
     static constexpr const char* ALIAS = NAME;

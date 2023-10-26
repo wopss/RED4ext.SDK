@@ -17,7 +17,7 @@ struct CMesh;
 
 namespace world
 {
-struct InstancedOccluderNode : world::Node
+struct __declspec(align(0x10)) InstancedOccluderNode : world::Node
 {
     static constexpr const char* NAME = "worldInstancedOccluderNode";
     static constexpr const char* ALIAS = NAME;

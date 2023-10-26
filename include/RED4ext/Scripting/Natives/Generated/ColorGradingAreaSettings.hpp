@@ -12,7 +12,7 @@
 
 namespace RED4ext
 {
-struct ColorGradingAreaSettings : IAreaSettings
+struct __declspec(align(0x10)) ColorGradingAreaSettings : IAreaSettings
 {
     static constexpr const char* NAME = "ColorGradingAreaSettings";
     static constexpr const char* ALIAS = NAME;

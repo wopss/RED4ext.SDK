@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimFeature_EditorOnlyPredictiveLookAt : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_EditorOnlyPredictiveLookAt : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_EditorOnlyPredictiveLookAt";
     static constexpr const char* ALIAS = NAME;

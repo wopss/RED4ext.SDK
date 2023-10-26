@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace rend
 {
-struct FragmentBuilderScriptProxy
+struct __declspec(align(0x10)) FragmentBuilderScriptProxy
 {
     static constexpr const char* NAME = "rendFragmentBuilderScriptProxy";
     static constexpr const char* ALIAS = "FragmentBuilder";

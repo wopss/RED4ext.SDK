@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace effect
 {
-struct RootEntry
+struct __declspec(align(0x10)) RootEntry
 {
     static constexpr const char* NAME = "effectRootEntry";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct SoundListenerComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) SoundListenerComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entSoundListenerComponent";
     static constexpr const char* ALIAS = NAME;

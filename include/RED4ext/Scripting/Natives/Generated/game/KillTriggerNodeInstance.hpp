@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct KillTriggerNodeInstance : world::AreaShapeNodeInstance
+struct __declspec(align(0x10)) KillTriggerNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "gameKillTriggerNodeInstance";
     static constexpr const char* ALIAS = NAME;

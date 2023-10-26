@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct STwoBonesIKSolver
+struct __declspec(align(0x10)) STwoBonesIKSolver
 {
     static constexpr const char* NAME = "animSTwoBonesIKSolver";
     static constexpr const char* ALIAS = NAME;

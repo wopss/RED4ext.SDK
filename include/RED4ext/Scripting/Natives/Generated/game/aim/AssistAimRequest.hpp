@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::aim
 {
-struct AssistAimRequest
+struct __declspec(align(0x10)) AssistAimRequest
 {
     static constexpr const char* NAME = "gameaimAssistAimRequest";
     static constexpr const char* ALIAS = "AimRequest";

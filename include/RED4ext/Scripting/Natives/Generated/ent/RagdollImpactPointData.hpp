@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct RagdollImpactPointData
+struct __declspec(align(0x10)) RagdollImpactPointData
 {
     static constexpr const char* NAME = "entRagdollImpactPointData";
     static constexpr const char* ALIAS = "RagdollImpactPointData";

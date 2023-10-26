@@ -17,7 +17,7 @@ namespace ent { struct IComponent; }
 
 namespace game::targeting
 {
-struct SystemHitInfo
+struct __declspec(align(0x10)) SystemHitInfo
 {
     static constexpr const char* NAME = "gametargetingSystemHitInfo";
     static constexpr const char* ALIAS = "TargetHitInfo";

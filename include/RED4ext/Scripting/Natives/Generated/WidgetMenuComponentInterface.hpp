@@ -16,7 +16,7 @@ struct CMaterialTemplate;
 namespace ink { struct WidgetLibraryResource; }
 namespace world::ui { struct MeshTargetBinding; }
 
-struct WidgetMenuComponentInterface : WidgetBaseComponent
+struct __declspec(align(0x10)) WidgetMenuComponentInterface : WidgetBaseComponent
 {
     static constexpr const char* NAME = "WidgetMenuComponentInterface";
     static constexpr const char* ALIAS = NAME;

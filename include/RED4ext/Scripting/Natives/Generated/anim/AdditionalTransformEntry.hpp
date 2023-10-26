@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AdditionalTransformEntry : ISerializable
+struct __declspec(align(0x10)) AdditionalTransformEntry : ISerializable
 {
     static constexpr const char* NAME = "animAdditionalTransformEntry";
     static constexpr const char* ALIAS = NAME;

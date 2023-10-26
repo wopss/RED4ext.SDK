@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct SlotComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) SlotComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entSlotComponent";
     static constexpr const char* ALIAS = "SlotComponent";

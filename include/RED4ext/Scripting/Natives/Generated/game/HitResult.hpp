@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct HitResult
+struct __declspec(align(0x10)) HitResult
 {
     static constexpr const char* NAME = "gameHitResult";
     static constexpr const char* ALIAS = "HitShapeResult";

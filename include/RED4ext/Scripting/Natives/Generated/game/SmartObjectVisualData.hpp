@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct SmartObjectVisualData
+struct __declspec(align(0x10)) SmartObjectVisualData
 {
     static constexpr const char* NAME = "gameSmartObjectVisualData";
     static constexpr const char* ALIAS = NAME;

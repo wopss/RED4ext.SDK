@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PlayerSpawnParams
+struct __declspec(align(0x10)) PlayerSpawnParams
 {
     static constexpr const char* NAME = "gamePlayerSpawnParams";
     static constexpr const char* ALIAS = NAME;

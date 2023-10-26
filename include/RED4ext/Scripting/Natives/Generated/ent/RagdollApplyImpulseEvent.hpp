@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct RagdollApplyImpulseEvent : red::Event
+struct __declspec(align(0x10)) RagdollApplyImpulseEvent : red::Event
 {
     static constexpr const char* NAME = "entRagdollApplyImpulseEvent";
     static constexpr const char* ALIAS = "RagdollApplyImpulseEvent";

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineStateContext
+struct __declspec(align(0x10)) MachineStateContext
 {
     static constexpr const char* NAME = "gamestateMachineStateContext";
     static constexpr const char* ALIAS = NAME;

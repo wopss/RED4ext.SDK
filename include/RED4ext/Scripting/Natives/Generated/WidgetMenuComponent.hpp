@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct WidgetMenuComponent : WidgetMenuComponentInterface
+struct __declspec(align(0x10)) WidgetMenuComponent : WidgetMenuComponentInterface
 {
     static constexpr const char* NAME = "WidgetMenuComponent";
     static constexpr const char* ALIAS = NAME;

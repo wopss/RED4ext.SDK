@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct MixerSlotTrajectoryBlendParams : ISerializable
+struct __declspec(align(0x10)) MixerSlotTrajectoryBlendParams : ISerializable
 {
     static constexpr const char* NAME = "animMixerSlotTrajectoryBlendParams";
     static constexpr const char* ALIAS = NAME;

@@ -20,7 +20,7 @@ struct CReflectionProbeDataResource;
 
 namespace world
 {
-struct ReflectionProbeNode : world::Node
+struct __declspec(align(0x10)) ReflectionProbeNode : world::Node
 {
     static constexpr const char* NAME = "worldReflectionProbeNode";
     static constexpr const char* ALIAS = NAME;

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct AnimInputSetterQuaternion : ent::AnimInputSetter
+struct __declspec(align(0x10)) AnimInputSetterQuaternion : ent::AnimInputSetter
 {
     static constexpr const char* NAME = "entAnimInputSetterQuaternion";
     static constexpr const char* ALIAS = "AnimInputSetterQuaternion";

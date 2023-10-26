@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace minimap { struct EncodedShapes; }
 
-struct MinimapDataNode : world::Node
+struct __declspec(align(0x10)) MinimapDataNode : world::Node
 {
     static constexpr const char* NAME = "MinimapDataNode";
     static constexpr const char* ALIAS = NAME;

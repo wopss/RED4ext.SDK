@@ -16,7 +16,7 @@ namespace ent { struct IComponent; }
 
 namespace game::targeting
 {
-struct SystemTargetFilterResult : IScriptable
+struct __declspec(align(0x10)) SystemTargetFilterResult : IScriptable
 {
     static constexpr const char* NAME = "gametargetingSystemTargetFilterResult";
     static constexpr const char* ALIAS = "TargetFilterResult";

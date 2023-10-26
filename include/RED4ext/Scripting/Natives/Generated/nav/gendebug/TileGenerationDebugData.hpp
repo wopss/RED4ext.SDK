@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace nav::gendebug
 {
-struct TileGenerationDebugData : ISerializable
+struct __declspec(align(0x10)) TileGenerationDebugData : ISerializable
 {
     static constexpr const char* NAME = "navgendebugTileGenerationDebugData";
     static constexpr const char* ALIAS = NAME;

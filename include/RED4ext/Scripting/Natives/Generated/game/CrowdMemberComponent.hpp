@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct CrowdMemberComponent : ent::IComponent
+struct __declspec(align(0x10)) CrowdMemberComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameCrowdMemberComponent";
     static constexpr const char* ALIAS = "CrowdMemberComponent";

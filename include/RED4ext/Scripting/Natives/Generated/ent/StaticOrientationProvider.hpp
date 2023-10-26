@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct StaticOrientationProvider : ent::IOrientationProvider
+struct __declspec(align(0x10)) StaticOrientationProvider : ent::IOrientationProvider
 {
     static constexpr const char* NAME = "entStaticOrientationProvider";
     static constexpr const char* ALIAS = NAME;

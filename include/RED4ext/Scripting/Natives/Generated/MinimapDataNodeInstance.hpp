@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct MinimapDataNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) MinimapDataNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "MinimapDataNodeInstance";
     static constexpr const char* ALIAS = NAME;

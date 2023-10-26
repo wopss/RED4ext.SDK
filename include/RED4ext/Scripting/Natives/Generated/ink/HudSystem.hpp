@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct HudSystem : ink::IHudSystem
+struct __declspec(align(0x10)) HudSystem : ink::IHudSystem
 {
     static constexpr const char* NAME = "inkHudSystem";
     static constexpr const char* ALIAS = NAME;

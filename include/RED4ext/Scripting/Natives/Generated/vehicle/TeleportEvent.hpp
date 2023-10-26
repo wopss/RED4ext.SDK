@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct TeleportEvent : red::Event
+struct __declspec(align(0x10)) TeleportEvent : red::Event
 {
     static constexpr const char* NAME = "vehicleTeleportEvent";
     static constexpr const char* ALIAS = "VehicleTeleportEvent";

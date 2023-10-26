@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNode_DampVector : anim::AnimNode_VectorValue
+struct __declspec(align(0x10)) AnimNode_DampVector : anim::AnimNode_VectorValue
 {
     static constexpr const char* NAME = "animAnimNode_DampVector";
     static constexpr const char* ALIAS = NAME;

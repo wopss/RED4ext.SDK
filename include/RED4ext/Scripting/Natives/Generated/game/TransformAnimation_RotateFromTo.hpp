@@ -16,7 +16,7 @@ namespace game { struct TransformAnimation_Rotation; }
 
 namespace game
 {
-struct TransformAnimation_RotateFromTo : game::TransformAnimationTrackItemImpl
+struct __declspec(align(0x10)) TransformAnimation_RotateFromTo : game::TransformAnimationTrackItemImpl
 {
     static constexpr const char* NAME = "gameTransformAnimation_RotateFromTo";
     static constexpr const char* ALIAS = NAME;

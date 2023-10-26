@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct PhysicalFractureFieldComponent : ent::PhysicalTriggerComponent
+struct __declspec(align(0x10)) PhysicalFractureFieldComponent : ent::PhysicalTriggerComponent
 {
     static constexpr const char* NAME = "entPhysicalFractureFieldComponent";
     static constexpr const char* ALIAS = NAME;

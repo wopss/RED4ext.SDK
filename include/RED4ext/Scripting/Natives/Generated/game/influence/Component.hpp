@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::influence
 {
-struct Component : ent::IPlacedComponent
+struct __declspec(align(0x10)) Component : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameinfluenceComponent";
     static constexpr const char* ALIAS = "InfluenceComponent";

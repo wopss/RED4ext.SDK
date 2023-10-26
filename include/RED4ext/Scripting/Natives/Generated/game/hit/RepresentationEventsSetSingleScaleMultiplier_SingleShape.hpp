@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::hit
 {
-struct RepresentationEventsSetSingleScaleMultiplier_SingleShape : game::hit::RepresentationEventsSetSingleScaleMultiplier_AllShapes
+struct __declspec(align(0x10)) RepresentationEventsSetSingleScaleMultiplier_SingleShape : game::hit::RepresentationEventsSetSingleScaleMultiplier_AllShapes
 {
     static constexpr const char* NAME = "gamehitRepresentationEventsSetSingleScaleMultiplier_SingleShape";
     static constexpr const char* ALIAS = "HitRepresentation_SetSingleScaleMultiplier_SingleShape";

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace game::weapon
 {
-struct Grenade : game::ItemObject
+struct __declspec(align(0x10)) Grenade : game::ItemObject
 {
     static constexpr const char* NAME = "gameweaponGrenade";
     static constexpr const char* ALIAS = "WeaponGrenade";

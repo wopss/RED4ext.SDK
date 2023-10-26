@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct MinimapModeOverrideAreaNodeInstance : world::TriggerAreaNodeInstance
+struct __declspec(align(0x10)) MinimapModeOverrideAreaNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "worldMinimapModeOverrideAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;

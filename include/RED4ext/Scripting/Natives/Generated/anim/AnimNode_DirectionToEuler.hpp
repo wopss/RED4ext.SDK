@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNode_DirectionToEuler : anim::AnimNode_FloatValue
+struct __declspec(align(0x10)) AnimNode_DirectionToEuler : anim::AnimNode_FloatValue
 {
     static constexpr const char* NAME = "animAnimNode_DirectionToEuler";
     static constexpr const char* ALIAS = NAME;

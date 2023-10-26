@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PreventionSystemDebugData
+struct __declspec(align(0x10)) PreventionSystemDebugData
 {
     static constexpr const char* NAME = "gamePreventionSystemDebugData";
     static constexpr const char* ALIAS = "PreventionSystemDebugData";

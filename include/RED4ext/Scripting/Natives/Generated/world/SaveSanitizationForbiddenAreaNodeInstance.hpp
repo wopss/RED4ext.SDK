@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct SaveSanitizationForbiddenAreaNodeInstance : world::TriggerAreaNodeInstance
+struct __declspec(align(0x10)) SaveSanitizationForbiddenAreaNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "worldSaveSanitizationForbiddenAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;

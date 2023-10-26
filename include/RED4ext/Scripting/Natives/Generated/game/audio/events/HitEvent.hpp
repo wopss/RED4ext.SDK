@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace game::audio::events
 {
-struct HitEvent : red::Event
+struct __declspec(align(0x10)) HitEvent : red::Event
 {
     static constexpr const char* NAME = "gameaudioeventsHitEvent";
     static constexpr const char* ALIAS = NAME;

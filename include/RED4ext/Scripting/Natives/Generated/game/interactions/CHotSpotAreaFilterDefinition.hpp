@@ -19,7 +19,7 @@ namespace game::interactions { struct IShapeDefinition; }
 
 namespace game::interactions
 {
-struct CHotSpotAreaFilterDefinition : game::interactions::NodeDefinition
+struct __declspec(align(0x10)) CHotSpotAreaFilterDefinition : game::interactions::NodeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsCHotSpotAreaFilterDefinition";
     static constexpr const char* ALIAS = NAME;

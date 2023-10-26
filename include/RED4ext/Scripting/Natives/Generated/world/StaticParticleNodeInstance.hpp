@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticParticleNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticParticleNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticParticleNodeInstance";
     static constexpr const char* ALIAS = NAME;

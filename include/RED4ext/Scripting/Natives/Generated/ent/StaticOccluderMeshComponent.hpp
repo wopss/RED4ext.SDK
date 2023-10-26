@@ -18,7 +18,7 @@ struct CMesh;
 
 namespace ent
 {
-struct StaticOccluderMeshComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) StaticOccluderMeshComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entStaticOccluderMeshComponent";
     static constexpr const char* ALIAS = NAME;

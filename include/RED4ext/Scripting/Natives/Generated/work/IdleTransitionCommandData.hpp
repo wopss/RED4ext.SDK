@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct IdleTransitionCommandData : work::IWorkspotCommandData
+struct __declspec(align(0x10)) IdleTransitionCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workIdleTransitionCommandData";
     static constexpr const char* ALIAS = NAME;

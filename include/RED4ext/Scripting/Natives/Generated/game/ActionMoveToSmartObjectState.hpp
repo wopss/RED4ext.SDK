@@ -20,7 +20,7 @@ namespace game { struct Object; }
 
 namespace game
 {
-struct ActionMoveToSmartObjectState : game::ActionMoveToState
+struct __declspec(align(0x10)) ActionMoveToSmartObjectState : game::ActionMoveToState
 {
     static constexpr const char* NAME = "gameActionMoveToSmartObjectState";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::weapon::events
 {
-struct ShootEvent : red::Event
+struct __declspec(align(0x10)) ShootEvent : red::Event
 {
     static constexpr const char* NAME = "gameweaponeventsShootEvent";
     static constexpr const char* ALIAS = NAME;

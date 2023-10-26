@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct NavmeshDetector : ent::IPlacedComponent
+struct __declspec(align(0x10)) NavmeshDetector : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameNavmeshDetector";
     static constexpr const char* ALIAS = NAME;

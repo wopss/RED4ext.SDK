@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace cp
 {
-struct ConveyorComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) ConveyorComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "cpConveyorComponent";
     static constexpr const char* ALIAS = NAME;

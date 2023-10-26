@@ -15,7 +15,7 @@ namespace ent { struct Entity; }
 
 namespace AI
 {
-struct DroppedThreatData
+struct __declspec(align(0x10)) DroppedThreatData
 {
     static constexpr const char* NAME = "AIDroppedThreatData";
     static constexpr const char* ALIAS = "DroppedThreatData";

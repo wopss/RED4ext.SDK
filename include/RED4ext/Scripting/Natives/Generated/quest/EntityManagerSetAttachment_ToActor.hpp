@@ -18,7 +18,7 @@ namespace RED4ext
 {
 namespace quest
 {
-struct EntityManagerSetAttachment_ToActor : quest::IEntityManagerSetAttachment_NodeSubType
+struct __declspec(align(0x10)) EntityManagerSetAttachment_ToActor : quest::IEntityManagerSetAttachment_NodeSubType
 {
     static constexpr const char* NAME = "questEntityManagerSetAttachment_ToActor";
     static constexpr const char* ALIAS = NAME;

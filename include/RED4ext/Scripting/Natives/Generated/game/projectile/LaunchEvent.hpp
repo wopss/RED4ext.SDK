@@ -17,7 +17,7 @@ namespace game { struct Object; }
 
 namespace game::projectile
 {
-struct LaunchEvent : red::Event
+struct __declspec(align(0x10)) LaunchEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileLaunchEvent";
     static constexpr const char* ALIAS = NAME;

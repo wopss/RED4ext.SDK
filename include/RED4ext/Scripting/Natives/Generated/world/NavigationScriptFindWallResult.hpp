@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct NavigationScriptFindWallResult : IScriptable
+struct __declspec(align(0x10)) NavigationScriptFindWallResult : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptFindWallResult";
     static constexpr const char* ALIAS = "NavigationFindWallResult";

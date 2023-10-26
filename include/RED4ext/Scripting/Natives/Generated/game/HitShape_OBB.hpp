@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct HitShape_OBB : game::HitShapeBase
+struct __declspec(align(0x10)) HitShape_OBB : game::HitShapeBase
 {
     static constexpr const char* NAME = "gameHitShape_OBB";
     static constexpr const char* ALIAS = "HitShape_OBB";

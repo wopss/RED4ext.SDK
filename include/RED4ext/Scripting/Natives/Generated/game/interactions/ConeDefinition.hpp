@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::interactions
 {
-struct ConeDefinition : game::interactions::IShapeDefinition
+struct __declspec(align(0x10)) ConeDefinition : game::interactions::IShapeDefinition
 {
     static constexpr const char* NAME = "gameinteractionsConeDefinition";
     static constexpr const char* ALIAS = NAME;

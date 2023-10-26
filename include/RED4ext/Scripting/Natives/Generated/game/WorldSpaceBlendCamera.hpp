@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct WorldSpaceBlendCamera : ent::BaseCameraComponent
+struct __declspec(align(0x10)) WorldSpaceBlendCamera : ent::BaseCameraComponent
 {
     static constexpr const char* NAME = "gameWorldSpaceBlendCamera";
     static constexpr const char* ALIAS = NAME;

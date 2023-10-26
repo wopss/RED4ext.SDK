@@ -18,7 +18,7 @@ namespace game { struct MountEventOptions; }
 
 namespace game
 {
-struct MountEventData : IScriptable
+struct __declspec(align(0x10)) MountEventData : IScriptable
 {
     static constexpr const char* NAME = "gameMountEventData";
     static constexpr const char* ALIAS = "MountEventData";

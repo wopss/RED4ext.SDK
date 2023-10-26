@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct ImportFacialTransformNoScale
+struct __declspec(align(0x10)) ImportFacialTransformNoScale
 {
     static constexpr const char* NAME = "animImportFacialTransformNoScale";
     static constexpr const char* ALIAS = NAME;

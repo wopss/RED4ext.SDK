@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct NavigationScriptCostModCircle : IScriptable
+struct __declspec(align(0x10)) NavigationScriptCostModCircle : IScriptable
 {
     static constexpr const char* NAME = "worldNavigationScriptCostModCircle";
     static constexpr const char* ALIAS = "NavigationCostModCircle";

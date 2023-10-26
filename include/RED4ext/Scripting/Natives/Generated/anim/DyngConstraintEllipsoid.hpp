@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct DyngConstraintEllipsoid : anim::IDyngConstraint
+struct __declspec(align(0x10)) DyngConstraintEllipsoid : anim::IDyngConstraint
 {
     static constexpr const char* NAME = "animDyngConstraintEllipsoid";
     static constexpr const char* ALIAS = NAME;

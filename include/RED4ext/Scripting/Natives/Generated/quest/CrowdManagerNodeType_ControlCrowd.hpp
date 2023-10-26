@@ -21,7 +21,8 @@ struct CrowdManagerNodeType_ControlCrowd : quest::ICrowdManager_NodeType
 
     CName debugSource; // 30
     quest::ControlCrowdAction action; // 38
-    uint8_t unk39[0x40 - 0x39]; // 39
+    bool distantCrowdOnly; // 39
+    uint8_t unk3A[0x40 - 0x3A]; // 3A
 };
 RED4EXT_ASSERT_SIZE(CrowdManagerNodeType_ControlCrowd, 0x40);
 } // namespace quest

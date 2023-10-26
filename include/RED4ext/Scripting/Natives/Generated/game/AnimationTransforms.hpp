@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct AnimationTransforms
+struct __declspec(align(0x10)) AnimationTransforms
 {
     static constexpr const char* NAME = "gameAnimationTransforms";
     static constexpr const char* ALIAS = NAME;

@@ -16,7 +16,7 @@ namespace vg { struct VectorGraphicStyle; }
 
 namespace vg
 {
-struct BaseVectorGraphicShape : ISerializable
+struct __declspec(align(0x10)) BaseVectorGraphicShape : ISerializable
 {
     static constexpr const char* NAME = "vgBaseVectorGraphicShape";
     static constexpr const char* ALIAS = NAME;

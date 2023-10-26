@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::ui::arcade
 {
-struct ShooterAIRangeController : game::ui::arcade::ShooterAIController
+struct __declspec(align(0x10)) ShooterAIRangeController : game::ui::arcade::ShooterAIController
 {
     static constexpr const char* NAME = "gameuiarcadeShooterAIRangeController";
     static constexpr const char* ALIAS = NAME;

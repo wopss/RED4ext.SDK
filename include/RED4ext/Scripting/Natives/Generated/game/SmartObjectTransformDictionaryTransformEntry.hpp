@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct SmartObjectTransformDictionaryTransformEntry
+struct __declspec(align(0x10)) SmartObjectTransformDictionaryTransformEntry
 {
     static constexpr const char* NAME = "gameSmartObjectTransformDictionaryTransformEntry";
     static constexpr const char* ALIAS = NAME;

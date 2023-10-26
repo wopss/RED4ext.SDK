@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace world::ui { struct MeshTargetBinding; }
 
-struct IWorldWidgetComponent : WidgetBaseComponent
+struct __declspec(align(0x10)) IWorldWidgetComponent : WidgetBaseComponent
 {
     static constexpr const char* NAME = "IWorldWidgetComponent";
     static constexpr const char* ALIAS = NAME;

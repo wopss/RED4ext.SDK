@@ -11,7 +11,7 @@
 
 namespace RED4ext
 {
-struct Transform
+struct __declspec(align(0x10)) Transform
 {
     static constexpr const char* NAME = "Transform";
     static constexpr const char* ALIAS = NAME;

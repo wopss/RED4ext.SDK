@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::ui
 {
-struct WeaponShootParams
+struct __declspec(align(0x10)) WeaponShootParams
 {
     static constexpr const char* NAME = "gameuiWeaponShootParams";
     static constexpr const char* ALIAS = NAME;

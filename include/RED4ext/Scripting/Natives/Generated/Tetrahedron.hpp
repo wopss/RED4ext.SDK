@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct Tetrahedron
+struct __declspec(align(0x10)) Tetrahedron
 {
     static constexpr const char* NAME = "Tetrahedron";
     static constexpr const char* ALIAS = NAME;

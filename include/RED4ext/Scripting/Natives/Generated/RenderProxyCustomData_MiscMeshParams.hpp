@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct RenderProxyCustomData_MiscMeshParams : IRenderProxyCustomData
+struct __declspec(align(0x10)) RenderProxyCustomData_MiscMeshParams : IRenderProxyCustomData
 {
     static constexpr const char* NAME = "RenderProxyCustomData_MiscMeshParams";
     static constexpr const char* ALIAS = NAME;

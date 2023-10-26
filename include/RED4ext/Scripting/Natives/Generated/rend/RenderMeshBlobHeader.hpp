@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace rend
 {
-struct RenderMeshBlobHeader
+struct __declspec(align(0x10)) RenderMeshBlobHeader
 {
     static constexpr const char* NAME = "rendRenderMeshBlobHeader";
     static constexpr const char* ALIAS = NAME;

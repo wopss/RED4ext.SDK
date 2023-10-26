@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineparameterTypeAdjustTransformWithDurations : game::state::MachineparameterTypeAdjustTransform
+struct __declspec(align(0x10)) MachineparameterTypeAdjustTransformWithDurations : game::state::MachineparameterTypeAdjustTransform
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeAdjustTransformWithDurations";
     static constexpr const char* ALIAS = "AdjustTransformWithDurations";

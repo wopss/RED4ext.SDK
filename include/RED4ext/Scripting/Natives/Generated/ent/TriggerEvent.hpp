@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct TriggerEvent : red::Event
+struct __declspec(align(0x10)) TriggerEvent : red::Event
 {
     static constexpr const char* NAME = "entTriggerEvent";
     static constexpr const char* ALIAS = "TriggerEvent";

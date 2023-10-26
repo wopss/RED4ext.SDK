@@ -22,7 +22,7 @@ struct CResource;
 
 namespace ent::dismemberment
 {
-struct WoundResource : ISerializable
+struct __declspec(align(0x10)) WoundResource : ISerializable
 {
     static constexpr const char* NAME = "entdismembermentWoundResource";
     static constexpr const char* ALIAS = NAME;

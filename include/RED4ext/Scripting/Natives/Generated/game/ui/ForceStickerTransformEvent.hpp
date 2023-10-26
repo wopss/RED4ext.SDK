@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::ui
 {
-struct ForceStickerTransformEvent : red::Event
+struct __declspec(align(0x10)) ForceStickerTransformEvent : red::Event
 {
     static constexpr const char* NAME = "gameuiForceStickerTransformEvent";
     static constexpr const char* ALIAS = "ForceStickerTransformEvent";

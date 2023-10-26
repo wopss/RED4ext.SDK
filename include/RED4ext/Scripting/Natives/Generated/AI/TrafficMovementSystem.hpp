@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace AI
 {
-struct TrafficMovementSystem : AI::ITrafficMovementSystem
+struct __declspec(align(0x10)) TrafficMovementSystem : AI::ITrafficMovementSystem
 {
     static constexpr const char* NAME = "AITrafficMovementSystem";
     static constexpr const char* ALIAS = NAME;

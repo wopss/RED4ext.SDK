@@ -18,7 +18,7 @@ struct CMesh;
 
 namespace ent
 {
-struct SkinnedClothComponent : ent::ISkinTargetComponent
+struct __declspec(align(0x10)) SkinnedClothComponent : ent::ISkinTargetComponent
 {
     static constexpr const char* NAME = "entSkinnedClothComponent";
     static constexpr const char* ALIAS = NAME;

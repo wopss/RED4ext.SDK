@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct CPhysicsDecorationResource : CMesh
+struct __declspec(align(0x10)) CPhysicsDecorationResource : CMesh
 {
     static constexpr const char* NAME = "CPhysicsDecorationResource";
     static constexpr const char* ALIAS = NAME;

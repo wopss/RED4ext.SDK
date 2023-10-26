@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct VehicleProxyBlendCamera : game::CameraComponent
+struct __declspec(align(0x10)) VehicleProxyBlendCamera : game::CameraComponent
 {
     static constexpr const char* NAME = "vehicleVehicleProxyBlendCamera";
     static constexpr const char* ALIAS = NAME;

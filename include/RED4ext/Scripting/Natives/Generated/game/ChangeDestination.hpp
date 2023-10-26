@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct ChangeDestination : game::ActionInternalEvent
+struct __declspec(align(0x10)) ChangeDestination : game::ActionInternalEvent
 {
     static constexpr const char* NAME = "gameChangeDestination";
     static constexpr const char* ALIAS = NAME;

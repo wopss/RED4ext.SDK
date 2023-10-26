@@ -15,7 +15,7 @@ namespace sense { struct SensorObject; }
 
 namespace sense
 {
-struct SensorObjectComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) SensorObjectComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "senseSensorObjectComponent";
     static constexpr const char* ALIAS = "SensorObjectComponent";

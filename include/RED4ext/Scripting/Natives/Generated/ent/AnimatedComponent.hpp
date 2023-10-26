@@ -24,7 +24,7 @@ namespace ent { struct AnimationControlBinding; }
 
 namespace ent
 {
-struct AnimatedComponent : ent::ISkinableComponent
+struct __declspec(align(0x10)) AnimatedComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entAnimatedComponent";
     static constexpr const char* ALIAS = "AnimatedComponent";

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct IKEvent : scn::SceneEvent
+struct __declspec(align(0x10)) IKEvent : scn::SceneEvent
 {
     static constexpr const char* NAME = "scnIKEvent";
     static constexpr const char* ALIAS = NAME;

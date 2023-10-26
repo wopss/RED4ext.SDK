@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct WorkspotSystem : world::IWorkspotSystem
+struct __declspec(align(0x10)) WorkspotSystem : world::IWorkspotSystem
 {
     static constexpr const char* NAME = "workWorkspotSystem";
     static constexpr const char* ALIAS = NAME;

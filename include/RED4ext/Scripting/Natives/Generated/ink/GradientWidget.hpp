@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct GradientWidget : ink::BaseShapeWidget
+struct __declspec(align(0x10)) GradientWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkGradientWidget";
     static constexpr const char* ALIAS = "inkGradient";

@@ -22,7 +22,7 @@ struct CMesh;
 
 namespace ent::dismemberment
 {
-struct MeshInfo
+struct __declspec(align(0x10)) MeshInfo
 {
     static constexpr const char* NAME = "entdismembermentMeshInfo";
     static constexpr const char* ALIAS = NAME;

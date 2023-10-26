@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-struct ColorBalance
+struct __declspec(align(0x10)) ColorBalance
 {
     static constexpr const char* NAME = "ColorBalance";
     static constexpr const char* ALIAS = NAME;

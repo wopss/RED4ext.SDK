@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimVariableTransform : anim::AnimVariable
+struct __declspec(align(0x10)) AnimVariableTransform : anim::AnimVariable
 {
     static constexpr const char* NAME = "animAnimVariableTransform";
     static constexpr const char* ALIAS = NAME;

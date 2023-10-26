@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct AudioEmitterComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) AudioEmitterComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameAudioEmitterComponent";
     static constexpr const char* ALIAS = "audioEmitter";

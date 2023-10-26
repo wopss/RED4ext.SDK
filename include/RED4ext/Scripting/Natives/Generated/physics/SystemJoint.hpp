@@ -21,7 +21,7 @@ namespace physics { struct PhysicalJointPin; }
 
 namespace physics
 {
-struct SystemJoint : physics::ISystemObject
+struct __declspec(align(0x10)) SystemJoint : physics::ISystemObject
 {
     static constexpr const char* NAME = "physicsSystemJoint";
     static constexpr const char* ALIAS = NAME;

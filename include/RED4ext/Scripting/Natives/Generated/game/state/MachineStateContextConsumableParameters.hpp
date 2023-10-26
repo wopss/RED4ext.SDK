@@ -21,7 +21,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineStateContextConsumableParameters
+struct __declspec(align(0x10)) MachineStateContextConsumableParameters
 {
     static constexpr const char* NAME = "gamestateMachineStateContextConsumableParameters";
     static constexpr const char* ALIAS = NAME;

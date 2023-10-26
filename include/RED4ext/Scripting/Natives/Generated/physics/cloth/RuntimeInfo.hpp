@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace physics::cloth
 {
-struct RuntimeInfo
+struct __declspec(align(0x10)) RuntimeInfo
 {
     static constexpr const char* NAME = "physicsclothRuntimeInfo";
     static constexpr const char* ALIAS = NAME;

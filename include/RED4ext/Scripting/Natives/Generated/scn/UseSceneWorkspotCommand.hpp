@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct UseSceneWorkspotCommand : AI::BaseUseWorkspotCommand
+struct __declspec(align(0x10)) UseSceneWorkspotCommand : AI::BaseUseWorkspotCommand
 {
     static constexpr const char* NAME = "scnUseSceneWorkspotCommand";
     static constexpr const char* ALIAS = NAME;

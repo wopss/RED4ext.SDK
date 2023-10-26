@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct RuntimeSystemFoliage : world::IRuntimeSystem
+struct __declspec(align(0x10)) RuntimeSystemFoliage : world::IRuntimeSystem
 {
     static constexpr const char* NAME = "worldRuntimeSystemFoliage";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct DestructibleProxyMeshNodeInstance : world::PrefabProxyMeshNodeInstance
+struct __declspec(align(0x10)) DestructibleProxyMeshNodeInstance : world::PrefabProxyMeshNodeInstance
 {
     static constexpr const char* NAME = "worldDestructibleProxyMeshNodeInstance";
     static constexpr const char* ALIAS = NAME;

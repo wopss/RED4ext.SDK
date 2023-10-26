@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticGpsLocationEntranceMarkerNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticGpsLocationEntranceMarkerNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticGpsLocationEntranceMarkerNodeInstance";
     static constexpr const char* ALIAS = NAME;

@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNode_SkAnimAdjuster : anim::AnimNode_SkAnim
+struct __declspec(align(0x10)) AnimNode_SkAnimAdjuster : anim::AnimNode_SkAnim
 {
     static constexpr const char* NAME = "animAnimNode_SkAnimAdjuster";
     static constexpr const char* ALIAS = NAME;

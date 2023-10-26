@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct TrafficLaneStreamed
+struct __declspec(align(0x10)) TrafficLaneStreamed
 {
     static constexpr const char* NAME = "worldTrafficLaneStreamed";
     static constexpr const char* ALIAS = NAME;

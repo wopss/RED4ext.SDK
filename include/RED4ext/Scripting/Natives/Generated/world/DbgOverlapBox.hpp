@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct DbgOverlapBox
+struct __declspec(align(0x10)) DbgOverlapBox
 {
     static constexpr const char* NAME = "worldDbgOverlapBox";
     static constexpr const char* ALIAS = NAME;

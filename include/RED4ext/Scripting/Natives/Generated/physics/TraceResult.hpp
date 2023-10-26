@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace physics
 {
-struct TraceResult
+struct __declspec(align(0x10)) TraceResult
 {
     static constexpr const char* NAME = "physicsTraceResult";
     static constexpr const char* ALIAS = "TraceResult";

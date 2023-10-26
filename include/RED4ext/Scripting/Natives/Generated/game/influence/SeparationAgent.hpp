@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::influence
 {
-struct SeparationAgent : game::influence::IAgent
+struct __declspec(align(0x10)) SeparationAgent : game::influence::IAgent
 {
     static constexpr const char* NAME = "gameinfluenceSeparationAgent";
     static constexpr const char* ALIAS = "InfluenceSeparationAgent";

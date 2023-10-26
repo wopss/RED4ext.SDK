@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct CyberspaceBoundaryNodeInstance : world::TriggerAreaNodeInstance
+struct __declspec(align(0x10)) CyberspaceBoundaryNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "gameCyberspaceBoundaryNodeInstance";
     static constexpr const char* ALIAS = NAME;

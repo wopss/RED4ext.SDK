@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace game::projectile
 {
-struct SpawnComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) SpawnComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameprojectileSpawnComponent";
     static constexpr const char* ALIAS = "ProjectileSpawnComponent";

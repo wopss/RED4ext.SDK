@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticSoundEmitterNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticSoundEmitterNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticSoundEmitterNodeInstance";
     static constexpr const char* ALIAS = NAME;

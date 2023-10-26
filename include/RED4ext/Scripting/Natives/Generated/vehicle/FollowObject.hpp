@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct FollowObject
+struct __declspec(align(0x10)) FollowObject
 {
     static constexpr const char* NAME = "vehicleFollowObject";
     static constexpr const char* ALIAS = NAME;

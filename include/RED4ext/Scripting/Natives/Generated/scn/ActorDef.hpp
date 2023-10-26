@@ -32,7 +32,7 @@ struct CResource;
 
 namespace scn
 {
-struct ActorDef
+struct __declspec(align(0x10)) ActorDef
 {
     static constexpr const char* NAME = "scnActorDef";
     static constexpr const char* ALIAS = NAME;

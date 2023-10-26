@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct FixedCapsule
+struct __declspec(align(0x10)) FixedCapsule
 {
     static constexpr const char* NAME = "FixedCapsule";
     static constexpr const char* ALIAS = NAME;

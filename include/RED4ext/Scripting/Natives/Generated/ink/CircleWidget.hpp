@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct CircleWidget : ink::BaseShapeWidget
+struct __declspec(align(0x10)) CircleWidget : ink::BaseShapeWidget
 {
     static constexpr const char* NAME = "inkCircleWidget";
     static constexpr const char* ALIAS = "inkCircle";

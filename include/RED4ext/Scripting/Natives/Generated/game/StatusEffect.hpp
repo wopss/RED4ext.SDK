@@ -18,7 +18,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct StatusEffect : game::StatusEffectBase
+struct __declspec(align(0x10)) StatusEffect : game::StatusEffectBase
 {
     static constexpr const char* NAME = "gameStatusEffect";
     static constexpr const char* ALIAS = "StatusEffect";

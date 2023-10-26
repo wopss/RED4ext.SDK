@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct Debug_ShapeComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) Debug_ShapeComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entDebug_ShapeComponent";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct World : world::Prefab
+struct __declspec(align(0x10)) World : world::Prefab
 {
     static constexpr const char* NAME = "worldWorld";
     static constexpr const char* ALIAS = NAME;

@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace interop
 {
-struct ReExportOptions
+struct __declspec(align(0x10)) ReExportOptions
 {
     static constexpr const char* NAME = "interopReExportOptions";
     static constexpr const char* ALIAS = NAME;

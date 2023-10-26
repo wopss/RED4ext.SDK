@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct StaticStickerNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) StaticStickerNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldStaticStickerNodeInstance";
     static constexpr const char* ALIAS = NAME;

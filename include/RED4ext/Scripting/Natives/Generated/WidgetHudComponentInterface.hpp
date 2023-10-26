@@ -16,7 +16,7 @@ struct CMaterialTemplate;
 namespace ink { struct HudEntriesResource; }
 namespace world::ui { struct MeshTargetBinding; }
 
-struct WidgetHudComponentInterface : WidgetBaseComponent
+struct __declspec(align(0x10)) WidgetHudComponentInterface : WidgetBaseComponent
 {
     static constexpr const char* NAME = "WidgetHudComponentInterface";
     static constexpr const char* ALIAS = NAME;

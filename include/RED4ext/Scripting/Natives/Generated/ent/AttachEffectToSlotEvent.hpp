@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct AttachEffectToSlotEvent : ent::AttachEffectEvent
+struct __declspec(align(0x10)) AttachEffectToSlotEvent : ent::AttachEffectEvent
 {
     static constexpr const char* NAME = "entAttachEffectToSlotEvent";
     static constexpr const char* ALIAS = NAME;

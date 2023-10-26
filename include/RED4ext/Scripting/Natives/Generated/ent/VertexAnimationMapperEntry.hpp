@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct VertexAnimationMapperEntry
+struct __declspec(align(0x10)) VertexAnimationMapperEntry
 {
     static constexpr const char* NAME = "entVertexAnimationMapperEntry";
     static constexpr const char* ALIAS = NAME;

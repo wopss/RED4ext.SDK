@@ -11,7 +11,7 @@
 
 namespace RED4ext
 {
-struct QsTransform
+struct __declspec(align(0x10)) QsTransform
 {
     static constexpr const char* NAME = "QsTransform";
     static constexpr const char* ALIAS = NAME;

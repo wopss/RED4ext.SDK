@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct BorderWidget : ink::LeafWidget
+struct __declspec(align(0x10)) BorderWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkBorderWidget";
     static constexpr const char* ALIAS = "inkBorder";

@@ -18,7 +18,7 @@ namespace game { struct Object; }
 
 namespace game
 {
-struct PingEntry
+struct __declspec(align(0x10)) PingEntry
 {
     static constexpr const char* NAME = "gamePingEntry";
     static constexpr const char* ALIAS = NAME;

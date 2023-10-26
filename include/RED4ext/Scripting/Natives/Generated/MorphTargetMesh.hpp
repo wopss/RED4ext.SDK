@@ -20,7 +20,7 @@ struct CMesh;
 struct IRenderResourceBlob;
 struct ITexture;
 
-struct MorphTargetMesh : res::StreamedResource
+struct __declspec(align(0x10)) MorphTargetMesh : res::StreamedResource
 {
     static constexpr const char* NAME = "MorphTargetMesh";
     static constexpr const char* ALIAS = NAME;

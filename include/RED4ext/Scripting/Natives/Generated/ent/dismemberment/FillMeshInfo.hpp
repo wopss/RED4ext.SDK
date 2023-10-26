@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace ent::dismemberment
 {
-struct FillMeshInfo : ent::dismemberment::MeshInfo
+struct __declspec(align(0x10)) FillMeshInfo : ent::dismemberment::MeshInfo
 {
     static constexpr const char* NAME = "entdismembermentFillMeshInfo";
     static constexpr const char* ALIAS = NAME;

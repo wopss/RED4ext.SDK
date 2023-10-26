@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct PhysicalImpulseAreaComponent : ent::PhysicalTriggerComponent
+struct __declspec(align(0x10)) PhysicalImpulseAreaComponent : ent::PhysicalTriggerComponent
 {
     static constexpr const char* NAME = "entPhysicalImpulseAreaComponent";
     static constexpr const char* ALIAS = NAME;

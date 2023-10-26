@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimFeature_HitReactionsData : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_HitReactionsData : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_HitReactionsData";
     static constexpr const char* ALIAS = "AnimFeature_HitReactionsData";

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct InteriorAreaNodeInstance : world::TriggerAreaNodeInstance
+struct __declspec(align(0x10)) InteriorAreaNodeInstance : world::TriggerAreaNodeInstance
 {
     static constexpr const char* NAME = "worldInteriorAreaNodeInstance";
     static constexpr const char* ALIAS = NAME;

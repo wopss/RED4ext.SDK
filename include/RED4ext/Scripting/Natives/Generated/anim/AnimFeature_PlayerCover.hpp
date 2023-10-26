@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimFeature_PlayerCover : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_PlayerCover : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_PlayerCover";
     static constexpr const char* ALIAS = "AnimFeature_PlayerCover";

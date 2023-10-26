@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct BaseShapeWidget : ink::LeafWidget
+struct __declspec(align(0x10)) BaseShapeWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkBaseShapeWidget";
     static constexpr const char* ALIAS = "inkBaseShape";

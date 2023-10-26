@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct ISkinableComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) ISkinableComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entISkinableComponent";
     static constexpr const char* ALIAS = "ISkinableComponent";

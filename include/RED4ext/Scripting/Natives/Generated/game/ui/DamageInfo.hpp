@@ -18,7 +18,7 @@ namespace game::ui { struct DamageInfoUserData; }
 
 namespace game::ui
 {
-struct DamageInfo
+struct __declspec(align(0x10)) DamageInfo
 {
     static constexpr const char* NAME = "gameuiDamageInfo";
     static constexpr const char* ALIAS = "DamageInfo";

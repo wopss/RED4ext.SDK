@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimFeature_PlayerSpatialAwareness : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_PlayerSpatialAwareness : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_PlayerSpatialAwareness";
     static constexpr const char* ALIAS = "AnimFeature_PlayerSpatialAwareness";

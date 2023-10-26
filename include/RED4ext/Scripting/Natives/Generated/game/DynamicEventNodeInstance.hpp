@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct DynamicEventNodeInstance : world::AreaShapeNodeInstance
+struct __declspec(align(0x10)) DynamicEventNodeInstance : world::AreaShapeNodeInstance
 {
     static constexpr const char* NAME = "gameDynamicEventNodeInstance";
     static constexpr const char* ALIAS = NAME;

@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct MeleeAttackData : IScriptable
+struct __declspec(align(0x10)) MeleeAttackData : IScriptable
 {
     static constexpr const char* NAME = "gameMeleeAttackData";
     static constexpr const char* ALIAS = "MeleeAttackData";

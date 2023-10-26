@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::interactions
 {
-struct TargetFilterResult_Logical : game::targeting::SystemTargetFilterResult
+struct __declspec(align(0x10)) TargetFilterResult_Logical : game::targeting::SystemTargetFilterResult
 {
     static constexpr const char* NAME = "gameinteractionsTargetFilterResult_Logical";
     static constexpr const char* ALIAS = "TargetFilterResult_Logical";

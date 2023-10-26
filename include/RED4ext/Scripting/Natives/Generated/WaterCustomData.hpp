@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct WaterCustomData : ICameraStorageCustomData
+struct __declspec(align(0x10)) WaterCustomData : ICameraStorageCustomData
 {
     static constexpr const char* NAME = "WaterCustomData";
     static constexpr const char* ALIAS = NAME;

@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct CacheWidget : ink::CompoundWidget
+struct __declspec(align(0x10)) CacheWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkCacheWidget";
     static constexpr const char* ALIAS = NAME;

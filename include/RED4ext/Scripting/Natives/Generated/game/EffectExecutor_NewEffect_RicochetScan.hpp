@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct EffectExecutor_NewEffect_RicochetScan : game::EffectExecutor_NewEffect
+struct __declspec(align(0x10)) EffectExecutor_NewEffect_RicochetScan : game::EffectExecutor_NewEffect
 {
     static constexpr const char* NAME = "gameEffectExecutor_NewEffect_RicochetScan";
     static constexpr const char* ALIAS = NAME;

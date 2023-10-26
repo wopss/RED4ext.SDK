@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct MergedMesh : CMesh
+struct __declspec(align(0x10)) MergedMesh : CMesh
 {
     static constexpr const char* NAME = "MergedMesh";
     static constexpr const char* ALIAS = NAME;

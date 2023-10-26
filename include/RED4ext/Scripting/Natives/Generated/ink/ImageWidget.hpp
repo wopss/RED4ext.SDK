@@ -21,7 +21,7 @@ namespace ink { struct TextureAtlas; }
 
 namespace ink
 {
-struct ImageWidget : ink::LeafWidget
+struct __declspec(align(0x10)) ImageWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkImageWidget";
     static constexpr const char* ALIAS = "inkImage";

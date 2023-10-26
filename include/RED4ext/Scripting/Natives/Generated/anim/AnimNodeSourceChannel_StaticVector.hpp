@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNodeSourceChannel_StaticVector : anim::IAnimNodeSourceChannel_Vector
+struct __declspec(align(0x10)) AnimNodeSourceChannel_StaticVector : anim::IAnimNodeSourceChannel_Vector
 {
     static constexpr const char* NAME = "animAnimNodeSourceChannel_StaticVector";
     static constexpr const char* ALIAS = NAME;

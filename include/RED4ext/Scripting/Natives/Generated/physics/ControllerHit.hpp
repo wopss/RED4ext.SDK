@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace physics
 {
-struct ControllerHit
+struct __declspec(align(0x10)) ControllerHit
 {
     static constexpr const char* NAME = "physicsControllerHit";
     static constexpr const char* ALIAS = "ControllerHit";

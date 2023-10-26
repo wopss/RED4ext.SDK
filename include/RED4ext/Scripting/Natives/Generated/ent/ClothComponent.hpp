@@ -15,7 +15,7 @@ struct CMesh;
 
 namespace ent
 {
-struct ClothComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) ClothComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entClothComponent";
     static constexpr const char* ALIAS = NAME;

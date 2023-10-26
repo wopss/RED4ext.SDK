@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::ui
 {
-struct UIIconsGeneratorSystem : game::ui::IUIIconsGeneratorSystem
+struct __declspec(align(0x10)) UIIconsGeneratorSystem : game::ui::IUIIconsGeneratorSystem
 {
     static constexpr const char* NAME = "gameuiUIIconsGeneratorSystem";
     static constexpr const char* ALIAS = "UIIconsGeneratorSystem";

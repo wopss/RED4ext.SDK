@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct SetupWorkspotActionEvent : sense::StimuliData
+struct __declspec(align(0x10)) SetupWorkspotActionEvent : sense::StimuliData
 {
     static constexpr const char* NAME = "gameSetupWorkspotActionEvent";
     static constexpr const char* ALIAS = "SetupWorkspotActionEvent";

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct Screenshot360CameraComponent : game::CameraComponent
+struct __declspec(align(0x10)) Screenshot360CameraComponent : game::CameraComponent
 {
     static constexpr const char* NAME = "gameScreenshot360CameraComponent";
     static constexpr const char* ALIAS = NAME;

@@ -15,7 +15,7 @@ namespace game { struct EffectSet; }
 
 namespace game::weapon
 {
-struct Object : game::ItemObject
+struct __declspec(align(0x10)) Object : game::ItemObject
 {
     static constexpr const char* NAME = "gameweaponObject";
     static constexpr const char* ALIAS = "WeaponObject";

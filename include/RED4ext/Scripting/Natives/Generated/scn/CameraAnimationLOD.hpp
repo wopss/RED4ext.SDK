@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct CameraAnimationLOD
+struct __declspec(align(0x10)) CameraAnimationLOD
 {
     static constexpr const char* NAME = "scnCameraAnimationLOD";
     static constexpr const char* ALIAS = NAME;

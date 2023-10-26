@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct FogVolumeComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) FogVolumeComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entFogVolumeComponent";
     static constexpr const char* ALIAS = NAME;

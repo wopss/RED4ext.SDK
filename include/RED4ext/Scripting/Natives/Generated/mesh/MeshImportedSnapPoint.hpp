@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace mesh
 {
-struct MeshImportedSnapPoint : ISerializable
+struct __declspec(align(0x10)) MeshImportedSnapPoint : ISerializable
 {
     static constexpr const char* NAME = "meshMeshImportedSnapPoint";
     static constexpr const char* ALIAS = NAME;

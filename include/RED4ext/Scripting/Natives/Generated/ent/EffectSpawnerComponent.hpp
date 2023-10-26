@@ -16,7 +16,7 @@ namespace ent { struct EffectDesc; }
 
 namespace ent
 {
-struct EffectSpawnerComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) EffectSpawnerComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entEffectSpawnerComponent";
     static constexpr const char* ALIAS = NAME;

@@ -15,7 +15,7 @@ namespace game::projectile { struct TrajectoryParams; }
 
 namespace game::projectile
 {
-struct SetUpAndLaunchEvent : game::projectile::LaunchEvent
+struct __declspec(align(0x10)) SetUpAndLaunchEvent : game::projectile::LaunchEvent
 {
     static constexpr const char* NAME = "gameprojectileSetUpAndLaunchEvent";
     static constexpr const char* ALIAS = NAME;

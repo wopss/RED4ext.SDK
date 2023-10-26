@@ -28,7 +28,7 @@ struct CIESDataResource;
 
 namespace ent
 {
-struct LightComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) LightComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightComponent";
     static constexpr const char* ALIAS = "LightComponent";

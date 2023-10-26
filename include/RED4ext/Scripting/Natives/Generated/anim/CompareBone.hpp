@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct CompareBone
+struct __declspec(align(0x10)) CompareBone
 {
     static constexpr const char* NAME = "animCompareBone";
     static constexpr const char* ALIAS = NAME;

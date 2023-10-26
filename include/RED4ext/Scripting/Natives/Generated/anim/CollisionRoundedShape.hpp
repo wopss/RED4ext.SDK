@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct CollisionRoundedShape
+struct __declspec(align(0x10)) CollisionRoundedShape
 {
     static constexpr const char* NAME = "animCollisionRoundedShape";
     static constexpr const char* ALIAS = NAME;

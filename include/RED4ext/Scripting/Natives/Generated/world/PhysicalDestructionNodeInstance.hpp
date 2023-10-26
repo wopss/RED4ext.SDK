@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct PhysicalDestructionNodeInstance : world::SnappableNodeInstance
+struct __declspec(align(0x10)) PhysicalDestructionNodeInstance : world::SnappableNodeInstance
 {
     static constexpr const char* NAME = "worldPhysicalDestructionNodeInstance";
     static constexpr const char* ALIAS = NAME;

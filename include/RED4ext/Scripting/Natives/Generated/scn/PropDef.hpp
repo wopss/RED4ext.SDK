@@ -25,7 +25,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct PropDef
+struct __declspec(align(0x10)) PropDef
 {
     static constexpr const char* NAME = "scnPropDef";
     static constexpr const char* ALIAS = NAME;

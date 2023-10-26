@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineConsumableParameterVector : game::state::MachineActionParameterVector
+struct __declspec(align(0x10)) MachineConsumableParameterVector : game::state::MachineActionParameterVector
 {
     static constexpr const char* NAME = "gamestateMachineConsumableParameterVector";
     static constexpr const char* ALIAS = "ConsumableParameterVector";

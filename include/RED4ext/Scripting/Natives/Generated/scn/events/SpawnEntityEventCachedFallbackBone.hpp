@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace scn::events
 {
-struct SpawnEntityEventCachedFallbackBone
+struct __declspec(align(0x10)) SpawnEntityEventCachedFallbackBone
 {
     static constexpr const char* NAME = "scneventsSpawnEntityEventCachedFallbackBone";
     static constexpr const char* ALIAS = NAME;

@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineparameterTypeLadderDescription : IScriptable
+struct __declspec(align(0x10)) MachineparameterTypeLadderDescription : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeLadderDescription";
     static constexpr const char* ALIAS = "LadderDescription";

@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace cp
 {
-struct ConveyorLine
+struct __declspec(align(0x10)) ConveyorLine
 {
     static constexpr const char* NAME = "cpConveyorLine";
     static constexpr const char* ALIAS = NAME;

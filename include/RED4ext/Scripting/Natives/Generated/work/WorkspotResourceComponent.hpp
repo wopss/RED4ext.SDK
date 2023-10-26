@@ -16,7 +16,7 @@ namespace work { struct WorkspotResource; }
 
 namespace work
 {
-struct WorkspotResourceComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) WorkspotResourceComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "workWorkspotResourceComponent";
     static constexpr const char* ALIAS = "WorkspotResourceComponent";

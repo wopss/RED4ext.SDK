@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimNode_FloorIk : anim::AnimNode_FloorIkBase
+struct __declspec(align(0x10)) AnimNode_FloorIk : anim::AnimNode_FloorIkBase
 {
     static constexpr const char* NAME = "animAnimNode_FloorIk";
     static constexpr const char* ALIAS = NAME;

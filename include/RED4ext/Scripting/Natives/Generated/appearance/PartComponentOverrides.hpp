@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace appearance
 {
-struct PartComponentOverrides
+struct __declspec(align(0x10)) PartComponentOverrides
 {
     static constexpr const char* NAME = "appearancePartComponentOverrides";
     static constexpr const char* ALIAS = NAME;

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 struct IEvaluatorFloat;
 
-struct CParticleInitializerSpawnCircle : IParticleInitializer
+struct __declspec(align(0x10)) CParticleInitializerSpawnCircle : IParticleInitializer
 {
     static constexpr const char* NAME = "CParticleInitializerSpawnCircle";
     static constexpr const char* ALIAS = NAME;

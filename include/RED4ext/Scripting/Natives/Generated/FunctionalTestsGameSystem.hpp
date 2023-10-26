@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct FunctionalTestsGameSystem : FunctionalTestsIGameSystem
+struct __declspec(align(0x10)) FunctionalTestsGameSystem : FunctionalTestsIGameSystem
 {
     static constexpr const char* NAME = "FunctionalTestsGameSystem";
     static constexpr const char* ALIAS = NAME;

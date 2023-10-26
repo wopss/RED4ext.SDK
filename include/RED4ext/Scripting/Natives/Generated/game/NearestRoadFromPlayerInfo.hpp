@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct NearestRoadFromPlayerInfo
+struct __declspec(align(0x10)) NearestRoadFromPlayerInfo
 {
     static constexpr const char* NAME = "gameNearestRoadFromPlayerInfo";
     static constexpr const char* ALIAS = "NearestRoadFromPlayerInfo";

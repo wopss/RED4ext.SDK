@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct DistantGINodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) DistantGINodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldDistantGINodeInstance";
     static constexpr const char* ALIAS = NAME;

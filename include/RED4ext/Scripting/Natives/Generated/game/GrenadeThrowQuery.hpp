@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct GrenadeThrowQuery
+struct __declspec(align(0x10)) GrenadeThrowQuery
 {
     static constexpr const char* NAME = "gameGrenadeThrowQuery";
     static constexpr const char* ALIAS = NAME;

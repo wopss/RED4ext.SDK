@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game::audio
 {
-struct SoundComponentBase : ent::IPlacedComponent
+struct __declspec(align(0x10)) SoundComponentBase : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameaudioSoundComponentBase";
     static constexpr const char* ALIAS = "SoundComponentBase";

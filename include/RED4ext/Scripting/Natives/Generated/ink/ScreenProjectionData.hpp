@@ -18,7 +18,7 @@ namespace ent { struct Entity; }
 
 namespace ink
 {
-struct ScreenProjectionData
+struct __declspec(align(0x10)) ScreenProjectionData
 {
     static constexpr const char* NAME = "inkScreenProjectionData";
     static constexpr const char* ALIAS = NAME;

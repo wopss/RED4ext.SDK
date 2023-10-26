@@ -17,7 +17,7 @@ namespace ink { struct MultiChildren; }
 
 namespace ink
 {
-struct CompoundWidget : ink::Widget
+struct __declspec(align(0x10)) CompoundWidget : ink::Widget
 {
     static constexpr const char* NAME = "inkCompoundWidget";
     static constexpr const char* ALIAS = NAME;

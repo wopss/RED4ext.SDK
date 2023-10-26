@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::state
 {
-struct MachineparameterTypeClimbParametersBase : IScriptable
+struct __declspec(align(0x10)) MachineparameterTypeClimbParametersBase : IScriptable
 {
     static constexpr const char* NAME = "gamestateMachineparameterTypeClimbParametersBase";
     static constexpr const char* ALIAS = "ClimbParametersBase";

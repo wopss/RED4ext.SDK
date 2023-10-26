@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct BasePanelWidget : ink::CompoundWidget
+struct __declspec(align(0x10)) BasePanelWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkBasePanelWidget";
     static constexpr const char* ALIAS = "inkBasePanel";

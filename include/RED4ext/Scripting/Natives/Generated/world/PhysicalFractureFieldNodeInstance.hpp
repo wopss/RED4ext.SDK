@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct PhysicalFractureFieldNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) PhysicalFractureFieldNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldPhysicalFractureFieldNodeInstance";
     static constexpr const char* ALIAS = NAME;

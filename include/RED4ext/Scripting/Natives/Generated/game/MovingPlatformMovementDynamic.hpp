@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct MovingPlatformMovementDynamic : game::IMovingPlatformMovementPointToPoint
+struct __declspec(align(0x10)) MovingPlatformMovementDynamic : game::IMovingPlatformMovementPointToPoint
 {
     static constexpr const char* NAME = "gameMovingPlatformMovementDynamic";
     static constexpr const char* ALIAS = "MovingPlatformMovementDynamic";

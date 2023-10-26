@@ -19,7 +19,7 @@ namespace world { struct StreamingSector; }
 
 namespace world
 {
-struct StreamingSectorDescriptor
+struct __declspec(align(0x10)) StreamingSectorDescriptor
 {
     static constexpr const char* NAME = "worldStreamingSectorDescriptor";
     static constexpr const char* ALIAS = NAME;

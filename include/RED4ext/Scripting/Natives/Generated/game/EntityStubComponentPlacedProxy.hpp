@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct EntityStubComponentPlacedProxy : ent::IPlacedComponent
+struct __declspec(align(0x10)) EntityStubComponentPlacedProxy : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "gameEntityStubComponentPlacedProxy";
     static constexpr const char* ALIAS = NAME;

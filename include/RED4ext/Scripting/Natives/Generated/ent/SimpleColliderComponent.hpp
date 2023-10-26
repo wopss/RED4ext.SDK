@@ -18,7 +18,7 @@ namespace physics { struct ICollider; }
 
 namespace ent
 {
-struct SimpleColliderComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) SimpleColliderComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entSimpleColliderComponent";
     static constexpr const char* ALIAS = "SimpleColliderComponent";

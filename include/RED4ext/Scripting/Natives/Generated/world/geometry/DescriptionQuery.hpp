@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace world::geometry
 {
-struct DescriptionQuery : IScriptable
+struct __declspec(align(0x10)) DescriptionQuery : IScriptable
 {
     static constexpr const char* NAME = "worldgeometryDescriptionQuery";
     static constexpr const char* ALIAS = "GeometryDescriptionQuery";

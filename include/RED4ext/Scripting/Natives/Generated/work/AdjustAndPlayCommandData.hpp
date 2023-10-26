@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct AdjustAndPlayCommandData : work::IWorkspotCommandData
+struct __declspec(align(0x10)) AdjustAndPlayCommandData : work::IWorkspotCommandData
 {
     static constexpr const char* NAME = "workAdjustAndPlayCommandData";
     static constexpr const char* ALIAS = NAME;

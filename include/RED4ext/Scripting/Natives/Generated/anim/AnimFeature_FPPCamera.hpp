@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct AnimFeature_FPPCamera : anim::AnimFeature
+struct __declspec(align(0x10)) AnimFeature_FPPCamera : anim::AnimFeature
 {
     static constexpr const char* NAME = "animAnimFeature_FPPCamera";
     static constexpr const char* ALIAS = "AnimFeature_FPPCamera";

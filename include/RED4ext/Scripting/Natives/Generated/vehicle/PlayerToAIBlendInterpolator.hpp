@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace vehicle
 {
-struct PlayerToAIBlendInterpolator
+struct __declspec(align(0x10)) PlayerToAIBlendInterpolator
 {
     static constexpr const char* NAME = "vehiclePlayerToAIBlendInterpolator";
     static constexpr const char* ALIAS = NAME;

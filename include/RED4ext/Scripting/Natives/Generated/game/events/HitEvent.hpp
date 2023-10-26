@@ -21,7 +21,7 @@ namespace game::damage { struct AttackData; }
 
 namespace game::events
 {
-struct HitEvent : red::Event
+struct __declspec(align(0x10)) HitEvent : red::Event
 {
     static constexpr const char* NAME = "gameeventsHitEvent";
     static constexpr const char* ALIAS = "gameHitEvent";

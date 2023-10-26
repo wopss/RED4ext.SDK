@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct RaceSplineNode : world::SpeedSplineNode
+struct __declspec(align(0x10)) RaceSplineNode : world::SpeedSplineNode
 {
     static constexpr const char* NAME = "worldRaceSplineNode";
     static constexpr const char* ALIAS = NAME;

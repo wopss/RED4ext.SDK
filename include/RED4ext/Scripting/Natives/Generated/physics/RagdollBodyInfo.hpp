@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace physics
 {
-struct RagdollBodyInfo
+struct __declspec(align(0x10)) RagdollBodyInfo
 {
     static constexpr const char* NAME = "physicsRagdollBodyInfo";
     static constexpr const char* ALIAS = NAME;

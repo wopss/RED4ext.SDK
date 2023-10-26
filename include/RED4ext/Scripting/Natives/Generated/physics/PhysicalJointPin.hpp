@@ -17,7 +17,7 @@ namespace physics { struct ISystemObject; }
 
 namespace physics
 {
-struct PhysicalJointPin : ISerializable
+struct __declspec(align(0x10)) PhysicalJointPin : ISerializable
 {
     static constexpr const char* NAME = "physicsPhysicalJointPin";
     static constexpr const char* ALIAS = NAME;

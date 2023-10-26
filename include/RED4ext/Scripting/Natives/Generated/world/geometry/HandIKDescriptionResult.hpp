@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world::geometry
 {
-struct HandIKDescriptionResult
+struct __declspec(align(0x10)) HandIKDescriptionResult
 {
     static constexpr const char* NAME = "worldgeometryHandIKDescriptionResult";
     static constexpr const char* ALIAS = "HandIKDescriptionResult";

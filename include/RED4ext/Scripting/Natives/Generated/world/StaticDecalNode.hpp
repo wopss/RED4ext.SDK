@@ -19,7 +19,7 @@ struct IMaterial;
 
 namespace world
 {
-struct StaticDecalNode : world::Node
+struct __declspec(align(0x10)) StaticDecalNode : world::Node
 {
     static constexpr const char* NAME = "worldStaticDecalNode";
     static constexpr const char* ALIAS = NAME;

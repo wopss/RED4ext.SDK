@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace move
 {
-struct PoliciesContractMoveToWorkspot : move::PoliciesContract
+struct __declspec(align(0x10)) PoliciesContractMoveToWorkspot : move::PoliciesContract
 {
     static constexpr const char* NAME = "movePoliciesContractMoveToWorkspot";
     static constexpr const char* ALIAS = NAME;

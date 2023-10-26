@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct UniformGridWidget : ink::CompoundWidget
+struct __declspec(align(0x10)) UniformGridWidget : ink::CompoundWidget
 {
     static constexpr const char* NAME = "inkUniformGridWidget";
     static constexpr const char* ALIAS = "inkUniformGrid";

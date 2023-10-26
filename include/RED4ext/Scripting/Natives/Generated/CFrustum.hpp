@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-struct CFrustum
+struct __declspec(align(0x10)) CFrustum
 {
     static constexpr const char* NAME = "CFrustum";
     static constexpr const char* ALIAS = "Frustum";

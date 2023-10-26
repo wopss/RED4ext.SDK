@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct PlacedComponentPositionProvider : ent::IPositionProvider
+struct __declspec(align(0x10)) PlacedComponentPositionProvider : ent::IPositionProvider
 {
     static constexpr const char* NAME = "entPlacedComponentPositionProvider";
     static constexpr const char* ALIAS = NAME;

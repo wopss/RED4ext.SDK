@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct VectorFieldComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) VectorFieldComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entVectorFieldComponent";
     static constexpr const char* ALIAS = NAME;

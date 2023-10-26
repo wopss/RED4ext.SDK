@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace physics::cloth
 {
-struct State
+struct __declspec(align(0x10)) State
 {
     static constexpr const char* NAME = "physicsclothState";
     static constexpr const char* ALIAS = NAME;

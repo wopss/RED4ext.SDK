@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct PoseCorrectionGroup
+struct __declspec(align(0x10)) PoseCorrectionGroup
 {
     static constexpr const char* NAME = "animPoseCorrectionGroup";
     static constexpr const char* ALIAS = NAME;

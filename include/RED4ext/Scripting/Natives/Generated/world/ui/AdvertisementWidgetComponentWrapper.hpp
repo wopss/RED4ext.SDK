@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world::ui
 {
-struct AdvertisementWidgetComponentWrapper : ink::IAdvertisementWidgetComponentWrapper
+struct __declspec(align(0x10)) AdvertisementWidgetComponentWrapper : ink::IAdvertisementWidgetComponentWrapper
 {
     static constexpr const char* NAME = "worlduiAdvertisementWidgetComponentWrapper";
     static constexpr const char* ALIAS = NAME;

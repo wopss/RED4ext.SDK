@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct ChaseSpawnComponent : ent::IComponent
+struct __declspec(align(0x10)) ChaseSpawnComponent : ent::IComponent
 {
     static constexpr const char* NAME = "gameChaseSpawnComponent";
     static constexpr const char* ALIAS = NAME;

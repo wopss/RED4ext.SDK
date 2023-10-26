@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct LightBlockingComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) LightBlockingComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entLightBlockingComponent";
     static constexpr const char* ALIAS = NAME;

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct VirtualCameraViewComponent : ent::IVisualComponent
+struct __declspec(align(0x10)) VirtualCameraViewComponent : ent::IVisualComponent
 {
     static constexpr const char* NAME = "entVirtualCameraViewComponent";
     static constexpr const char* ALIAS = "VirtualCameraViewComponent";

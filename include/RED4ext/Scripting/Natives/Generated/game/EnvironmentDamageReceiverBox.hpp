@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct EnvironmentDamageReceiverBox : game::EnvironmentDamageReceiverShape
+struct __declspec(align(0x10)) EnvironmentDamageReceiverBox : game::EnvironmentDamageReceiverShape
 {
     static constexpr const char* NAME = "gameEnvironmentDamageReceiverBox";
     static constexpr const char* ALIAS = NAME;

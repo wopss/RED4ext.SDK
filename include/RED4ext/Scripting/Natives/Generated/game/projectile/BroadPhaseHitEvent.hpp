@@ -18,7 +18,7 @@ namespace ent { struct IComponent; }
 
 namespace game::projectile
 {
-struct BroadPhaseHitEvent : red::Event
+struct __declspec(align(0x10)) BroadPhaseHitEvent : red::Event
 {
     static constexpr const char* NAME = "gameprojectileBroadPhaseHitEvent";
     static constexpr const char* ALIAS = NAME;

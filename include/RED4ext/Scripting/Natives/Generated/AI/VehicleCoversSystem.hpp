@@ -17,9 +17,9 @@ struct VehicleCoversSystem : AI::IVehicleCoversSystem
     static constexpr const char* NAME = "AIVehicleCoversSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x88 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleCoversSystem, 0x88);
+RED4EXT_ASSERT_SIZE(VehicleCoversSystem, 0x90);
 } // namespace AI
 using AIVehicleCoversSystem = AI::VehicleCoversSystem;
 } // namespace RED4ext

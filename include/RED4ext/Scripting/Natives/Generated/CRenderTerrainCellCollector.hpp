@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct CRenderTerrainCellCollector : ISceneStorageCustomData
+struct __declspec(align(0x10)) CRenderTerrainCellCollector : ISceneStorageCustomData
 {
     static constexpr const char* NAME = "CRenderTerrainCellCollector";
     static constexpr const char* ALIAS = NAME;

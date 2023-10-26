@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace anim
 {
-struct SetBoneTransformEntry
+struct __declspec(align(0x10)) SetBoneTransformEntry
 {
     static constexpr const char* NAME = "animSetBoneTransformEntry";
     static constexpr const char* ALIAS = NAME;

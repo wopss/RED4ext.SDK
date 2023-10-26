@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world::ui
 {
-struct ViewportWidget : ink::CanvasWidget
+struct __declspec(align(0x10)) ViewportWidget : ink::CanvasWidget
 {
     static constexpr const char* NAME = "worlduiViewportWidget";
     static constexpr const char* ALIAS = "ViewportWidget";

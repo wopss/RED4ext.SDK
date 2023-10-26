@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct EffectInstance : game::IEffect
+struct __declspec(align(0x10)) EffectInstance : game::IEffect
 {
     static constexpr const char* NAME = "gameEffectInstance";
     static constexpr const char* ALIAS = "EffectInstance";

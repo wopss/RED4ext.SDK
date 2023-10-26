@@ -16,7 +16,7 @@ namespace RED4ext
 struct CBitmapTexture;
 namespace ink { struct WidgetLibraryResource; }
 
-struct WorldWidgetComponent : IWorldWidgetComponent
+struct __declspec(align(0x10)) WorldWidgetComponent : IWorldWidgetComponent
 {
     static constexpr const char* NAME = "WorldWidgetComponent";
     static constexpr const char* ALIAS = NAME;

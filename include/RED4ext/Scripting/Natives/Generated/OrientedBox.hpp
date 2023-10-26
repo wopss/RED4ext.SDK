@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct OrientedBox
+struct __declspec(align(0x10)) OrientedBox
 {
     static constexpr const char* NAME = "OrientedBox";
     static constexpr const char* ALIAS = NAME;

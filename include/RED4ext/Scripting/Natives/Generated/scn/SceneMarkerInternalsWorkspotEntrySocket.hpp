@@ -13,7 +13,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct SceneMarkerInternalsWorkspotEntrySocket
+struct __declspec(align(0x10)) SceneMarkerInternalsWorkspotEntrySocket
 {
     static constexpr const char* NAME = "scnSceneMarkerInternalsWorkspotEntrySocket";
     static constexpr const char* ALIAS = NAME;

@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PuppetTriggerDestructionComponent : game::ITriggerDestructionComponent
+struct __declspec(align(0x10)) PuppetTriggerDestructionComponent : game::ITriggerDestructionComponent
 {
     static constexpr const char* NAME = "gamePuppetTriggerDestructionComponent";
     static constexpr const char* ALIAS = NAME;

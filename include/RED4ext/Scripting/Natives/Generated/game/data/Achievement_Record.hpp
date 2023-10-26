@@ -17,9 +17,9 @@ struct Achievement_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataAchievement_Record";
     static constexpr const char* ALIAS = "Achievement_Record";
 
-    uint8_t unk48[0xB0 - 0x48]; // 48
+    uint8_t unk48[0xC8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(Achievement_Record, 0xB0);
+RED4EXT_ASSERT_SIZE(Achievement_Record, 0xC8);
 } // namespace game::data
 using gamedataAchievement_Record = game::data::Achievement_Record;
 using Achievement_Record = game::data::Achievement_Record;

@@ -17,7 +17,7 @@ namespace anim { struct LookAtPreset_FullControl; }
 
 namespace ent
 {
-struct MarketingAnimationComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) MarketingAnimationComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "entMarketingAnimationComponent";
     static constexpr const char* ALIAS = NAME;

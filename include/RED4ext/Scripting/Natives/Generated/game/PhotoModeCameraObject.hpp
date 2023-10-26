@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct PhotoModeCameraObject : game::Object
+struct __declspec(align(0x10)) PhotoModeCameraObject : game::Object
 {
     static constexpr const char* NAME = "gamePhotoModeCameraObject";
     static constexpr const char* ALIAS = NAME;

@@ -16,7 +16,7 @@ namespace anim { struct AnimSet; }
 
 namespace ent
 {
-struct InstancedAnimationComponent : ent::ISkinableComponent
+struct __declspec(align(0x10)) InstancedAnimationComponent : ent::ISkinableComponent
 {
     static constexpr const char* NAME = "entInstancedAnimationComponent";
     static constexpr const char* ALIAS = NAME;

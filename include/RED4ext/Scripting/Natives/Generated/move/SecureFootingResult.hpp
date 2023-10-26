@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace move
 {
-struct SecureFootingResult
+struct __declspec(align(0x10)) SecureFootingResult
 {
     static constexpr const char* NAME = "moveSecureFootingResult";
     static constexpr const char* ALIAS = "SecureFootingResult";

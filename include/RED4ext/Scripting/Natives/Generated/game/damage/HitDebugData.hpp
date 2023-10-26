@@ -20,7 +20,7 @@ namespace game::damage { struct DamageDebugData; }
 
 namespace game::damage
 {
-struct HitDebugData : IScriptable
+struct __declspec(align(0x10)) HitDebugData : IScriptable
 {
     static constexpr const char* NAME = "gamedamageHitDebugData";
     static constexpr const char* ALIAS = "HitDebugData";

@@ -11,7 +11,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct GameSessionDesc
+struct __declspec(align(0x10)) GameSessionDesc
 {
     static constexpr const char* NAME = "gameGameSessionDesc";
     static constexpr const char* ALIAS = NAME;

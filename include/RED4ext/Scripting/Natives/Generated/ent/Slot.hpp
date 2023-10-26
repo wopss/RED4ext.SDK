@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct Slot
+struct __declspec(align(0x10)) Slot
 {
     static constexpr const char* NAME = "entSlot";
     static constexpr const char* ALIAS = NAME;

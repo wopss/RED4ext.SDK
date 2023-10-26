@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct PopulationSpawnerNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) PopulationSpawnerNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldPopulationSpawnerNodeInstance";
     static constexpr const char* ALIAS = NAME;

@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace physics
 {
-struct ColliderConvex : physics::ICollider
+struct __declspec(align(0x10)) ColliderConvex : physics::ICollider
 {
     static constexpr const char* NAME = "physicsColliderConvex";
     static constexpr const char* ALIAS = NAME;

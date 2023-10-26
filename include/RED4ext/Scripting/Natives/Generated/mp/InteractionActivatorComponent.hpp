@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace mp
 {
-struct InteractionActivatorComponent : ent::IPlacedComponent
+struct __declspec(align(0x10)) InteractionActivatorComponent : ent::IPlacedComponent
 {
     static constexpr const char* NAME = "mpInteractionActivatorComponent";
     static constexpr const char* ALIAS = NAME;

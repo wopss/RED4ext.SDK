@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace scn
 {
-struct LookAtAdvancedEventData
+struct __declspec(align(0x10)) LookAtAdvancedEventData
 {
     static constexpr const char* NAME = "scnLookAtAdvancedEventData";
     static constexpr const char* ALIAS = NAME;

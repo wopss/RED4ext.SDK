@@ -15,7 +15,7 @@ namespace RED4ext
 {
 namespace grs
 {
-struct HeistState
+struct __declspec(align(0x10)) HeistState
 {
     static constexpr const char* NAME = "grsHeistState";
     static constexpr const char* ALIAS = NAME;

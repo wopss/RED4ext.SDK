@@ -18,7 +18,7 @@ namespace world { struct Effect; }
 
 namespace ent
 {
-struct BakedDestructionComponent : ent::PhysicalMeshComponent
+struct __declspec(align(0x10)) BakedDestructionComponent : ent::PhysicalMeshComponent
 {
     static constexpr const char* NAME = "entBakedDestructionComponent";
     static constexpr const char* ALIAS = "BakedDestructionComponent";

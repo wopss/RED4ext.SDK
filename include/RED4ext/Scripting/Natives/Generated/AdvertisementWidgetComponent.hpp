@@ -12,7 +12,7 @@
 
 namespace RED4ext
 {
-struct AdvertisementWidgetComponent : IWorldWidgetComponent
+struct __declspec(align(0x10)) AdvertisementWidgetComponent : IWorldWidgetComponent
 {
     static constexpr const char* NAME = "AdvertisementWidgetComponent";
     static constexpr const char* ALIAS = NAME;

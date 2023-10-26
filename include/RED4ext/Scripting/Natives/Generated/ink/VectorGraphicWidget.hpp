@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct VectorGraphicWidget : ink::LeafWidget
+struct __declspec(align(0x10)) VectorGraphicWidget : ink::LeafWidget
 {
     static constexpr const char* NAME = "inkVectorGraphicWidget";
     static constexpr const char* ALIAS = NAME;

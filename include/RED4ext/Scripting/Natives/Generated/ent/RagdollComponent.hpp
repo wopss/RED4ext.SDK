@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct RagdollComponent : ent::IComponent
+struct __declspec(align(0x10)) RagdollComponent : ent::IComponent
 {
     static constexpr const char* NAME = "entRagdollComponent";
     static constexpr const char* ALIAS = "RagdollComponent";

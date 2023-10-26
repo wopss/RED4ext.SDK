@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-struct CRenderDistantIrradiancetData : ISceneStorageCustomData
+struct __declspec(align(0x10)) CRenderDistantIrradiancetData : ISceneStorageCustomData
 {
     static constexpr const char* NAME = "CRenderDistantIrradiancetData";
     static constexpr const char* ALIAS = NAME;

@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace scn::events
 {
-struct AttachPropToNode : scn::SceneEvent
+struct __declspec(align(0x10)) AttachPropToNode : scn::SceneEvent
 {
     static constexpr const char* NAME = "scneventsAttachPropToNode";
     static constexpr const char* ALIAS = NAME;

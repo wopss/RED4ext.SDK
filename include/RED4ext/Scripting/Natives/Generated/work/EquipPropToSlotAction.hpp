@@ -17,7 +17,7 @@ namespace RED4ext
 {
 namespace work
 {
-struct EquipPropToSlotAction : work::IWorkspotItemAction
+struct __declspec(align(0x10)) EquipPropToSlotAction : work::IWorkspotItemAction
 {
     static constexpr const char* NAME = "workEquipPropToSlotAction";
     static constexpr const char* ALIAS = NAME;

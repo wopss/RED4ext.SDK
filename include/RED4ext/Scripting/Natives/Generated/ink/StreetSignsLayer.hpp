@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace ink
 {
-struct StreetSignsLayer : ink::WorldFluffLayer
+struct __declspec(align(0x10)) StreetSignsLayer : ink::WorldFluffLayer
 {
     static constexpr const char* NAME = "inkStreetSignsLayer";
     static constexpr const char* ALIAS = NAME;

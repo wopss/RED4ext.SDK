@@ -17,7 +17,7 @@ namespace ent { struct IPlacedComponent; }
 
 namespace game::projectile
 {
-struct WeaponParams
+struct __declspec(align(0x10)) WeaponParams
 {
     static constexpr const char* NAME = "gameprojectileWeaponParams";
     static constexpr const char* ALIAS = NAME;

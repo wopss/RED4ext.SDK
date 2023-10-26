@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace world
 {
-struct SceneRecordingContentObserverNodeInstance : world::INodeInstance
+struct __declspec(align(0x10)) SceneRecordingContentObserverNodeInstance : world::INodeInstance
 {
     static constexpr const char* NAME = "worldSceneRecordingContentObserverNodeInstance";
     static constexpr const char* ALIAS = NAME;

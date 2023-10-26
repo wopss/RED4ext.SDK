@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game::ui
 {
-struct StealthMappinController : game::ui::InteractionMappinController
+struct __declspec(align(0x10)) StealthMappinController : game::ui::InteractionMappinController
 {
     static constexpr const char* NAME = "gameuiStealthMappinController";
     static constexpr const char* ALIAS = "StealthMappinController";

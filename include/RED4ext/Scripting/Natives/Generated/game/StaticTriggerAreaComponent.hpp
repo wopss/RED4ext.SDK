@@ -12,7 +12,7 @@ namespace RED4ext
 {
 namespace game
 {
-struct StaticTriggerAreaComponent : game::StaticAreaShapeComponent
+struct __declspec(align(0x10)) StaticTriggerAreaComponent : game::StaticAreaShapeComponent
 {
     static constexpr const char* NAME = "gameStaticTriggerAreaComponent";
     static constexpr const char* ALIAS = "TriggerComponent";

@@ -14,7 +14,7 @@ namespace RED4ext
 {
 namespace ent
 {
-struct DismembermentAudioEvent : red::Event
+struct __declspec(align(0x10)) DismembermentAudioEvent : red::Event
 {
     static constexpr const char* NAME = "entDismembermentAudioEvent";
     static constexpr const char* ALIAS = "DismembermentAudioEvent";

@@ -16,7 +16,7 @@ namespace RED4ext
 {
 namespace nav::gendebug
 {
-struct PolyMesh : ISerializable
+struct __declspec(align(0x10)) PolyMesh : ISerializable
 {
     static constexpr const char* NAME = "navgendebugPolyMesh";
     static constexpr const char* ALIAS = NAME;
