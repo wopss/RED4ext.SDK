@@ -47,17 +47,17 @@ def get_groups() -> List[Group]:
         Group(name='CClass', functions=[
             Item(name='Unserialize', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 4C 8B 15 ? ? ? ?', expected=1, index=0),
             Item(name='ToString', pattern='48 89 5C 24 ? 48 89 74 24 ? 55 57 41 56 48 8D 6C 24 ? 48 81 EC ? ? ? ?', expected=341, index=104),
-            Item(name='sub_80', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ?', expected=987, index=514),
+            Item(name='sub_80', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? F6 41 70 ?', expected=1, index=0),
             Item(name='sub_88', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B 02', expected=65, index=34),
             Item(name='sub_90', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?', expected=3, index=0),
             Item(name='sub_98', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 81 EC ? ? ? ?', expected=3, index=2),
-            Item(name='sub_A0', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC', expected=538, index=354),
+            Item(name='sub_A0', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 41 56 41 57 48 8B EC 48 83 EC 70 41 F7 40 14 FF FF FF 3F', expected=1, index=0),
             Item(name='sub_B0', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B 05 ? ? ? ?', expected=1, index=0),
             Item(name='sub_C0', pattern='48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 83 64 24 ? ?', expected=58, index=12),
-            Item(name='GetMaxAlignment', pattern='48 89 5C 24 ? 57 48 83 EC ? 8B 59 ?', expected=126, index=18),
+            Item(name='GetMaxAlignment', pattern='48 89 5C 24 ? 57 48 83 EC ? 8B 59 ? E8 ? ? ? ?', expected=1, index=0),
             Item(name='sub_D0', pattern='4C 8B DC 49 89 5B ? 49 89 6B ? 49 89 73 ? 57 41 54 41 55 41 56', expected=33, index=25),
 
-            Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ?', expected=421, index=7),
+            Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ? 48 8B F1', expected=4, index=0),
             Item(name='GetProperty', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA', expected=4, index=0),
             Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=31, index=5),
             Item(name='ClearScriptedData', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ? 80 A1 ? ? ? ? ? 48 8D 99 ? ? ? ? 48 8B F9 48 8B CB E8'),
@@ -167,7 +167,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='JobQueue', functions=[
-            Item(name='ctor_FromGroup', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B 42 ? 48 8B DA', expected=23, index=0),
+            Item(name='ctor_FromGroup', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B 42 ? 48 8B DA 8A 52 ?', expected=1, index=0),
             Item(name='ctor_FromParams', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 49 8B D9', expected=65, index=0),
             Item(name='dtor', pattern='40 53 48 83 EC ? 80 79 ? ? 48 8B D9 75 05', expected=1, index=0),
             Item(name='Capture', pattern='48 89 5C 24 ? 57 48 83 EC ? 48 8B FA 48 8B D9 E8 ? ? ? ? 48 8B 43 ?', expected=6, index=0),
