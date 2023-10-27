@@ -132,7 +132,7 @@ constexpr uintptr_t ISerializable_sub_C0 = 0x14049137C - ImageBase; // 40 53 48 
 #pragma endregion
 
 #pragma region JobDispatcher
-constexpr uintptr_t JobDispatcher = 0x1432FEEB8 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 2, offset: 3
+constexpr uintptr_t JobDispatcher = 0x143310640 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 1, offset: 3
 constexpr uintptr_t JobDispatcher_DispatchJob = 0x140164DB0 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55, expected: 2, index: 0
 #pragma endregion
 

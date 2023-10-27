@@ -160,7 +160,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='JobDispatcher', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=2)
+            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=1)
         ],
         functions=[
             Item(name='DispatchJob', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55', expected=2, index=0)
