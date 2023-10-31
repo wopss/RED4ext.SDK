@@ -344,10 +344,6 @@ public:
 
     ~WeakPtr() noexcept
     {
-        static_assert(Memory::IsDeleteCompatible<T>,
-                      "WeakPtr only supports types that define the allocator type and are destructible "
-                      "(a polymorphic type requires a virtual destructor)");
-
         BaseType::DecWeakRef();
     }
 

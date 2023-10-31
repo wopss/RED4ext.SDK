@@ -6,6 +6,11 @@
 
 #include <cstring>
 
+RED4EXT_INLINE uint32_t RED4ext::Murmur3_32(const char* aText, const uint32_t aSeed)
+{
+    return Murmur3_32(reinterpret_cast<const uint8_t*>(aText), strlen(aText), aSeed);
+}
+
 RED4EXT_INLINE uint32_t RED4ext::Murmur3_32(const uint8_t* aKey, const size_t aLength, const uint32_t aSeed)
 {
     auto rotl = [](uint32_t x, uint32_t r) { return (x << r) | (x >> (32 - r)); };

@@ -20,12 +20,17 @@ RED4EXT_INLINE void RED4ext::CRTTISystem::RegisterType(CBaseRTTIType* aType)
 
 RED4EXT_INLINE void RED4ext::RTTIRegistrator::Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused)
 {
-    static RTTIRegistrator instance;
+    RED4EXT_UNUSED_PARAMETER(aUnused);
 
-    using func_t = RTTIRegistrator* (*)(RTTIRegistrator*, CallbackFunc, CallbackFunc, bool);
+    if (aRegFunc)
+    {
+        CRTTISystem::Get()->AddRegisterCallback(aRegFunc);
+    }
 
-    RelocFunc<func_t> func(Addresses::CRTTIRegistrator_Add);
-    func(&instance, aRegFunc, aPostRegFunc, aUnused);
+    if (aPostRegFunc)
+    {
+        CRTTISystem::Get()->AddPostRegisterCallback(aPostRegFunc);
+    }
 }
 
 RED4EXT_INLINE const uint32_t RED4ext::RTTIRegistrator::GetNextId()
