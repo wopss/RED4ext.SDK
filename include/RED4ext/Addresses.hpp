@@ -86,7 +86,6 @@ constexpr uintptr_t CNamePool_Get = 0x1401A11CC - ImageBase; // 48 83 EC 38 48 8
 
 #pragma region CRTTIRegistrator
 constexpr uintptr_t CRTTIRegistrator_RTTIAsyncId = 0x143E3CB8C - ImageBase; // F0 0F C1 05 ? ? ? ? FF C0 48 8D 0D ? ? ? ? 89 05 ? ? ? ? E8 ? ? ? ?, expected: 11822, index: 0, offset: 4
-constexpr uintptr_t CRTTIRegistrator_Add = 0x140873030 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 70 ? 4C 89 40 ? 48 89 50 ? 57, expected: 41, index: 8
 #pragma endregion
 
 #pragma region CRTTIScriptReferenceType
