@@ -27,6 +27,17 @@ struct DynArray
     {
     }
 
+    DynArray(std::initializer_list<T> aItems, Memory::IAllocator* aAllocator = nullptr)
+        : DynArray(aAllocator)
+    {
+        Reserve(aItems.size());
+
+        for (const auto& item : aItems)
+        {
+            EmplaceBack(item);
+        }
+    }
+
     DynArray(const DynArray& aOther)
         : DynArray(aOther.GetAllocator())
     {
@@ -238,6 +249,26 @@ struct DynArray
         return End();
     }
 #pragma endregion
+
+    T& Front()
+    {
+        return *entries;
+    }
+
+    const T& Front() const
+    {
+        return *entries;
+    }
+
+    T& Back()
+    {
+        return *(entries + size - 1);
+    }
+
+    const T& Back() const
+    {
+        return *(entries + size - 1);
+    }
 
     T* entries;        // 00
     uint32_t capacity; // 08

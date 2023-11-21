@@ -10,6 +10,7 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Hashing/CRC.hpp>
 #include <RED4ext/InstanceType.hpp>
+#include <RED4ext/NodeRef.hpp>
 #include <RED4ext/ResourceReference.hpp>
 #include <RED4ext/Unks.hpp>
 
@@ -219,12 +220,6 @@ struct MessageResourcePath
     int64_t unk00; // 00
 };
 RED4EXT_ASSERT_SIZE(MessageResourcePath, 0x8);
-
-struct NodeRef
-{
-    uint64_t hash; // 00
-};
-RED4EXT_ASSERT_SIZE(NodeRef, 0x8);
 
 struct RuntimeEntityRef
 {
