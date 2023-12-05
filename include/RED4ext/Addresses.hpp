@@ -161,7 +161,7 @@ constexpr uintptr_t Memory_PoolStorage_OOM = 0x141FD9AEC - ImageBase; // 48 83 E
 #pragma endregion
 
 #pragma region OpcodeHandlers
-constexpr uintptr_t OpcodeHandlers = 0x1432F4D30 - ImageBase; // 4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?, expected: 2, index: 0, offset: 3
+constexpr uintptr_t OpcodeHandlers = 0x1432B4D30 - ImageBase; // 4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?, expected: 2, index: 1, offset: 3
 #pragma endregion
 
 #pragma region ResourceDepot
