@@ -114,8 +114,10 @@ RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::
     {
     case RED4ext::EMainReason::Load:
     {
-        CRTTISystem::Get()->AddRegisterCallback(RegisterTypes);
-        CRTTISystem::Get()->AddPostRegisterCallback(PostRegisterTypes);
+        auto rtti = RED4ext::CRTTISystem::Get();
+
+        rtti->AddRegisterCallback(RegisterTypes);
+        rtti->AddPostRegisterCallback(PostRegisterTypes);
         break;
     }
     case RED4ext::EMainReason::Unload:
