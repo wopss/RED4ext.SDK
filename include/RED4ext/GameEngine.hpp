@@ -210,8 +210,8 @@ struct CGameEngine : BaseGameEngine
         uintptr_t unk00;            // 00
         uintptr_t unk08;            // 08
         GameInstance* gameInstance; // 10
-        uintptr_t unk18;            // 18
-        uintptr_t unk120;           // 20
+        uintptr_t unk18;            // 18 - worldRuntimeScene
+        uintptr_t unk20;            // 20
     };
     RED4EXT_ASSERT_SIZE(CGameFramework, 0x28);
     RED4EXT_ASSERT_OFFSET(CGameFramework, gameInstance, 0x10);

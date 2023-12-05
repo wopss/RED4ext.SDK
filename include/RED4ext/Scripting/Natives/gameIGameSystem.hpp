@@ -39,8 +39,9 @@ struct IGameSystem : IUpdatableSystem
     virtual void sub_180();                                                                                   // 180
     virtual void sub_188();                                                                                   // 188
     virtual void sub_190(void* a1);                                                                           // 190
-    virtual void OnInitialize(const JobHandle& aJob);                                                         // 198
-    virtual void OnUninitialize();                                                                            // 1A0
+    virtual void sub_198();                                                                                   // 198
+    virtual void OnInitialize(const JobHandle& aJob);                                                         // 1A0
+    virtual void OnUninitialize();                                                                            // 1A8
 
     GameInstance* gameInstance; // 40
 };

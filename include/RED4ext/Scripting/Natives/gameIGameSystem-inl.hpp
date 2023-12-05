@@ -97,6 +97,10 @@ RED4EXT_INLINE void RED4ext::game::IGameSystem::sub_190(void* a1)
     RED4EXT_UNUSED_PARAMETER(a1);
 }
 
+RED4EXT_INLINE void RED4ext::game::IGameSystem::sub_198()
+{
+}
+
 RED4EXT_INLINE void RED4ext::game::IGameSystem::OnInitialize(const RED4ext::JobHandle& aJob)
 {
     RED4EXT_UNUSED_PARAMETER(aJob);

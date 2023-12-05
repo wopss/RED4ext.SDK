@@ -59,7 +59,7 @@ def get_groups() -> List[Group]:
 
             Item(name='CreateInstance', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 65 48 8B 04 25 ? ? ? ? 48 8B F1', expected=4, index=0),
             Item(name='GetProperty', pattern='48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 33 FF 48 8B DA', expected=4, index=0),
-            Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9', expected=31, index=8),
+            Item(name='GetProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? 48 8B D9 48 8B FA 48 8B 49 ? 48 85 C9 74'),
             Item(name='ClearScriptedData', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 4C 89 60 ? 55 41 56 41 57 48 8B EC 48 83 EC ? 80 A1 ? ? ? ? ? 48 8D 99 ? ? ? ? 48 8B F9 48 8B CB E8'),
 
             Item(name='InitializeProperties', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 48 89 78 ? 41 56 48 83 EC ? F6 41 70 ?', expected=1, index=0),
@@ -95,7 +95,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='OpcodeHandlers', pointers=[
-            Item(pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', offset=3, expected=2, index=0)
+            Item(pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', offset=3, expected=2, index=1)
         ]),
 
         Group(name='CGameEngine', pointers=[
@@ -123,7 +123,7 @@ def get_groups() -> List[Group]:
 
         Group(name='CString', functions=[
             Item(name='ctor_str', pattern='48 85 D2 74 15 48 83 C8 FF 48 FF C0', expected=1, index=0),
-            Item(name='ctor_span', pattern='40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ? 88 01 89 41 ? E8', expected=3, index=2),
+            Item(name='ctor_span', pattern='40 53 48 83 EC ? 33 C0 48 8B D9 48 89 41 ? 88 01 89 41 ? E8', expected=3, index=1),
             Item(name='copy', pattern='B8 ? ? ? ? 39 41 ? 73 19 39 42 ?', expected=1, index=0),
             Item(name='dtor', pattern='40 53 48 83 EC ? 8B 41 ? 48 8B D9 C1 E8 ?', expected=2, index=0)
         ]),
@@ -134,7 +134,7 @@ def get_groups() -> List[Group]:
 
         Group(name='Handle', functions=[
             Item(name='ctor', pattern='48 89 5C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 55 48 8B EC 48 83 EC ? 48 83 61 ? ?', expected=1, index=0),
-            Item(name='DecWeakRef', pattern='40 53 48 83 EC ? 48 8B D9 48 8B 49 ? 48 85 C9', expected=124, index=12)
+            Item(name='DecWeakRef', pattern='40 53 48 83 EC ? 48 8B D9 48 8B 49 ? 48 85 C9 74 ? 83 C8 FF F0 0F C1 41 04 83 F8 01 74 ? 48 83 C4 ? 5B C3')
         ]),
 
         Group(name='ISerializable', functions=[
@@ -157,7 +157,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='JobDispatcher', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=1)
+            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=2)
         ],
         functions=[
             Item(name='DispatchJob', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55', expected=2, index=0)
@@ -194,7 +194,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='ResourceLoader', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=2)
+            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=3)
         ],
         functions=[
             Item(name='FindTokenFast', pattern='48 8B C4 4C 89 40 ? 53 48 83 EC ? 48 8B DA 4C 8D 40 ?', expected=2, index=0),
@@ -212,7 +212,7 @@ def get_groups() -> List[Group]:
             Item(name='Fetch', pattern='40 53 48 83  EC 50 48 8B D9 E8 ? ? ? ? 84 C0 74 0A 48 8D 43 28'),
             Item(name='OnLoaded', pattern='48 8B C4 48 89 58 ? 48 89 70 ? 48 89 78 ? 55 48 8D 68 ? 48 81 EC ? ? ? ? 48 8B F2 48 8B D9 48 8B D1', expected=2, index=0),
             Item(name='CancelUnk38', pattern='F6 05 ? ? ? ? ? 75 ? 48 83 79 68 FF 75 ? C3'),
-            Item(name='DestructUnk38', pattern='40 53 48 83 EC 30 48 8B D9 E8 ? ? ? ? 84 C0 75 ? 48 83 C4 30 5B C3', expected=195, index=26)
+            Item(name='DestructUnk38', pattern='40 53 48 83 EC 30 48 8B D9 E8 ? ? ? ? 84 C0 75 ? 48 83 C4 ? 5B C3 48 8B 03 48 85 C0 74 ? 48 83 64 24 ? ? 48 8D 4C 24', expected=17, index=1)
         ]),
 
         Group(name='UpdateRegistrar', functions=[
