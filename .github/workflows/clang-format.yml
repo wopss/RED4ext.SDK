@@ -28,11 +28,11 @@ jobs:
         env:
             RED4EXT_COMMIT_BEFORE: ${{ github.event.pull_request.base.sha || github.event.before }}
             RED4EXT_COMMIT_AFTER: ${{ github.sha }}
-        run: >-
-          git
-            -c core.autocrlf=false
-            -c core.eol=lf
-            -c color.ui=always
-            clang-format
-              --style file
-              --diff $env:RED4EXT_COMMIT_BEFORE $env:RED4EXT_COMMIT_AFTER
+        run: |
+          git `
+            -c core.autocrlf=false `
+            -c core.eol=lf `
+            -c color.ui=always `
+            clang-format `
+              --style file `
+              --diff $env:RED4EXT_COMMIT_BEFORE $env:RED4EXT_COMMIT_AFTER `
