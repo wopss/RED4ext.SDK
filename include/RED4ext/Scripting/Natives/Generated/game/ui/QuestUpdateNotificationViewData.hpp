@@ -24,8 +24,9 @@ struct QuestUpdateNotificationViewData : game::ui::GenericNotificationViewData
     uint8_t unkB1[0xB8 - 0xB1]; // B1
     CName animation; // B8
     CString SMSText; // C0
+    CString SMSLocKey; // E0
 };
-RED4EXT_ASSERT_SIZE(QuestUpdateNotificationViewData, 0xE0);
+RED4EXT_ASSERT_SIZE(QuestUpdateNotificationViewData, 0x100);
 } // namespace game::ui
 using gameuiQuestUpdateNotificationViewData = game::ui::QuestUpdateNotificationViewData;
 using QuestUpdateNotificationViewData = game::ui::QuestUpdateNotificationViewData;

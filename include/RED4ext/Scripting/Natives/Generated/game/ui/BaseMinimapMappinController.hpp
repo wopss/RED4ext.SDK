@@ -19,13 +19,13 @@ struct BaseMinimapMappinController : game::ui::MappinBaseController
     static constexpr const char* NAME = "gameuiBaseMinimapMappinController";
     static constexpr const char* ALIAS = "BaseMinimapMappinController";
 
-    uint8_t unk1D8[0x1E8 - 0x1D8]; // 1D8
-    ink::WidgetReference fixedOrientationWidget; // 1E8
-    ink::WidgetReference clampArrowWidget; // 200
-    game::ui::EIconOrientation iconOrientation; // 218
-    uint8_t unk21C[0x220 - 0x21C]; // 21C
+    uint8_t unk1E0[0x1F0 - 0x1E0]; // 1E0
+    ink::WidgetReference fixedOrientationWidget; // 1F0
+    ink::WidgetReference clampArrowWidget; // 208
+    game::ui::EIconOrientation iconOrientation; // 220
+    uint8_t unk224[0x228 - 0x224]; // 224
 };
-RED4EXT_ASSERT_SIZE(BaseMinimapMappinController, 0x220);
+RED4EXT_ASSERT_SIZE(BaseMinimapMappinController, 0x228);
 } // namespace game::ui
 using gameuiBaseMinimapMappinController = game::ui::BaseMinimapMappinController;
 using BaseMinimapMappinController = game::ui::BaseMinimapMappinController;

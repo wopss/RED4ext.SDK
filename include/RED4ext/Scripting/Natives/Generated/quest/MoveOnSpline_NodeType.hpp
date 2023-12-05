@@ -10,6 +10,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EntityReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/IVehicleManagerNodeType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/AIPathTrafficDeletionMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/PlayerToAIInterpolationType.hpp>
 
 namespace RED4ext
@@ -34,7 +35,8 @@ struct MoveOnSpline_NodeType : quest::IVehicleManagerNodeType
     float sceneBlendInDistance; // 80
     float sceneBlendOutDistance; // 84
     bool arriveWithPivot; // 88
-    uint8_t unk89[0x90 - 0x89]; // 89
+    uint8_t unk89[0x8C - 0x89]; // 89
+    vehicle::AIPathTrafficDeletionMode trafficDeletionMode; // 8C
     Handle<quest::IVehicleMoveOnSpline_Overrides> overrides; // 90
     Ref<vehicle::AudioVehicleCurveSet> audioCurves; // A0
     uint8_t unkB8[0xC8 - 0xB8]; // B8

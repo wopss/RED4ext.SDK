@@ -65,9 +65,10 @@ struct __declspec(align(0x10)) ChoiceNode : scn::SceneGraphNode
     scn::ChoiceNodeNsChoiceNodeBitFlags choiceFlags; // 138
     bool alwaysUseBrainGender; // 13A
     bool cpoHoldInputActionSection; // 13B
-    scn::ChoiceNodeNsAttachToActorParams ataParams; // 13C
-    scn::ChoiceNodeNsAttachToPropParams atpParams; // 144
-    uint8_t unk14C[0x150 - 0x14C]; // 14C
+    bool doNotTurnOffPreventionSystem; // 13C
+    uint8_t unk13D[0x140 - 0x13D]; // 13D
+    scn::ChoiceNodeNsAttachToActorParams ataParams; // 140
+    scn::ChoiceNodeNsAttachToPropParams atpParams; // 148
     scn::ChoiceNodeNsAttachToGameObjectParams atgoParams; // 150
     scn::ChoiceNodeNsAttachToScreenParams atsParams; // 160
     uint8_t unk161[0x170 - 0x161]; // 161

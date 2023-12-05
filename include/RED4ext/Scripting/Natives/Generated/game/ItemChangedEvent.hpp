@@ -25,8 +25,9 @@ struct ItemChangedEvent : red::Event
     Handle<game::ItemData> itemData; // 50
     int32_t difference; // 60
     int32_t currentQuantity; // 64
+    uint8_t unk68[0x70 - 0x68]; // 68
 };
-RED4EXT_ASSERT_SIZE(ItemChangedEvent, 0x68);
+RED4EXT_ASSERT_SIZE(ItemChangedEvent, 0x70);
 } // namespace game
 using gameItemChangedEvent = game::ItemChangedEvent;
 using ItemChangedEvent = game::ItemChangedEvent;

@@ -40,56 +40,58 @@ struct HackingMinigameLogicController : ink::WidgetLogicController
     ink::WidgetReference successExitButton; // 1C8
     ink::WidgetReference failureExitButton; // 1E0
     ink::WidgetReference timerProgressBar; // 1F8
-    CName introAnimName; // 210
-    CName loopAnimName; // 218
-    CName cursorAnimName; // 220
-    CName higlightAnimName; // 228
-    CName gameWonAnimName; // 230
-    CName gameLostAnimName; // 238
-    CName terminalShutdownAnimName; // 240
-    CName trapActivatedAnimName; // 248
-    CName programSucceedAnimName; // 250
-    CName programFailedAnimName; // 258
-    CName programResetFromFailedAnimName; // 260
-    uint8_t unk268[0x270 - 0x268]; // 268
-    CName gridCellHoverAnimName; // 270
-    CName gridCellClickFlashAnimName; // 278
-    CName bufferCellHoverAnimName; // 280
-    CName bufferCellClickFlashAnimName; // 288
-    CName programCellClickFlashAnimName; // 290
-    CName cursorWidgetRelativePath; // 298
-    CName activatedTrapIconLibraryName; // 2A0
-    CName trapIconsContainerRelativePath; // 2A8
-    uint8_t unk2B0[0x2C0 - 0x2B0]; // 2B0
-    CName bufferCellLibraryName; // 2C0
-    CName bufferCellTextWidgetRelativePath; // 2C8
-    CName programCellLibraryName; // 2D0
-    CName programCellTextWidgetRelativePath; // 2D8
-    CName gridCellLibraryName; // 2E0
-    CName gridCellTextWidgetRelativePath; // 2E8
-    CName gridCellTrapIconWidgetRelativePath; // 2F0
-    CName gridCellTrapIconContainerRelativePath; // 2F8
-    CName gridCellProgramHighlightRelativePath; // 300
-    CName gridCellDefaultStateName; // 308
-    CName gridCellHoveredStateName; // 310
-    CName gridCellSelectedStateName; // 318
-    CName gridCellDisabledStateName; // 320
-    CName mainHiglightBarStateName; // 328
-    CName secondaryHiglightBarStateName; // 330
-    CName inactiveHiglightBarStateName; // 338
-    CString gridCellDisabledSymbol; // 340
-    CName programSucceedStateName; // 360
-    CName programCellReadyStateName; // 368
-    CName programCellHighlightStateName; // 370
-    CName programFailedStateName; // 378
-    CName programEntryLibraryName; // 380
-    CName programEntryTextWidgetRelativePath; // 388
-    CName programEntryNoteWidgetRelativePath; // 390
-    CName programEntryInstructionContainerRelativePath; // 398
-    CName programEntryIconPath; // 3A0
-    uint8_t unk3A8[0x458 - 0x3A8]; // 3A8
+    ink::WidgetReference timerContainer; // 210
+    ink::WidgetReference timerPlaceholder; // 228
+    CName introAnimName; // 240
+    CName loopAnimName; // 248
+    CName cursorAnimName; // 250
+    CName higlightAnimName; // 258
+    CName gameWonAnimName; // 260
+    CName gameLostAnimName; // 268
+    CName terminalShutdownAnimName; // 270
+    CName trapActivatedAnimName; // 278
+    CName programSucceedAnimName; // 280
+    CName programFailedAnimName; // 288
+    CName programResetFromFailedAnimName; // 290
+    uint8_t unk298[0x2A0 - 0x298]; // 298
+    CName gridCellHoverAnimName; // 2A0
+    CName gridCellClickFlashAnimName; // 2A8
+    CName bufferCellHoverAnimName; // 2B0
+    CName bufferCellClickFlashAnimName; // 2B8
+    CName programCellClickFlashAnimName; // 2C0
+    CName cursorWidgetRelativePath; // 2C8
+    CName activatedTrapIconLibraryName; // 2D0
+    CName trapIconsContainerRelativePath; // 2D8
+    uint8_t unk2E0[0x2F0 - 0x2E0]; // 2E0
+    CName bufferCellLibraryName; // 2F0
+    CName bufferCellTextWidgetRelativePath; // 2F8
+    CName programCellLibraryName; // 300
+    CName programCellTextWidgetRelativePath; // 308
+    CName gridCellLibraryName; // 310
+    CName gridCellTextWidgetRelativePath; // 318
+    CName gridCellTrapIconWidgetRelativePath; // 320
+    CName gridCellTrapIconContainerRelativePath; // 328
+    CName gridCellProgramHighlightRelativePath; // 330
+    CName gridCellDefaultStateName; // 338
+    CName gridCellHoveredStateName; // 340
+    CName gridCellSelectedStateName; // 348
+    CName gridCellDisabledStateName; // 350
+    CName mainHiglightBarStateName; // 358
+    CName secondaryHiglightBarStateName; // 360
+    CName inactiveHiglightBarStateName; // 368
+    CString gridCellDisabledSymbol; // 370
+    CName programSucceedStateName; // 390
+    CName programCellReadyStateName; // 398
+    CName programCellHighlightStateName; // 3A0
+    CName programFailedStateName; // 3A8
+    CName programEntryLibraryName; // 3B0
+    CName programEntryTextWidgetRelativePath; // 3B8
+    CName programEntryNoteWidgetRelativePath; // 3C0
+    CName programEntryInstructionContainerRelativePath; // 3C8
+    CName programEntryIconPath; // 3D0
+    uint8_t unk3D8[0x488 - 0x3D8]; // 3D8
 };
-RED4EXT_ASSERT_SIZE(HackingMinigameLogicController, 0x458);
+RED4EXT_ASSERT_SIZE(HackingMinigameLogicController, 0x488);
 } // namespace game::ui
 using gameuiHackingMinigameLogicController = game::ui::HackingMinigameLogicController;
 } // namespace RED4ext

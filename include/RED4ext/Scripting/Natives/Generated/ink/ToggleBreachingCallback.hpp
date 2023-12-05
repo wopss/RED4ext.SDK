@@ -12,16 +12,16 @@ namespace RED4ext
 {
 namespace ink
 {
-struct AdditionalContentDataInvalid : ink::CallbackBase
+struct ToggleBreachingCallback : ink::CallbackBase
 {
-    static constexpr const char* NAME = "inkAdditionalContentDataInvalid";
+    static constexpr const char* NAME = "inkToggleBreachingCallback";
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk28[0x38 - 0x28]; // 28
 };
-RED4EXT_ASSERT_SIZE(AdditionalContentDataInvalid, 0x38);
+RED4EXT_ASSERT_SIZE(ToggleBreachingCallback, 0x38);
 } // namespace ink
-using inkAdditionalContentDataInvalid = ink::AdditionalContentDataInvalid;
+using inkToggleBreachingCallback = ink::ToggleBreachingCallback;
 } // namespace RED4ext
 
 // clang-format on

@@ -18,14 +18,14 @@ struct MinimapDynamicEventMappinController : game::ui::BaseMinimapMappinControll
     static constexpr const char* NAME = "gameuiMinimapDynamicEventMappinController";
     static constexpr const char* ALIAS = "MinimapDynamicEventMappinController";
 
-    bool pulseEnabled; // 220
-    uint8_t unk221[0x228 - 0x221]; // 221
-    ink::WidgetReference pulseWidget; // 228
-    float hideAtDistance; // 240
-    bool hideInCombat; // 244
-    uint8_t unk245[0x248 - 0x245]; // 245
+    bool pulseEnabled; // 228
+    uint8_t unk229[0x230 - 0x229]; // 229
+    ink::WidgetReference pulseWidget; // 230
+    float hideAtDistance; // 248
+    bool hideInCombat; // 24C
+    uint8_t unk24D[0x250 - 0x24D]; // 24D
 };
-RED4EXT_ASSERT_SIZE(MinimapDynamicEventMappinController, 0x248);
+RED4EXT_ASSERT_SIZE(MinimapDynamicEventMappinController, 0x250);
 } // namespace game::ui
 using gameuiMinimapDynamicEventMappinController = game::ui::MinimapDynamicEventMappinController;
 using MinimapDynamicEventMappinController = game::ui::MinimapDynamicEventMappinController;

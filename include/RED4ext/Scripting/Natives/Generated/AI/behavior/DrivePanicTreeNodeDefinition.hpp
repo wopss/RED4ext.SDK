@@ -25,8 +25,9 @@ struct DrivePanicTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
     Handle<AI::ArgumentMapping> disableStuckDetection; // 60
     Handle<AI::ArgumentMapping> useSpeedBasedLookupRange; // 70
     Handle<AI::ArgumentMapping> tryDriveAwayFromPlayer; // 80
+    Handle<AI::ArgumentMapping> needDriver; // 90
 };
-RED4EXT_ASSERT_SIZE(DrivePanicTreeNodeDefinition, 0x90);
+RED4EXT_ASSERT_SIZE(DrivePanicTreeNodeDefinition, 0xA0);
 } // namespace AI::behavior
 using AIbehaviorDrivePanicTreeNodeDefinition = AI::behavior::DrivePanicTreeNodeDefinition;
 } // namespace RED4ext

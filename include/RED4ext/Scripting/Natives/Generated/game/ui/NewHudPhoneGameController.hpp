@@ -9,6 +9,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ExternalPhoneElement.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/GenericNotificationGameController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/HudScalingSensitiveWidget.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/LocalPhoneElement.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/PhoneElementVisibility.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ResolutionSensitiveWidget.hpp>
@@ -24,18 +25,23 @@ struct NewHudPhoneGameController : game::ui::GenericNotificationGameController
     static constexpr const char* ALIAS = NAME;
 
     game::ui::LocalPhoneElement holoAudioCallElement; // 1A8
-    game::ui::LocalPhoneElement incomingCallElement; // 208
-    game::ui::LocalPhoneElement contactsElement; // 268
-    game::ui::ExternalPhoneElement smsMessengerElement; // 2C8
-    game::ui::PhoneElementVisibility notificationsElement; // 340
-    game::ui::LocalPhoneElement phoneIconElement; // 378
-    uint8_t unk3D8[0x408 - 0x3D8]; // 3D8
-    DynArray<game::ui::ResolutionSensitiveWidget> resolutionSensitiveWidgets; // 408
-    uint8_t unk418[0x430 - 0x418]; // 418
-    ink::WidgetReference phoneIconMarker; // 430
-    uint8_t unk448[0x450 - 0x448]; // 448
+    game::ui::LocalPhoneElement incomingCallElement; // 210
+    game::ui::LocalPhoneElement contactsElement; // 278
+    game::ui::ExternalPhoneElement smsMessengerElement; // 2E0
+    game::ui::PhoneElementVisibility notificationsElement; // 360
+    game::ui::LocalPhoneElement phoneIconElement; // 3A0
+    uint8_t unk408[0x438 - 0x408]; // 408
+    DynArray<game::ui::ResolutionSensitiveWidget> resolutionSensitiveWidgets; // 438
+    DynArray<game::ui::HudScalingSensitiveWidget> hudScalingSensitiveWidgets; // 448
+    uint8_t unk458[0x470 - 0x458]; // 458
+    ink::WidgetReference phoneIconMarker; // 470
+    ink::WidgetReference phoneIconVehicleMarker; // 488
+    ink::WidgetReference callMarker; // 4A0
+    ink::WidgetReference contactsMarker; // 4B8
+    ink::WidgetReference notificationMarker; // 4D0
+    uint8_t unk4E8[0x500 - 0x4E8]; // 4E8
 };
-RED4EXT_ASSERT_SIZE(NewHudPhoneGameController, 0x450);
+RED4EXT_ASSERT_SIZE(NewHudPhoneGameController, 0x500);
 } // namespace game::ui
 using gameuiNewHudPhoneGameController = game::ui::NewHudPhoneGameController;
 } // namespace RED4ext

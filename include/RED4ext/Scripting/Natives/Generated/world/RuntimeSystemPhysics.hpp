@@ -17,9 +17,9 @@ struct RuntimeSystemPhysics : world::IRuntimeSystem
     static constexpr const char* NAME = "worldRuntimeSystemPhysics";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x1F8 - 0x48]; // 48
+    uint8_t unk48[0x200 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RuntimeSystemPhysics, 0x1F8);
+RED4EXT_ASSERT_SIZE(RuntimeSystemPhysics, 0x200);
 } // namespace world
 using worldRuntimeSystemPhysics = world::RuntimeSystemPhysics;
 } // namespace RED4ext

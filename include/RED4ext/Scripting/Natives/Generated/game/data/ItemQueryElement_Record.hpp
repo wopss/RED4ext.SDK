@@ -17,9 +17,9 @@ struct ItemQueryElement_Record : game::data::LootTableElement_Record
     static constexpr const char* NAME = "gamedataItemQueryElement_Record";
     static constexpr const char* ALIAS = "ItemQueryElement_Record";
 
-    uint8_t unk90[0xA0 - 0x90]; // 90
+    uint8_t unkA0[0xB0 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(ItemQueryElement_Record, 0xA0);
+RED4EXT_ASSERT_SIZE(ItemQueryElement_Record, 0xB0);
 } // namespace game::data
 using gamedataItemQueryElement_Record = game::data::ItemQueryElement_Record;
 using ItemQueryElement_Record = game::data::ItemQueryElement_Record;

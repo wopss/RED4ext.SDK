@@ -17,9 +17,9 @@ struct IsAliveListener : game::IStatPoolsListener
     static constexpr const char* NAME = "scnIsAliveListener";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x48 - 0x40]; // 40
+    uint8_t unk40[0x50 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(IsAliveListener, 0x48);
+RED4EXT_ASSERT_SIZE(IsAliveListener, 0x50);
 } // namespace scn
 using scnIsAliveListener = scn::IsAliveListener;
 } // namespace RED4ext

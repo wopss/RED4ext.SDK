@@ -26,9 +26,11 @@ struct InventoryItemSortData
     bool QuestItem; // 34
     bool NewItem; // 35
     bool DLCAddedItem; // 36
-    uint8_t unk37[0x38 - 0x37]; // 37
+    bool ChimeraMod; // 37
+    bool IsPlayerFavourite; // 38
+    uint8_t unk39[0x40 - 0x39]; // 39
 };
-RED4EXT_ASSERT_SIZE(InventoryItemSortData, 0x38);
+RED4EXT_ASSERT_SIZE(InventoryItemSortData, 0x40);
 } // namespace game
 using gameInventoryItemSortData = game::InventoryItemSortData;
 using InventoryItemSortData = game::InventoryItemSortData;

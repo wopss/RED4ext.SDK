@@ -20,16 +20,16 @@ struct FreeCameraSettings
 
     float movPrecision; // 00
     float rotPrecision; // 04
-    float fov; // 08
-    float dofIntensity; // 0C
-    float dofNearBlur; // 10
-    float dofNearFocus; // 14
-    float dofFarBlur; // 18
-    float dofFarFocus; // 1C
-    int32_t iso; // 20
-    float shutter; // 24
-    float aperture; // 28
-    uint8_t unk2C[0x30 - 0x2C]; // 2C
+    float roll; // 08
+    float fov; // 0C
+    float dofIntensity; // 10
+    float dofNearBlur; // 14
+    float dofNearFocus; // 18
+    float dofFarBlur; // 1C
+    float dofFarFocus; // 20
+    int32_t iso; // 24
+    float shutter; // 28
+    float aperture; // 2C
     DynArray<game::FreeCameraLightSettings> lights; // 30
 };
 RED4EXT_ASSERT_SIZE(FreeCameraSettings, 0x40);

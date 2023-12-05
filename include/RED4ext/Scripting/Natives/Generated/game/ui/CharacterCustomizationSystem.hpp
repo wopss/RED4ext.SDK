@@ -17,9 +17,9 @@ struct CharacterCustomizationSystem : game::ui::ICharacterCustomizationSystem
     static constexpr const char* NAME = "gameuiCharacterCustomizationSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x390 - 0x48]; // 48
+    uint8_t unk48[0x388 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CharacterCustomizationSystem, 0x390);
+RED4EXT_ASSERT_SIZE(CharacterCustomizationSystem, 0x388);
 } // namespace game::ui
 using gameuiCharacterCustomizationSystem = game::ui::CharacterCustomizationSystem;
 } // namespace RED4ext

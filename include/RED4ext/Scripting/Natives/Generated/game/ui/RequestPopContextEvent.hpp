@@ -19,7 +19,8 @@ struct RequestPopContextEvent : red::Event
     static constexpr const char* ALIAS = "PopUIGameContextEvent";
 
     UIGameContext context; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
+    bool invalidate; // 44
+    uint8_t unk45[0x48 - 0x45]; // 45
 };
 RED4EXT_ASSERT_SIZE(RequestPopContextEvent, 0x48);
 } // namespace game::ui

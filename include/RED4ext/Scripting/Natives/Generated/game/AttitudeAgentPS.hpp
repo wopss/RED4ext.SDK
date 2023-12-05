@@ -19,8 +19,9 @@ struct AttitudeAgentPS : game::ComponentPS
     static constexpr const char* ALIAS = NAME;
 
     CName currentAttitudeGroup; // 68
+    CName currentAttitudeGroupUnsavable; // 70
 };
-RED4EXT_ASSERT_SIZE(AttitudeAgentPS, 0x70);
+RED4EXT_ASSERT_SIZE(AttitudeAgentPS, 0x78);
 } // namespace game
 using gameAttitudeAgentPS = game::AttitudeAgentPS;
 } // namespace RED4ext

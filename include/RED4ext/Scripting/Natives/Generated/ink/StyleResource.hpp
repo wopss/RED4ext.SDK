@@ -10,6 +10,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/Style.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/StyleOverride.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/StyleTheme.hpp>
 
 namespace RED4ext
@@ -24,11 +25,12 @@ struct StyleResource : CResource
 
     DynArray<ink::Style> styles; // 40
     DynArray<ink::StyleTheme> themes; // 50
-    DynArray<Ref<ink::StyleResource>> styleImports; // 60
-    bool hideInInheritingStyles; // 70
-    uint8_t unk71[0xB0 - 0x71]; // 71
+    DynArray<ink::StyleOverride> overrides; // 60
+    DynArray<Ref<ink::StyleResource>> styleImports; // 70
+    bool hideInInheritingStyles; // 80
+    uint8_t unk81[0xC0 - 0x81]; // 81
 };
-RED4EXT_ASSERT_SIZE(StyleResource, 0xB0);
+RED4EXT_ASSERT_SIZE(StyleResource, 0xC0);
 } // namespace ink
 using inkStyleResource = ink::StyleResource;
 } // namespace RED4ext

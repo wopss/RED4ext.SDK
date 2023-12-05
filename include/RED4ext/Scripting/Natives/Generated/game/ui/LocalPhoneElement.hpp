@@ -22,11 +22,11 @@ struct LocalPhoneElement : game::ui::PhoneElementVisibility
     static constexpr const char* NAME = "gameuiLocalPhoneElement";
     static constexpr const char* ALIAS = NAME;
 
-    WeakHandle<ink::AsyncSpawnRequest> request; // 38
-    WeakHandle<ink::Widget> widget; // 48
-    CName libraryID; // 58
+    WeakHandle<ink::AsyncSpawnRequest> request; // 40
+    WeakHandle<ink::Widget> widget; // 50
+    CName libraryID; // 60
 };
-RED4EXT_ASSERT_SIZE(LocalPhoneElement, 0x60);
+RED4EXT_ASSERT_SIZE(LocalPhoneElement, 0x68);
 } // namespace game::ui
 using gameuiLocalPhoneElement = game::ui::LocalPhoneElement;
 } // namespace RED4ext

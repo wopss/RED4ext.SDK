@@ -47,9 +47,9 @@ struct __declspec(align(0x10)) RenderToTextureCameraComponent : ent::BaseCameraC
     RenderSceneLayer renderSceneLayer; // 9F4
     bool overrideBackgroundColor; // 9F5
     ent::RenderToTextureFeatures features; // 9F6
-    uint8_t unk9FE[0xA00 - 0x9FE]; // 9FE
+    uint8_t unk9FE[0xA10 - 0x9FE]; // 9FE
 };
-RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0xA00);
+RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0xA10);
 } // namespace ent
 using entRenderToTextureCameraComponent = ent::RenderToTextureCameraComponent;
 } // namespace RED4ext

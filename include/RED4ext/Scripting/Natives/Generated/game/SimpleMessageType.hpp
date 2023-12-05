@@ -18,6 +18,7 @@ enum class SimpleMessageType : uint32_t
     Relic = 5,
     Money = 6,
     Reveal = 7,
+    Boss = 8,
 };
 } // namespace game
 using gameSimpleMessageType = game::SimpleMessageType;

@@ -18,7 +18,7 @@ struct JournalContact_NodeType : quest::IJournal_NodeType
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(JournalContact_NodeType, 0x48);
+RED4EXT_ASSERT_SIZE(JournalContact_NodeType, 0x50);
 } // namespace quest
 using questJournalContact_NodeType = quest::JournalContact_NodeType;
 } // namespace RED4ext

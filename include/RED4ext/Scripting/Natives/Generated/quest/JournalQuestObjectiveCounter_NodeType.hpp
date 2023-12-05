@@ -18,7 +18,7 @@ struct JournalQuestObjectiveCounter_NodeType : quest::IJournal_NodeType
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(JournalQuestObjectiveCounter_NodeType, 0x48);
+RED4EXT_ASSERT_SIZE(JournalQuestObjectiveCounter_NodeType, 0x50);
 } // namespace quest
 using questJournalQuestObjectiveCounter_NodeType = quest::JournalQuestObjectiveCounter_NodeType;
 } // namespace RED4ext

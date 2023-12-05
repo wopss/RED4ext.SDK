@@ -21,14 +21,14 @@ struct MinimapSecurityAreaMappinController : game::ui::BaseMinimapMappinControll
     static constexpr const char* NAME = "gameuiMinimapSecurityAreaMappinController";
     static constexpr const char* ALIAS = "MinimapSecurityAreaMappinController";
 
-    uint8_t unk220[0x221 - 0x220]; // 220
-    bool playerInArea; // 221
-    uint8_t unk222[0x228 - 0x222]; // 222
-    Handle<game::mappins::IArea> area; // 228
-    uint8_t unk238[0x248 - 0x238]; // 238
-    ink::ShapeWidgetReference areaShapeWidget; // 248
+    uint8_t unk228[0x229 - 0x228]; // 228
+    bool playerInArea; // 229
+    uint8_t unk22A[0x230 - 0x22A]; // 22A
+    Handle<game::mappins::IArea> area; // 230
+    uint8_t unk240[0x250 - 0x240]; // 240
+    ink::ShapeWidgetReference areaShapeWidget; // 250
 };
-RED4EXT_ASSERT_SIZE(MinimapSecurityAreaMappinController, 0x260);
+RED4EXT_ASSERT_SIZE(MinimapSecurityAreaMappinController, 0x268);
 } // namespace game::ui
 using gameuiMinimapSecurityAreaMappinController = game::ui::MinimapSecurityAreaMappinController;
 using MinimapSecurityAreaMappinController = game::ui::MinimapSecurityAreaMappinController;

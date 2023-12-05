@@ -19,11 +19,11 @@ struct RootHudGameController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiRootHudGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE0[0x278 - 0xE0]; // E0
-    DynArray<ink::CompoundWidgetReference> resolutionSensitiveRoots; // 278
-    uint8_t unk288[0x2E0 - 0x288]; // 288
+    uint8_t unkE0[0x2C0 - 0xE0]; // E0
+    DynArray<ink::CompoundWidgetReference> resolutionSensitiveRoots; // 2C0
+    uint8_t unk2D0[0x328 - 0x2D0]; // 2D0
 };
-RED4EXT_ASSERT_SIZE(RootHudGameController, 0x2E0);
+RED4EXT_ASSERT_SIZE(RootHudGameController, 0x328);
 } // namespace game::ui
 using gameuiRootHudGameController = game::ui::RootHudGameController;
 } // namespace RED4ext

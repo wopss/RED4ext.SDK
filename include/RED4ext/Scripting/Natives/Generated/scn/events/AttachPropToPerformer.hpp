@@ -7,12 +7,14 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/OffsetMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/PerformerId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/PropId.hpp>
 #include <RED4ext/Scripting/Natives/Generated/scn/SceneEvent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/scn/events/AttachPropToPerformerFallbackData.hpp>
 
 namespace RED4ext
 {
@@ -31,8 +33,9 @@ struct __declspec(align(0x10)) AttachPropToPerformer : scn::SceneEvent
     Vector3 customOffsetPos; // 6C
     uint8_t unk78[0x80 - 0x78]; // 78
     Quaternion customOffsetRot; // 80
+    DynArray<scn::events::AttachPropToPerformerFallbackData> fallbackData; // 90
 };
-RED4EXT_ASSERT_SIZE(AttachPropToPerformer, 0x90);
+RED4EXT_ASSERT_SIZE(AttachPropToPerformer, 0xA0);
 } // namespace scn::events
 using scneventsAttachPropToPerformer = scn::events::AttachPropToPerformer;
 } // namespace RED4ext

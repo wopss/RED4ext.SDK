@@ -22,13 +22,13 @@ struct __declspec(align(0x10)) BaseCameraComponent : ent::IPlacedComponent
     float fov; // 128
     uint8_t unk12C[0x15C - 0x12C]; // 12C
     float zoom; // 15C
-    uint8_t unk160[0x164 - 0x160]; // 160
-    float nearPlaneOverride; // 164
-    float farPlaneOverride; // 168
-    float motionBlurScale; // 16C
-    uint8_t unk170[0x174 - 0x170]; // 170
-    SWeaponPlaneParams weaponPlane; // 174
-    uint8_t unk190[0x1E0 - 0x190]; // 190
+    uint8_t unk160[0x168 - 0x160]; // 160
+    float nearPlaneOverride; // 168
+    float farPlaneOverride; // 16C
+    float motionBlurScale; // 170
+    uint8_t unk174[0x178 - 0x174]; // 174
+    SWeaponPlaneParams weaponPlane; // 178
+    uint8_t unk194[0x1E0 - 0x194]; // 194
 };
 RED4EXT_ASSERT_SIZE(BaseCameraComponent, 0x1E0);
 } // namespace ent

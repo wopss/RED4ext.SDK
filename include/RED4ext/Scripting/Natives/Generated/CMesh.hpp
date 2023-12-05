@@ -57,7 +57,9 @@ struct __declspec(align(0x10)) CMesh : res::StreamedResource
     Handle<IRenderResourceBlob> renderResourceBlob; // 1F8
     bool useRayTracingShadowLODBias; // 208
     bool castsRayTracedShadowsFromOriginalGeometry; // 209
-    uint8_t unk20A[0x219 - 0x20A]; // 20A
+    bool isShadowMesh; // 20A
+    bool isPlayerShadowMesh; // 20B
+    uint8_t unk20C[0x219 - 0x20C]; // 20C
     ERenderObjectType objectType; // 219
     uint8_t unk21A[0x230 - 0x21A]; // 21A
 };

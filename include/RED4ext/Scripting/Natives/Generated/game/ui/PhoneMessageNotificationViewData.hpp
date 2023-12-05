@@ -17,10 +17,10 @@ struct PhoneMessageNotificationViewData : game::ui::QuestUpdateNotificationViewD
     static constexpr const char* NAME = "gameuiPhoneMessageNotificationViewData";
     static constexpr const char* ALIAS = "PhoneMessageNotificationViewData";
 
-    int32_t threadHash; // E0
-    int32_t contactHash; // E4
+    int32_t threadHash; // 100
+    int32_t contactHash; // 104
 };
-RED4EXT_ASSERT_SIZE(PhoneMessageNotificationViewData, 0xE8);
+RED4EXT_ASSERT_SIZE(PhoneMessageNotificationViewData, 0x108);
 } // namespace game::ui
 using gameuiPhoneMessageNotificationViewData = game::ui::PhoneMessageNotificationViewData;
 using PhoneMessageNotificationViewData = game::ui::PhoneMessageNotificationViewData;

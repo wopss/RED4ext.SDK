@@ -18,10 +18,10 @@ struct MinimapDeviceMappinController : game::ui::BaseMinimapMappinController
     static constexpr const char* NAME = "gameuiMinimapDeviceMappinController";
     static constexpr const char* ALIAS = "MinimapDeviceMappinController";
 
-    uint8_t unk220[0x228 - 0x220]; // 220
-    ink::CircleWidgetReference effectAreaWidget; // 228
+    uint8_t unk228[0x230 - 0x228]; // 228
+    ink::CircleWidgetReference effectAreaWidget; // 230
 };
-RED4EXT_ASSERT_SIZE(MinimapDeviceMappinController, 0x240);
+RED4EXT_ASSERT_SIZE(MinimapDeviceMappinController, 0x248);
 } // namespace game::ui
 using gameuiMinimapDeviceMappinController = game::ui::MinimapDeviceMappinController;
 using MinimapDeviceMappinController = game::ui::MinimapDeviceMappinController;

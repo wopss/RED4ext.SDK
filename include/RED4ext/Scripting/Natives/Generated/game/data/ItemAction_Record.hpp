@@ -17,9 +17,9 @@ struct ItemAction_Record : game::data::ObjectAction_Record
     static constexpr const char* NAME = "gamedataItemAction_Record";
     static constexpr const char* ALIAS = "ItemAction_Record";
 
-    uint8_t unk138[0x150 - 0x138]; // 138
+    uint8_t unk148[0x160 - 0x148]; // 148
 };
-RED4EXT_ASSERT_SIZE(ItemAction_Record, 0x150);
+RED4EXT_ASSERT_SIZE(ItemAction_Record, 0x160);
 } // namespace game::data
 using gamedataItemAction_Record = game::data::ItemAction_Record;
 using ItemAction_Record = game::data::ItemAction_Record;

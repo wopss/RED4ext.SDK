@@ -22,8 +22,9 @@ struct IJournal_NodeType : quest::IRetNodeType
 
     uint8_t unk30[0x38 - 0x30]; // 30
     Handle<game::JournalPath> path; // 38
+    uint8_t unk48[0x50 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(IJournal_NodeType, 0x48);
+RED4EXT_ASSERT_SIZE(IJournal_NodeType, 0x50);
 } // namespace quest
 using questIJournal_NodeType = quest::IJournal_NodeType;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) PopulationSystem : game::IPopulationSystem
     static constexpr const char* NAME = "gamePopulationSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x2050 - 0x48]; // 48
+    uint8_t unk48[0x20D0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PopulationSystem, 0x2050);
+RED4EXT_ASSERT_SIZE(PopulationSystem, 0x20D0);
 } // namespace game
 using gamePopulationSystem = game::PopulationSystem;
 } // namespace RED4ext

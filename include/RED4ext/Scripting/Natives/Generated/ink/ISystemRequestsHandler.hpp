@@ -7,7 +7,6 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentDataInvalid.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentDataReloadProgress.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentInstallRequestedCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/AdditionalContentInstalledCallback.hpp>
@@ -21,6 +20,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/SaveTransferRequestUpdate.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/SystemRequesResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/SystemServerRequesResult.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/ToggleBreachingCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/TrialOnBuyFullGame.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/TrialVersionRemainingTimeUpdate.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/UserIdResult.hpp>
@@ -49,7 +49,7 @@ struct ISystemRequestsHandler : IScriptable
     ink::AdditionalContentInstalledCallback AdditionalContentInstallationResult; // 2E0
     ink::AdditionalContentStatusUpdateCallback AdditionalContentStatusUpdateResult; // 318
     ink::AdditionalContentDataReloadProgress AdditionalContentDataReloadProgressCallback; // 350
-    ink::AdditionalContentDataInvalid AdditionalDataInvalidCallback; // 388
+    ink::ToggleBreachingCallback ToggleBreachingCallback; // 388
     ink::UserIdResult UserIdResult; // 3C0
     ink::UserIdResult UserChanged; // 3F8
     ink::SystemServerRequesResult ServersSearchResult; // 430

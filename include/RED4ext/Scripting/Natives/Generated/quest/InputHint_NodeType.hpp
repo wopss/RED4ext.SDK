@@ -21,12 +21,13 @@ struct InputHint_NodeType : quest::IUIManagerNodeType
 
     CName action; // 38
     CName groupId; // 40
-    CString localizedLabel; // 48
-    bool show; // 68
-    uint8_t unk69[0x6C - 0x69]; // 69
-    int32_t queuePriority; // 6C
+    CName source; // 48
+    CString localizedLabel; // 50
+    bool show; // 70
+    uint8_t unk71[0x74 - 0x71]; // 71
+    int32_t queuePriority; // 74
 };
-RED4EXT_ASSERT_SIZE(InputHint_NodeType, 0x70);
+RED4EXT_ASSERT_SIZE(InputHint_NodeType, 0x78);
 } // namespace quest
 using questInputHint_NodeType = quest::InputHint_NodeType;
 } // namespace RED4ext

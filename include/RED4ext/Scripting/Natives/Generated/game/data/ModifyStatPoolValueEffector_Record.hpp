@@ -17,9 +17,9 @@ struct ModifyStatPoolValueEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataModifyStatPoolValueEffector_Record";
     static constexpr const char* ALIAS = "ModifyStatPoolValueEffector_Record";
 
-    uint8_t unk88[0xB0 - 0x88]; // 88
+    uint8_t unk88[0xB8 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(ModifyStatPoolValueEffector_Record, 0xB0);
+RED4EXT_ASSERT_SIZE(ModifyStatPoolValueEffector_Record, 0xB8);
 } // namespace game::data
 using gamedataModifyStatPoolValueEffector_Record = game::data::ModifyStatPoolValueEffector_Record;
 using ModifyStatPoolValueEffector_Record = game::data::ModifyStatPoolValueEffector_Record;

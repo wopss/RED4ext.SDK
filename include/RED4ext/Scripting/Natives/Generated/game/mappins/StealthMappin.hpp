@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) StealthMappin : game::mappins::RuntimeMappin
     static constexpr const char* NAME = "gamemappinsStealthMappin";
     static constexpr const char* ALIAS = "StealthMappin";
 
-    uint8_t unk108[0x3A0 - 0x108]; // 108
+    uint8_t unk108[0x3B0 - 0x108]; // 108
 };
-RED4EXT_ASSERT_SIZE(StealthMappin, 0x3A0);
+RED4EXT_ASSERT_SIZE(StealthMappin, 0x3B0);
 } // namespace game::mappins
 using gamemappinsStealthMappin = game::mappins::StealthMappin;
 using StealthMappin = game::mappins::StealthMappin;

@@ -17,8 +17,10 @@ struct ApplyZOffsetFromGroundEvent : red::Event
     static constexpr const char* NAME = "vehicleApplyZOffsetFromGroundEvent";
     static constexpr const char* ALIAS = "VehicleApplyZOffsetFromGroundEvent";
 
+    bool sampleNavmesh; // 40
+    uint8_t unk41[0x48 - 0x41]; // 41
 };
-RED4EXT_ASSERT_SIZE(ApplyZOffsetFromGroundEvent, 0x40);
+RED4EXT_ASSERT_SIZE(ApplyZOffsetFromGroundEvent, 0x48);
 } // namespace vehicle
 using vehicleApplyZOffsetFromGroundEvent = vehicle::ApplyZOffsetFromGroundEvent;
 using VehicleApplyZOffsetFromGroundEvent = vehicle::ApplyZOffsetFromGroundEvent;

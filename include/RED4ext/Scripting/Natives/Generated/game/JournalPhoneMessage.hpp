@@ -27,8 +27,10 @@ struct JournalPhoneMessage : game::JournalEntry
     TweakDBID imageId; // A8
     game::MessageSender sender; // B0
     float delay; // B4
+    bool isQuestImportant; // B8
+    uint8_t unkB9[0xC0 - 0xB9]; // B9
 };
-RED4EXT_ASSERT_SIZE(JournalPhoneMessage, 0xB8);
+RED4EXT_ASSERT_SIZE(JournalPhoneMessage, 0xC0);
 } // namespace game
 using gameJournalPhoneMessage = game::JournalPhoneMessage;
 using JournalPhoneMessage = game::JournalPhoneMessage;

@@ -30,8 +30,9 @@ struct DeviceVisualizerDefinition : game::interactions::vis::IVisualizerDefiniti
     bool createMappin; // 72
     uint8_t unk73[0x78 - 0x73]; // 73
     Handle<game::interactions::vis::IVisualizerTimeProvider> timeProvider; // 78
+    uint8_t unk88[0x90 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(DeviceVisualizerDefinition, 0x88);
+RED4EXT_ASSERT_SIZE(DeviceVisualizerDefinition, 0x90);
 } // namespace game::interactions::vis
 using gameinteractionsvisDeviceVisualizerDefinition = game::interactions::vis::DeviceVisualizerDefinition;
 } // namespace RED4ext

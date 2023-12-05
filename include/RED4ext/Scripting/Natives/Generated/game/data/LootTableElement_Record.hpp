@@ -17,9 +17,9 @@ struct LootTableElement_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataLootTableElement_Record";
     static constexpr const char* ALIAS = "LootTableElement_Record";
 
-    uint8_t unk48[0x90 - 0x48]; // 48
+    uint8_t unk48[0xA0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(LootTableElement_Record, 0x90);
+RED4EXT_ASSERT_SIZE(LootTableElement_Record, 0xA0);
 } // namespace game::data
 using gamedataLootTableElement_Record = game::data::LootTableElement_Record;
 using LootTableElement_Record = game::data::LootTableElement_Record;

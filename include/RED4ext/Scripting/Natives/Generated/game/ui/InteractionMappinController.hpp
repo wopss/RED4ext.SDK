@@ -18,7 +18,7 @@ struct __declspec(align(0x10)) InteractionMappinController : game::ui::MappinBas
     static constexpr const char* NAME = "gameuiInteractionMappinController";
     static constexpr const char* ALIAS = "BaseInteractionMappinController";
 
-    uint8_t unk1D8[0x270 - 0x1D8]; // 1D8
+    uint8_t unk1E0[0x270 - 0x1E0]; // 1E0
     CName canvasWidgetName; // 270
     uint8_t unk278[0x288 - 0x278]; // 278
     CName arrowWidgetName; // 288

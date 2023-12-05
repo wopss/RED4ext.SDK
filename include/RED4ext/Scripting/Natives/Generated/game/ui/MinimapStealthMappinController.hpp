@@ -18,9 +18,9 @@ struct MinimapStealthMappinController : game::ui::BaseMinimapMappinController
     static constexpr const char* NAME = "gameuiMinimapStealthMappinController";
     static constexpr const char* ALIAS = "MinimapStealthMappinController";
 
-    ink::ImageWidgetReference visionConeWidget; // 220
+    ink::ImageWidgetReference visionConeWidget; // 228
 };
-RED4EXT_ASSERT_SIZE(MinimapStealthMappinController, 0x238);
+RED4EXT_ASSERT_SIZE(MinimapStealthMappinController, 0x240);
 } // namespace game::ui
 using gameuiMinimapStealthMappinController = game::ui::MinimapStealthMappinController;
 using MinimapStealthMappinController = game::ui::MinimapStealthMappinController;

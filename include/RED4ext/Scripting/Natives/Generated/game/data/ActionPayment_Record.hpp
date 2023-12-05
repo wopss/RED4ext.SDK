@@ -18,7 +18,7 @@ struct ActionPayment_Record : game::data::ObjectAction_Record
     static constexpr const char* ALIAS = "ActionPayment_Record";
 
 };
-RED4EXT_ASSERT_SIZE(ActionPayment_Record, 0x138);
+RED4EXT_ASSERT_SIZE(ActionPayment_Record, 0x148);
 } // namespace game::data
 using gamedataActionPayment_Record = game::data::ActionPayment_Record;
 using ActionPayment_Record = game::data::ActionPayment_Record;

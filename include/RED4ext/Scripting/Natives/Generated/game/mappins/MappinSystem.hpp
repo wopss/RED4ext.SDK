@@ -17,9 +17,9 @@ struct MappinSystem : game::mappins::IMappinSystem
     static constexpr const char* NAME = "gamemappinsMappinSystem";
     static constexpr const char* ALIAS = "MappinSystem";
 
-    uint8_t unk58[0x18440 - 0x58]; // 58
+    uint8_t unk58[0x18480 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(MappinSystem, 0x18440);
+RED4EXT_ASSERT_SIZE(MappinSystem, 0x18480);
 } // namespace game::mappins
 using gamemappinsMappinSystem = game::mappins::MappinSystem;
 using MappinSystem = game::mappins::MappinSystem;

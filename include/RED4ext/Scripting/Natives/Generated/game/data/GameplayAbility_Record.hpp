@@ -17,9 +17,9 @@ struct GameplayAbility_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataGameplayAbility_Record";
     static constexpr const char* ALIAS = "GameplayAbility_Record";
 
-    uint8_t unk48[0x88 - 0x48]; // 48
+    uint8_t unk48[0x90 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GameplayAbility_Record, 0x88);
+RED4EXT_ASSERT_SIZE(GameplayAbility_Record, 0x90);
 } // namespace game::data
 using gamedataGameplayAbility_Record = game::data::GameplayAbility_Record;
 using GameplayAbility_Record = game::data::GameplayAbility_Record;

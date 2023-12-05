@@ -18,7 +18,7 @@ struct MinimapStubMappinController : game::ui::BaseMinimapMappinController
     static constexpr const char* ALIAS = "MinimapStubMappinController";
 
 };
-RED4EXT_ASSERT_SIZE(MinimapStubMappinController, 0x220);
+RED4EXT_ASSERT_SIZE(MinimapStubMappinController, 0x228);
 } // namespace game::ui
 using gameuiMinimapStubMappinController = game::ui::MinimapStubMappinController;
 using MinimapStubMappinController = game::ui::MinimapStubMappinController;

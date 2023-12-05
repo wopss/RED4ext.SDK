@@ -17,9 +17,9 @@ struct PreventionSpawnSystem : game::IPreventionSpawnSystem
     static constexpr const char* NAME = "gamePreventionSpawnSystem";
     static constexpr const char* ALIAS = "PreventionSpawnSystem";
 
-    uint8_t unk48[0x348 - 0x48]; // 48
+    uint8_t unk48[0x368 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PreventionSpawnSystem, 0x348);
+RED4EXT_ASSERT_SIZE(PreventionSpawnSystem, 0x368);
 } // namespace game
 using gamePreventionSpawnSystem = game::PreventionSpawnSystem;
 using PreventionSpawnSystem = game::PreventionSpawnSystem;

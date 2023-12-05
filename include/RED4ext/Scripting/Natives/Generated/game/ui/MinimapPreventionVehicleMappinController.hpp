@@ -18,7 +18,7 @@ struct MinimapPreventionVehicleMappinController : game::ui::BaseMinimapMappinCon
     static constexpr const char* ALIAS = "MinimapPreventionVehicleMappinController";
 
 };
-RED4EXT_ASSERT_SIZE(MinimapPreventionVehicleMappinController, 0x220);
+RED4EXT_ASSERT_SIZE(MinimapPreventionVehicleMappinController, 0x228);
 } // namespace game::ui
 using gameuiMinimapPreventionVehicleMappinController = game::ui::MinimapPreventionVehicleMappinController;
 using MinimapPreventionVehicleMappinController = game::ui::MinimapPreventionVehicleMappinController;

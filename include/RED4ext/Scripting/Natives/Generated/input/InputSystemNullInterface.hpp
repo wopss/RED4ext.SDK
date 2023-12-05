@@ -18,7 +18,7 @@ struct InputSystemNullInterface : input::IInputSystem
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(InputSystemNullInterface, 0x148);
+RED4EXT_ASSERT_SIZE(InputSystemNullInterface, 0x158);
 } // namespace input
 using inputInputSystemNullInterface = input::InputSystemNullInterface;
 } // namespace RED4ext

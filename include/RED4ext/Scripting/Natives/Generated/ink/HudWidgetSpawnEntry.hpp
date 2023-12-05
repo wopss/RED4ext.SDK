@@ -45,13 +45,17 @@ struct HudWidgetSpawnEntry
     ink::WidgetSlotAttachmentParams slotParams; // 60
     bool useSeparateWindow; // A0
     bool ignoreHudSafezones; // A1
-    uint8_t unkA2[0x117 - 0xA2]; // A2
-    bool affectedByGlitchEffect; // 117
-    bool affectedByBlackwallEffect; // 118
-    bool spawnBeforeSlots; // 119
-    uint8_t unk11A[0x120 - 0x11A]; // 11A
+    bool ignoreHudScaleOverride; // A2
+    uint8_t unkA3[0xA4 - 0xA3]; // A3
+    float hudScalingInterpolationValue; // A4
+    ink::Margin hudScalingMarginCorrection; // A8
+    uint8_t unkB8[0x127 - 0xB8]; // B8
+    bool affectedByGlitchEffect; // 127
+    bool affectedByBlackwallEffect; // 128
+    bool spawnBeforeSlots; // 129
+    uint8_t unk12A[0x130 - 0x12A]; // 12A
 };
-RED4EXT_ASSERT_SIZE(HudWidgetSpawnEntry, 0x120);
+RED4EXT_ASSERT_SIZE(HudWidgetSpawnEntry, 0x130);
 } // namespace ink
 using inkHudWidgetSpawnEntry = ink::HudWidgetSpawnEntry;
 } // namespace RED4ext

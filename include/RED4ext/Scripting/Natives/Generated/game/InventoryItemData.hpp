@@ -94,14 +94,14 @@ struct InventoryItemData
     DynArray<game::StatViewData> PrimaryStats; // 1D0
     DynArray<game::StatViewData> SecondaryStats; // 1E0
     game::InventoryItemSortData SortData; // 1F0
-    bool IsPerkRequired; // 228
-    uint8_t unk229[0x230 - 0x229]; // 229
-    CString PerkRequiredName; // 230
-    bool IsCrafted; // 250
-    bool IsIconic; // 251
-    uint8_t unk252[0x258 - 0x252]; // 252
+    bool IsPerkRequired; // 230
+    uint8_t unk231[0x238 - 0x231]; // 231
+    CString PerkRequiredName; // 238
+    bool IsCrafted; // 258
+    bool IsIconic; // 259
+    uint8_t unk25A[0x260 - 0x25A]; // 25A
 };
-RED4EXT_ASSERT_SIZE(InventoryItemData, 0x258);
+RED4EXT_ASSERT_SIZE(InventoryItemData, 0x260);
 } // namespace game
 using gameInventoryItemData = game::InventoryItemData;
 using InventoryItemData = game::InventoryItemData;

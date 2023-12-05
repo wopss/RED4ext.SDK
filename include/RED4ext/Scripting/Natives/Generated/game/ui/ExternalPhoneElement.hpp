@@ -20,9 +20,9 @@ struct ExternalPhoneElement : game::ui::LocalPhoneElement
     static constexpr const char* NAME = "gameuiExternalPhoneElement";
     static constexpr const char* ALIAS = NAME;
 
-    Ref<ink::WidgetLibraryResource> libraryResource; // 60
+    Ref<ink::WidgetLibraryResource> libraryResource; // 68
 };
-RED4EXT_ASSERT_SIZE(ExternalPhoneElement, 0x78);
+RED4EXT_ASSERT_SIZE(ExternalPhoneElement, 0x80);
 } // namespace game::ui
 using gameuiExternalPhoneElement = game::ui::ExternalPhoneElement;
 } // namespace RED4ext

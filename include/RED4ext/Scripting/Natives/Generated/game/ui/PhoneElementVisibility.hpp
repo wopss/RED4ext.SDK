@@ -23,9 +23,9 @@ struct PhoneElementVisibility
     ink::CompoundWidgetReference slot; // 08
     world::ui::ContextVisibility tierVisibility; // 20
     game::ui::Context gameContextVisibility; // 28
-    uint8_t unk2C[0x38 - 0x2C]; // 2C
+    uint8_t unk2C[0x40 - 0x2C]; // 2C
 };
-RED4EXT_ASSERT_SIZE(PhoneElementVisibility, 0x38);
+RED4EXT_ASSERT_SIZE(PhoneElementVisibility, 0x40);
 } // namespace game::ui
 using gameuiPhoneElementVisibility = game::ui::PhoneElementVisibility;
 } // namespace RED4ext

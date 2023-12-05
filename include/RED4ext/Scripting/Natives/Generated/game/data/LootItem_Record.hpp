@@ -17,9 +17,9 @@ struct LootItem_Record : game::data::LootTableElement_Record
     static constexpr const char* NAME = "gamedataLootItem_Record";
     static constexpr const char* ALIAS = "LootItem_Record";
 
-    uint8_t unk90[0xA0 - 0x90]; // 90
+    uint8_t unkA0[0xB0 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(LootItem_Record, 0xA0);
+RED4EXT_ASSERT_SIZE(LootItem_Record, 0xB0);
 } // namespace game::data
 using gamedataLootItem_Record = game::data::LootItem_Record;
 using LootItem_Record = game::data::LootItem_Record;

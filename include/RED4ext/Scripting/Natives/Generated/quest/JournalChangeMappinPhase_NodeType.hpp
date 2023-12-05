@@ -18,11 +18,11 @@ struct JournalChangeMappinPhase_NodeType : quest::IJournal_NodeType
     static constexpr const char* NAME = "questJournalChangeMappinPhase_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    game::data::MappinPhase phase; // 48
-    bool notifyUI; // 4C
-    uint8_t unk4D[0x50 - 0x4D]; // 4D
+    game::data::MappinPhase phase; // 50
+    bool notifyUI; // 54
+    uint8_t unk55[0x58 - 0x55]; // 55
 };
-RED4EXT_ASSERT_SIZE(JournalChangeMappinPhase_NodeType, 0x50);
+RED4EXT_ASSERT_SIZE(JournalChangeMappinPhase_NodeType, 0x58);
 } // namespace quest
 using questJournalChangeMappinPhase_NodeType = quest::JournalChangeMappinPhase_NodeType;
 } // namespace RED4ext

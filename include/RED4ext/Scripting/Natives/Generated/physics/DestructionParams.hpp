@@ -46,8 +46,9 @@ struct DestructionParams
     bool useAggregatesForClusters; // 4A
     bool turnDynamicOnImpulse; // 4B
     bool buildConvexForClusters; // 4C
-    physics::SimulationType simulationType; // 4D
-    uint8_t unk4E[0x50 - 0x4E]; // 4E
+    bool enableImpulseDamage; // 4D
+    physics::SimulationType simulationType; // 4E
+    uint8_t unk4F[0x50 - 0x4F]; // 4F
 };
 RED4EXT_ASSERT_SIZE(DestructionParams, 0x50);
 } // namespace physics

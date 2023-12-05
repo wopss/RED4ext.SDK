@@ -22,7 +22,7 @@ struct TooltipsManager : ink::WidgetLogicController
     uint8_t unk78[0x7D - 0x78]; // 78
     bool flipX; // 7D
     bool flipY; // 7E
-    uint8_t unk7F[0x80 - 0x7F]; // 7F
+    bool flipVerticalAttachment; // 7F
     ink::Margin rootMargin; // 80
     uint8_t unk90[0xD0 - 0x90]; // 90
     ink::Margin screenMargin; // D0

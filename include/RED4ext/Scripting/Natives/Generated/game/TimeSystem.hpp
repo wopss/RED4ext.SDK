@@ -17,9 +17,9 @@ struct TimeSystem : game::ITimeSystem
     static constexpr const char* NAME = "gameTimeSystem";
     static constexpr const char* ALIAS = "TimeSystem";
 
-    uint8_t unk58[0x6B7C0 - 0x58]; // 58
+    uint8_t unk58[0x6EBC0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(TimeSystem, 0x6B7C0);
+RED4EXT_ASSERT_SIZE(TimeSystem, 0x6EBC0);
 } // namespace game
 using gameTimeSystem = game::TimeSystem;
 using TimeSystem = game::TimeSystem;

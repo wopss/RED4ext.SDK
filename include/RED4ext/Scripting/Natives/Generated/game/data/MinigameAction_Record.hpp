@@ -17,9 +17,9 @@ struct MinigameAction_Record : game::data::ObjectAction_Record
     static constexpr const char* NAME = "gamedataMinigameAction_Record";
     static constexpr const char* ALIAS = "MinigameAction_Record";
 
-    uint8_t unk138[0x1B0 - 0x138]; // 138
+    uint8_t unk148[0x1C0 - 0x148]; // 148
 };
-RED4EXT_ASSERT_SIZE(MinigameAction_Record, 0x1B0);
+RED4EXT_ASSERT_SIZE(MinigameAction_Record, 0x1C0);
 } // namespace game::data
 using gamedataMinigameAction_Record = game::data::MinigameAction_Record;
 using MinigameAction_Record = game::data::MinigameAction_Record;
