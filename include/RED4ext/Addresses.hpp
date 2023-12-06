@@ -56,11 +56,11 @@ constexpr uintptr_t CClass_AssignDefaultValuesToProperties = 0x140158DE8 - Image
 #pragma endregion
 
 #pragma region CClassFunction
-constexpr uintptr_t CClassFunction_ctor = 0x1409B00E0 - ImageBase; // 40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?, expected: 2, index: 1
+constexpr uintptr_t CClassFunction_ctor = 0x14060F5AC - ImageBase; // 40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?, expected: 2, index: 0
 #pragma endregion
 
 #pragma region CClassStaticFunction
-constexpr uintptr_t CClassStaticFunction_ctor = 0x14060F5AC - ImageBase; // 40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?, expected: 2, index: 0
+constexpr uintptr_t CClassStaticFunction_ctor = 0x1409B00E0 - ImageBase; // 40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?, expected: 2, index: 0
 #pragma endregion
 
 #pragma region CEnum

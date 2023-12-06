@@ -83,11 +83,11 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='CClassFunction', functions=[
-            Item(name='ctor', pattern='40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?', expected=2, index=1)
+            Item(name='ctor', pattern='40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ? ? ? ? ? ? ? 01', expected=1, index=0)
         ]),
 
         Group(name='CClassStaticFunction', functions=[
-            Item(name='ctor', pattern='40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ?', expected=2, index=0)
+            Item(name='ctor', pattern='40 53 48 83 EC ? 49 8B C1 4D 8B D0 44 8B 4C 24 ? ? ? ? ? ? ? 03', expected=1, index=0)
         ]),
 
         Group(name='CGlobalFunction', functions=[
