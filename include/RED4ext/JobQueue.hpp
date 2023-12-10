@@ -59,10 +59,9 @@ RED4EXT_ASSERT_SIZE(JobParamSet, 0x3);
  */
 struct JobHandle
 {
-    JobHandle() = default;
+    JobHandle(uintptr_t aUnk = 0);
     JobHandle(const JobHandle&) = default;
     JobHandle(JobHandle&&) = default;
-    JobHandle(JobParamSet aParams, uintptr_t aUnk = 0);
     ~JobHandle();
 
     /**
