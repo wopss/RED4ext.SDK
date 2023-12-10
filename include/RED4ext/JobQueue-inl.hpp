@@ -39,13 +39,12 @@ RED4EXT_INLINE RED4ext::JobParamSet::JobParamSet() noexcept
 {
 }
 
-RED4EXT_INLINE RED4ext::JobHandle::JobHandle(JobParamSet aParams, uintptr_t aUnk)
-    : unk00(nullptr)
+RED4EXT_INLINE RED4ext::JobHandle::JobHandle(uintptr_t aUnk)
 {
-    using func_t = void (*)(JobHandle*, JobParamSet&, uintptr_t);
+    using func_t = void* (*)(void*, uintptr_t);
     RelocFunc<func_t> func(Addresses::JobHandle_ctor);
 
-    func(this, aParams, aUnk);
+    unk00 = func(nullptr, aUnk);
 }
 
 RED4EXT_INLINE RED4ext::JobHandle::~JobHandle()
