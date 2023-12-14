@@ -13,7 +13,8 @@ RED4EXT_INLINE RED4ext::ScriptReport::ScriptReport() noexcept
 {
 }
 
-RED4EXT_INLINE RED4ext::ScriptReport::ScriptReport(RED4ext::DynArray<RED4ext::CString>& aErrors, uint32_t aMaxErrors) noexcept
+RED4EXT_INLINE RED4ext::ScriptReport::ScriptReport(RED4ext::DynArray<RED4ext::CString>& aErrors,
+                                                   uint32_t aMaxErrors) noexcept
     : errors(&aErrors)
     , maxErrors(aMaxErrors)
     , fillErrors(true)
