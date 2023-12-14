@@ -201,9 +201,5 @@ constexpr uintptr_t TweakDB_CreateRecord = 0x1401D50D0 - ImageBase; // 48 89 5C 
 constexpr uintptr_t UpdateRegistrar_RegisterGroupUpdate = 0x1407FC05C - ImageBase; // 48 8B C4 48 89 58 08 48 89 70 10 48 89 78 18 55 41 56 41 57 48 8D 68 B1 48 81 EC D0 00 00 00 48 8B 7D 77 49 8B D9, expected: 1, index: 0
 constexpr uintptr_t UpdateRegistrar_RegisterBucketUpdate = 0x1407FBF0C - ImageBase; // 48 8B C4 48 89 58 08 48 89 70 10 48 89 78 18 55 41 56 41 57 48 8D 68 B9 48 81 EC D0 00 00 00 48 8B 7D 77 49 8B D9, expected: 1, index: 0
 #pragma endregion
-
-#pragma region ScriptValidator
-constexpr uintptr_t ScriptValidator_Validate = 0x14060FC3C - ImageBase; // 48 89 5C 24 ? 48 89 4C 24 ? 55 56 57 41 54 41 55 41 56 41 57 48 8D 6C 24 ? 48 81 EC ? ? ? ? 48 8B C2, expected: 1, index: 0
-#pragma endregion
 } // namespace RED4ext::Addresses
 // clang-format on
