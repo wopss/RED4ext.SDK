@@ -1,5 +1,7 @@
 #pragma once
 
+#include <compare>
+
 #include <RED4ext/Common.hpp>
 
 namespace RED4ext::ent
@@ -36,6 +38,11 @@ struct EntityID
     constexpr bool operator==(const EntityID& aRhs) const noexcept
     {
         return hash == aRhs.hash;
+    }
+
+    constexpr std::strong_ordering operator<=>(const EntityID& aRhs) const noexcept
+    {
+        return hash <=> aRhs.hash;
     }
 
     [[nodiscard]] constexpr bool IsDefined() const noexcept
