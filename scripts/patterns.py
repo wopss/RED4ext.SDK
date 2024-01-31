@@ -157,7 +157,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='JobDispatcher', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=2)
+            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=4)
         ],
         functions=[
             Item(name='DispatchJob', pattern='48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55', expected=2, index=0)
@@ -194,7 +194,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='ResourceLoader', pointers=[
-            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=3)
+            Item(pattern='48 89 05 ? ? ? ? 48 83 C4 ? 5F C3', offset=3, expected=6, index=2)
         ],
         functions=[
             Item(name='FindTokenFast', pattern='48 8B C4 4C 89 40 ? 53 48 83 EC ? 48 8B DA 4C 8D 40 ?', expected=2, index=0),
