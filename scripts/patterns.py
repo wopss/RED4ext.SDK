@@ -95,7 +95,7 @@ def get_groups() -> List[Group]:
         ]),
 
         Group(name='OpcodeHandlers', pointers=[
-            Item(pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', offset=3, expected=2, index=1)
+            Item(pattern='4C 8D 05 ? ? ? ? 48 8D 0D ? ? ? ? 4C 89 9B ? ? ? ?', offset=3, expected=2, index=0)
         ]),
 
         Group(name='CGameEngine', pointers=[
