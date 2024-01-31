@@ -33,10 +33,12 @@ struct MeleeWeaponConfiguration : audio::AudioMetadata
     audio::MeleeSound parrySound; // B8
     audio::MeleeSound attackChargedSound; // C8
     audio::MeleeSound attackDischargedSound; // D8
-    Handle<audio::MeleeHitTypeMeleeSoundDictionary> meleeSoundsByHitPerMaterialType; // E8
-    audio::MeleeRigTypeMeleeWeaponConfigurationMap meleeWeaponConfigurationsByRigTypeMap; // F8
+    float attackChargedThreshold; // E8
+    uint8_t unkEC[0xF0 - 0xEC]; // EC
+    Handle<audio::MeleeHitTypeMeleeSoundDictionary> meleeSoundsByHitPerMaterialType; // F0
+    audio::MeleeRigTypeMeleeWeaponConfigurationMap meleeWeaponConfigurationsByRigTypeMap; // 100
 };
-RED4EXT_ASSERT_SIZE(MeleeWeaponConfiguration, 0x108);
+RED4EXT_ASSERT_SIZE(MeleeWeaponConfiguration, 0x110);
 } // namespace audio
 using audioMeleeWeaponConfiguration = audio::MeleeWeaponConfiguration;
 } // namespace RED4ext

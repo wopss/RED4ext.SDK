@@ -32,8 +32,9 @@ struct DriveToNodeTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
     Handle<AI::ArgumentMapping> portals; // D0
     Handle<AI::ArgumentMapping> trafficTryNeighborsForStart; // E0
     Handle<AI::ArgumentMapping> trafficTryNeighborsForEnd; // F0
+    Handle<AI::ArgumentMapping> ignoreNoAIDrivingLanes; // 100
 };
-RED4EXT_ASSERT_SIZE(DriveToNodeTreeNodeDefinition, 0x100);
+RED4EXT_ASSERT_SIZE(DriveToNodeTreeNodeDefinition, 0x110);
 } // namespace AI::behavior
 using AIbehaviorDriveToNodeTreeNodeDefinition = AI::behavior::DriveToNodeTreeNodeDefinition;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct RazerChromaEffectsSystem : game::IRazerChromaEffectsSystem
     static constexpr const char* NAME = "gameRazerChromaEffectsSystem";
     static constexpr const char* ALIAS = "RazerChromaEffectsSystem";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0xC8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(RazerChromaEffectsSystem, 0x50);
+RED4EXT_ASSERT_SIZE(RazerChromaEffectsSystem, 0xC8);
 } // namespace game
 using gameRazerChromaEffectsSystem = game::RazerChromaEffectsSystem;
 using RazerChromaEffectsSystem = game::RazerChromaEffectsSystem;

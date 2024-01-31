@@ -14,6 +14,7 @@ enum class CameraPlanesPreset : uint8_t
     VeryNear = 1,
     Near = 2,
     Normal = 3,
+    None = 4,
 };
 } // namespace quest
 using questCameraPlanesPreset = quest::CameraPlanesPreset;

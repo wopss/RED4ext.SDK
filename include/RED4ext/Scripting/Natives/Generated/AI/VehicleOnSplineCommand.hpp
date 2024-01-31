@@ -37,12 +37,13 @@ struct VehicleOnSplineCommand : AI::VehicleCommand
     bool rubberBandingBool; // 94
     uint8_t unk95[0x98 - 0x95]; // 95
     WeakHandle<game::Object> rubberBandingTargetRef; // 98
-    float rubberBandingMinDistance; // A8
-    float rubberBandingMaxDistance; // AC
-    bool rubberBandingStopAndWait; // B0
-    bool rubberBandingTeleportToCatchUp; // B1
-    bool rubberBandingStayInFront; // B2
-    uint8_t unkB3[0xB8 - 0xB3]; // B3
+    float rubberBandingTargetForwardOffset; // A8
+    float rubberBandingMinDistance; // AC
+    float rubberBandingMaxDistance; // B0
+    bool rubberBandingStopAndWait; // B4
+    bool rubberBandingTeleportToCatchUp; // B5
+    bool rubberBandingStayInFront; // B6
+    uint8_t unkB7[0xB8 - 0xB7]; // B7
     WeakHandle<vehicle::AudioCurvesParam> audioCurvesParam; // B8
 };
 RED4EXT_ASSERT_SIZE(VehicleOnSplineCommand, 0xC8);

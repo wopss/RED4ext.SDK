@@ -17,9 +17,9 @@ struct StatusEffectPrereq_Record : game::data::IPrereq_Record
     static constexpr const char* NAME = "gamedataStatusEffectPrereq_Record";
     static constexpr const char* ALIAS = "StatusEffectPrereq_Record";
 
-    uint8_t unk58[0x98 - 0x58]; // 58
+    uint8_t unk58[0xA0 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(StatusEffectPrereq_Record, 0x98);
+RED4EXT_ASSERT_SIZE(StatusEffectPrereq_Record, 0xA0);
 } // namespace game::data
 using gamedataStatusEffectPrereq_Record = game::data::StatusEffectPrereq_Record;
 using StatusEffectPrereq_Record = game::data::StatusEffectPrereq_Record;

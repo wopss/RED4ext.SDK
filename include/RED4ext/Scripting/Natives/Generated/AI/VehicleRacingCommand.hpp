@@ -28,12 +28,13 @@ struct VehicleRacingCommand : AI::VehicleCommand
     bool startFromClosest; // 76
     bool rubberBandingBool; // 77
     WeakHandle<game::Object> rubberBandingTargetRef; // 78
-    float rubberBandingMinDistance; // 88
-    float rubberBandingMaxDistance; // 8C
-    bool rubberBandingStopAndWait; // 90
-    bool rubberBandingTeleportToCatchUp; // 91
-    bool rubberBandingStayInFront; // 92
-    uint8_t unk93[0x98 - 0x93]; // 93
+    float rubberBandingTargetForwardOffset; // 88
+    float rubberBandingMinDistance; // 8C
+    float rubberBandingMaxDistance; // 90
+    bool rubberBandingStopAndWait; // 94
+    bool rubberBandingTeleportToCatchUp; // 95
+    bool rubberBandingStayInFront; // 96
+    uint8_t unk97[0x98 - 0x97]; // 97
 };
 RED4EXT_ASSERT_SIZE(VehicleRacingCommand, 0x98);
 } // namespace AI

@@ -34,7 +34,8 @@ struct VehicleToNodeCommand : AI::VehicleCommand
     Handle<vehicle::PortalsList> portals; // 88
     bool trafficTryNeighborsForStart; // 98
     bool trafficTryNeighborsForEnd; // 99
-    uint8_t unk9A[0xA0 - 0x9A]; // 9A
+    bool ignoreNoAIDrivingLanes; // 9A
+    uint8_t unk9B[0xA0 - 0x9B]; // 9B
 };
 RED4EXT_ASSERT_SIZE(VehicleToNodeCommand, 0xA0);
 } // namespace AI

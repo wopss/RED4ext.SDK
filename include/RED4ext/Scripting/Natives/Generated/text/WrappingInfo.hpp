@@ -21,7 +21,8 @@ struct WrappingInfo
     uint8_t unk01[0x4 - 0x1]; // 1
     float wrappingAtPosition; // 04
     text::WrappingPolicy wrappingPolicy; // 08
-    uint8_t unk09[0xC - 0x9]; // 9
+    bool forceMinimumWidthToWrappingAtPosition; // 09
+    uint8_t unk0A[0xC - 0xA]; // A
 };
 RED4EXT_ASSERT_SIZE(WrappingInfo, 0xC);
 } // namespace text
