@@ -32,7 +32,8 @@ struct ToNodeParams : quest::VehicleSpecificCommandParams
     Handle<vehicle::PortalsList> portals; // 50
     bool trafficTryNeighborsForStart; // 60
     bool trafficTryNeighborsForEnd; // 61
-    uint8_t unk62[0x68 - 0x62]; // 62
+    bool ignoreNoAIDrivingLanes; // 62
+    uint8_t unk63[0x68 - 0x63]; // 63
 };
 RED4EXT_ASSERT_SIZE(ToNodeParams, 0x68);
 } // namespace quest::vehicle

@@ -17,9 +17,9 @@ struct Vehicle_Record : game::data::SpawnableObject_Record
     static constexpr const char* NAME = "gamedataVehicle_Record";
     static constexpr const char* ALIAS = "Vehicle_Record";
 
-    uint8_t unkF8[0x500 - 0xF8]; // F8
+    uint8_t unkF8[0x530 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(Vehicle_Record, 0x500);
+RED4EXT_ASSERT_SIZE(Vehicle_Record, 0x530);
 } // namespace game::data
 using gamedataVehicle_Record = game::data::Vehicle_Record;
 using Vehicle_Record = game::data::Vehicle_Record;

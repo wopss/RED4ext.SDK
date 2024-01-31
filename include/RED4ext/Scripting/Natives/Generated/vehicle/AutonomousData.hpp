@@ -56,33 +56,35 @@ struct AutonomousData : ISerializable
     bool rubberBandingBool; // 114
     uint8_t unk115[0x118 - 0x115]; // 115
     WeakHandle<game::Object> rubberBandingTargetRef; // 118
-    float rubberBandingMinDistance; // 128
-    float rubberBandingMaxDistance; // 12C
-    bool rubberBandingStopAndWait; // 130
-    bool rubberBandingTeleportToCatchUp; // 131
-    bool rubberBandingStayInFront; // 132
-    uint8_t unk133[0x148 - 0x133]; // 133
+    float rubberBandingTargetForwardOffset; // 128
+    float rubberBandingMinDistance; // 12C
+    float rubberBandingMaxDistance; // 130
+    bool rubberBandingStopAndWait; // 134
+    bool rubberBandingTeleportToCatchUp; // 135
+    bool rubberBandingStayInFront; // 136
+    uint8_t unk137[0x148 - 0x137]; // 137
     float secureTimeOut; // 148
     uint8_t unk14C[0x150 - 0x14C]; // 14C
     Handle<vehicle::PortalsList> portalsList; // 150
     bool trafficTryNeighborsForStart; // 160
     bool trafficTryNeighborsForEnd; // 161
-    uint8_t unk162[0x163 - 0x162]; // 162
-    bool allowSimplifiedMovement; // 163
-    bool ignoreTickets; // 164
-    bool disableStuckDetection; // 165
-    bool useSpeedBasedLookupRange; // 166
-    bool tryDriveAwayFromPlayer; // 167
-    uint8_t unk168[0x170 - 0x168]; // 168
-    bool clearTrafficOnPath; // 170
-    uint8_t unk171[0x1A0 - 0x171]; // 171
-    bool emergencyPatrol; // 1A0
-    uint8_t unk1A1[0x1A4 - 0x1A1]; // 1A1
-    uint32_t numPatrolLoops; // 1A4
-    bool aggressiveRammingEnabled; // 1A8
-    bool ignoreChaseVehiclesLimit; // 1A9
-    bool boostDrivingStats; // 1AA
-    uint8_t unk1AB[0x1B0 - 0x1AB]; // 1AB
+    bool ignoreNoAIDrivingLanes; // 162
+    uint8_t unk163[0x164 - 0x163]; // 163
+    bool allowSimplifiedMovement; // 164
+    bool ignoreTickets; // 165
+    bool disableStuckDetection; // 166
+    bool useSpeedBasedLookupRange; // 167
+    bool tryDriveAwayFromPlayer; // 168
+    uint8_t unk169[0x174 - 0x169]; // 169
+    bool clearTrafficOnPath; // 174
+    uint8_t unk175[0x1A4 - 0x175]; // 175
+    bool emergencyPatrol; // 1A4
+    uint8_t unk1A5[0x1A8 - 0x1A5]; // 1A5
+    uint32_t numPatrolLoops; // 1A8
+    bool aggressiveRammingEnabled; // 1AC
+    bool ignoreChaseVehiclesLimit; // 1AD
+    bool boostDrivingStats; // 1AE
+    uint8_t unk1AF[0x1B0 - 0x1AF]; // 1AF
 };
 RED4EXT_ASSERT_SIZE(AutonomousData, 0x1B0);
 } // namespace vehicle

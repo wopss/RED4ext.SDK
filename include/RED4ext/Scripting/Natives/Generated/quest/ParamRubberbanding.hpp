@@ -21,12 +21,13 @@ struct ParamRubberbanding : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     Handle<quest::UniversalRef> targetRef; // 30
-    float minDistance; // 40
-    float maxDistance; // 44
-    bool stopAndWait; // 48
-    bool teleportToCatchUp; // 49
-    bool stayInFront; // 4A
-    uint8_t unk4B[0x50 - 0x4B]; // 4B
+    float targetForwardOffset; // 40
+    float minDistance; // 44
+    float maxDistance; // 48
+    bool stopAndWait; // 4C
+    bool teleportToCatchUp; // 4D
+    bool stayInFront; // 4E
+    uint8_t unk4F[0x50 - 0x4F]; // 4F
 };
 RED4EXT_ASSERT_SIZE(ParamRubberbanding, 0x50);
 } // namespace quest

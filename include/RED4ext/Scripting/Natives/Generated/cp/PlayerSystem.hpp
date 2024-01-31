@@ -17,9 +17,9 @@ struct PlayerSystem : game::PlayerSystem
     static constexpr const char* NAME = "cpPlayerSystem";
     static constexpr const char* ALIAS = "PlayerSystem";
 
-    uint8_t unk70[0x60500 - 0x70]; // 70
+    uint8_t unk70[0x60540 - 0x70]; // 70
 };
-RED4EXT_ASSERT_SIZE(PlayerSystem, 0x60500);
+RED4EXT_ASSERT_SIZE(PlayerSystem, 0x60540);
 } // namespace cp
 using cpPlayerSystem = cp::PlayerSystem;
 using PlayerSystem = cp::PlayerSystem;

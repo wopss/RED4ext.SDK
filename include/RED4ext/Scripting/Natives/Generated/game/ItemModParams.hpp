@@ -23,8 +23,9 @@ struct ItemModParams
     int32_t quantity; // 18
     uint8_t unk1C[0x50 - 0x1C]; // 1C
     DynArray<ItemID> customPartsToInstall; // 50
+    uint8_t unk60[0x68 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(ItemModParams, 0x60);
+RED4EXT_ASSERT_SIZE(ItemModParams, 0x68);
 } // namespace game
 using gameItemModParams = game::ItemModParams;
 using ItemModParams = game::ItemModParams;

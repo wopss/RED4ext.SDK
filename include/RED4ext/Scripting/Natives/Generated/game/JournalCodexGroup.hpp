@@ -18,9 +18,11 @@ struct JournalCodexGroup : game::JournalContainerEntry
     static constexpr const char* NAME = "gameJournalCodexGroup";
     static constexpr const char* ALIAS = "JournalCodexGroup";
 
-    LocalizationString groupName; // 88
+    bool isSorted; // 88
+    uint8_t unk89[0x90 - 0x89]; // 89
+    LocalizationString groupName; // 90
 };
-RED4EXT_ASSERT_SIZE(JournalCodexGroup, 0xB0);
+RED4EXT_ASSERT_SIZE(JournalCodexGroup, 0xB8);
 } // namespace game
 using gameJournalCodexGroup = game::JournalCodexGroup;
 using JournalCodexGroup = game::JournalCodexGroup;

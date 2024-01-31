@@ -25,11 +25,11 @@ struct __declspec(align(0x10)) HitEvent : red::Event
     Vector4 hitPosition; // 50
     CName physicsMaterial; // 60
     float damage; // 68
-    bool isTargetPuppet; // 6C
-    uint8_t unk6D[0x70 - 0x6D]; // 6D
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
     CName targetPuppetMeleeMaterial; // 70
-    bool isTargetPuppetHead; // 78
-    uint8_t unk79[0x80 - 0x79]; // 79
+    bool isTargetPuppet; // 78
+    bool isTargetPuppetHead; // 79
+    uint8_t unk7A[0x80 - 0x7A]; // 7A
 };
 RED4EXT_ASSERT_SIZE(HitEvent, 0x80);
 } // namespace game::audio::events

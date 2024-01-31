@@ -34,13 +34,14 @@ struct DriveRacingTreeNodeDefinition : AI::behavior::DriveTreeNodeDefinition
     Handle<AI::ArgumentMapping> keepDistanceParamDistance; // F0
     Handle<AI::ArgumentMapping> rubberBandingBool; // 100
     Handle<AI::ArgumentMapping> rubberBandingTargetRef; // 110
-    Handle<AI::ArgumentMapping> rubberBandingMinDistance; // 120
-    Handle<AI::ArgumentMapping> rubberBandingMaxDistance; // 130
-    Handle<AI::ArgumentMapping> rubberBandingStopAndWait; // 140
-    Handle<AI::ArgumentMapping> rubberBandingTeleportToCatchUp; // 150
-    Handle<AI::ArgumentMapping> rubberBandingStayInFront; // 160
+    Handle<AI::ArgumentMapping> rubberBandingTargetForwardOffset; // 120
+    Handle<AI::ArgumentMapping> rubberBandingMinDistance; // 130
+    Handle<AI::ArgumentMapping> rubberBandingMaxDistance; // 140
+    Handle<AI::ArgumentMapping> rubberBandingStopAndWait; // 150
+    Handle<AI::ArgumentMapping> rubberBandingTeleportToCatchUp; // 160
+    Handle<AI::ArgumentMapping> rubberBandingStayInFront; // 170
 };
-RED4EXT_ASSERT_SIZE(DriveRacingTreeNodeDefinition, 0x170);
+RED4EXT_ASSERT_SIZE(DriveRacingTreeNodeDefinition, 0x180);
 } // namespace AI::behavior
 using AIbehaviorDriveRacingTreeNodeDefinition = AI::behavior::DriveRacingTreeNodeDefinition;
 } // namespace RED4ext

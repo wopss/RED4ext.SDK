@@ -2447,6 +2447,7 @@
 #include <RED4ext/Scripting/Natives/Generated/quest/Platform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PlayEnv_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PlayFX_NodeTypeParams.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/PlayRazerAnimation_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PlayVoiceset_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PrefabVariantMapArrayElement.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PrefabVariantReplicatedInfo.hpp>
@@ -2469,6 +2470,7 @@
 #include <RED4ext/Scripting/Natives/Generated/quest/SetAsCrowdObstacle_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SetDestructionStateAction.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SetGender_NodeTypeParams.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/SetIdleRazerAnimation_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SetItemTags_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SetTriggerState_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/ShowDialogIndicator_NodeTypeParams.hpp>
@@ -2480,6 +2482,7 @@
 #include <RED4ext/Scripting/Natives/Generated/quest/SpawnManagerNodeType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SpawnedVehicleType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/StartEndNodeDefinition.hpp>
+#include <RED4ext/Scripting/Natives/Generated/quest/StopRazerAnimation_NodeTypeParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/Storage.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/SwitchWeaponModes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/TeleportPuppetParams.hpp>
