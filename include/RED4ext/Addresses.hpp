@@ -131,7 +131,7 @@ constexpr uintptr_t ISerializable_sub_C0 = 0x1406CBEE4 - ImageBase; // 40 53 48 
 #pragma endregion
 
 #pragma region JobDispatcher
-constexpr uintptr_t JobDispatcher = 0x143372C58 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 2, offset: 3
+constexpr uintptr_t JobDispatcher = 0x1433844E0 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 4, offset: 3
 constexpr uintptr_t JobDispatcher_DispatchJob = 0x14013E140 - ImageBase; // 48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 44 88 40 ? 57 41 54 41 55, expected: 2, index: 0
 #pragma endregion
 
@@ -169,7 +169,7 @@ constexpr uintptr_t ResourceDepot = 0x1448345D8 - ImageBase; // 48 89 05 ? ? ? ?
 #pragma endregion
 
 #pragma region ResourceLoader
-constexpr uintptr_t ResourceLoader = 0x143731060 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 3, offset: 3
+constexpr uintptr_t ResourceLoader = 0x143372C58 - ImageBase; // 48 89 05 ? ? ? ? 48 83 C4 ? 5F C3, expected: 6, index: 2, offset: 3
 constexpr uintptr_t ResourceLoader_FindTokenFast = 0x1401388DC - ImageBase; // 48 8B C4 4C 89 40 ? 53 48 83 EC ? 48 8B DA 4C 8D 40 ?, expected: 2, index: 0
 constexpr uintptr_t ResourceLoader_LoadAsync = 0x1401A3204 - ImageBase; // 48 89 5C 24 ? 55 48 8B EC 48 83 EC ? 83 4D E8 ? 33 C0, expected: 1, index: 0
 #pragma endregion
