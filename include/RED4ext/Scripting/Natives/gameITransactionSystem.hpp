@@ -84,9 +84,9 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_3A8() = 0;                                                                                  // 3A8
     virtual void sub_3B0() = 0;                                                                                  // 3B0
     virtual void sub_3B8() = 0;                                                                                  // 3B8
-    virtual void sub_3C0() = 0;                                                                                  // 3C0
-    virtual bool IsSlotEmpty(IScriptable* aOwner, TweakDBID aSlotID) = 0;                                        // 3C8
-    virtual bool IsSlotSpawning(IScriptable* aOwner, TweakDBID aSlotID) = 0;                                     // 3D0
+    virtual bool IsSlotEmpty(IScriptable* aOwner, TweakDBID aSlotID) = 0;                                        // 3C0
+    virtual bool IsSlotSpawning(IScriptable* aOwner, TweakDBID aSlotID) = 0;                                     // 3C8
+    virtual void sub_3D0() = 0;                                                                                  // 3D0
     virtual void sub_3D8() = 0;                                                                                  // 3D8
     virtual void sub_3E0() = 0;                                                                                  // 3E0
     virtual void sub_3E8() = 0;                                                                                  // 3E8
