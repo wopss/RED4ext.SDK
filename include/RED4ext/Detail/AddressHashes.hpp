@@ -8,7 +8,7 @@
 namespace RED4ext::Detail::AddressHashes
 {
 #pragma region CBaseFunction
-constexpr std::uint64_t CBaseFunction_Handlers = RED4ext::FNV1a64("CBaseFunction_Handlers");
+constexpr std::uint64_t CBaseFunction_Handlers = 0x5A7D28A9;
 constexpr std::uint64_t CBaseFunction_ExecuteScripted = 0xE1F920D6;
 constexpr std::uint64_t CBaseFunction_ExecuteNative = 0xE1321AEB;
 constexpr std::uint64_t CBaseFunction_InternalExecute = 0x1817231D;
@@ -63,7 +63,7 @@ constexpr std::uint64_t CEnum_FromString = 0x21CA1EC1;
 #pragma endregion
 
 #pragma region CGameEngine
-constexpr std::uint64_t CGameEngine = RED4ext::FNV1a64("CGameEngine");
+constexpr std::uint64_t CGameEngine = 0x97F209D6; // TODO: Check next update, there is hash conflict.
 #pragma endregion
 
 #pragma region CGlobalFunction
@@ -78,7 +78,7 @@ constexpr std::uint64_t CNamePool_Get = 0x68DF07DC;
 #pragma endregion
 
 #pragma region CRTTIRegistrator
-constexpr std::uint64_t CRTTIRegistrator_RTTIAsyncId = RED4ext::FNV1a64("CRTTIRegistrator_RTTIAsyncId");
+constexpr std::uint64_t CRTTIRegistrator_RTTIAsyncId = 0xDDBD19E8;
 #pragma endregion
 
 #pragma region CRTTIScriptReferenceType
@@ -91,7 +91,7 @@ constexpr std::uint64_t CRTTISystem_Get = 0x4A610F64;
 #pragma endregion
 
 #pragma region CStack
-constexpr std::uint64_t CStack_vtbl = RED4ext::FNV1a64("CStack_vtbl");
+constexpr std::uint64_t CStack_vtbl = 0x33175496;
 #pragma endregion
 
 #pragma region CString
@@ -124,7 +124,7 @@ constexpr std::uint64_t ISerializable_sub_C0 = 0x80201C35;
 #pragma endregion
 
 #pragma region JobDispatcher
-constexpr std::uint64_t JobDispatcher = RED4ext::FNV1a64("JobDispatcher");
+constexpr std::uint64_t JobDispatcher = 0xBAD50B3D; // TODO: Check next update, there is hash conflict.
 constexpr std::uint64_t JobDispatcher_DispatchJob = 0x9C441E82;
 #pragma endregion
 
@@ -143,7 +143,7 @@ constexpr std::uint64_t JobQueue_SyncWait = 0xD9AD0C00;
 #pragma endregion
 
 #pragma region Memory
-constexpr std::uint64_t Memory_Vault = RED4ext::FNV1a64("Memory_Vault");
+constexpr std::uint64_t Memory_Vault = 0x1B530DEC;
 constexpr std::uint64_t Memory_Vault_Alloc = 0x902A14E0;
 constexpr std::uint64_t Memory_Vault_AllocAligned = 0x516917DD;
 constexpr std::uint64_t Memory_Vault_Realloc = 0x770A17AC;
@@ -154,15 +154,15 @@ constexpr std::uint64_t Memory_PoolStorage_OOM = 0xD54F163A;
 #pragma endregion
 
 #pragma region OpcodeHandlers
-constexpr std::uint64_t OpcodeHandlers = RED4ext::FNV1a64("OpcodeHandlers");
+constexpr std::uint64_t OpcodeHandlers = 0x39532858;
 #pragma endregion
 
 #pragma region ResourceDepot
-constexpr std::uint64_t ResourceDepot = RED4ext::FNV1a64("ResourceDepot");
+constexpr std::uint64_t ResourceDepot = 0x659A0FC7;
 #pragma endregion
 
 #pragma region ResourceLoader
-constexpr std::uint64_t ResourceLoader = RED4ext::FNV1a64("ResourceLoader");
+constexpr std::uint64_t ResourceLoader = 0x783C1034;
 constexpr std::uint64_t ResourceLoader_FindTokenFast = 0xC86F39B7;
 constexpr std::uint64_t ResourceLoader_LoadAsync = 0x4A863580;
 #pragma endregion
