@@ -1,21 +1,13 @@
 #pragma once
 
 #include <cstdint>
-#include <mutex>
-#include <sstream>
-
-#include <Windows.h>
 
 namespace RED4ext
 {
 class RelocBase
 {
 public:
-    inline static uintptr_t GetImageBase()
-    {
-        static const auto base = reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr));
-        return base;
-    }
+    static uintptr_t GetImageBase();
 };
 
 /**
@@ -98,53 +90,7 @@ enum class UniversalRelocSegment : uint32_t
 class UniversalRelocBase
 {
 public:
-    static uintptr_t Resolve(UniversalRelocSegment aSegment, uint64_t aHash)
-    {
-        using functionType = uintptr_t (*)(UniversalRelocSegment, uint64_t);
-        static functionType resolveFunc = nullptr;
-
-        static std::once_flag flag;
-        std::call_once(flag,
-                       []()
-                       {
-                           constexpr auto dllName = "RED4ext.dll";
-                           constexpr auto functionName = "RED4ext_ResolveAddress";
-
-                           auto handle = LoadLibraryA(dllName);
-                           if (!handle)
-                           {
-                               std::stringstream stream;
-                               stream << "Failed to get '" << dllName
-                                      << "' handle.\nProcess will now close.\n\nLast error: " << GetLastError();
-
-                               MessageBoxA(nullptr, stream.str().c_str(), "RED4ext.SDK", MB_ICONERROR | MB_OK);
-                               TerminateProcess(GetCurrentProcess(), 1);
-                           }
-
-                           resolveFunc = reinterpret_cast<functionType>(GetProcAddress(handle, functionName));
-                           if (resolveFunc == nullptr)
-                           {
-                               std::stringstream stream;
-                               stream << "Failed to get '" << functionName
-                                      << "' address.\nProcess will now close.\n\nLast error: " << GetLastError();
-
-                               MessageBoxA(nullptr, stream.str().c_str(), "RED4ext.SDK", MB_ICONERROR | MB_OK);
-                               TerminateProcess(GetCurrentProcess(), 1);
-                           }
-                       });
-
-        auto address = resolveFunc(aSegment, aHash);
-        if (address == 0)
-        {
-            std::stringstream stream;
-            stream << "Failed to resolve address for hash " << std::hex << aHash << ".\nProcess will now close.";
-
-            MessageBoxA(nullptr, stream.str().c_str(), "RED4ext.SDK", MB_ICONERROR | MB_OK);
-            TerminateProcess(GetCurrentProcess(), 1);
-        }
-
-        return address;
-    }
+    static uintptr_t Resolve(UniversalRelocSegment aSegment, uint64_t aHash);
 };
 
 /**
@@ -218,3 +164,7 @@ private:
 };
 
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Relocation-inl.hpp>
+#endif
