@@ -4,11 +4,11 @@
 #include <RED4ext/GameEngine.hpp>
 #endif
 
-#include <RED4ext/Addresses.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CGameEngine* RED4ext::CGameEngine::Get()
 {
-    RelocPtr<CGameEngine*> ptr(Addresses::CGameEngine);
+    UniversalRelocPtr<CGameEngine*> ptr(Detail::AddressHashes::CGameEngine);
     return ptr;
 }

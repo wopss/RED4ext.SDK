@@ -4,7 +4,7 @@
 #include <RED4ext/Scripting/Functions.hpp>
 #endif
 
-#include <RED4ext/Addresses.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Relocation.hpp>
@@ -56,12 +56,12 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
     if (!flags.isNative)
     {
         using executeScriptedFn_t = bool (*)(CBaseFunction*, CStack*, void*);
-        RelocFunc<executeScriptedFn_t> executeScriptedFn(Addresses::CBaseFunction_ExecuteScripted);
+        UniversalRelocFunc<executeScriptedFn_t> executeScriptedFn(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
         return executeScriptedFn(this, aStack, nullptr);
     }
 
     using executeNativeFn_t = bool (*)(CBaseFunction*, CStack*);
-    RelocFunc<executeNativeFn_t> executeNativeFn(Addresses::CBaseFunction_ExecuteNative);
+    UniversalRelocFunc<executeNativeFn_t> executeNativeFn(Detail::AddressHashes::CBaseFunction_ExecuteNative);
     return executeNativeFn(this, aStack);
 }
 
@@ -70,7 +70,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute_(CStack* aStack)
     if (!flags.isNative)
     {
         using func_t = bool (*)(CBaseFunction*, CStack*);
-        RelocFunc<func_t> func(Addresses::CBaseFunction_ExecuteScripted);
+        UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
         return func(this, aStack);
     }
 
@@ -83,7 +83,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute_(CStack* aStack)
 
 RED4EXT_INLINE RED4ext::CBaseFunction::Handler_t RED4ext::CBaseFunction::GetHandler(uint32_t aIndex)
 {
-    RelocPtr<Handler_t*> handlers(Addresses::CBaseFunction_Handlers);
+    UniversalRelocPtr<Handler_t*> handlers(Detail::AddressHashes::CBaseFunction_Handlers);
     return handlers[aIndex];
 }
 
