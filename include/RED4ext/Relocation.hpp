@@ -90,7 +90,7 @@ enum class UniversalRelocSegment : uint32_t
 class UniversalRelocBase
 {
 public:
-    static uintptr_t Resolve(UniversalRelocSegment aSegment, uint64_t aHash);
+    static uintptr_t Resolve(UniversalRelocSegment aSegment, uint32_t aHash);
 };
 
 /**
@@ -101,7 +101,7 @@ template<typename T>
 class UniversalRelocFunc : private UniversalRelocBase
 {
 public:
-    UniversalRelocFunc(uint64_t aHash)
+    UniversalRelocFunc(uint32_t aHash)
         : m_address(reinterpret_cast<T>(Resolve(UniversalRelocSegment::Text, aHash)))
     {
     }
@@ -123,7 +123,7 @@ template<typename T>
 class UniversalRelocPtr : private UniversalRelocBase
 {
 public:
-    UniversalRelocPtr(uint64_t aHash, UniversalRelocSegment aSegment = UniversalRelocSegment::Data)
+    UniversalRelocPtr(uint32_t aHash, UniversalRelocSegment aSegment = UniversalRelocSegment::Data)
         : m_address(reinterpret_cast<T*>(Resolve(aSegment, aHash)))
     {
     }
@@ -149,7 +149,7 @@ private:
 class UniversalRelocVtbl : private UniversalRelocBase
 {
 public:
-    UniversalRelocVtbl(uint64_t aHash)
+    UniversalRelocVtbl(uint32_t aHash)
         : m_address(reinterpret_cast<uintptr_t*>(Resolve(UniversalRelocSegment::Rdata, aHash)))
     {
     }

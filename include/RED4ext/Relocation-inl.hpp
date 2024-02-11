@@ -18,9 +18,9 @@ RED4EXT_INLINE uintptr_t RED4ext::RelocBase::GetImageBase()
 }
 
 RED4EXT_INLINE
-uintptr_t RED4ext::UniversalRelocBase::Resolve(UniversalRelocSegment aSegment, uint64_t aHash)
+uintptr_t RED4ext::UniversalRelocBase::Resolve(UniversalRelocSegment aSegment, uint32_t aHash)
 {
-    using functionType = uintptr_t (*)(UniversalRelocSegment, uint64_t);
+    using functionType = uintptr_t (*)(UniversalRelocSegment, uint32_t);
     static functionType resolveFunc = nullptr;
 
     static std::once_flag flag;
