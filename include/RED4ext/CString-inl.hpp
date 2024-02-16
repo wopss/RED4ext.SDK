@@ -6,7 +6,7 @@
 
 #include <cstring>
 
-#include <RED4ext/Addresses.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CString::CString(Memory::IAllocator* aAllocator)
@@ -19,41 +19,41 @@ RED4EXT_INLINE RED4ext::CString::CString(Memory::IAllocator* aAllocator)
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor_str);
+    UniversalRelocFunc<CString* (*)(CString*, const char*)> func(Detail::AddressHashes::CString_ctor_str);
     func(this, aText);
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText, uint32_t aLength, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    RelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Addresses::CString_ctor_span);
+    UniversalRelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Detail::AddressHashes::CString_ctor_span);
     func(this, aText, aLength);
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const std::string& aText, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    RelocFunc<CString* (*)(CString*, const char*)> func(Addresses::CString_ctor_str);
+    UniversalRelocFunc<CString* (*)(CString*, const char*)> func(Detail::AddressHashes::CString_ctor_str);
     func(this, aText.data());
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const std::string_view& aText, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    RelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Addresses::CString_ctor_span);
+    UniversalRelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Detail::AddressHashes::CString_ctor_span);
     func(this, aText.data(), static_cast<uint32_t>(aText.size()));
 }
 
 RED4EXT_INLINE RED4ext::CString::CString(const CString& aOther)
     : CString()
 {
-    RelocFunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
+    UniversalRelocFunc<CString* (*)(CString*, const CString&)> func(Detail::AddressHashes::CString_copy);
     func(this, aOther);
 }
 
 RED4EXT_INLINE RED4ext::CString::~CString()
 {
-    RelocFunc<CString* (*)(CString*)> func(Addresses::CString_dtor);
+    UniversalRelocFunc<CString* (*)(CString*)> func(Detail::AddressHashes::CString_dtor);
     func(this);
 }
 
@@ -70,7 +70,7 @@ RED4EXT_INLINE RED4ext::CString::CString(CString&& aOther) noexcept
 
 RED4EXT_INLINE RED4ext::CString& RED4ext::CString::operator=(const CString& aRhs)
 {
-    RelocFunc<CString* (*)(CString*, const CString&)> func(Addresses::CString_copy);
+    UniversalRelocFunc<CString* (*)(CString*, const CString&)> func(Detail::AddressHashes::CString_copy);
     func(this, aRhs);
     return *this;
 }

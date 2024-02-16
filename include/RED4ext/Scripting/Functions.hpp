@@ -112,7 +112,7 @@ struct CGlobalFunction : CBaseFunction
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t = CGlobalFunction* (*)(CGlobalFunction*, CName, CName, ScriptingFunction_t<T>);
-            RelocFunc<func_t> func(Addresses::CGlobalFunction_ctor);
+            UniversalRelocFunc<func_t> func(Detail::AddressHashes::CGlobalFunction_ctor);
             func(memory, fullName, shortName, aFunc);
         }
 
@@ -138,7 +138,7 @@ struct CClassFunction : CBaseFunction
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t = CClassFunction* (*)(CClassFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            RelocFunc<func_t> func(Addresses::CClassFunction_ctor);
+            UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClassFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 
@@ -167,7 +167,7 @@ struct CClassStaticFunction : CClassFunction
 
             using func_t =
                 CClassStaticFunction* (*)(CClassStaticFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            RelocFunc<func_t> func(Addresses::CClassStaticFunction_ctor);
+            UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClassStaticFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 

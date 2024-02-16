@@ -6,7 +6,7 @@
 
 #include <bit>
 
-#include <RED4ext/Addresses.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Relocation.hpp>
 
@@ -45,7 +45,7 @@ RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aContext, CStackType* aArg
     , argsCount(aArgsCount)
     , result(aResult)
 {
-    RelocVtbl vtbl(Addresses::CStack_vtbl);
+    UniversalRelocVtbl vtbl(Detail::AddressHashes::CStack_vtbl);
     *reinterpret_cast<uintptr_t**>(this) = vtbl;
 }
 

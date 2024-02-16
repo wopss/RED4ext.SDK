@@ -5,7 +5,7 @@
 
 #include <Windows.h>
 
-#include <RED4ext/Addresses.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Memory/Utils.hpp>
 #include <RED4ext/Relocation.hpp>
@@ -178,7 +178,7 @@ protected:
         if (refCount)
         {
             // This function also deallocates RefCnt when weakRefs reaches 0.
-            RelocFunc<void (*)(SharedPtrBase*)> decWeakRefFn(Addresses::Handle_DecWeakRef);
+            UniversalRelocFunc<void (*)(SharedPtrBase*)> decWeakRefFn(Detail::AddressHashes::Handle_DecWeakRef);
             decWeakRefFn(this);
         }
     }
