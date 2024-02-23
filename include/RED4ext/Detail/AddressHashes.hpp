@@ -91,7 +91,7 @@ constexpr std::uint32_t CRTTISystem_Get = 0x4A610F64;
 #pragma endregion
 
 #pragma region CStack
-constexpr std::uint32_t CStack_vtbl = 0x33175496;
+constexpr std::uint32_t CStack_vtbl = 0x349A0EE1;
 #pragma endregion
 
 #pragma region CString
