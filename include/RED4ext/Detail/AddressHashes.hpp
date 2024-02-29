@@ -63,7 +63,7 @@ constexpr std::uint32_t CEnum_FromString = 0x21CA1EC1;
 #pragma endregion
 
 #pragma region CGameEngine
-constexpr std::uint32_t CGameEngine = 0x97F209D6; // TODO: Check next update, there is hash conflict.
+constexpr std::uint32_t CGameEngine = 0x97F209D6;
 #pragma endregion
 
 #pragma region CGlobalFunction
@@ -124,7 +124,7 @@ constexpr std::uint32_t ISerializable_sub_C0 = 0x80201C35;
 #pragma endregion
 
 #pragma region JobDispatcher
-constexpr std::uint32_t JobDispatcher = 0xBAD50B3D; // TODO: Check next update, there is hash conflict.
+constexpr std::uint32_t JobDispatcher = 0xBAD50B3D;
 constexpr std::uint32_t JobDispatcher_DispatchJob = 0x9C441E82;
 #pragma endregion
 

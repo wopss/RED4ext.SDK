@@ -57,7 +57,7 @@ uintptr_t RED4ext::UniversalRelocBase::Resolve(uint32_t aHash)
     if (address == 0)
     {
         std::stringstream stream;
-        stream << "Failed to resolve address for hash " << std::hex << aHash << ".\nProcess will now close.";
+        stream << "Failed to resolve address for hash " << std::hex << std::showbase << aHash << ".\nProcess will now close.";
 
         MessageBoxA(nullptr, stream.str().c_str(), "RED4ext.SDK", MB_ICONERROR | MB_OK);
         TerminateProcess(GetCurrentProcess(), 1);
