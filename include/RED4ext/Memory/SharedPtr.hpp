@@ -178,7 +178,7 @@ protected:
         if (refCount)
         {
             // This function also deallocates RefCnt when weakRefs reaches 0.
-            UniversalRelocFunc<void (*)(SharedPtrBase*)> decWeakRefFn(Detail::AddressHashes::Handle_DecWeakRef);
+            static UniversalRelocFunc<void (*)(SharedPtrBase*)> decWeakRefFn(Detail::AddressHashes::Handle_DecWeakRef);
             decWeakRefFn(this);
         }
     }

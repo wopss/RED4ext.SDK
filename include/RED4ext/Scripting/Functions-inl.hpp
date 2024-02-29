@@ -56,12 +56,12 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
     if (!flags.isNative)
     {
         using executeScriptedFn_t = bool (*)(CBaseFunction*, CStack*, void*);
-        UniversalRelocFunc<executeScriptedFn_t> executeScriptedFn(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
+        static UniversalRelocFunc<executeScriptedFn_t> executeScriptedFn(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
         return executeScriptedFn(this, aStack, nullptr);
     }
 
     using executeNativeFn_t = bool (*)(CBaseFunction*, CStack*);
-    UniversalRelocFunc<executeNativeFn_t> executeNativeFn(Detail::AddressHashes::CBaseFunction_ExecuteNative);
+    static UniversalRelocFunc<executeNativeFn_t> executeNativeFn(Detail::AddressHashes::CBaseFunction_ExecuteNative);
     return executeNativeFn(this, aStack);
 }
 
@@ -70,7 +70,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute_(CStack* aStack)
     if (!flags.isNative)
     {
         using func_t = bool (*)(CBaseFunction*, CStack*);
-        UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
+        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
         return func(this, aStack);
     }
 
@@ -83,7 +83,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute_(CStack* aStack)
 
 RED4EXT_INLINE RED4ext::CBaseFunction::Handler_t RED4ext::CBaseFunction::GetHandler(uint32_t aIndex)
 {
-    UniversalRelocPtr<Handler_t*> handlers(Detail::AddressHashes::CBaseFunction_Handlers);
+    static UniversalRelocPtr<Handler_t*> handlers(Detail::AddressHashes::CBaseFunction_Handlers);
     return handlers[aIndex];
 }
 

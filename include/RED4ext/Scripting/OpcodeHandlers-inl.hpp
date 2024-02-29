@@ -9,7 +9,7 @@
 
 RED4EXT_INLINE RED4ext::OpcodeHandlers::Handler_t RED4ext::OpcodeHandlers::Get(uint8_t aOpcode)
 {
-    UniversalRelocPtr<Handler_t> opcodes(Detail::AddressHashes::OpcodeHandlers);
+    static UniversalRelocPtr<Handler_t> opcodes(Detail::AddressHashes::OpcodeHandlers);
     return opcodes.GetAddr()[aOpcode];
 }
 

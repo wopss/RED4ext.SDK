@@ -9,6 +9,6 @@
 
 RED4EXT_INLINE RED4ext::Memory::Vault* RED4ext::Memory::Vault::Get()
 {
-    UniversalRelocPtr<Vault*> ptr(Detail::AddressHashes::Memory_Vault);
+    static UniversalRelocPtr<Vault*> ptr(Detail::AddressHashes::Memory_Vault);
     return reinterpret_cast<Vault*>(ptr.GetAddr());
 }

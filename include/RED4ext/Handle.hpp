@@ -26,7 +26,7 @@ public:
 
     explicit Handle(T* aPtr)
     {
-        UniversalRelocFunc<Handle* (*)(Handle*, T*)> ctor(Detail::AddressHashes::Handle_ctor);
+        static UniversalRelocFunc<Handle* (*)(Handle*, T*)> ctor(Detail::AddressHashes::Handle_ctor);
         ctor(this, aPtr);
     }
 

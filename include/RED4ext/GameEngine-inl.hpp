@@ -9,6 +9,6 @@
 
 RED4EXT_INLINE RED4ext::CGameEngine* RED4ext::CGameEngine::Get()
 {
-    UniversalRelocPtr<CGameEngine*> ptr(Detail::AddressHashes::CGameEngine);
+    static UniversalRelocPtr<CGameEngine*> ptr(Detail::AddressHashes::CGameEngine);
     return ptr;
 }

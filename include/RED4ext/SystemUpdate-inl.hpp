@@ -13,7 +13,7 @@ RED4EXT_INLINE void RED4ext::UpdateRegistrar::RegisterUpdate(UpdateTickGroup aGr
                                                              const char* aName, GroupUpdateCallback&& aCallback)
 {
     using func_t = void (*)(UpdateRegistrar*, UpdateTickGroup, CClass*, const char*, GroupUpdateCallback&&, uint32_t);
-    UniversalRelocFunc<func_t> func(Detail::AddressHashes::UpdateRegistrar_RegisterGroupUpdate);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::UpdateRegistrar_RegisterGroupUpdate);
 
     func(this, aGroup, aSystem->GetNativeType(), aName, std::forward<GroupUpdateCallback>(aCallback), 0);
 }
@@ -24,7 +24,7 @@ RED4EXT_INLINE void RED4ext::UpdateRegistrar::RegisterUpdate(UpdateBucketMask aB
 {
     using func_t = void (*)(UpdateRegistrar*, UpdateBucketMask, UpdateBucketStage, CClass*, const char*,
                             BucketUpdateCallback&&, uint32_t);
-    UniversalRelocFunc<func_t> func(Detail::AddressHashes::UpdateRegistrar_RegisterBucketUpdate);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::UpdateRegistrar_RegisterBucketUpdate);
 
     func(this, aBuckets, aStage, aSystem->GetNativeType(), aName, std::forward<BucketUpdateCallback>(aCallback), 0);
 }

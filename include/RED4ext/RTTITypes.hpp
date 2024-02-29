@@ -254,7 +254,7 @@ struct TTypedClass : CClass
     {
         // This is doing something extra beside comparing properties, using the native func until we figure it out.
         using func_t = bool (*)(TTypedClass<T>*, const ScriptInstance, const ScriptInstance, uint32_t);
-        UniversalRelocFunc<func_t> func(Detail::AddressHashes::TTypedClass_IsEqual);
+        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::TTypedClass_IsEqual);
         return func(this, aLhs, aRhs, a3);
     }
 
@@ -483,7 +483,7 @@ struct CRTTIScriptReferenceType : CBaseRTTIType
     static CRTTIScriptReferenceType* New(void* aMemory, void* aUnknownArg = nullptr)
     {
         using func_t = void (*)(void*, void*);
-        UniversalRelocFunc<func_t> func(Detail::AddressHashes::CRTTIScriptReferenceType_ctor);
+        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CRTTIScriptReferenceType_ctor);
         func(aMemory, aUnknownArg);
 
         return (CRTTIScriptReferenceType*)aMemory;
@@ -493,7 +493,7 @@ struct CRTTIScriptReferenceType : CBaseRTTIType
     void Set(CBaseRTTIType* aBaseType, const T* aValue)
     {
         using func_t = void (*)(CRTTIScriptReferenceType*, CBaseRTTIType*, const T*);
-        UniversalRelocFunc<func_t> func(Detail::AddressHashes::CRTTIScriptReferenceType_Set);
+        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CRTTIScriptReferenceType_Set);
         func(this, aBaseType, aValue);
     }
 
