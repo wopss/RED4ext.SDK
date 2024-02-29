@@ -45,7 +45,7 @@ RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aContext, CStackType* aArg
     , argsCount(aArgsCount)
     , result(aResult)
 {
-    UniversalRelocVtbl vtbl(Detail::AddressHashes::CStack_vtbl);
+    static UniversalRelocVtbl vtbl(Detail::AddressHashes::CStack_vtbl);
     *reinterpret_cast<uintptr_t**>(this) = vtbl;
 }
 

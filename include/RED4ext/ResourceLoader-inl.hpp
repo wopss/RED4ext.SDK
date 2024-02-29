@@ -9,6 +9,6 @@
 
 RED4EXT_INLINE RED4ext::ResourceLoader* RED4ext::ResourceLoader::Get()
 {
-    UniversalRelocPtr<ResourceLoader*> ptr(Detail::AddressHashes::ResourceLoader);
+    static UniversalRelocPtr<ResourceLoader*> ptr(Detail::AddressHashes::ResourceLoader);
     return ptr;
 }

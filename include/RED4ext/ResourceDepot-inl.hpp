@@ -9,6 +9,6 @@
 
 RED4EXT_INLINE RED4ext::ResourceDepot* RED4ext::ResourceDepot::Get()
 {
-    UniversalRelocPtr<ResourceDepot*> ptr(Detail::AddressHashes::ResourceDepot);
+    static UniversalRelocPtr<ResourceDepot*> ptr(Detail::AddressHashes::ResourceDepot);
     return ptr;
 }

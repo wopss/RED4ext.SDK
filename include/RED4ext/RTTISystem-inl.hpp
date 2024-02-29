@@ -9,7 +9,7 @@
 
 RED4EXT_INLINE RED4ext::CRTTISystem* RED4ext::CRTTISystem::Get()
 {
-    UniversalRelocFunc<CRTTISystem* (*)()> func(Detail::AddressHashes::CRTTISystem_Get);
+    static UniversalRelocFunc<CRTTISystem* (*)()> func(Detail::AddressHashes::CRTTISystem_Get);
     return func();
 }
 
@@ -35,6 +35,6 @@ RED4EXT_INLINE void RED4ext::RTTIRegistrator::Add(CallbackFunc aRegFunc, Callbac
 
 RED4EXT_INLINE const uint32_t RED4ext::RTTIRegistrator::GetNextId()
 {
-    UniversalRelocPtr<volatile uint32_t> ptr(Detail::AddressHashes::CRTTIRegistrator_RTTIAsyncId);
+    static UniversalRelocPtr<volatile uint32_t> ptr(Detail::AddressHashes::CRTTIRegistrator_RTTIAsyncId);
     return InterlockedIncrement(ptr.GetAddr());
 }

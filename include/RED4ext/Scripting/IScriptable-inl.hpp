@@ -32,7 +32,7 @@ RED4EXT_INLINE RED4ext::CClass* RED4ext::IScriptable::GetType()
 RED4EXT_INLINE void RED4ext::IScriptable::sub_D8(int64_t a1, int64_t a2)
 {
     using func_t = void (*)(ISerializable*, int64_t, int64_t);
-    UniversalRelocFunc<func_t> func(Detail::AddressHashes::IScriptable_sub_D8);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::IScriptable_sub_D8);
     func(this, a1, a2);
 }
 
@@ -76,7 +76,7 @@ RED4EXT_INLINE void* RED4ext::IScriptable::GetValueHolder()
 RED4EXT_INLINE void RED4ext::IScriptable::DestructValueHolder()
 {
     using func_t = void* (*)(IScriptable*);
-    UniversalRelocFunc<func_t> func(Detail::AddressHashes::IScriptable_DestructValueHolder);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::IScriptable_DestructValueHolder);
     func(this);
 }
 
