@@ -53,7 +53,7 @@ constexpr std::uint32_t CClassFunction_ctor = 0x602D29F3;
 #pragma endregion
 
 #pragma region CClassStaticFunction
-constexpr std::uint32_t CClassStaticFunction_ctor = 0x235013BB;
+constexpr std::uint32_t CClassStaticFunction_ctor = 2920426135UL;
 #pragma endregion
 
 #pragma region CEnum

@@ -167,7 +167,7 @@ struct CClassStaticFunction : CClassFunction
 
             using func_t =
                 CClassStaticFunction* (*)(CClassStaticFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
-            UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClassStaticFunction_ctor);
+            static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClassStaticFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
 
