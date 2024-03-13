@@ -44,7 +44,7 @@ constexpr std::uint32_t CClass_CreateInstance = 0x5A800F1D;
 constexpr std::uint32_t CClass_GetProperty = 0x8F031512;
 constexpr std::uint32_t CClass_GetProperties = 1652956141UL;
 constexpr std::uint32_t CClass_ClearScriptedData = 0x31F20E93;
-constexpr std::uint32_t CClass_InitializeProperties = 0xF4AC12B0;
+constexpr std::uint32_t CClass_InitializeProperties = 2257327441UL;
 constexpr std::uint32_t CClass_AssignDefaultValuesToProperties = 0x97DF1590;
 #pragma endregion
 
