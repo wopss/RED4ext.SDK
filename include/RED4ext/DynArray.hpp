@@ -181,14 +181,14 @@ struct DynArray
 
     void Reserve(uint32_t aCount)
     {
-        constexpr uint32_t alignment = std::max(8ull, alignof(T));
+        constexpr uint32_t alignment = alignof(T);
 
         auto newCapacity = CalculateGrowth(aCount);
         using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
-        func(this, newCapacity, sizeof(T), alignment, nullptr);
+        func(this, newCapacity, sizeof(T), alignment >= 8 ? alignment : 8, nullptr);
     }
 
     Memory::IAllocator* GetAllocator() const
