@@ -123,7 +123,7 @@ struct DynArray
     template<class... TArgs>
     void Emplace(T* aPosition, TArgs&&... aArgs)
     {
-        uint32_t posIdx = static_cast<uint32_t>(aPosition - begin());
+        uint32_t posIdx = capacity ? static_cast<uint32_t>(aPosition - begin()) : 0;
         uint32_t newSize = size + 1;
         if (newSize > capacity)
         {
@@ -181,15 +181,14 @@ struct DynArray
 
     void Reserve(uint32_t aCount)
     {
-        // Alignment seems to always be 8.
-        constexpr uint32_t alignment = 8;
+        constexpr uint32_t alignment = alignof(T);
 
         auto newCapacity = CalculateGrowth(aCount);
         using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*a5)(int64_t, int64_t, int64_t, int64_t));
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
-        func(this, newCapacity, sizeof(T), alignment, nullptr);
+        func(this, newCapacity, sizeof(T), alignment >= 8 ? alignment : 8, nullptr);
     }
 
     Memory::IAllocator* GetAllocator() const
