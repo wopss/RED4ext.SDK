@@ -36,7 +36,9 @@
  * @brief Supports all game versions.
  * @note Only use this if you do not use RED4ext.SDK library, but you want to use RED4ext as a loader only.
  */
-#define RED4EXT_V0_RUNTIME_INDEPENDENT RED4EXT_V0_FILEVER(-1, -1, -1, -1)
+#define RED4EXT_V0_RUNTIME_INDEPENDENT                                                                                 \
+    RED4EXT_V0_FILEVER(static_cast<uint16_t>(-1), static_cast<uint16_t>(-1), static_cast<uint16_t>(-1),                \
+                       static_cast<uint16_t>(-1))
 
 /*
  * @brief The latest game version.
