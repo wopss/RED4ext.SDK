@@ -165,6 +165,8 @@ RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
 struct RawBuffer
 {
+    using AllocatorType = Memory::EngineAllocator;
+
     void* data;         // 00
     uint32_t size;      // 08
     uint32_t alignment; // 0C
@@ -185,18 +187,49 @@ struct SharedDataBuffer
 };
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
+struct DeferredDataBufferToken;
+
+enum class DeferredDataBufferState : uint8_t
+{
+    Unloaded = 0,
+    Loading = 1,
+    Loaded = 2,
+};
+
 struct DeferredDataBuffer
 {
-    int64_t unk00;    // 00
-    int64_t unk08;    // 08
-    RawBuffer buffer; // 10
-    int64_t unk30;    // 30
-    int8_t unk38;     // 38
-    int64_t unk40;    // 40
-    int64_t unk48;    // 48
-    int64_t unk50;    // 50
+    SharedPtr<DeferredDataBufferToken> LoadAsync();
+
+    RawBuffer temp;                // 00
+    SharedPtr<RawBuffer> raw;      // 20
+    void* unk30;                   // 30
+    uint8_t unk38;                 // 38
+    uint64_t unk40;                // 40
+    uint64_t unk48;                // 48
+    uint32_t unk50;                // 50
+    DeferredDataBufferState state; // 54
+    SharedMutex lock;              // 55
+    uint16_t unk56;                // 56
 };
 RED4EXT_ASSERT_SIZE(DeferredDataBuffer, 0x58);
+RED4EXT_ASSERT_OFFSET(DeferredDataBuffer, raw, 0x20);
+RED4EXT_ASSERT_OFFSET(DeferredDataBuffer, state, 0x54);
+RED4EXT_ASSERT_OFFSET(DeferredDataBuffer, lock, 0x55);
+
+struct DeferredDataBufferToken
+{
+    using AllocatorType = Memory::EngineAllocator;
+    using LoadedCallback = Callback<void (*)(DeferredDataBuffer&)>;
+
+    DeferredDataBufferToken(DeferredDataBuffer& aBuffer, JobHandle& aJob) noexcept;
+    DeferredDataBufferToken(const DeferredDataBufferToken&) = default;
+    DeferredDataBufferToken(DeferredDataBufferToken&&) = default;
+
+    void OnLoaded(LoadedCallback&& aCallback);
+
+    DeferredDataBuffer& buffer;
+    JobHandle job;
+};
 
 struct gamedataLocKeyWrapper
 {
