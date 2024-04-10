@@ -44,7 +44,7 @@ struct CallbackHandlerImpl<UnboundFunctionTarget<R, Args...>>
 {
     using TargetType = UnboundFunctionTarget<R, Args...>;
 
-    static R Invoke(TargetType* aTarget, Args&&... aArgs)
+    static R Invoke(const TargetType* aTarget, Args&&... aArgs)
     {
         std::invoke(aTarget->func, std::forward<Args>(aArgs)...);
     }
@@ -71,7 +71,7 @@ struct CallbackHandlerImpl<MemberFunctionTarget<C, R, Args...>>
 {
     using TargetType = MemberFunctionTarget<C, R, Args...>;
 
-    static R Invoke(TargetType* aTarget, Args&&... aArgs)
+    static R Invoke(const TargetType* aTarget, Args&&... aArgs)
     {
         std::invoke(aTarget->func, aTarget->context, std::forward<Args>(aArgs)...);
     }
@@ -103,7 +103,7 @@ struct CallbackHandlerImpl<ClosureTarget<L, R, Args...>>
 {
     using TargetType = typename ClosureTarget<L, R, Args...>::ClosureType;
 
-    static R Invoke(TargetType* aTarget, Args&&... aArgs)
+    static R Invoke(const TargetType* aTarget, Args&&... aArgs)
     {
         (*aTarget)(std::forward<Args>(aArgs)...);
     }

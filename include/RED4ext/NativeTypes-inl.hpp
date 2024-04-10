@@ -258,3 +258,29 @@ RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::CBaseRTTIType*
 {
     return aType->GetSize() <= InlineSize && aType->GetAlignment() <= InlineAlignment;
 }
+
+RED4EXT_INLINE RED4ext::SharedPtr<RED4ext::DeferredDataBufferToken> RED4ext::DeferredDataBuffer::LoadAsync()
+{
+    using LoadBufferAsync_t = JobHandle* (*)(DeferredDataBuffer*, JobHandle*, int64_t);
+    static UniversalRelocFunc<LoadBufferAsync_t> func(Detail::AddressHashes::DeferredDataBuffer_LoadAsync);
+
+    JobHandle loadingJob;
+    func(this, &loadingJob, 0);
+
+    return MakeShared<DeferredDataBufferToken>(*this, loadingJob);
+}
+
+RED4EXT_INLINE RED4ext::DeferredDataBufferToken::DeferredDataBufferToken(DeferredDataBuffer& aBuffer,
+                                                                         JobHandle& aJob) noexcept
+    : buffer(aBuffer)
+    , job(aJob)
+{
+}
+
+RED4EXT_INLINE void RED4ext::DeferredDataBufferToken::OnLoaded(LoadedCallback&& aCallback)
+{
+    JobQueue jobQueue;
+    jobQueue.Wait(job);
+    jobQueue.Dispatch([self = MakeShared<DeferredDataBufferToken>(*this), callback = std::move(aCallback)]()
+                      { callback(self->buffer); });
+}
