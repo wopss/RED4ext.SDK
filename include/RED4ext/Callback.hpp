@@ -16,7 +16,7 @@ template<typename R, typename... Args>
 struct CallbackHandler
 {
     template<typename T>
-    using InvokeFunc = R (*)(T* aTarget, Args&&... aArgs);
+    using InvokeFunc = R (*)(const T* aTarget, Args&&... aArgs);
 
     template<typename T>
     using CopyFunc = void (*)(T* aDst, T* aSrc);
@@ -141,9 +141,9 @@ public:
         ResetHandler();
     }
 
-    R operator()(Args&&... aArgs) const
+    auto operator()(Args&&... aArgs) const
     {
-        return InvokeTarget(buffer, std::forward<Args>(aArgs)...);
+        return InvokeTarget(std::forward<Args>(aArgs)...);
     }
 
     uint8_t buffer[InlineSize];
@@ -176,7 +176,7 @@ private:
         handler = nullptr;
     }
 
-    R InvokeTarget(Args&&... aArgs) const
+    inline auto InvokeTarget(Args&&... aArgs) const
     {
         return handler->invoke(buffer, std::forward<Args>(aArgs)...);
     }
@@ -304,7 +304,7 @@ public:
         ResetHandler();
     }
 
-    R operator()(Args&&... aArgs) const
+    auto operator()(Args&&... aArgs) const
     {
         return InvokeTarget(std::forward<Args>(aArgs)...);
     }
@@ -416,7 +416,7 @@ protected:
         }
     }
 
-    inline R InvokeTarget(Args&&... aArgs) const
+    inline auto InvokeTarget(Args&&... aArgs) const
     {
         return handler->invoke(GetBuffer(), std::forward<Args>(aArgs)...);
     }
