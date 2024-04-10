@@ -281,7 +281,6 @@ RED4EXT_INLINE void RED4ext::DeferredDataBufferToken::OnLoaded(LoadedCallback&& 
 {
     JobQueue jobQueue;
     jobQueue.Wait(job);
-    jobQueue.Dispatch([self = MakeShared<DeferredDataBufferToken>(*this), callback = std::move(aCallback)]() {
-        callback(self->buffer);
-    });
+    jobQueue.Dispatch([self = MakeShared<DeferredDataBufferToken>(*this), callback = std::move(aCallback)]()
+                      { callback(self->buffer); });
 }
