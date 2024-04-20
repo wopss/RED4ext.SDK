@@ -137,9 +137,14 @@ struct Variant
     Variant() noexcept = default;
     Variant(const CBaseRTTIType* aType);
     Variant(const CBaseRTTIType* aType, const ScriptInstance aData);
-    Variant(const CName& aTypeName, const ScriptInstance aData);
+    Variant(CName aTypeName);
+    Variant(CName aTypeName, const ScriptInstance aData);
     Variant(const Variant& aOther);
+    Variant(Variant&& aOther) noexcept;
     ~Variant();
+
+    Variant& operator=(const Variant& aRhs);
+    Variant& operator=(Variant&& aRhs) noexcept;
 
     bool IsEmpty() const noexcept;
     bool IsInlined() const noexcept;
