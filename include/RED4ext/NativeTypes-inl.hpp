@@ -152,7 +152,7 @@ RED4EXT_INLINE RED4ext::Variant::Variant(Variant&& aOther) noexcept
     : type(aOther.type)
 {
     std::copy(std::begin(aOther.inlined), std::end(aOther.inlined), std::begin(inlined));
-    std::fill(std::begin(aOther.inlined), std::end(aOther.inlined), 0);
+    std::fill(std::begin(aOther.inlined), std::end(aOther.inlined), static_cast<uint8_t>(0));
     aOther.type = nullptr;
 }
 
@@ -173,7 +173,7 @@ RED4EXT_INLINE RED4ext::Variant& RED4ext::Variant::operator=(Variant&& aRhs) noe
     aRhs.type = nullptr;
 
     std::copy(std::begin(aRhs.inlined), std::end(aRhs.inlined), std::begin(inlined));
-    std::fill(std::begin(aRhs.inlined), std::end(aRhs.inlined), 0);
+    std::fill(std::begin(aRhs.inlined), std::end(aRhs.inlined), static_cast<uint8_t>(0));
 
     return *this;
 }
