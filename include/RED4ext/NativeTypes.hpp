@@ -12,7 +12,6 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/NodeRef.hpp>
 #include <RED4ext/ResourceReference.hpp>
-#include <RED4ext/Unks.hpp>
 
 namespace RED4ext
 {
@@ -168,14 +167,30 @@ struct Variant
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
+struct RawBufferAllocator
+{
+    virtual void sub_00() = 0;                     // 08
+    virtual void Free(void* aData) = 0;            // 08
+    virtual Memory::IAllocator GetAllocator() = 0; // 10
+
+    void* unk08;
+};
+RED4EXT_ASSERT_SIZE(RawBufferAllocator, 0x10);
+
 struct RawBuffer
 {
     using AllocatorType = Memory::EngineAllocator;
 
-    void* data;         // 00
-    uint32_t size;      // 08
-    uint32_t alignment; // 0C
-    Unk530 unk10;       // 10
+    RawBuffer();
+    RawBuffer(void* aData, uint32_t aSize, uint32_t aAlignment = 8);
+    RawBuffer(const RawBuffer&) = delete;
+    RawBuffer(RawBuffer&&) = default;
+    ~RawBuffer();
+
+    void* data;            // 00
+    uint32_t size;         // 08
+    uint32_t alignment;    // 0C
+    uint64_t allocator[2]; // 10
 };
 RED4EXT_ASSERT_SIZE(RawBuffer, 0x20);
 
