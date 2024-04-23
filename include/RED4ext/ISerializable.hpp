@@ -18,6 +18,8 @@ struct CString;
 
 struct ISerializable
 {
+    ISerializable();
+
     virtual CClass* GetNativeType() = 0;                                                // 00
     virtual CClass* GetType();                                                          // 08
     virtual Memory::IAllocator* GetAllocator();                                         // 10
@@ -51,7 +53,9 @@ struct ISerializable
 
     WeakHandle<ISerializable> ref;   // 00 - Initialized in Handle ctor
     WeakHandle<ISerializable> unk18; // 18
-    uint64_t unk28;                  // 28 - Incremental ID set in ISerializable ctor, can be zero
+    uint64_t unk28;                  // 28 - Global incremental ID, used in serialization
+
+    inline static UniversalRelocPtr<volatile int64_t> s_globalIDCounter{Detail::AddressHashes::ISerializable_Counter};
 };
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext
