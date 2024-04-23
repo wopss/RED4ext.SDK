@@ -38,13 +38,7 @@ struct ResourcePath
 
     constexpr ResourcePath& operator=(const char* aRhs) noexcept
     {
-        *this = ResourcePath(aRhs);
-        return *this;
-    }
-
-    constexpr ResourcePath& operator=(const ResourcePath& aRhs) noexcept
-    {
-        hash = aRhs.hash;
+        hash = HashSanitized(aRhs);
         return *this;
     }
 
