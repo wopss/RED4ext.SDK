@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/inkDrawArea.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ink::DrawArea, 0x4C);
+using inkDrawArea = ink::DrawArea;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector2.hpp>
@@ -29,3 +38,4 @@ using inkDrawArea = ink::DrawArea;
 } // namespace RED4ext
 
 // clang-format on
+*/

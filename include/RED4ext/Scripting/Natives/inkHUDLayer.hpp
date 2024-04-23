@@ -27,5 +27,5 @@ struct __declspec(align(0x10)) HUDLayer : ink::FullScreenLayer
 RED4EXT_ASSERT_SIZE(HUDLayer, 0x200);
 RED4EXT_ASSERT_OFFSET(HUDLayer, entries, 0x150);
 RED4EXT_ASSERT_OFFSET(HUDLayer, definition, 0x188);
-RED4EXT_ASSERT_OFFSET(HUDLayer, spawnLock, 0x198);
+RED4EXT_ASSERT_OFFSET(HUDLayer, spawningLock, 0x198);
 } // namespace RED4ext::ink
