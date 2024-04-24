@@ -324,6 +324,17 @@ RED4EXT_INLINE RED4ext::SharedPtr<RED4ext::DeferredDataBufferToken> RED4ext::Def
     return MakeShared<DeferredDataBufferToken>(*this, loadingJob);
 }
 
+RED4EXT_INLINE RED4ext::SharedPtr<RED4ext::DeferredDataBufferRefToken> RED4ext::DeferredDataBuffer::LoadRefAsync()
+{
+    using LoadBufferRefAsync_t = void* (*)(DeferredDataBuffer*, SharedPtr<DeferredDataBufferRefToken>*, int8_t);
+    static UniversalRelocFunc<LoadBufferRefAsync_t> func(Detail::AddressHashes::DeferredDataBuffer_LoadRefAsync);
+
+    SharedPtr<DeferredDataBufferRefToken> token;
+    func(this, &token, 0);
+
+    return token;
+}
+
 RED4EXT_INLINE RED4ext::DeferredDataBufferToken::DeferredDataBufferToken(DeferredDataBuffer& aBuffer,
                                                                          JobHandle& aJob) noexcept
     : buffer(aBuffer)
@@ -337,4 +348,19 @@ RED4EXT_INLINE void RED4ext::DeferredDataBufferToken::OnLoaded(LoadedCallback&& 
     jobQueue.Wait(job);
     jobQueue.Dispatch([self = MakeShared<DeferredDataBufferToken>(*this), callback = std::move(aCallback)]()
                       { callback(self->buffer); });
+}
+
+RED4EXT_INLINE RED4ext::DeferredDataBufferRefToken::~DeferredDataBufferRefToken()
+{
+    using DestructUnk28_t = void (*)(void**);
+    static UniversalRelocFunc<DestructUnk28_t> DestructUnk28(Detail::AddressHashes::ResourceToken_DestructUnk38);
+    DestructUnk28(&unk28);
+}
+
+RED4EXT_INLINE void RED4ext::DeferredDataBufferRefToken::OnLoaded(LoadedCallback&& aCallback)
+{
+    JobQueue jobQueue;
+    jobQueue.Wait(job);
+    jobQueue.Dispatch([self = self.Lock(), callback = std::move(aCallback)]()
+                      { callback(self); });
 }

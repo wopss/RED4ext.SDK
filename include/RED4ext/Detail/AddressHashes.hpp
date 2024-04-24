@@ -198,6 +198,7 @@ constexpr std::uint32_t UpdateRegistrar_RegisterBucketUpdate = 0x192F4EA2;
 
 #pragma region DeferredDataBuffer
 constexpr std::uint32_t DeferredDataBuffer_LoadAsync = 4125893577;
+constexpr std::uint32_t DeferredDataBuffer_LoadRefAsync = 1459046115;
 #pragma endregion
 }
 // clang-format on

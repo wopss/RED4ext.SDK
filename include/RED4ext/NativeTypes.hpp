@@ -208,6 +208,7 @@ struct SharedDataBuffer
 RED4EXT_ASSERT_SIZE(SharedDataBuffer, 0x8);
 
 struct DeferredDataBufferToken;
+struct DeferredDataBufferRefToken;
 
 enum class DeferredDataBufferState : uint8_t
 {
@@ -219,6 +220,7 @@ enum class DeferredDataBufferState : uint8_t
 struct DeferredDataBuffer
 {
     SharedPtr<DeferredDataBufferToken> LoadAsync();
+    SharedPtr<DeferredDataBufferRefToken> LoadRefAsync();
 
     RawBuffer temp;                // 00
     SharedPtr<RawBuffer> raw;      // 20
@@ -250,6 +252,26 @@ struct DeferredDataBufferToken
     DeferredDataBuffer& buffer;
     JobHandle job;
 };
+
+struct DeferredDataBufferRefToken
+{
+    using AllocatorType = Memory::EngineAllocator;
+    using LoadedCallback = Callback<void (*)(const SharedPtr<DeferredDataBufferRefToken>&)>;
+
+    ~DeferredDataBufferRefToken();
+
+    void OnLoaded(LoadedCallback&& aCallback);
+
+    WeakPtr<DeferredDataBufferRefToken> self; // 00
+    JobHandle job;                            // 10
+    SharedPtr<RawBuffer> raw;                 // 18
+    void* unk28;                              // 28 - SharedPtr.instance
+    void* unk30;                              // 30 - SharedPtr.refCount
+};
+RED4EXT_ASSERT_SIZE(DeferredDataBufferRefToken, 0x38);
+RED4EXT_ASSERT_OFFSET(DeferredDataBufferRefToken, job, 0x10);
+RED4EXT_ASSERT_OFFSET(DeferredDataBufferRefToken, raw, 0x18);
+RED4EXT_ASSERT_OFFSET(DeferredDataBufferRefToken, unk28, 0x28);
 
 struct gamedataLocKeyWrapper
 {
