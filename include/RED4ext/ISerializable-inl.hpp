@@ -8,6 +8,11 @@
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Relocation.hpp>
 
+RED4EXT_INLINE RED4ext::ISerializable::ISerializable()
+    : unk28(InterlockedIncrement64(s_globalIDCounter.GetAddr()))
+{
+}
+
 RED4EXT_INLINE RED4ext::CClass* RED4ext::ISerializable::GetType()
 {
     return GetNativeType();

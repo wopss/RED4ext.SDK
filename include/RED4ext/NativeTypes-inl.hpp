@@ -289,6 +289,30 @@ RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::CBaseRTTIType*
     return aType->GetSize() <= InlineSize && aType->GetAlignment() <= InlineAlignment;
 }
 
+RED4EXT_INLINE RED4ext::RawBuffer::RawBuffer()
+    : data(nullptr)
+    , size(0)
+    , alignment(8)
+    , allocator{0}
+{
+}
+
+RED4EXT_INLINE RED4ext::RawBuffer::RawBuffer(void* aData, uint32_t aSize, uint32_t aAlignment)
+    : data(aData)
+    , size(aSize)
+    , alignment(aAlignment)
+    , allocator{0}
+{
+}
+
+RED4EXT_INLINE RED4ext::RawBuffer::~RawBuffer()
+{
+    if (data && allocator[0])
+    {
+        reinterpret_cast<RawBufferAllocator*>(&allocator)->Free(data);
+    }
+}
+
 RED4EXT_INLINE RED4ext::SharedPtr<RED4ext::DeferredDataBufferToken> RED4ext::DeferredDataBuffer::LoadAsync()
 {
     using LoadBufferAsync_t = JobHandle* (*)(DeferredDataBuffer*, JobHandle*, int64_t);
