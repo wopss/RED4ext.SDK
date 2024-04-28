@@ -60,8 +60,6 @@ RED4EXT_ASSERT_SIZE(JobParamSet, 0x3);
 struct JobHandle
 {
     JobHandle(uintptr_t aUnk = 0);
-    JobHandle(const JobHandle&) = default;
-    JobHandle(JobHandle&&) = default;
     ~JobHandle();
 
     /**
@@ -242,7 +240,7 @@ public:
      *
      * @param aJob The job to wait before continuing the queue.
      */
-    void Wait(JobHandle& aJob);
+    void Wait(const JobHandle& aJob);
 
     /**
      * @brief Finalizes the queue and returns a job handle associated with this queue.

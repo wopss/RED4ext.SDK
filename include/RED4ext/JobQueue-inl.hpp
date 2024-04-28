@@ -87,7 +87,7 @@ RED4EXT_INLINE RED4ext::JobQueue::~JobQueue()
     func(this);
 }
 
-RED4EXT_INLINE void RED4ext::JobQueue::Wait(JobHandle& aJob)
+RED4EXT_INLINE void RED4ext::JobQueue::Wait(const JobHandle& aJob)
 {
     unk10.Join(aJob);
 }
