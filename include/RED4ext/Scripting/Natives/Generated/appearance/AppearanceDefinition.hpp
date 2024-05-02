@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/appearanceAppearanceDefinition.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(appearance::AppearanceDefinition, 0x1D8);
+using appearanceAppearanceDefinition = appearance::AppearanceDefinition;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -52,5 +61,6 @@ RED4EXT_ASSERT_SIZE(AppearanceDefinition, 0x1D8);
 } // namespace appearance
 using appearanceAppearanceDefinition = appearance::AppearanceDefinition;
 } // namespace RED4ext
+*/
 
 // clang-format on

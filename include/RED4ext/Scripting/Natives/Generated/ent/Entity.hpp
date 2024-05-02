@@ -4,6 +4,16 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/entEntity.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ent::Entity, 0x160);
+using entEntity = ent::Entity;
+using Entity = ent::Entity;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
@@ -30,5 +40,6 @@ RED4EXT_ASSERT_SIZE(Entity, 0x160);
 using entEntity = ent::Entity;
 using Entity = ent::Entity;
 } // namespace RED4ext
+*/
 
 // clang-format on
