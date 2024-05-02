@@ -4,6 +4,14 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/CMeshMaterialEntry.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(CMeshMaterialEntry, 0x30);
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -23,5 +31,6 @@ struct CMeshMaterialEntry
 };
 RED4EXT_ASSERT_SIZE(CMeshMaterialEntry, 0x30);
 } // namespace RED4ext
+*/
 
 // clang-format on

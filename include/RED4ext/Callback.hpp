@@ -67,6 +67,12 @@ public:
 
     static_assert(InlineSize >= sizeof(void*), "Buffer size can't be less than pointer size");
 
+    Callback()
+        : buffer()
+        , handler(nullptr)
+    {
+    }
+
     Callback(R (*aFunc)(Args...)) noexcept
     {
         using TargetType = Detail::UnboundFunctionTarget<R, Args...>;
@@ -219,6 +225,14 @@ public:
     using AllocatorType = Memory::DefaultAllocator;
 
     static_assert(InlineSize >= sizeof(void*), "Buffer size can't be less than pointer size");
+
+    FlexCallback()
+        : buffer()
+        , handler(nullptr)
+        , allocator(0)
+        , extendedSize(0)
+    {
+    }
 
     FlexCallback(R (*aFunc)(Args...))
         : allocator(0)
@@ -397,14 +411,14 @@ protected:
         return InlineSize;
     }
 
-    [[nodiscard]] void* GetBuffer() noexcept
+    [[nodiscard]] void* GetBuffer() const noexcept
     {
         if (IsExtendedMode())
         {
-            return *reinterpret_cast<void**>(buffer);
+            return *reinterpret_cast<void**>(const_cast<uint8_t*>(buffer));
         }
 
-        return buffer;
+        return const_cast<uint8_t*>(buffer);
     }
 
     void ResetBuffer()
