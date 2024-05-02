@@ -27,8 +27,9 @@ RED4EXT_INLINE void RED4ext::ISerializable::sub_20()
 {
 }
 
-RED4EXT_INLINE void RED4ext::ISerializable::sub_28()
+RED4EXT_INLINE void RED4ext::ISerializable::PostLoad(const RED4ext::PostLoadParams& aParams)
 {
+    RED4EXT_UNUSED_PARAMETER(aParams);
 }
 
 RED4EXT_INLINE bool RED4ext::ISerializable::sub_30()

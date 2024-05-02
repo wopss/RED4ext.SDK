@@ -158,6 +158,18 @@ constexpr std::uint32_t Memory_PoolStorage_OOM = 0xD54F163A;
 constexpr std::uint32_t OpcodeHandlers = 0x39532858;
 #pragma endregion
 
+#pragma region ObjectPackageExtractor
+constexpr std::uint32_t ObjectPackageExtractor_Initialize = 2318998714;
+constexpr std::uint32_t ObjectPackageExtractor_ExtractSync = 2038372664;
+constexpr std::uint32_t ObjectPackageExtractor_ExtractAsync = 3819248393;
+#pragma endregion
+
+#pragma region ObjectPackageReader
+constexpr std::uint32_t ObjectPackageReader_ctor = 3628731410;
+constexpr std::uint32_t ObjectPackageReader_OnReadHeader = 1632836642;
+constexpr std::uint32_t ObjectPackageReader_ReadHeader = 1285757088;
+#pragma endregion
+
 #pragma region ResourceDepot
 constexpr std::uint32_t ResourceDepot = 0x659A0FC7;
 #pragma endregion
