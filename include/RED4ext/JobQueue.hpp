@@ -53,13 +53,31 @@ struct JobParamSet
 };
 RED4EXT_ASSERT_SIZE(JobParamSet, 0x3);
 
+struct JobInternalHandle
+{
+    uint64_t unk00;          // 00
+    uint64_t unk08;          // 08
+    uint64_t unk10;          // 10
+    volatile uint32_t unk18; // 18
+    volatile uint32_t unk1C; // 1C
+    uint8_t unk20;           // 20
+    JobParamSet params;      // 21
+};
+RED4EXT_ASSERT_SIZE(JobInternalHandle, 0x28);
+RED4EXT_ASSERT_OFFSET(JobInternalHandle, unk1C, 0x1C);
+
 /**
  * @brief A handle associated with a job queue or job group.
  * It's used to track job completion and sync job execution.
  */
-struct JobHandle
+class JobHandle
 {
+public:
     JobHandle(uintptr_t aUnk = 0);
+    JobHandle(const JobHandle&);
+    JobHandle(JobHandle&&) noexcept;
+    JobHandle& operator=(const JobHandle&);
+    JobHandle& operator=(JobHandle&&) noexcept;
     ~JobHandle();
 
     /**
@@ -70,7 +88,13 @@ struct JobHandle
      */
     void Join(const JobHandle& aOther);
 
-    void* unk00; // 00
+    JobInternalHandle* internal; // 00
+
+private:
+    void AcquireInternalHandle(uintptr_t aUnk);
+    void CopyInternalHandle(const JobHandle& aOther);
+    void MoveInternalHandle(JobHandle& aOther);
+    void ReleaseInternalHandle();
 };
 RED4EXT_ASSERT_SIZE(JobHandle, 0x8);
 
