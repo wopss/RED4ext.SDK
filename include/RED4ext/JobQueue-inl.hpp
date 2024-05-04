@@ -4,6 +4,11 @@
 #include <RED4ext/JobQueue.hpp>
 #endif
 
+#include <cstdint>
+#include <memory>
+
+#include <Windows.h>
+
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Hashing/FNV1a.hpp>
 #include <RED4ext/Relocation.hpp>
@@ -41,18 +46,44 @@ RED4EXT_INLINE RED4ext::JobParamSet::JobParamSet() noexcept
 
 RED4EXT_INLINE RED4ext::JobHandle::JobHandle(uintptr_t aUnk)
 {
-    using func_t = void* (*)(void*, uintptr_t);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobHandle_ctor);
+    AcquireInternalHandle(aUnk);
+}
 
-    unk00 = func(nullptr, aUnk);
+RED4EXT_INLINE RED4ext::JobHandle::JobHandle(const JobHandle& aOther)
+{
+    CopyInternalHandle(aOther);
+}
+
+RED4EXT_INLINE RED4ext::JobHandle::JobHandle(JobHandle&& aOther) noexcept
+{
+    MoveInternalHandle(aOther);
+}
+
+RED4EXT_INLINE RED4ext::JobHandle& RED4ext::JobHandle::operator=(const JobHandle& aOther)
+{
+    if (this != std::addressof(aOther))
+    {
+        ReleaseInternalHandle();
+        CopyInternalHandle(aOther);
+    }
+
+    return *this;
+}
+
+RED4EXT_INLINE RED4ext::JobHandle& RED4ext::JobHandle::operator=(JobHandle&& aOther) noexcept
+{
+    if (this != std::addressof(aOther))
+    {
+        ReleaseInternalHandle();
+        MoveInternalHandle(aOther);
+    }
+
+    return *this;
 }
 
 RED4EXT_INLINE RED4ext::JobHandle::~JobHandle()
 {
-    using func_t = void (*)(JobHandle*);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobHandle_dtor);
-
-    func(this);
+    ReleaseInternalHandle();
 }
 
 RED4EXT_INLINE void RED4ext::JobHandle::Join(const JobHandle& aOther)
@@ -61,6 +92,37 @@ RED4EXT_INLINE void RED4ext::JobHandle::Join(const JobHandle& aOther)
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobHandle_Join);
 
     func(this, aOther);
+}
+
+RED4EXT_INLINE void RED4ext::JobHandle::AcquireInternalHandle(uintptr_t aUnk)
+{
+    using func_t = JobInternalHandle* (*)(void*, uintptr_t);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobInternalHandle_Acquire);
+
+    internal = func(nullptr, aUnk);
+}
+
+RED4EXT_INLINE void RED4ext::JobHandle::CopyInternalHandle(const JobHandle& aOther)
+{
+    internal = aOther.internal;
+    InterlockedExchangeAdd(&internal->unk1C, static_cast<uint32_t>(1));
+}
+
+RED4EXT_INLINE void RED4ext::JobHandle::MoveInternalHandle(JobHandle& aOther)
+{
+    internal = aOther.internal;
+    aOther.internal = nullptr;
+}
+
+RED4EXT_INLINE void RED4ext::JobHandle::ReleaseInternalHandle()
+{
+    if (internal)
+    {
+        using func_t = void (*)(JobHandle*);
+        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobHandle_dtor);
+
+        func(this);
+    }
 }
 
 RED4EXT_INLINE RED4ext::JobQueue::JobQueue(const JobGroup& aGroup)
@@ -105,11 +167,11 @@ RED4EXT_INLINE [[nodiscard]] RED4ext::JobHandle RED4ext::JobQueue::Capture()
 
 RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
 {
-    using func_t = uint32_t (*)(void*, const JobInstance&, uint8_t, JobHandle, JobHandle);
+    using func_t = uint32_t (*)(void*, const JobInstance&, uint8_t, JobInternalHandle*, JobInternalHandle*);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobDispatcher_DispatchJob);
     static UniversalRelocPtr<void*> dispatcher(Detail::AddressHashes::JobDispatcher);
 
-    func(dispatcher, aJob, params.unk00, unk10, unk18);
+    func(dispatcher, aJob, params.unk00, unk10.internal, unk18.internal);
 }
 
 RED4EXT_INLINE void RED4ext::JobQueue::SyncWait()

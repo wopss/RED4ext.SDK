@@ -130,9 +130,12 @@ constexpr std::uint32_t JobDispatcher_DispatchJob = 0x9C441E82;
 #pragma endregion
 
 #pragma region JobHandle
-constexpr std::uint32_t JobHandle_ctor = 0x6EFF1BD2;
 constexpr std::uint32_t JobHandle_dtor = 0x9E480A2E;
 constexpr std::uint32_t JobHandle_Join = 0x9C9C097C;
+#pragma endregion
+
+#pragma region JobInternalHandle
+constexpr std::uint32_t JobInternalHandle_Acquire = 0x6EFF1BD2;
 #pragma endregion
 
 #pragma region JobQueue
