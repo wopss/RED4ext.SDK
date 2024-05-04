@@ -48,6 +48,27 @@ RED4EXT_ASSERT_OFFSET(PackageHeader, unk02, 0x02);
 RED4EXT_ASSERT_OFFSET(PackageHeader, root, 0x08);
 RED4EXT_ASSERT_OFFSET(PackageHeader, buffer, 0x48);
 
+struct PackageReader
+{
+    PackageReader(void* aBuffer, uint32_t aSize);
+    PackageReader(const DeferredDataBuffer& aBuffer);
+    PackageReader(const DataBuffer& aBuffer);
+    PackageReader(const RawBuffer& aBuffer);
+
+    virtual ~PackageReader() = default;                      // 00
+    virtual void OnReadHeader(uint64_t a1, uint64_t a2) = 0; // 08
+
+    void ReadHeader(PackageHeader& aOut);
+
+    [[nodiscard]] bool IsEmpty() const;
+
+    void* buffer;  // 08
+    uint32_t size; // 10
+};
+RED4EXT_ASSERT_SIZE(PackageReader, 0x18);
+RED4EXT_ASSERT_OFFSET(PackageReader, buffer, 0x08);
+RED4EXT_ASSERT_OFFSET(PackageReader, size, 0x10);
+
 struct ObjectPackageHeader
 {
     ObjectPackageHeader();
@@ -63,28 +84,19 @@ RED4EXT_ASSERT_OFFSET(ObjectPackageHeader, rootIndex, 0x0);
 RED4EXT_ASSERT_OFFSET(ObjectPackageHeader, cruids, 0x08);
 RED4EXT_ASSERT_OFFSET(ObjectPackageHeader, package, 0x18);
 
-struct ObjectPackageReader
+struct ObjectPackageReader : PackageReader
 {
-    ObjectPackageReader(void* aBuffer, uint32_t aSize);
-    ObjectPackageReader(const DeferredDataBuffer& aBuffer);
-    ObjectPackageReader(const DataBuffer& aBuffer);
-    ObjectPackageReader(const RawBuffer& aBuffer);
+    using PackageReader::PackageReader;
 
-    virtual ~ObjectPackageReader() = default;            // 00
-    virtual void OnReadHeader(uint64_t a1, uint64_t a2); // 08
+    ~ObjectPackageReader() override = default;            // 00
+    void OnReadHeader(uint64_t a1, uint64_t a2) override; // 08
 
     void ReadHeader();
     void ReadHeader(ObjectPackageHeader& aOut);
 
-    [[nodiscard]] bool IsEmpty() const;
-
-    void* buffer;               // 08
-    uint32_t size;              // 10
     ObjectPackageHeader header; // 18
 };
 RED4EXT_ASSERT_SIZE(ObjectPackageReader, 0x88);
-RED4EXT_ASSERT_OFFSET(ObjectPackageReader, buffer, 0x08);
-RED4EXT_ASSERT_OFFSET(ObjectPackageReader, size, 0x10);
 RED4EXT_ASSERT_OFFSET(ObjectPackageReader, header, 0x18);
 
 struct ObjectPackageExtractorParams
