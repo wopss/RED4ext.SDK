@@ -22,7 +22,7 @@ struct ResourceToken
     using AllocatorType = Memory::EngineAllocator;
     using LoadedCallback = FlexCallback<void (*)(RED4ext::Handle<T>&)>;
 
-    ResourceToken() = delete;
+    ResourceToken() = default;
     ResourceToken(const ResourceToken&) = delete;
     ResourceToken(ResourceToken&&) = delete;
 
