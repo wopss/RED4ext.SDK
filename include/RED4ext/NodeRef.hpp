@@ -114,6 +114,18 @@ struct NodeRef
 };
 RED4EXT_ASSERT_SIZE(NodeRef, 0x8);
 
+namespace world
+{
+struct GlobalNodeRef : NodeRef
+{
+    using NodeRef::NodeRef;
+};
+RED4EXT_ASSERT_SIZE(GlobalNodeRef, 0x8);
+} // namespace world
+
+using GlobalNodeRef = world::GlobalNodeRef;
+using worldGlobalNodeRef = world::GlobalNodeRef;
+
 template<typename T>
 struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, NodeRef>>>
 {
