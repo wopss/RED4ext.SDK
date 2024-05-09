@@ -7,8 +7,8 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/PrefabVariantReplicatedInfo.hpp>
-#include <RED4ext/Scripting/Natives/Generated/world/GlobalNodeRef.hpp>
 
 namespace RED4ext
 {

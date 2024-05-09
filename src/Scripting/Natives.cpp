@@ -2957,7 +2957,6 @@
 #include <RED4ext/Scripting/Natives/Generated/world/GeometryShapeNode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/GeometryShapeNodeInstance.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/GlobalNodeID.hpp>
-#include <RED4ext/Scripting/Natives/Generated/world/GlobalNodeRef.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/GroupProxyMeshBuildParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/HeatmapSetup.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/IDestructibleSpotsSystem.hpp>

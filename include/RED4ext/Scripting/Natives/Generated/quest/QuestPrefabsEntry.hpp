@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/world/GlobalNodeRef.hpp>
+#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/QuestPrefabLoadingMode.hpp>
 
 namespace RED4ext

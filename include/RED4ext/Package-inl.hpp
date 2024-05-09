@@ -5,6 +5,44 @@
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 
+
+RED4EXT_INLINE RED4ext::PackageReader::PackageReader(void* aBuffer, uint32_t aSize)
+    : buffer(aBuffer)
+    , size(aSize)
+{
+}
+
+RED4EXT_INLINE RED4ext::PackageReader::PackageReader(const DeferredDataBuffer& aBuffer)
+    : buffer(aBuffer.raw->data)
+    , size(aBuffer.raw->size)
+{
+}
+
+RED4EXT_INLINE RED4ext::PackageReader::PackageReader(const DataBuffer& aBuffer)
+    : buffer(aBuffer.buffer.data)
+    , size(aBuffer.buffer.size)
+{
+}
+
+RED4EXT_INLINE RED4ext::PackageReader::PackageReader(const RawBuffer& aBuffer)
+    : buffer(aBuffer.data)
+    , size(aBuffer.size)
+{
+}
+
+RED4EXT_INLINE bool RED4ext::PackageReader::IsEmpty() const
+{
+    return !buffer;
+}
+
+RED4EXT_INLINE void RED4ext::PackageReader::ReadHeader(RED4ext::PackageHeader& aOut)
+{
+    using func_t = void (*)(PackageReader*, PackageHeader&);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::BasePackageReader_ReadHeader);
+
+    func(this, aOut);
+}
+
 RED4EXT_INLINE RED4ext::ObjectPackageHeader::ObjectPackageHeader()
     : rootIndex(-1)
 {
@@ -13,50 +51,6 @@ RED4EXT_INLINE RED4ext::ObjectPackageHeader::ObjectPackageHeader()
 RED4EXT_INLINE bool RED4ext::ObjectPackageHeader::IsEmpty() const
 {
     return cruids.IsEmpty();
-}
-
-RED4EXT_INLINE RED4ext::ObjectPackageReader::ObjectPackageReader(void* aBuffer, uint32_t aSize)
-{
-    using func_t = void (*)(ObjectPackageReader*);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::ObjectPackageReader_ctor);
-
-    func(this);
-
-    buffer = aBuffer;
-    size = aSize;
-}
-
-RED4EXT_INLINE RED4ext::ObjectPackageReader::ObjectPackageReader(const DeferredDataBuffer& aBuffer)
-{
-    using func_t = void (*)(ObjectPackageReader*);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::ObjectPackageReader_ctor);
-
-    func(this);
-
-    buffer = aBuffer.raw->data;
-    size = aBuffer.raw->size;
-}
-
-RED4EXT_INLINE RED4ext::ObjectPackageReader::ObjectPackageReader(const DataBuffer& aBuffer)
-{
-    using func_t = void (*)(ObjectPackageReader*);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::ObjectPackageReader_ctor);
-
-    func(this);
-
-    buffer = aBuffer.buffer.data;
-    size = aBuffer.buffer.size;
-}
-
-RED4EXT_INLINE RED4ext::ObjectPackageReader::ObjectPackageReader(const RawBuffer& aBuffer)
-{
-    using func_t = void (*)(ObjectPackageReader*);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::ObjectPackageReader_ctor);
-
-    func(this);
-
-    buffer = aBuffer.data;
-    size = aBuffer.size;
 }
 
 RED4EXT_INLINE void RED4ext::ObjectPackageReader::OnReadHeader(uint64_t a1, uint64_t a2)
@@ -81,11 +75,6 @@ RED4EXT_INLINE void RED4ext::ObjectPackageReader::ReadHeader(RED4ext::ObjectPack
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::ObjectPackageReader_ReadHeader);
 
     func(this, aOut);
-}
-
-RED4EXT_INLINE bool RED4ext::ObjectPackageReader::IsEmpty() const
-{
-    return !buffer;
 }
 
 RED4EXT_INLINE RED4ext::ObjectPackageExtractorParams::ObjectPackageExtractorParams(const RED4ext::PackageHeader& aHeader)

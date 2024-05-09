@@ -173,6 +173,10 @@ constexpr std::uint32_t ObjectPackageReader_OnReadHeader = 1632836642;
 constexpr std::uint32_t ObjectPackageReader_ReadHeader = 1285757088;
 #pragma endregion
 
+#pragma region BasePackageReader
+constexpr std::uint32_t BasePackageReader_ReadHeader = 3410956665;
+#pragma endregion
+
 #pragma region ResourceDepot
 constexpr std::uint32_t ResourceDepot = 0x659A0FC7;
 #pragma endregion
