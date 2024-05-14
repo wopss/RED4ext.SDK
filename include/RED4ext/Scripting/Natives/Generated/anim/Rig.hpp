@@ -4,7 +4,7 @@
 
 // This file is generated from the Game's Reflection data
 
-#include <RED4ext/Scripting/Natives/Rig.hpp>
+#include <RED4ext/Scripting/Natives/AnimRig.hpp>
 
 namespace RED4ext
 {
