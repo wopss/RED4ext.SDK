@@ -4,15 +4,14 @@
 
 // This file is generated from the Game's Reflection data
 
-#include <cstdint>
-#include <RED4ext/Common.hpp>
-#include <RED4ext/CName.hpp>
-#include <RED4ext/DynArray.hpp>
-#include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/anim/AnimDataAddress.hpp>
-#include <RED4ext/Scripting/Natives/Generated/anim/IAnimationBuffer.hpp>
+#include <RED4ext/Scripting/Natives/AnimationBufferCompressed.hpp>
 
 namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
+using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
+}*/ // namespace RED4ext
+/*namespace RED4ext
 {
 namespace anim
 {
@@ -44,6 +43,6 @@ struct AnimationBufferCompressed : anim::IAnimationBuffer
 RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
 } // namespace anim
 using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
-} // namespace RED4ext
+}*/ // namespace RED4ext
 
 // clang-format on
