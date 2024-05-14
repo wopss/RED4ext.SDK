@@ -42,7 +42,7 @@ struct KeyFrameRaw : KeyFrameHeader
 };
 RED4EXT_ASSERT_SIZE(KeyFrameRaw, 0x10);
 
-struct KeyFrameConst // 14B?
+struct KeyFrameConst // 14 Bytes?
 {
     uint16_t bitWiseData; // 00 Most likely a bitfield
 
@@ -60,7 +60,7 @@ struct TrackKey
 };
 RED4EXT_ASSERT_SIZE(TrackKey, 0x8);
 
-struct TrackKeyConst // 6B?
+struct TrackKeyConst // 6 Bytes?
 {
     uint16_t index; // 00
     float value;    // 02
