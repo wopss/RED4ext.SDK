@@ -2,18 +2,6 @@
 
 // clang-format off
 
-#include <RED4ext/Scripting/Natives/AnimSet.hpp>
-
-namespace RED4ext
-{
-RED4EXT_ASSERT_SIZE(AnimSet, 0x1F0);
-using animAnimSet = anim::AnimSet;
-} // namespace RED4ext
-
-/*#pragma once
-
-// clang-format off
-
 // This file is generated from the Game's Reflection data
 
 #include <cstdint>
@@ -62,8 +50,5 @@ RED4EXT_ASSERT_SIZE(AnimSet, 0x1F0);
 } // namespace anim
 using animAnimSet = anim::AnimSet;
 } // namespace RED4ext
-
-// clang-format on
-*/
 
 // clang-format on
