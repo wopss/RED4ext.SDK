@@ -308,9 +308,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
                                      {"BaseGameEngine", "GameEngine"},
                                      {"CGameEngine", "GameEngine"},
                                      {"UpdateBucketEnum", "SystemUpdate"},
-                                     {"worldGlobalNodeRef", "NativeTypes"},
-                                     {"AnimSet", "Scripting/Natives/AnimSet"},
-                                     {"AnimationBufferCompressed", "Scripting/Natives/AnimationBufferCompressed"}};
+                                     {"worldGlobalNodeRef", "NativeTypes"}};
 
     std::regex invalidChars(INVALID_CHARACTERS);
     std::regex invalidKeywords(INVALID_KEYWORDS);
