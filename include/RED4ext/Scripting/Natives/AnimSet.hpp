@@ -1,6 +1,5 @@
 #pragma once
 
-// clang-format off
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
