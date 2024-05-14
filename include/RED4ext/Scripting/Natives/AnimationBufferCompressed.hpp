@@ -53,4 +53,3 @@ RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
 using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
 } // namespace RED4ext
 
-// clang-format on
