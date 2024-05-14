@@ -21,6 +21,10 @@ struct KeyFrameHeader
     uint16_t rotationWSign : 1;  // 0F
 };
 RED4EXT_ASSERT_SIZE(KeyFrameHeader, 0x4);
+RED4EXT_ASSERT_OFFSET(KeyFrameHeader, timeNormalized, 0x0);
+RED4EXT_ASSERT_OFFSET(KeyFrameHeader, boneIndex, 0x2);
+RED4EXT_ASSERT_OFFSET(KeyFrameHeader, componentType, 0xE);
+RED4EXT_ASSERT_OFFSET(KeyFrameHeader, rotationWSign, 0xF);
 
 struct KeyFrameCompressed : KeyFrameHeader
 {
