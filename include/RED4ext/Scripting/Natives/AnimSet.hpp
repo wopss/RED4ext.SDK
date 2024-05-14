@@ -11,6 +11,7 @@
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimDataChunk.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimFallbackFrameDesc.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
+#include <RED4ext/Scripting/Natives/AnimBufferState.hpp>
 
 namespace RED4ext
 {
