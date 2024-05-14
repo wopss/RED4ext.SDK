@@ -49,4 +49,3 @@ RED4EXT_ASSERT_SIZE(AnimSet, 0x1F0);
 using animAnimSet = anim::AnimSet;
 } // namespace RED4ext
 
-// clang-format on
