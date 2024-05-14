@@ -10,7 +10,8 @@ namespace RED4ext
 {
 RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
 using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
-}*/ // namespace RED4ext
+} // namespace RED4ext
+
 /*namespace RED4ext
 {
 namespace anim
