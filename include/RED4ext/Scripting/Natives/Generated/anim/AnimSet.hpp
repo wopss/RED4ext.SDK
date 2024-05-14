@@ -2,8 +2,6 @@
 
 // clang-format off
 
-// This file is generated from the Game's Reflection data
-
 #include <RED4ext/Scripting/Natives/AnimSet.hpp>
 
 namespace RED4ext
@@ -12,7 +10,23 @@ RED4EXT_ASSERT_SIZE(AnimSet, 0x1F0);
 using animAnimSet = anim::AnimSet;
 } // namespace RED4ext
 
-/*namespace RED4ext
+/*#pragma once
+
+// clang-format off
+
+// This file is generated from the Game's Reflection data
+
+#include <cstdint>
+#include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Handle.hpp>
+#include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/anim/AnimDataChunk.hpp>
+#include <RED4ext/Scripting/Natives/Generated/anim/AnimFallbackFrameDesc.hpp>
+#include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
+
+namespace RED4ext
 {
 namespace anim { struct AnimSetEntry; }
 namespace anim { struct Rig; }
@@ -47,6 +61,9 @@ struct AnimSet : CResource
 RED4EXT_ASSERT_SIZE(AnimSet, 0x1F0);
 } // namespace anim
 using animAnimSet = anim::AnimSet;
-} // namespace RED4ext*/
+} // namespace RED4ext
+
+// clang-format on
+*/
 
 // clang-format on
