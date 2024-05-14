@@ -32,7 +32,7 @@ struct KeyFrameCompressed : KeyFrameHeader
     uint16_t y; // 02
     uint16_t z; // 04
 };
-RED4EXT_ASSERT_SIZE(KeyFrameCompressed, 0xA); // total struct size is header size + struct size
+RED4EXT_ASSERT_SIZE(KeyFrameCompressed, 0xA);
 
 struct KeyFrameRaw : KeyFrameHeader
 {
