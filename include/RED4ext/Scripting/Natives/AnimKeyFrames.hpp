@@ -15,10 +15,10 @@ enum KeyFrameComponent
 
 struct KeyFrameHeader
 {
-    uint16_t timeNormalized; // 00
-    uint16_t boneIndex : 13; // 02
-    uint16_t componentType : 2; // 0E
-    uint16_t rotationWSign : 1; // 0F
+    uint16_t timeNormalized;     // 00
+    uint16_t boneIndex : 13;     // 02
+    uint16_t componentType : 2;  // 0E
+    uint16_t rotationWSign : 1;  // 0F
 };
 RED4EXT_ASSERT_SIZE(KeyFrameHeader, 0x4);
 
@@ -50,16 +50,16 @@ RED4EXT_ASSERT_SIZE(KeyFrameConst, 0x10);
 
 struct TrackKey
 {
-    uint16_t time; // 00
+    uint16_t time;  // 00
     uint16_t index; // 02
-    float value; // 04
+    float value;    // 04
 };
 RED4EXT_ASSERT_SIZE(TrackKey, 0x8);
 
 struct TrackKeyConst // 6B?
 {
     uint16_t index; // 00
-    float value; // 02
+    float value;    // 02
 };
 RED4EXT_ASSERT_SIZE(TrackKeyConst, 0x8);
 
