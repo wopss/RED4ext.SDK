@@ -44,6 +44,6 @@ struct AnimationBufferCompressed : anim::IAnimationBuffer
 RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
 } // namespace anim
 using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
-} // namespace RED4ext */
+} // namespace RED4ext
 
 // clang-format on
