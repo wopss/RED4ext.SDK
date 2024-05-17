@@ -2,6 +2,7 @@
 
 #include <array>
 #include <cstdint>
+#include <limits>
 #include <string_view>
 
 #include <RED4ext/Buffer.hpp>
@@ -13,6 +14,8 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/NodeRef.hpp>
 #include <RED4ext/ResourceReference.hpp>
+#include <RED4ext/Scripting/Natives/Generated/curve/EInterpolationType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/curve/ESegmentsLinkType.hpp>
 
 namespace RED4ext
 {
@@ -210,17 +213,54 @@ template<typename T, uint32_t MAX_LEN>
 using NativeArray = std::array<T, MAX_LEN>;
 
 template<typename T>
+struct CurvePoint
+{
+    float point;
+    T value;
+};
+
+template<typename T>
+struct CurveBuffer
+{
+    [[nodiscard]] float* GetPoints() noexcept;
+    [[nodiscard]] T* GetValues() noexcept;
+
+    uint32_t size;         // 00
+    uint32_t unk04;        // 04
+    uint32_t offsetPoints; // 08
+    uint32_t offsetValues; // 12
+    // float points[size]; // 16
+    // T values[size];     // 16 + size * sizeof(float)
+};
+RED4EXT_ASSERT_SIZE(CurveBuffer<float>, 0x10);
+RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, size, 0x00);
+RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, offsetPoints, 0x08);
+RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, offsetValues, 0x0C);
+
+template<typename T>
 struct CurveData
 {
-    uint64_t unk00; // 00
-    uint64_t unk08; // 08
-    uint64_t unk10; // 10
-    uint64_t unk18; // 18
-    uint64_t unk20; // 20
-    uint64_t unk28; // 28
-    uint64_t unk30; // 30
+    [[nodiscard]] CurveBuffer<T>* GetCurve() const noexcept;
+    [[nodiscard]] uint32_t GetSize() const noexcept;
+
+    [[nodiscard]] CurvePoint<T> GetPoint(uint32_t aIndex) const noexcept;
+    void SetPoint(uint32_t aIndex, const CurvePoint<T>& acPoint) noexcept;
+    void SetPoint(uint32_t aIndex, float aPoint, const T& acValue) noexcept;
+
+    [[nodiscard]] inline CurvePoint<T> operator[](uint32_t aIndex) const noexcept;
+
+    CName name;                                  // 00
+    RawBuffer buffer;                            // 08
+    CBaseRTTIType* valueType;                    // 40
+    curve::EInterpolationType interpolationType; // 48
+    curve::ESegmentsLinkType linkType;           // 49
 };
 RED4EXT_ASSERT_SIZE(CurveData<float>, 0x38);
+RED4EXT_ASSERT_OFFSET(CurveData<float>, name, 0x00);
+RED4EXT_ASSERT_OFFSET(CurveData<float>, buffer, 0x08);
+RED4EXT_ASSERT_OFFSET(CurveData<float>, valueType, 0x28);
+RED4EXT_ASSERT_OFFSET(CurveData<float>, interpolationType, 0x30);
+RED4EXT_ASSERT_OFFSET(CurveData<float>, linkType, 0x31);
 
 template<typename T>
 struct ScriptRef
