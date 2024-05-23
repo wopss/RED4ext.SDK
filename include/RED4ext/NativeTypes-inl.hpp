@@ -320,9 +320,9 @@ RED4EXT_INLINE RED4ext::CurvePoint<T> RED4ext::CurveData<T>::GetPoint(uint32_t a
     {
         return {.point = std::numeric_limits<float>::infinity(), .value = T()};
     }
-    const CurveBuffer<T>* curve = GetCurve();
-    const float* points = curve->GetPoints();
-    const T* values = curve->GetValues();
+    CurveBuffer<T>* curve = GetCurve();
+    float* points = curve->GetPoints();
+    T* values = curve->GetValues();
 
     return {points[aIndex], values[aIndex]};
 }
@@ -340,7 +340,7 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, float aPoin
     {
         return;
     }
-    const CurveBuffer<T>* curve = GetCurve();
+    CurveBuffer<T>* curve = GetCurve();
     float* points = curve->GetPoints();
     T* values = curve->GetValues();
 
