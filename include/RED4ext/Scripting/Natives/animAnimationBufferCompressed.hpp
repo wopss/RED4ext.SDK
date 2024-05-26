@@ -1,16 +1,15 @@
 #pragma once
 
-
-#include <cstdint>
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Range.hpp>
+#include <RED4ext/Scripting/Natives/AnimBufferState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimDataAddress.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/IAnimationBuffer.hpp>
-#include <RED4ext/Range.hpp>
 #include <RED4ext/Scripting/Natives/KeyFrames.hpp>
-#include <RED4ext/Scripting/Natives/AnimBufferState.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {
@@ -52,4 +51,3 @@ RED4EXT_ASSERT_SIZE(AnimationBufferCompressed, 0x188);
 } // namespace anim
 using animAnimationBufferCompressed = anim::AnimationBufferCompressed;
 } // namespace RED4ext
-
