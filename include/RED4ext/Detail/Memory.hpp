@@ -13,6 +13,15 @@ struct IAllocator;
 namespace Detail
 {
 template<typename T>
+struct AddressResolverOverride : std::false_type
+{
+    inline static uintptr_t Resolve(T aHash)
+    {
+        return 0;
+    }
+};
+
+template<typename T>
 struct AllocatorHook : std::false_type
 {
 };
