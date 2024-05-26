@@ -288,3 +288,68 @@ RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::CBaseRTTIType*
 {
     return aType->GetSize() <= InlineSize && aType->GetAlignment() <= InlineAlignment;
 }
+
+template<typename T>
+RED4EXT_INLINE float* RED4ext::CurveBuffer<T>::GetPoints() noexcept
+{
+    return reinterpret_cast<float*>(reinterpret_cast<uint8_t*>(this) + offsetPoints);
+}
+
+template<typename T>
+RED4EXT_INLINE T* RED4ext::CurveBuffer<T>::GetValues() noexcept
+{
+    return reinterpret_cast<T*>(reinterpret_cast<uint8_t*>(this) + offsetValues);
+}
+
+template<typename T>
+RED4EXT_INLINE RED4ext::CurveBuffer<T>* RED4ext::CurveData<T>::GetCurve() const noexcept
+{
+    return reinterpret_cast<RED4ext::CurveBuffer<T>*>(buffer.data);
+}
+
+template<typename T>
+RED4EXT_INLINE uint32_t RED4ext::CurveData<T>::GetSize() const noexcept
+{
+    return GetCurve()->size;
+}
+
+template<typename T>
+RED4EXT_INLINE RED4ext::CurvePoint<T> RED4ext::CurveData<T>::GetPoint(uint32_t aIndex) const noexcept
+{
+    if (aIndex >= GetSize())
+    {
+        return {.point = std::numeric_limits<float>::infinity(), .value = T()};
+    }
+    CurveBuffer<T>* curve = GetCurve();
+    float* points = curve->GetPoints();
+    T* values = curve->GetValues();
+
+    return {points[aIndex], values[aIndex]};
+}
+
+template<typename T>
+RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, const RED4ext::CurvePoint<T>& acPoint) noexcept
+{
+    SetPoint(aIndex, acPoint.point, acPoint.value);
+}
+
+template<typename T>
+RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, float aPoint, const T& acValue) noexcept
+{
+    if (aIndex >= GetSize())
+    {
+        return;
+    }
+    CurveBuffer<T>* curve = GetCurve();
+    float* points = curve->GetPoints();
+    T* values = curve->GetValues();
+
+    points[aIndex] = aPoint;
+    values[aIndex] = acValue;
+}
+
+template<typename T>
+RED4EXT_INLINE RED4ext::CurvePoint<T> RED4ext::CurveData<T>::operator[](uint32_t aIndex) const noexcept
+{
+    return GetPoint(aIndex);
+}
