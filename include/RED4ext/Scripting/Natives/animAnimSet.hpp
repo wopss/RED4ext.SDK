@@ -16,9 +16,6 @@ namespace RED4ext
 namespace anim 
 { 
 struct AnimSetEntry; 
-}
-namespace anim 
-{ 
 struct Rig; 
 }
 
