@@ -13,10 +13,12 @@
 
 namespace RED4ext
 {
-namespace anim { 
+namespace anim 
+{ 
 struct AnimSetEntry; 
 }
-namespace anim { 
+namespace anim 
+{ 
 struct Rig; 
 }
 
