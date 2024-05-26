@@ -1,9 +1,9 @@
 #pragma once
 
-#include <cstdint>
-#include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/Buffer.hpp>
+#include <RED4ext/Memory/SharedPtr.hpp>
+#include <RED4ext/NativeTypes.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {
@@ -19,11 +19,11 @@ struct AnimBufferState
         External,
     };
 
-    SharedPtr<DeferredDataBufferCopyToken> token;          // 00
-    JobHandle job;                                         // 10
-    uint32_t requestsCounter;                              // 18
-    State state;                                           // 1C
-    uint8_t unk1E;                                         // 1E
+    SharedPtr<DeferredDataBufferCopyToken> token; // 00
+    JobHandle job;                                // 10
+    uint32_t requestsCounter;                     // 18
+    State state;                                  // 1C
+    uint8_t unk1E;                                // 1E
 };
 RED4EXT_ASSERT_SIZE(AnimBufferState, 0x20);
 } // namespace anim
