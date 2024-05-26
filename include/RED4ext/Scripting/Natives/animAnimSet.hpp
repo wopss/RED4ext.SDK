@@ -17,10 +17,7 @@ namespace anim
 { 
 struct AnimSetEntry; 
 struct Rig; 
-}
 
-namespace anim
-{
 struct AnimSet : CResource
 {
     static constexpr const char* NAME = "animAnimSet";
