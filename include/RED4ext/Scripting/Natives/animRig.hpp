@@ -16,9 +16,9 @@
 
 namespace RED4ext
 {
-namespace anim 
-{ 
-struct IRigIkSetup; 
+namespace anim
+{
+struct IRigIkSetup;
 }
 
 namespace anim
