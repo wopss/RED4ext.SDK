@@ -191,7 +191,7 @@ struct DynArray
         constexpr uint32_t alignment = alignof(T);
 
         auto newCapacity = CalculateGrowth(aCount);
-        using func_t = void (*)(DynArray * aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
+        using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*aMoveFunc)(T* aDstBuffer, T* aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
@@ -311,7 +311,7 @@ private:
     uint32_t CalculateGrowth(uint32_t aNewSize)
     {
         uint32_t geometric = capacity + (capacity / 2);
-        return std::max(aNewSize, geometric);
+        return (std::max)(aNewSize, geometric);
     }
 
     void CopyFrom(const DynArray& aOther)
