@@ -1,8 +1,7 @@
 #pragma once
 
-#include <cstdint>
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
@@ -13,6 +12,7 @@
 #include <RED4ext/Scripting/Natives/Generated/physics/RagdollBodyInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/physics/RagdollBodyNames.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
+#include <cstdint>
 
 namespace RED4ext::anim
 {
