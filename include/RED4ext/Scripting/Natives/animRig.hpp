@@ -14,15 +14,10 @@
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
 #include <cstdint>
 
-namespace RED4ext
-{
-namespace anim
+namespace RED4ext::anim
 {
 struct IRigIkSetup;
-}
 
-namespace anim
-{
 struct Rig : CResource
 {
     static constexpr const char* NAME = "animRig";
@@ -53,6 +48,4 @@ struct Rig : CResource
     DynArray<physics::RagdollBodyNames> ragdollNames; // 170
 };
 RED4EXT_ASSERT_SIZE(Rig, 0x180);
-} // namespace anim
-using animRig = anim::Rig;
-} // namespace RED4ext
+} // namespace RED4ext::anim

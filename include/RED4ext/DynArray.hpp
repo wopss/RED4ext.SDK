@@ -41,6 +41,7 @@ struct DynArray
     DynArray(const DynArray& aOther)
         : DynArray(aOther.GetAllocator())
     {
+        Reserve(aOther.size);
         CopyFrom(aOther);
     }
 
@@ -64,6 +65,7 @@ struct DynArray
         if (this != std::addressof(aOther))
         {
             Clear();
+            Reserve(aOther.size);
             CopyFrom(aOther);
         }
 
