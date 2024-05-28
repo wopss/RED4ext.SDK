@@ -4,16 +4,11 @@
 
 // This file is generated from the Game's Reflection data
 
-#include <RED4ext/Scripting/Natives/Rig.hpp>
+#include <RED4ext/Scripting/Natives/animRig.hpp>
 
 namespace RED4ext
 {
-namespace anim { struct IRigIkSetup; }
-
-namespace anim
-{
-RED4EXT_ASSERT_SIZE(Rig, 0x180);
-} // namespace anim
+RED4EXT_ASSERT_SIZE(anim::Rig, 0x180);
 using animRig = anim::Rig;
 } // namespace RED4ext
 
