@@ -55,9 +55,9 @@ struct DynArray
         if (capacity)
         {
             Clear();
-            auto* allocator = GetAllocator();
-            allocator->Free(entries);
-            entries = *reinterpret_cast<T**>(allocator);
+            auto allocator = *reinterpret_cast<T**>(GetAllocator());
+            reinterpret_cast<Memory::IAllocator*>(&allocator)->Free(entries);
+            entries = allocator;
             capacity = 0;
         }
     }
