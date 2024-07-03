@@ -39,9 +39,11 @@ struct KeyFrameRaw : KeyFrameHeader
 };
 RED4EXT_ASSERT_SIZE(KeyFrameRaw, 0x10);
 
-struct KeyFrameConst // 14 Bytes?
+struct KeyFrameConst
 {
-    uint16_t bitWiseData; // 00 Most likely a bitfield
+    uint16_t boneIndex : 13;
+    uint16_t channel : 2;
+    uint16_t rotationWSign : 1;
 
     float x; // 02
     float y; // 06
