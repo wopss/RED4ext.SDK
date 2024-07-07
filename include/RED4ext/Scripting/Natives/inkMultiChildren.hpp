@@ -14,7 +14,7 @@ struct MultiChildren : Children
     static constexpr const char* NAME = "inkMultiChildren";
     static constexpr const char* ALIAS = NAME;
 
-    SharedMutex lock;                  // 30
+    SharedSpinLock lock;               // 30
     DynArray<Handle<Widget>> children; // 38
 };
 RED4EXT_ASSERT_SIZE(MultiChildren, 0x48);

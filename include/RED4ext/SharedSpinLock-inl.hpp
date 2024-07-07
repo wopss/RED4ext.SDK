@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/SharedSpinLock.hpp>
 #endif
 
 #include <cstdint>
@@ -9,17 +9,17 @@
 
 #include <Windows.h>
 
-RED4EXT_INLINE RED4ext::SharedMutex::SharedMutex()
+RED4EXT_INLINE RED4ext::SharedSpinLock::SharedSpinLock()
     : state(0)
 {
 }
 
-RED4EXT_INLINE bool RED4ext::SharedMutex::TryLock()
+RED4EXT_INLINE bool RED4ext::SharedSpinLock::TryLock()
 {
     return _InterlockedCompareExchange8(&state, -1, 0) == 0;
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::Lock()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::Lock()
 {
     int32_t loopCount = 0;
     while (true)
@@ -35,12 +35,12 @@ RED4EXT_INLINE void RED4ext::SharedMutex::Lock()
     }
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::Unlock()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::Unlock()
 {
     InterlockedExchange8(&state, 0);
 }
 
-RED4EXT_INLINE bool RED4ext::SharedMutex::TryLockShared()
+RED4EXT_INLINE bool RED4ext::SharedSpinLock::TryLockShared()
 {
     char currentState = state;
     if (currentState != -1)
@@ -50,7 +50,7 @@ RED4EXT_INLINE bool RED4ext::SharedMutex::TryLockShared()
     return false;
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::LockShared()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::LockShared()
 {
     int32_t loopCount = 0;
     while (true)
@@ -66,7 +66,7 @@ RED4EXT_INLINE void RED4ext::SharedMutex::LockShared()
     }
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::UnlockShared()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::UnlockShared()
 {
     _InterlockedExchangeAdd8(&state, -1);
 }
@@ -75,32 +75,32 @@ RED4EXT_INLINE void RED4ext::SharedMutex::UnlockShared()
 // -- support for lock_guard and shared_lock --
 // --------------------------------------------
 
-RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock()
+RED4EXT_INLINE bool RED4ext::SharedSpinLock::try_lock()
 {
     return TryLock();
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::lock()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::lock()
 {
     Lock();
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::unlock()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::unlock()
 {
     Unlock();
 }
 
-RED4EXT_INLINE bool RED4ext::SharedMutex::try_lock_shared()
+RED4EXT_INLINE bool RED4ext::SharedSpinLock::try_lock_shared()
 {
     return TryLockShared();
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::lock_shared()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::lock_shared()
 {
     LockShared();
 }
 
-RED4EXT_INLINE void RED4ext::SharedMutex::unlock_shared()
+RED4EXT_INLINE void RED4ext::SharedSpinLock::unlock_shared()
 {
     UnlockShared();
 }

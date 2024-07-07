@@ -3,12 +3,14 @@
 #include <Windows.h>
 #include <cstdint>
 
-#include <RED4ext/Callback.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Mutex.hpp>
 #include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/SharedSpinLock.hpp>
 
 namespace RED4ext
 {
@@ -56,10 +58,10 @@ struct IRTTISystem
                                                      // containing the name and the bit.
     virtual void InitializeScriptRuntime() = 0;      // F8 - Called by script loader at the very end
     virtual void RegisterScriptName(CName aNativeName, CName aScriptedName) = 0; // 100
-    virtual CClass* GetClassByScriptName(CName aName) = 0;        // 108
-    virtual CEnum* GetEnumByScriptName(CName aName) = 0;          // 110
-    virtual CName ConvertNativeToScriptName(CName aName) = 0;     // 118
-    virtual CName ConvertScriptToNativeName(CName aName) = 0;     // 120
+    virtual CClass* GetClassByScriptName(CName aName) = 0;                       // 108
+    virtual CEnum* GetEnumByScriptName(CName aName) = 0;                         // 110
+    virtual CName ConvertNativeToScriptName(CName aName) = 0;                    // 118
+    virtual CName ConvertScriptToNativeName(CName aName) = 0;                    // 120
     virtual CString* GetStringConst(uint32_t aIndex) = 0;         // 128 - Used by StringConst opcode (0x10)
     virtual void SetStringTable(DynArray<CString>& aStrings) = 0; // 130 - Called by script loader
 
@@ -88,9 +90,9 @@ struct CRTTISystem : IRTTISystem
     DynArray<CString> strings;                        // 1B0 - Used by StringConst opcode (0x10)
     DynArray<void*> unk1C0;                           // 1C0
     DynArray<void*> unk1D0;                           // 1D0
-    CRITICAL_SECTION unk1E0;                          // 1E0
-    volatile int8_t typesLock;                        // 208
-    CRITICAL_SECTION unk210;                          // 210
+    Mutex unk1E0;                                     // 1E0
+    SharedSpinLock typesLock;                         // 208
+    Mutex rttiRegistratorMutex;                       // 210
 };
 RED4EXT_ASSERT_SIZE(CRTTISystem, 0x238);
 RED4EXT_ASSERT_OFFSET(CRTTISystem, types, 0x10);

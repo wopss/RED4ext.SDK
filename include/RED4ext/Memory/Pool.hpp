@@ -5,7 +5,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Hashing/FNV1a.hpp>
-#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/SharedSpinLock.hpp>
 
 namespace RED4ext::Memory
 {
@@ -47,7 +47,7 @@ struct PoolRegistry
 {
     static constexpr auto MaxPoolCount = 768;
 
-    SharedMutex nodesLock;        // 00
+    SharedSpinLock nodesLock;     // 00
     PoolInfo nodes[MaxPoolCount]; // 08
 
     template<typename T = PoolInfo>
@@ -60,7 +60,7 @@ struct PoolRegistry
     template<typename T = PoolInfo>
     T* Get(uint32_t aHandle)
     {
-        std::shared_lock<SharedMutex> _(nodesLock);
+        std::shared_lock<SharedSpinLock> _(nodesLock);
 
         /* Did not find anything to do this in O(1), could do it with some caching, but a separate struct would have to
          * be mantained, which is an overkill for this. Code that is using this should cache the value in a static

@@ -19,7 +19,7 @@
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/gamedataTweakDBRecord.hpp>
 #include <RED4ext/Scripting/Stack.hpp>
-#include <RED4ext/SharedMutex.hpp>
+#include <RED4ext/SharedSpinLock.hpp>
 #include <RED4ext/SortedArray.hpp>
 
 namespace RED4ext
@@ -145,8 +145,8 @@ struct TweakDB
     uint64_t unk08;                 // 08
     void* unkF0;                    // F0
     void* unkF8;                    // F8
-    SharedMutex mutex00;            // 20 - used with flats, flatDataBuffer* and defaultValues
-    SharedMutex mutex01;            // 21 - used with recordsByID, recordsByType, queries and groups
+    SharedSpinLock mutex00;         // 20 - used with flats, flatDataBuffer* and defaultValues
+    SharedSpinLock mutex01;         // 21 - used with recordsByID, recordsByType, queries and groups
     void* unk28;                    // 28 - class - 344 bytes - has DynArray<GroupTagCName> and DynArray<TagVal-1byte>
     void* unk30;                    // 30 - class - 248 bytes
     bool unk38;                     // 38
@@ -174,7 +174,7 @@ struct TweakDB
     template<typename T>
     bool TryGetValue(TweakDBID aDBID, T& aValue)
     {
-        std::shared_lock<SharedMutex> _(mutex00);
+        std::shared_lock<SharedSpinLock> _(mutex00);
 
         auto* flatValue = GetFlatValue(aDBID);
         if (flatValue == nullptr)

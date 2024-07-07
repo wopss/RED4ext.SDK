@@ -28,7 +28,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecord(TweakDBID aDBID, Handle<IScri
 {
     if (!aDBID.IsValid())
         return false;
-    std::shared_lock<SharedMutex> _(mutex01);
+    std::shared_lock<SharedSpinLock> _(mutex01);
 
     auto* record = recordsByID.Get(aDBID);
     if (record == nullptr)
@@ -49,7 +49,7 @@ RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>> RED4ext:
 RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecordsByType(CBaseRTTIType* aType,
                                                           DynArray<Handle<IScriptable>>& aRecordsArray)
 {
-    std::shared_lock<SharedMutex> _(mutex01);
+    std::shared_lock<SharedSpinLock> _(mutex01);
 
     auto* records = recordsByType.Get(aType);
     if (records == nullptr)
@@ -66,7 +66,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::AddQuery(TweakDBID aDBID, const DynArray<T
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex01);
+    std::lock_guard<SharedSpinLock> _(mutex01);
     return queries.Insert(aDBID, aArray).second;
 }
 
@@ -77,7 +77,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::ReplaceQuery(TweakDBID aDBID, const DynArr
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex01);
+    std::lock_guard<SharedSpinLock> _(mutex01);
     return queries.InsertOrAssign(aDBID, aArray).second;
 }
 
@@ -92,7 +92,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryQuery(TweakDBID aDBID, DynArray<TweakDB
 {
     if (!aDBID.IsValid())
         return false;
-    std::shared_lock<SharedMutex> _(mutex01);
+    std::shared_lock<SharedSpinLock> _(mutex01);
 
     const auto* recordArray = queries.Get(aDBID);
     if (recordArray == nullptr)
@@ -109,7 +109,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::HasQuery(TweakDBID aDBID)
         return false;
     }
 
-    std::shared_lock<SharedMutex> _(mutex01);
+    std::shared_lock<SharedSpinLock> _(mutex01);
     const auto queriesArray = queries.Get(aDBID);
     return queriesArray != nullptr;
 }
@@ -121,7 +121,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::AddGroupTag(TweakDBID aDBID, GroupTag aGro
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex01);
+    std::lock_guard<SharedSpinLock> _(mutex01);
     return groups.Insert(aDBID, aGroup).second;
 }
 
@@ -132,7 +132,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::ReplaceGroupTag(TweakDBID aDBID, GroupTag 
         return false;
     }
 
-    std::lock_guard<SharedMutex> _(mutex01);
+    std::lock_guard<SharedSpinLock> _(mutex01);
     return groups.InsertOrAssign(aDBID, aGroup).second;
 }
 
@@ -143,7 +143,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::HasGroupTag(TweakDBID aDBID)
         return false;
     }
 
-    std::shared_lock<SharedMutex> _(mutex01);
+    std::shared_lock<SharedSpinLock> _(mutex01);
     const auto group = groups.Get(aDBID);
     return group != nullptr;
 }
@@ -237,7 +237,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, CBaseRTTITyp
 {
     Handle<IScriptable> record;
     {
-        std::shared_lock<SharedMutex> _(mutex01);
+        std::shared_lock<SharedSpinLock> _(mutex01);
 
         const auto* records = recordsByType.Get(aType);
         if (records == nullptr || records->size == 0)
@@ -273,7 +273,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::RemoveRecord(TweakDBID aDBID)
     if (!record)
         return false;
 
-    std::lock_guard<SharedMutex> _(mutex01);
+    std::lock_guard<SharedSpinLock> _(mutex01);
     if (recordsByID.Remove(aDBID))
     {
         auto* records = recordsByType.Get(record->GetNativeType());
@@ -285,21 +285,21 @@ RED4EXT_INLINE bool RED4ext::TweakDB::RemoveRecord(TweakDBID aDBID)
 
 RED4EXT_INLINE bool RED4ext::TweakDB::AddFlat(TweakDBID aDBID)
 {
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedSpinLock> _(mutex00);
 
     return flats.Insert(aDBID).second;
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::AddFlats(const SortedUniqueArray<TweakDBID>& aDBIDs)
 {
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedSpinLock> _(mutex00);
 
     return flats.Insert(aDBIDs) > 0;
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::RemoveFlat(TweakDBID aDBID)
 {
-    std::lock_guard<SharedMutex> _(mutex00);
+    std::lock_guard<SharedSpinLock> _(mutex00);
 
     return flats.Remove(aDBID);
 }
@@ -308,7 +308,7 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
 {
     if (!aDBID.IsValid())
         return nullptr;
-    std::shared_lock<SharedMutex> _(mutex00);
+    std::shared_lock<SharedSpinLock> _(mutex00);
 
     if (!aDBID.HasTDBOffset())
     {
@@ -330,7 +330,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
     uintptr_t flatDataBufferEnd_Aligned = RED4ext::AlignUp(flatDataBufferEnd, flatAlignment);
 
     {
-        std::lock_guard<SharedMutex> _(mutex00);
+        std::lock_guard<SharedSpinLock> _(mutex00);
 
         if (flatDataBufferEnd_Aligned + flatValueSize > flatDataBuffer + flatDataBufferCapacity)
         {
@@ -443,7 +443,7 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(void* aBuffer, uint32_t 
 
 RED4EXT_INLINE const RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetDefaultFlatValue(CName aTypeName)
 {
-    std::shared_lock<SharedMutex> _(mutex00);
+    std::shared_lock<SharedSpinLock> _(mutex00);
 
     FlatValue** flatValue = defaultValues.Get(aTypeName);
     return flatValue ? *flatValue : nullptr;

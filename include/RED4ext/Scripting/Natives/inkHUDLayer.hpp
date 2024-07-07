@@ -21,7 +21,7 @@ struct __declspec(align(0x10)) HUDLayer : ink::FullScreenLayer
     Ref<HudEntriesResource> resource;      // 170
     HUDLayerDefinition* definition;        // 188
     JobHandle spawningJob;                 // 190
-    SharedMutex spawningLock;              // 198
+    SharedSpinLock spawningLock;           // 198
     uint8_t unk199[0x200 - 0x199];         // 199
 };
 RED4EXT_ASSERT_SIZE(HUDLayer, 0x200);

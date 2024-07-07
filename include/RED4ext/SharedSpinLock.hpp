@@ -4,18 +4,18 @@
 
 namespace RED4ext
 {
-struct SharedMutex
+struct SharedSpinLock
 {
     // -1 : write
     // 0 : free
     // + : read
     volatile char state;
 
-    SharedMutex();
-    SharedMutex(const SharedMutex&) = delete;
-    SharedMutex(SharedMutex&&) = delete;
-    SharedMutex& operator=(const SharedMutex&) = delete;
-    SharedMutex& operator=(SharedMutex&&) = delete;
+    SharedSpinLock();
+    SharedSpinLock(const SharedSpinLock&) = delete;
+    SharedSpinLock(SharedSpinLock&&) = delete;
+    SharedSpinLock& operator=(const SharedSpinLock&) = delete;
+    SharedSpinLock& operator=(SharedSpinLock&&) = delete;
 
     bool TryLock();
     void Lock();
@@ -37,9 +37,9 @@ struct SharedMutex
     void lock_shared();
     void unlock_shared();
 };
-RED4EXT_ASSERT_SIZE(SharedMutex, 1);
+RED4EXT_ASSERT_SIZE(SharedSpinLock, 1);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
-#include <RED4ext/SharedMutex-inl.hpp>
+#include <RED4ext/SharedSpinLock-inl.hpp>
 #endif
