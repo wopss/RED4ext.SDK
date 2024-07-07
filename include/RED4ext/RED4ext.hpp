@@ -31,6 +31,7 @@
 #include <RED4ext/Scripting/Utils.hpp>
 
 #include <RED4ext/Mutex.hpp>
+#include <RED4ext/SharedMutex.hpp>
 #include <RED4ext/SharedSpinLock.hpp>
 #include <RED4ext/TweakDB.hpp>
 

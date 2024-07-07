@@ -7,8 +7,6 @@ namespace RED4ext
 {
 struct Mutex
 {
-    CRITICAL_SECTION cs;
-
     Mutex();
     Mutex(const Mutex&) = delete;
     Mutex(Mutex&&) = delete;
@@ -19,11 +17,14 @@ struct Mutex
     void Unlock();
 
     // --------------------------------------------
-    // -- support for lock_guard and shared_lock --
+    // -- support for lock_guard --
     // --------------------------------------------
 
     void lock();
     void unlock();
+
+private:
+    CRITICAL_SECTION m_cs;
 };
 RED4EXT_ASSERT_SIZE(Mutex, 40);
 } // namespace RED4ext

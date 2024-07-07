@@ -6,17 +6,17 @@
 
 RED4EXT_INLINE RED4ext::Mutex::Mutex()
 {
-    InitializeCriticalSection(&cs);
+    InitializeCriticalSection(&m_cs);
 }
 
 RED4EXT_INLINE void RED4ext::Mutex::Lock()
 {
-    EnterCriticalSection(&cs);
+    EnterCriticalSection(&m_cs);
 }
 
 RED4EXT_INLINE void RED4ext::Mutex::Unlock()
 {
-    LeaveCriticalSection(&cs);
+    LeaveCriticalSection(&m_cs);
 }
 
 RED4EXT_INLINE void RED4ext::Mutex::lock()
