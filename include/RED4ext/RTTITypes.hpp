@@ -53,9 +53,9 @@ struct CBaseRTTIType
     virtual CName GetComputedName() const;                    // 30
     virtual void Construct(ScriptInstance aMemory) const = 0; // 38
     virtual void Destruct(ScriptInstance aMemory) const = 0;  // 40
-    virtual const bool IsEqual(
-        const ScriptInstance aLhs, const ScriptInstance aRhs,
-        uint32_t a3 = 0) = 0; // 48 - Not const because CClass aquire some mutex when this is called and a flag is modified.
+    virtual const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs,
+                               uint32_t a3 = 0) = 0; // 48 - Not const because CClass aquire some mutex when this is
+                                                     // called and a flag is modified.
     virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const = 0;                 // 50
     virtual void Move(ScriptInstance aLhs, ScriptInstance aRhs) const;                             // 58
     virtual bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const = 0; // 60
@@ -225,7 +225,7 @@ struct CClass : CBaseRTTIType
     int8_t listening[256];                       // 1C0 - Bitmask of event types that this class listens to
     int16_t eventTypeId;                         // 2C0 - Assigned to event classes only
     int32_t unk2C4;                              // 2C4
-    SharedMutex unk2C8;                          // 2C8
+    SharedSpinLock unk2C8;                       // 2C8
     uint8_t unk2C9;                              // 2C9
 };
 RED4EXT_ASSERT_SIZE(CClass, 0x2D0);
@@ -594,62 +594,141 @@ RED4EXT_ASSERT_SIZE(CRTTIMultiChannelCurveType, 0x48);
 RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, name, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, curveType, 0x18);
 
-struct [[deprecated("Use 'CBaseRTTIType' instead.")]] IRTTIType : CBaseRTTIType{};
-struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIBaseType : CBaseRTTIType{};
-struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIType : CBaseRTTIType{};
+struct [[deprecated("Use 'CBaseRTTIType' instead.")]] IRTTIType : CBaseRTTIType
+{
+};
+struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIBaseType : CBaseRTTIType
+{
+};
+struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIType : CBaseRTTIType
+{
+};
 
-struct [[deprecated("Use 'CFundamentalRTTITypeBool' instead.")]] BoolType : CFundamentalRTTITypeBool{};
-struct [[deprecated("Use 'CFundamentalRTTITypeInt8' instead.")]] Int8Type : CFundamentalRTTITypeInt8{};
-struct [[deprecated("Use 'CFundamentalRTTITypeUint8' instead.")]] Uint8Type : CFundamentalRTTITypeUint8{};
-struct [[deprecated("Use 'CFundamentalRTTITypeInt16' instead.")]] Int16Type : CFundamentalRTTITypeInt16{};
-struct [[deprecated("Use 'CFundamentalRTTITypeUint16' instead.")]] Uint16Type : CFundamentalRTTITypeUint16{};
-struct [[deprecated("Use 'CFundamentalRTTITypeInt32' instead.")]] Int32Type : CFundamentalRTTITypeInt32{};
-struct [[deprecated("Use 'CFundamentalRTTITypeUint32' instead.")]] Uint32Type : CFundamentalRTTITypeUint32{};
-struct [[deprecated("Use 'CFundamentalRTTITypeInt64' instead.")]] Int64Type : CFundamentalRTTITypeInt64{};
-struct [[deprecated("Use 'CFundamentalRTTITypeUint64' instead.")]] Uint64Type : CFundamentalRTTITypeUint64{};
-struct [[deprecated("Use 'CFundamentalRTTITypeFloat' instead.")]] FloatType : CFundamentalRTTITypeFloat{};
-struct [[deprecated("Use 'CFundamentalRTTITypeDouble' instead.")]] DoubleType : CFundamentalRTTITypeDouble{};
+struct [[deprecated("Use 'CFundamentalRTTITypeBool' instead.")]] BoolType : CFundamentalRTTITypeBool
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeInt8' instead.")]] Int8Type : CFundamentalRTTITypeInt8
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeUint8' instead.")]] Uint8Type : CFundamentalRTTITypeUint8
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeInt16' instead.")]] Int16Type : CFundamentalRTTITypeInt16
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeUint16' instead.")]] Uint16Type : CFundamentalRTTITypeUint16
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeInt32' instead.")]] Int32Type : CFundamentalRTTITypeInt32
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeUint32' instead.")]] Uint32Type : CFundamentalRTTITypeUint32
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeInt64' instead.")]] Int64Type : CFundamentalRTTITypeInt64
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeUint64' instead.")]] Uint64Type : CFundamentalRTTITypeUint64
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeFloat' instead.")]] FloatType : CFundamentalRTTITypeFloat
+{
+};
+struct [[deprecated("Use 'CFundamentalRTTITypeDouble' instead.")]] DoubleType : CFundamentalRTTITypeDouble
+{
+};
 
-struct [[deprecated("Use 'CSimpleRTTITypeCName' instead.")]] CNameType : CSimpleRTTITypeCName{};
-struct [[deprecated("Use 'CSimpleRTTITypeString' instead.")]] StringType : CSimpleRTTITypeString{};
+struct [[deprecated("Use 'CSimpleRTTITypeCName' instead.")]] CNameType : CSimpleRTTITypeCName
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeString' instead.")]] StringType : CSimpleRTTITypeString
+{
+};
 struct [[deprecated("Use 'CSimpleRTTITypeLocalizationString' instead.")]] LocalizationStringType
-    : CSimpleRTTITypeLocalizationString{};
-struct [[deprecated("Use 'CSimpleRTTITypeTweakDBID' instead.")]] TweakDBIDType : CSimpleRTTITypeTweakDBID{};
-struct [[deprecated("Use 'CSimpleRTTITypeDataBuffer' instead.")]] DataBufferType : CSimpleRTTITypeDataBuffer{};
+    : CSimpleRTTITypeLocalizationString
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeTweakDBID' instead.")]] TweakDBIDType : CSimpleRTTITypeTweakDBID
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeDataBuffer' instead.")]] DataBufferType : CSimpleRTTITypeDataBuffer
+{
+};
 struct [[deprecated("Use 'CSimpleRTTITypeSharedDataBuffer' instead.")]] SharedDataBufferType
-    : CSimpleRTTITypeSharedDataBuffer{};
+    : CSimpleRTTITypeSharedDataBuffer
+{
+};
 struct [[deprecated(
     "Use 'CSimpleRTTITypeSerializationDeferredDataBuffer' instead.")]] serializationDeferredDataBufferType
-    : CSimpleRTTITypeSerializationDeferredDataBuffer{};
-struct [[deprecated("Use 'CSimpleRTTITypeVariant' instead.")]] VariantType : CSimpleRTTITypeVariant{};
-struct [[deprecated("Use 'CSimpleRTTITypeCDateTime' instead.")]] CDateTimeType : CSimpleRTTITypeCDateTime{};
-struct [[deprecated("Use 'CSimpleRTTITypeCGUID' instead.")]] CGUIDType : CSimpleRTTITypeCGUID{};
-struct [[deprecated("Use 'CSimpleRTTITypeCRUID' instead.")]] CRUIDType : CSimpleRTTITypeCRUID{};
-struct [[deprecated("Use 'CSimpleRTTITypeCRUIDRef' instead.")]] CRUIDRefType : CSimpleRTTITypeCRUIDRef{};
-struct [[deprecated("Use 'CSimpleRTTITypeEditorObjectID' instead.")]] EditorObjectIDType
-    : CSimpleRTTITypeEditorObjectID{};
+    : CSimpleRTTITypeSerializationDeferredDataBuffer
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeVariant' instead.")]] VariantType : CSimpleRTTITypeVariant
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeCDateTime' instead.")]] CDateTimeType : CSimpleRTTITypeCDateTime
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeCGUID' instead.")]] CGUIDType : CSimpleRTTITypeCGUID
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeCRUID' instead.")]] CRUIDType : CSimpleRTTITypeCRUID
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeCRUIDRef' instead.")]] CRUIDRefType : CSimpleRTTITypeCRUIDRef
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeEditorObjectID' instead.")]] EditorObjectIDType : CSimpleRTTITypeEditorObjectID
+{
+};
 struct [[deprecated("Use 'CSimpleRTTITypeGamedataLocKeyWrapper' instead.")]] gamedataLocKeyWrapperType
-    : CSimpleRTTITypeGamedataLocKeyWrapper{};
+    : CSimpleRTTITypeGamedataLocKeyWrapper
+{
+};
 struct [[deprecated("Use 'CSimpleRTTITypeMessageResourcePath' instead.")]] MessageResourcePathType
-    : CSimpleRTTITypeMessageResourcePath{};
-struct [[deprecated("Use 'CSimpleRTTITypeNodeRef' instead.")]] NodeRefType : CSimpleRTTITypeNodeRef{};
+    : CSimpleRTTITypeMessageResourcePath
+{
+};
+struct [[deprecated("Use 'CSimpleRTTITypeNodeRef' instead.")]] NodeRefType : CSimpleRTTITypeNodeRef
+{
+};
 struct [[deprecated("Use 'CSimpleRTTITypeRuntimeEntityRef' instead.")]] RuntimeEntityRefType
-    : CSimpleRTTITypeRuntimeEntityRef{};
+    : CSimpleRTTITypeRuntimeEntityRef
+{
+};
 
-struct [[deprecated("Use 'CRTTIBaseArrayType' instead.")]] CArrayBase : CRTTIBaseArrayType{};
-struct [[deprecated("Use 'CRTTIArrayType' instead.")]] CArray : CRTTIArrayType{};
-struct [[deprecated("Use 'CRTTIStaticArrayType' instead.")]] CStaticArray : CRTTIStaticArrayType{};
-struct [[deprecated("Use 'CRTTINativeArrayType' instead.")]] CNativeArray : CRTTINativeArrayType{};
+struct [[deprecated("Use 'CRTTIBaseArrayType' instead.")]] CArrayBase : CRTTIBaseArrayType
+{
+};
+struct [[deprecated("Use 'CRTTIArrayType' instead.")]] CArray : CRTTIArrayType
+{
+};
+struct [[deprecated("Use 'CRTTIStaticArrayType' instead.")]] CStaticArray : CRTTIStaticArrayType
+{
+};
+struct [[deprecated("Use 'CRTTINativeArrayType' instead.")]] CNativeArray : CRTTINativeArrayType
+{
+};
 
-struct [[deprecated("Use 'CRTTIHandleType' instead.")]] CHandle : CRTTIHandleType{};
-struct [[deprecated("Use 'CRTTIWeakHandleType' instead.")]] CWeakHandle : CRTTIWeakHandleType{};
-struct [[deprecated("Use 'CRTTIResourceReferenceType' instead.")]] CResourceReference : CRTTIResourceReferenceType{};
+struct [[deprecated("Use 'CRTTIHandleType' instead.")]] CHandle : CRTTIHandleType
+{
+};
+struct [[deprecated("Use 'CRTTIWeakHandleType' instead.")]] CWeakHandle : CRTTIWeakHandleType
+{
+};
+struct [[deprecated("Use 'CRTTIResourceReferenceType' instead.")]] CResourceReference : CRTTIResourceReferenceType
+{
+};
 
 struct [[deprecated("Use 'CRTTIResourceAsyncReferenceType' instead.")]] CResourceAsyncReference
-    : CRTTIResourceAsyncReferenceType{};
+    : CRTTIResourceAsyncReferenceType
+{
+};
 
 struct [[deprecated("Use 'CRTTILegacySingleChannelCurveType' instead.")]] CLegacySingleChannelCurve
-    : CRTTILegacySingleChannelCurveType{};
+    : CRTTILegacySingleChannelCurveType
+{
+};
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

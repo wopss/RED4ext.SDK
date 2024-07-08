@@ -13,9 +13,9 @@ struct WorldLayer : ink::Layer
     static constexpr const char* NAME = "inkWorldLayer";
     static constexpr const char* ALIAS = NAME;
 
-    SharedMutex unk150;                                      // 150
+    SharedSpinLock unk150;                                   // 150
     DynArray<void*> unk158;                                  // 158
-    SharedMutex unk168;                                      // 168
+    SharedSpinLock unk168;                                   // 168
     DynArray<SharedPtr<IWidgetComponentWrapper>> components; // 170
     uint8_t unk180[0x1B8 - 0x180];                           // 180
 };

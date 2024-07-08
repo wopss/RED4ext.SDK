@@ -2,9 +2,9 @@
 
 #include <type_traits>
 
-#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/JobQueue.hpp>
@@ -99,7 +99,7 @@ struct ResourceToken
 
     WeakPtr<ResourceToken<T>> self;                    // 00
     DynArray<SharedPtr<ResourceToken<>>> dependencies; // 10
-    SharedMutex lock;                                  // 20
+    SharedSpinLock lock;                               // 20
     Handle<T> resource;                                // 28
     void* unk38;                                       // 38 - SharedPtr<Unk38>.instance
     void* unk40;                                       // 40 - SharedPtr<Unk38>.refCount
@@ -139,7 +139,7 @@ struct ResourceLoader
         using FindToken_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>*, ResourcePath);
         static UniversalRelocFunc<FindToken_t> func(Detail::AddressHashes::ResourceLoader_FindTokenFast);
 
-        std::shared_lock<SharedMutex> _(tokenLock);
+        std::shared_lock<SharedSpinLock> _(tokenLock);
 
         SharedPtr<ResourceToken<T>> token;
         func(this, &token, aPath);
@@ -149,7 +149,7 @@ struct ResourceLoader
 
     HashMap<ResourcePath, WeakPtr<ResourceToken<>>> tokens; // 00
     DynArray<SharedPtr<ResourceToken<>>> failed;            // 30
-    SharedMutex tokenLock;                                  // 40
+    SharedSpinLock tokenLock;                               // 40
     uintptr_t unk48;                                        // 48
     uintptr_t unk50;                                        // 50
     uintptr_t unk58;                                        // 58

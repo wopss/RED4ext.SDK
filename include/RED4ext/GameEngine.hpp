@@ -134,7 +134,7 @@ struct CBaseEngine
     int8_t unk34;                              // 34
     uint64_t scriptsTimestamp;                 // 38
     int8_t unk40;                              // 40
-    SharedMutex terminationLock;               // 41
+    SharedSpinLock terminationLock;            // 41
     int32_t unk44;                             // 44
     int8_t terminating;                        // 48
     int8_t unk49;                              // 49

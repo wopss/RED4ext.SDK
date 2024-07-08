@@ -2,4 +2,4 @@
 #error Please define 'RED4EXT_STATIC_LIB' to compile this file.
 #endif
 
-#include <RED4ext/SharedMutex-inl.hpp>
+#include <RED4ext/SharedSpinLock-inl.hpp>

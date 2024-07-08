@@ -72,7 +72,7 @@ struct DeferredDataBuffer
     uint64_t unk48;                // 48
     uint32_t unk50;                // 50
     DeferredDataBufferState state; // 54
-    SharedMutex lock;              // 55
+    SharedSpinLock lock;           // 55
     uint16_t unk56;                // 56
 };
 RED4EXT_ASSERT_SIZE(DeferredDataBuffer, 0x58);
