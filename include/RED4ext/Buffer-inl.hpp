@@ -28,6 +28,15 @@ RED4EXT_INLINE RED4ext::RawBuffer::~RawBuffer()
     }
 }
 
+RED4EXT_INLINE void RED4ext::RawBuffer::Resize(uint32_t aSize)
+{
+    if (data && allocator[0])
+    {
+        data = reinterpret_cast<RawBufferAllocator*>(&allocator)->ReallocAligned(data, aSize, alignment);
+        size = aSize;
+    }
+}
+
 RED4EXT_INLINE RED4ext::SharedPtr<RED4ext::DeferredDataBufferToken> RED4ext::DeferredDataBuffer::LoadAsync()
 {
     using LoadBufferAsync_t = JobHandle* (*)(DeferredDataBuffer*, JobHandle*, int64_t);
