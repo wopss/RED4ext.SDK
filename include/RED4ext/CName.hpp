@@ -15,12 +15,20 @@ struct CName
     {
     }
 
-    constexpr CName(const char* aName) noexcept
+    constexpr CName(const char* aName, size_t aLength = 0) noexcept
         : hash(0)
     {
         constexpr CName None = FNV1a64("None");
 
-        hash = FNV1a64(aName);
+        if (aLength <= 0)
+        {
+            hash = FNV1a64(aName);
+        }
+        else
+        {
+            hash = FNV1a64(reinterpret_cast<const uint8_t*>(aName), aLength);
+        }
+
         if (hash == None)
         {
             hash = 0;

@@ -15,8 +15,8 @@ struct ResourcePath
     {
     }
 
-    constexpr ResourcePath(const char* aPath) noexcept
-        : hash(HashSanitized(aPath))
+    constexpr ResourcePath(const char* aPath, size_t aLength = 0) noexcept
+        : hash(HashSanitized(aPath, aLength))
     {
     }
 
@@ -67,7 +67,7 @@ struct ResourcePath
         return hash == 0;
     }
 
-    static constexpr uint64_t HashSanitized(const char* aPath)
+    static constexpr uint64_t HashSanitized(const char* aPath, size_t aLength = 0)
     {
         // Sanitations:
         // 1. Discard opening and closing quotes (singles and doubles)
@@ -79,10 +79,15 @@ struct ResourcePath
         if (!aPath || *aPath == '\0')
             return 0;
 
-        constexpr size_t MaxLength = 216;
-        char buffer[MaxLength];
+        constexpr size_t MaxPathLength = 216;
 
-        char* out = buffer;
+        if (aLength <= 0 || aLength > MaxPathLength)
+        {
+            aLength = MaxPathLength;
+        }
+
+        char buffer[MaxPathLength + 1];
+        size_t pos = 0;
         const char* in = aPath;
 
         if (*in == '"' || *in == '\'')
@@ -95,8 +100,8 @@ struct ResourcePath
         {
             if (*in == '/' || *in == '\\')
             {
-                *out = '\\';
-                ++out;
+                buffer[pos] = '\\';
+                ++pos;
                 ++in;
 
                 while (*in == '/' || *in == '\\')
@@ -104,16 +109,19 @@ struct ResourcePath
             }
             else
             {
-                *out = (*in >= 'A' && *in <= 'Z') ? *in + ('a' - 'A') : *in;
-                ++out;
+                buffer[pos] = (*in >= 'A' && *in <= 'Z') ? *in + ('a' - 'A') : *in;
+                ++pos;
                 ++in;
             }
+
+            if (pos == aLength)
+                break;
         }
 
-        if (out == buffer)
+        if (pos == 0)
             return 0;
 
-        *out = '\0';
+        buffer[pos] = '\0';
 
         return RED4ext::FNV1a64(buffer);
     }

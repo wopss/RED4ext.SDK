@@ -11,9 +11,9 @@ namespace RED4ext
 {
 struct RawBufferAllocator
 {
-    virtual void sub_00() = 0;                     // 08
-    virtual void Free(void* aData) = 0;            // 08
-    virtual Memory::IAllocator GetAllocator() = 0; // 10
+    virtual void* ReallocAligned(void* aData, uint32_t aSize, uint32_t aAlignment) = 0; // 00
+    virtual void Free(void* aData) = 0;                                                 // 08
+    virtual Memory::IAllocator GetAllocator() = 0;                                      // 10
 
     void* unk08;
 };
@@ -28,6 +28,8 @@ struct RawBuffer
     RawBuffer(const RawBuffer&) = delete;
     RawBuffer(RawBuffer&&) = default;
     ~RawBuffer();
+
+    void Resize(uint32_t aSize);
 
     void* data;            // 00
     uint32_t size;         // 08
