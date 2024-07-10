@@ -7,9 +7,9 @@
 namespace RED4ext
 {
 template<typename T>
-struct Range
+struct Span
 {
-    Range()
+    Span()
         : beginPtr(nullptr)
         , endPtr(nullptr)
     {
@@ -43,7 +43,7 @@ struct Range
     T* beginPtr; // 00
     T* endPtr;   // 08
 };
-RED4EXT_ASSERT_SIZE(Range<int32_t>, 0x10);
-RED4EXT_ASSERT_OFFSET(Range<int32_t>, beginPtr, 0x0);
-RED4EXT_ASSERT_OFFSET(Range<int32_t>, endPtr, 0x8);
+RED4EXT_ASSERT_SIZE(Span<int32_t>, 0x10);
+RED4EXT_ASSERT_OFFSET(Span<int32_t>, beginPtr, 0x0);
+RED4EXT_ASSERT_OFFSET(Span<int32_t>, endPtr, 0x8);
 } // namespace RED4ext

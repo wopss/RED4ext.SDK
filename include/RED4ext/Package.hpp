@@ -4,8 +4,8 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Range.hpp>
 #include <RED4ext/ResourceLoader.hpp>
+#include <RED4ext/Span.hpp>
 
 namespace RED4ext
 {
@@ -36,10 +36,10 @@ struct PackageHeader
     uint8_t version;       // 00
     uint8_t unk01;         // 01
     uint16_t unk02;        // 02
-    Range<Chunk> root;     // 08
-    Range<Chunk> chunks;   // 18
-    Range<Name> names;     // 28
-    Range<Import> imports; // 38
+    Span<Chunk> root;      // 08
+    Span<Chunk> chunks;    // 18
+    Span<Name> names;      // 28
+    Span<Import> imports;  // 38
     void* buffer;          // 48
     uint32_t size;         // 50
 };
@@ -76,7 +76,7 @@ struct ObjectPackageHeader
     [[nodiscard]] bool IsEmpty() const;
 
     int16_t rootIndex;     // 00 - Set to 0 if package contains root Entity, otherwise -1
-    Range<CRUID> cruids;   // 08
+    Span<CRUID> cruids;    // 08
     PackageHeader package; // 18
 };
 RED4EXT_ASSERT_SIZE(ObjectPackageHeader, 0x70);
