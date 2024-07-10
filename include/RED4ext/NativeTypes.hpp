@@ -80,10 +80,19 @@ struct TweakDBID
         name.tdbOffsetBE[2] = 0;
     }
 
-    constexpr TweakDBID(const char* aName) noexcept
+    constexpr TweakDBID(const char* aName, size_t aLength = 0) noexcept
     {
-        name.hash = CRC32(aName, 0);
-        name.length = static_cast<uint8_t>(std::char_traits<char>::length(aName));
+        if (aLength <= 0)
+        {
+            name.hash = CRC32(aName, 0);
+            name.length = static_cast<uint8_t>(std::char_traits<char>::length(aName));
+        }
+        else
+        {
+            name.hash = CRC32(reinterpret_cast<const uint8_t*>(aName), aLength, 0);
+            name.length = static_cast<uint8_t>(aLength);
+        }
+
         name.tdbOffsetBE[0] = 0;
         name.tdbOffsetBE[1] = 0;
         name.tdbOffsetBE[2] = 0;
