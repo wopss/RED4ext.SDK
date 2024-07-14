@@ -21,9 +21,9 @@ struct Span
     {
     }
 
-    Span(T* begin, uint32_t aAmount)
+    Span(T* begin, uint32_t aCount)
         : beginPtr(begin)
-        , endPtr(begin + aAmount)
+        , endPtr(begin + aCount)
     {
     }
 
