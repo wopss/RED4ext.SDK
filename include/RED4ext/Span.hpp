@@ -15,6 +15,18 @@ struct Span
     {
     }
 
+    Span(T* begin, T* end)
+        : beginPtr(begin)
+        , endPtr(end)
+    {
+    }
+
+    Span(T* begin, uint32_t count)
+        : beginPtr(begin)
+        , endPtr(begin + count)
+    {
+    }
+
     constexpr operator bool() const noexcept
     {
         return IsEmpty();
