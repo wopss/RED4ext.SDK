@@ -9,8 +9,6 @@ namespace RED4ext
 template<typename T>
 struct Span
 {
-    Span() = default;
-
     Span()
         : beginPtr(nullptr)
         , endPtr(nullptr)
