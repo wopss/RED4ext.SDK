@@ -189,27 +189,21 @@ struct DynArray
             return;
 
         auto newCapacity = CalculateGrowth(aCount);
-        Resize(newCapacity);
+        SetCapacity(newCapacity);
     }
 
     void ShrinkToSize()
     {
         if (capacity > size)
-            Resize(size);
+            SetCapacity(size);
     }
 
-    void Resize(uint32_t aNewCapacity)
+    void SetCapacity(uint32_t aNewCapacity)
     {
-        constexpr uint32_t alignment = alignof(T);
-
         if (aNewCapacity < size)
-        {
-            for (uint32_t i = aNewCapacity; i < size; ++i)
-            {
-                entries[i].~T();
-            }
-            size = aNewCapacity;
-        }
+            return;
+
+        constexpr uint32_t alignment = alignof(T);
 
         using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*aMoveFunc)(T* aDstBuffer, T* aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
