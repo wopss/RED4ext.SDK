@@ -191,20 +191,20 @@ struct DynArray
         auto newCapacity = CalculateGrowth(aCount);
         Resize(newCapacity);
     }
-    
+
     void ShrinkToSize()
     {
         if (capacity > size)
             Resize(size);
     }
-    
+
     void Resize(uint32_t aNewCapacity)
     {
         constexpr uint32_t alignment = alignof(T);
-    
+        
         using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*aMoveFunc)(T* aDstBuffer, T* aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
-    
+        
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
         func(this, aNewCapacity, sizeof(T), alignment >= 8 ? alignment : 8, nullptr);
     }
