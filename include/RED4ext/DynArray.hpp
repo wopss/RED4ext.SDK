@@ -211,14 +211,6 @@ struct DynArray
             size = aNewCapacity;
         }
 
-        if (aNewCapacity > capacity) // Should consider Emplace functionality
-        {
-            for (uint32_t i = capacity; i < aNewCapacity; ++i)
-            {
-                new (&entries[i]) T();
-            }
-        }
-
         using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*aMoveFunc)(T* aDstBuffer, T* aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
 
