@@ -215,7 +215,7 @@ struct DynArray
         {
             for (uint32_t i = capacity; i < aNewCapacity; ++i)
             {
-                new (&entries[posIdx]) T();
+                new (&entries[i]) T();
             }
         }
 
