@@ -187,7 +187,7 @@ struct DynArray
     {
         if (capacity >= aCount)
             return;
-    
+        
         auto newCapacity = CalculateGrowth(aCount);
         Resize(newCapacity);
     }
@@ -207,7 +207,7 @@ struct DynArray
     
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
         func(this, aNewCapacity, sizeof(T), alignment >= 8 ? alignment : 8, nullptr);
-}
+    }
 
     Memory::IAllocator* GetAllocator() const
     {
