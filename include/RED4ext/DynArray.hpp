@@ -211,7 +211,7 @@ struct DynArray
             size = aNewCapacity;
         }
 
-        if (aNewCapacity > capacity)  // Should consider Emplace functionality
+        if (aNewCapacity > capacity) // Should consider Emplace functionality
         {
             for (uint32_t i = capacity; i < aNewCapacity; ++i)
             {
