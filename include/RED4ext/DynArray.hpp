@@ -202,9 +202,26 @@ struct DynArray
     {
         constexpr uint32_t alignment = alignof(T);
 
+        if (aNewCapacity < size)
+        {
+            for (uint32_t i = aNewCapacity; i < size; ++i)
+            {
+                entries[i].~T();
+            }
+            size = aNewCapacity;
+        }
+
+        if (aNewCapacity > capacity)  // Should consider Emplace functionality
+        {
+            for (uint32_t i = capacity; i < aNewCapacity; ++i)
+            {
+                new (&entries[posIdx]) T();
+            }
+        }
+
         using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                                 void (*aMoveFunc)(T* aDstBuffer, T* aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
-
+    
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
         func(this, aNewCapacity, sizeof(T), alignment >= 8 ? alignment : 8, nullptr);
     }
