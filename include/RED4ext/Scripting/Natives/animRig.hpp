@@ -23,8 +23,8 @@ struct Rig : CResource
     static constexpr const char* NAME = "animRig";
     static constexpr const char* ALIAS = NAME;
 
-    // parentIndeces(0x40) and referencePoseLS(0x48) share size with boneNames(0x50)
-    int16_t* parentIndeces;                           // 40
+    // parentIndices(0x40) and referencePoseLS(0x48) share size with boneNames(0x50)
+    int16_t* parentIndices;                           // 40
     QsTransform* referencePoseLS;                     // 48
     DynArray<CName> boneNames;                        // 50
     DynArray<QsTransform> referencePoseMS;            // 60
