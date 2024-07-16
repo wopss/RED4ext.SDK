@@ -15,15 +15,15 @@ struct Span
     {
     }
 
-    Span(T* begin, T* end)
-        : beginPtr(begin)
-        , endPtr(end)
+    Span(T* aBegin, T* aEnd)
+        : beginPtr(aBegin)
+        , endPtr(aEnd)
     {
     }
 
-    Span(T* begin, uint32_t aCount)
-        : beginPtr(begin)
-        , endPtr(begin + aCount)
+    Span(T* aBegin, uint32_t aCount)
+        : beginPtr(aBegin)
+        , endPtr(aBegin + aCount)
     {
     }
 
