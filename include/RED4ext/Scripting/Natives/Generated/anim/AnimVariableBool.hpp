@@ -18,7 +18,7 @@ struct AnimVariableBool : anim::AnimVariable
     static constexpr const char* ALIAS = NAME;
 
     bool value; // 38
-    bool default_; // 39
+    bool default_; // 39 -- default
     uint8_t unk3A[0x40 - 0x3A]; // 3A
 };
 RED4EXT_ASSERT_SIZE(AnimVariableBool, 0x40);

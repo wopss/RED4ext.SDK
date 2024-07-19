@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-RED4EXT_ASSERT_SIZE( ent::EntityTemplate, 0x2B0);
+RED4EXT_ASSERT_SIZE(ent::EntityTemplate, 0x2B0);
 using entEntityTemplate = ent::EntityTemplate;
 } // namespace RED4ext
 

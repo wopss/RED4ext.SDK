@@ -36,6 +36,6 @@ RED4EXT_ASSERT_SIZE(DrawArea, 0x4C);
 } // namespace ink
 using inkDrawArea = ink::DrawArea;
 } // namespace RED4ext
+*/
 
 // clang-format on
-*/

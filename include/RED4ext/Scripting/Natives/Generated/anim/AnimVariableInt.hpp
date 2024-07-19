@@ -18,7 +18,7 @@ struct AnimVariableInt : anim::AnimVariable
     static constexpr const char* ALIAS = NAME;
 
     int32_t value; // 38
-    int32_t default_; // 3C
+    int32_t default_; // 3C -- default
     int32_t min; // 40
     int32_t max; // 44
 };

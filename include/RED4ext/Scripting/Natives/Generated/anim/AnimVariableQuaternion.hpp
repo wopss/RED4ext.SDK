@@ -22,7 +22,7 @@ struct __declspec(align(0x10)) AnimVariableQuaternion : anim::AnimVariable
     float pitch; // 3C
     float yaw; // 40
     uint8_t unk44[0x50 - 0x44]; // 44
-    Quaternion default_; // 50
+    Quaternion default_; // 50 -- default
 };
 RED4EXT_ASSERT_SIZE(AnimVariableQuaternion, 0x60);
 } // namespace anim
