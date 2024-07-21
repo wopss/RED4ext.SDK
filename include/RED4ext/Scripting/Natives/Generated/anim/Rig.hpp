@@ -38,7 +38,7 @@ struct Rig : CResource
     static constexpr const char* NAME = "animRig";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x50 - 0x40]; //40
+    uint8_t unk40[0x50 - 0x40]; // 40
     DynArray<CName> boneNames; // 50
     DynArray<QsTransform> referencePoseMS; // 60
     DynArray<int16_t> levelOfDetailStartIndices; // 70
@@ -63,6 +63,7 @@ struct Rig : CResource
 RED4EXT_ASSERT_SIZE(Rig, 0x180);
 } // namespace anim
 using animRig = anim::Rig;
-} // namespace RED4ext*/
+} // namespace RED4ext
+*/
 
 // clang-format on

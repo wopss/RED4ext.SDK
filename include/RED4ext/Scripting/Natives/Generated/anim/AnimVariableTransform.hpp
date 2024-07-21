@@ -20,7 +20,7 @@ struct __declspec(align(0x10)) AnimVariableTransform : anim::AnimVariable
 
     uint8_t unk38[0x40 - 0x38]; // 38
     QsTransform value; // 40
-    QsTransform default_; // 70
+    QsTransform default_; // 70 -- default
 };
 RED4EXT_ASSERT_SIZE(AnimVariableTransform, 0xA0);
 } // namespace anim
