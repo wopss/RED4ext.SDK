@@ -162,7 +162,7 @@ RED4EXT_INLINE void RED4ext::JobQueue::Wait(const JobHandle& aJob)
     JobHandle handle{};
     func(this, &handle);
 
-    return std::move(handle);
+    return handle;
 }
 
 RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
