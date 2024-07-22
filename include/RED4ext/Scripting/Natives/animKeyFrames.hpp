@@ -6,7 +6,7 @@ namespace RED4ext
 {
 namespace anim
 {
-enum KeyFrameComponent
+enum KeyFrameChannel
 {
     Translation = 0,
     Rotation,
@@ -17,7 +17,7 @@ struct KeyFrameHeader
 {
     uint16_t timeNormalized;    // 00
     uint16_t boneIndex : 13;    // 02
-    uint16_t componentType : 2; // 0E
+    uint16_t channel : 2;       // 0E
     uint16_t rotationWSign : 1; // 0F
 };
 RED4EXT_ASSERT_SIZE(KeyFrameHeader, 0x4);

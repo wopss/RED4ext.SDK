@@ -33,6 +33,7 @@ enum class UpdateBucketEnum : uint8_t
     Vehicle = 0,
     Character = 1,
     AttachedObject = 2,
+    BucketCount = 3,
 };
 
 enum class UpdateBucketMask : uint8_t

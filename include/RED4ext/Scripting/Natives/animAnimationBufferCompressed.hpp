@@ -39,8 +39,8 @@ struct AnimationBufferCompressed : anim::IAnimationBuffer
     DataBuffer inplaceCompressedBuffer;           // C8
     DynArray<CName> extraDataNames;               // F0
     uint8_t unk100[0x110 - 0x100];                // 100
-    Span<KeyFrameCompressed> animKeysCompressed;  // 110
-    Span<KeyFrameRaw> animKeysRaw;                // 120
+    Span<KeyFrameCompressed> compressedAnimKeys;  // 110
+    Span<KeyFrameRaw> rawAnimKeys;                // 120
     Span<KeyFrameConst> constAnimKeys;            // 130
     Span<TrackKey> trackKeys;                     // 140
     Span<TrackKeyConst> constTrackKeys;           // 150
