@@ -4,6 +4,16 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/vehicleBaseObject.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(vehicle::BaseObject, 0xB90);
+using vehicleBaseObject = vehicle::BaseObject;
+using VehicleObject = vehicle::BaseObject;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -31,5 +41,6 @@ RED4EXT_ASSERT_SIZE(BaseObject, 0xB90);
 using vehicleBaseObject = vehicle::BaseObject;
 using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext
+*/
 
 // clang-format on
