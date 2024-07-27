@@ -1,10 +1,10 @@
 # Contributing
 
-You can contribuite to RED4ext.SDK with issues, ideas and PRs. Simply filling issues or propose new ideas is a great way to contribute.
+You can contribute to RED4ext.SDK with issues, ideas and PRs. Simply filling issues or propose new ideas is a great way to contribute.
 
 ## Content guidelines
 
-The issue tracker is exclusively for filling and discussing bugs and featurerequests, it is not for scripting support (e.g. `How do I get X handler?`, `How can I call X function?`, etc.). For any other kind of discussion use [discussions](https://github.com/WopsS/RED4ext.SDK/discussions).
+The issue tracker is exclusively for filling and discussing bugs and feature requests, it is not for scripting support (e.g. `How do I get X handler?`, `How can I call X function?`, etc.). For any other kind of discussion use [discussions](https://github.com/WopsS/RED4ext.SDK/discussions).
 
 ### Reporting a bug or requesting a feature
 
@@ -20,7 +20,7 @@ The project is using [C++20](https://en.cppreference.com/w/cpp/20), any C++20 fe
 
 * Use [EditorConfig](https://editorconfig.org/) and [clang-format](https://clang.llvm.org/docs/ClangFormat.html) to style your code before pushing.
 * Use names that describe the purpose or intent of the object. Names should be self-explanatory and easily recognizable in the context.
-* Minimize the use of abbreviations that would likely be unknown to someone outside of the project.
+* Minimize the use of abbreviations that would likely be unknown to someone outside the project.
 * Use `auto` whenever it is possible, if the intended type is the correct one (in case of primitive types).
 * Brackets (`{}`) must be on new line.
 
@@ -32,8 +32,8 @@ The project is using [C++20](https://en.cppreference.com/w/cpp/20), any C++20 fe
 ### Classes
 
 * Class names must be `PascalCase`.
-* Use `class` and `struct` acordingly.
-  * A rule of thumb is to use `struct` for reversed types or objects that carry data, for everything else use `class`.
+* Use `class` and `struct` accordingly.
+* A rule of thumb is to use `struct` for reversed types or objects that carry data, for everything else use `class`.
 
 ### Functions
 
@@ -53,7 +53,7 @@ The project is using [C++20](https://en.cppreference.com/w/cpp/20), any C++20 fe
 
 ### Macros
 
-* Marcos should named with uppercase letters.
+* Marcos should be named with uppercase letters.
 * Prefix macros with `RED4EXT_`.
 
 ## Commit messages
