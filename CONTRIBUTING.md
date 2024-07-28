@@ -53,7 +53,7 @@ The project is using [C++20](https://en.cppreference.com/w/cpp/20), any C++20 fe
 
 ### Macros
 
-* Marcos should be named with uppercase letters.
+* Macros should be named with uppercase letters.
 * Prefix macros with `RED4EXT_`.
 
 ## Commit messages
