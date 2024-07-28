@@ -145,13 +145,26 @@ using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext
 ```
 
+6. Remove these comments:
+
+```diff
+-// clang-format off
+
+-// This file is generated from the Game's Reflection data
+
+...
+
+-// clang-format on
+```
+
 ### Generate stub
 
-1. Build the library and install it in `<game>/red4ext/plugins/`.
+1. Build the RTTIDumper with the modified SDK and install it in `<game>/red4ext/plugins/`.
 2. Run the game, wait, close the game and go in `<game>/bin/x64/dumps/cpp/Scripting/`.
-3. Copy the folder `Natives` in the folder of RED4ext.SDK to replace its content with the new version.
-4. If you see a difference on files you didn't touch, ask around before proceeding.
-5. It should have [generated a stub](https://github.com/WopsS/RED4ext.SDK/blob/8730efb3aa0fed84e040997ca3e07571d5c86803/include/RED4ext/Scripting/Natives/Generated/vehicle/BaseObject.hpp)
+3. Delete the old folder `Natives` within RED4ext.SDK.
+4. Copy the new generated folder `Natives` from the dump and paste it within RED4ext.SDK.
+5. If you see a difference on files you didn't touch, ask around before proceeding.
+6. It should have [generated a stub](https://github.com/WopsS/RED4ext.SDK/blob/8730efb3aa0fed84e040997ca3e07571d5c86803/include/RED4ext/Scripting/Natives/Generated/vehicle/BaseObject.hpp)
    for the file in `Generated` folder. It *disables* the generated file using comments, and include the native 
    declaration we added.
 
