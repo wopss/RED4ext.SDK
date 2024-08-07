@@ -4,11 +4,11 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/AnimBufferState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimDataChunk.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimFallbackFrameDesc.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
+#include <RED4ext/Scripting/Natives/animAnimBufferState.hpp>
 #include <cstdint>
 
 namespace RED4ext
