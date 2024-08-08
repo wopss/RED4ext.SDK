@@ -4,6 +4,14 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/Vector2.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(Vector2, 0x8);
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 
@@ -19,5 +27,6 @@ struct Vector2
 };
 RED4EXT_ASSERT_SIZE(Vector2, 0x8);
 } // namespace RED4ext
+*/
 
 // clang-format on
