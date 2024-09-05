@@ -5,8 +5,9 @@
 #include <functional>
 #include <type_traits>
 
-#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Relocation.hpp>
 #include <RED4ext/Utils.hpp>
 
