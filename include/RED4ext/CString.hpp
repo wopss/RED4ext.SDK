@@ -3,6 +3,7 @@
 #include <RED4ext/Common.hpp>
 #include <cstdint>
 #include <string_view>
+#include <string>
 
 namespace RED4ext
 {
