@@ -43,8 +43,9 @@ struct BenchmarkSummary : IScriptable
     float time; // 17C
     uint32_t frameNumber; // 180
     uint8_t upscalingType; // 184
-    bool DLAAEnabled; // 185
-    uint8_t unk186[0x188 - 0x186]; // 186
+    uint8_t frameGenerationType; // 185
+    bool DLAAEnabled; // 186
+    uint8_t unk187[0x188 - 0x187]; // 187
     float DLAASharpness; // 188
     bool DLSSEnabled; // 18C
     bool DLSSDEnabled; // 18D
@@ -56,28 +57,33 @@ struct BenchmarkSummary : IScriptable
     uint8_t unk19A[0x19C - 0x19A]; // 19A
     int32_t FSR2Quality; // 19C
     float FSR2Sharpness; // 1A0
-    bool XeSSEnabled; // 1A4
+    bool FSR3Enabled; // 1A4
     uint8_t unk1A5[0x1A8 - 0x1A5]; // 1A5
-    int32_t XeSSQuality; // 1A8
-    float XeSSSharpness; // 1AC
-    bool DRSEnabled; // 1B0
-    uint8_t unk1B1[0x1B4 - 0x1B1]; // 1B1
-    uint32_t DRSTargetFPS; // 1B4
-    uint32_t DRSMinimalResolutionPercentage; // 1B8
-    uint32_t DRSMaximalResolutionPercentage; // 1BC
-    bool CASSharpeningEnabled; // 1C0
-    bool FSREnabled; // 1C1
-    uint8_t unk1C2[0x1C4 - 0x1C2]; // 1C2
-    int32_t FSRQuality; // 1C4
-    bool rayTracingEnabled; // 1C8
-    bool rayTracedReflections; // 1C9
-    bool rayTracedSunShadows; // 1CA
-    bool rayTracedLocalShadows; // 1CB
-    int32_t rayTracedLightingQuality; // 1CC
-    bool rayTracedPathTracingEnabled; // 1D0
-    uint8_t unk1D1[0x1D8 - 0x1D1]; // 1D1
+    int32_t FSR3Quality; // 1A8
+    float FSR3Sharpness; // 1AC
+    bool FSR3FrameGenEnabled; // 1B0
+    bool XeSSEnabled; // 1B1
+    uint8_t unk1B2[0x1B4 - 0x1B2]; // 1B2
+    int32_t XeSSQuality; // 1B4
+    float XeSSSharpness; // 1B8
+    bool DRSEnabled; // 1BC
+    uint8_t unk1BD[0x1C0 - 0x1BD]; // 1BD
+    uint32_t DRSTargetFPS; // 1C0
+    uint32_t DRSMinimalResolutionPercentage; // 1C4
+    uint32_t DRSMaximalResolutionPercentage; // 1C8
+    bool CASSharpeningEnabled; // 1CC
+    bool FSREnabled; // 1CD
+    uint8_t unk1CE[0x1D0 - 0x1CE]; // 1CE
+    int32_t FSRQuality; // 1D0
+    bool rayTracingEnabled; // 1D4
+    bool rayTracedReflections; // 1D5
+    bool rayTracedSunShadows; // 1D6
+    bool rayTracedLocalShadows; // 1D7
+    int32_t rayTracedLightingQuality; // 1D8
+    bool rayTracedPathTracingEnabled; // 1DC
+    uint8_t unk1DD[0x1E0 - 0x1DD]; // 1DD
 };
-RED4EXT_ASSERT_SIZE(BenchmarkSummary, 0x1D8);
+RED4EXT_ASSERT_SIZE(BenchmarkSummary, 0x1E0);
 } // namespace world
 using worldBenchmarkSummary = world::BenchmarkSummary;
 } // namespace RED4ext
