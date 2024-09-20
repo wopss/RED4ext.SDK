@@ -64,7 +64,7 @@ struct LookAtController
         CName partName;                       // 00
         DynArray<anim::LookAtRef> lookAtRefs; // 08
     };
-    RED4EXT_ASSERT_SIZE(AdditionalLookAtData, 0x28);
+    RED4EXT_ASSERT_SIZE(AdditionalLookAtData, 0x18);
     RED4EXT_ASSERT_OFFSET(AdditionalLookAtData, partName, 0x00);
     RED4EXT_ASSERT_OFFSET(AdditionalLookAtData, lookAtRefs, 0x08);
 
@@ -80,7 +80,7 @@ RED4EXT_ASSERT_SIZE(LookAtController, 0x88);
 RED4EXT_ASSERT_OFFSET(LookAtController, animationControllerComponent, 0x00);
 RED4EXT_ASSERT_OFFSET(LookAtController, lookAtData, 0x20);
 RED4EXT_ASSERT_OFFSET(LookAtController, additionalLookAtData, 0x30);
-RED4EXT_ASSERT_OFFSET(LookAtController, lookAtParams, 0x30);
+RED4EXT_ASSERT_OFFSET(LookAtController, lookAtParams, 0x40);
 
 struct AnimationControllerComponent : ent::IComponent
 {
