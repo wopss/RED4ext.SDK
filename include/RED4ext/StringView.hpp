@@ -36,8 +36,8 @@ struct StringView
     constexpr const char* begin() const noexcept;
     constexpr const char* end() const noexcept;
 
-    const char* ptr{};
-    std::uint32_t len{};
+    const char* ptr;
+    std::uint32_t length;
 };
 #pragma pack(pop)
 
