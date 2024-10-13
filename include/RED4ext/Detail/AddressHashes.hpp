@@ -219,5 +219,10 @@ constexpr std::uint32_t UpdateRegistrar_RegisterBucketUpdate = 0x192F4EA2;
 constexpr std::uint32_t DeferredDataBuffer_LoadAsync = 4125893577;
 constexpr std::uint32_t DeferredDataBuffer_LoadRefAsync = 1459046115;
 #pragma endregion
+
+#pragma region CommandLine
+constexpr std::uint32_t CommandLine = 677908004;
+constexpr std::uint32_t CommandLine_HasLaunchParameter = 2449555025;
+#pragma endregion
 }
 // clang-format on
