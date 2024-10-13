@@ -9,6 +9,13 @@ struct StringView;
 
 class CommandLine
 {
+public:
+    CommandLine() = delete;
+    CommandLine(const CommandLine&) = delete;
+    CommandLine(CommandLine&&) = delete;
+    CommandLine& operator=(const CommandLine&) = delete;
+    CommandLine& operator=(CommandLine&&) = delete;
+
     static CommandLine* Get() noexcept;
     bool HasLaunchParameter(StringView aParam) noexcept;
 };

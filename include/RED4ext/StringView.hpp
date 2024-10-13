@@ -43,7 +43,7 @@ struct StringView
 
 RED4EXT_ASSERT_SIZE(StringView, 0xC);
 RED4EXT_ASSERT_OFFSET(StringView, ptr, 0x0);
-RED4EXT_ASSERT_OFFSET(StringView, len, 0x8);
+RED4EXT_ASSERT_OFFSET(StringView, length, 0x8);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

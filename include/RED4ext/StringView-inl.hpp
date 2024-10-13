@@ -8,31 +8,31 @@
 
 RED4EXT_INLINE constexpr RED4ext::StringView::StringView() noexcept
     : ptr(nullptr)
-    , len(0u)
+    , length(0u)
 {
 }
 
 RED4EXT_INLINE constexpr RED4ext::StringView::StringView(const char* aStr) noexcept
     : ptr(aStr)
-    , len(static_cast<std::uint32_t>(std::char_traits<char>::length(aStr)))
+    , length(static_cast<std::uint32_t>(std::char_traits<char>::length(aStr)))
 {
 }
 
 RED4EXT_INLINE constexpr RED4ext::StringView::StringView(std::string_view aView) noexcept
     : ptr(aView.data())
-    , len(static_cast<std::uint32_t>(aView.length()))
+    , length(static_cast<std::uint32_t>(aView.length()))
 {
 }
 
 RED4EXT_INLINE RED4ext::StringView::StringView(const RED4ext::CString& aStr) noexcept
     : ptr(aStr.c_str())
-    , len(aStr.Length())
+    , length(aStr.Length())
 {
 }
 
 RED4EXT_INLINE constexpr bool RED4ext::StringView::IsValid() const noexcept
 {
-    return ptr && len > 0u;
+    return ptr && length > 0u;
 }
 
 RED4EXT_INLINE constexpr RED4ext::StringView::operator bool() const noexcept
@@ -92,7 +92,7 @@ RED4EXT_INLINE constexpr const char* RED4ext::StringView::Data() const noexcept
 
 RED4EXT_INLINE constexpr std::uint32_t RED4ext::StringView::Length() const noexcept
 {
-    return len;
+    return length;
 }
 
 RED4EXT_INLINE constexpr const char* RED4ext::StringView::begin() const noexcept
