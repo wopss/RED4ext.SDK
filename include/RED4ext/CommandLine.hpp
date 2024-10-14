@@ -17,7 +17,7 @@ public:
     CommandLine& operator=(CommandLine&&) = delete;
 
     static CommandLine* Get() noexcept;
-    bool HasLaunchParameter(StringView aParam) noexcept;
+    bool HasLaunchParameter(const StringView& aParam) noexcept;
 };
 } // namespace RED4ext
 

@@ -17,12 +17,11 @@ RED4EXT_INLINE RED4ext::CommandLine* RED4ext::CommandLine::Get() noexcept
     return ptr;
 }
 
-RED4EXT_INLINE bool RED4ext::CommandLine::HasLaunchParameter(RED4ext::StringView aParam) noexcept
+RED4EXT_INLINE bool RED4ext::CommandLine::HasLaunchParameter(const RED4ext::StringView& aParam) noexcept
 {
-    using func_t =
-        bool (*)(RED4ext::CommandLine* aThis, StringView aParam, std::uint32_t* aOptionIndex, std::uint64_t** aUnk2);
+    using func_t = bool (*)(RED4ext::CommandLine*, const StringView&, std::uint32_t*, std::uint64_t**);
 
-    static func_t func{
+    static const func_t func{
         RED4ext::UniversalRelocFunc<func_t>(RED4ext::Detail::AddressHashes::CommandLine_HasLaunchParameter)};
 
     std::uint32_t optionIndex{};

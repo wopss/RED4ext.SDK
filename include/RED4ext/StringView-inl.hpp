@@ -30,19 +30,19 @@ RED4EXT_INLINE RED4ext::StringView::StringView(const RED4ext::CString& aStr) noe
 {
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::IsValid() const noexcept
+RED4EXT_INLINE constexpr bool RED4ext::StringView::IsEmpty() const noexcept
 {
-    return ptr && length > 0u;
+    return !ptr || length == 0u;
 }
 
 RED4EXT_INLINE constexpr RED4ext::StringView::operator bool() const noexcept
 {
-    return IsValid();
+    return !IsEmpty();
 }
 
 RED4EXT_INLINE constexpr bool RED4ext::StringView::operator==(const StringView& aRhs) const noexcept
 {
-    return Length() == aRhs.Length() && std::char_traits<char>::compare(Data(), aRhs.Data(), Length());
+    return Length() == aRhs.Length() && std::char_traits<char>::compare(Data(), aRhs.Data(), Length()) == 0;
 }
 
 RED4EXT_INLINE constexpr bool RED4ext::StringView::operator!=(const StringView& aRhs) const noexcept

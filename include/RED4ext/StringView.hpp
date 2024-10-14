@@ -16,7 +16,7 @@ struct StringView
     constexpr StringView(std::string_view aView) noexcept;
     StringView(const RED4ext::CString& aStr) noexcept;
 
-    constexpr bool IsValid() const noexcept;
+    constexpr bool IsEmpty() const noexcept;
     constexpr operator bool() const noexcept;
 
     constexpr bool operator==(const StringView& aRhs) const noexcept;
