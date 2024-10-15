@@ -1,6 +1,8 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/HashMap.hpp>
+
 #include <cstdint>
 #include <string_view>
 #include <string>
@@ -81,6 +83,23 @@ RED4EXT_ASSERT_SIZE(CString, 0x20);
 RED4EXT_ASSERT_OFFSET(CString, text, 0x00);
 RED4EXT_ASSERT_OFFSET(CString, length, 0x14);
 RED4EXT_ASSERT_OFFSET(CString, allocator, 0x18);
+
+template<typename T>
+struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, CString>>>
+{
+    uint32_t operator()(const T& aKey) const noexcept
+    {
+        // I believe the game uses this implementation for StringView and String?
+        std::uint32_t hash{};
+
+        for (const auto i : aKey)
+        {
+            hash = static_cast<std::uint32_t>(i) + 31u * hash;
+        }
+
+        return hash;
+    }
+};
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

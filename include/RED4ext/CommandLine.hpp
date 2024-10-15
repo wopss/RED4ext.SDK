@@ -1,23 +1,20 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/DynArray.hpp>
+#include <RED4ext/HashMap.hpp>
 
 namespace RED4ext
 {
-
-struct StringView;
+struct CString;
 
 class CommandLine
 {
 public:
-    CommandLine() = delete;
-    CommandLine(const CommandLine&) = delete;
-    CommandLine(CommandLine&&) = delete;
-    CommandLine& operator=(const CommandLine&) = delete;
-    CommandLine& operator=(CommandLine&&) = delete;
+    static const CommandLine* Get() noexcept;
+    bool HasLaunchParameter(const RED4ext::CString& aParam) const noexcept;
 
-    static CommandLine* Get() noexcept;
-    bool HasLaunchParameter(const StringView& aParam) noexcept;
+    RED4ext::HashMap<RED4ext::CString, RED4ext::DynArray<RED4ext::CString>> m_parameterMap;
 };
 } // namespace RED4ext
 

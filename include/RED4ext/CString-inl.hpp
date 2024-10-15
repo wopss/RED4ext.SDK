@@ -7,7 +7,6 @@
 #include <cstring>
 
 #include <RED4ext/Detail/AddressHashes.hpp>
-#include <RED4ext/HashMap.hpp>
 #include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CString::CString(Memory::IAllocator* aAllocator)
@@ -141,20 +140,3 @@ RED4EXT_INLINE uint32_t RED4ext::CString::Length() const noexcept
 {
     return length & 0x3FFFFFFF;
 }
-
-template<typename T>
-struct RED4ext::HashMapHash<T, std::enable_if_t<std::is_same_v<T, RED4ext::CString>>>
-{
-    uint32_t operator()(const T& aKey) const noexcept
-    {
-        // I believe the game uses this implementation for StringView and String?
-        std::uint32_t hash{};
-
-        for (const auto i : aKey)
-        {
-            hash = static_cast<std::uint32_t>(i) + 31u * hash;
-        }
-
-        return hash;
-    }
-};
