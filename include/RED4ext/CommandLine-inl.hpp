@@ -4,9 +4,9 @@
 #include <RED4ext/CommandLine.hpp>
 #endif
 
+#include <RED4ext/CString.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
-#include <RED4ext/CString.hpp>
 
 RED4EXT_INLINE const RED4ext::CommandLine* RED4ext::CommandLine::Get() noexcept
 {

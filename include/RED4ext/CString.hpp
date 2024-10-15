@@ -2,10 +2,9 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/HashMap.hpp>
-
 #include <cstdint>
-#include <string_view>
 #include <string>
+#include <string_view>
 
 namespace RED4ext
 {
