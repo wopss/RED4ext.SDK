@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldWorldID.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::WorldID, 0x38);
+using worldWorldID = world::WorldID;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 
@@ -22,5 +31,6 @@ RED4EXT_ASSERT_SIZE(WorldID, 0x38);
 } // namespace world
 using worldWorldID = world::WorldID;
 } // namespace RED4ext
+*/
 
 // clang-format on
