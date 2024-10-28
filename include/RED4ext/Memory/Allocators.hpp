@@ -129,8 +129,8 @@ struct Allocator : IAllocator
         return result;
     }
 
-    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint32_t aSize, uint32_t aAlignment) const
-        override
+    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint32_t aSize,
+                                            uint32_t aAlignment) const override
     {
         using realloc_t = void (*)(Vault*, AllocationResult*, AllocationResult&, uint32_t, uint32_t);
         static UniversalRelocFunc<realloc_t> realloc(Detail::AddressHashes::Memory_Vault_ReallocAligned);
