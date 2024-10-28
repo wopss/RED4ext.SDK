@@ -31,7 +31,7 @@ static constexpr const char* INVALID_CHARACTERS = R"(-|'|\(|\)|\]|\[|/|\.|\s|:)"
 // small conflicts with windows macro
 // Plane conflicts with itself as a type name
 static constexpr const char* INVALID_KEYWORDS =
-    R"(\bregister\b|\bbool\b|\bint\b|\btemplate\b|\bdefault\b|\btrue\b|\bfalse\b|\bsmall\b|\bPlane\b)";
+    R"(\bregister\b|\bbool\b|\bint\b|\btemplate\b|\bdefault\b|\btrue\b|\bfalse\b|\bsmall\b|\bswitch\b|\bPlane\b)";
 
 struct ClassFileDescriptor
 {

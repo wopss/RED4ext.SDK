@@ -168,12 +168,12 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     TweakDB fakeTweakDB;
     struct FakeAllocator : Memory::IAllocator
     {
-        virtual Memory::AllocationResult Alloc(uint32_t aSize) override
+        virtual Memory::AllocationResult Alloc(uint32_t aSize) const override
         {
             return AllocAligned(aSize, 8);
         }
 
-        virtual Memory::AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) override
+        virtual Memory::AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) const override
         {
             Memory::AllocationResult result;
             result.memory = _aligned_malloc(aSize, aAlignment);
@@ -181,7 +181,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
             return result;
         }
 
-        virtual Memory::AllocationResult Realloc(Memory::AllocationResult& aAllocation, uint32_t aSize) override
+        virtual Memory::AllocationResult Realloc(Memory::AllocationResult& aAllocation, uint32_t aSize) const override
         {
             RED4EXT_UNUSED_PARAMETER(aAllocation);
             RED4EXT_UNUSED_PARAMETER(aSize);
@@ -190,7 +190,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
         }
 
         virtual Memory::AllocationResult ReallocAligned(Memory::AllocationResult& aAllocation, uint32_t aSize,
-                                                        uint32_t aAlignment) override
+                                                        uint32_t aAlignment) const override
         {
             RED4EXT_UNUSED_PARAMETER(aAllocation);
             RED4EXT_UNUSED_PARAMETER(aSize);
@@ -199,12 +199,12 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
             return {};
         }
 
-        virtual void Free(Memory::AllocationResult& aAllocation) override
+        virtual void Free(Memory::AllocationResult& aAllocation) const override
         {
             _aligned_free(aAllocation.memory);
         }
 
-        virtual void sub_28(void* aMemory) override
+        virtual void sub_28(void* aMemory) const override
         {
             RED4EXT_UNUSED_PARAMETER(aMemory);
         }
