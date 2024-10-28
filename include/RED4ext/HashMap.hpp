@@ -209,6 +209,11 @@ struct HashMap
         return nullptr;
     }
 
+    bool Contains(const K& aKey)
+    {
+        return Get(aKey) != nullptr;
+    }
+
     bool Remove(const K& aKey)
     {
         if (size == 0)
@@ -373,9 +378,10 @@ struct HashMap
         nodeList = newNodeList;
     }
 
-    Memory::IAllocator* GetAllocator()
+    Memory::IAllocator* GetAllocator() const
     {
-        return reinterpret_cast<Memory::IAllocator*>(&allocator);
+        const auto allocatorPtr = reinterpret_cast<uintptr_t>(&allocator);
+        return reinterpret_cast<Memory::IAllocator*>(allocatorPtr);
     }
 
     void CopyFrom(const HashMap& aOther)
