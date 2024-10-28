@@ -378,10 +378,9 @@ struct HashMap
         nodeList = newNodeList;
     }
 
-    Memory::IAllocator* GetAllocator() const
+    const Memory::IAllocator* GetAllocator() const
     {
-        const auto allocatorPtr = reinterpret_cast<uintptr_t>(&allocator);
-        return reinterpret_cast<Memory::IAllocator*>(allocatorPtr);
+        return reinterpret_cast<const Memory::IAllocator*>(&allocator);
     }
 
     void CopyFrom(const HashMap& aOther)
