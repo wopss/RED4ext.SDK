@@ -30,10 +30,10 @@ struct GameSessionDesc
 
     world::WorldID worldId; // 0
 
-    bool unk38;     // 38
+    bool unk38;     // 38, Seems to need to be true to load into session
     uint32_t unk3C; // 3C
-    uint32_t unk40; // 40
-    uint32_t unk44; // 44
+    uint32_t unk40; // 40, Set to 7 in game ctor
+    uint32_t unk44; // 44, Set to 257 in game ctor
 
     bool unk48; // 48
 
@@ -41,14 +41,14 @@ struct GameSessionDesc
     uint64_t unk50; // 50
     uint64_t unk58; // 58
     uint64_t unk60; // 60
-    uint32_t unk68; // 68
+    int32_t unk68;  // 68
 
     CString saveName; // 70 - QuickSave-1
     CString unk90;    // 90
     CString unkB0;    // B0
 
-    std::uint64_t unkD0; // D0
-    std::uint64_t unkD8; // D8
+    uint64_t unkD0; // D0
+    uint64_t unkD8; // D8
 
     PlayerSpawnParams playerSpawnParams; // E0
 
@@ -56,11 +56,13 @@ struct GameSessionDesc
     uint64_t unk158; // 158
 
     DynArray<MainQuestData> mainQuests; // 160
-    DynArray<MainQuestData> unk170;     // 170 - Empty on new game start, as far as I can tell
+    DynArray<DynArray<MainQuestData>>
+        questsFromMainGameDefinitions; // 170, Filled with quests from ep1\quest\ep1.gamedef and
+                                       // ep1\quest\ep1_standalone.gamedef on game load
 
-    std::uint64_t unk180; // 180
-    std::uint64_t unk188; // 188
-    std::uint64_t unk190; // 190
+    uint64_t unk180; // 180
+    uint64_t unk188; // 188
+    uint64_t unk190; // 190
 
     Handle<game::ui::CharacterCustomizationState> characterCustomizationState; // 198
 
@@ -70,6 +72,40 @@ struct GameSessionDesc
     bool unk1AB; // 1AB
 
     CString saveMetadataRelativePath; // 1B0 - QuickSave-1/metadata.9.json
+
+    GameSessionDesc()
+        : unk38(true)
+        , unk3C()
+        , unk40(7u)
+        , unk44(257u)
+        , unk48()
+        , unk4C()
+        , unk50()
+        , unk58()
+        , unk60()
+        , unk68(-1)
+        , saveName()
+        , unk90()
+        , unkB0()
+        , unkD0()
+        , unkD8()
+        , playerSpawnParams()
+        , unk150()
+        , unk158()
+        , mainQuests()
+        , questsFromMainGameDefinitions()
+        , unk180()
+        , unk188()
+        , unk190()
+        , characterCustomizationState()
+        , unk1A8()
+        , unk1A9()
+        , unk1AA()
+        , unk1AB()
+        , saveMetadataRelativePath()
+    {
+        playerSpawnParams.spawnPoint.orientation.r = 1.0f; // Game ctor does this
+    }
 };
 RED4EXT_ASSERT_SIZE(GameSessionDesc, 0x1D0);
 RED4EXT_ASSERT_OFFSET(GameSessionDesc, worldId, 0x0);
@@ -82,7 +118,7 @@ RED4EXT_ASSERT_OFFSET(GameSessionDesc, unkD0, 0xD0);
 RED4EXT_ASSERT_OFFSET(GameSessionDesc, unkD8, 0xD8);
 RED4EXT_ASSERT_OFFSET(GameSessionDesc, playerSpawnParams, 0xE0);
 RED4EXT_ASSERT_OFFSET(GameSessionDesc, mainQuests, 0x160);
-RED4EXT_ASSERT_OFFSET(GameSessionDesc, unk170, 0x170);
+RED4EXT_ASSERT_OFFSET(GameSessionDesc, questsFromMainGameDefinitions, 0x170);
 RED4EXT_ASSERT_OFFSET(GameSessionDesc, characterCustomizationState, 0x198);
 RED4EXT_ASSERT_OFFSET(GameSessionDesc, saveMetadataRelativePath, 0x1B0);
 
