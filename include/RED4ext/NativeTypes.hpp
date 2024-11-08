@@ -239,7 +239,7 @@ struct CurveBuffer
     uint32_t offsetPoints; // 08
     uint32_t offsetValues; // 12
     // float points[size]; // 16
-    // T values[size];     // 16 + size * sizeof(float)
+    // T values[size];     // 16 + size * sizeof(T)
 };
 RED4EXT_ASSERT_SIZE(CurveBuffer<float>, 0x10);
 RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, size, 0x00);
@@ -255,6 +255,8 @@ struct CurveData
     [[nodiscard]] CurvePoint<T> GetPoint(uint32_t aIndex) const noexcept;
     void SetPoint(uint32_t aIndex, const CurvePoint<T>& acPoint) noexcept;
     void SetPoint(uint32_t aIndex, float aPoint, const T& acValue) noexcept;
+
+    void Resize(uint32_t aPoints) noexcept;
 
     [[nodiscard]] inline CurvePoint<T> operator[](uint32_t aIndex) const noexcept;
 
