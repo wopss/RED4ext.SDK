@@ -349,36 +349,27 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, float aPoin
 }
 
 template<typename T>
-RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aPoints) noexcept
+RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
 {
-    if (aPoints == 0)
+    if (aNewSize == 0 || aNewSize == GetSize())
     {
         return;
     }
-    uint32_t size = GetSize();
-
-    if (aPoints < size)
-    {
-        size = aPoints;
-    }
-    float* points = new float[size];
-    T* values = new T[size];
     auto* curve = GetCurve();
+    uint32_t size = curve->size;
 
-    std::memcpy(points, curve->GetPoints(), size * sizeof(float));
-    std::memcpy(values, curve->GetValues(), size * sizeof(T));
-
-    buffer.Resize(sizeof(CurveBuffer) + aPoints * sizeof(float) + aPoints * sizeof(T));
+    if (aNewSize < size)
+    {
+        std::copy_n(curve->GetValues(), aNewSize * sizeof(T), buffer.data + 0x10 * aNewSize * sizeof(float));
+    }
+    buffer.Resize(sizeof(CurveBuffer) + aNewSize * sizeof(float) + aNewSize * sizeof(T));
+    if (aNewSize > size)
+    {
+        std::copy_n(curve->GetValues(), aNewSize * sizeof(T), buffer.data + 0x10 * aNewSize * sizeof(float));
+    }
     curve = GetCurve();
-    curve->size = aPoints;
-    curve->unk04 = 0;
-    curve->offsetPoints = 0x10;
-    curve->offsetValues = 0x10 + aPoints * sizeof(T);
-    std::memcpy(curve->GetPoints(), points, size * sizeof(float));
-    std::memcpy(curve->GetValues(), values, size * sizeof(T));
-
-    delete[] points;
-    delete[] values;
+    curve->size = aNewSize;
+    curve->offsetValues = 0x10 + aNewSize * sizeof(float);
 }
 
 template<typename T>
