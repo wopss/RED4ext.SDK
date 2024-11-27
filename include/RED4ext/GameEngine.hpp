@@ -7,6 +7,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Scripting/Natives/Generated/services/GameServices.hpp>
 
 namespace RED4ext
 {
@@ -188,6 +189,7 @@ struct CBaseEngine
     int64_t unk2C0;                            // 2C0
     int64_t unk2C8;                            // 2C8
     int32_t unk2D0;                            // 2D0
+    bool isEP1;                                // 2D4 - IsEP1()
     int64_t unk2D8;                            // 2D8
     int64_t unk2E0;                            // 2E0
 };
@@ -196,6 +198,7 @@ RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsLoaded, 0x54);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, unkD0, 0xD0);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsValidationErrors, 0x90);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsBlobPath, 0x150);
+RED4EXT_ASSERT_OFFSET(CBaseEngine, isEP1, 0x2D4);
 
 struct BaseGameEngine : CBaseEngine
 {
@@ -218,19 +221,19 @@ struct CGameEngine : BaseGameEngine
 
     static CGameEngine* Get();
 
-    int64_t unk2F0;            // 2F0
-    int64_t unk2F8;            // 2F8
-    int32_t unk300;            // 300
-    int32_t unk304;            // 304
-    CGameFramework* framework; // 308
-    int64_t unk310;            // 310
-    int64_t unk318;            // 318
-    int64_t unk320;            // 320
-    int64_t unk328;            // 328
-    int64_t unk330;            // 330
-    int64_t unk338;            // 338
-    int32_t unk340;            // 340
-    int64_t unk348;            // 348
+    int64_t unk2F0;                       // 2F0
+    int64_t unk2F8;                       // 2F8
+    int32_t unk300;                       // 300
+    int32_t unk304;                       // 304
+    CGameFramework* framework;            // 308
+    services::GameServices* gameServices; // 310
+    int64_t unk318;                       // 318
+    int64_t unk320;                       // 320
+    int64_t unk328;                       // 328
+    int64_t unk330;                       // 330
+    int64_t unk338;                       // 338
+    int32_t unk340;                       // 340
+    int64_t unk348;                       // 348
 };
 RED4EXT_ASSERT_SIZE(CGameEngine, 0x350);
 RED4EXT_ASSERT_OFFSET(CGameEngine, framework, 0x308);
