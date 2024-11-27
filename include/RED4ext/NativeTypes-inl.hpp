@@ -349,6 +349,30 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, float aPoin
 }
 
 template<typename T>
+RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
+{
+    if (aNewSize == 0 || aNewSize == GetSize())
+    {
+        return;
+    }
+    auto* curve = GetCurve();
+    uint32_t size = curve->size;
+
+    if (aNewSize < size)
+    {
+        std::copy_n(curve->GetValues(), aNewSize * sizeof(T), buffer.data + 0x10 * aNewSize * sizeof(float));
+    }
+    buffer.Resize(sizeof(CurveBuffer) + aNewSize * sizeof(float) + aNewSize * sizeof(T));
+    if (aNewSize > size)
+    {
+        std::copy_n(curve->GetValues(), aNewSize * sizeof(T), buffer.data + 0x10 * aNewSize * sizeof(float));
+    }
+    curve = GetCurve();
+    curve->size = aNewSize;
+    curve->offsetValues = 0x10 + aNewSize * sizeof(float);
+}
+
+template<typename T>
 RED4EXT_INLINE RED4ext::CurvePoint<T> RED4ext::CurveData<T>::operator[](uint32_t aIndex) const noexcept
 {
     return GetPoint(aIndex);

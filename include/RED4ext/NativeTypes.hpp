@@ -256,6 +256,8 @@ struct CurveData
     void SetPoint(uint32_t aIndex, const CurvePoint<T>& acPoint) noexcept;
     void SetPoint(uint32_t aIndex, float aPoint, const T& acValue) noexcept;
 
+    void Resize(uint32_t aNewSize) noexcept;
+
     [[nodiscard]] inline CurvePoint<T> operator[](uint32_t aIndex) const noexcept;
 
     CName name;                                  // 00
