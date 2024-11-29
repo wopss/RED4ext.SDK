@@ -12,16 +12,22 @@ RED4EXT_INLINE RED4ext::RawBufferAllocator::RawBufferAllocator(Memory::IAllocato
 RED4EXT_INLINE void* RED4ext::RawBufferAllocator::ReallocAligned(void* aData, uint32_t aSize, uint32_t aAlignment) const
 {
     auto innerAllocator = reinterpret_cast<const Memory::IAllocator*>(&allocator);
-    Memory::AllocationResult allocation{aData, 0};
 
+    if (!innerAllocator)
+        return nullptr;
+
+    Memory::AllocationResult allocation{aData, 0};
     return innerAllocator->ReallocAligned(allocation, aSize, aAlignment).memory;
 }
 
 RED4EXT_INLINE void RED4ext::RawBufferAllocator::Free(void* aData) const
 {
     auto innerAllocator = reinterpret_cast<const Memory::IAllocator*>(&allocator);
-    Memory::AllocationResult allocation{aData, 0};
 
+    if (!innerAllocator)
+        return;
+
+    Memory::AllocationResult allocation{aData, 0};
     innerAllocator->Free(allocation);
 }
 
