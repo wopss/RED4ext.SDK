@@ -236,15 +236,15 @@ struct CurveBuffer
 
     uint32_t size;         // 00
     uint32_t unk04;        // 04
-    uint32_t offsetPoints; // 08
-    uint32_t offsetValues; // 12
-    // float points[size]; // 16
-    // T values[size];     // 16 + size * sizeof(float)
+    uint32_t pointsOffset; // 08
+    uint32_t valuesOffset; // 0C
+    // float points[size]; // 10h
+    // T values[size];     // 10h + size * sizeof(float)
 };
 RED4EXT_ASSERT_SIZE(CurveBuffer<float>, 0x10);
 RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, size, 0x00);
-RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, offsetPoints, 0x08);
-RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, offsetValues, 0x0C);
+RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, pointsOffset, 0x08);
+RED4EXT_ASSERT_OFFSET(CurveBuffer<float>, valuesOffset, 0x0C);
 
 template<typename T>
 struct CurveData

@@ -124,6 +124,8 @@ RED4EXT_ASSERT_OFFSET(ObjectPackageExtractorParams, unk80, 0x80);
 
 struct ObjectPackageExtractor
 {
+    using AllocatorType = Memory::EngineAllocator;
+
     ObjectPackageExtractor(const ObjectPackageExtractorParams& aParams);
 
     void ExtractSync();
