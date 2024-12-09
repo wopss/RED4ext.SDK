@@ -382,11 +382,13 @@ public:
 };
 RED4EXT_ASSERT_SIZE(WeakPtr<void>, 0x10);
 
+// clang-format off
 template<typename T>
 concept IsSelfReference = requires(T* t)
 {
     { &t->self } -> std::same_as<WeakPtr<T>*>;
 };
+// clang-format on
 
 template<typename T, typename... Args>
 inline SharedPtr<T> MakeShared(Args&&... args)
