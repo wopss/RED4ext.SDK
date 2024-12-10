@@ -17,9 +17,9 @@ struct InputSystemWin32Game : input::InputSystemWin32Base
     static constexpr const char* NAME = "inputInputSystemWin32Game";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk190[0x1308 - 0x190]; // 190
+    uint8_t unk190[0x1330 - 0x190]; // 190
 };
-RED4EXT_ASSERT_SIZE(InputSystemWin32Game, 0x1308);
+RED4EXT_ASSERT_SIZE(InputSystemWin32Game, 0x1330);
 } // namespace input
 using inputInputSystemWin32Game = input::InputSystemWin32Game;
 } // namespace RED4ext

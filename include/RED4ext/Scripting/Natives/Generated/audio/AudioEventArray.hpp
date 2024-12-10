@@ -23,7 +23,7 @@ struct AudioEventArray : ISerializable
     uint8_t unk31[0x38 - 0x31]; // 31
     DynArray<audio::AudioEventMetadataArrayElement> events; // 38
     DynArray<audio::AudioEventMetadataArrayElement> switchGroup; // 48
-    DynArray<audio::AudioEventMetadataArrayElement> switch_; // 58
+    DynArray<audio::AudioEventMetadataArrayElement> switch_; // 58 -- switch
     DynArray<audio::AudioEventMetadataArrayElement> stateGroup; // 68
     DynArray<audio::AudioEventMetadataArrayElement> state; // 78
     DynArray<audio::AudioEventMetadataArrayElement> gameParameter; // 88

@@ -43,9 +43,9 @@ struct CaptureParameters
     bool enable; // A0
     bool videoRecordingMode; // A1
     bool audioRecordingMode; // A2
-    uint8_t unkA3[0xA8 - 0xA3]; // A3
+    uint8_t unkA3[0xB0 - 0xA3]; // A3
 };
-RED4EXT_ASSERT_SIZE(CaptureParameters, 0xA8);
+RED4EXT_ASSERT_SIZE(CaptureParameters, 0xB0);
 } // namespace rend
 using rendCaptureParameters = rend::CaptureParameters;
 } // namespace RED4ext

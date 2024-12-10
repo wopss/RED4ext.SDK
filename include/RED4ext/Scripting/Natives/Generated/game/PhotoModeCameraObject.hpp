@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) PhotoModeCameraObject : game::Object
     static constexpr const char* NAME = "gamePhotoModeCameraObject";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk240[0x3F0 - 0x240]; // 240
+    uint8_t unk240[0x4B0 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(PhotoModeCameraObject, 0x3F0);
+RED4EXT_ASSERT_SIZE(PhotoModeCameraObject, 0x4B0);
 } // namespace game
 using gamePhotoModeCameraObject = game::PhotoModeCameraObject;
 } // namespace RED4ext
