@@ -384,6 +384,7 @@
 #include <RED4ext/Scripting/Natives/Generated/WorldRenderAreaSettings.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldShadowConfig.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldTransform.hpp>
+#include <RED4ext/Scripting/Natives/Generated/WorldWidgetComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/ActionAnimDatabase_AnimationData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/ActionAnimDatabase_DatabaseRow.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AdditionalFloatTrackContainer.hpp>
@@ -1496,6 +1497,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/data/BaseObject_Record.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/BaseSign_Record.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/Base_MappinDefinition_Record.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/data/CharacterRandomizationCategory.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/Character_Record.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/ChoiceCaptionPart_Record.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/data/CompanionDistancePreset.hpp>
@@ -1744,6 +1746,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/BaseUIData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/BaseWorldMapMappinController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CensorshipInfo.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/ChangeAspectRatioCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationAction.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationActionType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationAttribute.hpp>
@@ -1760,6 +1763,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationUiPresetValue.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationVersionUpdateInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomization_BrokenNoseStage.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterRandomizationInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/ChoiceListVisualizerType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/Context.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CrosshairBaseGameController.hpp>
@@ -1819,6 +1823,7 @@
 #include <RED4ext/Scripting/Natives/Generated/game/ui/MinigameGenerationRule.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/MinigameState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/MinimapContainerController.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/NpcImageCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/OnscreenVOPlayerController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/OptionsGroup.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/PanzerBonus.hpp>
@@ -1961,6 +1966,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/DebugLayerDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/DebugLayerEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/DeleteRequestResult.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/DeleteScreenshotResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/DiscreteNavigationController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/DiscreteNavigationDirection.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/DisplayMode.hpp>
@@ -1984,12 +1990,15 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/EffectType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/EmptyCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/Event.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/FavoriteLoadResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/FinalConfigurationVisibility.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/FitToContentDirection.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/FocusEvent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/FontStyle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/FullScreenLayer.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/GalleryData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/GameNotificationsLayerDefinition.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/GameScreenshotsRequestResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/GenericSystemNotificationLogicController.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/GlitchEffect.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/GradientMode.hpp>
@@ -2054,6 +2063,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/LoadingLayerDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/LocalizedBink.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/Margin.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ink/MarketingConsentPopupTypeResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/MaskDataSource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/MaskWidgetReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/MenuEntry.hpp>
@@ -2878,6 +2888,8 @@
 #include <RED4ext/Scripting/Natives/Generated/vehicle/PoliceStrategy.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/SummonState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/UnlockedVehicle.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleAppearanceToDecalsName.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleClearCoatOverrides.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleDoorInteractionState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleDoorState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleNetrunnerQuickhackType.hpp>
