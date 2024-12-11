@@ -11,6 +11,7 @@
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Color.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationAction.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterRandomizationInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/TagList.hpp>
 
 namespace RED4ext
@@ -29,8 +30,9 @@ struct IndexedAppearanceDefinition
     CString localizedName; // 18
     DynArray<game::ui::CharacterCustomizationAction> actions; // 38
     red::TagList tags; // 48
+    game::ui::CharacterRandomizationInfo randomizationInfo; // 58
 };
-RED4EXT_ASSERT_SIZE(IndexedAppearanceDefinition, 0x58);
+RED4EXT_ASSERT_SIZE(IndexedAppearanceDefinition, 0x60);
 } // namespace game::ui
 using gameuiIndexedAppearanceDefinition = game::ui::IndexedAppearanceDefinition;
 } // namespace RED4ext

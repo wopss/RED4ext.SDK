@@ -19,6 +19,8 @@ enum class SimpleMessageType : uint32_t
     Money = 6,
     Reveal = 7,
     Boss = 8,
+    Twintone = 9,
+    Police = 10,
 };
 } // namespace game
 using gameSimpleMessageType = game::SimpleMessageType;

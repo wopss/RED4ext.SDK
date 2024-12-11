@@ -20,12 +20,12 @@ struct SwitcherInfo : game::ui::CharacterCustomizationInfo
     static constexpr const char* NAME = "gameuiSwitcherInfo";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CName> uiSlots; // B8
-    DynArray<game::ui::SwitcherOption> options; // C8
-    bool switchVisibility; // D8
-    uint8_t unkD9[0xE0 - 0xD9]; // D9
+    DynArray<CName> uiSlots; // C0
+    DynArray<game::ui::SwitcherOption> options; // D0
+    bool switchVisibility; // E0
+    uint8_t unkE1[0xE8 - 0xE1]; // E1
 };
-RED4EXT_ASSERT_SIZE(SwitcherInfo, 0xE0);
+RED4EXT_ASSERT_SIZE(SwitcherInfo, 0xE8);
 } // namespace game::ui
 using gameuiSwitcherInfo = game::ui::SwitcherInfo;
 } // namespace RED4ext

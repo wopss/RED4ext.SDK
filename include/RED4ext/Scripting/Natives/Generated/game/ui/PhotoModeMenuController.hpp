@@ -6,6 +6,8 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/ChangeAspectRatioCallback.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/ui/NpcImageCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/SetPhotoModeKeyEnabledCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/StickerImageCallback.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/WidgetGameController.hpp>
@@ -23,9 +25,11 @@ struct PhotoModeMenuController : game::ui::WidgetGameController
     game::ui::SetPhotoModeKeyEnabledCallback SetAttributeOptionEnabled; // 260
     game::ui::SetPhotoModeKeyEnabledCallback SetCategoryEnabled; // 298
     game::ui::StickerImageCallback SetStickerImage; // 2D0
-    uint8_t unk308[0x330 - 0x308]; // 308
+    game::ui::NpcImageCallback SetNpcImage; // 308
+    game::ui::ChangeAspectRatioCallback ChangeAspectRatio; // 340
+    uint8_t unk378[0x3A0 - 0x378]; // 378
 };
-RED4EXT_ASSERT_SIZE(PhotoModeMenuController, 0x330);
+RED4EXT_ASSERT_SIZE(PhotoModeMenuController, 0x3A0);
 } // namespace game::ui
 using gameuiPhotoModeMenuController = game::ui::PhotoModeMenuController;
 } // namespace RED4ext
