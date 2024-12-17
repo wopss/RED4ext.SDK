@@ -12,5 +12,7 @@ foreach(EXAMPLE_PATH ${EXAMPLE_PATHS})
 
     set_target_properties(${EXAMPLE_NAME} PROPERTIES FOLDER "Examples")
     target_link_libraries(${EXAMPLE_NAME} PRIVATE RED4ext::SDK)
+
+    target_compile_definitions(${EXAMPLE_NAME} PRIVATE WIN32_LEAN_AND_MEAN)
   endif()
 endforeach()

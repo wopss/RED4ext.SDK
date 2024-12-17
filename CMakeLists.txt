@@ -102,7 +102,13 @@ else()
       "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
   )
 
-  target_compile_definitions(RED4ext.SDK PUBLIC RED4EXT_STATIC_LIB)
+  target_compile_definitions(
+    RED4ext.SDK
+      PUBLIC
+        RED4EXT_STATIC_LIB
+      PRIVATE
+        WIN32_LEAN_AND_MEAN
+  )
 
   if(RED4EXT_USE_PCH)
     set(RED4EXT_PCH_FILE "${PROJECT_BINARY_DIR}/red4ext_pch.hpp")

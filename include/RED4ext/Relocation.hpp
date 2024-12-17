@@ -1,6 +1,12 @@
 #pragma once
 
 #include <cstdint>
+#include <filesystem>
+#include <string_view>
+
+#include <Windows.h>
+
+#include <RED4ext/Api/Sdk.hpp>
 
 namespace RED4ext
 {
@@ -80,11 +86,28 @@ private:
     uintptr_t* m_address;
 };
 
-
 class UniversalRelocBase
 {
 public:
     static uintptr_t Resolve(uint32_t aHash);
+
+private:
+    using QueryFunc_t = void (*)(PluginInfo*);
+    using ResolveFunc_t = std::uintptr_t (*)(std::uint32_t);
+
+    static HMODULE GetRED4extModule();
+
+    static ResolveFunc_t InitializeAddressResolverFunction();
+    static ResolveFunc_t GetAddressResolverFunction();
+
+    static HMODULE GetCurrentModuleHandle();
+    static std::filesystem::path GetCurrentModulePath();
+
+    static QueryFunc_t GetCurrentPluginQueryFunction();
+    static bool QueryCurrentPlugin(PluginInfo& aPluginInfo);
+
+    static void ShowErrorAndTerminateProcess(std::wstring_view aMsg, std::uint32_t aLastError,
+                                             bool aQueryPluginInfo = true);
 };
 
 /**
