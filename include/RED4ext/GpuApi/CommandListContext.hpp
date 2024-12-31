@@ -1,8 +1,8 @@
 #pragma once
 
 #include <REd4ext/CString.hpp>
-#include <wrl/client.h>
 #include <d3d12.h>
+#include <wrl/client.h>
 
 namespace RED4ext
 {
@@ -27,7 +27,7 @@ struct CommandListContext
     Red::CString debugName;
     uint64_t hash;
     Microsoft::WRL::ComPtr<ID3D12CommandAllocator> commandAllocator;
-    Microsoft::WRL::ComPtr <ID3D12GraphicsCommandList> commandList;
+    Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> commandList;
     uint8_t unk38[0x68 - 0x38];
     CommandListType type;
     uint8_t unk6c[0x528 - 0x6c];
