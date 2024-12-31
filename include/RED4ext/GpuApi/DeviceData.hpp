@@ -38,8 +38,6 @@ struct CommandListsContainer
 };
 RED4EXT_ASSERT_SIZE(CommandListsContainer, 0x818);
 
-
-
 struct SDeviceDataBase
 {
     uint8_t unk00[0x5c0ae0 - 0x00];          // 00
@@ -49,7 +47,6 @@ struct SDeviceDataBase
     uint8_t unkd1b598[0x13bc240 - 0xd1b598]; // D1B598
 };
 RED4EXT_ASSERT_SIZE(SDeviceDataBase, 0x13bc240);
-
 
 struct SDeviceData : SDeviceDataBase
 {
