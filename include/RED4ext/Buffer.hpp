@@ -15,7 +15,7 @@ struct RawBufferAllocator
 
     virtual void* ReallocAligned(void* aData, uint32_t aSize, uint32_t aAlignment) const; // 00
     virtual void Free(void* aData) const;                                                 // 08
-    virtual const Memory::IAllocator* GetAllocator() const;                               // 10
+    virtual Memory::IAllocator* GetAllocator() const;                               // 10
 
     uintptr_t allocator;
 };
@@ -31,6 +31,7 @@ struct RawBuffer
     RawBuffer(RawBuffer&&) = default;
     ~RawBuffer();
 
+    Memory::IAllocator* GetAllocator() const;
     void Initialize(Memory::IAllocator* aAllocator, uint32_t aSize, uint32_t aAlignment = 8);
     void Resize(uint32_t aSize);
 
