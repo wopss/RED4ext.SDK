@@ -31,9 +31,9 @@ RED4EXT_INLINE void RED4ext::RawBufferAllocator::Free(void* aData) const
     innerAllocator->Free(allocation);
 }
 
-RED4EXT_INLINE const RED4ext::Memory::IAllocator* RED4ext::RawBufferAllocator::GetAllocator() const
+RED4EXT_INLINE RED4ext::Memory::IAllocator* RED4ext::RawBufferAllocator::GetAllocator() const
 {
-    return reinterpret_cast<const Memory::IAllocator*>(&allocator);
+    return reinterpret_cast<Memory::IAllocator*>(const_cast<uintptr_t*>(&allocator));
 }
 
 RED4EXT_INLINE RED4ext::RawBuffer::RawBuffer()
@@ -58,6 +58,16 @@ RED4EXT_INLINE RED4ext::RawBuffer::~RawBuffer()
     {
         reinterpret_cast<RawBufferAllocator*>(&allocator)->Free(data);
     }
+}
+
+RED4EXT_INLINE RED4ext::Memory::IAllocator* RED4ext::RawBuffer::GetAllocator() const
+{
+    if (!allocator[0])
+    {
+        return nullptr;
+    }
+
+    return reinterpret_cast<const RawBufferAllocator*>(&allocator)->GetAllocator();
 }
 
 RED4EXT_INLINE void RED4ext::RawBuffer::Initialize(Memory::IAllocator* aAllocator, uint32_t aSize, uint32_t aAlignment)
