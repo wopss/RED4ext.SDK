@@ -310,7 +310,8 @@ RED4EXT_INLINE RED4ext::CurveBuffer<T>* RED4ext::CurveData<T>::GetCurve() const 
 template<typename T>
 RED4EXT_INLINE uint32_t RED4ext::CurveData<T>::GetSize() const noexcept
 {
-    return GetCurve()->size;
+    auto* curve = GetCurve();
+    return curve ? curve->size : 0;
 }
 
 template<typename T>
@@ -320,7 +321,8 @@ RED4EXT_INLINE RED4ext::CurvePoint<T> RED4ext::CurveData<T>::GetPoint(uint32_t a
     {
         return {.point = std::numeric_limits<float>::infinity(), .value = T()};
     }
-    CurveBuffer<T>* curve = GetCurve();
+
+    auto* curve = GetCurve();
     float* points = curve->GetPoints();
     T* values = curve->GetValues();
 
@@ -340,7 +342,8 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, float aPoin
     {
         return;
     }
-    CurveBuffer<T>* curve = GetCurve();
+
+    auto* curve = GetCurve();
     float* points = curve->GetPoints();
     T* values = curve->GetValues();
 
