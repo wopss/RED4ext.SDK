@@ -1,6 +1,7 @@
 #pragma once
 
 #include <REd4ext/CString.hpp>
+#include <RED4ext/DynArray.hpp>
 #include <d3d12.h>
 #include <wrl/client.h>
 
