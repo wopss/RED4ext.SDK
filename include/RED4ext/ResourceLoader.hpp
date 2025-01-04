@@ -117,6 +117,29 @@ RED4EXT_ASSERT_OFFSET(ResourceToken<>, unk38, 0x38);
 RED4EXT_ASSERT_OFFSET(ResourceToken<>, finished, 0x58);
 RED4EXT_ASSERT_OFFSET(ResourceToken<>, error, 0x5C);
 
+struct ResourceRequest
+{
+    ResourceRequest(ResourcePath aPath = {});
+
+    ResourcePath path;             // 00
+    uint64_t unk08;                // 08
+    bool unk10;                    // 10
+    bool disablePreInitialization; // 11
+    bool disableImports;           // 12
+    bool disablePostLoad;          // 13
+    bool unk14;                    // 14
+    bool unk15;                    // 15
+    bool unk16;                    // 16
+    int32_t archiveHandle;         // 18
+    int32_t unk1C;                 // 1C
+    uint64_t unk20;                // 20
+};
+RED4EXT_ASSERT_SIZE(ResourceRequest, 0x28);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, path, 0x0);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePreInitialization, 0x11);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePostLoad, 0x13);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, archiveHandle, 0x18);
+
 struct ResourceLoader
 {
     static ResourceLoader* Get();
@@ -124,11 +147,23 @@ struct ResourceLoader
     template<typename T = CResource>
     SharedPtr<ResourceToken<T>> LoadAsync(ResourcePath aPath)
     {
-        using LoadAsync_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>*, ResourcePath);
-        static UniversalRelocFunc<LoadAsync_t> func(Detail::AddressHashes::ResourceLoader_LoadAsync);
+        using LoadAsync_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>&, ResourcePath);
+        static UniversalRelocFunc<LoadAsync_t> func(Detail::AddressHashes::ResourceLoader_IssueLoadingRequestByPath);
 
         SharedPtr<ResourceToken<T>> token;
-        func(this, &token, aPath);
+        func(this, token, aPath);
+
+        return token;
+    }
+
+    template<typename T = CResource>
+    SharedPtr<ResourceToken<T>> LoadAsync(const ResourceRequest& aRequest)
+    {
+        using LoadAsync_t = uintptr_t (*)(ResourceLoader*, SharedPtr<ResourceToken<T>>&, const ResourceRequest&);
+        static UniversalRelocFunc<LoadAsync_t> func(Detail::AddressHashes::ResourceLoader_IssueLoadingRequest);
+
+        SharedPtr<ResourceToken<T>> token;
+        func(this, token, aRequest);
 
         return token;
     }
