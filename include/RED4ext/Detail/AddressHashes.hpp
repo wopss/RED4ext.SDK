@@ -78,8 +78,9 @@ constexpr std::uint32_t CNamePool_Get = 0x68DF07DC;
 #pragma endregion
 
 #pragma region CommandListContext
-constexpr std::uint32_t CommandListContext_AddPendingBarrier = 2814122829;
-constexpr std::uint32_t CommandListContext_FlushPendingBarriers = 2786924000;
+constexpr std::uint32_t GetFreeCommandList = 2814122829UL;
+constexpr std::uint32_t CommandListContext_AddPendingBarrier = 2814122829UL;
+constexpr std::uint32_t CommandListContext_FlushPendingBarriers = 2786924000UL;
 #pragma endregion
 
 #pragma region CRTTIRegistrator
