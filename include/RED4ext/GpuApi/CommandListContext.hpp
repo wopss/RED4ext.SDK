@@ -24,7 +24,7 @@ struct CommandListContext
     void AddPendingBarrier(const D3D12_RESOURCE_BARRIER* aBarrier);
     void FlushPendingBarriers();
 
-    Red::CString debugName;
+    CString debugName;
     uint64_t hash;
     Microsoft::WRL::ComPtr<ID3D12CommandAllocator> commandAllocator;
     Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> commandList;
