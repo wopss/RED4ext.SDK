@@ -60,8 +60,8 @@ struct ALLOCATION_DESC
 struct Allocator : IUnknownImpl
 {
     HRESULT CreateResource(const ALLOCATION_DESC* pAllocDesc, const D3D12_RESOURCE_DESC* pResourceDesc,
-                           D3D12_RESOURCE_STATES InitialResourceState, Allocation** ppAllocation, REFIID riidResource,
-                           void** ppvResource);
+                           D3D12_RESOURCE_STATES InitialResourceState, const D3D12_CLEAR_VALUE* pOptimizedClearValue,
+                           Allocation** ppAllocation, REFIID riidResource, void** ppvResource);
 
     uint8_t unk10[0x18 - 0x10]; // 10
 };
