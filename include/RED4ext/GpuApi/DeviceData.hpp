@@ -1,7 +1,8 @@
 #pragma once
 
-#include <REd4ext/GpuApi/Buffer.hpp>
-#include <REd4ext/GpuApi/CommandListContext.hpp>
+#include <RED4ext/GpuApi/Buffer.hpp>
+#include <RED4ext/GpuApi/CommandListContext.hpp>
+#include <RED4ext/GpuApi/D3D12MemAlloc.hpp>
 
 namespace RED4ext
 {
@@ -56,7 +57,7 @@ struct SDeviceData : SDeviceDataBase
     Microsoft::WRL::ComPtr<ID3D12CommandQueue> directCommandQueue;  // 13BC4D0
     Microsoft::WRL::ComPtr<ID3D12CommandQueue> computeCommandQueue; // 13BC4D8
     uint8_t unk13bc4e0[0x13bc540 - 0x13bc4e0];                      // 13BC4E0
-    void* memoryAllocator;                                          // 13BC540 D3D12MA::Allocator*
+    D3D12MA::Allocator* memoryAllocator;                            // 13BC540
     uint8_t unk13bc4b8[0x1a8f880 - 0x13bc548];                      // 13BC548
 };
 RED4EXT_ASSERT_SIZE(SDeviceData, 0x1a8f880);

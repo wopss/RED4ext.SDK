@@ -78,7 +78,7 @@ constexpr std::uint32_t CNamePool_Get = 0x68DF07DC;
 #pragma endregion
 
 #pragma region CommandListContext
-constexpr std::uint32_t GetFreeCommandList = 2814122829UL;
+constexpr std::uint32_t GetFreeCommandList = 1926836641UL;
 constexpr std::uint32_t CommandListContext_AddPendingBarrier = 2814122829UL;
 constexpr std::uint32_t CommandListContext_FlushPendingBarriers = 2786924000UL;
 #pragma endregion
@@ -113,6 +113,10 @@ constexpr std::uint32_t g_DeviceData = 1239944840UL;
 
 #pragma region DynArray
 constexpr std::uint32_t DynArray_Realloc = 0x7AA013D2;
+#pragma endregion
+
+#pragma region D3D12MA
+constexpr std::uint32_t Allocator_CreateResource = 2508272872UL;
 #pragma endregion
 
 #pragma region Handle
