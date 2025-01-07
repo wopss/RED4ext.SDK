@@ -4,7 +4,8 @@
 #include <cstdint>
 #include <d3d12.h>
 
-// this file is a recreation of D3D12MemAlloc.h from https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator as 
+
+// this file is a recreation of D3D12MemAlloc.h from https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator as
 // it exists in Cyberpunk 2077
 
 namespace RED4ext
@@ -30,6 +31,7 @@ struct Allocation : IUnknownImpl
     uint8_t unk40[0x28];        // 40
 };
 RED4EXT_ASSERT_SIZE(Allocation, 0x68);
+
 
 enum ALLOCATION_FLAGS 
 {

@@ -10,8 +10,7 @@
 RED4EXT_INLINE HRESULT RED4ext::D3D12MA::Allocator::CreateResource(const ALLOCATION_DESC* pAllocDesc,
                                                                    const D3D12_RESOURCE_DESC* pResourceDesc,
                                                                    D3D12_RESOURCE_STATES InitialResourceState,
-                                                                   Allocation** ppAllocation,
-                                                                   REFIID riidResource,
+                                                                   Allocation** ppAllocation, REFIID riidResource,
                                                                    void** ppvResource)
 {
     using func_t = HRESULT (*)(Allocator*, const ALLOCATION_DESC*, const D3D12_RESOURCE_DESC*, D3D12_RESOURCE_STATES,
