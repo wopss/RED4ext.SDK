@@ -31,7 +31,7 @@ struct Allocation : IUnknownImpl
 };
 RED4EXT_ASSERT_SIZE(Allocation, 0x68);
 
-enum ALLOCATION_FLAGS 
+enum ALLOCATION_FLAGS
 {
     ALLOCATION_FLAG_NONE = 0,
     ALLOCATION_FLAG_COMMITTED = 0x1,
