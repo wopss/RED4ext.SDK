@@ -17,5 +17,6 @@ RED4EXT_INLINE HRESULT RED4ext::D3D12MA::Allocator::CreateResource(const ALLOCAT
     using func_t = HRESULT (*)(Allocator*, const ALLOCATION_DESC*, const D3D12_RESOURCE_DESC*, D3D12_RESOURCE_STATES,
                                const D3D12_CLEAR_VALUE*, Allocation**, REFIID, void**);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::Allocator_CreateResource);
-    return func(this, pAllocDesc, pResourceDesc, InitialResourceState, pOptimizedClearValue, ppAllocation, riidResource, ppvResource);
+    return func(this, pAllocDesc, pResourceDesc, InitialResourceState, pOptimizedClearValue, ppAllocation, riidResource, 
+                ppvResource);
 }

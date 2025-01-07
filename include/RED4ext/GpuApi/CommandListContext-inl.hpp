@@ -6,9 +6,9 @@
 
 #include <RED4ext/Relocation.hpp>
 
-RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::AddPendingBarrier(const D3D12_RESOURCE_BARRIER* aBarrier)
+RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::AddPendingBarrier(const D3D12_RESOURCE_BARRIER& aBarrier)
 {
-    using func_t = void (*)(CommandListContext*, const D3D12_RESOURCE_BARRIER*);
+    using func_t = void (*)(CommandListContext*, const D3D12_RESOURCE_BARRIER&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CommandListContext_AddPendingBarrier);
     func(this, aBarrier);
 }

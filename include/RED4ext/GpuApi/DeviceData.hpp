@@ -9,43 +9,28 @@ namespace RED4ext
 namespace GpuApi
 {
 
-struct BuffersContainer // should probably track down the actual struct names
+template <typename T, size_t MaxSize>
+struct ResourceContainer
 {
-    struct BufferDataHandle
+    struct Handle
     {
         int32_t refCount;
-        SBufferData instance;
+        T instance;
     };
-
+    
     void* unk00;
-    int32_t numUnsued;
-    BufferDataHandle entries[32768];
-    uint16_t unk580010;
+    int32_t numUnused;
+    Handle[MaxSize];
+    uint16_t unkUint;
 };
-RED4EXT_ASSERT_SIZE(BuffersContainer, 0x580018);
-
-struct CommandListsContainer
-{
-    struct CommandListHandle
-    {
-        int32_t refCount;
-        CommandListContext* instance;
-    };
-
-    void* unk00;
-    int32_t numUnsued;
-    CommandListHandle entries[128];
-    uint16_t unk810;
-};
-RED4EXT_ASSERT_SIZE(CommandListsContainer, 0x818);
 
 struct SDeviceDataBase
 {
-    uint8_t unk00[0x5c0ae0 - 0x00];          // 00
-    BuffersContainer buffers;                // 5C0AE0
-    uint8_t unkb40af8[0xd1ad80 - 0xb40af8];  // B40Af8
-    CommandListsContainer commandLists;      // D1AD80
-    uint8_t unkd1b598[0x13bc240 - 0xd1b598]; // D1B598
+    uint8_t unk00[0x5c0ae0 - 0x00];                           // 00
+    ResourceContainer<SBufferData, 32768> buffers;            // 5C0AE0
+    uint8_t unkb40af8[0xd1ad80 - 0xb40af8];                   // B40Af8
+    ResourceContainer<CommandListContext*, 128> commandLists; // D1AD80 - Uses some irrelevant ptr wrapper
+    uint8_t unkd1b598[0x13bc240 - 0xd1b598];                  // D1B598
 };
 RED4EXT_ASSERT_SIZE(SDeviceDataBase, 0x13bc240);
 
@@ -57,14 +42,15 @@ struct SDeviceData : SDeviceDataBase
     Microsoft::WRL::ComPtr<ID3D12CommandQueue> directCommandQueue;  // 13BC4D0
     Microsoft::WRL::ComPtr<ID3D12CommandQueue> computeCommandQueue; // 13BC4D8
     uint8_t unk13bc4e0[0x13bc540 - 0x13bc4e0];                      // 13BC4E0
-    D3D12MA::Allocator* memoryAllocator;                            // 13BC540
+    Microsoft::WRL::ComPtr<D3D12MA::Allocator> memoryAllocator;     // 13BC540
     uint8_t unk13bc4b8[0x1a8f880 - 0x13bc548];                      // 13BC548
 };
 RED4EXT_ASSERT_SIZE(SDeviceData, 0x1a8f880);
 
-RED4EXT_INLINE SDeviceData* GetDeviceData()
+RED4EXT_INLINE SDeviceData& GetDeviceData()
 {
-    return UniversalRelocPtr<SDeviceData*>(Detail::AddressHashes::g_DeviceData);
+    static UniversalRelocPtr<SDeviceData*> dd(Detail::AddressHashes::g_DeviceData);
+    return *dd;
 }
 
 } // namespace GpuApi
