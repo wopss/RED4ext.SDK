@@ -198,7 +198,8 @@ constexpr std::uint32_t ResourceDepot = 0x659A0FC7;
 #pragma region ResourceLoader
 constexpr std::uint32_t ResourceLoader = 0x783C1034;
 constexpr std::uint32_t ResourceLoader_FindTokenFast = 0xC86F39B7;
-constexpr std::uint32_t ResourceLoader_LoadAsync = 0x4A863580;
+constexpr std::uint32_t ResourceLoader_IssueLoadingRequest = 2365013187;
+constexpr std::uint32_t ResourceLoader_IssueLoadingRequestByPath = 1250309504;
 #pragma endregion
 
 #pragma region ResourceReference
