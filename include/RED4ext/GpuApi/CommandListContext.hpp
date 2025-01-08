@@ -39,7 +39,9 @@ RED4EXT_ASSERT_SIZE(CommandListContext, 0x650);
 
 RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
 {
-    using func_t = CommandListContext** (*)(CommandListContext**, CommandListType, const char*, const uint64_t); // actually calling this function with a name and hash, crashes
+    using func_t =
+        CommandListContext** (*)(CommandListContext**, CommandListType, const char*,
+                                 const uint64_t); // actually calling this function with a name and hash, crashes
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::GetFreeCommandList);
 
     CommandListContext* outContext;

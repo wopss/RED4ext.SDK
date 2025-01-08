@@ -9,7 +9,7 @@ namespace RED4ext
 namespace GpuApi
 {
 
-template <typename T, size_t MaxSize>
+template<typename T, size_t MaxSize>
 struct ResourceContainer
 {
     struct Handle
@@ -17,7 +17,7 @@ struct ResourceContainer
         int32_t refCount;
         T instance;
     };
-    
+
     void* unk00;
     int32_t numUnused;
     Handle[MaxSize];
