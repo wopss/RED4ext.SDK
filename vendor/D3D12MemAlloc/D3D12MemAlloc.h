@@ -2027,3 +2027,7 @@ Features deliberately excluded from the scope of this library:
 */
 
 // clang-format on
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/GpuApi/D3D12MemAlloc-inl.hpp>
+#endif
