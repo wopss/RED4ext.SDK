@@ -22,6 +22,8 @@
 
 #pragma once
 
+// clang-format off
+
 /** \mainpage D3D12 Memory Allocator
 
 <b>Version 2.0.0-development</b> (2021-07-26)
@@ -2023,3 +2025,5 @@ Features deliberately excluded from the scope of this library:
 - This is a C++ library. **Bindings or ports to any other programming languages** are welcome as external projects but
   are not going to be included into this repository.
 */
+
+// clang-format on
