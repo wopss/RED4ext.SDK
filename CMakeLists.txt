@@ -27,6 +27,7 @@ cmake_dependent_option(RED4EXT_USE_PCH "Use precompiled headers to speed up comp
 
 set(RED4EXT_CMAKE_DIR "${PROJECT_SOURCE_DIR}/cmake")
 set(RED4EXT_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include/")
+set(RED4EXT_VENDOR_DIR "${PROJECT_SOURCE_DIR}/vendor/")
 
 # -----------------------------------------------------------------------------
 # Options related to warnings
@@ -68,6 +69,7 @@ if(RED4EXT_HEADER_ONLY)
     INTERFACE
       "$<BUILD_INTERFACE:${RED4EXT_INCLUDE_DIR}>"
       "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
+      "$<BUILD_INTERFACE:${RED4EXT_VENDOR_DIR}/D3D12MemAlloc>"
   )
 else()
   file(GLOB_RECURSE RED4EXT_HEADER_FILES "${RED4EXT_INCLUDE_DIR}/*.hpp")
@@ -100,6 +102,7 @@ else()
     PUBLIC
       "$<BUILD_INTERFACE:${RED4EXT_INCLUDE_DIR}>"
       "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
+      "$<BUILD_INTERFACE:${RED4EXT_VENDOR_DIR}/D3D12MemAlloc>"
   )
 
   target_compile_definitions(

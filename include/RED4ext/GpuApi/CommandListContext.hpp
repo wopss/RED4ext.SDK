@@ -41,7 +41,7 @@ RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
 {
     using func_t =
         CommandListContext** (*)(CommandListContext**, CommandListType, const char*,
-                                 const uint64_t); // actually calling this function with a name and hash, crashes
+                                 const uint64_t); // actually calling this function with a name, crashes
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::GetFreeCommandList);
 
     CommandListContext* outContext;
