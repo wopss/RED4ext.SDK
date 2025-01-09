@@ -1,8 +1,8 @@
 #pragma once
 
+#include <D3D12MemAlloc.h>
 #include <RED4ext/GpuApi/Buffer.hpp>
 #include <RED4ext/GpuApi/CommandListContext.hpp>
-#include <D3D12MemAlloc.h>
 
 namespace RED4ext
 {
