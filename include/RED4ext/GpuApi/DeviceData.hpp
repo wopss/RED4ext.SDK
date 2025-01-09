@@ -20,8 +20,8 @@ struct ResourceContainer
 
     void* mutex;              // spin lock?
     int32_t defaultNumUnused; // defaults to MaxSize
-    Handle resourceHandle[MaxSize]; 
-    uint16_t unusedIndices[MaxSize]; 
+    Handle resourceHandle[MaxSize];
+    uint16_t unusedIndices[MaxSize];
 };
 
 struct SDeviceDataBase
