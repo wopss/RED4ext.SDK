@@ -40,7 +40,7 @@ RED4EXT_ASSERT_SIZE(CommandListContext, 0x650);
 
 RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
 {
-    //NOTE: this function has parameters for hash and name but they appear unused.
+    // NOTE: this function has parameters for hash and name but they appear unused.
     using func_t = CommandListContext** (*)(CommandListContext**, CommandListType);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::GetFreeCommandList);
 
