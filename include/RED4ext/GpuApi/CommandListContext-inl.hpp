@@ -13,6 +13,13 @@ RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::AddPendingBarrier(const
     func(this, aBarrier);
 }
 
+RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::Close()
+{
+    using func_t = void (*)(CommandListContext*);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CommandListContext_Close);
+    func(this);
+}
+
 RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::FlushPendingBarriers()
 {
     using func_t = void (*)(CommandListContext*);

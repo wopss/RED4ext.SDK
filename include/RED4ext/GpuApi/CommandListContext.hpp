@@ -23,6 +23,7 @@ enum class CommandListType
 struct CommandListContext
 {
     void AddPendingBarrier(const D3D12_RESOURCE_BARRIER& aBarrier);
+    void Close();
     void FlushPendingBarriers();
 
     CString debugName;

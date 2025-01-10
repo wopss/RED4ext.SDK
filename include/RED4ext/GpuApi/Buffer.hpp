@@ -10,7 +10,7 @@ struct SBufferData
 {
     uint32_t bufferSize;
     uint8_t unk04[0x10 - 0x04];
-    Microsoft::WRL::ComPtr<ID3D12Resource> DX12Resource;
+    Microsoft::WRL::ComPtr<ID3D12Resource> bufferResource;
     void* unk18;
     uint8_t unk20[0xa8 - 0x20]; // 0x20
 };
