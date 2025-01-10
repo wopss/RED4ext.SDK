@@ -29,7 +29,7 @@ struct SDeviceDataBase
     uint8_t unk00[0x5c0ae0 - 0x00];                           // 00
     ResourceContainer<SBufferData, 32768> buffers;            // 5C0AE0
     uint8_t unkb40af8[0xd1ad80 - 0xb50af0];                   // B50AF0
-    ResourceContainer<CommandListContext*, 128> commandLists; // D1AD80 - Uses some irrelevant ptr wrapper
+    ResourceContainer<CommandListContext*, 128> commandLists; // D1AD80 - Uses unknown ptr wrapper
     uint8_t unkd1b598[0x13bc240 - 0xd1b690];                  // D1B690
 };
 RED4EXT_ASSERT_SIZE(SDeviceDataBase, 0x13bc240);

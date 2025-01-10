@@ -38,14 +38,14 @@ struct CommandListContext
 };
 RED4EXT_ASSERT_SIZE(CommandListContext, 0x650);
 
-RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType, const uint64_t aHash = 0)
+RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
 {
-    using func_t = CommandListContext** (*)(CommandListContext**, CommandListType, const char*,
-                                            const uint64_t); // actually calling this function with a name, crashes
+    //NOTE: this function has params for a name
+    using func_t = CommandListContext** (*)(CommandListContext**, CommandListType&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::GetFreeCommandList);
 
     CommandListContext* outContext;
-    func(&outContext, aType, "", aHash); // name and hash are probably intended for debugging, should we keep it?
+    func(&outContext, aType, "", 0); //NOTE: name and hash appear unused
     return outContext;
 }
 
