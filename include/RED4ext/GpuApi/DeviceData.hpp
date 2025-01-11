@@ -9,7 +9,6 @@ namespace RED4ext
 {
 namespace GpuApi
 {
-
 template<typename T, size_t MAX_SIZE>
 struct ResourceContainer
 {
