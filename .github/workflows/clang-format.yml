@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  LLVM_VERSION: 17
+  LLVM_VERSION: 18
 
 jobs:
   format:
