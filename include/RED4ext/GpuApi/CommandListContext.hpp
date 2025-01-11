@@ -37,10 +37,10 @@ struct CommandListContext
     uint8_t unk538[0x650 - 0x538];                                   // 538
 };
 RED4EXT_ASSERT_SIZE(CommandListContext, 0x650);
-RED4EXT_ASSRT_OFFSET(CommandListContext, commandAllocator, 0x28);
-RED4EXT_ASSRT_OFFSET(CommandListContext, commandList, 0x30);
-RED4EXT_ASSRT_OFFSET(CommandListContext, type, 0x68);
-RED4EXT_ASSRT_OFFSET(CommandListContext, pendingBarriers, 0x528);
+RED4EXT_ASSERT_OFFSET(CommandListContext, commandAllocator, 0x28);
+RED4EXT_ASSERT_OFFSET(CommandListContext, commandList, 0x30);
+RED4EXT_ASSERT_OFFSET(CommandListContext, type, 0x68);
+RED4EXT_ASSERT_OFFSET(CommandListContext, pendingBarriers, 0x528);
 
 RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
 {
