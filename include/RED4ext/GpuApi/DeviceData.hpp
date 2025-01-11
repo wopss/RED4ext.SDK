@@ -1,27 +1,27 @@
 #pragma once
 
-#include <D3D12MemAlloc.h>
 #include <RED4ext/GpuApi/Buffer.hpp>
 #include <RED4ext/GpuApi/CommandListContext.hpp>
+#include <RED4ext/GpuApi/D3D12MemAlloc.hpp>
 
 namespace RED4ext
 {
 namespace GpuApi
 {
 
-template<typename T, size_t MaxSize>
+template<typename T, size_t MAX_SIZE>
 struct ResourceContainer
 {
-    struct Handle
+    struct Resource
     {
         int32_t refCount;
         T instance;
     };
 
-    void* mutex;              // spin lock?
-    int32_t defaultNumUnused; // defaults to MaxSize
-    Handle resourceHandle[MaxSize];
-    uint16_t unusedIndices[MaxSize];
+    void* mutex;              // 00 - spin lock?
+    int32_t defaultNumUnused; // 08 - defaults to MaxSize
+    Resource resources[MAX_SIZE];
+    uint16_t unusedIndices[MAX_SIZE];
 };
 
 struct SDeviceDataBase
@@ -33,6 +33,8 @@ struct SDeviceDataBase
     uint8_t unkd1b598[0x13bc240 - 0xd1b690];                  // D1B690
 };
 RED4EXT_ASSERT_SIZE(SDeviceDataBase, 0x13bc240);
+RED4EXT_ASSRT_OFFSET(SDeviceDataBase, buffers, 0x5C0AE0);
+RED4EXT_ASSRT_OFFSET(SDeviceDataBase, commandLists, 0xD1AD80);
 
 struct SDeviceData : SDeviceDataBase
 {
@@ -46,6 +48,9 @@ struct SDeviceData : SDeviceDataBase
     uint8_t unk13bc4b8[0x1a8f880 - 0x13bc548];                      // 13BC548
 };
 RED4EXT_ASSERT_SIZE(SDeviceData, 0x1a8f880);
+RED4EXT_ASSRT_OFFSET(SDeviceData, device, 0x13BC4A8);
+RED4EXT_ASSRT_OFFSET(SDeviceData, directCommandQueue, 0x13BC4D0);
+RED4EXT_ASSRT_OFFSET(SDeviceData, memoryAllocator, 0x13BC540);
 
 RED4EXT_INLINE SDeviceData& GetDeviceData()
 {

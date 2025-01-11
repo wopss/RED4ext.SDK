@@ -5,7 +5,6 @@ namespace RED4ext
 {
 namespace GpuApi
 {
-
 struct SBufferData
 {
     uint32_t bufferSize;
@@ -15,6 +14,5 @@ struct SBufferData
     uint8_t unk20[0xa8 - 0x20]; // 0x20
 };
 RED4EXT_ASSERT_SIZE(SBufferData, 0xa8);
-
 } // namespace GpuApi
 } // namespace RED4ext
