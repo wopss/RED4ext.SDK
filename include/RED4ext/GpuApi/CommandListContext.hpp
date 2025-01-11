@@ -2,6 +2,7 @@
 
 #include <RED4ext/DynArray.hpp>
 #include <REd4ext/CString.hpp>
+#include <REd4ext/Common.hpp>
 #include <d3d12.h>
 #include <wrl/client.h>
 
@@ -32,14 +33,14 @@ struct CommandListContext
     uint8_t unk38[0x68 - 0x38];                                      // 48
     CommandListType type;                                            // 68
     uint8_t unk6c[0x528 - 0x6c];                                     // 6C
-    DynArray<D3D12_RESOURCE_BARRIER> pendingBariers;                 // 528
+    DynArray<D3D12_RESOURCE_BARRIER> pendingBarriers;                // 528
     uint8_t unk538[0x650 - 0x538];                                   // 538
 };
 RED4EXT_ASSERT_SIZE(CommandListContext, 0x650);
 RED4EXT_ASSRT_OFFSET(CommandListContext, commandAllocator, 0x28);
 RED4EXT_ASSRT_OFFSET(CommandListContext, commandList, 0x30);
 RED4EXT_ASSRT_OFFSET(CommandListContext, type, 0x68);
-RED4EXT_ASSRT_OFFSET(CommandListContext, pendingBariers, 0x528);
+RED4EXT_ASSRT_OFFSET(CommandListContext, pendingBarriers, 0x528);
 
 RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
 {

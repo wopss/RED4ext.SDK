@@ -1,3 +1,5 @@
+
+#include <REd4ext/Common.hpp>
 #include <d3d12.h>
 #include <wrl/client.h>
 
@@ -7,12 +9,13 @@ namespace GpuApi
 {
 struct SBufferData
 {
-    uint32_t bufferSize;
-    uint8_t unk04[0x10 - 0x04];
-    Microsoft::WRL::ComPtr<ID3D12Resource> bufferResource;
-    void* unk18;
-    uint8_t unk20[0xa8 - 0x20]; // 0x20
+    uint32_t bufferSize;                                   // 00
+    uint8_t unk04[0x10 - 0x04];                            // 04
+    Microsoft::WRL::ComPtr<ID3D12Resource> bufferResource; // 10
+    void* unk18;                                           // 18
+    uint8_t unk20[0xa8 - 0x20];                            // 0x20
 };
 RED4EXT_ASSERT_SIZE(SBufferData, 0xa8);
+RED4EXT_ASSERT_OFFSET(SBufferData, bufferResource, 0xa8);
 } // namespace GpuApi
 } // namespace RED4ext
