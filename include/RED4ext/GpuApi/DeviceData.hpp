@@ -1,9 +1,9 @@
 #pragma once
 
-#include <REd4ext/Common.hpp>
 #include <RED4ext/GpuApi/Buffer.hpp>
 #include <RED4ext/GpuApi/CommandListContext.hpp>
 #include <RED4ext/GpuApi/D3D12MemAlloc.hpp>
+#include <REd4ext/Common.hpp>
 
 namespace RED4ext
 {
