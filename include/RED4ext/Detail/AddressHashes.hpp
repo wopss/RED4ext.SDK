@@ -77,6 +77,13 @@ constexpr std::uint32_t CNamePool_AddPair = 0xD9840BD8;
 constexpr std::uint32_t CNamePool_Get = 0x68DF07DC;
 #pragma endregion
 
+#pragma region CommandListContext
+constexpr std::uint32_t GetFreeCommandList = 1926836641UL;
+constexpr std::uint32_t CommandListContext_AddPendingBarrier = 2814122829UL;
+constexpr std::uint32_t CommandListContext_Close = 1163138096UL;
+constexpr std::uint32_t CommandListContext_FlushPendingBarriers = 2786924000UL;
+#pragma endregion
+
 #pragma region CRTTIRegistrator
 constexpr std::uint32_t CRTTIRegistrator_RTTIAsyncId = 0xDDBD19E8;
 #pragma endregion
@@ -101,8 +108,16 @@ constexpr std::uint32_t CString_copy = 0xE8B40B51;
 constexpr std::uint32_t CString_dtor = 0x5405072C;
 #pragma endregion
 
+#pragma region DeviceData
+constexpr std::uint32_t g_DeviceData = 1239944840UL;
+#pragma endregion
+
 #pragma region DynArray
 constexpr std::uint32_t DynArray_Realloc = 0x7AA013D2;
+#pragma endregion
+
+#pragma region D3D12MA
+constexpr std::uint32_t Allocator_CreateResource = 2508272872UL;
 #pragma endregion
 
 #pragma region Handle
