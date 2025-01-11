@@ -1,4 +1,4 @@
-============ D3D12MemoryAllocator ============ 
+================ GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator ================
 
 Copyright (c) 2019-2025 Advanced Micro Devices, Inc. All rights reserved.
 
