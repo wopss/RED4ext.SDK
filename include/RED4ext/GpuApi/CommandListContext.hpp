@@ -1,8 +1,9 @@
 #pragma once
 
+#include <RED4ext/CString.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
-#include <REd4ext/CString.hpp>
-#include <REd4ext/Common.hpp>
+
 #include <d3d12.h>
 #include <wrl/client.h>
 
@@ -26,32 +27,25 @@ struct CommandListContext
     void Close();
     void FlushPendingBarriers();
 
-    CString debugName;                                               // 00
-    uint64_t hash;                                                   // 20
-    Microsoft::WRL::ComPtr<ID3D12CommandAllocator> commandAllocator; // 28
-    Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> commandList;   // 30
-    uint8_t unk38[0x68 - 0x38];                                      // 48
-    CommandListType type;                                            // 68
-    uint8_t unk6c[0x528 - 0x6c];                                     // 6C
+    CString debugName;                                               // 000
+    uint64_t hash;                                                   // 020
+    Microsoft::WRL::ComPtr<ID3D12CommandAllocator> commandAllocator; // 028
+    Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> commandList;   // 030
+    uint8_t unk38[0x068 - 0x038];                                    // 038
+    CommandListType type;                                            // 068
+    uint8_t unk6c[0x528 - 0x06c];                                    // 06C
     DynArray<D3D12_RESOURCE_BARRIER> pendingBarriers;                // 528
     uint8_t unk538[0x650 - 0x538];                                   // 538
 };
 RED4EXT_ASSERT_SIZE(CommandListContext, 0x650);
-RED4EXT_ASSERT_OFFSET(CommandListContext, commandAllocator, 0x28);
-RED4EXT_ASSERT_OFFSET(CommandListContext, commandList, 0x30);
-RED4EXT_ASSERT_OFFSET(CommandListContext, type, 0x68);
+RED4EXT_ASSERT_OFFSET(CommandListContext, debugName, 0x000);
+RED4EXT_ASSERT_OFFSET(CommandListContext, hash, 0x020);
+RED4EXT_ASSERT_OFFSET(CommandListContext, commandAllocator, 0x028);
+RED4EXT_ASSERT_OFFSET(CommandListContext, commandList, 0x030);
+RED4EXT_ASSERT_OFFSET(CommandListContext, type, 0x068);
 RED4EXT_ASSERT_OFFSET(CommandListContext, pendingBarriers, 0x528);
 
-RED4EXT_INLINE CommandListContext* GetFreeCommandList(CommandListType aType)
-{
-    // NOTE: this function has parameters for hash and name but they appear unused.
-    using func_t = CommandListContext** (*)(CommandListContext**, CommandListType, const char*, uint64_t);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::GetFreeCommandList);
-
-    CommandListContext* outContext;
-    func(&outContext, aType, "", 0);
-    return outContext;
-}
+CommandListContext* GetFreeCommandList(CommandListType aType);
 
 } // namespace GpuApi
 } // namespace RED4ext

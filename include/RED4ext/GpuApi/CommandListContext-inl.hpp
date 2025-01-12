@@ -26,3 +26,16 @@ RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::FlushPendingBarriers()
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CommandListContext_FlushPendingBarriers);
     func(this);
 }
+
+RED4EXT_INLINE RED4ext::GpuApi::CommandListContext* GetFreeCommandList(RED4ext::GpuApi::CommandListType aType)
+{
+    // NOTE: this function has parameters for hash and name but they appear unused.
+    using func_t =
+        RED4ext::GpuApi::CommandListContext** (*)(RED4ext::GpuApi::CommandListContext**,
+                                                  RED4ext::GpuApi::CommandListType, RED4ext::CString*, uint64_t);
+    static RED4ext::UniversalRelocFunc<func_t> func(RED4ext::Detail::AddressHashes::GetFreeCommandList);
+
+    RED4ext::GpuApi::CommandListContext* outContext = nullptr;
+    func(&outContext, aType, nullptr, 0);
+    return outContext;
+}
