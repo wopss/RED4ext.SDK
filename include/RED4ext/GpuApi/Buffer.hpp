@@ -1,5 +1,7 @@
+#pragma once
 
-#include <REd4ext/Common.hpp>
+#include <RED4ext/Common.hpp>
+
 #include <d3d12.h>
 #include <wrl/client.h>
 
@@ -16,6 +18,6 @@ struct SBufferData
     uint8_t unk20[0xa8 - 0x20];                            // 20
 };
 RED4EXT_ASSERT_SIZE(SBufferData, 0xa8);
-RED4EXT_ASSERT_OFFSET(SBufferData, bufferResource, 0xa8);
+RED4EXT_ASSERT_OFFSET(SBufferData, bufferResource, 0x10);
 } // namespace GpuApi
 } // namespace RED4ext
