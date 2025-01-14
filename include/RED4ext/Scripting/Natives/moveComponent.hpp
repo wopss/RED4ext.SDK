@@ -1,11 +1,11 @@
 #pragma once
 
-#include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Vector3.hpp>
-#include <RED4ext/Scripting/Natives/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldTransform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IMoverComponent.hpp>
+#include <RED4ext/Scripting/Natives/Vector3.hpp>
+#include <RED4ext/Scripting/Natives/Vector4.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {
