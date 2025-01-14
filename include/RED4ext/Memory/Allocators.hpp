@@ -1,12 +1,16 @@
+// Disable ReSharper virtual destructor check, as the Allocators are just structs with pointers to functions which are
+// copied around.
+// ReSharper disable CppPolymorphicClassWithNonVirtualPublicDestructor
+
 #pragma once
+
+#include <RED4ext/Common.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
+#include <RED4ext/Memory/Pools.hpp>
+#include <RED4ext/Relocation.hpp>
 
 #include <cstdint>
 #include <type_traits>
-
-#include <RED4ext/Detail/AddressHashes.hpp>
-#include <RED4ext/Common.hpp>
-#include <RED4ext/Memory/Pools.hpp>
-#include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
 {
@@ -28,7 +32,7 @@ struct IAllocator
                                             uint32_t aAlignment) const = 0; // 16
     virtual void Free(AllocationResult& aAllocation) const = 0;             // 20
     virtual void sub_28(void* a1) const = 0;                                // 28
-    virtual const uint32_t GetHandle() const = 0;                     // 30
+    virtual const uint32_t GetHandle() const = 0;                           // 30
 
     [[deprecated("Use 'GetHandle()' instead.")]] const uint32_t GetId() const
     {
@@ -81,9 +85,9 @@ struct Allocator : IAllocator
         static UniversalRelocFunc<alloc_t> alloc(Detail::AddressHashes::Memory_Vault_Alloc);
 
         auto pool = T::Get();
-        auto storage = pool->storage->GetAllocatorStorage<Vault>();
+        auto storage = pool->storage->template GetAllocatorStorage<Vault>();
 
-        AllocationResult result;
+        AllocationResult result = {};
         alloc(storage, &result, aSize);
         if (!result.memory)
         {
@@ -99,9 +103,9 @@ struct Allocator : IAllocator
         static UniversalRelocFunc<alloc_t> alloc(Detail::AddressHashes::Memory_Vault_AllocAligned);
 
         auto pool = T::Get();
-        auto storage = pool->storage->GetAllocatorStorage<Vault>();
+        auto storage = pool->storage->template GetAllocatorStorage<Vault>();
 
-        AllocationResult result;
+        AllocationResult result = {};
         alloc(storage, &result, aSize, aAlignment);
         if (!result.memory)
         {
@@ -117,9 +121,9 @@ struct Allocator : IAllocator
         static UniversalRelocFunc<realloc_t> realloc(Detail::AddressHashes::Memory_Vault_Realloc);
 
         auto pool = T::Get();
-        auto storage = pool->storage->GetAllocatorStorage<Vault>();
+        auto storage = pool->storage->template GetAllocatorStorage<Vault>();
 
-        AllocationResult result;
+        AllocationResult result = {};
         realloc(storage, &result, aAllocation, aSize);
         if (!result.memory && aSize)
         {
@@ -136,9 +140,9 @@ struct Allocator : IAllocator
         static UniversalRelocFunc<realloc_t> realloc(Detail::AddressHashes::Memory_Vault_ReallocAligned);
 
         auto pool = T::Get();
-        auto storage = pool->storage->GetAllocatorStorage<Vault>();
+        auto storage = pool->storage->template GetAllocatorStorage<Vault>();
 
-        AllocationResult result;
+        AllocationResult result = {};
         realloc(storage, &result, aAllocation, aSize, aAlignment);
         if (!result.memory && aSize)
         {
@@ -154,7 +158,7 @@ struct Allocator : IAllocator
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::Memory_Vault_Free);
 
         auto pool = T::Get();
-        auto storage = pool->storage->GetAllocatorStorage<Vault>();
+        auto storage = pool->storage->template GetAllocatorStorage<Vault>();
         func(storage, aAllocation);
     }
 
@@ -164,7 +168,7 @@ struct Allocator : IAllocator
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::Memory_Vault_Unk1);
 
         auto pool = T::Get();
-        auto storage = pool->storage->GetAllocatorStorage<Vault>();
+        auto storage = pool->storage->template GetAllocatorStorage<Vault>();
         func(storage, a2);
     }
 
@@ -2712,14 +2716,4 @@ struct GPUM_Buffer_MorphTargetsAllocator : Allocator<GPUM_Buffer_MorphTargets>
 {
 };
 } // namespace Memory
-
-struct [[deprecated("Use 'Memory::IAllocator' instead.")]] IMemoryAllocator : Memory::IAllocator
-{
-    struct [[deprecated("Use 'Memory::AllocationResult' instead.")]] Result : Memory::AllocationResult{};
-};
-
-struct [[deprecated("Use 'Memory::EngineAllocator' instead.")]] EngineAllocator : Memory::EngineAllocator{};
-struct [[deprecated("Use 'Memory::RTTIAllocator' instead.")]] RTTIAllocator : Memory::RTTIAllocator{};
-struct [[deprecated("Use 'Memory::RTTIFunctionAllocator' instead.")]] RTTIFunctionAllocator
-    : Memory::RTTIFunctionAllocator{};
 } // namespace RED4ext
