@@ -8,8 +8,8 @@
 
 namespace RED4ext
 {
-    RED4EXT_ASSERT_SIZE(move::Component, 0x2C0);
-    using moveComponent = move::Component;
+RED4EXT_ASSERT_SIZE(move::Component, 0x2C0);
+using moveComponent = move::Component;
 } // namespace RED4ext
 
 /*
