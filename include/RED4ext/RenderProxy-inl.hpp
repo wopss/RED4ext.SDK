@@ -85,13 +85,15 @@ RED4EXT_INLINE void RED4ext::IRenderProxyBase::sub_78(void* a1)
 
 RED4EXT_INLINE void RED4ext::IRenderProxyBase::sub_80(void* a1, void* a2)
 {
-    static UniversalRelocFunc<void (*)(IRenderProxyBase*, void*, void*)> func(Detail::AddressHashes::IRenderProxy_sub_80);
+    using func_t = void (*)(IRenderProxyBase*, void*, void*);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::IRenderProxy_sub_80);
     func(this, a1, a2);
 }
 
 RED4EXT_INLINE bool RED4ext::IRenderProxyBase::sub_88(void* a1, void* a2)
 {
-    static UniversalRelocFunc<bool (*)(IRenderProxyBase*, void*, void*)> func(Detail::AddressHashes::IRenderProxy_sub_88);
+    using func_t = bool (*)(IRenderProxyBase*, void*, void*);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::IRenderProxy_sub_88);
     return func(this, a1, a2);
 }
 
