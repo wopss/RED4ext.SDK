@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/moveComponent.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(move::Component, 0x2C0);
+using moveComponent = move::Component;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IMoverComponent.hpp>
@@ -23,5 +32,6 @@ RED4EXT_ASSERT_SIZE(Component, 0x2C0);
 } // namespace move
 using moveComponent = move::Component;
 } // namespace RED4ext
+*/
 
 // clang-format on
