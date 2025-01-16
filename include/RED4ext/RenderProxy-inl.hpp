@@ -4,8 +4,8 @@
 #include <RED4ext/RenderProxy.hpp>
 #endif
 
-#include <RED4ext/Relocation.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
+#include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE void RED4ext::IRenderProxy::sub_00()
 {
@@ -106,7 +106,6 @@ RED4EXT_INLINE void RED4ext::IRenderProxy::sub_98(void* a1)
     static UniversalRelocFunc<void (*)(IRenderProxy*, void*)> func(Detail::AddressHashes::IRenderProxy_sub_98);
     func(this, a1);
 }
-
 
 RED4EXT_INLINE void RED4ext::IRenderProxy::sub_A0()
 {

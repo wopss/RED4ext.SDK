@@ -1,8 +1,7 @@
 #pragma once
 
-#include <cstdint>
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -14,6 +13,7 @@
 #include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 #include <RED4ext/Scripting/Natives/Generated/mesh/MeshMaterialBuffer.hpp>
 #include <RED4ext/Scripting/Natives/Generated/res/StreamedResource.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {

@@ -1,8 +1,7 @@
 #pragma once
 
-#include <cstdint>
-#include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
+#include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/RenderProxy.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CMesh.hpp>
@@ -11,6 +10,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ent/ISkinTargetComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/MeshComponentLODMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/shadows/ShadowCastingMode.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {

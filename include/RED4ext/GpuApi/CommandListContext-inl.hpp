@@ -27,9 +27,8 @@ RED4EXT_INLINE void RED4ext::GpuApi::CommandListContext::FlushPendingBarriers()
     func(this);
 }
 
-RED4EXT_INLINE RED4ext::GpuApi::CommandListContext* RED4ext::GpuApi::AcquireFreeCommandList(RED4ext::GpuApi::CommandListType aType,
-                                                                                            const RED4ext::StringView& aDebugName,
-                                                                                            uint64_t aHash)
+RED4EXT_INLINE RED4ext::GpuApi::CommandListContext* RED4ext::GpuApi::AcquireFreeCommandList(
+    RED4ext::GpuApi::CommandListType aType, const RED4ext::StringView& aDebugName, uint64_t aHash)
 {
     // NOTE: This function has parameters for debug name and hash which seem to be optional.
     // Expects unique ptr as an out param and returns it by reference.

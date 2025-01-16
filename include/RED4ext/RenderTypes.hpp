@@ -3,9 +3,9 @@
 #include <cstdint>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/IRenderProxyCustomData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/Chunk.hpp>
+#include <RED4ext/Scripting/Natives/Vector4.hpp>
 
 namespace RED4ext
 {
