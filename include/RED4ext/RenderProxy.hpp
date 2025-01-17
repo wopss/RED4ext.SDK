@@ -46,13 +46,13 @@ struct IRenderProxy
     IRenderProxyCustomData* customData; // 48
     uint8_t unk50[0x98 - 0x50];         // 50
 };
-RED4EXT_ASSERT_SIZE(RenderProxyBase, 0x98);
+RED4EXT_ASSERT_SIZE(IRenderProxy, 0x98);
 
 struct RenderProxyBase : IRenderProxy
 {
     virtual void sub_F8() = 0; // F8
 };
-RED4EXT_ASSERT_SIZE(RegistarableRenderProxy, 0x98);
+RED4EXT_ASSERT_SIZE(RenderProxyBase, 0x98);
 
 struct CRenderProxy : RenderProxyBase
 {
