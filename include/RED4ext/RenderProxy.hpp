@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-struct IRenderProxyBase
+struct IRenderProxy
 {
     virtual void sub_00();                   // 00
     virtual void sub_08();                   // 08
@@ -46,27 +46,27 @@ struct IRenderProxyBase
     IRenderProxyCustomData* customData; // 48
     uint8_t unk50[0x98 - 0x50];         // 50
 };
-RED4EXT_ASSERT_SIZE(IRenderProxyBase, 0x98);
+RED4EXT_ASSERT_SIZE(RenderProxyBase, 0x98);
 
-struct IRenderProxy : IRenderProxyBase
+struct RenderProxyBase : IRenderProxy
 {
     virtual void sub_F8() = 0; // F8
 };
-RED4EXT_ASSERT_SIZE(IRenderProxy, 0x98);
+RED4EXT_ASSERT_SIZE(RegistarableRenderProxy, 0x98);
 
-struct CRenderProxy : IRenderProxy
+struct CRenderProxy : RenderProxyBase
 {
     uint8_t unk98[0xb8 - 0x98]; // 98
 };
 RED4EXT_ASSERT_SIZE(CRenderProxy, 0xb8);
 
-struct CRenderProxy_Mesh : CRenderProxy
+struct MeshRenderProxy : CRenderProxy
 {
     uint8_t unkB8[0xd8 - 0xb8];  // B8
     CRenderMesh* renderMesh;     // D8
     uint8_t unkE0[0x1c0 - 0xe0]; // E0
 };
-RED4EXT_ASSERT_SIZE(CRenderProxy_Mesh, 0x1c0);
+RED4EXT_ASSERT_SIZE(MeshRenderProxy, 0x1c0);
 
 struct RenderProxy_Handle
 {
