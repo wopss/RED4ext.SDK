@@ -5,9 +5,13 @@ repos:
       rev: v5.0.0
       hooks:
       -   id: trailing-whitespace
+          exclude: ^vendor/
       -   id: end-of-file-fixer
+          exclude: ^vendor/
       -   id: check-added-large-files
+          exclude: ^vendor/
   -   repo: https://github.com/pre-commit/mirrors-clang-format
       rev: v19.1.7
       hooks:
       -   id: clang-format
+          exclude: ^vendor/
