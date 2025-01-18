@@ -8,9 +8,7 @@
 #include <d3d12.h>
 #include <wrl/client.h>
 
-namespace RED4ext
-{
-namespace GpuApi
+namespace RED4ext::GpuApi
 {
 enum class CommandListType
 {
@@ -50,8 +48,7 @@ RED4EXT_ASSERT_OFFSET(CommandListContext, pendingBarriers, 0x528);
 CommandListContext* AcquireFreeCommandList(CommandListType aType, const StringView& aDebugName = "",
                                            uint64_t aHash = 0);
 
-} // namespace GpuApi
-} // namespace RED4ext
+} // namespace RED4ext::GpuApi
 
 #ifdef RED4EXT_HEADER_ONLY
 #include <RED4ext/GpuApi/CommandListContext-inl.hpp>

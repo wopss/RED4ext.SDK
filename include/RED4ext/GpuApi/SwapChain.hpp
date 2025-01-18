@@ -5,9 +5,7 @@
 #include <wrl/client.h>
 #include <wrl/wrappers/corewrappers.h>
 
-namespace RED4ext
-{
-namespace GpuApi
+namespace RED4ext::GpuApi
 {
 enum class HDRMode : uint8_t
 {
@@ -52,5 +50,4 @@ RED4EXT_ASSERT_OFFSET(SSwapChainData, presentFenceNextCompletionFrame, 0x60);
 RED4EXT_ASSERT_OFFSET(SSwapChainData, backBufferRtvs, 0x68);
 RED4EXT_ASSERT_OFFSET(SSwapChainData, backBufferUavs, 0x80);
 RED4EXT_ASSERT_OFFSET(SSwapChainData, presentFenceEvent, 0x98);
-} // namespace GpuApi
-} // namespace RED4ext
+} // namespace RED4ext::GpuApi
