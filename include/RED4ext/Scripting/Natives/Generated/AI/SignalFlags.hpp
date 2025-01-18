@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class SignalFlags : uint32_t
 {
     Undefined = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class EffectType : uint8_t
 {
     ScanlineWipe = 0,

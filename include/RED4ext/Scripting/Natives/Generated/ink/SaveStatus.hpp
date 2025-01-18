@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class SaveStatus : uint8_t
 {
     Invalid = 0,

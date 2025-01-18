@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class LimitedSoundType : uint8_t
 {
     Locomotion = 0,

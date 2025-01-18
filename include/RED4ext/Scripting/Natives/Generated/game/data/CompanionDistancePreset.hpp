@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class CompanionDistancePreset : uint32_t
 {
     Close = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class ELayerType : uint8_t
 {
     Watermarks = 0,

@@ -33,15 +33,15 @@ struct PackageHeader
     };
     RED4EXT_ASSERT_SIZE(Import, 0x4);
 
-    uint8_t version;       // 00
-    uint8_t unk01;         // 01
-    uint16_t unk02;        // 02
-    Span<Chunk> root;      // 08
-    Span<Chunk> chunks;    // 18
-    Span<Name> names;      // 28
-    Span<Import> imports;  // 38
-    void* buffer;          // 48
-    uint32_t size;         // 50
+    uint8_t version;      // 00
+    uint8_t unk01;        // 01
+    uint16_t unk02;       // 02
+    Span<Chunk> root;     // 08
+    Span<Chunk> chunks;   // 18
+    Span<Name> names;     // 28
+    Span<Import> imports; // 38
+    void* buffer;         // 48
+    uint32_t size;        // 50
 };
 RED4EXT_ASSERT_SIZE(PackageHeader, 0x58);
 RED4EXT_ASSERT_OFFSET(PackageHeader, unk02, 0x02);

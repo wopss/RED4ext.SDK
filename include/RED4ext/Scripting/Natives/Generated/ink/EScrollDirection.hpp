@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class EScrollDirection : uint32_t
 {
     Vertical = 0,

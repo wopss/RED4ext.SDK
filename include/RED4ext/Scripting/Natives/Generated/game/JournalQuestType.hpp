@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class JournalQuestType : uint32_t
 {
     MainQuest = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class WeaponShellCasingDirection : uint32_t
 {
     rightFront = 0,

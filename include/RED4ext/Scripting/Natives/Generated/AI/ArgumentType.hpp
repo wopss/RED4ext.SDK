@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class ArgumentType : uint32_t
 {
     Bool = 0,

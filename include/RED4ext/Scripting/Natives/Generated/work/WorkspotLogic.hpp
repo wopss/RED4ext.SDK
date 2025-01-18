@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace work { 
+namespace work {
 enum class WorkspotLogic : uint32_t
 {
     Allow = 0,

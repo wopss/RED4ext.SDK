@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim::compression { 
+namespace anim::compression {
 enum class QualityPreset : uint8_t
 {
     HIGH = 0,

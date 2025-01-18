@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SmartObjectPointType : uint32_t
 {
     Entry = 0,

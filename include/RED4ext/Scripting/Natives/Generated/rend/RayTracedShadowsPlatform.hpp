@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class RayTracedShadowsPlatform : uint8_t
 {
     RLSP_All = 0,

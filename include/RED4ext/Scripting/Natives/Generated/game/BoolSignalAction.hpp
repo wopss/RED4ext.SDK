@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class BoolSignalAction : uint32_t
 {
     None = 0,

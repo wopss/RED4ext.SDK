@@ -1,9 +1,9 @@
 #pragma once
 
-#include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/ExternalComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/MorphTargetWeightEntry.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {

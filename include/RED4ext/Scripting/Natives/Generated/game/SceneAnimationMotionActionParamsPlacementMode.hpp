@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SceneAnimationMotionActionParamsPlacementMode : uint32_t
 {
     Blend = 0,

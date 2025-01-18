@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class Leg : uint32_t
 {
     Left = 0,

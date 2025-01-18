@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EVectorWsToMsType : uint32_t
 {
     Position = 0,

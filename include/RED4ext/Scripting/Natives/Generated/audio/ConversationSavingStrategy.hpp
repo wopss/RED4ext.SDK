@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class ConversationSavingStrategy : uint32_t
 {
     Default = 0,

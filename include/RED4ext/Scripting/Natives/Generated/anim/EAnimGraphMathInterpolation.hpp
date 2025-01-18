@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EAnimGraphMathInterpolation : uint32_t
 {
     AGMI_LINEAR = 0,

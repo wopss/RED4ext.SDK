@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace text { 
+namespace text {
 enum class JustificationType : uint8_t
 {
     Left = 0,

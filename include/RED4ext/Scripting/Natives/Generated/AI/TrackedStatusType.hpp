@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class TrackedStatusType : uint32_t
 {
     Unknown = 0,

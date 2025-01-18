@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class TransformAnimation_RotateOnAxisAxis : uint32_t
 {
     X = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class EParticleSortingMode : uint32_t
 {
     PSM_None = 0,

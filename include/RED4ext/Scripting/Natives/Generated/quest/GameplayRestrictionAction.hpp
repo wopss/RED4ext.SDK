@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class GameplayRestrictionAction : uint32_t
 {
     AddRestriction = 0,

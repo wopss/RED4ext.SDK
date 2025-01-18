@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class CompareFunc : uint32_t
 {
     Equal = 0,

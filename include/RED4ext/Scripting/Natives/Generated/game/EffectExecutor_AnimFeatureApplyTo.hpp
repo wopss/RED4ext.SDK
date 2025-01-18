@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EffectExecutor_AnimFeatureApplyTo : uint32_t
 {
     Target = 0,

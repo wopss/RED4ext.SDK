@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions {
 enum class ELookAtTarget : uint32_t
 {
     Entity = 0,

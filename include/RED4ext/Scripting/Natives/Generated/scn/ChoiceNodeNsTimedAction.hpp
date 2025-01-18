@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class ChoiceNodeNsTimedAction : uint8_t
 {
     appear = 0,

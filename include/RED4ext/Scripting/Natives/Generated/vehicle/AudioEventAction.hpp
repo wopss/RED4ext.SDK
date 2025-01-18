@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle {
 enum class AudioEventAction : uint32_t
 {
     OnPlayerDriving = 0,

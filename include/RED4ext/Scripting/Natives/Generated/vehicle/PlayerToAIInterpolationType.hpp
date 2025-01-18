@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle {
 enum class PlayerToAIInterpolationType : uint32_t
 {
     PTAIT_INSTANT = 0,

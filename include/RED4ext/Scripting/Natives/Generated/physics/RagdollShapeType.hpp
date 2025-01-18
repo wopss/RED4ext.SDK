@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 enum class RagdollShapeType : uint8_t
 {
     CAPSULE = 0,

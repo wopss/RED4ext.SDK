@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class QuestType : uint8_t
 {
     MainQuest = 0,

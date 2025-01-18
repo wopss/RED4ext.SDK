@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 struct RagdollBodyPartE
 {
     uint32_t HEAD : 1; // 0

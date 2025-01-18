@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace text { 
+namespace text {
 enum class VerticalAlignment : uint8_t
 {
     Top = 0,

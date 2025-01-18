@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle {
 enum class ESummonedVehicleType : uint32_t
 {
     Any = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class SceneCategoryTag : uint8_t
 {
     voiceset = 0,

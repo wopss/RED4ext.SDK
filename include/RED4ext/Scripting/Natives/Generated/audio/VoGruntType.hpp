@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class VoGruntType : uint32_t
 {
     PainLong = 0,

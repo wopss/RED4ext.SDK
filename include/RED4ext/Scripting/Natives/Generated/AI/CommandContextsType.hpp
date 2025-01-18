@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class CommandContextsType : uint32_t
 {
     Default = 0,

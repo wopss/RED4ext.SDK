@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class ArchetypeType : uint32_t
 {
     AndroidMeleeT1 = 0,

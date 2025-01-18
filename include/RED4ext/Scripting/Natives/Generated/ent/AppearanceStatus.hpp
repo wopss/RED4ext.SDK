@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class AppearanceStatus : uint8_t
 {
     None = 0,

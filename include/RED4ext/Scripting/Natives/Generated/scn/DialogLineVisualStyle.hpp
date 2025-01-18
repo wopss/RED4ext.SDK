@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class DialogLineVisualStyle : uint8_t
 {
     regular = 0,

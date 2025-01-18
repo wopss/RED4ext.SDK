@@ -5,8 +5,8 @@
 
 #include <Windows.h>
 
-#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Memory/Utils.hpp>
 #include <RED4ext/Relocation.hpp>
 

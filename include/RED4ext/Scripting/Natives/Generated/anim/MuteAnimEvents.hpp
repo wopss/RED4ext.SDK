@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 struct MuteAnimEvents
 {
     uint32_t STANDARD : 1; // 0

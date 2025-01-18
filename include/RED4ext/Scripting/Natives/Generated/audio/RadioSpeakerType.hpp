@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class RadioSpeakerType : uint32_t
 {
     Stanley = 0,

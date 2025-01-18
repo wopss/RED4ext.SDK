@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class ParameterizationType : uint32_t
 {
     BehaviorArgument = 0,

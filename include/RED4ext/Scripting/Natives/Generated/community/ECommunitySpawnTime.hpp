@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace community { 
+namespace community {
 enum class ECommunitySpawnTime : uint8_t
 {
     Morning = 0,

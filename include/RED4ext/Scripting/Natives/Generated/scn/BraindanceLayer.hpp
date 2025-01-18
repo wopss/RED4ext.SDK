@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class BraindanceLayer : uint8_t
 {
     Visual = 0,

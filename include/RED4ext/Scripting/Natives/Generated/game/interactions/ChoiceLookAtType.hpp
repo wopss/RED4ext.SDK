@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions {
 enum class ChoiceLookAtType : uint32_t
 {
     Root = 0,

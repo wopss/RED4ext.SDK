@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class ChoiceNodeNsVisualizerStyle : uint8_t
 {
     onScreen = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class NodeProfileTimerMode : uint32_t
 {
     Begin = 0,

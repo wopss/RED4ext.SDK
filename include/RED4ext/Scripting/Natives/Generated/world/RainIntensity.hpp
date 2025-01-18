@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class RainIntensity : uint32_t
 {
     NoRain = 0,

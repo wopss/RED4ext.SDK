@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions {
 enum class EInteractionEventType : uint32_t
 {
     EIET_activate = 0,

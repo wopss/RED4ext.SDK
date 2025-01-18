@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 struct LightChannel
 {
     uint16_t LC_Channel1 : 1; // 0

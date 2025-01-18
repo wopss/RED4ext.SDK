@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class FindLaneFilter : uint32_t
 {
     None = 0,

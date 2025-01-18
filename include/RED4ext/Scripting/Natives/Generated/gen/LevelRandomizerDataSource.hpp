@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace gen { 
+namespace gen {
 enum class LevelRandomizerDataSource : uint32_t
 {
     Entries = 0,

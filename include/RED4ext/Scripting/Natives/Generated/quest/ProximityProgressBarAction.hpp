@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class ProximityProgressBarAction : uint32_t
 {
     Activated = 0,

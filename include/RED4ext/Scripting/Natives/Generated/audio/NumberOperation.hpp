@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class NumberOperation : uint8_t
 {
     SetEqual = 0,

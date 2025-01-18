@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class PatrolSplinePointTypes : uint32_t
 {
     Workspot = 0,

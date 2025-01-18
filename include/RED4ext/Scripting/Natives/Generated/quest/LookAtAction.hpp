@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class LookAtAction : uint32_t
 {
     Nothing = 0,

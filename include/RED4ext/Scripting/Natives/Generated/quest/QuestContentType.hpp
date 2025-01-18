@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class QuestContentType : uint8_t
 {
     EP1_MainQuest = 0,

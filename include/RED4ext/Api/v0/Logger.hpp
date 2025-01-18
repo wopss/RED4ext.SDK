@@ -20,7 +20,7 @@ struct Logger
 
     void (*Info)(PluginHandle aHandle, const char* aMessage);
     void (*InfoF)(PluginHandle aHandle, const char* aFormat, ...);
-        
+
     void (*InfoW)(PluginHandle aHandle, const wchar_t* aMessage);
     void (*InfoWF)(PluginHandle aHandle, const wchar_t* aFormat, ...);
 

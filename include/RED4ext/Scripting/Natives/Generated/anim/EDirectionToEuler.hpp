@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EDirectionToEuler : uint32_t
 {
     Pitch = 0,

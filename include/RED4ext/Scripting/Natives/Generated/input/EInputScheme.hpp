@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace input { 
+namespace input {
 enum class EInputScheme : uint8_t
 {
     LEGACY = 0,

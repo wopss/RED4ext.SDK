@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment {
 struct PlacementE
 {
     uint16_t b0 : 1; // 0

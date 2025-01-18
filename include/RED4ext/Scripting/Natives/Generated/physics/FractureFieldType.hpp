@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 struct FractureFieldType
 {
     uint16_t FF_Default : 1; // 0

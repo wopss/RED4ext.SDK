@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class ETimeShiftType : uint32_t
 {
     ShiftByTime = 0,

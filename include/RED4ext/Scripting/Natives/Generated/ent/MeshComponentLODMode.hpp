@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class MeshComponentLODMode : uint8_t
 {
     AlwaysVisible = 0,

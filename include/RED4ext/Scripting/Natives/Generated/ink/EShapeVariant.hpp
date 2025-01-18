@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class EShapeVariant : uint32_t
 {
     Fill = 0,

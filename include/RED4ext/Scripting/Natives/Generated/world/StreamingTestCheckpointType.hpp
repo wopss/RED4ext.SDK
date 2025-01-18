@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class StreamingTestCheckpointType : uint32_t
 {
     BeginMove = 0,

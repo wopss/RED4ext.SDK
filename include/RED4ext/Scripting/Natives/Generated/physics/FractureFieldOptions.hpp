@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 struct FractureFieldOptions
 {
     uint16_t FFO_OnlyPrefractured : 1; // 0

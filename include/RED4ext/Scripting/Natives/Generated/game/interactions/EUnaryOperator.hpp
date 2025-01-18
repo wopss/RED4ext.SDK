@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::interactions { 
+namespace game::interactions {
 enum class EUnaryOperator : uint32_t
 {
     EUnaryOperator_empty = 0,

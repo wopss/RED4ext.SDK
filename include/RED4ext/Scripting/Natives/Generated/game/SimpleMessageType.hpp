@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SimpleMessageType : uint32_t
 {
     Undefined = 0,

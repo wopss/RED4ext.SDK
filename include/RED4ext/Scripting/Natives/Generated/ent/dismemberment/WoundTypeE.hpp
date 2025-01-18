@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment {
 struct WoundTypeE
 {
     uint16_t CLEAN : 1; // 0

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade {
 enum class ArcadeParallaxPlaneControllerDisplacementAxis : uint32_t
 {
     Horizontal = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio::breathing { 
+namespace audio::breathing {
 enum class EventTag : uint8_t
 {
     Walk = 0,

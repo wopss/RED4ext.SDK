@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace tempshit { 
+namespace tempshit {
 enum class MapPinOperation : uint8_t
 {
     Undefined = 0,

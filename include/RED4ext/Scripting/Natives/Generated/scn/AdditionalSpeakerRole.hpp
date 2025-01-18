@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class AdditionalSpeakerRole : uint32_t
 {
     Full = 0,

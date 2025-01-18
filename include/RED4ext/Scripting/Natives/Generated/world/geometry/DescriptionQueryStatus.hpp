@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world::geometry { 
+namespace world::geometry {
 enum class DescriptionQueryStatus : uint32_t
 {
     OK = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class EchoPositionType : uint32_t
 {
     DynamicEnvironment = 0,
