@@ -517,7 +517,7 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
     if (nsIndex != std::string::npos)
     {
         auto ns = nameQualified.substr(0, nsIndex - 1);
-        o << "namespace " << ns << " { " << std::endl;
+        o << "namespace " << ns << " {" << std::endl;
         o << "enum class " << name;
     }
     else
@@ -696,7 +696,7 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aOutP
     if (nsIndex != std::string::npos)
     {
         auto ns = nameQualified.substr(0, nsIndex - 1);
-        o << "namespace " << ns << " { " << std::endl;
+        o << "namespace " << ns << " {" << std::endl;
         o << "struct " << name;
     }
     else
