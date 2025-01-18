@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class TutorialBracketType : uint32_t
 {
     WidgetArea = 0,

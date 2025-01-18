@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn::fpp { 
+namespace scn::fpp {
 enum class BlendOverride : uint32_t
 {
     Centering = 0,

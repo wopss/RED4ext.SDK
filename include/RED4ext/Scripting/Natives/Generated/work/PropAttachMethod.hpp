@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace work { 
+namespace work {
 enum class PropAttachMethod : uint32_t
 {
     BonePosition = 0,

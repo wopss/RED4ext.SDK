@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class QuestGuidanceMarkerPathfindingType : uint32_t
 {
     Auto = 0,

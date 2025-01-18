@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EffectHitDataType : uint8_t
 {
     Entity = 0,

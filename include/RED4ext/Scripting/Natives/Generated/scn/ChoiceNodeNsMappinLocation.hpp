@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class ChoiceNodeNsMappinLocation : uint8_t
 {
     None = 0,

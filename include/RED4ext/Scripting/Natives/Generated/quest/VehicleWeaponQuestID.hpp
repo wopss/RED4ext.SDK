@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class VehicleWeaponQuestID : uint8_t
 {
     Primary = 0,

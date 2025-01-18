@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class AudioEventFlags : uint32_t
 {
     NoEventFlags = 0,

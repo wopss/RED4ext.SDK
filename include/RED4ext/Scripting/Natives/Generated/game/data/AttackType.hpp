@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class AttackType : uint32_t
 {
     ChargedWhipAttack = 0,

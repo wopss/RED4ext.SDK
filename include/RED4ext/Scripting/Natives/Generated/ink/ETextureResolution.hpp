@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class ETextureResolution : uint8_t
 {
     UltraHD_3840_2160 = 0,

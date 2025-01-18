@@ -3,4 +3,3 @@
 #endif
 
 #include <RED4ext/Relocation-inl.hpp>
-

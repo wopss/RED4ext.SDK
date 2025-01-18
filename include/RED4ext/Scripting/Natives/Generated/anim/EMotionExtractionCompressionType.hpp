@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EMotionExtractionCompressionType : uint32_t
 {
     EMECT_UNCOMPRESSED = 0,

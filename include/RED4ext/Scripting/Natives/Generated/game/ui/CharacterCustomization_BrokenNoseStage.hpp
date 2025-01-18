@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class CharacterCustomization_BrokenNoseStage : uint32_t
 {
     CCBN_Disabled = 0,

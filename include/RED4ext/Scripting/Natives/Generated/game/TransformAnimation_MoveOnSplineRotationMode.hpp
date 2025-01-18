@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class TransformAnimation_MoveOnSplineRotationMode : uint32_t
 {
     Disabled = 0,

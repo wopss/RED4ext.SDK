@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace input { 
+namespace input {
 enum class ESimplifiedInputDevice : uint8_t
 {
     KBM = 0,

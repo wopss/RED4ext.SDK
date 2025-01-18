@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::audio::events { 
+namespace game::audio::events {
 enum class SurfaceDirection : uint32_t
 {
     Normal = 0,

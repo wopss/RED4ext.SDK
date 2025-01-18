@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio::breathing { 
+namespace audio::breathing {
 enum class LoopBehavior : uint8_t
 {
     TimedBreathing = 0,

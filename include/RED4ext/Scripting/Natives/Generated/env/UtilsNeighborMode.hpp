@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace env { 
+namespace env {
 enum class UtilsNeighborMode : uint8_t
 {
     eCLOSEST = 0,

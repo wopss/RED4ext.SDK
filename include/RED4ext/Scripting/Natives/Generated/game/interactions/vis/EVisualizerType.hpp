@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis {
 enum class EVisualizerType : uint32_t
 {
     Device = 0,

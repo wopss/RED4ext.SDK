@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class ChoiceSection_ConditionTypeMode : uint8_t
 {
     Highlight = 0,

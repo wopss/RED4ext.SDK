@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade {
 enum class ShooterTriggerType : uint32_t
 {
     Delay = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class WeaponShellCasingMode : uint32_t
 {
     none = 0,

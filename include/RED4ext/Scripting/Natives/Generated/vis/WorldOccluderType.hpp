@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vis { 
+namespace vis {
 enum class WorldOccluderType : uint8_t
 {
     Default = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn::loc { 
+namespace scn::loc {
 enum class LocaleId : uint8_t
 {
     db_db = 0,

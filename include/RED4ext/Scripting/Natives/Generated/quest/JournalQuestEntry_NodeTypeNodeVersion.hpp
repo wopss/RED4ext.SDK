@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class JournalQuestEntry_NodeTypeNodeVersion : uint8_t
 {
     Initial = 0,

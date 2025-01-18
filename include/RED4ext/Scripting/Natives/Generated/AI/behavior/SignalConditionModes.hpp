@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior {
 enum class SignalConditionModes : uint32_t
 {
     CurrentValue = 0,

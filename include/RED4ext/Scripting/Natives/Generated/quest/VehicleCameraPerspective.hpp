@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class VehicleCameraPerspective : uint8_t
 {
     TPP = 0,

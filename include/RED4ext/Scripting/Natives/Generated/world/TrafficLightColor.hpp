@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class TrafficLightColor : uint32_t
 {
     GREEN = 0,

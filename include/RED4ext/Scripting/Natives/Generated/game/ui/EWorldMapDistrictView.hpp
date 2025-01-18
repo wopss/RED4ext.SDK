@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class EWorldMapDistrictView : uint32_t
 {
     None = 0,

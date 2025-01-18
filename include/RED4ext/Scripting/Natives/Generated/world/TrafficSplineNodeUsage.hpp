@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class TrafficSplineNodeUsage : uint32_t
 {
     Pavement = 0,

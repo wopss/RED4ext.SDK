@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SceneAnimationMotionActionParamsEasingType : uint32_t
 {
     Linear = 0,

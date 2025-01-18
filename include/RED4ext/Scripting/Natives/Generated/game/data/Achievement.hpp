@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class Achievement : uint32_t
 {
     AllThePresidentsMen = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::projectile { 
+namespace game::projectile {
 enum class OnCollisionAction : uint32_t
 {
     None = 0,

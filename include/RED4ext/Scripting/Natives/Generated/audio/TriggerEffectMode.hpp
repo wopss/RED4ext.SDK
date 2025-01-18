@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class TriggerEffectMode : uint8_t
 {
     Off = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior {
 enum class StoryActionType : uint32_t
 {
     Setup = 0,

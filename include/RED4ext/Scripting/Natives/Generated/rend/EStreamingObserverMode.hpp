@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class EStreamingObserverMode : uint8_t
 {
     Point = 0,

@@ -5,7 +5,6 @@
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 
-
 RED4EXT_INLINE RED4ext::PackageReader::PackageReader(void* aBuffer, uint32_t aSize)
     : buffer(aBuffer)
     , size(aSize)
@@ -77,7 +76,8 @@ RED4EXT_INLINE void RED4ext::ObjectPackageReader::ReadHeader(RED4ext::ObjectPack
     func(this, aOut);
 }
 
-RED4EXT_INLINE RED4ext::ObjectPackageExtractorParams::ObjectPackageExtractorParams(const RED4ext::PackageHeader& aHeader)
+RED4EXT_INLINE RED4ext::ObjectPackageExtractorParams::ObjectPackageExtractorParams(
+    const RED4ext::PackageHeader& aHeader)
     : header(aHeader)
     , loader(ResourceLoader::Get())
     , disablePostLoad(false)
@@ -89,12 +89,14 @@ RED4EXT_INLINE RED4ext::ObjectPackageExtractorParams::ObjectPackageExtractorPara
 {
 }
 
-RED4EXT_INLINE RED4ext::ObjectPackageExtractorParams::ObjectPackageExtractorParams(const RED4ext::ObjectPackageHeader& aHeader)
+RED4EXT_INLINE RED4ext::ObjectPackageExtractorParams::ObjectPackageExtractorParams(
+    const RED4ext::ObjectPackageHeader& aHeader)
     : ObjectPackageExtractorParams(aHeader.package)
 {
 }
 
-RED4EXT_INLINE RED4ext::ObjectPackageExtractor::ObjectPackageExtractor(const RED4ext::ObjectPackageExtractorParams& aParams)
+RED4EXT_INLINE RED4ext::ObjectPackageExtractor::ObjectPackageExtractor(
+    const RED4ext::ObjectPackageExtractorParams& aParams)
     : unk78(0)
     , loader(nullptr)
     , disablePostLoad(false)

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade {
 enum class ShooterLevelType : uint32_t
 {
     HORIZONTAL = 0,

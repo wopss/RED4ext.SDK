@@ -1,7 +1,7 @@
 #pragma once
 
-#include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <cstdint>
 
 namespace RED4ext
 {
@@ -12,7 +12,7 @@ struct ScriptGameInstance
     /**
      * @brief Construct an instance of "ScriptGameInstance" native type.
      * @param aInstance The instance pointer, if NULL it will be retrived automatically from CGameFramework.
-    */
+     */
     ScriptGameInstance(GameInstance* aInstance = nullptr);
 
     GameInstance* instance;

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class CharacterRandomizationCategory : uint32_t
 {
     Body = 0,

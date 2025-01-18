@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class SpeedSplineOrientationMarkerType : uint32_t
 {
     UseSplineOrientation = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 struct ChoiceNodeNsChoiceNodeBitFlags
 {
     uint16_t IsFocusClue : 1; // 0

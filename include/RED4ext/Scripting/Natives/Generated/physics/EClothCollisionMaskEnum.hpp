@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 struct EClothCollisionMaskEnum
 {
     uint32_t SPHERE : 1; // 0

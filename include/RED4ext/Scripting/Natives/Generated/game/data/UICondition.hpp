@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class UICondition : uint32_t
 {
     InEyesSubMenu = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI::influence { 
+namespace AI::influence {
 enum class EBumpPolicy : uint8_t
 {
     Static = 0,

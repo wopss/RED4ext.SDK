@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class LightAttenuation : uint8_t
 {
     LA_InverseSquare = 0,

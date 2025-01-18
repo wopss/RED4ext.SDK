@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class AnimEventGenderAlt : uint32_t
 {
     None = 0,

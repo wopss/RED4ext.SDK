@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class BreathingTransitionType : uint32_t
 {
     PlayerSpeed = 0,

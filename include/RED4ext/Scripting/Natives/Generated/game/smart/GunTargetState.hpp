@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::smart { 
+namespace game::smart {
 enum class GunTargetState : uint32_t
 {
     Visible = 1,

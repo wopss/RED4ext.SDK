@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class InputHintKeyCombinationType : uint32_t
 {
     Or = 0,

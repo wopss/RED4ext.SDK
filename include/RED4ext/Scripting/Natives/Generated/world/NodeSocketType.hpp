@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class NodeSocketType : uint8_t
 {
     Bidirectional = 0,

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Map.hpp>
+#include <RED4ext/NativeTypes.hpp>
 
 namespace RED4ext
 {

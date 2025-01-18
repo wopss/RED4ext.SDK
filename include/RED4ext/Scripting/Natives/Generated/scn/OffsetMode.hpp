@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class OffsetMode : uint8_t
 {
     useRealOffset = 0,

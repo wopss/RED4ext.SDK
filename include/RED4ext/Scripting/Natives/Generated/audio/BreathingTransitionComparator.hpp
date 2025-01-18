@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class BreathingTransitionComparator : uint32_t
 {
     Less = 0,

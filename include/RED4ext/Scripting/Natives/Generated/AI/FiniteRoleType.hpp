@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class FiniteRoleType : uint32_t
 {
     Patrol = 0,

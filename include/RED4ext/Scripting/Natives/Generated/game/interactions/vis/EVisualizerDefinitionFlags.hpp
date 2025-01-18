@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::interactions::vis { 
+namespace game::interactions::vis {
 enum class EVisualizerDefinitionFlags : uint16_t
 {
     None = 0,

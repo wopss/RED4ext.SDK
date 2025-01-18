@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class ETransformAxis : uint32_t
 {
     X_Axis = 1,

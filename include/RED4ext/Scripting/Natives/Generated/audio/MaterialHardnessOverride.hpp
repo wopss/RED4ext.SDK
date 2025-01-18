@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class MaterialHardnessOverride : uint32_t
 {
     None = 0,

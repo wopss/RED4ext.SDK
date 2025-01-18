@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class SpringProjectionType : uint32_t
 {
     Disabled = 0,

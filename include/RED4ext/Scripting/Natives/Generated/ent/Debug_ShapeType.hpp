@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class Debug_ShapeType : uint8_t
 {
     Sphere = 0,

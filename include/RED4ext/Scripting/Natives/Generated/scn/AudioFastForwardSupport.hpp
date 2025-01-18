@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class AudioFastForwardSupport : uint8_t
 {
     MuteDuringFastForward = 1,
