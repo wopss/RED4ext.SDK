@@ -1,10 +1,11 @@
 #pragma once
 
+#include <RED4ext/Common.hpp>
+#include <RED4ext/RenderResource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/IRenderProxyCustomData.hpp>
+
 #include <cstdint>
 
-#include <RED4ext/Common.hpp>
-#include <RED4ext/RenderTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/IRenderProxyCustomData.hpp>
 
 namespace RED4ext
 {
@@ -47,6 +48,7 @@ struct IRenderProxy
     uint8_t unk50[0x98 - 0x50];         // 50
 };
 RED4EXT_ASSERT_SIZE(IRenderProxy, 0x98);
+RED4EXT_ASSERT_OFFSET(IRenderProxy, customData, 0x48);
 
 struct RenderProxyBase : IRenderProxy
 {
@@ -67,15 +69,16 @@ struct MeshRenderProxy : CRenderProxy
     uint8_t unkE0[0x1c0 - 0xe0]; // E0
 };
 RED4EXT_ASSERT_SIZE(MeshRenderProxy, 0x1c0);
+RED4EXT_ASSERT_OFFSET(MeshRenderProxy, renderMesh, 0xD8);
 
-struct RenderProxy_Handle
+struct CRenderProxy_Handle
 {
-    virtual ~RenderProxy_Handle() = 0;
+    virtual ~CRenderProxy_Handle() = default; // 00
 
-    void* unk08;
-    IRenderProxy* renderProxy;
-    void* unk18;
-    uint8_t unk20[0x28 - 0x20];
+    uint8_t unk08[0x10 - 0x08]; // 08
+    IRenderProxy* renderProxy;  // 10
+    uint8_t unk18[0x28 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(RenderProxy_Handle, 0x28);
+RED4EXT_ASSERT_SIZE(CRenderProxy_Handle, 0x28);
+RED4EXT_ASSERT_OFFSET(CRenderProxy_Handle, renderProxy, 0x10);
 } // namespace RED4ext

@@ -10,6 +10,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ent/ISkinTargetComponent.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/MeshComponentLODMode.hpp>
 #include <RED4ext/Scripting/Natives/Generated/shadows/ShadowCastingMode.hpp>
+
 #include <cstdint>
 
 namespace RED4ext
