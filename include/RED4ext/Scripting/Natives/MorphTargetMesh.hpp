@@ -35,4 +35,3 @@ struct MorphTargetMesh : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(MorphTargetMesh, 0xD0);
 } // namespace RED4ext
-

@@ -6,7 +6,6 @@
 
 #include <cstdint>
 
-
 namespace RED4ext
 {
 struct IRenderProxy

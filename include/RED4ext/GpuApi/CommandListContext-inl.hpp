@@ -29,7 +29,7 @@ RED4EXT_INLINE void CommandListContext::FlushPendingBarriers()
     func(this);
 }
 
-RED4EXT_INLINE CommandListContext* AcquireFreeCommandList(CommandListType aType, const StringView& aDebugName, 
+RED4EXT_INLINE CommandListContext* AcquireFreeCommandList(CommandListType aType, const StringView& aDebugName,
                                                           uint64_t aHash)
 {
     // NOTE: This function has parameters for debug name and hash which seem to be optional.
