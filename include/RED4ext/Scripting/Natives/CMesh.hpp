@@ -28,7 +28,7 @@ struct MeshAppearance;
 struct MeshParameter;
 } // namespace mesh
 
-struct CMesh : res::StreamedResource
+struct __declspec(align(0x10)) CMesh : res::StreamedResource
 {
     static constexpr const char* NAME = "CMesh";
     static constexpr const char* ALIAS = NAME;
