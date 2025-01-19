@@ -8,7 +8,7 @@ namespace RED4ext::GpuApi
 {
 RED4EXT_INLINE SDeviceData* GetDeviceData()
 {
-    static UniversalRelocPtr<SDeviceData*> dd(Detail::AddressHashes::g_DeviceData);
+    static const UniversalRelocPtr<SDeviceData*> dd(Detail::AddressHashes::g_DeviceData);
     return dd;
 }
 } // namespace RED4ext::GpuApi
