@@ -22,11 +22,11 @@ struct CMaterialInstance;
 struct CResource;
 struct IMaterial;
 struct IRenderResourceBlob;
-namespace mesh 
-{ 
+namespace mesh
+{
 struct MeshAppearance;
-struct MeshParameter; 
-}
+struct MeshParameter;
+} // namespace mesh
 
 struct CMesh : res::StreamedResource
 {
