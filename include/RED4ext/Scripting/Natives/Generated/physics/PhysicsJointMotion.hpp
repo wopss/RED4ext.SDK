@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 enum class PhysicsJointMotion : uint8_t
 {
     Locked = 0,

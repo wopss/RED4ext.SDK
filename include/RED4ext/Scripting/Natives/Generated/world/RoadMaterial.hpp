@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class RoadMaterial : uint32_t
 {
     Concrete = 0,

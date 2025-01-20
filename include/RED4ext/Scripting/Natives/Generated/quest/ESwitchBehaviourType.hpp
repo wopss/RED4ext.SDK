@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class ESwitchBehaviourType : uint32_t
 {
     First_Fulfilled = 0, // First Fulfilled

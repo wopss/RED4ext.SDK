@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class AudioDismembermentPart : uint32_t
 {
     Head = 0,

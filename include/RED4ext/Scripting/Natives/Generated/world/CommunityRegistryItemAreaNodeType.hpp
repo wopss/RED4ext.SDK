@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class CommunityRegistryItemAreaNodeType : uint8_t
 {
     Regular = 0,

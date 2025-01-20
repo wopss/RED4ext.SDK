@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class OnlineSystemStatus : uint32_t
 {
     Uninitialized = 0,

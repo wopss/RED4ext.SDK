@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment {
 struct ResourceSetMask
 {
     uint16_t BARE : 1; // 0

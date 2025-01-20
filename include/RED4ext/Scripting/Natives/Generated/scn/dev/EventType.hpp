@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn::dev { 
+namespace scn::dev {
 enum class EventType : uint32_t
 {
     DebugMessage = 0,

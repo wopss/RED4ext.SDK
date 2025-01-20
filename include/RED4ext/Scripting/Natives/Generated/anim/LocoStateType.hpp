@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class LocoStateType : uint32_t
 {
     LS_Pre = 0,

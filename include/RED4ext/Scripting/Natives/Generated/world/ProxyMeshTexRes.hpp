@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class ProxyMeshTexRes : uint8_t
 {
     RES_64 = 0,

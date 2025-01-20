@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class TemplateComponentResolveMode : uint8_t
 {
     AutoSelect = 0,

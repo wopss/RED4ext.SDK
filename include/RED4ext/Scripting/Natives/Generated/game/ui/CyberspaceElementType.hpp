@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class CyberspaceElementType : uint32_t
 {
     CyberspaceNPC = 0,

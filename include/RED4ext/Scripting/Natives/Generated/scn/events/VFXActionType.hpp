@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn::events { 
+namespace scn::events {
 enum class VFXActionType : uint32_t
 {
     Play = 0,

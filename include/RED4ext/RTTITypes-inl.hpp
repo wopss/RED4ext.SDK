@@ -4,8 +4,8 @@
 #include <RED4ext/RTTITypes.hpp>
 #endif
 
-#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/CNamePool.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 #include <RED4ext/Scripting/CProperty.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
@@ -360,7 +360,8 @@ RED4EXT_INLINE RED4ext::CProperty* RED4ext::CClass::GetProperty(CName aName)
 
 RED4EXT_INLINE void RED4ext::CClass::InitializeProperties(ScriptInstance aInstance)
 {
-    static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> initializeProperties(Detail::AddressHashes::CClass_InitializeProperties);
+    static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> initializeProperties(
+        Detail::AddressHashes::CClass_InitializeProperties);
     initializeProperties(this, aInstance);
 
     static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> assignDefaultValuesToProperties(

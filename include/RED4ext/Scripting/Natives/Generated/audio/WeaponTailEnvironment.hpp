@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class WeaponTailEnvironment : uint32_t
 {
     InteriorDefault = 0,

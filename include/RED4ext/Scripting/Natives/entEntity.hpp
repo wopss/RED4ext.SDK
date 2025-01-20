@@ -11,7 +11,10 @@
 
 namespace RED4ext
 {
-namespace world { struct RuntimeScene; }
+namespace world
+{
+struct RuntimeScene;
+}
 
 enum class EntityStatus : uint8_t
 {

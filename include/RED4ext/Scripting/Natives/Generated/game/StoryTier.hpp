@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class StoryTier : uint8_t
 {
     Gameplay = 0,

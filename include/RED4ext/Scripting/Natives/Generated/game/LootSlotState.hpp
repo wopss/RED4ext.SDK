@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 struct LootSlotState
 {
     uint8_t Looted : 1; // 0

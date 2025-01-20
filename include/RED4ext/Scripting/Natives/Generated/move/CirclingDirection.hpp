@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace move { 
+namespace move {
 enum class CirclingDirection : uint32_t
 {
     None = 0,

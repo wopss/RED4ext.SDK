@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class CoverHeight : uint32_t
 {
     Invalid = 0,

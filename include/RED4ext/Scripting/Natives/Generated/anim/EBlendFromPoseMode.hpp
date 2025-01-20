@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EBlendFromPoseMode : uint32_t
 {
     BFPM_AlwaysOnActivation = 0,

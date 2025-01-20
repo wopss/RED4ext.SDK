@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class LookAtTargetType : uint32_t
 {
     Actor = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class FacialEmotionTransitionType : uint32_t
 {
     Natural = 0,

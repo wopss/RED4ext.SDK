@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle {
 enum class EQuestVehicleWindowState : uint32_t
 {
     ForceOpen = 0,

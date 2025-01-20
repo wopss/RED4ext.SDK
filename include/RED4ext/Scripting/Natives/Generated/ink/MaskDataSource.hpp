@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class MaskDataSource : uint8_t
 {
     TextureAtlas = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class PostFx_ScanningState : uint8_t
 {
     Off = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class ControlCrowdAction : uint8_t
 {
     Disable = 0,

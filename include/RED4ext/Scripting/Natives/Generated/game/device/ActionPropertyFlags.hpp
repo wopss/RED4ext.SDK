@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::device { 
+namespace game::device {
 enum class ActionPropertyFlags : uint32_t
 {
     None = 0,

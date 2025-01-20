@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class RotatingMeshNodeAxis : uint32_t
 {
     X = 0,

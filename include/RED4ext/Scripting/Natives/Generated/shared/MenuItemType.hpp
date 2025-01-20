@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace shared { 
+namespace shared {
 enum class MenuItemType : uint8_t
 {
     Action = 0,

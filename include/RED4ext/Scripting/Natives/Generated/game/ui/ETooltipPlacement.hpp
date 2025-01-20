@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class ETooltipPlacement : uint8_t
 {
     LeftCenter = 0,

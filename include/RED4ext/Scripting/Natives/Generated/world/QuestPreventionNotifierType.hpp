@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class QuestPreventionNotifierType : uint8_t
 {
     Deescalation = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui::arcade { 
+namespace game::ui::arcade {
 enum class ArcadeColliderType : uint32_t
 {
     Body = 0,

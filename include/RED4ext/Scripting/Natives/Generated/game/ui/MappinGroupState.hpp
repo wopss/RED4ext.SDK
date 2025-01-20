@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class MappinGroupState : uint32_t
 {
     Ungrouped = 0,

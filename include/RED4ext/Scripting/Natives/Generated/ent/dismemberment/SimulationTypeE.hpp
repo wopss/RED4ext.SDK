@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment {
 enum class SimulationTypeE : uint16_t
 {
     NONE = 0,

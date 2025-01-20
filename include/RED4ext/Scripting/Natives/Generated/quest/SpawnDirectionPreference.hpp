@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class SpawnDirectionPreference : uint32_t
 {
     Behind = 0,

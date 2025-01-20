@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace env { 
+namespace env {
 enum class UtilsReflectionProbeAmbientContributionMode : uint8_t
 {
     eNO_AMBIENT_CONTRIBUTION = 0,

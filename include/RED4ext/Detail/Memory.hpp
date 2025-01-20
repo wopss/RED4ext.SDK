@@ -85,8 +85,8 @@ template<typename T>
 using ResolveAllocatorType = typename StaticAllocatorTypeResolver<T>::type;
 
 template<typename T>
-concept IsSafeDestructible = std::is_destructible_v<T> &&
-    (!std::is_polymorphic_v<T> || std::has_virtual_destructor_v<T>);
+concept IsSafeDestructible =
+    std::is_destructible_v<T> && (!std::is_polymorphic_v<T> || std::has_virtual_destructor_v<T>);
 
 template<typename T>
 concept IsAllocator = std::is_base_of_v<Memory::IAllocator, T>;

@@ -9,7 +9,7 @@ namespace RED4ext
 {
 struct NodeRef
 {
-    static constexpr auto GlobalRoot = FNV1a64("$"); // NodeRef("$")
+    static constexpr auto GlobalRoot = FNV1a64("$");   // NodeRef("$")
     static constexpr auto RelativeRoot = FNV1a64("~"); // NodeRef("~")
 
     constexpr NodeRef(uint64_t aHash = 0) noexcept

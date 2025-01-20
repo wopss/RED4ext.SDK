@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class MultiplayerAIDirectorFunction : uint32_t
 {
     SetStatus = 0,

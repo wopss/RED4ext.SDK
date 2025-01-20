@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace red { 
+namespace red {
 enum class TaskTextMessageType : uint32_t
 {
     Info = 0,

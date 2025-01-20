@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim::compression { 
+namespace anim::compression {
 enum class FrameratePreset : uint8_t
 {
     USE_30_HZ = 0,

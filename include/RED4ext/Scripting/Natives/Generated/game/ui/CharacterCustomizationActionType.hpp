@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class CharacterCustomizationActionType : uint32_t
 {
     Activate = 0,

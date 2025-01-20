@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class RenderToTextureFeaturesPlatform : uint8_t
 {
     RTFP_All = 0,

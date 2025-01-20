@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class ClassificationMethod : uint32_t
 {
     HasAnyTag = 0,

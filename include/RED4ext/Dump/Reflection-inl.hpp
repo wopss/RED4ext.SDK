@@ -37,7 +37,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     std::unordered_map<std::string, std::vector<std::string>> prefixHierarchy;
 
     // Trim the preceeding lower-case suffix, this seems to be either a namespace or directory, or both
-    auto GetPrefix = [](const std::string& aInput) -> std::string {
+    auto GetPrefix = [](const std::string& aInput) -> std::string
+    {
         size_t i = 0;
 
         // Special case for AI
@@ -67,50 +68,52 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     };
 
     // First pass gather all properties and descriptors
-    rttiSystem->types.for_each([&descriptorMap, GetPrefix, &prefixHierarchy,
-                                aPropertyHolders](RED4ext::CName aName, RED4ext::CBaseRTTIType*& aType) {
-        if (aType->GetType() == RED4ext::ERTTIType::Class)
+    rttiSystem->types.for_each(
+        [&descriptorMap, GetPrefix, &prefixHierarchy, aPropertyHolders](RED4ext::CName aName,
+                                                                        RED4ext::CBaseRTTIType*& aType)
         {
-            auto classType = static_cast<const RED4ext::CClass*>(aType);
-            if (classType->flags.isNative)
+            if (aType->GetType() == RED4ext::ERTTIType::Class)
             {
-                ClassDependencyBuilder builder;
-                builder.pType = classType;
-
-                for (uint32_t i = 0; i < classType->unk118.size; ++i)
+                auto classType = static_cast<const RED4ext::CClass*>(aType);
+                if (classType->flags.isNative)
                 {
-                    auto prop = classType->unk118.entries[i];
-                    if (!prop->flags.inValueHolder)
+                    ClassDependencyBuilder builder;
+                    builder.pType = classType;
+
+                    for (uint32_t i = 0; i < classType->unk118.size; ++i)
                     {
-                        builder.mPropertyMap.emplace(prop->valueOffset, prop);
+                        auto prop = classType->unk118.entries[i];
+                        if (!prop->flags.inValueHolder)
+                        {
+                            builder.mPropertyMap.emplace(prop->valueOffset, prop);
+                        }
+                        else if (aPropertyHolders)
+                        {
+                            builder.mHolderPropertyMap.emplace(prop->valueOffset, prop);
+                        }
                     }
-                    else if (aPropertyHolders)
-                    {
-                        builder.mHolderPropertyMap.emplace(prop->valueOffset, prop);
-                    }
+
+                    descriptorMap.emplace(classType, builder);
                 }
-
-                descriptorMap.emplace(classType, builder);
             }
-        }
 
-        switch (aType->GetType())
-        {
-        case RED4ext::ERTTIType::Class:
-        case RED4ext::ERTTIType::Enum:
-        case RED4ext::ERTTIType::BitField:
-        {
-            std::string prefix = GetPrefix(aName.ToString());
-            if (!prefix.empty())
+            switch (aType->GetType())
             {
-                prefixHierarchy[prefix] = std::vector<std::string>();
+            case RED4ext::ERTTIType::Class:
+            case RED4ext::ERTTIType::Enum:
+            case RED4ext::ERTTIType::BitField:
+            {
+                std::string prefix = GetPrefix(aName.ToString());
+                if (!prefix.empty())
+                {
+                    prefixHierarchy[prefix] = std::vector<std::string>();
+                }
+                break;
             }
-            break;
-        }
-        default:
-            break;
-        }
-    });
+            default:
+                break;
+            }
+        });
 
     // Build a mapped list of nested prefixes
     for (auto& [prefix, children] : prefixHierarchy)
@@ -194,9 +197,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
             if (it != prefixHierarchy.end())
             {
                 pathPrefix = std::accumulate(it->second.begin(), it->second.end(), std::string(),
-                                             [](const std::string& a, const std::string& b) -> std::string {
-                                                 return a + (a.length() > 0 ? "/" : "") + b;
-                                             });
+                                             [](const std::string& a, const std::string& b) -> std::string
+                                             { return a + (a.length() > 0 ? "/" : "") + b; });
             }
 
             pathPrefix += "/";
@@ -252,7 +254,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     };
 
     // Remove the prefix from the class
-    auto SanitizeType = [GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string {
+    auto SanitizeType = [GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string
+    {
         auto name = aType->GetName();
         std::string fullName = name.ToString();
         auto prefix = GetPrefix(fullName);
@@ -260,7 +263,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     };
 
     // Convert the prefixes into a namespace
-    auto GetNamespace = [&prefixHierarchy](const std::string& aPrefix) -> std::string {
+    auto GetNamespace = [&prefixHierarchy](const std::string& aPrefix) -> std::string
+    {
         std::string ns;
         if (!aPrefix.empty())
         {
@@ -268,9 +272,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
             if (it != prefixHierarchy.end())
             {
                 ns = std::accumulate(it->second.begin(), it->second.end(), std::string(),
-                                     [](const std::string& a, const std::string& b) -> std::string {
-                                         return a + (a.length() > 0 ? "::" : "") + b;
-                                     });
+                                     [](const std::string& a, const std::string& b) -> std::string
+                                     { return a + (a.length() > 0 ? "::" : "") + b; });
             }
         }
 
@@ -312,8 +315,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
     std::regex invalidChars(INVALID_CHARACTERS);
     std::regex invalidKeywords(INVALID_KEYWORDS);
-    NameSantizer nameSanitizer = [invalidChars, invalidKeywords](const std::string& input,
-                                                                 bool& modify) -> std::string {
+    NameSantizer nameSanitizer = [invalidChars, invalidKeywords](const std::string& input, bool& modify) -> std::string
+    {
         modify = std::regex_search(input, invalidChars) || std::regex_search(input, invalidKeywords);
         std::string output = std::regex_replace(std::regex_replace(input, invalidChars, "_"), invalidKeywords, "$&_");
         if (!input.empty() && isdigit(input[0])) // Starting with a number is invalid, prefix it
@@ -514,7 +517,7 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
     if (nsIndex != std::string::npos)
     {
         auto ns = nameQualified.substr(0, nsIndex - 1);
-        o << "namespace " << ns << " { " << std::endl;
+        o << "namespace " << ns << " {" << std::endl;
         o << "enum class " << name;
     }
     else
@@ -693,7 +696,7 @@ RED4EXT_INLINE void BitfieldFileDescriptor::EmitFile(std::filesystem::path aOutP
     if (nsIndex != std::string::npos)
     {
         auto ns = nameQualified.substr(0, nsIndex - 1);
-        o << "namespace " << ns << " { " << std::endl;
+        o << "namespace " << ns << " {" << std::endl;
         o << "struct " << name;
     }
     else

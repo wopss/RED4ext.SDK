@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class AnimNode_SetDrivenKey_InternalsEChannelType : uint32_t
 {
     FloatTrack = 0,

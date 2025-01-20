@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class ProxWindowsType : uint8_t
 {
     SkipWindows = 0,

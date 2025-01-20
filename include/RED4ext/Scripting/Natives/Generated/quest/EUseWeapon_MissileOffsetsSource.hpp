@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class EUseWeapon_MissileOffsetsSource : uint32_t
 {
     None = 0,

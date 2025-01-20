@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class PrefabStreamingOcclusion : uint8_t
 {
     Default = 0,

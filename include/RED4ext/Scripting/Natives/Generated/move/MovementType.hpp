@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace move { 
+namespace move {
 enum class MovementType : uint32_t
 {
     Walk = 0,

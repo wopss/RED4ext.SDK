@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class DialogLineLanguage : uint32_t
 {
     Origin = 0,

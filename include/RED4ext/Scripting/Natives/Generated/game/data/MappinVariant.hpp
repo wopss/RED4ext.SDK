@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class MappinVariant : uint32_t
 {
     ActionDealDamageVariant = 0,

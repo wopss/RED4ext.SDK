@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace tools { 
+namespace tools {
 enum class MessageSeverity : uint32_t
 {
     Success = 0,

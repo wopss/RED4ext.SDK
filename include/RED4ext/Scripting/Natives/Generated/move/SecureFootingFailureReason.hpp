@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace move { 
+namespace move {
 enum class SecureFootingFailureReason : uint32_t
 {
     Invalid = 0,

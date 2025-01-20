@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SmartObjectInstanceEntryType : uint32_t
 {
     UseEntryAnimation = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class PatchIntro : uint32_t
 {
     Patch1500_NextGen = 0,

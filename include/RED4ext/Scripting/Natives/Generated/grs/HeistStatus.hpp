@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace grs { 
+namespace grs {
 enum class HeistStatus : uint32_t
 {
     Waiting = 0,

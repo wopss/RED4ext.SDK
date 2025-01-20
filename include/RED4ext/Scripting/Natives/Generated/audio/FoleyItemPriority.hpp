@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class FoleyItemPriority : uint8_t
 {
     P0 = 0,

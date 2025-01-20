@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class CaptureContextType : uint32_t
 {
     SceneGamedef = 0,

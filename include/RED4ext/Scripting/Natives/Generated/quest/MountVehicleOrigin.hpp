@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class MountVehicleOrigin : uint32_t
 {
     Any = 0,

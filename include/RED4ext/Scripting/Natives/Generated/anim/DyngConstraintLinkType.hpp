@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class DyngConstraintLinkType : uint32_t
 {
     KeepFixedDistance = 0,

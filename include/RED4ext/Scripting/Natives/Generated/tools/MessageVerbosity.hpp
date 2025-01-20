@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace tools { 
+namespace tools {
 enum class MessageVerbosity : uint32_t
 {
     Normal = 0,

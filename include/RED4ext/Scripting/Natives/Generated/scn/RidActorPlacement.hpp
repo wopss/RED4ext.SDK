@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class RidActorPlacement : uint32_t
 {
     SceneOrigin = 0,

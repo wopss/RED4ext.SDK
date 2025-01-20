@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::state { 
+namespace game::state {
 enum class MachineParameterAspect : uint32_t
 {
     Temporary = 0,

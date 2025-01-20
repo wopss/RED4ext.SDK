@@ -2,8 +2,8 @@
 #include <RED4ext/ISerializable.hpp>
 #endif
 
-#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/CString.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Relocation.hpp>

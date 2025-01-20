@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class PendulumConstraintType : uint32_t
 {
     Cone = 0,
