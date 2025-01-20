@@ -4,8 +4,8 @@
 #include <RED4ext/CNamePool.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
-#include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/InstanceType.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Scripting/Script.hpp>
 
 namespace RED4ext
@@ -24,7 +24,8 @@ struct IFunction
     {
         virtual void sub_0() = 0;
         virtual void sub_8() = 0;
-        virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult, const CBaseRTTIType* aResultType) = 0;
+        virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult,
+                             const CBaseRTTIType* aResultType) = 0;
     };
 
     virtual Memory::IAllocator* GetAllocator() = 0; // 00
@@ -32,7 +33,7 @@ struct IFunction
     virtual CClass* GetParent() = 0;                // 10
     virtual uint32_t GetRegIndex() = 0;             // 18
     virtual Invokable* GetInvokable() = 0; // 20 - Returns an object, vf obj+0x20 is the function to invoke only used
-                                             // if static func
+                                           // if static func
 };
 RED4EXT_ASSERT_SIZE(IFunction, 0x8);
 
@@ -87,7 +88,6 @@ struct CBaseFunction : IFunction
     int32_t unkAC;                  // AC
 
 private:
-
     using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, CBaseRTTIType*);
 
     bool Execute_(CStack* aStack);

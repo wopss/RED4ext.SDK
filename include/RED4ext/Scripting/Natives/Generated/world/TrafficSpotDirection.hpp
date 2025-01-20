@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class TrafficSpotDirection : uint32_t
 {
     Forward = 0,

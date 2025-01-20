@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class TelemetryDamageSituation : uint32_t
 {
     Irrelevant = 0,

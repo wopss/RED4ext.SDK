@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class JournalEntryUserState : uint8_t
 {
     Undefined = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink::anim { 
+namespace ink::anim {
 enum class InterpolationType : uint8_t
 {
     Linear = 0,

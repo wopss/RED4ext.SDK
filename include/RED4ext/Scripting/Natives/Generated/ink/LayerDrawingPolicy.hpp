@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class LayerDrawingPolicy : uint32_t
 {
     InOrder = 0,

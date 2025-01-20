@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace work { 
+namespace work {
 struct WorkspotItemPolicy
 {
     uint32_t ItemPolicy_SpawnItemOnIdleChange : 1; // 0

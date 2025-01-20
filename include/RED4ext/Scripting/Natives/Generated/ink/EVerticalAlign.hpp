@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class EVerticalAlign : uint8_t
 {
     Fill = 0,

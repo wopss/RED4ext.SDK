@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior {
 enum class EdgeConditionAction : uint32_t
 {
     None = 0,

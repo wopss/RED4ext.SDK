@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class ProxyNormalAngleStepSize : uint8_t
 {
     STEP_90 = 0,

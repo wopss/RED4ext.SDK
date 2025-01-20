@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn::fpp { 
+namespace scn::fpp {
 enum class ParallaxSpace : uint32_t
 {
     Default = 0,

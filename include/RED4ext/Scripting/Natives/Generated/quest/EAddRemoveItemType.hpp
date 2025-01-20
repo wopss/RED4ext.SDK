@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class EAddRemoveItemType : uint32_t
 {
     AddItem = 0,

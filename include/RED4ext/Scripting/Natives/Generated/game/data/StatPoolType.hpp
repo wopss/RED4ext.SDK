@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class StatPoolType : uint32_t
 {
     AccumulatedDoT = 0,

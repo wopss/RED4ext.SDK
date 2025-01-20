@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class GIGroup : uint8_t
 {
     GI_Group0 = 0,

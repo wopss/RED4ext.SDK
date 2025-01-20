@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class SimpleValueNodeValueType : uint32_t
 {
     String = 0,

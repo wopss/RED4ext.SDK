@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class ProxyMeshBuildType : uint8_t
 {
     ProxyFromProxy = 0,

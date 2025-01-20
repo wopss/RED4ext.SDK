@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class UseWorkspotNodeFunctions : uint32_t
 {
     UseWorkspot = 0,

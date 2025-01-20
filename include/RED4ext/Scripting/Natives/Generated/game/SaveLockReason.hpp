@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SaveLockReason : uint32_t
 {
     Nothing = 0,

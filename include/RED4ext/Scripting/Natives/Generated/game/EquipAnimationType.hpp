@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EquipAnimationType : uint32_t
 {
     Default = 0,

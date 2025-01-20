@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class ConstraintWeightMode : uint32_t
 {
     Static = 0,

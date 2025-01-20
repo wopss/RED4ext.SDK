@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class FloatTrackOperationType : uint32_t
 {
     Override = 0,

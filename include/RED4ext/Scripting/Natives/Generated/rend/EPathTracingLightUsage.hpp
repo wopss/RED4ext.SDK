@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class EPathTracingLightUsage : uint8_t
 {
     PTLU_Everywhere = 0,

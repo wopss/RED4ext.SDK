@@ -1,6 +1,6 @@
 #include <RED4ext/RED4ext.hpp>
-#include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/RTTITypes.hpp>
+#include <RED4ext/Scripting/IScriptable.hpp>
 
 struct MyCustomClass : RED4ext::IScriptable
 {
@@ -33,15 +33,15 @@ RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
 
 RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()
 {
-   auto rtti = RED4ext::CRTTISystem::Get();
-   auto scriptable = rtti->GetClass("IScriptable");
-   cls.parent = scriptable;
+    auto rtti = RED4ext::CRTTISystem::Get();
+    auto scriptable = rtti->GetClass("IScriptable");
+    cls.parent = scriptable;
 
-   RED4ext::CBaseFunction::Flags flags = { .isNative = true };
-   auto getNumber = RED4ext::CClassFunction::Create(&cls, "GetNumber", "GetNumber", &GetNumber);
-   getNumber->flags = flags;
-   getNumber->SetReturnType("Float");
-   cls.RegisterFunction(getNumber);
+    RED4ext::CBaseFunction::Flags flags = {.isNative = true};
+    auto getNumber = RED4ext::CClassFunction::Create(&cls, "GetNumber", "GetNumber", &GetNumber);
+    getNumber->flags = flags;
+    getNumber->SetReturnType("Float");
+    cls.RegisterFunction(getNumber);
 }
 
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::PluginHandle aHandle, RED4ext::EMainReason aReason,

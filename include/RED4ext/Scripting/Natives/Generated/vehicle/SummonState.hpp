@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle {
 enum class SummonState : uint32_t
 {
     Idle = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent::dismemberment { 
+namespace ent::dismemberment {
 enum class ResourceSetE : uint8_t
 {
     BARE = 0,

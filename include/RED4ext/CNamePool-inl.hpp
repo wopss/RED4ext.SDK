@@ -4,8 +4,8 @@
 #include <RED4ext/CNamePool.hpp>
 #endif
 
-#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CNamePool::Add(const char* aText)

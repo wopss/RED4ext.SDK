@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class SpawnMode : uint32_t
 {
     SingleAndMultiplayer = 0,

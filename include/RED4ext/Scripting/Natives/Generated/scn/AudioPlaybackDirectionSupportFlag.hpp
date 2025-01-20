@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class AudioPlaybackDirectionSupportFlag : uint8_t
 {
     Forward = 1,

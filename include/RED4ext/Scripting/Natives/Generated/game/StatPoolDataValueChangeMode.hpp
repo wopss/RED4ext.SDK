@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class StatPoolDataValueChangeMode : uint8_t
 {
     Normal = 0,

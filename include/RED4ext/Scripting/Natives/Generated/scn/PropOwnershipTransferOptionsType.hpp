@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class PropOwnershipTransferOptionsType : uint32_t
 {
     TransferToWorkspotSystem_Automatic = 0,

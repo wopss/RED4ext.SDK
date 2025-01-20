@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class UseWorkspotTier : uint32_t
 {
     Tier3 = 0,

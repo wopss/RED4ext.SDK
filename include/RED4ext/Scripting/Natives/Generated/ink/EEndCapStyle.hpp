@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class EEndCapStyle : uint32_t
 {
     BUTT = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI { 
+namespace AI {
 enum class CoverExposureMethod : uint32_t
 {
     Standing_Step_Left = 0,

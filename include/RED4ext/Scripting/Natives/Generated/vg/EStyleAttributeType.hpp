@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vg { 
+namespace vg {
 enum class EStyleAttributeType : uint32_t
 {
     FillColor = 0,

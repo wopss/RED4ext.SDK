@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class DistractedConditionTarget : uint8_t
 {
     Anyone = 0,

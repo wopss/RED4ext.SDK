@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class StreamingSectorCategory : uint8_t
 {
     Exterior = 0,

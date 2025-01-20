@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class SectionInternalsActorBehaviorMode : uint32_t
 {
     OnlyIfAlive = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class ForcedLodDistance : uint8_t
 {
     Default = 0,

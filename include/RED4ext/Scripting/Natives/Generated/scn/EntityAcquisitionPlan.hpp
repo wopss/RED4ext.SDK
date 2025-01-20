@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace scn { 
+namespace scn {
 enum class EntityAcquisitionPlan : uint32_t
 {
     findInContext = 1,

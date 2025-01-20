@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class DynamicReverbType : uint32_t
 {
     Dynamic = 0,

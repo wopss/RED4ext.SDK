@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim::compression { 
+namespace anim::compression {
 enum class BufferTypePreset : uint8_t
 {
     Spline = 0,

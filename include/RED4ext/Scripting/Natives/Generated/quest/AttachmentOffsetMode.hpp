@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class AttachmentOffsetMode : uint8_t
 {
     UseRealOffset = 0,

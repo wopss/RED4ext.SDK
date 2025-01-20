@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent::ragdoll { 
+namespace ent::ragdoll {
 enum class ActivationRequestType : uint32_t
 {
     Default = 0,

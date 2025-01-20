@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class ContainerType : uint32_t
 {
     AmmoCase = 0,

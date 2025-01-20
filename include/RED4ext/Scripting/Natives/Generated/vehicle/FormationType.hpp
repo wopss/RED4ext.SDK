@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace vehicle { 
+namespace vehicle {
 enum class FormationType : uint8_t
 {
     FORMATION_TRIANGLE = 0,

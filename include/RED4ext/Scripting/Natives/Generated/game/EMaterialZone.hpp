@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EMaterialZone : uint8_t
 {
     Zero = 0,

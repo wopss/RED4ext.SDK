@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::influence { 
+namespace game::influence {
 enum class EBoundingBoxType : uint32_t
 {
     Colider = 0,

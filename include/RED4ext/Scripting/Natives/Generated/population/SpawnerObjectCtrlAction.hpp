@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace population { 
+namespace population {
 enum class SpawnerObjectCtrlAction : uint8_t
 {
     Undefined = 0,

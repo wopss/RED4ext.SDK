@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace nav { 
+namespace nav {
 enum class LocomotionPathSegmentTypes : uint8_t
 {
     Invalid = 0,

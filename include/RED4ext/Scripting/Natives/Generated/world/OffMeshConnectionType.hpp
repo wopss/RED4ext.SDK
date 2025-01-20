@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class OffMeshConnectionType : uint32_t
 {
     Door = 0,

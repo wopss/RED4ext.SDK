@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace AI::behavior { 
+namespace AI::behavior {
 enum class EntityLODConditions : uint32_t
 {
     Crowd = 0,

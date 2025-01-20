@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class InjectLootOperationType : uint32_t
 {
     Inject = 0,

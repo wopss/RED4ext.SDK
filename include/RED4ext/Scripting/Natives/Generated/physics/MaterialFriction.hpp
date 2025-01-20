@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 enum class MaterialFriction : uint32_t
 {
     Enabled = 0,

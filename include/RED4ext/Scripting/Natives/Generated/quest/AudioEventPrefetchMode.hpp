@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class AudioEventPrefetchMode : uint8_t
 {
     AddEventPrefetch = 0,
