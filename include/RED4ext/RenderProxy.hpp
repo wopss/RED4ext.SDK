@@ -61,23 +61,23 @@ struct CRenderProxy : RenderProxyBase
 };
 RED4EXT_ASSERT_SIZE(CRenderProxy, 0xb8);
 
-struct MeshRenderProxy : CRenderProxy
+struct CRenderProxy_Mesh : CRenderProxy
 {
     uint8_t unkB8[0xd8 - 0xb8];  // B8
     CRenderMesh* renderMesh;     // D8
     uint8_t unkE0[0x1c0 - 0xe0]; // E0
 };
-RED4EXT_ASSERT_SIZE(MeshRenderProxy, 0x1c0);
-RED4EXT_ASSERT_OFFSET(MeshRenderProxy, renderMesh, 0xD8);
+RED4EXT_ASSERT_SIZE(CRenderProxy_Mesh, 0x1c0);
+RED4EXT_ASSERT_OFFSET(CRenderProxy_Mesh, renderMesh, 0xD8);
 
-struct CRenderProxy_Handle
+struct CRenderProxyHandle
 {
-    virtual ~CRenderProxy_Handle() = default; // 00
+    virtual ~CRenderProxyHandle() = default; // 00
 
     uint8_t unk08[0x10 - 0x08]; // 08
     IRenderProxy* renderProxy;  // 10
     uint8_t unk18[0x28 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CRenderProxy_Handle, 0x28);
-RED4EXT_ASSERT_OFFSET(CRenderProxy_Handle, renderProxy, 0x10);
+RED4EXT_ASSERT_SIZE(CRenderProxyHandle, 0x28);
+RED4EXT_ASSERT_OFFSET(CRenderProxyHandle, renderProxy, 0x10);
 } // namespace RED4ext

@@ -54,7 +54,7 @@ struct __declspec(align(0x10)) CMesh : res::StreamedResource
     DynArray<Handle<IMaterial>> preloadLocalMaterialInstances;  // 1C0
     DynArray<Ref<CResource>> inplaceResources;                  // 1D0
     DynArray<Handle<mesh::MeshAppearance>> appearances;         // 1E0
-    CRenderMesh* runtimeRenderResource;                         // 1F0
+    CRenderMesh* renderResource;                                // 1F0
     Handle<IRenderResourceBlob> renderResourceBlob;             // 1F8
     bool useRayTracingShadowLODBias;                            // 208
     bool castsRayTracedShadowsFromOriginalGeometry;             // 209

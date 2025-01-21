@@ -23,15 +23,15 @@ struct __declspec(align(0x10)) MorphTargetMesh : res::StreamedResource
     static constexpr const char* NAME = "MorphTargetMesh";
     static constexpr const char* ALIAS = NAME;
 
-    Box boundingBox;                               // 40
-    Ref<CMesh> baseMesh;                           // 60
-    CName baseTextureParamName;                    // 78
-    Ref<ITexture> baseTexture;                     // 80
-    CName baseMeshAppearance;                      // 98
-    Handle<IRenderResourceBlob> blob;              // A0
-    DynArray<MorphTargetMeshEntry> targets;        // B0
-    CRenderMorphTargetMesh* runtimeRenderResource; // C0
-    uint8_t unkC8[0xD0 - 0xC8];                    // C8
+    Box boundingBox;                        // 40
+    Ref<CMesh> baseMesh;                    // 60
+    CName baseTextureParamName;             // 78
+    Ref<ITexture> baseTexture;              // 80
+    CName baseMeshAppearance;               // 98
+    Handle<IRenderResourceBlob> blob;       // A0
+    DynArray<MorphTargetMeshEntry> targets; // B0
+    CRenderMorphTargetMesh* renderResource; // C0
+    uint8_t unkC8[0xD0 - 0xC8];             // C8
 };
 RED4EXT_ASSERT_SIZE(MorphTargetMesh, 0xD0);
 } // namespace RED4ext
