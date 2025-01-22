@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/VertexPackingPackingElement.hpp>
+#include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/VertexPacking/PackingElement.hpp>
 
 namespace RED4ext
 {
@@ -18,7 +18,7 @@ struct VertexLayoutDesc
     static constexpr const char* NAME = "GpuWrapApiVertexLayoutDesc";
     static constexpr const char* ALIAS = NAME;
 
-    StaticArray<GpuWrapApi::VertexPackingPackingElement, 32> elements; // 00
+    StaticArray<GpuWrapApi::VertexPacking::PackingElement, 32> elements; // 00
     StaticArray<uint8_t, 8> slotStrides; // A4
     uint32_t slotMask; // B0
     uint32_t hash; // B4

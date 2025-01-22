@@ -41,18 +41,20 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     {
         size_t i = 0;
 
-        constexpr std::string_view exceptions[] = {"AI", "GpuWrapApi"};
+        constexpr std::string_view exceptions[] = {"AI", "GpuWrapApi", "GpuWrapApiVertexPacking"};
 
         for (const auto& exception : exceptions)
         {
             if (aInput.size() > exception.size() && aInput.starts_with(exception))
             {
-                if (exception == "GpuWrapApi")
-                {
-                    return aInput.substr(0, exception.size());
-                }
                 i = exception.size();
             }
+        }
+
+        // Special case for enums under `GpuWrapApi` i.e. `eTextureType`
+        if ((aInput.starts_with("GpuWrapApi") || aInput.starts_with("GpuWrapApiVertexPacking")) && aInput[i] == 'e')
+        {
+            return aInput.substr(0, i);
         }
 
         // Special case of "in", this will break directory layout for "ink", "interop", etc..

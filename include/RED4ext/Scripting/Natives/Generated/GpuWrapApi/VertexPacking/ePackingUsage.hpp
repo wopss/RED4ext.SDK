@@ -7,8 +7,8 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace GpuWrapApi {
-enum class VertexPackingePackingUsage : uint8_t
+namespace GpuWrapApi::VertexPacking {
+enum class ePackingUsage : uint8_t
 {
     PS_SysPosition = 0,
     PS_Position = 1,
@@ -37,8 +37,8 @@ enum class VertexPackingePackingUsage : uint8_t
     PS_Max = 24,
     PS_Invalid = 255,
 };
-} // namespace GpuWrapApi
-using GpuWrapApiVertexPackingePackingUsage = GpuWrapApi::VertexPackingePackingUsage;
+} // namespace GpuWrapApi::VertexPacking
+using GpuWrapApiVertexPackingePackingUsage = GpuWrapApi::VertexPacking::ePackingUsage;
 } // namespace RED4ext
 
 // clang-format on
