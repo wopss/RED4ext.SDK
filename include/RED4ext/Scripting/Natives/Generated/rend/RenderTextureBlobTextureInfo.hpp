@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Scripting/Natives/Generated/GpuWrapApieTextureType.hpp>
+#include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/eTextureType.hpp>
 
 namespace RED4ext
 {
@@ -17,7 +17,7 @@ struct RenderTextureBlobTextureInfo
     static constexpr const char* NAME = "rendRenderTextureBlobTextureInfo";
     static constexpr const char* ALIAS = NAME;
 
-    GpuWrapApieTextureType type; // 00
+    GpuWrapApi::eTextureType type; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
     uint32_t textureDataSize; // 04
     uint32_t sliceSize; // 08

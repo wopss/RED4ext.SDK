@@ -47,6 +47,10 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         {
             if (aInput.size() > exception.size() && aInput.starts_with(exception))
             {
+                if(exception == "GpuWrapApi")
+                {
+                    return aInput.substr(0, exception.size());
+                }
                 i = exception.size();
             }
         }
