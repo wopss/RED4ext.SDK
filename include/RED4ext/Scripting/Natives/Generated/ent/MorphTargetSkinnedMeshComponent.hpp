@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/entMorphTargetSkinnedMeshComponent.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(ent::MorphTargetSkinnedMeshComponent, 0x370);
+using entMorphTargetSkinnedMeshComponent = ent::MorphTargetSkinnedMeshComponent;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -45,5 +54,6 @@ RED4EXT_ASSERT_SIZE(MorphTargetSkinnedMeshComponent, 0x370);
 } // namespace ent
 using entMorphTargetSkinnedMeshComponent = ent::MorphTargetSkinnedMeshComponent;
 } // namespace RED4ext
+*/
 
 // clang-format on

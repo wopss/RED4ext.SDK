@@ -125,6 +125,21 @@ constexpr std::uint32_t Handle_ctor = 0xBA0C115D;
 constexpr std::uint32_t Handle_DecWeakRef = 0x333B1404;
 #pragma endregion
 
+#pragma region IRenderProxy
+constexpr std::uint32_t IRenderProxy_sub_00 = 302583262UL;
+constexpr std::uint32_t IRenderProxy_sub_08 = 3505328647UL;
+constexpr std::uint32_t IRenderProxy_sub_18 = 2756580845UL;
+constexpr std::uint32_t IRenderProxy_sub_58 = 2462126272UL;
+constexpr std::uint32_t IRenderProxy_sub_60 = 3491501770UL;
+constexpr std::uint32_t IRenderProxy_sub_78 = 2542474580UL;
+constexpr std::uint32_t IRenderProxy_sub_80 = 510274732UL;
+constexpr std::uint32_t IRenderProxy_sub_88 = 3724941976UL;
+constexpr std::uint32_t IRenderProxy_sub_90 = 1894391003UL;
+constexpr std::uint32_t IRenderProxy_sub_98 = 3516862860UL;
+constexpr std::uint32_t IRenderProxy_sub_A8 = 4096926792UL;
+constexpr std::uint32_t IRenderProxy_sub_B0 = 1468405902UL;
+#pragma endregion
+
 #pragma region IScriptable
 constexpr std::uint32_t IScriptable_sub_D8 = 0xF8E41DDF;
 constexpr std::uint32_t IScriptable_DestructValueHolder = 0x3521331;

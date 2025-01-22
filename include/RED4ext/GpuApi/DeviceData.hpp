@@ -14,7 +14,7 @@ namespace GpuApi
 template<typename T, size_t MAX_SIZE>
 struct ResourceContainer
 {
-    struct Resource
+    struct ResourceHandle
     {
         bool IsUsed() const;
 
@@ -56,7 +56,7 @@ struct ResourceContainer
 
     SpinLock& spinLockRef;         // 00 - Always points to SDeviceDataBase::resourcesSpinLock.
     std::atomic_int32_t numUnused; // 08 - Defaults to MaxSize.
-    Resource resources[MAX_SIZE];
+    ResourceHandle resources[MAX_SIZE];
     uint16_t unusedIndices[MAX_SIZE]; // These are indices, not IDs!
 };
 
@@ -94,6 +94,52 @@ RED4EXT_ASSERT_OFFSET(SDeviceData, directCommandQueue, 0x13bc4d0);
 RED4EXT_ASSERT_OFFSET(SDeviceData, memoryAllocator, 0x13bc540);
 
 SDeviceData* GetDeviceData();
+
+template<typename T, size_t MAX_SIZE>
+bool ResourceContainer<T, MAX_SIZE>::ResourceHandle::IsUsed() const
+{
+    return refCount >= 0;
+}
+
+template<typename T, size_t MAX_SIZE>
+bool ResourceContainer<T, MAX_SIZE>::IsUsedID(const uint32_t id) const
+{
+    return IsValidID(id) && resources[IDToIndex(id)].IsUsed();
+}
+
+template<typename T, size_t MAX_SIZE>
+bool ResourceContainer<T, MAX_SIZE>::IsUnusedID(const uint32_t id) const
+{
+    return IsValidID(id) && !resources[IDToIndex(id)].IsUsed();
+}
+
+template<typename T, size_t MAX_SIZE>
+bool ResourceContainer<T, MAX_SIZE>::IsEmpty() const
+{
+    assert(numUnused <= MAX_SIZE);
+    return numUnused == MAX_SIZE;
+}
+
+template<typename T, size_t MAX_SIZE>
+bool ResourceContainer<T, MAX_SIZE>::IsFull() const
+{
+    assert(numUnused <= MAX_SIZE);
+    return numUnused == 0;
+}
+
+template<typename T, size_t MAX_SIZE>
+T& ResourceContainer<T, MAX_SIZE>::GetData(uint32_t id)
+{
+    assert(IsUsedID(id));
+    return resources[IDToIndex(id)].instance;
+}
+
+template<typename T, size_t MAX_SIZE>
+const T& ResourceContainer<T, MAX_SIZE>::GetData(uint32_t id) const
+{
+    assert(IsUsedID(id));
+    return resources[IDToIndex(id)].instance;
+}
 } // namespace GpuApi
 } // namespace RED4ext
 

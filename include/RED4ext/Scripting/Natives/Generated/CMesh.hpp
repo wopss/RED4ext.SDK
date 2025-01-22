@@ -4,6 +4,14 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/CMesh.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(CMesh, 0x230);
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -65,5 +73,6 @@ struct __declspec(align(0x10)) CMesh : res::StreamedResource
 };
 RED4EXT_ASSERT_SIZE(CMesh, 0x230);
 } // namespace RED4ext
+*/
 
 // clang-format on

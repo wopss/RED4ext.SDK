@@ -110,14 +110,7 @@ one:
     static constexpr const char* NAME = "vehicleBaseObject";
 ```
 
-3. Remove `__declspec()` declaration:
-
-```diff
-- struct __declspec(align(0x10)) BaseObject : game::Object
-+ struct BaseObject : game::Object
-```
-
-4. Declare the new member based on its offset and type:
+3. Declare the new member based on its offset and type:
 
 ```diff
 {
@@ -135,7 +128,7 @@ one:
 };
 ```
 
-5. Assert the offset of known members:
+4. Assert the offset of known members:
 
 ```diff
 };
@@ -149,7 +142,7 @@ using VehicleObject = vehicle::BaseObject;
 } // namespace RED4ext
 ```
 
-6. Remove these comments:
+5. Remove these comments:
 
 ```diff
 -// clang-format off
