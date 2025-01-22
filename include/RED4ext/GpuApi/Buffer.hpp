@@ -5,6 +5,8 @@
 #include <d3d12.h>
 #include <wrl/client.h>
 
+#include <cstdint>
+
 namespace RED4ext
 {
 namespace GpuApi

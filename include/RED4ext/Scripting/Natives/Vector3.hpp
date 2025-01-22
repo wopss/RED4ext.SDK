@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+
 #include <cstdint>
 
 namespace RED4ext

@@ -16,7 +16,7 @@ RED4EXT_INLINE HRESULT D3D12MA::Allocator::CreateResource(const ALLOCATION_DESC*
 {
     using func_t = HRESULT (*)(Allocator*, const ALLOCATION_DESC*, const D3D12_RESOURCE_DESC*, D3D12_RESOURCE_STATES,
                                const D3D12_CLEAR_VALUE*, Allocation**, REFIID, void**);
-    static RED4ext::UniversalRelocFunc<func_t> func(RED4ext::Detail::AddressHashes::Allocator_CreateResource);
+    static const RED4ext::UniversalRelocFunc<func_t> func(RED4ext::Detail::AddressHashes::Allocator_CreateResource);
     return func(this, pAllocDesc, pResourceDesc, InitialResourceState, pOptimizedClearValue, ppAllocation, riidResource,
                 ppvResource);
 }

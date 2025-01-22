@@ -1,6 +1,8 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+
+#include <cmath>
 #include <cstdint>
 
 namespace RED4ext
@@ -28,7 +30,7 @@ struct Vector4
 
     inline Vector4& operator=(const Vector4& aOther)
     {
-        if (this != std::addressof(aOther))
+        if (this != &aOther)
         {
             X = aOther.X;
             Y = aOther.Y;
