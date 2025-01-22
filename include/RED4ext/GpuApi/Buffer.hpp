@@ -11,6 +11,17 @@ namespace RED4ext
 {
 namespace GpuApi
 {
+enum eBufferUsageType : uint8_t
+{
+    BUT_Default,
+    BUT_Immutable,
+    BUT_Readback,
+    BUT_Dynamic_Legacy,
+    BUT_Transient,
+    BUT_Mapped,
+    BUT_MAX
+};
+
 struct SBufferData
 {
     uint32_t bufferSize;                                   // 00

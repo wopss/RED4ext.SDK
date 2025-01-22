@@ -40,10 +40,14 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     auto GetPrefix = [](const std::string& aInput) -> std::string {
         size_t i = 0;
 
-        // Special case for AI
-        if (aInput.size() >= 2 && aInput[0] == 'A' && aInput[1] == 'I')
+        constexpr std::string_view exceptions[] = {"AI", "GpuWrapApi"};
+
+        for (const auto& exception : exceptions)
         {
-            i = 2;
+            if (aInput.size() > exception.size() && aInput.starts_with(exception))
+            {
+                i = exception.size();
+            }
         }
 
         // Special case of "in", this will break directory layout for "ink", "interop", etc..
