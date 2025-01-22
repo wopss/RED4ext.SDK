@@ -58,7 +58,7 @@ struct ISerializable
     operator const WeakHandle<ISerializable>&() const noexcept;
     operator Handle<ISerializable>() noexcept;
 
-    WeakHandle<ISerializable> ref;   // 00 - Initialized in Handle ctor
+    WeakHandle<ISerializable> ref;   // 08 - Initialized in Handle ctor
     WeakHandle<ISerializable> unk18; // 18
     uint64_t unk28;                  // 28 - Global incremental ID, used in serialization
 };
