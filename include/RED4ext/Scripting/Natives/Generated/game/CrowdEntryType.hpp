@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class CrowdEntryType : uint8_t
 {
     Pedestrian = 0,

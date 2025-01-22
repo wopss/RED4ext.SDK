@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EquipmentSetType : uint32_t
 {
     Offensive = 0,

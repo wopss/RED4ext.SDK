@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EAnimGraphCompareFunc : uint32_t
 {
     AGCF_Equal = 0,

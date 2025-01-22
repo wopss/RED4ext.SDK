@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class EntityEmitterContextType : uint32_t
 {
     Entity_Emitter = 0, // Entity Emitter

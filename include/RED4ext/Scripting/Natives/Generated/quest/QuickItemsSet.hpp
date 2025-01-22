@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class QuickItemsSet : uint32_t
 {
     Q001_Kereznikov_Heal_Phone = 0,

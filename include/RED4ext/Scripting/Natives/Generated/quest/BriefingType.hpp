@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class BriefingType : uint32_t
 {
     Fullscreen = 0,

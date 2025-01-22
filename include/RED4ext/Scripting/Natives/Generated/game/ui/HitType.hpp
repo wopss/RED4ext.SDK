@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class HitType : uint32_t
 {
     Miss = 0,

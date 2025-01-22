@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class ObjectTagExt : uint32_t
 {
     Default = 1634100548,

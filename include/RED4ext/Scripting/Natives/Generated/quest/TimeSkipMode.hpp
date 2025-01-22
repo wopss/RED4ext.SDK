@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class TimeSkipMode : uint8_t
 {
     PreSkip = 0,

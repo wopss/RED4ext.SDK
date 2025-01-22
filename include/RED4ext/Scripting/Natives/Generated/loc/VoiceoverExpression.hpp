@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace loc { 
+namespace loc {
 enum class VoiceoverExpression : uint8_t
 {
     Vo_Expression_Spoken = 0,

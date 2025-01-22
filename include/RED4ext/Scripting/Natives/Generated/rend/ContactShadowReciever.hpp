@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class ContactShadowReciever : uint8_t
 {
     CSR_None = 0,

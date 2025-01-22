@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 enum class MaterialTagVisibility : uint8_t
 {
     None = 0,

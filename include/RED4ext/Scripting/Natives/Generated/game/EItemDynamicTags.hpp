@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 struct EItemDynamicTags
 {
     uint8_t Quest : 1; // 0

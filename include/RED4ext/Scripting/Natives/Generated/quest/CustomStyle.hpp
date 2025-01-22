@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class CustomStyle : uint32_t
 {
     PlacidePhone = 0,

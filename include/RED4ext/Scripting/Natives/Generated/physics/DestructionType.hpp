@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 struct DestructionType
 {
     uint16_t DT_PhysicalNode : 1; // 0

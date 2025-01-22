@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace text { 
+namespace text {
 enum class OverflowPolicy : uint8_t
 {
     None = 0,

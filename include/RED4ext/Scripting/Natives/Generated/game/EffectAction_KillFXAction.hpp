@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EffectAction_KillFXAction : uint32_t
 {
     Stop = 0,

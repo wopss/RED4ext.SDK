@@ -19,6 +19,10 @@ The project is using [C++20](https://en.cppreference.com/w/cpp/20), any C++20 fe
 ### General
 
 * Use [EditorConfig](https://editorconfig.org/) and [clang-format](https://clang.llvm.org/docs/ClangFormat.html) to style your code before pushing.
+  * Ideally, set up pre-commit hook using [pre-commit](https://pre-commit.com).
+    All that should be required to set it up is to have [Python 3.x](https://www.python.org/) with [pip](https://pypi.org/project/pip/) installed and run the following command inside of the cloned repository folder: `pip install pre-commit && pre-commit install`
+    * Note that first commit after setting up the hook will take longer as it has to download required packages.
+    * You don't have to run it every single time there is some update, hook is auto-updated after initial installation.
 * Use names that describe the purpose or intent of the object. Names should be self-explanatory and easily recognizable in the context.
 * Minimize the use of abbreviations that would likely be unknown to someone outside the project.
 * Use `auto` whenever it is possible, if the intended type is the correct one (in case of primitive types).
@@ -74,15 +78,15 @@ Fix #1
 
 ## Declare reverse engineered content
 
-SDK doesn't include every member of classes. Most of the knowledge is generated using [RED4.RTTIDumper](https://github.com/WopsS/RED4.RTTIDumper), 
+SDK doesn't include every member of classes. Most of the knowledge is generated using [RED4.RTTIDumper](https://github.com/WopsS/RED4.RTTIDumper),
 through the RTTI system.
 
-Say you discovered a new member in a class, and you want to write a PR. This section will give you a tour to make it 
+Say you discovered a new member in a class, and you want to write a PR. This section will give you a tour to make it
 right and compliant with the SDK.
 
 ### Prepare your environment
 
-Clone and setup [RED4.RTTIDumper](https://github.com/WopsS/RED4.RTTIDumper), read through the [build](https://github.com/WopsS/RED4.RTTIDumper?tab=readme-ov-file#build-instructions) 
+Clone and setup [RED4.RTTIDumper](https://github.com/WopsS/RED4.RTTIDumper), read through the [build](https://github.com/WopsS/RED4.RTTIDumper?tab=readme-ov-file#build-instructions)
 instructions.
 Make sure to update RED4ext.SDK dependency, in `<RTTIDumper>/deps/red4ext.sdk` to use the latest snapshot of the SDK.
 You can comment each line adding a [custom writer](https://github.com/WopsS/RED4.RTTIDumper/blob/4feaad12de106e395b7a637031432ea3caa2cf10/src/Main.cpp#L29).
@@ -158,12 +162,12 @@ using VehicleObject = vehicle::BaseObject;
 4. Copy the new generated folder `Natives` from the dump and paste it within RED4ext.SDK.
 5. If you see a difference on files you didn't touch, ask around before proceeding.
 6. It should have [generated a stub](https://github.com/WopsS/RED4ext.SDK/blob/8730efb3aa0fed84e040997ca3e07571d5c86803/include/RED4ext/Scripting/Natives/Generated/vehicle/BaseObject.hpp)
-   for the file in `Generated` folder. It *disables* the generated file using comments, and include the native 
+   for the file in `Generated` folder. It *disables* the generated file using comments, and include the native
    declaration we added.
 
 ### Ready to push
 
-After isolating the changes we made in the clone of SDK in RTTI.Dumper, we can mirror them in our own clone of 
+After isolating the changes we made in the clone of SDK in RTTI.Dumper, we can mirror them in our own clone of
 RED4ext.SDK.
 You are now ready to write a nice commit, push and send a PR.
 

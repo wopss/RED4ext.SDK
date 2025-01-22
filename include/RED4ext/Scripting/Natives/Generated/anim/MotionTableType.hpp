@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class MotionTableType : uint32_t
 {
     MTT_None = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace physics { 
+namespace physics {
 enum class FractureFieldEffect : uint8_t
 {
     FE_Fracture = 0,

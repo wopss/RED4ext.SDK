@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class WindShapeAnchorPointDepth : uint32_t
 {
     AP_CENTER = 0,

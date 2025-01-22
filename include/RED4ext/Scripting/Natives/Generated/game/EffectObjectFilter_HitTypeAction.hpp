@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EffectObjectFilter_HitTypeAction : uint32_t
 {
     Accept = 0,

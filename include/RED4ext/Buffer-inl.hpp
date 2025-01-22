@@ -153,6 +153,5 @@ RED4EXT_INLINE void RED4ext::DeferredDataBufferCopyToken::OnLoaded(LoadedCallbac
 {
     JobQueue jobQueue;
     jobQueue.Wait(job);
-    jobQueue.Dispatch([self = self.Lock(), callback = std::move(aCallback)]()
-                      { callback(self); });
+    jobQueue.Dispatch([self = self.Lock(), callback = std::move(aCallback)]() { callback(self); });
 }

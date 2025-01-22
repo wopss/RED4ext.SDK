@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world { 
+namespace world {
 enum class PrefabProxyMeshOnly : uint8_t
 {
     SettingFromResource = 0,

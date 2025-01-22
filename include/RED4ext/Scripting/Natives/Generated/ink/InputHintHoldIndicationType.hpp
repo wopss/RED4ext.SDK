@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ink { 
+namespace ink {
 enum class InputHintHoldIndicationType : uint8_t
 {
     FromInputConfig = 0,

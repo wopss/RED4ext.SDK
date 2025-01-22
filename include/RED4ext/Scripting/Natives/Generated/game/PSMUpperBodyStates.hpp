@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class PSMUpperBodyStates : uint32_t
 {
     Default = 0,

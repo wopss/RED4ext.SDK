@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class CharacterHitEventType : uint32_t
 {
     Bullet = 0,

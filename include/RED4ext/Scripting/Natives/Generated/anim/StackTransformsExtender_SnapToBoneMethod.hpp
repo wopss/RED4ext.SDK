@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class StackTransformsExtender_SnapToBoneMethod : uint32_t
 {
     NoSnapping = 0,

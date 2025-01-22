@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class AnimParamSlotFunction : uint32_t
 {
     RenderingPlane = 0,

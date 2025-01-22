@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class BaseMenuGameControllerPuppetGenderInfo : uint32_t
 {
     Male = 0,

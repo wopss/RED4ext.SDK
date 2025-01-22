@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace anim { 
+namespace anim {
 enum class EAnimGraphAdditiveType : uint32_t
 {
     AGAT_Local = 0,

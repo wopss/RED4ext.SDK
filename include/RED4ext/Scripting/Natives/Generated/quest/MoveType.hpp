@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class MoveType : uint32_t
 {
     MoveOnSpline = 0,

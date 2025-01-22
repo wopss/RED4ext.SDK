@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace quest { 
+namespace quest {
 enum class PhoneCallVisuals : uint32_t
 {
     Default = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::ui { 
+namespace game::ui {
 enum class AuthorisationNotificationType : uint32_t
 {
     Unknown = 0,

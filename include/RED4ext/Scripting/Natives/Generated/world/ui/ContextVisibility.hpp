@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui {
 struct ContextVisibility
 {
     uint64_t SceneDefault : 1; // 0

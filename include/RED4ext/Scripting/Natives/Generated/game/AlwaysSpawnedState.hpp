@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class AlwaysSpawnedState : uint8_t
 {
     default__false_ = 0, // default (false)

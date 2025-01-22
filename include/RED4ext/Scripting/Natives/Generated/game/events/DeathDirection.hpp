@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::events { 
+namespace game::events {
 enum class DeathDirection : uint32_t
 {
     Undefined = 0,

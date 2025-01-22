@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace ent { 
+namespace ent {
 enum class RenderToTextureMode : uint8_t
 {
     Shaded = 0,

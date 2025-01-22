@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class SpawnInViewState : uint8_t
 {
     default__true_ = 0, // default (true)

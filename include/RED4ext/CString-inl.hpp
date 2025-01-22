@@ -26,7 +26,8 @@ RED4EXT_INLINE RED4ext::CString::CString(const char* aText, Memory::IAllocator* 
 RED4EXT_INLINE RED4ext::CString::CString(const char* aText, uint32_t aLength, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    static UniversalRelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Detail::AddressHashes::CString_ctor_span);
+    static UniversalRelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(
+        Detail::AddressHashes::CString_ctor_span);
     func(this, aText, aLength);
 }
 
@@ -40,7 +41,8 @@ RED4EXT_INLINE RED4ext::CString::CString(const std::string& aText, Memory::IAllo
 RED4EXT_INLINE RED4ext::CString::CString(const std::string_view& aText, Memory::IAllocator* aAllocator)
     : CString(aAllocator)
 {
-    static UniversalRelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(Detail::AddressHashes::CString_ctor_span);
+    static UniversalRelocFunc<CString* (*)(CString*, const char*, uint32_t)> func(
+        Detail::AddressHashes::CString_ctor_span);
     func(this, aText.data(), static_cast<uint32_t>(aText.size()));
 }
 

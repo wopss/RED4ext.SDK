@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class MetaQuest : uint32_t
 {
     MetaQuest1 = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game::data { 
+namespace game::data {
 enum class GrenadeDeliveryMethodType : uint32_t
 {
     Homing = 0,

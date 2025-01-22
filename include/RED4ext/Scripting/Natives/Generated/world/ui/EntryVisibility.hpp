@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace world::ui { 
+namespace world::ui {
 enum class EntryVisibility : uint32_t
 {
     TierVisibility = 0,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace shadows { 
+namespace shadows {
 enum class ShadowCastingMode : uint8_t
 {
     Default = 0,

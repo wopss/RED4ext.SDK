@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace audio { 
+namespace audio {
 enum class AdvertIndoorFilter : uint32_t
 {
     Always = 0,

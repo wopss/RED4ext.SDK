@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class StatPoolDataBonusType : uint8_t
 {
     None = 0,

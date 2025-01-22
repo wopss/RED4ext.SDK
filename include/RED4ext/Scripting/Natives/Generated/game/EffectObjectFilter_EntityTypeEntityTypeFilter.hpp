@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace game { 
+namespace game {
 enum class EffectObjectFilter_EntityTypeEntityTypeFilter : uint32_t
 {
     Puppet = 0,

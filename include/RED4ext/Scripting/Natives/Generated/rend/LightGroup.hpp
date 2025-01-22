@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-namespace rend { 
+namespace rend {
 enum class LightGroup : uint8_t
 {
     LG_Group0 = 0,
