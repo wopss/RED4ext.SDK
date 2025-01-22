@@ -98,7 +98,6 @@ public:
     }
 
     T* instance;
-
 };
 RED4EXT_ASSERT_SIZE(UniquePtr<void>, 0x8);
 RED4EXT_ASSERT_OFFSET(UniquePtr<void>, instance, 0x0);
