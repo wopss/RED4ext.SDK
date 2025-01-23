@@ -3,6 +3,7 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/Memory/UniquePtr.hpp>
 #include <RED4ext/StringView.hpp>
 
 #include <d3d12.h>
@@ -24,6 +25,10 @@ enum class CommandListType
 
 struct CommandListContext
 {
+    using AllocatorType = Memory::CommandListsAllocator;
+
+    ~CommandListContext();
+
     void AddPendingBarrier(const D3D12_RESOURCE_BARRIER& aBarrier);
     void Close();
     void FlushPendingBarriers();
@@ -46,9 +51,8 @@ RED4EXT_ASSERT_OFFSET(CommandListContext, commandList, 0x030);
 RED4EXT_ASSERT_OFFSET(CommandListContext, type, 0x068);
 RED4EXT_ASSERT_OFFSET(CommandListContext, pendingBarriers, 0x528);
 
-// TODO: Change to return unique ptr.
-CommandListContext* AcquireFreeCommandList(CommandListType aType, const StringView& aDebugName = "",
-                                           uint64_t aHash = 0);
+UniquePtr<CommandListContext> AcquireFreeCommandList(CommandListType aType, const StringView& aDebugName = "",
+                                                     uint64_t aHash = 0);
 
 } // namespace GpuApi
 } // namespace RED4ext
