@@ -17,6 +17,7 @@
 #include <RED4ext/Hashing/Murmur3.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Memory/SharedPtr.hpp>
+#include <RED4ext/Memory/UniquePtr.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>
 
