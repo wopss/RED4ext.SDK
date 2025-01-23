@@ -43,7 +43,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
         static constexpr std::pair<std::string_view, bool> uniqueNamespaces[] = {
             {"AI", false}, {"inGame", true}, {"GpuWrapApi", true}, {"GpuWrapApiVertexPacking", true}};
-            
+
         for (const auto& [name, isSpecialCase] : uniqueNamespaces)
         {
             if (aInput.size() > name.size() && aInput.starts_with(name))
