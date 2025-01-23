@@ -41,26 +41,34 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     {
         size_t i = 0;
 
-        constexpr std::string_view exceptions[] = {"AI", "GpuWrapApi", "GpuWrapApiVertexPacking"};
+        static constexpr std::pair<std::string_view, bool> uniqueNamespaces[] = {
+            {"AI", false},
+            {"inGame", true},
+            {"GpuWrapApi", true},
+            {"GpuWrapApiVertexPacking", true}
+        };
 
-        for (const auto& exception : exceptions)
+        for (const auto& [name, isSpecialCase] : uniqueNamespaces)
         {
-            if (aInput.size() > exception.size() && aInput.starts_with(exception))
+            if (aInput.size() > name.size() && aInput.starts_with(name))
             {
-                i = exception.size();
+                i = name.size();
+
+                if (isSpecialCase)
+                {
+                    // Special case of "in", this will break directory layout for "ink", "interop", etc..
+                    if (aInput.starts_with("inGame"))
+                    {
+                        return "";
+                    }
+
+                    // Special case for enums under `GpuWrapApi` i.e. `eTextureType`
+                    if (name.starts_with("GpuWrapApi") && aInput[i] == 'e')
+                    {
+                        return aInput.substr(0, i);
+                    }
+                }
             }
-        }
-
-        // Special case for enums under `GpuWrapApi` i.e. `eTextureType`
-        if ((aInput.starts_with("GpuWrapApi") || aInput.starts_with("GpuWrapApiVertexPacking")) && aInput[i] == 'e')
-        {
-            return aInput.substr(0, i);
-        }
-
-        // Special case of "in", this will break directory layout for "ink", "interop", etc..
-        if (aInput.starts_with("inGame"))
-        {
-            return "";
         }
 
         for (; i < aInput.size(); ++i)
