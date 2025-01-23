@@ -79,6 +79,7 @@ constexpr std::uint32_t CNamePool_Get = 0x68DF07DC;
 
 #pragma region CommandListContext
 constexpr std::uint32_t GetFreeCommandList = 1926836641UL;
+constexpr std::uint32_t CommandListContext_dtor = 4228123904UL;
 constexpr std::uint32_t CommandListContext_AddPendingBarrier = 2814122829UL;
 constexpr std::uint32_t CommandListContext_Close = 1163138096UL;
 constexpr std::uint32_t CommandListContext_FlushPendingBarriers = 2786924000UL;
