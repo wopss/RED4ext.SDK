@@ -42,7 +42,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         size_t i = 0;
 
         static constexpr std::pair<std::string_view, bool> uniqueNamespaces[] = {
-            {"AI", false}, {"inGame", true}, {"GpuWrapApi", true}, {"GpuWrapApiVertexPacking", true}};
+            {"AI", false}, {"GpuWrapApi", true}, {"GpuWrapApiVertexPacking", true}};
 
         for (const auto& [name, isSpecialCase] : uniqueNamespaces)
         {
@@ -52,19 +52,15 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
                 if (isSpecialCase)
                 {
-                    // Special case of "in", this will break directory layout for "ink", "interop", etc..
-                    if (aInput.starts_with("inGame"))
-                    {
-                        return "";
-                    }
-
-                    // Special case for enums under `GpuWrapApi` i.e. `eTextureType`
-                    if (name.starts_with("GpuWrapApi") && aInput[i] == 'e')
-                    {
-                        return aInput.substr(0, i);
-                    }
+                    return aInput.substr(0, i);
                 }
             }
+        }
+
+        // Special case of "in", this will break directory layout for "ink", "interop", etc..
+        if (aInput.starts_with("inGame"))
+        {
+            return "";
         }
 
         for (; i < aInput.size(); ++i)
