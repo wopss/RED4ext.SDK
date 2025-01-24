@@ -39,7 +39,7 @@ RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const CString& a
 
 RED4EXT_INLINE const char* RED4ext::CNamePool::Get(const CName& aName)
 {
-    static UniversalRelocFunc<const char* (*)(const CName&)> func(Detail::AddressHashes::CNamePool_Get);
+    static UniversalRelocFunc<const char* (*)(const CName&)> func(Detail::AddressHashes::CNamePool_GetString);
     auto result = func(aName);
     if (result)
     {
@@ -57,7 +57,7 @@ RED4EXT_INLINE RED4ext::CNamePool* RED4ext::CNamePool::GetPool()
 
 RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNodeInner::Outer()
 {
-    return reinterpret_cast<RED4ext::CNamePoolNode*>(reinterpret_cast<int*>(this) - 1);
+    return reinterpret_cast<RED4ext::CNamePoolNode*>(reinterpret_cast<uintptr_t>(this) - offsetof(RED4ext::CNamePoolNode, inner));
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInList() const
@@ -67,17 +67,17 @@ RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInL
 
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInHashBin()
 {
-    return this->next;
+    return next;
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInList() const
 {
-    return reinterpret_cast<RED4ext::CNamePoolNode*>(reinterpret_cast<int64_t>(&this->inner) + this->len);
+    return reinterpret_cast<RED4ext::CNamePoolNode*>(reinterpret_cast<uintptr_t>(&inner) + len);
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInHashBin()
 {
-    return this->inner.next->Outer();
+    return inner.next->Outer();
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator& RED4ext::CNamePoolAllocator::Iterator::operator++()
@@ -122,7 +122,7 @@ RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator RED4ext::CNamePoolAllocator
 
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner*& RED4ext::CNamePoolHashmap::operator[](const uint64_t aKey)
 {
-    return this->nodesByHash[aKey & 0x7ffff];
+    return nodesByHash[aKey & 0x7ffff];
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::Begin(const CName& aKey)
@@ -147,7 +147,7 @@ RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::En
 
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner*& RED4ext::CNamePoolHashmap::operator[](const CName& aKey)
 {
-    return this->nodesByHash[aKey.hash & 0x7ffff];
+    return nodesByHash[aKey.hash & 0x7ffff];
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator& RED4ext::CNamePoolHashmap::Iterator::operator++()

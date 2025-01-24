@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DynArray.hpp"
+#include <RED4ext/DynArray.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 
@@ -156,28 +156,28 @@ struct CNamePoolAllocator
     CNamePoolNode* listEnd; // 10
     // I believe these three pointers would be used if more space than `head` has available is needed, but the amount
     // of allocated space is so large that it shouldn't come up
-    CNamePoolNode* unkNodePtr;  // 18
-    CNamePoolNode* unkNodePtr2; // 20
-    CNamePoolNode* unkNodePtr3; // 28
+    CNamePoolNode* unk18;  // 18
+    CNamePoolNode* unk20; // 20
+    CNamePoolNode* unk28; // 28
     // potentially padding
     char unk[8]; // 30
     // some kind of memory allocation handler, or something like that
-    void* unkPtr; // 38
+    void* unk38; // 38
     // should always be 0x8_0000
-    uint32_t unk2; // 40
+    uint32_t unk40; // 40
     // should always be 3
-    uint32_t unk3; // 44
+    uint32_t unk44; // 44
 };
 RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, head, 0x00);
 RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, endAvailableSpace, 0x08);
 RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, listEnd, 0x10);
-RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unkNodePtr, 0x18);
-RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unkNodePtr2, 0x20);
-RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unkNodePtr3, 0x28);
+RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk18, 0x18);
+RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk20, 0x20);
+RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk28, 0x28);
 RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk, 0x30);
-RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unkPtr, 0x38);
-RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk2, 0x40);
-RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk3, 0x44);
+RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk38, 0x38);
+RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk40, 0x40);
+RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, unk44, 0x44);
 RED4EXT_ASSERT_SIZE(CNamePoolAllocator, 0x48);
 
 /**
@@ -336,7 +336,7 @@ struct CNamePool
     SharedSpinLock listLock; // 400018
 
     // potentially padding
-    uint64_t unk2[4]; // 400020
+    uint64_t unk400020[4]; // 400020
 
     /// @brief Essentially an allocation arena for `CNamePoolNode`s
     /// @sa CNamePoolAllocator
@@ -346,7 +346,7 @@ RED4EXT_ASSERT_OFFSET(CNamePool, hashmapLock, 0x00);
 RED4EXT_ASSERT_OFFSET(CNamePool, nodes, 0x08);
 RED4EXT_ASSERT_OFFSET(CNamePool, hashmap, 0x18);
 RED4EXT_ASSERT_OFFSET(CNamePool, listLock, 0x400018);
-RED4EXT_ASSERT_OFFSET(CNamePool, unk2, 0x400020);
+RED4EXT_ASSERT_OFFSET(CNamePool, unk400020, 0x400020);
 RED4EXT_ASSERT_OFFSET(CNamePool, allocator, 0x400040);
 RED4EXT_ASSERT_SIZE(CNamePool, 0x400088);
 
