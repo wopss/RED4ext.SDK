@@ -75,6 +75,7 @@ constexpr std::uint32_t CNamePool_AddCstr = 0xA00C9B;
 constexpr std::uint32_t CNamePool_AddCString = 0xFFD61709;
 constexpr std::uint32_t CNamePool_AddPair = 0xD9840BD8;
 constexpr std::uint32_t CNamePool_Get = 0x68DF07DC;
+constexpr std::uint32_t CNamePool_GetPool = 0xC5E711D3;
 #pragma endregion
 
 #pragma region CommandListContext
