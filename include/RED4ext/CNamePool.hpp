@@ -1,8 +1,8 @@
 #pragma once
 
-#include <RED4ext/DynArray.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
+#include <RED4ext/DynArray.hpp>
 
 namespace RED4ext
 {
@@ -18,6 +18,7 @@ struct CNamePoolNode;
 struct CNamePoolNodeInner
 {
     CNamePoolNodeInner() = delete;
+
     /// @brief The CName corresponding to #str (in other words, the FNV1a64 hash of #str)
     const CName cname; // 00
 
@@ -70,6 +71,7 @@ RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, str, 0x14);
 struct CNamePoolNode
 {
     CNamePoolNode() = delete;
+
 #pragma pack(push, 4)
     /// @brief The size of #inner in bytes
     const uint32_t len; // 00
@@ -156,7 +158,7 @@ struct CNamePoolAllocator
     CNamePoolNode* listEnd; // 10
     // I believe these three pointers would be used if more space than `head` has available is needed, but the amount
     // of allocated space is so large that it shouldn't come up
-    CNamePoolNode* unk18;  // 18
+    CNamePoolNode* unk18; // 18
     CNamePoolNode* unk20; // 20
     CNamePoolNode* unk28; // 28
     // potentially padding
@@ -307,13 +309,13 @@ struct CNamePool
      * @param aName The CName to find the string value of
      * @return The string value of @p aName, if it was ever added to the pool, otherwise null
      */
-    static const char* Get(const CName& aName);
+    static const char* GetString(const CName& aName);
 
     /**
      * Gets the singleton CNamePool value
      * @return The singleton CNamePool value
      */
-    static CNamePool* GetPool();
+    static CNamePool* Get();
 
     /// @brief The lock for state owned directly by CNamePool
     ///

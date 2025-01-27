@@ -37,7 +37,7 @@ RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const CString& a
     Add(aName, aText.c_str());
 }
 
-RED4EXT_INLINE const char* RED4ext::CNamePool::Get(const CName& aName)
+RED4EXT_INLINE const char* RED4ext::CNamePool::GetString(const CName& aName)
 {
     static UniversalRelocFunc<const char* (*)(const CName&)> func(Detail::AddressHashes::CNamePool_GetString);
     auto result = func(aName);
@@ -49,20 +49,20 @@ RED4EXT_INLINE const char* RED4ext::CNamePool::Get(const CName& aName)
     return "";
 }
 
-RED4EXT_INLINE RED4ext::CNamePool* RED4ext::CNamePool::GetPool()
+RED4EXT_INLINE RED4ext::CNamePool* RED4ext::CNamePool::Get()
 {
-    static UniversalRelocFunc<CNamePool* (*)()> func(Detail::AddressHashes::CNamePool_GetPool);
+    static UniversalRelocFunc<CNamePool* (*)()> func(Detail::AddressHashes::CNamePool_Get);
     return func();
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNodeInner::Outer()
 {
-    return reinterpret_cast<RED4ext::CNamePoolNode*>(reinterpret_cast<uintptr_t>(this) - offsetof(RED4ext::CNamePoolNode, inner));
+    return reinterpret_cast<CNamePoolNode*>(reinterpret_cast<uintptr_t>(this) - offsetof(CNamePoolNode, inner));
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInList() const
 {
-    return &const_cast<RED4ext::CNamePoolNodeInner*>(this)->Outer()->NextInList()->inner;
+    return &const_cast<CNamePoolNodeInner*>(this)->Outer()->NextInList()->inner;
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInHashBin()
@@ -72,7 +72,7 @@ RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInH
 
 RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInList() const
 {
-    return reinterpret_cast<RED4ext::CNamePoolNode*>(reinterpret_cast<uintptr_t>(&inner) + len);
+    return reinterpret_cast<CNamePoolNode*>(reinterpret_cast<uintptr_t>(&inner) + len);
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInHashBin()
