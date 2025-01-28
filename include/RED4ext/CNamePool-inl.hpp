@@ -60,6 +60,11 @@ RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNodeInner::Outer()
     return reinterpret_cast<CNamePoolNode*>(reinterpret_cast<uintptr_t>(this) - offsetof(CNamePoolNode, inner));
 }
 
+RED4EXT_INLINE const char* RED4ext::CNamePoolNodeInner::GetString() const
+{
+    return &*str;
+}
+
 RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInList() const
 {
     return &const_cast<CNamePoolNodeInner*>(this)->Outer()->NextInList()->inner;
@@ -135,12 +140,12 @@ RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::Be
     return Iterator((*this)[aKey]);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const CName& aKey)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const CName&)
 {
     return Iterator(nullptr);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const uint64_t aKey)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const uint64_t)
 {
     return Iterator(nullptr);
 }

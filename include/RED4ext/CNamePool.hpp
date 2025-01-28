@@ -8,6 +8,8 @@ namespace RED4ext
 {
 struct CNamePoolNode;
 
+// CNamePoolNode and CNamePoolNodeInner are packed to a 4-byte alignment
+#pragma pack(push, 4)
 /**
  * @brief The primary type for storing CNames in a CNamePool. This type is an implementation detail of CNamePool.
  *
@@ -17,9 +19,11 @@ struct CNamePoolNode;
  */
 struct CNamePoolNodeInner
 {
+    // Only the game should allocate this struct
     CNamePoolNodeInner() = delete;
 
-    /// @brief The CName corresponding to #str (in other words, the FNV1a64 hash of #str)
+    /// @brief The CName (key) corresponding to the string (value) of this node (in other words, the FNV1a64 hash of
+    /// #GetString())
     const CName cname; // 00
 
     /// @brief The next node in the hash bucket containing this node
@@ -31,9 +35,19 @@ struct CNamePoolNodeInner
     /// @brief The index of this node in CNamePoolAllocator
     const uint32_t cnameListIndex : 24; // 11
 
+private:
     /// @brief The corresponding string for #cname
-    const char str[]; // 14
+    /// This is a flexible array in the game, but because flexible arrays are a nonstandard extension, we use this
+    /// placeholder field plus #GetString() instead
+    const char str[1]; // 14
     // if necessary, there is padding after this to align with a DWORD boundary
+
+public:
+    /**
+     * @brief Gets the string (value) contained in this node, corresponding to the CName (key) contained in this node
+     * @return The string (value) contained in this node
+     */
+    const char* GetString() const;
 
     /**
      * @brief Gets the next CNamePoolNodeInner that was allocated, chronologically speaking
@@ -59,7 +73,6 @@ RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, cname, 0x00);
 RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, next, 0x08);
 // we can't assert the offset of `len` and `cnameListIndex` because they're bitfields
 // maybe switch to doing the bit manipulation ourselves?
-RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, str, 0x14);
 
 /**
  * @brief The type of nodes allocated in a CNamePoolAllocator. This type is an implementation detail of
@@ -70,14 +83,13 @@ RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, str, 0x14);
  */
 struct CNamePoolNode
 {
+    // Only the game should allocate this struct
     CNamePoolNode() = delete;
 
-#pragma pack(push, 4)
     /// @brief The size of #inner in bytes
     const uint32_t len; // 00
     /// @brief The actual allocated space
     CNamePoolNodeInner inner; // 04
-#pragma pack(pop)
 
     /**
      * @brief Gets the next CNamePoolNode that was allocated, chronologically speaking
@@ -94,6 +106,7 @@ struct CNamePoolNode
      */
     CNamePoolNode* NextInHashBin();
 };
+#pragma pack(pop)
 RED4EXT_ASSERT_OFFSET(CNamePoolNode, len, 0x00);
 RED4EXT_ASSERT_OFFSET(CNamePoolNode, inner, 0x04);
 
