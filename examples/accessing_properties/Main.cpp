@@ -111,8 +111,143 @@ void PrintScannerStatus(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aF
     }
 }
 
+#include <RED4ext/Containers/DynArray.hpp>
+
 RED4EXT_C_EXPORT void RED4EXT_CALL RegisterTypes()
 {
+    // https://github.com/oneapi-src/oneTBB/blob/master/include/oneapi/tbb/memory_pool.h
+    // https://stackoverflow.com/questions/826569/compelling-examples-of-custom-c-allocators
+    // https://stackoverflow.com/questions/657783/how-does-intel-tbbs-scalable-allocator-work
+
+    {
+        std::vector<int /*, std::pmr::polymorphic_allocator<int>*/> vector;
+        vector.clear();
+        std::cout << vector.size() << std::endl;
+
+        std::uninitialized_copy(vector.begin(), vector.end(), vector.data());
+        std::uninitialized_move(vector.begin(), vector.end(), vector.data());
+    }
+
+    {
+        RED4ext::Containers::DynArray<int, RED4ext::Allocator<int, RED4ext::Memory::PoolRTTIFunction>>
+            DynArrayDefaultAlloc;
+
+        constexpr auto max_size = DynArrayDefaultAlloc.MaxSize();
+        std::cout << max_size << std::endl;
+
+        auto capacity = DynArrayDefaultAlloc.Capacity();
+        std::cout << capacity << std::endl;
+
+        DynArrayDefaultAlloc.Reserve(1025);
+
+        capacity = DynArrayDefaultAlloc.Capacity();
+        std::cout << capacity << std::endl;
+
+        for (auto i : DynArrayDefaultAlloc)
+        {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+
+        for (const auto i : DynArrayDefaultAlloc)
+        {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+
+        for (auto& i : DynArrayDefaultAlloc)
+        {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+
+        for (const auto& i : DynArrayDefaultAlloc)
+        {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    {
+        RED4ext::Containers::DynArray<int> DynArray({1, 2, 3});
+    }
+
+    {
+        RED4ext::Containers::DynArray<int> DynArray1({1, 2, 3});
+        RED4ext::Containers::DynArray<int> DynArray2(DynArray1);
+    }
+
+    {
+        RED4ext::Containers::DynArray<int> DynArray1({1, 2, 3});
+        RED4ext::Containers::DynArray<int> DynArray2(std::move(DynArray1));
+    }
+
+    {
+        RED4ext::Containers::DynArray<int> DynArray(1);
+    }
+
+    {
+        RED4ext::Containers::DynArray<int> DynArray(1, 123);
+    }
+
+    {
+        RED4ext::Containers::DynArray<int> DynArray(1, 123);
+        DynArray.ShrinkToFit();
+        DynArray.Clear();
+        DynArray.PopBack();
+        DynArray.Resize(10);
+        DynArray.Resize(123, 4);
+        DynArray.PushBack(1);
+        DynArray.PushBack(std::move(2));
+        DynArray.EmplaceBack(3);
+        DynArray.Assign(3, 5);
+        DynArray.Erase(DynArray.begin());
+        DynArray.Erase(DynArray.begin(), DynArray.end());
+    }
+
+    {
+        RED4ext::Containers::DynArray<int*> DynArray;
+        DynArray.ShrinkToFit();
+        DynArray.Clear();
+        DynArray.PopBack();
+    }
+
+    {
+        RED4ext::Allocator<int, RED4ext::Memory::PoolAI> allocator;
+        auto allocate = allocator.Allocate(12);
+        auto a = allocator.Reallocate(allocate, 1234);
+        allocator.Deallocate(a);
+
+        auto allocateAtLeast = allocator.AllocateAtLeast(255);
+        allocator.Deallocate(allocateAtLeast);
+    }
+
+    {
+        constexpr RED4ext::Allocator<int, RED4ext::Memory::PoolAI> allocator;
+        constexpr RED4ext::Allocator<void*, RED4ext::Memory::PoolAI_Attitudes> allocator2;
+        constexpr RED4ext::Allocator<char, RED4ext::Memory::PoolAI> allocator3;
+
+        {
+            constexpr auto equal = (allocator == allocator2);
+            std::cout << equal << std::endl;
+        }
+
+        {
+            constexpr auto equal = (allocator == allocator3);
+            std::cout << equal << std::endl;
+        }
+    }
+
+    {
+        std::allocator<int> allocator;
+        auto a = allocator.allocate(12);
+    }
+
+    {
+        // std::allocator_traits<RED4ext::Allocator<int, RED4ext::Memory::PoolAI>> triats;
+        // std::allocator_traits<RED4ext::Allocator<int,
+        // RED4ext::Memory::PoolAI>>::select_on_container_copy_construction triats.allocate(10);
+    }
 }
 
 RED4EXT_C_EXPORT void RED4EXT_CALL PostRegisterTypes()

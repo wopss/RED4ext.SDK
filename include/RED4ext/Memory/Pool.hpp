@@ -4,6 +4,7 @@
 #include <shared_mutex>
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Detail/Memory.hpp>
 #include <RED4ext/Hashing/FNV1a.hpp>
 #include <RED4ext/SharedSpinLock.hpp>
 
@@ -21,7 +22,7 @@ struct PoolStorage
     uint32_t allocatorhandle;   // 20
     uint32_t allocatorId;       // 24
 
-    template<typename T = void>
+    template<typename T>
     T* GetAllocatorStorage() const
     {
         return reinterpret_cast<T*>(allocatorStorage & ~7);
@@ -50,15 +51,17 @@ struct PoolRegistry
     SharedSpinLock nodesLock;     // 00
     PoolInfo nodes[MaxPoolCount]; // 08
 
-    template<typename T = PoolInfo>
+    template<typename T>
+    requires Detail::IsMemoryPool<T>
     T* Get(const char* aName)
     {
         const auto id = FNV1a32(aName);
         return Get<T>(id);
     }
 
-    template<typename T = PoolInfo>
-    T* Get(uint32_t aHandle)
+    template<typename T>
+    requires Detail::IsMemoryPool<T>
+    T* Get(std::uint32_t aHandle)
     {
         std::shared_lock<SharedSpinLock> _(nodesLock);
 
@@ -66,7 +69,7 @@ struct PoolRegistry
          * be mantained, which is an overkill for this. Code that is using this should cache the value in a static
          * variable if the code is critical.
          */
-        for (uint32_t i = 0; i < MaxPoolCount; i++)
+        for (std::uint32_t i = 0; i < MaxPoolCount; i++)
         {
             auto& node = nodes[i];
             if (node.handle == aHandle)

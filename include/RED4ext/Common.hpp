@@ -2,6 +2,16 @@
 
 #include <cstddef>
 
+#if defined(_MSVC_LANG) && _MSVC_LANG > __cplusplus
+#define RED4EXT_CPLUSPLUS _MSVC_LANG
+#else
+#define RED4EXT_CPLUSPLUS __cplusplus
+#endif
+
+#ifndef RED4EXT_HAS_CPP23
+#define RED4EXT_HAS_CPP23 (RED4EXT_CPLUSPLUS > 202002L)
+#endif
+
 #ifdef RED4EXT_STATIC_LIB
 #undef RED4EXT_HEADER_ONLY
 #define RED4EXT_INLINE
