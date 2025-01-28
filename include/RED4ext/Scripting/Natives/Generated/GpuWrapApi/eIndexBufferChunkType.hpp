@@ -7,12 +7,15 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class GpuWrapApieIndexBufferChunkType : uint8_t
+namespace GpuWrapApi {
+enum class eIndexBufferChunkType : uint8_t
 {
     IBCT_IndexUInt = 0,
     IBCT_IndexUShort = 1,
     IBCT_Max = 2,
 };
+} // namespace GpuWrapApi
+using GpuWrapApieIndexBufferChunkType = GpuWrapApi::eIndexBufferChunkType;
 } // namespace RED4ext
 
 // clang-format on

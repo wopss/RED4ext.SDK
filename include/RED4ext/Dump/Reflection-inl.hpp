@@ -41,10 +41,20 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     {
         size_t i = 0;
 
-        // Special case for AI
-        if (aInput.size() >= 2 && aInput[0] == 'A' && aInput[1] == 'I')
+        static constexpr std::pair<std::string_view, bool> uniqueNamespaces[] = {
+            {"AI", false}, {"GpuApi", true}, {"GpuWrapApiVertexPacking", true}, {"GpuWrapApi", true}};
+
+        for (const auto& [name, isSpecialCase] : uniqueNamespaces)
         {
-            i = 2;
+            if (aInput.size() >= name.size() && aInput.starts_with(name))
+            {
+                i = name.size();
+
+                if (isSpecialCase)
+                {
+                    return aInput.substr(0, i);
+                }
+            }
         }
 
         // Special case of "in", this will break directory layout for "ink", "interop", etc..

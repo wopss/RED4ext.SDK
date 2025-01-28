@@ -17,8 +17,9 @@ struct ChangeCameraControlHintVisibilityEvent : red::Event
     static constexpr const char* NAME = "gameuiChangeCameraControlHintVisibilityEvent";
     static constexpr const char* ALIAS = "ChangeCameraControlHintVisibilityEvent";
 
-    bool visible; // 40
-    uint8_t unk41[0x48 - 0x41]; // 41
+    bool movementVisible; // 40
+    bool rotationVisible; // 41
+    uint8_t unk42[0x48 - 0x42]; // 42
 };
 RED4EXT_ASSERT_SIZE(ChangeCameraControlHintVisibilityEvent, 0x48);
 } // namespace game::ui

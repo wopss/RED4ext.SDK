@@ -7,7 +7,8 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class GpuWrapApieTextureGroup : uint8_t
+namespace GpuWrapApi {
+enum class eTextureGroup : uint8_t
 {
     TEXG_Generic_Color = 1,
     TEXG_Generic_Grayscale = 2,
@@ -22,6 +23,8 @@ enum class GpuWrapApieTextureGroup : uint8_t
     TEXG_Multilayer_Grayscale = 11,
     TEXG_Multilayer_Microblend = 12,
 };
+} // namespace GpuWrapApi
+using GpuWrapApieTextureGroup = GpuWrapApi::eTextureGroup;
 } // namespace RED4ext
 
 // clang-format on

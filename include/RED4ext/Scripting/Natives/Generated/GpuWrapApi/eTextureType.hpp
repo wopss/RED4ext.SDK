@@ -7,13 +7,16 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class GpuWrapApieTextureType : uint8_t
+namespace GpuWrapApi {
+enum class eTextureType : uint8_t
 {
     TEXTYPE_2D = 0,
     TEXTYPE_CUBE = 1,
     TEXTYPE_ARRAY = 2,
     TEXTYPE_3D = 3,
 };
+} // namespace GpuWrapApi
+using GpuWrapApieTextureType = GpuWrapApi::eTextureType;
 } // namespace RED4ext
 
 // clang-format on
