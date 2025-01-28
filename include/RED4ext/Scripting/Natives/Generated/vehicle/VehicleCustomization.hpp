@@ -20,9 +20,9 @@ struct VehicleCustomization : ent::IComponent
     static constexpr const char* ALIAS = "VehicleCustomizationComponent";
 
     DynArray<vehicle::VehicleAppearanceToDecalsName> defaultDecalsPerAppearance; // 90
-    uint8_t unkA0[0x148 - 0xA0]; // A0
+    uint8_t unkA0[0x158 - 0xA0]; // A0
 };
-RED4EXT_ASSERT_SIZE(VehicleCustomization, 0x148);
+RED4EXT_ASSERT_SIZE(VehicleCustomization, 0x158);
 } // namespace vehicle
 using vehicleVehicleCustomization = vehicle::VehicleCustomization;
 using VehicleCustomizationComponent = vehicle::VehicleCustomization;

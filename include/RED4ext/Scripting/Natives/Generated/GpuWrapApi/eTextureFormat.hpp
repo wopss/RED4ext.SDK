@@ -7,7 +7,8 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class GpuWrapApieTextureFormat : uint8_t
+namespace GpuWrapApi {
+enum class eTextureFormat : uint8_t
 {
     TEXFMT_A8_Unorm = 0,
     TEXFMT_R8_Unorm = 1,
@@ -77,6 +78,8 @@ enum class GpuWrapApieTextureFormat : uint8_t
     TEXFMT_Uint_32 = TEXFMT_R32_Uint,
     TEXFMT_Uint_R32G32B32A32 = TEXFMT_R16G16B16A16_Uint,
 };
+} // namespace GpuWrapApi
+using GpuWrapApieTextureFormat = GpuWrapApi::eTextureFormat;
 } // namespace RED4ext
 
 // clang-format on

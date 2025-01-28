@@ -8,7 +8,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ETextureCompression.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ETextureRawFormat.hpp>
-#include <RED4ext/Scripting/Natives/Generated/GpuWrapApieTextureGroup.hpp>
+#include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/eTextureGroup.hpp>
 
 namespace RED4ext
 {
@@ -19,7 +19,7 @@ struct STextureGroupSetup
 
     ETextureCompression compression; // 00
     ETextureRawFormat rawFormat; // 04
-    GpuWrapApieTextureGroup group; // 08
+    GpuWrapApi::eTextureGroup group; // 08
     uint8_t platformMipBiasPC; // 09
     uint8_t platformMipBiasConsole; // 0A
     bool isStreamable; // 0B

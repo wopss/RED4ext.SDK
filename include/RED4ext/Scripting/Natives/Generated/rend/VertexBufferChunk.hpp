@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/Scripting/Natives/Generated/GpuWrapApiVertexLayoutDesc.hpp>
+#include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/VertexLayoutDesc.hpp>
 
 namespace RED4ext
 {
@@ -18,7 +18,7 @@ struct VertexBufferChunk
     static constexpr const char* NAME = "rendVertexBufferChunk";
     static constexpr const char* ALIAS = NAME;
 
-    GpuWrapApiVertexLayoutDesc vertexLayout; // 00
+    GpuWrapApi::VertexLayoutDesc vertexLayout; // 00
     StaticArray<uint32_t, 5> byteOffsets; // B8
 };
 RED4EXT_ASSERT_SIZE(VertexBufferChunk, 0xD0);
