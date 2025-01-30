@@ -6,28 +6,30 @@
 
 namespace RED4ext
 {
-struct CNamePoolNode;
-
-// CNamePoolNode and CNamePoolNodeInner are packed to a 4-byte alignment
+// CNamePoolAllocWrapper and CNamePoolNode are packed to 4-byte alignments
 #pragma pack(push, 4)
 /**
  * @brief The primary type for storing CNames in a CNamePool. This type is an implementation detail of CNamePool.
  *
- * Values of this type are always allocated in CNamePool#allocator, and are always contained by a CNamePoolNode.
+ * Values of this type are always allocated in CNamePool#allocator, and are always contained by a CNamePoolAllocWrapper.
  *
  * Note that this type uses a flexible array and is thus unsized.
  */
-struct CNamePoolNodeInner
+struct CNamePoolNode
 {
     // Only the game should allocate this struct
-    CNamePoolNodeInner() = delete;
+    CNamePoolNode() = delete;
+
+    // Defaulted copy/move constructors don't work with flexible arrays
+    CNamePoolNode(CNamePoolNode const&) = delete;
+    CNamePoolNode& operator=(CNamePoolNode const&) = delete;
 
     /// @brief The CName (key) corresponding to the string (value) of this node (in other words, the FNV1a64 hash of
     /// #GetString())
     const CName cname; // 00
 
     /// @brief The next node in the hash bucket containing this node
-    CNamePoolNodeInner* next; // 08
+    CNamePoolNode* next; // 08
 
     /// @brief The total size of this struct in bytes
     const uint32_t len : 8; // 10
@@ -35,105 +37,121 @@ struct CNamePoolNodeInner
     /// @brief The index of this node in CNamePoolAllocator
     const uint32_t cnameListIndex : 24; // 11
 
-private:
+    // disable the warning that flexible arrays are a nonstandard compiler extension
+    // official Microsoft docs imply this is fine in this case:
+    // https://learn.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200
+#pragma warning(push)
+#pragma warning(disable : 4200)
     /// @brief The corresponding string for #cname
-    /// This is a flexible array in the game, but because flexible arrays are a nonstandard extension, we use this
-    /// placeholder field plus #GetString() instead
-    const char str[1]; // 14
+    const char str[]; // 14
     // if necessary, there is padding after this to align with a DWORD boundary
-
-public:
-    /**
-     * @brief Gets the string (value) contained in this node, corresponding to the CName (key) contained in this node
-     * @return The string (value) contained in this node
-     */
-    const char* GetString() const;
-
-    /**
-     * @brief Gets the next CNamePoolNodeInner that was allocated, chronologically speaking
-     *
-     * The returned CNamePoolNodeInner may be empty (uninitialized) in the case that this is the most recently
-     * allocated node, but the pointer will not be null
-     */
-    CNamePoolNodeInner* NextInList() const;
-
-    /**
-     * @brief Gets the next CNamePoolNodeInner in this hash bin
-     *
-     * May be null
-     */
-    CNamePoolNodeInner* NextInHashBin();
-
-    /**
-     * @brief Gets the CNamePoolNode that contains this CNamePoolNodeInner
-     */
-    CNamePoolNode* Outer();
-};
-RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, cname, 0x00);
-RED4EXT_ASSERT_OFFSET(CNamePoolNodeInner, next, 0x08);
-// we can't assert the offset of `len` and `cnameListIndex` because they're bitfields
-// maybe switch to doing the bit manipulation ourselves?
-
-/**
- * @brief The type of nodes allocated in a CNamePoolAllocator. This type is an implementation detail of
- * CNamePoolAllocator.
- *
- * This type is just an allocator wrapper type containing the size of the allocation and then the allocation. You
- * probably don't need to even know this type exists.
- */
-struct CNamePoolNode
-{
-    // Only the game should allocate this struct
-    CNamePoolNode() = delete;
-
-    /// @brief The size of #inner in bytes
-    const uint32_t len; // 00
-    /// @brief The actual allocated space
-    CNamePoolNodeInner inner; // 04
+#pragma warning(pop)
 
     /**
      * @brief Gets the next CNamePoolNode that was allocated, chronologically speaking
      *
-     * The returned CNamePoolNode may be empty (uninitialized) in the case that this is the most recently allocated
-     * node, but the pointer will not be null
+     * The returned CNamePoolNode may be empty (uninitialized) in the case that this is the most recently
+     * allocated node, but the pointer will not be null
      */
-    CNamePoolNode* NextInList() const;
+    const CNamePoolNode* NextInList() const;
 
     /**
      * @brief Gets the next CNamePoolNode in this hash bin
      *
      * May be null
      */
-    CNamePoolNode* NextInHashBin();
+    const CNamePoolNode* NextInHashBin() const;
 };
 #pragma pack(pop)
-RED4EXT_ASSERT_OFFSET(CNamePoolNode, len, 0x00);
-RED4EXT_ASSERT_OFFSET(CNamePoolNode, inner, 0x04);
+RED4EXT_ASSERT_OFFSET(CNamePoolNode, cname, 0x00);
+RED4EXT_ASSERT_OFFSET(CNamePoolNode, next, 0x08);
+// we can't assert the offset of `len` and `cnameListIndex` because they're bitfields
+// maybe switch to doing the bit manipulation ourselves?
+RED4EXT_ASSERT_OFFSET(CNamePoolNode, str, 0x14);
 
 /**
  * @brief An allocation pool/arena for CNamePoolNodes
  *
- * The single type of this value (stored at CNamePool#allocator) contains every CNamePoolNode ever allocated.
+ * The single type of this value (stored at CNamePool#allocator) contains every CNamePoolAllocWrapper ever allocated.
  */
 struct CNamePoolAllocator
 {
+private:
+// CNamePoolAllocWrapper and CNamePoolNode are packed to 4-byte alignments
+#pragma pack(push, 4)
+    /**
+     * @brief The type of nodes allocated in a CNamePoolAllocator. This type is an implementation detail of
+     * CNamePoolAllocator.
+     *
+     * This type is just an allocator wrapper type containing the size of the allocation and then the allocation. You
+     * probably don't need to even know this type exists.
+     */
+    struct CNamePoolNodeAllocWrapper
+    {
+        // Only the game should allocate this struct
+        CNamePoolNodeAllocWrapper() = delete;
+
+        // Defaulted copy/move constructors don't work with flexible arrays
+        CNamePoolNodeAllocWrapper(CNamePoolNodeAllocWrapper const&) = delete;
+        CNamePoolNodeAllocWrapper& operator=(CNamePoolNodeAllocWrapper const&) = delete;
+
+        /// @brief The size of #inner in bytes
+        const uint32_t len; // 00
+        /// @brief The actual allocated space
+        CNamePoolNode inner; // 04
+
+        /**
+         * @brief Gets the next CNamePoolAllocWrapper that was allocated, chronologically speaking
+         *
+         * The returned CNamePoolAllocWrapper may be empty (uninitialized) in the case that this is the most recently
+         * allocated node, but the pointer will not be null
+         */
+        const CNamePoolNodeAllocWrapper* NextInList() const;
+
+        /**
+         * @brief Gets the next CNamePoolAllocWrapper in this hash bin
+         *
+         * May be null
+         */
+        const CNamePoolNodeAllocWrapper* NextInHashBin() const;
+
+        /**
+         * @brief Gets the wrapper around the given node
+         * @param aNode The node whose wrapper to get
+         * @return The wrapper containing @p aNode
+         */
+        static const CNamePoolNodeAllocWrapper& GetWrapper(const CNamePoolNode& aNode);
+
+        /**
+         * @brief Gets the wrapper around the given node
+         * @param aNode The node whose wrapper to get
+         * @return The wrapper containing @p aNode
+         */
+        static const CNamePoolNodeAllocWrapper* GetWrapper(const CNamePoolNode* aNode);
+    };
+#pragma pack(pop)
+    RED4EXT_ASSERT_OFFSET(CNamePoolNodeAllocWrapper, len, 0x00);
+    RED4EXT_ASSERT_OFFSET(CNamePoolNodeAllocWrapper, inner, 0x04);
+
+public:
     class Iterator
     {
         typedef std::forward_iterator_tag iterator_category;
-        typedef CNamePoolNode* value_type;
+        typedef const CNamePoolNode value_type;
         typedef std::ptrdiff_t difference_type;
-        typedef CNamePoolNode** pointer;
-        typedef CNamePoolNode*& reference;
-        CNamePoolAllocator* m_list;
-        CNamePoolNode* m_node;
+        typedef const CNamePoolNode* const pointer;
+        typedef const CNamePoolNode& reference;
+
+        const CNamePoolAllocator* const m_list;
+        const CNamePoolNodeAllocWrapper* m_node;
 
     public:
-        explicit Iterator(CNamePoolAllocator* aList)
+        explicit Iterator(const CNamePoolAllocator* const aList)
             : m_list(aList)
             , m_node(aList->head)
         {
         }
-        explicit Iterator(CNamePoolAllocator* aList, CNamePoolNode* aNode)
+        explicit Iterator(const CNamePoolAllocator* const aList, const CNamePoolNodeAllocWrapper* const aNode)
             : m_list(aList)
             , m_node(aNode)
         {
@@ -142,8 +160,15 @@ struct CNamePoolAllocator
         Iterator& operator+(int aN);
         bool operator==(const Iterator& aRhs) const;
         bool operator!=(const Iterator& aRhs) const;
-        reference operator*();
+        reference operator*() const;
+        pointer operator->() const;
     };
+
+    // only the game should create this struct
+    CNamePoolAllocator() = delete;
+    // this is a singleton, so no move or copy should be allowed
+    CNamePoolAllocator(CNamePoolAllocator const&) = delete;
+    CNamePoolAllocator& operator=(CNamePoolAllocator const&) = delete;
 
     /**
      * @brief The beginning of an iterator over every CNamePoolNode
@@ -151,29 +176,29 @@ struct CNamePoolAllocator
      * Automatically handles the pointer arithmetic necessary to deal with nodes being unsized. Note that there may
      * be duplicates.
      */
-    Iterator Begin();
+    Iterator Begin() const;
 
     /**
      * @brief The end of an iterator over every CNamePoolNode
      */
-    Iterator End();
+    Iterator End() const;
 
     /// @brief The beginning of the allocation arena
     ///
     /// All CNamePoolNodes should exist between this pointer and #endAvailableSpace.
     ///
-    /// Note that because CNamePoolNode is unsized, you should not perform regular pointer arithmetic on this pointer.
-    /// Instead, use the provided methods in CNamePoolNode.
-    CNamePoolNode* head; // 00
+    /// Note that because CNamePoolAllocWrapper is unsized, you should not perform regular pointer arithmetic on this
+    /// pointer. Instead, use the provided methods in CNamePoolAllocWrapper.
+    CNamePoolNodeAllocWrapper* head; // 00
     /// @brief The end of the area available to be used, starting from #head
-    CNamePoolNode* endAvailableSpace; // 08
+    CNamePoolNodeAllocWrapper* endAvailableSpace; // 08
     /// @brief The end of the currently used area in #head
-    CNamePoolNode* listEnd; // 10
+    CNamePoolNodeAllocWrapper* listEnd; // 10
     // I believe these three pointers would be used if more space than `head` has available is needed, but the amount
     // of allocated space is so large that it shouldn't come up
-    CNamePoolNode* unk18; // 18
-    CNamePoolNode* unk20; // 20
-    CNamePoolNode* unk28; // 28
+    CNamePoolNodeAllocWrapper* unk18; // 18
+    CNamePoolNodeAllocWrapper* unk20; // 20
+    CNamePoolNodeAllocWrapper* unk28; // 28
     // potentially padding
     char unk[8]; // 30
     // some kind of memory allocation handler, or something like that
@@ -182,6 +207,8 @@ struct CNamePoolAllocator
     uint32_t unk40; // 40
     // should always be 3
     uint32_t unk44; // 44
+
+    friend CNamePoolNode;
 };
 RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, head, 0x00);
 RED4EXT_ASSERT_OFFSET(CNamePoolAllocator, endAvailableSpace, 0x08);
@@ -207,14 +234,15 @@ struct CNamePoolHashmap
     class Iterator
     {
         typedef std::forward_iterator_tag iterator_category;
-        typedef CNamePoolNode* value_type;
+        typedef const CNamePoolNode* const value_type;
         typedef std::ptrdiff_t difference_type;
-        typedef CNamePoolNodeInner** pointer;
-        typedef CNamePoolNodeInner*& reference;
-        CNamePoolNodeInner* m_node;
+        typedef const CNamePoolNode* const* const pointer;
+        typedef const CNamePoolNode* const& reference;
+
+        const CNamePoolNode* m_node;
 
     public:
-        explicit Iterator(CNamePoolNodeInner* aNode)
+        explicit Iterator(const CNamePoolNode* aNode)
             : m_node(aNode)
         {
         }
@@ -222,14 +250,22 @@ struct CNamePoolHashmap
         Iterator& operator+(int aN);
         bool operator==(const Iterator& aRhs) const;
         bool operator!=(const Iterator& aRhs) const;
-        reference operator*();
+        reference operator*() const;
+        reference operator->() const;
     };
+
+    // only the game should create this struct
+    CNamePoolHashmap() = delete;
+    // this is a singleton, so no move or copy should be allowed
+    CNamePoolHashmap(CNamePoolHashmap const&) = delete;
+    CNamePoolHashmap& operator=(CNamePoolHashmap const&) = delete;
+
     /// @brief The hashmap mapping from CName hash to string
     ///
     /// After locking hashmapLock (if you want to play nice), index this array using `CName.hash & 0x7ffff` or
     /// `CName.hash % 0x80000`. The resulting value is the hash bucket for that hash. If it's null, the bucket is empty.
-    /// Otherwise, you can iterate over the bucket's contents with CNamePoolNodeInner::NextInHashBin().
-    CNamePoolNodeInner* nodesByHash[0x80000]; // 00
+    /// Otherwise, you can iterate over the bucket's contents with CNamePoolNode::NextInHashBin().
+    CNamePoolNode* nodesByHash[0x80000]; // 00
 
     /**
      * @brief Gets the hash bin that would contain the given CName as a key
@@ -237,7 +273,7 @@ struct CNamePoolHashmap
      * Note that the returned hash bin may be empty (null), and may not contain the given CName. If you just want the
      * string value of a CName, use CNamePool::Get.
      */
-    CNamePoolNodeInner*& operator[](const CName& aKey);
+    const CNamePoolNode* const& operator[](const CName& aKey) const;
 
     /**
      * @brief Gets the hash bin that would contain the given FNV1a64 hash as a key
@@ -245,17 +281,17 @@ struct CNamePoolHashmap
      * Note that the returned hash bin may be empty (null), and may not contain the given hash. If you just want the
      * string value of a CName, use CNamePool::Get.
      */
-    CNamePoolNodeInner*& operator[](uint64_t aKey);
+    const CNamePoolNode* const& operator[](uint64_t aKey) const;
 
     /// @brief The beginning of an iterator over the hash bucket that would contain @p aKey
-    Iterator Begin(const CName& aKey);
+    Iterator Begin(const CName& aKey) const;
     /// @brief The beginning of an iterator over the hash bucket that would contain @p aKey
-    Iterator Begin(uint64_t aKey);
+    Iterator Begin(uint64_t aKey) const;
 
     /// @brief The end of an iterator over the hash bucket that would contain @p aKey
-    Iterator End(const CName& aKey);
+    Iterator End(const CName& aKey) const;
     /// @brief The end of an iterator over the hash bucket that would contain @p aKey
-    Iterator End(uint64_t aKey);
+    Iterator End(uint64_t aKey) const;
 };
 RED4EXT_ASSERT_OFFSET(CNamePoolHashmap, nodesByHash, 0x0);
 RED4EXT_ASSERT_SIZE(CNamePoolHashmap, 0x400000);
@@ -276,8 +312,8 @@ RED4EXT_ASSERT_SIZE(CNamePoolHashmap, 0x400000);
  *
  * @par The hashmap
  * The core of the CNamePool is a hashmap, CNamePool#hashmap. Since CNames are already a hash, the map is indexed by
- * `CName % 0x80000` (optimized to`CName & 0x7ffff`). Values in the map are of type `CNamePoolNodeInner *`, and each is
- * effectively its own bucket, thanks to CNamePoolNodeInner#next.
+ * `CName % 0x80000` (optimized to`CName & 0x7ffff`). Values in the map are of type `CNamePoolNode *`, and each is
+ * effectively its own bucket, thanks to CNamePoolNode#next.
  *
  * @par Implementation details
  * When the function to add a CName is called, the game first checks whether that CName already exists in the hashmap.
@@ -286,11 +322,11 @@ RED4EXT_ASSERT_SIZE(CNamePoolHashmap, 0x400000);
  * CNamePoolAllocator.
  *
  * @par
- * Next, the game allocates and initializes a CNamePoolNode in the CNamePoolAllocator. Note that, because CNamePoolNode
- * is an unsized type (it includes a C-style flexible array), the size of the allocated value depends on the size of the
- * string it contains. The allocation is also end-padded to a 4-byte alignment. The details of the actual allocation are
- * somewhat complicated in the game's code due to some seemingly-vestigial members of the list, so that won't be covered
- * here.
+ * Next, the game allocates and initializes a CNamePoolAllocWrapper in the CNamePoolAllocator. Note that, because
+ * CNamePoolAllocWrapper is an unsized type (it includes a C-style flexible array), the size of the allocated value
+ * depends on the size of the string it contains. The allocation is also end-padded to a 4-byte alignment. The details
+ * of the actual allocation are somewhat complicated in the game's code due to some seemingly-vestigial members of the
+ * list, so that won't be covered here.
  *
  * @par
  * Once the new node is allocated and initialized, the game attempts to add it to the hashmap (CNamePool#hashmap). This
@@ -330,16 +366,22 @@ struct CNamePool
      */
     static CNamePool* Get();
 
+    // only the game should create this struct
+    CNamePool() = delete;
+    // this is a singleton, so no move or copy should be allowed
+    CNamePool(const CNamePool&) = delete;
+    CNamePool& operator=(const CNamePool&) = delete;
+
     /// @brief The lock for state owned directly by CNamePool
     ///
     /// This should be locked whenever accessing #nodes or #hashmap. A shared lock may be used for read-only access.
     /// For write access, a unique lock is required.
     SharedSpinLock hashmapLock; // 00
 
-    /// @brief A list of every CNamePoolNodeInner ever added to #hashmap.
+    /// @brief A list of every CNamePoolNode ever added to #hashmap.
     ///
     /// Notably, unlike #allocator, this should never contain duplicates.
-    DynArray<CNamePoolNodeInner*> nodes; // 08
+    DynArray<CNamePoolNode*> nodes; // 08
 
     /// @brief The hashmap mapping from CName hash to string
     CNamePoolHashmap hashmap; // 18
@@ -353,7 +395,7 @@ struct CNamePool
     // potentially padding
     uint64_t unk400020[4]; // 400020
 
-    /// @brief Essentially an allocation arena for `CNamePoolNode`s
+    /// @brief Essentially an allocation arena for `CNamePoolAllocWrapper`s
     /// @sa CNamePoolAllocator
     CNamePoolAllocator allocator; // 400040
 };

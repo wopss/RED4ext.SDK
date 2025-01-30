@@ -4,6 +4,7 @@
 #include <RED4ext/CNamePool.hpp>
 #endif
 
+#include "CNamePool.hpp"
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
@@ -12,7 +13,7 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CNamePool::Add(const char* aText)
 {
     CName result;
 
-    static UniversalRelocFunc<CName* (*)(CName&, const char*)> func(Detail::AddressHashes::CNamePool_AddCstr);
+    static const UniversalRelocFunc<CName* (*)(CName&, const char*)> func(Detail::AddressHashes::CNamePool_AddCstr);
     func(result, aText);
     return result;
 }
@@ -21,14 +22,16 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CNamePool::Add(const CString& aText)
 {
     CName result;
 
-    static UniversalRelocFunc<CName* (*)(CName&, const CString&)> func(Detail::AddressHashes::CNamePool_AddCString);
+    static const UniversalRelocFunc<CName* (*)(CName&, const CString&)> func(
+        Detail::AddressHashes::CNamePool_AddCString);
     func(result, aText);
     return result;
 }
 
 RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const char* aText)
 {
-    static UniversalRelocFunc<uint8_t (*)(const CName&, const char*)> func(Detail::AddressHashes::CNamePool_AddPair);
+    static const UniversalRelocFunc<uint8_t (*)(const CName&, const char*)> func(
+        Detail::AddressHashes::CNamePool_AddPair);
     func(aName, aText);
 }
 
@@ -39,7 +42,7 @@ RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const CString& a
 
 RED4EXT_INLINE const char* RED4ext::CNamePool::GetString(const CName& aName)
 {
-    static UniversalRelocFunc<const char* (*)(const CName&)> func(Detail::AddressHashes::CNamePool_GetString);
+    static const UniversalRelocFunc<const char* (*)(const CName&)> func(Detail::AddressHashes::CNamePool_GetString);
     auto result = func(aName);
     if (result)
     {
@@ -51,38 +54,30 @@ RED4EXT_INLINE const char* RED4ext::CNamePool::GetString(const CName& aName)
 
 RED4EXT_INLINE RED4ext::CNamePool* RED4ext::CNamePool::Get()
 {
-    static UniversalRelocFunc<CNamePool* (*)()> func(Detail::AddressHashes::CNamePool_Get);
+    static const UniversalRelocFunc<CNamePool* (*)()> func(Detail::AddressHashes::CNamePool_Get);
     return func();
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNodeInner::Outer()
+RED4EXT_INLINE const RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInList() const
 {
-    return reinterpret_cast<CNamePoolNode*>(reinterpret_cast<uintptr_t>(this) - offsetof(CNamePoolNode, inner));
+    return &CNamePoolAllocator::CNamePoolNodeAllocWrapper::GetWrapper(this)->NextInList()->inner;
 }
 
-RED4EXT_INLINE const char* RED4ext::CNamePoolNodeInner::GetString() const
-{
-    return &*str;
-}
-
-RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInList() const
-{
-    return &const_cast<CNamePoolNodeInner*>(this)->Outer()->NextInList()->inner;
-}
-
-RED4EXT_INLINE RED4ext::CNamePoolNodeInner* RED4ext::CNamePoolNodeInner::NextInHashBin()
+RED4EXT_INLINE const RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInHashBin() const
 {
     return next;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInList() const
+RED4EXT_INLINE const RED4ext::CNamePoolAllocator::CNamePoolNodeAllocWrapper* RED4ext::CNamePoolAllocator::
+    CNamePoolNodeAllocWrapper::NextInList() const
 {
-    return reinterpret_cast<CNamePoolNode*>(reinterpret_cast<uintptr_t>(&inner) + len);
+    return std::bit_cast<CNamePoolNodeAllocWrapper*>(std::bit_cast<uintptr_t>(&inner) + len);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolNode* RED4ext::CNamePoolNode::NextInHashBin()
+RED4EXT_INLINE const RED4ext::CNamePoolAllocator::CNamePoolNodeAllocWrapper* RED4ext::CNamePoolAllocator::
+    CNamePoolNodeAllocWrapper::NextInHashBin() const
 {
-    return inner.next->Outer();
+    return GetWrapper(inner.next);
 }
 
 RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator& RED4ext::CNamePoolAllocator::Iterator::operator++()
@@ -110,47 +105,52 @@ RED4EXT_INLINE bool RED4ext::CNamePoolAllocator::Iterator::operator!=(const Iter
     return m_node != aRhs.m_node;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator::reference RED4ext::CNamePoolAllocator::Iterator::operator*()
+RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator::reference RED4ext::CNamePoolAllocator::Iterator::operator*() const
 {
-    return m_node;
+    return m_node->inner;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator RED4ext::CNamePoolAllocator::Begin()
+RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator::pointer RED4ext::CNamePoolAllocator::Iterator::operator->() const
+{
+    return &m_node->inner;
+}
+
+RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator RED4ext::CNamePoolAllocator::Begin() const
 {
     return Iterator(this);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator RED4ext::CNamePoolAllocator::End()
+RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator RED4ext::CNamePoolAllocator::End() const
 {
     return Iterator(this, listEnd);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolNodeInner*& RED4ext::CNamePoolHashmap::operator[](const uint64_t aKey)
+RED4EXT_INLINE const RED4ext::CNamePoolNode* const& RED4ext::CNamePoolHashmap::operator[](const uint64_t aKey) const
 {
     return nodesByHash[aKey & 0x7ffff];
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::Begin(const CName& aKey)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::Begin(const CName& aKey) const
 {
     return Iterator((*this)[aKey]);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::Begin(const uint64_t aKey)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::Begin(const uint64_t aKey) const
 {
     return Iterator((*this)[aKey]);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const CName&)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const CName&) const
 {
     return Iterator(nullptr);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const uint64_t)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator RED4ext::CNamePoolHashmap::End(const uint64_t) const
 {
     return Iterator(nullptr);
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolNodeInner*& RED4ext::CNamePoolHashmap::operator[](const CName& aKey)
+RED4EXT_INLINE const RED4ext::CNamePoolNode* const& RED4ext::CNamePoolHashmap::operator[](const CName& aKey) const
 {
     return nodesByHash[aKey.hash & 0x7ffff];
 }
@@ -180,7 +180,12 @@ RED4EXT_INLINE bool RED4ext::CNamePoolHashmap::Iterator::operator!=(const Iterat
     return m_node != aRhs.m_node;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator::reference RED4ext::CNamePoolHashmap::Iterator::operator*()
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator::reference RED4ext::CNamePoolHashmap::Iterator::operator*() const
+{
+    return m_node;
+}
+
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator::reference RED4ext::CNamePoolHashmap::Iterator::operator->() const
 {
     return m_node;
 }
