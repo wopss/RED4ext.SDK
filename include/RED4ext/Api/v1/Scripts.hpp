@@ -3,7 +3,7 @@
 #include <RED4ext/Api/PluginHandle.hpp>
 #include <filesystem>
 
-namespace RED4ext::v0
+namespace RED4ext::v1
 {
 struct Scripts
 {
@@ -34,4 +34,4 @@ struct Scripts
      */
     bool (*Add)(PluginHandle aHandle, const wchar_t* aPath);
 };
-} // namespace RED4ext::v0
+} // namespace RED4ext::v1
