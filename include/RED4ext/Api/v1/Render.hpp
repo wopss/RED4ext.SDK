@@ -74,8 +74,8 @@ struct Render
      * being used. Failing to do so may leak resources or cause premature removal of memory which is actively in use by
      * the GPU!
      */
-    bool (*OnBeforeResizeBuffers)(uint32_t aRenderWidth, uint32_t aRenderHeight, int32_t aMonitorIndex,
-                                  RED4ext::GpuApi::EHdrMode aHdrMode, GpuApi::SSwapChainData& aSwapChainData);
+    bool (*OnBeforeResizeBackbuffer)(uint32_t aRenderWidth, uint32_t aRenderHeight, int32_t aMonitorIndex,
+                                     GpuApi::EHdrMode aHdrMode, GpuApi::SSwapChainData& aSwapChainData);
 
     /**
      * @brief The function that is called when the buffers inside a swapchain need to be resized, after original
@@ -94,8 +94,8 @@ struct Render
      * being used. Failing to do so may leak resources or cause premature removal of memory which is actively in use by
      * the GPU!
      */
-    bool (*OnAfterResizeBuffers)(uint32_t aRenderWidth, uint32_t aRenderHeight, int32_t aMonitorIndex,
-                                 RED4ext::GpuApi::EHdrMode aHdrMode, GpuApi::SSwapChainData& aSwapChainData);
+    bool (*OnAfterResizeBackbuffer)(uint32_t aRenderWidth, uint32_t aRenderHeight, int32_t aMonitorIndex,
+                                    GpuApi::EHdrMode aHdrMode, GpuApi::SSwapChainData& aSwapChainData);
 
     /**
      * @brief The function that is called when the latest frame is ready to be presented to the GPU, before original

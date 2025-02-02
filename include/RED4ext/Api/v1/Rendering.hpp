@@ -18,7 +18,7 @@ struct Rendering
      *
      * @return True if the rendering hook is added successfully, false otherwise.
      */
-    bool (*AddHook)(PluginHandle aHandle, const Render* aRender);
+    bool (*AddHook)(PluginHandle aHandle, const Render& aRender);
 };
 } // namespace v1
 } // namespace RED4ext
