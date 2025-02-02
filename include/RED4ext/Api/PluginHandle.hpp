@@ -1,11 +1,9 @@
 #pragma once
 
-#include <Windows.h>
-
 namespace RED4ext
 {
 /**
  * @brief The identifier of the plugin.
  */
-using PluginHandle = HMODULE;
+using PluginHandle = int64_t;
 } // namespace RED4ext

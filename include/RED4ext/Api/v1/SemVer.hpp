@@ -1,9 +1,9 @@
 #pragma once
 
+#include <RED4ext/Common.hpp>
+
 #include <cstdint>
 #include <string>
-
-#include <RED4ext/Common.hpp>
 
 namespace RED4ext::v1
 {

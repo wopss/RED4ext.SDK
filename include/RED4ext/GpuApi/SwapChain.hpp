@@ -9,7 +9,7 @@ namespace RED4ext
 {
 namespace GpuApi
 {
-enum class HDRMode : uint8_t
+enum class EHdrMode : uint8_t
 {
     Disabled,
     PQ,
@@ -26,7 +26,7 @@ struct SSwapChainData
     uint32_t backBufferIndex;                          // 2C
     uint8_t unk30;                                     // 30 - Always seems to be zero.
     bool fullScreen;                                   // 31 - True when in fullscreen.
-    HDRMode startupHdrMode;     // 32 - Seems to be set only during startup and stay at the same value during runtime.
+    EHdrMode startupHdrMode;    // 32 - Seems to be set only during startup and stay at the same value during runtime.
     uint8_t unk33[0x38 - 0x33]; // 33 - Always seems to be filled with zeroes.
     HWND windowHandle;          // 38
     Microsoft::WRL::ComPtr<ID3D12Fence1> presentFence;     // 40

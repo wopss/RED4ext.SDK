@@ -26,7 +26,7 @@ using FileVer = v1::FileVer;
 using Sdk = v1::Sdk;
 
 /**
- * @brief The latest hooking.
+ * @brief The latest logger.
  */
 using Logger = v1::Logger;
 
@@ -36,19 +36,29 @@ using Logger = v1::Logger;
 using Hooking = v1::Hooking;
 
 /**
- * @brief The latest game state type.
+ * @brief The latest game state handler.
  */
 using GameStates = v1::GameStates;
 
 /**
- * @brief The latest game state type.
+ * @brief The latest game state for hooking.
  */
 using GameState = v1::GameState;
 
 /**
- * @brief The latest game state type.
+ * @brief The latest scripts compiler interface.
  */
 using Scripts = v1::Scripts;
+
+/**
+ * @brief The latest rendering handler.
+ */
+using Rendering = v1::Rendering;
+
+/**
+ * @brief The latest render structure for hooking.
+ */
+using Render = v1::Render;
 } // namespace RED4ext
 
 /*
@@ -60,5 +70,5 @@ using Scripts = v1::Scripts;
  */
 #ifndef RED4EXT_OFFSET_TO_ADDR
 #define RED4EXT_OFFSET_TO_ADDR(offset)                                                                                 \
-    reinterpret_cast<void*>(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)) + offset)
+    std::bit_cast<void*>(std::bit_cast<uintptr_t>(GetModuleHandleW(nullptr)) + offset)
 #endif

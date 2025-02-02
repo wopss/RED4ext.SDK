@@ -20,7 +20,7 @@ struct GameStates
      *
      * @return true if the state hook is added successfully, false otherwise.
      */
-    bool (*AddHook)(PluginHandle aHandle, EGameStateType aType, GameState* aState);
+    bool (*AddHook)(PluginHandle aHandle, EGameStateType aType, const GameState& aState);
 };
 } // namespace v1
 } // namespace RED4ext
