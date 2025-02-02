@@ -111,6 +111,7 @@ else()
         RED4EXT_STATIC_LIB
       PRIVATE
         WIN32_LEAN_AND_MEAN
+        NOMINMAX
   )
 
   if(RED4EXT_USE_PCH)

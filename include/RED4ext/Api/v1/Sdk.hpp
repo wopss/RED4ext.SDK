@@ -1,12 +1,13 @@
 #pragma once
 
-#include <RED4ext/Api/v0/FileVer.hpp>
-#include <RED4ext/Api/v0/GameStates.hpp>
-#include <RED4ext/Api/v0/Hooking.hpp>
-#include <RED4ext/Api/v0/Logger.hpp>
-#include <RED4ext/Api/v0/Scripts.hpp>
+#include <RED4ext/Api/v1/FileVer.hpp>
+#include <RED4ext/Api/v1/GameStates.hpp>
+#include <RED4ext/Api/v1/Hooking.hpp>
+#include <RED4ext/Api/v1/Logger.hpp>
+#include <RED4ext/Api/v1/Rendering.hpp>
+#include <RED4ext/Api/v1/Scripts.hpp>
 
-namespace RED4ext::v0
+namespace RED4ext::v1
 {
 struct Sdk
 {
@@ -23,5 +24,6 @@ struct Sdk
     Hooking* hooking;
     GameStates* gameStates;
     Scripts* scripts;
+    Rendering* rendering;
 };
-} // namespace RED4ext::v0
+} // namespace RED4ext::v1
