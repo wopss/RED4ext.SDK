@@ -59,6 +59,11 @@ using Rendering = v1::Rendering;
  * @brief The latest render structure for hooking.
  */
 using Render = v1::Render;
+
+/**
+ * @brief The latest game state hook result.
+ */
+using EGameStateResult = v1::EGameStateResult;
 } // namespace RED4ext
 
 /*
@@ -70,5 +75,5 @@ using Render = v1::Render;
  */
 #ifndef RED4EXT_OFFSET_TO_ADDR
 #define RED4EXT_OFFSET_TO_ADDR(offset)                                                                                 \
-    std::bit_cast<void*>(std::bit_cast<uintptr_t>(GetModuleHandleW(nullptr)) + offset)
+    reinterpret_cast<void*>(reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr)) + offset)
 #endif

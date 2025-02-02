@@ -207,7 +207,7 @@ RED4EXT_INLINE void RED4ext::UniversalRelocBase::ShowErrorAndTerminateProcess(st
         auto isQuerySuccessful = QueryCurrentPlugin(pluginInfo);
         if (isQuerySuccessful)
         {
-            if (!pluginInfo.name.empty())
+            if (pluginInfo.name)
             {
                 pluginName = pluginInfo.name;
             }

@@ -5,5 +5,5 @@ namespace RED4ext
 /**
  * @brief The identifier of the plugin.
  */
-using PluginHandle = int64_t;
+using PluginHandle = void*;
 } // namespace RED4ext

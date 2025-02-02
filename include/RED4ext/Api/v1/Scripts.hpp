@@ -2,8 +2,6 @@
 
 #include <RED4ext/Api/PluginHandle.hpp>
 
-#include <string_view>
-
 namespace RED4ext::v1
 {
 struct Scripts
@@ -33,6 +31,6 @@ struct Scripts
      *     return true;
      * }
      */
-    bool (*Add)(PluginHandle aHandle, std::wstring_view aPath);
+    bool (*Add)(PluginHandle aHandle, const wchar_t* aPath);
 };
 } // namespace RED4ext::v1

@@ -16,9 +16,10 @@ struct GameStates
      *
      * @param[in] aHandle    The plugin's handle.
      * @param[in] aType      The type of the state to hook.
-     * @param[in] aState     Hooks for the state. Can be allocated on stack.
+     * @param[in] aState     Hooks for the state. Can be allocated on stack. Can leave out hooks for events that are not
+     * interesting as NULL.
      *
-     * @return true if the state hook is added successfully, false otherwise.
+     * @return True if the state hook is added successfully, false otherwise.
      */
     bool (*AddHook)(PluginHandle aHandle, EGameStateType aType, const GameState& aState);
 };

@@ -6,6 +6,16 @@ struct CGameApplication;
 
 namespace v1
 {
+/**
+ * @brief Result type for game state hooks.
+ */
+enum class EGameStateResult : uint8_t
+{
+    Running,  /**< Hook has not yet finished. Until the state changes, hook continues to operate. */
+    Finished, /**< Hook has finished. When signaled, hook is detached. */
+    Observing /**< Hook is observing, not running a task. Hook won't get detached until shutdown. */
+};
+
 struct GameState
 {
     /**
@@ -13,64 +23,60 @@ struct GameState
      *
      * @param[in] aApp The game application.
      *
-     * @return Always return true.
-     * @note The return result do not matter for this event, always return "true" here.
+     * @return EGameStateResult specifying the state of the hook after it ran. See its documentation for possible
+     * values.
      */
-    bool (*OnBeforeEnter)(CGameApplication& aApp);
+    EGameStateResult (*OnBeforeEnter)(CGameApplication& aApp);
 
     /**
      * @brief The function that is called when the state is actived, after original function call.
      *
      * @param[in] aApp The game application.
      *
-     * @return Always return true.
-     * @note The return result do not matter for this event, always return "true" here.
+     * @return EGameStateResult specifying the state of the hook after it ran. See its documentation for possible
+     * values.
      */
-    bool (*OnAfterEnter)(CGameApplication& aApp);
+    EGameStateResult (*OnAfterEnter)(CGameApplication& aApp);
 
     /**
      * @brief The function that is called when the state is updated, before original function call.
      *
      * @param[in] aApp The game application.
      *
-     * @return true if the state is done updating, false otherwise.
-     * @note Returning true will prevent the update function from being called, returning false will keep calling the
-     *       function until it returns true. When this function is not called from "Running" the return result will not
-     *       matter as the function will get called only once either way.
+     * @return EGameStateResult specifying the state of the hook after it ran. See its documentation for possible
+     * values.
      */
-    bool (*OnBeforeTick)(CGameApplication& aApp);
+    EGameStateResult (*OnBeforeTick)(CGameApplication& aApp);
 
     /**
      * @brief The function that is called when the state is updated, after original function call.
      *
      * @param[in] aApp The game application.
      *
-     * @return true if the state is done updating, false otherwise.
-     * @note Returning true will prevent the update function from being called, returning false will keep calling the
-     *       function until it returns true. When this function is not called from "Running" the return result will not
-     *       matter as the function will get called only once either way.
+     * @return EGameStateResult specifying the state of the hook after it ran. See its documentation for possible
+     * values.
      */
-    bool (*OnAfterTick)(CGameApplication& aApp);
+    EGameStateResult (*OnAfterTick)(CGameApplication& aApp);
 
     /**
      * @brief The function that is called when the state is done, before original function call.
      *
      * @param[in] aApp The game application.
      *
-     * @return Always return true.
-     * @note The return result do not matter for this event, always return "true" here.
+     * @return EGameStateResult specifying the state of the hook after it ran. See its documentation for possible
+     * values.
      */
-    bool (*OnBeforeExit)(CGameApplication& aApp);
+    EGameStateResult (*OnBeforeExit)(CGameApplication& aApp);
 
     /**
      * @brief The function that is called when the state is done, after original function call.
      *
      * @param[in] aApp The game application.
      *
-     * @return Always return true.
-     * @note The return result do not matter for this event, always return "true" here.
+     * @return EGameStateResult specifying the state of the hook after it ran. See its documentation for possible
+     * values.
      */
-    bool (*OnAfterExit)(CGameApplication& aApp);
+    EGameStateResult (*OnAfterExit)(CGameApplication& aApp);
 };
 } // namespace v1
 } // namespace RED4ext

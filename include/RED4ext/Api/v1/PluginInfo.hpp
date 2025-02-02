@@ -3,8 +3,6 @@
 #include <RED4ext/Api/v1/FileVer.hpp>
 #include <RED4ext/Api/v1/SemVer.hpp>
 
-#include <string_view>
-
 namespace RED4ext::v1
 {
 struct PluginInfo
@@ -17,12 +15,12 @@ struct PluginInfo
     /**
      * @brief The name of the plugin.
      */
-    std::wstring_view name;
+    const wchar_t* name;
 
     /**
      * @brief The author(s) of the plugin.
      */
-    std::wstring_view author;
+    const wchar_t* author;
 
     /**
      * @brief The version of the plugin.
