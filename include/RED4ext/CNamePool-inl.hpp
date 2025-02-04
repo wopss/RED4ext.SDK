@@ -80,6 +80,19 @@ RED4EXT_INLINE const RED4ext::CNamePoolAllocator::CNamePoolNodeAllocWrapper* RED
     return GetWrapper(inner.next);
 }
 
+RED4EXT_INLINE const RED4ext::CNamePoolAllocator::CNamePoolNodeAllocWrapper& RED4ext::CNamePoolAllocator::
+    CNamePoolNodeAllocWrapper::GetWrapper(const CNamePoolNode& aNode)
+{
+    return *GetWrapper(&aNode);
+}
+
+RED4EXT_INLINE const RED4ext::CNamePoolAllocator::CNamePoolNodeAllocWrapper* RED4ext::CNamePoolAllocator::
+    CNamePoolNodeAllocWrapper::GetWrapper(const CNamePoolNode* aNode)
+{
+    return std::bit_cast<const CNamePoolNodeAllocWrapper*>(std::bit_cast<uintptr_t>(aNode) -
+                                                           offsetof(CNamePoolNodeAllocWrapper, inner));
+}
+
 RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator& RED4ext::CNamePoolAllocator::Iterator::operator++()
 {
     m_node = m_node->NextInList();
