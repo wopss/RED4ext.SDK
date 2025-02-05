@@ -8,7 +8,7 @@
 #include <RED4ext/Scripting/Natives/AnimKeyFrames.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimDataAddress.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/IAnimationBuffer.hpp>
-#include <RED4ext/Span.hpp>
+#include <RED4ext/Containers/Span.hpp>
 #include <cstdint>
 
 namespace RED4ext

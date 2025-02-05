@@ -5,7 +5,7 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/ResourceLoader.hpp>
-#include <RED4ext/Span.hpp>
+#include <RED4ext/Containers/Span.hpp>
 
 namespace RED4ext
 {
