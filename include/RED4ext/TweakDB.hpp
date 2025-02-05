@@ -4,7 +4,7 @@
 #include <shared_mutex>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Map.hpp>
