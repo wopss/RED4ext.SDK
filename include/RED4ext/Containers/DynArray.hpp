@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <cassert>
 #include <cstdint>
 #include <functional>
 #include <type_traits>
@@ -135,9 +136,14 @@ struct DynArray
         return Data()[static_cast<SizeType>(aPos)];
     }
 
-    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) const noexcept
+    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
     {
-        return std::find(cbegin(), cend(), aValue);
+        return Iterator(std::find(begin(), end(), aValue));
+    }
+
+    [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
+    {
+        return ConstIterator(std::find(cbegin(), cend(), aValue));
     }
 
     [[nodiscard]] bool Contains(ConstReference aValue) const

@@ -46,7 +46,7 @@ struct Span
         return IsEmpty();
     }
 
-    constexpr Reference operator[](SizeType aPos) const
+    constexpr Reference operator[](SizeType aPos)
     {
         assert(aPos < Size());
         return Data()[aPos];
@@ -69,7 +69,7 @@ struct Span
     }
 
 #pragma region Iterator
-    [[nodiscard]] constexpr Iterator begin() const noexcept
+    [[nodiscard]] constexpr Iterator begin() noexcept
     {
         return beginPtr;
     }
@@ -84,7 +84,7 @@ struct Span
         return begin();
     }
 
-    [[nodiscard]] constexpr Iterator end() const noexcept
+    [[nodiscard]] constexpr Iterator end() noexcept
     {
         return endPtr;
     }
@@ -105,7 +105,7 @@ struct Span
         return !Data();
     }
 
-    [[nodiscard]] constexpr Pointer Data() const noexcept
+    [[nodiscard]] constexpr Pointer Data() noexcept
     {
         return beginPtr;
     }
