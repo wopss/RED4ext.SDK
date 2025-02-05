@@ -7,8 +7,8 @@
 #include <type_traits>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Detail/Containers/ArrayIterator.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
+#include <RED4ext/Detail/Containers/ArrayIterator.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Relocation.hpp>
 #include <RED4ext/Utils.hpp>
@@ -464,8 +464,9 @@ private:
 
         constexpr uint32_t alignment = alignof(ValueType);
 
-        using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
-                                void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
+        using func_t =
+            void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
+                     void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
         func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, nullptr);
