@@ -58,9 +58,14 @@ struct Span
         return Data()[aPos];
     }
 
-    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) const noexcept
+    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
     {
-        return std::find(cbegin(), cend(), aValue);
+        return Iterator(std::find(begin(), end(), aValue));
+    }
+
+    [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
+    {
+        return ConstIterator(std::find(cbegin(), cend(), aValue));
     }
 
     [[nodiscard]] constexpr bool Contains(ConstReference aValue) const noexcept
