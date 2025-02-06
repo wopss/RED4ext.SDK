@@ -192,10 +192,10 @@ struct DynArray
     {
         if (aSize > Capacity())
             Reserve(aSize);
-        
+
         if (aSize < Size())
             std::destroy(begin() + aSize, end());
-        
+
         size = aSize;
     }
 

@@ -215,13 +215,35 @@ struct StaticArray
     constexpr T& operator[](uint32_t aPos)
     {
         assert(aPos < Size());
-        return entries[aPos];
+        return Data()[aPos];
     }
 
     constexpr const T& operator[](uint32_t aPos) const
     {
         assert(aPos < Size());
-        return entries[aPos];
+        return Data()[aPos];
+    }
+
+    [[nodiscard]] constexpr T& At(int32_t aPos)
+    {
+        if (aPos < 0)
+            aPos += Size();
+
+        if (aPos < 0 || aPos >= Size())
+            throw std::out_of_range("StaticArray::At out of range");
+
+        return Data()[static_cast<uint32_t>(aPos)];
+    }
+
+    [[nodiscard]] constexpr const T& At(int32_t aPos) const
+    {
+        if (aPos < 0)
+            aPos += Size();
+
+        if (aPos < 0 || aPos >= Size())
+            throw std::out_of_range("StaticArray::At out of range");
+
+        return Data()[static_cast<uint32_t>(aPos)];
     }
 
 #pragma region Iterator
