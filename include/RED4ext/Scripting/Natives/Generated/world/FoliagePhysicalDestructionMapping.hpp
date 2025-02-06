@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/physics/DestructionLevelData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/physics/DestructionParams.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/FoliageDestructionMapping.hpp>

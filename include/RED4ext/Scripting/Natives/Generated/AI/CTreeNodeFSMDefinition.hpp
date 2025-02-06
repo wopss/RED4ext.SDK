@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/CTreeNodeCompositeDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/FSMEventTransitionsListDefinition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/FSMStateDefinition.hpp>

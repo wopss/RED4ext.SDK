@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/CharacterCustomizationInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ui/IndexedMorphName.hpp>
 

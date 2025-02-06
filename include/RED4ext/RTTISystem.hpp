@@ -6,7 +6,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Mutex.hpp>
 #include <RED4ext/RTTITypes.hpp>
