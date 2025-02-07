@@ -119,7 +119,6 @@ public:
 
     [[nodiscard]] constexpr auto operator<=>(const ArrayIterator& aRhs) const noexcept
     {
-        // TODO: _Unfancy
         return m_ptr <=> aRhs.m_ptr;
     }
 
