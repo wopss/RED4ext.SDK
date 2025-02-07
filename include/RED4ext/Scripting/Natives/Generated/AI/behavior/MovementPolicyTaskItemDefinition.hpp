@@ -6,9 +6,9 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Containers/StaticArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/ISerializable.hpp>
-#include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/AI/behavior/MovementPolicyTaskFunctions.hpp>
 
 namespace RED4ext

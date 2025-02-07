@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/EquipParam.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/interactions/ReactionState.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>

@@ -831,7 +831,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         }
         case RED4ext::ERTTIType::Array:
         {
-            aFd.includes.emplace("DynArray");
+            aFd.includes.emplace("Containers/DynArray");
             break;
         }
         case RED4ext::ERTTIType::Name:
@@ -846,6 +846,10 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
             break;
         }
         case RED4ext::ERTTIType::StaticArray:
+        {
+            aFd.includes.emplace("Containers/StaticArray");
+            break;
+        }
         case RED4ext::ERTTIType::NativeArray:
         case RED4ext::ERTTIType::ResourceReference:
         case RED4ext::ERTTIType::ResourceAsyncReference:

@@ -5,7 +5,7 @@
 #include <functional>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
@@ -176,7 +176,7 @@ struct Map
     int32_t flags;      // 20
 
 private:
-    const K* LowerBound(const K& aKey) const
+    const auto LowerBound(const K& aKey) const
     {
         if ((flags & (int32_t)Flags::NotSorted) == (int32_t)Flags::NotSorted)
         {

@@ -1,12 +1,14 @@
 #pragma once
 
 #include <algorithm>
+#include <cassert>
 #include <cstdint>
 #include <functional>
 #include <type_traits>
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
+#include <RED4ext/Detail/Containers/ArrayIterator.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Relocation.hpp>
 #include <RED4ext/Utils.hpp>
@@ -21,14 +23,28 @@ struct IAllocator;
 template<typename T>
 struct DynArray
 {
+    using ValueType = T;
+    using Reference = ValueType&;
+    using ConstReference = const ValueType&;
+    using Pointer = ValueType*;
+    using ConstPointer = const ValueType*;
+
+    using SizeType = std::uint32_t;
+    using DifferenceType = std::ptrdiff_t;
+
+    using Iterator = Detail::ArrayIterator<ValueType, DynArray>;
+    using ConstIterator = Detail::ArrayIterator<const ValueType, DynArray>;
+    using ReverseIterator = std::reverse_iterator<Iterator>;
+    using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
+
     DynArray(Memory::IAllocator* aAllocator = nullptr)
-        : entries(aAllocator ? *reinterpret_cast<T**>(aAllocator) : nullptr)
+        : entries(aAllocator ? *reinterpret_cast<Pointer*>(aAllocator) : nullptr)
         , size(0)
         , capacity(0)
     {
     }
 
-    DynArray(std::initializer_list<T> aItems, Memory::IAllocator* aAllocator = nullptr)
+    DynArray(std::initializer_list<ValueType> aItems, Memory::IAllocator* aAllocator = nullptr)
         : DynArray(aAllocator)
     {
         Reserve(aItems.size());
@@ -56,7 +72,7 @@ struct DynArray
         if (capacity)
         {
             Clear();
-            auto allocator = *reinterpret_cast<T**>(GetAllocator());
+            auto allocator = *reinterpret_cast<Pointer*>(GetAllocator());
             reinterpret_cast<Memory::IAllocator*>(&allocator)->Free(entries);
             entries = allocator;
             capacity = 0;
@@ -86,37 +102,63 @@ struct DynArray
         return *this;
     }
 
-    const T& operator[](uint32_t aIndex) const
+    constexpr Reference operator[](SizeType aPos)
     {
-        return entries[aIndex];
+        assert(aPos < Size());
+        return Data()[aPos];
     }
 
-    T& operator[](uint32_t aIndex)
+    constexpr ConstReference operator[](SizeType aPos) const
     {
-        return entries[aIndex];
+        assert(aPos < Size());
+        return Data()[aPos];
     }
 
-    bool Contains(const T& aItem) const
+    [[nodiscard]] constexpr Reference At(std::make_signed_t<SizeType> aPos)
     {
-        for (uint32_t i = 0; i != size; ++i)
-        {
-            if (aItem == entries[i])
-            {
-                return true;
-            }
-        }
+        if (aPos < 0)
+            aPos += Size();
 
-        return false;
+        if (aPos < 0 || aPos >= Size())
+            throw std::out_of_range("DynArray::At out of range");
+
+        return Data()[static_cast<SizeType>(aPos)];
     }
 
-    void PushBack(const T& aItem)
+    [[nodiscard]] constexpr ConstReference At(std::make_signed_t<SizeType> aPos) const
     {
-        EmplaceBack(std::forward<const T&>(aItem));
+        if (aPos < 0)
+            aPos += Size();
+
+        if (aPos < 0 || aPos >= Size())
+            throw std::out_of_range("DynArray::At out of range");
+
+        return Data()[static_cast<SizeType>(aPos)];
     }
 
-    void PushBack(T&& aItem)
+    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
     {
-        EmplaceBack(std::forward<T&&>(aItem));
+        return Iterator(std::find(begin(), end(), aValue));
+    }
+
+    [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
+    {
+        return ConstIterator(std::find(cbegin(), cend(), aValue));
+    }
+
+    [[nodiscard]] bool Contains(ConstReference aValue) const
+    {
+        return Find(aValue) != cend();
+    }
+
+    void PushBack(ConstReference aItem)
+    {
+        EmplaceBack(std::forward<ConstReference>(aItem));
+    }
+
+    void PushBack(Reference& aItem)
+    {
+        EmplaceBack(std::forward<Reference&>(aItem));
     }
 
     template<class... TArgs>
@@ -126,29 +168,40 @@ struct DynArray
     }
 
     template<class... TArgs>
-    void Emplace(T* aPosition, TArgs&&... aArgs)
+    void Emplace(Iterator aPosition, TArgs&&... aArgs)
     {
-        uint32_t posIdx = capacity ? static_cast<uint32_t>(aPosition - begin()) : 0;
-        uint32_t newSize = size + 1;
+        SizeType posIdx = capacity ? static_cast<SizeType>(aPosition - begin()) : 0;
+        SizeType newSize = Size() + 1;
         if (newSize > capacity)
         {
             Reserve(newSize);
         }
 
         // If not at the end
-        if (posIdx != size)
+        if (posIdx != Size())
         {
-            uint32_t entriesCount = size - posIdx;
+            SizeType entriesCount = Size() - posIdx;
             MoveEntries(&entries[posIdx], &entries[posIdx + 1], entriesCount);
         }
 
-        new (&entries[posIdx]) T(std::forward<TArgs>(aArgs)...);
+        new (&entries[posIdx]) ValueType(std::forward<TArgs>(aArgs)...);
         size = newSize;
     }
 
-    bool Remove(const T& aItem)
+    void Resize(SizeType aSize)
     {
-        for (uint32_t i = 0; i != size; ++i)
+        if (aSize > Capacity())
+            Reserve(aSize);
+
+        if (aSize < Size())
+            std::destroy(begin() + aSize, end());
+
+        size = aSize;
+    }
+
+    bool Remove(ConstReference aItem)
+    {
+        for (uint32_t i = 0; i != Size(); ++i)
         {
             if (aItem == entries[i])
             {
@@ -159,122 +212,209 @@ struct DynArray
         return false;
     }
 
-    bool RemoveAt(uint32_t aIndex)
+    bool RemoveAt(SizeType aPos)
     {
-        if (aIndex >= size)
+        if (aPos >= Size())
             return false;
 
-        entries[aIndex].~T();
-        if ((aIndex + 1) != size) // If not at the end
+        entries[aPos].~ValueType();
+        if ((aPos + 1) != Size()) // If not at the end
         {
-            uint32_t entriesCount = size - (aIndex + 1);
-            MoveEntries(&entries[aIndex + 1], &entries[aIndex], entriesCount);
+            SizeType entriesCount = Size() - (aPos + 1);
+            MoveEntries(&entries[aPos + 1], &entries[aPos], entriesCount);
         }
         --size;
         return true;
     }
 
-    void Clear()
+    void Clear() noexcept
     {
-        for (uint32_t i = 0; i != size; ++i)
-        {
-            entries[i].~T();
-        }
-
+        std::destroy(begin(), end());
         size = 0;
     }
 
-    void Reserve(uint32_t aCount)
+    void Reserve(SizeType aCount)
     {
-        if (capacity >= aCount)
+        if (Capacity() >= aCount)
             return;
 
         auto newCapacity = CalculateGrowth(aCount);
         SetCapacity(newCapacity);
     }
 
-    void ShrinkToSize()
+    void ShrinkToFit()
     {
-        if (capacity > size)
-            SetCapacity(size);
+        if (Capacity() > Size())
+            SetCapacity(Size());
     }
 
-    Memory::IAllocator* GetAllocator() const
+    [[nodiscard]] Memory::IAllocator* GetAllocator() const
     {
-        if (capacity == 0)
+        if (Capacity() == 0)
         {
             // Case 1: Allocator is stored instead of entries pointer
             // It's only 8 bytes for VFT so it fits in a pointer
-            return reinterpret_cast<Memory::IAllocator*>(const_cast<T**>(&entries));
+            return reinterpret_cast<Memory::IAllocator*>(const_cast<Pointer*>(&entries));
         }
         else
         {
             // Case 2: Allocator is stored at the end of entries buffer (aligned)
-            auto allocatorPtr = AlignUp(reinterpret_cast<size_t>(&entries[capacity]), sizeof(void*));
+            auto allocatorPtr = AlignUp(reinterpret_cast<size_t>(&entries[Capacity()]), sizeof(void*));
             return reinterpret_cast<Memory::IAllocator*>(allocatorPtr);
         }
     }
 
+#pragma region STL
+    [[nodiscard]] constexpr Reference Front()
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr ConstReference Front() const
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr Reference Back()
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
+
+    [[nodiscard]] constexpr ConstReference Back() const
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
 #pragma region Iterator
-    T* Begin()
+    [[nodiscard]] constexpr Iterator Begin() noexcept
     {
         return entries;
     }
 
-    const T* Begin() const
+    [[nodiscard]] constexpr ConstIterator Begin() const noexcept
     {
         return entries;
     }
 
-    T* begin()
+    [[nodiscard]] constexpr Iterator begin() noexcept
     {
         return Begin();
     }
 
-    const T* begin() const
+    [[nodiscard]] constexpr ConstIterator begin() const noexcept
     {
         return Begin();
     }
 
-    T* End()
+    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
     {
-        return entries + size;
+        return begin();
     }
 
-    const T* End() const
+    [[nodiscard]] constexpr Iterator End() noexcept
     {
-        return entries + size;
+        return Iterator(entries + size);
     }
 
-    T* end()
+    [[nodiscard]] constexpr ConstIterator End() const noexcept
+    {
+        return ConstIterator(entries + size);
+    }
+
+    [[nodiscard]] constexpr Iterator end() noexcept
     {
         return End();
     }
 
-    const T* end() const
+    [[nodiscard]] constexpr ConstIterator end() const noexcept
     {
         return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cend() const noexcept
+    {
+        return end();
     }
 #pragma endregion
-
-    T& Front()
+#pragma region Reverse Iterator
+    [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
     {
-        return *entries;
+        return ReverseIterator(begin());
     }
 
-    const T& Front() const
+    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
     {
-        return *entries;
+        return ConstReverseIterator(begin());
     }
 
-    T& Back()
+    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
     {
-        return *(entries + size - 1);
+        return RBegin();
     }
 
-    const T& Back() const
+    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
     {
-        return *(entries + size - 1);
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
+    {
+        return rbegin();
+    }
+
+    [[nodiscard]] constexpr ReverseIterator REnd() noexcept
+    {
+        return ReverseIterator(end());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
+    {
+        return ConstReverseIterator(end());
+    }
+
+    [[nodiscard]] constexpr ReverseIterator rend() noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
+    {
+        return rend();
+    }
+#pragma endregion
+#pragma endregion
+
+    [[nodiscard]] constexpr bool Empty() const noexcept
+    {
+        return Size() == 0;
+    }
+
+    [[nodiscard]] constexpr Pointer Data() noexcept
+    {
+        return entries;
+    }
+
+    [[nodiscard]] constexpr ConstPointer Data() const noexcept
+    {
+        return entries;
+    }
+
+    [[nodiscard]] constexpr SizeType Capacity() const noexcept
+    {
+        return capacity;
+    }
+
+    [[nodiscard]] constexpr SizeType Size() const noexcept
+    {
+        return size;
     }
 
     T* entries;        // 00
@@ -282,36 +422,36 @@ struct DynArray
     uint32_t size;     // 0C
 
 private:
-    void MoveEntries(T* aSrc, T* aDst, uint32_t aCount)
+    void MoveEntries(Pointer aSrc, Pointer aDst, SizeType aCount)
     {
         if (aCount == 0 || aSrc == aDst)
             return;
 
         if constexpr (std::is_trivially_copyable_v<T>)
         {
-            std::memmove(aDst, aSrc, aCount * sizeof(T));
+            std::memmove(aDst, aSrc, aCount * sizeof(ValueType));
         }
         else if (aSrc < aDst)
         {
             for (; aCount != 0; --aCount)
             {
-                new (&aDst[aCount - 1]) T(std::move(aSrc[aCount - 1]));
-                aSrc[aCount - 1].~T();
+                new (&aDst[aCount - 1]) ValueType(std::move(aSrc[aCount - 1]));
+                aSrc[aCount - 1].~ValueType();
             }
         }
         else
         {
             for (uint32_t i = 0; i != aCount; ++i)
             {
-                new (&aDst[i]) T(std::move(aSrc[i]));
-                aSrc[i].~T();
+                new (&aDst[i]) ValueType(std::move(aSrc[i]));
+                aSrc[i].~ValueType();
             }
         }
     }
 
-    uint32_t CalculateGrowth(uint32_t aNewSize)
+    SizeType CalculateGrowth(SizeType aNewSize)
     {
-        uint32_t geometric = capacity + (capacity / 2);
+        uint32_t geometric = Capacity() + (Capacity() / 2);
         return (std::max)(aNewSize, geometric);
     }
 
@@ -323,29 +463,30 @@ private:
         }
     }
 
-    void SetCapacity(uint32_t aNewCapacity)
+    void SetCapacity(SizeType aNewCapacity)
     {
         if (aNewCapacity < size)
             return;
 
-        constexpr uint32_t alignment = alignof(T);
+        constexpr uint32_t alignment = alignof(ValueType);
 
-        using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
-                                void (*aMoveFunc)(T* aDstBuffer, T* aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
+        using func_t =
+            void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
+                     void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
-        func(this, aNewCapacity, sizeof(T), alignment >= 8 ? alignment : 8, nullptr);
+        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, nullptr);
     }
 
     void MoveFrom(DynArray&& aOther)
     {
-        entries = aOther.entries;
-        capacity = aOther.capacity;
-        size = aOther.size;
+        entries = aOther.Data();
+        capacity = aOther.Capacity();
+        size = aOther.Size();
 
-        if (aOther.capacity)
+        if (aOther.Capacity())
         {
-            aOther.entries = *reinterpret_cast<T**>(aOther.GetAllocator());
+            aOther.entries = *reinterpret_cast<Pointer*>(aOther.GetAllocator());
             aOther.capacity = 0;
             aOther.size = 0;
         }
