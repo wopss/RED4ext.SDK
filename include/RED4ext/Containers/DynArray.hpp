@@ -89,7 +89,7 @@ struct DynArray
     DynArray(TContainer&& aContainer, Memory::IAllocator* aAllocator = nullptr)
         : DynArray(aAllocator)
     {
-        Assign(std::make_move_iterator(aContainer.begin()), std::make_move_iterator(aContainer.end()))
+        Assign(std::make_move_iterator(aContainer.begin()), std::make_move_iterator(aContainer.end()));
     }
 
     ~DynArray()

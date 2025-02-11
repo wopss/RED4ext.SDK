@@ -6,7 +6,7 @@
 namespace RED4ext::Detail
 {
 template<typename T, typename Container>
-class ArrayIterator
+class ArrayIterator // Designed and created by @wopss
 {
 public:
     using iterator_concept = std::contiguous_iterator_tag;
