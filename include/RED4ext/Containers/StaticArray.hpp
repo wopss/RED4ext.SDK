@@ -27,43 +27,36 @@ struct StaticArray
     using ReverseIterator = std::reverse_iterator<Iterator>;
     using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
 
-    constexpr Reference operator[](uint32_t aPos)
+    constexpr Reference operator[](SizeType aPos)
     {
         assert(aPos < Size());
         return Data()[aPos];
     }
 
-    constexpr ConstReference operator[](uint32_t aPos) const
+    constexpr ConstReference operator[](SizeType aPos) const
     {
         assert(aPos < Size());
         return Data()[aPos];
     }
 
-    [[nodiscard]] constexpr Reference At(std::make_signed_t<SizeType> aPos)
+    [[nodiscard]] constexpr Reference At(SizeType aPos)
     {
-        if (aPos < 0)
-            aPos += Size();
-
-        if (aPos < 0 || aPos >= Size())
+        if (aPos >= Size())
             throw std::out_of_range("StaticArray::At out of range");
 
-        return Data()[static_cast<SizeType>(aPos)];
+        return Data()[aPos];
     }
 
-    [[nodiscard]] constexpr ConstReference At(std::make_signed_t<SizeType> aPos) const
+    [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
     {
-        if (aPos < 0)
-            aPos += Size();
-
-        if (aPos < 0 || aPos >= Size())
+        if (aPos >= Size())
             throw std::out_of_range("StaticArray::At out of range");
 
-        return Data()[static_cast<SizeType>(aPos)];
+        return Data()[aPos];
     }
 
 #pragma region STL
 #pragma region Iterator
-
     constexpr Iterator begin() noexcept
     {
         return entries;
@@ -105,7 +98,34 @@ struct StaticArray
         return ConstReverseIterator(end());
     }
 #pragma endregion
-#pragma endregion
+    [[nodiscard]] constexpr Reference Front()
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr ConstReference Front() const
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr Reference Back()
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
+
+    [[nodiscard]] constexpr ConstReference Back() const
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
+
+    [[nodiscard]] constexpr bool Empty() const noexcept
+    {
+        return Size() == 0;
+    }
 
     constexpr Pointer Data() noexcept
     {
@@ -126,6 +146,7 @@ struct StaticArray
     {
         return size;
     }
+#pragma endregion
 
     T entries[MAX_LEN]; // 00
     uint32_t size;

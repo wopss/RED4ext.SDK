@@ -23,6 +23,8 @@ struct Span
 
     using Iterator = Detail::ArrayIterator<ValueType, Span>;
     using ConstIterator = Detail::ArrayIterator<const ValueType, Span>;
+    using ReverseIterator = std::reverse_iterator<Iterator>;
+    using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
 
     Span()
         : beginPtr(nullptr)
@@ -42,11 +44,6 @@ struct Span
     {
     }
 
-    constexpr operator bool() const noexcept
-    {
-        return IsEmpty();
-    }
-
     constexpr Reference operator[](SizeType aPos)
     {
         assert(aPos < Size());
@@ -56,6 +53,22 @@ struct Span
     constexpr ConstReference operator[](SizeType aPos) const
     {
         assert(aPos < Size());
+        return Data()[aPos];
+    }
+
+    [[nodiscard]] constexpr Reference At(SizeType aPos)
+    {
+        if (aPos >= Size())
+            throw std::out_of_range("Span::At out of range");
+
+        return Data()[aPos];
+    }
+
+    [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
+    {
+        if (aPos >= Size())
+            throw std::out_of_range("Span::At out of range");
+
         return Data()[aPos];
     }
 
@@ -74,6 +87,30 @@ struct Span
         return Find(aValue) != cend();
     }
 
+#pragma region STL
+    [[nodiscard]] constexpr Reference Front()
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr ConstReference Front() const
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr Reference Back()
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
+
+    [[nodiscard]] constexpr ConstReference Back() const
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
 #pragma region Iterator
     [[nodiscard]] constexpr Iterator begin() noexcept
     {
@@ -105,8 +142,38 @@ struct Span
         return end();
     }
 #pragma endregion
+#pragma region Reverse Iterator
+    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
+    {
+        return ReverseIterator(begin());
+    }
 
-    [[nodiscard]] constexpr bool IsEmpty() const
+    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    {
+        return return ConstReverseIterator(begin());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
+    {
+        return rbegin();
+    }
+
+    [[nodiscard]] constexpr ReverseIterator rend() noexcept
+    {
+        return ReverseIterator(end());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
+    {
+        return ConstReverseIterator(end());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
+    {
+        return rend();
+    }
+#pragma endregion
+    [[nodiscard]] constexpr bool Empty() const
     {
         return !Data();
     }
@@ -125,6 +192,7 @@ struct Span
     {
         return endPtr - beginPtr;
     }
+#pragma endregion
 
     T* beginPtr; // 00
     T* endPtr;   // 08

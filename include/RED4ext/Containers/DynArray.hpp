@@ -4,6 +4,7 @@
 #include <cassert>
 #include <cstdint>
 #include <functional>
+#include <memory>
 #include <type_traits>
 
 #include <RED4ext/Common.hpp>
@@ -19,6 +20,11 @@ namespace Memory
 {
 struct IAllocator;
 }
+template<typename T>
+concept ContainerType = requires(T t) {
+    { t.begin() } -> std::input_iterator;
+    { t.end() } -> std::input_iterator;
+};
 
 template<typename T>
 struct DynArray
@@ -47,47 +53,60 @@ struct DynArray
     DynArray(std::initializer_list<ValueType> aItems, Memory::IAllocator* aAllocator = nullptr)
         : DynArray(aAllocator)
     {
-        Reserve(aItems.size());
+        Assign(aItems);
+    }
 
-        for (const auto& item : aItems)
-        {
-            EmplaceBack(item);
-        }
+    DynArray(uint32_t aSize, Memory::IAllocator* aAllocator = nullptr)
+        : DynArray(aAllocator)
+    {
+        Resize(aSize);
     }
 
     DynArray(const DynArray& aOther)
         : DynArray(aOther.GetAllocator())
     {
-        Reserve(aOther.size);
-        CopyFrom(aOther);
+        Assign(aOther.begin(), aOther.end());
     }
 
     DynArray(DynArray&& aOther) noexcept
+        : entries(aOther.Data())
+        , size(aOther.Size())
+        , capacity(aOther.Capacity())
     {
-        MoveFrom(std::move(aOther));
+        aOther.entries = reinterpret_cast<Pointer>(aOther.GetAllocator());
+        aOther.capacity = 0;
+        aOther.size = 0;
+    }
+
+    template<ContainerType TContainer>
+    DynArray(const TContainer& aContainer, Memory::IAllocator* aAllocator = nullptr)
+        : DynArray(aAllocator)
+    {
+        Assign(aContainer.begin(), aContainer.end());
+    }
+
+    template<ContainerType TContainer>
+    DynArray(TContainer&& aContainer, Memory::IAllocator* aAllocator = nullptr)
+        : DynArray(aAllocator)
+    {
+        Assign(std::make_move_iterator(aContainer.begin()), std::make_move_iterator(aContainer.end()))
     }
 
     ~DynArray()
     {
-        if (capacity)
-        {
-            Clear();
-            auto allocator = *reinterpret_cast<Pointer*>(GetAllocator());
-            reinterpret_cast<Memory::IAllocator*>(&allocator)->Free(entries);
-            entries = allocator;
-            capacity = 0;
-        }
+        Clear();
+        auto allocator = *reinterpret_cast<Pointer*>(GetAllocator());
+        reinterpret_cast<Memory::IAllocator*>(&allocator)->Free(entries);
+        entries = allocator;
+        capacity = 0;
     }
 
     DynArray& operator=(const DynArray& aOther)
     {
         if (this != std::addressof(aOther))
         {
-            Clear();
-            Reserve(aOther.size);
-            CopyFrom(aOther);
+            Assign(aOther.begin(), aOther.end());
         }
-
         return *this;
     }
 
@@ -95,8 +114,24 @@ struct DynArray
     {
         if (this != std::addressof(aOther))
         {
-            Clear();
-            MoveFrom(std::move(aOther));
+            Assign(std::make_move_iterator(aOther.begin()), std::make_move_iterator(aOther.end()));
+        }
+        return *this;
+    }
+
+    template<ContainerType TContainer>
+    DynArray& operator=(const TContainer& aOther)
+    {
+        Assign(aOther.begin(), aOther.end());
+        return *this;
+    }
+
+    template<ContainerType TContainer>
+    DynArray& operator=(TContainer&& aOther)
+    {
+        if (this != std::addressof(aOther))
+        {
+            Assign(std::make_move_iterator(aOther.begin()), std::make_move_iterator(aOther.end()));
         }
 
         return *this;
@@ -114,26 +149,57 @@ struct DynArray
         return Data()[aPos];
     }
 
-    [[nodiscard]] constexpr Reference At(std::make_signed_t<SizeType> aPos)
+    template<typename TIterator>
+    constexpr void Assign(TIterator aBegin, TIterator aEnd)
     {
-        if (aPos < 0)
-            aPos += Size();
+        SizeType newSize = std::distance(aBegin, aEnd);
 
-        if (aPos < 0 || aPos >= Size())
-            throw std::out_of_range("DynArray::At out of range");
+        Clear();
+        Resize(newSize);
 
-        return Data()[static_cast<SizeType>(aPos)];
+        if constexpr (std::is_trivially_copyable_v<ValueType>)
+        {
+            std::memcpy(Data(), aBegin, newSize * sizeof(ValueType));
+        }
+        else if constexpr (std::is_move_constructible_v<ValueType>)
+        {
+            std::move(aBegin, aEnd, Data());
+        }
+        else
+        {
+            std::copy(aBegin, aEnd, Data());
+        }
     }
 
-    [[nodiscard]] constexpr ConstReference At(std::make_signed_t<SizeType> aPos) const
+    constexpr void Assign(std::initializer_list<ValueType> aItems)
     {
-        if (aPos < 0)
-            aPos += Size();
+        Assign(aItems.begin(), aItems.end());
+    }
 
-        if (aPos < 0 || aPos >= Size())
+    constexpr void Assign(SizeType aAmount, ValueType aValue)
+    {
+        Clear();
+        Resize(aAmount);
+        for (SizeType i = 0; i < aAmount; ++i)
+        {
+            Emplace(i, aValue);
+        }
+    }
+
+    [[nodiscard]] constexpr Reference At(SizeType aPos)
+    {
+        if (aPos >= Size())
             throw std::out_of_range("DynArray::At out of range");
 
-        return Data()[static_cast<SizeType>(aPos)];
+        return Data()[aPos];
+    }
+
+    [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
+    {
+        if (aPos >= Size())
+            throw std::out_of_range("DynArray::At out of range");
+
+        return Data()[aPos];
     }
 
     [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
@@ -170,9 +236,9 @@ struct DynArray
     template<class... TArgs>
     void Emplace(Iterator aPosition, TArgs&&... aArgs)
     {
-        SizeType posIdx = capacity ? static_cast<SizeType>(aPosition - begin()) : 0;
+        SizeType posIdx = Capacity() ? static_cast<SizeType>(aPosition - begin()) : 0;
         SizeType newSize = Size() + 1;
-        if (newSize > capacity)
+        if (newSize > Capacity())
         {
             Reserve(newSize);
         }
@@ -193,8 +259,10 @@ struct DynArray
         if (aSize > Capacity())
             Reserve(aSize);
 
-        if (aSize < Size())
+        else if (aSize < Size())
+        {
             std::destroy(begin() + aSize, end());
+        }
 
         size = aSize;
     }
@@ -229,7 +297,8 @@ struct DynArray
 
     void Clear() noexcept
     {
-        std::destroy(begin(), end());
+        if (capacity)
+            std::destroy(begin(), end());
         size = 0;
     }
 
@@ -240,6 +309,9 @@ struct DynArray
 
         auto newCapacity = CalculateGrowth(aCount);
         SetCapacity(newCapacity);
+
+        if (aCount > Size())
+            std::uninitialized_default_construct(begin() + aCount, end());
     }
 
     void ShrinkToFit()
@@ -265,29 +337,6 @@ struct DynArray
     }
 
 #pragma region STL
-    [[nodiscard]] constexpr Reference Front()
-    {
-        assert(!Empty());
-        return Data()[0];
-    }
-
-    [[nodiscard]] constexpr ConstReference Front() const
-    {
-        assert(!Empty());
-        return Data()[0];
-    }
-
-    [[nodiscard]] constexpr Reference Back()
-    {
-        assert(!Empty());
-        return Data()[Size() - 1];
-    }
-
-    [[nodiscard]] constexpr ConstReference Back() const
-    {
-        assert(!Empty());
-        return Data()[Size() - 1];
-    }
 #pragma region Iterator
     [[nodiscard]] constexpr Iterator Begin() noexcept
     {
@@ -390,7 +439,29 @@ struct DynArray
         return rend();
     }
 #pragma endregion
-#pragma endregion
+    [[nodiscard]] constexpr Reference Front()
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr ConstReference Front() const
+    {
+        assert(!Empty());
+        return Data()[0];
+    }
+
+    [[nodiscard]] constexpr Reference Back()
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
+
+    [[nodiscard]] constexpr ConstReference Back() const
+    {
+        assert(!Empty());
+        return Data()[Size() - 1];
+    }
 
     [[nodiscard]] constexpr bool Empty() const noexcept
     {
@@ -416,6 +487,7 @@ struct DynArray
     {
         return size;
     }
+#pragma endregion
 
     T* entries;        // 00
     uint32_t capacity; // 08
@@ -455,14 +527,6 @@ private:
         return (std::max)(aNewSize, geometric);
     }
 
-    void CopyFrom(const DynArray& aOther)
-    {
-        for (uint32_t i = 0; i != aOther.size; ++i)
-        {
-            PushBack(aOther[i]);
-        }
-    }
-
     void SetCapacity(SizeType aNewCapacity)
     {
         if (aNewCapacity < size)
@@ -476,20 +540,6 @@ private:
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
         func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, nullptr);
-    }
-
-    void MoveFrom(DynArray&& aOther)
-    {
-        entries = aOther.Data();
-        capacity = aOther.Capacity();
-        size = aOther.Size();
-
-        if (aOther.Capacity())
-        {
-            aOther.entries = *reinterpret_cast<Pointer*>(aOther.GetAllocator());
-            aOther.capacity = 0;
-            aOther.size = 0;
-        }
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
