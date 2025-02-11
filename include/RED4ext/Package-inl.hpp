@@ -49,7 +49,7 @@ RED4EXT_INLINE RED4ext::ObjectPackageHeader::ObjectPackageHeader()
 
 RED4EXT_INLINE bool RED4ext::ObjectPackageHeader::IsEmpty() const
 {
-    return cruids.IsEmpty();
+    return cruids.Empty();
 }
 
 RED4EXT_INLINE void RED4ext::ObjectPackageReader::OnReadHeader(uint64_t a1, uint64_t a2)

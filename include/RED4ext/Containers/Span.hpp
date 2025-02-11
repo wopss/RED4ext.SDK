@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
+#include <stdexcept>
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Detail/Containers/ArrayIterator.hpp>
@@ -150,7 +151,7 @@ struct Span
 
     [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
     {
-        return return ConstReverseIterator(begin());
+        return ConstReverseIterator(begin());
     }
 
     [[nodiscard]] constexpr ConstReverseIterator crbegin() const

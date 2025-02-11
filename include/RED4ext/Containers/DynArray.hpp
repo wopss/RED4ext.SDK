@@ -159,7 +159,8 @@ struct DynArray
 
         if constexpr (std::is_trivially_copyable_v<ValueType>)
         {
-            std::memcpy(Data(), aBegin, newSize * sizeof(ValueType));
+            auto begin = *aBegin;
+            std::memcpy(Data(), &begin, newSize * sizeof(ValueType));
         }
         else if constexpr (std::is_move_constructible_v<ValueType>)
         {
