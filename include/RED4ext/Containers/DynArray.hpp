@@ -73,7 +73,7 @@ struct DynArray
         , size(aOther.Size())
         , capacity(aOther.Capacity())
     {
-        aOther.entries = reinterpret_cast<Pointer>(aOther.GetAllocator());
+        aOther.entries = *reinterpret_cast<Pointer*>(aOther.GetAllocator());
         aOther.capacity = 0;
         aOther.size = 0;
     }
@@ -152,7 +152,8 @@ struct DynArray
     template<typename TIterator>
     constexpr void Assign(TIterator aBegin, TIterator aEnd)
     {
-        SizeType newSize = std::distance(aBegin, aEnd);
+        SizeType newSize = static_cast<SizeType>(std::distance(aBegin, aEnd));
+        assert(newSize >= 0);
 
         Clear();
         Resize(newSize);
