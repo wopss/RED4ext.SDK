@@ -50,10 +50,10 @@ struct DynArray
         Resize(aSize);
     }
 
-    DynArray(std::initializer_list<ValueType> aItems, Memory::IAllocator* aAllocator = nullptr)
+    DynArray(std::initializer_list<ValueType> aList, Memory::IAllocator* aAllocator = nullptr)
         : DynArray(aAllocator)
     {
-        Assign(aItems);
+        Assign(aList);
     }
 
     DynArray(const DynArray& aOther)
@@ -102,9 +102,9 @@ struct DynArray
         if (this != std::addressof(aOther))
         {
             Clear();
-            entries = aOther.entries;
-            size = aOther.size;
-            capacity = aOther.capacity;
+            entries = aOther.Data();
+            size = aOther.Size();
+            capacity = aOther.Capacity();
 
             aOther.entries = std::bit_cast<Pointer>(aOther.GetAllocator());
             aOther.capacity = 0;
@@ -129,11 +129,17 @@ struct DynArray
     template<std::input_iterator InputIt>
     constexpr void Assign(InputIt aFirst, InputIt aLast)
     {
-        SizeType newSize = static_cast<SizeType>(std::distance(aFirst, aLast));
-        assert(newSize >= 0);
+        if (aFirst == aLast)
+        {
+            Clear();
+            return;
+        }
 
-        Clear();
-        Resize(newSize);
+        DifferenceType diff = std::abs(std::distance(aFirst, aLast));
+        if (diff > MaxSize())
+            throw std::length_error("DynArray::Assign: Iterator range exceeds max size");
+
+        Resize(static_cast<SizeType>(diff));
 
         if constexpr (std::is_move_constructible_v<ValueType>)
         {
@@ -145,25 +151,24 @@ struct DynArray
         }
     }
 
-    constexpr void Assign(std::initializer_list<ValueType> aItems)
+    constexpr void Assign(std::initializer_list<ValueType> aList)
     {
-        Assign(aItems.begin(), aItems.end());
+        Assign(aList.begin(), aList.end());
     }
 
     constexpr void Assign(SizeType aAmount, ValueType aValue)
     {
-        Clear();
-        Reserve(aAmount);
+        Resize(aAmount);
         for (SizeType i = 0; i < aAmount; ++i)
         {
-            Emplace(i, aValue);
+            Data()[i] = aValue;
         }
     }
 
     [[nodiscard]] constexpr Reference At(SizeType aPos)
     {
         if (aPos >= Size())
-            throw std::out_of_range("DynArray::At out of range");
+            throw std::out_of_range("DynArray::At: Out of range");
 
         return Data()[aPos];
     }
@@ -171,7 +176,7 @@ struct DynArray
     [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
     {
         if (aPos >= Size())
-            throw std::out_of_range("DynArray::At out of range");
+            throw std::out_of_range("DynArray::At: Out of range");
 
         return Data()[aPos];
     }
@@ -231,15 +236,13 @@ struct DynArray
         if (aSize == Size())
             return;
 
-        if (aSize > Capacity())
-            Reserve(aSize);
-
         if (aSize < Size())
         {
             std::destroy(Begin() + aSize, End());
         }
         else
         {
+            Reserve(aSize);
             std::uninitialized_default_construct(End(), Begin() + aSize);
         }
 
@@ -393,6 +396,12 @@ struct DynArray
     [[nodiscard]] constexpr SizeType Capacity() const noexcept
     {
         return capacity;
+    }
+
+    [[nodiscard]] constexpr SizeType MaxSize() const noexcept
+    {
+#undef max // preprocessor thinks max is a macro under NOMINMAX
+        return std::numeric_limits<SizeType>::max();
     }
 
     [[nodiscard]] constexpr SizeType Size() const noexcept

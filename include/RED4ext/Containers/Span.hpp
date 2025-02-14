@@ -60,7 +60,7 @@ struct Span
     [[nodiscard]] constexpr Reference At(SizeType aPos)
     {
         if (aPos >= Size())
-            throw std::out_of_range("Span::At out of range");
+            throw std::out_of_range("Span::At: out of range");
 
         return Data()[aPos];
     }
@@ -68,7 +68,7 @@ struct Span
     [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
     {
         if (aPos >= Size())
-            throw std::out_of_range("Span::At out of range");
+            throw std::out_of_range("Span::At: out of range");
 
         return Data()[aPos];
     }

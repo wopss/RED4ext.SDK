@@ -27,6 +27,15 @@ struct StaticArray
     using ReverseIterator = std::reverse_iterator<Iterator>;
     using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
 
+    StaticArray(std::initializer_list<T> aList)
+    {
+        if (aList.size() > MaxSize())
+            throw std::invalid_argument("StaticArray: Initializer list size cannot exceed MAX_LEN");
+
+        std::copy(aList.begin(), aList.end(), Data());
+        size = aList.size();
+    }
+
     constexpr Reference operator[](SizeType aPos)
     {
         assert(aPos < Size());
@@ -42,7 +51,7 @@ struct StaticArray
     [[nodiscard]] constexpr Reference At(SizeType aPos)
     {
         if (aPos >= Size())
-            throw std::out_of_range("StaticArray::At out of range");
+            throw std::out_of_range("StaticArray::At: out of range");
 
         return Data()[aPos];
     }
@@ -50,7 +59,7 @@ struct StaticArray
     [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
     {
         if (aPos >= Size())
-            throw std::out_of_range("StaticArray::At out of range");
+            throw std::out_of_range("StaticArray::At: out of range");
 
         return Data()[aPos];
     }
