@@ -51,7 +51,7 @@ struct Map
 
     uint32_t GetSize() const
     {
-        return keys.size;
+        return keys.Size();
     }
 
     T* Get(const K& aKey)
@@ -105,8 +105,8 @@ struct Map
             return {&values[index], false};
         }
 
-        keys.Emplace(&keys.entries[index], std::forward<const K&>(aKey));
-        values.Emplace(&values.entries[index], std::forward<TArgs>(aArgs)...);
+        keys.Emplace(&keys[index], std::forward<const K&>(aKey));
+        values.Emplace(&values[index], std::forward<TArgs>(aArgs)...);
         return {&values[index], true};
     }
 

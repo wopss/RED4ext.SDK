@@ -80,7 +80,7 @@ struct Span
 
     [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
     {
-        return ConstIterator(Find(aValue));
+        return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
     [[nodiscard]] constexpr bool Contains(ConstReference aValue) const noexcept

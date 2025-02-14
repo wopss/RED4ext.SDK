@@ -11,7 +11,7 @@ RED4EXT_INLINE RED4ext::red::TagList::operator bool() const noexcept
 
 RED4EXT_INLINE bool RED4ext::red::TagList::IsEmpty() const
 {
-    return !tags.size;
+    return !tags.Size();
 }
 
 RED4EXT_INLINE bool RED4ext::red::TagList::Contains(CName aTag) const

@@ -183,7 +183,7 @@ struct DynArray
 
     [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
     {
-        return ConstIterator(Find(aValue));
+        return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
     [[nodiscard]] bool Contains(ConstReference aValue) const
@@ -196,9 +196,9 @@ struct DynArray
         EmplaceBack(std::forward<ConstReference>(aItem));
     }
 
-    void PushBack(Reference& aItem)
+    void PushBack(ValueType&& aItem)
     {
-        EmplaceBack(std::forward<Reference&>(aItem));
+        EmplaceBack(std::forward<ValueType&&>(aItem));
     }
 
     template<class... TArgs>
@@ -506,6 +506,4 @@ private:
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
-RED4EXT_ASSERT_OFFSET(DynArray<void*>, capacity, 0x8);
-RED4EXT_ASSERT_OFFSET(DynArray<void*>, size, 0xC);
 } // namespace RED4ext
