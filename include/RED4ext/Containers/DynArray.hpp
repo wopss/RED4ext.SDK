@@ -21,19 +21,13 @@ namespace Memory
 struct IAllocator;
 }
 template<typename T>
-concept ContainerType = requires(T t) {
-    { t.begin() } -> std::input_iterator;
-    { t.end() } -> std::input_iterator;
-};
-
-template<typename T>
 struct DynArray
 {
     using ValueType = T;
     using Reference = ValueType&;
-    using ConstReference = const ValueType&;
+    using ConstReference = const Reference;
     using Pointer = ValueType*;
-    using ConstPointer = const ValueType*;
+    using ConstPointer = const Pointer;
 
     using SizeType = std::uint32_t;
     using DifferenceType = std::ptrdiff_t;
@@ -44,10 +38,16 @@ struct DynArray
     using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
 
     DynArray(Memory::IAllocator* aAllocator = nullptr)
-        : entries(aAllocator ? *reinterpret_cast<Pointer*>(aAllocator) : nullptr)
+        : entries(aAllocator ? std::bit_cast<Pointer>(aAllocator) : nullptr)
         , size(0)
         , capacity(0)
     {
+    }
+
+    DynArray(SizeType aSize, Memory::IAllocator* aAllocator = nullptr)
+        : DynArray(aAllocator)
+    {
+        Resize(aSize);
     }
 
     DynArray(std::initializer_list<ValueType> aItems, Memory::IAllocator* aAllocator = nullptr)
@@ -56,16 +56,10 @@ struct DynArray
         Assign(aItems);
     }
 
-    DynArray(uint32_t aSize, Memory::IAllocator* aAllocator = nullptr)
-        : DynArray(aAllocator)
-    {
-        Resize(aSize);
-    }
-
     DynArray(const DynArray& aOther)
         : DynArray(aOther.GetAllocator())
     {
-        Assign(aOther.begin(), aOther.end());
+        Assign(aOther.Begin(), aOther.End());
     }
 
     DynArray(DynArray&& aOther) noexcept
@@ -73,30 +67,23 @@ struct DynArray
         , size(aOther.Size())
         , capacity(aOther.Capacity())
     {
-        aOther.entries = *reinterpret_cast<Pointer*>(aOther.GetAllocator());
+        aOther.entries = std::bit_cast<Pointer>(aOther.GetAllocator());
         aOther.capacity = 0;
         aOther.size = 0;
     }
 
-    template<ContainerType TContainer>
-    DynArray(const TContainer& aContainer, Memory::IAllocator* aAllocator = nullptr)
+    template<std::input_iterator InputIt>
+    DynArray(InputIt aFirst, InputIt aLast, Memory::IAllocator* aAllocator = nullptr)
         : DynArray(aAllocator)
     {
-        Assign(aContainer.begin(), aContainer.end());
-    }
-
-    template<ContainerType TContainer>
-    DynArray(TContainer&& aContainer, Memory::IAllocator* aAllocator = nullptr)
-        : DynArray(aAllocator)
-    {
-        Assign(std::make_move_iterator(aContainer.begin()), std::make_move_iterator(aContainer.end()));
+        Assign(aFirst, aLast);
     }
 
     ~DynArray()
     {
         Clear();
-        auto allocator = *reinterpret_cast<Pointer*>(GetAllocator());
-        reinterpret_cast<Memory::IAllocator*>(&allocator)->Free(entries);
+        auto allocator = std::bit_cast<Pointer>(GetAllocator());
+        std::bit_cast<Memory::IAllocator*>(&allocator)->Free(entries);
         entries = allocator;
         capacity = 0;
     }
@@ -105,7 +92,7 @@ struct DynArray
     {
         if (this != std::addressof(aOther))
         {
-            Assign(aOther.begin(), aOther.end());
+            Assign(aOther.Begin(), aOther.End());
         }
         return *this;
     }
@@ -114,24 +101,14 @@ struct DynArray
     {
         if (this != std::addressof(aOther))
         {
-            Assign(std::make_move_iterator(aOther.begin()), std::make_move_iterator(aOther.end()));
-        }
-        return *this;
-    }
+            Clear();
+            entries = aOther.entries;
+            size = aOther.size;
+            capacity = aOther.capacity;
 
-    template<ContainerType TContainer>
-    DynArray& operator=(const TContainer& aOther)
-    {
-        Assign(aOther.begin(), aOther.end());
-        return *this;
-    }
-
-    template<ContainerType TContainer>
-    DynArray& operator=(TContainer&& aOther)
-    {
-        if (this != std::addressof(aOther))
-        {
-            Assign(std::make_move_iterator(aOther.begin()), std::make_move_iterator(aOther.end()));
+            aOther.entries = std::bit_cast<Pointer>(aOther.GetAllocator());
+            aOther.capacity = 0;
+            aOther.size = 0;
         }
 
         return *this;
@@ -149,27 +126,22 @@ struct DynArray
         return Data()[aPos];
     }
 
-    template<typename TIterator>
-    constexpr void Assign(TIterator aBegin, TIterator aEnd)
+    template<std::input_iterator InputIt>
+    constexpr void Assign(InputIt aFirst, InputIt aLast)
     {
-        SizeType newSize = static_cast<SizeType>(std::distance(aBegin, aEnd));
+        SizeType newSize = static_cast<SizeType>(std::distance(aFirst, aLast));
         assert(newSize >= 0);
 
         Clear();
         Resize(newSize);
 
-        if constexpr (std::is_trivially_copyable_v<ValueType>)
+        if constexpr (std::is_move_constructible_v<ValueType>)
         {
-            auto begin = *aBegin;
-            std::memcpy(Data(), &begin, newSize * sizeof(ValueType));
-        }
-        else if constexpr (std::is_move_constructible_v<ValueType>)
-        {
-            std::move(aBegin, aEnd, Data());
+            std::move(aFirst, aLast, Data());
         }
         else
         {
-            std::copy(aBegin, aEnd, Data());
+            std::copy(aFirst, aLast, Data());
         }
     }
 
@@ -181,7 +153,7 @@ struct DynArray
     constexpr void Assign(SizeType aAmount, ValueType aValue)
     {
         Clear();
-        Resize(aAmount);
+        Reserve(aAmount);
         for (SizeType i = 0; i < aAmount; ++i)
         {
             Emplace(i, aValue);
@@ -206,17 +178,17 @@ struct DynArray
 
     [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
     {
-        return Iterator(std::find(begin(), end(), aValue));
+        return Iterator(std::find(Begin(), End(), aValue));
     }
 
     [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
     {
-        return ConstIterator(std::find(cbegin(), cend(), aValue));
+        return ConstIterator(Find(aValue));
     }
 
     [[nodiscard]] bool Contains(ConstReference aValue) const
     {
-        return Find(aValue) != cend();
+        return Find(aValue) != End();
     }
 
     void PushBack(ConstReference aItem)
@@ -232,18 +204,16 @@ struct DynArray
     template<class... TArgs>
     void EmplaceBack(TArgs&&... aArgs)
     {
-        Emplace(end(), std::forward<TArgs>(aArgs)...);
+        Emplace(End(), std::forward<TArgs>(aArgs)...);
     }
 
     template<class... TArgs>
     void Emplace(Iterator aPosition, TArgs&&... aArgs)
     {
-        SizeType posIdx = Capacity() ? static_cast<SizeType>(aPosition - begin()) : 0;
+        SizeType posIdx = Capacity() ? static_cast<SizeType>(aPosition - Begin()) : 0;
         SizeType newSize = Size() + 1;
         if (newSize > Capacity())
-        {
             Reserve(newSize);
-        }
 
         // If not at the end
         if (posIdx != Size())
@@ -258,12 +228,19 @@ struct DynArray
 
     void Resize(SizeType aSize)
     {
+        if (aSize == Size())
+            return;
+
         if (aSize > Capacity())
             Reserve(aSize);
 
-        else if (aSize < Size())
+        if (aSize < Size())
         {
-            std::destroy(begin() + aSize, end());
+            std::destroy(Begin() + aSize, End());
+        }
+        else
+        {
+            std::uninitialized_default_construct(End(), Begin() + aSize);
         }
 
         size = aSize;
@@ -273,7 +250,7 @@ struct DynArray
     {
         for (uint32_t i = 0; i != Size(); ++i)
         {
-            if (aItem == entries[i])
+            if (aItem == Data()[i])
             {
                 return RemoveAt(i);
             }
@@ -299,8 +276,7 @@ struct DynArray
 
     void Clear() noexcept
     {
-        if (capacity)
-            std::destroy(begin(), end());
+        std::destroy(Begin(), End());
         size = 0;
     }
 
@@ -311,9 +287,6 @@ struct DynArray
 
         auto newCapacity = CalculateGrowth(aCount);
         SetCapacity(newCapacity);
-
-        if (aCount > Size())
-            std::uninitialized_default_construct(begin() + aCount, end());
     }
 
     void ShrinkToFit()
@@ -338,109 +311,6 @@ struct DynArray
         }
     }
 
-#pragma region STL
-#pragma region Iterator
-    [[nodiscard]] constexpr Iterator Begin() noexcept
-    {
-        return entries;
-    }
-
-    [[nodiscard]] constexpr ConstIterator Begin() const noexcept
-    {
-        return entries;
-    }
-
-    [[nodiscard]] constexpr Iterator begin() noexcept
-    {
-        return Begin();
-    }
-
-    [[nodiscard]] constexpr ConstIterator begin() const noexcept
-    {
-        return Begin();
-    }
-
-    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
-    {
-        return begin();
-    }
-
-    [[nodiscard]] constexpr Iterator End() noexcept
-    {
-        return Iterator(entries + size);
-    }
-
-    [[nodiscard]] constexpr ConstIterator End() const noexcept
-    {
-        return ConstIterator(entries + size);
-    }
-
-    [[nodiscard]] constexpr Iterator end() noexcept
-    {
-        return End();
-    }
-
-    [[nodiscard]] constexpr ConstIterator end() const noexcept
-    {
-        return End();
-    }
-
-    [[nodiscard]] constexpr ConstIterator cend() const noexcept
-    {
-        return end();
-    }
-#pragma endregion
-#pragma region Reverse Iterator
-    [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
-    {
-        return ReverseIterator(begin());
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
-    {
-        return ConstReverseIterator(begin());
-    }
-
-    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
-    {
-        return rbegin();
-    }
-
-    [[nodiscard]] constexpr ReverseIterator REnd() noexcept
-    {
-        return ReverseIterator(end());
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
-    {
-        return ConstReverseIterator(end());
-    }
-
-    [[nodiscard]] constexpr ReverseIterator rend() noexcept
-    {
-        return REnd();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
-    {
-        return REnd();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
-    {
-        return rend();
-    }
-#pragma endregion
     [[nodiscard]] constexpr Reference Front()
     {
         assert(!Empty());
@@ -463,6 +333,46 @@ struct DynArray
     {
         assert(!Empty());
         return Data()[Size() - 1];
+    }
+
+    [[nodiscard]] constexpr Iterator Begin() noexcept
+    {
+        return entries;
+    }
+
+    [[nodiscard]] constexpr ConstIterator Begin() const noexcept
+    {
+        return entries;
+    }
+
+    [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
+    {
+        return ReverseIterator(Begin());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
+    {
+        return ConstReverseIterator(Begin());
+    }
+
+    [[nodiscard]] constexpr Iterator End() noexcept
+    {
+        return Iterator(entries + size);
+    }
+
+    [[nodiscard]] constexpr ConstIterator End() const noexcept
+    {
+        return ConstIterator(entries + size);
+    }
+
+    [[nodiscard]] constexpr ReverseIterator REnd() noexcept
+    {
+        return ReverseIterator(End());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
+    {
+        return ConstReverseIterator(End());
     }
 
     [[nodiscard]] constexpr bool Empty() const noexcept
@@ -489,37 +399,88 @@ struct DynArray
     {
         return size;
     }
-#pragma endregion
 
+#pragma region STL
+#pragma region Iterator
+    [[nodiscard]] constexpr Iterator begin() noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr ConstIterator begin() const noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
+    {
+        return begin();
+    }
+
+    [[nodiscard]] constexpr Iterator end() noexcept
+    {
+        return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator end() const noexcept
+    {
+        return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cend() const noexcept
+    {
+        return end();
+    }
+#pragma endregion
+#pragma region Reverse Iterator
+    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
+    {
+        return rbegin();
+    }
+
+    [[nodiscard]] constexpr ReverseIterator rend() noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
+    {
+        return rend();
+    }
+#pragma endregion
+#pragma endregion
+private:
     T* entries;        // 00
     uint32_t capacity; // 08
     uint32_t size;     // 0C
 
-private:
     void MoveEntries(Pointer aSrc, Pointer aDst, SizeType aCount)
     {
         if (aCount == 0 || aSrc == aDst)
             return;
 
-        if constexpr (std::is_trivially_copyable_v<T>)
+        if (aSrc < aDst)
         {
-            std::memmove(aDst, aSrc, aCount * sizeof(ValueType));
-        }
-        else if (aSrc < aDst)
-        {
-            for (; aCount != 0; --aCount)
-            {
-                new (&aDst[aCount - 1]) ValueType(std::move(aSrc[aCount - 1]));
-                aSrc[aCount - 1].~ValueType();
-            }
+            std::move_backward(aSrc, aSrc + aCount, aDst + aCount);
         }
         else
         {
-            for (uint32_t i = 0; i != aCount; ++i)
-            {
-                new (&aDst[i]) ValueType(std::move(aSrc[i]));
-                aSrc[i].~ValueType();
-            }
+            std::move(aSrc, aSrc + aCount, aDst);
         }
     }
 

@@ -15,9 +15,9 @@ struct StaticArray
 {
     using ValueType = T;
     using Reference = ValueType&;
-    using ConstReference = const ValueType&;
+    using ConstReference = const Reference;
     using Pointer = ValueType*;
-    using ConstPointer = const ValueType*;
+    using ConstPointer = const Pointer;
 
     using SizeType = std::uint32_t;
     using DifferenceType = std::ptrdiff_t;
@@ -55,49 +55,46 @@ struct StaticArray
         return Data()[aPos];
     }
 
-#pragma region STL
-#pragma region Iterator
-    constexpr Iterator begin() noexcept
+    [[nodiscard]] constexpr Iterator Begin() noexcept
     {
         return entries;
     }
 
-    constexpr ConstIterator begin() const noexcept
+    [[nodiscard]] constexpr ConstIterator Begin() const noexcept
     {
         return entries;
     }
 
-    constexpr Iterator end() noexcept
+    [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
+    {
+        return ReverseIterator(Begin());
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
+    {
+        return ConstReverseIterator(Begin());
+    }
+
+    [[nodiscard]] constexpr Iterator End() noexcept
     {
         return entries + size;
     }
 
-    constexpr ConstIterator end() const noexcept
+    [[nodiscard]] constexpr ConstIterator End() const noexcept
     {
         return entries + size;
     }
-#pragma endregion
-#pragma region Reverse Iterator
-    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
+
+    [[nodiscard]] constexpr ReverseIterator REnd() noexcept
     {
-        return ReverseIterator(begin());
+        return ReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
     {
-        return ConstReverseIterator(begin());
+        return ConstReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr ReverseIterator rend() noexcept
-    {
-        return ReverseIterator(end());
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
-    {
-        return ConstReverseIterator(end());
-    }
-#pragma endregion
     [[nodiscard]] constexpr Reference Front()
     {
         assert(!Empty());
@@ -122,9 +119,9 @@ struct StaticArray
         return Data()[Size() - 1];
     }
 
-    [[nodiscard]] constexpr bool Empty() const noexcept
+    constexpr SizeType Capacity() const noexcept
     {
-        return Size() == 0;
+        return MaxSize();
     }
 
     constexpr Pointer Data() noexcept
@@ -137,6 +134,11 @@ struct StaticArray
         return entries;
     }
 
+    [[nodiscard]] constexpr bool Empty() const noexcept
+    {
+        return Size() == 0;
+    }
+
     constexpr SizeType MaxSize() const noexcept
     {
         return MAX_LEN;
@@ -146,10 +148,74 @@ struct StaticArray
     {
         return size;
     }
-#pragma endregion
 
     T entries[MAX_LEN]; // 00
     uint32_t size;
+
+#pragma region STL
+#pragma region Iterator
+    [[nodiscard]] constexpr Iterator begin() noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr ConstIterator begin() const noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
+    {
+        return begin();
+    }
+
+    [[nodiscard]] constexpr Iterator end() noexcept
+    {
+        return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator end() const noexcept
+    {
+        return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cend() const noexcept
+    {
+        return end();
+    }
+#pragma endregion
+#pragma region Reverse Iterator
+    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crbegin() const noexcept
+    {
+        return rbegin();
+    }
+
+    [[nodiscard]] constexpr ReverseIterator rend() noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
+    {
+        return rend();
+    }
+#pragma endregion
+#pragma endregion
 };
 static_assert(sizeof(StaticArray<std::array<uint8_t, 5>, 32>) ==
               164); // StaticArray<GpuWrapApiVertexPackingPackingElement, 32>

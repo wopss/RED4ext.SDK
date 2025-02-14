@@ -15,9 +15,9 @@ struct Span
 {
     using ValueType = T;
     using Reference = ValueType&;
-    using ConstReference = const ValueType;
+    using ConstReference = const Reference;
     using Pointer = ValueType*;
-    using ConstPointer = const ValueType*;
+    using ConstPointer = const Pointer;
 
     using SizeType = std::uint32_t;
     using DifferenceType = std::ptrdiff_t;
@@ -75,20 +75,19 @@ struct Span
 
     [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
     {
-        return Iterator(std::find(begin(), end(), aValue));
+        return Iterator(std::find(Begin(), End(), aValue));
     }
 
     [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
     {
-        return ConstIterator(std::find(cbegin(), cend(), aValue));
+        return ConstIterator(Find(aValue));
     }
 
     [[nodiscard]] constexpr bool Contains(ConstReference aValue) const noexcept
     {
-        return Find(aValue) != cend();
+        return Find(aValue) != End();
     }
 
-#pragma region STL
     [[nodiscard]] constexpr Reference Front()
     {
         assert(!Empty());
@@ -112,71 +111,50 @@ struct Span
         assert(!Empty());
         return Data()[Size() - 1];
     }
-#pragma region Iterator
-    [[nodiscard]] constexpr Iterator begin() noexcept
+
+    [[nodiscard]] constexpr Iterator Begin() noexcept
     {
         return beginPtr;
     }
 
-    [[nodiscard]] constexpr ConstIterator begin() const noexcept
+    [[nodiscard]] constexpr ConstIterator Begin() const noexcept
     {
         return beginPtr;
     }
 
-    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
+    [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
     {
-        return begin();
+        return ReverseIterator(Begin());
     }
 
-    [[nodiscard]] constexpr Iterator end() noexcept
+    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
+    {
+        return ConstReverseIterator(Begin());
+    }
+
+    [[nodiscard]] constexpr Iterator End() noexcept
     {
         return endPtr;
     }
 
-    [[nodiscard]] constexpr ConstIterator end() const noexcept
+    [[nodiscard]] constexpr ConstIterator End() const noexcept
     {
         return endPtr;
     }
 
-    [[nodiscard]] constexpr ConstIterator cend() const noexcept
+    [[nodiscard]] constexpr ReverseIterator REnd() noexcept
     {
-        return end();
-    }
-#pragma endregion
-#pragma region Reverse Iterator
-    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
-    {
-        return ReverseIterator(begin());
+        return ReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
     {
-        return ConstReverseIterator(begin());
+        return ConstReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
-    {
-        return rbegin();
-    }
-
-    [[nodiscard]] constexpr ReverseIterator rend() noexcept
-    {
-        return ReverseIterator(end());
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
-    {
-        return ConstReverseIterator(end());
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
-    {
-        return rend();
-    }
-#pragma endregion
     [[nodiscard]] constexpr bool Empty() const
     {
-        return !Data();
+        return Size() == 0;
     }
 
     [[nodiscard]] constexpr Pointer Data() noexcept
@@ -193,10 +171,74 @@ struct Span
     {
         return endPtr - beginPtr;
     }
-#pragma endregion
 
     T* beginPtr; // 00
     T* endPtr;   // 08
+
+#pragma region STL
+#pragma region Iterator
+    [[nodiscard]] constexpr Iterator begin() noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr ConstIterator begin() const noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] constexpr Iterator end() noexcept
+    {
+        return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator end() const noexcept
+    {
+        return End();
+    }
+
+    [[nodiscard]] constexpr ConstIterator cend() const noexcept
+    {
+        return End();
+    }
+#pragma endregion
+#pragma region Reverse Iterator
+    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
+    {
+        return RBegin();
+    }
+
+    [[nodiscard]] constexpr ReverseIterator rend() noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
+    {
+        return REnd();
+    }
+
+    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
+    {
+        return REnd();
+    }
+#pragma endregion
+#pragma endregion
 };
 RED4EXT_ASSERT_SIZE(Span<int32_t>, 0x10);
 RED4EXT_ASSERT_OFFSET(Span<int32_t>, beginPtr, 0x0);
