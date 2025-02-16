@@ -20,11 +20,11 @@ struct IGameState
 {
     virtual ~IGameState() = 0; // 00
 
-    virtual const char* GetName() = 0;                 // 08
-    virtual EGameStateType GetType() = 0;              // 10
-    virtual bool OnEnter(CGameApplication* aApp) = 0;  // 18
-    virtual bool OnUpdate(CGameApplication* aApp) = 0; // 20
-    virtual bool OnExit(CGameApplication* aApp) = 0;   // 28
+    virtual const char* GetName() = 0;                // 08
+    virtual EGameStateType GetType() = 0;             // 10
+    virtual bool OnEnter(CGameApplication& aApp) = 0; // 18
+    virtual bool OnTick(CGameApplication& aApp) = 0;  // 20
+    virtual bool OnExit(CGameApplication& aApp) = 0;  // 28
 };
 
 struct CBaseInitializationState : IGameState
