@@ -30,48 +30,114 @@ struct StaticArray
     StaticArray(std::initializer_list<T> aList)
     {
         if (aList.size() > MaxSize())
-            throw std::invalid_argument("StaticArray: Initializer list size cannot exceed MAX_LEN");
+            throw std::invalid_argument("StaticArray: Initializer list size cannot exceed MaxSize");
 
         std::copy(aList.begin(), aList.end(), Data());
         size = aList.size();
     }
 
-    constexpr Reference operator[](SizeType aPos)
+    ~StaticArray()
     {
-        assert(aPos < Size());
-        return Data()[aPos];
+        Clear();
     }
 
-    constexpr ConstReference operator[](SizeType aPos) const
+    constexpr Reference operator[](SizeType aIndex)
     {
-        assert(aPos < Size());
-        return Data()[aPos];
+        assert(aIndex < Size());
+        return entries[aIndex];
     }
 
-    [[nodiscard]] constexpr Reference At(SizeType aPos)
+    constexpr ConstReference operator[](SizeType aIndex) const
     {
-        if (aPos >= Size())
-            throw std::out_of_range("StaticArray::At: out of range");
-
-        return Data()[aPos];
+        assert(aIndex < Size());
+        return entries[aIndex];
     }
 
-    [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
+    [[nodiscard]] constexpr Reference At(SizeType aIndex)
     {
-        if (aPos >= Size())
-            throw std::out_of_range("StaticArray::At: out of range");
+        if (aIndex >= Size())
+            throw std::out_of_range("StaticArray::At: Position out of range");
 
-        return Data()[aPos];
+        return entries[aIndex];
+    }
+
+    [[nodiscard]] constexpr ConstReference At(SizeType aIndex) const
+    {
+        if (aIndex >= Size())
+            throw std::out_of_range("StaticArray::At: Position out of range");
+
+        return entries[aIndex];
+    }
+
+    [[nodiscard]] Iterator Find(ConstReference aValue) noexcept
+    {
+        return Iterator(std::find(Begin(), End(), aValue));
+    }
+
+    [[nodiscard]] ConstIterator Find(ConstReference aValue) const noexcept
+    {
+        return ConstIterator(std::find(Begin(), End(), aValue));
+    }
+
+    [[nodiscard]] bool Contains(ConstReference aValue) const noexcept
+    {
+        return Find(aValue) != End();
+    }
+
+    [[nodiscard]] bool Contains(ConstIterator aPos) const noexcept
+    {
+        return Begin() <= aPos && aPos <= End();
+    }
+
+    [[nodiscard]] bool Contains(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    {
+        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
+    }
+
+    void Resize(SizeType aNewSize)
+    {
+        if (aNewSize > MaxSize())
+            throw std::invalid_argument("StaticArray::Resize: New size cannot exceed MaxSize");
+
+        if (aNewSize == size)
+            return;
+
+        if (aNewSize < size)
+        {
+            std::destroy(Begin() + aNewSize, End());
+        }
+        else
+        {
+            std::uninitialized_default_construct(End(), Begin() + aNewSize);
+        }
+
+        size = aNewSize;
+    }
+
+    void Clear()
+    {
+        std::destroy(Begin(), End());
+        size = 0;
     }
 
     [[nodiscard]] constexpr Iterator Begin() noexcept
     {
-        return entries;
+        return Iterator(entries);
     }
 
     [[nodiscard]] constexpr ConstIterator Begin() const noexcept
     {
-        return entries;
+        return ConstIterator(entries);
+    }
+
+    [[nodiscard]] constexpr Iterator End() noexcept
+    {
+        return Iterator(entries + size);
+    }
+
+    [[nodiscard]] constexpr ConstIterator End() const noexcept
+    {
+        return Iterator(entries + size);
     }
 
     [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
@@ -82,16 +148,6 @@ struct StaticArray
     [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
     {
         return ConstReverseIterator(Begin());
-    }
-
-    [[nodiscard]] constexpr Iterator End() noexcept
-    {
-        return entries + size;
-    }
-
-    [[nodiscard]] constexpr ConstIterator End() const noexcept
-    {
-        return entries + size;
     }
 
     [[nodiscard]] constexpr ReverseIterator REnd() noexcept
@@ -107,25 +163,25 @@ struct StaticArray
     [[nodiscard]] constexpr Reference Front()
     {
         assert(!Empty());
-        return Data()[0];
+        return entries[0];
     }
 
     [[nodiscard]] constexpr ConstReference Front() const
     {
         assert(!Empty());
-        return Data()[0];
+        return entries[0];
     }
 
     [[nodiscard]] constexpr Reference Back()
     {
         assert(!Empty());
-        return Data()[Size() - 1];
+        return entries[size - 1];
     }
 
     [[nodiscard]] constexpr ConstReference Back() const
     {
         assert(!Empty());
-        return Data()[Size() - 1];
+        return entries[size - 1];
     }
 
     constexpr SizeType Capacity() const noexcept
@@ -173,11 +229,6 @@ struct StaticArray
         return Begin();
     }
 
-    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
-    {
-        return begin();
-    }
-
     [[nodiscard]] constexpr Iterator end() noexcept
     {
         return End();
@@ -186,11 +237,6 @@ struct StaticArray
     [[nodiscard]] constexpr ConstIterator end() const noexcept
     {
         return End();
-    }
-
-    [[nodiscard]] constexpr ConstIterator cend() const noexcept
-    {
-        return end();
     }
 #pragma endregion
 #pragma region Reverse Iterator
@@ -204,11 +250,6 @@ struct StaticArray
         return RBegin();
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator crbegin() const noexcept
-    {
-        return rbegin();
-    }
-
     [[nodiscard]] constexpr ReverseIterator rend() noexcept
     {
         return REnd();
@@ -218,14 +259,9 @@ struct StaticArray
     {
         return REnd();
     }
-
-    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
-    {
-        return rend();
-    }
 #pragma endregion
 #pragma endregion
 };
 static_assert(sizeof(StaticArray<std::array<uint8_t, 5>, 32>) ==
-              164); // StaticArray<GpuWrapApiVertexPackingPackingElement, 32>
+              0xA4); // StaticArray<GpuWrapApi::VertexPacking::PackingElement, 32>
 } // namespace RED4ext

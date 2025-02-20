@@ -45,32 +45,32 @@ struct Span
     {
     }
 
-    constexpr Reference operator[](SizeType aPos)
+    constexpr Reference operator[](SizeType aIndex)
     {
-        assert(aPos < Size());
-        return Data()[aPos];
+        assert(aIndex < Size());
+        return Data()[aIndex];
     }
 
-    constexpr ConstReference operator[](SizeType aPos) const
+    constexpr ConstReference operator[](SizeType aIndex) const
     {
-        assert(aPos < Size());
-        return Data()[aPos];
+        assert(aIndex < Size());
+        return Data()[aIndex];
     }
 
-    [[nodiscard]] constexpr Reference At(SizeType aPos)
+    [[nodiscard]] constexpr Reference At(SizeType aIndex)
     {
-        if (aPos >= Size())
-            throw std::out_of_range("Span::At: out of range");
+        if (aIndex >= Size())
+            throw std::out_of_range("Span::At: Position out of range");
 
-        return Data()[aPos];
+        return Data()[aIndex];
     }
 
-    [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
+    [[nodiscard]] constexpr ConstReference At(SizeType aIndex) const
     {
-        if (aPos >= Size())
-            throw std::out_of_range("Span::At: out of range");
+        if (aIndex >= Size())
+            throw std::out_of_range("Span::At: Position out of range");
 
-        return Data()[aPos];
+        return Data()[aIndex];
     }
 
     [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
@@ -86,6 +86,16 @@ struct Span
     [[nodiscard]] constexpr bool Contains(ConstReference aValue) const noexcept
     {
         return Find(aValue) != End();
+    }
+
+    [[nodiscard]] bool Contains(ConstIterator aPos) const noexcept
+    {
+        return Begin() <= aPos && aPos <= End();
+    }
+
+    [[nodiscard]] bool Contains(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    {
+        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
     }
 
     [[nodiscard]] constexpr Reference Front()
@@ -114,12 +124,22 @@ struct Span
 
     [[nodiscard]] constexpr Iterator Begin() noexcept
     {
-        return beginPtr;
+        return Iterator(beginPtr);
     }
 
     [[nodiscard]] constexpr ConstIterator Begin() const noexcept
     {
-        return beginPtr;
+        return ConstIterator(beginPtr);
+    }
+
+    [[nodiscard]] constexpr Iterator End() noexcept
+    {
+        return Iterator(endPtr);
+    }
+
+    [[nodiscard]] constexpr ConstIterator End() const noexcept
+    {
+        return ConstIterator(endPtr);
     }
 
     [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
@@ -130,16 +150,6 @@ struct Span
     [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
     {
         return ConstReverseIterator(Begin());
-    }
-
-    [[nodiscard]] constexpr Iterator End() noexcept
-    {
-        return endPtr;
-    }
-
-    [[nodiscard]] constexpr ConstIterator End() const noexcept
-    {
-        return endPtr;
     }
 
     [[nodiscard]] constexpr ReverseIterator REnd() noexcept
@@ -169,7 +179,7 @@ struct Span
 
     [[nodiscard]] constexpr DifferenceType Size() const
     {
-        return endPtr - beginPtr;
+        return End() - Begin();
     }
 
     T* beginPtr; // 00
@@ -187,22 +197,12 @@ struct Span
         return Begin();
     }
 
-    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
-    {
-        return Begin();
-    }
-
     [[nodiscard]] constexpr Iterator end() noexcept
     {
         return End();
     }
 
     [[nodiscard]] constexpr ConstIterator end() const noexcept
-    {
-        return End();
-    }
-
-    [[nodiscard]] constexpr ConstIterator cend() const noexcept
     {
         return End();
     }
@@ -218,22 +218,12 @@ struct Span
         return RBegin();
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
-    {
-        return RBegin();
-    }
-
     [[nodiscard]] constexpr ReverseIterator rend() noexcept
     {
         return REnd();
     }
 
     [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
-    {
-        return REnd();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
     {
         return REnd();
     }

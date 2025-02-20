@@ -38,9 +38,9 @@ struct DynArray
     using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
 
     DynArray(Memory::IAllocator* aAllocator = nullptr)
-        : entries(aAllocator ? std::bit_cast<Pointer>(aAllocator) : nullptr)
-        , size(0)
-        , capacity(0)
+        : m_entries(aAllocator ? *std::bit_cast<Pointer*>(aAllocator) : nullptr)
+        , m_size(0)
+        , m_capacity(0)
     {
     }
 
@@ -56,22 +56,6 @@ struct DynArray
         Assign(aList);
     }
 
-    DynArray(const DynArray& aOther)
-        : DynArray(aOther.GetAllocator())
-    {
-        Assign(aOther.Begin(), aOther.End());
-    }
-
-    DynArray(DynArray&& aOther) noexcept
-        : entries(aOther.Data())
-        , size(aOther.Size())
-        , capacity(aOther.Capacity())
-    {
-        aOther.entries = std::bit_cast<Pointer>(aOther.GetAllocator());
-        aOther.capacity = 0;
-        aOther.size = 0;
-    }
-
     template<std::input_iterator InputIt>
     DynArray(InputIt aFirst, InputIt aLast, Memory::IAllocator* aAllocator = nullptr)
         : DynArray(aAllocator)
@@ -79,13 +63,29 @@ struct DynArray
         Assign(aFirst, aLast);
     }
 
-    ~DynArray()
+    DynArray(const DynArray& aOther)
+        : DynArray(aOther.GetAllocator())
+    {
+        Assign(aOther.Begin(), aOther.End());
+    }
+
+    DynArray(DynArray&& aOther) noexcept
+        : m_entries(aOther.m_entries)
+        , m_size(aOther.m_size)
+        , m_capacity(aOther.m_capacity)
+    {
+        aOther.m_entries = *std::bit_cast<Pointer*>(aOther.GetAllocator());
+        aOther.m_capacity = 0;
+        aOther.m_size = 0;
+    }
+
+    ~DynArray() noexcept
     {
         Clear();
-        auto allocator = std::bit_cast<Pointer>(GetAllocator());
-        std::bit_cast<Memory::IAllocator*>(&allocator)->Free(entries);
-        entries = allocator;
-        capacity = 0;
+        auto allocator = *std::bit_cast<Pointer*>(GetAllocator());
+        std::bit_cast<Memory::IAllocator*>(&allocator)->Free(m_entries);
+        m_entries = allocator;
+        m_capacity = 0;
     }
 
     DynArray& operator=(const DynArray& aOther)
@@ -97,37 +97,37 @@ struct DynArray
         return *this;
     }
 
-    DynArray& operator=(DynArray&& aOther)
+    DynArray& operator=(DynArray&& aOther) noexcept
     {
         if (this != std::addressof(aOther))
         {
             Clear();
-            entries = aOther.Data();
-            size = aOther.Size();
-            capacity = aOther.Capacity();
+            m_entries = aOther.m_entries;
+            m_size = aOther.m_size;
+            m_capacity = aOther.m_capacity;
 
-            aOther.entries = std::bit_cast<Pointer>(aOther.GetAllocator());
-            aOther.capacity = 0;
-            aOther.size = 0;
+            aOther.m_entries = *std::bit_cast<Pointer*>(aOther.GetAllocator());
+            aOther.m_capacity = 0;
+            aOther.m_size = 0;
         }
 
         return *this;
     }
 
-    constexpr Reference operator[](SizeType aPos)
+    Reference operator[](SizeType aIndex) noexcept
     {
-        assert(aPos < Size());
-        return Data()[aPos];
+        assert(aIndex < m_size);
+        return m_entries[aIndex];
     }
 
-    constexpr ConstReference operator[](SizeType aPos) const
+    ConstReference operator[](SizeType aIndex) const noexcept
     {
-        assert(aPos < Size());
-        return Data()[aPos];
+        assert(aIndex < m_size);
+        return m_entries[aIndex];
     }
 
     template<std::input_iterator InputIt>
-    constexpr void Assign(InputIt aFirst, InputIt aLast)
+    void Assign(InputIt aFirst, InputIt aLast)
     {
         if (aFirst == aLast)
         {
@@ -135,65 +135,69 @@ struct DynArray
             return;
         }
 
-        DifferenceType diff = std::abs(std::distance(aFirst, aLast));
+        auto itRange = std::distance(aFirst, aLast);
+        DifferenceType diff = std::abs(itRange);
         if (diff > MaxSize())
-            throw std::length_error("DynArray::Assign: Iterator range exceeds max size");
+            throw std::length_error("DynArray::Assign: Iterator range cannot exceed MaxSize");
 
         Resize(static_cast<SizeType>(diff));
 
-        if constexpr (std::is_move_constructible_v<ValueType>)
-        {
-            std::move(aFirst, aLast, Data());
-        }
+        if (itRange > 0)
+            std::copy(aFirst, aLast, m_entries);
         else
-        {
-            std::copy(aFirst, aLast, Data());
-        }
+            std::reverse_copy(aLast, aFirst, m_entries);
     }
 
-    constexpr void Assign(std::initializer_list<ValueType> aList)
+    void Assign(std::initializer_list<ValueType> aList)
     {
         Assign(aList.begin(), aList.end());
     }
 
-    constexpr void Assign(SizeType aAmount, ValueType aValue)
+    void Assign(SizeType aSize, ConstReference aValue)
     {
-        Resize(aAmount);
-        for (SizeType i = 0; i < aAmount; ++i)
-        {
-            Data()[i] = aValue;
-        }
+        Resize(aSize);
+        std::fill(Begin(), End(), aValue);
     }
 
-    [[nodiscard]] constexpr Reference At(SizeType aPos)
+    [[nodiscard]] Reference At(SizeType aIndex)
     {
-        if (aPos >= Size())
-            throw std::out_of_range("DynArray::At: Out of range");
+        if (aIndex >= m_size)
+            throw std::out_of_range("DynArray::At: Position out of range");
 
-        return Data()[aPos];
+        return m_entries[aIndex];
     }
 
-    [[nodiscard]] constexpr ConstReference At(SizeType aPos) const
+    [[nodiscard]] ConstReference At(SizeType aIndex) const
     {
-        if (aPos >= Size())
-            throw std::out_of_range("DynArray::At: Out of range");
+        if (aIndex >= m_size)
+            throw std::out_of_range("DynArray::At: Position out of range");
 
-        return Data()[aPos];
+        return m_entries[aIndex];
     }
 
-    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) noexcept
+    [[nodiscard]] Iterator Find(ConstReference aValue) noexcept
     {
         return Iterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] constexpr ConstIterator Find(ConstReference aValue) const noexcept
+    [[nodiscard]] ConstIterator Find(ConstReference aValue) const noexcept
     {
         return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] bool Contains(ConstReference aValue) const
+    [[nodiscard]] bool Contains(ConstReference aValue) const noexcept
     {
         return Find(aValue) != End();
+    }
+
+    [[nodiscard]] bool Contains(ConstIterator aPos) const noexcept
+    {
+        return Begin() <= aPos && aPos <= End();
+    }
+
+    [[nodiscard]] bool Contains(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    {
+        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
     }
 
     void PushBack(ConstReference aItem)
@@ -207,301 +211,368 @@ struct DynArray
     }
 
     template<class... TArgs>
-    void EmplaceBack(TArgs&&... aArgs)
+    Iterator EmplaceBack(TArgs&&... aArgs)
     {
-        Emplace(End(), std::forward<TArgs>(aArgs)...);
+        return Emplace(End(), std::forward<TArgs>(aArgs)...);
     }
 
     template<class... TArgs>
-    void Emplace(Iterator aPosition, TArgs&&... aArgs)
+    Iterator Emplace(ConstIterator aPos, TArgs&&... aArgs)
     {
-        SizeType posIdx = Capacity() ? static_cast<SizeType>(aPosition - Begin()) : 0;
-        SizeType newSize = Size() + 1;
-        if (newSize > Capacity())
-            Reserve(newSize);
+        assert(Contains(aPos));
 
-        // If not at the end
-        if (posIdx != Size())
-        {
-            SizeType entriesCount = Size() - posIdx;
-            MoveEntries(&entries[posIdx], &entries[posIdx + 1], entriesCount);
-        }
+        SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
+        SizeType newSize = m_size + 1;
+        Reserve(newSize);
 
-        new (&entries[posIdx]) ValueType(std::forward<TArgs>(aArgs)...);
-        size = newSize;
+        SizeType tailSize = m_size - posIdx;
+        if (tailSize > 0)
+            MoveEntries(Iterator(&m_entries[posIdx]), Iterator(&m_entries[posIdx + 1]), tailSize);
+
+        new (&m_entries[posIdx]) ValueType(std::forward<TArgs>(aArgs)...);
+
+        m_size = newSize;
+        return Begin() + posIdx;
     }
 
-    void Resize(SizeType aSize)
+    template<typename U>
+    Iterator Insert(ConstIterator aPos, U&& aValue)
     {
-        if (aSize == Size())
+        return Emplace(aPos, std::forward<U>(aValue));
+    }
+
+    template<std::input_iterator InputIt>
+    Iterator Insert(ConstIterator aPos, InputIt aFirst, InputIt aLast)
+    {
+        assert(Contains(aPos));
+
+        auto itRange = std::distance(aFirst, aLast);
+        SizeType insertSize = static_cast<SizeType>(std::abs(itRange));
+        SizeType insertIdx = static_cast<SizeType>(std::distance(Begin(), aPos));
+
+        SizeType newSize = m_size + insertSize;
+        Reserve(newSize);
+
+        Iterator insertPos = Begin()[insertIdx];
+
+        SizeType tailSize = m_size - insertIdx;
+        if (tailSize > 0)
+            MoveEntries(insertPos, insertPos + insertSize, tailSize);
+
+        if (itRange > 0)
+            std::copy(aFirst, aLast, insertPos);
+        else
+            std::reverse_copy(aFirst, aLast, insertPos);
+
+        m_size = newSize;
+        return insertPos;
+    }
+
+    Iterator Insert(ConstIterator aPos, std::initializer_list<ValueType> aList)
+    {
+        return Insert(aList.begin(), aList.end());
+    }
+
+    Iterator Insert(ConstIterator aPos, SizeType aCount, ConstReference aValue)
+    {
+        assert(Contains(aPos));
+
+        SizeType insertIdx = static_cast<SizeType>(std::distance(Begin(), aPos));
+
+        SizeType newSize = m_size + aCount;
+        Reserve(newSize);
+
+        Iterator first = Begin()[insertIdx];
+        Iterator last = first + aCount;
+
+        SizeType tailSize = m_size - insertIdx;
+        if (tailSize > 0)
+            MoveEntries(first, last, tailSize);
+
+        std::fill(first, last, aValue);
+
+        m_size = newSize;
+        return first;
+    }
+
+    void Resize(SizeType aNewSize)
+    {
+        if (aNewSize == m_size)
             return;
 
-        if (aSize < Size())
+        if (aNewSize < m_size)
         {
-            std::destroy(Begin() + aSize, End());
+            std::destroy(Begin() + aNewSize, End());
         }
         else
         {
-            Reserve(aSize);
-            std::uninitialized_default_construct(End(), Begin() + aSize);
+            Reserve(aNewSize);
+            std::uninitialized_default_construct(End(), Begin() + aNewSize);
         }
 
-        size = aSize;
+        m_size = aNewSize;
+    }
+
+    Iterator Erase(Iterator aPos)
+    {
+        assert(aPos < End() && Contains(aPos));
+
+        aPos->~ValueType();
+
+        SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End()));
+        if (tailSize > 0)
+            MoveEntries(aPos + 1, aPos, tailSize);
+
+        --m_size;
+        return tailSize == 0 ? End() : aPos;
+    }
+
+    Iterator Erase(ConstIterator aFirst, ConstIterator aLast)
+    {
+        if (aFirst == aLast)
+            return aFirst;
+
+        ConstIterator first = (std::min)(aFirst, aLast);
+        ConstIterator last = (std::max)(aFirst, aLast);
+
+        assert(last < End() && Contains(first, last));
+
+        std::destroy(first, last);
+
+        SizeType tailSize = static_cast<SizeType>(std::distance(last, End()));
+        if (tailSize > 0)
+            MoveEntries(last, first, tailSize);
+
+        m_size -= static_cast<SizeType>(std::distance(first, last));
+
+        return tailSize == 0 ? End() : first;
     }
 
     bool Remove(ConstReference aItem)
     {
-        for (uint32_t i = 0; i != Size(); ++i)
-        {
-            if (aItem == Data()[i])
-            {
-                return RemoveAt(i);
-            }
-        }
-
-        return false;
-    }
-
-    bool RemoveAt(SizeType aPos)
-    {
-        if (aPos >= Size())
+        auto it = Find(aItem);
+        if (it == End())
             return false;
 
-        entries[aPos].~ValueType();
-        if ((aPos + 1) != Size()) // If not at the end
-        {
-            SizeType entriesCount = Size() - (aPos + 1);
-            MoveEntries(&entries[aPos + 1], &entries[aPos], entriesCount);
-        }
-        --size;
+        Erase(it);
+        return true;
+    }
+
+    bool RemoveAt(SizeType aIndex)
+    {
+        if (aIndex >= m_size)
+            return false;
+
+        Erase(Begin() + aIndex);
         return true;
     }
 
     void Clear() noexcept
     {
         std::destroy(Begin(), End());
-        size = 0;
+        m_size = 0;
     }
 
-    void Reserve(SizeType aCount)
+    void Reserve(SizeType aCapacity)
     {
-        if (Capacity() >= aCount)
+        if (aCapacity > MaxSize())
+            throw std::invalid_argument("DynArray::Reserve: Capacity cannot exceed MaxSize");
+
+        if (m_capacity >= aCapacity)
             return;
 
-        auto newCapacity = CalculateGrowth(aCount);
+        auto newCapacity = CalculateGrowth(aCapacity);
         SetCapacity(newCapacity);
     }
 
     void ShrinkToFit()
     {
-        if (Capacity() > Size())
-            SetCapacity(Size());
+        if (m_capacity > m_size)
+            SetCapacity(m_size);
     }
 
     [[nodiscard]] Memory::IAllocator* GetAllocator() const
     {
-        if (Capacity() == 0)
+        if (m_capacity == 0)
         {
             // Case 1: Allocator is stored instead of entries pointer
-            // It's only 8 bytes for VFT so it fits in a pointer
-            return reinterpret_cast<Memory::IAllocator*>(const_cast<Pointer*>(&entries));
+            return reinterpret_cast<Memory::IAllocator*>(const_cast<Pointer*>(&m_entries));
         }
         else
         {
             // Case 2: Allocator is stored at the end of entries buffer (aligned)
-            auto allocatorPtr = AlignUp(reinterpret_cast<size_t>(&entries[Capacity()]), sizeof(void*));
+            auto allocatorPtr = AlignUp(reinterpret_cast<size_t>(&m_entries[m_capacity]), sizeof(void*));
             return reinterpret_cast<Memory::IAllocator*>(allocatorPtr);
         }
     }
 
-    [[nodiscard]] constexpr Reference Front()
+    [[nodiscard]] Reference Front()
     {
         assert(!Empty());
-        return Data()[0];
+        return m_entries[0];
     }
 
-    [[nodiscard]] constexpr ConstReference Front() const
+    [[nodiscard]] ConstReference Front() const
     {
         assert(!Empty());
-        return Data()[0];
+        return m_entries[0];
     }
 
-    [[nodiscard]] constexpr Reference Back()
+    [[nodiscard]] Reference Back()
     {
         assert(!Empty());
-        return Data()[Size() - 1];
+        return m_entries[m_size - 1];
     }
 
-    [[nodiscard]] constexpr ConstReference Back() const
+    [[nodiscard]] ConstReference Back() const
     {
         assert(!Empty());
-        return Data()[Size() - 1];
+        return m_entries[m_size - 1];
     }
 
-    [[nodiscard]] constexpr Iterator Begin() noexcept
+    [[nodiscard]] Iterator Begin() noexcept
     {
-        return entries;
+        return Iterator(m_entries);
     }
 
-    [[nodiscard]] constexpr ConstIterator Begin() const noexcept
+    [[nodiscard]] ConstIterator Begin() const noexcept
     {
-        return entries;
+        return ConstIterator(m_entries);
     }
 
-    [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
+    [[nodiscard]] Iterator End() noexcept
+    {
+        return Iterator(m_entries + m_size);
+    }
+
+    [[nodiscard]] ConstIterator End() const noexcept
+    {
+        return ConstIterator(m_entries + m_size);
+    }
+
+    [[nodiscard]] ReverseIterator RBegin() noexcept
     {
         return ReverseIterator(Begin());
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
+    [[nodiscard]] ConstReverseIterator RBegin() const noexcept
     {
         return ConstReverseIterator(Begin());
     }
 
-    [[nodiscard]] constexpr Iterator End() noexcept
-    {
-        return Iterator(entries + size);
-    }
-
-    [[nodiscard]] constexpr ConstIterator End() const noexcept
-    {
-        return ConstIterator(entries + size);
-    }
-
-    [[nodiscard]] constexpr ReverseIterator REnd() noexcept
+    [[nodiscard]] ReverseIterator REnd() noexcept
     {
         return ReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
+    [[nodiscard]] ConstReverseIterator REnd() const noexcept
     {
         return ConstReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr bool Empty() const noexcept
+    [[nodiscard]] bool Empty() const noexcept
     {
-        return Size() == 0;
+        return m_size == 0;
     }
 
-    [[nodiscard]] constexpr Pointer Data() noexcept
+    [[nodiscard]] Pointer Data() noexcept
     {
-        return entries;
+        return m_entries;
     }
 
-    [[nodiscard]] constexpr ConstPointer Data() const noexcept
+    [[nodiscard]] ConstPointer Data() const noexcept
     {
-        return entries;
+        return m_entries;
     }
 
-    [[nodiscard]] constexpr SizeType Capacity() const noexcept
+    [[nodiscard]] SizeType Capacity() const noexcept
     {
-        return capacity;
+        return m_capacity;
     }
 
     [[nodiscard]] constexpr SizeType MaxSize() const noexcept
     {
-#undef max // preprocessor thinks max is a macro under NOMINMAX
-        return std::numeric_limits<SizeType>::max();
+#undef max // avoid conflict with max macro
+        static constexpr auto maxSize = std::numeric_limits<SizeType>::max() / sizeof(ValueType);
+        return maxSize;
     }
 
-    [[nodiscard]] constexpr SizeType Size() const noexcept
+    [[nodiscard]] SizeType Size() const noexcept
     {
-        return size;
+        return m_size;
     }
 
 #pragma region STL
 #pragma region Iterator
-    [[nodiscard]] constexpr Iterator begin() noexcept
+    [[nodiscard]] Iterator begin() noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] constexpr ConstIterator begin() const noexcept
+    [[nodiscard]] ConstIterator begin() const noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] constexpr ConstIterator cbegin() const noexcept
-    {
-        return begin();
-    }
-
-    [[nodiscard]] constexpr Iterator end() noexcept
+    [[nodiscard]] Iterator end() noexcept
     {
         return End();
     }
 
-    [[nodiscard]] constexpr ConstIterator end() const noexcept
+    [[nodiscard]] ConstIterator end() const noexcept
     {
         return End();
-    }
-
-    [[nodiscard]] constexpr ConstIterator cend() const noexcept
-    {
-        return end();
     }
 #pragma endregion
 #pragma region Reverse Iterator
-    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
+    [[nodiscard]] ReverseIterator rbegin() noexcept
     {
         return RBegin();
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
+    [[nodiscard]] ConstReverseIterator rbegin() const noexcept
     {
         return RBegin();
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator crbegin() const
-    {
-        return rbegin();
-    }
-
-    [[nodiscard]] constexpr ReverseIterator rend() noexcept
+    [[nodiscard]] ReverseIterator rend() noexcept
     {
         return REnd();
     }
 
-    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
+    [[nodiscard]] ConstReverseIterator rend() const noexcept
     {
         return REnd();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator crend() const noexcept
-    {
-        return rend();
     }
 #pragma endregion
 #pragma endregion
 private:
-    T* entries;        // 00
-    uint32_t capacity; // 08
-    uint32_t size;     // 0C
+    T* m_entries;        // 00
+    uint32_t m_capacity; // 08
+    uint32_t m_size;     // 0C
 
-    void MoveEntries(Pointer aSrc, Pointer aDst, SizeType aCount)
+    template<class InputIt>
+    requires std::same_as<InputIt, Iterator> || std::same_as<InputIt, ConstIterator>
+    void MoveEntries(InputIt aSrc, InputIt aDst, SizeType aCount) noexcept
     {
         if (aCount == 0 || aSrc == aDst)
             return;
 
-        if (aSrc < aDst)
-        {
-            std::move_backward(aSrc, aSrc + aCount, aDst + aCount);
-        }
-        else
-        {
+        if (aSrc >= aDst)
             std::move(aSrc, aSrc + aCount, aDst);
-        }
+        else
+            std::move_backward(aSrc, aSrc + aCount, aDst + aCount);
     }
 
     SizeType CalculateGrowth(SizeType aNewSize)
     {
-        uint32_t geometric = Capacity() + (Capacity() / 2);
+        uint32_t geometric = m_capacity + (m_capacity / 2);
         return (std::max)(aNewSize, geometric);
     }
 
     void SetCapacity(SizeType aNewCapacity)
     {
-        if (aNewCapacity < size)
+        if (aNewCapacity < m_size)
             return;
 
         constexpr uint32_t alignment = alignof(ValueType);
