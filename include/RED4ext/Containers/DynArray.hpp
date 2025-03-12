@@ -25,9 +25,9 @@ struct DynArray
 {
     using ValueType = T;
     using Reference = ValueType&;
-    using ConstReference = const Reference;
+    using ConstReference = const ValueType&;
     using Pointer = ValueType*;
-    using ConstPointer = const Pointer;
+    using ConstPointer = const ValueType*;
 
     using SizeType = std::uint32_t;
     using DifferenceType = std::ptrdiff_t;
@@ -81,11 +81,14 @@ struct DynArray
 
     ~DynArray() noexcept
     {
-        Clear();
-        auto allocator = *std::bit_cast<Pointer*>(GetAllocator());
-        std::bit_cast<Memory::IAllocator*>(&allocator)->Free(m_entries);
-        m_entries = allocator;
-        m_capacity = 0;
+        if (m_capacity)
+        {
+            Clear();
+            auto allocator = *std::bit_cast<Pointer*>(GetAllocator());
+            std::bit_cast<Memory::IAllocator*>(&allocator)->Free(m_entries);
+            m_entries = allocator;
+            m_capacity = 0;
+        }
     }
 
     DynArray& operator=(const DynArray& aOther)
