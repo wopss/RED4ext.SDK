@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Containers/StaticArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/VertexPacking/PackingElement.hpp>
 
 namespace RED4ext
