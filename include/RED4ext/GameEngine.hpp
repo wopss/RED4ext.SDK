@@ -7,6 +7,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/SingleScreenShotData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/services/GameServices.hpp>
 
 namespace RED4ext
@@ -202,6 +203,8 @@ RED4EXT_ASSERT_OFFSET(CBaseEngine, isEP1, 0x2D4);
 
 struct BaseGameEngine : CBaseEngine
 {
+    virtual void TakeScreenshot(const rend::SingleScreenShotData& acData, bool a2 = false);
+
     int64_t unk2E8; // 2E8
 };
 RED4EXT_ASSERT_SIZE(BaseGameEngine, 0x2F0);
@@ -220,6 +223,8 @@ struct CGameEngine : BaseGameEngine
     RED4EXT_ASSERT_OFFSET(CGameFramework, gameInstance, 0x10);
 
     static CGameEngine* Get();
+
+    void TakeScreenshot(const rend::SingleScreenShotData& acData, bool a2 = false) override;
 
     int64_t unk2F0;                       // 2F0
     int64_t unk2F8;                       // 2F8
