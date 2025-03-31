@@ -7,6 +7,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/HashMap.hpp>
+#include <RED4ext/Scripting/Natives/Generated/rend/SingleScreenShotData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/services/GameServices.hpp>
 
 namespace RED4ext
@@ -90,39 +91,39 @@ struct CBaseEngine
     };
     RED4EXT_ASSERT_SIZE(Unk110, 0x10);
 
-    virtual CBaseRTTIType* GetNativeType() = 0;      // 00
-    virtual CBaseRTTIType* GetParentType() = 0;      // 08
-    virtual Memory::IAllocator* GetAllocator() = 0;  // 10
-    virtual ~CBaseEngine() = 0;                      // 18
-    virtual void sub_18() = 0;                       // 20
-    virtual void sub_28() = 0;                       // 28
-    virtual void sub_30() = 0;                       // 30
-    virtual void Terminate(int32_t aExitStatus) = 0; // 38
-    virtual void sub_40() = 0;                       // 40
-    virtual void sub_48() = 0;                       // 48
-    virtual void sub_50() = 0;                       // 50
-    virtual void sub_58() = 0;                       // 58
-    virtual void sub_60() = 0;                       // 60
-    virtual void sub_68() = 0;                       // 68
-    virtual void sub_70() = 0;                       // 70
-    virtual void sub_78() = 0;                       // 78
-    virtual void sub_80() = 0;                       // 80
-    virtual void sub_88() = 0;                       // 88
-    virtual void sub_90() = 0;                       // 90
-    virtual void sub_98() = 0;                       // 98
-    virtual void sub_A0() = 0;                       // A0
-    virtual void sub_A8() = 0;                       // A8
-    virtual void sub_B0() = 0;                       // B0
-    virtual void sub_B8() = 0;                       // B8
-    virtual void sub_C0() = 0;                       // C0
-    virtual void sub_C8(CGameOptions& aOptions) = 0; // C8
-    virtual void sub_D0() = 0;                       // D0
-    virtual void sub_D8() = 0;                       // D8
-    virtual void sub_E0() = 0;                       // E0
-    virtual void sub_E8() = 0;                       // E8
-    virtual void sub_F0() = 0;                       // F0
-    virtual void sub_F8() = 0;                       // F8
-    virtual void sub_100() = 0;                      // 100
+    virtual CBaseRTTIType* GetNativeType() = 0;                                                 // 00
+    virtual CBaseRTTIType* GetParentType() = 0;                                                 // 08
+    virtual Memory::IAllocator* GetAllocator() = 0;                                             // 10
+    virtual ~CBaseEngine() = 0;                                                                 // 18
+    virtual void sub_18() = 0;                                                                  // 20
+    virtual void sub_28() = 0;                                                                  // 28
+    virtual void sub_30() = 0;                                                                  // 30
+    virtual void Terminate(int32_t aExitStatus) = 0;                                            // 38
+    virtual void sub_40() = 0;                                                                  // 40
+    virtual void sub_48() = 0;                                                                  // 48
+    virtual void sub_50() = 0;                                                                  // 50
+    virtual void sub_58() = 0;                                                                  // 58
+    virtual void sub_60() = 0;                                                                  // 60
+    virtual void sub_68() = 0;                                                                  // 68
+    virtual void sub_70() = 0;                                                                  // 70
+    virtual void sub_78() = 0;                                                                  // 78
+    virtual void sub_80() = 0;                                                                  // 80
+    virtual void sub_88() = 0;                                                                  // 88
+    virtual void sub_90() = 0;                                                                  // 90
+    virtual void sub_98() = 0;                                                                  // 98
+    virtual void sub_A0() = 0;                                                                  // A0
+    virtual void sub_A8() = 0;                                                                  // A8
+    virtual void sub_B0() = 0;                                                                  // B0
+    virtual void TakeScreenshot(const rend::SingleScreenShotData& acData, bool a2 = false) = 0; // B8
+    virtual void sub_C0() = 0;                                                                  // C0
+    virtual void sub_C8(CGameOptions& aOptions) = 0;                                            // C8
+    virtual void sub_D0() = 0;                                                                  // D0
+    virtual void sub_D8() = 0;                                                                  // D8
+    virtual void sub_E0() = 0;                                                                  // E0
+    virtual void sub_E8() = 0;                                                                  // E8
+    virtual void sub_F0() = 0;                                                                  // F0
+    virtual void sub_F8() = 0;                                                                  // F8
+    virtual void sub_100() = 0;                                                                 // 100
 
     double unk8;                               // 08
     float unk10;                               // 10
