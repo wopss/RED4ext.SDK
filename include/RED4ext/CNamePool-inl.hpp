@@ -4,7 +4,6 @@
 #include <RED4ext/CNamePool.hpp>
 #endif
 
-#include "CNamePool.hpp"
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
@@ -99,11 +98,10 @@ RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator& RED4ext::CNamePoolAllocato
     return *this;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator& RED4ext::CNamePoolAllocator::Iterator::operator+(const int aN)
+RED4EXT_INLINE RED4ext::CNamePoolAllocator::Iterator& RED4ext::CNamePoolAllocator::Iterator::operator+(
+    const uint32_t aN)
 {
-    if (aN <= 0)
-        return *this;
-    for (int i = 0; i < aN; i++)
+    for (uint32_t i = 0; i < aN; i++)
         m_node = m_node->NextInList();
     return *this;
 }
@@ -174,11 +172,9 @@ RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator& RED4ext::CNamePoolHashmap::I
     return *this;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator& RED4ext::CNamePoolHashmap::Iterator::operator+(const int aN)
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator& RED4ext::CNamePoolHashmap::Iterator::operator+(const uint32_t aN)
 {
-    if (aN <= 0)
-        return *this;
-    for (int i = 0; i < aN; i++)
+    for (uint32_t i = 0; i < aN; i++)
         m_node = m_node->NextInHashBin();
     return *this;
 }

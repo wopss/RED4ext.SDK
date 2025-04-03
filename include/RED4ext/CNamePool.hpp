@@ -21,8 +21,8 @@ struct CNamePoolNode
     CNamePoolNode() = delete;
 
     // Defaulted copy/move constructors don't work with flexible arrays
-    CNamePoolNode(CNamePoolNode const&) = delete;
-    CNamePoolNode& operator=(CNamePoolNode const&) = delete;
+    CNamePoolNode(const CNamePoolNode&) = delete;
+    CNamePoolNode& operator=(const CNamePoolNode&) = delete;
 
     /// @brief The CName (key) corresponding to the string (value) of this node (in other words, the FNV1a64 hash of
     /// #GetString())
@@ -92,10 +92,12 @@ private:
         CNamePoolNodeAllocWrapper() = delete;
 
         // Defaulted copy/move constructors don't work with flexible arrays
-        CNamePoolNodeAllocWrapper(CNamePoolNodeAllocWrapper const&) = delete;
-        CNamePoolNodeAllocWrapper& operator=(CNamePoolNodeAllocWrapper const&) = delete;
+        CNamePoolNodeAllocWrapper(const CNamePoolNodeAllocWrapper&) = delete;
+        CNamePoolNodeAllocWrapper& operator=(const CNamePoolNodeAllocWrapper&) = delete;
 
         /// @brief The size of #inner in bytes
+        /// This value includes any necessary padding to align with a DWORD boundary; that is to say, `len+4` is the
+        /// total size of this struct.
         const uint32_t len; // 00
         /// @brief The actual allocated space
         CNamePoolNode inner; // 04
@@ -157,7 +159,7 @@ public:
         {
         }
         Iterator& operator++();
-        Iterator& operator+(int aN);
+        Iterator& operator+(uint32_t aN);
         bool operator==(const Iterator& aRhs) const;
         bool operator!=(const Iterator& aRhs) const;
         reference operator*() const;
@@ -167,8 +169,8 @@ public:
     // only the game should create this struct
     CNamePoolAllocator() = delete;
     // this is a singleton, so no move or copy should be allowed
-    CNamePoolAllocator(CNamePoolAllocator const&) = delete;
-    CNamePoolAllocator& operator=(CNamePoolAllocator const&) = delete;
+    CNamePoolAllocator(const CNamePoolAllocator&) = delete;
+    CNamePoolAllocator& operator=(const CNamePoolAllocator&) = delete;
 
     /**
      * @brief The beginning of an iterator over every CNamePoolNode
@@ -247,7 +249,7 @@ struct CNamePoolHashmap
         {
         }
         Iterator& operator++();
-        Iterator& operator+(int aN);
+        Iterator& operator+(uint32_t aN);
         bool operator==(const Iterator& aRhs) const;
         bool operator!=(const Iterator& aRhs) const;
         reference operator*() const;
@@ -257,8 +259,8 @@ struct CNamePoolHashmap
     // only the game should create this struct
     CNamePoolHashmap() = delete;
     // this is a singleton, so no move or copy should be allowed
-    CNamePoolHashmap(CNamePoolHashmap const&) = delete;
-    CNamePoolHashmap& operator=(CNamePoolHashmap const&) = delete;
+    CNamePoolHashmap(const CNamePoolHashmap&) = delete;
+    CNamePoolHashmap& operator=(const CNamePoolHashmap&) = delete;
 
     /// @brief The hashmap mapping from CName hash to string
     ///
