@@ -191,10 +191,10 @@ RED4EXT_INLINE bool RED4ext::CNamePoolHashmap::Iterator::operator!=(const Iterat
 
 RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator::reference RED4ext::CNamePoolHashmap::Iterator::operator*() const
 {
-    return m_node;
+    return *m_node;
 }
 
-RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator::reference RED4ext::CNamePoolHashmap::Iterator::operator->() const
+RED4EXT_INLINE RED4ext::CNamePoolHashmap::Iterator::pointer RED4ext::CNamePoolHashmap::Iterator::operator->() const
 {
     return m_node;
 }

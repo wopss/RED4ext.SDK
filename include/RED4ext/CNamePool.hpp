@@ -236,10 +236,10 @@ struct CNamePoolHashmap
     class Iterator
     {
         typedef std::forward_iterator_tag iterator_category;
-        typedef const CNamePoolNode* const value_type;
+        typedef const CNamePoolNode value_type;
         typedef std::ptrdiff_t difference_type;
-        typedef const CNamePoolNode* const* const pointer;
-        typedef const CNamePoolNode* const& reference;
+        typedef const CNamePoolNode* const pointer;
+        typedef const CNamePoolNode& reference;
 
         const CNamePoolNode* m_node;
 
@@ -253,7 +253,7 @@ struct CNamePoolHashmap
         bool operator==(const Iterator& aRhs) const;
         bool operator!=(const Iterator& aRhs) const;
         reference operator*() const;
-        reference operator->() const;
+        pointer operator->() const;
     };
 
     // only the game should create this struct
