@@ -2,7 +2,7 @@
 
 #include <RED4ext/Api/PluginHandle.hpp>
 
-namespace RED4ext::v0
+namespace RED4ext::v1
 {
 struct Logger
 {
@@ -42,4 +42,4 @@ struct Logger
     void (*CriticalW)(PluginHandle aHandle, const wchar_t* aMessage);
     void (*CriticalWF)(PluginHandle aHandle, const wchar_t* aFormat, ...);
 };
-} // namespace RED4ext::v0
+} // namespace RED4ext::v1
