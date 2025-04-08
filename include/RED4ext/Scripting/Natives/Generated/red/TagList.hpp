@@ -16,7 +16,7 @@ using redTagList = red::TagList;
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 
 namespace RED4ext
 {
