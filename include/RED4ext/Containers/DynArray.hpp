@@ -574,8 +574,10 @@ private:
         constexpr bool isTrivialRealloc =
             std::is_trivially_move_constructible_v<ValueType> && std::is_trivially_destructible_v<ValueType>;
 
-        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8,
-             isTrivialRealloc ? nullptr : DynArray::MoveEntries);
+        if constepxr (isTrivialRealloc)
+            func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, nullptr);
+        else
+            func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, DynArray::MoveEntries);
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
