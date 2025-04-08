@@ -571,11 +571,13 @@ private:
         using func_t = void (*)(
             DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
             void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, uint32_t aSrcSizeInBytes, DynArray* aSrcArray));
+        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
 
-        if constexpr (std::is_trivially_move_constructible_v<ValueType> && std::is_trivially_destructible_v<ValueType>)
-            func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, nullptr);
-        else
-            func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, DynArray::MoveEntries);
+        constexpr bool isTrivialRealloc =
+            std::is_trivially_move_constructible_v<ValueType> && std::is_trivially_destructible_v<ValueType>;
+
+        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8,
+             isTrivialRealloc ? nullptr : DynArray::MoveEntries);
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
