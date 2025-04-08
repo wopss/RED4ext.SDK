@@ -494,8 +494,11 @@ struct DynArray
 
     [[nodiscard]] constexpr SizeType MaxSize() const noexcept
     {
-#undef max // avoid conflict with max macro
-        static constexpr auto maxSize = std::min(std::numeric_limits<SizeType>::max(), std::numeric_limits<uint32_t>::max() / sizeof(ValueType));
+#undef max // avoid conflict with minmax
+#undef min
+        static constexpr auto maxSize =
+            std::min(std::numeric_limits<SizeType>::max(),
+                     static_cast<SizeType>(std::numeric_limits<uint32_t>::max() / sizeof(ValueType)));
         return maxSize;
     }
 
@@ -547,7 +550,7 @@ private:
     {
         if (aSrcSize == 0 || aSrcBuffer == aDstBuffer)
             return;
-        
+
         std::move(aSrcBuffer, aSrcBuffer + aSrcSize, aDstBuffer);
         std::destroy(aSrcBuffer, aSrcBuffer + aSrcSize);
     }
