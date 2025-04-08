@@ -568,10 +568,8 @@ private:
 
         constexpr uint32_t alignment = alignof(ValueType);
 
-        using func_t =
-            void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
-                     void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
-        static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
+        using func_t = void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
+                                void (*aMoveFunc)(Pointer, Pointer, uint32_t, DynArray*));
 
         constexpr bool isTrivialRealloc =
             std::is_trivially_move_constructible_v<ValueType> && std::is_trivially_destructible_v<ValueType>;
