@@ -138,14 +138,14 @@ struct DynArray
             return;
         }
 
-        auto itRange = std::distance(aFirst, aLast);
-        DifferenceType diff = std::abs(itRange);
-        if (diff > MaxSize())
+        auto distance = std::distance(aFirst, aLast);
+        DifferenceType newSize = std::abs(distance);
+        if (newSize > MaxSize())
             throw std::length_error("DynArray::Assign: Iterator range cannot exceed MaxSize");
 
-        Resize(static_cast<SizeType>(diff));
+        Resize(static_cast<SizeType>(newSize));
 
-        if (itRange > 0)
+        if (distance > 0)
             std::copy(aFirst, aLast, m_entries);
         else
             std::reverse_copy(aLast, aFirst, m_entries);
@@ -230,7 +230,7 @@ struct DynArray
 
         SizeType tailSize = m_size - posIdx;
         if (tailSize > 0)
-            MoveEntries(Iterator(&m_entries[posIdx]), Iterator(&m_entries[posIdx + 1]), tailSize);
+            ShiftEntries(Iterator(&m_entries[posIdx]), Iterator(&m_entries[posIdx + 1]), tailSize);
 
         new (&m_entries[posIdx]) ValueType(std::forward<TArgs>(aArgs)...);
 
@@ -238,10 +238,9 @@ struct DynArray
         return Begin() + posIdx;
     }
 
-    template<typename U>
-    Iterator Insert(ConstIterator aPos, U&& aValue)
+    Iterator Insert(ConstIterator aPos, ConstReference aValue)
     {
-        return Emplace(aPos, std::forward<U>(aValue));
+        return Emplace(aPos, aValue);
     }
 
     template<std::input_iterator InputIt>
@@ -249,20 +248,20 @@ struct DynArray
     {
         assert(Contains(aPos));
 
-        auto itRange = std::distance(aFirst, aLast);
-        SizeType insertSize = static_cast<SizeType>(std::abs(itRange));
-        SizeType insertIdx = static_cast<SizeType>(std::distance(Begin(), aPos));
+        auto distance = std::distance(aFirst, aLast);
+        SizeType insertSize = static_cast<SizeType>(std::abs(distance));
+        SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
         SizeType newSize = m_size + insertSize;
         Reserve(newSize);
 
-        Iterator insertPos = Begin()[insertIdx];
+        Iterator insertPos = Begin() + insertIdx;
 
         SizeType tailSize = m_size - insertIdx;
         if (tailSize > 0)
-            MoveEntries(insertPos, insertPos + insertSize, tailSize);
+            ShiftEntries(insertPos, insertPos + insertSize, tailSize);
 
-        if (itRange > 0)
+        if (distance > 0)
             std::copy(aFirst, aLast, insertPos);
         else
             std::reverse_copy(aFirst, aLast, insertPos);
@@ -280,17 +279,17 @@ struct DynArray
     {
         assert(Contains(aPos));
 
-        SizeType insertIdx = static_cast<SizeType>(std::distance(Begin(), aPos));
+        SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
         SizeType newSize = m_size + aCount;
         Reserve(newSize);
 
-        Iterator first = Begin()[insertIdx];
+        Iterator first = Begin() + insertIdx;
         Iterator last = first + aCount;
 
         SizeType tailSize = m_size - insertIdx;
         if (tailSize > 0)
-            MoveEntries(first, last, tailSize);
+            ShiftEntries(first, last, tailSize);
 
         std::fill(first, last, aValue);
 
@@ -324,7 +323,7 @@ struct DynArray
 
         SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End()));
         if (tailSize > 0)
-            MoveEntries(aPos + 1, aPos, tailSize);
+            ShiftEntries(aPos + 1, aPos, tailSize);
 
         --m_size;
         return tailSize == 0 ? End() : aPos;
@@ -344,7 +343,7 @@ struct DynArray
 
         SizeType tailSize = static_cast<SizeType>(std::distance(last, End()));
         if (tailSize > 0)
-            MoveEntries(last, first, tailSize);
+            ShiftEntries(last, first, tailSize);
 
         m_size -= static_cast<SizeType>(std::distance(first, last));
 
@@ -496,7 +495,7 @@ struct DynArray
     [[nodiscard]] constexpr SizeType MaxSize() const noexcept
     {
 #undef max // avoid conflict with max macro
-        static constexpr auto maxSize = std::numeric_limits<SizeType>::max() / sizeof(ValueType);
+        static constexpr auto maxSize = std::min(std::numeric_limits<SizeType>::max(), std::numeric_limits<uint32_t>::max() / sizeof(ValueType));
         return maxSize;
     }
 
@@ -506,7 +505,6 @@ struct DynArray
     }
 
 #pragma region STL
-#pragma region Iterator
     [[nodiscard]] Iterator begin() noexcept
     {
         return Begin();
@@ -527,28 +525,6 @@ struct DynArray
         return End();
     }
 #pragma endregion
-#pragma region Reverse Iterator
-    [[nodiscard]] ReverseIterator rbegin() noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] ConstReverseIterator rbegin() const noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] ReverseIterator rend() noexcept
-    {
-        return REnd();
-    }
-
-    [[nodiscard]] ConstReverseIterator rend() const noexcept
-    {
-        return REnd();
-    }
-#pragma endregion
-#pragma endregion
 private:
     T* m_entries;        // 00
     uint32_t m_capacity; // 08
@@ -556,7 +532,7 @@ private:
 
     template<class InputIt>
     requires std::same_as<InputIt, Iterator> || std::same_as<InputIt, ConstIterator>
-    void MoveEntries(InputIt aSrc, InputIt aDst, SizeType aCount) noexcept
+    void ShiftEntries(InputIt aSrc, InputIt aDst, SizeType aCount) noexcept
     {
         if (aCount == 0 || aSrc == aDst)
             return;
@@ -565,6 +541,15 @@ private:
             std::move(aSrc, aSrc + aCount, aDst);
         else
             std::move_backward(aSrc, aSrc + aCount, aDst + aCount);
+    }
+
+    static void MoveEntries(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray = nullptr)
+    {
+        if (aSrcSize == 0 || aSrcBuffer == aDstBuffer)
+            return;
+        
+        std::move(aSrcBuffer, aSrcBuffer + aSrcSize, aDstBuffer);
+        std::destroy(aSrcBuffer, aSrcBuffer + aSrcSize);
     }
 
     SizeType CalculateGrowth(SizeType aNewSize)
@@ -585,7 +570,7 @@ private:
                      void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
 
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
-        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, nullptr);
+        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, DynArray::MoveEntries);
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);

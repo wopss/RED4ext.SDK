@@ -72,11 +72,11 @@ struct StaticArray
             return;
         }
 
-        auto itRange = std::distance(aFirst, aLast);
-        if (itRange > MaxSize())
+        auto newSize = std::distance(aFirst, aLast);
+        if (newSize > MaxSize())
             throw std::length_error("StaticArray::Assign: Iterator range cannot exceed MaxSize");
 
-        Resize(itRange);
+        Resize(newSize);
         std::copy(aFirst, aLast, entries);
     }
 
@@ -249,7 +249,6 @@ struct StaticArray
     uint32_t size;
 
 #pragma region STL
-#pragma region Iterator
     [[nodiscard]] Iterator begin() noexcept
     {
         return Begin();
@@ -269,28 +268,6 @@ struct StaticArray
     {
         return End();
     }
-#pragma endregion
-#pragma region Reverse Iterator
-    [[nodiscard]] ReverseIterator rbegin() noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] ConstReverseIterator rbegin() const noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] ReverseIterator rend() noexcept
-    {
-        return REnd();
-    }
-
-    [[nodiscard]] ConstReverseIterator rend() const noexcept
-    {
-        return REnd();
-    }
-#pragma endregion
 #pragma endregion
 };
 static_assert(sizeof(StaticArray<std::array<uint8_t, 5>, 32>) ==

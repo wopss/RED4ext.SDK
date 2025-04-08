@@ -186,7 +186,6 @@ struct Span
     T* endPtr;   // 08
 
 #pragma region STL
-#pragma region Iterator
     [[nodiscard]] constexpr Iterator begin() noexcept
     {
         return Begin();
@@ -206,28 +205,6 @@ struct Span
     {
         return End();
     }
-#pragma endregion
-#pragma region Reverse Iterator
-    [[nodiscard]] constexpr ReverseIterator rbegin() noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator rbegin() const noexcept
-    {
-        return RBegin();
-    }
-
-    [[nodiscard]] constexpr ReverseIterator rend() noexcept
-    {
-        return REnd();
-    }
-
-    [[nodiscard]] constexpr ConstReverseIterator rend() const noexcept
-    {
-        return REnd();
-    }
-#pragma endregion
 #pragma endregion
 };
 RED4EXT_ASSERT_SIZE(Span<int32_t>, 0x10);
