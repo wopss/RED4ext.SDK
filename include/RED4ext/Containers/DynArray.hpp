@@ -193,16 +193,6 @@ struct DynArray
         return Find(aValue) != End();
     }
 
-    [[nodiscard]] bool Contains(ConstIterator aPos) const noexcept
-    {
-        return Begin() <= aPos && aPos <= End();
-    }
-
-    [[nodiscard]] bool Contains(ConstIterator aFirst, ConstIterator aLast) const noexcept
-    {
-        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
-    }
-
     void PushBack(ConstReference aItem)
     {
         EmplaceBack(std::forward<ConstReference>(aItem));
@@ -222,7 +212,7 @@ struct DynArray
     template<class... TArgs>
     Iterator Emplace(ConstIterator aPos, TArgs&&... aArgs)
     {
-        assert(Contains(aPos));
+        assert(Includes(aPos));
 
         SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
         SizeType newSize = m_size + 1;
@@ -246,7 +236,7 @@ struct DynArray
     template<std::input_iterator InputIt>
     Iterator Insert(ConstIterator aPos, InputIt aFirst, InputIt aLast)
     {
-        assert(Contains(aPos));
+        assert(Includes(aPos));
 
         auto distance = std::distance(aFirst, aLast);
         SizeType insertSize = static_cast<SizeType>(std::abs(distance));
@@ -277,7 +267,7 @@ struct DynArray
 
     Iterator Insert(ConstIterator aPos, SizeType aCount, ConstReference aValue)
     {
-        assert(Contains(aPos));
+        assert(Includes(aPos));
 
         SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
@@ -317,7 +307,7 @@ struct DynArray
 
     Iterator Erase(Iterator aPos)
     {
-        assert(aPos < End() && Contains(aPos));
+        assert(aPos < End() && Includes(aPos));
 
         aPos->~ValueType();
 
@@ -337,7 +327,7 @@ struct DynArray
         ConstIterator first = (std::min)(aFirst, aLast);
         ConstIterator last = (std::max)(aFirst, aLast);
 
-        assert(last < End() && Contains(first, last));
+        assert(last < End() && Includes(first, last));
 
         std::destroy(first, last);
 
@@ -532,6 +522,16 @@ private:
     T* m_entries;        // 00
     uint32_t m_capacity; // 08
     uint32_t m_size;     // 0C
+
+    [[nodiscard]] bool Includes(ConstIterator aPos) const noexcept
+    {
+        return Begin() <= aPos && aPos <= End();
+    }
+
+    [[nodiscard]] bool Includes(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    {
+        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
+    }
 
     template<class InputIt>
     requires std::same_as<InputIt, Iterator> || std::same_as<InputIt, ConstIterator>
