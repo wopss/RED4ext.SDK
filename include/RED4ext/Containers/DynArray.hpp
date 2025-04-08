@@ -546,13 +546,13 @@ private:
             std::move_backward(aSrc, aSrc + aCount, aDst + aCount);
     }
 
-    static void MoveEntries(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray = nullptr)
+    static void MoveEntries(Pointer aDstBuffer, Pointer aSrcBuffer, uint32_t aSrcSizeInBytes, DynArray* aSrcArray)
     {
-        if (aSrcSize == 0 || aSrcBuffer == aDstBuffer)
+        if (aSrcSizeInBytes == 0)
             return;
 
-        std::move(aSrcBuffer, aSrcBuffer + aSrcSize, aDstBuffer);
-        std::destroy(aSrcBuffer, aSrcBuffer + aSrcSize);
+        std::move(aSrcBuffer, aSrcBuffer + aSrcArray->Size(), aDstBuffer);
+        std::destroy(aSrcBuffer, aSrcBuffer + aSrcArray->Size());
     }
 
     SizeType CalculateGrowth(SizeType aNewSize)
@@ -571,9 +571,13 @@ private:
         using func_t =
             void (*)(DynArray* aThis, uint32_t aCapacity, uint32_t aElementSize, uint32_t aAlignment,
                      void (*aMoveFunc)(Pointer aDstBuffer, Pointer aSrcBuffer, int32_t aSrcSize, DynArray* aSrcArray));
-
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::DynArray_Realloc);
-        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8, DynArray::MoveEntries);
+
+        constexpr bool isTrivialRealloc =
+            std::is_trivially_move_constructible_v<ValueType> && std::is_trivially_destructible_v<ValueType>;
+
+        func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8,
+             isTrivialRealloc ? nullptr : DynArray::MoveEntries);
     }
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
