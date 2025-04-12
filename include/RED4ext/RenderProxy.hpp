@@ -10,6 +10,8 @@ namespace RED4ext
 {
 struct IRenderProxy
 {
+    using AllocatorType = Memory::RenderProxyAllocator;
+
     virtual void sub_00();                   // 00
     virtual void sub_08();                   // 08
     virtual ~IRenderProxy() = default;       // 10
