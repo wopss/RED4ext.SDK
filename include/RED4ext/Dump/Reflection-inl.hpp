@@ -385,6 +385,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         [&aOutPath, SanitizeType, &QualifiedType, GetGeneratedPath, nameSanitizer](RED4ext::CName aName,
                                                                                    RED4ext::CBaseRTTIType*& aType)
         {
+            RED4EXT_UNUSED_PARAMETER(aName);
+
             switch (aType->GetType())
             {
             case RED4ext::ERTTIType::Enum:
