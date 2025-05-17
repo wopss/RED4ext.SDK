@@ -1,12 +1,15 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/Vector3.hpp>
 
 #include <cmath>
 #include <cstdint>
 
 namespace RED4ext
 {
+struct Vector3;
+
 struct Vector4
 {
     static constexpr const char* NAME = "Vector4";
@@ -24,6 +27,14 @@ struct Vector4
         : X(aX)
         , Y(aY)
         , Z(aZ)
+        , W(aW)
+    {
+    }
+
+    Vector4(const Vector3& aOther, float aW = 1.0)
+        : X(aOther.X)
+        , Y(aOther.Y)
+        , Z(aOther.Z)
         , W(aW)
     {
     }
@@ -46,6 +57,19 @@ struct Vector4
         return {X + aOther.X, Y + aOther.Y, Z + aOther.Z, W + aOther.W};
     }
 
+    inline Vector4& operator+=(const Vector4& aOther)
+    {
+        if (this != &aOther)
+        {
+            X += aOther.X;
+            Y += aOther.Y;
+            Z += aOther.Z;
+            W += aOther.W;
+        }
+
+        return *this;
+    }
+
     inline Vector4 operator-() const
     {
         return {-X, -Y, -Z, -W};
@@ -56,14 +80,83 @@ struct Vector4
         return {X - aOther.X, Y - aOther.Y, Z - aOther.Z, W - aOther.W};
     }
 
-    inline Vector4 operator*(const float aScalar) const
+    inline Vector4& operator-=(const Vector4& aOther)
+    {
+        if (this != &aOther)
+        {
+            X -= aOther.X;
+            Y -= aOther.Y;
+            Z -= aOther.Z;
+            W -= aOther.W;
+        }
+
+        return *this;
+    }
+
+    inline Vector4 operator*(float aScalar) const
     {
         return {X * aScalar, Y * aScalar, Z * aScalar, W * aScalar};
+    }
+
+    inline Vector4& operator*=(float aScalar)
+    {
+        X *= aScalar;
+        Y *= aScalar;
+        Z *= aScalar;
+        W *= aScalar;
+
+        return *this;
     }
 
     inline Vector4 operator*(const Vector4& aOther) const
     {
         return {X * aOther.X, Y * aOther.Y, Z * aOther.Z, W * aOther.W};
+    }
+
+    inline Vector4& operator*=(const Vector4& aOther)
+    {
+        if (this != &aOther)
+        {
+            X *= aOther.X;
+            Y *= aOther.Y;
+            Z *= aOther.Z;
+            W *= aOther.W;
+        }
+
+        return *this;
+    }
+
+    inline Vector4 operator/(const float aScalar) const
+    {
+        return {X / aScalar, Y / aScalar, Z / aScalar, W / aScalar};
+    }
+
+    inline Vector4& operator/=(float aScalar)
+    {
+        X /= aScalar;
+        Y /= aScalar;
+        Z /= aScalar;
+        W /= aScalar;
+
+        return *this;
+    }
+
+    inline Vector4 operator/(const Vector4& aOther) const
+    {
+        return {X / aOther.X, Y / aOther.Y, Z / aOther.Z, W / aOther.W};
+    }
+
+    inline Vector4& operator/=(const Vector4& aOther)
+    {
+        if (this != &aOther)
+        {
+            X /= aOther.X;
+            Y /= aOther.Y;
+            Z /= aOther.Z;
+            W /= aOther.W;
+        }
+
+        return *this;
     }
 
     inline bool operator==(const Vector4& aOther) const
@@ -79,6 +172,12 @@ struct Vector4
     inline float Magnitude() const
     {
         return std::sqrt(X * X + Y * Y + Z * Z + W * W);
+    }
+
+    inline Vector4 Normalized() const
+    {
+        const float mag = Magnitude();
+        return mag != 0 ? *this / mag : *this;
     }
 
     inline void Normalize()
@@ -107,6 +206,21 @@ struct Vector4
             Y * aOther.Z - Z * aOther.Y, Z * aOther.X - X * aOther.Z, X * aOther.Y - Y * aOther.X,
             0.f // W is ignored for cross of Vector4
         };
+    }
+
+    inline Vector4 Min(const Vector4& aOther) const
+    {
+        return {(std::min)(X, aOther.X), (std::min)(Y, aOther.Y), (std::min)(Z, aOther.Z), (std::min)(W, aOther.W)};
+    }
+
+    inline Vector4 Max(const Vector4& aOther) const
+    {
+        return {(std::max)(X, aOther.X), (std::max)(Y, aOther.Y), (std::max)(Z, aOther.Z), (std::max)(W, aOther.W)};
+    }
+
+    inline Vector3 AsVector3() const
+    {
+        return {X, Y, Z};
     }
 
     float X; // 00

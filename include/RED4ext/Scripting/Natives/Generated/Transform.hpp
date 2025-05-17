@@ -4,6 +4,14 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/Transform.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(Transform, 0x20);
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
@@ -21,5 +29,6 @@ struct __declspec(align(0x10)) Transform
 };
 RED4EXT_ASSERT_SIZE(Transform, 0x20);
 } // namespace RED4ext
+*/
 
 // clang-format on

@@ -28,6 +28,25 @@ struct WorldPosition
     {
     }
 
+    inline Vector3 AsVector3() const noexcept
+    {
+        return {
+            static_cast<float>(x.Bits) / (2 << 16),
+            static_cast<float>(y.Bits) / (2 << 16),
+            static_cast<float>(z.Bits) / (2 << 16),
+        };
+    }
+
+    inline Vector4 AsVector4() const noexcept
+    {
+        return {
+            static_cast<float>(x.Bits) / (2 << 16),
+            static_cast<float>(y.Bits) / (2 << 16),
+            static_cast<float>(z.Bits) / (2 << 16),
+            0,
+        };
+    }
+
     FixedPoint x; // 00
     FixedPoint y; // 04
     FixedPoint z; // 08

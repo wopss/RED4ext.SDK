@@ -21,7 +21,7 @@ struct Span
     {
     }
 
-    Span(T* aBegin, uint32_t aCount)
+    Span(T* aBegin, size_t aCount)
         : beginPtr(aBegin)
         , endPtr(aBegin + aCount)
     {
@@ -30,6 +30,11 @@ struct Span
     constexpr operator bool() const noexcept
     {
         return IsEmpty();
+    }
+
+    T& operator[](size_t aIndex)
+    {
+        return beginPtr[aIndex];
     }
 
     [[nodiscard]] inline T* begin() const
