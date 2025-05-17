@@ -54,8 +54,8 @@ struct __declspec(align(0x10)) Quaternion
     inline Vector4 Transform(const Vector4& aVector) const
     {
         const Vector4 q = Normalized().AsVector4();
-		const Vector4 t = q.Cross(aVector) * 2.0f; // t = 2 * (q x v)
-		return aVector + t * q.W + q.Cross(t); // v + (w * t) + (q x t)
+        const Vector4 t = q.Cross(aVector) * 2.0f; // t = 2 * (q x v)
+        return aVector + t * q.W + q.Cross(t);     // v + (w * t) + (q x t)
     }
 
     inline Quaternion Normalized() const
@@ -86,23 +86,17 @@ struct __declspec(align(0x10)) Quaternion
 
     inline Vector3 AxisX() const
     {
-        return {1.0f - 2.0f * (j * j + k * k),
-                2.0f * (i * j + r * k),
-                2.0f * (i * k - r * j)};
+        return {1.0f - 2.0f * (j * j + k * k), 2.0f * (i * j + r * k), 2.0f * (i * k - r * j)};
     }
 
     inline Vector3 AxisY() const
     {
-        return {2.0f * (i * j - r * k),
-                1.0f - 2.0f * (i * i + k * k),
-                2.0f * (j * k + r * i)};
+        return {2.0f * (i * j - r * k), 1.0f - 2.0f * (i * i + k * k), 2.0f * (j * k + r * i)};
     }
 
     inline Vector3 AxisZ() const
     {
-        return {2.0f * (i * k + r * j),
-                2.0f * (j * k - r * i),
-                1.0f - 2.0f * (i * i + j * j)};
+        return {2.0f * (i * k + r * j), 2.0f * (j * k - r * i), 1.0f - 2.0f * (i * i + j * j)};
     }
 
     inline Vector4 AsVector4() const
