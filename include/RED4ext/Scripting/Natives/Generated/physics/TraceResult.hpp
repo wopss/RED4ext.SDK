@@ -4,6 +4,16 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/physicsTraceResult.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(physics::TraceResult, 0x60);
+using physicsTraceResult = physics::TraceResult;
+using TraceResult = physics::TraceResult;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -28,5 +38,6 @@ RED4EXT_ASSERT_SIZE(TraceResult, 0x60);
 using physicsTraceResult = physics::TraceResult;
 using TraceResult = physics::TraceResult;
 } // namespace RED4ext
+*/
 
 // clang-format on
