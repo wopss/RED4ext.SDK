@@ -65,6 +65,19 @@ struct ISerializable
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext
 
+/**
+ * @brief Adds default implementation for generated/imported class.
+ * Allows ISerializable class to be used without Handle<> and RTTI construction.
+ * Some ISerializables are used as structs, without initilializing ref counter.
+ */
+#ifndef RED4EXT_IMPL_NATIVE_TYPE
+#define RED4EXT_IMPL_NATIVE_TYPE()                                                                                     \
+    CClass* GetNativeType() override                                                                                   \
+    {                                                                                                                  \
+        return CRTTISystem::Get()->GetClass(NAME);                                                                     \
+    }
+#endif
+
 #ifdef RED4EXT_HEADER_ONLY
 #include <RED4ext/ISerializable-inl.hpp>
 #endif
