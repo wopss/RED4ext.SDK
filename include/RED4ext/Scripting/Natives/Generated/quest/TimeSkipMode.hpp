@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class TimeSkipMode : uint8_t
+enum class TimeSkipMode : int8_t
 {
     PreSkip = 0,
     PostSkip = 1,

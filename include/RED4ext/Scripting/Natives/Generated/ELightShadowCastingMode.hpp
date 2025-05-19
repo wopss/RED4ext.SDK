@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ELightShadowCastingMode : uint32_t
+enum class ELightShadowCastingMode : int32_t
 {
     LSCM_None = 0,
     LSCM_Normal = 1,

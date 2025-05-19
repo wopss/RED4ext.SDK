@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIAdditionalTraceType : uint32_t
+enum class AIAdditionalTraceType : int32_t
 {
     Chest = 0,
     Hip = 1,

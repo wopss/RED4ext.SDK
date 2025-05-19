@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class EntitySpawnPriority : uint8_t
+enum class EntitySpawnPriority : int8_t
 {
     Background = 0,
     Normal = 1,

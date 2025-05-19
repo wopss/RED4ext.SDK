@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class PSODescRasterizerModeCullMode : uint8_t
+enum class PSODescRasterizerModeCullMode : int8_t
 {
     CULL_None = 0,
     CULL_Front = 1,

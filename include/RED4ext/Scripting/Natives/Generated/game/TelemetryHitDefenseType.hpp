@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TelemetryHitDefenseType : uint32_t
+enum class TelemetryHitDefenseType : int32_t
 {
     Block = 0,
     Deflect = 1,

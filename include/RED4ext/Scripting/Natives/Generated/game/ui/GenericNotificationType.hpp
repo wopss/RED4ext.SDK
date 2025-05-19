@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class GenericNotificationType : uint8_t
+enum class GenericNotificationType : int8_t
 {
     Generic = 0,
     QuestUpdate = 1,

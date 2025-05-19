@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class AudioFastForwardSupport : uint8_t
+enum class AudioFastForwardSupport : int8_t
 {
     MuteDuringFastForward = 1,
     DontMuteDuringFastForward = 2,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class EInteractionEventType : uint32_t
+enum class EInteractionEventType : int32_t
 {
     EIET_activate = 0,
     EIET_deactivate = 1,

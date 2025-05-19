@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class AppearanceSource : uint32_t
+enum class AppearanceSource : int32_t
 {
     EntityResource = 0,
     PopulationSpawner = 1,

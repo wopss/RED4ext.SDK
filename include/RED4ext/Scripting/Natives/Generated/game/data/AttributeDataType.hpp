@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AttributeDataType : uint32_t
+enum class AttributeDataType : int32_t
 {
     BodyAttributeData = 0,
     CoolAttributeData = 1,

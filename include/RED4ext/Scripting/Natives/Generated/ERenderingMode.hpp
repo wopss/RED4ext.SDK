@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderingMode : uint32_t
+enum class ERenderingMode : int32_t
 {
     RM_Shaded = 0,
     RM_Shaded_NoAmbient = 1,

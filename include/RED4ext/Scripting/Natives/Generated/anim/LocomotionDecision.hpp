@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LocomotionDecision : uint32_t
+enum class LocomotionDecision : int32_t
 {
     LD_None = 0,
     LD_Stop = 1,

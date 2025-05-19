@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIActionSecurityAreaType : uint32_t
+enum class AIActionSecurityAreaType : int32_t
 {
     DANGEROUS = 0,
     DISABLED = 1,

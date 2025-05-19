@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class SpawnableObjectPriority : uint32_t
+enum class SpawnableObjectPriority : int32_t
 {
     Crowd = 0,
     Quest = 1,

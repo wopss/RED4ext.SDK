@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class InGameConfigVarUpdatePolicy : uint8_t
+enum class InGameConfigVarUpdatePolicy : int8_t
 {
     Disabled = 0,
     Immediately = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class EWorldMapCameraMode : uint8_t
+enum class EWorldMapCameraMode : int8_t
 {
     TopDown = 0,
     ZoomLevels = 1,

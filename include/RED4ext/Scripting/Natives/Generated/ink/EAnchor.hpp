@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EAnchor : uint8_t
+enum class EAnchor : int8_t
 {
     TopLeft = 0,
     TopCenter = 1,

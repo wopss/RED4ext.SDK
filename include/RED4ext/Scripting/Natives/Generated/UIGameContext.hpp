@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class UIGameContext : uint32_t
+enum class UIGameContext : int32_t
 {
     Default = 0,
     QuickHack = 1,

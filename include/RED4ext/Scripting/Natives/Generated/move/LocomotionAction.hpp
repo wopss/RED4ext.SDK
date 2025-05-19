@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace move {
-enum class LocomotionAction : uint32_t
+enum class LocomotionAction : int32_t
 {
     Undefined = 0,
     Exploration = 1,

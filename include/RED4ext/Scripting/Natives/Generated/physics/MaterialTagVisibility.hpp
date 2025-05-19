@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class MaterialTagVisibility : uint8_t
+enum class MaterialTagVisibility : int8_t
 {
     None = 0,
     SemiTransparent = 1,

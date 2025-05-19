@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class VideoInstanceDoneReason : uint32_t
+enum class VideoInstanceDoneReason : int32_t
 {
     Failed = 0,
     Stopped = 1,

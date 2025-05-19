@@ -8,8 +8,8 @@
 
 namespace RED4ext
 {
+RED4EXT_ASSERT_SIZE(physics::FilterData, 0x68);
 using physicsFilterData = physics::FilterData;
-RED4EXT_ASSERT_SIZE(physicsFilterData, 0x68);
 } // namespace RED4ext
 
 /*

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class SearchFilterMaskType : uint32_t
+enum class SearchFilterMaskType : int32_t
 {
     Att_Friendly = 0,
     Att_Hostile = 1,

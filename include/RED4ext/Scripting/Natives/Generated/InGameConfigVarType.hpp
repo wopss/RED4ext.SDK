@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class InGameConfigVarType : uint8_t
+enum class InGameConfigVarType : int8_t
 {
     Bool = 0,
     Int = 1,

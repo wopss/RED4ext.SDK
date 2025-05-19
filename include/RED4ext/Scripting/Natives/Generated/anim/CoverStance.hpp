@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class CoverStance : uint32_t
+enum class CoverStance : int32_t
 {
     None = 0,
     LowLeft = 1,

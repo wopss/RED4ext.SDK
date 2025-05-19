@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NPCType : uint32_t
+enum class NPCType : int32_t
 {
     Android = 0,
     Any = 1,

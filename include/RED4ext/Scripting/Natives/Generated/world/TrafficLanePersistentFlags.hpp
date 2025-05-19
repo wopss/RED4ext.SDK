@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class TrafficLanePersistentFlags : uint16_t
+enum class TrafficLanePersistentFlags : int16_t
 {
     FromRoadSpline = 1,
     Bidirectional = 2,

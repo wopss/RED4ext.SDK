@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace minimap::ui {
-enum class ELayerType : uint8_t
+enum class ELayerType : int8_t
 {
     Floor = 0,
     Cover = 1,

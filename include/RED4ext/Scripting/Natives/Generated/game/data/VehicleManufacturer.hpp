@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class VehicleManufacturer : uint32_t
+enum class VehicleManufacturer : int32_t
 {
     Arch = 0,
     Archer = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class BuildType : uint32_t
+enum class BuildType : int32_t
 {
     Avg_10_Int_Netrunner = 0,
     Body40 = 1,

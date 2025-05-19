@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class GrenadeThrowStartType : uint32_t
+enum class GrenadeThrowStartType : int32_t
 {
     Invalid = 0,
     LeftSide = 1,

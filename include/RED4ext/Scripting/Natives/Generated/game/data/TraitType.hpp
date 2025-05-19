@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class TraitType : uint32_t
+enum class TraitType : int32_t
 {
     AssaultTrait01 = 0,
     AthleticsTrait01 = 1,

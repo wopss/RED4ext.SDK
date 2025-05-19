@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class Tier2WalkType : uint32_t
+enum class Tier2WalkType : int32_t
 {
     Undefined = 0,
     Slow = 1,

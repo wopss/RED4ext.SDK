@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class EAddRemoveItemType : uint32_t
+enum class EAddRemoveItemType : int32_t
 {
     AddItem = 0,
     RemoveByItemID = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace work {
-enum class WorkspotDebugMode : uint32_t
+enum class WorkspotDebugMode : int32_t
 {
     VisualLogToogle = 2,
     VisualLogOn = 4,

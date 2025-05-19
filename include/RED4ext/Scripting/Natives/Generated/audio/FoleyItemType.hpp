@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class FoleyItemType : uint8_t
+enum class FoleyItemType : int8_t
 {
     Jacket = 0,
     Top = 1,

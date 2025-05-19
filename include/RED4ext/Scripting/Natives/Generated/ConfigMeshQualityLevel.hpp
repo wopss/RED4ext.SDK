@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ConfigMeshQualityLevel : uint32_t
+enum class ConfigMeshQualityLevel : int32_t
 {
     Default = 0,
     Console = 1,

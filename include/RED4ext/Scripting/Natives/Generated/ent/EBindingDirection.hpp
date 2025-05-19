@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class EBindingDirection : uint8_t
+enum class EBindingDirection : int8_t
 {
     BindToSource = 0,
     BindToDestination = 1,

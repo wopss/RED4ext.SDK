@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class CombatSpaceSize : uint32_t
+enum class CombatSpaceSize : int32_t
 {
     Undefined = 0,
     Narrow = 1,

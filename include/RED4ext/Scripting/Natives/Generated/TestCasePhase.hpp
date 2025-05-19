@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class TestCasePhase : uint8_t
+enum class TestCasePhase : int8_t
 {
     Setup = 0,
     Body = 1,

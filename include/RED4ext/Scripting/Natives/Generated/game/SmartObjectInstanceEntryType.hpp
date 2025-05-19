@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class SmartObjectInstanceEntryType : uint32_t
+enum class SmartObjectInstanceEntryType : int32_t
 {
     UseEntryAnimation = 0,
     UseLocomotion = 1,

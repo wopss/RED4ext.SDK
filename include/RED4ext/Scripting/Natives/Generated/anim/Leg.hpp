@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class Leg : uint32_t
+enum class Leg : int32_t
 {
     Left = 0,
     Right = 1,

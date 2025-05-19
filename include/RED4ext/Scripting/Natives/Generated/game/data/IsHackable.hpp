@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class IsHackable : uint32_t
+enum class IsHackable : int32_t
 {
     Always = 0,
     Dynamic = 1,

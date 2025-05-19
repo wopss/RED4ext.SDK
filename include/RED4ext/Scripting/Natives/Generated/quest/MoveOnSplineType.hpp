@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class MoveOnSplineType : uint32_t
+enum class MoveOnSplineType : int32_t
 {
     Simple = 0,
     Anim = 1,

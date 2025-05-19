@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class ETooltipPlacement : uint8_t
+enum class ETooltipPlacement : int8_t
 {
     LeftCenter = 0,
     RightCenter = 1,

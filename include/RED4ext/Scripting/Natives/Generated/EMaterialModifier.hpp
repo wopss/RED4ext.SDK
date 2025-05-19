@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMaterialModifier : uint32_t
+enum class EMaterialModifier : int32_t
 {
     EMATMOD_HitProxy = 0,
     EMATMOD_WindData = 1,

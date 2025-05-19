@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PopulationEntityPriority : uint8_t
+enum class PopulationEntityPriority : int8_t
 {
     Quest = 0,
     Community = 1,

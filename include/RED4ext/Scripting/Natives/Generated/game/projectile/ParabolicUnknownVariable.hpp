@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::projectile {
-enum class ParabolicUnknownVariable : uint32_t
+enum class ParabolicUnknownVariable : int32_t
 {
     TargetPoint = 0,
     VelocityValue = 1,

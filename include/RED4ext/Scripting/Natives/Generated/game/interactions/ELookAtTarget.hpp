@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class ELookAtTarget : uint32_t
+enum class ELookAtTarget : int32_t
 {
     Entity = 0,
     Component = 1,

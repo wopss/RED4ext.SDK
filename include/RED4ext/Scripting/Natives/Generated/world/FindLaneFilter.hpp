@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class FindLaneFilter : uint32_t
+enum class FindLaneFilter : int32_t
 {
     None = 0,
     Road = 1,

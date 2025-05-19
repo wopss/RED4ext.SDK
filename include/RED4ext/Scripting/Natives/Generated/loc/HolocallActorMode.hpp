@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace loc {
-enum class HolocallActorMode : uint8_t
+enum class HolocallActorMode : int8_t
 {
     Default = 0,
     ActorUsesHolocall = 1,

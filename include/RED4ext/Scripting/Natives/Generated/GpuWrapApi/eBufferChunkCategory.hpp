@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuWrapApi {
-enum class eBufferChunkCategory : uint8_t
+enum class eBufferChunkCategory : int8_t
 {
     BCC_Staging = 0,
     BCC_Vertex = 1,

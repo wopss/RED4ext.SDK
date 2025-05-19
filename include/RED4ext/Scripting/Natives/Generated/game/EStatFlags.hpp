@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EStatFlags : uint32_t
+enum class EStatFlags : int32_t
 {
     Bool = 1,
     EquipOnPlayer = 2,

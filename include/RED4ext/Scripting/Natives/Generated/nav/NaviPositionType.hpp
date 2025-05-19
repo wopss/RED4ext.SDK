@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace nav {
-enum class NaviPositionType : uint32_t
+enum class NaviPositionType : int32_t
 {
     None = 0,
     Normal = 1,

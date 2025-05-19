@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::targeting {
-enum class SystemETargetFilterStatus : uint32_t
+enum class SystemETargetFilterStatus : int32_t
 {
     Stop = 0,
     Continue = 1,

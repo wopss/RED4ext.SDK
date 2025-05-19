@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class GameplayEventFlag : uint32_t
+enum class GameplayEventFlag : int32_t
 {
     Ai = 1,
     Trigger = 2,

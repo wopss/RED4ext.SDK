@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuWrapApi {
-enum class BufferGroup : uint8_t
+enum class BufferGroup : int8_t
 {
     System = 0,
     MeshResource = 1,

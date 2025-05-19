@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PlatformMovementState : uint32_t
+enum class PlatformMovementState : int32_t
 {
     Stopped = 0,
     Paused = 1,

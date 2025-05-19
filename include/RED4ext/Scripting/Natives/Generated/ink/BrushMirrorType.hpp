@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class BrushMirrorType : uint8_t
+enum class BrushMirrorType : int8_t
 {
     NoMirror = 0,
     Horizontal = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NewPerkType : uint32_t
+enum class NewPerkType : int32_t
 {
     Body_Central_Milestone_1 = 0,
     Body_Central_Milestone_3 = 1,

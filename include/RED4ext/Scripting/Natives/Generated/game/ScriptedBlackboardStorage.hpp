@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ScriptedBlackboardStorage : uint32_t
+enum class ScriptedBlackboardStorage : int32_t
 {
     Default = 0,
 };

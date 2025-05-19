@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ItemComparisonState : uint32_t
+enum class ItemComparisonState : int32_t
 {
     Default = 0,
     NoChange = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace text {
-enum class TextDirection : uint8_t
+enum class TextDirection : int8_t
 {
     LeftToRight = 0,
     RightToLeft = 1,

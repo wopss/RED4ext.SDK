@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMUpperBodyStates : uint32_t
+enum class PSMUpperBodyStates : int32_t
 {
+    Any = -1,
     Default = 0,
     SwitchItems = 1,
     SwitchCyberware = 2,
@@ -17,7 +18,6 @@ enum class PSMUpperBodyStates : uint32_t
     TemporaryUnequip = 4,
     ForceEmptyHands = 5,
     Aim = 6,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMUpperBodyStates = game::PSMUpperBodyStates;

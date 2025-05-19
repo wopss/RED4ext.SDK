@@ -538,24 +538,24 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
 
     switch (size)
     {
-    case sizeof(uint8_t):
+    case sizeof(int8_t):
     {
-        o << "uint8_t";
+        o << "int8_t";
         break;
     }
-    case sizeof(uint16_t):
+    case sizeof(int16_t):
     {
-        o << "uint16_t";
+        o << "int16_t";
         break;
     }
-    case sizeof(uint32_t):
+    case sizeof(int32_t):
     {
-        o << "uint32_t";
+        o << "int32_t";
         break;
     }
-    case sizeof(uint64_t):
+    case sizeof(int64_t):
     {
-        o << "uint64_t";
+        o << "int64_t";
         break;
     }
     default:
@@ -572,24 +572,24 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
 
         switch (size)
         {
-        case sizeof(uint8_t):
+        case sizeof(int8_t):
         {
-            o << static_cast<uint32_t>(static_cast<uint8_t>(ev.first));
+            o << static_cast<int32_t>(static_cast<int8_t>(ev.first));
             break;
         }
-        case sizeof(uint16_t):
+        case sizeof(int16_t):
         {
-            o << static_cast<uint16_t>(ev.first);
+            o << static_cast<int16_t>(ev.first);
             break;
         }
-        case sizeof(uint32_t):
+        case sizeof(int32_t):
         {
-            o << static_cast<uint32_t>(ev.first);
+            o << static_cast<int32_t>(ev.first);
             break;
         }
-        case sizeof(uint64_t):
+        case sizeof(int64_t):
         {
-            o << static_cast<uint64_t>(ev.first);
+            o << static_cast<int64_t>(ev.first);
             break;
         }
         default:

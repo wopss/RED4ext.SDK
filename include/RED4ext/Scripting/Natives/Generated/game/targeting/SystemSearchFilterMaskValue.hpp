@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::targeting {
-enum class SystemSearchFilterMaskValue : uint32_t
+enum class SystemSearchFilterMaskValue : int32_t
 {
     Obj_Player = 1,
     Obj_Puppet = 2,

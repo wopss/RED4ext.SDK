@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class CombatSectorType : uint32_t
+enum class CombatSectorType : int32_t
 {
     ToBackLeft = 0,
     ToBackMid = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class StateCompletionStatus : uint32_t
+enum class StateCompletionStatus : int32_t
 {
     ForwardBehaviorStatus = 0,
     Failure = 1,

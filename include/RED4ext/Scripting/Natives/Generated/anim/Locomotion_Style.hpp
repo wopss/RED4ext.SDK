@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class Locomotion_Style : uint32_t
+enum class Locomotion_Style : int32_t
 {
     LS_Idle = 0,
     LS_Rotation = 1,

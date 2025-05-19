@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ScriptTaskExecutionStage : uint32_t
+enum class ScriptTaskExecutionStage : int32_t
 {
     Any = 0,
     PostPhysics = 1,

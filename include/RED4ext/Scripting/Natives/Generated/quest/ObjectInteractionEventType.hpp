@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class ObjectInteractionEventType : uint8_t
+enum class ObjectInteractionEventType : int8_t
 {
     Undefined = 0,
     Entered = 1,

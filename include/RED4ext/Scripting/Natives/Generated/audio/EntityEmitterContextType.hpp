@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class EntityEmitterContextType : uint32_t
+enum class EntityEmitterContextType : int32_t
 {
     Entity_Emitter = 0, // Entity Emitter
     Radio_Emitter = 2, // Radio Emitter

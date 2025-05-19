@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class SelectorChangeDirection : uint32_t
+enum class SelectorChangeDirection : int32_t
 {
     None = 0,
     Prior = 1,

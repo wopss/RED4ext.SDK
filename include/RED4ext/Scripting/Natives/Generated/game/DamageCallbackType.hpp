@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class DamageCallbackType : uint32_t
+enum class DamageCallbackType : int32_t
 {
     HitTriggered = 0,
     HitReceived = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class PlayDirection : uint32_t
+enum class PlayDirection : int32_t
 {
     Forward = 0,
     Backward = 1,

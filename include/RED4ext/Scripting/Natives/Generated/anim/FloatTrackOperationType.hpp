@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class FloatTrackOperationType : uint32_t
+enum class FloatTrackOperationType : int32_t
 {
     Override = 0,
     Multiply = 1,

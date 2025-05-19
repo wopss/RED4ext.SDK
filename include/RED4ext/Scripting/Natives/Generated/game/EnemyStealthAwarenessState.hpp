@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EnemyStealthAwarenessState : uint32_t
+enum class EnemyStealthAwarenessState : int32_t
 {
     Relaxed = 0,
     Aware = 1,

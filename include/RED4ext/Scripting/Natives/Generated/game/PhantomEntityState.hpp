@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PhantomEntityState : uint32_t
+enum class PhantomEntityState : int32_t
 {
     RootMotion = 0,
     Workspot = 1,

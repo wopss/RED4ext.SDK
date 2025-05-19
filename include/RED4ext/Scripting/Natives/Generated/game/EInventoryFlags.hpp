@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EInventoryFlags : uint32_t
+enum class EInventoryFlags : int32_t
 {
     MustSave = 1,
 };

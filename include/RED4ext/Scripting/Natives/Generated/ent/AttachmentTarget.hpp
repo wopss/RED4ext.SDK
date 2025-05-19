@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class AttachmentTarget : uint32_t
+enum class AttachmentTarget : int32_t
 {
     Transform = 0,
     TargetPosition = 1,

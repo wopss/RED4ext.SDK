@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class MeleeAttackDirection : uint32_t
+enum class MeleeAttackDirection : int32_t
 {
     Center = 0,
     DownToUp = 1,

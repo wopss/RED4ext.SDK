@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EffectType : uint8_t
+enum class EffectType : int8_t
 {
     ScanlineWipe = 0,
     LinearWipe = 1,

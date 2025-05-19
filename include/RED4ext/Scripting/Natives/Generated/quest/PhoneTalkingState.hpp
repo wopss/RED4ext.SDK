@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class PhoneTalkingState : uint32_t
+enum class PhoneTalkingState : int32_t
 {
     Ended = 0,
     Initializing = 1,

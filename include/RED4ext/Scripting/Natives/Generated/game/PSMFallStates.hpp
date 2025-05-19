@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMFallStates : uint32_t
+enum class PSMFallStates : int32_t
 {
     Default = 0,
     RegularFall = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class VehicleCommonCurve : uint32_t
+enum class VehicleCommonCurve : int32_t
 {
     RPMLimit = 0,
     ForcedBrakeForce = 1,

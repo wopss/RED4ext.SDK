@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class FoleyActionType : uint32_t
+enum class FoleyActionType : int32_t
 {
     FastHeavy = 0,
     FastMedium = 1,

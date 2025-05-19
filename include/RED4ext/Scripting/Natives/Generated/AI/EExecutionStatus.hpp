@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class EExecutionStatus : uint32_t
+enum class EExecutionStatus : int32_t
 {
     STATUS_INVALID = 0,
     STATUS_SUCCESS = 1,

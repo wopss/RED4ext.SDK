@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class AIDirectorTensionEventType : uint32_t
+enum class AIDirectorTensionEventType : int32_t
 {
     Time = 0,
     Progress = 1,

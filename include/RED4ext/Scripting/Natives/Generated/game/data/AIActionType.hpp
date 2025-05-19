@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIActionType : uint32_t
+enum class AIActionType : int32_t
 {
     BackUp = 0,
     BattleCry = 1,

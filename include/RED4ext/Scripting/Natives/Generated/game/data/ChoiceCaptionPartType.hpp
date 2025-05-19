@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ChoiceCaptionPartType : uint32_t
+enum class ChoiceCaptionPartType : int32_t
 {
     Blueline = 0,
     Icon = 1,

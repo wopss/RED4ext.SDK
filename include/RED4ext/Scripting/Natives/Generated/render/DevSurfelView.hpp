@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace render {
-enum class DevSurfelView : uint32_t
+enum class DevSurfelView : int32_t
 {
     ALBEDO = 0,
     NORMAL = 1,

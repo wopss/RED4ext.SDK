@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class SaveTransferStatus : uint8_t
+enum class SaveTransferStatus : int8_t
 {
     ExportStarted = 0,
     ExportSuccess = 1,

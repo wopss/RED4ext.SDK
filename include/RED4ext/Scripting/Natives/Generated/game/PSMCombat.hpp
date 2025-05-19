@@ -8,13 +8,13 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMCombat : uint32_t
+enum class PSMCombat : int32_t
 {
+    Any = -1,
     Default = 0,
     InCombat = 1,
     OutOfCombat = 2,
     Stealth = 3,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMCombat = game::PSMCombat;

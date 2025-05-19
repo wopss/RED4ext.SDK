@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ReactionPresetType : uint32_t
+enum class ReactionPresetType : int32_t
 {
     Cerberus_Aggressive = 0,
     Child = 1,

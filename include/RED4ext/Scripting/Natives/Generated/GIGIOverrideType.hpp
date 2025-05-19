@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class GIGIOverrideType : uint8_t
+enum class GIGIOverrideType : int8_t
 {
     Default = 0,
     Override_True = 1,

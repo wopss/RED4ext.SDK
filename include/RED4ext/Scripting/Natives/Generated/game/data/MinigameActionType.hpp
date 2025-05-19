@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class MinigameActionType : uint32_t
+enum class MinigameActionType : int32_t
 {
     AccessPoint = 0,
     Both = 1,

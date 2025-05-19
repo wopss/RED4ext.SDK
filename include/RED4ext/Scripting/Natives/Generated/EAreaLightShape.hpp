@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EAreaLightShape : uint32_t
+enum class EAreaLightShape : int32_t
 {
     ALS_Sphere = 0,
     ALS_Capsule = 1,

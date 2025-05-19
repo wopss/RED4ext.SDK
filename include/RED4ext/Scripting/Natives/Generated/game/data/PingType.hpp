@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class PingType : uint32_t
+enum class PingType : int32_t
 {
     Device = 0,
     Door = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class ContextualActorName : uint32_t
+enum class ContextualActorName : int32_t
 {
     Player = 0,
     VoicesetHolder = 1,

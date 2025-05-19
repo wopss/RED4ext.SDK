@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class BraindancePerspective : uint8_t
+enum class BraindancePerspective : int8_t
 {
     FirstPerson = 0,
     ThirdPerson = 1,

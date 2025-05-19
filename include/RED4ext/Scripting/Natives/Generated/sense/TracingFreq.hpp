@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace sense {
-enum class TracingFreq : uint32_t
+enum class TracingFreq : int32_t
 {
     Never = 0,
     Lowest = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StatusEffectType : uint32_t
+enum class StatusEffectType : int32_t
 {
     AndroidTurnOff = 0,
     AndroidTurnOn = 1,

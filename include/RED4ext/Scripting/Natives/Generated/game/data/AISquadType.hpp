@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AISquadType : uint32_t
+enum class AISquadType : int32_t
 {
     Attitude = 0,
     Community = 1,

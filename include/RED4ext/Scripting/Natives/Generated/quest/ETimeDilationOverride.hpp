@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class ETimeDilationOverride : uint32_t
+enum class ETimeDilationOverride : int32_t
 {
     None = 0,
     Ignore = 1,

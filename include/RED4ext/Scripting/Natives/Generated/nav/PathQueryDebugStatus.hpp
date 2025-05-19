@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace nav {
-enum class PathQueryDebugStatus : uint32_t
+enum class PathQueryDebugStatus : int32_t
 {
     InvalidQuery = 0,
     Active = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class MaterialFriction : uint32_t
+enum class MaterialFriction : int32_t
 {
     Enabled = 0,
     DisabledStrong = 1,

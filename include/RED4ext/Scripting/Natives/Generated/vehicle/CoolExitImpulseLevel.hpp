@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class CoolExitImpulseLevel : uint32_t
+enum class CoolExitImpulseLevel : int32_t
 {
     NoExit = 0,
     NoImpulse = 1,

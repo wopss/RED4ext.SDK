@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EEntityHighlightType : uint32_t
+enum class EEntityHighlightType : int32_t
 {
     EHE_None = 0,
     EHE_FillAndOutline = 1,

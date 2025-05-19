@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EColorChannel : uint32_t
+enum class EColorChannel : int32_t
 {
     COLCHANNEL_Red = 0,
     COLCHANNEL_Green = 1,

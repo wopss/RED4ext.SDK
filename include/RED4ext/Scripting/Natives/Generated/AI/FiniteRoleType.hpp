@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class FiniteRoleType : uint32_t
+enum class FiniteRoleType : int32_t
 {
     Patrol = 0,
 };

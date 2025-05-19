@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::cheatsystem {
-enum class Flag : uint32_t
+enum class Flag : int32_t
 {
     God_Immortal = 1,
     God_Invulnerable = 2,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class MaterialTagType : uint8_t
+enum class MaterialTagType : int8_t
 {
     AIVisibility = 0,
     PlayerVisibility = 1,

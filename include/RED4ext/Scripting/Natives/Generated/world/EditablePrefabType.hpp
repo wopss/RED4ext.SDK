@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class EditablePrefabType : uint8_t
+enum class EditablePrefabType : int8_t
 {
     Regular = 0,
     Decoration = 1,

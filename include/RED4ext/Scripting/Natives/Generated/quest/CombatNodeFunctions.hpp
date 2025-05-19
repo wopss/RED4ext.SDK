@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class CombatNodeFunctions : uint32_t
+enum class CombatNodeFunctions : int32_t
 {
     CombatTarget = 0,
     ShootAt = 1,

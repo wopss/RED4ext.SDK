@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EToggleState : uint32_t
+enum class EToggleState : int32_t
 {
     Normal = 0,
     Press = 1,

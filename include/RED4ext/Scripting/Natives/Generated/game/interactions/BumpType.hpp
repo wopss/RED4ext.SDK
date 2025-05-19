@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class BumpType : uint32_t
+enum class BumpType : int32_t
 {
     Workspot = 0,
     Crowd = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class PhysicalSystemOwner : uint8_t
+enum class PhysicalSystemOwner : int8_t
 {
     Unknown = 0,
     BakedDestructionNode = 1,

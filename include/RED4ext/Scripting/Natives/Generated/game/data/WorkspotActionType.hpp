@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class WorkspotActionType : uint32_t
+enum class WorkspotActionType : int32_t
 {
     DeviceInvestigation = 0,
     FearHide = 1,

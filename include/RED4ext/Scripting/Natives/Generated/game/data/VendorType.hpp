@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class VendorType : uint32_t
+enum class VendorType : int32_t
 {
     Armorsmith = 0,
     Clothes = 1,

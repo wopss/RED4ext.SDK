@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class TPPCameraHeight : uint32_t
+enum class TPPCameraHeight : int32_t
 {
     Low = 0,
     High = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class UIIconCensorFlag : uint32_t
+enum class UIIconCensorFlag : int32_t
 {
     Drugs = 0,
     Gore = 1,

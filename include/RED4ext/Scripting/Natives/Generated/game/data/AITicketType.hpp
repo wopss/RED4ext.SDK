@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AITicketType : uint32_t
+enum class AITicketType : int32_t
 {
     AndroidMelee = 0,
     BackUp = 1,

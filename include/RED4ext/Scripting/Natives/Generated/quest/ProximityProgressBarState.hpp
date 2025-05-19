@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class ProximityProgressBarState : uint32_t
+enum class ProximityProgressBarState : int32_t
 {
     None = 0,
     Active = 1,

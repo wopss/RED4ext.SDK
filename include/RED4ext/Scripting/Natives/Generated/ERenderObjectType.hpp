@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderObjectType : uint8_t
+enum class ERenderObjectType : int8_t
 {
     ROT_Static = 0,
     ROT_Terrain = 1,

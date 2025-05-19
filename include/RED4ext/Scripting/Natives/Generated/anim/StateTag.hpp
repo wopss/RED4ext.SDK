@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class StateTag : uint32_t
+enum class StateTag : int32_t
 {
     ST_Invalid = 0,
     Idle = 1,

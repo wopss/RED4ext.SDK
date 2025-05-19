@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace services {
-enum class CloudSavesQueryStatus : uint8_t
+enum class CloudSavesQueryStatus : int8_t
 {
     NotFetched = 0,
     FetchedSuccessfully = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ProxyMeshDependencyMode : uint8_t
+enum class ProxyMeshDependencyMode : int8_t
 {
     Auto = 0,
     Include = 1,

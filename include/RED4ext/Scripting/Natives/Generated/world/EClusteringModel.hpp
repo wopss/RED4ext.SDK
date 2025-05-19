@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class EClusteringModel : uint8_t
+enum class EClusteringModel : int8_t
 {
     HierarchicalGrid = 0,
     AlwaysLoaded = 1,

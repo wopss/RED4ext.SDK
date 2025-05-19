@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class SpawnInViewState : uint8_t
+enum class SpawnInViewState : int8_t
 {
     default__true_ = 0, // default (true)
     true_ = 1, // true

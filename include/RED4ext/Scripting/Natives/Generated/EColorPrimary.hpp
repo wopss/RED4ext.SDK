@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EColorPrimary : uint32_t
+enum class EColorPrimary : int32_t
 {
     PRIM_REC709 = 0,
     PRIM_DCIP3 = 1,

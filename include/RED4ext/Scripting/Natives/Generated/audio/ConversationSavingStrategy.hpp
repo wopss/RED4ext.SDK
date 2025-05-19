@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class ConversationSavingStrategy : uint32_t
+enum class ConversationSavingStrategy : int32_t
 {
     Default = 0,
     Save = 1,

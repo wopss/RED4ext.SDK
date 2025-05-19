@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class VehicleModel : uint32_t
+enum class VehicleModel : int32_t
 {
     Aerondight = 0,
     Alvarado = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class EffectorTimeDilationDriver : uint32_t
+enum class EffectorTimeDilationDriver : int32_t
 {
     Source = 0,
     Target = 1,

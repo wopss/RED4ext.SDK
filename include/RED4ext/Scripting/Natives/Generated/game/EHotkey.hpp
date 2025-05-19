@@ -8,14 +8,14 @@
 namespace RED4ext
 {
 namespace game {
-enum class EHotkey : uint32_t
+enum class EHotkey : int32_t
 {
+    INVALID = -1,
     DPAD_UP = 0,
     DPAD_DOWN = 1,
     DPAD_RIGHT = 2,
     RB = 3,
     LBRB = 4,
-    INVALID = 4294967295,
 };
 } // namespace game
 using gameEHotkey = game::EHotkey;

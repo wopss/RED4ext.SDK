@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ELootGenerationType : uint32_t
+enum class ELootGenerationType : int32_t
 {
     DropChance = 0,
     NumberBased = 1,

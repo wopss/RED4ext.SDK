@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class MenuState : uint32_t
+enum class MenuState : int32_t
 {
     Enabled = 0,
     Disabled = 1,

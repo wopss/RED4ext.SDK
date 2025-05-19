@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EquipmentSetType : uint32_t
+enum class EquipmentSetType : int32_t
 {
     Offensive = 0,
     Defensive = 1,

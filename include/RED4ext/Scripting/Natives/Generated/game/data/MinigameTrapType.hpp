@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class MinigameTrapType : uint32_t
+enum class MinigameTrapType : int32_t
 {
     Both = 0,
     Device = 1,

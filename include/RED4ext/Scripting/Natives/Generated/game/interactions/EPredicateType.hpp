@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class EPredicateType : uint32_t
+enum class EPredicateType : int32_t
 {
     EPredicateFunction_true = 0,
     EPredicateFunction_distanceFromScreenCentre = 1,

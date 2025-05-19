@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class AnimEventGenderAlt : uint32_t
+enum class AnimEventGenderAlt : int32_t
 {
     None = 0,
     Female = 1,

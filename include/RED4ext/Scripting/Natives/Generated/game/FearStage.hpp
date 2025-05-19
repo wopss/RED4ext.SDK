@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class FearStage : uint8_t
+enum class FearStage : int8_t
 {
     Relaxed = 0,
     Stressed = 1,

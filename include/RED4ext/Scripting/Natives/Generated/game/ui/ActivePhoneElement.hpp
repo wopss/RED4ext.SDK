@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class ActivePhoneElement : uint32_t
+enum class ActivePhoneElement : int32_t
 {
     Call = 1,
     IncomingCall = 2,

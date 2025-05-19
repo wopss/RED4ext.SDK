@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class TPPCameraDistance : uint32_t
+enum class TPPCameraDistance : int32_t
 {
     Close = 0,
     Medium = 1,

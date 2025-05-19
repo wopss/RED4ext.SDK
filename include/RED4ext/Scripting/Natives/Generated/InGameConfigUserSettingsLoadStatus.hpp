@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class InGameConfigUserSettingsLoadStatus : uint8_t
+enum class InGameConfigUserSettingsLoadStatus : int8_t
 {
     NotLoaded = 0,
     InternalError = 1,

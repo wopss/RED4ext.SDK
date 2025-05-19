@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace render {
-enum class DevTXAADebugMode : uint32_t
+enum class DevTXAADebugMode : int32_t
 {
     TXAA_NoDebug = 0,
     TXAA_ShowHistoryBlendFactor = 1,

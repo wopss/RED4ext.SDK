@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio::ttsvoices {
-enum class PolishMale : uint32_t
+enum class PolishMale : int32_t
 {
     Mateusz = 14,
     Pawel = 15,

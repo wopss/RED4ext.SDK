@@ -8,11 +8,11 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class InputHintSortingPriority : uint32_t
+enum class InputHintSortingPriority : int32_t
 {
+    Top = -2147483648,
     Bottom = 2147483646,
     Invalid = 2147483647,
-    Top = 2147483648,
 };
 } // namespace game::ui
 using gameuiInputHintSortingPriority = game::ui::InputHintSortingPriority;

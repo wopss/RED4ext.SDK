@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ImprovementRelation : uint32_t
+enum class ImprovementRelation : int32_t
 {
     Direct = 0,
     Inverse = 1,

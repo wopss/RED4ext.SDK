@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class AudioEventFlags : uint32_t
+enum class AudioEventFlags : int32_t
 {
     NoEventFlags = 0,
     SloMoOnly = 1,

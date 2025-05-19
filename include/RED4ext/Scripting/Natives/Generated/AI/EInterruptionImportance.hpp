@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class EInterruptionImportance : uint32_t
+enum class EInterruptionImportance : int32_t
 {
     Undefined = 0,
     Casual = 1,

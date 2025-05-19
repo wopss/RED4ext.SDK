@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EBlendFromPoseMode : uint32_t
+enum class EBlendFromPoseMode : int32_t
 {
     BFPM_AlwaysOnActivation = 0,
     BFPM_RequestedByTag = 1,

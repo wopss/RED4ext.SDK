@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ParentAttachmentType : uint32_t
+enum class ParentAttachmentType : int32_t
 {
     Animated = 0,
     Skinned = 1,

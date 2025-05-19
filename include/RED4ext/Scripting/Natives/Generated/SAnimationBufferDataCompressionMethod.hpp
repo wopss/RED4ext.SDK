@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class SAnimationBufferDataCompressionMethod : uint32_t
+enum class SAnimationBufferDataCompressionMethod : int32_t
 {
     ABDCM_Invalid = 0,
     ABDCM_Plain = 1,

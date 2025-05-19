@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class LoadingScreenType : uint32_t
+enum class LoadingScreenType : int32_t
 {
     Unknown = 0,
     SplashScreen = 1,

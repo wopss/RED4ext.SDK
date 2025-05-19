@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class PerkWeaponGroupType : uint32_t
+enum class PerkWeaponGroupType : int32_t
 {
     AssaultRiflesPerkWeaponGroup = 0,
     BladesPerkWeaponGroup = 1,

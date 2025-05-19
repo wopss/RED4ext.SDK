@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class StateValue : uint32_t
+enum class StateValue : int32_t
 {
     Position = 1,
     Rotation = 2,

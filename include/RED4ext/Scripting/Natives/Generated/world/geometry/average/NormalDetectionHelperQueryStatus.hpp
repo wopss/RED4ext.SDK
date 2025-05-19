@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world::geometry::average {
-enum class NormalDetectionHelperQueryStatus : uint32_t
+enum class NormalDetectionHelperQueryStatus : int32_t
 {
     Finished = 0,
     NoGeometry = 1,

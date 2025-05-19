@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EComparisonType : uint32_t
+enum class EComparisonType : int32_t
 {
     Greater = 0,
     GreaterOrEqual = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIActionTarget : uint32_t
+enum class AIActionTarget : int32_t
 {
     AssignedVehicle = 0,
     CombatTarget = 1,

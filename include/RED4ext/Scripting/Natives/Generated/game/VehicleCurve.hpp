@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class VehicleCurve : uint32_t
+enum class VehicleCurve : int32_t
 {
     SpeedToWheelMaxTurn = 0,
     InputToWheelMaxTurn = 1,

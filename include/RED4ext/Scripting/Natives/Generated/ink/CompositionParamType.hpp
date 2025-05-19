@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class CompositionParamType : uint8_t
+enum class CompositionParamType : int8_t
 {
     FLOAT = 0,
     VECTOR2 = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NPCQuestAffiliation : uint32_t
+enum class NPCQuestAffiliation : int32_t
 {
     General = 0,
     MainQuest = 1,

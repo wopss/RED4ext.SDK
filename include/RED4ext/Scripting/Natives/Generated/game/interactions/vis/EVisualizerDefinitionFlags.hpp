@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions::vis {
-enum class EVisualizerDefinitionFlags : uint16_t
+enum class EVisualizerDefinitionFlags : int16_t
 {
     None = 0,
     Fading = 1,

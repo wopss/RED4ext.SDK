@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EFeatureFlag : uint8_t
+enum class EFeatureFlag : int8_t
 {
     FEATFLAG_Default = 0,
     FEATFLAG_Shadows = 1,

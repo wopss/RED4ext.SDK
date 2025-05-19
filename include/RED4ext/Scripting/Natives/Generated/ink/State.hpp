@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class State : uint8_t
+enum class State : int8_t
 {
     InitEngine = 0,
     PreGameMenu = 3,

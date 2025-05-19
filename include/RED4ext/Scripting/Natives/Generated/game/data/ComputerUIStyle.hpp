@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ComputerUIStyle : uint32_t
+enum class ComputerUIStyle : int32_t
 {
     DarkBlue = 0,
     LightBlue = 1,

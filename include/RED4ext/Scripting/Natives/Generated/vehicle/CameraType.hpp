@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class CameraType : uint32_t
+enum class CameraType : int32_t
 {
     FPP = 0,
     TPP = 1,

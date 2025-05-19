@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ItemDisplayContext : uint32_t
+enum class ItemDisplayContext : int32_t
 {
     None = 0,
     Vendor = 1,

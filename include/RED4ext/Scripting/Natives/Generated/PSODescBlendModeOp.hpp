@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class PSODescBlendModeOp : uint8_t
+enum class PSODescBlendModeOp : int8_t
 {
     OP_Add = 0,
     OP_Subtract = 1,

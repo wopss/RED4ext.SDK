@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LookAtStyle : uint32_t
+enum class LookAtStyle : int32_t
 {
     VerySlow = 0,
     Slow = 1,

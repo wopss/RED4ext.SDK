@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class PerkUtility : uint32_t
+enum class PerkUtility : int32_t
 {
     ActiveUtility = 0,
     PassiveUtility = 1,

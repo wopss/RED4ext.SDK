@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace move {
-enum class LineOfSightPointPreference : uint32_t
+enum class LineOfSightPointPreference : int32_t
 {
     None = 0,
     ClosestToOwner = 1,

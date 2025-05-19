@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class CharacterCustomizationEditTag : uint32_t
+enum class CharacterCustomizationEditTag : int32_t
 {
     NewGame = 0,
     HairDresser = 1,

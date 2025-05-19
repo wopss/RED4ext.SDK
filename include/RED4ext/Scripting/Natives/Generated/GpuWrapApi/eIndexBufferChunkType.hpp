@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuWrapApi {
-enum class eIndexBufferChunkType : uint8_t
+enum class eIndexBufferChunkType : int8_t
 {
     IBCT_IndexUInt = 0,
     IBCT_IndexUShort = 1,

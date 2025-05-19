@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class MarketingConsentPopupType : uint32_t
+enum class MarketingConsentPopupType : int32_t
 {
     None = 0,
     ThirdParty = 1,

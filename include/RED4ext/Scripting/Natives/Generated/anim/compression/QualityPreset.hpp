@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim::compression {
-enum class QualityPreset : uint8_t
+enum class QualityPreset : int8_t
 {
     HIGH = 0,
     MID = 1,

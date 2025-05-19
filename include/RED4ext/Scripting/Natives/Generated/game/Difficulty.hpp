@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class Difficulty : uint32_t
+enum class Difficulty : int32_t
 {
     Easy = 0,
     Hard = 1,

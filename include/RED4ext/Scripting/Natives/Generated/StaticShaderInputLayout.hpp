@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class StaticShaderInputLayout : uint32_t
+enum class StaticShaderInputLayout : int32_t
 {
     DebugVertexBase = 0,
     DebugVertexUV = 1,

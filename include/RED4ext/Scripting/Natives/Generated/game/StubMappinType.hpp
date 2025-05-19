@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StubMappinType : uint8_t
+enum class StubMappinType : int8_t
 {
     None = 0,
     Police = 1,

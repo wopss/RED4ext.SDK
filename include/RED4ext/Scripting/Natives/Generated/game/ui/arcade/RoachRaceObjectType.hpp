@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class RoachRaceObjectType : uint32_t
+enum class RoachRaceObjectType : int32_t
 {
     BoostObject_Apple = 0,
     BoostObject_Carrot = 1,

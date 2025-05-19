@@ -8,13 +8,13 @@
 namespace RED4ext
 {
 namespace game {
-enum class EPowerDifferential : uint32_t
+enum class EPowerDifferential : int32_t
 {
+    IMPOSSIBLE = -6,
+    HARD = -3,
     NORMAL = 2,
     EASY = 4,
     TRASH = 5,
-    IMPOSSIBLE = 4294967290,
-    HARD = 4294967293,
 };
 } // namespace game
 using gameEPowerDifferential = game::EPowerDifferential;

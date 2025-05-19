@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMeasurementUnit : uint32_t
+enum class EMeasurementUnit : int32_t
 {
     Millimeter = 0,
     Centimeter = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class AnimNode_SetDrivenKey_InternalsEChannelType : uint32_t
+enum class AnimNode_SetDrivenKey_InternalsEChannelType : int32_t
 {
     FloatTrack = 0,
     TransX = 1,

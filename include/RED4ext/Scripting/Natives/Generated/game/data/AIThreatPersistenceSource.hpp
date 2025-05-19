@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIThreatPersistenceSource : uint32_t
+enum class AIThreatPersistenceSource : int32_t
 {
     AddThreat = 0,
     CatchUp = 1,

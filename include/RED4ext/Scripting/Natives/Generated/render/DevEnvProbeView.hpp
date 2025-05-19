@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace render {
-enum class DevEnvProbeView : uint32_t
+enum class DevEnvProbeView : int32_t
 {
     RADIANCE = 0,
     ALBEDO = 1,

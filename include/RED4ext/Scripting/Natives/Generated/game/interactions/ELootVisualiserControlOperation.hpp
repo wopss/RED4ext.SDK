@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class ELootVisualiserControlOperation : uint32_t
+enum class ELootVisualiserControlOperation : int32_t
 {
     Locked = 1,
 };

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderProxyType : uint8_t
+enum class ERenderProxyType : int8_t
 {
     RPT_None = 0,
     RPT_Mesh = 1,

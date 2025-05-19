@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class TrackingMode : uint32_t
+enum class TrackingMode : int32_t
 {
     BeliefPosition = 0,
     LastKnownPosition = 1,

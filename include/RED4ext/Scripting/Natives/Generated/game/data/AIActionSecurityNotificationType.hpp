@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIActionSecurityNotificationType : uint32_t
+enum class AIActionSecurityNotificationType : int32_t
 {
     COMBAT = 0,
     DEESCALATE = 1,

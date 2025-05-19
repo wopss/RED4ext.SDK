@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LookAtChestMode : uint32_t
+enum class LookAtChestMode : int32_t
 {
     Default = 0,
     NoHips = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AISmartCompositeType : uint32_t
+enum class AISmartCompositeType : int32_t
 {
     Selector = 0,
     SelectorWithMemory = 1,

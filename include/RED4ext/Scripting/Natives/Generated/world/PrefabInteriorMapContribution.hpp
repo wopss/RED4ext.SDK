@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class PrefabInteriorMapContribution : uint8_t
+enum class PrefabInteriorMapContribution : int8_t
 {
     Auto = 0,
     Include = 1,

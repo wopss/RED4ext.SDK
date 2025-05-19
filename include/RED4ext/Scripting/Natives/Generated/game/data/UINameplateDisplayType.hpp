@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class UINameplateDisplayType : uint32_t
+enum class UINameplateDisplayType : int32_t
 {
     AfterScan = 0,
     Always = 1,

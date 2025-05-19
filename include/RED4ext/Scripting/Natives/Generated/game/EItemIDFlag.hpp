@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EItemIDFlag : uint8_t
+enum class EItemIDFlag : int8_t
 {
     Preview = 1,
 };

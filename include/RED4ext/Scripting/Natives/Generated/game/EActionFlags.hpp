@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EActionFlags : uint16_t
+enum class EActionFlags : int16_t
 {
     NONE = 0,
     USE_ANIMATION = 1,

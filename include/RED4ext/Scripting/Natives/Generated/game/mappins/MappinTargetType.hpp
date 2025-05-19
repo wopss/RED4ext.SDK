@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::mappins {
-enum class MappinTargetType : uint32_t
+enum class MappinTargetType : int32_t
 {
     World = 0,
     Minimap = 1,

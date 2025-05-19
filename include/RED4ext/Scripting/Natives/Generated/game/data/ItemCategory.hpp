@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ItemCategory : uint32_t
+enum class ItemCategory : int32_t
 {
     Clothing = 0,
     Consumable = 1,

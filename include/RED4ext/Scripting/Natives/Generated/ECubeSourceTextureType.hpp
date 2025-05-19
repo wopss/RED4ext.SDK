@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ECubeSourceTextureType : uint32_t
+enum class ECubeSourceTextureType : int32_t
 {
     CST_CrossHorizontal = 0,
     CST_CrossVertical = 1,

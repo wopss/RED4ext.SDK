@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureCompression : uint32_t
+enum class ETextureCompression : int32_t
 {
     TCM_None = 0,
     TCM_DXTNoAlpha = 1,

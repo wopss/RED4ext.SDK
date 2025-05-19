@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class LastTickVideoState : uint32_t
+enum class LastTickVideoState : int32_t
 {
     NotDrawn = 0,
     Drawn = 1,

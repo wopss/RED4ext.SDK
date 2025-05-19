@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class ShooterTriggerType : uint32_t
+enum class ShooterTriggerType : int32_t
 {
     Delay = 0,
     SpawnerFinish = 1,

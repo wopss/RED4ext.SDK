@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::influence {
-enum class TestLineResult : uint32_t
+enum class TestLineResult : int32_t
 {
     Fail = 0,
     Success = 1,

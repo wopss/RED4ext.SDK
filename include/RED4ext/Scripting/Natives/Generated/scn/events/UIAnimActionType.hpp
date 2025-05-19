@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn::events {
-enum class UIAnimActionType : uint32_t
+enum class UIAnimActionType : int32_t
 {
     Play = 0,
     Update = 1,

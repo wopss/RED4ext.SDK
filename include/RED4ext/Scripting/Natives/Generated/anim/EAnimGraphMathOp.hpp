@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EAnimGraphMathOp : uint32_t
+enum class EAnimGraphMathOp : int32_t
 {
     AGMO_Add = 0,
     AGMO_Subtract = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class RumbleStrength : uint8_t
+enum class RumbleStrength : int8_t
 {
     SuperLight = 0,
     Light = 1,

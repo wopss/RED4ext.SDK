@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class StanceState : uint32_t
+enum class StanceState : int32_t
 {
     Stand = 0,
     Crouch = 1,

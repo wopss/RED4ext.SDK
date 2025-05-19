@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace sense {
-enum class AdditionalTraceType : uint32_t
+enum class AdditionalTraceType : int32_t
 {
     Knee = 0,
     Hip = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class NodeSocketType : uint8_t
+enum class NodeSocketType : int8_t
 {
     Bidirectional = 0,
     Inward = 1,

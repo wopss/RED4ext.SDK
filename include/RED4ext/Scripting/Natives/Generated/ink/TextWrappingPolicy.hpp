@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class TextWrappingPolicy : uint32_t
+enum class TextWrappingPolicy : int32_t
 {
     SingleLine = 0,
     MultiLine = 1,

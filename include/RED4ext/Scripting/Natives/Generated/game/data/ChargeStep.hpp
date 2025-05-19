@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ChargeStep : uint32_t
+enum class ChargeStep : int32_t
 {
     Idle = 0,
     Charging = 1,

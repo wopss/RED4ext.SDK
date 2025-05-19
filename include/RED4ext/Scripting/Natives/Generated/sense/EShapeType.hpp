@@ -8,13 +8,13 @@
 namespace RED4ext
 {
 namespace sense {
-enum class EShapeType : uint32_t
+enum class EShapeType : int32_t
 {
+    INVALID = -1,
     BOX = 0,
     SPHERE = 1,
     CONE = 2,
     ANGLE_RANGE = 3,
-    INVALID = 4294967295,
 };
 } // namespace sense
 using senseEShapeType = sense::EShapeType;

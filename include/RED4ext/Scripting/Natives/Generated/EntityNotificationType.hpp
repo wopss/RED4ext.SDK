@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EntityNotificationType : uint32_t
+enum class EntityNotificationType : int32_t
 {
     DoNotNotifyEntity = 0,
     SendThisEventToEntity = 1,

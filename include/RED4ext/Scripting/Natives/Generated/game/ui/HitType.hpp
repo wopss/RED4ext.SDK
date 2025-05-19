@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class HitType : uint32_t
+enum class HitType : int32_t
 {
     Miss = 0,
     Glance = 1,

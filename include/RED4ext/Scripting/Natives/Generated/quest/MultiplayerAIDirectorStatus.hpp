@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class MultiplayerAIDirectorStatus : uint32_t
+enum class MultiplayerAIDirectorStatus : int32_t
 {
     Enabled = 0,
     Disabled = 1,

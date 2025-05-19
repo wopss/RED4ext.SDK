@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StimPriority : uint32_t
+enum class StimPriority : int32_t
 {
     High = 0,
     Low = 1,

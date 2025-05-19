@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class AnimationCategory : uint32_t
+enum class AnimationCategory : int32_t
 {
     Body = 0,
     Facial = 1,

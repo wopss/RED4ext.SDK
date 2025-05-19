@@ -8,11 +8,11 @@
 namespace RED4ext
 {
 namespace game {
-enum class DebugViewETextAlignment : uint32_t
+enum class DebugViewETextAlignment : int32_t
 {
+    Left = -1,
     Center = 0,
     Right = 1,
-    Left = 4294967295,
 };
 } // namespace game
 using gameDebugViewETextAlignment = game::DebugViewETextAlignment;

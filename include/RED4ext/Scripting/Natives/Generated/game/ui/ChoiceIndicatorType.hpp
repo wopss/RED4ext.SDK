@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class ChoiceIndicatorType : uint32_t
+enum class ChoiceIndicatorType : int32_t
 {
     Default = 0,
     Speech = 1,

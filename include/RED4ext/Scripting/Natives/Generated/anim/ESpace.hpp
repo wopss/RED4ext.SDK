@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class ESpace : uint32_t
+enum class ESpace : int32_t
 {
     Local = 0,
     Model = 1,

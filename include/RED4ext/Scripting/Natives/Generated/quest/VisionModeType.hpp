@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class VisionModeType : uint32_t
+enum class VisionModeType : int32_t
 {
     Undefined = 0,
     FocusMode = 1,

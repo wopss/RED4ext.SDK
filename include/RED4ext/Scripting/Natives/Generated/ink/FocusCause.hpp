@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class FocusCause : uint8_t
+enum class FocusCause : int8_t
 {
     Mouse = 0,
     Navigation = 1,

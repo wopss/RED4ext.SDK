@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class DefenseMode : uint32_t
+enum class DefenseMode : int32_t
 {
     DefendAll = 0,
     DefendMelee = 1,

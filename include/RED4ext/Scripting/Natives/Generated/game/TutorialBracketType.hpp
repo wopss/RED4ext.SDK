@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TutorialBracketType : uint32_t
+enum class TutorialBracketType : int32_t
 {
     WidgetArea = 0,
     CustomArea = 1,

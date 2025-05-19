@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn::bloc {
-enum class LocaleId : uint8_t
+enum class LocaleId : int8_t
 {
     db_db = 0,
     pl_pl = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMaterialShaderTarget : uint8_t
+enum class EMaterialShaderTarget : int8_t
 {
     MSH_Invalid = 0,
     MSH_VertexShader = 1,

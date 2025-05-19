@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EResetTypeNode : uint32_t
+enum class EResetTypeNode : int32_t
 {
     RT_Reference = 0,
     RT_Indentity = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::device {
-enum class RequestType : uint32_t
+enum class RequestType : int32_t
 {
     None = 0,
     External = 1,

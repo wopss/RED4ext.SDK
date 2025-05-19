@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class HitPrereqConditionType : uint32_t
+enum class HitPrereqConditionType : int32_t
 {
     AgentMoving = 0,
     AmmoState = 1,

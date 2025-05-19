@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class CheckType : uint32_t
+enum class CheckType : int32_t
 {
     Category = 0,
     Evolution = 1,

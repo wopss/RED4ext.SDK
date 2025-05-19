@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class StaticCollisionShapeCategory : uint32_t
+enum class StaticCollisionShapeCategory : int32_t
 {
     Interior = 0,
     Exterior = 1,

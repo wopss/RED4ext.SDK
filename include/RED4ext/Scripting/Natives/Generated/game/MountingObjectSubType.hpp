@@ -8,11 +8,11 @@
 namespace RED4ext
 {
 namespace game {
-enum class MountingObjectSubType : uint32_t
+enum class MountingObjectSubType : int32_t
 {
+    Invalid = -1,
     Car = 0,
     Bike = 1,
-    Invalid = 4294967295,
 };
 } // namespace game
 using gameMountingObjectSubType = game::MountingObjectSubType;

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PuppetVehicleState : uint32_t
+enum class PuppetVehicleState : int32_t
 {
     IdleMounted = 0,
     IdleStand = 1,

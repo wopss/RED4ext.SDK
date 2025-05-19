@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class ArgumentType : uint32_t
+enum class ArgumentType : int32_t
 {
     Bool = 0,
     Int = 1,

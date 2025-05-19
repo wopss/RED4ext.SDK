@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink::anim {
-enum class InterpolationMode : uint8_t
+enum class InterpolationMode : int8_t
 {
     EasyIn = 0,
     EasyOut = 1,

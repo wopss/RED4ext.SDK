@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NPCRarity : uint32_t
+enum class NPCRarity : int32_t
 {
     Boss = 0,
     Elite = 1,

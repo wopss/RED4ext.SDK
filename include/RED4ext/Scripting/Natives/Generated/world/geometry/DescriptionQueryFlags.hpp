@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world::geometry {
-enum class DescriptionQueryFlags : uint32_t
+enum class DescriptionQueryFlags : int32_t
 {
     DistanceVector = 1,
     CollisionNormal = 2,

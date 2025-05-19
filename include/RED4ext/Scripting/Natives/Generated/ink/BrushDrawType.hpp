@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class BrushDrawType : uint8_t
+enum class BrushDrawType : int8_t
 {
     NoDraw = 0,
     Solid = 1,

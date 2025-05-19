@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class ParallelNodeChildState : uint32_t
+enum class ParallelNodeChildState : int32_t
 {
     Inactive = 0,
     Active = 1,

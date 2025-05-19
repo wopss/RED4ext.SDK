@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class SummonFinishState : uint32_t
+enum class SummonFinishState : int32_t
 {
     Arrived = 0,
 };

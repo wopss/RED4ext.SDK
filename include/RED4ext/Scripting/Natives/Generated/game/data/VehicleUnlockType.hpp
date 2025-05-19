@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class VehicleUnlockType : uint32_t
+enum class VehicleUnlockType : int32_t
 {
     CourierMissions = 0,
     Quest = 1,

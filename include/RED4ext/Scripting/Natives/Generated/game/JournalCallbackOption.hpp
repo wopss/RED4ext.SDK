@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class JournalCallbackOption : uint32_t
+enum class JournalCallbackOption : int32_t
 {
     DoNotFire = 0,
     Fire = 1,

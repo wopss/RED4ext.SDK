@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ObjectActionReference : uint32_t
+enum class ObjectActionReference : int32_t
 {
     Instigator = 0,
     Source = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class TrafficSpotDirection : uint32_t
+enum class TrafficSpotDirection : int32_t
 {
     Forward = 0,
     Backward = 1,

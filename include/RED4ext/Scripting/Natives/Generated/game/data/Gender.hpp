@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class Gender : uint32_t
+enum class Gender : int32_t
 {
     Default = 0,
     Female = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class JournalBriefingContentType : uint32_t
+enum class JournalBriefingContentType : int32_t
 {
     MapLocation = 0,
     VideoContent = 1,

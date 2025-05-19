@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMDetailedLocomotionStates : uint32_t
+enum class PSMDetailedLocomotionStates : int32_t
 {
     NotInBaseLocomotion = 0,
     Stand = 1,

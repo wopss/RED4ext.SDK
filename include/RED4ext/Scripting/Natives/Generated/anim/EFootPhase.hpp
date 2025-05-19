@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EFootPhase : uint8_t
+enum class EFootPhase : int8_t
 {
     RightUp = 0,
     RightForward = 1,

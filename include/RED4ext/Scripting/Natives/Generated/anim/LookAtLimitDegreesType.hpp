@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LookAtLimitDegreesType : uint32_t
+enum class LookAtLimitDegreesType : int32_t
 {
     Narrow = 0,
     Normal = 1,

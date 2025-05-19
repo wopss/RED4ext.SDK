@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NPCUpperBodyState : uint32_t
+enum class NPCUpperBodyState : int32_t
 {
     Aim = 0,
     Any = 1,

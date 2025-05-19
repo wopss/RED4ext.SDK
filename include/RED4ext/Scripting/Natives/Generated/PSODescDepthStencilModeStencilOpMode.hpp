@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class PSODescDepthStencilModeStencilOpMode : uint8_t
+enum class PSODescDepthStencilModeStencilOpMode : int8_t
 {
     STENCILOP_Keep = 0,
     STENCILOP_Zero = 1,

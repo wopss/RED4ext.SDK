@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class ThreatPersistenceStatus : uint32_t
+enum class ThreatPersistenceStatus : int32_t
 {
     ThreatNotFound = 0,
     Persistent = 1,

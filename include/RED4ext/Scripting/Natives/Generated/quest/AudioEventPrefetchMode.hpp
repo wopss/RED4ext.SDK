@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class AudioEventPrefetchMode : uint8_t
+enum class AudioEventPrefetchMode : int8_t
 {
     AddEventPrefetch = 0,
     RemoveEventPrefetch = 1,

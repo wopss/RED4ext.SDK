@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PlayerStateMachine : uint32_t
+enum class PlayerStateMachine : int32_t
 {
     Locomotion = 0,
     UpperBody = 1,

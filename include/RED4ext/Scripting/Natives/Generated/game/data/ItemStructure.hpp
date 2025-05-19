@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ItemStructure : uint32_t
+enum class ItemStructure : int32_t
 {
     BlueprintStackable = 0,
     Stackable = 1,

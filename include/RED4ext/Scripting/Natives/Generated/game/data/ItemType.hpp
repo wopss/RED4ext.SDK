@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ItemType : uint32_t
+enum class ItemType : int32_t
 {
     Clo_Face = 0,
     Clo_Feet = 1,

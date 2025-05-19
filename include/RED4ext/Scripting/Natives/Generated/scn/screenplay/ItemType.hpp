@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn::screenplay {
-enum class ItemType : uint8_t
+enum class ItemType : int8_t
 {
     invalid = 0,
     dialogLine = 1,

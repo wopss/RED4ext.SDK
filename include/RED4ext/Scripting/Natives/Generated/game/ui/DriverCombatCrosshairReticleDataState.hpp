@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class DriverCombatCrosshairReticleDataState : uint32_t
+enum class DriverCombatCrosshairReticleDataState : int32_t
 {
     Default = 0,
     Dot = 1,

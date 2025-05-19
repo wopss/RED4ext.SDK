@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class IMaterialDataProviderDescEParameterType : uint8_t
+enum class IMaterialDataProviderDescEParameterType : int8_t
 {
     PT_None = 0,
     PT_Texture = 1,

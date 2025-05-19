@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StatPoolDataStatPoolModificationStatus : uint8_t
+enum class StatPoolDataStatPoolModificationStatus : int8_t
 {
     Regeneration = 0,
     Decay = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class SceneCategoryTag : uint8_t
+enum class SceneCategoryTag : int8_t
 {
     voiceset = 0,
     mainQuests = 1,

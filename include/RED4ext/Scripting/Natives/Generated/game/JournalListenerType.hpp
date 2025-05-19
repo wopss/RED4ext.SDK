@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class JournalListenerType : uint32_t
+enum class JournalListenerType : int32_t
 {
     State = 0,
     Visited = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class SetDestructionStateAction : uint32_t
+enum class SetDestructionStateAction : int32_t
 {
     Undefined = 0,
     Trigger = 1,

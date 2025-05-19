@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StatusEffectAIBehaviorFlag : uint32_t
+enum class StatusEffectAIBehaviorFlag : int32_t
 {
     AcceptsAdditives = 0,
     InterruptsForcedBehavior = 1,

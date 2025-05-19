@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class WidgetStyle : uint32_t
+enum class WidgetStyle : int32_t
 {
     Arasaka = 0,
     DarkNet = 1,

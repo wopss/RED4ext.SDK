@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class ObjectInspectEventType : uint32_t
+enum class ObjectInspectEventType : int32_t
 {
     Undefined = 0,
     Started = 1,

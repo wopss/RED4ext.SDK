@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class CameraCurve : uint32_t
+enum class CameraCurve : int32_t
 {
     CentricPitchOfSpeed = 0,
     CentricVerticalOffsetOfSpeed = 1,

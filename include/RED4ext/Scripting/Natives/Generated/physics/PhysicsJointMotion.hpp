@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class PhysicsJointMotion : uint8_t
+enum class PhysicsJointMotion : int8_t
 {
     Locked = 0,
     Limited = 1,

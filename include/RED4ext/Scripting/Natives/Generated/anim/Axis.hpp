@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class Axis : uint32_t
+enum class Axis : int32_t
 {
     X = 0,
     Y = 1,

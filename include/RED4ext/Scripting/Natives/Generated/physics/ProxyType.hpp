@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class ProxyType : uint8_t
+enum class ProxyType : int8_t
 {
     Invalid = 0,
     PhysicalSystem = 1,

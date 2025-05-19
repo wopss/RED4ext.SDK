@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIDifficulty : uint32_t
+enum class AIDifficulty : int32_t
 {
     Easy = 0,
     Hard = 1,

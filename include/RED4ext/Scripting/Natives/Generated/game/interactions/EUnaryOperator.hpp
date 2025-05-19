@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class EUnaryOperator : uint32_t
+enum class EUnaryOperator : int32_t
 {
     EUnaryOperator_empty = 0,
     EUnaryOperator_not = 1,

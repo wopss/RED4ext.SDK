@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class BinkVideoStatus : uint32_t
+enum class BinkVideoStatus : int32_t
 {
     Idle = 0,
     NotStarted = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::weapon {
-enum class ReloadStatus : uint32_t
+enum class ReloadStatus : int32_t
 {
     Standard = 0,
     Interrupted = 1,

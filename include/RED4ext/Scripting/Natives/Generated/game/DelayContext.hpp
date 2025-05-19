@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class DelayContext : uint32_t
+enum class DelayContext : int32_t
 {
     Standard_TD = 1,
     Standard_ND = 2,

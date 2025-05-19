@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class MovementType : uint32_t
+enum class MovementType : int32_t
 {
     Run = 0,
     Sprint = 1,

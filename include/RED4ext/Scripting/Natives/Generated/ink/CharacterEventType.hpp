@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class CharacterEventType : uint8_t
+enum class CharacterEventType : int8_t
 {
     CharInput = 0,
     MoveCaretForward = 1,

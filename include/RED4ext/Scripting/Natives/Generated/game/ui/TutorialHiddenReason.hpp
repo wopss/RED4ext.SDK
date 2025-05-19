@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class TutorialHiddenReason : uint32_t
+enum class TutorialHiddenReason : int32_t
 {
     None = 0,
     DefaultHiddenReason = 1,

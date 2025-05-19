@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class QuestContentType : uint8_t
+enum class QuestContentType : int8_t
 {
     EP1_MainQuest = 0,
     EP1_SideQuest = 1,

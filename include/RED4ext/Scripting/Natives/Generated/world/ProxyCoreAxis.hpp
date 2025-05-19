@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ProxyCoreAxis : uint8_t
+enum class ProxyCoreAxis : int8_t
 {
     X = 0,
     Y = 1,

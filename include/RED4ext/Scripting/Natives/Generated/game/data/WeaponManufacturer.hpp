@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class WeaponManufacturer : uint32_t
+enum class WeaponManufacturer : int32_t
 {
     Corporation = 0,
     Street = 1,

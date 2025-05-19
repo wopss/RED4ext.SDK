@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class RumblePosition : uint8_t
+enum class RumblePosition : int8_t
 {
     Both = 0,
     Left = 1,

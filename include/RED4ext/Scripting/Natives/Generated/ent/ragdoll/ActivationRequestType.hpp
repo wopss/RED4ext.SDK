@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent::ragdoll {
-enum class ActivationRequestType : uint32_t
+enum class ActivationRequestType : int32_t
 {
     Default = 0,
     Animated = 1,

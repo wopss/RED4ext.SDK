@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class AdvertisementLoadMode : uint32_t
+enum class AdvertisementLoadMode : int32_t
 {
     TweakDB = 0,
     Override = 1,

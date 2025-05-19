@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EButtonState : uint32_t
+enum class EButtonState : int32_t
 {
     Normal = 0,
     Hover = 1,

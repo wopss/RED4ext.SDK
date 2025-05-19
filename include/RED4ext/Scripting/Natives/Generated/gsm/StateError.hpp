@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace gsm {
-enum class StateError : uint32_t
+enum class StateError : int32_t
 {
     StateError_OK = 0,
     StateError_SettingsCorrupted = 1,

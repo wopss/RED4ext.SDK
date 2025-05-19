@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ECharacterStance : uint32_t
+enum class ECharacterStance : int32_t
 {
     Stance_Stand = 0,
     Stance_Crouch = 1,

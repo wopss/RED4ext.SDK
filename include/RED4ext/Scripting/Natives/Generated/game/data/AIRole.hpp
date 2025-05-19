@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIRole : uint32_t
+enum class AIRole : int32_t
 {
     Follower = 0,
     Patrol = 1,

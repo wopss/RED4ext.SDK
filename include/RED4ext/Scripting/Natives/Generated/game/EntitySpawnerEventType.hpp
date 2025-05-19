@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EntitySpawnerEventType : uint32_t
+enum class EntitySpawnerEventType : int32_t
 {
     Spawn = 2,
     Despawn = 3,

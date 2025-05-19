@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ConsumableBaseName : uint32_t
+enum class ConsumableBaseName : int32_t
 {
     Alcohol = 0,
     BonesMcCoy70 = 1,

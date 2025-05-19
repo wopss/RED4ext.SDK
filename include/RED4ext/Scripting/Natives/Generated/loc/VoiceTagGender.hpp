@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace loc {
-enum class VoiceTagGender : uint32_t
+enum class VoiceTagGender : int32_t
 {
     Undefined = 0,
     Male = 1,

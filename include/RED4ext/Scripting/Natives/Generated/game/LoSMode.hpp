@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class LoSMode : uint32_t
+enum class LoSMode : int32_t
 {
     Invalid = 0,
     Keep = 1,

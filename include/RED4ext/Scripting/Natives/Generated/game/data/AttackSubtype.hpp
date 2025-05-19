@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AttackSubtype : uint32_t
+enum class AttackSubtype : int32_t
 {
     BlockAttack = 0,
     BodySlamAttack = 1,

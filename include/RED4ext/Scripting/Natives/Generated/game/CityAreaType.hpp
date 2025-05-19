@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class CityAreaType : uint32_t
+enum class CityAreaType : int32_t
 {
     Undefined = 0,
     PublicZone = 1,

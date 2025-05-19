@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NPCBehaviorState : uint32_t
+enum class NPCBehaviorState : int32_t
 {
     State1 = 0,
     State2 = 1,

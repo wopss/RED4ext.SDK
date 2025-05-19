@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class EventActionType : uint32_t
+enum class EventActionType : int32_t
 {
     Play = 0,
     PlayAnimation = 1,

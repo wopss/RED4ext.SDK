@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class CoverBehavior : uint32_t
+enum class CoverBehavior : int32_t
 {
     Idle = 0,
     PreAction = 1,

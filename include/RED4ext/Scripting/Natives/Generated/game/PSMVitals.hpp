@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMVitals : uint32_t
+enum class PSMVitals : int32_t
 {
     Alive = 0,
     Dead = 1,

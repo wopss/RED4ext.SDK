@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace input {
-enum class EInputDevice : uint32_t
+enum class EInputDevice : int32_t
 {
     INVALID = 0,
     KBD_MOUSE = 1,

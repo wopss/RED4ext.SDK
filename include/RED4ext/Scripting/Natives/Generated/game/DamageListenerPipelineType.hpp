@@ -8,12 +8,12 @@
 namespace RED4ext
 {
 namespace game {
-enum class DamageListenerPipelineType : uint32_t
+enum class DamageListenerPipelineType : int32_t
 {
     None = 0,
     Damage = 1,
     ProjectedDamage = 2,
-    All = 4294967295,
+    All = -1,
 };
 } // namespace game
 using gameDamageListenerPipelineType = game::DamageListenerPipelineType;

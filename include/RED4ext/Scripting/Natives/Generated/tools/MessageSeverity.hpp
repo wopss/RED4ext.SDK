@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace tools {
-enum class MessageSeverity : uint32_t
+enum class MessageSeverity : int32_t
 {
     Success = 0,
     Info = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class QueryUseCase : uint16_t
+enum class QueryUseCase : int16_t
 {
     Default = 0,
     ActionAnimation = 1,

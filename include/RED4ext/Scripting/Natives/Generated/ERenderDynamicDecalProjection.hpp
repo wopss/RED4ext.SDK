@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderDynamicDecalProjection : uint32_t
+enum class ERenderDynamicDecalProjection : int32_t
 {
     RDDP_Ortho = 0,
     RDDP_Sphere = 1,

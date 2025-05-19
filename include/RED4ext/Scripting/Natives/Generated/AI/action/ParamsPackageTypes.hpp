@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::action {
-enum class ParamsPackageTypes : uint32_t
+enum class ParamsPackageTypes : int32_t
 {
     Default = 0,
     Reaction = 1,

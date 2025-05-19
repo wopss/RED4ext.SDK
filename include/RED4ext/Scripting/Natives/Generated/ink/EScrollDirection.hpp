@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EScrollDirection : uint32_t
+enum class EScrollDirection : int32_t
 {
     Vertical = 0,
     Horizontal = 1,

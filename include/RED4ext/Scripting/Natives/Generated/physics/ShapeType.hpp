@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class ShapeType : uint8_t
+enum class ShapeType : int8_t
 {
     Box = 0,
     Sphere = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::mappins {
-enum class VerticalPositioning : uint32_t
+enum class VerticalPositioning : int32_t
 {
     Above = 0,
     Same = 1,

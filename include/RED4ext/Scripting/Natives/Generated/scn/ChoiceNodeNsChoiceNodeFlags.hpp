@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class ChoiceNodeNsChoiceNodeFlags : uint16_t
+enum class ChoiceNodeNsChoiceNodeFlags : int16_t
 {
     IsFocusClue = 1,
     IsValidInteractionFailsafeDisabled = 2,

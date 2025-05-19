@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ProjectileLaunchMode : uint32_t
+enum class ProjectileLaunchMode : int32_t
 {
     Regular = 0,
     Tracking = 1,

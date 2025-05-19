@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StatPoolModificationTypes : uint32_t
+enum class StatPoolModificationTypes : int32_t
 {
     Regeneration = 0,
     Decay = 1,

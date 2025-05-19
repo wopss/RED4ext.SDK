@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMHighLevel : uint32_t
+enum class PSMHighLevel : int32_t
 {
+    Any = -1,
     Default = 0,
     SceneTier1 = 1,
     SceneTier2 = 2,
@@ -17,7 +18,6 @@ enum class PSMHighLevel : uint32_t
     SceneTier4 = 4,
     SceneTier5 = 5,
     Swimming = 6,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMHighLevel = game::PSMHighLevel;

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIDirectorEntryStartType : uint32_t
+enum class AIDirectorEntryStartType : int32_t
 {
     Default = 0,
     DespawnAllEnemies = 1,

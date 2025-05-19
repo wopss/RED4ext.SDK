@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class ChoiceType : uint32_t
+enum class ChoiceType : int32_t
 {
     QuestImportant = 1,
     AlreadyRead = 2,

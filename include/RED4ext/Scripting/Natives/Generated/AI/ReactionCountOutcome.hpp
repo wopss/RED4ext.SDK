@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class ReactionCountOutcome : uint32_t
+enum class ReactionCountOutcome : int32_t
 {
     Failed = 0,
     Succeded = 1,

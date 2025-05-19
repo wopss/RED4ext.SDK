@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EInputCustomKey : uint32_t
+enum class EInputCustomKey : int32_t
 {
     ICK_Pad_DigitLeftRight = 273,
     ICK_Pad_DigitUpDown = 274,

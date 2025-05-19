@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class EInterruptionOutcome : uint32_t
+enum class EInterruptionOutcome : int32_t
 {
     INTERRUPTION_SUCCESS = 0,
     INTERRUPTION_DELAYED = 1,

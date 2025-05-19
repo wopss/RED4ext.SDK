@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class PhysicsJointAxis : uint8_t
+enum class PhysicsJointAxis : int8_t
 {
     AxisX = 0,
     AxisY = 1,

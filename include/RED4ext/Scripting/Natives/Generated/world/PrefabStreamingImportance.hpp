@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class PrefabStreamingImportance : uint8_t
+enum class PrefabStreamingImportance : int8_t
 {
     Auto = 0,
     P1 = 1,

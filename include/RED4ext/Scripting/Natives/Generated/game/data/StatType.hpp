@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StatType : uint32_t
+enum class StatType : int32_t
 {
     ADSSpeedPercentBonus = 0,
     ADSSpeedPercentBonusModifierHelper = 1,

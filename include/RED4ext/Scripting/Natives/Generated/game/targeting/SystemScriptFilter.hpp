@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::targeting {
-enum class SystemScriptFilter : uint32_t
+enum class SystemScriptFilter : int32_t
 {
     Melee = 1,
     Shooting = 2,

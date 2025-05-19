@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class PSODescPrimitiveTopologyType : uint32_t
+enum class PSODescPrimitiveTopologyType : int32_t
 {
     Invalid = 0,
     Point = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ConfigTextureQualityLevel : uint32_t
+enum class ConfigTextureQualityLevel : int32_t
 {
     Console = 0,
     ConsoleSafe = 1,

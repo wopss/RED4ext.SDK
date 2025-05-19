@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class TrafficMovementBehavior : uint32_t
+enum class TrafficMovementBehavior : int32_t
 {
     Pedestrian = 0,
     Car = 1,

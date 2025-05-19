@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class DismWoundType : uint32_t
+enum class DismWoundType : int32_t
 {
     CLEAN = 1,
     COARSE = 2,

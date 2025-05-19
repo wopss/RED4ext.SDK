@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TelemetryMovementType : uint32_t
+enum class TelemetryMovementType : int32_t
 {
     Jump = 0,
     DoubleJump = 1,

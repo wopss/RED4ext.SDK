@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class VideoOptimizationState : uint32_t
+enum class VideoOptimizationState : int32_t
 {
     None = 0,
     TooManyBinks = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AimAssistType : uint32_t
+enum class AimAssistType : int32_t
 {
     BreachTarget = 0,
     ChestTarget = 1,

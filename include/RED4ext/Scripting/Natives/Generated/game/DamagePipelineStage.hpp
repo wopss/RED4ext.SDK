@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class DamagePipelineStage : uint32_t
+enum class DamagePipelineStage : int32_t
 {
     PreProcess = 0,
     Process = 1,

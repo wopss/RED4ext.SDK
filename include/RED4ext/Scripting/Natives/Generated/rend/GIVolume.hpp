@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class GIVolume : uint8_t
+enum class GIVolume : int8_t
 {
     GI_Exterior = 0,
     GI_Interior1 = 1,

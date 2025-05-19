@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class UninterruptibleActionType : uint32_t
+enum class UninterruptibleActionType : int32_t
 {
     None = 0,
     Default = 1,

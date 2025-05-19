@@ -78,7 +78,7 @@ struct EnumFileDescriptor
     std::string alias;
     std::string directory;
     size_t size = 0;
-    std::map<uint64_t, std::string> enumMap;
+    std::map<int64_t, std::string> enumMap;
     std::map<std::string, uint64_t> enumAlias;
 
     void EmitFile(std::filesystem::path aOutPath, NameSantizer aSanitizer);

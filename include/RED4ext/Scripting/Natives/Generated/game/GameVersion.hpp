@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class GameVersion : uint32_t
+enum class GameVersion : int32_t
 {
     CP77_Initial = 0,
     CP77_Development = 1,

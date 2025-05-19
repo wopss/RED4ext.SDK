@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class ELayerType : uint8_t
+enum class ELayerType : int8_t
 {
     Watermarks = 0,
     WaitingSign = 1,

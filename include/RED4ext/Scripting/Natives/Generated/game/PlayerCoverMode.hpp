@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PlayerCoverMode : uint32_t
+enum class PlayerCoverMode : int32_t
 {
     None = 0,
     Auto = 1,

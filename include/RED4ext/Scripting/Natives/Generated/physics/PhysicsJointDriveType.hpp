@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class PhysicsJointDriveType : uint8_t
+enum class PhysicsJointDriveType : int8_t
 {
     AxisX = 0,
     AxisY = 1,

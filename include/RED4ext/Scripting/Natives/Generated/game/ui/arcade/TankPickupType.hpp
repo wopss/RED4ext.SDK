@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class TankPickupType : uint32_t
+enum class TankPickupType : int32_t
 {
     Patch_Kit = 0,
     AEAMS = 1,

@@ -8,14 +8,14 @@
 namespace RED4ext
 {
 namespace world {
-enum class StreamingSectorCategory : uint8_t
+enum class StreamingSectorCategory : int8_t
 {
+    Unknown = -1,
     Exterior = 0,
     Interior = 1,
     Quest = 2,
     Navigation = 3,
     AlwaysLoaded = 4,
-    Unknown = 255,
 };
 } // namespace world
 using worldStreamingSectorCategory = world::StreamingSectorCategory;

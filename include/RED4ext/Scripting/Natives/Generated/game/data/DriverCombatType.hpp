@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class DriverCombatType : uint32_t
+enum class DriverCombatType : int32_t
 {
     CrystalDome = 0,
     Disabled = 1,

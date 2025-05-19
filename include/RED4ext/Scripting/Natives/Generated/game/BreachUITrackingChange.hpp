@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class BreachUITrackingChange : uint32_t
+enum class BreachUITrackingChange : int32_t
 {
     NoChange = 0,
     StartedNew = 1,

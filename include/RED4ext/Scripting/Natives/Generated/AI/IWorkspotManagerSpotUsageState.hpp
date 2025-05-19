@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class IWorkspotManagerSpotUsageState : uint8_t
+enum class IWorkspotManagerSpotUsageState : int8_t
 {
     Reserved = 0,
     Occupied = 1,

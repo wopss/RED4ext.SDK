@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StatusEffectVariation : uint32_t
+enum class StatusEffectVariation : int32_t
 {
     Bike = 0,
     Default = 1,

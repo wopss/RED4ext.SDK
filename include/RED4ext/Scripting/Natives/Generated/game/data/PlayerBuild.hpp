@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class PlayerBuild : uint32_t
+enum class PlayerBuild : int32_t
 {
     Cool = 0,
     Netrunner = 1,

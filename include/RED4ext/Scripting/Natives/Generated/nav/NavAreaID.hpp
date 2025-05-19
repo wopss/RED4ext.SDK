@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace nav {
-enum class NavAreaID : uint8_t
+enum class NavAreaID : int8_t
 {
     Unwalkable = 0,
     Terrain = 1,

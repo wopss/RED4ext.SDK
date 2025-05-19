@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class FxActionType : uint32_t
+enum class FxActionType : int32_t
 {
     BreakLoop = 0,
     Kill = 1,

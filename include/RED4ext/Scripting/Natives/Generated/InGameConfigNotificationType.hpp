@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class InGameConfigNotificationType : uint8_t
+enum class InGameConfigNotificationType : int8_t
 {
     RestartRequiredConfirmed = 0,
     RestartRequiredRejected = 1,

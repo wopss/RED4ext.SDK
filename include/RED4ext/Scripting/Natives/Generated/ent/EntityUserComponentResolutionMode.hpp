@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class EntityUserComponentResolutionMode : uint8_t
+enum class EntityUserComponentResolutionMode : int8_t
 {
     Select = 0,
     Suppress = 1,

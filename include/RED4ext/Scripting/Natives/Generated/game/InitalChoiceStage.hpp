@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class InitalChoiceStage : uint32_t
+enum class InitalChoiceStage : int32_t
 {
     None = 0,
     Difficulty = 1,

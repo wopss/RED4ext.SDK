@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class SAnimationBufferBitwiseCompressionPreset : uint32_t
+enum class SAnimationBufferBitwiseCompressionPreset : int32_t
 {
     ABBCP_Custom = 0,
     ABBCP_VeryHighQuality = 1,

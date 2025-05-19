@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ESystemNotificationTypes : uint32_t
+enum class ESystemNotificationTypes : int32_t
 {
     DiscOperationIndicator = 0,
     GenericNotModal = 1,

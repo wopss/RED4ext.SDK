@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class PhoneCallPhase : uint32_t
+enum class PhoneCallPhase : int32_t
 {
     Undefined = 0,
     IncomingCall = 1,

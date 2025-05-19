@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EActionStatus : uint32_t
+enum class EActionStatus : int32_t
 {
     STATUS_INVALID = 0,
     STATUS_BOUND = 1,

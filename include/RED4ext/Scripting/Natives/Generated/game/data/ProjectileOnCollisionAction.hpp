@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ProjectileOnCollisionAction : uint32_t
+enum class ProjectileOnCollisionAction : int32_t
 {
     Bounce = 0,
     Pierce = 1,

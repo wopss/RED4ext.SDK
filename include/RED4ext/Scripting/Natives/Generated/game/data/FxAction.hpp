@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class FxAction : uint32_t
+enum class FxAction : int32_t
 {
     EnterCharge = 0,
     EnterDischarge = 1,

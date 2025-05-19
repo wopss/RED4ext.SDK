@@ -8,14 +8,14 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMCover : uint32_t
+enum class PSMCover : int32_t
 {
+    Any = -1,
     Default = 0,
     InCover = 1,
     Peek = 2,
     Lean = 3,
     OutOfCover = 4,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMCover = game::PSMCover;

@@ -8,14 +8,14 @@
 namespace RED4ext
 {
 namespace game {
-enum class MountingSlotRole : uint32_t
+enum class MountingSlotRole : int32_t
 {
+    Invalid = -1,
     Driver = 0,
     Passenger = 1,
     Passenger_FR = 2,
     Passenger_BL = 3,
     Passenger_BR = 4,
-    Invalid = 4294967295,
 };
 } // namespace game
 using gameMountingSlotRole = game::MountingSlotRole;

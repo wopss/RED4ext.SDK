@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class PostFx_ScanningState : uint8_t
+enum class PostFx_ScanningState : int8_t
 {
     Off = 0,
     Scanning = 2,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EEquipmentManagerState : uint32_t
+enum class EEquipmentManagerState : int32_t
 {
     InfiniteAmmo = 1,
 };

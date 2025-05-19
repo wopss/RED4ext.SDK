@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class BikeCurve : uint32_t
+enum class BikeCurve : int32_t
 {
     SpeedToTilt = 0,
     InputToTilt = 1,

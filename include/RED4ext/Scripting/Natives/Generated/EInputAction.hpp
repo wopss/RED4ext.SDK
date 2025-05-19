@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EInputAction : uint32_t
+enum class EInputAction : int32_t
 {
     IACT_None = 0,
     IACT_Press = 1,

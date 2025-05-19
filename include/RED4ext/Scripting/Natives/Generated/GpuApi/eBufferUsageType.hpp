@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuApi {
-enum class eBufferUsageType : uint8_t
+enum class eBufferUsageType : int8_t
 {
     BUT_Default = 0,
     BUT_Immutable = 1,

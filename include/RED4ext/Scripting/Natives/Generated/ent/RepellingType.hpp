@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class RepellingType : uint8_t
+enum class RepellingType : int8_t
 {
     Debris = 0,
     BigObjects = 1,

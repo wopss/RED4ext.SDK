@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class MotionTag : uint32_t
+enum class MotionTag : int32_t
 {
     MT_Invalid = 0,
     Walk = 1,

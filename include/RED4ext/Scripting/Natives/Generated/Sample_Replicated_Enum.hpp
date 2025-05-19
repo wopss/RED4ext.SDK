@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class Sample_Replicated_Enum : uint32_t
+enum class Sample_Replicated_Enum : int32_t
 {
     One = 0,
     Two = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class SignalConditionModes : uint32_t
+enum class SignalConditionModes : int32_t
 {
     CurrentValue = 0,
     StartOfFrameValue = 1,

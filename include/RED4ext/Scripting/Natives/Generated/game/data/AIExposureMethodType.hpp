@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIExposureMethodType : uint32_t
+enum class AIExposureMethodType : int32_t
 {
     BlindFire = 0,
     Lean = 1,

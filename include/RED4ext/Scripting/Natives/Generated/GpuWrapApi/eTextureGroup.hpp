@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuWrapApi {
-enum class eTextureGroup : uint8_t
+enum class eTextureGroup : int8_t
 {
     TEXG_Generic_Color = 1,
     TEXG_Generic_Grayscale = 2,

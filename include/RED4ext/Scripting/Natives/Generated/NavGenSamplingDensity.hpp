@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class NavGenSamplingDensity : uint8_t
+enum class NavGenSamplingDensity : int8_t
 {
     None = 0,
     Sparse = 1,

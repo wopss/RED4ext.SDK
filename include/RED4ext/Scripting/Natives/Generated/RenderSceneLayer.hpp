@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class RenderSceneLayer : uint8_t
+enum class RenderSceneLayer : int8_t
 {
     Default = 0,
     Cyberspace = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NewPerkCategoryType : uint32_t
+enum class NewPerkCategoryType : int32_t
 {
     MasterNewPerkCategory = 0,
     MilestoneNewPerkCategory = 1,

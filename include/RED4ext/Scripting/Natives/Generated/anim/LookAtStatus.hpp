@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LookAtStatus : uint32_t
+enum class LookAtStatus : int32_t
 {
     Active = 2,
     LimitReached = 4,

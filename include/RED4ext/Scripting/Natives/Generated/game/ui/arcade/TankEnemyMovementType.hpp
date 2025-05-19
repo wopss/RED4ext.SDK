@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class TankEnemyMovementType : uint32_t
+enum class TankEnemyMovementType : int32_t
 {
     x_axis = 0,
     x_axisL = 1,

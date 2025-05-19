@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class UpdateBucketEnum : uint8_t
+enum class UpdateBucketEnum : int8_t
 {
     Vehicle = 0,
     Character = 1,

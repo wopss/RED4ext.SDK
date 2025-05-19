@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class Output : uint32_t
+enum class Output : int32_t
 {
     AskToFollowOrder = 0,
     AskToHolster = 1,

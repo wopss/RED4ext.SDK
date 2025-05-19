@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class EdgeConditionAction : uint32_t
+enum class EdgeConditionAction : int32_t
 {
     None = 0,
     Toggle = 1,

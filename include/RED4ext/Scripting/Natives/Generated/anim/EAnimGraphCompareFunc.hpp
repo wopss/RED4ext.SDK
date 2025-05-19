@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EAnimGraphCompareFunc : uint32_t
+enum class EAnimGraphCompareFunc : int32_t
 {
     AGCF_Equal = 0,
     AGCF_NotEqual = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class Ethnicity : uint32_t
+enum class Ethnicity : int32_t
 {
     African = 0,
     AfricanAmerican = 1,

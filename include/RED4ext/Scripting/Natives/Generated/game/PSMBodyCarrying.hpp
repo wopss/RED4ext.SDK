@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMBodyCarrying : uint32_t
+enum class PSMBodyCarrying : int32_t
 {
+    Any = -1,
     Default = 0,
     PickUp = 1,
     Carry = 2,
@@ -17,7 +18,6 @@ enum class PSMBodyCarrying : uint32_t
     Drop = 4,
     Aim = 5,
     Throw = 6,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMBodyCarrying = game::PSMBodyCarrying;

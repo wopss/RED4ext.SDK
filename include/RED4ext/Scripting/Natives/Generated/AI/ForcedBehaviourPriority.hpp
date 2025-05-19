@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class ForcedBehaviourPriority : uint8_t
+enum class ForcedBehaviourPriority : int8_t
 {
     AboveIdle = 0,
     AboveCombat = 1,

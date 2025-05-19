@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class NavGenAgentSize : uint32_t
+enum class NavGenAgentSize : int32_t
 {
     Human = 0,
     Vehicle = 1,

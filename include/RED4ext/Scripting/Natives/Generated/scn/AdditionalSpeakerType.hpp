@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class AdditionalSpeakerType : uint32_t
+enum class AdditionalSpeakerType : int32_t
 {
     Normal = 0,
     Holocall = 1,

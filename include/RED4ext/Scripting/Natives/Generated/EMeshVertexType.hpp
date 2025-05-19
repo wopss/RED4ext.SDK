@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMeshVertexType : uint32_t
+enum class EMeshVertexType : int32_t
 {
     MVT_StaticMesh = 0,
     MVT_ProceduralMesh = 1,

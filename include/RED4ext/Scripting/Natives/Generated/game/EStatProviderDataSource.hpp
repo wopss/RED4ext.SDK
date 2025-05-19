@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EStatProviderDataSource : uint32_t
+enum class EStatProviderDataSource : int32_t
 {
     gameItemData = 0,
     InventoryItemData = 1,

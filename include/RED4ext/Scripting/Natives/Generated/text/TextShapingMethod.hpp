@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace text {
-enum class TextShapingMethod : uint8_t
+enum class TextShapingMethod : int8_t
 {
     Auto = 0,
     KerningOnly = 1,

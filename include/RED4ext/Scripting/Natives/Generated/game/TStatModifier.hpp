@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TStatModifier : uint8_t
+enum class TStatModifier : int8_t
 {
     Constant = 0,
     Random = 1,

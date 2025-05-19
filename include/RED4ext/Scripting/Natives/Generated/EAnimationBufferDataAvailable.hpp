@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EAnimationBufferDataAvailable : uint32_t
+enum class EAnimationBufferDataAvailable : int32_t
 {
     ABDA_None = 0,
     ABDA_Partial = 1,

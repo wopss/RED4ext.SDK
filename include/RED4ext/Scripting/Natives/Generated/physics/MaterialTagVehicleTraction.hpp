@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class MaterialTagVehicleTraction : uint8_t
+enum class MaterialTagVehicleTraction : int8_t
 {
     Default = 0,
     Gravel = 1,

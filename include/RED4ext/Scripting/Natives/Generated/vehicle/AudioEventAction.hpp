@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class AudioEventAction : uint32_t
+enum class AudioEventAction : int32_t
 {
     OnPlayerDriving = 0,
     OnPlayerPassenger = 1,

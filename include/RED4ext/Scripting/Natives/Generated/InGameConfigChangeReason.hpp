@@ -7,13 +7,13 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class InGameConfigChangeReason : uint8_t
+enum class InGameConfigChangeReason : int8_t
 {
+    Invalid = -1,
     Accepted = 0,
     Rejected = 1,
     NeedsConfirmation = 2,
     NeedsRestart = 3,
-    Invalid = 255,
 };
 using ConfigChangeReason = InGameConfigChangeReason;
 } // namespace RED4ext

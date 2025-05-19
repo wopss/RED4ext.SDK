@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class WidgetResourceVersion : uint8_t
+enum class WidgetResourceVersion : int8_t
 {
     Default = 0,
     BrushToAtlas = 1,

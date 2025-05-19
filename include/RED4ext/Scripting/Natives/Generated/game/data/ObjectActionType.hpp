@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ObjectActionType : uint32_t
+enum class ObjectActionType : int32_t
 {
     DeviceQuickHack = 0,
     Direct = 1,

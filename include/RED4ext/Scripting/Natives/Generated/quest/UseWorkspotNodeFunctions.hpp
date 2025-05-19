@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class UseWorkspotNodeFunctions : uint32_t
+enum class UseWorkspotNodeFunctions : int32_t
 {
     UseWorkspot = 0,
     JumpWorkspot = 1,

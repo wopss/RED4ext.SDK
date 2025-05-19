@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace move {
-enum class LineOfSight : uint32_t
+enum class LineOfSight : int32_t
 {
     None = 0,
     Keep = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class LifePath : uint8_t
+enum class LifePath : int8_t
 {
     Corporate = 0,
     Nomad = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class WorkspotSlidingBehaviour : uint32_t
+enum class WorkspotSlidingBehaviour : int32_t
 {
     DontPlayAtResourcePosition = 0,
     PlayAtResourcePosition = 1,

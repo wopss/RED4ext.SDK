@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class DamageDigitsMode : uint32_t
+enum class DamageDigitsMode : int32_t
 {
     Off = 0,
     Individual = 1,

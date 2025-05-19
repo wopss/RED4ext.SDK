@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ReprimandMappinAnimationState : uint32_t
+enum class ReprimandMappinAnimationState : int32_t
 {
     None = 0,
     Normal = 1,

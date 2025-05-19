@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class TriggerEffectTarget : uint8_t
+enum class TriggerEffectTarget : int8_t
 {
     L2 = 0,
     R2 = 1,

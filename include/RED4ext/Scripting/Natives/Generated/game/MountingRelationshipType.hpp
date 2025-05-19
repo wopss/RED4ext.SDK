@@ -8,11 +8,11 @@
 namespace RED4ext
 {
 namespace game {
-enum class MountingRelationshipType : uint32_t
+enum class MountingRelationshipType : int32_t
 {
+    Invalid = -1,
     Parent = 0,
     Child = 1,
-    Invalid = 4294967295,
 };
 } // namespace game
 using gameMountingRelationshipType = game::MountingRelationshipType;

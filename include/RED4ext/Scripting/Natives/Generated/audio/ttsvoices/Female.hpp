@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio::ttsvoices {
-enum class Female : uint32_t
+enum class Female : int32_t
 {
     Olivia = 7,
     Emily = 8,

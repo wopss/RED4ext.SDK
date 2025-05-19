@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace render {
-enum class DevGIProbeView : uint32_t
+enum class DevGIProbeView : int32_t
 {
     RADIANCE = 0,
     SKY_VISIBILITY = 1,

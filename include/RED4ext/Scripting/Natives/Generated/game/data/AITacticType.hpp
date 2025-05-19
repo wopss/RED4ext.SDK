@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AITacticType : uint32_t
+enum class AITacticType : int32_t
 {
     Assault = 0,
     Defend = 1,

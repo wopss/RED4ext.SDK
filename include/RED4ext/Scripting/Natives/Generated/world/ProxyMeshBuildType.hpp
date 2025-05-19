@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ProxyMeshBuildType : uint8_t
+enum class ProxyMeshBuildType : int8_t
 {
     ProxyFromProxy = 0,
     ProxyFromScratch = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class SenseObjectType : uint32_t
+enum class SenseObjectType : int32_t
 {
     Camera = 0,
     Deadbody = 1,

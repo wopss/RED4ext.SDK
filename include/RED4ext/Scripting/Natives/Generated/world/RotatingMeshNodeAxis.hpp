@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class RotatingMeshNodeAxis : uint32_t
+enum class RotatingMeshNodeAxis : int32_t
 {
     X = 0,
     Y = 1,

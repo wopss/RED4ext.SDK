@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class SelectionRule : uint8_t
+enum class SelectionRule : int8_t
 {
     Single = 0,
     Parent = 1,

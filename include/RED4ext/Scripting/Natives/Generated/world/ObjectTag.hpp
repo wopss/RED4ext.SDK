@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ObjectTag : uint32_t
+enum class ObjectTag : int32_t
 {
     WallExterior = 1164730711,
     WallInterior = 1231839575,

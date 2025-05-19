@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class WorldMapFilter : uint32_t
+enum class WorldMapFilter : int32_t
 {
     ApartmentToPurchaseFilter = 0,
     AutofixerFilter = 1,

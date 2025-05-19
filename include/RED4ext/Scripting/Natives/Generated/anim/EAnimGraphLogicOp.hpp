@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EAnimGraphLogicOp : uint32_t
+enum class EAnimGraphLogicOp : int32_t
 {
     AGLO_Or = 0,
     AGLO_And = 1,

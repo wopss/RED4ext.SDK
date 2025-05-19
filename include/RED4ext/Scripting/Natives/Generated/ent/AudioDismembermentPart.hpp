@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class AudioDismembermentPart : uint32_t
+enum class AudioDismembermentPart : int32_t
 {
     Head = 0,
     Leg = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StatsBundleOwnerType : uint32_t
+enum class StatsBundleOwnerType : int32_t
 {
     None = 0,
     Cleared = 1,

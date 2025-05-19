@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class EExecutionOutcome : uint32_t
+enum class EExecutionOutcome : int32_t
 {
     OUTCOME_FAILURE = 0,
     OUTCOME_SUCCESS = 1,

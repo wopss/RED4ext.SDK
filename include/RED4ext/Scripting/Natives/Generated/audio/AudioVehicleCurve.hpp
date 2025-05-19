@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class AudioVehicleCurve : uint32_t
+enum class AudioVehicleCurve : int32_t
 {
     ThrottleInput = 0,
     RPM = 1,

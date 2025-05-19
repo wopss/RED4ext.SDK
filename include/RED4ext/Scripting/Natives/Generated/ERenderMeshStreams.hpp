@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderMeshStreams : uint32_t
+enum class ERenderMeshStreams : int32_t
 {
     RMS_PositionSkinning = 1,
     RMS_TexCoords = 2,

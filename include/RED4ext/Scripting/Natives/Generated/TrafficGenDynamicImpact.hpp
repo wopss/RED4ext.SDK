@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class TrafficGenDynamicImpact : uint16_t
+enum class TrafficGenDynamicImpact : int16_t
 {
     Ignored = 0,
     Blocking = 1,

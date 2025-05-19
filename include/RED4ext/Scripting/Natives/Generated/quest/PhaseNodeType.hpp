@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class PhaseNodeType : uint8_t
+enum class PhaseNodeType : int8_t
 {
     Quest = 0,
     OpenWorld = 1,

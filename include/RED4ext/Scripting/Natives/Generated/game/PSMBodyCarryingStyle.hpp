@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMBodyCarryingStyle : uint32_t
+enum class PSMBodyCarryingStyle : int32_t
 {
     Any = 0,
     Default = 1,

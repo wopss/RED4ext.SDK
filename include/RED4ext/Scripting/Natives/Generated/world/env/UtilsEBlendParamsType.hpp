@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world::env {
-enum class UtilsEBlendParamsType : uint32_t
+enum class UtilsEBlendParamsType : int32_t
 {
     EBPS_Tick = 0,
     EBPS_Game = 1,

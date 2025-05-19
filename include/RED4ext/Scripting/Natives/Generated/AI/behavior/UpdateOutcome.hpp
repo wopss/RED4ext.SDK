@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class UpdateOutcome : uint32_t
+enum class UpdateOutcome : int32_t
 {
     IN_PROGRESS = 0,
     SUCCESS = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMeasurementSystem : uint32_t
+enum class EMeasurementSystem : int32_t
 {
     Metric = 0,
     Imperial = 1,

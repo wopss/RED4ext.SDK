@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMaterialShadingRateMode : uint8_t
+enum class EMaterialShadingRateMode : int8_t
 {
     MSRM_Default = 0,
     MSRM_Disable = 1,

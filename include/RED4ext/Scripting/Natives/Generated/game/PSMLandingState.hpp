@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMLandingState : uint32_t
+enum class PSMLandingState : int32_t
 {
     Default = 0,
     RegularLand = 1,

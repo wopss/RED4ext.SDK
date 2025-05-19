@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class LocomotionMode : uint32_t
+enum class LocomotionMode : int32_t
 {
     Moving = 0,
     Static = 1,

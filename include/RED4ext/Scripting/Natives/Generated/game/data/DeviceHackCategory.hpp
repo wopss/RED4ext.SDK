@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class DeviceHackCategory : uint32_t
+enum class DeviceHackCategory : int32_t
 {
     ControlHack = 0,
     CovertHack = 1,

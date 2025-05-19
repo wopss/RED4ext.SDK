@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class WorkspotReactionType : uint32_t
+enum class WorkspotReactionType : int32_t
 {
     Anger = 0,
     BumpLeftBack = 1,

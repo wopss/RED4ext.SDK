@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class OneTimeMessage : uint32_t
+enum class OneTimeMessage : int32_t
 {
     XboxCompatibilityLimitation = 0,
 };

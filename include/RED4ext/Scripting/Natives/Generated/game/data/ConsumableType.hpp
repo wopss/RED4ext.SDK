@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ConsumableType : uint32_t
+enum class ConsumableType : int32_t
 {
     Drug = 0,
     Medical = 1,

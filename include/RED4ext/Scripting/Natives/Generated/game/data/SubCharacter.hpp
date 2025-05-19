@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class SubCharacter : uint32_t
+enum class SubCharacter : int32_t
 {
     Flathead = 0,
     Count = 1,

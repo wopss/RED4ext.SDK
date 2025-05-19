@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class AimState : uint32_t
+enum class AimState : int32_t
 {
     Unaimed = 0,
     Aimed = 1,

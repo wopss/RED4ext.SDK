@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class DynamicReverbType : uint32_t
+enum class DynamicReverbType : int32_t
 {
     Dynamic = 0,
     StaticSmall = 1,

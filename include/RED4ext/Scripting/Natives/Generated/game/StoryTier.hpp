@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StoryTier : uint8_t
+enum class StoryTier : int8_t
 {
     Gameplay = 0,
     Cinematic = 1,

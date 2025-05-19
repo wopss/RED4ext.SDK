@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class ActivationStatus : uint8_t
+enum class ActivationStatus : int8_t
 {
     NOT_ACTIVATED = 0,
     ACTIVATING = 1,

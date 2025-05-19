@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class WeaponBulletType : uint32_t
+enum class WeaponBulletType : int32_t
 {
     standard = 0,
     sniper = 1,

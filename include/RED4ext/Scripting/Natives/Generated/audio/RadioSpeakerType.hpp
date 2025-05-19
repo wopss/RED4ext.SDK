@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class RadioSpeakerType : uint32_t
+enum class RadioSpeakerType : int32_t
 {
     Stanley = 0,
     MaximumMike = 1,

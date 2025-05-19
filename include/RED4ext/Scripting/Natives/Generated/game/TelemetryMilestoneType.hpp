@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TelemetryMilestoneType : uint32_t
+enum class TelemetryMilestoneType : int32_t
 {
     StartFact = 0,
     ImportantFact = 1,

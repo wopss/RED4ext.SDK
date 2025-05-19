@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class RadioSoundType : uint8_t
+enum class RadioSoundType : int8_t
 {
     Song = 0,
     AnnouncementScene = 1,

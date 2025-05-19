@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TransformAnimation_MoveOnSplineRotationMode : uint32_t
+enum class TransformAnimation_MoveOnSplineRotationMode : int32_t
 {
     Disabled = 0,
     Yaw = 1,

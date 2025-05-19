@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class ObstructionTestType : uint32_t
+enum class ObstructionTestType : int32_t
 {
     SingleShot = 0,
     Continuous = 1,

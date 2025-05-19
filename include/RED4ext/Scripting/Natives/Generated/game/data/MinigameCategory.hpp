@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class MinigameCategory : uint32_t
+enum class MinigameCategory : int32_t
 {
     CameraAccess = 0,
     CyberwareAccess = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class FastForwardMode : uint32_t
+enum class FastForwardMode : int32_t
 {
     Default = 0,
     GameplayReview = 1,

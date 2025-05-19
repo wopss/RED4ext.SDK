@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class MenuMode : uint32_t
+enum class MenuMode : int32_t
 {
     Unknown = 0,
     PauseMenu = 1,

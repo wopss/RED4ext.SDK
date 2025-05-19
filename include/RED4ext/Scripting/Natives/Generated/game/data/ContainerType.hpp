@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ContainerType : uint32_t
+enum class ContainerType : int32_t
 {
     AmmoCase = 0,
     Body = 1,

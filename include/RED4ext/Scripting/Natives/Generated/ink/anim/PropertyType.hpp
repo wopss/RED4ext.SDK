@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink::anim {
-enum class PropertyType : uint8_t
+enum class PropertyType : int8_t
 {
     Size = 0,
     Color = 1,

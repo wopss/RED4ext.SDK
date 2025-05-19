@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class DamageIndicatorMode : uint32_t
+enum class DamageIndicatorMode : int32_t
 {
     Off = 0,
     DamageOnly = 1,

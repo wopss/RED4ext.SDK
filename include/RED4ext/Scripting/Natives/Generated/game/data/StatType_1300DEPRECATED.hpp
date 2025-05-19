@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StatType_1300DEPRECATED : uint32_t
+enum class StatType_1300DEPRECATED : int32_t
 {
     Acceleration = 0,
     Accuracy = 1,

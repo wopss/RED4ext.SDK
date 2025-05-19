@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class DataNodeType : uint32_t
+enum class DataNodeType : int32_t
 {
     File = 0,
     Group = 1,

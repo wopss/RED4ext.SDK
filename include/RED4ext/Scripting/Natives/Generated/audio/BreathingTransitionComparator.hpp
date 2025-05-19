@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class BreathingTransitionComparator : uint32_t
+enum class BreathingTransitionComparator : int32_t
 {
     Less = 0,
     Equal = 1,

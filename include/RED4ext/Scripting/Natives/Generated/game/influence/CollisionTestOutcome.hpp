@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::influence {
-enum class CollisionTestOutcome : uint32_t
+enum class CollisionTestOutcome : int32_t
 {
     NoCell = 0,
     Empty = 1,

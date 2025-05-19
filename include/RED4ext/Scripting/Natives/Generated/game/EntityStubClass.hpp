@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EntityStubClass : uint8_t
+enum class EntityStubClass : int8_t
 {
     Other = 0,
     Puppet = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class DismBodyPart : uint32_t
+enum class DismBodyPart : int32_t
 {
     HEAD = 1,
     LEFT_ARM = 14,

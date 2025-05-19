@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class ELootChoiceType : uint32_t
+enum class ELootChoiceType : int32_t
 {
     Available = 0,
     Unavailable = 1,

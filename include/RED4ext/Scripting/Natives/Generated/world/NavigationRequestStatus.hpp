@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class NavigationRequestStatus : uint32_t
+enum class NavigationRequestStatus : int32_t
 {
     OK = 0,
     InvalidStartingPosition = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StatPoolModifierProperty : uint32_t
+enum class StatPoolModifierProperty : int32_t
 {
     RangeBegin = 0,
     RangeEnd = 1,

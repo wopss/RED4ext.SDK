@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class GameScreenshotSortMode : uint32_t
+enum class GameScreenshotSortMode : int32_t
 {
     DateAscending = 0,
     DateDescending = 1,

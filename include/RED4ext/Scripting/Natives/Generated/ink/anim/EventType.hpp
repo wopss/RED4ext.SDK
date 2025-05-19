@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink::anim {
-enum class EventType : uint8_t
+enum class EventType : int8_t
 {
     OnLoaded = 0,
     OnStart = 1,

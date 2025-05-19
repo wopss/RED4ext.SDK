@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class TrafficGenMeshImpact : uint16_t
+enum class TrafficGenMeshImpact : int16_t
 {
     UseNavigation = 0,
     ForceIgnored = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class PropOwnershipTransferOptionsType : uint32_t
+enum class PropOwnershipTransferOptionsType : int32_t
 {
     TransferToWorkspotSystem_Automatic = 0,
     TransferToWorkspotSystem_Custom = 1,

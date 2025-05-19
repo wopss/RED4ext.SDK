@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AIComparison : uint32_t
+enum class AIComparison : int32_t
 {
     Equal = 0,
     Greater = 1,

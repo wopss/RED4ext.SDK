@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class InterruptionPhase : uint8_t
+enum class InterruptionPhase : int8_t
 {
     WaitForInterruption = 0,
     WaitForInterrupted = 1,

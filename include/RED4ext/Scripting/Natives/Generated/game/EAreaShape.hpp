@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EAreaShape : uint16_t
+enum class EAreaShape : int16_t
 {
     NONE = 0,
     SPHERE = 1,

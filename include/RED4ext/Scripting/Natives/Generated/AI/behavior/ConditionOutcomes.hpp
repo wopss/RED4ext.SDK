@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class ConditionOutcomes : uint32_t
+enum class ConditionOutcomes : int32_t
 {
     True = 0,
     False = 1,

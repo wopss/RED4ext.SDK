@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class AttackType : uint32_t
+enum class AttackType : int32_t
 {
     ChargedWhipAttack = 0,
     Direct = 1,

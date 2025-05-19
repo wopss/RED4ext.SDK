@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class PerkArea : uint32_t
+enum class PerkArea : int32_t
 {
     Assault_Area_01 = 0,
     Assault_Area_02 = 1,

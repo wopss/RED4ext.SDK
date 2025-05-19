@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NewPerkTierType : uint32_t
+enum class NewPerkTierType : int32_t
 {
     AdeptNewPerkTier = 0,
     EspionageNewPerkTier = 1,

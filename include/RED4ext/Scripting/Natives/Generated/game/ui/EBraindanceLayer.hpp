@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class EBraindanceLayer : uint32_t
+enum class EBraindanceLayer : int32_t
 {
     Visual = 0,
     Audio = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LookAtHeadMode : uint32_t
+enum class LookAtHeadMode : int32_t
 {
     Default = 0,
     Horizontal = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class GarageState : uint32_t
+enum class GarageState : int32_t
 {
     NoVehiclesAvailable = 0,
     SummonAvailable = 1,

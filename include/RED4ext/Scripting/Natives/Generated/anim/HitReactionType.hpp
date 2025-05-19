@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class HitReactionType : uint32_t
+enum class HitReactionType : int32_t
 {
     None = 0,
     Twitch = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace tools {
-enum class MessageTokenType : uint32_t
+enum class MessageTokenType : int32_t
 {
     Text = 0,
     Location = 1,

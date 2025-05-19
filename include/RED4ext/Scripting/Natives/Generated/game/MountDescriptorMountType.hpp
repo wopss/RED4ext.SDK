@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class MountDescriptorMountType : uint32_t
+enum class MountDescriptorMountType : int32_t
 {
     Unmounted = 0,
     KeepState = 1,

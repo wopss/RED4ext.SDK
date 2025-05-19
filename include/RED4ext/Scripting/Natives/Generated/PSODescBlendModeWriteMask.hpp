@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class PSODescBlendModeWriteMask : uint8_t
+enum class PSODescBlendModeWriteMask : int8_t
 {
     MASK_None = 0,
     MASK_R = 1,

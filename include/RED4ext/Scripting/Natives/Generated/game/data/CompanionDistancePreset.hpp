@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class CompanionDistancePreset : uint32_t
+enum class CompanionDistancePreset : int32_t
 {
     Close = 0,
     Far = 1,

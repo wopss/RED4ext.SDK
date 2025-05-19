@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class InGameConfigUserSettingsSaveStatus : uint8_t
+enum class InGameConfigUserSettingsSaveStatus : int8_t
 {
     NotSaved = 0,
     InternalError = 1,

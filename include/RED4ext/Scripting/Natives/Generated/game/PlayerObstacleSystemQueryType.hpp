@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class PlayerObstacleSystemQueryType : uint32_t
+enum class PlayerObstacleSystemQueryType : int32_t
 {
     Climb_Vault = 0,
     Covers = 1,

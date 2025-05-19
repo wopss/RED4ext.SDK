@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class RumbleType : uint8_t
+enum class RumbleType : int8_t
 {
     Fast = 0,
     Pulse = 1,

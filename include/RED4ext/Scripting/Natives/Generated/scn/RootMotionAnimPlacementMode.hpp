@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class RootMotionAnimPlacementMode : uint32_t
+enum class RootMotionAnimPlacementMode : int32_t
 {
     Blend = 0,
     TeleportToStart = 1,
