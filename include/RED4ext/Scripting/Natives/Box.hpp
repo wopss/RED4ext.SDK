@@ -110,10 +110,10 @@ struct __declspec(align(0x10)) Box
         const auto z1 = zAxis * Min.Z;
         const auto z2 = zAxis * Max.Z;
 
-        const auto xMin = x1.Min(x2) + y1.Min(y2) + z1.Min(z2);
-        const auto xMax = x1.Max(x2) + y1.Max(y2) + z1.Max(z2);
+        const auto pMin = x1.Min(x2) + y1.Min(y2) + z1.Min(z2);
+        const auto pMax = x1.Max(x2) + y1.Max(y2) + z1.Max(z2);
 
-        return {xMin, xMax};
+        return {pMin, pMax};
     }
 
     inline Box& operator*=(const Quaternion& aRotation)

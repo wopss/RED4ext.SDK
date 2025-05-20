@@ -19,10 +19,8 @@ struct CName
     }
 
     constexpr CName(const char* aName) noexcept
-        : hash(0)
+        : hash(FNV1a64(aName))
     {
-        hash = FNV1a64(aName);
-
         if (hash == EmptyStrHash || hash == NoneStrHash)
         {
             hash = 0;
@@ -30,10 +28,8 @@ struct CName
     }
 
     CName(const char* aName, size_t aLength) noexcept
-        : hash(0)
+        : hash(FNV1a64(reinterpret_cast<const uint8_t*>(aName), aLength))
     {
-        hash = FNV1a64(reinterpret_cast<const uint8_t*>(aName), aLength);
-
         if (hash == EmptyStrHash || hash == NoneStrHash)
         {
             hash = 0;
