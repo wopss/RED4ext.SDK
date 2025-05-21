@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EEnvManagerModifier : uint32_t
+enum class EEnvManagerModifier : int32_t
 {
     EMM_None = 0,
     EMM_WireframeSolid = 1,

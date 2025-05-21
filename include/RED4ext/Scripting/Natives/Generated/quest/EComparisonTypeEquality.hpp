@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class EComparisonTypeEquality : uint32_t
+enum class EComparisonTypeEquality : int32_t
 {
     Equal = 0,
     NotEqual = 1,

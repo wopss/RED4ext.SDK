@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class BumpSide : uint32_t
+enum class BumpSide : int32_t
 {
     Invalid = 0,
     Left = 1,

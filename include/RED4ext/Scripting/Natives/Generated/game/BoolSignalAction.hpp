@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class BoolSignalAction : uint32_t
+enum class BoolSignalAction : int32_t
 {
     None = 0,
     TurnOn = 1,

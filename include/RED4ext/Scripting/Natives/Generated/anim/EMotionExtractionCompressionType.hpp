@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EMotionExtractionCompressionType : uint32_t
+enum class EMotionExtractionCompressionType : int32_t
 {
     EMECT_UNCOMPRESSED = 0,
     EMECT_SPLINE_MID = 2,

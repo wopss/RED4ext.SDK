@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ArchetypeType : uint32_t
+enum class ArchetypeType : int32_t
 {
     AndroidMeleeT1 = 0,
     AndroidMeleeT2 = 1,

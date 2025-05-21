@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class GameplayRestrictionAction : uint32_t
+enum class GameplayRestrictionAction : int32_t
 {
     AddRestriction = 0,
     RemoveRestriction = 1,

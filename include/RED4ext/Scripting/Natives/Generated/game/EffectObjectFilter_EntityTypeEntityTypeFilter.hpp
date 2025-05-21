@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EffectObjectFilter_EntityTypeEntityTypeFilter : uint32_t
+enum class EffectObjectFilter_EntityTypeEntityTypeFilter : int32_t
 {
     Puppet = 0,
     Device = 1,

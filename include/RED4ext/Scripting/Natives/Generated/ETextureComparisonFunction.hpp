@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureComparisonFunction : uint8_t
+enum class ETextureComparisonFunction : int8_t
 {
     TCF_None = 0,
     TCF_Less = 1,

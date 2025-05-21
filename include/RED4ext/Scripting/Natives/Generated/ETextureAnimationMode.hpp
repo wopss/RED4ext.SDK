@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureAnimationMode : uint32_t
+enum class ETextureAnimationMode : int32_t
 {
     TAM_Speed = 0,
     TAM_LifeTime = 1,

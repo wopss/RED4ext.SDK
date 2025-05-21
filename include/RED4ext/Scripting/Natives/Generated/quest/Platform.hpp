@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class Platform : uint32_t
+enum class Platform : int32_t
 {
     PC = 0,
     Console = 1,

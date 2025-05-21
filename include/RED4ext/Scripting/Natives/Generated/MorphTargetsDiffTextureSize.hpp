@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class MorphTargetsDiffTextureSize : uint8_t
+enum class MorphTargetsDiffTextureSize : int8_t
 {
     TEXTURE_SIZE_1024x1024 = 0,
     TEXTURE_SIZE_512x512 = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class EStreamingObserverMode : uint8_t
+enum class EStreamingObserverMode : int8_t
 {
     Point = 0,
     Box = 1,

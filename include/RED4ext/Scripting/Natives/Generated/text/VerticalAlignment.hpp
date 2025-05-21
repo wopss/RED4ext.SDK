@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace text {
-enum class VerticalAlignment : uint8_t
+enum class VerticalAlignment : int8_t
 {
     Top = 0,
     Center = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class FitToContentDirection : uint32_t
+enum class FitToContentDirection : int32_t
 {
     None = 0,
     Vertical = 1,

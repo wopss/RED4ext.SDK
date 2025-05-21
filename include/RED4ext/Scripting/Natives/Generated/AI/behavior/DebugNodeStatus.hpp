@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class DebugNodeStatus : uint8_t
+enum class DebugNodeStatus : int8_t
 {
     Undefined = 0,
     NotRunning = 1,

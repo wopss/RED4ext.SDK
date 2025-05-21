@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class ShooterLevelType : uint32_t
+enum class ShooterLevelType : int32_t
 {
     HORIZONTAL = 0,
     VERTICALUP = 1,

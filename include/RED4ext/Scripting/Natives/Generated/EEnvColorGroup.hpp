@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EEnvColorGroup : uint8_t
+enum class EEnvColorGroup : int8_t
 {
     ECG_Default = 0,
     ECG_Sky = 1,

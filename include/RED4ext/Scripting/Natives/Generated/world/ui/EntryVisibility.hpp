@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world::ui {
-enum class EntryVisibility : uint32_t
+enum class EntryVisibility : int32_t
 {
     TierVisibility = 0,
     ForceShow = 1,

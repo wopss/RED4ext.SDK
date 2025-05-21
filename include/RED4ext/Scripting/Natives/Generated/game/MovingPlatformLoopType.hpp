@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class MovingPlatformLoopType : uint32_t
+enum class MovingPlatformLoopType : int32_t
 {
     NoLooping = 0,
     Bounce = 1,

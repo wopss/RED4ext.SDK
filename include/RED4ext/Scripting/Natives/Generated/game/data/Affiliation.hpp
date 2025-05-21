@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class Affiliation : uint32_t
+enum class Affiliation : int32_t
 {
     AfterlifeMercs = 0,
     Aldecaldos = 1,

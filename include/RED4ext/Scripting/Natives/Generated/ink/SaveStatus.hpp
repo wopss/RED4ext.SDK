@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class SaveStatus : uint8_t
+enum class SaveStatus : int8_t
 {
     Invalid = 0,
     Local = 1,

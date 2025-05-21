@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class FilterDataSource : uint8_t
+enum class FilterDataSource : int8_t
 {
     Parent = 0,
     Collider = 1,

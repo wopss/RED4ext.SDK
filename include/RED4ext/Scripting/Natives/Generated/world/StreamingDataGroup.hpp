@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class StreamingDataGroup : uint8_t
+enum class StreamingDataGroup : int8_t
 {
     Base = 0,
     EP1 = 1,

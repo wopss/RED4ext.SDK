@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class TextReplaceAnimationControllerWidgetTextUsage : uint8_t
+enum class TextReplaceAnimationControllerWidgetTextUsage : int8_t
 {
     BaseText = 0,
     TargetText = 1,

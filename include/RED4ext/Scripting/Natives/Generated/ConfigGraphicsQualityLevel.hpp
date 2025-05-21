@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ConfigGraphicsQualityLevel : uint32_t
+enum class ConfigGraphicsQualityLevel : int32_t
 {
     Low = 0,
     Medium = 1,

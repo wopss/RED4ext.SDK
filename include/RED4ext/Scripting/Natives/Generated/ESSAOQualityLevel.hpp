@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ESSAOQualityLevel : uint32_t
+enum class ESSAOQualityLevel : int32_t
 {
     SSAOQUALITY_VeryLow = 0,
     SSAOQUALITY_Low = 1,

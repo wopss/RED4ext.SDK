@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn::events {
-enum class VFXActionType : uint32_t
+enum class VFXActionType : int32_t
 {
     Play = 0,
     Break = 1,

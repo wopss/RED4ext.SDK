@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class LootItemType : uint8_t
+enum class LootItemType : int8_t
 {
     Default = 0,
     Quest = 1,

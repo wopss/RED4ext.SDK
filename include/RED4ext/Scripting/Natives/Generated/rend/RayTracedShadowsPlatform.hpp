@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class RayTracedShadowsPlatform : uint8_t
+enum class RayTracedShadowsPlatform : int8_t
 {
     RLSP_All = 0,
     RLSP_PC = 1,

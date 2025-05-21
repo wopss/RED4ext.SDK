@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class VehicleCameraPerspective : uint8_t
+enum class VehicleCameraPerspective : int8_t
 {
     TPP = 0,
     FPP = 1,

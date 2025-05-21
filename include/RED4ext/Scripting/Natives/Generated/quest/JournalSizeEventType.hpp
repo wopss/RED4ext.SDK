@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class JournalSizeEventType : uint32_t
+enum class JournalSizeEventType : int32_t
 {
     Maximize = 0,
     Minimize = 1,

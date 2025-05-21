@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ItemIconGender : uint8_t
+enum class ItemIconGender : int8_t
 {
     Female = 0,
     Male = 1,

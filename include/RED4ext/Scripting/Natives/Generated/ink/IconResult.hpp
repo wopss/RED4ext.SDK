@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class IconResult : uint32_t
+enum class IconResult : int32_t
 {
     Success = 0,
     UnknownIconTweak = 1,

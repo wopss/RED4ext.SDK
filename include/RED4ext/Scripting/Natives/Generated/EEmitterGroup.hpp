@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EEmitterGroup : uint8_t
+enum class EEmitterGroup : int8_t
 {
     EG_Default = 0,
     EG_Group0 = 1,

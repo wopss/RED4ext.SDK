@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuWrapApi {
-enum class eTextureType : uint8_t
+enum class eTextureType : int8_t
 {
     TEXTYPE_2D = 0,
     TEXTYPE_CUBE = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class TextureType : uint8_t
+enum class TextureType : int8_t
 {
     StaticTexture = 0,
     DynamicTexture = 1,

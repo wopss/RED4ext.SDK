@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ESaveFormat : uint32_t
+enum class ESaveFormat : int32_t
 {
     SF_PNG = 2,
     SF_EXR = 32,

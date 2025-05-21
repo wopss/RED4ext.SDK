@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EInputKey : uint32_t
+enum class EInputKey : int32_t
 {
     IK_None = 0,
     IK_LeftMouse = 1,

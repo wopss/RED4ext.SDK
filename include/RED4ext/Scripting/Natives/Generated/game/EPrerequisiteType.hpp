@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EPrerequisiteType : uint32_t
+enum class EPrerequisiteType : int32_t
 {
     None = 0,
     NestedPrereq = 1,

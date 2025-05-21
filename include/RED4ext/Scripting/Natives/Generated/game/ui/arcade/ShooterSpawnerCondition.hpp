@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class ShooterSpawnerCondition : uint32_t
+enum class ShooterSpawnerCondition : int32_t
 {
     ScreenLeft = 0,
     ScreenRight = 1,

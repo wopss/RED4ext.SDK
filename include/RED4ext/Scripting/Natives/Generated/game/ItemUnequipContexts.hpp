@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ItemUnequipContexts : uint32_t
+enum class ItemUnequipContexts : int32_t
 {
     AllWeapons = 0,
     HeadClothing = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace gen {
-enum class LevelRandomizerDataSource : uint32_t
+enum class LevelRandomizerDataSource : int32_t
 {
     Entries = 0,
     Markers = 1,

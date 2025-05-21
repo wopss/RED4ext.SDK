@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class OnlineSystemErrors : uint32_t
+enum class OnlineSystemErrors : int32_t
 {
     None = 0,
     RequestFailed = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio::breathing {
-enum class EventTag : uint8_t
+enum class EventTag : int8_t
 {
     Walk = 0,
     Jog = 1,

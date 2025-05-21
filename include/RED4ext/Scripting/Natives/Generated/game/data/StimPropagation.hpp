@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StimPropagation : uint32_t
+enum class StimPropagation : int32_t
 {
     Audio = 0,
     Visual = 1,

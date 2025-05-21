@@ -8,11 +8,11 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMVision : uint32_t
+enum class PSMVision : int32_t
 {
+    Any = -1,
     Default = 0,
     Focus = 1,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMVision = game::PSMVision;

@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/physicsFilterData.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(physics::FilterData, 0x68);
+using physicsFilterData = physics::FilterData;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
@@ -32,5 +41,6 @@ RED4EXT_ASSERT_SIZE(FilterData, 0x68);
 } // namespace physics
 using physicsFilterData = physics::FilterData;
 } // namespace RED4ext
+*/
 
 // clang-format on

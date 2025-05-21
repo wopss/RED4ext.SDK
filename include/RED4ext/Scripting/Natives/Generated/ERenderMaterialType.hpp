@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderMaterialType : uint8_t
+enum class ERenderMaterialType : int8_t
 {
     RMT_Standard = 0,
     RMT_Subsurface = 1,

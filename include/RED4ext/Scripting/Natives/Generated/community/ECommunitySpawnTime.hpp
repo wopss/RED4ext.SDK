@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace community {
-enum class ECommunitySpawnTime : uint8_t
+enum class ECommunitySpawnTime : int8_t
 {
     Morning = 0,
     Day = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ProxyMeshOutputType : uint8_t
+enum class ProxyMeshOutputType : int8_t
 {
     RayScan = 0,
     SurfaceReconstruction = 1,

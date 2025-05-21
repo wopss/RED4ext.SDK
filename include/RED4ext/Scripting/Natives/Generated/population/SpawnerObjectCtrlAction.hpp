@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace population {
-enum class SpawnerObjectCtrlAction : uint8_t
+enum class SpawnerObjectCtrlAction : int8_t
 {
     Undefined = 0,
     Activate = 1,

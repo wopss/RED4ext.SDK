@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class DisplayMode : uint32_t
+enum class DisplayMode : int32_t
 {
     Invalid = 0,
     Basic = 1,

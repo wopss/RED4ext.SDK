@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class AdvertisementFormat : uint8_t
+enum class AdvertisementFormat : int8_t
 {
     Format_0_7x1 = 0,
     Format_1x1 = 1,

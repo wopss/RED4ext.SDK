@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim::compression {
-enum class BufferTypePreset : uint8_t
+enum class BufferTypePreset : int8_t
 {
     Spline = 0,
     SIMD = 1,

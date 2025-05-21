@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class DialogLineLanguage : uint32_t
+enum class DialogLineLanguage : int32_t
 {
     Origin = 0,
     Creole = 1,

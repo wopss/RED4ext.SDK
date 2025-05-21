@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class AttachmentOffsetMode : uint8_t
+enum class AttachmentOffsetMode : int8_t
 {
     UseRealOffset = 0,
     UseCustomOffset = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace move {
-enum class SecureFootingFailureReason : uint32_t
+enum class SecureFootingFailureReason : int32_t
 {
     Invalid = 0,
     Filter = 1,

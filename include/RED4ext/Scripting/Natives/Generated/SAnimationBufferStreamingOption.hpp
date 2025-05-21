@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class SAnimationBufferStreamingOption : uint32_t
+enum class SAnimationBufferStreamingOption : int32_t
 {
     ABSO_NonStreamable = 0,
     ABSO_PartiallyStreamable = 1,

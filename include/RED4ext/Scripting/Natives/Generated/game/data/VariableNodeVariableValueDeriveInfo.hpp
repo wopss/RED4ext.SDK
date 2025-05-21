@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class VariableNodeVariableValueDeriveInfo : uint8_t
+enum class VariableNodeVariableValueDeriveInfo : int8_t
 {
     NotDerived = 0,
     ArrayAddition = 1,

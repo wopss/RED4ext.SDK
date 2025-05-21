@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class MappinVariant : uint32_t
+enum class MappinVariant : int32_t
 {
     ActionDealDamageVariant = 0,
     ActionFastSoloVariant = 1,

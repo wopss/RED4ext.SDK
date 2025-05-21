@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class LineType : uint8_t
+enum class LineType : int8_t
 {
     RegularPatternSpacing = 0,
     LoosePatternSpacing = 1,

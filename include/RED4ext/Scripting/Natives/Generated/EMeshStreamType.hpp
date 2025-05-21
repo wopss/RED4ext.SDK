@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMeshStreamType : uint32_t
+enum class EMeshStreamType : int32_t
 {
     MST_Position_3F = 1,
     MST_SkinningIndices_4U8 = 2,

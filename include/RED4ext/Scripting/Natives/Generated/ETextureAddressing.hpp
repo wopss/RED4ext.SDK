@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureAddressing : uint8_t
+enum class ETextureAddressing : int8_t
 {
     TA_Wrap = 0,
     TA_Mirror = 1,

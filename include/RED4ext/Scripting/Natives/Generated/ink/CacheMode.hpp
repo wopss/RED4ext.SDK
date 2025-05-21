@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class CacheMode : uint8_t
+enum class CacheMode : int8_t
 {
     Normal = 0,
     Minimap = 1,

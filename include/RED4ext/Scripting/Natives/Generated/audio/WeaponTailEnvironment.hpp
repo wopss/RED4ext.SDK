@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class WeaponTailEnvironment : uint32_t
+enum class WeaponTailEnvironment : int32_t
 {
     InteriorDefault = 0,
     InteriorWide = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::influence {
-enum class EBoundingBoxType : uint32_t
+enum class EBoundingBoxType : int32_t
 {
     Colider = 0,
     Custom = 1,

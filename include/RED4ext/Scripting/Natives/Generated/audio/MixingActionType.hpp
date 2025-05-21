@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class MixingActionType : uint8_t
+enum class MixingActionType : int8_t
 {
     VoContext = 0,
     EmitterTag = 1,

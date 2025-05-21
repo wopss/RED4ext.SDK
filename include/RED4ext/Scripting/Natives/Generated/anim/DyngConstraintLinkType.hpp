@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class DyngConstraintLinkType : uint32_t
+enum class DyngConstraintLinkType : int32_t
 {
     KeepFixedDistance = 0,
     KeepVariableDistance = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn::fpp {
-enum class ParallaxSpace : uint32_t
+enum class ParallaxSpace : int32_t
 {
     Default = 0,
     Camera = 1,

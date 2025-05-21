@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class LightGroup : uint8_t
+enum class LightGroup : int8_t
 {
     LG_Group0 = 0,
     LG_Group1 = 1,

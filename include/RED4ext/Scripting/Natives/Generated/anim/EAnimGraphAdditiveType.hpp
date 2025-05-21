@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EAnimGraphAdditiveType : uint32_t
+enum class EAnimGraphAdditiveType : int32_t
 {
     AGAT_Local = 0,
     AGAT_Ref = 1,

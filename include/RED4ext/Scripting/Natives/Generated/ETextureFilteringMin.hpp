@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureFilteringMin : uint8_t
+enum class ETextureFilteringMin : int8_t
 {
     TFMin_Point = 0,
     TFMin_Linear = 1,

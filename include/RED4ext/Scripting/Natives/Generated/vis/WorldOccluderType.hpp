@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vis {
-enum class WorldOccluderType : uint8_t
+enum class WorldOccluderType : int8_t
 {
     Default = 0,
     None = 1,

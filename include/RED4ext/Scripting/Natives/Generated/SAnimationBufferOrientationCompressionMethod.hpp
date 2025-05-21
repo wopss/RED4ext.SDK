@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class SAnimationBufferOrientationCompressionMethod : uint32_t
+enum class SAnimationBufferOrientationCompressionMethod : int32_t
 {
     ABOCM_PackIn64bitsW = 0,
     ABOCM_PackIn48bitsW = 1,

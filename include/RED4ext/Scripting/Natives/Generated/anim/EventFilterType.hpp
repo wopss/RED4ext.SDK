@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EventFilterType : uint32_t
+enum class EventFilterType : int32_t
 {
     Default = 0,
     AlwaysCollect = 1,

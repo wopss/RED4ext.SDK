@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class EquipmentArea : uint32_t
+enum class EquipmentArea : int32_t
 {
     AbilityCW = 0,
     ArmsCW = 1,

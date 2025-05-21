@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::device {
-enum class ActionPropertyFlags : uint32_t
+enum class ActionPropertyFlags : int32_t
 {
     None = 0,
     IsUsedByQuest = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class QuestPreventionNotifierActivation : uint8_t
+enum class QuestPreventionNotifierActivation : int8_t
 {
     OnFootOnly = 0,
     InVehicleOnly = 1,

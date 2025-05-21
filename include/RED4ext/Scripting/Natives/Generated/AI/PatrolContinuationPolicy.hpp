@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class PatrolContinuationPolicy : uint32_t
+enum class PatrolContinuationPolicy : int32_t
 {
     FromNextControlPoint = 0,
     FromClosestPoint = 1,

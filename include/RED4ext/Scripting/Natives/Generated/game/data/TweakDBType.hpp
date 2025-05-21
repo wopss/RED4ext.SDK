@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class TweakDBType : uint32_t
+enum class TweakDBType : int32_t
 {
     Invalid = 0,
     ForeignKey = 1,

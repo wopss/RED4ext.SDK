@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class MusicSyncType : uint32_t
+enum class MusicSyncType : int32_t
 {
     Bar = 0,
     Beat = 1,

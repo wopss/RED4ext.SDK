@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace audio {
-enum class VoGruntType : uint32_t
+enum class VoGruntType : int32_t
 {
+    None = -1,
     PainLong = 0,
     AgroShort = 1,
     AgroLong = 2,
@@ -35,7 +36,6 @@ enum class VoGruntType : uint32_t
     BraindanceSexual = 22,
     PainShort = 23,
     Effort = 25,
-    None = 4294967295,
 };
 } // namespace audio
 using audioVoGruntType = audio::VoGruntType;

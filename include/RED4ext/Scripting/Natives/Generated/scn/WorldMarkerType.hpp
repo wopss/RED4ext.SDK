@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class WorldMarkerType : uint8_t
+enum class WorldMarkerType : int8_t
 {
     Tag = 0,
     NodeRef = 1,

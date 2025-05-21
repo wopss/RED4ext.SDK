@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class Storage : uint32_t
+enum class Storage : int32_t
 {
     Slow = 0,
     Fast = 1,

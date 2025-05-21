@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class QuickItemsSet : uint32_t
+enum class QuickItemsSet : int32_t
 {
     Q001_Kereznikov_Heal_Phone = 0,
     Q003_All = 1,

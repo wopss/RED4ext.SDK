@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class TrafficLightColor : uint32_t
+enum class TrafficLightColor : int32_t
 {
     GREEN = 0,
     RED = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ECustomMaterialParam : uint32_t
+enum class ECustomMaterialParam : int32_t
 {
     ECMP_CustomParam0 = 1,
     ECMP_CustomParam1 = 2,

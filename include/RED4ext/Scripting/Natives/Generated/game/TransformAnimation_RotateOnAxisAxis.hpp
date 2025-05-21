@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class TransformAnimation_RotateOnAxisAxis : uint32_t
+enum class TransformAnimation_RotateOnAxisAxis : int32_t
 {
     X = 0,
     Y = 1,

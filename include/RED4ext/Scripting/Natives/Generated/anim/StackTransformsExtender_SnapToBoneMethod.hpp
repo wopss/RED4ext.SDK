@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class StackTransformsExtender_SnapToBoneMethod : uint32_t
+enum class StackTransformsExtender_SnapToBoneMethod : int32_t
 {
     NoSnapping = 0,
     WholeTransform = 1,

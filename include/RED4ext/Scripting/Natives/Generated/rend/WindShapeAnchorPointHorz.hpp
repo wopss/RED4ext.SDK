@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class WindShapeAnchorPointHorz : uint32_t
+enum class WindShapeAnchorPointHorz : int32_t
 {
     AP_CENTER = 0,
     AP_RIGHT = 1,

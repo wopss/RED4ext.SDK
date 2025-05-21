@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class EVehicleWindowState : uint32_t
+enum class EVehicleWindowState : int32_t
 {
     Closed = 0,
     Open = 1,

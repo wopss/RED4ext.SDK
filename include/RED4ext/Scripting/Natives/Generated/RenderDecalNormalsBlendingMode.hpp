@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class RenderDecalNormalsBlendingMode : uint8_t
+enum class RenderDecalNormalsBlendingMode : int8_t
 {
     AlphaBlending = 0,
     Reorient = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class MuppetMoveStyle : uint32_t
+enum class MuppetMoveStyle : int32_t
 {
     Invalid = 0,
     Walk = 1,

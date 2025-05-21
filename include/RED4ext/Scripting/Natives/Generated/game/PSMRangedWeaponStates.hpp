@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMRangedWeaponStates : uint32_t
+enum class PSMRangedWeaponStates : int32_t
 {
+    Any = -1,
     Default = 0,
     Charging = 1,
     Reload = 2,
@@ -19,7 +20,6 @@ enum class PSMRangedWeaponStates : uint32_t
     Safe = 6,
     Overheat = 7,
     Shoot = 8,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMRangedWeaponStates = game::PSMRangedWeaponStates;

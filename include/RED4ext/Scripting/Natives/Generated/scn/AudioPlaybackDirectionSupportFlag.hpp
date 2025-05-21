@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class AudioPlaybackDirectionSupportFlag : uint8_t
+enum class AudioPlaybackDirectionSupportFlag : int8_t
 {
     Forward = 1,
     Backward = 2,

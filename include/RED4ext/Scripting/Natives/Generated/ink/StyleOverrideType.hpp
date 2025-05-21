@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class StyleOverrideType : uint8_t
+enum class StyleOverrideType : int8_t
 {
     Invalid = 0,
     BigFont = 1,

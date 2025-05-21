@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class ParentStaticSwitchBranch : uint32_t
+enum class ParentStaticSwitchBranch : int32_t
 {
     None = 0,
     TrueBranch = 1,

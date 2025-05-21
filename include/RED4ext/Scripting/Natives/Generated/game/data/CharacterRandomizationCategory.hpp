@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class CharacterRandomizationCategory : uint32_t
+enum class CharacterRandomizationCategory : int32_t
 {
     Body = 0,
     Eyebrows = 1,

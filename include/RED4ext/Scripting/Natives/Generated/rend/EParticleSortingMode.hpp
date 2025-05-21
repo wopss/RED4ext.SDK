@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class EParticleSortingMode : uint32_t
+enum class EParticleSortingMode : int32_t
 {
     PSM_None = 0,
     PSM_Billboard = 1,

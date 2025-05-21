@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class NodeGroupType : uint8_t
+enum class NodeGroupType : int8_t
 {
     RegularGroup = 0,
     PrefabVariant = 1,

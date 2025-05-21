@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class MappinGroupState : uint32_t
+enum class MappinGroupState : int32_t
 {
     Ungrouped = 0,
     Grouped = 1,

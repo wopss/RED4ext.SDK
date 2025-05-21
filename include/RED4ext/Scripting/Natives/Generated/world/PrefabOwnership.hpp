@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class PrefabOwnership : uint8_t
+enum class PrefabOwnership : int8_t
 {
     None = 0,
     Quest = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::influence {
-enum class EBumpPolicy : uint8_t
+enum class EBumpPolicy : int8_t
 {
     Static = 0,
     Lean = 1,

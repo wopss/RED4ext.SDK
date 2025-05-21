@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureRawFormat : uint32_t
+enum class ETextureRawFormat : int32_t
 {
     TRF_AlphaGrayscale = 0,
     TRF_TrueColor = 1,

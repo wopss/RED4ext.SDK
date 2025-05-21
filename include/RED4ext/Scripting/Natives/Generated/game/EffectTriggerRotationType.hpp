@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EffectTriggerRotationType : uint32_t
+enum class EffectTriggerRotationType : int32_t
 {
     None = 0,
     AtSpawn = 1,

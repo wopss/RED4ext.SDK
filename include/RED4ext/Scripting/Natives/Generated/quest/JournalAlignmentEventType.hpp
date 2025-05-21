@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class JournalAlignmentEventType : uint32_t
+enum class JournalAlignmentEventType : int32_t
 {
     Left = 0,
     Center = 1,

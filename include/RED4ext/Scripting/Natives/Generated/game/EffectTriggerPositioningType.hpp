@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EffectTriggerPositioningType : uint32_t
+enum class EffectTriggerPositioningType : int32_t
 {
     PlayerRoot = 0,
     CameraRoot = 1,

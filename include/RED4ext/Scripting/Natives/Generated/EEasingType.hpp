@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EEasingType : uint32_t
+enum class EEasingType : int32_t
 {
     EET_In = 0,
     EET_Out = 1,

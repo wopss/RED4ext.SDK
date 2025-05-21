@@ -7,6 +7,8 @@
 #include <RED4ext/GpuApi/SwapChain.hpp>
 #include <RED4ext/SpinLock.hpp>
 
+#include <cassert>
+
 namespace RED4ext
 {
 namespace GpuApi

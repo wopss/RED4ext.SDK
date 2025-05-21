@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class WorkspotCategory : uint32_t
+enum class WorkspotCategory : int32_t
 {
     Any = 0,
     Eating = 1,

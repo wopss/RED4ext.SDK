@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace move {
-enum class CirclingDirection : uint32_t
+enum class CirclingDirection : int32_t
 {
     None = 0,
     Left = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class FacialEmotionTransitionType : uint32_t
+enum class FacialEmotionTransitionType : int32_t
 {
     Natural = 0,
     Fast = 1,

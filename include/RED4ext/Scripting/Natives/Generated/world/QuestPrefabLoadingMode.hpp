@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class QuestPrefabLoadingMode : uint8_t
+enum class QuestPrefabLoadingMode : int8_t
 {
     Disable = 0,
     ForceLoad = 1,

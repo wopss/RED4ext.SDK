@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class LightAttenuation : uint8_t
+enum class LightAttenuation : int8_t
 {
     LA_InverseSquare = 0,
     LA_Linear = 1,

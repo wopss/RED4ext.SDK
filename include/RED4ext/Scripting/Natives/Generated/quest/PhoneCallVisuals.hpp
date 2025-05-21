@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class PhoneCallVisuals : uint32_t
+enum class PhoneCallVisuals : int32_t
 {
     Default = 0,
     Somi = 1,

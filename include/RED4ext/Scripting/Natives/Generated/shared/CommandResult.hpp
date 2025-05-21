@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace shared {
-enum class CommandResult : uint32_t
+enum class CommandResult : int32_t
 {
     Success = 0,
     NeedOptions = 1,

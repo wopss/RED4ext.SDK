@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace text {
-enum class WrappingPolicy : uint8_t
+enum class WrappingPolicy : int8_t
 {
     Default = 0,
     PerCharacter = 1,

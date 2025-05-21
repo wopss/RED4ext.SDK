@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class FoleyItemPriority : uint8_t
+enum class FoleyItemPriority : int8_t
 {
     P0 = 0,
     P1 = 1,

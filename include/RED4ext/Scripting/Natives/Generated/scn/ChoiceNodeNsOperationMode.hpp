@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class ChoiceNodeNsOperationMode : uint8_t
+enum class ChoiceNodeNsOperationMode : int8_t
 {
     attachToActor = 0,
     attachToProp = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class EUseWeapon_MissileOffsetsSource : uint32_t
+enum class EUseWeapon_MissileOffsetsSource : int32_t
 {
     None = 0,
     Predefined_Narrow = 1,

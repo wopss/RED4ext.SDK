@@ -128,8 +128,8 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     // Build a mapped list of nested prefixes
     for (auto& [prefix, children] : prefixHierarchy)
     {
-        // Special case for localization (prevents loc::alization namespace)
-        if (prefix != "localization")
+        // Special case for localization (prevents loc::alization and rend::er namespaces)
+        if (prefix != "localization" && prefix != "render")
         {
             for (auto i = 0; i < prefix.size(); ++i)
             {
@@ -373,38 +373,6 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         builder.ToFileDescriptor(fileDescriptor, SanitizeType, QualifiedType, GetGeneratedPath, GetOverridePath,
                                  IsHandleCompatible, fixedMapping, aVerbose);
 
-        for (auto& dep : builder.mDirect)
-        {
-            // Don't emit files for the fixed mappings
-            auto depName = dep->GetName();
-
-            it = fixedMapping.find(depName);
-            if (it != fixedMapping.end())
-            {
-                continue;
-            }
-
-            switch (dep->GetType())
-            {
-            case RED4ext::ERTTIType::Enum:
-            {
-                EnumFileDescriptor enumFd(static_cast<const RED4ext::CEnum*>(dep), SanitizeType, QualifiedType,
-                                          GetGeneratedPath);
-                enumFd.EmitFile(aOutPath, nameSanitizer);
-                break;
-            }
-            case RED4ext::ERTTIType::BitField:
-            {
-                BitfieldFileDescriptor bfFd(static_cast<const RED4ext::CBitfield*>(dep), SanitizeType, QualifiedType,
-                                            GetGeneratedPath);
-                bfFd.EmitFile(aOutPath, nameSanitizer);
-                break;
-            }
-            default:
-                break;
-            }
-        }
-
         for (auto& inc : fileDescriptor.includes)
         {
             includeCollector.emplace(inc);
@@ -412,6 +380,37 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
         fileDescriptor.EmitFile(aOutPath, nameSanitizer);
     }
+
+    rttiSystem->types.for_each(
+        [&aOutPath, SanitizeType, &QualifiedType, GetGeneratedPath, nameSanitizer](RED4ext::CName aName,
+                                                                                   RED4ext::CBaseRTTIType*& aType)
+        {
+            RED4EXT_UNUSED_PARAMETER(aName);
+
+            switch (aType->GetType())
+            {
+            case RED4ext::ERTTIType::Enum:
+            {
+                auto pEnum = static_cast<const RED4ext::CEnum*>(aType);
+                if (!pEnum->flags.isScripted)
+                {
+                    EnumFileDescriptor enumFd(pEnum, SanitizeType, QualifiedType, GetGeneratedPath);
+                    enumFd.EmitFile(aOutPath, nameSanitizer);
+                }
+                break;
+            }
+            case RED4ext::ERTTIType::BitField:
+            {
+                auto pEnum = static_cast<const RED4ext::CBitfield*>(aType);
+                if (!pEnum->flags.isScripted)
+                {
+                    BitfieldFileDescriptor bfFd(pEnum, SanitizeType, QualifiedType, GetGeneratedPath);
+                    bfFd.EmitFile(aOutPath, nameSanitizer);
+                }
+                break;
+            }
+            }
+        });
 
     EmitBulkGenerated(aOutPath, includeCollector);
 }
@@ -539,24 +538,24 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
 
     switch (size)
     {
-    case sizeof(uint8_t):
+    case sizeof(int8_t):
     {
-        o << "uint8_t";
+        o << "int8_t";
         break;
     }
-    case sizeof(uint16_t):
+    case sizeof(int16_t):
     {
-        o << "uint16_t";
+        o << "int16_t";
         break;
     }
-    case sizeof(uint32_t):
+    case sizeof(int32_t):
     {
-        o << "uint32_t";
+        o << "int32_t";
         break;
     }
-    case sizeof(uint64_t):
+    case sizeof(int64_t):
     {
-        o << "uint64_t";
+        o << "int64_t";
         break;
     }
     default:
@@ -573,24 +572,24 @@ RED4EXT_INLINE void EnumFileDescriptor::EmitFile(std::filesystem::path aOutPath,
 
         switch (size)
         {
-        case sizeof(uint8_t):
+        case sizeof(int8_t):
         {
-            o << static_cast<uint32_t>(static_cast<uint8_t>(ev.first));
+            o << static_cast<int32_t>(static_cast<int8_t>(ev.first));
             break;
         }
-        case sizeof(uint16_t):
+        case sizeof(int16_t):
         {
-            o << static_cast<uint16_t>(ev.first);
+            o << static_cast<int16_t>(ev.first);
             break;
         }
-        case sizeof(uint32_t):
+        case sizeof(int32_t):
         {
-            o << static_cast<uint32_t>(ev.first);
+            o << static_cast<int32_t>(ev.first);
             break;
         }
-        case sizeof(uint64_t):
+        case sizeof(int64_t):
         {
-            o << static_cast<uint64_t>(ev.first);
+            o << static_cast<int64_t>(ev.first);
             break;
         }
         default:

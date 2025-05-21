@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ScanningState : uint32_t
+enum class ScanningState : int32_t
 {
     Default = 0,
     Started = 1,

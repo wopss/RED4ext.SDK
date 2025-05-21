@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world::geometry {
-enum class ProbingStatus : uint32_t
+enum class ProbingStatus : int32_t
 {
     None = 0,
     StillInObstacle = 1,

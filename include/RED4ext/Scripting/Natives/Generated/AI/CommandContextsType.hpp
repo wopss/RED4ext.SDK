@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI {
-enum class CommandContextsType : uint32_t
+enum class CommandContextsType : int32_t
 {
     Default = 0,
     Immediate = 1,

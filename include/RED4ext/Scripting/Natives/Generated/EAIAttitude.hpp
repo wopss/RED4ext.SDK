@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EAIAttitude : uint32_t
+enum class EAIAttitude : int32_t
 {
     AIA_Friendly = 0,
     AIA_Neutral = 1,

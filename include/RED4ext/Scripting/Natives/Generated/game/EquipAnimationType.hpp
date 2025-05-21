@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EquipAnimationType : uint32_t
+enum class EquipAnimationType : int32_t
 {
     Default = 0,
     Instant = 1,

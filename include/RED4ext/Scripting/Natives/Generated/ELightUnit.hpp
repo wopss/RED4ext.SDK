@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ELightUnit : uint32_t
+enum class ELightUnit : int32_t
 {
     LU_Lumen = 0,
     LU_Watt = 1,

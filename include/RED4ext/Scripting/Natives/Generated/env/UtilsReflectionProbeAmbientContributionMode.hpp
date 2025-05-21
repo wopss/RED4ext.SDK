@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace env {
-enum class UtilsReflectionProbeAmbientContributionMode : uint8_t
+enum class UtilsReflectionProbeAmbientContributionMode : int8_t
 {
     eNO_AMBIENT_CONTRIBUTION = 0,
     eALLOW_AMBIENT_CONTRIBUTION = 1,

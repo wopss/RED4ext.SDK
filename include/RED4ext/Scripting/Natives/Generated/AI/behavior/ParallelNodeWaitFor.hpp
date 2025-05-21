@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class ParallelNodeWaitFor : uint32_t
+enum class ParallelNodeWaitFor : int32_t
 {
     LeftChild = 0,
     RightChild = 1,

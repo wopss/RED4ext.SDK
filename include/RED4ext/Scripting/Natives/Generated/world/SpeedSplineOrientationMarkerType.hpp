@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class SpeedSplineOrientationMarkerType : uint32_t
+enum class SpeedSplineOrientationMarkerType : int32_t
 {
     UseSplineOrientation = 0,
     WorldSpace = 1,

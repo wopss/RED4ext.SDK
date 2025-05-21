@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class AuthorisationNotificationType : uint32_t
+enum class AuthorisationNotificationType : int32_t
 {
     Unknown = 0,
     GotKeycard = 1,

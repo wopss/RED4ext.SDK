@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class MuppetComparisonReportItemType : uint32_t
+enum class MuppetComparisonReportItemType : int32_t
 {
     Different = 0,
     WithinTolerance = 1,

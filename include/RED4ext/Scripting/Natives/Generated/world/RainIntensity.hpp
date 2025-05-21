@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class RainIntensity : uint32_t
+enum class RainIntensity : int32_t
 {
     NoRain = 0,
     LightRain = 1,

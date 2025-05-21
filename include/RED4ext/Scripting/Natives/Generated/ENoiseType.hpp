@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ENoiseType : uint32_t
+enum class ENoiseType : int32_t
 {
     NT_Random = 0,
     NT_Simplex2D = 1,

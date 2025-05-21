@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class ESlotState : uint32_t
+enum class ESlotState : int32_t
 {
     Taken = 0,
     Empty = 1,

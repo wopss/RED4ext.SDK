@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class MeleeHitPerMaterialType : uint32_t
+enum class MeleeHitPerMaterialType : int32_t
 {
     Light = 0,
     Light_Hard = 1,

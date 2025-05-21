@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ProxySyncNormalSource : uint8_t
+enum class ProxySyncNormalSource : int8_t
 {
     From_Groups = 0,
     From_Face_Average = 1,

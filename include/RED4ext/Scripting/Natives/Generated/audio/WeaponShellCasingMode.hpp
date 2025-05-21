@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class WeaponShellCasingMode : uint32_t
+enum class WeaponShellCasingMode : int32_t
 {
     none = 0,
     onShoot = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StatPoolType : uint32_t
+enum class StatPoolType : int32_t
 {
     AccumulatedDoT = 0,
     Adrenaline = 1,

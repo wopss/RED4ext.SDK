@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderDynamicDecalAtlas : uint32_t
+enum class ERenderDynamicDecalAtlas : int32_t
 {
     RDDA_1x1 = 0,
     RDDA_2x1 = 1,

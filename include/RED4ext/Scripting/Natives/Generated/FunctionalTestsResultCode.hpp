@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class FunctionalTestsResultCode : uint32_t
+enum class FunctionalTestsResultCode : int32_t
 {
     Valid = 0,
     MalformedEntityDescr = 1,

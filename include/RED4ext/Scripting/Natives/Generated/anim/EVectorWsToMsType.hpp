@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EVectorWsToMsType : uint32_t
+enum class EVectorWsToMsType : int32_t
 {
     Position = 0,
     Direction = 1,
