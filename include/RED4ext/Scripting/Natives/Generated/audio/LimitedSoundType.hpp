@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class LimitedSoundType : uint8_t
+enum class LimitedSoundType : int8_t
 {
     Locomotion = 0,
     Footsteps = 1,

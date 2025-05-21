@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class ETimeShiftType : uint32_t
+enum class ETimeShiftType : int32_t
 {
     ShiftByTime = 0,
     ShiftToHour = 1,

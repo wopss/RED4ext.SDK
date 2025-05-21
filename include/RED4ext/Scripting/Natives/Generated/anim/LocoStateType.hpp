@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class LocoStateType : uint32_t
+enum class LocoStateType : int32_t
 {
     LS_Pre = 0,
     LS_Loop = 1,

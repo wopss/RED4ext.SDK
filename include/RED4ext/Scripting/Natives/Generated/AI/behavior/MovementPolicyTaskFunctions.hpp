@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class MovementPolicyTaskFunctions : uint32_t
+enum class MovementPolicyTaskFunctions : int32_t
 {
     SetMovementType = 0,
     SetTargetObject = 1,

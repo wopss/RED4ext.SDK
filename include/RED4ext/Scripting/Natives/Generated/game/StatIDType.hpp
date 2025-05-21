@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StatIDType : uint32_t
+enum class StatIDType : int32_t
 {
     EntityID = 0,
     ItemID = 1,

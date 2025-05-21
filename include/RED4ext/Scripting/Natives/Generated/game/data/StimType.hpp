@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StimType : uint32_t
+enum class StimType : int32_t
 {
     AimingAt = 0,
     Alarm = 1,

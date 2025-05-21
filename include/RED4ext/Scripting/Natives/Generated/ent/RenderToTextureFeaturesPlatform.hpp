@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class RenderToTextureFeaturesPlatform : uint8_t
+enum class RenderToTextureFeaturesPlatform : int8_t
 {
     RTFP_All = 0,
     RTFP_PC = 1,

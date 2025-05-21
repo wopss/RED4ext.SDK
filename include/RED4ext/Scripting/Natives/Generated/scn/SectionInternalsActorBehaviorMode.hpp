@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class SectionInternalsActorBehaviorMode : uint32_t
+enum class SectionInternalsActorBehaviorMode : int32_t
 {
     OnlyIfAlive = 0,
     EvenIfDead = 1,

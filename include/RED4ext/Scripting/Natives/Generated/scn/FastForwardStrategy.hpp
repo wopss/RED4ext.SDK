@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class FastForwardStrategy : uint32_t
+enum class FastForwardStrategy : int32_t
 {
     automatic = 0,
     allow_fully = 1,

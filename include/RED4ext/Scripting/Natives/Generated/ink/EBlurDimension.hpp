@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EBlurDimension : uint32_t
+enum class EBlurDimension : int32_t
 {
     Horizontal = 0,
     Vertical = 1,

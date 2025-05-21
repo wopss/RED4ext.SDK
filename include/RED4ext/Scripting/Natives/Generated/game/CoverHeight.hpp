@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class CoverHeight : uint32_t
+enum class CoverHeight : int32_t
 {
     Invalid = 0,
     Low = 1,

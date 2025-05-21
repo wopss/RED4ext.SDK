@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class ESwitchBehaviourType : uint32_t
+enum class ESwitchBehaviourType : int32_t
 {
     First_Fulfilled = 0, // First Fulfilled
     All_Fulfilled = 1, // All Fulfilled

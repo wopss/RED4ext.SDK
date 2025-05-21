@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class EchoPositionType : uint32_t
+enum class EchoPositionType : int32_t
 {
     DynamicEnvironment = 0,
     Simple = 1,

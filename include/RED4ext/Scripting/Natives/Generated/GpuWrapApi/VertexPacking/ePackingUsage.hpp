@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace GpuWrapApi::VertexPacking {
-enum class ePackingUsage : uint8_t
+enum class ePackingUsage : int8_t
 {
+    PS_Invalid = -1,
     PS_SysPosition = 0,
     PS_Position = 1,
     PS_Normal = 2,
@@ -35,7 +36,6 @@ enum class ePackingUsage : uint8_t
     PS_Padding = 22,
     PS_PatchOffset = 23,
     PS_Max = 24,
-    PS_Invalid = 255,
 };
 } // namespace GpuWrapApi::VertexPacking
 using GpuWrapApiVertexPackingePackingUsage = GpuWrapApi::VertexPacking::ePackingUsage;

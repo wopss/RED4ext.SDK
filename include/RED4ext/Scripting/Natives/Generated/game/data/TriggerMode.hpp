@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class TriggerMode : uint32_t
+enum class TriggerMode : int32_t
 {
     Burst = 0,
     Charge = 1,

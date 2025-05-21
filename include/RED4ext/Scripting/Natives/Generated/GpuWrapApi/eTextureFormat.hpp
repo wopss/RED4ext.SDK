@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace GpuWrapApi {
-enum class eTextureFormat : uint8_t
+enum class eTextureFormat : int8_t
 {
     TEXFMT_A8_Unorm = 0,
     TEXFMT_R8_Unorm = 1,

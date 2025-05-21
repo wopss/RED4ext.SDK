@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class GrenadeDeliveryMethodType : uint32_t
+enum class GrenadeDeliveryMethodType : int32_t
 {
     Homing = 0,
     Regular = 1,

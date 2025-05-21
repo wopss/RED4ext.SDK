@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace text {
-enum class JustificationType : uint8_t
+enum class JustificationType : int8_t
 {
     Left = 0,
     Center = 1,

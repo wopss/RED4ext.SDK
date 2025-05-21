@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EffectAction_KillFXAction : uint32_t
+enum class EffectAction_KillFXAction : int32_t
 {
     Stop = 0,
     BreakLoop = 1,

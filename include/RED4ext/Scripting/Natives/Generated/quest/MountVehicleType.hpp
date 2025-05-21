@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class MountVehicleType : uint32_t
+enum class MountVehicleType : int32_t
 {
     Any = 0,
     Car = 1,

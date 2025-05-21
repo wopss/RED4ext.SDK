@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class EUIMenuState : uint32_t
+enum class EUIMenuState : int32_t
 {
     Open = 0,
     Closed = 1,

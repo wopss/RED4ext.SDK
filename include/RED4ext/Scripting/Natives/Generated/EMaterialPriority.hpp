@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMaterialPriority : uint8_t
+enum class EMaterialPriority : int8_t
 {
     EMP_Normal = 0,
     EMP_Front = 1,

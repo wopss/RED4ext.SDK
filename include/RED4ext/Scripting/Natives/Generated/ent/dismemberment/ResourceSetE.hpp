@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent::dismemberment {
-enum class ResourceSetE : uint8_t
+enum class ResourceSetE : int8_t
 {
     BARE = 0,
     BARE1 = 1,

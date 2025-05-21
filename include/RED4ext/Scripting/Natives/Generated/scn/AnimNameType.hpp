@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class AnimNameType : uint32_t
+enum class AnimNameType : int32_t
 {
     direct = 0,
     reference = 1,

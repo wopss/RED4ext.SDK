@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class EHorizontalAlign : uint8_t
+enum class EHorizontalAlign : int8_t
 {
     Fill = 0,
     Left = 1,

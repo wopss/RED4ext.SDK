@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class AnimParamSlotFunction : uint32_t
+enum class AnimParamSlotFunction : int32_t
 {
     RenderingPlane = 0,
     Visibility = 1,

@@ -10,26 +10,27 @@ namespace RED4ext
 {
 struct CName
 {
+    static constexpr uint64_t EmptyStrHash = FNV1a64("");
+    static constexpr uint64_t NoneStrHash = FNV1a64("None");
+
     constexpr CName(uint64_t aHash = 0) noexcept
         : hash(aHash)
     {
     }
 
-    constexpr CName(const char* aName, size_t aLength = 0) noexcept
-        : hash(0)
+    constexpr CName(const char* aName) noexcept
+        : hash(FNV1a64(aName))
     {
-        constexpr CName None = FNV1a64("None");
-
-        if (aLength <= 0)
+        if (hash == EmptyStrHash || hash == NoneStrHash)
         {
-            hash = FNV1a64(aName);
+            hash = 0;
         }
-        else
-        {
-            hash = FNV1a64(reinterpret_cast<const uint8_t*>(aName), aLength);
-        }
+    }
 
-        if (hash == None)
+    CName(const char* aName, size_t aLength) noexcept
+        : hash(FNV1a64(reinterpret_cast<const uint8_t*>(aName), aLength))
+    {
+        if (hash == EmptyStrHash || hash == NoneStrHash)
         {
             hash = 0;
         }

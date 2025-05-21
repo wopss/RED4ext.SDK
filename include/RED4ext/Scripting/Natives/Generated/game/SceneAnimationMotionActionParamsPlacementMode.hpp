@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class SceneAnimationMotionActionParamsPlacementMode : uint32_t
+enum class SceneAnimationMotionActionParamsPlacementMode : int32_t
 {
     Blend = 0,
     TeleportToStart = 1,

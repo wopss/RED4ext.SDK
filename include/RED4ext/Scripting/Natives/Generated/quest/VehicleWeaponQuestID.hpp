@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class VehicleWeaponQuestID : uint8_t
+enum class VehicleWeaponQuestID : int8_t
 {
     Primary = 0,
     Secondary = 1,

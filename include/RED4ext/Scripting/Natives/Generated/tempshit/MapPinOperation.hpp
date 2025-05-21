@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace tempshit {
-enum class MapPinOperation : uint8_t
+enum class MapPinOperation : int8_t
 {
     Undefined = 0,
     Add = 1,

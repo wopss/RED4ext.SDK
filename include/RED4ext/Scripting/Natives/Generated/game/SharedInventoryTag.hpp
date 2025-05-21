@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class SharedInventoryTag : uint32_t
+enum class SharedInventoryTag : int32_t
 {
     None = 0,
     PlayerStash = 1000000,

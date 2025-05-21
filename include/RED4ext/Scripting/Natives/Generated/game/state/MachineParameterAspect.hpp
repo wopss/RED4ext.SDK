@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::state {
-enum class MachineParameterAspect : uint32_t
+enum class MachineParameterAspect : int32_t
 {
     Temporary = 0,
     Permanent = 1,

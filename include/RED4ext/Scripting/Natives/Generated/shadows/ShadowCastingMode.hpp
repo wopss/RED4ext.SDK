@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace shadows {
-enum class ShadowCastingMode : uint8_t
+enum class ShadowCastingMode : int8_t
 {
     Default = 0,
     Always = 1,

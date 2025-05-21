@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EParticleEventType : uint32_t
+enum class EParticleEventType : int32_t
 {
     PET_Death = 0,
     PET_OverLife = 1,

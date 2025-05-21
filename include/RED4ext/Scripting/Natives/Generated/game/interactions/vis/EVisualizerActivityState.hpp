@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions::vis {
-enum class EVisualizerActivityState : uint32_t
+enum class EVisualizerActivityState : int32_t
 {
     None = 0,
     Visible = 1,

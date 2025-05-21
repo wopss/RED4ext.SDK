@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class MaterialHardnessOverride : uint32_t
+enum class MaterialHardnessOverride : int32_t
 {
     None = 0,
     SetAsSoft = 1,

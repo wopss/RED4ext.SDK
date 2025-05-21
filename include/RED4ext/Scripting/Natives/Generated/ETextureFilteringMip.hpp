@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureFilteringMip : uint8_t
+enum class ETextureFilteringMip : int8_t
 {
     TFMip_None = 0,
     TFMip_Point = 1,

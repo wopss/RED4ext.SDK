@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::projectile {
-enum class OnCollisionAction : uint32_t
+enum class OnCollisionAction : int32_t
 {
     None = 0,
     Stop = 1,

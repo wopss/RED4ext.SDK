@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class ObjectTagExt : uint32_t
+enum class ObjectTagExt : int32_t
 {
     Default = 1634100548,
     NonClimbable = 1651262286,

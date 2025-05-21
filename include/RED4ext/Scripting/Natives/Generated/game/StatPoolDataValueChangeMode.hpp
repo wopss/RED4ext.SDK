@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class StatPoolDataValueChangeMode : uint8_t
+enum class StatPoolDataValueChangeMode : int8_t
 {
     Normal = 0,
     IncreasingOnly = 1,

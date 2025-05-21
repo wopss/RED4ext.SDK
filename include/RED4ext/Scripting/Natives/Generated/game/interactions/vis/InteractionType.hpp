@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions::vis {
-enum class InteractionType : uint8_t
+enum class InteractionType : int8_t
 {
     LookAt = 0,
     Proximity = 1,

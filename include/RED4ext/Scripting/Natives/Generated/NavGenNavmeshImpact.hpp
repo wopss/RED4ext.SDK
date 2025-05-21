@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class NavGenNavmeshImpact : uint16_t
+enum class NavGenNavmeshImpact : int16_t
 {
     Walkable = 0,
     Ignored = 1,

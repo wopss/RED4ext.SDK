@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace move {
-enum class MovementType : uint32_t
+enum class MovementType : int32_t
 {
     Walk = 0,
     Run = 1,

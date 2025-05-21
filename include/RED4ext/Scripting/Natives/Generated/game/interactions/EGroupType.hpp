@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class EGroupType : uint32_t
+enum class EGroupType : int32_t
 {
     EGT_default = 0,
     EGT_noInput = 1,

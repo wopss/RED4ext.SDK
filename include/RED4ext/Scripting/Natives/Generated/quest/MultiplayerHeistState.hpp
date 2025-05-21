@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class MultiplayerHeistState : uint32_t
+enum class MultiplayerHeistState : int32_t
 {
     Invalid = 0,
     Failure = 1,

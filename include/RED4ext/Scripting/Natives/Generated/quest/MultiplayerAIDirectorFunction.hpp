@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class MultiplayerAIDirectorFunction : uint32_t
+enum class MultiplayerAIDirectorFunction : int32_t
 {
     SetStatus = 0,
     SetCurrentPath = 1,

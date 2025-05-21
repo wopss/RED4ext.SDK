@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class FractureFieldEffect : uint8_t
+enum class FractureFieldEffect : int8_t
 {
     FE_Fracture = 0,
     FE_Erase = 1,

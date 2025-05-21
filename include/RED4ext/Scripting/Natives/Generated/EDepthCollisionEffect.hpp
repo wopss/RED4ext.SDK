@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EDepthCollisionEffect : uint32_t
+enum class EDepthCollisionEffect : int32_t
 {
     DCE_Bounce = 1,
     DCE_Glide = 2,

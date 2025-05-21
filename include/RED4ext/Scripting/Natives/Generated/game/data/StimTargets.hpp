@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class StimTargets : uint32_t
+enum class StimTargets : int32_t
 {
     All = 0,
     Puppets = 1,

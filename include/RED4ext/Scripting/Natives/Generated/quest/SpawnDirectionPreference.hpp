@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class SpawnDirectionPreference : uint32_t
+enum class SpawnDirectionPreference : int32_t
 {
     Behind = 0,
     InFront = 1,

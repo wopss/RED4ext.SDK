@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class ESoundCurveType : uint32_t
+enum class ESoundCurveType : int32_t
 {
     Log3 = 0,
     Sine = 1,

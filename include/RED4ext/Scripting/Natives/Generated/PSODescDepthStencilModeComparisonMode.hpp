@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class PSODescDepthStencilModeComparisonMode : uint8_t
+enum class PSODescDepthStencilModeComparisonMode : int8_t
 {
     COMPARISON_Never = 0,
     COMPARISON_Less = 1,

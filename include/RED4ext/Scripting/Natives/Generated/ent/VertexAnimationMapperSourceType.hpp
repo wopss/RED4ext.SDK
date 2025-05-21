@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class VertexAnimationMapperSourceType : uint32_t
+enum class VertexAnimationMapperSourceType : int32_t
 {
     FloatTrack = 0,
     TranslationX = 1,

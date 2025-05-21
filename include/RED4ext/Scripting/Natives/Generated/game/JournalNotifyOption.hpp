@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class JournalNotifyOption : uint32_t
+enum class JournalNotifyOption : int32_t
 {
     Undefined = 0,
     DoNotNotify = 1,

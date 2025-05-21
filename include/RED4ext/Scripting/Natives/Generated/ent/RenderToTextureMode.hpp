@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class RenderToTextureMode : uint8_t
+enum class RenderToTextureMode : int8_t
 {
     Shaded = 0,
     GBufferOnly = 1,

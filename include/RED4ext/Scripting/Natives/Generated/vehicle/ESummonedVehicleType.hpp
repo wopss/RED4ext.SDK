@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class ESummonedVehicleType : uint32_t
+enum class ESummonedVehicleType : int32_t
 {
     Any = 0,
     Car = 1,

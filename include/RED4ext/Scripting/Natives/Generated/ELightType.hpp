@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ELightType : uint32_t
+enum class ELightType : int32_t
 {
     LT_Point = 0,
     LT_Spot = 1,

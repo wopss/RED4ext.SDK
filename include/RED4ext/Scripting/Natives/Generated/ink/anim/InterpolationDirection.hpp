@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink::anim {
-enum class InterpolationDirection : uint8_t
+enum class InterpolationDirection : int8_t
 {
     To = 0,
     From = 1,

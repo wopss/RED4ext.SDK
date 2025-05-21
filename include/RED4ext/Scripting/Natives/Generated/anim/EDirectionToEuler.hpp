@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EDirectionToEuler : uint32_t
+enum class EDirectionToEuler : int32_t
 {
     Pitch = 0,
     Yaw = 1,

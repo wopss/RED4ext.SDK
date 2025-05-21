@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui {
-enum class HackingMinigameState : uint32_t
+enum class HackingMinigameState : int32_t
 {
     Unknown = 0,
     InProgress = 1,

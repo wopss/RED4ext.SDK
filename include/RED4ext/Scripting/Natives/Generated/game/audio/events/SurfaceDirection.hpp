@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::audio::events {
-enum class SurfaceDirection : uint32_t
+enum class SurfaceDirection : int32_t
 {
     Normal = 0,
     WallLeft = 1,

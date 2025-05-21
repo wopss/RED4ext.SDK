@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class BehindInteractionEventType : uint8_t
+enum class BehindInteractionEventType : int8_t
 {
     Undefined = 0,
     StartedBeingBehind = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class OnlineSystemStatus : uint32_t
+enum class OnlineSystemStatus : int32_t
 {
     Uninitialized = 0,
     GeneratingCPID = 1,

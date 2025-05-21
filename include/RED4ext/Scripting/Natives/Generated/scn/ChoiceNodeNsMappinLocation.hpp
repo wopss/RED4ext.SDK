@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class ChoiceNodeNsMappinLocation : uint8_t
+enum class ChoiceNodeNsMappinLocation : int8_t
 {
     None = 0,
     Interaction = 1,

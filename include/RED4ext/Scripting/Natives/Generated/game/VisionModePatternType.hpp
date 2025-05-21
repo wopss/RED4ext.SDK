@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class VisionModePatternType : uint32_t
+enum class VisionModePatternType : int32_t
 {
     Default = 0,
     Netrunner = 1,

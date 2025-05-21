@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class PuppetVehicleState : uint8_t
+enum class PuppetVehicleState : int8_t
 {
     IdleMounted = 0,
     IdleStand = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent::dismemberment {
-enum class SimulationTypeE : uint16_t
+enum class SimulationTypeE : int16_t
 {
     NONE = 0,
     DANGLE = 128,

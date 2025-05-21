@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::interactions {
-enum class ReactionState : uint32_t
+enum class ReactionState : int32_t
 {
     Idle = 0,
     Starting = 1,

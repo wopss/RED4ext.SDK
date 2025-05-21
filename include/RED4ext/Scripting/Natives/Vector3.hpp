@@ -101,6 +101,16 @@ struct Vector3
         return {Y * aOther.Z - Z * aOther.Y, Z * aOther.X - X * aOther.Z, X * aOther.Y - Y * aOther.X};
     }
 
+    inline Vector3 Min(const Vector3& aOther) const
+    {
+        return {(std::min)(X, aOther.X), (std::min)(Y, aOther.Y), (std::min)(Z, aOther.Z)};
+    }
+
+    inline Vector3 Max(const Vector3& aOther) const
+    {
+        return {(std::max)(X, aOther.X), (std::max)(Y, aOther.Y), (std::max)(Z, aOther.Z)};
+    }
+
     float X; // 00
     float Y; // 04
     float Z; // 08

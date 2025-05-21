@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class AppearanceStatus : uint8_t
+enum class AppearanceStatus : int8_t
 {
     None = 0,
     Proxy = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EMaterialVertexFactory : uint8_t
+enum class EMaterialVertexFactory : int8_t
 {
     MVF_Terrain = 1,
     MVF_MeshStatic = 2,

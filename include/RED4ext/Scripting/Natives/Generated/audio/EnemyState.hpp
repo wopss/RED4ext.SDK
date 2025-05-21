@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class EnemyState : uint8_t
+enum class EnemyState : int8_t
 {
     InCombat = 0,
     Alerted = 1,

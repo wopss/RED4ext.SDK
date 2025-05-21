@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class ClassificationMethod : uint32_t
+enum class ClassificationMethod : int32_t
 {
     HasAnyTag = 0,
     HasAllTags = 1,

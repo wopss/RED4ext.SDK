@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class TemplateComponentResolveMode : uint8_t
+enum class TemplateComponentResolveMode : int8_t
 {
     AutoSelect = 0,
     Select = 1,

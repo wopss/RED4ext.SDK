@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETimeOfYearSeason : uint32_t
+enum class ETimeOfYearSeason : int32_t
 {
     ETOYS_Spring = 0,
     ETOYS_Summer = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class ESliderDirection : uint32_t
+enum class ESliderDirection : int32_t
 {
     Horizontal = 0,
     Vertical = 1,

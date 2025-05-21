@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class EffectObjectFilter_AxisRangeAxis : uint32_t
+enum class EffectObjectFilter_AxisRangeAxis : int32_t
 {
     X = 0,
     Y = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class RenderDecalOrderPriority : uint8_t
+enum class RenderDecalOrderPriority : int8_t
 {
     Priority0 = 0,
     Priority1 = 1,

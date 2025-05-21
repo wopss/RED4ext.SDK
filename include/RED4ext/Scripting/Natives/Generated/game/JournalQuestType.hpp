@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class JournalQuestType : uint32_t
+enum class JournalQuestType : int32_t
 {
     MainQuest = 0,
     SideQuest = 1,

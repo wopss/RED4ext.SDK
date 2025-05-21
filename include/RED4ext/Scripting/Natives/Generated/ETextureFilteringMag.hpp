@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETextureFilteringMag : uint8_t
+enum class ETextureFilteringMag : int8_t
 {
     TFMag_Point = 0,
     TFMag_Linear = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace audio {
-enum class BreathingTransitionType : uint32_t
+enum class BreathingTransitionType : int32_t
 {
     PlayerSpeed = 0,
     Event = 1,

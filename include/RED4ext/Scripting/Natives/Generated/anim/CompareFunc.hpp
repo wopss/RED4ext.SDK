@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class CompareFunc : uint32_t
+enum class CompareFunc : int32_t
 {
     Equal = 0,
     NotEqual = 1,

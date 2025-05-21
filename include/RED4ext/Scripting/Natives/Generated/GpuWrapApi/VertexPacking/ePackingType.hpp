@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace GpuWrapApi::VertexPacking {
-enum class ePackingType : uint8_t
+enum class ePackingType : int8_t
 {
+    PT_Invalid = -1,
     PT_Float1 = 0,
     PT_Float2 = 1,
     PT_Float3 = 2,
@@ -42,7 +43,6 @@ enum class ePackingType : uint8_t
     PT_Index16 = 29,
     PT_Index32 = 30,
     PT_Max = 31,
-    PT_Invalid = 255,
 };
 } // namespace GpuWrapApi::VertexPacking
 using GpuWrapApiVertexPackingePackingType = GpuWrapApi::VertexPacking::ePackingType;

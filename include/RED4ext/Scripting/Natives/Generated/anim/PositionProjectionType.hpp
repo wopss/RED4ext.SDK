@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class PositionProjectionType : uint32_t
+enum class PositionProjectionType : int32_t
 {
     Disabled = 0,
     ShortestPath = 1,

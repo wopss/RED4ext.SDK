@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class BraindanceSpeed : uint8_t
+enum class BraindanceSpeed : int8_t
 {
     Any = 0,
     Slow = 1,

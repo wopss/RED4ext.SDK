@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class ProficiencyType : uint32_t
+enum class ProficiencyType : int32_t
 {
     Assault = 0,
     Athletics = 1,

@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ERenderingPlane : uint32_t
+enum class ERenderingPlane : int32_t
 {
     RPl_Scene = 0,
     RPl_Background = 1,

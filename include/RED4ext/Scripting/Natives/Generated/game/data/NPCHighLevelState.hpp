@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class NPCHighLevelState : uint32_t
+enum class NPCHighLevelState : int32_t
 {
     Alerted = 0,
     Any = 1,

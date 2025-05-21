@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class UseWorkspotTier : uint32_t
+enum class UseWorkspotTier : int32_t
 {
     Tier3 = 0,
     Tier4 = 1,

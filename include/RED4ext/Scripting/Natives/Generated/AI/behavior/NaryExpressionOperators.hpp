@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace AI::behavior {
-enum class NaryExpressionOperators : uint32_t
+enum class NaryExpressionOperators : int32_t
 {
     LogicalAnd = 0,
     LogicalOr = 1,

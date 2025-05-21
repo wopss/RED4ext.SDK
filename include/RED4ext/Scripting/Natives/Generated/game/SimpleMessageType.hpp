@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class SimpleMessageType : uint32_t
+enum class SimpleMessageType : int32_t
 {
     Undefined = 0,
     Negative = 1,

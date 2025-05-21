@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class SceneAnimationMotionActionParamsMotionType : uint32_t
+enum class SceneAnimationMotionActionParamsMotionType : int32_t
 {
     Rid = 0,
     Anim = 1,

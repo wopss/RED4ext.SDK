@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace red {
-enum class TaskTextMessageType : uint32_t
+enum class TaskTextMessageType : int32_t
 {
     Info = 0,
     Error = 1,

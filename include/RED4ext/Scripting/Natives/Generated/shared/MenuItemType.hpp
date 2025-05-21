@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace shared {
-enum class MenuItemType : uint8_t
+enum class MenuItemType : int8_t
 {
     Action = 0,
     Checked = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class PhoneStatus : uint32_t
+enum class PhoneStatus : int32_t
 {
     Available = 0,
     NotAvailable = 1,

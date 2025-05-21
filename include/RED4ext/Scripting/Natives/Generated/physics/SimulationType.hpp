@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace physics {
-enum class SimulationType : uint8_t
+enum class SimulationType : int8_t
 {
     Static = 0,
     Dynamic = 1,

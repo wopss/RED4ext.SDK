@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class UIGameContextRequestType : uint32_t
+enum class UIGameContextRequestType : int32_t
 {
     Push = 0,
     Pop = 1,

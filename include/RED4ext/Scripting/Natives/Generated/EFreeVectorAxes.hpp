@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class EFreeVectorAxes : uint32_t
+enum class EFreeVectorAxes : int32_t
 {
     FVA_One = 1,
     FVA_Two = 2,

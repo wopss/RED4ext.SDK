@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class LookAtTargetType : uint32_t
+enum class LookAtTargetType : int32_t
 {
     Actor = 0,
     Prop = 1,

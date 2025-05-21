@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class EBlendTypeLBC : uint32_t
+enum class EBlendTypeLBC : int32_t
 {
     Linear = 0,
     Smoothstep = 1,

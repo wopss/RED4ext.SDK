@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace env {
-enum class UtilsNeighborMode : uint8_t
+enum class UtilsNeighborMode : int8_t
 {
     eCLOSEST = 0,
     eONLY_GLOBAL = 1,

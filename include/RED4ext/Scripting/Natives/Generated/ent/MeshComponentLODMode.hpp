@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class MeshComponentLODMode : uint8_t
+enum class MeshComponentLODMode : int8_t
 {
     AlwaysVisible = 0,
     Appearance = 1,

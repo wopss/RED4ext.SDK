@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vg {
-enum class EStyleAttributeType : uint32_t
+enum class EStyleAttributeType : int32_t
 {
     FillColor = 0,
     StrokeColor = 1,

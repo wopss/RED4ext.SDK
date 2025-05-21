@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ELightShadowSoftnessMode : uint32_t
+enum class ELightShadowSoftnessMode : int32_t
 {
     LSSM_ExtraSoft = 0,
     LSSM_Soft = 1,

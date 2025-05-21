@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class DevelopmentPointType : uint32_t
+enum class DevelopmentPointType : int32_t
 {
     Attribute = 0,
     Espionage = 1,

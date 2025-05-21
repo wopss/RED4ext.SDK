@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class SimpleValueNodeValueType : uint32_t
+enum class SimpleValueNodeValueType : int32_t
 {
     String = 0,
     Number = 1,

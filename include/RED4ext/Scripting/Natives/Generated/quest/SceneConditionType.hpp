@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class SceneConditionType : uint8_t
+enum class SceneConditionType : int8_t
 {
     Undefined = 0,
     IsInside = 1,

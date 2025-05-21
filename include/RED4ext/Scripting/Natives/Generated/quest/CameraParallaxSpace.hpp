@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class CameraParallaxSpace : uint32_t
+enum class CameraParallaxSpace : int32_t
 {
     Trajectory = 0,
     Camera = 1,

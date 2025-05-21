@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink::anim {
-enum class InterpolationType : uint8_t
+enum class InterpolationType : int8_t
 {
     Linear = 0,
     Quadratic = 1,

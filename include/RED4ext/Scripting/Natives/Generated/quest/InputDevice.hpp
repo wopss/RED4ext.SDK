@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class InputDevice : uint32_t
+enum class InputDevice : int32_t
 {
     Undefined = 0,
     KeyboardMouse = 1,

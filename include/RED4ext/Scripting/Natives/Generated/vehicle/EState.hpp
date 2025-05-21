@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace vehicle {
-enum class EState : uint32_t
+enum class EState : int32_t
 {
     Default = 1,
     On = 2,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class SaveType : uint8_t
+enum class SaveType : int8_t
 {
     ManualSave = 0,
     QuickSave = 1,

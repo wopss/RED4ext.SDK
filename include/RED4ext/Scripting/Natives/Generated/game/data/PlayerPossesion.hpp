@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::data {
-enum class PlayerPossesion : uint32_t
+enum class PlayerPossesion : int32_t
 {
     Default = 0,
     Johnny = 1,

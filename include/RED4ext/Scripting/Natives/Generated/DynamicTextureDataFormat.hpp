@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class DynamicTextureDataFormat : uint8_t
+enum class DynamicTextureDataFormat : int8_t
 {
     R_Uint8 = 0,
     R_Float16 = 1,

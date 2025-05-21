@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class VehicleCommandType : uint8_t
+enum class VehicleCommandType : int8_t
 {
     Move_On_Spline = 0, // Move On Spline
     Follow = 1,

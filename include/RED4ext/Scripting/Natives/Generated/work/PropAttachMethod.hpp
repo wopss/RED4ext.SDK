@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace work {
-enum class PropAttachMethod : uint32_t
+enum class PropAttachMethod : int32_t
 {
     BonePosition = 0,
     RelativePosition = 1,

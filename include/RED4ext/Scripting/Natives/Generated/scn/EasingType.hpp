@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class EasingType : uint8_t
+enum class EasingType : int8_t
 {
     Linear = 0,
     SinusoidalEaseInOut = 1,

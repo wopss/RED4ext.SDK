@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class OffMeshConnectionType : uint32_t
+enum class OffMeshConnectionType : int32_t
 {
     Door = 0,
     Ladder = 1,

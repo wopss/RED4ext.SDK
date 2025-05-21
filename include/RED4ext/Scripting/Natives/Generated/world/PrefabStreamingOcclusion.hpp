@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class PrefabStreamingOcclusion : uint8_t
+enum class PrefabStreamingOcclusion : int8_t
 {
     Default = 0,
     Exterior = 1,

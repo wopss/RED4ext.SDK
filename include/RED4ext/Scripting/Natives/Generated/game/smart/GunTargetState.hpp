@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::smart {
-enum class GunTargetState : uint32_t
+enum class GunTargetState : int32_t
 {
     Visible = 1,
     Targetable = 2,

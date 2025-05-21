@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace anim {
-enum class SetBoneTransformEntry_SetMethod : uint32_t
+enum class SetBoneTransformEntry_SetMethod : int32_t
 {
     NoSnapping = 0,
     WholeTransform = 1,

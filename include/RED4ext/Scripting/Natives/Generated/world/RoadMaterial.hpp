@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace world {
-enum class RoadMaterial : uint32_t
+enum class RoadMaterial : int32_t
 {
     Concrete = 0,
     ConcreteDestroyed = 1,

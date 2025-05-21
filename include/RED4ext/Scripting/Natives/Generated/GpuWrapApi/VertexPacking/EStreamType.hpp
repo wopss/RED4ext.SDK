@@ -8,12 +8,12 @@
 namespace RED4ext
 {
 namespace GpuWrapApi::VertexPacking {
-enum class EStreamType : uint8_t
+enum class EStreamType : int8_t
 {
+    ST_Invalid = -1,
     ST_PerVertex = 0,
     ST_PerInstance = 1,
     ST_Max = 2,
-    ST_Invalid = 255,
 };
 } // namespace GpuWrapApi::VertexPacking
 using GpuWrapApiVertexPackingEStreamType = GpuWrapApi::VertexPacking::EStreamType;

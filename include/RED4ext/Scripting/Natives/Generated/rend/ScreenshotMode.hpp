@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace rend {
-enum class ScreenshotMode : uint32_t
+enum class ScreenshotMode : int32_t
 {
     NONE = 0,
     NORMAL = 1,

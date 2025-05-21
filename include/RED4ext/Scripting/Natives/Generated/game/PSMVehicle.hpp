@@ -8,8 +8,9 @@
 namespace RED4ext
 {
 namespace game {
-enum class PSMVehicle : uint32_t
+enum class PSMVehicle : int32_t
 {
+    Any = -1,
     Default = 0,
     Driving = 1,
     Combat = 2,
@@ -18,7 +19,6 @@ enum class PSMVehicle : uint32_t
     Turret = 5,
     DriverCombat = 6,
     Scene = 7,
-    Any = 4294967295,
 };
 } // namespace game
 using gamePSMVehicle = game::PSMVehicle;

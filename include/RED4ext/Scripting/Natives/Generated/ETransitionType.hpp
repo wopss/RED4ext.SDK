@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class ETransitionType : uint32_t
+enum class ETransitionType : int32_t
 {
     EET_Linear = 0,
     EET_Sine = 1,

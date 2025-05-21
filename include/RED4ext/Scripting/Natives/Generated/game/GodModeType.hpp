@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game {
-enum class GodModeType : uint32_t
+enum class GodModeType : int32_t
 {
     Invulnerable = 0,
     Immortal = 1,

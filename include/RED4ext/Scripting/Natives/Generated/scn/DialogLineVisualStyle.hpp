@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace scn {
-enum class DialogLineVisualStyle : uint8_t
+enum class DialogLineVisualStyle : int8_t
 {
     regular = 0,
     overHead = 1,

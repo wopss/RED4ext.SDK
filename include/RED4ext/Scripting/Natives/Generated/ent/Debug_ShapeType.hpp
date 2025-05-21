@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ent {
-enum class Debug_ShapeType : uint8_t
+enum class Debug_ShapeType : int8_t
 {
     Sphere = 0,
     Box = 1,

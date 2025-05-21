@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace game::ui::arcade {
-enum class ArcadeMinigame : uint32_t
+enum class ArcadeMinigame : int32_t
 {
     RoachRace = 0,
     Shooter = 1,

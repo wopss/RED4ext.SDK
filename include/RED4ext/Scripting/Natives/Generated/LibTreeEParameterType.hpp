@@ -7,7 +7,7 @@
 #include <cstdint>
 namespace RED4ext
 {
-enum class LibTreeEParameterType : uint16_t
+enum class LibTreeEParameterType : int16_t
 {
     PARAM_Bool = 0,
     PARAM_Int32 = 1,

@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace quest {
-enum class WeaponUsageType : uint32_t
+enum class WeaponUsageType : int32_t
 {
     Shoot = 0,
     StopShooting = 1,

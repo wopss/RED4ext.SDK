@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace ink {
-enum class ETextureResolution : uint8_t
+enum class ETextureResolution : int8_t
 {
     UltraHD_3840_2160 = 0,
     FullHD_1920_1080 = 1,
