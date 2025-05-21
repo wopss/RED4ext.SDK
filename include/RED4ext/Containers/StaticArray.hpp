@@ -125,23 +125,22 @@ struct StaticArray
         return Find(aValue) != End();
     }
 
-    [[nodiscard]] bool Contains(ConstIterator aPos) const noexcept
-    {
-        return Begin() <= aPos && aPos <= End();
-    }
-
-    [[nodiscard]] bool Contains(ConstIterator aFirst, ConstIterator aLast) const noexcept
-    {
-        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
-    }
-
     void Resize(SizeType aNewSize)
     {
-        if (aNewSize > MaxSize())
-            throw std::invalid_argument("StaticArray::Resize: New size cannot exceed MaxSize");
-
         if (aNewSize == size)
             return;
+
+        if (aNewSize < size)
+        {
+            std::destroy(Begin() + aNewSize, End());
+        }
+        else
+        {
+            if (aNewSize > MaxSize())
+                throw std::invalid_argument("StaticArray::Resize: New size cannot exceed MaxSize");
+
+            std::uninitialized_default_construct(End(), Begin() + aNewSize);
+        }
 
         size = aNewSize;
     }
@@ -245,9 +244,6 @@ struct StaticArray
         return size;
     }
 
-    T entries[MAX_LEN]; // 00
-    uint32_t size;
-
 #pragma region STL
     [[nodiscard]] Iterator begin() noexcept
     {
@@ -269,6 +265,20 @@ struct StaticArray
         return End();
     }
 #pragma endregion
+
+private:
+    T entries[MAX_LEN]; // 00
+    uint32_t size;
+
+    [[nodiscard]] bool Includes(ConstIterator aPos) const noexcept
+    {
+        return Begin() <= aPos && aPos <= End();
+    }
+
+    [[nodiscard]] bool Includes(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    {
+        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
+    }
 };
 static_assert(sizeof(StaticArray<std::array<uint8_t, 5>, 32>) ==
               0xA4); // StaticArray<GpuWrapApi::VertexPacking::PackingElement, 32>
