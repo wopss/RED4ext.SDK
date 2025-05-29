@@ -1,26 +1,25 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/Api/v0/SemVer.hpp>
+#include <RED4ext/Api/v1/SemVer.hpp>
 #endif
 
 #include <RED4ext/Common.hpp>
+
 #include <sstream>
 
-RED4EXT_INLINE RED4ext::v0::SemVer RED4ext::v0::CreateSemVer(uint8_t aMajor, uint16_t aMinor, uint32_t aPatch,
-                                                             uint32_t aPrereleaseType, uint32_t aPrereleaseNumber)
+namespace RED4ext::v1
 {
-    SemVer version{};
-    version.major = aMajor;
-    version.minor = aMinor;
-    version.patch = aPatch;
-    version.prerelease.type = aPrereleaseType;
-    version.prerelease.number = aPrereleaseNumber;
-
-    return version;
+RED4EXT_INLINE SemVer CreateSemVer(uint8_t aMajor, uint16_t aMinor, uint32_t aPatch, uint32_t aPrereleaseType,
+                                   uint32_t aPrereleaseNumber)
+{
+    return {.major = aMajor,
+            .minor = aMinor,
+            .patch = aPatch,
+            .prerelease = {.type = aPrereleaseType, .number = aPrereleaseNumber}};
 }
 
-RED4EXT_INLINE int32_t RED4ext::v0::CompareSemVer(const RED4ext::v0::SemVer& aLhs, const RED4ext::v0::SemVer& aRhs)
+RED4EXT_INLINE int32_t CompareSemVer(const SemVer& aLhs, const SemVer& aRhs)
 {
     if (aLhs.major != aRhs.major)
     {
@@ -38,8 +37,7 @@ RED4EXT_INLINE int32_t RED4ext::v0::CompareSemVer(const RED4ext::v0::SemVer& aLh
     return CompareSemVerPrerelease(aLhs.prerelease, aRhs.prerelease);
 }
 
-RED4EXT_INLINE int32_t RED4ext::v0::CompareSemVerPrerelease(const RED4ext::v0::SemVer::PrereleaseInfo& aLhs,
-                                                            const RED4ext::v0::SemVer::PrereleaseInfo& aRhs)
+RED4EXT_INLINE int32_t CompareSemVerPrerelease(const SemVer::PrereleaseInfo& aLhs, const SemVer::PrereleaseInfo& aRhs)
 {
     if (aLhs.type != aRhs.type)
     {
@@ -52,28 +50,31 @@ RED4EXT_INLINE int32_t RED4ext::v0::CompareSemVerPrerelease(const RED4ext::v0::S
 
     return 0;
 }
+} // namespace RED4ext::v1
 
-RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v0::SemVer& aVersion)
+namespace std
 {
-    std::wstringstream stream;
+RED4EXT_INLINE wstring to_wstring(const RED4ext::v1::SemVer& aVersion)
+{
+    wstringstream stream;
     stream << aVersion.major << L"." << aVersion.minor << L"." << aVersion.patch;
 
-    if (aVersion.prerelease.type != RED4EXT_V0_SEMVER_PRERELEASE_TYPE_NONE)
+    if (aVersion.prerelease.type != RED4EXT_V1_SEMVER_PRERELEASE_TYPE_NONE)
     {
         stream << L"-";
         switch (aVersion.prerelease.type)
         {
-        case RED4EXT_V0_SEMVER_PRERELEASE_TYPE_ALPHA:
+        case RED4EXT_V1_SEMVER_PRERELEASE_TYPE_ALPHA:
         {
             stream << L"alpha";
             break;
         }
-        case RED4EXT_V0_SEMVER_PRERELEASE_TYPE_BETA:
+        case RED4EXT_V1_SEMVER_PRERELEASE_TYPE_BETA:
         {
             stream << L"beta";
             break;
         }
-        case RED4EXT_V0_SEMVER_PRERELEASE_TYPE_RC:
+        case RED4EXT_V1_SEMVER_PRERELEASE_TYPE_RC:
         {
             stream << L"rc";
             break;
@@ -90,3 +91,4 @@ RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v0::SemVer& aVersion)
 
     return stream.str();
 }
+} // namespace std

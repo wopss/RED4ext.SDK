@@ -111,6 +111,7 @@ else()
         RED4EXT_STATIC_LIB
       PRIVATE
         WIN32_LEAN_AND_MEAN
+        NOMINMAX
   )
 
   if(RED4EXT_USE_PCH)
@@ -174,6 +175,16 @@ if(NOT CMAKE_SKIP_INSTALL_RULES)
 
     install(
       DIRECTORY "${RED4EXT_INCLUDE_DIR}/"
+      DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
+
+    install(
+      DIRECTORY "${RED4EXT_VENDOR_DIR}/D3D12MemAlloc/include/"
+      DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
+
+    install(
+      DIRECTORY "${RED4EXT_VENDOR_DIR}/D3D12on7/include/"
       DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
     )
 

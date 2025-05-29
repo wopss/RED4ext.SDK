@@ -1,9 +1,9 @@
 #pragma once
 
-#include <cstdint>
-
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Map.hpp>
+
+#include <cstdint>
 
 namespace RED4ext
 {
@@ -12,10 +12,10 @@ enum class EGameStateType : uint32_t;
 
 enum class EGameStateStatus
 {
-    Uninitialized = 0,
-    Initialized,
-    Ran,
-    Done,
+    Enter = 0,
+    Tick,
+    Exit,
+    NextState,
 };
 
 struct CGameOptions
@@ -168,24 +168,21 @@ struct CGameApplication : CBaseGameApplication
 {
     virtual void sub_78() = 0; // 78
 
-    CGameOptions options;                 // 1B0
-    DynArray<EGameStateType> statesTypes; // 268
-    DynArray<IGameState*> states;         // 278
-    int32_t unk288;                       // 288
-    IGameState* currState;                // 290
-    IGameState* nextState;                // 298
-    EGameStateStatus status;              // 2A0
-    int32_t unk2A4;                       // 2A4
-    const char* name;                     // 2A8
-    int32_t retCode;                      // 2B0
+    CGameOptions options;                    // 1B0
+    Map<EGameStateType, IGameState*> states; // 268
+    IGameState* currentState;                // 290
+    IGameState* nextState;                   // 298
+    EGameStateStatus stateStatus;            // 2A0
+    int32_t unk2A4;                          // 2A4
+    const char* name;                        // 2A8
+    int32_t retCode;                         // 2B0
 };
 RED4EXT_ASSERT_SIZE(CGameApplication, 0x2B8);
 RED4EXT_ASSERT_OFFSET(CGameApplication, options, 0x1B0);
-RED4EXT_ASSERT_OFFSET(CGameApplication, statesTypes, 0x268);
-RED4EXT_ASSERT_OFFSET(CGameApplication, states, 0x278);
-RED4EXT_ASSERT_OFFSET(CGameApplication, currState, 0x290);
+RED4EXT_ASSERT_OFFSET(CGameApplication, states, 0x268);
+RED4EXT_ASSERT_OFFSET(CGameApplication, currentState, 0x290);
 RED4EXT_ASSERT_OFFSET(CGameApplication, nextState, 0x298);
-RED4EXT_ASSERT_OFFSET(CGameApplication, status, 0x2A0);
+RED4EXT_ASSERT_OFFSET(CGameApplication, stateStatus, 0x2A0);
 RED4EXT_ASSERT_OFFSET(CGameApplication, name, 0x2A8);
 RED4EXT_ASSERT_OFFSET(CGameApplication, retCode, 0x2B0);
 } // namespace RED4ext
