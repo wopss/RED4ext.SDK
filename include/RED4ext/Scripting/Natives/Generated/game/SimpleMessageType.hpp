@@ -21,6 +21,10 @@ enum class SimpleMessageType : int32_t
     Boss = 8,
     Twintone = 9,
     Police = 10,
+    Autodrive = 11,
+    TwintoneNegative = 12,
+    Connection = 13,
+    DelamainTaxi = 14,
 };
 } // namespace game
 using gameSimpleMessageType = game::SimpleMessageType;

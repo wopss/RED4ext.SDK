@@ -8,7 +8,7 @@
 namespace RED4ext
 {
 namespace minimap::ui {
-enum class ELayerType : int8_t
+enum class ELayerType : int32_t
 {
     Floor = 0,
     Cover = 1,
@@ -17,7 +17,8 @@ enum class ELayerType : int8_t
     Door = 4,
     Stairs = 5,
     Road = 6,
-    Count = 7,
+    RoadNoAutodrive = 7,
+    Count = 8,
 };
 } // namespace minimap::ui
 using minimapuiELayerType = minimap::ui::ELayerType;

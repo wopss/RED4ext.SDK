@@ -29,9 +29,16 @@ struct PlayerVehicle
     bool isUnlocked; // 3C
     uint8_t unk3D[0x40 - 0x3D]; // 3D
     int32_t uiFavoriteIndex; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
+    bool overrideDisplay; // 44
+    uint8_t unk45[0x48 - 0x45]; // 45
+    CName icon; // 48
+    CName defaultState; // 50
+    CName activeState; // 58
+    bool forcedFavorite; // 60
+    bool spawnOnlyOnValidRoad; // 61
+    uint8_t unk62[0x68 - 0x62]; // 62
 };
-RED4EXT_ASSERT_SIZE(PlayerVehicle, 0x48);
+RED4EXT_ASSERT_SIZE(PlayerVehicle, 0x68);
 } // namespace vehicle
 using vehiclePlayerVehicle = vehicle::PlayerVehicle;
 using PlayerVehicle = vehicle::PlayerVehicle;

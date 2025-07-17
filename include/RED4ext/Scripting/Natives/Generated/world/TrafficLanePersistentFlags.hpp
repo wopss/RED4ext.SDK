@@ -25,6 +25,7 @@ enum class TrafficLanePersistentFlags : int16_t
     Yield = 4096,
     NoAIDriving = 8192,
     Highway = 16384,
+    NoAutodrive = -32768,
 };
 } // namespace world
 using worldTrafficLanePersistentFlags = world::TrafficLanePersistentFlags;

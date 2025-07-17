@@ -52,7 +52,7 @@ struct Vector3
         return {X - aOther.X, Y - aOther.Y, Z - aOther.Z};
     }
 
-    inline Vector3 operator*(const float aScalar) const
+    inline Vector3 operator*(float aScalar) const
     {
         return {X * aScalar, Y * aScalar, Z * aScalar};
     }

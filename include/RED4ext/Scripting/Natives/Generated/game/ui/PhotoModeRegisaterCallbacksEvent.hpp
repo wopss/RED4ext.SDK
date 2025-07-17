@@ -17,9 +17,9 @@ struct PhotoModeRegisaterCallbacksEvent : red::Event
     static constexpr const char* NAME = "gameuiPhotoModeRegisaterCallbacksEvent";
     static constexpr const char* ALIAS = "PhotoModeRegisaterCallbacksEvent";
 
-    uint8_t unk40[0x1C0 - 0x40]; // 40
+    uint8_t unk40[0x200 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(PhotoModeRegisaterCallbacksEvent, 0x1C0);
+RED4EXT_ASSERT_SIZE(PhotoModeRegisaterCallbacksEvent, 0x200);
 } // namespace game::ui
 using gameuiPhotoModeRegisaterCallbacksEvent = game::ui::PhotoModeRegisaterCallbacksEvent;
 using PhotoModeRegisaterCallbacksEvent = game::ui::PhotoModeRegisaterCallbacksEvent;

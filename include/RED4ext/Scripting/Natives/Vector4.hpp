@@ -126,7 +126,7 @@ struct Vector4
         return *this;
     }
 
-    inline Vector4 operator/(const float aScalar) const
+    inline Vector4 operator/(float aScalar) const
     {
         return {X / aScalar, Y / aScalar, Z / aScalar, W / aScalar};
     }

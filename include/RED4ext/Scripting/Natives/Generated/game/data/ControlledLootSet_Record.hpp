@@ -17,9 +17,9 @@ struct ControlledLootSet_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataControlledLootSet_Record";
     static constexpr const char* ALIAS = "ControlledLootSet_Record";
 
-    uint8_t unk48[0x138 - 0x48]; // 48
+    uint8_t unk48[0x148 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ControlledLootSet_Record, 0x138);
+RED4EXT_ASSERT_SIZE(ControlledLootSet_Record, 0x148);
 } // namespace game::data
 using gamedataControlledLootSet_Record = game::data::ControlledLootSet_Record;
 using ControlledLootSet_Record = game::data::ControlledLootSet_Record;
