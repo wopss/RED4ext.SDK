@@ -10,12 +10,12 @@ struct TLS
 {
     static TLS* Get();
 
-    uint8_t unk00[0x14A]; // 00
-    uint8_t jobParam;     // 14A
+    uint8_t unk00[0x19A]; // 00
+    uint8_t jobParam;     // 19A
 };
 
-RED4EXT_ASSERT_SIZE(TLS, 0x14B);
-RED4EXT_ASSERT_OFFSET(TLS, jobParam, 0x14A);
+RED4EXT_ASSERT_SIZE(TLS, 0x19B);
+RED4EXT_ASSERT_OFFSET(TLS, jobParam, 0x19A);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
