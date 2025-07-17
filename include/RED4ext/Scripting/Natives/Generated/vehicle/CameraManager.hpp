@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) CameraManager : IScriptable
     static constexpr const char* NAME = "vehicleCameraManager";
     static constexpr const char* ALIAS = "VehicleCameraManager";
 
-    uint8_t unk40[0x390 - 0x40]; // 40
+    uint8_t unk40[0x3A0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(CameraManager, 0x390);
+RED4EXT_ASSERT_SIZE(CameraManager, 0x3A0);
 } // namespace vehicle
 using vehicleCameraManager = vehicle::CameraManager;
 using VehicleCameraManager = vehicle::CameraManager;

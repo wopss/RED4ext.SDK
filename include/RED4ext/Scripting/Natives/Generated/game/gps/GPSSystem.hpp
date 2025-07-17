@@ -17,9 +17,9 @@ struct GPSSystem : game::gps::IGPSSystem
     static constexpr const char* NAME = "gamegpsGPSSystem";
     static constexpr const char* ALIAS = "GPSSystem";
 
-    uint8_t unk48[0x368 - 0x48]; // 48
+    uint8_t unk48[0x440 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GPSSystem, 0x368);
+RED4EXT_ASSERT_SIZE(GPSSystem, 0x440);
 } // namespace game::gps
 using gamegpsGPSSystem = game::gps::GPSSystem;
 using GPSSystem = game::gps::GPSSystem;

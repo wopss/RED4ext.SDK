@@ -17,9 +17,9 @@ struct StatsSystem : game::IStatsSystem
     static constexpr const char* NAME = "gameStatsSystem";
     static constexpr const char* ALIAS = "StatsSystem";
 
-    uint8_t unk48[0x530 - 0x48]; // 48
+    uint8_t unk48[0x538 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(StatsSystem, 0x530);
+RED4EXT_ASSERT_SIZE(StatsSystem, 0x538);
 } // namespace game
 using gameStatsSystem = game::StatsSystem;
 using StatsSystem = game::StatsSystem;

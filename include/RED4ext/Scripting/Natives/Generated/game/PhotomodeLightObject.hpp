@@ -17,9 +17,9 @@ struct PhotomodeLightObject : game::Object
     static constexpr const char* NAME = "gamePhotomodeLightObject";
     static constexpr const char* ALIAS = "PhotomodeLightObject";
 
-    uint8_t unk240[0x338 - 0x240]; // 240
+    uint8_t unk240[0x350 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(PhotomodeLightObject, 0x338);
+RED4EXT_ASSERT_SIZE(PhotomodeLightObject, 0x350);
 } // namespace game
 using gamePhotomodeLightObject = game::PhotomodeLightObject;
 using PhotomodeLightObject = game::PhotomodeLightObject;

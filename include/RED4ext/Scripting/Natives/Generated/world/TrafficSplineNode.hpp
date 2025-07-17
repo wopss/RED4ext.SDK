@@ -35,7 +35,8 @@ struct TrafficSplineNode : world::TrafficSourceNode
     bool neverDeadEnd; // B9
     bool trafficDisabled; // BA
     bool noAIDriving; // BB
-    uint8_t unkBC[0xC0 - 0xBC]; // BC
+    bool noAutodrive; // BC
+    uint8_t unkBD[0xC0 - 0xBD]; // BD
 };
 RED4EXT_ASSERT_SIZE(TrafficSplineNode, 0xC0);
 } // namespace world

@@ -32,9 +32,9 @@ struct BaseObject : game::Object
     Ref<AI::Archetype> archetype;  // 3A0
     uint8_t unk3B8[0x6D2 - 0x3B8]; // 3B8
     bool isVehicleOnStateLocked;   // 6D2
-    uint8_t unk6D3[0xB90 - 0x6D3]; // 6D3
+    uint8_t unk6D3[0xBA0 - 0x6D3]; // 6D3
 };
-RED4EXT_ASSERT_SIZE(BaseObject, 0xB90);
+RED4EXT_ASSERT_SIZE(BaseObject, 0xBA0);
 RED4EXT_ASSERT_OFFSET(BaseObject, isOnGround, 0x25C);
 RED4EXT_ASSERT_OFFSET(BaseObject, acceleration, 0x264);
 RED4EXT_ASSERT_OFFSET(BaseObject, deceleration, 0x268);
