@@ -25,10 +25,10 @@ RED4EXT_ASSERT_SIZE(AllocationResult, 0x10);
 
 struct IAllocator
 {
-    virtual AllocationResult Alloc(uint32_t aSize) const = 0;                                  // 00
-    virtual AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) const = 0;      // 08
-    virtual AllocationResult Realloc(AllocationResult& aAllocation, uint32_t aSize) const = 0; // 10
-    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint32_t aSize,
+    virtual AllocationResult Alloc(uint64_t aSize) const = 0;                                  // 00
+    virtual AllocationResult AllocAligned(uint64_t aSize, uint32_t aAlignment) const = 0;      // 08
+    virtual AllocationResult Realloc(AllocationResult& aAllocation, uint64_t aSize) const = 0; // 10
+    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint64_t aSize,
                                             uint32_t aAlignment) const = 0; // 16
     virtual void Free(AllocationResult& aAllocation) const = 0;             // 20
     virtual void sub_28(void* a1) const = 0;                                // 28
@@ -69,19 +69,19 @@ struct Allocator : IAllocator
 
     /*
      * All [re]alloc functions have the following typedef:
-     *  AllocationResult [Re]Alloc(Vault*, [AllocationResult&], uint32_t, [uint32_t])
+     *  AllocationResult [Re]Alloc(Vault*, [AllocationResult&], uint64_t, [uint32_t])
      *
      * Because "REDfunc" is using a variable to call them in memory we cannot abuse the __fastcall convention, thus it
      * is necessary to use the following typedef:
-     *  void [Re]Alloc(Vault*, AllocationResult*, [AllocationResult&], uint32_t, [uint32_t])
+     *  void [Re]Alloc(Vault*, AllocationResult*, [AllocationResult&], uint64_t, [uint32_t])
      *
      * Specifing the RDX directly and using void as return type should not cause problems when calling these functions,
      * doing something else the calls will be ill-formed.
      */
 
-    virtual AllocationResult Alloc(uint32_t aSize) const override
+    virtual AllocationResult Alloc(uint64_t aSize) const override
     {
-        using alloc_t = void(__fastcall*)(Vault*, AllocationResult*, uint32_t);
+        using alloc_t = void(__fastcall*)(Vault*, AllocationResult*, uint64_t);
         static UniversalRelocFunc<alloc_t> alloc(Detail::AddressHashes::Memory_Vault_Alloc);
 
         auto pool = T::Get();
@@ -97,9 +97,9 @@ struct Allocator : IAllocator
         return result;
     }
 
-    virtual AllocationResult AllocAligned(uint32_t aSize, uint32_t aAlignment) const override
+    virtual AllocationResult AllocAligned(uint64_t aSize, uint32_t aAlignment) const override
     {
-        using alloc_t = void (*)(Vault*, AllocationResult*, uint32_t, uint32_t);
+        using alloc_t = void (*)(Vault*, AllocationResult*, uint64_t, uint32_t);
         static UniversalRelocFunc<alloc_t> alloc(Detail::AddressHashes::Memory_Vault_AllocAligned);
 
         auto pool = T::Get();
@@ -115,9 +115,9 @@ struct Allocator : IAllocator
         return result;
     }
 
-    virtual AllocationResult Realloc(AllocationResult& aAllocation, uint32_t aSize) const override
+    virtual AllocationResult Realloc(AllocationResult& aAllocation, uint64_t aSize) const override
     {
-        using realloc_t = void (*)(Vault*, AllocationResult*, AllocationResult&, uint32_t);
+        using realloc_t = void (*)(Vault*, AllocationResult*, AllocationResult&, uint64_t);
         static UniversalRelocFunc<realloc_t> realloc(Detail::AddressHashes::Memory_Vault_Realloc);
 
         auto pool = T::Get();
@@ -133,10 +133,10 @@ struct Allocator : IAllocator
         return result;
     }
 
-    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint32_t aSize,
+    virtual AllocationResult ReallocAligned(AllocationResult& aAllocation, uint64_t aSize,
                                             uint32_t aAlignment) const override
     {
-        using realloc_t = void (*)(Vault*, AllocationResult*, AllocationResult&, uint32_t, uint32_t);
+        using realloc_t = void (*)(Vault*, AllocationResult*, AllocationResult&, uint64_t, uint32_t);
         static UniversalRelocFunc<realloc_t> realloc(Detail::AddressHashes::Memory_Vault_ReallocAligned);
 
         auto pool = T::Get();
@@ -186,9 +186,9 @@ protected:
     ~Allocator() = default;
 
 private:
-    inline void OOM(uint32_t aSize, uint32_t aAlignment) const
+    inline void OOM(uint64_t aSize, uint32_t aAlignment) const
     {
-        using oom_t = AllocationResult (*)(PoolStorage*, uint32_t, uint32_t);
+        using oom_t = AllocationResult (*)(PoolStorage*, uint64_t, uint32_t);
         static UniversalRelocFunc<oom_t> oom(Detail::AddressHashes::Memory_PoolStorage_OOM);
 
         auto pool = T::Get();
