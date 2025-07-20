@@ -7,11 +7,10 @@
 #include <unordered_set>
 
 #include <RED4ext/CName.hpp>
-#include <RED4ext/rtti/IType.hpp>
+#include <RED4ext/rtti/ClassType.hpp>
 
 namespace RED4ext
 {
-struct CClass;
 struct CProperty;
 struct CEnum;
 struct CBitfield;
@@ -102,7 +101,7 @@ struct BitfieldFileDescriptor
 
 struct ClassDependencyBuilder
 {
-    const RED4ext::CClass* pType;
+    const RED4ext::rtti::ClassType* pType;
     std::unordered_set<const RED4ext::rtti::IType*> mDirect;
     std::unordered_set<const RED4ext::rtti::IType*> mIndirect;
     std::map<uint64_t, const RED4ext::CProperty*> mPropertyMap;

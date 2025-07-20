@@ -4,6 +4,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Handle.hpp>
+#include <RED4ext/rtti/ClassType.hpp>
 
 namespace RED4ext
 {
@@ -12,7 +13,6 @@ namespace Memory
 struct IAllocator;
 }
 
-struct CClass;
 struct BaseStream;
 struct CString;
 
@@ -27,8 +27,8 @@ struct ISerializable
 {
     ISerializable();
 
-    virtual CClass* GetNativeType() = 0;                                                // 00
-    virtual CClass* GetType();                                                          // 08
+    virtual rtti::ClassType* GetNativeType() = 0;                                                // 00
+    virtual rtti::ClassType* GetType();                                                          // 08
     virtual Memory::IAllocator* GetAllocator();                                         // 10
     virtual ~ISerializable() = default;                                                 // 18
     virtual void sub_20();                                                              // 20
@@ -48,7 +48,7 @@ struct ISerializable
     virtual bool sub_90();                                                              // 90
     virtual bool sub_98();                                                              // 98
     virtual void* sub_A0();                                                             // A0
-    virtual CClass* sub_A8();                                                           // A8
+    virtual rtti::ClassType* sub_A8();                                                           // A8
     virtual void sub_B0(void* a1);                                                      // B0
     virtual CString sub_B8();                                                           // B8
     virtual void* sub_C0(void* a1);                                                     // C0
@@ -72,7 +72,7 @@ RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
  */
 #ifndef RED4EXT_IMPL_NATIVE_TYPE
 #define RED4EXT_IMPL_NATIVE_TYPE()                                                                                     \
-    CClass* GetNativeType() override                                                                                   \
+    rtti::ClassType* GetNativeType() override                                                                                   \
     {                                                                                                                  \
         return CRTTISystem::Get()->GetClass(NAME);                                                                     \
     }

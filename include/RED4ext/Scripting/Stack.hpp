@@ -4,7 +4,7 @@
 
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
-#include <RED4ext/rtti/IType.hpp>
+#include <RED4ext/rtti/CLassType.hpp>
 
 namespace RED4ext
 {
@@ -17,7 +17,6 @@ namespace RED4ext
  * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
-struct CClass;
 struct IScriptable;
 
 struct CStackType
@@ -69,7 +68,7 @@ struct CBaseStack : IStack
     void* unk10;            // 10
     IScriptable* context18; // 18
     IScriptable* context20; // 20
-    CClass* unk28;          // 28
+    rtti::ClassType* unk28;          // 28
 
 protected:
     CBaseStack(IScriptable* aContext) noexcept;
