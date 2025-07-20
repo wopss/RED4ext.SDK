@@ -9,10 +9,10 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/SingleScreenShotData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/services/GameServices.hpp>
+#include <RED4ext/rtti/IType.hpp>
 
 namespace RED4ext
 {
-struct CBaseRTTIType;
 struct IScriptable;
 struct CGameOptions;
 
@@ -32,7 +32,7 @@ enum class EEngineState : int32_t
 struct GameInstance
 {
     virtual ~GameInstance() = 0;                                    // 00
-    virtual IScriptable* GetSystem(const CBaseRTTIType* aType) = 0; // 08
+    virtual IScriptable* GetSystem(const rtti::IType* aType) = 0; // 08
     virtual void Unk_10() = 0;                                      // 10
     virtual void Unk_18() = 0;                                      // 18
     virtual void Unk_20() = 0;                                      // 20
@@ -46,9 +46,9 @@ struct GameInstance
     virtual void Unk_60() = 0;                                      // 60
     virtual void Unk_68() = 0;                                      // 68
 
-    HashMap<CBaseRTTIType*, Handle<IScriptable>> systemMap;        // 08 - Maps implementation type to instance
+    HashMap<rtti::IType*, Handle<IScriptable>> systemMap;        // 08 - Maps implementation type to instance
     DynArray<Handle<IScriptable>> systemInstances;                 // 38
-    HashMap<CBaseRTTIType*, CBaseRTTIType*> systemImplementations; // 48 - Maps interface type to implementation type
+    HashMap<rtti::IType*, rtti::IType*> systemImplementations; // 48 - Maps interface type to implementation type
     uintptr_t unk78[(0x138 - 0x78) >> 3];                          // 78
 };
 RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
@@ -91,8 +91,8 @@ struct CBaseEngine
     };
     RED4EXT_ASSERT_SIZE(Unk110, 0x10);
 
-    virtual CBaseRTTIType* GetNativeType() = 0;                                                 // 00
-    virtual CBaseRTTIType* GetParentType() = 0;                                                 // 08
+    virtual rtti::IType* GetNativeType() = 0;                                                 // 00
+    virtual rtti::IType* GetParentType() = 0;                                                 // 08
     virtual Memory::IAllocator* GetAllocator() = 0;                                             // 10
     virtual ~CBaseEngine() = 0;                                                                 // 18
     virtual void sub_18() = 0;                                                                  // 20

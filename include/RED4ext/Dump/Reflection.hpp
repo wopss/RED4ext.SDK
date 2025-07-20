@@ -7,11 +7,11 @@
 #include <unordered_set>
 
 #include <RED4ext/CName.hpp>
+#include <RED4ext/rtti/IType.hpp>
 
 namespace RED4ext
 {
 struct CClass;
-struct CBaseRTTIType;
 struct CProperty;
 struct CEnum;
 struct CBitfield;
@@ -21,10 +21,10 @@ namespace RED4ext::GameReflection
 {
 using GetPrefix = std::function<std::string(const std::string&)>;
 using NameSantizer = std::function<std::string(const std::string&, bool&)>;
-using NameTransformer = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
-using DescriptorPath = std::function<std::string(const RED4ext::CBaseRTTIType*)>;
-using NamespaceTransformer = std::function<std::vector<std::string>(const RED4ext::CBaseRTTIType*)>;
-using TypeChecker = std::function<bool(const RED4ext::CBaseRTTIType*)>;
+using NameTransformer = std::function<std::string(const RED4ext::rtti::IType*)>;
+using DescriptorPath = std::function<std::string(const RED4ext::rtti::IType*)>;
+using NamespaceTransformer = std::function<std::vector<std::string>(const RED4ext::rtti::IType*)>;
+using TypeChecker = std::function<bool(const RED4ext::rtti::IType*)>;
 using FixedTypeMapping = std::unordered_map<RED4ext::CName, std::string, RED4ext::CName>;
 
 static constexpr const char* INVALID_CHARACTERS = R"(-|'|\(|\)|\]|\[|/|\.|\s|:)";
@@ -103,12 +103,12 @@ struct BitfieldFileDescriptor
 struct ClassDependencyBuilder
 {
     const RED4ext::CClass* pType;
-    std::unordered_set<const RED4ext::CBaseRTTIType*> mDirect;
-    std::unordered_set<const RED4ext::CBaseRTTIType*> mIndirect;
+    std::unordered_set<const RED4ext::rtti::IType*> mDirect;
+    std::unordered_set<const RED4ext::rtti::IType*> mIndirect;
     std::map<uint64_t, const RED4ext::CProperty*> mPropertyMap;
     std::map<uint64_t, const RED4ext::CProperty*> mHolderPropertyMap;
 
-    void Accumulate(const RED4ext::CBaseRTTIType* type);
+    void Accumulate(const RED4ext::rtti::IType* type);
 
     void ToFileDescriptor(ClassFileDescriptor& aFd, NameTransformer aNameTransformer,
                           NameTransformer aQualifiedTransformer, DescriptorPath aTypeToPath,
@@ -116,7 +116,7 @@ struct ClassDependencyBuilder
                           const FixedTypeMapping& aFixedMapping, bool aVerbose);
 };
 
-std::string TypeToString(const RED4ext::CBaseRTTIType* aType, NameTransformer aNameTransformer, bool aVerbose = false);
+std::string TypeToString(const RED4ext::rtti::IType* aType, NameTransformer aNameTransformer, bool aVerbose = false);
 
 void EmitBulkGenerated(std::filesystem::path aOutPath, const std::set<std::string>& aIncludes);
 

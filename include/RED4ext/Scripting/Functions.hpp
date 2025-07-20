@@ -7,6 +7,7 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Scripting/Script.hpp>
+#include <RED4ext/rtti/IType.hpp>
 
 namespace RED4ext
 {
@@ -16,7 +17,6 @@ struct CStackFrame;
 struct CProperty;
 struct PoolRTTIFunctionAllocator;
 struct IScriptable;
-struct CBaseRTTIType;
 
 struct IFunction
 {
@@ -25,7 +25,7 @@ struct IFunction
         virtual void sub_0() = 0;
         virtual void sub_8() = 0;
         virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult,
-                             const CBaseRTTIType* aResultType) = 0;
+                             const rtti::IType* aResultType) = 0;
     };
 
     virtual Memory::IAllocator* GetAllocator() = 0; // 00
@@ -88,7 +88,7 @@ struct CBaseFunction : IFunction
     int32_t unkAC;                  // AC
 
 private:
-    using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, CBaseRTTIType*);
+    using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, rtti::IType*);
 
     bool Execute_(CStack* aStack);
     static Handler_t GetHandler(uint32_t aIndex);
