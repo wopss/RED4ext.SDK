@@ -51,7 +51,8 @@ enum class GameVersion : int32_t
     CP77_Patch_2_1_Hotfix2 = 2120,
     CP77_Patch_2_1_Hotfix3 = 2137,
     CP77_Patch_2_2 = 2200,
-    Current = 2210,
+    CP77_Patch_2_2_Hotfix1 = 2210,
+    Current = 2300,
 };
 } // namespace game
 using gameGameVersion = game::GameVersion;

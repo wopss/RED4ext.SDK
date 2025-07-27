@@ -17,9 +17,9 @@ struct VehicleCustomMultilayer_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleCustomMultilayer_Record";
     static constexpr const char* ALIAS = "VehicleCustomMultilayer_Record";
 
-    uint8_t unk48[0x90 - 0x48]; // 48
+    uint8_t unk48[0xA0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleCustomMultilayer_Record, 0x90);
+RED4EXT_ASSERT_SIZE(VehicleCustomMultilayer_Record, 0xA0);
 } // namespace game::data
 using gamedataVehicleCustomMultilayer_Record = game::data::VehicleCustomMultilayer_Record;
 using VehicleCustomMultilayer_Record = game::data::VehicleCustomMultilayer_Record;

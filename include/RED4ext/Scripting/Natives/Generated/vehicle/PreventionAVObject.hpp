@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) PreventionAVObject : vehicle::AVBaseObject
     static constexpr const char* NAME = "vehiclePreventionAVObject";
     static constexpr const char* ALIAS = "PreventionAVObject";
 
-    uint8_t unkB90[0xBA0 - 0xB90]; // B90
+    uint8_t unkBA0[0xBB0 - 0xBA0]; // BA0
 };
-RED4EXT_ASSERT_SIZE(PreventionAVObject, 0xBA0);
+RED4EXT_ASSERT_SIZE(PreventionAVObject, 0xBB0);
 } // namespace vehicle
 using vehiclePreventionAVObject = vehicle::PreventionAVObject;
 using PreventionAVObject = vehicle::PreventionAVObject;

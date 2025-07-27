@@ -17,9 +17,9 @@ struct CActionsFactory : game::IActionsFactory
     static constexpr const char* NAME = "gameCActionsFactory";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x2F0 - 0x48]; // 48
+    uint8_t unk48[0x2F8 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(CActionsFactory, 0x2F0);
+RED4EXT_ASSERT_SIZE(CActionsFactory, 0x2F8);
 } // namespace game
 using gameCActionsFactory = game::CActionsFactory;
 } // namespace RED4ext

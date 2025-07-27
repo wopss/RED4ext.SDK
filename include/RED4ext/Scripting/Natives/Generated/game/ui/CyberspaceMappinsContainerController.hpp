@@ -18,7 +18,7 @@ struct CyberspaceMappinsContainerController : game::ui::MappinsContainerControll
     static constexpr const char* ALIAS = "CyberspaceMappinsContainerController";
 
 };
-RED4EXT_ASSERT_SIZE(CyberspaceMappinsContainerController, 0x2E8);
+RED4EXT_ASSERT_SIZE(CyberspaceMappinsContainerController, 0x340);
 } // namespace game::ui
 using gameuiCyberspaceMappinsContainerController = game::ui::CyberspaceMappinsContainerController;
 using CyberspaceMappinsContainerController = game::ui::CyberspaceMappinsContainerController;

@@ -22,7 +22,7 @@ struct SetupScrollBarForAttributeEvent : red::Event
     float minValue; // 48
     float maxValue; // 4C
     float step; // 50
-    uint8_t unk54[0x58 - 0x54]; // 54
+    uint32_t displayType; // 54
 };
 RED4EXT_ASSERT_SIZE(SetupScrollBarForAttributeEvent, 0x58);
 } // namespace game::ui

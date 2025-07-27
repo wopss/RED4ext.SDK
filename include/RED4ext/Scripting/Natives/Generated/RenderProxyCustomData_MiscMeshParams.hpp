@@ -15,9 +15,9 @@ struct __declspec(align(0x10)) RenderProxyCustomData_MiscMeshParams : IRenderPro
     static constexpr const char* NAME = "RenderProxyCustomData_MiscMeshParams";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk10[0xE0 - 0x10]; // 10
+    uint8_t unk10[0x100 - 0x10]; // 10
 };
-RED4EXT_ASSERT_SIZE(RenderProxyCustomData_MiscMeshParams, 0xE0);
+RED4EXT_ASSERT_SIZE(RenderProxyCustomData_MiscMeshParams, 0x100);
 } // namespace RED4ext
 
 // clang-format on

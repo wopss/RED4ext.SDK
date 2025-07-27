@@ -26,7 +26,7 @@ struct ExposureAreaSettings : IAreaSettings
     CurveData<float> exposureSkyImpact; // 1D0
     CurveData<float> exposureCenterImportance; // 208
     float cameraVelocityFaloff; // 240
-    uint8_t unk244[0x248 - 0x244]; // 244
+    float exposureCompensationOffset; // 244
 };
 RED4EXT_ASSERT_SIZE(ExposureAreaSettings, 0x248);
 } // namespace RED4ext

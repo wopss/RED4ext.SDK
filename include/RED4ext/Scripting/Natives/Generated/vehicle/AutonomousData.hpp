@@ -77,16 +77,16 @@ struct AutonomousData : ISerializable
     bool tryDriveAwayFromPlayer; // 168
     uint8_t unk169[0x174 - 0x169]; // 169
     bool clearTrafficOnPath; // 174
-    uint8_t unk175[0x1A4 - 0x175]; // 175
-    bool emergencyPatrol; // 1A4
-    uint8_t unk1A5[0x1A8 - 0x1A5]; // 1A5
-    uint32_t numPatrolLoops; // 1A8
-    bool aggressiveRammingEnabled; // 1AC
-    bool ignoreChaseVehiclesLimit; // 1AD
-    bool boostDrivingStats; // 1AE
-    uint8_t unk1AF[0x1B0 - 0x1AF]; // 1AF
+    uint8_t unk175[0x1A8 - 0x175]; // 175
+    bool emergencyPatrol; // 1A8
+    uint8_t unk1A9[0x1AC - 0x1A9]; // 1A9
+    uint32_t numPatrolLoops; // 1AC
+    bool aggressiveRammingEnabled; // 1B0
+    bool ignoreChaseVehiclesLimit; // 1B1
+    bool boostDrivingStats; // 1B2
+    uint8_t unk1B3[0x1C0 - 0x1B3]; // 1B3
 };
-RED4EXT_ASSERT_SIZE(AutonomousData, 0x1B0);
+RED4EXT_ASSERT_SIZE(AutonomousData, 0x1C0);
 } // namespace vehicle
 using vehicleAutonomousData = vehicle::AutonomousData;
 } // namespace RED4ext

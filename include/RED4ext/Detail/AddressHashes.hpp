@@ -157,7 +157,7 @@ constexpr std::uint32_t ISerializable_Counter = 2630817091;
 
 #pragma region JobDispatcher
 constexpr std::uint32_t JobDispatcher = 1508445968UL;
-constexpr std::uint32_t JobDispatcher_DispatchJob = 0x9C441E82;
+constexpr std::uint32_t JobDispatcher_DispatchJob = 2621709954UL;
 #pragma endregion
 
 #pragma region JobHandle
@@ -174,7 +174,7 @@ constexpr std::uint32_t JobQueue_ctor_FromGroup = 0xE750D4B;
 constexpr std::uint32_t JobQueue_ctor_FromParams = 0x82BD14F8;
 constexpr std::uint32_t JobQueue_dtor = 0x5AF4077C;
 constexpr std::uint32_t JobQueue_Capture = 0x41D12C4;
-constexpr std::uint32_t JobQueue_SyncWait = 0xD9AD0C00;
+constexpr std::uint32_t JobQueue_SyncWait = 3651996672UL;
 #pragma endregion
 
 #pragma region Memory

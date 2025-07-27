@@ -19,14 +19,15 @@ struct VehicleCustomMultilayer
     static constexpr const char* NAME = "vehicleVehicleCustomMultilayer";
     static constexpr const char* ALIAS = "VehicleCustomMultilayer";
 
-    DynArray<CName> affectedComponents; // 00
-    DynArray<CName> excludedComponents; // 10
-    red::ResourceReferenceScriptToken customMlSetup; // 20
-    red::ResourceReferenceScriptToken customMlMask; // 28
-    float coatLayerMin; // 30
-    float coatLayerMax; // 34
+    DynArray<CName> onlyForPlayerVehicleAppearances; // 00
+    DynArray<CName> affectedComponents; // 10
+    DynArray<CName> excludedComponents; // 20
+    red::ResourceReferenceScriptToken customMlSetup; // 30
+    red::ResourceReferenceScriptToken customMlMask; // 38
+    float coatLayerMin; // 40
+    float coatLayerMax; // 44
 };
-RED4EXT_ASSERT_SIZE(VehicleCustomMultilayer, 0x38);
+RED4EXT_ASSERT_SIZE(VehicleCustomMultilayer, 0x48);
 } // namespace vehicle
 using vehicleVehicleCustomMultilayer = vehicle::VehicleCustomMultilayer;
 using VehicleCustomMultilayer = vehicle::VehicleCustomMultilayer;
