@@ -110,9 +110,7 @@ struct DynArray
 
     DynArray& operator=(DynArray&& aOther) noexcept
     {
-        std::swap(m_entries, aOther.m_entries);
-        std::swap(m_size, aOther.m_size);
-        std::swap(m_capacity, aOther.m_capacity);
+        Swap(aOther);
         return *this;
     }
 
@@ -137,17 +135,12 @@ struct DynArray
             return;
         }
 
-        auto distance = std::distance(aFirst, aLast);
-        DifferenceType newSize = std::abs(distance);
+        auto newSize = std::distance(aFirst, aLast);
         if (newSize > MaxSize())
             throw std::length_error("DynArray::Assign: Iterator range cannot exceed MaxSize");
 
         Resize(static_cast<SizeType>(newSize));
-
-        if (distance > 0)
-            std::copy(aFirst, aLast, m_entries);
-        else
-            std::reverse_copy(aLast, aFirst, m_entries);
+        std::copy(aFirst, aLast, m_entries);
     }
 
     template<std::ranges::range TRange>
@@ -165,6 +158,13 @@ struct DynArray
     {
         Resize(aSize);
         std::fill(Begin(), End(), aValue);
+    }
+
+    void Swap(DynArray& aOther) noexcept
+    {
+        std::swap(m_entries, aOther.m_entries);
+        std::swap(m_size, aOther.m_size);
+        std::swap(m_capacity, aOther.m_capacity);
     }
 
     [[nodiscard]] Reference At(SizeType aIndex)
@@ -244,7 +244,7 @@ struct DynArray
         assert(Includes(aPos));
 
         auto distance = std::distance(aFirst, aLast);
-        SizeType insertSize = static_cast<SizeType>(std::abs(distance));
+        SizeType insertSize = static_cast<SizeType>(distance);
         SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
         SizeType newSize = m_size + insertSize;
@@ -256,12 +256,9 @@ struct DynArray
         if (tailSize > 0)
             ShiftEntries(insertPos, insertPos + insertSize, tailSize);
 
-        if (distance > 0)
-            std::copy(aFirst, aLast, insertPos);
-        else
-            std::reverse_copy(aFirst, aLast, insertPos);
-
+        std::copy(aFirst, aLast, insertPos);
         m_size = newSize;
+
         return insertPos;
     }
 
@@ -509,6 +506,35 @@ struct DynArray
     }
 
 #pragma region STL
+    using value_type = ValueType;
+    using reference = Reference;
+    using const_reference = ConstReference;
+    using pointer = Pointer;
+    using const_pointer = ConstPointer;
+
+    using size_type = SizeType;
+    using difference_type = DifferenceType;
+
+    using iterator = Iterator;
+    using const_iterator = ConstIterator;
+    using reverse_iterator = ReverseIterator;
+    using const_reverse_iterator = ConstReverseIterator;
+
+    [[nodiscard]] SizeType size() const noexcept
+    {
+        return Size();
+    }
+
+    void push_back(ConstReference aItem)
+    {
+        PushBack(aItem);
+    }
+
+    void push_back(ValueType&& aItem)
+    {
+        PushBack(std::move(aItem));
+    }
+
     [[nodiscard]] Iterator begin() noexcept
     {
         return Begin();
