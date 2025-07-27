@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <functional>
 #include <memory>
+#include <ranges>
 #include <type_traits>
 
 #include <RED4ext/Common.hpp>
@@ -63,6 +64,13 @@ struct DynArray
         Assign(aFirst, aLast);
     }
 
+    template<std::ranges::range TRange>
+    DynArray(TRange&& aRange, Memory::IAllocator* aAllocator = nullptr)
+        : DynArray(aAllocator)
+    {
+        Assign(aRange);
+    }
+
     DynArray(const DynArray& aOther)
         : DynArray(aOther.GetAllocator())
     {
@@ -102,18 +110,9 @@ struct DynArray
 
     DynArray& operator=(DynArray&& aOther) noexcept
     {
-        if (this != std::addressof(aOther))
-        {
-            Clear();
-            m_entries = aOther.m_entries;
-            m_size = aOther.m_size;
-            m_capacity = aOther.m_capacity;
-
-            aOther.m_entries = *std::bit_cast<Pointer*>(aOther.GetAllocator());
-            aOther.m_capacity = 0;
-            aOther.m_size = 0;
-        }
-
+        std::swap(m_entries, aOther.m_entries);
+        std::swap(m_size, aOther.m_size);
+        std::swap(m_capacity, aOther.m_capacity);
         return *this;
     }
 
@@ -149,6 +148,12 @@ struct DynArray
             std::copy(aFirst, aLast, m_entries);
         else
             std::reverse_copy(aLast, aFirst, m_entries);
+    }
+
+    template<std::ranges::range TRange>
+    void Assign(TRange&& aRange)
+    {
+        Assign(std::ranges::begin(aRange), std::ranges::end(aRange));
     }
 
     void Assign(std::initializer_list<ValueType> aList)
@@ -195,12 +200,12 @@ struct DynArray
 
     void PushBack(ConstReference aItem)
     {
-        EmplaceBack(std::forward<ConstReference>(aItem));
+        EmplaceBack(aItem);
     }
 
     void PushBack(ValueType&& aItem)
     {
-        EmplaceBack(std::forward<ValueType&&>(aItem));
+        EmplaceBack(std::move(aItem));
     }
 
     template<class... TArgs>
@@ -260,9 +265,15 @@ struct DynArray
         return insertPos;
     }
 
+    template<std::ranges::range TRange>
+    Iterator Insert(ConstIterator aPos, TRange&& aRange)
+    {
+        return Insert(aPos, std::ranges::begin(aRange), std::ranges::end(aRange));
+    }
+
     Iterator Insert(ConstIterator aPos, std::initializer_list<ValueType> aList)
     {
-        return Insert(aList.begin(), aList.end());
+        return Insert(aPos, aList.begin(), aList.end());
     }
 
     Iterator Insert(ConstIterator aPos, SizeType aCount, ConstReference aValue)
@@ -309,7 +320,7 @@ struct DynArray
     {
         assert(aPos < End() && Includes(aPos));
 
-        aPos->~ValueType();
+        std::destroy_at(std::addressof(*aPos));
 
         SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End()));
         if (tailSize > 0)
