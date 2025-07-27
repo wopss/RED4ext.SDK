@@ -28,7 +28,7 @@ struct StaticArray
     using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
 
     StaticArray()
-        : size(0)
+        : m_size(0)
     {
     }
 
@@ -54,13 +54,13 @@ struct StaticArray
     Reference operator[](SizeType aIndex)
     {
         assert(aIndex < Size());
-        return entries[aIndex];
+        return m_entries[aIndex];
     }
 
     ConstReference operator[](SizeType aIndex) const
     {
         assert(aIndex < Size());
-        return entries[aIndex];
+        return m_entries[aIndex];
     }
 
     template<std::input_iterator InputIt>
@@ -77,7 +77,7 @@ struct StaticArray
             throw std::length_error("StaticArray::Assign: Iterator range cannot exceed MaxSize");
 
         Resize(newSize);
-        std::copy(aFirst, aLast, entries);
+        std::copy(aFirst, aLast, m_entries);
     }
 
     void Assign(std::initializer_list<ValueType> aList)
@@ -99,7 +99,7 @@ struct StaticArray
         if (aIndex >= Size())
             throw std::out_of_range("StaticArray::At: Position out of range");
 
-        return entries[aIndex];
+        return m_entries[aIndex];
     }
 
     [[nodiscard]] constexpr ConstReference At(SizeType aIndex) const
@@ -107,7 +107,7 @@ struct StaticArray
         if (aIndex >= Size())
             throw std::out_of_range("StaticArray::At: Position out of range");
 
-        return entries[aIndex];
+        return m_entries[aIndex];
     }
 
     [[nodiscard]] Iterator Find(ConstReference aValue) noexcept
@@ -142,7 +142,7 @@ struct StaticArray
             std::uninitialized_default_construct(End(), Begin() + aNewSize);
         }
 
-        size = aNewSize;
+        m_size = aNewSize;
     }
 
     void Clear()
@@ -152,22 +152,22 @@ struct StaticArray
 
     [[nodiscard]] Iterator Begin() noexcept
     {
-        return Iterator(entries);
+        return Iterator(m_entries);
     }
 
     [[nodiscard]] ConstIterator Begin() const noexcept
     {
-        return ConstIterator(entries);
+        return ConstIterator(m_entries);
     }
 
     [[nodiscard]] Iterator End() noexcept
     {
-        return Iterator(entries + size);
+        return Iterator(m_entries + m_size);
     }
 
     [[nodiscard]] ConstIterator End() const noexcept
     {
-        return ConstIterator(entries + size);
+        return ConstIterator(m_entries + m_size);
     }
 
     [[nodiscard]] ReverseIterator RBegin() noexcept
@@ -193,25 +193,25 @@ struct StaticArray
     [[nodiscard]] Reference Front()
     {
         assert(!Empty());
-        return entries[0];
+        return m_entries[0];
     }
 
     [[nodiscard]] ConstReference Front() const
     {
         assert(!Empty());
-        return entries[0];
+        return m_entries[0];
     }
 
     [[nodiscard]] Reference Back()
     {
         assert(!Empty());
-        return entries[size - 1];
+        return m_entries[m_size - 1];
     }
 
     [[nodiscard]] ConstReference Back() const
     {
         assert(!Empty());
-        return entries[size - 1];
+        return m_entries[m_size - 1];
     }
 
     SizeType Capacity() const noexcept
@@ -221,17 +221,17 @@ struct StaticArray
 
     Pointer Data() noexcept
     {
-        return entries;
+        return m_entries;
     }
 
     ConstPointer Data() const noexcept
     {
-        return entries;
+        return m_entries;
     }
 
     [[nodiscard]] bool Empty() const noexcept
     {
-        return Size() == 0;
+        return m_size == 0;
     }
 
     constexpr SizeType MaxSize() const noexcept
@@ -241,7 +241,7 @@ struct StaticArray
 
     SizeType Size() const noexcept
     {
-        return size;
+        return m_size;
     }
 
 #pragma region STL
@@ -286,8 +286,8 @@ struct StaticArray
 #pragma endregion
 
 private:
-    T entries[MAX_LEN]; // 00
-    uint32_t size;
+    T m_entries[MAX_LEN]; // 00
+    uint32_t m_size;
 
     [[nodiscard]] bool Includes(ConstIterator aPos) const noexcept
     {
