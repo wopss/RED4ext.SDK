@@ -245,6 +245,25 @@ struct StaticArray
     }
 
 #pragma region STL
+    using value_type = ValueType;
+    using reference = Reference;
+    using const_reference = ConstReference;
+    using pointer = Pointer;
+    using const_pointer = ConstPointer;
+
+    using size_type = SizeType;
+    using difference_type = DifferenceType;
+
+    using iterator = Iterator;
+    using const_iterator = ConstIterator;
+    using reverse_iterator = ReverseIterator;
+    using const_reverse_iterator = ConstReverseIterator;
+
+    [[nodiscard]] SizeType size() const noexcept
+    {
+        return Size();
+    }
+
     [[nodiscard]] Iterator begin() noexcept
     {
         return Begin();
