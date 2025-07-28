@@ -14,7 +14,10 @@ struct IAllocator;
 }
 
 struct BaseStream;
-struct CString;
+namespace red
+{
+struct String;
+}
 
 struct PostLoadParams
 {
@@ -50,7 +53,7 @@ struct ISerializable
     virtual void* sub_A0();                                                             // A0
     virtual rtti::ClassType* sub_A8();                                                           // A8
     virtual void sub_B0(void* a1);                                                      // B0
-    virtual CString sub_B8();                                                           // B8
+    virtual red::String sub_B8();                                                           // B8
     virtual void* sub_C0(void* a1);                                                     // C0
     virtual void* sub_C8(void* a1);                                                     // C8
     virtual bool CanBeDestructed();                                                     // D0

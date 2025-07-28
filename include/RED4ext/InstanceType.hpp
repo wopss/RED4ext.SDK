@@ -8,7 +8,10 @@
 
 namespace RED4ext
 {
-struct CString;
+namespace red
+{
+struct String;
+}
 struct ISerializable;
 struct IScriptable;
 struct TweakDBID;
@@ -25,7 +28,7 @@ union ScriptInstanceUnion
     RED4EXT_DECLARE_TYPE(int32_t, i32);
     RED4EXT_DECLARE_TYPE(uint64_t, u64);
     RED4EXT_DECLARE_TYPE(int64_t, i64);
-    RED4EXT_DECLARE_TYPE(CString, str);
+    RED4EXT_DECLARE_TYPE(red::String, str);
     RED4EXT_DECLARE_TYPE(TweakDBID, tdbid);
     RED4EXT_DECLARE_TYPE(ItemID, itemid);
     RED4EXT_DECLARE_TYPE(ISerializable, serializable);
