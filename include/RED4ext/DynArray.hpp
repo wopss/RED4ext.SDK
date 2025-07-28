@@ -18,6 +18,9 @@ namespace Memory
 struct IAllocator;
 }
 
+namespace red 
+{
+
 template<typename T>
 struct DynArray
 {
@@ -351,7 +354,14 @@ private:
         }
     }
 };
+
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
 RED4EXT_ASSERT_OFFSET(DynArray<void*>, capacity, 0x8);
 RED4EXT_ASSERT_OFFSET(DynArray<void*>, size, 0xC);
+
+} // namespace red
+
+template <typename T>
+using DynArray = red::DynArray<T>;
+
 } // namespace RED4ext
