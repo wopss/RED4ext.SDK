@@ -362,6 +362,6 @@ RED4EXT_ASSERT_OFFSET(DynArray<void*>, size, 0xC);
 } // namespace red
 
 template <typename T>
-using DynArray = red::DynArray<T>;
+using DynArray [[deprecated("Use red::DynArray")]] = red::DynArray<T>;
 
 } // namespace RED4ext
