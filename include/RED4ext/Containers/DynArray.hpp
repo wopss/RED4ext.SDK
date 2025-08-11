@@ -220,7 +220,7 @@ struct DynArray
     {
         assert(IsInRange(aPos));
 
-        SizeType posIdx = static_cast<SizeType>(std::distance(Begin(), aPos));
+        SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
         SizeType newSize = m_size + 1;
         Reserve(newSize);
 
