@@ -110,17 +110,12 @@ struct StaticArray
         return m_entries[aIndex];
     }
 
-    [[nodiscard]] Iterator Find(ConstReference aValue) noexcept
+    [[nodiscard]] Iterator Find(ConstReference aValue) const
     {
         return Iterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] ConstIterator Find(ConstReference aValue) const noexcept
-    {
-        return ConstIterator(std::find(Begin(), End(), aValue));
-    }
-
-    [[nodiscard]] bool Contains(ConstReference aValue) const noexcept
+    [[nodiscard]] bool IsInRange(ConstReference aValue) const noexcept
     {
         return Find(aValue) != End();
     }

@@ -189,11 +189,6 @@ struct DynArray
         return Iterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] ConstIterator Find(ConstReference aValue) const
-    {
-        return ConstIterator(std::find(Begin(), End(), aValue));
-    }
-
     [[nodiscard]] bool IsInRange(ConstReference aValue) const
     {
         return Find(aValue) != End();
