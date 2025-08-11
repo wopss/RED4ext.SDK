@@ -16,7 +16,7 @@ RED4EXT_INLINE bool RED4ext::red::TagList::IsEmpty() const
 
 RED4EXT_INLINE bool RED4ext::red::TagList::Contains(CName aTag) const
 {
-    return tags.Contains(aTag);
+    return tags.IsInRange(aTag);
 }
 
 RED4EXT_INLINE bool RED4ext::red::TagList::Contains(const DynArray<CName>& aTags) const
