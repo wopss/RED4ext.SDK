@@ -83,21 +83,6 @@ struct Span
         return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] constexpr bool Contains(ConstReference aValue) const noexcept
-    {
-        return Find(aValue) != End();
-    }
-
-    [[nodiscard]] bool Contains(ConstIterator aPos) const noexcept
-    {
-        return Begin() <= aPos && aPos <= End();
-    }
-
-    [[nodiscard]] bool Contains(ConstIterator aFirst, ConstIterator aLast) const noexcept
-    {
-        return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
-    }
-
     [[nodiscard]] constexpr Reference Front()
     {
         assert(!Empty());

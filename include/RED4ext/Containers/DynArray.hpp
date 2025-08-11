@@ -92,6 +92,7 @@ struct DynArray
         if (m_capacity)
         {
             Clear();
+            // this is done this way to match engine behavior
             auto allocator = *std::bit_cast<Pointer*>(GetAllocator());
             std::bit_cast<Memory::IAllocator*>(&allocator)->Free(m_entries);
             m_entries = allocator;
@@ -183,17 +184,17 @@ struct DynArray
         return m_entries[aIndex];
     }
 
-    [[nodiscard]] Iterator Find(ConstReference aValue) noexcept
+    [[nodiscard]] Iterator Find(ConstReference aValue) const
     {
         return Iterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] ConstIterator Find(ConstReference aValue) const noexcept
+    [[nodiscard]] ConstIterator Find(ConstReference aValue) const
     {
         return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] bool Contains(ConstReference aValue) const noexcept
+    [[nodiscard]] bool IsInRange(ConstReference aValue) const
     {
         return Find(aValue) != End();
     }
@@ -217,9 +218,9 @@ struct DynArray
     template<class... TArgs>
     Iterator Emplace(ConstIterator aPos, TArgs&&... aArgs)
     {
-        assert(Includes(aPos));
+        assert(IsInRange(aPos));
 
-        SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
+        SizeType posIdx = static_cast<SizeType>(std::distance(Begin(), aPos));
         SizeType newSize = m_size + 1;
         Reserve(newSize);
 
@@ -241,7 +242,7 @@ struct DynArray
     template<std::input_iterator InputIt>
     Iterator Insert(ConstIterator aPos, InputIt aFirst, InputIt aLast)
     {
-        assert(Includes(aPos));
+        assert(IsInRange(aPos));
 
         auto distance = std::distance(aFirst, aLast);
         SizeType insertSize = static_cast<SizeType>(distance);
@@ -275,7 +276,7 @@ struct DynArray
 
     Iterator Insert(ConstIterator aPos, SizeType aCount, ConstReference aValue)
     {
-        assert(Includes(aPos));
+        assert(IsInRange(aPos));
 
         SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
@@ -315,7 +316,7 @@ struct DynArray
 
     Iterator Erase(Iterator aPos)
     {
-        assert(aPos < End() && Includes(aPos));
+        assert(aPos < End() && IsInRange(aPos));
 
         std::destroy_at(std::addressof(*aPos));
 
@@ -329,23 +330,21 @@ struct DynArray
 
     Iterator Erase(ConstIterator aFirst, ConstIterator aLast)
     {
+        assert(aFirst < aLast);
+        assert(aLast < End() && IsInRange(aFirst, aLast));
+
         if (aFirst == aLast)
             return aFirst;
 
-        ConstIterator first = (std::min)(aFirst, aLast);
-        ConstIterator last = (std::max)(aFirst, aLast);
+        std::destroy(aFirst, aLast);
 
-        assert(last < End() && Includes(first, last));
-
-        std::destroy(first, last);
-
-        SizeType tailSize = static_cast<SizeType>(std::distance(last, End()));
+        SizeType tailSize = static_cast<SizeType>(std::distance(aLast, End()));
         if (tailSize > 0)
-            ShiftEntries(last, first, tailSize);
+            ShiftEntries(aLast, aFirst, tailSize);
 
-        m_size -= static_cast<SizeType>(std::distance(first, last));
+        m_size -= static_cast<SizeType>(std::distance(aFirst, aLast));
 
-        return tailSize == 0 ? End() : first;
+        return tailSize == 0 ? End() : aFirst;
     }
 
     bool Remove(ConstReference aItem)
@@ -492,8 +491,6 @@ struct DynArray
 
     [[nodiscard]] constexpr SizeType MaxSize() const noexcept
     {
-#undef max // avoid conflict with minmax
-#undef min
         static constexpr auto maxSize =
             std::min(std::numeric_limits<SizeType>::max(),
                      static_cast<SizeType>(std::numeric_limits<uint32_t>::max() / sizeof(ValueType)));
@@ -556,16 +553,13 @@ struct DynArray
     }
 #pragma endregion
 private:
-    T* m_entries;        // 00
-    uint32_t m_capacity; // 08
-    uint32_t m_size;     // 0C
 
-    [[nodiscard]] bool Includes(ConstIterator aPos) const noexcept
+    [[nodiscard]] bool IsInRange(ConstIterator aPos) const noexcept
     {
         return Begin() <= aPos && aPos <= End();
     }
 
-    [[nodiscard]] bool Includes(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    [[nodiscard]] bool IsInRange(ConstIterator aFirst, ConstIterator aLast) const noexcept
     {
         return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
     }
@@ -616,6 +610,10 @@ private:
         func(this, aNewCapacity, sizeof(ValueType), alignment >= 8 ? alignment : 8,
              isTrivialRealloc ? nullptr : DynArray::MoveEntries);
     }
+
+    T* m_entries;        // 00
+    uint32_t m_capacity; // 08
+    uint32_t m_size;     // 0C
 };
 RED4EXT_ASSERT_SIZE(DynArray<void*>, 0x10);
 } // namespace RED4ext

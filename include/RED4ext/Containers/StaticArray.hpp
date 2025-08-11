@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-template<typename T, uint32_t MAX_LEN>
+template<typename T, uint32_t MaxSize>
 struct StaticArray
 {
     using ValueType = T;
@@ -236,7 +236,7 @@ struct StaticArray
 
     constexpr SizeType MaxSize() const noexcept
     {
-        return MAX_LEN;
+        return MaxSize;
     }
 
     SizeType Size() const noexcept
@@ -286,15 +286,15 @@ struct StaticArray
 #pragma endregion
 
 private:
-    T m_entries[MAX_LEN]; // 00
+    T m_entries[MaxSize]; // 00
     uint32_t m_size;
 
-    [[nodiscard]] bool Includes(ConstIterator aPos) const noexcept
+    [[nodiscard]] bool IsInRange(ConstIterator aPos) const noexcept
     {
         return Begin() <= aPos && aPos <= End();
     }
 
-    [[nodiscard]] bool Includes(ConstIterator aFirst, ConstIterator aLast) const noexcept
+    [[nodiscard]] bool IsInRange(ConstIterator aFirst, ConstIterator aLast) const noexcept
     {
         return Begin() <= (std::min)(aFirst, aLast) && (std::max)(aLast, aFirst) <= End();
     }
