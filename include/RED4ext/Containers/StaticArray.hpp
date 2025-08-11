@@ -110,7 +110,7 @@ struct StaticArray
         return m_entries[aIndex];
     }
 
-    [[nodiscard]] Iterator Find(ConstReference aValue) const
+    [[nodiscard]] Iterator Find(ConstReference aValue)
     {
         return Iterator(std::find(Begin(), End(), aValue));
     }

@@ -39,7 +39,7 @@ RED4EXT_INLINE bool RED4ext::red::TagList::Contains(const TagList& aTags) const
 
 RED4EXT_INLINE void RED4ext::red::TagList::Add(CName aTag)
 {
-    if (!tags.Contains(aTag))
+    if (!Contains(aTag))
     {
         tags.EmplaceBack(aTag);
     }
