@@ -73,9 +73,14 @@ struct Span
         return Data()[aIndex];
     }
 
-    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) const 
+    [[nodiscard]] constexpr Iterator Find(ConstReference aValue) 
     {
         return Iterator(std::find(Begin(), End(), aValue));
+    }
+
+    [[nodiscard]] ConstIterator Find(ConstReference aValue) const
+    {
+        return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
     [[nodiscard]] constexpr Reference Front()
