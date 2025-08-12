@@ -555,7 +555,6 @@ struct DynArray
     }
 #pragma endregion
 private:
-
     [[nodiscard]] bool IsInRange(ConstIterator aPos) const noexcept
     {
         return Begin() <= aPos && aPos <= End();
