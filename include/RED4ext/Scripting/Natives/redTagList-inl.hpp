@@ -11,12 +11,12 @@ RED4EXT_INLINE RED4ext::red::TagList::operator bool() const noexcept
 
 RED4EXT_INLINE bool RED4ext::red::TagList::IsEmpty() const
 {
-    return !tags.size;
+    return tags.Empty();
 }
 
 RED4EXT_INLINE bool RED4ext::red::TagList::Contains(CName aTag) const
 {
-    return tags.Contains(aTag);
+    return tags.IsInRange(aTag);
 }
 
 RED4EXT_INLINE bool RED4ext::red::TagList::Contains(const DynArray<CName>& aTags) const
@@ -39,7 +39,7 @@ RED4EXT_INLINE bool RED4ext::red::TagList::Contains(const TagList& aTags) const
 
 RED4EXT_INLINE void RED4ext::red::TagList::Add(CName aTag)
 {
-    if (!tags.Contains(aTag))
+    if (!Contains(aTag))
     {
         tags.EmplaceBack(aTag);
     }
