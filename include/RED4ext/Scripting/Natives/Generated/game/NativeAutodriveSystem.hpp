@@ -17,9 +17,9 @@ struct NativeAutodriveSystem : game::ScriptableSystem
     static constexpr const char* NAME = "gameNativeAutodriveSystem";
     static constexpr const char* ALIAS = "NativeAutodriveSystem";
 
-    uint8_t unk530[0x550 - 0x530]; // 530
+    uint8_t unk530[0x570 - 0x530]; // 530
 };
-RED4EXT_ASSERT_SIZE(NativeAutodriveSystem, 0x550);
+RED4EXT_ASSERT_SIZE(NativeAutodriveSystem, 0x570);
 } // namespace game
 using gameNativeAutodriveSystem = game::NativeAutodriveSystem;
 using NativeAutodriveSystem = game::NativeAutodriveSystem;
