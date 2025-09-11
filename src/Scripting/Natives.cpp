@@ -2867,6 +2867,10 @@
 #include <RED4ext/Scripting/Natives/Generated/vehicle/CameraManager.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/CameraPerspective.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/CarBaseObject.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/CinematicCameraShot.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/CinematicCameraShotEffect.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/CinematicCameraShotGroup.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/CinematicCameraShotStopCondition.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/DestructionPSData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/DisabledReason.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/ELightMode.hpp>
@@ -2887,6 +2891,7 @@
 #include <RED4ext/Scripting/Natives/Generated/vehicle/PlayerToAIInterpolationType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/PoliceStrategy.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/SummonState.hpp>
+#include <RED4ext/Scripting/Natives/Generated/vehicle/TimedCinematicCameraShotEffect.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/UnlockedVehicle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleAppearanceToDecalsName.hpp>
 #include <RED4ext/Scripting/Natives/Generated/vehicle/VehicleClearCoatOverrides.hpp>
