@@ -7,16 +7,15 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Scripting/Script.hpp>
+#include <RED4ext/rtti/IType.hpp>
 
 namespace RED4ext
 {
-struct CClass;
 struct CStack;
 struct CStackFrame;
 struct CProperty;
 struct PoolRTTIFunctionAllocator;
 struct IScriptable;
-struct CBaseRTTIType;
 
 struct IFunction
 {
@@ -25,12 +24,12 @@ struct IFunction
         virtual void sub_0() = 0;
         virtual void sub_8() = 0;
         virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult,
-                             const CBaseRTTIType* aResultType) = 0;
+                             const rtti::IType* aResultType) = 0;
     };
 
     virtual Memory::IAllocator* GetAllocator() = 0; // 00
     virtual ~IFunction() = 0;                       // 08
-    virtual CClass* GetParent() = 0;                // 10
+    virtual rtti::ClassType* GetParent() = 0;                // 10
     virtual uint32_t GetRegIndex() = 0;             // 18
     virtual Invokable* GetInvokable() = 0; // 20 - Returns an object, vf obj+0x20 is the function to invoke only used
                                            // if static func
@@ -88,7 +87,7 @@ struct CBaseFunction : IFunction
     int32_t unkAC;                  // AC
 
 private:
-    using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, CBaseRTTIType*);
+    using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, rtti::IType*);
 
     bool Execute_(CStack* aStack);
     static Handler_t GetHandler(uint32_t aIndex);
@@ -127,7 +126,7 @@ RED4EXT_ASSERT_OFFSET(CGlobalFunction, regIndex, 0xB0);
 struct CClassFunction : CBaseFunction
 {
     template<typename T>
-    static CClassFunction* Create(CClass* aParent, const char* aFullName, const char* aShortName,
+    static CClassFunction* Create(rtti::ClassType* aParent, const char* aFullName, const char* aShortName,
                                   ScriptingFunction_t<T> aFunc, Flags aFlags = {})
     {
         Memory::RTTIFunctionAllocator allocator;
@@ -137,7 +136,7 @@ struct CClassFunction : CBaseFunction
             auto fullName = CNamePool::Add(aFullName);
             auto shortName = CNamePool::Add(aShortName);
 
-            using func_t = CClassFunction* (*)(CClassFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
+            using func_t = CClassFunction* (*)(CClassFunction*, rtti::ClassType*, CName, CName, ScriptingFunction_t<T>, Flags);
             static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClassFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
@@ -145,7 +144,7 @@ struct CClassFunction : CBaseFunction
         return memory;
     }
 
-    CClass* parent;    // B0
+    rtti::ClassType* parent;    // B0
     uint32_t regIndex; // B8
 };
 RED4EXT_ASSERT_SIZE(CClassFunction, 0xC0);
@@ -155,7 +154,7 @@ RED4EXT_ASSERT_OFFSET(CClassFunction, regIndex, 0xB8);
 struct CClassStaticFunction : CClassFunction
 {
     template<typename T>
-    static CClassStaticFunction* Create(CClass* aParent, const char* aFullName, const char* aShortName,
+    static CClassStaticFunction* Create(rtti::ClassType* aParent, const char* aFullName, const char* aShortName,
                                         ScriptingFunction_t<T> aFunc, Flags aFlags = {})
     {
         Memory::RTTIFunctionAllocator allocator;
@@ -166,7 +165,7 @@ struct CClassStaticFunction : CClassFunction
             auto shortName = CNamePool::Add(aShortName);
 
             using func_t =
-                CClassStaticFunction* (*)(CClassStaticFunction*, CClass*, CName, CName, ScriptingFunction_t<T>, Flags);
+                CClassStaticFunction* (*)(CClassStaticFunction*, rtti::ClassType*, CName, CName, ScriptingFunction_t<T>, Flags);
             static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClassStaticFunction_ctor);
             func(memory, aParent, fullName, shortName, aFunc, aFlags);
         }
@@ -178,7 +177,7 @@ RED4EXT_ASSERT_SIZE(CClassStaticFunction, 0xC0);
 
 struct CScriptedFunction : CBaseFunction
 {
-    CClass* parent; // B0
+    rtti::ClassType* parent; // B0
 };
 RED4EXT_ASSERT_SIZE(CScriptedFunction, 0xB8);
 RED4EXT_ASSERT_OFFSET(CScriptedFunction, parent, 0xB0);
