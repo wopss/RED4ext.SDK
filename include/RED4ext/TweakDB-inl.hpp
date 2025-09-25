@@ -320,69 +320,21 @@ RED4EXT_INLINE RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetFlatValue(Tweak
 
 RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStackType)
 {
-    uintptr_t flatAlignment = aStackType.type->GetAlignment();
-    if (flatAlignment < 8)
-    {
-        flatAlignment = 8;
-    }
+    std::lock_guard<SharedSpinLock> _(mutex00);
 
+    UpsizeFlatDataBuffer(MaxFlatDataBufferSize);
+
+    uintptr_t flatAlignment = (std::min)(aStackType.type->GetAlignment(), 8u);
     uintptr_t flatValueSize = RED4ext::AlignUp(8ull /* vftable */ + aStackType.type->GetSize(), flatAlignment);
     uintptr_t flatDataBufferEnd_Aligned = RED4ext::AlignUp(flatDataBufferEnd, flatAlignment);
 
+    if (AllocateFlatValue(reinterpret_cast<void*>(flatDataBufferEnd_Aligned), aStackType))
     {
-        std::lock_guard<SharedSpinLock> _(mutex00);
-
-        if (flatDataBufferEnd_Aligned + flatValueSize > flatDataBuffer + flatDataBufferCapacity)
-        {
-            Memory::GMPL_TDB_DataAllocator allocator;
-
-            // max possible size
-            if (flatDataBufferCapacity == 0x00FFFFFF)
-                return -1;
-
-            uint32_t currentSize = static_cast<uint32_t>(flatDataBufferEnd - flatDataBuffer);
-            uint32_t newCapacity = flatDataBufferCapacity + (1000 * (8 + sizeof(DynArray<int>)));
-            if (newCapacity > 0x00FFFFFF)
-            {
-                newCapacity = 0x00FFFFFF;
-                if (flatDataBufferEnd_Aligned + flatValueSize > (flatDataBuffer + newCapacity))
-                {
-                    // If it won't be enough
-                    return -1;
-                }
-            }
-
-            auto result = allocator.AllocAligned(newCapacity, 8);
-            if (result.memory == nullptr)
-                return -1;
-            else if (result.size > 0x00FFFFFF)
-                result.size = 0x00FFFFFF;
-
-            auto* oldFlatDataBuffer = reinterpret_cast<void*>(flatDataBuffer);
-            memcpy(result.memory, oldFlatDataBuffer, currentSize);
-            SetFlatDataBuffer(result.memory, currentSize, static_cast<uint32_t>(result.size));
-            flatDataBufferEnd_Aligned = (7 + flatDataBufferEnd) & ~7;
-
-            // Race condition when freeing old buffer
-            // Undefined behavior if the game is in the process of dereferencing the buffer
-            // Mutex locking is useless. Game accesses the buffer via a static pointer
-            // pRTTIAllocator->Free(oldFlatDataBuffer);
-
-            // Delay freeing. Consumes more memory but less risky
-            static void* lastFlatDataBuffer = nullptr;
-            if (lastFlatDataBuffer != nullptr)
-                allocator.Free(lastFlatDataBuffer);
-            lastFlatDataBuffer = oldFlatDataBuffer;
-        }
-
-        if (AllocateFlatValue(reinterpret_cast<void*>(flatDataBufferEnd_Aligned), aStackType))
-        {
-            flatDataBufferEnd = flatDataBufferEnd_Aligned + flatValueSize;
-            return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned)->ToTDBOffset();
-        }
-
-        return -1;
+        flatDataBufferEnd = flatDataBufferEnd_Aligned + flatValueSize;
+        return reinterpret_cast<FlatValue*>(flatDataBufferEnd_Aligned)->ToTDBOffset();
     }
+
+    return -1;
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::AllocateFlatValue(void* aBuffer, const CStackType& aStackType)
@@ -426,7 +378,7 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(void* aBuffer, uint32_t 
     uintptr_t oldFlatDataBuffer = flatDataBuffer;
     flatDataBuffer = reinterpret_cast<uintptr_t>(aBuffer);
     flatDataBufferEnd = flatDataBuffer + aSize;
-    flatDataBufferCapacity = aCapacity;
+    flatDataBufferCapacity = (std::max)(aCapacity, MaxFlatDataBufferSize);
     staticFlatDataBuffer = flatDataBuffer;
 
     // assumes mutex00 is locked
@@ -439,6 +391,41 @@ RED4EXT_INLINE void RED4ext::TweakDB::SetFlatDataBuffer(void* aBuffer, uint32_t 
             int32_t offset = static_cast<int32_t>(reinterpret_cast<uintptr_t>(defaultFlatValue) - oldFlatDataBuffer);
             defaultFlatValue = reinterpret_cast<RED4ext::TweakDB::FlatValue*>(flatDataBuffer + offset);
         });
+}
+
+RED4EXT_INLINE void RED4ext::TweakDB::UpsizeFlatDataBufferToMax()
+{
+    std::lock_guard<SharedSpinLock> _(mutex00);
+
+    UpsizeFlatDataBuffer(MaxFlatDataBufferSize);
+}
+
+RED4EXT_INLINE void RED4ext::TweakDB::UpsizeFlatDataBuffer(uint32_t aCapacity)
+{
+    if (flatDataBufferCapacity >= aCapacity || aCapacity > MaxFlatDataBufferSize)
+        return;
+
+    Memory::GMPL_TDB_DataAllocator allocator;
+
+    auto result = allocator.AllocAligned(aCapacity, 8);
+    if (result.memory == nullptr)
+        return;
+
+    auto currentSize = static_cast<uint32_t>(flatDataBufferEnd - flatDataBuffer);
+    auto* oldFlatDataBuffer = reinterpret_cast<void*>(flatDataBuffer);
+    memcpy(result.memory, oldFlatDataBuffer, currentSize);
+    SetFlatDataBuffer(result.memory, currentSize, static_cast<uint32_t>(result.size));
+
+    // Race condition when freeing old buffer
+    // Undefined behavior if the game is in the process of dereferencing the buffer
+    // Mutex locking is useless. Game accesses the buffer via a static pointer
+    // pRTTIAllocator->Free(oldFlatDataBuffer);
+
+    // Delay freeing. Consumes more memory but less risky
+    static void* lastFlatDataBuffer = nullptr;
+    if (lastFlatDataBuffer != nullptr)
+        allocator.Free(lastFlatDataBuffer);
+    lastFlatDataBuffer = oldFlatDataBuffer;
 }
 
 RED4EXT_INLINE const RED4ext::TweakDB::FlatValue* RED4ext::TweakDB::GetDefaultFlatValue(CName aTypeName)
