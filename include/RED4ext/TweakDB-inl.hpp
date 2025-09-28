@@ -324,7 +324,7 @@ RED4EXT_INLINE int32_t RED4ext::TweakDB::CreateFlatValue(const CStackType& aStac
 
     UpsizeFlatDataBuffer(MaxFlatDataBufferSize);
 
-    uintptr_t flatAlignment = (std::min)(aStackType.type->GetAlignment(), 8u);
+    uintptr_t flatAlignment = (std::max)(aStackType.type->GetAlignment(), 8u);
     uintptr_t flatValueSize = RED4ext::AlignUp(8ull /* vftable */ + aStackType.type->GetSize(), flatAlignment);
     uintptr_t flatDataBufferEnd_Aligned = RED4ext::AlignUp(flatDataBufferEnd, flatAlignment);
 
