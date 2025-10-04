@@ -4,18 +4,18 @@
 
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/ISerializable.hpp>
+#include <RED4ext/rtti/ClassType.hpp>
 
 namespace RED4ext
 {
 struct CBaseFunction;
-struct CClass;
 
 struct IScriptable : ISerializable
 {
     IScriptable();
 
     ~IScriptable() override;
-    CClass* GetType() override;
+    rtti::ClassType* GetType() override;
 
     virtual void sub_D8(int64_t a1, int64_t a2); // D8
     virtual void sub_E0();                       // E0
@@ -30,7 +30,7 @@ struct IScriptable : ISerializable
     void* GetValueHolder();
     void DestructValueHolder();
 
-    CClass* nativeType; // 30
+    rtti::ClassType* nativeType; // 30
     void* valueHolder;  // 38
 };
 RED4EXT_ASSERT_SIZE(IScriptable, 0x40);

@@ -33,7 +33,7 @@ struct CommandListContext
     void Close();
     void FlushPendingBarriers();
 
-    CString debugName;                                               // 000
+    red::String debugName;                                           // 000
     uint64_t hash;                                                   // 020
     Microsoft::WRL::ComPtr<ID3D12CommandAllocator> commandAllocator; // 028
     Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> commandList;   // 030

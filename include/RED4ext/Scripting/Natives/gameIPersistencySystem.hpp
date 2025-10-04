@@ -22,7 +22,7 @@ struct IPersistencySystem : IGameSystem
     static constexpr const char* ALIAS = "IGamePersistencySystem";
 
     virtual void* GetPersistentState(Handle<PersistentState>& aState, const PersistentID& aPersistentID,
-                                     CClass* aPersistentStateType, bool aCreateState) = 0;      // 1A8
+                                     rtti::ClassType* aPersistentStateType, bool aCreateState) = 0;      // 1A8
     virtual void sub_1B0() = 0;                                                                 // 1B0
     virtual void sub_1B8() = 0;                                                                 // 1B8
     virtual void sub_1C0() = 0;                                                                 // 1C0
