@@ -37,6 +37,8 @@ namespace RED4ext
 
 struct TweakDB
 {
+    static constexpr uint32_t MaxFlatDataBufferSize = 0x00FFFFFF;
+
     enum class GroupTag : int8_t
     {
         None = 0,
@@ -224,12 +226,15 @@ struct TweakDB
     // This will return null if the game never needed the default value
     const FlatValue* GetDefaultFlatValue(CName aTypeName);
 
+    void UpsizeFlatDataBufferToMax();
+
     static TweakDB* Get();
 
 private:
     // Multithreads may lead to undefined behavior
     void SetFlatDataBuffer(void* aBuffer, uint32_t aSize, uint32_t aCapacity);
     bool AllocateFlatValue(void* aBuffer, const CStackType& aStackType);
+    void UpsizeFlatDataBuffer(uint32_t aCapacity);
 };
 RED4EXT_ASSERT_OFFSET(TweakDB, mutex00, 0x20);
 RED4EXT_ASSERT_OFFSET(TweakDB, flats, 0x40);
