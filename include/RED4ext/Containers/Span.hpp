@@ -19,8 +19,8 @@ struct Span
     using Pointer = ValueType*;
     using ConstPointer = const Pointer;
 
-    using SizeType = std::uint32_t;
     using DifferenceType = std::ptrdiff_t;
+    using SizeType = DifferenceType;
 
     using Iterator = Detail::ArrayIterator<ValueType, Span>;
     using ConstIterator = Detail::ArrayIterator<const ValueType, Span>;
@@ -162,7 +162,7 @@ struct Span
         return beginPtr;
     }
 
-    [[nodiscard]] constexpr DifferenceType Size() const
+    [[nodiscard]] constexpr SizeType Size() const
     {
         return End() - Begin();
     }
@@ -185,27 +185,27 @@ struct Span
     using reverse_iterator = ReverseIterator;
     using const_reverse_iterator = ConstReverseIterator;
 
-    [[nodiscard]] DifferenceType size() const noexcept
+    [[nodiscard]] size_type size() const noexcept
     {
         return Size();
     }
 
-    [[nodiscard]] constexpr Iterator begin() noexcept
+    [[nodiscard]] constexpr iterator begin() noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] constexpr ConstIterator begin() const noexcept
+    [[nodiscard]] constexpr const_iterator begin() const noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] constexpr Iterator end() noexcept
+    [[nodiscard]] constexpr iterator end() noexcept
     {
         return End();
     }
 
-    [[nodiscard]] constexpr ConstIterator end() const noexcept
+    [[nodiscard]] constexpr const_iterator end() const noexcept
     {
         return End();
     }

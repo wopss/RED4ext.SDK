@@ -137,8 +137,8 @@ struct DynArray
             return;
         }
 
-        auto distance = std::distance(aFirst, aLast);
-        DifferenceType newSize = std::abs(distance);
+        DifferenceType distance = std::distance(aFirst, aLast);
+        SizeType newSize = std::abs(distance);
         if (newSize > MaxSize())
             throw std::length_error("DynArray::Assign: Iterator range cannot exceed MaxSize");
 
@@ -183,17 +183,17 @@ struct DynArray
         return m_entries[aIndex];
     }
 
-    [[nodiscard]] Iterator Find(ConstReference aValue) noexcept
+    [[nodiscard]] Iterator Find(ConstReference aValue)
     {
         return Iterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] ConstIterator Find(ConstReference aValue) const noexcept
+    [[nodiscard]] ConstIterator Find(ConstReference aValue) const
     {
         return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] bool Contains(ConstReference aValue) const noexcept
+    [[nodiscard]] bool IsInRange(ConstReference aValue) const
     {
         return Find(aValue) != End();
     }
@@ -495,10 +495,8 @@ struct DynArray
 
     [[nodiscard]] constexpr SizeType MaxSize() const noexcept
     {
-#undef max // avoid conflict with minmax
-#undef min
         static constexpr auto maxSize =
-            std::min(std::numeric_limits<SizeType>::max(),
+            (std::min)(std::numeric_limits<SizeType>::max(),
                      static_cast<SizeType>(std::numeric_limits<uint32_t>::max() / sizeof(ValueType)));
         return maxSize;
     }
@@ -509,22 +507,41 @@ struct DynArray
     }
 
 #pragma region STL
-    [[nodiscard]] Iterator begin() noexcept
+    using value_type = ValueType;
+    using reference = Reference;
+    using const_reference = ConstReference;
+    using pointer = Pointer;
+    using const_pointer = ConstPointer;
+
+    using size_type = SizeType;
+    using difference_type = DifferenceType;
+
+    using iterator = Iterator;
+    using const_iterator = ConstIterator;
+    using reverse_iterator = ReverseIterator;
+    using const_reverse_iterator = ConstReverseIterator;
+
+    [[nodiscard]] size_type size() const noexcept
+    {
+        return Size();
+    }
+
+    [[nodiscard]] iterator begin() noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] ConstIterator begin() const noexcept
+    [[nodiscard]] const_iterator begin() const noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] Iterator end() noexcept
+    [[nodiscard]] iterator end() noexcept
     {
         return End();
     }
 
-    [[nodiscard]] ConstIterator end() const noexcept
+    [[nodiscard]] const_iterator end() const noexcept
     {
         return End();
     }

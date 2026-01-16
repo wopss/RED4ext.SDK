@@ -10,7 +10,7 @@
 
 namespace RED4ext
 {
-template<typename T, uint32_t MAXSIZE>
+template<typename T, uint32_t N>
 struct StaticArray
 {
     using ValueType = T;
@@ -120,7 +120,7 @@ struct StaticArray
         return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] bool IsInRange(ConstReference aValue) const noexcept
+    [[nodiscard]] bool IsInRange(ConstReference aValue) const
     {
         return Find(aValue) != End();
     }
@@ -236,7 +236,7 @@ struct StaticArray
 
     constexpr SizeType MaxSize() const noexcept
     {
-        return MAXSIZE;
+        return N;
     }
 
     SizeType Size() const noexcept
@@ -259,34 +259,34 @@ struct StaticArray
     using reverse_iterator = ReverseIterator;
     using const_reverse_iterator = ConstReverseIterator;
 
-    [[nodiscard]] SizeType size() const noexcept
+    [[nodiscard]] size_type size() const noexcept
     {
         return Size();
     }
 
-    [[nodiscard]] Iterator begin() noexcept
+    [[nodiscard]] iterator begin() noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] ConstIterator begin() const noexcept
+    [[nodiscard]] const_iterator begin() const noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] Iterator end() noexcept
+    [[nodiscard]] iterator end() noexcept
     {
         return End();
     }
 
-    [[nodiscard]] ConstIterator end() const noexcept
+    [[nodiscard]] const_iterator end() const noexcept
     {
         return End();
     }
 #pragma endregion
 
 private:
-    T m_entries[MAXSIZE]; // 00
+    T m_entries[N]; // 00
     uint32_t m_size;
 
     [[nodiscard]] bool IsInRange(ConstIterator aPos) const noexcept
