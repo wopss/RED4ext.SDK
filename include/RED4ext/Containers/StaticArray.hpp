@@ -72,7 +72,7 @@ struct StaticArray
             return;
         }
 
-        auto newSize = std::distance(aFirst, aLast);
+        const SizeType newSize = static_cast<SizeType>(std::distance(aFirst, aLast));
         if (newSize > MaxSize())
             throw std::length_error("StaticArray::Assign: Iterator range cannot exceed MaxSize");
 

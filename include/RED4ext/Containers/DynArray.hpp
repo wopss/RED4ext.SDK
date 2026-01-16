@@ -137,12 +137,12 @@ struct DynArray
             return;
         }
 
-        DifferenceType distance = std::distance(aFirst, aLast);
-        SizeType newSize = std::abs(distance);
+        const DifferenceType distance = std::distance(aFirst, aLast);
+        const SizeType newSize = static_cast<SizeType>(std::abs(distance));
         if (newSize > MaxSize())
             throw std::length_error("DynArray::Assign: Iterator range cannot exceed MaxSize");
 
-        Resize(static_cast<SizeType>(newSize));
+        Resize(newSize);
 
         if (distance > 0)
             std::copy(aFirst, aLast, m_entries);
@@ -219,11 +219,11 @@ struct DynArray
     {
         assert(Includes(aPos));
 
-        SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
-        SizeType newSize = m_size + 1;
+        const SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
+        const SizeType newSize = m_size + 1;
         Reserve(newSize);
 
-        SizeType tailSize = m_size - posIdx;
+        const SizeType tailSize = m_size - posIdx;
         if (tailSize > 0)
             ShiftEntries(Iterator(&m_entries[posIdx]), Iterator(&m_entries[posIdx + 1]), tailSize);
 
@@ -243,11 +243,11 @@ struct DynArray
     {
         assert(Includes(aPos));
 
-        auto distance = std::distance(aFirst, aLast);
-        SizeType insertSize = static_cast<SizeType>(std::abs(distance));
-        SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
+        const DifferenceType distance = std::distance(aFirst, aLast);
+        const SizeType insertSize = static_cast<SizeType>(std::abs(distance));
+        const SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
-        SizeType newSize = m_size + insertSize;
+        const SizeType newSize = m_size + insertSize;
         Reserve(newSize);
 
         Iterator insertPos = Begin() + insertIdx;
@@ -280,15 +280,15 @@ struct DynArray
     {
         assert(Includes(aPos));
 
-        SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
+        const SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
-        SizeType newSize = m_size + aCount;
+        const SizeType newSize = m_size + aCount;
         Reserve(newSize);
 
         Iterator first = Begin() + insertIdx;
         Iterator last = first + aCount;
 
-        SizeType tailSize = m_size - insertIdx;
+        const SizeType tailSize = m_size - insertIdx;
         if (tailSize > 0)
             ShiftEntries(first, last, tailSize);
 
@@ -322,7 +322,7 @@ struct DynArray
 
         std::destroy_at(std::addressof(*aPos));
 
-        SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End()));
+        const SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End()));
         if (tailSize > 0)
             ShiftEntries(aPos + 1, aPos, tailSize);
 
@@ -342,7 +342,7 @@ struct DynArray
 
         std::destroy(first, last);
 
-        SizeType tailSize = static_cast<SizeType>(std::distance(last, End()));
+        const SizeType tailSize = static_cast<SizeType>(std::distance(last, End()));
         if (tailSize > 0)
             ShiftEntries(last, first, tailSize);
 
@@ -384,7 +384,7 @@ struct DynArray
         if (m_capacity >= aCapacity)
             return;
 
-        auto newCapacity = CalculateGrowth(aCapacity);
+        const auto newCapacity = CalculateGrowth(aCapacity);
         SetCapacity(newCapacity);
     }
 
