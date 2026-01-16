@@ -497,7 +497,7 @@ struct DynArray
     {
         static constexpr auto maxSize =
             (std::min)((std::numeric_limits<SizeType>::max)(),
-                     static_cast<SizeType>((std::numeric_limits<uint32_t>::max)() / sizeof(ValueType)));
+                       static_cast<SizeType>((std::numeric_limits<uint32_t>::max)() / sizeof(ValueType)));
         return maxSize;
     }
 
