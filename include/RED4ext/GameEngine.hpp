@@ -12,7 +12,7 @@
 
 namespace RED4ext
 {
-namespace rtti 
+namespace rtti
 {
 struct IType;
 }
