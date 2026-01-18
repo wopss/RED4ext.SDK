@@ -80,7 +80,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     // First pass gather all properties and descriptors
     rttiSystem->types.for_each(
         [&descriptorMap, GetPrefix, &prefixHierarchy, aPropertyHolders](RED4ext::CName aName,
-                                                                        RED4ext::CBaseRTTIType*& aType)
+                                                                        RED4ext::rtti::IType*& aType)
         {
             if (aType->GetType() == RED4ext::ERTTIType::Class)
             {
@@ -196,7 +196,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     }
 
     auto GetGeneratedPath = [aExtendedPath, redEvent, scriptable, serializable, GetPrefix,
-                             &prefixHierarchy](const RED4ext::CBaseRTTIType* aType) -> std::string
+                             &prefixHierarchy](const RED4ext::rtti::IType* aType) -> std::string
     {
         auto name = aType->GetName();
 
@@ -250,7 +250,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         return "Scripting/Natives/Generated/" + pathPrefix;
     };
 
-    auto GetOverridePath = [&aIncludePath](const RED4ext::CBaseRTTIType* aType) -> std::string
+    auto GetOverridePath = [&aIncludePath](const RED4ext::rtti::IType* aType) -> std::string
     {
         std::string name = aType->GetName().ToString();
         std::string path = "Scripting/Natives/" + name + ".hpp";
@@ -264,7 +264,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     };
 
     // Remove the prefix from the class
-    auto SanitizeType = [GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string
+    auto SanitizeType = [GetPrefix](const RED4ext::rtti::IType* aType) -> std::string
     {
         auto name = aType->GetName();
         std::string fullName = name.ToString();
@@ -291,7 +291,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     };
 
     // Combine the namespace and sanitized name
-    auto QualifiedType = [GetNamespace, GetPrefix](const RED4ext::CBaseRTTIType* aType) -> std::string
+    auto QualifiedType = [GetNamespace, GetPrefix](const RED4ext::rtti::IType* aType) -> std::string
     {
         auto name = aType->GetName();
 
@@ -303,7 +303,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
         return ns.empty() ? stripped : ns + "::" + stripped;
     };
 
-    auto IsHandleCompatible = [serializable](const RED4ext::CBaseRTTIType* aType) -> bool
+    auto IsHandleCompatible = [serializable](const RED4ext::rtti::IType* aType) -> bool
     {
         if (aType->GetType() == RED4ext::ERTTIType::Class)
         {
@@ -383,7 +383,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
 
     rttiSystem->types.for_each(
         [&aOutPath, SanitizeType, &QualifiedType, GetGeneratedPath, nameSanitizer](RED4ext::CName aName,
-                                                                                   RED4ext::CBaseRTTIType*& aType)
+                                                                                   RED4ext::rtti::IType*& aType)
         {
             RED4EXT_UNUSED_PARAMETER(aName);
 
@@ -415,7 +415,7 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
     EmitBulkGenerated(aOutPath, includeCollector);
 }
 
-RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(const RED4ext::CBaseRTTIType* aType)
+RED4EXT_INLINE void ClassDependencyBuilder::Accumulate(const RED4ext::rtti::IType* aType)
 {
     switch (aType->GetType())
     {
@@ -883,7 +883,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
     }
 }
 
-RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, NameTransformer aNameTransformer,
+RED4EXT_INLINE std::string TypeToString(const RED4ext::rtti::IType* aType, NameTransformer aNameTransformer,
                                         bool aVerbose)
 {
     // Handle some simple type conversions and fundamentals

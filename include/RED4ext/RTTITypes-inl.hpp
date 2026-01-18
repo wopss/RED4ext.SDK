@@ -13,7 +13,7 @@
 RED4EXT_INLINE RED4ext::CClass::CClass(CName aName, uint32_t aSize, Flags aFlags)
     : parent(nullptr)
     , name(aName)
-    , computedName(CBaseRTTIType::GetComputedName())
+    , computedName(rtti::IType::GetComputedName())
     , size(aSize)
     , flags(aFlags)
     , holderSize(0)
@@ -162,7 +162,7 @@ RED4EXT_INLINE RED4ext::ScriptInstance RED4ext::CClass::CreateInstance(bool aZer
     return func(this, GetSize(), aZeroMemory);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::IsA(const CBaseRTTIType* aType) const
+RED4EXT_INLINE bool RED4ext::CClass::IsA(const rtti::IType* aType) const
 {
     if (this == aType)
     {
@@ -252,7 +252,7 @@ RED4EXT_INLINE void RED4ext::CClass::ClearScriptedData()
 
 RED4EXT_INLINE RED4ext::CEnum::CEnum(CName aName, int8_t aActualSize, Flags aFlags)
     : name(aName)
-    , computedName(CBaseRTTIType::GetComputedName())
+    , computedName(rtti::IType::GetComputedName())
     , actualSize(aActualSize)
     , flags(aFlags)
     , hashList(Memory::RTTIAllocator::Get())
@@ -374,7 +374,7 @@ RED4EXT_INLINE bool RED4ext::CEnum::FromString(ScriptInstance aInstance, const C
 
 RED4EXT_INLINE RED4ext::CBitfield::CBitfield(CName aName, int8_t aActualSize, Flags aFlags)
     : name(aName)
-    , computedName(CBaseRTTIType::GetComputedName())
+    , computedName(rtti::IType::GetComputedName())
     , actualSize(aActualSize)
     , flags(aFlags)
     , validBits(0)

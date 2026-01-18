@@ -16,7 +16,7 @@ struct CStackFrame;
 struct CProperty;
 struct PoolRTTIFunctionAllocator;
 struct IScriptable;
-struct CBaseRTTIType;
+struct rtti::IType;
 
 struct IFunction
 {
@@ -25,7 +25,7 @@ struct IFunction
         virtual void sub_0() = 0;
         virtual void sub_8() = 0;
         virtual void Execute(ScriptInstance aInstance, CStackFrame& aFrame, void* aResult,
-                             const CBaseRTTIType* aResultType) = 0;
+                             const rtti::IType* aResultType) = 0;
     };
 
     virtual Memory::IAllocator* GetAllocator() = 0; // 00
@@ -88,7 +88,7 @@ struct CBaseFunction : IFunction
     int32_t unkAC;                  // AC
 
 private:
-    using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, CBaseRTTIType*);
+    using Handler_t = void (*)(ScriptInstance, RED4ext::CStackFrame&, void*, rtti::IType*);
 
     bool Execute_(CStack* aStack);
     static Handler_t GetHandler(uint32_t aIndex);
