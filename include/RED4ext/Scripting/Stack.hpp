@@ -16,7 +16,10 @@ namespace RED4ext
  * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
-namespace rtti { struct IType; }
+namespace rtti
+{
+struct IType;
+}
 struct CClass;
 struct IScriptable;
 
@@ -24,7 +27,7 @@ struct CStackType
 {
     CStackType(rtti::IType* aType = nullptr, ScriptInstance aValue = nullptr);
 
-    rtti::IType* type;  // 00
+    rtti::IType* type;    // 00
     ScriptInstance value; // 08
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
@@ -100,7 +103,7 @@ struct CScriptStack : CBaseStack
 
     uint8_t* args;        // 30
     ScriptInstance value; // 38
-    rtti::IType* type;  // 40
+    rtti::IType* type;    // 40
 };
 
 RED4EXT_ASSERT_SIZE(CScriptStack, 0x48);

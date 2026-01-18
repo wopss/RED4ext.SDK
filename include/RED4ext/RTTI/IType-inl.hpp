@@ -146,8 +146,7 @@ RED4EXT_INLINE bool RED4ext::rtti::IType::sub_90(int64_t a1, ScriptInstance aIns
     return func(this, a1, aInstance, a3, a4);
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4,
-                                                   bool a5)
+RED4EXT_INLINE bool RED4ext::rtti::IType::sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5)
 {
     using func_t = bool (*)(IType*, int64_t, ScriptInstance, CString&, int64_t, bool);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_98);

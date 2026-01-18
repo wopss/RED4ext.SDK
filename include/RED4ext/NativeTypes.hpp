@@ -19,7 +19,10 @@
 
 namespace RED4ext
 {
-namespace rtti { struct IType; }
+namespace rtti 
+{
+struct IType;
+}
 
 struct CDateTime
 {
@@ -262,7 +265,7 @@ struct CurveData
 
     CName name;                                  // 00
     RawBuffer buffer;                            // 08
-    rtti::IType* valueType;                    // 40
+    rtti::IType* valueType;                      // 40
     curve::EInterpolationType interpolationType; // 48
     curve::ESegmentsLinkType linkType;           // 49
 };
@@ -276,10 +279,10 @@ RED4EXT_ASSERT_OFFSET(CurveData<float>, linkType, 0x31);
 template<typename T>
 struct ScriptRef
 {
-    uint8_t unk00[0x10];      // 00
+    uint8_t unk00[0x10];    // 00
     rtti::IType* innerType; // 10
-    T* ref;                   // 18
-    CName hash;               // 20
+    T* ref;                 // 18
+    CName hash;             // 20
 };
 RED4EXT_ASSERT_SIZE(ScriptRef<void>, 0x28);
 

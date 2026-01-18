@@ -2,8 +2,8 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
-#include <RED4ext/InstanceType.hpp>
 #include <RED4ext/IO/BaseStream.hpp>
+#include <RED4ext/InstanceType.hpp>
 
 namespace RED4ext
 {
@@ -103,13 +103,13 @@ struct IType
     void* unk8;
 };
 RED4EXT_ASSERT_SIZE(IType, 0x10);
-}
+} // namespace rtti
 using ERTTIType = rtti::ERTTIType;
 
 struct [[deprecated("Use 'rtti::IType' instead.")]] CBaseRTTIType : rtti::IType
 {
 };
-}
+} // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
 #include <RED4ext/rtti/IType-inl.hpp>

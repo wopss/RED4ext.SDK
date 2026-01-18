@@ -19,15 +19,15 @@ struct CGlobalFunction;
 
 struct IRTTISystem
 {
-    virtual rtti::IType* GetType(CName aName) = 0;                                             // 00
-    virtual rtti::IType* GetTypeByAsyncId(uint32_t aAsyncId) = 0;                              // 08
+    virtual rtti::IType* GetType(CName aName) = 0;                                               // 00
+    virtual rtti::IType* GetTypeByAsyncId(uint32_t aAsyncId) = 0;                                // 08
     virtual CClass* GetClass(CName aName) = 0;                                                   // 10
     virtual CEnum* GetEnum(CName aName) = 0;                                                     // 18
     virtual CBitfield* GetBitfield(CName aName) = 0;                                             // 20
     virtual void sub_28() = 0;                                                                   // 28
     virtual CGlobalFunction* GetFunction(CName aName) = 0;                                       // 30
     virtual void sub_38() = 0;                                                                   // 38
-    virtual void GetNativeTypes(DynArray<rtti::IType*>& aTypes) = 0;                           // 40
+    virtual void GetNativeTypes(DynArray<rtti::IType*>& aTypes) = 0;                             // 40
     virtual void GetGlobalFunctions(DynArray<CBaseFunction*>& aFunctions) = 0;                   // 48
     virtual void sub_50() = 0;                                                                   // 50
     virtual void GetClassFunctions(DynArray<CBaseFunction*>& aFunctions) = 0;                    // 58
@@ -36,10 +36,10 @@ struct IRTTISystem
     virtual void GetClasses(CClass* aIsAClass, DynArray<CClass*>& aClasses, bool (*aFilter)(CClass*) = nullptr,
                             bool aIncludeAbstract = false) = 0;                               // 70
     virtual void GetDerivedClasses(CClass* aBaseClass, DynArray<CClass*>& aClasses) = 0;      // 78
-    virtual void RegisterType(rtti::IType* aType, uint32_t aAsyncId) = 0;                   // 80
+    virtual void RegisterType(rtti::IType* aType, uint32_t aAsyncId) = 0;                     // 80
     virtual void sub_88() = 0;                                                                // 88
     virtual void sub_90() = 0;                                                                // 90 - added in 2.0
-    virtual void UnregisterType(rtti::IType* aType) = 0;                                    // 98
+    virtual void UnregisterType(rtti::IType* aType) = 0;                                      // 98
     virtual void RegisterFunction(CGlobalFunction* aFunc) = 0;                                // A0
     virtual void UnregisterFunction(CGlobalFunction* aFunc) = 0;                              // A8
     virtual void sub_B0() = 0;                                                                // B0
@@ -76,23 +76,23 @@ struct CRTTISystem : IRTTISystem
     using IRTTISystem::RegisterType;
     void RegisterType(rtti::IType* aType);
 
-    int32_t unk8;                                     // 08
-    HashMap<CName, rtti::IType*> types;             // 10
-    HashMap<uint64_t, rtti::IType*> typesByAsyncId; // 40
-    HashMap<CName, uint32_t> typeAsyncIds;            // 70
-    HashMap<CName, CGlobalFunction*> funcs;           // A0
-    HashMap<uint64_t, CGlobalFunction*> funcsByHash;  // D0
-    HashMap<void*, void*> unkF8;                      // F8
-    DynArray<void*> unk130;                           // 130
-    DynArray<void*> unk140;                           // 140
-    HashMap<CName, CName> scriptToNative;             // 150
-    HashMap<CName, CName> nativeToScript;             // 180
-    DynArray<CString> strings;                        // 1B0 - Used by StringConst opcode (0x10)
-    DynArray<void*> unk1C0;                           // 1C0
-    DynArray<void*> unk1D0;                           // 1D0
-    Mutex unk1E0;                                     // 1E0
-    SharedSpinLock typesLock;                         // 208
-    Mutex rttiRegistratorMutex;                       // 210
+    int32_t unk8;                                    // 08
+    HashMap<CName, rtti::IType*> types;              // 10
+    HashMap<uint64_t, rtti::IType*> typesByAsyncId;  // 40
+    HashMap<CName, uint32_t> typeAsyncIds;           // 70
+    HashMap<CName, CGlobalFunction*> funcs;          // A0
+    HashMap<uint64_t, CGlobalFunction*> funcsByHash; // D0
+    HashMap<void*, void*> unkF8;                     // F8
+    DynArray<void*> unk130;                          // 130
+    DynArray<void*> unk140;                          // 140
+    HashMap<CName, CName> scriptToNative;            // 150
+    HashMap<CName, CName> nativeToScript;            // 180
+    DynArray<CString> strings;                       // 1B0 - Used by StringConst opcode (0x10)
+    DynArray<void*> unk1C0;                          // 1C0
+    DynArray<void*> unk1D0;                          // 1D0
+    Mutex unk1E0;                                    // 1E0
+    SharedSpinLock typesLock;                        // 208
+    Mutex rttiRegistratorMutex;                      // 210
 };
 RED4EXT_ASSERT_SIZE(CRTTISystem, 0x238);
 RED4EXT_ASSERT_OFFSET(CRTTISystem, types, 0x10);

@@ -10,7 +10,10 @@
 
 namespace RED4ext
 {
-namespace rtti { struct IType; }
+namespace rtti 
+{
+struct IType;
+}
 struct CClass;
 struct CStack;
 struct CStackFrame;

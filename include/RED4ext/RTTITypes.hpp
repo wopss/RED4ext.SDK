@@ -2,7 +2,6 @@
 
 #include <type_traits>
 
-#include <RED4ext/RTTI/IType.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Callback.hpp>
@@ -10,6 +9,7 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Map.hpp>
+#include <RED4ext/RTTI/IType.hpp>
 #include <RED4ext/Utils.hpp>
 
 namespace RED4ext
@@ -317,7 +317,7 @@ using CSimpleRTTITypeRuntimeEntityRef = rtti::IType;
 #pragma region Arrays
 struct CRTTIBaseArrayType : rtti::IType
 {
-    virtual rtti::IType* GetInnerType() const = 0;                                        // C0
+    virtual rtti::IType* GetInnerType() const = 0;                                          // C0
     virtual bool sub_C8() = 0;                                                              // C8 ret 1
     virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
     virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
@@ -340,11 +340,11 @@ RED4EXT_ASSERT_OFFSET(CRTTIBaseArrayType, innerType, 0x10);
 
 struct CRTTIArrayType : CRTTIBaseArrayType
 {
-    CName name;            // 18
+    CName name;          // 18
     rtti::IType* parent; // 20
-    uintptr_t unk28;       // 28
-    uintptr_t unk30;       // 30
-    uintptr_t unk38;       // 38
+    uintptr_t unk28;     // 28
+    uintptr_t unk30;     // 30
+    uintptr_t unk38;     // 38
 };
 RED4EXT_ASSERT_SIZE(CRTTIArrayType, 0x40);
 RED4EXT_ASSERT_OFFSET(CRTTIArrayType, parent, 0x20);
@@ -377,8 +377,8 @@ RED4EXT_ASSERT_OFFSET(CRTTINativeArrayType, computedName, 0x28);
 struct CRTTIPointerType : rtti::IType
 {
     rtti::IType* innerType; // 10
-    CName name;               // 18
-    CName unk20;              // 20
+    CName name;             // 18
+    CName unk20;            // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIPointerType, 0x28);
 RED4EXT_ASSERT_OFFSET(CRTTIPointerType, innerType, 0x10);
@@ -406,8 +406,8 @@ struct CRTTIScriptReferenceType : rtti::IType
     }
 
     rtti::IType* innerType; // 10
-    int64_t unk18;            // 18
-    CName name;               // 20
+    int64_t unk18;          // 18
+    CName name;             // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIScriptReferenceType, 0x28);
 RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, innerType, 0x10);
@@ -416,14 +416,14 @@ RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, name, 0x20);
 
 struct CRTTIHandleType : rtti::IType
 {
-    virtual rtti::IType* GetInnerType() const = 0;   // C0
+    virtual rtti::IType* GetInnerType() const = 0;     // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8
 
     rtti::IType* innerType; // 10
-    CName name;               // 18
-    CName computedName;       // 20
+    CName name;             // 18
+    CName computedName;     // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIHandleType, 0x28);
 RED4EXT_ASSERT_OFFSET(CRTTIHandleType, innerType, 0x10);
@@ -432,14 +432,14 @@ RED4EXT_ASSERT_OFFSET(CRTTIHandleType, computedName, 0x20);
 
 struct CRTTIWeakHandleType : rtti::IType
 {
-    virtual rtti::IType* GetInnerType() const = 0;   // C0
+    virtual rtti::IType* GetInnerType() const = 0;     // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8 - Empty impl
 
     rtti::IType* innerType; // 10
-    CName name;               // 18
-    CName computedName;       // 20
+    CName name;             // 18
+    CName computedName;     // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIWeakHandleType, 0x28);
 RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, innerType, 0x10);
@@ -448,8 +448,8 @@ RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, computedName, 0x20);
 
 struct CRTTIResourceReferenceType : rtti::IType
 {
-    CName name;               // 10
-    CName computedName;       // 18
+    CName name;             // 10
+    CName computedName;     // 18
     rtti::IType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceReferenceType, 0x28);
@@ -459,8 +459,8 @@ RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, innerType, 0x20);
 
 struct CRTTIResourceAsyncReferenceType : rtti::IType
 {
-    CName name;               // 10
-    CName computedName;       // 18
+    CName name;             // 10
+    CName computedName;     // 18
     rtti::IType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceAsyncReferenceType, 0x28);
@@ -470,18 +470,18 @@ RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, innerType, 0x20);
 
 struct CRTTILegacySingleChannelCurveType : rtti::IType
 {
-    CName name;               // 10
-    uint64_t unk18;           // 18
-    uint64_t unk20;           // 20
-    uint64_t unk28;           // 28
-    uint8_t unk30;            // 30
-    uint8_t unk31;            // 31
-    uint16_t pad32;           // 32
-    uint32_t pad34;           // 34
+    CName name;             // 10
+    uint64_t unk18;         // 18
+    uint64_t unk20;         // 20
+    uint64_t unk28;         // 28
+    uint8_t unk30;          // 30
+    uint8_t unk31;          // 31
+    uint16_t pad32;         // 32
+    uint32_t pad34;         // 34
     rtti::IType* curveType; // 38
-    uint16_t unk40;           // 40
-    uint16_t pad42;           // 42
-    uint32_t pad44;           // 44
+    uint16_t unk40;         // 40
+    uint16_t pad42;         // 42
+    uint32_t pad44;         // 44
 };
 RED4EXT_ASSERT_SIZE(CRTTILegacySingleChannelCurveType, 0x48);
 RED4EXT_ASSERT_OFFSET(CRTTILegacySingleChannelCurveType, name, 0x10);
@@ -489,14 +489,14 @@ RED4EXT_ASSERT_OFFSET(CRTTILegacySingleChannelCurveType, curveType, 0x38);
 
 struct CRTTIMultiChannelCurveType : rtti::IType
 {
-    CName name;               // 10
+    CName name;             // 10
     rtti::IType* curveType; // 18
-    int64_t unk20;            // 20
-    int64_t unk28;            // 28
-    int64_t unk30;            // 30
-    int64_t unk38;            // 38
-    int32_t unk40;            // 40
-    int16_t unk44;            // 44
+    int64_t unk20;          // 20
+    int64_t unk28;          // 28
+    int64_t unk30;          // 30
+    int64_t unk38;          // 38
+    int32_t unk40;          // 40
+    int16_t unk44;          // 44
 };
 RED4EXT_ASSERT_SIZE(CRTTIMultiChannelCurveType, 0x48);
 RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, name, 0x10);
