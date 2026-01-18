@@ -20,7 +20,7 @@ struct CClassFunction;
 struct CClassStaticFunction;
 struct Variant;
 
-struct CClass : CBaseRTTIType
+struct CClass : rtti::IType
 {
     struct Flags
     {
@@ -77,7 +77,7 @@ struct CClass : CBaseRTTIType
 
     ScriptInstance CreateInstance(bool aZeroMemory = false) const;
 
-    bool IsA(const CBaseRTTIType* aType) const;
+    bool IsA(const rtti::IType* aType) const;
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aShortName) const;
@@ -198,7 +198,7 @@ struct TTypedClass : CClass
 };
 RED4EXT_ASSERT_SIZE(TTypedClass<CName>, sizeof(CClass));
 
-struct CEnum : CBaseRTTIType
+struct CEnum : rtti::IType
 {
     struct Flags
     {
@@ -241,7 +241,7 @@ RED4EXT_ASSERT_OFFSET(CEnum, valueList, 0x38);
 RED4EXT_ASSERT_OFFSET(CEnum, aliasList, 0x48);
 RED4EXT_ASSERT_OFFSET(CEnum, aliasValueList, 0x58);
 
-struct CBitfield : CBaseRTTIType
+struct CBitfield : rtti::IType
 {
     struct Flags
     {
@@ -281,43 +281,43 @@ RED4EXT_ASSERT_OFFSET(CBitfield, validBits, 0x28);
 RED4EXT_ASSERT_OFFSET(CBitfield, bitNames, 0x30);
 
 #pragma region Fundamentals
-using CFundamentalRTTITypeBool = CBaseRTTIType;
-using CFundamentalRTTITypeInt8 = CBaseRTTIType;
-using CFundamentalRTTITypeUint8 = CBaseRTTIType;
-using CFundamentalRTTITypeInt16 = CBaseRTTIType;
-using CFundamentalRTTITypeUint16 = CBaseRTTIType;
-using CFundamentalRTTITypeInt32 = CBaseRTTIType;
-using CFundamentalRTTITypeUint32 = CBaseRTTIType;
-using CFundamentalRTTITypeInt64 = CBaseRTTIType;
-using CFundamentalRTTITypeUint64 = CBaseRTTIType;
-using CFundamentalRTTITypeFloat = CBaseRTTIType;
-using CFundamentalRTTITypeDouble = CBaseRTTIType;
+using CFundamentalRTTITypeBool = rtti::IType;
+using CFundamentalRTTITypeInt8 = rtti::IType;
+using CFundamentalRTTITypeUint8 = rtti::IType;
+using CFundamentalRTTITypeInt16 = rtti::IType;
+using CFundamentalRTTITypeUint16 = rtti::IType;
+using CFundamentalRTTITypeInt32 = rtti::IType;
+using CFundamentalRTTITypeUint32 = rtti::IType;
+using CFundamentalRTTITypeInt64 = rtti::IType;
+using CFundamentalRTTITypeUint64 = rtti::IType;
+using CFundamentalRTTITypeFloat = rtti::IType;
+using CFundamentalRTTITypeDouble = rtti::IType;
 #pragma endregion
 
 #pragma region Simples
-using CSimpleRTTITypeCName = CBaseRTTIType;
-using CSimpleRTTITypeString = CBaseRTTIType;
-using CSimpleRTTITypeLocalizationString = CBaseRTTIType;
-using CSimpleRTTITypeTweakDBID = CBaseRTTIType;
-using CSimpleRTTITypeDataBuffer = CBaseRTTIType;
-using CSimpleRTTITypeSerializationDeferredDataBuffer = CBaseRTTIType;
-using CSimpleRTTITypeSharedDataBuffer = CBaseRTTIType;
-using CSimpleRTTITypeVariant = CBaseRTTIType;
-using CSimpleRTTITypeCDateTime = CBaseRTTIType;
-using CSimpleRTTITypeCGUID = CBaseRTTIType;
-using CSimpleRTTITypeCRUID = CBaseRTTIType;
-using CSimpleRTTITypeCRUIDRef = CBaseRTTIType;
-using CSimpleRTTITypeEditorObjectID = CBaseRTTIType;
-using CSimpleRTTITypeGamedataLocKeyWrapper = CBaseRTTIType;
-using CSimpleRTTITypeMessageResourcePath = CBaseRTTIType;
-using CSimpleRTTITypeNodeRef = CBaseRTTIType;
-using CSimpleRTTITypeRuntimeEntityRef = CBaseRTTIType;
+using CSimpleRTTITypeCName = rtti::IType;
+using CSimpleRTTITypeString = rtti::IType;
+using CSimpleRTTITypeLocalizationString = rtti::IType;
+using CSimpleRTTITypeTweakDBID = rtti::IType;
+using CSimpleRTTITypeDataBuffer = rtti::IType;
+using CSimpleRTTITypeSerializationDeferredDataBuffer = rtti::IType;
+using CSimpleRTTITypeSharedDataBuffer = rtti::IType;
+using CSimpleRTTITypeVariant = rtti::IType;
+using CSimpleRTTITypeCDateTime = rtti::IType;
+using CSimpleRTTITypeCGUID = rtti::IType;
+using CSimpleRTTITypeCRUID = rtti::IType;
+using CSimpleRTTITypeCRUIDRef = rtti::IType;
+using CSimpleRTTITypeEditorObjectID = rtti::IType;
+using CSimpleRTTITypeGamedataLocKeyWrapper = rtti::IType;
+using CSimpleRTTITypeMessageResourcePath = rtti::IType;
+using CSimpleRTTITypeNodeRef = rtti::IType;
+using CSimpleRTTITypeRuntimeEntityRef = rtti::IType;
 #pragma endregion
 
 #pragma region Arrays
-struct CRTTIBaseArrayType : CBaseRTTIType
+struct CRTTIBaseArrayType : rtti::IType
 {
-    virtual CBaseRTTIType* GetInnerType() const = 0;                                        // C0
+    virtual rtti::IType* GetInnerType() const = 0;                                        // C0
     virtual bool sub_C8() = 0;                                                              // C8 ret 1
     virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
     virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
@@ -333,7 +333,7 @@ struct CRTTIBaseArrayType : CBaseRTTIType
     virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) const = 0; // 100
     virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) const = 0;   // 108
 
-    CBaseRTTIType* innerType; // 10
+    rtti::IType* innerType; // 10
 };
 RED4EXT_ASSERT_SIZE(CRTTIBaseArrayType, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIBaseArrayType, innerType, 0x10);
@@ -341,7 +341,7 @@ RED4EXT_ASSERT_OFFSET(CRTTIBaseArrayType, innerType, 0x10);
 struct CRTTIArrayType : CRTTIBaseArrayType
 {
     CName name;            // 18
-    CBaseRTTIType* parent; // 20
+    rtti::IType* parent; // 20
     uintptr_t unk28;       // 28
     uintptr_t unk30;       // 30
     uintptr_t unk38;       // 38
@@ -374,9 +374,9 @@ RED4EXT_ASSERT_OFFSET(CRTTINativeArrayType, name, 0x20);
 RED4EXT_ASSERT_OFFSET(CRTTINativeArrayType, computedName, 0x28);
 #pragma endregion
 
-struct CRTTIPointerType : CBaseRTTIType
+struct CRTTIPointerType : rtti::IType
 {
-    CBaseRTTIType* innerType; // 10
+    rtti::IType* innerType; // 10
     CName name;               // 18
     CName unk20;              // 20
 };
@@ -385,7 +385,7 @@ RED4EXT_ASSERT_OFFSET(CRTTIPointerType, innerType, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIPointerType, name, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIPointerType, unk20, 0x20);
 
-struct CRTTIScriptReferenceType : CBaseRTTIType
+struct CRTTIScriptReferenceType : rtti::IType
 {
     // No need for a destructor as it doesn't do anything
     static CRTTIScriptReferenceType* New(void* aMemory, void* aUnknownArg = nullptr)
@@ -398,14 +398,14 @@ struct CRTTIScriptReferenceType : CBaseRTTIType
     }
 
     template<class T>
-    void Set(CBaseRTTIType* aBaseType, const T* aValue)
+    void Set(rtti::IType* aBaseType, const T* aValue)
     {
-        using func_t = void (*)(CRTTIScriptReferenceType*, CBaseRTTIType*, const T*);
+        using func_t = void (*)(CRTTIScriptReferenceType*, rtti::IType*, const T*);
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CRTTIScriptReferenceType_Set);
         func(this, aBaseType, aValue);
     }
 
-    CBaseRTTIType* innerType; // 10
+    rtti::IType* innerType; // 10
     int64_t unk18;            // 18
     CName name;               // 20
 };
@@ -414,14 +414,14 @@ RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, innerType, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, unk18, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIScriptReferenceType, name, 0x20);
 
-struct CRTTIHandleType : CBaseRTTIType
+struct CRTTIHandleType : rtti::IType
 {
-    virtual CBaseRTTIType* GetInnerType() const = 0;   // C0
+    virtual rtti::IType* GetInnerType() const = 0;   // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8
 
-    CBaseRTTIType* innerType; // 10
+    rtti::IType* innerType; // 10
     CName name;               // 18
     CName computedName;       // 20
 };
@@ -430,14 +430,14 @@ RED4EXT_ASSERT_OFFSET(CRTTIHandleType, innerType, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIHandleType, name, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIHandleType, computedName, 0x20);
 
-struct CRTTIWeakHandleType : CBaseRTTIType
+struct CRTTIWeakHandleType : rtti::IType
 {
-    virtual CBaseRTTIType* GetInnerType() const = 0;   // C0
+    virtual rtti::IType* GetInnerType() const = 0;   // C0
     virtual void sub_C8(void* aUnk1, void* aUnk2) = 0; // C8
     virtual void sub_D0(void* aUnk1, void* aUnk2) = 0; // D0
     virtual void sub_D8(void* aUnk1, void* aUnk2) = 0; // D8 - Empty impl
 
-    CBaseRTTIType* innerType; // 10
+    rtti::IType* innerType; // 10
     CName name;               // 18
     CName computedName;       // 20
 };
@@ -446,29 +446,29 @@ RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, innerType, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, name, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIWeakHandleType, computedName, 0x20);
 
-struct CRTTIResourceReferenceType : CBaseRTTIType
+struct CRTTIResourceReferenceType : rtti::IType
 {
     CName name;               // 10
     CName computedName;       // 18
-    CBaseRTTIType* innerType; // 20
+    rtti::IType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceReferenceType, 0x28);
 RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, name, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, computedName, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIResourceReferenceType, innerType, 0x20);
 
-struct CRTTIResourceAsyncReferenceType : CBaseRTTIType
+struct CRTTIResourceAsyncReferenceType : rtti::IType
 {
     CName name;               // 10
     CName computedName;       // 18
-    CBaseRTTIType* innerType; // 20
+    rtti::IType* innerType; // 20
 };
 RED4EXT_ASSERT_SIZE(CRTTIResourceAsyncReferenceType, 0x28);
 RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, name, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, computedName, 0x18);
 RED4EXT_ASSERT_OFFSET(CRTTIResourceAsyncReferenceType, innerType, 0x20);
 
-struct CRTTILegacySingleChannelCurveType : CBaseRTTIType
+struct CRTTILegacySingleChannelCurveType : rtti::IType
 {
     CName name;               // 10
     uint64_t unk18;           // 18
@@ -478,7 +478,7 @@ struct CRTTILegacySingleChannelCurveType : CBaseRTTIType
     uint8_t unk31;            // 31
     uint16_t pad32;           // 32
     uint32_t pad34;           // 34
-    CBaseRTTIType* curveType; // 38
+    rtti::IType* curveType; // 38
     uint16_t unk40;           // 40
     uint16_t pad42;           // 42
     uint32_t pad44;           // 44
@@ -487,10 +487,10 @@ RED4EXT_ASSERT_SIZE(CRTTILegacySingleChannelCurveType, 0x48);
 RED4EXT_ASSERT_OFFSET(CRTTILegacySingleChannelCurveType, name, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTILegacySingleChannelCurveType, curveType, 0x38);
 
-struct CRTTIMultiChannelCurveType : CBaseRTTIType
+struct CRTTIMultiChannelCurveType : rtti::IType
 {
     CName name;               // 10
-    CBaseRTTIType* curveType; // 18
+    rtti::IType* curveType; // 18
     int64_t unk20;            // 20
     int64_t unk28;            // 28
     int64_t unk30;            // 30
@@ -502,13 +502,13 @@ RED4EXT_ASSERT_SIZE(CRTTIMultiChannelCurveType, 0x48);
 RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, name, 0x10);
 RED4EXT_ASSERT_OFFSET(CRTTIMultiChannelCurveType, curveType, 0x18);
 
-struct [[deprecated("Use 'CBaseRTTIType' instead.")]] IRTTIType : CBaseRTTIType
+struct [[deprecated("Use 'rtti::IType' instead.")]] IRTTIType : rtti::IType
 {
 };
-struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIBaseType : CBaseRTTIType
+struct [[deprecated("Use 'rtti::IType' instead.")]] CRTTIBaseType : rtti::IType
 {
 };
-struct [[deprecated("Use 'CBaseRTTIType' instead.")]] CRTTIType : CBaseRTTIType
+struct [[deprecated("Use 'rtti::IType' instead.")]] CRTTIType : rtti::IType
 {
 };
 
