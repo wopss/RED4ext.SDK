@@ -62,28 +62,41 @@ struct IType
     virtual Memory::IAllocator* GetAllocator() const;                                              // B8
 
 #pragma region deprecated
-    [[deprecated("Use 'GetERTTITypeString' instead.")]]
-    RED4EXT_INLINE CString GetTypeName() const
+    [[deprecated("Use 'GetName()' instead.")]]
+    inline void GetName(CName& aOut) const
     {
-        return GetERTTITypeString();
+        aOut = GetName();
     }
 
-    [[deprecated("Use 'GetRefName' instead.")]]
-    RED4EXT_INLINE CName GetComputedName() const
+    [[deprecated("Use 'GetComputedName()' instead.")]]
+    inline CName GetName2() const
     {
-        return GetRefName();
+        return GetComputedName();
     }
 
-    [[deprecated("Use 'Compare' instead.")]]
-    RED4EXT_INLINE bool IsEqual(const void* aLhs, const void* aRhs, uint32_t a3 = 0) const
+    [[deprecated("Use 'GetComputedName()' instead.")]]
+    inline void GetName2(CName& aOut) const
     {
-        return Compare(aLhs, aRhs, a3);
+        aOut = GetComputedName();
     }
 
-    [[deprecated("Use 'Copy' instead.")]]
-    RED4EXT_INLINE void Assign(void* aDest, const void* aSrc) const
+    [[deprecated("Use 'GetTypeName()' instead.")]]
+    inline void GetTypeName(CString& aOut) const
     {
-        Copy(aDest, aSrc);
+        auto name = GetTypeName();
+        aOut = name;
+    }
+
+    [[deprecated("Use 'Construct()' instead.")]]
+    inline void Init(ScriptInstance aMemory) const
+    {
+        Construct(aMemory);
+    }
+
+    [[deprecated("Use 'Destruct()' instead.")]]
+    inline void Destroy(ScriptInstance aMemory) const
+    {
+        Destruct(aMemory);
     }
 #pragma endregion
 
