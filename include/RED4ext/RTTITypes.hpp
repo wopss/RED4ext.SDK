@@ -2,6 +2,7 @@
 
 #include <type_traits>
 
+#include <RED4ext/RTTI/IType.hpp>
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Callback.hpp>
@@ -18,99 +19,6 @@ struct CProperty;
 struct CClassFunction;
 struct CClassStaticFunction;
 struct Variant;
-
-enum class ERTTIType : uint8_t
-{
-    Name = 0,
-    Fundamental = 1,
-    Class = 2,
-    Array = 3,
-    Simple = 4,
-    Enum = 5,
-    StaticArray = 6,
-    NativeArray = 7,
-    Pointer = 8,
-    Handle = 9,
-    WeakHandle = 10,
-    ResourceReference = 11,
-    ResourceAsyncReference = 12,
-    BitField = 13,
-    LegacySingleChannelCurve = 14,
-    ScriptReference = 15,
-    FixedArray = 16
-};
-
-struct CBaseRTTIType
-{
-    CBaseRTTIType();
-    virtual ~CBaseRTTIType() = default; // 00
-
-    virtual CName GetName() const = 0;                        // 08
-    virtual uint32_t GetSize() const = 0;                     // 10
-    virtual uint32_t GetAlignment() const = 0;                // 18
-    virtual ERTTIType GetType() const = 0;                    // 20
-    virtual CString GetTypeName() const;                      // 28
-    virtual CName GetComputedName() const;                    // 30
-    virtual void Construct(ScriptInstance aMemory) const = 0; // 38
-    virtual void Destruct(ScriptInstance aMemory) const = 0;  // 40
-    virtual const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs,
-                               uint32_t a3 = 0) = 0; // 48 - Not const because CClass aquire some mutex when this is
-                                                     // called and a flag is modified.
-    virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const = 0;                 // 50
-    virtual void Move(ScriptInstance aLhs, ScriptInstance aRhs) const;                             // 58
-    virtual bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const = 0; // 60
-    virtual bool ToString(const ScriptInstance aInstance, CString& aOut) const;                    // 68
-    virtual bool FromString(ScriptInstance aInstance, const CString& aString) const;               // 70
-    virtual bool sub_78();                                                                         // 78
-    virtual bool sub_80(int64_t a1, ScriptInstance aInstance);                                     // 80
-    virtual bool sub_88(int64_t a1, ScriptInstance aInstance);                                     // 88
-    virtual bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4);            // 90
-    virtual bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5);   // 98
-    virtual bool sub_A0(int64_t a1, CString& a2, bool a3);                                         // A0
-    virtual bool sub_A8();                                                                         // A8
-    virtual void sub_B0(int64_t a1, int64_t a2);                                                   // B0
-    virtual Memory::IAllocator* GetAllocator() const;                                              // B8
-
-    [[deprecated("Use 'GetName()' instead.")]]
-    inline void GetName(CName& aOut) const
-    {
-        aOut = GetName();
-    }
-
-    [[deprecated("Use 'GetComputedName()' instead.")]]
-    inline CName GetName2() const
-    {
-        return GetComputedName();
-    }
-
-    [[deprecated("Use 'GetComputedName()' instead.")]]
-    inline void GetName2(CName& aOut) const
-    {
-        aOut = GetComputedName();
-    }
-
-    [[deprecated("Use 'GetTypeName()' instead.")]]
-    inline void GetTypeName(CString& aOut) const
-    {
-        auto name = GetTypeName();
-        aOut = name;
-    }
-
-    [[deprecated("Use 'Construct()' instead.")]]
-    inline void Init(ScriptInstance aMemory) const
-    {
-        Construct(aMemory);
-    }
-
-    [[deprecated("Use 'Destruct()' instead.")]]
-    inline void Destroy(ScriptInstance aMemory) const
-    {
-        Destruct(aMemory);
-    }
-
-    int64_t unk8;
-};
-RED4EXT_ASSERT_SIZE(CBaseRTTIType, 0x10);
 
 struct CClass : CBaseRTTIType
 {
