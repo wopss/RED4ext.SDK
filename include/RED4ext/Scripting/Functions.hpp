@@ -10,13 +10,13 @@
 
 namespace RED4ext
 {
+namespace rtti { struct IType; }
 struct CClass;
 struct CStack;
 struct CStackFrame;
 struct CProperty;
 struct PoolRTTIFunctionAllocator;
 struct IScriptable;
-struct rtti::IType;
 
 struct IFunction
 {

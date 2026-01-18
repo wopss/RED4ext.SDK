@@ -10,8 +10,8 @@
 
 namespace RED4ext
 {
+namespace rtti { struct IType; }
 struct CClass;
-struct rtti::IType;
 struct CProperty;
 struct CEnum;
 struct CBitfield;

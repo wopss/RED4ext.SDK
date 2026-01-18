@@ -19,7 +19,7 @@
 
 namespace RED4ext
 {
-struct rtti::IType;
+namespace rtti { struct IType; }
 
 struct CDateTime
 {
