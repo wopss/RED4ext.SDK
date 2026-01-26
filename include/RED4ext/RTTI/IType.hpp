@@ -4,7 +4,7 @@
 #include <RED4ext/CString.hpp>
 #include <RED4ext/IO/BaseStream.hpp>
 #include <RED4ext/InstanceType.hpp>
-#include <RED4ext/RTTI/ERTTIType.hpp>
+#include <RED4ext/rtti/ERTTIType.hpp>
 
 namespace RED4ext
 {

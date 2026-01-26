@@ -9,7 +9,7 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Map.hpp>
-#include <RED4ext/RTTI/IType.hpp>
+#include <RED4ext/rtti/IType.hpp>
 #include <RED4ext/Utils.hpp>
 
 namespace RED4ext
@@ -20,7 +20,7 @@ struct CClassFunction;
 struct CClassStaticFunction;
 struct Variant;
 
-using ERTTIType = rtti::ERTTIType;
+using ERTTIType [[deprecated("Use 'rtti::ERTTIType' instead.")]] = rtti::ERTTIType;
 
 struct [[deprecated("Use 'rtti::IType' instead.")]] CBaseRTTIType : rtti::IType
 {
