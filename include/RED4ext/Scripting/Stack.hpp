@@ -16,15 +16,18 @@ namespace RED4ext
  * Maybe this should have the name 'CStack', but I am not entirely sure how to call '*Stack', so until a better name is
  * found, the names will be kept as they are now.
  */
-struct CBaseRTTIType;
+namespace rtti
+{
+struct IType;
+}
 struct CClass;
 struct IScriptable;
 
 struct CStackType
 {
-    CStackType(CBaseRTTIType* aType = nullptr, ScriptInstance aValue = nullptr);
+    CStackType(rtti::IType* aType = nullptr, ScriptInstance aValue = nullptr);
 
-    CBaseRTTIType* type;  // 00
+    rtti::IType* type;    // 00
     ScriptInstance value; // 08
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
@@ -40,7 +43,7 @@ struct IStack
         return nullptr;
     }
 
-    virtual CBaseRTTIType* GetResultType() // 10
+    virtual rtti::IType* GetResultType() // 10
     {
         return nullptr;
     }
@@ -100,7 +103,7 @@ struct CScriptStack : CBaseStack
 
     uint8_t* args;        // 30
     ScriptInstance value; // 38
-    CBaseRTTIType* type;  // 40
+    rtti::IType* type;    // 40
 };
 
 RED4EXT_ASSERT_SIZE(CScriptStack, 0x48);
@@ -112,21 +115,21 @@ struct CStackFrame
 {
     CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
 
-    char* code;              // 00
-    CBaseFunction* func;     // 08 - For scripted functions
-    void* localVars;         // 10 - For scripted functions
-    void* params;            // 18 - For scripted functions
-    int64_t unk20;           // 20
-    int64_t unk28;           // 28
-    void* data;              // 30 - The result of the opcode, points to the original instance (local, param, etc.)
-    CBaseRTTIType* dataType; // 38 - The type of the result
-    IScriptable* context;    // 40
-    CStackFrame* parent;     // 48
-    int16_t unk50;           // 50
-    int64_t unk58;           // 58
-    uint16_t paramFlags;     // 60
-    uint8_t currentParam;    // 62
-    bool useDirectData;      // 63 - If set the result param is not used, preventing an extra copy of the result
+    char* code;            // 00
+    CBaseFunction* func;   // 08 - For scripted functions
+    void* localVars;       // 10 - For scripted functions
+    void* params;          // 18 - For scripted functions
+    int64_t unk20;         // 20
+    int64_t unk28;         // 28
+    void* data;            // 30 - The result of the opcode, points to the original instance (local, param, etc.)
+    rtti::IType* dataType; // 38 - The type of the result
+    IScriptable* context;  // 40
+    CStackFrame* parent;   // 48
+    int16_t unk50;         // 50
+    int64_t unk58;         // 58
+    uint16_t paramFlags;   // 60
+    uint8_t currentParam;  // 62
+    bool useDirectData;    // 63 - If set the result param is not used, preventing an extra copy of the result
 
     void Step()
     {

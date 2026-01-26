@@ -19,7 +19,10 @@
 
 namespace RED4ext
 {
-struct CBaseRTTIType;
+namespace rtti
+{
+struct IType;
+}
 
 struct CDateTime
 {
@@ -147,8 +150,8 @@ struct Variant
     static constexpr uintptr_t TypeMask = ~InlineFlag;
 
     Variant() noexcept = default;
-    Variant(const CBaseRTTIType* aType);
-    Variant(const CBaseRTTIType* aType, const ScriptInstance aData);
+    Variant(const rtti::IType* aType);
+    Variant(const rtti::IType* aType, const ScriptInstance aData);
     Variant(CName aTypeName);
     Variant(CName aTypeName, const ScriptInstance aData);
     Variant(const Variant& aOther);
@@ -161,17 +164,17 @@ struct Variant
     bool IsEmpty() const noexcept;
     bool IsInlined() const noexcept;
 
-    CBaseRTTIType* GetType() const noexcept;
+    rtti::IType* GetType() const noexcept;
     ScriptInstance GetDataPtr() const noexcept;
 
-    bool Init(const CBaseRTTIType* aType);
-    bool Fill(const CBaseRTTIType* aType, const ScriptInstance aData);
+    bool Init(const rtti::IType* aType);
+    bool Fill(const rtti::IType* aType, const ScriptInstance aData);
     bool Extract(ScriptInstance aBuffer);
     void Free();
 
-    static bool CanBeInlined(const CBaseRTTIType* aType) noexcept;
+    static bool CanBeInlined(const rtti::IType* aType) noexcept;
 
-    const CBaseRTTIType* type{nullptr};
+    const rtti::IType* type{nullptr};
     union
     {
         uint8_t inlined[InlineSize]{0};
@@ -262,7 +265,7 @@ struct CurveData
 
     CName name;                                  // 00
     RawBuffer buffer;                            // 08
-    CBaseRTTIType* valueType;                    // 40
+    rtti::IType* valueType;                      // 40
     curve::EInterpolationType interpolationType; // 48
     curve::ESegmentsLinkType linkType;           // 49
 };
@@ -276,10 +279,10 @@ RED4EXT_ASSERT_OFFSET(CurveData<float>, linkType, 0x31);
 template<typename T>
 struct ScriptRef
 {
-    uint8_t unk00[0x10];      // 00
-    CBaseRTTIType* innerType; // 10
-    T* ref;                   // 18
-    CName hash;               // 20
+    uint8_t unk00[0x10];    // 00
+    rtti::IType* innerType; // 10
+    T* ref;                 // 18
+    CName hash;             // 20
 };
 RED4EXT_ASSERT_SIZE(ScriptRef<void>, 0x28);
 

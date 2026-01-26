@@ -48,13 +48,13 @@ struct CProperty
     };
     RED4EXT_ASSERT_SIZE(Flags, 0x8);
 
-    CProperty(CBaseRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
+    CProperty(rtti::IType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
               const char* aGroup = nullptr, Flags aFlags = {});
 
-    static CProperty* Create(CBaseRTTIType* aType, const char* aName, CClass* aParent = nullptr,
+    static CProperty* Create(rtti::IType* aType, const char* aName, CClass* aParent = nullptr,
                              uint32_t aValueOffset = 0, const char* aGroup = nullptr, Flags aFlags = {});
 
-    CBaseRTTIType* type;  // 00
+    rtti::IType* type;    // 00
     CName name;           // 08
     CName group;          // 10
     CClass* parent;       // 18
