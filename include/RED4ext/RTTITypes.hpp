@@ -20,6 +20,12 @@ struct CClassFunction;
 struct CClassStaticFunction;
 struct Variant;
 
+using ERTTIType = rtti::ERTTIType;
+
+struct [[deprecated("Use 'rtti::IType' instead.")]] CBaseRTTIType : rtti::IType
+{
+};
+
 struct CClass : rtti::IType
 {
     struct Flags

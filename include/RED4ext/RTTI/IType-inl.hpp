@@ -88,10 +88,10 @@ RED4EXT_INLINE RED4ext::CString RED4ext::rtti::IType::GetTypeName() const
 
 RED4EXT_INLINE RED4ext::CName RED4ext::rtti::IType::GetComputedName() const
 {
-    std::string name = "script_ref:";
     auto hash = GetName();
     if (!hash.IsNone())
     {
+        std::string name = "script_ref:";
         name += hash.ToString();
         return CNamePool::Add(name.c_str());
     }
