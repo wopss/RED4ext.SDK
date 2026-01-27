@@ -1,9 +1,9 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Rendering/RenderData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/Chunk.hpp>
 #include <RED4ext/Scripting/Natives/Vector4.hpp>
-#include <RED4ext/Rendering/RenderData.hpp>
 
 #include <cstdint>
 

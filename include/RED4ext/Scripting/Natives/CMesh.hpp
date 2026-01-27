@@ -5,7 +5,7 @@
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/RenderResource.hpp>
+#include <RED4ext/Rendering/RenderResource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Box.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CMeshMaterialEntry.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ERenderObjectType.hpp>
