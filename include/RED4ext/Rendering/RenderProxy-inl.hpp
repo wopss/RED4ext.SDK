@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/RenderProxy.hpp>
+#include <RED4ext/Rendering/RenderProxy.hpp>
 #endif
 
 #include <RED4ext/Detail/AddressHashes.hpp>
