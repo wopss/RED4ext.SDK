@@ -43,7 +43,7 @@ class TRenderPtr
 {
     TRenderPtr() = default;
 
-    ~TRenderPtr() noexcept
+    ~TRenderPtr()
     {
         Release();
     }
@@ -103,7 +103,7 @@ class TRenderPtr
     }
 
 private:
-    void Release() noexcept
+    void Release()
     {
         if (m_instance)
             m_instance->Release();
