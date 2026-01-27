@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/Detail/Memory.hpp>
+#include <RED4ext/Memory/Utils.hpp>
 
 namespace RED4ext
 {
