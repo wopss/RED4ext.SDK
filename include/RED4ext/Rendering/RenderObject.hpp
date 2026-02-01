@@ -4,8 +4,10 @@
 
 namespace RED4ext
 {
-struct IRenderData
+struct IRenderObject
 {
+    friend class TRenderPtr;
+
     using AllocatorType = Memory::RenderDataAllocator;
 
     virtual Memory::IAllocator* GetAllocator()
@@ -21,24 +23,25 @@ struct IRenderData
         }
     }
 
-    virtual ~IRenderData() = default;
+    virtual ~IRenderObject() = default;
 
+protected:
     void Release()
     {
-        if (--refCount < 1)
+        if (--m_refCount < 1)
             Destroy();
     }
 
     void AddRef()
     {
-        refCount++;
+        m_refCount++;
     }
 
-    std::atomic<int32_t> refCount = 1;
+    std::atomic<int32_t> m_refCount = 1;
 };
-RED4EXT_ASSERT_SIZE(IRenderData, 0x10);
+RED4EXT_ASSERT_SIZE(IRenderObject, 0x10);
 
-template<std::derived_from<IRenderData> T = IRenderData>
+template<std::derived_from<IRenderObject> T = IRenderObject>
 class TRenderPtr
 {
     TRenderPtr() = default;
@@ -52,8 +55,7 @@ class TRenderPtr
     {
     }
 
-    template<std::derived_from<IRenderData> U>
-    explicit TRenderPtr(U* aPointer) noexcept
+    explicit TRenderPtr(T* aPointer) noexcept
         : m_instance(aPointer)
     {
     }
@@ -70,7 +72,7 @@ class TRenderPtr
         Swap(aOther);
     }
 
-    operator bool() const noexcept
+    explicit operator bool() const noexcept
     {
         return m_instance != nullptr;
     }
@@ -90,6 +92,11 @@ class TRenderPtr
     T* operator->() const noexcept
     {
         return m_instance;
+    }
+
+    T& operator*() const noexcept
+    {
+        return *m_instance;
     }
 
     void Swap(TRenderPtr& aOther) noexcept

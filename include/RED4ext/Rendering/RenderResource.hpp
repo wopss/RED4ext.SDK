@@ -1,7 +1,7 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Rendering/RenderData.hpp>
+#include <RED4ext/Rendering/RenderObject.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/Chunk.hpp>
 #include <RED4ext/Scripting/Natives/Vector4.hpp>
 
@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-struct IRenderResource : IRenderData
+struct IRenderResource : IRenderObject
 {
     using AllocatorType = Memory::RenderResourcesAllocator;
 
