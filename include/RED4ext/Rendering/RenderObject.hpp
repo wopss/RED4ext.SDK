@@ -6,6 +6,7 @@ namespace RED4ext
 {
 struct IRenderObject
 {
+    template<typename T>
     friend class TRenderPtr;
 
     using AllocatorType = Memory::RenderDataAllocator;
@@ -44,6 +45,7 @@ RED4EXT_ASSERT_SIZE(IRenderObject, 0x10);
 template<std::derived_from<IRenderObject> T = IRenderObject>
 class TRenderPtr
 {
+public:
     TRenderPtr() = default;
 
     ~TRenderPtr()
