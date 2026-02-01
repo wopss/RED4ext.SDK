@@ -6,7 +6,7 @@ namespace RED4ext
 {
 struct IRenderObject
 {
-    template<typename T>
+    template<std::derived_from<IRenderObject> T>
     friend class TRenderPtr;
 
     using AllocatorType = Memory::RenderDataAllocator;
