@@ -4,8 +4,11 @@
 #include <D3D12MemAlloc.h>
 #endif
 
+#include <RED4ext/Common.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
+
+#include <Windows.h>
 
 RED4EXT_INLINE HRESULT D3D12MA::Allocator::CreateResource(const ALLOCATION_DESC* pAllocDesc,
                                                           const D3D12_RESOURCE_DESC* pResourceDesc,
