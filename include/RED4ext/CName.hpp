@@ -97,11 +97,6 @@ struct CName
         return hash == 0;
     }
 
-    [[deprecated("Use 'IsNone()' instead.")]] constexpr bool IsEmpty() const noexcept
-    {
-        return IsNone();
-    }
-
     uint64_t hash; // 00
 };
 RED4EXT_ASSERT_SIZE(CName, 0x8);
