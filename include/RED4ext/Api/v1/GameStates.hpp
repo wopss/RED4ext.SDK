@@ -1,13 +1,15 @@
 #pragma once
 
 #include <RED4ext/Api/PluginHandle.hpp>
-#include <RED4ext/Api/v0/GameState.hpp>
+#include <RED4ext/Api/v1/GameState.hpp>
+
+#include <cstdint>
 
 namespace RED4ext
 {
 enum class EGameStateType : uint32_t;
 
-namespace v0
+namespace v1
 {
 struct GameStates
 {
@@ -22,5 +24,5 @@ struct GameStates
      */
     bool (*Add)(PluginHandle aHandle, EGameStateType aType, GameState* aState);
 };
-} // namespace v0
+} // namespace v1
 } // namespace RED4ext
