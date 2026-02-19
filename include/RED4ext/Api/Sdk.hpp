@@ -1,54 +1,56 @@
 #pragma once
 
-#include <RED4ext/Api/v0/PluginInfo.hpp>
-#include <RED4ext/Api/v0/Sdk.hpp>
+#include <RED4ext/Api/v1/PluginInfo.hpp>
+#include <RED4ext/Api/v1/Sdk.hpp>
+
+#include <cstdint>
 
 namespace RED4ext
 {
 /**
  * @brief The latest plugin info type.
  */
-using PluginInfo = v0::PluginInfo;
+using PluginInfo = v1::PluginInfo;
 
 /**
  * @brief The latest version info type.
  */
-using SemVer = v0::SemVer;
+using SemVer = v1::SemVer;
 
 /**
  * @brief The latest version info type.
  */
-using FileVer = v0::FileVer;
+using FileVer = v1::FileVer;
 
 /**
  * @brief The latest RED4ext.
  */
-using Sdk = v0::Sdk;
+using Sdk = v1::Sdk;
 
 /**
  * @brief The latest hooking.
  */
-using Logger = v0::Logger;
+using Logger = v1::Logger;
 
 /**
  * @brief The latest hooking.
  */
-using Hooking = v0::Hooking;
+using Hooking = v1::Hooking;
 
 /**
  * @brief The latest game state type.
  */
-using GameStates = v0::GameStates;
+using GameStates = v1::GameStates;
 
 /**
  * @brief The latest game state type.
  */
-using GameState = v0::GameState;
+using GameState = v1::GameState;
 
 /**
  * @brief The latest game state type.
  */
-using Scripts = v0::Scripts;
+using Scripts = v1::Scripts;
 } // namespace RED4ext
 
 /*
@@ -60,5 +62,5 @@ using Scripts = v0::Scripts;
  */
 #ifndef RED4EXT_OFFSET_TO_ADDR
 #define RED4EXT_OFFSET_TO_ADDR(offset)                                                                                 \
-    reinterpret_cast<void*>(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)) + offset)
+    reinterpret_cast<void*>(reinterpret_cast<std::uintptr_t>(GetModuleHandle(nullptr)) + offset)
 #endif
