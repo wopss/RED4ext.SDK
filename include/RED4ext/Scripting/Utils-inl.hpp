@@ -34,7 +34,7 @@ RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunc
 
     // Set the arguments types here. This is done here so that we don't have to copy the code for finding a function
     // multiple times.
-    for (size_t i = 0; i < aArgs.size() && i < aFunc->params.size; i++)
+    for (size_t i = 0; i < aArgs.size() && i < aFunc->params.Size(); i++)
     {
         auto& arg = aArgs[i];
 
