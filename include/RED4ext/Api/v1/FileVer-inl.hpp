@@ -1,13 +1,16 @@
 #pragma once
 
 #ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/Api/v0/FileVer.hpp>
+#include <RED4ext/Api/v1/FileVer.hpp>
 #endif
 
 #include <RED4ext/Common.hpp>
-#include <sstream>
 
-RED4EXT_INLINE RED4ext::v0::FileVer RED4ext::v0::CreateFileVer(uint16_t aMajor, uint16_t aMinor, uint16_t aBuild,
+#include <cstdint>
+#include <sstream>
+#include <string>
+
+RED4EXT_INLINE RED4ext::v1::FileVer RED4ext::v1::CreateFileVer(uint16_t aMajor, uint16_t aMinor, uint16_t aBuild,
                                                                uint16_t aRevision)
 {
     FileVer version{};
@@ -19,7 +22,7 @@ RED4EXT_INLINE RED4ext::v0::FileVer RED4ext::v0::CreateFileVer(uint16_t aMajor, 
     return version;
 }
 
-RED4EXT_INLINE int32_t RED4ext::v0::CompareFileVer(const RED4ext::v0::FileVer& aLhs, const RED4ext::v0::FileVer& aRhs)
+RED4EXT_INLINE int32_t RED4ext::v1::CompareFileVer(const RED4ext::v1::FileVer& aLhs, const RED4ext::v1::FileVer& aRhs)
 {
     if (aLhs.major != aRhs.major)
     {
@@ -41,7 +44,7 @@ RED4EXT_INLINE int32_t RED4ext::v0::CompareFileVer(const RED4ext::v0::FileVer& a
     return 0;
 }
 
-RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v0::FileVer& aVersion)
+RED4EXT_INLINE std::wstring std::to_wstring(const RED4ext::v1::FileVer& aVersion)
 {
     std::wstringstream stream;
     stream << aVersion.major << L"." << aVersion.minor << L"." << aVersion.build << L"." << aVersion.revision;

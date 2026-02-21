@@ -1,9 +1,8 @@
 #pragma once
 
 #include <RED4ext/Api/PluginHandle.hpp>
-#include <filesystem>
 
-namespace RED4ext::v0
+namespace RED4ext::v1
 {
 struct Scripts
 {
@@ -37,4 +36,4 @@ struct Scripts
      */
     bool (*RegisterMixedRefType)(const char* aType);
 };
-} // namespace RED4ext::v0
+} // namespace RED4ext::v1

@@ -18,21 +18,6 @@ RED4EXT_INLINE void RED4ext::CRTTISystem::RegisterType(CBaseRTTIType* aType)
     RegisterType(aType, RTTIRegistrator::GetNextId());
 }
 
-RED4EXT_INLINE void RED4ext::RTTIRegistrator::Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused)
-{
-    RED4EXT_UNUSED_PARAMETER(aUnused);
-
-    if (aRegFunc)
-    {
-        CRTTISystem::Get()->AddRegisterCallback(aRegFunc);
-    }
-
-    if (aPostRegFunc)
-    {
-        CRTTISystem::Get()->AddPostRegisterCallback(aPostRegFunc);
-    }
-}
-
 RED4EXT_INLINE const uint32_t RED4ext::RTTIRegistrator::GetNextId()
 {
     static UniversalRelocPtr<volatile uint32_t> ptr(Detail::AddressHashes::CRTTIRegistrator_RTTIAsyncId);
