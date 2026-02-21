@@ -6,6 +6,7 @@ namespace RED4ext
 {
 class IRenderObject
 {
+public:
     template<std::derived_from<IRenderObject> T>
     friend class TRenderPtr;
 
@@ -47,11 +48,6 @@ class TRenderPtr
 public:
     TRenderPtr() = default;
 
-    ~TRenderPtr()
-    {
-        Release();
-    }
-
     TRenderPtr(std::nullptr_t) noexcept
     {
     }
@@ -73,6 +69,11 @@ public:
     TRenderPtr(TRenderPtr&& aOther) noexcept
     {
         Swap(aOther);
+    }
+
+    ~TRenderPtr()
+    {
+        Release();
     }
 
     explicit operator bool() const noexcept
