@@ -4,7 +4,7 @@
 
 namespace RED4ext
 {
-struct IRenderObject
+class IRenderObject
 {
     template<std::derived_from<IRenderObject> T>
     friend class TRenderPtr;
@@ -18,10 +18,7 @@ struct IRenderObject
 
     virtual void Destroy()
     {
-        if (this)
-        {
-            Memory::Delete(this);
-        }
+        Memory::Delete(this);
     }
 
     virtual ~IRenderObject() = default;
@@ -30,7 +27,9 @@ protected:
     void Release()
     {
         if (--m_refCount < 1)
+        {
             Destroy();
+        }
     }
 
     void AddRef()
@@ -38,7 +37,7 @@ protected:
         m_refCount++;
     }
 
-    std::atomic<int32_t> m_refCount = 1;
+    std::atomic<int32_t> m_refCount{1};
 };
 RED4EXT_ASSERT_SIZE(IRenderObject, 0x10);
 
@@ -66,7 +65,9 @@ public:
         : m_instance(aOther.m_instance)
     {
         if (m_instance)
+        {
             m_instance->AddRef();
+        }
     }
 
     TRenderPtr(TRenderPtr&& aOther) noexcept
@@ -118,7 +119,7 @@ private:
             m_instance->Release();
     }
 
-    T* m_instance = nullptr;
+    T* m_instance{nullptr};
 };
-RED4EXT_ASSERT_SIZE(TRenderPtr<>, 0x08);
+RED4EXT_ASSERT_SIZE(TRenderPtr<>, 0x8);
 } // namespace RED4ext

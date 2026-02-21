@@ -13,6 +13,11 @@ struct IRenderResource : IRenderObject
 {
     using AllocatorType = Memory::RenderResourcesAllocator;
 
+    virtual Memory::IAllocator* GetAllocator() override
+    {
+        return AllocatorType::Get();
+    }
+
     virtual ~IRenderResource() = default;
     virtual CName GetResourceName() = 0;
     virtual char** sub_20() = 0;
