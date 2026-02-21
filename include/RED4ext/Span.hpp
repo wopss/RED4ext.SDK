@@ -29,7 +29,7 @@ struct Span
 
     constexpr operator bool() const noexcept
     {
-        return IsEmpty();
+        return !Empty();
     }
 
     T& operator[](size_t aIndex)
@@ -55,6 +55,26 @@ struct Span
     [[nodiscard]] inline auto GetSize() const
     {
         return endPtr - beginPtr;
+    }
+
+    [[nodiscard]] inline T* Data()
+    {
+        return beginPtr;
+    }
+
+    [[nodiscard]] inline const T* Data() const
+    {
+        return beginPtr;
+    }
+
+    [[nodiscard]] inline auto Size() const
+    {
+        return endPtr - beginPtr;
+    }
+
+    [[nodiscard]] inline bool Empty() const
+    {
+        return !beginPtr;
     }
 
     T* beginPtr; // 00
