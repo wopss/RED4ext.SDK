@@ -72,11 +72,6 @@ struct Span
         return endPtr - beginPtr;
     }
 
-    [[nodiscard]] inline bool Empty() const
-    {
-        return !beginPtr;
-    }
-
     T* beginPtr; // 00
     T* endPtr;   // 08
 };

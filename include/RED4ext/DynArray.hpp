@@ -297,7 +297,7 @@ struct DynArray
         return size;
     }
 
-    [[nodiscard]] bool Empty() const noexcept
+    [[nodiscard]] bool IsEmpty() const noexcept
     {
         return size == 0;
     }
