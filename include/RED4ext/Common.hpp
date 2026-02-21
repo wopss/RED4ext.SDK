@@ -1,6 +1,9 @@
 #pragma once
 
 #include <cstddef>
+#include <cstdint>
+
+#include <Windows.h>
 
 #ifdef RED4EXT_STATIC_LIB
 #undef RED4EXT_HEADER_ONLY
@@ -48,4 +51,16 @@
 
 #ifndef RED4EXT_CALL
 #define RED4EXT_CALL __fastcall
+#endif
+
+/*
+ * @brief Compute the runtime address of an offset.
+ *
+ * @example
+ *  const auto offset = 0x14022EAD0 - 0x140000000;
+ *  const auto addr =  RED4EXT_OFFSET_TO_ADDR(offset);
+ */
+#ifndef RED4EXT_OFFSET_TO_ADDR
+#define RED4EXT_OFFSET_TO_ADDR(offset)                                                                                 \
+    reinterpret_cast<void*>(reinterpret_cast<std::uintptr_t>(GetModuleHandle(nullptr)) + offset)
 #endif

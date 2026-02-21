@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/Api/PluginHandle.hpp>
+#include <RED4ext/Api/v1/PluginHandle.hpp>
 
 namespace RED4ext::v1
 {
