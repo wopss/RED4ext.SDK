@@ -29,7 +29,7 @@ struct Span
 
     constexpr operator bool() const noexcept
     {
-        return !Empty();
+        return !IsEmpty();
     }
 
     T& operator[](size_t aIndex)
