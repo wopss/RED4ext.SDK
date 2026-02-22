@@ -45,12 +45,12 @@ RED4EXT_INLINE void RED4ext::ScriptReport::AddBindingError(const char* aFormat, 
 
 RED4EXT_INLINE bool RED4ext::ScriptReport::HasErrors() const noexcept
 {
-    return errors && !errors->Empty();
+    return errors && !errors->IsEmpty();
 }
 
 RED4EXT_INLINE RED4ext::CString RED4ext::ScriptReport::ToString() const noexcept
 {
-    if (!errors || errors->Empty())
+    if (!errors || errors->IsEmpty())
     {
         return {};
     }

@@ -240,7 +240,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, CBaseRTTITyp
         std::shared_lock<SharedSpinLock> _(mutex01);
 
         const auto* records = recordsByType.Get(aType);
-        if (records == nullptr || records->Empty())
+        if (records == nullptr || records->IsEmpty())
             return false;
 
         record = (*records)[0];
