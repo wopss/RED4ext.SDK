@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/Api/v0/Version.hpp>
+#include <RED4ext/Api/v1/Version.hpp>
 
 /*
  * The SDK is using only one API version, the reason behind that is that multiple versions for every structure is
@@ -14,18 +14,18 @@
  * backward compatible.
  */
 
-#define RED4EXT_API_VERSION_0 0
-#define RED4EXT_API_VERSION_LATEST RED4EXT_API_VERSION_0
+#define RED4EXT_API_VERSION_1 1
+#define RED4EXT_API_VERSION_LATEST RED4EXT_API_VERSION_1
 
 /*
  * The SDK version, it is maninly used to reject loading plugin that are using a broken SDK version, while API version
  * is 0, it is used to load only plugins using the latest SDK version.
  */
 
-#define RED4EXT_SDK_0_1_0 RED4EXT_V0_SDK_0_1_0
-#define RED4EXT_SDK_0_2_0 RED4EXT_V0_SDK_0_2_0
-#define RED4EXT_SDK_0_3_0 RED4EXT_V0_SDK_0_3_0
-#define RED4EXT_SDK_0_4_0 RED4EXT_V0_SDK_0_4_0
-#define RED4EXT_SDK_0_5_0 RED4EXT_V0_SDK_0_5_0
+#define RED4EXT_SDK_0_1_0 RED4EXT_V1_SDK_0_1_0
+#define RED4EXT_SDK_0_2_0 RED4EXT_V1_SDK_0_2_0
+#define RED4EXT_SDK_0_3_0 RED4EXT_V1_SDK_0_3_0
+#define RED4EXT_SDK_0_4_0 RED4EXT_V1_SDK_0_4_0
+#define RED4EXT_SDK_0_5_0 RED4EXT_V1_SDK_0_5_0
 
-#define RED4EXT_SDK_LATEST RED4EXT_V0_SDK_LATEST
+#define RED4EXT_SDK_LATEST RED4EXT_V1_SDK_LATEST
