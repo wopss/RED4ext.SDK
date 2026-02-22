@@ -193,7 +193,7 @@ struct DynArray
         return ConstIterator(std::find(Begin(), End(), aValue));
     }
 
-    [[nodiscard]] bool IsInRange(ConstReference aValue) const
+    [[nodiscard]] bool Contains(ConstReference aValue) const
     {
         return Find(aValue) != End();
     }
@@ -217,7 +217,7 @@ struct DynArray
     template<class... TArgs>
     Iterator Emplace(ConstIterator aPos, TArgs&&... aArgs)
     {
-        assert(Includes(aPos));
+        assert(IsInRange(aPos));
 
         const SizeType posIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
         const SizeType newSize = m_size + 1;
@@ -241,7 +241,7 @@ struct DynArray
     template<std::input_iterator InputIt>
     Iterator Insert(ConstIterator aPos, InputIt aFirst, InputIt aLast)
     {
-        assert(Includes(aPos));
+        assert(IsInRange(aPos));
 
         const DifferenceType distance = std::distance(aFirst, aLast);
         const SizeType insertSize = static_cast<SizeType>(std::abs(distance));
@@ -278,7 +278,7 @@ struct DynArray
 
     Iterator Insert(ConstIterator aPos, SizeType aCount, ConstReference aValue)
     {
-        assert(Includes(aPos));
+        assert(IsInRange(aPos));
 
         const SizeType insertIdx = static_cast<SizeType>(std::distance(ConstIterator(Begin()), aPos));
 
@@ -318,7 +318,7 @@ struct DynArray
 
     Iterator Erase(Iterator aPos)
     {
-        assert(aPos < End() && Includes(aPos));
+        assert(aPos < End() && IsInRange(aPos));
 
         std::destroy_at(std::addressof(*aPos));
 
@@ -411,25 +411,25 @@ struct DynArray
 
     [[nodiscard]] Reference Front()
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[0];
     }
 
     [[nodiscard]] ConstReference Front() const
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[0];
     }
 
     [[nodiscard]] Reference Back()
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[m_size - 1];
     }
 
     [[nodiscard]] ConstReference Back() const
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[m_size - 1];
     }
 
@@ -473,7 +473,7 @@ struct DynArray
         return ConstReverseIterator(End());
     }
 
-    [[nodiscard]] bool Empty() const noexcept
+    [[nodiscard]] bool IsEmpty() const noexcept
     {
         return m_size == 0;
     }
@@ -551,7 +551,7 @@ private:
     uint32_t m_capacity; // 08
     uint32_t m_size;     // 0C
 
-    [[nodiscard]] bool Includes(ConstIterator aPos) const noexcept
+    [[nodiscard]] bool IsInRange(ConstIterator aPos) const noexcept
     {
         return Begin() <= aPos && aPos <= End();
     }

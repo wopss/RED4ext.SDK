@@ -85,25 +85,25 @@ struct Span
 
     [[nodiscard]] constexpr Reference Front()
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return Data()[0];
     }
 
     [[nodiscard]] constexpr ConstReference Front() const
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return Data()[0];
     }
 
     [[nodiscard]] constexpr Reference Back()
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return Data()[Size() - 1];
     }
 
     [[nodiscard]] constexpr ConstReference Back() const
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return Data()[Size() - 1];
     }
 
@@ -147,7 +147,7 @@ struct Span
         return ConstReverseIterator(End());
     }
 
-    [[nodiscard]] constexpr bool Empty() const
+    [[nodiscard]] constexpr bool IsEmpty() const
     {
         return Size() == 0;
     }

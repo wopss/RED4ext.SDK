@@ -192,25 +192,25 @@ struct StaticArray
 
     [[nodiscard]] Reference Front()
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[0];
     }
 
     [[nodiscard]] ConstReference Front() const
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[0];
     }
 
     [[nodiscard]] Reference Back()
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[m_size - 1];
     }
 
     [[nodiscard]] ConstReference Back() const
     {
-        assert(!Empty());
+        assert(!IsEmpty());
         return m_entries[m_size - 1];
     }
 
@@ -229,7 +229,7 @@ struct StaticArray
         return m_entries;
     }
 
-    [[nodiscard]] bool Empty() const noexcept
+    [[nodiscard]] bool IsEmpty() const noexcept
     {
         return m_size == 0;
     }
