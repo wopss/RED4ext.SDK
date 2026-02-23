@@ -277,6 +277,31 @@ struct DynArray
         return *(entries + size - 1);
     }
 
+    [[nodiscard]] T* Data() noexcept
+    {
+        return entries;
+    }
+
+    [[nodiscard]] const T* Data() const noexcept
+    {
+        return entries;
+    }
+
+    [[nodiscard]] uint32_t Capacity() const noexcept
+    {
+        return capacity;
+    }
+
+    [[nodiscard]] uint32_t Size() const noexcept
+    {
+        return size;
+    }
+
+    [[nodiscard]] bool IsEmpty() const noexcept
+    {
+        return size == 0;
+    }
+
     T* entries;        // 00
     uint32_t capacity; // 08
     uint32_t size;     // 0C
