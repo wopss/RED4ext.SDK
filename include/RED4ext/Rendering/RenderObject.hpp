@@ -41,6 +41,7 @@ protected:
         m_refCount++;
     }
 
+private:
     std::atomic<int32_t> m_refCount{1};
 };
 RED4EXT_ASSERT_SIZE(IRenderObject, 0x10);
@@ -120,7 +121,9 @@ private:
     void Release()
     {
         if (m_instance)
+        {
             m_instance->Release();
+        }
     }
 
     T* m_instance{nullptr};
