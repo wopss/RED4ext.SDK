@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
-#include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/Containers/StaticArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
 
 namespace RED4ext

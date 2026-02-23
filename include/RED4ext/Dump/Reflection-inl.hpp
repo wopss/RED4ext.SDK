@@ -90,9 +90,9 @@ RED4EXT_INLINE void Dump(std::filesystem::path aOutPath, std::filesystem::path a
                     ClassDependencyBuilder builder;
                     builder.pType = classType;
 
-                    for (uint32_t i = 0; i < classType->unk118.size; ++i)
+                    for (uint32_t i = 0; i < classType->unk118.Size(); ++i)
                     {
-                        auto prop = classType->unk118.entries[i];
+                        auto prop = classType->unk118[i];
                         if (!prop->flags.inValueHolder)
                         {
                             builder.mPropertyMap.emplace(prop->valueOffset, prop);
@@ -493,12 +493,12 @@ RED4EXT_INLINE EnumFileDescriptor::EnumFileDescriptor(const RED4ext::CEnum* pEnu
 
     size = pEnum->GetSize();
 
-    for (uint32_t i = 0; i < pEnum->hashList.size; ++i)
+    for (uint32_t i = 0; i < pEnum->hashList.Size(); ++i)
     {
         enumMap[pEnum->valueList[i]] = pEnum->hashList[i].ToString();
     }
 
-    for (uint32_t i = 0; i < pEnum->aliasList.size; ++i)
+    for (uint32_t i = 0; i < pEnum->aliasList.Size(); ++i)
     {
         enumAlias[pEnum->aliasList[i].ToString()] = pEnum->aliasValueList[i];
     }
@@ -830,7 +830,7 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
         }
         case RED4ext::ERTTIType::Array:
         {
-            aFd.includes.emplace("DynArray");
+            aFd.includes.emplace("Containers/DynArray");
             break;
         }
         case RED4ext::ERTTIType::Name:
@@ -845,6 +845,10 @@ RED4EXT_INLINE void ClassDependencyBuilder::ToFileDescriptor(ClassFileDescriptor
             break;
         }
         case RED4ext::ERTTIType::StaticArray:
+        {
+            aFd.includes.emplace("Containers/StaticArray");
+            break;
+        }
         case RED4ext::ERTTIType::NativeArray:
         case RED4ext::ERTTIType::ResourceReference:
         case RED4ext::ERTTIType::ResourceAsyncReference:

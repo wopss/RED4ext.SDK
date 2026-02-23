@@ -5,7 +5,7 @@
 #include <functional>
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Relocation.hpp>
 
 namespace RED4ext
@@ -51,7 +51,7 @@ struct Map
 
     uint32_t GetSize() const
     {
-        return keys.size;
+        return keys.Size();
     }
 
     T* Get(const K& aKey)
@@ -105,8 +105,8 @@ struct Map
             return {&values[index], false};
         }
 
-        keys.Emplace(&keys.entries[index], std::forward<const K&>(aKey));
-        values.Emplace(&values.entries[index], std::forward<TArgs>(aArgs)...);
+        keys.Emplace(&keys[index], std::forward<const K&>(aKey));
+        values.Emplace(&values[index], std::forward<TArgs>(aArgs)...);
         return {&values[index], true};
     }
 
@@ -176,7 +176,7 @@ struct Map
     int32_t flags;      // 20
 
 private:
-    const K* LowerBound(const K& aKey) const
+    const auto LowerBound(const K& aKey) const
     {
         if ((flags & (int32_t)Flags::NotSorted) == (int32_t)Flags::NotSorted)
         {
