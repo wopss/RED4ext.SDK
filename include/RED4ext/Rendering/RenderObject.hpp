@@ -19,7 +19,10 @@ public:
 
     virtual void Destroy()
     {
-        Memory::Delete(this);
+        if (this)
+        {
+            Memory::Delete(this);
+        }
     }
 
     virtual ~IRenderObject() = default;
