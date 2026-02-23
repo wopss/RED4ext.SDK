@@ -4,7 +4,7 @@ include(CMakeDependentOption)
 
 project(
   RED4ext.SDK
-  VERSION 0.5.0
+  VERSION 1.0.0
   LANGUAGES CXX
 )
 
