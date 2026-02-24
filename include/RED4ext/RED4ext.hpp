@@ -38,10 +38,17 @@
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/NativeTypes.hpp>
 
-#include <RED4ext/Api/EMainReason.hpp>
-#include <RED4ext/Api/FileVer.hpp>
-#include <RED4ext/Api/PluginHandle.hpp>
-#include <RED4ext/Api/Runtime.hpp>
-#include <RED4ext/Api/Sdk.hpp>
-#include <RED4ext/Api/SemVer.hpp>
-#include <RED4ext/Api/Version.hpp>
+#include <RED4ext/Api/ApiVersion.hpp>
+#include <RED4ext/Api/v1/EMainReason.hpp>
+#include <RED4ext/Api/v1/FileVer.hpp>
+#include <RED4ext/Api/v1/GameState.hpp>
+#include <RED4ext/Api/v1/GameStates.hpp>
+#include <RED4ext/Api/v1/Hooking.hpp>
+#include <RED4ext/Api/v1/Logger.hpp>
+#include <RED4ext/Api/v1/PluginHandle.hpp>
+#include <RED4ext/Api/v1/PluginInfo.hpp>
+#include <RED4ext/Api/v1/Runtime.hpp>
+#include <RED4ext/Api/v1/Scripts.hpp>
+#include <RED4ext/Api/v1/Sdk.hpp>
+#include <RED4ext/Api/v1/SemVer.hpp>
+#include <RED4ext/Api/v1/Version.hpp>

@@ -1,10 +1,10 @@
 #pragma once
 
-#include <RED4ext/Api/v1/FileVer.hpp>
 #include <RED4ext/Api/v1/GameStates.hpp>
 #include <RED4ext/Api/v1/Hooking.hpp>
 #include <RED4ext/Api/v1/Logger.hpp>
 #include <RED4ext/Api/v1/Scripts.hpp>
+#include <RED4ext/Api/v1/SemVer.hpp>
 
 namespace RED4ext::v1
 {

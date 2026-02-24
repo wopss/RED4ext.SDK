@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/Api/PluginHandle.hpp>
 #include <RED4ext/Api/v1/GameState.hpp>
+#include <RED4ext/Api/v1/PluginHandle.hpp>
 
 #include <cstdint>
 
