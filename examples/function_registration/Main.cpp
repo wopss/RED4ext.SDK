@@ -16,7 +16,7 @@
  * You have to take care of the type conversion from stack variables, stack management, etc..
  */
 
-void MyGlobalFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, RED4ext::CString* aOut, int64_t a4)
+void MyGlobalFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, RED4ext::String* aOut, int64_t a4)
 {
     RED4EXT_UNUSED_PARAMETER(aContext);
     RED4EXT_UNUSED_PARAMETER(aFrame);
@@ -30,7 +30,7 @@ void MyGlobalFunc(RED4ext::IScriptable* aContext, RED4ext::CStackFrame* aFrame, 
 
     if (aOut)
     {
-        RED4ext::CString result("Returned from MyGlobalFunc");
+        RED4ext::String result("Returned from MyGlobalFunc");
         *aOut = result;
     }
 }

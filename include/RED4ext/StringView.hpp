@@ -6,7 +6,7 @@
 
 namespace RED4ext
 {
-struct String;
+class String;
 
 #pragma pack(push, 4)
 struct StringView
