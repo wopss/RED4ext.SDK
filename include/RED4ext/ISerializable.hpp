@@ -14,7 +14,7 @@ struct IAllocator;
 
 struct CClass;
 struct BaseStream;
-struct String;
+class String;
 
 struct PostLoadParams
 {

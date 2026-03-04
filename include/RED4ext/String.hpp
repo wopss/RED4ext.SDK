@@ -1,7 +1,6 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/StringView.hpp>
 #include <RED4ext/HashMap.hpp>
 
 #include <cassert>
@@ -75,13 +74,13 @@ public:
     String(const std::string& aStr, Memory::IAllocator* aAllocator = nullptr)
         : m_allocator(aAllocator)
     {
-        Assign(aStr.c_str(), aStr.size());
+        Assign(aStr.c_str(), static_cast<SizeType>(aStr.size()));
     }
 
     String(const std::string_view& aView, Memory::IAllocator* aAllocator = nullptr)
         : m_allocator(aAllocator)
     {
-        Assign(aView.data(), aView.size());
+        Assign(aView.data(), static_cast<SizeType>(aView.size()));
     }
 
     ~String()
@@ -126,12 +125,12 @@ public:
 
     String& operator+=(const String& aOther)
     {
-        return Append(aOther.AsChar(), aOther.Size());
+        return Append(aOther.AsChar(), aOther.m_size);
     }
 
     String& operator+=(ConstPointer aStr)
     {
-        return Append(aStr, strlen(aStr));
+        return Append(aStr, static_cast<SizeType>(strlen(aStr)));
     }
 
     bool operator==(const String& aOther) const noexcept
@@ -181,7 +180,7 @@ public:
     // canonically `Set`
     String& Assign(ConstPointer aStr)
     {
-        return Assign(aStr, aStr ? strlen(aStr) : 0);
+        return Assign(aStr, aStr ? static_cast<SizeType>(strlen(aStr)) : 0);
     }
     // canonically `Set`
     String& Assign(const String& aOther)
@@ -248,11 +247,6 @@ public:
     String& Append(ValueType aChar)
     {
         return Append(&aChar, 1);
-    }
-
-    String& Append(const StringView& aView)
-    {
-        return Append(aView.Data(), aView.Length());
     }
 
     bool Insert(SizeType aIndex, ConstPointer aStr, SizeType aSize)

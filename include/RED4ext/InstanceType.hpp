@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-struct String;
+class String;
 struct ISerializable;
 struct IScriptable;
 struct TweakDBID;
