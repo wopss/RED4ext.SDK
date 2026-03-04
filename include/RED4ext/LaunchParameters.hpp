@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
@@ -14,7 +14,7 @@ namespace RED4ext
  *
  * @return A const reference to a hash map of the game's launch parameters.
  */
-const HashMap<CString, DynArray<CString>>& GetLaunchParameters() noexcept;
+const HashMap<String, DynArray<String>>& GetLaunchParameters() noexcept;
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

@@ -20,7 +20,7 @@ struct FinalBoardsOpenSpeakerScreen_NodeType : quest::IUIManagerNodeType
 
     bool openSpeakerScreen; // 38
     uint8_t unk39[0x40 - 0x39]; // 39
-    CString speakerName; // 40
+    String speakerName; // 40
 };
 RED4EXT_ASSERT_SIZE(FinalBoardsOpenSpeakerScreen_NodeType, 0x60);
 } // namespace quest

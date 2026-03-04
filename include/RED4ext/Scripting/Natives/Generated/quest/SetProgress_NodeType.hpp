@@ -19,7 +19,7 @@ struct SetProgress_NodeType : quest::IAchievementManagerNodeType
     static constexpr const char* ALIAS = NAME;
 
     TweakDBID achievement; // 30
-    CString factName; // 38
+    String factName; // 38
     uint32_t maxValue; // 58
     uint32_t currentValue; // 5C
 };

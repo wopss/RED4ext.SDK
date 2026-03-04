@@ -24,7 +24,7 @@ struct EventManagerNodeDefinition : quest::DisableableNodeDefinition
     static constexpr const char* ALIAS = NAME;
 
     game::EntityReference objectRef; // 48
-    CString managerName; // 80
+    String managerName; // 80
     CName PSClassName; // A0
     CName componentName; // A8
     Handle<IScriptable> event; // B0

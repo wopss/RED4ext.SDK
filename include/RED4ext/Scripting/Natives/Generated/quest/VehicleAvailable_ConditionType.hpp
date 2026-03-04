@@ -21,7 +21,7 @@ struct VehicleAvailable_ConditionType : quest::IVehicleConditionType
 
     quest::AvailableVehicleType vehicleType; // 38
     uint8_t unk3C[0x40 - 0x3C]; // 3C
-    CString vehicleName; // 40
+    String vehicleName; // 40
 };
 RED4EXT_ASSERT_SIZE(VehicleAvailable_ConditionType, 0x60);
 } // namespace quest

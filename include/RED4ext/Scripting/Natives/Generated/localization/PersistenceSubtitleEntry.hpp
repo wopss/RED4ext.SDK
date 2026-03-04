@@ -18,8 +18,8 @@ struct PersistenceSubtitleEntry
     static constexpr const char* ALIAS = NAME;
 
     CRUID stringId; // 00
-    CString femaleVariant; // 08
-    CString maleVariant; // 28
+    String femaleVariant; // 08
+    String maleVariant; // 28
 };
 RED4EXT_ASSERT_SIZE(PersistenceSubtitleEntry, 0x48);
 } // namespace localization

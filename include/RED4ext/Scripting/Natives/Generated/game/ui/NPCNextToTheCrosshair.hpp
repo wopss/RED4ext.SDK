@@ -24,7 +24,7 @@ struct NPCNextToTheCrosshair
     static constexpr const char* ALIAS = "NPCNextToTheCrosshair";
 
     WeakHandle<game::Object> npc; // 00
-    CString name; // 10
+    String name; // 10
     int32_t currentHealth; // 30
     int32_t maximumHealth; // 34
     int32_t currentCyberwarePct; // 38

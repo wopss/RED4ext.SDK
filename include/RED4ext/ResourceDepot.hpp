@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/ResourcePath.hpp>
@@ -13,7 +13,7 @@ struct Archive
 {
     void* instance;      // 00
     int32_t asyncHandle; // 08
-    CString path;        // 10
+    String path;         // 10
     uint8_t unk30[0x20]; // 30 - Used by LoadEntireArchiveIntoMemory()
 };
 RED4EXT_ASSERT_SIZE(Archive, 0x50);
@@ -31,7 +31,7 @@ enum class ArchiveScope : uint32_t
 struct ArchiveGroup
 {
     DynArray<Archive> archives; // 00
-    CString basePath;           // 10
+    String basePath;            // 10
     ArchiveScope scope;         // 30
 };
 RED4EXT_ASSERT_SIZE(ArchiveGroup, 0x38);
@@ -50,7 +50,7 @@ struct ResourceDepot
     uint64_t unk08;                // 08
     DynArray<ArchiveGroup> groups; // 10
     DynArray<void*> unk20;         // 20
-    CString rootPath;              // 30
+    String rootPath;               // 30
     bool hasModArchives;           // 50
 };
 RED4EXT_ASSERT_SIZE(ResourceDepot, 0x58);

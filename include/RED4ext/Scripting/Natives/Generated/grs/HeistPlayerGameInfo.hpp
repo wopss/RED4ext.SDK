@@ -28,7 +28,7 @@ struct __declspec(align(0x10)) HeistPlayerGameInfo
     net::Time spawnTime; // 08
     uint32_t killCount; // 10
     uint32_t deathCount; // 14
-    CString characterRecord; // 18
+    String characterRecord; // 18
     uint8_t unk38[0x70 - 0x38]; // 38
 };
 RED4EXT_ASSERT_SIZE(HeistPlayerGameInfo, 0x70);

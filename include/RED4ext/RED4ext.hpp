@@ -5,7 +5,7 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/GameApplication.hpp>
 #include <RED4ext/GameEngine.hpp>

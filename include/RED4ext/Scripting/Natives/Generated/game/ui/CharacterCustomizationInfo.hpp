@@ -27,7 +27,7 @@ struct CharacterCustomizationInfo : IScriptable
 
     CName name; // 40
     CName uiSlot; // 48
-    CString localizedName; // 50
+    String localizedName; // 50
     int32_t defaultIndex; // 70
     int32_t index; // 74
     bool hidden; // 78

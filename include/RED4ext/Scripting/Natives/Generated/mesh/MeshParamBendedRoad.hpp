@@ -29,11 +29,11 @@ struct MeshParamBendedRoad : mesh::MeshParameter
     DynArray<DynArray<uint16_t>> collInds; // 70
     DynArray<DynArray<Vector3>> collVerts; // 80
     DynArray<DynArray<uint16_t>> collFaceMatInds; // 90
-    DynArray<DynArray<CString>> collFaceMaterialNames; // A0
+    DynArray<DynArray<String>> collFaceMaterialNames; // A0
     DynArray<DynArray<Vector4>> collSkinWeights; // B0
     DynArray<DynArray<Color>> collSkinInds; // C0
-    DynArray<CString> collMaterialName; // D0
-    DynArray<CString> collFilterPresetName; // E0
+    DynArray<String> collMaterialName; // D0
+    DynArray<String> collFilterPresetName; // E0
 };
 RED4EXT_ASSERT_SIZE(MeshParamBendedRoad, 0xF0);
 } // namespace mesh

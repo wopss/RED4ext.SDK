@@ -23,7 +23,7 @@ struct AICommandNodeFunction
     uint8_t unk04[0x8 - 0x4]; // 4
     CName nodeType; // 08
     CName commandCategory; // 10
-    CString friendlyName; // 18
+    String friendlyName; // 18
     CName paramsType; // 38
     Color nodeColor; // 40
     uint8_t unk44[0x48 - 0x44]; // 44

@@ -4,7 +4,7 @@
 #include <RED4ext/StringView.hpp>
 #endif
 
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 
 RED4EXT_INLINE constexpr RED4ext::StringView::StringView() noexcept
     : ptr(nullptr)
@@ -24,8 +24,8 @@ RED4EXT_INLINE constexpr RED4ext::StringView::StringView(std::string_view aView)
 {
 }
 
-RED4EXT_INLINE RED4ext::StringView::StringView(const RED4ext::CString& aStr) noexcept
-    : ptr(aStr.c_str())
+RED4EXT_INLINE RED4ext::StringView::StringView(const RED4ext::String& aStr) noexcept
+    : ptr(aStr.AsChar())
     , length(aStr.Length())
 {
 }
@@ -70,12 +70,12 @@ RED4EXT_INLINE constexpr bool RED4ext::StringView::operator!=(std::string_view a
     return *this != StringView{aRhs};
 }
 
-RED4EXT_INLINE bool RED4ext::StringView::operator==(const RED4ext::CString& aRhs) const noexcept
+RED4EXT_INLINE bool RED4ext::StringView::operator==(const RED4ext::String& aRhs) const noexcept
 {
     return *this == StringView{aRhs};
 }
 
-RED4EXT_INLINE bool RED4ext::StringView::operator!=(const RED4ext::CString& aRhs) const noexcept
+RED4EXT_INLINE bool RED4ext::StringView::operator!=(const RED4ext::String& aRhs) const noexcept
 {
     return *this != StringView{aRhs};
 }

@@ -18,7 +18,7 @@ struct NameColorPair
     static constexpr const char* NAME = "worldNameColorPair";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
+    String name; // 00
     Color color; // 20
     uint8_t unk24[0x28 - 0x24]; // 24
 };

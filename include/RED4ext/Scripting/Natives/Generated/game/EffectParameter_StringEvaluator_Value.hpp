@@ -18,7 +18,7 @@ struct EffectParameter_StringEvaluator_Value : game::IEffectParameter_StringEval
     static constexpr const char* NAME = "gameEffectParameter_StringEvaluator_Value";
     static constexpr const char* ALIAS = NAME;
 
-    CString value; // 30
+    String value; // 30
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_StringEvaluator_Value, 0x50);
 } // namespace game

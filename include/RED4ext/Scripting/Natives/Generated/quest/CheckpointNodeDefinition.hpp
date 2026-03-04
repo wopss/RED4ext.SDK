@@ -26,7 +26,7 @@ struct CheckpointNodeDefinition : quest::SignalStoppingNodeDefinition
     bool retryOnFailure; // 4C
     uint8_t unk4D[0x50 - 0x4D]; // 4D
     DynArray<TweakDBID> additionalEndGameRewardsTweak; // 50
-    CString debugString; // 60
+    String debugString; // 60
 };
 RED4EXT_ASSERT_SIZE(CheckpointNodeDefinition, 0x80);
 } // namespace quest

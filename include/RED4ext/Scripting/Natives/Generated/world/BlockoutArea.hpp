@@ -23,7 +23,7 @@ struct BlockoutArea : ISerializable
     static constexpr const char* NAME = "worldBlockoutArea";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 30
+    String name; // 30
     Color color; // 50
     uint32_t parent; // 54
     DynArray<uint32_t> children; // 58

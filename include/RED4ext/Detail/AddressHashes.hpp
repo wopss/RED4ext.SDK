@@ -102,11 +102,8 @@ constexpr std::uint32_t CRTTISystem_Get = 0x4A610F64;
 constexpr std::uint32_t CStack_vtbl = 0x349A0EE1;
 #pragma endregion
 
-#pragma region CString
-constexpr std::uint32_t CString_ctor_str = 0xC81F0AAB;
-constexpr std::uint32_t CString_ctor_span = 0x7B210877;
-constexpr std::uint32_t CString_copy = 0xE8B40B51;
-constexpr std::uint32_t CString_dtor = 0x5405072C;
+#pragma region String
+constexpr std::uint32_t String_SetCapacity = 1744572317UL;
 #pragma endregion
 
 #pragma region DeviceData

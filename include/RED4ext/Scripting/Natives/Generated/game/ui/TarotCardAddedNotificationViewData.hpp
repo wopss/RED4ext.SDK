@@ -20,7 +20,7 @@ struct TarotCardAddedNotificationViewData : game::ui::GenericNotificationViewDat
     static constexpr const char* ALIAS = "TarotCardAddedNotificationViewData";
 
     CName imagePart; // 90
-    CString cardName; // 98
+    String cardName; // 98
     CName animation; // B8
 };
 RED4EXT_ASSERT_SIZE(TarotCardAddedNotificationViewData, 0xC0);

@@ -365,7 +365,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::AllocateFlatValue(void* aBuffer, const CSt
         RED4EXT_TDB_FLAT_CASE("raRef:CResource", ResourceAsyncReference<CResource>);
         RED4EXT_TDB_FLAT_CASE("CName", CName);
         RED4EXT_TDB_FLAT_CASE("Bool", bool);
-        RED4EXT_TDB_FLAT_CASE("String", CString);
+        RED4EXT_TDB_FLAT_CASE("String", String);
         RED4EXT_TDB_FLAT_CASE("Float", float);
         RED4EXT_TDB_FLAT_CASE("Int32", int32_t);
     }

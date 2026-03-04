@@ -18,7 +18,7 @@ struct Tooltip : attr::Attribute
     static constexpr const char* NAME = "attrTooltip";
     static constexpr const char* ALIAS = NAME;
 
-    CString xt; // 30
+    String xt; // 30
 };
 RED4EXT_ASSERT_SIZE(Tooltip, 0x50);
 } // namespace attr

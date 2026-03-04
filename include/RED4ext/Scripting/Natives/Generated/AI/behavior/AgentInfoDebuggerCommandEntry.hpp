@@ -19,7 +19,7 @@ struct AgentInfoDebuggerCommandEntry
     static constexpr const char* ALIAS = NAME;
 
     AI::behavior::BehaviorInstanceCallStack callStack; // 00
-    CString behaviorResourcePath; // 18
+    String behaviorResourcePath; // 18
 };
 RED4EXT_ASSERT_SIZE(AgentInfoDebuggerCommandEntry, 0x38);
 } // namespace AI::behavior

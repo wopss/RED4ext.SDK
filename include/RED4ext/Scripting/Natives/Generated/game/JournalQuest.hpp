@@ -23,7 +23,7 @@ struct JournalQuest : game::JournalFileEntry
     game::JournalQuestType type; // C8
     TweakDBID recommendedLevelID; // CC
     uint8_t unkD4[0xD8 - 0xD4]; // D4
-    CString districtID; // D8
+    String districtID; // D8
 };
 RED4EXT_ASSERT_SIZE(JournalQuest, 0xF8);
 } // namespace game

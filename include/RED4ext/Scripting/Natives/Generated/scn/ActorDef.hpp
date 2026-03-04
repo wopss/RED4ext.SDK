@@ -59,7 +59,7 @@ struct __declspec(align(0x10)) ActorDef
     RaRef<CResource> holocallInitScn; // 1A0
     scn::LipsyncAnimSetSRRefId lipsyncAnimSet; // 1A8
     uint8_t unk1AC[0x1B0 - 0x1AC]; // 1AC
-    CString actorName; // 1B0
+    String actorName; // 1B0
     TweakDBID specCharacterRecordId; // 1D0
     CName specAppearance; // 1D8
 };

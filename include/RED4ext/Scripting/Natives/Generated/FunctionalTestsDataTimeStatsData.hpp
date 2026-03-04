@@ -26,8 +26,8 @@ struct FunctionalTestsDataTimeStatsData : ISerializable
     float cpuTime; // 58
     float gpuTime; // 5C
     uint64_t rawLocalTime; // 60
-    CString playerPosition; // 68
-    CString playerOrientation; // 88
+    String playerPosition; // 68
+    String playerOrientation; // 88
     uint8_t unkA8[0xE8 - 0xA8]; // A8
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestsDataTimeStatsData, 0xE8);

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Memory/UniquePtr.hpp>
@@ -33,7 +33,7 @@ struct CommandListContext
     void Close();
     void FlushPendingBarriers();
 
-    CString debugName;                                               // 000
+    String debugName;                                                // 000
     uint64_t hash;                                                   // 020
     Microsoft::WRL::ComPtr<ID3D12CommandAllocator> commandAllocator; // 028
     Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> commandList;   // 030

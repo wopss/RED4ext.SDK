@@ -28,7 +28,7 @@ struct SceneTalking_ConditionType : quest::ISceneConditionType
     scn::SceneVersionCheck SceneVersion; // 78
     uint8_t unk79[0x80 - 0x79]; // 79
     CName SectionName; // 80
-    CString ActorName; // 88
+    String ActorName; // 88
     bool isInverted; // A8
     uint8_t unkA9[0xB0 - 0xA9]; // A9
 };

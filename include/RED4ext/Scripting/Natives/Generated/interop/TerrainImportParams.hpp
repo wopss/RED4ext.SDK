@@ -32,9 +32,9 @@ struct TerrainImportParams
     bool importColorMaps; // 35
     bool importControlMaps; // 36
     bool overwriteTransformsOfExistingNodes; // 37
-    CString nodesNamingPattern; // 38
-    CString prefabsNamingPattern; // 58
-    CString prefabsDestinationPath; // 78
+    String nodesNamingPattern; // 38
+    String prefabsNamingPattern; // 58
+    String prefabsDestinationPath; // 78
     tools::EditorObjectIDPath dstPrefabNodePath; // 98
 };
 RED4EXT_ASSERT_SIZE(TerrainImportParams, 0xA8);

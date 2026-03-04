@@ -1,6 +1,6 @@
 #pragma once
 
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <cstdint>
@@ -16,7 +16,7 @@ struct WorldID
 
     ResourcePath worldPath;          // 00
     ResourcePath streamingWorldPath; // 08
-    CString worldName;               // 10
+    String worldName;                // 10
     std::uint64_t unk30;             // 30
 };
 RED4EXT_ASSERT_SIZE(WorldID, 0x38);

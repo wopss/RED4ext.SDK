@@ -24,7 +24,7 @@ struct PackageNode : ISerializable
     static constexpr const char* NAME = "gamedataPackageNode";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 30
+    String name; // 30
     uint8_t unk50[0xA0 - 0x50]; // 50
     DynArray<Handle<game::data::FileNode>> files; // A0
     DynArray<Handle<game::data::VariableNode>> serializedVariables; // B0

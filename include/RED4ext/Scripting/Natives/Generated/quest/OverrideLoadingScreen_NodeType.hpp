@@ -23,7 +23,7 @@ struct OverrideLoadingScreen_NodeType : quest::IUIManagerNodeType
 
     RaRef<Bink> video; // 38
     DynArray<RaRef<Bink>> videos; // 40
-    DynArray<CString> tooltips; // 50
+    DynArray<String> tooltips; // 50
     float tooltipDuration; // 60
     bool forceVideoFrameRate; // 64
     uint8_t unk65[0x68 - 0x65]; // 65

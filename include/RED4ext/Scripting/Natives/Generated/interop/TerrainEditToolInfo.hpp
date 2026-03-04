@@ -25,10 +25,10 @@ struct TerrainEditToolInfo
     float defaultEmptyHeightmapMaskFalloff; // 0C
     float defaultEmptyHeightmapMaskRoundness; // 10
     uint32_t defaultEmptyHeightmapZeroMaskMargin; // 14
-    CString defaultHeightmap1; // 18
-    CString defaultHeightmap2; // 38
-    CString defaultColormap1; // 58
-    CString defaultColormap2; // 78
+    String defaultHeightmap1; // 18
+    String defaultHeightmap2; // 38
+    String defaultColormap1; // 58
+    String defaultColormap2; // 78
     DynArray<interop::TerrainEditToolCreationSlotInfo> creationSlots; // 98
 };
 RED4EXT_ASSERT_SIZE(TerrainEditToolInfo, 0xA8);

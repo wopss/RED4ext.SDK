@@ -18,7 +18,7 @@ struct NarrationEvent
     static constexpr const char* NAME = "gameuiNarrationEvent";
     static constexpr const char* ALIAS = "NarrationEvent";
 
-    CString text; // 00
+    String text; // 00
     float durationSec; // 20
     Color color; // 24
 };

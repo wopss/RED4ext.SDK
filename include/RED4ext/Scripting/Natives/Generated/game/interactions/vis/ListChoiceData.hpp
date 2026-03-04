@@ -23,7 +23,7 @@ struct ListChoiceData
     static constexpr const char* NAME = "gameinteractionsvisListChoiceData";
     static constexpr const char* ALIAS = "ListChoiceData";
 
-    CString localizedName; // 00
+    String localizedName; // 00
     game::interactions::ChoiceTypeWrapper type; // 20
     uint8_t unk24[0x28 - 0x24]; // 24
     CName inputActionName; // 28

@@ -21,7 +21,7 @@ struct VoiceTag
     CName voiceTag; // 00
     bool isApuc; // 08
     uint8_t unk09[0x10 - 0x9]; // 9
-    CString voicesetScenePath; // 10
+    String voicesetScenePath; // 10
     CRUID id; // 30
     uint8_t unk38[0x40 - 0x38]; // 38
 };

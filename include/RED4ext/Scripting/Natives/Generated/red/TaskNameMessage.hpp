@@ -20,7 +20,7 @@ struct TaskNameMessage
 
     uint32_t id; // 00
     uint32_t parent; // 04
-    CString title; // 08
+    String title; // 08
     CName uniqueName; // 28
 };
 RED4EXT_ASSERT_SIZE(TaskNameMessage, 0x30);

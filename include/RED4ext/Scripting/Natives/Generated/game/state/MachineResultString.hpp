@@ -19,7 +19,7 @@ struct MachineResultString
 
     bool valid; // 00
     uint8_t unk01[0x8 - 0x1]; // 1
-    CString value; // 08
+    String value; // 08
 };
 RED4EXT_ASSERT_SIZE(MachineResultString, 0x28);
 } // namespace game::state

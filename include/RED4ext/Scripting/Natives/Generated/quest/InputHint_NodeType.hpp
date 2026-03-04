@@ -22,7 +22,7 @@ struct InputHint_NodeType : quest::IUIManagerNodeType
     CName action; // 38
     CName groupId; // 40
     CName source; // 48
-    CString localizedLabel; // 50
+    String localizedLabel; // 50
     bool show; // 70
     uint8_t unk71[0x74 - 0x71]; // 71
     int32_t queuePriority; // 74

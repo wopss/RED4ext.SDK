@@ -18,9 +18,9 @@ struct TerrainImportedTile
     static constexpr const char* NAME = "interopTerrainImportedTile";
     static constexpr const char* ALIAS = NAME;
 
-    CString heightMapAbsolutePath; // 00
-    CString controlMapAbsolutePath; // 20
-    CString colorMapAbsolutePath; // 40
+    String heightMapAbsolutePath; // 00
+    String controlMapAbsolutePath; // 20
+    String colorMapAbsolutePath; // 40
     Point position; // 60
 };
 RED4EXT_ASSERT_SIZE(TerrainImportedTile, 0x68);

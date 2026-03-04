@@ -18,9 +18,9 @@ struct DisplayMessageBox_NodeType : quest::IUIManagerNodeType
     static constexpr const char* NAME = "questDisplayMessageBox_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString title; // 38
+    String title; // 38
     LocalizationString localizedTitle; // 58
-    CString message; // 80
+    String message; // 80
     LocalizationString localizedMessage; // A0
 };
 RED4EXT_ASSERT_SIZE(DisplayMessageBox_NodeType, 0xC8);

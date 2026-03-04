@@ -20,7 +20,7 @@ struct StatViewData
 
     game::data::StatType type; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString statName; // 08
+    String statName; // 08
     int32_t value; // 28
     int32_t diffValue; // 2C
     bool isMaxValue; // 30

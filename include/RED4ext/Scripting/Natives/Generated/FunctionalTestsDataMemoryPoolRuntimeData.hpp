@@ -17,7 +17,7 @@ struct FunctionalTestsDataMemoryPoolRuntimeData : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk30[0x38 - 0x30]; // 30
-    CString poolName; // 38
+    String poolName; // 38
     int64_t bytesAllocated; // 58
     int64_t allocationCount; // 60
 };

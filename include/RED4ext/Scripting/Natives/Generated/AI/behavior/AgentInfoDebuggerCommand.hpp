@@ -22,7 +22,7 @@ struct AgentInfoDebuggerCommand : AI::behavior::IDebuggerCommand
     static constexpr const char* ALIAS = NAME;
 
     ent::EntityID entityId; // 30
-    CString agentName; // 38
+    String agentName; // 38
     bool isSelected; // 58
     uint8_t unk59[0x60 - 0x59]; // 59
     DynArray<AI::behavior::AgentInfoDebuggerCommandEntry> entries; // 60

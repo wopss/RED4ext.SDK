@@ -19,7 +19,7 @@ struct Choice : attr::Attribute
     static constexpr const char* NAME = "attrChoice";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> tions; // 30
+    DynArray<String> tions; // 30
 };
 RED4EXT_ASSERT_SIZE(Choice, 0x40);
 } // namespace attr

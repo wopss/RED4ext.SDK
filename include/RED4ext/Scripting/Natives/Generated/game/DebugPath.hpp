@@ -17,7 +17,7 @@ struct DebugPath
     static constexpr const char* NAME = "gameDebugPath";
     static constexpr const char* ALIAS = NAME;
 
-    CString str; // 00
+    String str; // 00
     uint8_t unk20[0x28 - 0x20]; // 20
 };
 RED4EXT_ASSERT_SIZE(DebugPath, 0x28);

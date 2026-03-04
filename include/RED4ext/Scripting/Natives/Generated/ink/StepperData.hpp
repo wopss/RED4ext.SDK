@@ -21,7 +21,7 @@ struct StepperData
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x30 - 0x0]; // 0
-    CString label; // 30
+    String label; // 30
     WeakHandle<IScriptable> data; // 50
 };
 RED4EXT_ASSERT_SIZE(StepperData, 0x60);

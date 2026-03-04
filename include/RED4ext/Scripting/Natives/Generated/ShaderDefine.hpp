@@ -15,8 +15,8 @@ struct ShaderDefine
     static constexpr const char* NAME = "ShaderDefine";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
-    CString value; // 20
+    String name; // 00
+    String value; // 20
 };
 RED4EXT_ASSERT_SIZE(ShaderDefine, 0x40);
 } // namespace RED4ext

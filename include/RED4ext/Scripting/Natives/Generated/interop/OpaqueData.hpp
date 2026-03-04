@@ -17,8 +17,8 @@ struct OpaqueData
     static constexpr const char* NAME = "interopOpaqueData";
     static constexpr const char* ALIAS = NAME;
 
-    CString description; // 00
-    CString payload; // 20
+    String description; // 00
+    String payload; // 20
     int32_t version; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
 };

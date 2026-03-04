@@ -19,9 +19,9 @@ struct RewardPack
     static constexpr const char* NAME = "gameRewardPack";
     static constexpr const char* ALIAS = "GOGRewardPack";
 
-    CString id; // 00
-    CString title; // 20
-    CString reason; // 40
+    String id; // 00
+    String title; // 20
+    String reason; // 40
     CName iconSlot; // 60
     CName group; // 68
     CName slotType; // 70

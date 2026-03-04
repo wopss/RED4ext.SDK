@@ -19,7 +19,7 @@ struct VOWithDelay
 
     float playDelay; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString voHexID; // 08
+    String voHexID; // 08
 };
 RED4EXT_ASSERT_SIZE(VOWithDelay, 0x28);
 } // namespace game::ui

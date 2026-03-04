@@ -29,7 +29,7 @@ struct ListChoiceHubData
     game::interactions::vis::EVisualizerDefinitionFlags flags; // 08
     bool isPhoneLockActive; // 0A
     uint8_t unk0B[0x10 - 0xB]; // B
-    CString title; // 10
+    String title; // 10
     DynArray<game::interactions::vis::ListChoiceData> choices; // 30
     WeakHandle<game::interactions::vis::IVisualizerTimeProvider> timeProvider; // 40
     uint8_t hubPriority; // 50

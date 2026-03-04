@@ -17,9 +17,9 @@ struct AuthenticationToken
     static constexpr const char* NAME = "oauthAuthenticationToken";
     static constexpr const char* ALIAS = NAME;
 
-    CString token; // 00
-    CString secret; // 20
-    CString sessionHandle; // 40
+    String token; // 00
+    String secret; // 20
+    String sessionHandle; // 40
     uint64_t tokenExpiresIn; // 60
     uint64_t authorizationExpiresIn; // 68
 };

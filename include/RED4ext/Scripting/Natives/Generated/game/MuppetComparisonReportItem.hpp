@@ -20,9 +20,9 @@ struct MuppetComparisonReportItem
 
     game::MuppetComparisonReportItemType type; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString propertyName; // 08
-    CString serverValue; // 28
-    CString clientValue; // 48
+    String propertyName; // 08
+    String serverValue; // 28
+    String clientValue; // 48
 };
 RED4EXT_ASSERT_SIZE(MuppetComparisonReportItem, 0x68);
 } // namespace game

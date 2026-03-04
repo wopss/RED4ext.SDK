@@ -19,7 +19,7 @@ struct LocStoreEmbeddedVariantPayloadEntry
     static constexpr const char* ALIAS = NAME;
 
     scn::loc::VariantId variantId; // 00
-    CString content; // 08
+    String content; // 08
 };
 RED4EXT_ASSERT_SIZE(LocStoreEmbeddedVariantPayloadEntry, 0x28);
 } // namespace scn::loc

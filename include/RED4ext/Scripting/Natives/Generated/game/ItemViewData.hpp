@@ -21,10 +21,10 @@ struct ItemViewData
     static constexpr const char* ALIAS = "ItemViewData";
 
     ItemID id; // 00
-    CString itemName; // 10
-    CString categoryName; // 30
-    CString description; // 50
-    CString quality; // 70
+    String itemName; // 10
+    String categoryName; // 30
+    String description; // 50
+    String quality; // 70
     float price; // 90
     bool isBroken; // 94
     uint8_t unk95[0x98 - 0x95]; // 95

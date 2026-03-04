@@ -22,7 +22,7 @@ struct StaticStickerNode : world::Node
     static constexpr const char* NAME = "worldStaticStickerNode";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> labels; // 38
+    DynArray<String> labels; // 38
     DynArray<RaRef<CBitmapTexture>> sprites; // 48
     uint8_t unk58[0x78 - 0x58]; // 58
     Color textColor; // 78

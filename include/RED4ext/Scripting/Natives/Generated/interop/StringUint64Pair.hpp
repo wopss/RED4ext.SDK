@@ -17,7 +17,7 @@ struct StringUint64Pair
     static constexpr const char* NAME = "interopStringUint64Pair";
     static constexpr const char* ALIAS = NAME;
 
-    CString string; // 00
+    String string; // 00
     uint64_t number; // 20
 };
 RED4EXT_ASSERT_SIZE(StringUint64Pair, 0x28);

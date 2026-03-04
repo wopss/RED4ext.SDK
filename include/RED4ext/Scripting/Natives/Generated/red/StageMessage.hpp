@@ -22,7 +22,7 @@ struct StageMessage
     bool reset; // 04
     uint8_t unk05[0x8 - 0x5]; // 5
     DynArray<uint32_t> ids; // 08
-    DynArray<CString> names; // 18
+    DynArray<String> names; // 18
 };
 RED4EXT_ASSERT_SIZE(StageMessage, 0x28);
 } // namespace red

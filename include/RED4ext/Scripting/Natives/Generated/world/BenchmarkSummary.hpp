@@ -19,16 +19,16 @@ struct BenchmarkSummary : IScriptable
     static constexpr const char* NAME = "worldBenchmarkSummary";
     static constexpr const char* ALIAS = NAME;
 
-    CString gameVersion; // 40
-    CString benchmarkName; // 60
-    CString gpuName; // 80
+    String gameVersion; // 40
+    String benchmarkName; // 60
+    String gpuName; // 80
     uint64_t gpuMemory; // A0
-    CString gpuDriverVersion; // A8
-    CString cpuName; // C8
+    String gpuDriverVersion; // A8
+    String cpuName; // C8
     uint64_t systemMemory; // E8
-    CString osName; // F0
-    CString osVersion; // 110
-    CString presetName; // 130
+    String osName; // F0
+    String osVersion; // 110
+    String presetName; // 130
     CName presetLocalizedName; // 150
     CName textureQualityPresetLocalizedName; // 158
     uint32_t renderWidth; // 160

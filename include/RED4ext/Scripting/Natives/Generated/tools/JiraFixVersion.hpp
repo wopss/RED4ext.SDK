@@ -17,7 +17,7 @@ struct JiraFixVersion
     static constexpr const char* NAME = "toolsJiraFixVersion";
     static constexpr const char* ALIAS = NAME;
 
-    CString id; // 00
+    String id; // 00
 };
 RED4EXT_ASSERT_SIZE(JiraFixVersion, 0x20);
 } // namespace tools

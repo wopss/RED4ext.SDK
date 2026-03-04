@@ -24,7 +24,7 @@ struct InputHintData
     CName source; // 08
     CName groupId; // 10
     CName tutorialAction; // 18
-    CString localizedLabel; // 20
+    String localizedLabel; // 20
     int32_t queuePriority; // 40
     int32_t sortingPriority; // 44
     int32_t tutorialActionCount; // 48

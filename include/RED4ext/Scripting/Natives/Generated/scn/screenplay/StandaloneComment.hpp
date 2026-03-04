@@ -20,7 +20,7 @@ struct StandaloneComment
 
     scn::screenplay::ItemId itemId; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString comment; // 08
+    String comment; // 08
 };
 RED4EXT_ASSERT_SIZE(StandaloneComment, 0x28);
 } // namespace scn::screenplay

@@ -20,7 +20,7 @@ struct EffectParameter_StringEvaluator_ValueOrBlackboard : game::IEffectParamete
     static constexpr const char* ALIAS = NAME;
 
     game::BlackboardPropertyBindingDefinition blackboardProperty; // 30
-    CString value; // 68
+    String value; // 68
 };
 RED4EXT_ASSERT_SIZE(EffectParameter_StringEvaluator_ValueOrBlackboard, 0x88);
 } // namespace game

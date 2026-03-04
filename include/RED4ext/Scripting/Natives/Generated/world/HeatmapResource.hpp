@@ -23,8 +23,8 @@ struct __declspec(align(0x10)) HeatmapResource : CResource
     static constexpr const char* ALIAS = NAME;
 
     world::HeatmapSetup setup; // 40
-    CString name; // 70
-    DynArray<CString> layerNames; // 90
+    String name; // 70
+    DynArray<String> layerNames; // 90
     DynArray<RaRef<world::HeatmapLayer>> layers; // A0
 };
 RED4EXT_ASSERT_SIZE(HeatmapResource, 0xB0);

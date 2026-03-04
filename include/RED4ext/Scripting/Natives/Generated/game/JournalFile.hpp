@@ -23,7 +23,7 @@ struct JournalFile : game::JournalEntry
     LocalizationString title; // 70
     LocalizationString content; // 98
     RaRef<Bink> videoResource; // C0
-    CString PictureFilename_legacy_; // C8 -- PictureFilename(legacy)
+    String PictureFilename_legacy_; // C8 -- PictureFilename(legacy)
     TweakDBID pictureTweak; // E8
 };
 RED4EXT_ASSERT_SIZE(JournalFile, 0xF0);

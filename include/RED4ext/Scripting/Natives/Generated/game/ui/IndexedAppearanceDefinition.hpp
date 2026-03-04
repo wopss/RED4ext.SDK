@@ -27,7 +27,7 @@ struct IndexedAppearanceDefinition
     Color color; // 04
     TweakDBID icon; // 08
     CName name; // 10
-    CString localizedName; // 18
+    String localizedName; // 18
     DynArray<game::ui::CharacterCustomizationAction> actions; // 38
     red::TagList tags; // 48
     game::ui::CharacterRandomizationInfo randomizationInfo; // 58

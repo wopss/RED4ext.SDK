@@ -26,7 +26,7 @@ struct InteractionChoiceData
     EInputKey rawInputKey; // 08
     bool isHoldAction; // 0C
     uint8_t unk0D[0x10 - 0xD]; // D
-    CString localizedName; // 10
+    String localizedName; // 10
     game::interactions::ChoiceTypeWrapper type; // 30
     uint8_t unk34[0x38 - 0x34]; // 34
     DynArray<Variant> data; // 38

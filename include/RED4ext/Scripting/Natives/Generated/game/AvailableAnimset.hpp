@@ -18,7 +18,7 @@ struct AvailableAnimset
     static constexpr const char* ALIAS = NAME;
 
     uint64_t hash; // 00
-    CString resourcePath; // 08
+    String resourcePath; // 08
 };
 RED4EXT_ASSERT_SIZE(AvailableAnimset, 0x28);
 } // namespace game

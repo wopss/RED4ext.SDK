@@ -18,7 +18,7 @@ struct SendAutoDriveNotificationRequest : game::ScriptableSystemRequest
     static constexpr const char* NAME = "gameSendAutoDriveNotificationRequest";
     static constexpr const char* ALIAS = "SendAutoDriveNotificationRequest";
 
-    CString locKey; // 48
+    String locKey; // 48
     bool isDelamain; // 68
     uint8_t unk69[0x70 - 0x69]; // 69
 };

@@ -18,7 +18,7 @@ struct ToggleBtn : attr::Attribute
     static constexpr const char* NAME = "attrToggleBtn";
     static constexpr const char* ALIAS = NAME;
 
-    CString nLabel; // 30
+    String nLabel; // 30
 };
 RED4EXT_ASSERT_SIZE(ToggleBtn, 0x50);
 } // namespace attr

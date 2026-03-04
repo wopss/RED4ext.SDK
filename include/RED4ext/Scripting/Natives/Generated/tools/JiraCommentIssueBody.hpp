@@ -18,7 +18,7 @@ struct JiraCommentIssueBody : ISerializable
     static constexpr const char* NAME = "toolsJiraCommentIssueBody";
     static constexpr const char* ALIAS = NAME;
 
-    CString body; // 30
+    String body; // 30
 };
 RED4EXT_ASSERT_SIZE(JiraCommentIssueBody, 0x50);
 } // namespace tools

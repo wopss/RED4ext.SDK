@@ -22,10 +22,10 @@ struct VendorPanel_NodeType : quest::IUIManagerNodeType
 
     bool openVendorPanel; // 38
     uint8_t unk39[0x40 - 0x39]; // 39
-    CString vendorId; // 40
+    String vendorId; // 40
     game::EntityReference objectRef; // 60
     CName scenarioName; // 98
-    CString assetsLibrary; // A0
+    String assetsLibrary; // A0
     CName rootItemName; // C0
 };
 RED4EXT_ASSERT_SIZE(VendorPanel_NodeType, 0xC8);

@@ -20,7 +20,7 @@ struct EntityManagerManageBinkComponent_NodeTypeParams
     static constexpr const char* ALIAS = NAME;
 
     game::EntityReference objectRef; // 00
-    CString videoPath; // 38
+    String videoPath; // 38
     game::BinkVideoAction action; // 58
     uint8_t unk59[0x60 - 0x59]; // 59
 };

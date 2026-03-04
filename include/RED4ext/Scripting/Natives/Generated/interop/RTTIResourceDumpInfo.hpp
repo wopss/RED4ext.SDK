@@ -17,9 +17,9 @@ struct RTTIResourceDumpInfo
     static constexpr const char* NAME = "interopRTTIResourceDumpInfo";
     static constexpr const char* ALIAS = NAME;
 
-    CString extension; // 00
-    CString deprecatedExtension; // 20
-    CString friendlyDescription; // 40
+    String extension; // 00
+    String deprecatedExtension; // 20
+    String friendlyDescription; // 40
 };
 RED4EXT_ASSERT_SIZE(RTTIResourceDumpInfo, 0x60);
 } // namespace interop

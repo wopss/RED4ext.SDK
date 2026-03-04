@@ -23,14 +23,14 @@ struct Metadata : save::GameMetadata
     uint32_t saveVersion; // 298
     uint32_t gameVersion; // 29C
     uint8_t unk2A0[0x2A8 - 0x2A0]; // 2A0
-    CString timestampString; // 2A8
-    CString name; // 2C8
+    String timestampString; // 2A8
+    String name; // 2C8
     uint8_t unk2E8[0x308 - 0x2E8]; // 2E8
-    CString userName; // 308
-    CString buildID; // 328
-    CString platform; // 348
-    CString censorFlags; // 368
-    CString buildConfiguration; // 388
+    String userName; // 308
+    String buildID; // 328
+    String platform; // 348
+    String censorFlags; // 368
+    String buildConfiguration; // 388
     uint32_t fileSize; // 3A8
     bool isForced; // 3AC
     bool isCheckpoint; // 3AD

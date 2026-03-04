@@ -18,7 +18,7 @@ struct ShowOnscreen_NodeType : quest::IUIManagerNodeType
     static constexpr const char* NAME = "questShowOnscreen_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString message; // 38
+    String message; // 38
     LocalizationString localizedMessage; // 58
     float duration; // 80
     bool show; // 84

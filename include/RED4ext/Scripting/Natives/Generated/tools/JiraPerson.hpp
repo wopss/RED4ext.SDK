@@ -17,9 +17,9 @@ struct JiraPerson
     static constexpr const char* NAME = "toolsJiraPerson";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
-    CString key; // 20
-    CString displayName; // 40
+    String name; // 00
+    String key; // 20
+    String displayName; // 40
 };
 RED4EXT_ASSERT_SIZE(JiraPerson, 0x60);
 } // namespace tools

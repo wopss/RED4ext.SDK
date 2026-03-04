@@ -17,7 +17,7 @@ struct JiraPriority
     static constexpr const char* NAME = "toolsJiraPriority";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
+    String name; // 00
 };
 RED4EXT_ASSERT_SIZE(JiraPriority, 0x20);
 } // namespace tools

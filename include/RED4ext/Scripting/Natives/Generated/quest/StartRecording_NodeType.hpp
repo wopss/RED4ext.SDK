@@ -20,7 +20,7 @@ struct StartRecording_NodeType : quest::IRecordingNodeType
 
     bool enabled; // 30
     uint8_t unk31[0x38 - 0x31]; // 31
-    CString sectionName; // 38
+    String sectionName; // 38
 };
 RED4EXT_ASSERT_SIZE(StartRecording_NodeType, 0x58);
 } // namespace quest

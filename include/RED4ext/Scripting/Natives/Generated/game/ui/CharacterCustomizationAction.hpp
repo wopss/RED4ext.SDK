@@ -20,7 +20,7 @@ struct CharacterCustomizationAction
 
     game::ui::CharacterCustomizationActionType type; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString params; // 08
+    String params; // 08
     bool applyImmediately; // 28
     bool applyToUISlot; // 29
     uint8_t unk2A[0x30 - 0x2A]; // 2A

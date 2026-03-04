@@ -19,8 +19,8 @@ struct FunctionalTestsDataRenderingStatsData : ISerializable
     uint8_t unk30[0x38 - 0x30]; // 30
     uint64_t engineTick; // 38
     uint64_t rawLocalTime; // 40
-    CString playerPosition; // 48
-    CString playerOrientation; // 68
+    String playerPosition; // 48
+    String playerOrientation; // 68
     uint32_t meshChunkCount; // 88
     uint32_t cameraTriangleCount; // 8C
     uint32_t shadowTriangleCount; // 90

@@ -888,10 +888,10 @@ RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, Nam
 {
     // Handle some simple type conversions and fundamentals
     static std::unordered_map<std::string, std::string> s_typeMap = {
-        {"Int8", "int8_t"},   {"Int16", "int16_t"},   {"Int32", "int32_t"},   {"Int64", "int64_t"},
-        {"Uint8", "uint8_t"}, {"Uint16", "uint16_t"}, {"Uint32", "uint32_t"}, {"Uint64", "uint64_t"},
-        {"Float", "float"},   {"Bool", "bool"},       {"String", "CString"},  {"gameItemID", "ItemID"},
-        {"Double", "double"}};
+        {"Int8", "int8_t"},   {"Int16", "int16_t"},   {"Int32", "int32_t"},     {"Int64", "int64_t"},
+        {"Uint8", "uint8_t"}, {"Uint16", "uint16_t"}, {"Uint32", "uint32_t"},   {"Uint64", "uint64_t"},
+        {"Float", "float"},   {"Bool", "bool"},       {"gameItemID", "ItemID"}, {"Double", "double"}
+    };
 
     std::string typeName;
 
@@ -1002,7 +1002,7 @@ RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, Nam
 
         // We don't have this type supported yet but we can put some bytes in as placeholder as we know its size
         typeName = "std::array<uint8_t, " + std::to_string(size) + ">/* UNHANDLED: " + trueName.ToString() + " (" +
-                   tName.c_str() + ") */";
+                   tName.AsChar() + ") */";
     }
 
     if (aVerbose)

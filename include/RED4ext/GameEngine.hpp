@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-#include <RED4ext/CString.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
@@ -125,74 +125,74 @@ struct CBaseEngine
     virtual void sub_F8() = 0;                                                                  // F8
     virtual void sub_100() = 0;                                                                 // 100
 
-    double unk8;                               // 08
-    float unk10;                               // 10
-    float unk14;                               // 14
-    float unk18;                               // 18
-    float unk1C;                               // 1C
-    float unk20;                               // 20
-    int64_t unk28;                             // 28
-    int32_t unk30;                             // 30
-    int8_t unk34;                              // 34
-    uint64_t scriptsTimestamp;                 // 38
-    int8_t unk40;                              // 40
-    SharedSpinLock terminationLock;            // 41
-    int32_t unk44;                             // 44
-    int8_t terminating;                        // 48
-    int8_t unk49;                              // 49
-    int8_t unk4A;                              // 4A
-    int8_t unk4B;                              // 4B
-    int32_t exitStatus;                        // 4C
-    int32_t unk50;                             // 50
-    bool scriptsLoaded;                        // 54
-    bool scriptsSilentCompilation;             // 55
-    bool scriptsSilentValidation;              // 56
-    int8_t unk57;                              // 57
-    int8_t unk58;                              // 58
-    int16_t unk5A;                             // 5A
-    int32_t interopStartingPort;               // 5C
-    int64_t unk60;                             // 60
-    int64_t unk68;                             // 68
-    CString scriptsCompilationErrors;          // 70
-    DynArray<CString> scriptsValidationErrors; // 90
-    int64_t unkA0;                             // A0
-    int64_t unkA8;                             // A8
-    int64_t unkB0;                             // B0
-    int64_t unkB8;                             // B8
-    uint8_t padC0[0x10];                       // C0
-    UnkD0* unkD0;                              // D0
-    double unkD8;                              // D8
-    double unkE0;                              // E0
-    int32_t unkE8;                             // E8
-    int64_t unkF0;                             // F0
-    int64_t unkF8;                             // F8
-    int64_t unk100;                            // 100
-    volatile EEngineState engineState;         // 108
-    int32_t unk10C;                            // 10C
-    int32_t unk110;                            // 110
-    Unk108* unk118;                            // 118
-    Unk110 unk120;                             // 120
-    CString buildString;                       // 130
-    CString scriptsBlobPath;                   // 150
-    int32_t unk170;                            // 170
-    int8_t unk174;                             // 174
-    int64_t unk178;                            // 178
-    int64_t unk180;                            // 180
-    int64_t unk188;                            // 188
-    int64_t unk190;                            // 190
-    int8_t unk198[178];                        // 198
-    int32_t unk24C;                            // 24C
-    int8_t unk250[64];                         // 250
-    DynArray<void*> unk290;                    // 290
-    DynArray<void*> unk2A0;                    // 2A0
-    int64_t unk2B0;                            // 2B0
-    int64_t unk2B8;                            // 2B8
-    int64_t unk2C0;                            // 2C0
-    int64_t unk2C8;                            // 2C8
-    int32_t unk2D0;                            // 2D0
-    bool isEP1;                                // 2D4 - IsEP1()
-    int64_t unk2D8;                            // 2D8
-    int64_t unk2E0;                            // 2E0
+    double unk8;                              // 08
+    float unk10;                              // 10
+    float unk14;                              // 14
+    float unk18;                              // 18
+    float unk1C;                              // 1C
+    float unk20;                              // 20
+    int64_t unk28;                            // 28
+    int32_t unk30;                            // 30
+    int8_t unk34;                             // 34
+    uint64_t scriptsTimestamp;                // 38
+    int8_t unk40;                             // 40
+    SharedSpinLock terminationLock;           // 41
+    int32_t unk44;                            // 44
+    int8_t terminating;                       // 48
+    int8_t unk49;                             // 49
+    int8_t unk4A;                             // 4A
+    int8_t unk4B;                             // 4B
+    int32_t exitStatus;                       // 4C
+    int32_t unk50;                            // 50
+    bool scriptsLoaded;                       // 54
+    bool scriptsSilentCompilation;            // 55
+    bool scriptsSilentValidation;             // 56
+    int8_t unk57;                             // 57
+    int8_t unk58;                             // 58
+    int16_t unk5A;                            // 5A
+    int32_t interopStartingPort;              // 5C
+    int64_t unk60;                            // 60
+    int64_t unk68;                            // 68
+    String scriptsCompilationErrors;          // 70
+    DynArray<String> scriptsValidationErrors; // 90
+    int64_t unkA0;                            // A0
+    int64_t unkA8;                            // A8
+    int64_t unkB0;                            // B0
+    int64_t unkB8;                            // B8
+    uint8_t padC0[0x10];                      // C0
+    UnkD0* unkD0;                             // D0
+    double unkD8;                             // D8
+    double unkE0;                             // E0
+    int32_t unkE8;                            // E8
+    int64_t unkF0;                            // F0
+    int64_t unkF8;                            // F8
+    int64_t unk100;                           // 100
+    volatile EEngineState engineState;        // 108
+    int32_t unk10C;                           // 10C
+    int32_t unk110;                           // 110
+    Unk108* unk118;                           // 118
+    Unk110 unk120;                            // 120
+    String buildString;                       // 130
+    String scriptsBlobPath;                   // 150
+    int32_t unk170;                           // 170
+    int8_t unk174;                            // 174
+    int64_t unk178;                           // 178
+    int64_t unk180;                           // 180
+    int64_t unk188;                           // 188
+    int64_t unk190;                           // 190
+    int8_t unk198[178];                       // 198
+    int32_t unk24C;                           // 24C
+    int8_t unk250[64];                        // 250
+    DynArray<void*> unk290;                   // 290
+    DynArray<void*> unk2A0;                   // 2A0
+    int64_t unk2B0;                           // 2B0
+    int64_t unk2B8;                           // 2B8
+    int64_t unk2C0;                           // 2C0
+    int64_t unk2C8;                           // 2C8
+    int32_t unk2D0;                           // 2D0
+    bool isEP1;                               // 2D4 - IsEP1()
+    int64_t unk2D8;                           // 2D8
+    int64_t unk2E0;                           // 2E0
 };
 RED4EXT_ASSERT_SIZE(CBaseEngine, 0x2E8);
 RED4EXT_ASSERT_OFFSET(CBaseEngine, scriptsLoaded, 0x54);

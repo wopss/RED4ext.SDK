@@ -50,7 +50,7 @@ struct PlayerActorDef
     scn::FindEntityInContextParams findActorInContextParams; // B0
     scn::LipsyncAnimSetSRRefId lipsyncAnimSet; // D8
     uint8_t unkDC[0xE0 - 0xDC]; // DC
-    CString playerName; // E0
+    String playerName; // E0
 };
 RED4EXT_ASSERT_SIZE(PlayerActorDef, 0x100);
 } // namespace scn

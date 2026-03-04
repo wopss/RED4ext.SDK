@@ -36,7 +36,7 @@ struct Sample_All_Supported_Replicated_Types
     uint8_t unk24[0x28 - 0x24]; // 24
     double double; // 28
     CName name; // 30
-    CString string; // 38
+    String string; // 38
     Sample_Replicated_Enum enum; // 58
     Sample_Replicated_Struct struct; // 5C
     DynArray<Sample_Replicated_Struct> dynamicArray; // 60

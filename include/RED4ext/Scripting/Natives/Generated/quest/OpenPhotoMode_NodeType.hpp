@@ -18,7 +18,7 @@ struct OpenPhotoMode_NodeType : quest::IUIManagerNodeType
     static constexpr const char* NAME = "questOpenPhotoMode_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString factName; // 38
+    String factName; // 38
     bool forceFppMode; // 58
     bool alwaysAllowTPP; // 59
     bool lockExitUntilScreenshot; // 5A

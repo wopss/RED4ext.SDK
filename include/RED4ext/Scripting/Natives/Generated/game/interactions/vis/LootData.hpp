@@ -27,7 +27,7 @@ struct LootData
     uint8_t unk07[0x8 - 0x7]; // 7
     int32_t currentIndex; // 08
     uint8_t unk0C[0x10 - 0xC]; // C
-    CString title; // 10
+    String title; // 10
     ent::EntityID ownerId; // 30
     bool isLocked; // 38
     uint8_t unk39[0x40 - 0x39]; // 39

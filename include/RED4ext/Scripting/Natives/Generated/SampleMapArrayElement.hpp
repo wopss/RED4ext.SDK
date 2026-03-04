@@ -18,8 +18,8 @@ struct SampleMapArrayElement
 
     uint32_t myKey; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString someStringProperty; // 08
-    DynArray<CString> someArrayProperty; // 28
+    String someStringProperty; // 08
+    DynArray<String> someArrayProperty; // 28
 };
 RED4EXT_ASSERT_SIZE(SampleMapArrayElement, 0x38);
 } // namespace RED4ext

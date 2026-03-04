@@ -25,7 +25,7 @@ struct EntityEffectSpawnerSyncData
     EditorObjectID componentParentID; // 20
     CName componentName; // 40
     DynArray<interop::EntityEffectSelectionSyncData> effects; // 48
-    CString templatePath; // 58
+    String templatePath; // 58
     Color templateColor; // 78
     bool included; // 7C
     uint8_t unk7D[0x80 - 0x7D]; // 7D

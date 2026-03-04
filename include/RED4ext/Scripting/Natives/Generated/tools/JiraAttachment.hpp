@@ -17,10 +17,10 @@ struct JiraAttachment
     static constexpr const char* NAME = "toolsJiraAttachment";
     static constexpr const char* ALIAS = NAME;
 
-    CString id; // 00
-    CString filename; // 20
-    CString content; // 40
-    CString thumbnail; // 60
+    String id; // 00
+    String filename; // 20
+    String content; // 40
+    String thumbnail; // 60
 };
 RED4EXT_ASSERT_SIZE(JiraAttachment, 0x80);
 } // namespace tools

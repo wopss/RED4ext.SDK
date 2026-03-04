@@ -25,24 +25,24 @@ struct __declspec(align(0x10)) ReExportOptions
     DynArray<CName> occlusionExportOptNames; // 00
     DynArray<bool> occlusionExportOptValues; // 10
     DynArray<bool> typeExportOptions; // 20
-    CString filePath; // 30
-    DynArray<CString> files; // 50
-    CString depotPath; // 60
+    String filePath; // 30
+    DynArray<String> files; // 50
+    String depotPath; // 60
     AbsolutePathSerializable maskDumpFilePath; // 80
     AbsolutePathSerializable jsonFile; // A0
     bool runDispatcher; // C0
     uint8_t unkC1[0xC8 - 0xC1]; // C1
-    CString hjobToken; // C8
-    CString hjobParams; // E8
-    CString hjobParamsOutput; // 108
-    CString assetName; // 128
-    CString rigs; // 148
-    CString hjobTemplate; // 168
-    CString bodyType; // 188
+    String hjobToken; // C8
+    String hjobParams; // E8
+    String hjobParamsOutput; // 108
+    String assetName; // 128
+    String rigs; // 148
+    String hjobTemplate; // 168
+    String bodyType; // 188
     uint8_t unk1A8[0x1CB - 0x1A8]; // 1A8
     bool generatePlayerBlockingCollision; // 1CB
     uint8_t unk1CC[0x1D0 - 0x1CC]; // 1CC
-    CString baseType; // 1D0
+    String baseType; // 1D0
     uint8_t unk1F0[0x210 - 0x1F0]; // 1F0
     Box exportBounds; // 210
     double minBBoxDiag; // 230
@@ -55,7 +55,7 @@ struct __declspec(align(0x10)) ReExportOptions
     Vector3 referencePoint; // 254
     uint8_t unk260[0x2B4 - 0x260]; // 260
     float preferSmallProxiesTreshold; // 2B4
-    DynArray<CString> assetPaths; // 2B8
+    DynArray<String> assetPaths; // 2B8
     uint8_t prefabType; // 2C8
     bool onlyProxy; // 2C9
     bool proxyFromProxy; // 2CA

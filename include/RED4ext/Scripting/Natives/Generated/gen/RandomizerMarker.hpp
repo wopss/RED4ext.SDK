@@ -19,7 +19,7 @@ struct RandomizerMarker : world::IMarker
     static constexpr const char* NAME = "genRandomizerMarker";
     static constexpr const char* ALIAS = NAME;
 
-    CString id; // 30
+    String id; // 30
     CName templateName; // 50
     float probability; // 58
     uint8_t unk5C[0x60 - 0x5C]; // 5C

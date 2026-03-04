@@ -24,7 +24,7 @@ struct DeviceVisualizerDefinition : game::interactions::vis::IVisualizerDefiniti
 
     game::interactions::vis::InteractionType interactionType; // 48
     uint8_t unk49[0x50 - 0x49]; // 49
-    CString displayNameOverride; // 50
+    String displayNameOverride; // 50
     bool isDynamic; // 70
     bool useDefaultActionMapping; // 71
     bool createMappin; // 72

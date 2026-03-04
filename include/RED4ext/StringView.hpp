@@ -6,7 +6,7 @@
 
 namespace RED4ext
 {
-struct CString;
+struct String;
 
 #pragma pack(push, 4)
 struct StringView
@@ -14,7 +14,7 @@ struct StringView
     constexpr StringView() noexcept;
     constexpr StringView(const char* aStr) noexcept;
     constexpr StringView(std::string_view aView) noexcept;
-    StringView(const RED4ext::CString& aStr) noexcept;
+    StringView(const RED4ext::String& aStr) noexcept;
 
     constexpr bool IsEmpty() const noexcept;
     constexpr operator bool() const noexcept;
@@ -25,8 +25,8 @@ struct StringView
     constexpr bool operator!=(const char* aRhs) const noexcept;
     constexpr bool operator==(std::string_view aRhs) const noexcept;
     constexpr bool operator!=(std::string_view aRhs) const noexcept;
-    bool operator==(const RED4ext::CString& aRhs) const noexcept;
-    bool operator!=(const RED4ext::CString& aRhs) const noexcept;
+    bool operator==(const RED4ext::String& aRhs) const noexcept;
+    bool operator!=(const RED4ext::String& aRhs) const noexcept;
 
     constexpr char operator[](std::size_t aIndex) const noexcept;
 

@@ -27,7 +27,7 @@ struct InteractionChoiceHubData
     game::interactions::vis::EVisualizerDefinitionFlags flags; // 04
     bool active; // 06
     uint8_t unk07[0x8 - 0x7]; // 7
-    CString title; // 08
+    String title; // 08
     DynArray<game::interactions::vis::InteractionChoiceData> choices; // 28
     WeakHandle<game::interactions::vis::IVisualizerTimeProvider> timeProvider; // 38
 };

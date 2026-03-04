@@ -20,8 +20,8 @@ struct RTTIClassDump
     static constexpr const char* NAME = "interopRTTIClassDump";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> classNames; // 00
-    DynArray<CString> descriptiveNames; // 10
+    DynArray<String> classNames; // 00
+    DynArray<String> descriptiveNames; // 10
     DynArray<interop::RTTIResourceDumpInfo> resourceInfos; // 20
     DynArray<interop::RTTIClassDumpEntry> entries; // 30
 };
