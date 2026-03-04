@@ -1,9 +1,9 @@
 #pragma once
 
-#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/Memory/UniquePtr.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/StringView.hpp>
 
 #include <d3d12.h>

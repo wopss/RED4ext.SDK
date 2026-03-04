@@ -890,8 +890,7 @@ RED4EXT_INLINE std::string TypeToString(const RED4ext::CBaseRTTIType* aType, Nam
     static std::unordered_map<std::string, std::string> s_typeMap = {
         {"Int8", "int8_t"},   {"Int16", "int16_t"},   {"Int32", "int32_t"},     {"Int64", "int64_t"},
         {"Uint8", "uint8_t"}, {"Uint16", "uint16_t"}, {"Uint32", "uint32_t"},   {"Uint64", "uint64_t"},
-        {"Float", "float"},   {"Bool", "bool"},       {"gameItemID", "ItemID"}, {"Double", "double"}
-    };
+        {"Float", "float"},   {"Bool", "bool"},       {"gameItemID", "ItemID"}, {"Double", "double"}};
 
     std::string typeName;
 

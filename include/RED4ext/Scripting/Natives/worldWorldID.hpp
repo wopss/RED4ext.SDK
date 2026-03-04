@@ -1,8 +1,8 @@
 #pragma once
 
-#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
+#include <RED4ext/String.hpp>
 #include <cstdint>
 
 namespace RED4ext

@@ -169,7 +169,7 @@ public:
     {
         if (!Resize(aSize) || (aSize == 0 && IsBackExternal()))
             return *this;
-    
+
         if (aStr && aSize > 0)
         {
             memcpy(AsChar(), aStr, aSize);
@@ -257,7 +257,7 @@ public:
 
         if (!Resize(currSize + aSize))
             return false;
-        
+
         Pointer ptr = AsChar();
         if (aIndex < currSize)
         {
@@ -303,7 +303,7 @@ public:
     {
         if (aStart < Begin() || aEnd > End() || aStart >= aEnd)
             return false;
-        
+
         memcpy(aStart, aEnd, End() - aEnd + 1);
         m_size -= static_cast<SizeType>(std::distance(aStart, aEnd));
 
@@ -324,7 +324,7 @@ public:
     {
         if (aPos < Begin() || aPos >= End())
             return false;
-        
+
         memcpy(aPos, aPos + 1, End() - aPos);
         m_size -= 1;
 
@@ -361,10 +361,10 @@ public:
     {
         if (!Data() && !aOther.Data())
             return true;
-        
+
         if (m_size != aOther.m_size)
             return false;
-        
+
         return strncmp(AsChar(), aOther.AsChar(), m_size) == 0;
     }
 
@@ -372,10 +372,10 @@ public:
     {
         if ((!Data() || IsEmpty()) && !aStr)
             return true;
-        
+
         if (m_size != strlen(aStr)) // will crash if aStr is null, CDPR code has same issue
             return false;
-        
+
         return strncmp(AsChar(), aStr, m_size) == 0;
     }
 
@@ -449,7 +449,7 @@ public:
         return AsChar() + m_size;
     }
 
-        [[nodiscard]] ReverseIterator RBegin() noexcept
+    [[nodiscard]] ReverseIterator RBegin() noexcept
     {
         return ReverseIterator(Begin());
     }
@@ -478,7 +478,7 @@ public:
     {
         return AsChar();
     }
-    
+
     [[nodiscard]] ConstPointer Data() const noexcept
     {
         return AsChar();
@@ -565,11 +565,11 @@ public:
 #pragma endregion
     union Storage
     {
-        enum class BackType : uint32_t 
+        enum class BackType : uint32_t
         {
-            Internal = 0,   // owned, inline
-            Allocated = 1,  // owned, external
-            Viewing = 2     // unowned, external
+            Internal = 0,  // owned, inline
+            Allocated = 1, // owned, external
+            Viewing = 2    // unowned, external
         };
 
         struct InternalBack
@@ -616,14 +616,14 @@ public:
             int32_t capacity{0};
         };
 #pragma pack(pop)
-        InternalBack internal{}; 
-        ExternalBack external; 
+        InternalBack internal{};
+        ExternalBack external;
     };
 
 private:
-    Storage m_storage{}; // 00
-    uint32_t m_size : 30{0};          // 14
-    Storage::BackType m_backType : 2{Storage::BackType::Internal};          
+    Storage m_storage{};     // 00
+    uint32_t m_size : 30{0}; // 14
+    Storage::BackType m_backType : 2 {Storage::BackType::Internal};          
     const Memory::IAllocator* m_allocator{nullptr}; // 18
 
     void SetCapacity(SizeType aNewCapacity) // name in keeping consistency with DynArray

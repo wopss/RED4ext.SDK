@@ -5,7 +5,6 @@
 
 #include <RED4ext/CName.hpp>
 #include <RED4ext/CNamePool.hpp>
-#include <RED4ext/String.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/GameApplication.hpp>
 #include <RED4ext/GameEngine.hpp>
@@ -18,6 +17,7 @@
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Memory/SharedPtr.hpp>
 #include <RED4ext/Memory/UniquePtr.hpp>
+#include <RED4ext/String.hpp>
 
 #include <RED4ext/IO/BaseStream.hpp>
 

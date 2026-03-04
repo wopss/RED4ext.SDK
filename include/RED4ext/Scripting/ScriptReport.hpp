@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/String.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/String.hpp>
 #include <cstdarg>
 
 namespace RED4ext

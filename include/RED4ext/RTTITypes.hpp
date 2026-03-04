@@ -3,12 +3,12 @@
 #include <type_traits>
 
 #include <RED4ext/CName.hpp>
-#include <RED4ext/String.hpp>
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Map.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Utils.hpp>
 
 namespace RED4ext

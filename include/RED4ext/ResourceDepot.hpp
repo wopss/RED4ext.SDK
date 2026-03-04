@@ -2,10 +2,10 @@
 
 #include <cstdint>
 
-#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/ResourcePath.hpp>
+#include <RED4ext/String.hpp>
 
 namespace RED4ext
 {

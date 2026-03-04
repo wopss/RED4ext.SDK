@@ -1,8 +1,8 @@
 #pragma once
 
-#include <RED4ext/String.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/SaveLockReason.hpp>
+#include <RED4ext/String.hpp>
 
 namespace RED4ext::game
 {

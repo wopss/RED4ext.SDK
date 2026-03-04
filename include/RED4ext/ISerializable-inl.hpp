@@ -2,11 +2,11 @@
 #include <RED4ext/ISerializable.hpp>
 #endif
 
-#include <RED4ext/String.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Relocation.hpp>
+#include <RED4ext/String.hpp>
 
 RED4EXT_INLINE RED4ext::ISerializable::ISerializable()
 {
