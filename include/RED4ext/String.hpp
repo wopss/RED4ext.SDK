@@ -621,9 +621,9 @@ public:
     };
 
 private:
-    Storage m_storage{};     // 00
-    uint32_t m_size : 30{0}; // 14
-    Storage::BackType m_backType : 2 {Storage::BackType::Internal};          
+    Storage m_storage{};      // 00
+    uint32_t m_size : 30 {0}; // 14
+    Storage::BackType m_backType : 2 {Storage::BackType::Internal};
     const Memory::IAllocator* m_allocator{nullptr}; // 18
 
     void SetCapacity(SizeType aNewCapacity) // name in keeping consistency with DynArray
