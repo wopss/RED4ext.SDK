@@ -9,4 +9,4 @@ struct [[deprecated("Use 'String' instead.")]] CString : String
 {
 };
 
-}
+} // namespace RED4ext
