@@ -21,4 +21,3 @@ RED4EXT_INLINE bool RED4ext::StringView::operator!=(const String& aRhs) const no
 {
     return !Compare(aRhs);
 }
-
