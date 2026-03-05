@@ -102,7 +102,7 @@ public:
     [[nodiscard]] constexpr ConstReference At(SizeType aIndex) const
     {
         if (aIndex >= m_size)
-        throw std::out_of_range("StringView::At: Position out of range");
+            throw std::out_of_range("StringView::At: Position out of range");
 
         return m_ptr[aIndex];
     }
@@ -191,8 +191,8 @@ public:
     }
 #pragma endregion
 private:
-    const char* m_ptr {nullptr};
-    std::uint32_t m_size {0};
+    const char* m_ptr{nullptr};
+    std::uint32_t m_size{0};
 };
 #pragma pack(pop)
 
