@@ -6,101 +6,147 @@
 
 #include <RED4ext/String.hpp>
 
-RED4EXT_INLINE constexpr RED4ext::StringView::StringView() noexcept
-    : ptr(nullptr)
-    , length(0u)
+constexpr RED4ext::StringView::StringView() noexcept
+    : m_ptr(nullptr)
+    , m_size(0u)
 {
 }
 
-RED4EXT_INLINE constexpr RED4ext::StringView::StringView(const char* aStr) noexcept
-    : ptr(aStr)
-    , length(static_cast<std::uint32_t>(std::char_traits<char>::length(aStr)))
+constexpr RED4ext::StringView::StringView(ConstPointer aStr) noexcept
+    : m_ptr(aStr)
+    , m_size(static_cast<SizeType>(TraitsType::length(aStr)))
 {
 }
 
-RED4EXT_INLINE constexpr RED4ext::StringView::StringView(std::string_view aView) noexcept
-    : ptr(aView.data())
-    , length(static_cast<std::uint32_t>(aView.length()))
+constexpr RED4ext::StringView::StringView(std::string_view aView) noexcept
+    : m_ptr(aView.data())
+    , m_size(static_cast<SizeType>(aView.size()))
 {
 }
 
-RED4EXT_INLINE RED4ext::StringView::StringView(const RED4ext::String& aStr) noexcept
-    : ptr(aStr.AsChar())
-    , length(aStr.Length())
+RED4EXT_INLINE RED4ext::StringView::StringView(const String& aStr) noexcept
+    : m_ptr(aStr.Data())
+    , m_size(aStr.Size())
 {
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::IsEmpty() const noexcept
+constexpr bool RED4ext::StringView::IsEmpty() const noexcept
 {
-    return !ptr || length == 0u;
+    return m_size == 0u;
 }
 
-RED4EXT_INLINE constexpr RED4ext::StringView::operator bool() const noexcept
+constexpr RED4ext::StringView::operator bool() const noexcept
 {
     return !IsEmpty();
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::operator==(const StringView& aRhs) const noexcept
+constexpr bool RED4ext::StringView::operator==(StringView aRhs) const noexcept
 {
-    return Length() == aRhs.Length() && std::char_traits<char>::compare(Data(), aRhs.Data(), Length()) == 0;
+    return Compare(aRhs);
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::operator!=(const StringView& aRhs) const noexcept
+constexpr bool RED4ext::StringView::operator!=(StringView aRhs) const noexcept
 {
-    return !(*this == aRhs);
+    return !Compare(aRhs);
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::operator==(const char* aRhs) const noexcept
+constexpr bool RED4ext::StringView::operator==(ConstPointer aRhs) const noexcept
 {
-    return *this == StringView{aRhs};
+    return Compare(aRhs);
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::operator!=(const char* aRhs) const noexcept
+constexpr bool RED4ext::StringView::operator!=(ConstPointer aRhs) const noexcept
 {
-    return *this != StringView{aRhs};
+    return !Compare(aRhs);
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::operator==(std::string_view aRhs) const noexcept
+constexpr bool RED4ext::StringView::operator==(std::string_view aRhs) const noexcept
 {
-    return *this == StringView{aRhs};
+    return Compare(aRhs);
 }
 
-RED4EXT_INLINE constexpr bool RED4ext::StringView::operator!=(std::string_view aRhs) const noexcept
+constexpr bool RED4ext::StringView::operator!=(std::string_view aRhs) const noexcept
 {
-    return *this != StringView{aRhs};
+    return !Compare(aRhs);
 }
 
-RED4EXT_INLINE bool RED4ext::StringView::operator==(const RED4ext::String& aRhs) const noexcept
+RED4EXT_INLINE bool RED4ext::StringView::operator==(const String& aRhs) const noexcept
 {
-    return *this == StringView{aRhs};
+    return Compare(aRhs);
 }
 
-RED4EXT_INLINE bool RED4ext::StringView::operator!=(const RED4ext::String& aRhs) const noexcept
+RED4EXT_INLINE bool RED4ext::StringView::operator!=(const String& aRhs) const noexcept
 {
-    return *this != StringView{aRhs};
+    return !Compare(aRhs);
 }
 
-RED4EXT_INLINE constexpr char RED4ext::StringView::operator[](std::size_t aIndex) const noexcept
+constexpr RED4ext::StringView::ConstReference RED4ext::StringView::operator[](SizeType aIndex) const noexcept
 {
-    return Data()[aIndex];
+    return m_ptr[aIndex];
 }
 
-RED4EXT_INLINE constexpr const char* RED4ext::StringView::Data() const noexcept
+constexpr RED4ext::StringView::ConstReference RED4ext::StringView::At(SizeType aIndex) const
 {
-    return ptr;
+    if (aIndex >= m_size)
+        throw std::out_of_range("StringView::At: Position out of range");
+
+    return m_ptr[aIndex];
 }
 
-RED4EXT_INLINE constexpr std::uint32_t RED4ext::StringView::Length() const noexcept
+constexpr bool RED4ext::StringView::Compare(StringView aOther) const noexcept
 {
-    return length;
+    if (IsEmpty() && aOther.IsEmpty())
+        return true;
+
+    if (m_size != aOther.m_size)
+        return false;
+
+    return TraitsType::compare(m_ptr, aOther.m_ptr, m_size) == 0;
 }
 
-RED4EXT_INLINE constexpr const char* RED4ext::StringView::begin() const noexcept
+constexpr RED4ext::StringView::ConstReference RED4ext::StringView::Front() const noexcept
 {
-    return Data();
+    assert(!IsEmpty());
+    return m_ptr[0];
 }
 
-RED4EXT_INLINE constexpr const char* RED4ext::StringView::end() const noexcept
+constexpr RED4ext::StringView::ConstReference RED4ext::StringView::Back() const noexcept
 {
-    return Data() + Length();
+    assert(!IsEmpty());
+    return m_ptr[m_size - 1];
+}
+
+constexpr RED4ext::StringView::ConstIterator RED4ext::StringView::Begin() const noexcept
+{
+    return m_ptr;
+}
+
+constexpr RED4ext::StringView::ConstIterator RED4ext::StringView::End() const noexcept
+{
+    return m_ptr + m_size;
+}
+
+constexpr RED4ext::StringView::ConstReverseIterator RED4ext::StringView::RBegin() const noexcept
+{
+    return ConstReverseIterator(Begin());
+}
+
+constexpr RED4ext::StringView::ConstReverseIterator RED4ext::StringView::REnd() const noexcept
+{
+    return ConstReverseIterator(End());
+}
+
+constexpr RED4ext::StringView::ConstPointer RED4ext::StringView::Data() const noexcept
+{
+    return m_ptr;
+}
+
+constexpr RED4ext::StringView::SizeType RED4ext::StringView::Size() const noexcept
+{
+    return m_size;
+}
+
+constexpr RED4ext::StringView::SizeType RED4ext::StringView::Length() const noexcept
+{
+    return m_size;
 }

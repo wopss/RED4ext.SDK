@@ -9,41 +9,99 @@ namespace RED4ext
 class String;
 
 #pragma pack(push, 4)
-struct StringView
+class StringView
 {
-    constexpr StringView() noexcept;
-    constexpr StringView(const char* aStr) noexcept;
-    constexpr StringView(std::string_view aView) noexcept;
-    StringView(const RED4ext::String& aStr) noexcept;
+public:
+    using ValueType = char;
+    using Reference = ValueType&;
+    using ConstReference = const ValueType&;
+    using Pointer = ValueType*;
+    using ConstPointer = const ValueType*;
 
-    constexpr bool IsEmpty() const noexcept;
+    using SizeType = std::uint32_t;
+    using DifferenceType = std::ptrdiff_t;
+
+    using Iterator = Pointer;
+    using ConstIterator = ConstPointer;
+    using ReverseIterator = std::reverse_iterator<Iterator>;
+    using ConstReverseIterator = std::reverse_iterator<ConstIterator>;
+
+    using TraitsType = std::char_traits<ValueType>;
+
+    constexpr StringView() noexcept;
+    constexpr StringView(ConstPointer aStr) noexcept;
+    constexpr StringView(std::string_view aView) noexcept;
+    StringView(const String& aStr) noexcept;
+
     constexpr operator bool() const noexcept;
 
-    constexpr bool operator==(const StringView& aRhs) const noexcept;
-    constexpr bool operator!=(const StringView& aRhs) const noexcept;
-    constexpr bool operator==(const char* aRhs) const noexcept;
-    constexpr bool operator!=(const char* aRhs) const noexcept;
+    constexpr bool operator==(StringView aRhs) const noexcept;
+    constexpr bool operator!=(StringView aRhs) const noexcept;
+    constexpr bool operator==(ConstPointer aRhs) const noexcept;
+    constexpr bool operator!=(ConstPointer aRhs) const noexcept;
     constexpr bool operator==(std::string_view aRhs) const noexcept;
     constexpr bool operator!=(std::string_view aRhs) const noexcept;
-    bool operator==(const RED4ext::String& aRhs) const noexcept;
-    bool operator!=(const RED4ext::String& aRhs) const noexcept;
+    bool operator==(const String& aRhs) const noexcept;
+    bool operator!=(const String& aRhs) const noexcept;
 
-    constexpr char operator[](std::size_t aIndex) const noexcept;
+    constexpr ConstReference operator[](SizeType aIndex) const noexcept;
 
-    constexpr const char* Data() const noexcept;
-    constexpr std::uint32_t Length() const noexcept;
+    [[nodiscard]] constexpr ConstReference At(SizeType aIndex) const;
 
-    constexpr const char* begin() const noexcept;
-    constexpr const char* end() const noexcept;
+    [[nodiscard]] constexpr bool Compare(StringView aOther) const noexcept;
 
-    const char* ptr;
-    std::uint32_t length;
+    [[nodiscard]] constexpr ConstReference Front() const noexcept;
+    [[nodiscard]] constexpr ConstReference Back() const noexcept;
+
+    [[nodiscard]] constexpr ConstIterator Begin() const noexcept;
+    [[nodiscard]] constexpr ConstIterator End() const noexcept;
+    [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept;
+    [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept;
+
+    [[nodiscard]] constexpr bool IsEmpty() const noexcept;
+
+    [[nodiscard]] constexpr ConstPointer Data() const noexcept;
+    [[nodiscard]] constexpr SizeType Size() const noexcept;
+    [[nodiscard]] constexpr SizeType Length() const noexcept;
+
+#pragma region STL
+    using value_type = ValueType;
+    using reference = Reference;
+    using const_reference = ConstReference;
+    using pointer = Pointer;
+    using const_pointer = ConstPointer;
+
+    using size_type = SizeType;
+    using difference_type = DifferenceType;
+
+    using iterator = Iterator;
+    using const_iterator = ConstIterator;
+    using reverse_iterator = ReverseIterator;
+    using const_reverse_iterator = ConstReverseIterator;
+
+    using traits_type = TraitsType;
+
+    [[nodiscard]] constexpr size_type size() const noexcept
+    {
+        return Size();
+    }
+
+    [[nodiscard]] constexpr const_iterator begin() const noexcept
+    {
+        return Begin();
+    }
+    [[nodiscard]] constexpr const_iterator end() const noexcept
+    {
+        return End();
+    }
+#pragma endregion
+private:
+    const char* m_ptr;
+    std::uint32_t m_size;
 };
 #pragma pack(pop)
 
 RED4EXT_ASSERT_SIZE(StringView, 0xC);
-RED4EXT_ASSERT_OFFSET(StringView, ptr, 0x0);
-RED4EXT_ASSERT_OFFSET(StringView, length, 0x8);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY
