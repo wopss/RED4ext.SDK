@@ -22,7 +22,7 @@ struct SceneTierData : IScriptable
     GameplayTier tier; // 40
     bool emptyHands; // 44
     uint8_t unk45[0x48 - 0x45]; // 45
-    CString userDebugInfo; // 48
+    String userDebugInfo; // 48
 };
 RED4EXT_ASSERT_SIZE(SceneTierData, 0x68);
 } // namespace game

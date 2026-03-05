@@ -18,8 +18,8 @@ struct ShowCustomTooltipEvent : red::Event
     static constexpr const char* NAME = "gameuiShowCustomTooltipEvent";
     static constexpr const char* ALIAS = "ShowCustomTooltipEvent";
 
-    CString text; // 40
-    CString inputAction; // 60
+    String text; // 40
+    String inputAction; // 60
 };
 RED4EXT_ASSERT_SIZE(ShowCustomTooltipEvent, 0x80);
 } // namespace game::ui

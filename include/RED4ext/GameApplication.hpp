@@ -29,8 +29,8 @@ struct CGameOptions
     uint32_t watchdogTimeout;     // 10
     int8_t scriptVersion;         // 14
     int16_t scriptProfiling;      // 16
-    CString scriptsBlobPath;      // 18
-    CString tweakdbBlobPath;      // 38
+    String scriptsBlobPath;       // 18
+    String tweakdbBlobPath;       // 38
     uint8_t unattended58;         // 58
     uint8_t unattended59;         // 59
     uint8_t unattended5A;         // 5A
@@ -41,8 +41,8 @@ struct CGameOptions
     uint8_t unk5F;                // 5F
     uint8_t unattended60;         // 60
     int64_t unk68;                // 68
-    CString automator;            // 70
-    CString windowCaption;        // 90
+    String automator;             // 70
+    String windowCaption;         // 90
     bool isBackendGameEngine;     // B0
     uint8_t unkB1;                // B1
     bool nochroma;                // B2

@@ -43,9 +43,9 @@ struct GameSessionDesc
     uint64_t unk60; // 60
     int32_t unk68;  // 68
 
-    CString saveName; // 70 - QuickSave-1
-    CString unk90;    // 90
-    CString unkB0;    // B0
+    String saveName; // 70 - QuickSave-1
+    String unk90;    // 90
+    String unkB0;    // B0
 
     uint64_t unkD0; // D0
     uint64_t unkD8; // D8
@@ -71,7 +71,7 @@ struct GameSessionDesc
     bool unk1AA; // 1AA
     bool unk1AB; // 1AB
 
-    CString saveMetadataRelativePath; // 1B0 - QuickSave-1/metadata.9.json
+    String saveMetadataRelativePath; // 1B0 - QuickSave-1/metadata.9.json
 
     GameSessionDesc()
         : unk38(true)

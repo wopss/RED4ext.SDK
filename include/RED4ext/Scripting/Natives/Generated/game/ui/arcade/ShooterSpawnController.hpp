@@ -23,7 +23,7 @@ struct ShooterSpawnController : ink::WidgetLogicController
     uint8_t unk78[0xB8 - 0x78]; // 78
     game::ui::arcade::ShooterAIType enemyType; // B8
     game::ui::arcade::ShooterSpawnerCondition spawnCondition; // BC
-    CString enemyParameter; // C0
+    String enemyParameter; // C0
     uint32_t spawnCount; // E0
     float skipOffset; // E4
     uint8_t unkE8[0xEC - 0xE8]; // E8

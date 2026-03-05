@@ -18,7 +18,7 @@ struct LocationAreaNode : world::TriggerAreaNode
     static constexpr const char* NAME = "worldLocationAreaNode";
     static constexpr const char* ALIAS = NAME;
 
-    CString locationName; // 70
+    String locationName; // 70
     uint8_t unk90[0x98 - 0x90]; // 90
 };
 RED4EXT_ASSERT_SIZE(LocationAreaNode, 0x98);

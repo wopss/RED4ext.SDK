@@ -32,7 +32,7 @@ struct __declspec(align(0x10)) TerrainNodeInfo
     uint8_t unk0F[0x10 - 0xF]; // F
     uint16_t terrainSysID; // 10
     uint8_t unk12[0x18 - 0x12]; // 12
-    CString nodeName; // 18
+    String nodeName; // 18
     Vector3 nodeScale; // 38
     uint8_t unk44[0x50 - 0x44]; // 44
     Transform nodeTransform; // 50

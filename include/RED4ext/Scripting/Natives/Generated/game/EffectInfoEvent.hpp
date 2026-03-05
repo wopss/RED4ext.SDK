@@ -18,7 +18,7 @@ struct EffectInfoEvent : red::Event
     static constexpr const char* NAME = "gameEffectInfoEvent";
     static constexpr const char* ALIAS = "EffectInfoEvent";
 
-    CString tag; // 40
+    String tag; // 40
     uint32_t entitiesGathered; // 60
     uint32_t entitiesFiltered; // 64
     uint32_t entitiesProcessed; // 68

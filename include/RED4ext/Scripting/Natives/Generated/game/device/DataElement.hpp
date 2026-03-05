@@ -25,10 +25,10 @@ struct DataElement
 
     Handle<game::JournalPath> journalPath; // 00
     CName documentName; // 10
-    CString owner; // 18
-    CString date; // 38
-    CString title; // 58
-    CString content; // 78
+    String owner; // 18
+    String date; // 38
+    String title; // 58
+    String content; // 78
     red::ResourceReferenceScriptToken videoPath; // 98
     game::device::QuestInfo questInfo; // A0
     bool isEncrypted; // B0

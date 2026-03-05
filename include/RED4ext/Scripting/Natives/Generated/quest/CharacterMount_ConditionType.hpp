@@ -33,7 +33,7 @@ struct CharacterMount_ConditionType : quest::ICharacterConditionType
     quest::MountVehicleOrigin vehicleOrigin; // BC
     game::data::Affiliation vehicleAfiliation; // C0
     uint8_t unkC4[0xC8 - 0xC4]; // C4
-    CString playerVehicleName; // C8
+    String playerVehicleName; // C8
     bool usePlayersVehicle; // E8
     bool anyParent; // E9
     bool anyChild; // EA

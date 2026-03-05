@@ -18,8 +18,8 @@ struct InputHintGroupData
     static constexpr const char* ALIAS = "InputHintGroupData";
 
     TweakDBID iconReference; // 00
-    CString localizedTitle; // 08
-    CString localizedDescription; // 28
+    String localizedTitle; // 08
+    String localizedDescription; // 28
     int32_t sortingPriority; // 48
     uint8_t unk4C[0x50 - 0x4C]; // 4C
 };

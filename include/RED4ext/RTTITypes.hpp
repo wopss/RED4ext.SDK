@@ -3,12 +3,12 @@
 #include <type_traits>
 
 #include <RED4ext/CName.hpp>
-#include <RED4ext/CString.hpp>
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Map.hpp>
+#include <RED4ext/String.hpp>
 #include <RED4ext/Utils.hpp>
 
 namespace RED4ext
@@ -49,7 +49,7 @@ struct CBaseRTTIType
     virtual uint32_t GetSize() const = 0;                     // 10
     virtual uint32_t GetAlignment() const = 0;                // 18
     virtual ERTTIType GetType() const = 0;                    // 20
-    virtual CString GetTypeName() const;                      // 28
+    virtual String GetTypeName() const;                       // 28
     virtual CName GetComputedName() const;                    // 30
     virtual void Construct(ScriptInstance aMemory) const = 0; // 38
     virtual void Destruct(ScriptInstance aMemory) const = 0;  // 40
@@ -59,14 +59,14 @@ struct CBaseRTTIType
     virtual void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const = 0;                 // 50
     virtual void Move(ScriptInstance aLhs, ScriptInstance aRhs) const;                             // 58
     virtual bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const = 0; // 60
-    virtual bool ToString(const ScriptInstance aInstance, CString& aOut) const;                    // 68
-    virtual bool FromString(ScriptInstance aInstance, const CString& aString) const;               // 70
+    virtual bool ToString(const ScriptInstance aInstance, String& aOut) const;                     // 68
+    virtual bool FromString(ScriptInstance aInstance, const String& aString) const;                // 70
     virtual bool sub_78();                                                                         // 78
     virtual bool sub_80(int64_t a1, ScriptInstance aInstance);                                     // 80
     virtual bool sub_88(int64_t a1, ScriptInstance aInstance);                                     // 88
-    virtual bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4);            // 90
-    virtual bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5);   // 98
-    virtual bool sub_A0(int64_t a1, CString& a2, bool a3);                                         // A0
+    virtual bool sub_90(int64_t a1, ScriptInstance aInstance, String& a3, int64_t a4);             // 90
+    virtual bool sub_98(int64_t a1, ScriptInstance aInstance, String& a3, int64_t a4, bool a5);    // 98
+    virtual bool sub_A0(int64_t a1, String& a2, bool a3);                                          // A0
     virtual bool sub_A8();                                                                         // A8
     virtual void sub_B0(int64_t a1, int64_t a2);                                                   // B0
     virtual Memory::IAllocator* GetAllocator() const;                                              // B8
@@ -107,21 +107,21 @@ struct CClass : CBaseRTTIType
 
     CClass(CName aName, uint32_t aSize, Flags aFlags);
 
-    CName GetName() const final;                                                               // 08
-    uint32_t GetSize() const final;                                                            // 10
-    uint32_t GetAlignment() const final;                                                       // 18
-    ERTTIType GetType() const final;                                                           // 20
-    CName GetComputedName() const final;                                                       // 30
-    void Construct(ScriptInstance aMemory) const final;                                        // 38
-    void Destruct(ScriptInstance aMemory) const final;                                         // 40
-    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;   // 60
-    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                  // 68
-    bool sub_80(int64_t a1, ScriptInstance aInstance) final;                                   // 80
-    bool sub_88(int64_t a1, ScriptInstance aInstance) final;                                   // 88
-    bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4) final;          // 90
-    bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5) final; // 98
-    bool sub_A0(int64_t a1, CString& a2, bool a3) final;                                       // A0
-    void sub_B0(int64_t a1, int64_t a2) final;                                                 // B0
+    CName GetName() const final;                                                              // 08
+    uint32_t GetSize() const final;                                                           // 10
+    uint32_t GetAlignment() const final;                                                      // 18
+    ERTTIType GetType() const final;                                                          // 20
+    CName GetComputedName() const final;                                                      // 30
+    void Construct(ScriptInstance aMemory) const final;                                       // 38
+    void Destruct(ScriptInstance aMemory) const final;                                        // 40
+    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;  // 60
+    bool ToString(const ScriptInstance aInstance, String& aOut) const final;                  // 68
+    bool sub_80(int64_t a1, ScriptInstance aInstance) final;                                  // 80
+    bool sub_88(int64_t a1, ScriptInstance aInstance) final;                                  // 88
+    bool sub_90(int64_t a1, ScriptInstance aInstance, String& a3, int64_t a4) final;          // 90
+    bool sub_98(int64_t a1, ScriptInstance aInstance, String& a3, int64_t a4, bool a5) final; // 98
+    bool sub_A0(int64_t a1, String& a2, bool a3) final;                                       // A0
+    void sub_B0(int64_t a1, int64_t a2) final;                                                // B0
 
     virtual void sub_C0();                                       // C0
     virtual uint32_t GetMaxAlignment() const;                    // C8
@@ -256,8 +256,8 @@ struct CEnum : CBaseRTTIType
     const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final; // 48
     void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final;                         // 50
     bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;         // 60
-    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
-    bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
+    bool ToString(const ScriptInstance aInstance, String& aOut) const final;                         // 68
+    bool FromString(ScriptInstance aInstance, const String& aString) const final;                    // 70
 
     CName name;                       // 10
     CName computedName;               // 18
@@ -299,8 +299,8 @@ struct CBitfield : CBaseRTTIType
     const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final; // 48
     void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final;                         // 50
     bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;         // 60
-    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
-    bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
+    bool ToString(const ScriptInstance aInstance, String& aOut) const final;                         // 68
+    bool FromString(ScriptInstance aInstance, const String& aString) const final;                    // 70
 
     CName name;         // 10
     CName computedName; // 18

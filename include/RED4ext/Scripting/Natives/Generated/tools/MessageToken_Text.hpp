@@ -18,7 +18,7 @@ struct MessageToken_Text : tools::IMessageToken
     static constexpr const char* NAME = "toolsMessageToken_Text";
     static constexpr const char* ALIAS = NAME;
 
-    CString text; // 30
+    String text; // 30
 };
 RED4EXT_ASSERT_SIZE(MessageToken_Text, 0x50);
 } // namespace tools

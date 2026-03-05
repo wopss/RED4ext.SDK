@@ -17,7 +17,7 @@ struct PanzerScoreRecordData
     static constexpr const char* NAME = "gameuiPanzerScoreRecordData";
     static constexpr const char* ALIAS = "PanzerScoreRecordData";
 
-    CString name; // 00
+    String name; // 00
     uint32_t score; // 20
     uint8_t unk24[0x28 - 0x24]; // 24
 };

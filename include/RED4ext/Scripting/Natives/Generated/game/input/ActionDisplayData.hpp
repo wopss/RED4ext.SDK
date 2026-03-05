@@ -21,8 +21,8 @@ struct ActionDisplayData
     CName name; // 00
     bool isHold; // 08
     uint8_t unk09[0x10 - 0x9]; // 9
-    CString inputDisplayPad; // 10
-    CString inputDisplayKeyboard; // 30
+    String inputDisplayPad; // 10
+    String inputDisplayKeyboard; // 30
 };
 RED4EXT_ASSERT_SIZE(ActionDisplayData, 0x50);
 } // namespace game::input

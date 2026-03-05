@@ -19,7 +19,7 @@ struct BinkVideoEvent : red::Event
     static constexpr const char* NAME = "gameBinkVideoEvent";
     static constexpr const char* ALIAS = NAME;
 
-    CString videoPath; // 40
+    String videoPath; // 40
     game::BinkVideoAction action; // 60
     uint8_t unk61[0x68 - 0x61]; // 61
 };

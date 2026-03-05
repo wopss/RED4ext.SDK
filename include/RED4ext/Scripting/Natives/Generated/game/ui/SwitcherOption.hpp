@@ -25,7 +25,7 @@ struct SwitcherOption
     int32_t index; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
     DynArray<CName> names; // 08
-    CString localizedName; // 18
+    String localizedName; // 18
     DynArray<game::ui::CharacterCustomizationAction> actions; // 38
     red::TagList tags; // 48
     game::ui::CharacterRandomizationInfo randomizationInfo; // 58

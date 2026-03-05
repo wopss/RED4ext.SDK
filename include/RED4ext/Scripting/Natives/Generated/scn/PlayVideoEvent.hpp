@@ -18,7 +18,7 @@ struct PlayVideoEvent : scn::SceneEvent
     static constexpr const char* NAME = "scnPlayVideoEvent";
     static constexpr const char* ALIAS = NAME;
 
-    CString videoPath; // 58
+    String videoPath; // 58
     bool isPhoneCall; // 78
     bool forceFrameRate; // 79
     uint8_t unk7A[0x80 - 0x7A]; // 7A

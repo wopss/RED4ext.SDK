@@ -21,7 +21,7 @@ struct JournalInternetBase : IScriptable
     static constexpr const char* ALIAS = "JournalInternetBase";
 
     CName name; // 40
-    CString linkAddress; // 48
+    String linkAddress; // 48
     Color tintColor; // 68
     Color hoverTintColor; // 6C
 };

@@ -22,7 +22,7 @@ struct TaskTextMessage
     uint8_t unk04[0x8 - 0x4]; // 4
     uint32_t parent; // 08
     uint8_t unk0C[0x10 - 0xC]; // C
-    CString text; // 10
+    String text; // 10
     red::TaskTextMessageType type; // 30
     uint8_t unk34[0x38 - 0x34]; // 34
 };

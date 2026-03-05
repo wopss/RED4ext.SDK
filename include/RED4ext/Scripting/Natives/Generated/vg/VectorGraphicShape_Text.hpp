@@ -18,7 +18,7 @@ struct __declspec(align(0x10)) VectorGraphicShape_Text : vg::BaseVectorGraphicSh
     static constexpr const char* NAME = "vgVectorGraphicShape_Text";
     static constexpr const char* ALIAS = NAME;
 
-    CString xt; // C0
+    String xt; // C0
 };
 RED4EXT_ASSERT_SIZE(VectorGraphicShape_Text, 0xE0);
 } // namespace vg

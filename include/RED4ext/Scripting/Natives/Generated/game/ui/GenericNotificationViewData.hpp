@@ -19,8 +19,8 @@ struct GenericNotificationViewData : IScriptable
     static constexpr const char* NAME = "gameuiGenericNotificationViewData";
     static constexpr const char* ALIAS = "GenericNotificationViewData";
 
-    CString title; // 40
-    CString text; // 60
+    String title; // 40
+    String text; // 60
     CName soundEvent; // 80
     CName soundAction; // 88
 };

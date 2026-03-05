@@ -23,7 +23,7 @@ struct TelemetryEnemy
     static constexpr const char* ALIAS = "TelemetryEnemy";
 
     TweakDBID characterRecord; // 00
-    CString enemyAffiliation; // 08
+    String enemyAffiliation; // 08
     WeakHandle<game::Object> enemy; // 28
     ent::EntityID enemyEntityID; // 38
     game::data::ArchetypeType archetype; // 40

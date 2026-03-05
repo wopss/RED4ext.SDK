@@ -17,7 +17,7 @@ struct StringWithID
     static constexpr const char* NAME = "interopStringWithID";
     static constexpr const char* ALIAS = NAME;
 
-    CString text; // 00
+    String text; // 00
     uint64_t id; // 20
 };
 RED4EXT_ASSERT_SIZE(StringWithID, 0x28);

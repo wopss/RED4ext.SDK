@@ -17,8 +17,8 @@ struct JiraResolution
     static constexpr const char* NAME = "toolsJiraResolution";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
-    CString id; // 20
+    String name; // 00
+    String id; // 20
 };
 RED4EXT_ASSERT_SIZE(JiraResolution, 0x40);
 } // namespace tools

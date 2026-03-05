@@ -23,7 +23,7 @@ struct TextValueProgressAnimationController : ink::TextAnimationController
     int32_t numbersAfterDot; // F8
     float stepValue; // FC
     uint8_t unk100[0x128 - 0x100]; // 100
-    CString suffix; // 128
+    String suffix; // 128
 };
 RED4EXT_ASSERT_SIZE(TextValueProgressAnimationController, 0x148);
 } // namespace ink

@@ -22,11 +22,11 @@ struct DialogLineData
     static constexpr const char* ALIAS = NAME;
 
     CRUID id; // 00
-    CString text; // 08
+    String text; // 08
     scn::DialogLineType type; // 28
     uint8_t unk2C[0x30 - 0x2C]; // 2C
     WeakHandle<game::Object> speaker; // 30
-    CString speakerName; // 40
+    String speakerName; // 40
     float duration; // 60
     bool isPersistent; // 64
     uint8_t unk65[0x68 - 0x65]; // 65

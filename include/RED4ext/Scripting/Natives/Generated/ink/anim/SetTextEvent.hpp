@@ -18,7 +18,7 @@ struct SetTextEvent : ink::anim::Event
     static constexpr const char* NAME = "inkanimSetTextEvent";
     static constexpr const char* ALIAS = NAME;
 
-    CString localizationString; // 48
+    String localizationString; // 48
 };
 RED4EXT_ASSERT_SIZE(SetTextEvent, 0x68);
 } // namespace ink::anim

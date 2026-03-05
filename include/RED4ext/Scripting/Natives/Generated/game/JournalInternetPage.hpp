@@ -28,7 +28,7 @@ struct JournalInternetPage : game::JournalEntry
     static constexpr const char* NAME = "gameJournalInternetPage";
     static constexpr const char* ALIAS = "JournalInternetPage";
 
-    CString address; // 70
+    String address; // 70
     DynArray<game::JournalFactNameValue> factsToSet; // 90
     RaRef<ink::WidgetLibraryResource> widgetFile; // A0
     float scale; // A8

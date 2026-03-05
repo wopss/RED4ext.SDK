@@ -29,7 +29,7 @@ struct SpawnPlayerVehicle_NodeType : quest::IVehicleManagerNodeType
     Vector3 offset; // 48
     bool driveIn; // 54
     uint8_t unk55[0x58 - 0x55]; // 55
-    CString vehicle; // 58
+    String vehicle; // 58
     CName vehicleGlobalName; // 78
     bool despawnAllEnabledVehicles; // 80
     bool retryUntilStubCreated; // 81

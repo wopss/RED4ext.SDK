@@ -21,8 +21,8 @@ struct CreditsSectionEntry
 
     ink::DisplayMode displayMode; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString sectionTitle; // 08
-    DynArray<CString> names; // 28
+    String sectionTitle; // 08
+    DynArray<String> names; // 28
 };
 RED4EXT_ASSERT_SIZE(CreditsSectionEntry, 0x38);
 } // namespace ink

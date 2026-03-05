@@ -21,7 +21,7 @@ struct ExecuteControllerFunctionEvent : ink::anim::Event
 
     CName controllerType; // 48
     CName eventName; // 50
-    CString params; // 58
+    String params; // 58
 };
 RED4EXT_ASSERT_SIZE(ExecuteControllerFunctionEvent, 0x78);
 } // namespace ink::anim

@@ -18,9 +18,9 @@ struct JiraIssue
     static constexpr const char* NAME = "toolsJiraIssue";
     static constexpr const char* ALIAS = NAME;
 
-    CString id; // 00
-    CString key; // 20
-    CString self; // 40
+    String id; // 00
+    String key; // 20
+    String self; // 40
     tools::JiraIssueFields fields; // 60
 };
 RED4EXT_ASSERT_SIZE(JiraIssue, 0x4B8);

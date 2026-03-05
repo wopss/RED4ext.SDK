@@ -18,7 +18,7 @@ struct Icon : attr::Attribute
     static constexpr const char* NAME = "attrIcon";
     static constexpr const char* ALIAS = NAME;
 
-    CString onName; // 30
+    String onName; // 30
 };
 RED4EXT_ASSERT_SIZE(Icon, 0x50);
 } // namespace attr

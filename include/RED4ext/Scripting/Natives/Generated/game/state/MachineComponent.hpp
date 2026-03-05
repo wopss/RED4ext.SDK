@@ -19,7 +19,7 @@ struct __declspec(align(0x10)) MachineComponent : game::PlayerControlledComponen
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk98[0x1ACE0 - 0x98]; // 98
-    CString packageName; // 1ACE0
+    String packageName; // 1ACE0
     uint8_t unk1AD00[0x1AD30 - 0x1AD00]; // 1AD00
 };
 RED4EXT_ASSERT_SIZE(MachineComponent, 0x1AD30);

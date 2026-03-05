@@ -17,7 +17,7 @@ struct RelativeNodePathElement
     static constexpr const char* NAME = "worldRelativeNodePathElement";
     static constexpr const char* ALIAS = NAME;
 
-    CString prefab; // 00
+    String prefab; // 00
     uint8_t unk20[0x28 - 0x20]; // 20
     uint64_t nodeID; // 28
     uint8_t unk30[0x38 - 0x30]; // 30

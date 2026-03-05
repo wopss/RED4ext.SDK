@@ -17,8 +17,8 @@ struct GlobalNodeIDResult
     static constexpr const char* NAME = "interopGlobalNodeIDResult";
     static constexpr const char* ALIAS = NAME;
 
-    CString errorMessage; // 00
-    CString result; // 20
+    String errorMessage; // 00
+    String result; // 20
     bool isValid; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };

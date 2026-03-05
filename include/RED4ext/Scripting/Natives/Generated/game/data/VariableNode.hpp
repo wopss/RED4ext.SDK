@@ -23,8 +23,8 @@ struct VariableNode : game::data::DataNode
     static constexpr const char* ALIAS = NAME;
 
     CName hashedName; // 98
-    CString type; // A0
-    CString name; // C0
+    String type; // A0
+    String name; // C0
     bool isForeignKey; // E0
     bool isArray; // E1
     bool hasArrayValues; // E2

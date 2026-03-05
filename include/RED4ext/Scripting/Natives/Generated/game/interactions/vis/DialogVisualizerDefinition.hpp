@@ -21,7 +21,7 @@ struct DialogVisualizerDefinition : game::interactions::vis::IVisualizerDefiniti
     static constexpr const char* NAME = "gameinteractionsvisDialogVisualizerDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    CString displayNameOverride; // 48
+    String displayNameOverride; // 48
     bool useLookAt; // 68
     uint8_t unk69[0x6C - 0x69]; // 69
     bool disableAfterSelectingChoice; // 6C

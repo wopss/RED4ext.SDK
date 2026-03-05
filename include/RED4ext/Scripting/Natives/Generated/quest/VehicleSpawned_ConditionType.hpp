@@ -27,7 +27,7 @@ struct VehicleSpawned_ConditionType : quest::IVehicleConditionType
     uint32_t count; // 74
     quest::SpawnedVehicleType vehicleType; // 78
     uint8_t unk7C[0x80 - 0x7C]; // 7C
-    CString vehicleName; // 80
+    String vehicleName; // 80
     CName vehicleGlobalName; // A0
 };
 RED4EXT_ASSERT_SIZE(VehicleSpawned_ConditionType, 0xA8);

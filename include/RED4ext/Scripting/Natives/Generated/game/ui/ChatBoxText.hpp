@@ -18,7 +18,7 @@ struct ChatBoxText
     static constexpr const char* NAME = "gameuiChatBoxText";
     static constexpr const char* ALIAS = "ChatBoxText";
 
-    CString text; // 00
+    String text; // 00
     int32_t id; // 20
     Color color; // 24
 };

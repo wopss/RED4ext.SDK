@@ -16,8 +16,8 @@ struct IParticleModule : ISerializable
     static constexpr const char* NAME = "IParticleModule";
     static constexpr const char* ALIAS = NAME;
 
-    CString editorName; // 30
-    CString editorGroup; // 50
+    String editorName; // 30
+    String editorGroup; // 50
     uint8_t unk70[0x74 - 0x70]; // 70
     bool isEnabled; // 74
     uint8_t unk75[0x78 - 0x75]; // 75

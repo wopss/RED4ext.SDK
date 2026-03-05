@@ -2,11 +2,11 @@
 #include <RED4ext/ISerializable.hpp>
 #endif
 
-#include <RED4ext/CString.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/Relocation.hpp>
+#include <RED4ext/String.hpp>
 
 RED4EXT_INLINE RED4ext::ISerializable::ISerializable()
 {
@@ -129,7 +129,7 @@ RED4EXT_INLINE void RED4ext::ISerializable::sub_B0(void* a1)
     std::memset(a1, 0, 0x20);
 }
 
-RED4EXT_INLINE RED4ext::CString RED4ext::ISerializable::sub_B8()
+RED4EXT_INLINE RED4ext::String RED4ext::ISerializable::sub_B8()
 {
     auto type = GetType();
     auto name = type->GetName();

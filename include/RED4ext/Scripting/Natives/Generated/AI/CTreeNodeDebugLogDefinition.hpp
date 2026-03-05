@@ -18,7 +18,7 @@ struct CTreeNodeDebugLogDefinition : AI::CTreeExtendableNodeDefinition
     static constexpr const char* NAME = "AICTreeNodeDebugLogDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    CString text; // 48
+    String text; // 48
     float timeOnScreen; // 68
     bool useVisualDebug; // 6C
     uint8_t unk6D[0x70 - 0x6D]; // 6D

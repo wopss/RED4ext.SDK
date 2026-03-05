@@ -19,7 +19,7 @@ struct ShowNarrativeEvent_NodeType : quest::IUIManagerNodeType
     static constexpr const char* NAME = "questShowNarrativeEvent_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString eventText; // 38
+    String eventText; // 38
     Color textColor; // 58
     float durationSec; // 5C
 };

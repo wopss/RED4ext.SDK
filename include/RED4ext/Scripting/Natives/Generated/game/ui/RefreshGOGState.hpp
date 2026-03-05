@@ -23,7 +23,7 @@ struct RefreshGOGState : red::Event
 
     game::OnlineSystemStatus status; // 40
     game::OnlineSystemErrors error; // 44
-    CString registerURL; // 48
+    String registerURL; // 48
     DynArray<uint8_t> qrCodePNGBlob; // 68
 };
 RED4EXT_ASSERT_SIZE(RefreshGOGState, 0x78);

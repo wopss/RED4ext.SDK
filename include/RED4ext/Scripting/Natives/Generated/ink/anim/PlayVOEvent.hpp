@@ -18,8 +18,8 @@ struct PlayVOEvent : ink::anim::Event
     static constexpr const char* NAME = "inkanimPlayVOEvent";
     static constexpr const char* ALIAS = NAME;
 
-    CString VOLine; // 48
-    CString speakerName; // 68
+    String VOLine; // 48
+    String speakerName; // 68
 };
 RED4EXT_ASSERT_SIZE(PlayVOEvent, 0x88);
 } // namespace ink::anim

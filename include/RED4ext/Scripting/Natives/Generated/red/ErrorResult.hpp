@@ -17,7 +17,7 @@ struct ErrorResult
     static constexpr const char* NAME = "redErrorResult";
     static constexpr const char* ALIAS = NAME;
 
-    CString message; // 00
+    String message; // 00
     Variant userData; // 20
 };
 RED4EXT_ASSERT_SIZE(ErrorResult, 0x38);

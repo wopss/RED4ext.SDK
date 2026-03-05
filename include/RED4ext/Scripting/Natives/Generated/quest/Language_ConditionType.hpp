@@ -21,7 +21,7 @@ struct Language_ConditionType : quest::ISystemConditionType
 
     quest::LanguageMode mode; // 38
     uint8_t unk3C[0x40 - 0x3C]; // 3C
-    CString languageCode; // 40
+    String languageCode; // 40
     bool inverted; // 60
     uint8_t unk61[0x68 - 0x61]; // 61
 };

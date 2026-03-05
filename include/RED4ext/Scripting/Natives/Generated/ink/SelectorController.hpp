@@ -24,7 +24,7 @@ struct SelectorController : ink::WidgetLogicController
     int32_t index; // B0
     bool cycledNavigation; // B4
     uint8_t unkB5[0xB8 - 0xB5]; // B5
-    DynArray<CString> values; // B8
+    DynArray<String> values; // B8
 };
 RED4EXT_ASSERT_SIZE(SelectorController, 0xC8);
 } // namespace ink

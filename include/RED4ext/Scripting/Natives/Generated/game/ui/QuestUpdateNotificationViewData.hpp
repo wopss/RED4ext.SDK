@@ -19,12 +19,12 @@ struct QuestUpdateNotificationViewData : game::ui::GenericNotificationViewData
     static constexpr const char* NAME = "gameuiQuestUpdateNotificationViewData";
     static constexpr const char* ALIAS = "QuestUpdateNotificationViewData";
 
-    CString questEntryId; // 90
+    String questEntryId; // 90
     bool canBeMerged; // B0
     uint8_t unkB1[0xB8 - 0xB1]; // B1
     CName animation; // B8
-    CString SMSText; // C0
-    CString SMSLocKey; // E0
+    String SMSText; // C0
+    String SMSLocKey; // E0
 };
 RED4EXT_ASSERT_SIZE(QuestUpdateNotificationViewData, 0x100);
 } // namespace game::ui

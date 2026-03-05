@@ -18,7 +18,7 @@ struct Inspect_ConditionType : quest::IObjectConditionType
     static constexpr const char* NAME = "questInspect_ConditionType";
     static constexpr const char* ALIAS = NAME;
 
-    CString objectID; // 38
+    String objectID; // 38
     bool inverted; // 58
     uint8_t unk59[0x60 - 0x59]; // 59
 };

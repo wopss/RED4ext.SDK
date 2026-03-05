@@ -19,7 +19,7 @@ struct JournalDescriptorResource : game::JournalBaseResource
     static constexpr const char* NAME = "gameJournalDescriptorResource";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> entriesActivatedAtStart; // 40
+    DynArray<String> entriesActivatedAtStart; // 40
 };
 RED4EXT_ASSERT_SIZE(JournalDescriptorResource, 0x50);
 } // namespace game

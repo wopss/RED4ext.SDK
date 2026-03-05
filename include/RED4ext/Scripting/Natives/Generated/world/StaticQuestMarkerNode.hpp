@@ -23,7 +23,7 @@ struct StaticQuestMarkerNode : world::Node
     uint8_t unk38[0x48 - 0x38]; // 38
     world::QuestType questType; // 48
     uint8_t unk49[0x50 - 0x49]; // 49
-    CString questLabel; // 50
+    String questLabel; // 50
     float questMarkerHeight; // 70
     uint8_t unk74[0x78 - 0x74]; // 74
     CName mapFilteringTag; // 78

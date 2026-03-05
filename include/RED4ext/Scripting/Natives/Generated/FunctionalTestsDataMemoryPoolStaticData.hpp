@@ -18,11 +18,11 @@ struct FunctionalTestsDataMemoryPoolStaticData : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk30[0x38 - 0x30]; // 30
-    CString poolName; // 38
+    String poolName; // 38
     int64_t budget; // 58
     int64_t childrenBudget; // 60
-    DynArray<CString> children; // 68
-    CString parent; // 78
+    DynArray<String> children; // 68
+    String parent; // 78
     uint8_t unk98[0xA0 - 0x98]; // 98
 };
 RED4EXT_ASSERT_SIZE(FunctionalTestsDataMemoryPoolStaticData, 0xA0);

@@ -45,10 +45,10 @@ struct __declspec(align(0x10)) PreventionSystemDebugData
     uint32_t awaitedAVSpawnPointsRequestID; // 60
     uint8_t unk64[0x70 - 0x64]; // 64
     Vector4 lastKnownPosition; // 70
-    CString heatChangeReason; // 80
+    String heatChangeReason; // 80
     bool systemEnabled; // A0
     uint8_t unkA1[0xA8 - 0xA1]; // A1
-    DynArray<CString> systemLockEventSources; // A8
+    DynArray<String> systemLockEventSources; // A8
     uint8_t unkB8[0xC0 - 0xB8]; // B8
 };
 RED4EXT_ASSERT_SIZE(PreventionSystemDebugData, 0xC0);

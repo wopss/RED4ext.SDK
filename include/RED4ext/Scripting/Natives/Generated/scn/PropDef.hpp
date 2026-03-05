@@ -41,7 +41,7 @@ struct __declspec(align(0x10)) PropDef
     scn::FindEntityInWorldParams findEntityInWorldParams; // E0
     scn::PropId propId; // 120
     uint8_t unk124[0x128 - 0x124]; // 124
-    CString propName; // 128
+    String propName; // 128
     TweakDBID specPropRecordId; // 148
     DynArray<scn::RidAnimSetSRRefId> animSets; // 150
     DynArray<scn::CinematicAnimSetSRRefId> cinematicAnimSets; // 160

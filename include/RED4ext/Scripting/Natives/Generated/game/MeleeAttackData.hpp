@@ -21,7 +21,7 @@ struct __declspec(align(0x10)) MeleeAttackData : IScriptable
     static constexpr const char* NAME = "gameMeleeAttackData";
     static constexpr const char* ALIAS = "MeleeAttackData";
 
-    CString trailAttackSide; // 40
+    String trailAttackSide; // 40
     bool isThrust; // 60
     bool useMiddlePosition; // 61
     uint8_t unk62[0x70 - 0x62]; // 62

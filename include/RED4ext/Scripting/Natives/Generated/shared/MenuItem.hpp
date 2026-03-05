@@ -22,12 +22,12 @@ struct MenuItem
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
-    CString displayName; // 08
+    String displayName; // 08
     shared::MenuItemType type; // 28
     bool isEnabled; // 29
     uint8_t unk2A[0x30 - 0x2A]; // 2A
-    CString tooltip; // 30
-    CString checkGroup; // 50
+    String tooltip; // 30
+    String checkGroup; // 50
     bool isChecked; // 70
     uint8_t unk71[0x78 - 0x71]; // 71
     CName id; // 78

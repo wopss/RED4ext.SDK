@@ -24,7 +24,7 @@ struct PinInfo
     int32_t iconType; // 04
     float offset; // 08
     uint8_t unk0C[0x10 - 0xC]; // C
-    CString displayText; // 10
+    String displayText; // 10
 };
 RED4EXT_ASSERT_SIZE(PinInfo, 0x30);
 } // namespace game::ui

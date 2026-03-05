@@ -7,7 +7,6 @@
 
 #include <RED4ext/Buffer.hpp>
 #include <RED4ext/CName.hpp>
-#include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Hashing/CRC.hpp>
@@ -16,6 +15,7 @@
 #include <RED4ext/ResourceReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/EInterpolationType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/ESegmentsLinkType.hpp>
+#include <RED4ext/String.hpp>
 
 namespace RED4ext
 {
@@ -193,7 +193,7 @@ RED4EXT_ASSERT_SIZE(gamedataLocKeyWrapper, 0x8);
 struct LocalizationString
 {
     int64_t unk00; // 00
-    CString unk08; // 08
+    String unk08;  // 08
 };
 RED4EXT_ASSERT_SIZE(LocalizationString, 0x28);
 

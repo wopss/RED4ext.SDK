@@ -20,7 +20,7 @@ struct JiraEditIssueResult : ISerializable
     static constexpr const char* NAME = "toolsJiraEditIssueResult";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> errorMessages; // 30
+    DynArray<String> errorMessages; // 30
     tools::JiraIssueFieldsResult errors; // 40
 };
 RED4EXT_ASSERT_SIZE(JiraEditIssueResult, 0x490);

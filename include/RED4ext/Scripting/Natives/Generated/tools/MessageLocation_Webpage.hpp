@@ -19,8 +19,8 @@ struct MessageLocation_Webpage : tools::IMessageLocation
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk30[0x38 - 0x30]; // 30
-    CString link; // 38
-    CString text; // 58
+    String link; // 38
+    String text; // 58
 };
 RED4EXT_ASSERT_SIZE(MessageLocation_Webpage, 0x78);
 } // namespace tools

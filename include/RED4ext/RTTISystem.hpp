@@ -62,8 +62,8 @@ struct IRTTISystem
     virtual CEnum* GetEnumByScriptName(CName aName) = 0;                         // 110
     virtual CName ConvertNativeToScriptName(CName aName) = 0;                    // 118
     virtual CName ConvertScriptToNativeName(CName aName) = 0;                    // 120
-    virtual CString* GetStringConst(uint32_t aIndex) = 0;         // 128 - Used by StringConst opcode (0x10)
-    virtual void SetStringTable(DynArray<CString>& aStrings) = 0; // 130 - Called by script loader
+    virtual String* GetStringConst(uint32_t aIndex) = 0;         // 128 - Used by StringConst opcode (0x10)
+    virtual void SetStringTable(DynArray<String>& aStrings) = 0; // 130 - Called by script loader
 
     virtual ~IRTTISystem() = 0; // 138
 };
@@ -87,7 +87,7 @@ struct CRTTISystem : IRTTISystem
     DynArray<void*> unk140;                           // 140
     HashMap<CName, CName> scriptToNative;             // 150
     HashMap<CName, CName> nativeToScript;             // 180
-    DynArray<CString> strings;                        // 1B0 - Used by StringConst opcode (0x10)
+    DynArray<String> strings;                         // 1B0 - Used by StringConst opcode (0x10)
     DynArray<void*> unk1C0;                           // 1C0
     DynArray<void*> unk1D0;                           // 1D0
     Mutex unk1E0;                                     // 1E0

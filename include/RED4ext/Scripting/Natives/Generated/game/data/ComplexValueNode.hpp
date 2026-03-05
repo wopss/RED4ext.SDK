@@ -19,7 +19,7 @@ struct ComplexValueNode : game::data::ValueDataNode
     static constexpr const char* NAME = "gamedataComplexValueNode";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> data; // 98
+    DynArray<String> data; // 98
 };
 RED4EXT_ASSERT_SIZE(ComplexValueNode, 0xA8);
 } // namespace game::data

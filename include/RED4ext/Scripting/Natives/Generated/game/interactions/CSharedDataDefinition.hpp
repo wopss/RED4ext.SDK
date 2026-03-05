@@ -21,7 +21,7 @@ struct CSharedDataDefinition
     static constexpr const char* NAME = "gameinteractionsCSharedDataDefinition";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> defaultChoices; // 00
+    DynArray<String> defaultChoices; // 00
     Handle<game::ui::IChoiceVisualizer> visualizer; // 10
 };
 RED4EXT_ASSERT_SIZE(CSharedDataDefinition, 0x20);

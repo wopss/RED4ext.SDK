@@ -17,8 +17,8 @@ struct Language
     static constexpr const char* NAME = "audioLanguage";
     static constexpr const char* ALIAS = NAME;
 
-    CString longName; // 00
-    CString codeName; // 20
+    String longName; // 00
+    String codeName; // 20
     bool hasVO; // 40
     uint8_t unk41[0x48 - 0x41]; // 41
 };

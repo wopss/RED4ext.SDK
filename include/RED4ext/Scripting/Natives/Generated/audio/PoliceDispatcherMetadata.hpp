@@ -26,7 +26,7 @@ struct PoliceDispatcherMetadata : audio::AudioMetadata
     DynArray<CName> playerChaseEndInputs; // 68
     float dispatcherTimeInterval; // 78
     uint8_t unk7C[0x80 - 0x7C]; // 7C
-    CString sceneFilePath; // 80
+    String sceneFilePath; // 80
     uint8_t unkA0[0xA8 - 0xA0]; // A0
 };
 RED4EXT_ASSERT_SIZE(PoliceDispatcherMetadata, 0xA8);

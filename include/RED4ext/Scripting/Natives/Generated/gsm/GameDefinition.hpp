@@ -28,7 +28,7 @@ struct GameDefinition : CResource
     DynArray<Handle<gsm::MainQuest>> mainQuests; // 40
     RaRef<world::World> world; // 50
     RaRef<CResource> streamingWorld; // 58
-    CString worldName; // 60
+    String worldName; // 60
     red::TagList spawnPointTags; // 80
 };
 RED4EXT_ASSERT_SIZE(GameDefinition, 0x90);

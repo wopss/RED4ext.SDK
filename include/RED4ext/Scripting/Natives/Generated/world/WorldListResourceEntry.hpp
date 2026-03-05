@@ -21,7 +21,7 @@ struct WorldListResourceEntry
 
     RaRef<CResource> world; // 00
     RaRef<CResource> streamingWorld; // 08
-    CString worldName; // 10
+    String worldName; // 10
 };
 RED4EXT_ASSERT_SIZE(WorldListResourceEntry, 0x30);
 } // namespace world

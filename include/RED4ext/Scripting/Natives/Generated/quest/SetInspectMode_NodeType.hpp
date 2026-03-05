@@ -18,7 +18,7 @@ struct SetInspectMode_NodeType : quest::IInteractiveObjectManagerNodeType
     static constexpr const char* NAME = "questSetInspectMode_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString objectID; // 30
+    String objectID; // 30
     float startingOffset; // 50
     float zoomOffset; // 54
     float timeInterval; // 58

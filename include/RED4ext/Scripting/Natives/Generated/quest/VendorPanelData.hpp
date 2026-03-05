@@ -21,7 +21,7 @@ struct VendorPanelData : IScriptable
     static constexpr const char* ALIAS = "VendorPanelData";
 
     game::VendorData data; // 40
-    CString assetsLibrary; // 70
+    String assetsLibrary; // 70
     CName rootItemName; // 90
 };
 RED4EXT_ASSERT_SIZE(VendorPanelData, 0x98);

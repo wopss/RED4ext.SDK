@@ -17,7 +17,7 @@ struct InventoryItemSortData
     static constexpr const char* NAME = "gameInventoryItemSortData";
     static constexpr const char* ALIAS = "InventoryItemSortData";
 
-    CString Name; // 00
+    String Name; // 00
     int32_t Quality; // 20
     int32_t Price; // 24
     float Weight; // 28

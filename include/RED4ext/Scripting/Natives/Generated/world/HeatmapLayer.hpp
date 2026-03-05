@@ -21,8 +21,8 @@ struct HeatmapLayer : CResource
     uint8_t unk40[0x50 - 0x40]; // 40
     uint32_t minValue; // 50
     uint32_t maxValue; // 54
-    CString name; // 58
-    CString units; // 78
+    String name; // 58
+    String units; // 78
     bool invert; // 98
     uint8_t unk99[0xA0 - 0x99]; // 99
 };

@@ -17,7 +17,7 @@ struct JiraCustomFieldName
     static constexpr const char* NAME = "toolsJiraCustomFieldName";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
+    String name; // 00
 };
 RED4EXT_ASSERT_SIZE(JiraCustomFieldName, 0x20);
 } // namespace tools

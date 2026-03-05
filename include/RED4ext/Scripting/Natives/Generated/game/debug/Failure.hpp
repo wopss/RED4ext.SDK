@@ -25,7 +25,7 @@ struct Failure : ISerializable
     game::debug::FailureId id; // 30
     float time; // 38
     uint8_t unk3C[0x48 - 0x3C]; // 3C
-    CString message; // 48
+    String message; // 48
     game::DebugPath path; // 68
     Handle<game::debug::Failure> previous; // 90
     Handle<game::debug::Failure> cause; // A0

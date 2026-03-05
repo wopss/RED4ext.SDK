@@ -21,7 +21,7 @@ struct SimpleScreenMessage
     bool isShown; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
     float duration; // 04
-    CString message; // 08
+    String message; // 08
     bool isInstant; // 28
     uint8_t unk29[0x2C - 0x29]; // 29
     game::SimpleMessageType type; // 2C

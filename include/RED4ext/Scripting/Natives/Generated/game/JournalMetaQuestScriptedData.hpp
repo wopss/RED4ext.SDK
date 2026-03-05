@@ -20,7 +20,7 @@ struct JournalMetaQuestScriptedData
     bool hidden; // 00
     uint8_t unk01[0x4 - 0x1]; // 1
     uint32_t percent; // 04
-    CString text; // 08
+    String text; // 08
 };
 RED4EXT_ASSERT_SIZE(JournalMetaQuestScriptedData, 0x28);
 } // namespace game

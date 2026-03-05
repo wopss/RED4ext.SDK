@@ -25,7 +25,7 @@ struct InteractionDisplayData
     EInputKey wInputKey; // 08
     bool HoldAction; // 0C
     uint8_t unk0D[0x10 - 0xD]; // D
-    CString calizedName; // 10
+    String calizedName; // 10
     game::interactions::ChoiceTypeWrapper pe; // 30
     uint8_t unk34[0x38 - 0x34]; // 34
     game::interactions::Choice oice; // 38

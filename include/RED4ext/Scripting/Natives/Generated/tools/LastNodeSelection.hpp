@@ -18,7 +18,7 @@ struct LastNodeSelection
     static constexpr const char* NAME = "toolsLastNodeSelection";
     static constexpr const char* ALIAS = NAME;
 
-    CString editorName; // 00
+    String editorName; // 00
     tools::EditorObjectIDPath selectedNodeIDPath; // 20
 };
 RED4EXT_ASSERT_SIZE(LastNodeSelection, 0x30);

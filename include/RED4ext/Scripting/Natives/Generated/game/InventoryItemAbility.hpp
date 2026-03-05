@@ -22,8 +22,8 @@ struct InventoryItemAbility
     static constexpr const char* ALIAS = "InventoryItemAbility";
 
     CName IconPath; // 00
-    CString Title; // 08
-    CString Description; // 28
+    String Title; // 08
+    String Description; // 28
     Handle<game::UILocalizationDataPackage> LocalizationDataPackage; // 48
 };
 RED4EXT_ASSERT_SIZE(InventoryItemAbility, 0x58);

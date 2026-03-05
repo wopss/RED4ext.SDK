@@ -21,7 +21,7 @@ struct Event
 
     scn::dev::EventType type; // 00
     scn::NodeId nodeId; // 04
-    CString message; // 08
+    String message; // 08
 };
 RED4EXT_ASSERT_SIZE(Event, 0x28);
 } // namespace scn::dev

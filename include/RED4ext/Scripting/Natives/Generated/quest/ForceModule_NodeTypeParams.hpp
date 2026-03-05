@@ -20,7 +20,7 @@ struct ForceModule_NodeTypeParams
     static constexpr const char* ALIAS = NAME;
 
     NodeRef objectRef; // 00
-    CString module; // 08
+    String module; // 08
     DynArray<CName> components; // 28
 };
 RED4EXT_ASSERT_SIZE(ForceModule_NodeTypeParams, 0x38);

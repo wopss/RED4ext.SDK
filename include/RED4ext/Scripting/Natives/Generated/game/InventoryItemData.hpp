@@ -36,7 +36,7 @@ struct InventoryItemData
 
     ItemID ID; // 00
     TweakDBID SlotID; // 10
-    CString Name; // 18
+    String Name; // 18
     CName Quality; // 38
     float QualityF; // 40
     int32_t Quantity; // 44
@@ -44,14 +44,14 @@ struct InventoryItemData
     game::InventoryItemShape Shape; // 4C
     game::InventoryItemShape ItemShape; // 4D
     uint8_t unk4E[0x50 - 0x4E]; // 4E
-    CString IconPath; // 50
-    CString CategoryName; // 70
+    String IconPath; // 50
+    String CategoryName; // 70
     game::data::ItemType ItemType; // 90
     uint8_t unk94[0x98 - 0x94]; // 94
-    CString LocalizedItemType; // 98
-    CString Description; // B8
-    CString AdditionalDescription; // D8
-    CString GameplayDescription; // F8
+    String LocalizedItemType; // 98
+    String Description; // B8
+    String AdditionalDescription; // D8
+    String GameplayDescription; // F8
     float Price; // 118
     float BuyPrice; // 11C
     float UnlockProgress; // 120
@@ -96,7 +96,7 @@ struct InventoryItemData
     game::InventoryItemSortData SortData; // 1F0
     bool IsPerkRequired; // 230
     uint8_t unk231[0x238 - 0x231]; // 231
-    CString PerkRequiredName; // 238
+    String PerkRequiredName; // 238
     bool IsCrafted; // 258
     bool IsIconic; // 259
     uint8_t unk25A[0x260 - 0x25A]; // 25A

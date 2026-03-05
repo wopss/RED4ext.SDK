@@ -22,7 +22,7 @@ struct InventoryItemAttachments : IScriptable
 
     TweakDBID SlotID; // 40
     game::InventoryItemData ItemData; // 48
-    CString SlotName; // 2A8
+    String SlotName; // 2A8
     game::InventoryItemAttachmentType SlotType; // 2C8
     uint8_t unk2CC[0x2D0 - 0x2CC]; // 2CC
 };

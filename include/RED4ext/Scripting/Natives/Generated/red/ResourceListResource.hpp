@@ -22,7 +22,7 @@ struct ResourceListResource : CResource
     static constexpr const char* ALIAS = NAME;
 
     DynArray<RaRef<CResource>> resources; // 40
-    DynArray<CString> descriptions; // 50
+    DynArray<String> descriptions; // 50
 };
 RED4EXT_ASSERT_SIZE(ResourceListResource, 0x60);
 } // namespace red

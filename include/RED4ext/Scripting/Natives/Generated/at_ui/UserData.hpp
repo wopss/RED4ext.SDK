@@ -18,7 +18,7 @@ struct UserData : ink::UserData
     static constexpr const char* NAME = "at_uiUserData";
     static constexpr const char* ALIAS = NAME;
 
-    CString atid; // 40
+    String atid; // 40
 };
 RED4EXT_ASSERT_SIZE(UserData, 0x60);
 } // namespace at_ui

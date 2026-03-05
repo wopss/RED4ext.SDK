@@ -17,7 +17,7 @@ struct JiraIssueType
     static constexpr const char* NAME = "toolsJiraIssueType";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
+    String name; // 00
 };
 RED4EXT_ASSERT_SIZE(JiraIssueType, 0x20);
 } // namespace tools

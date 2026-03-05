@@ -18,8 +18,8 @@ struct GraphConnectionCreationData
     static constexpr const char* NAME = "interopGraphConnectionCreationData";
     static constexpr const char* ALIAS = NAME;
 
-    CString data; // 00
-    DynArray<CString> extraData; // 20
+    String data; // 00
+    DynArray<String> extraData; // 20
 };
 RED4EXT_ASSERT_SIZE(GraphConnectionCreationData, 0x30);
 } // namespace interop

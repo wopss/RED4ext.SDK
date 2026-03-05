@@ -18,7 +18,7 @@ struct SetVar_NodeType : quest::IFactsDBManagerNodeType
     static constexpr const char* NAME = "questSetVar_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString factName; // 30
+    String factName; // 30
     int32_t value; // 50
     bool setExactValue; // 54
     uint8_t unk55[0x58 - 0x55]; // 55

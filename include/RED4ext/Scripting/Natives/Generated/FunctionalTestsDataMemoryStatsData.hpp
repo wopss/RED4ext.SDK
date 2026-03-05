@@ -35,8 +35,8 @@ struct FunctionalTestsDataMemoryStatsData : ISerializable
     uint8_t unk8C[0x90 - 0x8C]; // 8C
     double engineTime; // 90
     uint64_t rawLocalTime; // 98
-    CString playerPosition; // A0
-    CString playerOrientation; // C0
+    String playerPosition; // A0
+    String playerOrientation; // C0
     DynArray<FunctionalTestsDataMemoryPoolRuntimeData> poolsRuntimeInfo; // E0
     DynArray<FunctionalTestsDataMemoryPoolStaticData> poolsCurrentInfo; // F0
     uint8_t unk100[0x140 - 0x100]; // 100

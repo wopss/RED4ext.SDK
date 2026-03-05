@@ -15,8 +15,8 @@ struct GameplayFunctionalTestReturnValue
     static constexpr const char* NAME = "GameplayFunctionalTestReturnValue";
     static constexpr const char* ALIAS = NAME;
 
-    CString value; // 00
-    CString errorInfo; // 20
+    String value; // 00
+    String errorInfo; // 20
 };
 RED4EXT_ASSERT_SIZE(GameplayFunctionalTestReturnValue, 0x40);
 } // namespace RED4ext

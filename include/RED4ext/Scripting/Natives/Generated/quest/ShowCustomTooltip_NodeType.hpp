@@ -22,7 +22,7 @@ struct ShowCustomTooltip_NodeType : quest::IUIManagerNodeType
     bool setTooltip; // 38
     uint8_t unk39[0x40 - 0x39]; // 39
     LocalizationString text; // 40
-    CString inputAction; // 68
+    String inputAction; // 68
     ink::InputHintHoldIndicationType holdIndicationType; // 88
     uint8_t unk89[0x8C - 0x89]; // 89
     int32_t queuePriority; // 8C

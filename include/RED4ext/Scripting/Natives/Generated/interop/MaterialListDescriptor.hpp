@@ -18,16 +18,16 @@ struct MaterialListDescriptor
     static constexpr const char* NAME = "interopMaterialListDescriptor";
     static constexpr const char* ALIAS = NAME;
 
-    CString chunksInfo; // 00
-    CString chunksLODInfo; // 20
+    String chunksInfo; // 00
+    String chunksLODInfo; // 20
     uint32_t numLayers; // 40
     bool isForward; // 44
     bool isMultilayer; // 45
     bool isLocalInstance; // 46
     bool isTemplate; // 47
-    CString materialName; // 48
-    CString appearanceName; // 68
-    DynArray<CString> availableMaterials; // 88
+    String materialName; // 48
+    String appearanceName; // 68
+    DynArray<String> availableMaterials; // 88
     uint32_t itemMaterialIndex; // 98
     uint8_t unk9C[0xA0 - 0x9C]; // 9C
 };
