@@ -6,7 +6,7 @@
 
 #include <Windows.h>
 
-#include <RED4ext/Api/Sdk.hpp>
+#include <RED4ext/Api/v1/PluginInfo.hpp>
 
 namespace RED4ext
 {
@@ -92,7 +92,7 @@ public:
     static uintptr_t Resolve(uint32_t aHash);
 
 private:
-    using QueryFunc_t = void (*)(PluginInfo*);
+    using QueryFunc_t = void (*)(v1::PluginInfo*);
     using ResolveFunc_t = std::uintptr_t (*)(std::uint32_t);
 
     static HMODULE GetRED4extModule();
@@ -104,7 +104,7 @@ private:
     static std::filesystem::path GetCurrentModulePath();
 
     static QueryFunc_t GetCurrentPluginQueryFunction();
-    static bool QueryCurrentPlugin(PluginInfo& aPluginInfo);
+    static bool QueryCurrentPlugin(v1::PluginInfo& aPluginInfo);
 
     static void ShowErrorAndTerminateProcess(std::wstring_view aMsg, std::uint32_t aLastError,
                                              bool aQueryPluginInfo = true);
