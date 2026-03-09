@@ -4,12 +4,21 @@
 #include <RED4ext/Relocation.hpp>
 #endif
 
-#include <mutex>
-#include <sstream>
-
-#include <RED4ext/Api/SemVer.hpp>
+#include <RED4ext/Api/v1/PluginInfo.hpp>
+#include <RED4ext/Api/v1/SemVer.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Detail/Memory.hpp>
+
+#include <Windows.h>
+
+#include <bit>
+#include <cstdarg>
+#include <cstdint>
+#include <filesystem>
+#include <ios>
+#include <sstream>
+#include <string>
+#include <string_view>
 
 RED4EXT_INLINE uintptr_t RED4ext::RelocBase::GetImageBase()
 {
@@ -171,7 +180,7 @@ RED4EXT_INLINE RED4ext::UniversalRelocBase::QueryFunc_t RED4ext::UniversalRelocB
     return func;
 }
 
-RED4EXT_INLINE bool RED4ext::UniversalRelocBase::QueryCurrentPlugin(PluginInfo& aPluginInfo)
+RED4EXT_INLINE bool RED4ext::UniversalRelocBase::QueryCurrentPlugin(v1::PluginInfo& aPluginInfo)
 {
     const auto queryFunc = GetCurrentPluginQueryFunction();
     if (!queryFunc)
@@ -202,7 +211,7 @@ RED4EXT_INLINE void RED4ext::UniversalRelocBase::ShowErrorAndTerminateProcess(st
 
     if (aQueryPluginInfo)
     {
-        PluginInfo pluginInfo{};
+        v1::PluginInfo pluginInfo{};
 
         auto isQuerySuccessful = QueryCurrentPlugin(pluginInfo);
         if (isQuerySuccessful)
