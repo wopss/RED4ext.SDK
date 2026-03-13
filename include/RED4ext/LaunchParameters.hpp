@@ -2,7 +2,7 @@
 
 #include <RED4ext/CString.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 
 namespace RED4ext

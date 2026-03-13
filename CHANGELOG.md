@@ -8,6 +8,67 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- Added `include/RED4ext/Detail/Containers/ArrayIterator.hpp`, a shared iterator
+  type used by `DynArray`, `StaticArray`, and `Span`.
+
+- `DynArray`:
+  - Associated type aliases: `ValueType`, `Reference`, `Pointer`, `SizeType`, `Iterator`, etc.
+  - Constructors: size, `std::input_iterator`, and `std::ranges::range`
+  - `Assign()`: `std::input_iterator`, `std::ranges::range`, `std::initializer_list`, and size overloads
+  - `Insert()`: value, `std::input_iterator`, `std::ranges::range`, `std::initializer_list`, and fill count overloads
+  - `Erase()`: position and first-last overloads
+  - `MaxSize()`
+  - `Resize()`
+  - Data Accessors: `At()` (bounds checked)
+  - Reverse Data Accessors: `RBegin()`/`REnd()`
+  - `Find()`, `IsInRange()`, `Includes()`
+  - STL compatibility region
+
+- `StaticArray`:
+  - Associated type aliases: `ValueType`, `Reference`, `Pointer`, `SizeType`, `Iterator`, etc.
+  - Constructors: default, `std::initializer_list`, and `std::input_iterator`
+  - Destructor
+  - Property Accessors: `Data()`, `Capacity()`, `Size()`
+  - Data Accessors: `operator[]()`, `At()` (bounds checked), `Begin()`/`End()`, `Front()`/`Back()`
+  - Reverse Data Accessors: `RBegin()`/`REnd()`
+  - `Assign()`: `std::input_iterator`, `std::initializer_list`, and fill count overloads
+  - `MaxSize()`
+  - `Resize()`
+  - `Clear()`
+  - `Find()`, `IsInRange()`
+  - STL compatibility region
+
+- `Span`:
+  - Associated type aliases: `ValueType`, `Reference`, `Pointer`, `SizeType`, `Iterator`, etc.
+  - Data Accessors: `At()` (bounds checked), `Front()`/`Back()`, CamelCase `Begin()`/`End()`
+  - Reverse Data Accessors: `RBegin()`/`REnd()`
+  - STL compatibility region
+
+### Changed
+
+- `DynArray`, `StaticArray`, `Span`, and `SortedArray` have been moved into 
+  respective files in `RED4ext/Containers/`
+
+- `DynArray`:
+  - Properties are now private
+  - `Empty()` is now `IsEmpty()`
+  - `MoveEntries()` has been split into two methods: `ShiftEntries()`,
+     which handles direction-aware in-buffer element shifting using `std::move`/`std::move_backward`, 
+     and a new static `MoveEntries()` reallocation callback with signature matching usage of `DynArray_Realloc`
+
+- `StaticArray`:
+  - Properties are now private
+
+### Removed
+
+- `DynArray`: `CopyFrom()`/`MoveFrom()`
+
+- `Span`: 
+  - `GetSize()` (favoring `Size()`)
+  - `operator bool()`
+
 ## [1.0.0] - 2026-03-09
 
 - Initial release.

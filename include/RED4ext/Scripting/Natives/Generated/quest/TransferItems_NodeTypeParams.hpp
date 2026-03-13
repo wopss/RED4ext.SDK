@@ -6,7 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Handle.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/TransferItems_NodeTypeParams_OperationData.hpp>
 #include <RED4ext/Scripting/Natives/Generated/quest/TransferItems_NodeTypeParams_TagOperationData.hpp>
