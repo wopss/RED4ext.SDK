@@ -38,15 +38,26 @@ public:
     {
     }
 
+    constexpr StringView(ConstPointer aStr, SizeType aSize) noexcept
+        : m_ptr(aStr)
+        , m_size(aSize)
+    {
+    }
+
     constexpr StringView(std::string_view aView) noexcept
         : m_ptr(aView.data())
         , m_size(static_cast<SizeType>(aView.size()))
     {
     }
 
-    StringView(const String& aStr) noexcept;
-    bool operator==(const String& aRhs) const noexcept;
-    bool operator!=(const String& aRhs) const noexcept;
+    constexpr StringView(const StringView&) noexcept = default;
+    constexpr StringView(StringView&&) noexcept = default;
+    constexpr StringView& operator=(const StringView&) noexcept = default;
+    constexpr StringView& operator=(StringView&&) noexcept = default;
+
+    constexpr StringView(const String& aStr) noexcept;
+    constexpr bool operator==(const String& aRhs) const noexcept;
+    constexpr bool operator!=(const String& aRhs) const noexcept;
 
     constexpr bool operator==(StringView aRhs) const noexcept
     {
@@ -91,19 +102,23 @@ public:
     [[nodiscard]] constexpr bool Compare(StringView aOther) const noexcept
     {
         if (IsEmpty() && aOther.IsEmpty())
+        {
             return true;
+        }
 
         if (m_size != aOther.m_size)
+        {
             return false;
-
+        }
         return TraitsType::compare(m_ptr, aOther.m_ptr, m_size) == 0;
     }
 
     [[nodiscard]] constexpr ConstReference At(SizeType aIndex) const
     {
         if (aIndex >= m_size)
+        {
             throw std::out_of_range("StringView::At: Position out of range");
-
+        }
         return m_ptr[aIndex];
     }
 

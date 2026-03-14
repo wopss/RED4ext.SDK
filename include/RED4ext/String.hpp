@@ -17,6 +17,64 @@ struct IAllocator;
 
 class StringView;
 
+enum class EStringMode : uint32_t
+{
+    Inline = 0, 
+    Dynamic = 1,
+    Scratch = 2
+};
+
+union StringStorage
+{
+    struct Internal
+    {
+        static constexpr uint8_t BUFFER_SIZE = 20;
+
+        [[nodiscard]] char* Data() noexcept
+        {
+            return data;
+        }
+
+        [[nodiscard]] const char* Data() const noexcept
+        {
+            return data;
+        }
+
+        [[nodiscard]] constexpr uint8_t Capacity() const noexcept
+        {
+            return BUFFER_SIZE - 1;
+        }
+
+        char data[BUFFER_SIZE]{};
+    };
+#pragma pack(push, 4)
+    struct External
+    {
+        [[nodiscard]] char* Data() noexcept
+        {
+            return data;
+        }
+
+        [[nodiscard]] const char* Data() const noexcept
+        {
+            return data;
+        }
+
+        [[nodiscard]] int32_t Capacity() const noexcept
+        {
+            return capacity;
+        }
+
+        char* data{nullptr};
+        int8_t unk[8]{};
+        int32_t capacity{0};
+    };
+#pragma pack(pop)
+
+    Internal internal{};
+    External external;
+};
+
 class String
 {
 public:
@@ -38,35 +96,31 @@ public:
 
     String() = default;
     String(SizeType aCapacity);
-    String(ConstPointer aStr, SizeType aSize, const Memory::IAllocator* aAllocator = nullptr);
-    String(StringView aView, const Memory::IAllocator* aAllocator = nullptr);
-    String(ConstPointer aStr, const Memory::IAllocator* aAllocator = nullptr);
+    String(StringView aView, Memory::IAllocator* aAllocator = nullptr);
+    String(ConstPointer aStr, Memory::IAllocator* aAllocator = nullptr);
     String(const String& aOther);
     String(String&& aOther) noexcept;
-    String(const std::string& aStr, const Memory::IAllocator* aAllocator = nullptr);
+    String(const std::string& aStr, Memory::IAllocator* aAllocator = nullptr);
+    String(const std::string_view aView, Memory::IAllocator* aAllocator = nullptr);
+
     ~String();
-
-    operator std::string() const;
-
-    [[nodiscard]] operator std::string_view() const noexcept;
 
     String& operator=(const String& aOther);
     String& operator=(String&& aOther) noexcept;
     String& operator=(StringView aView);
 
     String& operator+=(const String& aOther);
-    String& operator+=(StringView aStr);
+    String& operator+=(StringView aView);
 
     bool operator==(const String& aOther) const noexcept;
     bool operator==(StringView aView) const noexcept;
 
     bool operator!=(const String& aOther) const noexcept;
-    bool operator!=(StringView aStr) const noexcept;
+    bool operator!=(StringView aView) const noexcept;
 
     Reference operator[](SizeType aIndex) noexcept;
     ConstReference operator[](SizeType aIndex) const noexcept;
 
-    String& Assign(ConstPointer aStr, SizeType aSize);
     String& Assign(StringView aView);
     String& Assign(const String& aOther);
 
@@ -75,11 +129,9 @@ public:
 
     void Swap(String& aOther) noexcept;
 
-    String& Append(ConstPointer aStr, SizeType aSize);
     String& Append(StringView aView);
     String& Append(ValueType aChar);
 
-    bool Insert(SizeType aIndex, ConstPointer aStr, SizeType aSize);
     bool Insert(SizeType aIndex, StringView aView);
     bool Insert(SizeType aIndex, ValueType aChar);
     bool Insert(SizeType aIndex, const String& aOther);
@@ -97,8 +149,6 @@ public:
     void ShrinkToFit();
 
     [[nodiscard]] bool Compare(StringView aView) const noexcept;
-
-    [[nodiscard]] uint32_t CalcHash() const noexcept;
 
     [[nodiscard]] Pointer AsChar() noexcept;
     [[nodiscard]] ConstPointer AsChar() const noexcept;
@@ -127,119 +177,37 @@ public:
     [[nodiscard]] SizeType Size() const noexcept;
     [[nodiscard]] SizeType Length() const noexcept;
     [[nodiscard]] SizeType Capacity() const noexcept;
-
-    [[nodiscard]] bool IsBackInternal() const noexcept;
-    [[nodiscard]] bool IsBackAllocated() const noexcept;
-    [[nodiscard]] bool IsBackViewing() const noexcept;
-    [[nodiscard]] bool IsBackExternal() const noexcept;
 #pragma region STL
-    using value_type = ValueType;
-    using reference = Reference;
-    using const_reference = ConstReference;
-    using pointer = Pointer;
-    using const_pointer = ConstPointer;
-
-    using size_type = SizeType;
-    using difference_type = DifferenceType;
-
-    using iterator = Iterator;
-    using const_iterator = ConstIterator;
-    using reverse_iterator = ReverseIterator;
-    using const_reverse_iterator = ConstReverseIterator;
-
-    using traits_type = TraitsType;
-
-    [[nodiscard]] size_type size() const noexcept
-    {
-        return Size();
-    }
-
-    [[nodiscard]] iterator begin() noexcept
+    [[nodiscard]] Iterator begin() noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] const_iterator begin() const noexcept
+    [[nodiscard]] ConstIterator begin() const noexcept
     {
         return Begin();
     }
 
-    [[nodiscard]] iterator end() noexcept
+    [[nodiscard]] Iterator end() noexcept
     {
         return End();
     }
 
-    [[nodiscard]] const_iterator end() const noexcept
+    [[nodiscard]] ConstIterator end() const noexcept
     {
         return End();
-    }
+    } 
 #pragma endregion
-    union Storage
-    {
-        enum class BackType : uint32_t
-        {
-            Internal = 0,  // owned, inline
-            Allocated = 1, // owned, external
-            Viewing = 2    // unowned, external
-        };
-
-        struct InternalBack
-        {
-            static constexpr uint8_t MAX_SIZE = 20;
-
-            [[nodiscard]] Pointer Data() noexcept
-            {
-                return data;
-            }
-
-            [[nodiscard]] ConstPointer Data() const noexcept
-            {
-                return data;
-            }
-
-            [[nodiscard]] constexpr SizeType Capacity() const noexcept
-            {
-                return MAX_SIZE - 1;
-            }
-
-            char data[MAX_SIZE]{};
-        };
-#pragma pack(push, 4)
-        struct ExternalBack
-        {
-            [[nodiscard]] Pointer Data() noexcept
-            {
-                return data;
-            }
-
-            [[nodiscard]] ConstPointer Data() const noexcept
-            {
-                return data;
-            }
-
-            [[nodiscard]] SizeType Capacity() const noexcept
-            {
-                return capacity;
-            }
-
-            char* data{nullptr};
-            int8_t unk[8]{};
-            int32_t capacity{0};
-        };
-#pragma pack(pop)
-        InternalBack internal{};
-        ExternalBack external;
-    };
 
 private:
-    Storage m_storage{};      // 00
-    uint32_t m_size : 30 {0}; // 14
-    Storage::BackType m_backType : 2 {Storage::BackType::Internal};
-    const Memory::IAllocator* m_allocator{nullptr}; // 18
-
     void SetCapacity(SizeType aNewCapacity);
 
     void TerminateAt(SizeType aPos) noexcept;
+
+    StringStorage m_storage{}; // 00
+    uint32_t m_size : 30 {0};  // 14
+    EStringMode m_mode : 2 {EStringMode::Inline};
+    Memory::IAllocator* m_allocator{nullptr}; // 18
 };
 RED4EXT_ASSERT_SIZE(String, 0x20);
 
