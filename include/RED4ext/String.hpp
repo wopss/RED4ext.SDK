@@ -19,7 +19,7 @@ class StringView;
 
 enum class EStringMode : uint32_t
 {
-    Inline = 0, 
+    Inline = 0,
     Dynamic = 1,
     Scratch = 2
 };
@@ -196,7 +196,7 @@ public:
     [[nodiscard]] ConstIterator end() const noexcept
     {
         return End();
-    } 
+    }
 #pragma endregion
 
 private:
