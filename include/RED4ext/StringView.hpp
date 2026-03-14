@@ -55,9 +55,9 @@ public:
     constexpr StringView& operator=(const StringView&) noexcept = default;
     constexpr StringView& operator=(StringView&&) noexcept = default;
 
-    constexpr StringView(const String& aStr) noexcept;
-    constexpr bool operator==(const String& aRhs) const noexcept;
-    constexpr bool operator!=(const String& aRhs) const noexcept;
+    StringView(const String& aStr) noexcept;
+    bool operator==(const String& aRhs) const noexcept;
+    bool operator!=(const String& aRhs) const noexcept;
 
     constexpr bool operator==(StringView aRhs) const noexcept
     {
