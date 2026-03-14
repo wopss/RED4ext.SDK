@@ -19,7 +19,7 @@ struct JournalPath : IScriptable
     static constexpr const char* NAME = "gameJournalPath";
     static constexpr const char* ALIAS = NAME;
 
-    CString realPath; // 40
+    String realPath; // 40
     uint8_t unk60[0x80 - 0x60]; // 60
     CName className; // 80
     int32_t fileEntryIndex; // 88

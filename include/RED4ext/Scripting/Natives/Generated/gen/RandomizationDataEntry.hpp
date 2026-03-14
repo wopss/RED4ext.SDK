@@ -19,7 +19,7 @@ struct __declspec(align(0x10)) RandomizationDataEntry
     static constexpr const char* NAME = "genRandomizationDataEntry";
     static constexpr const char* ALIAS = "RandomizationDataEntry";
 
-    CString id; // 00
+    String id; // 00
     CName templateName; // 20
     float probability; // 28
     uint8_t unk2C[0x30 - 0x2C]; // 2C

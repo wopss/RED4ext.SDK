@@ -17,7 +17,7 @@ struct PhotoModeOptionSelectorData
     static constexpr const char* NAME = "gameuiPhotoModeOptionSelectorData";
     static constexpr const char* ALIAS = "PhotoModeOptionSelectorData";
 
-    CString optionText; // 00
+    String optionText; // 00
     int32_t optionData; // 20
     uint8_t unk24[0x28 - 0x24]; // 24
 };

@@ -42,7 +42,7 @@ struct __declspec(align(0x10)) ChoiceNode : scn::SceneGraphNode
     static constexpr const char* NAME = "scnChoiceNode";
     static constexpr const char* ALIAS = NAME;
 
-    CString displayNameOverride; // 48
+    String displayNameOverride; // 48
     LocalizationString localizedDisplayNameOverride; // 68
     DynArray<scn::ChoiceNodeOption> options; // 90
     scn::ChoiceNodeNsOperationMode mode; // A0

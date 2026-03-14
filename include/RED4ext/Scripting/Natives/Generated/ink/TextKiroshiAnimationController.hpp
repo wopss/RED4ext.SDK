@@ -21,7 +21,7 @@ struct TextKiroshiAnimationController : ink::TextAnimationController
     static constexpr const char* ALIAS = "inkTextKiroshiAnimController";
 
     uint8_t unkF0[0x150 - 0xF0]; // F0
-    CString nativeText; // 150
+    String nativeText; // 150
     ink::TextWidgetReference preTranslatedTextWidget; // 170
     ink::TextWidgetReference postTranslatedTextWidget; // 188
     ink::RichTextBoxWidgetReference nativeTextWidget; // 1A0

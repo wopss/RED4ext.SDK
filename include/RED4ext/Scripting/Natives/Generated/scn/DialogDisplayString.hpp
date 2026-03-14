@@ -18,10 +18,10 @@ struct DialogDisplayString
     static constexpr const char* NAME = "scnDialogDisplayString";
     static constexpr const char* ALIAS = NAME;
 
-    CString text; // 00
-    CString translation; // 20
-    CString preTranslatedText; // 40
-    CString postTranslatedText; // 60
+    String text; // 00
+    String translation; // 20
+    String preTranslatedText; // 40
+    String postTranslatedText; // 60
     scn::DialogLineLanguage language; // 80
     uint8_t unk84[0x88 - 0x84]; // 84
 };

@@ -21,7 +21,7 @@ struct TextReplaceAnimationController : ink::TextAnimationController
 
     ink::TextReplaceAnimationControllerWidgetTextUsage widgetTextUsage; // F0
     uint8_t unkF1[0x118 - 0xF1]; // F1
-    CString targetText; // 118
+    String targetText; // 118
     LocalizationString baseTextLocalized; // 138
     LocalizationString targetTextLocalized; // 160
     uint8_t unk188[0x1CC - 0x188]; // 188

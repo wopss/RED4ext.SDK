@@ -24,7 +24,7 @@ struct AudioMusicSyncNodeType : quest::IAudioNodeType
     uint8_t unk44[0x48 - 0x44]; // 44
     CName syncTrack; // 48
     CName userCue; // 50
-    CString description; // 58
+    String description; // 58
 };
 RED4EXT_ASSERT_SIZE(AudioMusicSyncNodeType, 0x78);
 } // namespace quest

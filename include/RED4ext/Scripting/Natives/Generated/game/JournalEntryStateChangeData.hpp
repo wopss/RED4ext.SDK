@@ -25,7 +25,7 @@ struct JournalEntryStateChangeData
     static constexpr const char* ALIAS = NAME;
 
     Handle<game::JournalPath> entryPath; // 00
-    CString entryName; // 10
+    String entryName; // 10
     CName entryType; // 30
     bool isEntryTracked; // 38
     bool isQuestEntryTracked; // 39

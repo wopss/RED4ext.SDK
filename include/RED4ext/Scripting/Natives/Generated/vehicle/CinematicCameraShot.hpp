@@ -24,7 +24,7 @@ struct __declspec(align(0x10)) CinematicCameraShot : IScriptable
     static constexpr const char* NAME = "vehicleCinematicCameraShot";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 40
+    String name; // 40
     bool enabled; // 60
     uint8_t unk61[0x64 - 0x61]; // 61
     int32_t probability; // 64

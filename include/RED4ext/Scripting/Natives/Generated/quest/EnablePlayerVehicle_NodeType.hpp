@@ -18,7 +18,7 @@ struct EnablePlayerVehicle_NodeType : quest::IVehicleManagerNodeType
     static constexpr const char* NAME = "questEnablePlayerVehicle_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString vehicle; // 30
+    String vehicle; // 30
     bool enable; // 50
     bool despawn; // 51
     bool makePlayerActiveVehicle; // 52

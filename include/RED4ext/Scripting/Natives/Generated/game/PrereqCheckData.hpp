@@ -21,7 +21,7 @@ struct PrereqCheckData
 
     game::EPrerequisiteType prereqType; // 00
     EComparisonType comparisonType; // 04
-    CString contextObject; // 08
+    String contextObject; // 08
     float valueToCompare; // 28
     uint8_t unk2C[0x30 - 0x2C]; // 2C
 };

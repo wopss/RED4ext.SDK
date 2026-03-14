@@ -15,7 +15,7 @@ struct Sample_Replicated_String_Property
     static constexpr const char* NAME = "Sample_Replicated_String_Property";
     static constexpr const char* ALIAS = NAME;
 
-    CString property; // 00
+    String property; // 00
 };
 RED4EXT_ASSERT_SIZE(Sample_Replicated_String_Property, 0x20);
 } // namespace RED4ext

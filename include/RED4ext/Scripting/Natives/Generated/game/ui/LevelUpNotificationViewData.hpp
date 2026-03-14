@@ -27,7 +27,7 @@ struct LevelUpNotificationViewData : game::ui::GenericNotificationViewData
     quest::LevelUpData levelupdata; // 94
     uint8_t unkAC[0xB0 - 0xAC]; // AC
     Handle<game::data::Proficiency_Record> proficiencyRecord; // B0
-    CString profString; // C0
+    String profString; // C0
 };
 RED4EXT_ASSERT_SIZE(LevelUpNotificationViewData, 0xE0);
 } // namespace game::ui

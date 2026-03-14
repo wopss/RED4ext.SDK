@@ -21,9 +21,9 @@ struct LatestSaveMetadataInfo : IScriptable
     static constexpr const char* NAME = "inkLatestSaveMetadataInfo";
     static constexpr const char* ALIAS = "LatestSaveMetadataInfo";
 
-    CString locationName; // 40
-    CString trackedQuest; // 60
-    CString gameVersion; // 80
+    String locationName; // 40
+    String trackedQuest; // 60
+    String gameVersion; // 80
     ink::LifePath lifePath; // A0
     uint8_t unkA1[0xA8 - 0xA1]; // A1
     double playTime; // A8

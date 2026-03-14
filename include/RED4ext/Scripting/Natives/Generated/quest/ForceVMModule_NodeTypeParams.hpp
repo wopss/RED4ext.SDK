@@ -21,7 +21,7 @@ struct ForceVMModule_NodeTypeParams
     static constexpr const char* ALIAS = NAME;
 
     game::EntityReference reference; // 00
-    CString module; // 38
+    String module; // 38
     DynArray<CName> components; // 58
 };
 RED4EXT_ASSERT_SIZE(ForceVMModule_NodeTypeParams, 0x68);

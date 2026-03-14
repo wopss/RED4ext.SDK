@@ -21,8 +21,8 @@ struct ResourceCommandOutcome
 
     shared::CommandResult result; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString message; // 08
-    DynArray<CString> modifiedFiles; // 28
+    String message; // 08
+    DynArray<String> modifiedFiles; // 28
 };
 RED4EXT_ASSERT_SIZE(ResourceCommandOutcome, 0x38);
 } // namespace shared

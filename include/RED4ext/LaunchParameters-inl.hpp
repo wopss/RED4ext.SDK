@@ -7,11 +7,11 @@
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/Relocation.hpp>
 
-RED4EXT_INLINE const RED4ext::HashMap<RED4ext::CString, RED4ext::DynArray<RED4ext::CString>>& RED4ext::
+RED4EXT_INLINE const RED4ext::HashMap<RED4ext::String, RED4ext::DynArray<RED4ext::String>>& RED4ext::
     GetLaunchParameters() noexcept
 {
     static const auto& params =
-        *UniversalRelocPtr<HashMap<CString, DynArray<CString>>>(Detail::AddressHashes::LaunchParameters).GetAddr();
+        *UniversalRelocPtr<HashMap<String, DynArray<String>>>(Detail::AddressHashes::LaunchParameters).GetAddr();
 
     return params;
 }

@@ -27,7 +27,7 @@ struct __declspec(align(0x10)) PlayerSpawnParams
     bool useSpecifiedStartPoint; // 40
     bool isSpectator; // 41
     uint8_t unk42[0x48 - 0x42]; // 42
-    CString nickname; // 48
+    String nickname; // 48
     uint8_t unk68[0x70 - 0x68]; // 68
 };
 RED4EXT_ASSERT_SIZE(PlayerSpawnParams, 0x70);

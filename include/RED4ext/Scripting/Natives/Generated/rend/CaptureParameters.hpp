@@ -27,8 +27,8 @@ struct CaptureParameters
 
     rend::ScreenshotMode mode; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
-    CString outputDirectoryName; // 08
-    CString outputDirectoryNameSuffix; // 28
+    String outputDirectoryName; // 08
+    String outputDirectoryNameSuffix; // 28
     uint32_t initialFrameNumber; // 48
     uint32_t outputDirectoryIndex; // 4C
     uint32_t recordingFPS; // 50

@@ -79,7 +79,7 @@ struct HackingMinigameLogicController : ink::WidgetLogicController
     CName mainHiglightBarStateName; // 358
     CName secondaryHiglightBarStateName; // 360
     CName inactiveHiglightBarStateName; // 368
-    CString gridCellDisabledSymbol; // 370
+    String gridCellDisabledSymbol; // 370
     CName programSucceedStateName; // 390
     CName programCellReadyStateName; // 398
     CName programCellHighlightStateName; // 3A0

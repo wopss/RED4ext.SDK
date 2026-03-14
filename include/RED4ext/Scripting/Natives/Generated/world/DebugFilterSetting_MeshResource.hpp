@@ -19,7 +19,7 @@ struct DebugFilterSetting_MeshResource : world::EditorDebugFilterSettings
     static constexpr const char* NAME = "worldDebugFilterSetting_MeshResource";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> resourcePaths; // 30
+    DynArray<String> resourcePaths; // 30
     uint8_t unk40[0x78 - 0x40]; // 40
 };
 RED4EXT_ASSERT_SIZE(DebugFilterSetting_MeshResource, 0x78);

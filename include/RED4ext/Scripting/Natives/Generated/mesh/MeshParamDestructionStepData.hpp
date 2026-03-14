@@ -21,7 +21,7 @@ struct MeshParamDestructionStepData : mesh::MeshParameter
     static constexpr const char* ALIAS = NAME;
 
     DynArray<physics::DestructionHierarchyOffset> offsets; // 30
-    CString isInstantRemovable; // 40
+    String isInstantRemovable; // 40
 };
 RED4EXT_ASSERT_SIZE(MeshParamDestructionStepData, 0x60);
 } // namespace mesh

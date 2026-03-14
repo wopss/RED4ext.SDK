@@ -18,7 +18,7 @@ struct AddCombatLogMessage_NodeType : quest::IUIManagerNodeType
     static constexpr const char* NAME = "questAddCombatLogMessage_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString message; // 38
+    String message; // 38
     LocalizationString localizedMessage; // 58
 };
 RED4EXT_ASSERT_SIZE(AddCombatLogMessage_NodeType, 0x80);

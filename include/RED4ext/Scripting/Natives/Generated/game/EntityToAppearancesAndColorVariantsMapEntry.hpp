@@ -21,7 +21,7 @@ struct EntityToAppearancesAndColorVariantsMapEntry : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     uint64_t entityPathHash; // 30
-    CString debugEntityPath; // 38
+    String debugEntityPath; // 38
     DynArray<game::EntityAppearanceColorVariantsArray> appearancesAndTheirColorVariants; // 58
 };
 RED4EXT_ASSERT_SIZE(EntityToAppearancesAndColorVariantsMapEntry, 0x68);

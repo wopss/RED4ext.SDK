@@ -22,7 +22,7 @@ struct PersistenceCLNumberDateContainer : ISerializable
 
     CName clNumber; // 30
     CName clTimestamp; // 38
-    DynArray<CString> clGeneratedIds; // 40
+    DynArray<String> clGeneratedIds; // 40
 };
 RED4EXT_ASSERT_SIZE(PersistenceCLNumberDateContainer, 0x50);
 } // namespace localization

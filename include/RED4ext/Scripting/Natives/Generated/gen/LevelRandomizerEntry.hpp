@@ -18,7 +18,7 @@ struct LevelRandomizerEntry
     static constexpr const char* NAME = "genLevelRandomizerEntry";
     static constexpr const char* ALIAS = NAME;
 
-    CString id; // 00
+    String id; // 00
     CName templateName; // 20
     NodeRef spawnPos; // 28
     float probability; // 30

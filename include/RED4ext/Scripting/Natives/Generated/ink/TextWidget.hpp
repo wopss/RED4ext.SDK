@@ -32,7 +32,7 @@ struct __declspec(align(0x10)) TextWidget : ink::LeafWidget
     static constexpr const char* ALIAS = "inkText";
 
     uint8_t unk200[0x228 - 0x200]; // 200
-    CString text; // 228
+    String text; // 228
     CName textIdKey; // 248
     RaRef<ink::FontFamilyResource> fontFamily; // 250
     CName fontStyle; // 258

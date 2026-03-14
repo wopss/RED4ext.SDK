@@ -23,8 +23,8 @@ struct MultiplayerAIDirectorParams : ISerializable
     quest::MultiplayerAIDirectorFunction function; // 30
     quest::MultiplayerAIDirectorStatus status; // 34
     NodeRef pathRef; // 38
-    CString scheduleEntryName; // 40
-    CString scheduleName; // 60
+    String scheduleEntryName; // 40
+    String scheduleName; // 60
 };
 RED4EXT_ASSERT_SIZE(MultiplayerAIDirectorParams, 0x80);
 } // namespace quest

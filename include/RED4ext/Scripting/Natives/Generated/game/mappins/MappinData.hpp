@@ -25,7 +25,7 @@ struct MappinData : game::mappins::IMappinData
     TweakDBID mappinType; // 08
     game::data::MappinVariant variant; // 10
     uint8_t unk14[0x18 - 0x14]; // 14
-    CString debugCaption; // 18
+    String debugCaption; // 18
     LocalizationString localizedCaption; // 38
     bool active; // 60
     bool visibleThroughWalls; // 61

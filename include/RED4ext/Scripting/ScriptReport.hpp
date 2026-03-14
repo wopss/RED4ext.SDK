@@ -1,7 +1,7 @@
 #pragma once
 
-#include <RED4ext/CString.hpp>
 #include <RED4ext/DynArray.hpp>
+#include <RED4ext/String.hpp>
 #include <cstdarg>
 
 namespace RED4ext
@@ -10,7 +10,7 @@ struct ScriptReport
 {
     ScriptReport() noexcept;
 
-    ScriptReport(DynArray<CString>& aErrors, uint32_t aMaxErrors = 0) noexcept;
+    ScriptReport(DynArray<String>& aErrors, uint32_t aMaxErrors = 0) noexcept;
 
     virtual ~ScriptReport() = default;
 
@@ -20,14 +20,14 @@ struct ScriptReport
 
     [[nodiscard]] bool HasErrors() const noexcept;
 
-    [[nodiscard]] CString ToString() const noexcept;
+    [[nodiscard]] String ToString() const noexcept;
 
-    static CString Format(const char* aFormat, std::va_list aArgs);
+    static String Format(const char* aFormat, std::va_list aArgs);
 
-    bool fillErrors;           // 08 - Usually equals to CBaseEngine::scriptsSilentValidation
-    DynArray<CString> unk10;   // 10 - Seems to be unused by the game
-    DynArray<CString>* errors; // 20 - Usually points to CBaseEngine::scriptsValidationErrors
-    uint32_t maxErrors;        // 28
+    bool fillErrors;          // 08 - Usually equals to CBaseEngine::scriptsSilentValidation
+    DynArray<String> unk10;   // 10 - Seems to be unused by the game
+    DynArray<String>* errors; // 20 - Usually points to CBaseEngine::scriptsValidationErrors
+    uint32_t maxErrors;       // 28
 };
 RED4EXT_ASSERT_SIZE(ScriptReport, 0x30);
 RED4EXT_ASSERT_OFFSET(ScriptReport, fillErrors, 0x08);

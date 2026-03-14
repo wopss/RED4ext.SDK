@@ -21,7 +21,7 @@ struct CyberspaceUIObject : game::Object
     static constexpr const char* ALIAS = NAME;
 
     CName slotName; // 240
-    CString caption; // 248
+    String caption; // 248
     game::ui::CyberspaceElementType mappinType; // 268
     uint8_t unk26C[0x280 - 0x26C]; // 26C
 };

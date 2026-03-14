@@ -20,7 +20,7 @@ struct SetupOptionButtonForAttributeEvent : red::Event
 
     uint32_t attribute; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
-    CString value; // 48
+    String value; // 48
 };
 RED4EXT_ASSERT_SIZE(SetupOptionButtonForAttributeEvent, 0x68);
 } // namespace game::ui

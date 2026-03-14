@@ -18,9 +18,9 @@ struct PersistenceOnScreenEntry
     static constexpr const char* ALIAS = NAME;
 
     uint64_t primaryKey; // 00
-    CString secondaryKey; // 08
-    CString femaleVariant; // 28
-    CString maleVariant; // 48
+    String secondaryKey; // 08
+    String femaleVariant; // 28
+    String maleVariant; // 48
 };
 RED4EXT_ASSERT_SIZE(PersistenceOnScreenEntry, 0x68);
 } // namespace localization

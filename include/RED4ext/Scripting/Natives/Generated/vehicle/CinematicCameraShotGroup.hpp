@@ -23,7 +23,7 @@ struct CinematicCameraShotGroup : IScriptable
     static constexpr const char* NAME = "vehicleCinematicCameraShotGroup";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 40
+    String name; // 40
     DynArray<vehicle::CinematicCameraShot> shots; // 60
     DynArray<Handle<vehicle::CinematicCameraShotStartCondition>> conditions; // 70
 };

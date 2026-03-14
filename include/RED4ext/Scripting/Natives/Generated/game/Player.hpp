@@ -21,7 +21,7 @@ struct Player
     uint8_t unk00[0x50 - 0x0]; // 0
     net::PeerID peerID; // 50
     uint8_t unk51[0x58 - 0x51]; // 51
-    CString nickname; // 58
+    String nickname; // 58
 };
 RED4EXT_ASSERT_SIZE(Player, 0x78);
 } // namespace game

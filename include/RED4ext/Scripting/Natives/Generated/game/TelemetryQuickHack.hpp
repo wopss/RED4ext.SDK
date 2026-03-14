@@ -20,8 +20,8 @@ struct TelemetryQuickHack
     static constexpr const char* ALIAS = "TelemetryQuickHack";
 
     CName actionName; // 00
-    CString titleLocKey; // 08
-    CString targetType; // 28
+    String titleLocKey; // 08
+    String targetType; // 28
     TweakDBID quickHackRecordID; // 48
     game::data::Quality quality; // 50
     uint8_t unk54[0x58 - 0x54]; // 54

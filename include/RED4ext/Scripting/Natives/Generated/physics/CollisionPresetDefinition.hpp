@@ -21,7 +21,7 @@ struct CollisionPresetDefinition : ISerializable
     static constexpr const char* ALIAS = NAME;
 
     CName Name; // 30
-    CString Description; // 38
+    String Description; // 38
     bool ForceEnableCollisionCallbacks; // 58
     uint8_t unk59[0x60 - 0x59]; // 59
     DynArray<CName> CollisionType; // 60

@@ -15,8 +15,8 @@ struct ParamData
     static constexpr const char* NAME = "ParamData";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
-    CString type; // 20
+    String name; // 00
+    String type; // 20
     Variant defaultValue; // 40
 };
 RED4EXT_ASSERT_SIZE(ParamData, 0x58);

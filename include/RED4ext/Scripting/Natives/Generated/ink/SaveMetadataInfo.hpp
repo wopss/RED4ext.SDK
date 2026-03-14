@@ -25,10 +25,10 @@ struct SaveMetadataInfo : IScriptable
 
     int32_t saveIndex; // 40
     uint32_t saveID; // 44
-    CString internalName; // 48
-    CString locationName; // 68
-    CString trackedQuest; // 88
-    CString gameVersion; // A8
+    String internalName; // 48
+    String locationName; // 68
+    String trackedQuest; // 88
+    String gameVersion; // A8
     ink::LifePath lifePath; // C8
     ink::SaveType saveType; // C9
     ink::SaveStatus saveStatus; // CA
@@ -41,7 +41,7 @@ struct SaveMetadataInfo : IScriptable
     bool isValid; // F8
     bool isModded; // F9
     uint8_t unkFA[0x100 - 0xFA]; // FA
-    CString platform; // 100
+    String platform; // 100
     DynArray<CName> additionalContentIds; // 120
 };
 RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x130);

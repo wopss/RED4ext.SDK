@@ -20,7 +20,7 @@ struct JournalEntry : IScriptable
     static constexpr const char* NAME = "gameJournalEntry";
     static constexpr const char* ALIAS = "JournalEntry";
 
-    CString id; // 40
+    String id; // 40
     DynArray<game::JournalEntryOverrideData> journalEntryOverrideDataList; // 60
 };
 RED4EXT_ASSERT_SIZE(JournalEntry, 0x70);

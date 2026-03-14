@@ -26,12 +26,12 @@ struct __declspec(align(0x10)) NodeEditorData : ISerializable
     uint64_t id; // 40
     CName name; // 48
     uint8_t unk50[0x58 - 0x50]; // 50
-    CString globalName; // 58
-    CString alternativeGlobalName; // 78
+    String globalName; // 58
+    String alternativeGlobalName; // 78
     bool isGlobalNameLocked; // 98
     bool isAlternativeGlobalNameLocked; // 99
     uint8_t unk9A[0xA0 - 0x9A]; // 9A
-    CString initialGlobalNameHash; // A0
+    String initialGlobalNameHash; // A0
     world::NodeTransform transform; // C0
     Transform pivotTransform; // F0
     uint8_t unk110[0x120 - 0x110]; // 110

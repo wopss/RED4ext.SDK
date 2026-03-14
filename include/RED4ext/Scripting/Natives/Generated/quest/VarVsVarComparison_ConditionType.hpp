@@ -19,8 +19,8 @@ struct VarVsVarComparison_ConditionType : quest::IFactsDBConditionType
     static constexpr const char* NAME = "questVarVsVarComparison_ConditionType";
     static constexpr const char* ALIAS = NAME;
 
-    CString factName1; // 38
-    CString factName2; // 58
+    String factName1; // 38
+    String factName2; // 58
     EComparisonType comparisonType; // 78
     uint8_t unk7C[0x80 - 0x7C]; // 7C
 };

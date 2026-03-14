@@ -18,7 +18,7 @@ struct StreamingTestSummary : ISerializable
     static constexpr const char* NAME = "worldStreamingTestSummary";
     static constexpr const char* ALIAS = NAME;
 
-    CString gameDefinition; // 30
+    String gameDefinition; // 30
     bool noCrowds; // 50
     uint8_t unk51[0x54 - 0x51]; // 51
     float testDurationSeconds; // 54

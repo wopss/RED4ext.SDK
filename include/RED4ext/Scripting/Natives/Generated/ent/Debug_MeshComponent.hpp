@@ -18,7 +18,7 @@ struct __declspec(align(0x10)) Debug_MeshComponent : ent::MeshComponent
     static constexpr const char* NAME = "entDebug_MeshComponent";
     static constexpr const char* ALIAS = NAME;
 
-    CString filterName; // 1E0
+    String filterName; // 1E0
     uint8_t unk200[0x430 - 0x200]; // 200
 };
 RED4EXT_ASSERT_SIZE(Debug_MeshComponent, 0x430);

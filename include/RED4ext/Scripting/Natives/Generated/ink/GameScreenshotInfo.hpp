@@ -17,7 +17,7 @@ struct GameScreenshotInfo
     static constexpr const char* NAME = "inkGameScreenshotInfo";
     static constexpr const char* ALIAS = "GameScreenshotInfo";
 
-    CString path; // 00
+    String path; // 00
     uint64_t creationDate; // 20
     uint32_t aspectRatioType; // 28
     uint32_t pathHash; // 2C

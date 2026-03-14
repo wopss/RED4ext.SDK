@@ -17,8 +17,8 @@ struct JiraStatus
     static constexpr const char* NAME = "toolsJiraStatus";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 00
-    CString id; // 20
+    String name; // 00
+    String id; // 20
 };
 RED4EXT_ASSERT_SIZE(JiraStatus, 0x40);
 } // namespace tools

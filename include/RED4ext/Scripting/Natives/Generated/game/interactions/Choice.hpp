@@ -21,7 +21,7 @@ struct Choice
     static constexpr const char* NAME = "gameinteractionsChoice";
     static constexpr const char* ALIAS = "InteractionChoice";
 
-    CString caption; // 00
+    String caption; // 00
     game::interactions::ChoiceCaption captionParts; // 20
     DynArray<Variant> data; // 30
     game::interactions::ChoiceMetaData choiceMetaData; // 40

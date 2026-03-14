@@ -18,7 +18,7 @@ struct JiraCurrentUserInfo : ISerializable
     static constexpr const char* NAME = "toolsJiraCurrentUserInfo";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 30
+    String name; // 30
 };
 RED4EXT_ASSERT_SIZE(JiraCurrentUserInfo, 0x50);
 } // namespace tools

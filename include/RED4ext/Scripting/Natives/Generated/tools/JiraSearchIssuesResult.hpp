@@ -25,8 +25,8 @@ struct JiraSearchIssuesResult : ISerializable
     uint32_t total; // 38
     uint8_t unk3C[0x40 - 0x3C]; // 3C
     DynArray<tools::JiraIssue> issues; // 40
-    DynArray<CString> errorMessages; // 50
-    DynArray<CString> warningMessages; // 60
+    DynArray<String> errorMessages; // 50
+    DynArray<String> warningMessages; // 60
 };
 RED4EXT_ASSERT_SIZE(JiraSearchIssuesResult, 0x70);
 } // namespace tools

@@ -23,7 +23,7 @@ struct DataNode : ISerializable
 
     game::data::DataNodeType nodeType; // 30
     uint8_t unk34[0x38 - 0x34]; // 34
-    CString fileName; // 38
+    String fileName; // 38
     WeakHandle<game::data::DataNode> parent; // 58
     uint8_t unk68[0x98 - 0x68]; // 68
 };

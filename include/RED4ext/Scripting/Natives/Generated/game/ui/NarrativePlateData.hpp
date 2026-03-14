@@ -20,8 +20,8 @@ struct NarrativePlateData
     static constexpr const char* NAME = "gameuiNarrativePlateData";
     static constexpr const char* ALIAS = "NarrativePlateData";
 
-    CString text; // 00
-    CString caption; // 20
+    String text; // 00
+    String caption; // 20
     WeakHandle<game::Object> entity; // 40
 };
 RED4EXT_ASSERT_SIZE(NarrativePlateData, 0x50);

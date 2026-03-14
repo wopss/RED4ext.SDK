@@ -18,7 +18,7 @@ struct ChoiceMetaData
     static constexpr const char* NAME = "gameinteractionsChoiceMetaData";
     static constexpr const char* ALIAS = "InteractionChoiceMetaData";
 
-    CString tweakDBName; // 00
+    String tweakDBName; // 00
     TweakDBID tweakDBID; // 20
     game::interactions::ChoiceTypeWrapper type; // 28
     uint8_t unk2C[0x30 - 0x2C]; // 2C

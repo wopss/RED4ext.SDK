@@ -23,7 +23,7 @@ struct IndexedMorphName
     int32_t index; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
     CName morphName; // 08
-    CString localizedName; // 10
+    String localizedName; // 10
     red::TagList tags; // 30
     game::ui::CharacterRandomizationInfo randomizationInfo; // 40
 };

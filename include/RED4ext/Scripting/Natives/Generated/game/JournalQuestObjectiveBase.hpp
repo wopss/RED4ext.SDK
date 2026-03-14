@@ -23,7 +23,7 @@ struct JournalQuestObjectiveBase : game::JournalContainerEntry
     bool optional; // B4
     uint8_t unkB5[0xB8 - 0xB5]; // B5
     NodeRef locationPrefabRef; // B8
-    CString districtID; // C0
+    String districtID; // C0
     TweakDBID itemID; // E0
 };
 RED4EXT_ASSERT_SIZE(JournalQuestObjectiveBase, 0xE8);

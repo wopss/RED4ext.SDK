@@ -13,7 +13,7 @@ RED4EXT_INLINE RED4ext::ScriptReport::ScriptReport() noexcept
 {
 }
 
-RED4EXT_INLINE RED4ext::ScriptReport::ScriptReport(RED4ext::DynArray<RED4ext::CString>& aErrors,
+RED4EXT_INLINE RED4ext::ScriptReport::ScriptReport(RED4ext::DynArray<RED4ext::String>& aErrors,
                                                    uint32_t aMaxErrors) noexcept
     : errors(&aErrors)
     , maxErrors(aMaxErrors)
@@ -48,7 +48,7 @@ RED4EXT_INLINE bool RED4ext::ScriptReport::HasErrors() const noexcept
     return errors && errors->size > 0;
 }
 
-RED4EXT_INLINE RED4ext::CString RED4ext::ScriptReport::ToString() const noexcept
+RED4EXT_INLINE RED4ext::String RED4ext::ScriptReport::ToString() const noexcept
 {
     if (!errors || errors->size == 0)
     {
@@ -65,14 +65,14 @@ RED4EXT_INLINE RED4ext::CString RED4ext::ScriptReport::ToString() const noexcept
             str.append("\n");
         }
 
-        str.append(error.c_str());
+        str.append(error.AsChar());
         eol = true;
     }
 
     return str.c_str();
 }
 
-RED4EXT_INLINE RED4ext::CString RED4ext::ScriptReport::Format(const char* aFormat, std::va_list aArgs)
+RED4EXT_INLINE RED4ext::String RED4ext::ScriptReport::Format(const char* aFormat, std::va_list aArgs)
 {
     char buffer[4096];
     vsnprintf(buffer, sizeof(buffer), aFormat, aArgs);

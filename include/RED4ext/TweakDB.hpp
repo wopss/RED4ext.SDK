@@ -158,7 +158,7 @@ struct TweakDB
     Map<TweakDBID, DynArray<TweakDBID>> queries;                          // B8
     Map<TweakDBID, GroupTag> groups;                                      // E0
     HashMap<CName, FlatValue*> defaultValues;                             // 108
-    DynArray<CString> unk138;                                             // 138 - empty - maybe not CString
+    DynArray<String> unk138;                                              // 138 - empty - maybe not String
     uintptr_t flatDataBuffer;                                             // 148
     uint32_t flatDataBufferCapacity;                                      // 150
     uintptr_t flatDataBufferEnd;                                          // 158

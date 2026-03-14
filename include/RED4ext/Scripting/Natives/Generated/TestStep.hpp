@@ -22,7 +22,7 @@ struct TestStep : IScriptable
     uint8_t unk48[0x4A - 0x48]; // 48
     uint16_t scriptId; // 4A
     uint8_t unk4C[0x50 - 0x4C]; // 4C
-    CString reproStep; // 50
+    String reproStep; // 50
     DynArray<Variant> args; // 70
     uint8_t unk80[0xA8 - 0x80]; // 80
     float stepTimeout; // A8

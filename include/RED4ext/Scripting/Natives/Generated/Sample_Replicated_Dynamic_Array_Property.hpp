@@ -16,7 +16,7 @@ struct Sample_Replicated_Dynamic_Array_Property
     static constexpr const char* NAME = "Sample_Replicated_Dynamic_Array_Property";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> property; // 00
+    DynArray<String> property; // 00
 };
 RED4EXT_ASSERT_SIZE(Sample_Replicated_Dynamic_Array_Property, 0x10);
 } // namespace RED4ext

@@ -21,7 +21,7 @@ struct SimpleValueNode : game::data::ValueDataNode
 
     game::data::SimpleValueNodeValueType type; // 98
     uint8_t unk9C[0xA0 - 0x9C]; // 9C
-    CString data; // A0
+    String data; // A0
     uint8_t unkC0[0xD0 - 0xC0]; // C0
 };
 RED4EXT_ASSERT_SIZE(SimpleValueNode, 0xD0);

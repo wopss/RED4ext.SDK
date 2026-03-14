@@ -19,8 +19,8 @@ struct TelemetryInventoryItem
     static constexpr const char* NAME = "gameTelemetryInventoryItem";
     static constexpr const char* ALIAS = "TelemetryInventoryItem";
 
-    CString friendlyName; // 00
-    CString localizedName; // 20
+    String friendlyName; // 00
+    String localizedName; // 20
     ItemID itemID; // 40
     game::data::Quality quality; // 50
     game::data::ItemType itemType; // 54

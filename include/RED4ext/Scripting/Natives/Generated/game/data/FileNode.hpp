@@ -24,7 +24,7 @@ struct FileNode : game::data::DataNode
     static constexpr const char* NAME = "gamedataFileNode";
     static constexpr const char* ALIAS = NAME;
 
-    CString packageName; // 98
+    String packageName; // 98
     uint8_t unkB8[0x2C0 - 0xB8]; // B8
 #pragma warning(suppress : 4324)
     alignas(8) StaticArray<WeakHandle<game::data::PackageNode>, 16> packageDependencies; // 2C0

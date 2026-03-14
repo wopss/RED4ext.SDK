@@ -18,7 +18,7 @@ struct CharacterStatusEffect_CondtionType : quest::ICharacterConditionType
     static constexpr const char* NAME = "questCharacterStatusEffect_CondtionType";
     static constexpr const char* ALIAS = NAME;
 
-    CString statusEffectID; // 78
+    String statusEffectID; // 78
     bool inverted; // 98
     uint8_t unk99[0xA0 - 0x99]; // 99
 };

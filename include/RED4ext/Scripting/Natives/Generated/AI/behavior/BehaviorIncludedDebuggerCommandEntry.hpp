@@ -18,7 +18,7 @@ struct BehaviorIncludedDebuggerCommandEntry
     static constexpr const char* ALIAS = NAME;
 
     CGUID nodeId; // 00
-    CString includedBehaviorResourcePath; // 10
+    String includedBehaviorResourcePath; // 10
 };
 RED4EXT_ASSERT_SIZE(BehaviorIncludedDebuggerCommandEntry, 0x30);
 } // namespace AI::behavior

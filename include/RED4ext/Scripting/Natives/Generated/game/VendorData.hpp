@@ -18,7 +18,7 @@ struct VendorData
     static constexpr const char* NAME = "gameVendorData";
     static constexpr const char* ALIAS = "VendorData";
 
-    CString vendorId; // 00
+    String vendorId; // 00
     ent::EntityID entityID; // 20
     bool isActive; // 28
     uint8_t unk29[0x30 - 0x29]; // 29

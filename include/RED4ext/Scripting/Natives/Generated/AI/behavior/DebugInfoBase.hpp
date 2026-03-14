@@ -18,7 +18,7 @@ struct DebugInfoBase : ISerializable
     static constexpr const char* NAME = "AIbehaviorDebugInfoBase";
     static constexpr const char* ALIAS = NAME;
 
-    CString caption; // 30
+    String caption; // 30
 };
 RED4EXT_ASSERT_SIZE(DebugInfoBase, 0x50);
 } // namespace AI::behavior

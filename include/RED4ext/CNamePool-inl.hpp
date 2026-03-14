@@ -17,11 +17,11 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CNamePool::Add(const char* aText)
     return result;
 }
 
-RED4EXT_INLINE RED4ext::CName RED4ext::CNamePool::Add(const CString& aText)
+RED4EXT_INLINE RED4ext::CName RED4ext::CNamePool::Add(const String& aText)
 {
     CName result;
 
-    static UniversalRelocFunc<CName* (*)(CName&, const CString&)> func(Detail::AddressHashes::CNamePool_AddCString);
+    static UniversalRelocFunc<CName* (*)(CName&, const String&)> func(Detail::AddressHashes::CNamePool_AddCString);
     func(result, aText);
     return result;
 }
@@ -32,9 +32,9 @@ RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const char* aTex
     func(aName, aText);
 }
 
-RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const CString& aText)
+RED4EXT_INLINE void RED4ext::CNamePool::Add(const CName& aName, const String& aText)
 {
-    Add(aName, aText.c_str());
+    Add(aName, aText.AsChar());
 }
 
 RED4EXT_INLINE const char* RED4ext::CNamePool::Get(const CName& aName)

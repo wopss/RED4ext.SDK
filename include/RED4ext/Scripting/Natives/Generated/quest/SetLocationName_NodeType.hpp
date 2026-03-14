@@ -19,7 +19,7 @@ struct SetLocationName_NodeType : quest::IUIManagerNodeType
     static constexpr const char* NAME = "questSetLocationName_NodeType";
     static constexpr const char* ALIAS = NAME;
 
-    CString locationName; // 38
+    String locationName; // 38
     quest::LocationAction action; // 58
     TweakDBID districtID; // 5C
     bool isNewLocation; // 64

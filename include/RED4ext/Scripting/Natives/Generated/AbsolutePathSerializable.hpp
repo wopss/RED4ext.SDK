@@ -15,7 +15,7 @@ struct AbsolutePathSerializable
     static constexpr const char* NAME = "AbsolutePathSerializable";
     static constexpr const char* ALIAS = NAME;
 
-    CString Path; // 00
+    String Path; // 00
 };
 RED4EXT_ASSERT_SIZE(AbsolutePathSerializable, 0x20);
 } // namespace RED4ext

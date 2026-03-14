@@ -17,8 +17,8 @@ struct C2dArray : CResource
     static constexpr const char* NAME = "C2dArray";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<CString> headers; // 40
-    DynArray<DynArray<CString>> data; // 50
+    DynArray<String> headers; // 40
+    DynArray<DynArray<String>> data; // 50
 };
 RED4EXT_ASSERT_SIZE(C2dArray, 0x60);
 } // namespace RED4ext

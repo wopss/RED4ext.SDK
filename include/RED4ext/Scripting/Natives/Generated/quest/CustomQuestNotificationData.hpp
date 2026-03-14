@@ -18,10 +18,10 @@ struct CustomQuestNotificationData
     static constexpr const char* NAME = "questCustomQuestNotificationData";
     static constexpr const char* ALIAS = "CustomQuestNotificationData";
 
-    CString header; // 00
-    CString desc; // 20
+    String header; // 00
+    String desc; // 20
     CName icon; // 40
-    CString fluffHeader; // 48
+    String fluffHeader; // 48
 };
 RED4EXT_ASSERT_SIZE(CustomQuestNotificationData, 0x68);
 } // namespace quest

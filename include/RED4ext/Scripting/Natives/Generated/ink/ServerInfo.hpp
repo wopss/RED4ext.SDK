@@ -20,10 +20,10 @@ struct ServerInfo : IScriptable
 
     int32_t number; // 40
     uint8_t unk44[0x48 - 0x44]; // 44
-    CString kind; // 48
-    CString hostname; // 68
-    CString address; // 88
-    CString worldDescription; // A8
+    String kind; // 48
+    String hostname; // 68
+    String address; // 88
+    String worldDescription; // A8
 };
 RED4EXT_ASSERT_SIZE(ServerInfo, 0xC8);
 } // namespace ink

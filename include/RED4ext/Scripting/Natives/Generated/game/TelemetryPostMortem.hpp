@@ -19,13 +19,13 @@ struct TelemetryPostMortem
     static constexpr const char* NAME = "gameTelemetryPostMortem";
     static constexpr const char* ALIAS = NAME;
 
-    CString crashVisitId; // 00
-    CString playthroughId; // 20
-    CString crashVersion; // 40
-    CString crashPatch; // 60
-    CString timeCrash; // 80
-    CString district; // A0
-    CString zoneType; // C0
+    String crashVisitId; // 00
+    String playthroughId; // 20
+    String crashVersion; // 40
+    String crashPatch; // 60
+    String timeCrash; // 80
+    String district; // A0
+    String zoneType; // C0
     game::TelemetryTrackedQuest trackedQuest; // E0
     Vector3 location; // 188
     float sessionLength; // 194

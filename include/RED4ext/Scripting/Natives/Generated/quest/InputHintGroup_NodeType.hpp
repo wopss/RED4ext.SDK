@@ -21,8 +21,8 @@ struct InputHintGroup_NodeType : quest::IUIManagerNodeType
 
     TweakDBID iconID; // 38
     CName groupId; // 40
-    CString localizedTitle; // 48
-    CString localizedDescription; // 68
+    String localizedTitle; // 48
+    String localizedDescription; // 68
     bool show; // 88
     uint8_t unk89[0x90 - 0x89]; // 89
 };

@@ -18,7 +18,7 @@ struct Label : attr::Attribute
     static constexpr const char* NAME = "attrLabel";
     static constexpr const char* ALIAS = NAME;
 
-    CString xt; // 30
+    String xt; // 30
 };
 RED4EXT_ASSERT_SIZE(Label, 0x50);
 } // namespace attr

@@ -26,9 +26,9 @@ struct GroupNode : game::data::DataNode
     static constexpr const char* NAME = "gamedataGroupNode";
     static constexpr const char* ALIAS = NAME;
 
-    CString name; // 98
-    CString base; // B8
-    CString schema; // D8
+    String name; // 98
+    String base; // B8
+    String schema; // D8
     bool isInline; // F8
     uint8_t unkF9[0x130 - 0xF9]; // F9
     WeakHandle<game::data::GroupNode> baseGroup; // 130

@@ -23,8 +23,8 @@ struct PopupData
     static constexpr const char* NAME = "gamePopupData";
     static constexpr const char* ALIAS = "PopupData";
 
-    CString title; // 00
-    CString message; // 20
+    String title; // 00
+    String message; // 20
     DynArray<Handle<game::JournalEntryOverrideData>> messageOverrideDataList; // 40
     TweakDBID iconID; // 50
     bool isModal; // 58

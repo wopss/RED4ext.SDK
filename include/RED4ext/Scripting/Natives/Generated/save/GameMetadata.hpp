@@ -22,20 +22,20 @@ struct GameMetadata
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk00[0x8 - 0x0]; // 0
-    CString gameDefinition; // 08
-    CString activeQuests; // 28
-    CString trackedQuestEntry; // 48
-    CString trackedQuest; // 68
-    CString mainQuest; // 88
-    CString locationName; // A8
-    CString debugString; // C8
-    CString initialBuildID; // E8
-    CString finishedQuests; // 108
-    CString playthroughID; // 128
-    CString pointOfNoReturnId; // 148
-    CString visitID; // 168
-    CString buildSKU; // 188
-    CString buildPatch; // 1A8
+    String gameDefinition; // 08
+    String activeQuests; // 28
+    String trackedQuestEntry; // 48
+    String trackedQuest; // 68
+    String mainQuest; // 88
+    String locationName; // A8
+    String debugString; // C8
+    String initialBuildID; // E8
+    String finishedQuests; // 108
+    String playthroughID; // 128
+    String pointOfNoReturnId; // 148
+    String visitID; // 168
+    String buildSKU; // 188
+    String buildPatch; // 1A8
     Vector3 playerPosition; // 1C8
     uint8_t unk1D4[0x1D8 - 0x1D4]; // 1D4
     double playTime; // 1D8
@@ -44,11 +44,11 @@ struct GameMetadata
     uint32_t nextNonSavableEntityID; // 1EC
     game::data::LifePath lifePath; // 1F0
     uint8_t unk1F4[0x1F8 - 0x1F4]; // 1F4
-    CString bodyGender; // 1F8
-    CString brainGender; // 218
+    String bodyGender; // 1F8
+    String brainGender; // 218
     game::Difficulty difficulty; // 238
     uint8_t unk23C[0x240 - 0x23C]; // 23C
-    DynArray<CString> facts; // 240
+    DynArray<String> facts; // 240
     float level; // 250
     float streetCred; // 254
     float gunslinger; // 258
