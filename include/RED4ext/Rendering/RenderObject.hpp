@@ -42,7 +42,7 @@ protected:
     }
 
 private:
-    int32_t m_refCount{1};
+    uint32_t m_refCount{1};
 };
 RED4EXT_ASSERT_SIZE(IRenderObject, 0x10);
 
