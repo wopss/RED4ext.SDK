@@ -1,7 +1,7 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/RenderResource.hpp>
+#include <RED4ext/Rendering/RenderResource.hpp>
 #include <RED4ext/Scripting/Natives/Generated/IRenderProxyCustomData.hpp>
 
 #include <cstdint>
@@ -83,3 +83,7 @@ struct CRenderProxyHandle
 RED4EXT_ASSERT_SIZE(CRenderProxyHandle, 0x28);
 RED4EXT_ASSERT_OFFSET(CRenderProxyHandle, renderProxy, 0x10);
 } // namespace RED4ext
+
+#ifdef RED4EXT_HEADER_ONLY
+#include <RED4ext/Rendering/RenderProxy-inl.hpp>
+#endif
