@@ -30,7 +30,7 @@ public:
 protected:
     void Release()
     {
-        if (--m_refCount < 1)
+        if (InterlockedDecrement(reinterpret_cast<long*>(&m_refCount)) == 0)
         {
             Destroy();
         }
@@ -38,11 +38,11 @@ protected:
 
     void AddRef()
     {
-        m_refCount++;
+        InterlockedIncrement(reinterpret_cast<long*>(&m_refCount));
     }
 
 private:
-    std::atomic<int32_t> m_refCount{1};
+    int32_t m_refCount{1};
 };
 RED4EXT_ASSERT_SIZE(IRenderObject, 0x10);
 
