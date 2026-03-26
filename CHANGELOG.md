@@ -10,23 +10,17 @@ and this project adheres to
 
 ### Added
 
-- Added `include/RED4ext/Detail/Containers/ArrayIterator.hpp`, a shared iterator
-  type used by `DynArray`, `StaticArray`, and `Span`.
-
+- Added `include/RED4ext/Detail/Containers/ArrayIterator.hpp`, an iterator type
+  used by `DynArray`, `StaticArray`, and `Span`.
 - Added `DynArray` constructors for input iterators and containers satisfying `std::ranges::range` concept.
 - Added several methods for manipulating `DynArray` buffer data.
-
-- `StaticArray` has been significantly fleshed out, including new accessors and methods for working with data.
+- Added `StaticArray` constructors and methods.
 
 ### Changed
 
-- `DynArray`, `StaticArray`, `Span`, and `SortedArray` have been moved into 
-  respective files in `RED4ext/Containers/`
-
+- Moved `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
 - `DynArray` properties are now private, use getter methods instead, `Data()`, `Size()`, etc.
-
 - `StaticArray` properties are now private, use getter methods instead, `Data()`, `Size()`, etc.
-
 - Renamed `Span::GetSize()` to `Span::Size()`
 
 ### Removed
