@@ -210,15 +210,6 @@ struct RuntimeEntityRef
 RED4EXT_ASSERT_SIZE(RuntimeEntityRef, 0x8);
 
 template<typename T, uint32_t MAX_LEN>
-struct StaticArray
-{
-    T entries[MAX_LEN]; // 00
-    uint32_t size;
-};
-static_assert(sizeof(StaticArray<std::array<uint8_t, 5>, 32>) ==
-              164); // StaticArray<GpuWrapApiVertexPackingPackingElement, 32>
-
-template<typename T, uint32_t MAX_LEN>
 using NativeArray = std::array<T, MAX_LEN>;
 
 template<typename T>

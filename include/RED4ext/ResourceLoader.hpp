@@ -4,8 +4,8 @@
 
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Detail/AddressHashes.hpp>
-#include <RED4ext/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/JobQueue.hpp>
 #include <RED4ext/Memory/Allocators.hpp>

@@ -8,6 +8,21 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- Add `DynArray` constructors for input iterators and containers satisfying `std::ranges::range` concept.
+- Add STL-like constructors and methods for `DynArray`, `StaticArray`: `Resize()`, `Insert()`, `Erase()`, etc
+
+### Changed
+
+- Move `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
+- Make `DynArray`, `StaticArray`, `Span` fields private, use getter methods instead: `Data()`, `Size()`, etc.
+- Rename `Span::GetSize()` to `Span::Size()`
+
+### Removed
+
+- Remove implicit boolean conversion for `Span`, use `Span::IsEmpty()` instead.
+
 ## [1.0.0] - 2026-03-09
 
 - Initial release.
