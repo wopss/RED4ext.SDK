@@ -1,6 +1,7 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Rendering/RenderObject.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/Chunk.hpp>
 #include <RED4ext/Scripting/Natives/Vector4.hpp>
 
@@ -8,9 +9,24 @@
 
 namespace RED4ext
 {
-struct CRenderMesh
+struct IRenderResource : IRenderObject
 {
-    uint8_t unk00[0x10 - 0x00];   // 00
+    using AllocatorType = Memory::RenderResourcesAllocator;
+
+    virtual Memory::IAllocator* GetAllocator() override
+    {
+        return AllocatorType::Get();
+    }
+
+    virtual ~IRenderResource() = default;
+    virtual CName GetResourceName() = 0;
+    virtual char** sub_20() = 0;
+    virtual int32_t sub_28() = 0;
+};
+RED4EXT_ASSERT_SIZE(IRenderResource, 0x10);
+
+struct CRenderMesh : IRenderResource
+{
     Vector4 quantizationScale;    // 10
     Vector4 quantizationBias;     // 20
     uint32_t vertexBufferID;      // 30 - GpuApi buffer ID
