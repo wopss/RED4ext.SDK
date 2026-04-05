@@ -30,7 +30,7 @@ public:
 protected:
     void Release()
     {
-        if (InterlockedDecrement(reinterpret_cast<long*>(&m_refCount)) == 0)
+        if (InterlockedDecrement(&m_refCount) == 0)
         {
             Destroy();
         }
@@ -38,7 +38,7 @@ protected:
 
     void AddRef()
     {
-        InterlockedIncrement(reinterpret_cast<long*>(&m_refCount));
+        InterlockedIncrement(&m_refCount);
     }
 
 private:
