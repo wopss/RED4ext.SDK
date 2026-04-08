@@ -4,7 +4,7 @@ namespace RED4ext
 {
 struct CGameApplication;
 
-namespace v0
+namespace v1
 {
 struct GameState
 {
@@ -40,5 +40,5 @@ struct GameState
      */
     bool (*OnExit)(CGameApplication* aApp);
 };
-} // namespace v0
+} // namespace v1
 } // namespace RED4ext

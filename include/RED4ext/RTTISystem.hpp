@@ -6,7 +6,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/Mutex.hpp>
 #include <RED4ext/RTTITypes.hpp>
@@ -103,9 +103,6 @@ RED4EXT_ASSERT_OFFSET(CRTTISystem, nativeToScript, 0x180);
 struct RTTIRegistrator
 {
     typedef void (*CallbackFunc)(void);
-
-    [[deprecated("Use 'AddRegisterCallback()' and `AddPostRegisterCallback()` instead.")]]
-    static void Add(CallbackFunc aRegFunc, CallbackFunc aPostRegFunc, bool aUnused = true);
 
     /**
      * @brief Returns the next unique identifier used for RTTI types.

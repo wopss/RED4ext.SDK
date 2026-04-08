@@ -1,8 +1,8 @@
 #pragma once
 
-#include <RED4ext/Api/PluginHandle.hpp>
+#include <RED4ext/Api/v1/PluginHandle.hpp>
 
-namespace RED4ext::v0
+namespace RED4ext::v1
 {
 struct Hooking
 {
@@ -88,4 +88,4 @@ struct Hooking
      */
     bool (*Detach)(PluginHandle aHandle, void* aTarget);
 };
-} // namespace RED4ext::v0
+} // namespace RED4ext::v1
