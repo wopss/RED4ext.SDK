@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/CName.hpp>
-#include <RED4ext/DynArray.hpp>
+#include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimNode_Base.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/AnimNode_BlendSpace_InternalsBlendSpace.hpp>
 #include <RED4ext/Scripting/Natives/Generated/anim/FloatLink.hpp>

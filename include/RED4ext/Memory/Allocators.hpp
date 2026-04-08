@@ -34,11 +34,6 @@ struct IAllocator
     virtual void sub_28(void* a1) const = 0;                                // 28
     virtual const uint32_t GetHandle() const = 0;                           // 30
 
-    [[deprecated("Use 'GetHandle()' instead.")]] const uint32_t GetId() const
-    {
-        return GetHandle();
-    }
-
     template<typename T, typename = std::enable_if_t<!std::is_pointer_v<T>, T*>>
     [[nodiscard]] T* Alloc() const
     {
