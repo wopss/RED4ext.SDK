@@ -58,7 +58,7 @@ RED4EXT_INLINE uint32_t RED4ext::CClass::GetAlignment() const
 
 RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CClass::GetType() const
 {
-    return ERTTIType::Class;
+    return rtti::ERTTIType::Class;
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CClass::GetComputedName() const
@@ -279,7 +279,7 @@ RED4EXT_INLINE uint32_t RED4ext::CEnum::GetAlignment() const
 
 RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CEnum::GetType() const
 {
-    return ERTTIType::Enum;
+    return rtti::ERTTIType::Enum;
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CEnum::GetComputedName() const
@@ -399,7 +399,7 @@ RED4EXT_INLINE uint32_t RED4ext::CBitfield::GetAlignment() const
 
 RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CBitfield::GetType() const
 {
-    return ERTTIType::BitField;
+    return rtti::ERTTIType::BitField;
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CBitfield::GetComputedName() const
