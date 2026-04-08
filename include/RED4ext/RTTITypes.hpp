@@ -61,7 +61,7 @@ struct CClass : rtti::IType
     CName GetName() const final;                                                      // 08
     uint32_t GetSize() const final;                                                   // 10
     uint32_t GetAlignment() const final;                                              // 18
-    ERTTIType GetType() const final;                                                  // 20
+    rtti::ERTTIType GetType() const final;                                            // 20
     CName GetComputedName() const final;                                              // 30
     void Construct(void* aMemory) const final;                                        // 38
     void Destruct(void* aMemory) const final;                                         // 40
@@ -176,7 +176,7 @@ struct TTypedClass : CClass
     {
         if constexpr (std::is_copy_constructible_v<T>)
         {
-            new (aLhs) T(*static_cast<T*>(aRhs));
+            new (aLhs) T(*static_cast<const T*>(aRhs));
         }
     }
 
@@ -218,7 +218,7 @@ struct CEnum : rtti::IType
     CName GetName() const final;                                                    // 08
     uint32_t GetSize() const final;                                                 // 10
     uint32_t GetAlignment() const final;                                            // 18
-    ERTTIType GetType() const final;                                                // 20
+    rtti::ERTTIType GetType() const final;                                          // 20
     CName GetComputedName() const final;                                            // 30
     void Construct(void* aMemory) const final;                                      // 38
     void Destruct(void* aMemory) const final;                                       // 40
@@ -261,7 +261,7 @@ struct CBitfield : rtti::IType
     CName GetName() const final;                                                    // 08
     uint32_t GetSize() const final;                                                 // 10
     uint32_t GetAlignment() const final;                                            // 18
-    ERTTIType GetType() const final;                                                // 20
+    rtti::ERTTIType GetType() const final;                                          // 20
     CName GetComputedName() const final;                                            // 30
     void Construct(void* aMemory) const final;                                      // 38
     void Destruct(void* aMemory) const final;                                       // 40
