@@ -56,7 +56,7 @@ RED4EXT_INLINE uint32_t RED4ext::CClass::GetAlignment() const
     return alignment;
 }
 
-RED4EXT_INLINE RED4ext::ERTTIType RED4ext::CClass::GetType() const
+RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CClass::GetType() const
 {
     return ERTTIType::Class;
 }
@@ -85,7 +85,7 @@ RED4EXT_INLINE bool RED4ext::CClass::Unserialize(BaseStream* aStream, void* aIns
 
 RED4EXT_INLINE bool RED4ext::CClass::ToString(const void* aInstance, CString& aOut) const
 {
-    using func_t = bool (*)(const CClass*, void*, CString&);
+    using func_t = bool (*)(const CClass*, const void*, CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_ToString);
     return func(this, aInstance, aOut);
 }
@@ -277,7 +277,7 @@ RED4EXT_INLINE uint32_t RED4ext::CEnum::GetAlignment() const
     return 1;
 }
 
-RED4EXT_INLINE RED4ext::ERTTIType RED4ext::CEnum::GetType() const
+RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CEnum::GetType() const
 {
     return ERTTIType::Enum;
 }
@@ -397,7 +397,7 @@ RED4EXT_INLINE uint32_t RED4ext::CBitfield::GetAlignment() const
     return 1;
 }
 
-RED4EXT_INLINE RED4ext::ERTTIType RED4ext::CBitfield::GetType() const
+RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CBitfield::GetType() const
 {
     return ERTTIType::BitField;
 }
@@ -480,7 +480,7 @@ RED4EXT_INLINE bool RED4ext::CBitfield::Unserialize(BaseStream* aStream, void* a
 
 RED4EXT_INLINE bool RED4ext::CBitfield::ToString(const void* aInstance, CString& aOut) const
 {
-    using func_t = bool (*)(const CBitfield*, void*, CString&);
+    using func_t = bool (*)(const CBitfield*, const void*, CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBitfield_ToString);
     return func(this, aInstance, aOut);
 }
