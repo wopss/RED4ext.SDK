@@ -99,12 +99,12 @@ RED4EXT_INLINE RED4ext::CName RED4ext::rtti::IType::GetComputedName() const
     return 0ull;
 }
 
-RED4EXT_INLINE void RED4ext::rtti::IType::Move(ScriptInstance aLhs, ScriptInstance aRhs) const
+RED4EXT_INLINE void RED4ext::rtti::IType::Move(void* aLhs, void* aRhs) const
 {
     Assign(aLhs, aRhs);
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::ToString(const ScriptInstance aInstance, CString& aOut) const
+RED4EXT_INLINE bool RED4ext::rtti::IType::ToString(const void* aInstance, CString& aOut) const
 {
     RED4EXT_UNUSED_PARAMETER(aInstance);
     RED4EXT_UNUSED_PARAMETER(aOut);
@@ -112,7 +112,7 @@ RED4EXT_INLINE bool RED4ext::rtti::IType::ToString(const ScriptInstance aInstanc
     return false;
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::FromString(ScriptInstance aInstance, const CString& aString) const
+RED4EXT_INLINE bool RED4ext::rtti::IType::FromString(void* aInstance, const CString& aString) const
 {
     RED4EXT_UNUSED_PARAMETER(aInstance);
     RED4EXT_UNUSED_PARAMETER(aString);
@@ -125,30 +125,30 @@ RED4EXT_INLINE bool RED4ext::rtti::IType::sub_78()
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::sub_80(int64_t a1, ScriptInstance aInstance)
+RED4EXT_INLINE bool RED4ext::rtti::IType::sub_80(int64_t a1, void* aInstance)
 {
-    using func_t = bool (*)(IType*, int64_t, ScriptInstance);
+    using func_t = bool (*)(IType*, int64_t, void*);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_80);
     return func(this, a1, aInstance);
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::sub_88(int64_t a1, ScriptInstance aInstance)
+RED4EXT_INLINE bool RED4ext::rtti::IType::sub_88(int64_t a1, void* aInstance)
 {
-    using func_t = bool (*)(IType*, int64_t, ScriptInstance);
+    using func_t = bool (*)(IType*, int64_t, void*);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_88);
     return func(this, a1, aInstance);
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4)
+RED4EXT_INLINE bool RED4ext::rtti::IType::sub_90(int64_t a1, void* aInstance, CString& a3, int64_t a4)
 {
-    using func_t = bool (*)(IType*, int64_t, ScriptInstance, CString&, int64_t);
+    using func_t = bool (*)(IType*, int64_t, void*, CString&, int64_t);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_90);
     return func(this, a1, aInstance, a3, a4);
 }
 
-RED4EXT_INLINE bool RED4ext::rtti::IType::sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5)
+RED4EXT_INLINE bool RED4ext::rtti::IType::sub_98(int64_t a1, void* aInstance, CString& a3, int64_t a4, bool a5)
 {
-    using func_t = bool (*)(IType*, int64_t, ScriptInstance, CString&, int64_t, bool);
+    using func_t = bool (*)(IType*, int64_t, void*, CString&, int64_t, bool);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_98);
     return func(this, a1, aInstance, a3, a4, a5);
 }
