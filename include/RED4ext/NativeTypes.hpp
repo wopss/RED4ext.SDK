@@ -151,9 +151,9 @@ struct Variant
 
     Variant() noexcept = default;
     Variant(const rtti::IType* aType);
-    Variant(const rtti::IType* aType, const ScriptInstance aData);
+    Variant(const rtti::IType* aType, const void* aData);
     Variant(CName aTypeName);
-    Variant(CName aTypeName, const ScriptInstance aData);
+    Variant(CName aTypeName, const void* aData);
     Variant(const Variant& aOther);
     Variant(Variant&& aOther) noexcept;
     ~Variant();
@@ -165,11 +165,11 @@ struct Variant
     bool IsInlined() const noexcept;
 
     rtti::IType* GetType() const noexcept;
-    ScriptInstance GetDataPtr() const noexcept;
+    void* GetDataPtr() const noexcept;
 
     bool Init(const rtti::IType* aType);
-    bool Fill(const rtti::IType* aType, const ScriptInstance aData);
-    bool Extract(ScriptInstance aBuffer);
+    bool Fill(const rtti::IType* aType, const void* aData);
+    bool Extract(void* aBuffer);
     void Free();
 
     static bool CanBeInlined(const rtti::IType* aType) noexcept;
@@ -178,7 +178,7 @@ struct Variant
     union
     {
         uint8_t inlined[InlineSize]{0};
-        ScriptInstance instance;
+        void* instance;
     };
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);

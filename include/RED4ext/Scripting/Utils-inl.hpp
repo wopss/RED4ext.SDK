@@ -11,14 +11,13 @@
 #include <RED4ext/Scripting/Functions.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(void* aInstance, CBaseFunction* aFunc, void* aOut)
 {
     StackArgs_t args;
     return ExecuteFunction(aInstance, aFunc, aOut, args);
 }
 
-RED4EXT_INLINE bool RED4ext::ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut,
-                                             StackArgs_t& aArgs)
+RED4EXT_INLINE bool RED4ext::ExecuteFunction(void* aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t& aArgs)
 {
     CStackType result;
     if (aFunc->returnType)

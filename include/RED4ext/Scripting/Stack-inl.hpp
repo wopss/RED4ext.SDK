@@ -31,14 +31,13 @@ RED4EXT_INLINE RED4ext::IScriptable* RED4ext::CBaseStack::GetContext() const
     return nullptr;
 }
 
-RED4EXT_INLINE RED4ext::CStackType::CStackType(rtti::IType* aType, ScriptInstance aValue)
+RED4EXT_INLINE RED4ext::CStackType::CStackType(rtti::IType* aType, void* aValue)
     : type(aType)
     , value{aValue}
 {
 }
 
-RED4EXT_INLINE RED4ext::CStack::CStack(ScriptInstance aContext, CStackType* aArgs, uint32_t aArgsCount,
-                                       CStackType* aResult)
+RED4EXT_INLINE RED4ext::CStack::CStack(void* aContext, CStackType* aArgs, uint32_t aArgsCount, CStackType* aResult)
 
     : CBaseStack(static_cast<IScriptable*>(aContext))
     , args(aArgs)

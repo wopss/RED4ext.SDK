@@ -124,7 +124,7 @@ RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::rtti::IType* aType)
     }
 }
 
-RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::rtti::IType* aType, const RED4ext::ScriptInstance aData)
+RED4EXT_INLINE RED4ext::Variant::Variant(const RED4ext::rtti::IType* aType, const void* aData)
     : Variant()
 {
     if (aType)
@@ -138,7 +138,7 @@ RED4EXT_INLINE RED4ext::Variant::Variant(RED4ext::CName aTypeName)
 {
 }
 
-RED4EXT_INLINE RED4ext::Variant::Variant(RED4ext::CName aTypeName, const RED4ext::ScriptInstance aData)
+RED4EXT_INLINE RED4ext::Variant::Variant(RED4ext::CName aTypeName, const void* aData)
     : Variant(RED4ext::CRTTISystem::Get()->GetType(aTypeName), aData)
 {
 }
@@ -193,7 +193,7 @@ RED4EXT_INLINE RED4ext::rtti::IType* RED4ext::Variant::GetType() const noexcept
     return reinterpret_cast<RED4ext::rtti::IType*>(reinterpret_cast<uintptr_t>(type) & TypeMask);
 }
 
-RED4EXT_INLINE RED4ext::ScriptInstance RED4ext::Variant::GetDataPtr() const noexcept
+RED4EXT_INLINE void* RED4ext::Variant::GetDataPtr() const noexcept
 {
     return IsInlined() ? const_cast<uint8_t*>(inlined) : instance;
 }
@@ -207,7 +207,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Init(const RED4ext::rtti::IType* aType)
     }
 
     RED4ext::rtti::IType* ownType = GetType();
-    RED4ext::ScriptInstance ownData = GetDataPtr();
+    void* ownData = GetDataPtr();
 
     if (ownType)
     {
@@ -241,7 +241,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Init(const RED4ext::rtti::IType* aType)
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::rtti::IType* aType, const RED4ext::ScriptInstance aData)
+RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::rtti::IType* aType, const void* aData)
 {
     if (!Init(aType))
         return false;
@@ -254,7 +254,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::rtti::IType* aType, co
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::Variant::Extract(RED4ext::ScriptInstance aBuffer)
+RED4EXT_INLINE bool RED4ext::Variant::Extract(void* aBuffer)
 {
     if (IsEmpty())
         return false;
@@ -270,7 +270,7 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
         return;
 
     RED4ext::rtti::IType* ownType = GetType();
-    RED4ext::ScriptInstance ownData = GetDataPtr();
+    void* ownData = GetDataPtr();
 
     if (ownData)
     {

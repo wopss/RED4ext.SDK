@@ -36,6 +36,4 @@ union ScriptInstanceUnion
     RED4EXT_DECLARE_TYPE(DynArray<Handle<IScriptable>>, array_ref);
 };
 RED4EXT_ASSERT_SIZE(ScriptInstanceUnion, 0x8);
-
-using ScriptInstance = void*;
 } // namespace RED4ext

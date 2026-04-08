@@ -9,8 +9,8 @@
 #include <RED4ext/HashMap.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/Map.hpp>
-#include <RED4ext/rtti/IType.hpp>
 #include <RED4ext/Utils.hpp>
+#include <RED4ext/rtti/IType.hpp>
 
 namespace RED4ext
 {
@@ -58,37 +58,37 @@ struct CClass : rtti::IType
 
     CClass(CName aName, uint32_t aSize, Flags aFlags);
 
-    CName GetName() const final;                                                               // 08
-    uint32_t GetSize() const final;                                                            // 10
-    uint32_t GetAlignment() const final;                                                       // 18
-    ERTTIType GetType() const final;                                                           // 20
-    CName GetComputedName() const final;                                                       // 30
-    void Construct(ScriptInstance aMemory) const final;                                        // 38
-    void Destruct(ScriptInstance aMemory) const final;                                         // 40
-    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;   // 60
-    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                  // 68
-    bool sub_80(int64_t a1, ScriptInstance aInstance) final;                                   // 80
-    bool sub_88(int64_t a1, ScriptInstance aInstance) final;                                   // 88
-    bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4) final;          // 90
-    bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5) final; // 98
-    bool sub_A0(int64_t a1, CString& a2, bool a3) final;                                       // A0
-    void sub_B0(int64_t a1, int64_t a2) final;                                                 // B0
+    CName GetName() const final;                                                      // 08
+    uint32_t GetSize() const final;                                                   // 10
+    uint32_t GetAlignment() const final;                                              // 18
+    ERTTIType GetType() const final;                                                  // 20
+    CName GetComputedName() const final;                                              // 30
+    void Construct(void* aMemory) const final;                                        // 38
+    void Destruct(void* aMemory) const final;                                         // 40
+    bool Unserialize(BaseStream* aStream, void* aInstance, int64_t a3) const final;   // 60
+    bool ToString(const void* aInstance, CString& aOut) const final;                  // 68
+    bool sub_80(int64_t a1, void* aInstance) final;                                   // 80
+    bool sub_88(int64_t a1, void* aInstance) final;                                   // 88
+    bool sub_90(int64_t a1, void* aInstance, CString& a3, int64_t a4) final;          // 90
+    bool sub_98(int64_t a1, void* aInstance, CString& a3, int64_t a4, bool a5) final; // 98
+    bool sub_A0(int64_t a1, CString& a2, bool a3) final;                              // A0
+    void sub_B0(int64_t a1, int64_t a2) final;                                        // B0
 
-    virtual void sub_C0();                                       // C0
-    virtual uint32_t GetMaxAlignment() const;                    // C8
-    virtual bool sub_D0() const;                                 // D0
-    virtual void ConstructCls(ScriptInstance aMemory) const = 0; // D8
-    virtual void DestructCls(ScriptInstance aMemory) const = 0;  // E0
-    virtual void* AllocMemory() const = 0;                       // E8
+    virtual void sub_C0();                              // C0
+    virtual uint32_t GetMaxAlignment() const;           // C8
+    virtual bool sub_D0() const;                        // D0
+    virtual void ConstructCls(void* aMemory) const = 0; // D8
+    virtual void DestructCls(void* aMemory) const = 0;  // E0
+    virtual void* AllocMemory() const = 0;              // E8
 
-    ScriptInstance CreateInstance(bool aZeroMemory = false) const;
+    void* CreateInstance(bool aZeroMemory = false) const;
 
     bool IsA(const rtti::IType* aType) const;
 
     CProperty* GetProperty(CName aName);
     CClassFunction* GetFunction(CName aShortName) const;
 
-    void InitializeProperties(ScriptInstance aInstance);
+    void InitializeProperties(void* aInstance);
     void GetProperties(DynArray<CProperty*>& aProps);
 
     void RegisterFunction(CClassFunction* aFunc);
@@ -96,19 +96,19 @@ struct CClass : rtti::IType
     void ClearScriptedData();
 
     [[deprecated("Use 'ConstructCls()' instead.")]]
-    inline void InitCls(ScriptInstance aMemory) const
+    inline void InitCls(void* aMemory) const
     {
         ConstructCls(aMemory);
     }
 
     [[deprecated("Use 'DestructCls()' instead.")]]
-    inline void DestroyCls(ScriptInstance aMemory) const
+    inline void DestroyCls(void* aMemory) const
     {
         DestructCls(aMemory);
     }
 
     [[deprecated("Use 'CreateInstance()' instead.")]]
-    inline ScriptInstance AllocInstance(bool aZeroMemory = false) const
+    inline void* AllocInstance(bool aZeroMemory = false) const
     {
         return CreateInstance(aZeroMemory);
     }
@@ -164,15 +164,15 @@ struct TTypedClass : CClass
     {
     }
 
-    const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final // 48
+    const bool IsEqual(const void* aLhs, const void* aRhs, uint32_t a3 = 0) final // 48
     {
         // This is doing something extra beside comparing properties, using the native func until we figure it out.
-        using func_t = bool (*)(TTypedClass<T>*, const ScriptInstance, const ScriptInstance, uint32_t);
+        using func_t = bool (*)(TTypedClass<T>*, const void*, const void*, uint32_t);
         static UniversalRelocFunc<func_t> func(Detail::AddressHashes::TTypedClass_IsEqual);
         return func(this, aLhs, aRhs, a3);
     }
 
-    void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final // 50
+    void Assign(void* aLhs, const void* aRhs) const final // 50
     {
         if constexpr (std::is_copy_constructible_v<T>)
         {
@@ -180,12 +180,12 @@ struct TTypedClass : CClass
         }
     }
 
-    void ConstructCls(ScriptInstance aMemory) const final // D8
+    void ConstructCls(void* aMemory) const final // D8
     {
         new (aMemory) T();
     }
 
-    void DestructCls(ScriptInstance aMemory) const final // E0
+    void DestructCls(void* aMemory) const final // E0
     {
         static_cast<T*>(aMemory)->~T();
     }
@@ -215,18 +215,18 @@ struct CEnum : rtti::IType
 
     CEnum(CName aName, int8_t aActualSize, Flags aFlags = {});
 
-    CName GetName() const final;                                                                     // 08
-    uint32_t GetSize() const final;                                                                  // 10
-    uint32_t GetAlignment() const final;                                                             // 18
-    ERTTIType GetType() const final;                                                                 // 20
-    CName GetComputedName() const final;                                                             // 30
-    void Construct(ScriptInstance aMemory) const final;                                              // 38
-    void Destruct(ScriptInstance aMemory) const final;                                               // 40
-    const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final; // 48
-    void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final;                         // 50
-    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;         // 60
-    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
-    bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
+    CName GetName() const final;                                                    // 08
+    uint32_t GetSize() const final;                                                 // 10
+    uint32_t GetAlignment() const final;                                            // 18
+    ERTTIType GetType() const final;                                                // 20
+    CName GetComputedName() const final;                                            // 30
+    void Construct(void* aMemory) const final;                                      // 38
+    void Destruct(void* aMemory) const final;                                       // 40
+    const bool IsEqual(const void* aLhs, const void* aRhs, uint32_t a3 = 0) final;  // 48
+    void Assign(void* aLhs, const void* aRhs) const final;                          // 50
+    bool Unserialize(BaseStream* aStream, void* aInstance, int64_t a3) const final; // 60
+    bool ToString(const void* aInstance, CString& aOut) const final;                // 68
+    bool FromString(void* aInstance, const CString& aString) const final;           // 70
 
     CName name;                       // 10
     CName computedName;               // 18
@@ -258,18 +258,18 @@ struct CBitfield : rtti::IType
 
     CBitfield(CName aName, int8_t aActualSize, Flags aFlags = {});
 
-    CName GetName() const final;                                                                     // 08
-    uint32_t GetSize() const final;                                                                  // 10
-    uint32_t GetAlignment() const final;                                                             // 18
-    ERTTIType GetType() const final;                                                                 // 20
-    CName GetComputedName() const final;                                                             // 30
-    void Construct(ScriptInstance aMemory) const final;                                              // 38
-    void Destruct(ScriptInstance aMemory) const final;                                               // 40
-    const bool IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3 = 0) final; // 48
-    void Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const final;                         // 50
-    bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;         // 60
-    bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                        // 68
-    bool FromString(ScriptInstance aInstance, const CString& aString) const final;                   // 70
+    CName GetName() const final;                                                    // 08
+    uint32_t GetSize() const final;                                                 // 10
+    uint32_t GetAlignment() const final;                                            // 18
+    ERTTIType GetType() const final;                                                // 20
+    CName GetComputedName() const final;                                            // 30
+    void Construct(void* aMemory) const final;                                      // 38
+    void Destruct(void* aMemory) const final;                                       // 40
+    const bool IsEqual(const void* aLhs, const void* aRhs, uint32_t a3 = 0) final;  // 48
+    void Assign(void* aLhs, const void* aRhs) const final;                          // 50
+    bool Unserialize(BaseStream* aStream, void* aInstance, int64_t a3) const final; // 60
+    bool ToString(const void* aInstance, CString& aOut) const final;                // 68
+    bool FromString(void* aInstance, const CString& aString) const final;           // 70
 
     CName name;         // 10
     CName computedName; // 18
@@ -323,21 +323,21 @@ using CSimpleRTTITypeRuntimeEntityRef = rtti::IType;
 #pragma region Arrays
 struct CRTTIBaseArrayType : rtti::IType
 {
-    virtual rtti::IType* GetInnerType() const = 0;                                          // C0
-    virtual bool sub_C8() = 0;                                                              // C8 ret 1
-    virtual uint32_t GetLength(ScriptInstance aInstance) const = 0;                         // D0
-    virtual int32_t GetMaxLength() const = 0;                                               // D8 ret -1
-    virtual ScriptInstance GetElement(ScriptInstance aInstance, uint32_t aIndex) const = 0; // E0
-    virtual ScriptInstance sub_E8(ScriptInstance aInstance, uint32_t aIndex) const = 0;     // E8 Same as E0
-    virtual int32_t Add(ScriptInstance aInstance, int32_t aCount) const = 0;                // F0
-    virtual bool RemoveAt(ScriptInstance aInstance, int32_t aIndex) const = 0;              // F8
+    virtual rtti::IType* GetInnerType() const = 0;                        // C0
+    virtual bool sub_C8() = 0;                                            // C8 ret 1
+    virtual uint32_t GetLength(void* aInstance) const = 0;                // D0
+    virtual int32_t GetMaxLength() const = 0;                             // D8 ret -1
+    virtual void* GetElement(void* aInstance, uint32_t aIndex) const = 0; // E0
+    virtual void* sub_E8(void* aInstance, uint32_t aIndex) const = 0;     // E8 Same as E0
+    virtual int32_t Add(void* aInstance, int32_t aCount) const = 0;       // F0
+    virtual bool RemoveAt(void* aInstance, int32_t aIndex) const = 0;     // F8
     // [1, 2, 3]
     // ArrayRTTI->InsertAt(aIndex: 1);
     // [1, (free), 2, 3]
     // InnerRTTI->Assign(ArrayRTTI->GetElement(1), newValue)
     // [1, newValue, 2, 3]
-    virtual bool InsertAt(ScriptInstance aInstance, int32_t aIndex) const = 0; // 100
-    virtual bool Resize(ScriptInstance aInstance, uint32_t aSize) const = 0;   // 108
+    virtual bool InsertAt(void* aInstance, int32_t aIndex) const = 0; // 100
+    virtual bool Resize(void* aInstance, uint32_t aSize) const = 0;   // 108
 
     rtti::IType* innerType; // 10
 };

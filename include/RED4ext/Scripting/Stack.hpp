@@ -25,10 +25,10 @@ struct IScriptable;
 
 struct CStackType
 {
-    CStackType(rtti::IType* aType = nullptr, ScriptInstance aValue = nullptr);
+    CStackType(rtti::IType* aType = nullptr, void* aValue = nullptr);
 
-    rtti::IType* type;    // 00
-    ScriptInstance value; // 08
+    rtti::IType* type; // 00
+    void* value;       // 08
 };
 RED4EXT_ASSERT_SIZE(CStackType, 0x10);
 
@@ -82,7 +82,7 @@ RED4EXT_ASSERT_SIZE(CBaseStack, 0x30);
 
 struct CStack : CBaseStack
 {
-    CStack(ScriptInstance aContext = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
+    CStack(void* aContext = nullptr, CStackType* aArgs = nullptr, uint32_t aArgsCount = 0,
            CStackType* aResult = nullptr);
     ~CStack() = default;
 
@@ -101,9 +101,9 @@ struct CScriptStack : CBaseStack
 {
     ~CScriptStack() override = default;
 
-    uint8_t* args;        // 30
-    ScriptInstance value; // 38
-    rtti::IType* type;    // 40
+    uint8_t* args;     // 30
+    void* value;       // 38
+    rtti::IType* type; // 40
 };
 
 RED4EXT_ASSERT_SIZE(CScriptStack, 0x48);

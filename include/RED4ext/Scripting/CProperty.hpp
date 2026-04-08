@@ -62,7 +62,7 @@ struct CProperty
     Flags flags;          // 28
 
     template<typename T>
-    bool IsEqual(ScriptInstance aInstance, T aValue, uint32_t a3 = 0) const
+    bool IsEqual(void* aInstance, T aValue, uint32_t a3 = 0) const
     {
         auto currValue = GetValuePtr<T>(aInstance);
 
@@ -75,7 +75,7 @@ struct CProperty
     }
 
     template<typename T>
-    void SetValue(ScriptInstance aInstance, T aValue) const
+    void SetValue(void* aInstance, T aValue) const
     {
         auto prevValue = GetValuePtr<T>(aInstance);
 
@@ -90,7 +90,7 @@ struct CProperty
     }
 
     template<typename T>
-    T GetValue(ScriptInstance aInstance) const
+    T GetValue(void* aInstance) const
     {
         if constexpr (std::is_pointer_v<T>)
         {
@@ -103,7 +103,7 @@ struct CProperty
     }
 
     template<typename T>
-    T* GetValuePtr(ScriptInstance aInstance) const
+    T* GetValuePtr(void* aInstance) const
     {
         void* holder = aInstance;
         if (flags.inValueHolder)
