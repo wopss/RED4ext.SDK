@@ -269,10 +269,14 @@ struct ParallelJobInstance
     JobFamily* family;                 // 30
     uint64_t unk18;                    // 38
 };
-RED4EXT_ASSERT_SIZE(JobInstance, 0x20);
-RED4EXT_ASSERT_OFFSET(JobInstance, handler, 0x00);
-RED4EXT_ASSERT_OFFSET(JobInstance, target, 0x08);
-RED4EXT_ASSERT_OFFSET(JobInstance, family, 0x10);
+RED4EXT_ASSERT_SIZE(ParallelJobInstance, 0x40);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, handleFunc, 0x00);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, finishFunc, 0x10);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, primaryTarget, 0x18);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, secondaryTarget, 0x20);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, jobSize, 0x28);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, batchSize, 0x2C);
+RED4EXT_ASSERT_OFFSET(ParallelJobInstance, family, 0x30);
 
 /**
  * @brief An implementation of closure based parallel jobs.
