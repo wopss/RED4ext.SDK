@@ -29,7 +29,7 @@ template<typename T>
 concept IsJobHandlerWithRangeAndGroupParams = IsClosure<T, void, uint32_t, uint32_t, const JobGroup&>;
 
 template<typename T>
-concept IsAnyRegualrJobHandler = IsJobHandlerWithGroupParam<T> || IsJobHandlerWithNoParams<T>;
+concept IsAnyRegularJobHandler = IsJobHandlerWithGroupParam<T> || IsJobHandlerWithNoParams<T>;
 
 template<typename T>
 concept IsAnyParallelJobHandler = IsJobHandlerWithRangeAndGroupParams<T> || IsJobHandlerWithRangeParams<T> ||

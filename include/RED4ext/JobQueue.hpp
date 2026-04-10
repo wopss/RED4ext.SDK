@@ -169,7 +169,7 @@ RED4EXT_ASSERT_OFFSET(JobInstance, family, 0x10);
  * @tparam HandlerType The closure type.
  */
 template<typename HandlerType>
-requires Detail::IsAnyRegualrJobHandler<HandlerType>
+requires Detail::IsAnyRegularJobHandler<HandlerType>
 struct JobClosure : JobInstance
 {
     using AllocatorType = Memory::Jobs2DataAllocator;
@@ -239,7 +239,7 @@ struct ParallelJobInstance
         , batchSize(aBatchSize)
         , family(aFamily)
         , unk08(0)
-        , unk18(0)
+        , unk38(0)
     {
     }
 
@@ -255,7 +255,7 @@ struct ParallelJobInstance
         , batchSize(aBatchSize)
         , family(aFamily)
         , unk08(0)
-        , unk18(0)
+        , unk38(0)
     {
     }
 
@@ -267,7 +267,7 @@ struct ParallelJobInstance
     uint32_t jobSize;                  // 28 - The number of elements in the job
     uint32_t batchSize;                // 2C - The preferred size of job batch (auto calculated if zero)
     JobFamily* family;                 // 30
-    uint64_t unk18;                    // 38
+    uint64_t unk38;                    // 38
 };
 RED4EXT_ASSERT_SIZE(ParallelJobInstance, 0x40);
 RED4EXT_ASSERT_OFFSET(ParallelJobInstance, handleFunc, 0x00);
@@ -308,7 +308,9 @@ struct ParallelJobClosure : ParallelJobInstance
                             const JobGroup& aGroup)
     {
         if (aFromInclusive >= aToExclusive)
+        {
             return;
+        }
 
         JobInternals::SetLocalThreadParam(aGroup.params.unk02);
 
@@ -411,7 +413,7 @@ public:
      * @param aHandler The closure instance.
      */
     template<typename HandlerType>
-    requires Detail::IsAnyRegualrJobHandler<HandlerType>
+    requires Detail::IsAnyRegularJobHandler<HandlerType>
     void Dispatch(HandlerType&& aHandler)
     {
         DispatchJob(JobClosure(std::forward<HandlerType>(aHandler)));
