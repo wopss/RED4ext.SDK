@@ -8,5 +8,5 @@
 
 RED4EXT_INLINE const char* RED4ext::CName::ToString() const
 {
-    return CNamePool::Get(*this);
+    return CNamePool::GetString(*this);
 }
