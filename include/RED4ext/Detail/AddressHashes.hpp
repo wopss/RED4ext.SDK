@@ -158,6 +158,7 @@ constexpr std::uint32_t ISerializable_Counter = 2630817091;
 #pragma region JobDispatcher
 constexpr std::uint32_t JobDispatcher = 1508445968UL;
 constexpr std::uint32_t JobDispatcher_DispatchJob = 2621709954UL;
+constexpr std::uint32_t JobDispatcher_DispatchParallelJob = 4117243690UL;
 #pragma endregion
 
 #pragma region JobHandle

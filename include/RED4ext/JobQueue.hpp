@@ -1,7 +1,7 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
-#include <RED4ext/Detail/Function.hpp>
+#include <RED4ext/Detail/JobQueue.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Memory/Utils.hpp>
 
@@ -166,33 +166,32 @@ RED4EXT_ASSERT_OFFSET(JobInstance, family, 0x10);
 /**
  * @brief An implementation of closure based jobs.
  *
- * @tparam L The closure type.
+ * @tparam HandlerType The closure type.
  */
-template<typename L>
-requires Detail::IsClosure<L, void, const JobGroup&> || Detail::IsClosure<L, void>
+template<typename HandlerType>
+requires Detail::IsAnyRegualrJobHandler<HandlerType>
 struct JobClosure : JobInstance
 {
     using AllocatorType = Memory::Jobs2DataAllocator;
-    using ClosureType = L;
-    using ClosurePtr = L*;
+    using HandlerPtr = HandlerType*;
 
-    JobClosure(ClosureType&& aClosure)
-        : JobInstance(&HandleTarget, CreateTarget(std::move(aClosure)), &GetFamily())
+    JobClosure(HandlerType&& aClosure)
+        : JobInstance(&HandleTarget, CreateTarget(std::forward<HandlerType>(aClosure)), &GetFamily())
     {
     }
 
-    static ClosurePtr CreateTarget(ClosureType&& aClosure)
+    static HandlerPtr CreateTarget(HandlerType&& aClosure)
     {
         // In this case the target is the closure itself.
         // We move the closure to our storage to extend its lifetime until the job is executed.
-        return Memory::New<AllocatorType, ClosureType>(std::move(aClosure));
+        return Memory::New<AllocatorType, HandlerType>(std::move(aClosure));
     }
 
-    static void HandleTarget(ClosurePtr aTarget, const JobGroup& aGroup)
+    static void HandleTarget(HandlerPtr aTarget, const JobGroup& aGroup)
     {
         JobInternals::SetLocalThreadParam(aGroup.params.unk02);
 
-        if constexpr (Detail::IsClosure<ClosureType, void, const JobGroup&>)
+        if constexpr (Detail::IsJobHandlerWithGroupParam<HandlerType>)
         {
             (*aTarget)(aGroup);
         }
@@ -203,6 +202,162 @@ struct JobClosure : JobInstance
 
         JobInternals::SetLocalThreadParam(255);
         Memory::Delete<AllocatorType>(aTarget);
+    }
+
+    inline static JobFamily& GetFamily()
+    {
+        static JobFamily s_family;
+        return s_family;
+    }
+};
+
+/**
+ * @brief A parallel job payload for the job dispatcher.
+ * Contains job data and a handler functions to execute.
+ * Parallel job is split into batches that are simultaneously executed.
+ */
+struct ParallelJobInstance
+{
+    template<typename T>
+    using TargetPtr = T*;
+
+    template<typename Primary, typename Secondary>
+    using HandleFunc = void (*)(TargetPtr<Primary>, TargetPtr<Secondary>, uint32_t, uint32_t, const JobGroup&);
+
+    template<typename Primary, typename Secondary>
+    using FinishFunc = void (*)(TargetPtr<Primary>, TargetPtr<Secondary>, uint32_t, const JobGroup&);
+
+    template<typename Primary>
+    ParallelJobInstance(HandleFunc<Primary, void> aHandler, FinishFunc<Primary, void> aFinisher,
+                        TargetPtr<Primary> aPrimaryTarget, uint32_t aJobSize, uint32_t aBatchSize,
+                        JobFamily* aFamily) noexcept
+        : handleFunc(reinterpret_cast<HandleFunc<void, void>>(aHandler))
+        , finishFunc(reinterpret_cast<FinishFunc<void, void>>(aFinisher))
+        , primaryTarget(reinterpret_cast<TargetPtr<void>>(aPrimaryTarget))
+        , secondaryTarget(nullptr)
+        , jobSize(aJobSize)
+        , batchSize(aBatchSize)
+        , family(aFamily)
+        , unk08(0)
+        , unk18(0)
+    {
+    }
+
+    template<typename Primary, typename Secondary>
+    ParallelJobInstance(HandleFunc<Primary, Secondary> aHandler, FinishFunc<Primary, Secondary> aFinisher,
+                        TargetPtr<Primary> aPrimaryTarget, TargetPtr<Secondary> aSecondaryTarget, uint32_t aJobSize,
+                        uint32_t aBatchSize, JobFamily* aFamily) noexcept
+        : handleFunc(reinterpret_cast<HandleFunc<void, void>>(aHandler))
+        , finishFunc(reinterpret_cast<FinishFunc<void, void>>(aFinisher))
+        , primaryTarget(reinterpret_cast<TargetPtr<void>>(aPrimaryTarget))
+        , secondaryTarget(reinterpret_cast<TargetPtr<void>>(aSecondaryTarget))
+        , jobSize(aJobSize)
+        , batchSize(aBatchSize)
+        , family(aFamily)
+        , unk08(0)
+        , unk18(0)
+    {
+    }
+
+    HandleFunc<void, void> handleFunc; // 00 - Called by job dispatcher to execute the job batch
+    uint64_t unk08;                    // 08
+    FinishFunc<void, void> finishFunc; // 10 - Called by job dispatcher after executing all job batches
+    TargetPtr<void> primaryTarget;     // 18 - Job data passed to the handler as first argument
+    TargetPtr<void> secondaryTarget;   // 20 - Job data passed to the handler as second argument
+    uint32_t jobSize;                  // 28 - The number of elements in the job
+    uint32_t batchSize;                // 2C - The preferred size of job batch (auto calculated if zero)
+    JobFamily* family;                 // 30
+    uint64_t unk18;                    // 38
+};
+RED4EXT_ASSERT_SIZE(JobInstance, 0x20);
+RED4EXT_ASSERT_OFFSET(JobInstance, handler, 0x00);
+RED4EXT_ASSERT_OFFSET(JobInstance, target, 0x08);
+RED4EXT_ASSERT_OFFSET(JobInstance, family, 0x10);
+
+/**
+ * @brief An implementation of closure based parallel jobs.
+ *
+ * @tparam HandlerType The closure type to execute for job batch.
+ * @tparam FinisherType The closure type to execute afater all batches are finished.
+ */
+template<typename HandlerType, typename FinisherType>
+requires Detail::IsAnyParallelJobHandler<HandlerType> && Detail::IsAnyParallelJobFinisher<FinisherType>
+struct ParallelJobClosure : ParallelJobInstance
+{
+    using AllocatorType = Memory::Jobs2DataAllocator;
+    using HandlerPtr = HandlerType*;
+    using FinisherPtr = FinisherType*;
+
+    ParallelJobClosure(HandlerType&& aHandler, FinisherType&& aFinisher, uint32_t aJobSize, uint32_t aBatchSize)
+        : ParallelJobInstance(&HandleBatch, &FinishJob, CreateTarget(std::forward<HandlerType>(aHandler)),
+                              CreateTarget(std::forward<FinisherType>(aFinisher)), aJobSize, aBatchSize, &GetFamily())
+    {
+    }
+
+    template<typename ClosureType>
+    static ClosureType* CreateTarget(ClosureType&& aClosure)
+    {
+        return Memory::New<AllocatorType, ClosureType>(std::move(aClosure));
+    }
+
+    static void HandleBatch(HandlerPtr aHandler, FinisherPtr aFinisher, uint32_t aFromInclusive, uint32_t aToExclusive,
+                            const JobGroup& aGroup)
+    {
+        if (aFromInclusive >= aToExclusive)
+            return;
+
+        JobInternals::SetLocalThreadParam(aGroup.params.unk02);
+
+        if constexpr (Detail::IsJobHandlerWithRangeAndGroupParams<HandlerType>)
+        {
+            (*aHandler)(aFromInclusive, aToExclusive, aGroup);
+        }
+        else if constexpr (Detail::IsJobHandlerWithRangeParams<HandlerType>)
+        {
+            (*aHandler)(aFromInclusive, aToExclusive);
+        }
+        else
+        {
+            for (auto i = aFromInclusive; i < aToExclusive; ++i)
+            {
+                if constexpr (Detail::IsJobHandlerWithIndexAndGroupParams<HandlerType>)
+                {
+                    (*aHandler)(i, aGroup);
+                }
+                else
+                {
+                    (*aHandler)(i);
+                }
+            }
+        }
+
+        JobInternals::SetLocalThreadParam(255);
+    }
+
+    static void FinishJob(HandlerPtr aHandler, FinisherPtr aFinisher, uint32_t aJobSize, const JobGroup& aGroup)
+    {
+        if (aFinisher)
+        {
+            JobInternals::SetLocalThreadParam(aGroup.params.unk02);
+
+            if constexpr (Detail::IsJobHandlerWithIndexAndGroupParams<FinisherType>)
+            {
+                (*aFinisher)(aJobSize, aGroup);
+            }
+            else if constexpr (Detail::IsJobHandlerWithGroupParam<FinisherType>)
+            {
+                (*aFinisher)(aGroup);
+            }
+            else
+            {
+                (*aFinisher)();
+            }
+
+            JobInternals::SetLocalThreadParam(255);
+            Memory::Delete<AllocatorType>(aFinisher);
+        }
+
+        Memory::Delete<AllocatorType>(aHandler);
     }
 
     inline static JobFamily& GetFamily()
@@ -248,14 +403,45 @@ public:
     /**
      * @brief Adds a closure based job to the queue.
      *
-     * @tparam L The closure type.
-     * @param aClosure The closure instance.
+     * @tparam HandlerType The closure type.
+     * @param aHandler The closure instance.
      */
-    template<typename L>
-    requires Detail::IsClosure<L, void, JobGroup&> || Detail::IsClosure<L, void>
-    void Dispatch(L&& aClosure)
+    template<typename HandlerType>
+    requires Detail::IsAnyRegualrJobHandler<HandlerType>
+    void Dispatch(HandlerType&& aHandler)
     {
-        DispatchJob(JobClosure(std::move(aClosure)));
+        DispatchJob(JobClosure(std::forward<HandlerType>(aHandler)));
+        SyncWait();
+    }
+
+    /**
+     * @brief Adds a closure based parallel job to the queue.
+     *
+     * @tparam HandlerType The handler closure type.
+     * @param aHandler The closure to execute for each job batch.
+     */
+    template<typename HandlerType>
+    requires Detail::IsAnyParallelJobHandler<HandlerType>
+    void Dispatch(HandlerType&& aHandler, uint32_t aJobSize, uint32_t aBatchSize = 0)
+    {
+        DispatchJob(ParallelJobClosure(std::forward<HandlerType>(aHandler), []{}, aJobSize, aBatchSize));
+        SyncWait();
+    }
+
+    /**
+     * @brief Adds a closure based parallel job to the queue.
+     *
+     * @tparam HandlerType The handler closure type.
+     * @tparam FinisherType The finisher closure type.
+     * @param aHandler The closure to execute for each job batch.
+     * @param aFinisher The closure to execute when all batches are finished.
+     */
+    template<typename HandlerType, typename FinisherType>
+    requires Detail::IsAnyParallelJobHandler<HandlerType> && Detail::IsAnyParallelJobFinisher<FinisherType>
+    void Dispatch(HandlerType&& aHandler, FinisherType&& aFinisher, uint32_t aJobSize, uint32_t aBatchSize = 0)
+    {
+        DispatchJob(ParallelJobClosure(std::forward<HandlerType>(aHandler), std::forward<FinisherType>(aFinisher),
+                                       aJobSize, aBatchSize));
         SyncWait();
     }
 
@@ -286,6 +472,7 @@ public:
 
 private:
     void DispatchJob(const JobInstance& aJob);
+    void DispatchJob(const ParallelJobInstance& aJob);
     void SyncWait();
 };
 RED4EXT_ASSERT_SIZE(JobQueue, 0x38);

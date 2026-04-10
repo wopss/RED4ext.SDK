@@ -174,6 +174,14 @@ RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
     func(dispatcher, aJob, params.unk00, unk10.internal, unk18.internal);
 }
 
+RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const ParallelJobInstance& aJob)
+{
+    using func_t = void (*)(void*, const ParallelJobInstance&, uint8_t, JobInternalHandle*, JobInternalHandle*);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobDispatcher_DispatchParallelJob);
+
+    func(nullptr, aJob, params.unk00, unk10.internal, unk18.internal);
+}
+
 RED4EXT_INLINE void RED4ext::JobQueue::SyncWait()
 {
     using func_t = void (*)(JobQueue*);
