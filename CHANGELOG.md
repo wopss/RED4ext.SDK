@@ -12,16 +12,16 @@ and this project adheres to
 
 - Add `DynArray` constructors for input iterators and containers satisfying `std::ranges::range` concept.
 - Add STL-like constructors and methods for `DynArray`, `StaticArray`: `Resize()`, `Insert()`, `Erase()`, etc
-- Add `IRenderObject` (#194)
-- Add `TRenderPtr<>`, a smart pointer for types inheriting `IRenderObject` (#194)
-- Add `IRenderResource` (#194)
+- Add `IRenderObject` (#194).
+- Add `TRenderPtr<>`, a smart pointer for types inheriting `IRenderObject` (#194).
+- Add `IRenderResource` (#194).
 
 ### Changed
 
 - Move `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
 - Make `DynArray`, `StaticArray`, `Span` fields private, use getter methods instead: `Data()`, `Size()`, etc.
 - Rename `Span::GetSize()` to `Span::Size()`
-- Move render types (`IRenderProxy`, `IRenderResource`, etc.) into respective files in `RED4ext/Rendering/` (#194)
+- Move render types (`IRenderProxy`, `IRenderResource`, etc.) into respective files in `RED4ext/Rendering/` (#194).
 
 ### Removed
 
