@@ -6,7 +6,7 @@
 
 namespace RED4ext
 {
-class JobGroup;
+struct JobGroup;
 
 namespace Detail
 {

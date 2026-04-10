@@ -424,7 +424,7 @@ public:
     requires Detail::IsAnyParallelJobHandler<HandlerType>
     void Dispatch(HandlerType&& aHandler, uint32_t aJobSize, uint32_t aBatchSize = 0)
     {
-        DispatchJob(ParallelJobClosure(std::forward<HandlerType>(aHandler), []{}, aJobSize, aBatchSize));
+        DispatchJob(ParallelJobClosure(std::forward<HandlerType>(aHandler), [] {}, aJobSize, aBatchSize));
         SyncWait();
     }
 
