@@ -3,7 +3,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
-#include <RED4ext/RenderProxy.hpp>
+#include <RED4ext/Rendering/RenderProxy.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CMesh.hpp>
 #include <RED4ext/Scripting/Natives/Generated/NavGenNavigationSetting.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/ForcedLodDistance.hpp>

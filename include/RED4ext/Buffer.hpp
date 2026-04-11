@@ -31,6 +31,9 @@ struct RawBuffer
     RawBuffer(RawBuffer&&) = default;
     ~RawBuffer();
 
+    RawBuffer& operator=(const RawBuffer& aRhs) = delete;
+    RawBuffer& operator=(RawBuffer&& aRhs) = default;
+
     Memory::IAllocator* GetAllocator() const;
     void Initialize(Memory::IAllocator* aAllocator, uint32_t aSize, uint32_t aAlignment = 8);
     void Resize(uint32_t aSize);
