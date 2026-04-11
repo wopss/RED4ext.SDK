@@ -12,7 +12,10 @@
 
 namespace RED4ext
 {
-struct CBaseRTTIType;
+namespace rtti
+{
+struct IType;
+}
 struct IScriptable;
 struct CGameOptions;
 
@@ -31,25 +34,25 @@ enum class EEngineState : int32_t
 
 struct GameInstance
 {
-    virtual ~GameInstance() = 0;                                    // 00
-    virtual IScriptable* GetSystem(const CBaseRTTIType* aType) = 0; // 08
-    virtual void Unk_10() = 0;                                      // 10
-    virtual void Unk_18() = 0;                                      // 18
-    virtual void Unk_20() = 0;                                      // 20
-    virtual void Unk_28() = 0;                                      // 28
-    virtual void Unk_30() = 0;                                      // 30
-    virtual void Unk_38() = 0;                                      // 38
-    virtual void Unk_40() = 0;                                      // 40
-    virtual void Unk_48() = 0;                                      // 48
-    virtual void Unk_50() = 0;                                      // 50
-    virtual void Unk_58() = 0;                                      // 58
-    virtual void Unk_60() = 0;                                      // 60
-    virtual void Unk_68() = 0;                                      // 68
+    virtual ~GameInstance() = 0;                                  // 00
+    virtual IScriptable* GetSystem(const rtti::IType* aType) = 0; // 08
+    virtual void Unk_10() = 0;                                    // 10
+    virtual void Unk_18() = 0;                                    // 18
+    virtual void Unk_20() = 0;                                    // 20
+    virtual void Unk_28() = 0;                                    // 28
+    virtual void Unk_30() = 0;                                    // 30
+    virtual void Unk_38() = 0;                                    // 38
+    virtual void Unk_40() = 0;                                    // 40
+    virtual void Unk_48() = 0;                                    // 48
+    virtual void Unk_50() = 0;                                    // 50
+    virtual void Unk_58() = 0;                                    // 58
+    virtual void Unk_60() = 0;                                    // 60
+    virtual void Unk_68() = 0;                                    // 68
 
-    HashMap<CBaseRTTIType*, Handle<IScriptable>> systemMap;        // 08 - Maps implementation type to instance
-    DynArray<Handle<IScriptable>> systemInstances;                 // 38
-    HashMap<CBaseRTTIType*, CBaseRTTIType*> systemImplementations; // 48 - Maps interface type to implementation type
-    uintptr_t unk78[(0x138 - 0x78) >> 3];                          // 78
+    HashMap<rtti::IType*, Handle<IScriptable>> systemMap;      // 08 - Maps implementation type to instance
+    DynArray<Handle<IScriptable>> systemInstances;             // 38
+    HashMap<rtti::IType*, rtti::IType*> systemImplementations; // 48 - Maps interface type to implementation type
+    uintptr_t unk78[(0x138 - 0x78) >> 3];                      // 78
 };
 RED4EXT_ASSERT_SIZE(GameInstance, 0x138);
 
@@ -91,8 +94,8 @@ struct CBaseEngine
     };
     RED4EXT_ASSERT_SIZE(Unk110, 0x10);
 
-    virtual CBaseRTTIType* GetNativeType() = 0;                                                 // 00
-    virtual CBaseRTTIType* GetParentType() = 0;                                                 // 08
+    virtual rtti::IType* GetNativeType() = 0;                                                   // 00
+    virtual rtti::IType* GetParentType() = 0;                                                   // 08
     virtual Memory::IAllocator* GetAllocator() = 0;                                             // 10
     virtual ~CBaseEngine() = 0;                                                                 // 18
     virtual void sub_18() = 0;                                                                  // 20

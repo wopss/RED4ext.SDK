@@ -22,10 +22,14 @@ and this project adheres to
 - Move `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
 - Make `DynArray`, `StaticArray`, `Span` fields private, use getter methods instead: `Data()`, `Size()`, etc.
 - Rename `Span::GetSize()` to `Span::Size()`
+- Rename `ERTTIType` to `rtti::ERTTIType` (#193).
+- Rename `CBaseRTTIType` to `rtti::IType` (#193).
+- Move `ERTTIType` and `rtti::IType` into respective files in `RED4ext/rtti/` (#193).
 - Move render types (`IRenderProxy`, `IRenderResource`, etc.) into respective files in `RED4ext/Rendering/` (#194).
 
 ### Removed
 
+- Remove `ScriptInstance` alias, use `void*` instead (#193).
 - Remove implicit boolean conversion for `Span`, use `Span::IsEmpty()` instead.
 
 ## [1.0.0] - 2026-03-09

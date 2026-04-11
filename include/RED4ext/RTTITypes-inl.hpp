@@ -10,181 +10,10 @@
 #include <RED4ext/Scripting/CProperty.hpp>
 #include <RED4ext/Scripting/Functions.hpp>
 
-RED4EXT_INLINE RED4ext::CBaseRTTIType::CBaseRTTIType()
-    : unk8(0)
-{
-}
-
-RED4EXT_INLINE RED4ext::CString RED4ext::CBaseRTTIType::GetTypeName() const
-{
-    switch (GetType())
-    {
-    case ERTTIType::Name:
-    {
-        return "RT_Name";
-    }
-    case ERTTIType::Fundamental:
-    {
-        return "RT_Fundamental";
-    }
-    case ERTTIType::Class:
-    {
-        return "RT_Class";
-    }
-    case ERTTIType::Array:
-    {
-        return "RT_Array";
-    }
-    case ERTTIType::Simple:
-    {
-        return "RT_Simple";
-    }
-    case ERTTIType::Enum:
-    {
-        return "RT_Enum";
-    }
-    case ERTTIType::StaticArray:
-    {
-        return "RT_StaticArray";
-    }
-    case ERTTIType::NativeArray:
-    {
-        return "RT_NativeArray";
-    }
-    case ERTTIType::Pointer:
-    {
-        return "RT_Pointer";
-    }
-    case ERTTIType::Handle:
-    {
-        return "RT_Handle";
-    }
-    case ERTTIType::WeakHandle:
-    {
-        return "RT_WeakHandle";
-    }
-    case ERTTIType::ResourceReference:
-    {
-        return "RT_ResourceReference";
-    }
-    case ERTTIType::ResourceAsyncReference:
-    {
-        return "RT_ResourceAsyncReference";
-    }
-    case ERTTIType::BitField:
-    {
-        return "RT_BitField";
-    }
-    case ERTTIType::LegacySingleChannelCurve:
-    {
-        return "RT_LegacySingleChannelCurve";
-    }
-    case ERTTIType::ScriptReference:
-    {
-        return "RT_ScriptReference";
-    }
-    default:
-    {
-        return "Unhandled ERTTITypeType";
-    }
-    }
-}
-
-RED4EXT_INLINE RED4ext::CName RED4ext::CBaseRTTIType::GetComputedName() const
-{
-    std::string name = "script_ref:";
-    auto hash = GetName();
-    if (!hash.IsNone())
-    {
-        name += hash.ToString();
-        return CNamePool::Add(name.c_str());
-    }
-
-    return 0ull;
-}
-
-RED4EXT_INLINE void RED4ext::CBaseRTTIType::Move(ScriptInstance aLhs, ScriptInstance aRhs) const
-{
-    Assign(aLhs, aRhs);
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::ToString(const ScriptInstance aInstance, CString& aOut) const
-{
-    RED4EXT_UNUSED_PARAMETER(aInstance);
-    RED4EXT_UNUSED_PARAMETER(aOut);
-
-    return false;
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::FromString(ScriptInstance aInstance, const CString& aString) const
-{
-    RED4EXT_UNUSED_PARAMETER(aInstance);
-    RED4EXT_UNUSED_PARAMETER(aString);
-
-    return false;
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_78()
-{
-    return true;
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_80(int64_t a1, ScriptInstance aInstance)
-{
-    using func_t = bool (*)(CBaseRTTIType*, int64_t, ScriptInstance);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_80);
-    return func(this, a1, aInstance);
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_88(int64_t a1, ScriptInstance aInstance)
-{
-    using func_t = bool (*)(CBaseRTTIType*, int64_t, ScriptInstance);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_88);
-    return func(this, a1, aInstance);
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4)
-{
-    using func_t = bool (*)(CBaseRTTIType*, int64_t, ScriptInstance, CString&, int64_t);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_90);
-    return func(this, a1, aInstance, a3, a4);
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4,
-                                                   bool a5)
-{
-    using func_t = bool (*)(CBaseRTTIType*, int64_t, ScriptInstance, CString&, int64_t, bool);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_98);
-    return func(this, a1, aInstance, a3, a4, a5);
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_A0(int64_t a1, CString& a2, bool a3)
-{
-    using func_t = bool (*)(CBaseRTTIType*, int64_t, CString&, bool);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_A0);
-    return func(this, a1, a2, a3);
-}
-
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_A8()
-{
-    return false;
-}
-
-RED4EXT_INLINE void RED4ext::CBaseRTTIType::sub_B0(int64_t a1, int64_t a2)
-{
-    RED4EXT_UNUSED_PARAMETER(a1);
-    RED4EXT_UNUSED_PARAMETER(a2);
-}
-
-RED4EXT_INLINE RED4ext::Memory::IAllocator* RED4ext::CBaseRTTIType::GetAllocator() const
-{
-    return Memory::RTTIAllocator::Get();
-}
-
 RED4EXT_INLINE RED4ext::CClass::CClass(CName aName, uint32_t aSize, Flags aFlags)
     : parent(nullptr)
     , name(aName)
-    , computedName(CBaseRTTIType::GetComputedName())
+    , computedName(rtti::IType::GetComputedName())
     , size(aSize)
     , flags(aFlags)
     , holderSize(0)
@@ -227,9 +56,9 @@ RED4EXT_INLINE uint32_t RED4ext::CClass::GetAlignment() const
     return alignment;
 }
 
-RED4EXT_INLINE RED4ext::ERTTIType RED4ext::CClass::GetType() const
+RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CClass::GetType() const
 {
-    return ERTTIType::Class;
+    return rtti::ERTTIType::Class;
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CClass::GetComputedName() const
@@ -237,56 +66,56 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CClass::GetComputedName() const
     return computedName;
 }
 
-RED4EXT_INLINE void RED4ext::CClass::Construct(ScriptInstance aMemory) const
+RED4EXT_INLINE void RED4ext::CClass::Construct(void* aMemory) const
 {
     ConstructCls(aMemory);
 }
 
-RED4EXT_INLINE void RED4ext::CClass::Destruct(ScriptInstance aMemory) const
+RED4EXT_INLINE void RED4ext::CClass::Destruct(void* aMemory) const
 {
     DestructCls(aMemory);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const
+RED4EXT_INLINE bool RED4ext::CClass::Unserialize(BaseStream* aStream, void* aInstance, int64_t a3) const
 {
-    using func_t = bool (*)(const CClass*, BaseStream*, ScriptInstance, int64_t);
+    using func_t = bool (*)(const CClass*, BaseStream*, void*, int64_t);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_Unserialize);
     return func(this, aStream, aInstance, a3);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::ToString(const ScriptInstance aInstance, CString& aOut) const
+RED4EXT_INLINE bool RED4ext::CClass::ToString(const void* aInstance, CString& aOut) const
 {
-    using func_t = bool (*)(const CClass*, ScriptInstance, CString&);
+    using func_t = bool (*)(const CClass*, const void*, CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_ToString);
     return func(this, aInstance, aOut);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::sub_80(int64_t a1, ScriptInstance aInstance)
+RED4EXT_INLINE bool RED4ext::CClass::sub_80(int64_t a1, void* aInstance)
 {
-    using func_t = bool (*)(const CClass*, int64_t, ScriptInstance);
+    using func_t = bool (*)(const CClass*, int64_t, void*);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_sub_80);
     return func(this, a1, aInstance);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::sub_88(int64_t a1, ScriptInstance aInstance)
+RED4EXT_INLINE bool RED4ext::CClass::sub_88(int64_t a1, void* aInstance)
 {
-    using func_t = bool (*)(const CClass*, int64_t, ScriptInstance);
+    using func_t = bool (*)(const CClass*, int64_t, void*);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_sub_88);
     return func(this, a1, aInstance);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4)
+RED4EXT_INLINE bool RED4ext::CClass::sub_90(int64_t a1, void* aInstance, CString& a3, int64_t a4)
 {
-    using func_t = bool (*)(const CClass*, int64_t, ScriptInstance, CString&, int64_t);
+    using func_t = bool (*)(const CClass*, int64_t, void*, CString&, int64_t);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_sub_90);
     return func(this, a1, aInstance, a3, a4);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5)
+RED4EXT_INLINE bool RED4ext::CClass::sub_98(int64_t a1, void* aInstance, CString& a3, int64_t a4, bool a5)
 {
     RED4EXT_UNUSED_PARAMETER(a5);
 
-    using func_t = bool (*)(const CClass*, int64_t, ScriptInstance, CString&, int64_t);
+    using func_t = bool (*)(const CClass*, int64_t, void*, CString&, int64_t);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_sub_90);
     return func(this, a1, aInstance, a3, a4);
 }
@@ -326,14 +155,14 @@ RED4EXT_INLINE bool RED4ext::CClass::sub_D0() const
     return func(this);
 }
 
-RED4EXT_INLINE RED4ext::ScriptInstance RED4ext::CClass::CreateInstance(bool aZeroMemory) const
+RED4EXT_INLINE void* RED4ext::CClass::CreateInstance(bool aZeroMemory) const
 {
-    using func_t = ScriptInstance (*)(const CClass*, uint32_t, bool);
+    using func_t = void* (*)(const CClass*, uint32_t, bool);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_CreateInstance);
     return func(this, GetSize(), aZeroMemory);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::IsA(const CBaseRTTIType* aType) const
+RED4EXT_INLINE bool RED4ext::CClass::IsA(const rtti::IType* aType) const
 {
     if (this == aType)
     {
@@ -358,13 +187,13 @@ RED4EXT_INLINE RED4ext::CProperty* RED4ext::CClass::GetProperty(CName aName)
     return func(this, aName);
 }
 
-RED4EXT_INLINE void RED4ext::CClass::InitializeProperties(ScriptInstance aInstance)
+RED4EXT_INLINE void RED4ext::CClass::InitializeProperties(void* aInstance)
 {
-    static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> initializeProperties(
+    static UniversalRelocFunc<void (*)(CClass*, void*)> initializeProperties(
         Detail::AddressHashes::CClass_InitializeProperties);
     initializeProperties(this, aInstance);
 
-    static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> assignDefaultValuesToProperties(
+    static UniversalRelocFunc<void (*)(CClass*, void*)> assignDefaultValuesToProperties(
         Detail::AddressHashes::CClass_AssignDefaultValuesToProperties);
     assignDefaultValuesToProperties(this, aInstance);
 }
@@ -423,7 +252,7 @@ RED4EXT_INLINE void RED4ext::CClass::ClearScriptedData()
 
 RED4EXT_INLINE RED4ext::CEnum::CEnum(CName aName, int8_t aActualSize, Flags aFlags)
     : name(aName)
-    , computedName(CBaseRTTIType::GetComputedName())
+    , computedName(rtti::IType::GetComputedName())
     , actualSize(aActualSize)
     , flags(aFlags)
     , hashList(Memory::RTTIAllocator::Get())
@@ -448,9 +277,9 @@ RED4EXT_INLINE uint32_t RED4ext::CEnum::GetAlignment() const
     return 1;
 }
 
-RED4EXT_INLINE RED4ext::ERTTIType RED4ext::CEnum::GetType() const
+RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CEnum::GetType() const
 {
-    return ERTTIType::Enum;
+    return rtti::ERTTIType::Enum;
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CEnum::GetComputedName() const
@@ -458,17 +287,17 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CEnum::GetComputedName() const
     return computedName;
 }
 
-RED4EXT_INLINE void RED4ext::CEnum::Construct(ScriptInstance aMemory) const
+RED4EXT_INLINE void RED4ext::CEnum::Construct(void* aMemory) const
 {
     RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
-RED4EXT_INLINE void RED4ext::CEnum::Destruct(ScriptInstance aMemory) const
+RED4EXT_INLINE void RED4ext::CEnum::Destruct(void* aMemory) const
 {
     RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
-RED4EXT_INLINE const bool RED4ext::CEnum::IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3)
+RED4EXT_INLINE const bool RED4ext::CEnum::IsEqual(const void* aLhs, const void* aRhs, uint32_t a3)
 {
     RED4EXT_UNUSED_PARAMETER(a3);
 
@@ -495,7 +324,7 @@ RED4EXT_INLINE const bool RED4ext::CEnum::IsEqual(const ScriptInstance aLhs, con
     return false;
 }
 
-RED4EXT_INLINE void RED4ext::CEnum::Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const
+RED4EXT_INLINE void RED4ext::CEnum::Assign(void* aLhs, const void* aRhs) const
 {
     switch (actualSize)
     {
@@ -522,30 +351,30 @@ RED4EXT_INLINE void RED4ext::CEnum::Assign(ScriptInstance aLhs, const ScriptInst
     }
 }
 
-RED4EXT_INLINE bool RED4ext::CEnum::Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const
+RED4EXT_INLINE bool RED4ext::CEnum::Unserialize(BaseStream* aStream, void* aInstance, int64_t a3) const
 {
-    using func_t = bool (*)(const CEnum*, BaseStream*, ScriptInstance, int64_t);
+    using func_t = bool (*)(const CEnum*, BaseStream*, void*, int64_t);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CEnum_Unserialize);
     return func(this, aStream, aInstance, a3);
 }
 
-RED4EXT_INLINE bool RED4ext::CEnum::ToString(const ScriptInstance aInstance, CString& aOut) const
+RED4EXT_INLINE bool RED4ext::CEnum::ToString(const void* aInstance, CString& aOut) const
 {
-    using func_t = bool (*)(const CEnum*, const ScriptInstance, CString&);
+    using func_t = bool (*)(const CEnum*, const void*, CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CEnum_ToString);
     return func(this, aInstance, aOut);
 }
 
-RED4EXT_INLINE bool RED4ext::CEnum::FromString(ScriptInstance aInstance, const CString& aString) const
+RED4EXT_INLINE bool RED4ext::CEnum::FromString(void* aInstance, const CString& aString) const
 {
-    using func_t = bool (*)(const CEnum*, ScriptInstance, const CString&);
+    using func_t = bool (*)(const CEnum*, void*, const CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CEnum_FromString);
     return func(this, aInstance, aString);
 }
 
 RED4EXT_INLINE RED4ext::CBitfield::CBitfield(CName aName, int8_t aActualSize, Flags aFlags)
     : name(aName)
-    , computedName(CBaseRTTIType::GetComputedName())
+    , computedName(rtti::IType::GetComputedName())
     , actualSize(aActualSize)
     , flags(aFlags)
     , validBits(0)
@@ -568,9 +397,9 @@ RED4EXT_INLINE uint32_t RED4ext::CBitfield::GetAlignment() const
     return 1;
 }
 
-RED4EXT_INLINE RED4ext::ERTTIType RED4ext::CBitfield::GetType() const
+RED4EXT_INLINE RED4ext::rtti::ERTTIType RED4ext::CBitfield::GetType() const
 {
-    return ERTTIType::BitField;
+    return rtti::ERTTIType::BitField;
 }
 
 RED4EXT_INLINE RED4ext::CName RED4ext::CBitfield::GetComputedName() const
@@ -578,17 +407,17 @@ RED4EXT_INLINE RED4ext::CName RED4ext::CBitfield::GetComputedName() const
     return computedName;
 }
 
-RED4EXT_INLINE void RED4ext::CBitfield::Construct(ScriptInstance aMemory) const
+RED4EXT_INLINE void RED4ext::CBitfield::Construct(void* aMemory) const
 {
     RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
-RED4EXT_INLINE void RED4ext::CBitfield::Destruct(ScriptInstance aMemory) const
+RED4EXT_INLINE void RED4ext::CBitfield::Destruct(void* aMemory) const
 {
     RED4EXT_UNUSED_PARAMETER(aMemory);
 }
 
-RED4EXT_INLINE const bool RED4ext::CBitfield::IsEqual(const ScriptInstance aLhs, const ScriptInstance aRhs, uint32_t a3)
+RED4EXT_INLINE const bool RED4ext::CBitfield::IsEqual(const void* aLhs, const void* aRhs, uint32_t a3)
 {
     RED4EXT_UNUSED_PARAMETER(a3);
 
@@ -615,7 +444,7 @@ RED4EXT_INLINE const bool RED4ext::CBitfield::IsEqual(const ScriptInstance aLhs,
     return false;
 }
 
-RED4EXT_INLINE void RED4ext::CBitfield::Assign(ScriptInstance aLhs, const ScriptInstance aRhs) const
+RED4EXT_INLINE void RED4ext::CBitfield::Assign(void* aLhs, const void* aRhs) const
 {
     switch (actualSize)
     {
@@ -642,23 +471,23 @@ RED4EXT_INLINE void RED4ext::CBitfield::Assign(ScriptInstance aLhs, const Script
     }
 }
 
-RED4EXT_INLINE bool RED4ext::CBitfield::Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const
+RED4EXT_INLINE bool RED4ext::CBitfield::Unserialize(BaseStream* aStream, void* aInstance, int64_t a3) const
 {
-    using func_t = bool (*)(const CBitfield*, BaseStream*, ScriptInstance, int64_t);
+    using func_t = bool (*)(const CBitfield*, BaseStream*, void*, int64_t);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBitfield_Unserialize);
     return func(this, aStream, aInstance, a3);
 }
 
-RED4EXT_INLINE bool RED4ext::CBitfield::ToString(const ScriptInstance aInstance, CString& aOut) const
+RED4EXT_INLINE bool RED4ext::CBitfield::ToString(const void* aInstance, CString& aOut) const
 {
-    using func_t = bool (*)(const CBitfield*, ScriptInstance, CString&);
+    using func_t = bool (*)(const CBitfield*, const void*, CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBitfield_ToString);
     return func(this, aInstance, aOut);
 }
 
-RED4EXT_INLINE bool RED4ext::CBitfield::FromString(ScriptInstance aInstance, const CString& aString) const
+RED4EXT_INLINE bool RED4ext::CBitfield::FromString(void* aInstance, const CString& aString) const
 {
-    using func_t = bool (*)(const CBitfield*, ScriptInstance, const CString&);
+    using func_t = bool (*)(const CBitfield*, void*, const CString&);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBitfield_FromString);
     return func(this, aInstance, aString);
 }
