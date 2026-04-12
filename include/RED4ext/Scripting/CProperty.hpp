@@ -48,13 +48,13 @@ struct CProperty
     };
     RED4EXT_ASSERT_SIZE(Flags, 0x8);
 
-    CProperty(CBaseRTTIType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
+    CProperty(rtti::IType* aType, const char* aName, CClass* aParent = nullptr, uint32_t aValueOffset = 0,
               const char* aGroup = nullptr, Flags aFlags = {});
 
-    static CProperty* Create(CBaseRTTIType* aType, const char* aName, CClass* aParent = nullptr,
+    static CProperty* Create(rtti::IType* aType, const char* aName, CClass* aParent = nullptr,
                              uint32_t aValueOffset = 0, const char* aGroup = nullptr, Flags aFlags = {});
 
-    CBaseRTTIType* type;  // 00
+    rtti::IType* type;    // 00
     CName name;           // 08
     CName group;          // 10
     CClass* parent;       // 18
@@ -62,7 +62,7 @@ struct CProperty
     Flags flags;          // 28
 
     template<typename T>
-    bool IsEqual(ScriptInstance aInstance, T aValue, uint32_t a3 = 0) const
+    bool IsEqual(void* aInstance, T aValue, uint32_t a3 = 0) const
     {
         auto currValue = GetValuePtr<T>(aInstance);
 
@@ -75,7 +75,7 @@ struct CProperty
     }
 
     template<typename T>
-    void SetValue(ScriptInstance aInstance, T aValue) const
+    void SetValue(void* aInstance, T aValue) const
     {
         auto prevValue = GetValuePtr<T>(aInstance);
 
@@ -90,7 +90,7 @@ struct CProperty
     }
 
     template<typename T>
-    T GetValue(ScriptInstance aInstance) const
+    T GetValue(void* aInstance) const
     {
         if constexpr (std::is_pointer_v<T>)
         {
@@ -103,7 +103,7 @@ struct CProperty
     }
 
     template<typename T>
-    T* GetValuePtr(ScriptInstance aInstance) const
+    T* GetValuePtr(void* aInstance) const
     {
         void* holder = aInstance;
         if (flags.inValueHolder)

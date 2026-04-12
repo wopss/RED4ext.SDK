@@ -39,14 +39,14 @@ RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecord(TweakDBID aDBID, Handle<IScri
 }
 
 RED4EXT_INLINE RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>> RED4ext::TweakDB::GetRecordsByType(
-    CBaseRTTIType* aType)
+    rtti::IType* aType)
 {
     RED4ext::DynArray<RED4ext::Handle<RED4ext::IScriptable>> records;
     TryGetRecordsByType(aType, records);
     return std::move(records);
 }
 
-RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecordsByType(CBaseRTTIType* aType,
+RED4EXT_INLINE bool RED4ext::TweakDB::TryGetRecordsByType(rtti::IType* aType,
                                                           DynArray<Handle<IScriptable>>& aRecordsArray)
 {
     std::shared_lock<SharedSpinLock> _(mutex01);
@@ -233,7 +233,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     return updated;
 }
 
-RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, CBaseRTTIType* aType)
+RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, rtti::IType* aType)
 {
     Handle<IScriptable> record;
     {

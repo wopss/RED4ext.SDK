@@ -12,8 +12,8 @@ namespace RED4ext
 struct CBaseFunction;
 struct CClass;
 
-bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut);
-bool ExecuteFunction(ScriptInstance aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t& aArgs);
+bool ExecuteFunction(void* aInstance, CBaseFunction* aFunc, void* aOut);
+bool ExecuteFunction(void* aInstance, CBaseFunction* aFunc, void* aOut, StackArgs_t& aArgs);
 
 bool ExecuteFunction(CClass* aContext, CBaseFunction* aFunc, void* aOut, StackArgs_t& aArgs);
 bool ExecuteFunction(CClass* aContext, CName aFunc, void* aOut, StackArgs_t& aArgs);
