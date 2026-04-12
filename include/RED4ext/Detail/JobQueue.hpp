@@ -33,6 +33,7 @@ concept IsAnyRegularJobHandler = IsJobHandlerWithGroupParam<T> || IsJobHandlerWi
 
 template<typename T>
 concept IsAnyParallelJobHandler = IsJobHandlerWithRangeAndGroupParams<T> || IsJobHandlerWithRangeParams<T> ||
+                                  IsJobHandlerWithIndexAndGroupParams<T> || IsJobHandlerWithIndexParam<T> ||
                                   IsJobHandlerWithGroupParam<T> || IsJobHandlerWithNoParams<T>;
 
 template<typename T>
