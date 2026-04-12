@@ -22,9 +22,7 @@ struct Variant;
 
 using ERTTIType [[deprecated("Use 'rtti::ERTTIType' instead.")]] = rtti::ERTTIType;
 
-struct [[deprecated("Use 'rtti::IType' instead.")]] CBaseRTTIType : rtti::IType
-{
-};
+using CBaseRTTIType [[deprecated("Use 'rtti::IType' instead.")]] = rtti::IType;
 
 struct CClass : rtti::IType
 {
