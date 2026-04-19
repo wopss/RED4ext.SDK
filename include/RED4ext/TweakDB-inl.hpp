@@ -225,7 +225,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
     bool updated = false;
     if (fakeTweakDB.recordsByID.size != 0)
     {
-        auto newRecord = fakeTweakDB.recordsByType.Get(aRecord->GetNativeType())->Begin()->instance;
+        auto newRecord = fakeTweakDB.recordsByID.Get(aRecord->recordID)->instance;
         aRecord->GetNativeType()->Assign(aRecord, newRecord);
         updated = true;
     }
