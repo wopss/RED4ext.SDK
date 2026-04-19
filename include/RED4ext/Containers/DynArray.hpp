@@ -110,6 +110,7 @@ struct DynArray
 
     DynArray& operator=(DynArray&& aOther) noexcept
     {
+        Clear();
         std::swap(m_entries, aOther.m_entries);
         std::swap(m_size, aOther.m_size);
         std::swap(m_capacity, aOther.m_capacity);
@@ -205,7 +206,7 @@ struct DynArray
 
     void PushBack(ValueType&& aItem)
     {
-        EmplaceBack(std::move(aItem));
+        EmplaceBack(std::forward<ValueType>(aItem));
     }
 
     template<class... TArgs>
@@ -322,7 +323,7 @@ struct DynArray
 
         std::destroy_at(std::addressof(*aPos));
 
-        const SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End()));
+        const SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End())) - 1;
         if (tailSize > 0)
             ShiftEntries(aPos + 1, aPos, tailSize);
 
@@ -342,7 +343,7 @@ struct DynArray
 
         std::destroy(first, last);
 
-        const SizeType tailSize = static_cast<SizeType>(std::distance(last, End()));
+        const SizeType tailSize = static_cast<SizeType>(std::distance(last, End())) - 1;
         if (tailSize > 0)
             ShiftEntries(last, first, tailSize);
 
