@@ -9,6 +9,7 @@
 #include <RED4ext/Detail/AddressHashes.hpp>
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/Relocation.hpp>
+#include <RED4ext/Hashing/Murmur3.hpp>
 
 RED4EXT_INLINE uintptr_t GetAddressFromInstruction(uintptr_t aRVAAddress, int32_t aAddressOffset)
 {
@@ -235,19 +236,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::UpdateRecord(gamedataTweakDBRecord* aRecor
 
 RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, rtti::IType* aType)
 {
-    Handle<IScriptable> record;
-    {
-        std::shared_lock<SharedSpinLock> _(mutex01);
-
-        const auto* records = recordsByType.Get(aType);
-        if (records == nullptr || records->IsEmpty())
-            return false;
-
-        record = (*records)[0];
-    }
-
-    const auto* tweakRecord = reinterpret_cast<gamedataTweakDBRecord*>(record.GetPtr());
-    return CreateRecord(aDBID, tweakRecord->GetTweakBaseHash());
+    return CreateRecord(aDBID, CalculateRecordTypeHash(aType));
 }
 
 RED4EXT_INLINE bool RED4ext::TweakDB::CreateRecord(TweakDBID aDBID, uint32_t aTweakBaseHash)
@@ -276,7 +265,7 @@ RED4EXT_INLINE bool RED4ext::TweakDB::RemoveRecord(TweakDBID aDBID)
     std::lock_guard<SharedSpinLock> _(mutex01);
     if (recordsByID.Remove(aDBID))
     {
-        auto* records = recordsByType.Get(record->GetNativeType());
+        auto* records = recordsByType.Get(record->GetType());
         return records->Remove(record);
     }
 
@@ -398,6 +387,24 @@ RED4EXT_INLINE void RED4ext::TweakDB::UpsizeFlatDataBufferToMax()
     std::lock_guard<SharedSpinLock> _(mutex00);
 
     UpsizeFlatDataBuffer(MaxFlatDataBufferSize);
+}
+
+RED4EXT_INLINE uint32_t RED4ext::TweakDB::CalculateRecordTypeHash(const char* aName)
+{
+    std::string name = aName;
+
+    if (name.starts_with(recordPrefix))
+        name.erase(0, recordPrefixLen);
+
+    if (name.ends_with(recordSuffix))
+        name.erase(name.end() - recordSuffixLen, name.end());
+
+    return Murmur3_32(reinterpret_cast<const uint8_t*>(name.data()), name.size());
+}
+
+RED4EXT_INLINE uint32_t RED4ext::TweakDB::CalculateRecordTypeHash(rtti::IType* aType)
+{
+    return CalculateRecordTypeHash(aType->GetName().ToString());
 }
 
 RED4EXT_INLINE void RED4ext::TweakDB::UpsizeFlatDataBuffer(uint32_t aCapacity)

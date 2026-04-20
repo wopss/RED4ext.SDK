@@ -39,6 +39,11 @@ struct TweakDB
 {
     static constexpr uint32_t MaxFlatDataBufferSize = 0x00FFFFFF;
 
+    static constexpr auto recordPrefix = "gamedata";
+    static constexpr auto recordSuffix = "_Record";
+    static constexpr auto recordPrefixLen = std::char_traits<char>::length(recordPrefix);
+    static constexpr auto recordSuffixLen = std::char_traits<char>::length(recordSuffix);
+
     enum class GroupTag : int8_t
     {
         None = 0,
@@ -227,6 +232,9 @@ struct TweakDB
     const FlatValue* GetDefaultFlatValue(CName aTypeName);
 
     void UpsizeFlatDataBufferToMax();
+
+    uint32_t CalculateRecordTypeHash(const char* aName);
+    uint32_t CalculateRecordTypeHash(rtti::IType* aType);
 
     static TweakDB* Get();
 
