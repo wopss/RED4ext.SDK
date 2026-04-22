@@ -60,7 +60,7 @@ struct Map
         if (it == keys.end() || *it != aKey)
             return nullptr;
 
-        uint32_t index = static_cast<uint32_t>(it - keys.begin());
+        const auto index = static_cast<uint32_t>(it - keys.begin());
         return &values[index];
     }
 
@@ -98,15 +98,15 @@ struct Map
     std::pair<T*, bool> Emplace(const K& aKey, TArgs&&... aArgs)
     {
         const auto it = LowerBound(aKey);
-        uint32_t index = static_cast<uint32_t>(it - keys.begin());
+        const auto index = static_cast<uint32_t>(it - keys.begin());
         if (it != keys.end() && *it == aKey)
         {
             // Do nothing if the map already contains this key.
             return {&values[index], false};
         }
 
-        keys.Emplace(&keys[index], std::forward<const K&>(aKey));
-        values.Emplace(&values[index], std::forward<TArgs>(aArgs)...);
+        keys.Emplace(keys.Begin() + index, std::forward<const K&>(aKey));
+        values.Emplace(values.Begin() + index, std::forward<TArgs>(aArgs)...);
         return {&values[index], true};
     }
 
@@ -116,7 +116,7 @@ struct Map
         if (valuePtr == nullptr)
             return false;
 
-        uint32_t index = static_cast<uint32_t>(valuePtr - values.begin());
+        const auto index = static_cast<uint32_t>(valuePtr - values.begin());
         return RemoveAt(index);
     }
 
@@ -176,7 +176,7 @@ struct Map
     int32_t flags;      // 20
 
 private:
-    const auto LowerBound(const K& aKey) const
+    auto LowerBound(const K& aKey) const
     {
         if ((flags & (int32_t)Flags::NotSorted) == (int32_t)Flags::NotSorted)
         {
