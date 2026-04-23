@@ -79,8 +79,8 @@ struct FrameInfo
     uint8_t unk10;              // 10
 };
 RED4EXT_ASSERT_SIZE(FrameInfo, 0x18);
-RED4EXT_ASSERT_OFFSET(FrameDetailedInfo, deltaTime, 0x00);
-RED4EXT_ASSERT_OFFSET(FrameDetailedInfo, unk10, 0x10);
+RED4EXT_ASSERT_OFFSET(FrameInfo, deltaTime, 0x00);
+RED4EXT_ASSERT_OFFSET(FrameInfo, unk10, 0x10);
 
 using GroupUpdateCallback = Callback<void (*)(FrameInfo&, JobQueue&)>;
 using BucketUpdateCallback = Callback<void (*)(UpdateBucketEnum, FrameInfo&, JobQueue&)>;
