@@ -1,6 +1,8 @@
 #pragma once
 
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Memory/Allocators.hpp>
+#include <RED4ext/Memory/UniquePtr.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Quaternion.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
@@ -35,6 +37,8 @@ enum class EntityStubStatus : uint8_t
 
 struct EntityStub
 {
+    using AllocatorType = Memory::GMPL_PSAllocator;
+
     game::IPersistencySystem* persistencySystem;               // 00
     StaticArray<Handle<game::ComponentPS>, 2> componentStates; // 08
     Handle<game::EntityStubComponentPS> stubState;             // 30
@@ -48,16 +52,14 @@ struct EntityStubToken
 {
     using AllocatorType = Memory::GMPL_SpawnAllocator;
 
-    EntityStub* ExtractStub()
+    UniquePtr<EntityStub> ExtractStub()
     {
-        auto extracted = stub;
-        stub = nullptr;
-        return extracted;
+        return std::move(stub);
     }
 
-    EntityStub* stub;        // 00
-    EntityID entityID;       // 08
-    EntityStubStatus status; // 10
+    UniquePtr<EntityStub> stub; // 00
+    EntityID entityID;          // 08
+    EntityStubStatus status;    // 10
 };
 RED4EXT_ASSERT_SIZE(EntityStubToken, 0x18);
 RED4EXT_ASSERT_OFFSET(EntityStubToken, stub, 0x00);
@@ -126,13 +128,12 @@ struct IEntityStubSystem : IGameSystem
     static constexpr const char* ALIAS = NAME;
 
     virtual void* CreateStub(EntityStubTokenPtr& aToken, EntityStubCreateRequest& aRequest,
-                             EntityStubCallback&& aCallback) = 0; // 1A8
+                             EntityStubCallback&& aCallback) = 0; // 1B0
     virtual void* RestoreStub(EntityStubTokenPtr& aToken, EntityStubRestoreRequest& aRequest,
-                              EntityStubCallback&& aCallback) = 0; // 1B0
-    virtual void CancelStub(EntityStubTokenPtr& aToken) = 0;       // 1B8
-    virtual void* DeleteStub(EntityStub*& aStub) = 0;              // 1C0
-    virtual EntityStub* FindStub(EntityID aEntityID) = 0;          // 1C8
-    virtual void sub_1D0() = 0;                                    // 1D0
+                              EntityStubCallback&& aCallback) = 0; // 1B8
+    virtual void CancelStub(EntityStubTokenPtr& aToken) = 0;       // 1C0
+    virtual void DeleteStub(UniquePtr<EntityStub>&& aStub) = 0;    // 1C8
+    virtual EntityStub* FindStub(EntityID aEntityID) = 0;          // 1D0
     virtual void sub_1D8() = 0;                                    // 1D8
     virtual void sub_1E0() = 0;                                    // 1E0
     virtual void sub_1E8() = 0;                                    // 1E8
@@ -142,6 +143,8 @@ struct IEntityStubSystem : IGameSystem
     virtual void sub_208() = 0;                                    // 208
     virtual void sub_210() = 0;                                    // 210
     virtual void sub_218() = 0;                                    // 218
+    virtual void sub_220() = 0;                                    // 220
+    virtual void sub_228() = 0;                                    // 228
 };
 RED4EXT_ASSERT_SIZE(IEntityStubSystem, 0x48);
 } // namespace game
