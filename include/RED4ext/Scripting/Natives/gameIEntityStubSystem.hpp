@@ -8,14 +8,13 @@
 #include <RED4ext/Scripting/Natives/Generated/Vector4.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldTransform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/EntityStubComponentPS.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
 
 namespace RED4ext
 {
 namespace game
 {
-struct ComponentPS;
-struct EntityStubComponentPS;
 struct IPersistencySystem;
 } // namespace game
 
