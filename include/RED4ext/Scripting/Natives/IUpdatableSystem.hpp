@@ -6,8 +6,6 @@
 
 namespace RED4ext
 {
-struct UpdateRegistrar;
-
 struct IUpdatableSystem : IScriptable
 {
     static constexpr const char* NAME = "IUpdatableSystem";

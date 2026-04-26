@@ -5,11 +5,10 @@
 #include <RED4ext/Callback.hpp>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/JobQueue.hpp>
+#include <RED4ext/Scripting/IScriptable.hpp>
 
 namespace RED4ext
 {
-struct IUpdatableSystem;
-
 enum class UpdateTickGroup : uint8_t
 {
     FrameBegin,
@@ -88,10 +87,10 @@ using BucketUpdateCallback = Callback<void (*)(UpdateBucketEnum, FrameInfo&, Job
 
 struct UpdateRegistrar
 {
-    void RegisterUpdate(UpdateTickGroup aGroup, IUpdatableSystem* aSystem, const char* aName,
+    void RegisterUpdate(UpdateTickGroup aGroup, IScriptable* aSystem, const char* aName,
                         GroupUpdateCallback&& aCallback);
-    void RegisterUpdate(UpdateBucketMask aBuckets, UpdateBucketStage aStage, IUpdatableSystem* aSystem,
-                        const char* aName, BucketUpdateCallback&& aCallback);
+    void RegisterUpdate(UpdateBucketMask aBuckets, UpdateBucketStage aStage, IScriptable* aSystem, const char* aName,
+                        BucketUpdateCallback&& aCallback);
 };
 } // namespace RED4ext
 
