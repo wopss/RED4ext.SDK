@@ -321,33 +321,46 @@ struct DynArray
     {
         assert(aPos < End() && IsInRange(aPos));
 
-        std::destroy_at(std::addressof(*aPos));
+        const auto tailSize = static_cast<SizeType>(std::distance(aPos, End())) - 1;
 
-        const SizeType tailSize = static_cast<SizeType>(std::distance(aPos, End())) - 1;
         if (tailSize > 0)
+        {
             ShiftEntries(aPos + 1, aPos, tailSize);
+        }
+        else
+        {
+            std::destroy_at(std::addressof(*aPos));
+        }
 
         --m_size;
+
         return tailSize == 0 ? End() : aPos;
     }
 
-    Iterator Erase(ConstIterator aFirst, ConstIterator aLast)
+    Iterator Erase(Iterator aFirst, Iterator aLast)
     {
         if (aFirst == aLast)
             return aFirst;
 
-        ConstIterator first = (std::min)(aFirst, aLast);
-        ConstIterator last = (std::max)(aFirst, aLast);
+        auto first = (std::min)(aFirst, aLast);
+        auto last = (std::max)(aFirst, aLast);
 
-        assert(last < End() && Includes(first, last));
+        assert(Includes(first, last));
 
-        std::destroy(first, last);
+        const auto rangeSize = static_cast<SizeType>(std::distance(first, last));
+        const auto tailSize = static_cast<SizeType>(std::distance(last, End()));
 
-        const SizeType tailSize = static_cast<SizeType>(std::distance(last, End())) - 1;
         if (tailSize > 0)
+        {
             ShiftEntries(last, first, tailSize);
+        }
 
-        m_size -= static_cast<SizeType>(std::distance(first, last));
+        if (rangeSize > tailSize)
+        {
+            std::destroy(first + tailSize, last);
+        }
+
+        m_size -= rangeSize;
 
         return tailSize == 0 ? End() : first;
     }
@@ -569,7 +582,7 @@ private:
         if (aCount == 0 || aSrc == aDst)
             return;
 
-        if (aSrc >= aDst)
+        if (aSrc > aDst)
             std::move(aSrc, aSrc + aCount, aDst);
         else
             std::move_backward(aSrc, aSrc + aCount, aDst + aCount);

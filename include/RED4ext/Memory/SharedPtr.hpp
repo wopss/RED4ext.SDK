@@ -112,7 +112,7 @@ protected:
         return false;
     }
 
-    void MoveConstructFrom(SharedPtrBase&& aOther) noexcept
+    void MoveConstructFrom(SharedPtrBase& aOther) noexcept
     {
         instance = aOther.instance;
         refCount = aOther.refCount;
@@ -270,7 +270,7 @@ public:
 
     SharedPtr(SharedPtr&& aRhs) noexcept
     {
-        BaseType::MoveConstructFrom(std::move(aRhs));
+        BaseType::MoveConstructFrom(aRhs);
     }
 
     SharedPtr(const WeakPtr<T>& aOther) noexcept
@@ -339,7 +339,7 @@ public:
 
     WeakPtr(WeakPtr&& aOther) noexcept
     {
-        BaseType::MoveConstructFrom(std::move(aOther));
+        BaseType::MoveConstructFrom(aOther);
     }
 
     ~WeakPtr() noexcept
