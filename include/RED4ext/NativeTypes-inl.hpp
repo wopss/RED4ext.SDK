@@ -354,8 +354,11 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::SetPoint(uint32_t aIndex, float aPoin
 template<typename T>
 RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
 {
-    constexpr auto HeaderSize = sizeof(CurveBuffer<T>);
-    constexpr auto FixedPointsOffset = HeaderSize;
+    constexpr uint32_t HeaderSize = sizeof(CurveBuffer<T>);
+    constexpr uint32_t FixedPointsOffset = HeaderSize;
+    constexpr uint32_t PointSize = sizeof(float);
+    constexpr uint32_t ValueSize = sizeof(T);
+    constexpr uint32_t ValueAlignment = alignof(T);
 
     if (aNewSize < 1)
     {
@@ -364,14 +367,13 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
 
     if (!buffer)
     {
-        buffer.Initialize(nullptr, HeaderSize + aNewSize * sizeof(float) + aNewSize * sizeof(T));
-
         auto curve = GetCurve();
         curve->size = aNewSize;
-        curve->unk04 = 0;
+        curve->alignment = ValueAlignment;
         curve->pointsOffset = FixedPointsOffset;
-        curve->valuesOffset = FixedPointsOffset + aNewSize * sizeof(float);
+        curve->valuesOffset = AlignUp(FixedPointsOffset + aNewSize * PointSize, curve->alignment);
 
+        buffer.Initialize(nullptr, curve->valuesOffset + aNewSize * ValueSize);
         return;
     }
 
@@ -384,7 +386,7 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
     }
 
     auto oldValuesOffset = curve->valuesOffset;
-    auto newValuesOffset = FixedPointsOffset + aNewSize * sizeof(float);
+    auto newValuesOffset = AlignUp(FixedPointsOffset + aNewSize * PointSize, curve->alignment);
 
     if (aNewSize < oldSize)
     {
@@ -395,7 +397,7 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
         std::copy(oldValues, oldValues + aNewSize, newValues);
     }
 
-    buffer.Resize(HeaderSize + aNewSize * sizeof(float) + aNewSize * sizeof(T));
+    buffer.Resize(newValuesOffset + aNewSize * ValueSize);
 
     if (aNewSize > oldSize)
     {

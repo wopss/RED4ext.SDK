@@ -30,7 +30,7 @@ constexpr std::uint32_t CBitfield_FromString = 0xA09B15A8;
 
 #pragma region CClass
 constexpr std::uint32_t CClass_Unserialize = 0xE4AA0CAD;
-constexpr std::uint32_t CClass_ToString = 0x65293F06;
+constexpr std::uint32_t CClass_ToString = 409015031UL;
 constexpr std::uint32_t CClass_sub_80 = 0x11D11B0C;
 constexpr std::uint32_t CClass_sub_88 = 0x4BDF1BB2;
 constexpr std::uint32_t CClass_sub_90 = 0xA26D374E;

@@ -32,6 +32,11 @@ and this project adheres to
 - Remove `ScriptInstance` alias, use `void*` instead (#193).
 - Remove implicit boolean conversion for `Span`, use `Span::IsEmpty()` instead.
 
+### Fixed
+
+- Fix `CurveData` values alignment in the buffer (#216).
+- Fix `CClass::ToString` address hash (#216).
+
 ## [1.0.0] - 2026-03-09
 
 - Initial release.

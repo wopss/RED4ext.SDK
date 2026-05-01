@@ -229,7 +229,7 @@ struct CurveBuffer
     [[nodiscard]] T* GetValues() noexcept;
 
     uint32_t size;         // 00
-    uint32_t unk04;        // 04
+    uint32_t alignment;    // 04
     uint32_t pointsOffset; // 08
     uint32_t valuesOffset; // 0C
     // float points[size]; // 10h
