@@ -35,6 +35,7 @@ and this project adheres to
 ### Fixed
 
 - Fix `CurveData` values alignment in the buffer (#216).
+- Fix `CurveData` buffer initialization (#217).
 - Fix `CClass::ToString` address hash (#216).
 
 ## [1.0.0] - 2026-03-09
