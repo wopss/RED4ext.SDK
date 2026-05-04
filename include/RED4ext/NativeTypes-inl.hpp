@@ -365,15 +365,18 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
         return;
     }
 
+    auto newValuesOffset = AlignUp(FixedPointsOffset + aNewSize * PointSize, ValueAlignment);
+    auto newBufferSize = newValuesOffset + aNewSize * ValueSize;
+
     if (!buffer)
     {
+        buffer.Initialize(nullptr, newBufferSize);
+
         auto curve = GetCurve();
         curve->size = aNewSize;
         curve->alignment = ValueAlignment;
         curve->pointsOffset = FixedPointsOffset;
-        curve->valuesOffset = AlignUp(FixedPointsOffset + aNewSize * PointSize, curve->alignment);
-
-        buffer.Initialize(nullptr, curve->valuesOffset + aNewSize * ValueSize);
+        curve->valuesOffset = newValuesOffset;
         return;
     }
 
@@ -386,7 +389,6 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
     }
 
     auto oldValuesOffset = curve->valuesOffset;
-    auto newValuesOffset = AlignUp(FixedPointsOffset + aNewSize * PointSize, curve->alignment);
 
     if (aNewSize < oldSize)
     {
@@ -397,7 +399,7 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
         std::copy(oldValues, oldValues + aNewSize, newValues);
     }
 
-    buffer.Resize(newValuesOffset + aNewSize * ValueSize);
+    buffer.Resize(newBufferSize);
 
     if (aNewSize > oldSize)
     {
