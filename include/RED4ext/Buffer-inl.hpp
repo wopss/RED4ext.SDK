@@ -52,12 +52,21 @@ RED4EXT_INLINE RED4ext::RawBuffer::RawBuffer(void* aData, uint32_t aSize, uint32
 {
 }
 
+RED4EXT_INLINE RED4ext::RawBuffer::RawBuffer(RawBuffer&& aOther)
+    : RawBuffer()
+{
+    Swap(aOther);
+}
+
 RED4EXT_INLINE RED4ext::RawBuffer::~RawBuffer()
 {
-    if (data && allocator[0])
-    {
-        reinterpret_cast<RawBufferAllocator*>(&allocator)->Free(data);
-    }
+    Clear();
+}
+
+RED4EXT_INLINE RED4ext::RawBuffer& RED4ext::RawBuffer::operator=(RawBuffer&& aRhs)
+{
+    RawBuffer(std::move(aRhs)).Swap(*this);
+    return *this;
 }
 
 RED4EXT_INLINE RED4ext::Memory::IAllocator* RED4ext::RawBuffer::GetAllocator() const
@@ -98,6 +107,25 @@ RED4EXT_INLINE void RED4ext::RawBuffer::Resize(uint32_t aSize)
 
     data = reinterpret_cast<RawBufferAllocator*>(&allocator)->ReallocAligned(data, aSize, alignment);
     size = aSize;
+}
+
+RED4EXT_INLINE void RED4ext::RawBuffer::Clear()
+{
+    if (data && allocator[0])
+    {
+        reinterpret_cast<RawBufferAllocator*>(&allocator)->Free(data);
+
+        data = nullptr;
+        size = 0;
+    }
+}
+
+RED4EXT_INLINE void RED4ext::RawBuffer::Swap(RawBuffer& aOther)
+{
+    std::swap(data, aOther.data);
+    std::swap(size, aOther.size);
+    std::swap(alignment, aOther.alignment);
+    std::swap(allocator, aOther.allocator);
 }
 
 RED4EXT_INLINE RED4ext::RawBuffer::operator bool() const noexcept
