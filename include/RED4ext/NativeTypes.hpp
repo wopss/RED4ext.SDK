@@ -174,6 +174,15 @@ struct Variant
 
     static bool CanBeInlined(const rtti::IType* aType) noexcept;
 
+    template<typename T>
+    static consteval CName GetTypeName();
+
+    template<typename T>
+    static bool FromValue(const T& aSrc, Variant& aDst);
+
+    template<typename T>
+    static bool ToValue(const Variant& aSrc, T& aDst);
+
     const rtti::IType* type{nullptr};
     union
     {
