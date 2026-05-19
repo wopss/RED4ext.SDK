@@ -181,7 +181,13 @@ struct Variant
     static bool FromValue(const T& aSrc, Variant& aDst);
 
     template<typename T>
+    static Variant FromValue(const T& aSrc);
+
+    template<typename T>
     static bool ToValue(const Variant& aSrc, T& aDst);
+
+    template<typename T>
+    static T ToValue(const Variant& aSrc);
 
     const rtti::IType* type{nullptr};
     union
