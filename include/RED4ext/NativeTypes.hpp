@@ -169,7 +169,7 @@ struct Variant
 
     bool Init(const rtti::IType* aType);
     bool Fill(const rtti::IType* aType, const void* aData);
-    bool Extract(void* aBuffer);
+    bool Extract(void* aBuffer) const;
     void Free();
 
     static bool CanBeInlined(const rtti::IType* aType) noexcept;

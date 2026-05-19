@@ -254,7 +254,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::rtti::IType* aType, co
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::Variant::Extract(void* aBuffer)
+RED4EXT_INLINE bool RED4ext::Variant::Extract(void* aBuffer) const
 {
     if (IsEmpty())
         return false;
