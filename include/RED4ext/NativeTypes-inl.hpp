@@ -288,6 +288,18 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
     type = nullptr;
 }
 
+template<typename T>
+RED4EXT_INLINE bool RED4ext::Variant::Set(const T& aValue)
+{
+    return Variant::FromValue<T>(aValue, *this);
+}
+
+template<typename T>
+RED4EXT_INLINE T RED4ext::Variant::Get() const
+{
+    return Variant::ToValue<T>(*this);
+}
+
 RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::rtti::IType* aType) noexcept
 {
     return aType->GetSize() <= InlineSize && aType->GetAlignment() <= InlineAlignment;

@@ -172,6 +172,12 @@ struct Variant
     bool Extract(void* aBuffer) const;
     void Free();
 
+    template<typename T>
+    bool Set(const T& aValue);
+
+    template<typename T>
+    [[nodiscard]] T Get() const;
+
     static bool CanBeInlined(const rtti::IType* aType) noexcept;
 
     template<typename T>
