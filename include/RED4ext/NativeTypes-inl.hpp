@@ -393,7 +393,7 @@ template<typename T>
 RED4EXT_INLINE bool RED4ext::Variant::FromValue(const T& aSrc, RED4ext::Variant& aDst)
 {
     const auto type = CRTTISystem::Get()->GetType(GetTypeName<T>());
-    return aDst.Fill(type, const_cast<void*>(&aSrc));
+    return aDst.Fill(type, const_cast<void*>(reinterpret_cast<const void*>(&aSrc)));
 }
 
 template<typename T>
