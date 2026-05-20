@@ -381,27 +381,20 @@ template<typename T>
 RED4EXT_INLINE bool RED4ext::Variant::FromValue(const T& aSrc, RED4ext::Variant& aDst)
 {
     const auto type = CRTTISystem::Get()->GetType(GetTypeName<T>());
-    if (!type)
-    {
-        return false;
-    }
-
-    return aDst.Init(type) && aDst.Fill(type, const_cast<void*>(reinterpret_cast<const void*>(&aSrc)));
+    return aDst.Fill(type, const_cast<void*>(&aSrc));
 }
 
 template<typename T>
-RED4EXT_INLINE RED4ext::Variant RED4ext::Variant::FromValue(const T& aSrc)
+RED4EXT_INLINE RED4ext::Variant RED4ext::Variant::FromValue(const T& aValue)
 {
-    RED4ext::Variant dst;
-    FromValue(aSrc, dst);
-    return dst;
+    return RED4ext::Variant{GetTypeName<T>(), const_cast<void*>(reinterpret_cast<const void*>(&aValue))};
 }
 
 template<typename T>
 RED4EXT_INLINE bool RED4ext::Variant::ToValue(const RED4ext::Variant& aSrc, T& aDst)
 {
-    const auto type = CRTTISystem::Get()->GetType(GetTypeName<T>());
-    if (type != aSrc.GetType())
+    const auto type = aSrc.GetType();
+    if (!type || type->GetName() != GetTypeName<T>())
     {
         return false;
     }
@@ -412,9 +405,15 @@ RED4EXT_INLINE bool RED4ext::Variant::ToValue(const RED4ext::Variant& aSrc, T& a
 template<typename T>
 RED4EXT_INLINE T RED4ext::Variant::ToValue(const RED4ext::Variant& aSrc)
 {
-    T dst;
-    ToValue(aSrc, dst);
-    return dst;
+    const auto type = aSrc.GetType();
+    if (!type || type->GetName() != GetTypeName<T>())
+    {
+        return T();
+    }
+
+    T value;
+    aSrc.Extract(&value);
+    return value;
 }
 
 template<typename T>
