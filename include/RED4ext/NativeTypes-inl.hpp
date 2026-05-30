@@ -370,7 +370,7 @@ RED4EXT_INLINE void RED4ext::CurveData<T>::Resize(uint32_t aNewSize) noexcept
 
     if (!buffer)
     {
-        buffer.Initialize(nullptr, newBufferSize);
+        buffer.Initialize(nullptr, newBufferSize, ValueAlignment);
 
         auto curve = GetCurve();
         curve->size = aNewSize;

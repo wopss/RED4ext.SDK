@@ -28,15 +28,17 @@ struct RawBuffer
     RawBuffer();
     RawBuffer(void* aData, uint32_t aSize, uint32_t aAlignment = 8);
     RawBuffer(const RawBuffer&) = delete;
-    RawBuffer(RawBuffer&&) = default;
+    RawBuffer(RawBuffer&& aOther);
     ~RawBuffer();
 
     RawBuffer& operator=(const RawBuffer& aRhs) = delete;
-    RawBuffer& operator=(RawBuffer&& aRhs) = default;
+    RawBuffer& operator=(RawBuffer&& aRhs);
 
     Memory::IAllocator* GetAllocator() const;
     void Initialize(Memory::IAllocator* aAllocator, uint32_t aSize, uint32_t aAlignment = 8);
     void Resize(uint32_t aSize);
+    void Clear();
+    void Swap(RawBuffer& aOther);
 
     operator bool() const noexcept;
 

@@ -172,9 +172,14 @@ struct TTypedClass : CClass
 
     void Assign(void* aLhs, const void* aRhs) const final // 50
     {
-        if constexpr (std::is_copy_constructible_v<T>)
+        if constexpr (std::is_copy_assignable_v<T>)
         {
-            new (aLhs) T(*static_cast<const T*>(aRhs));
+            *reinterpret_cast<T*>(aLhs) = *reinterpret_cast<const T*>(aRhs);
+        }
+        else if constexpr (std::is_copy_constructible_v<T>)
+        {
+            reinterpret_cast<T*>(aLhs)->~T();
+            new (aLhs) T(*reinterpret_cast<const T*>(aRhs));
         }
     }
 
