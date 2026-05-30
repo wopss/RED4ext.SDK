@@ -383,9 +383,9 @@ RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
     }
     else
     {
-        // NOTE: for a better implementation, see RedLib:
+        // TODO: support all game types and user types using RedLib solution:
         // https://github.com/psiberx/cp2077-red-lib/blob/master/include/Red/TypeInfo/Resolving.hpp
-        static_assert(false, "Type is currently not implemented.");
+        static_assert(false, "Type is currently unsupported.");
         return "";
     }
 }
