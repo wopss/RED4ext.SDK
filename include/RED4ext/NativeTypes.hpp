@@ -3,6 +3,7 @@
 #include <array>
 #include <cstdint>
 #include <limits>
+#include <optional>
 #include <string_view>
 
 #include <RED4ext/Buffer.hpp>
@@ -173,10 +174,10 @@ struct Variant
     void Free();
 
     template<typename T>
-    bool Set(const T& aValue);
+    bool Set(const T& acValue);
 
     template<typename T>
-    [[nodiscard]] T Get() const;
+    [[nodiscard]] std::optional<T> Get() const;
 
     static bool CanBeInlined(const rtti::IType* aType) noexcept;
 
@@ -184,16 +185,10 @@ struct Variant
     static consteval CName GetTypeName();
 
     template<typename T>
-    static bool FromValue(const T& aSrc, Variant& aDst);
+    static Variant FromValue(const T& acSrc);
 
     template<typename T>
-    static Variant FromValue(const T& aSrc);
-
-    template<typename T>
-    static bool ToValue(const Variant& aSrc, T& aDst);
-
-    template<typename T>
-    static T ToValue(const Variant& aSrc);
+    static std::optional<T> ToValue(const Variant& acSrc);
 
     const rtti::IType* type{nullptr};
     union

@@ -289,13 +289,14 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
 }
 
 template<typename T>
-RED4EXT_INLINE bool RED4ext::Variant::Set(const T& aValue)
+RED4EXT_INLINE bool RED4ext::Variant::Set(const T& acValue)
 {
-    return Variant::FromValue<T>(aValue, *this);
+    *this = Variant::FromValue(acValue);
+    return !IsEmpty();
 }
 
 template<typename T>
-RED4EXT_INLINE T RED4ext::Variant::Get() const
+RED4EXT_INLINE std::optional<T> RED4ext::Variant::Get() const
 {
     return Variant::ToValue<T>(*this);
 }
@@ -390,41 +391,22 @@ RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
 }
 
 template<typename T>
-RED4EXT_INLINE bool RED4ext::Variant::FromValue(const T& aSrc, RED4ext::Variant& aDst)
+RED4EXT_INLINE RED4ext::Variant RED4ext::Variant::FromValue(const T& acSrc)
 {
-    const auto type = CRTTISystem::Get()->GetType(GetTypeName<T>());
-    return aDst.Fill(type, const_cast<void*>(reinterpret_cast<const void*>(&aSrc)));
+    return RED4ext::Variant{GetTypeName<T>(), std::addressof(acSrc)};
 }
 
 template<typename T>
-RED4EXT_INLINE RED4ext::Variant RED4ext::Variant::FromValue(const T& aValue)
+RED4EXT_INLINE std::optional<T> RED4ext::Variant::ToValue(const RED4ext::Variant& acSrc)
 {
-    return RED4ext::Variant{GetTypeName<T>(), const_cast<void*>(reinterpret_cast<const void*>(&aValue))};
-}
-
-template<typename T>
-RED4EXT_INLINE bool RED4ext::Variant::ToValue(const RED4ext::Variant& aSrc, T& aDst)
-{
-    const auto type = aSrc.GetType();
+    const auto type = acSrc.GetType();
     if (!type || type->GetName() != GetTypeName<T>())
     {
-        return false;
-    }
-
-    return aSrc.Extract(reinterpret_cast<void*>(&aDst));
-}
-
-template<typename T>
-RED4EXT_INLINE T RED4ext::Variant::ToValue(const RED4ext::Variant& aSrc)
-{
-    const auto type = aSrc.GetType();
-    if (!type || type->GetName() != GetTypeName<T>())
-    {
-        return T();
+        return std::nullopt;
     }
 
     T value;
-    aSrc.Extract(&value);
+    acSrc.Extract(std::addressof(value));
     return value;
 }
 
