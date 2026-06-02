@@ -14,6 +14,7 @@
 #include <RED4ext/Hashing/CRC.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/NodeRef.hpp>
+#include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/ResourceReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/EInterpolationType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/ESegmentsLinkType.hpp>
@@ -155,6 +156,8 @@ struct Variant
     Variant(const rtti::IType* aType, const void* aData);
     Variant(CName aTypeName);
     Variant(CName aTypeName, const void* aData);
+    template<rtti::IsNotIType T>
+    Variant(const T& acValue);
     Variant(const Variant& aOther);
     Variant(Variant&& aOther) noexcept;
     ~Variant();
@@ -183,12 +186,6 @@ struct Variant
 
     template<typename T>
     static consteval CName GetTypeName();
-
-    template<typename T>
-    static Variant FromValue(const T& acSrc);
-
-    template<typename T>
-    static std::optional<T> ToValue(const Variant& acSrc);
 
     const rtti::IType* type{nullptr};
     union

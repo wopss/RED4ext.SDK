@@ -147,6 +147,12 @@ RED4EXT_INLINE RED4ext::Variant::Variant(RED4ext::CName aTypeName, const void* a
 {
 }
 
+template<RED4ext::rtti::IsNotIType T>
+RED4EXT_INLINE RED4ext::Variant::Variant(const T& acValue)
+    : Variant(GetTypeName<T>(), std::addressof(acValue))
+{
+}
+
 RED4EXT_INLINE RED4ext::Variant::Variant(const Variant& aOther)
     : Variant(aOther.GetType(), aOther.GetDataPtr())
 {
@@ -291,14 +297,22 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
 template<typename T>
 RED4EXT_INLINE bool RED4ext::Variant::Set(const T& acValue)
 {
-    *this = Variant::FromValue(acValue);
-    return !IsEmpty();
+    const auto type = RED4ext::CRTTISystem::Get()->GetType(GetTypeName<T>());
+    return Fill(type, std::addressof(acValue));
 }
 
 template<typename T>
 RED4EXT_INLINE std::optional<T> RED4ext::Variant::Get() const
 {
-    return Variant::ToValue<T>(*this);
+    const auto type = GetType();
+    if (!type || type->GetName() != GetTypeName<T>())
+    {
+        return std::nullopt;
+    }
+
+    T value;
+    Extract(std::addressof(value));
+    return value;
 }
 
 RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::rtti::IType* aType) noexcept
@@ -353,31 +367,31 @@ RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
     {
         return "Double";
     }
-    else if constexpr (std::is_same_v<T, CString>)
+    else if constexpr (std::is_same_v<T, RED4ext::CString>)
     {
         return "String";
     }
-    else if constexpr (std::is_same_v<T, CName>)
+    else if constexpr (std::is_same_v<T, RED4ext::CName>)
     {
         return "CName";
     }
-    else if constexpr (std::is_same_v<T, TweakDBID>)
+    else if constexpr (std::is_same_v<T, RED4ext::TweakDBID>)
     {
         return "TweakDBID";
     }
-    else if constexpr (std::is_same_v<T, Vector2>)
+    else if constexpr (std::is_same_v<T, RED4ext::Vector2>)
     {
         return "Vector2";
     }
-    else if constexpr (std::is_same_v<T, Vector3>)
+    else if constexpr (std::is_same_v<T, RED4ext::Vector3>)
     {
         return "Vector3";
     }
-    else if constexpr (std::is_same_v<T, Vector4>)
+    else if constexpr (std::is_same_v<T, RED4ext::Vector4>)
     {
         return "Vector4";
     }
-    else if constexpr (std::is_same_v<T, Quaternion>)
+    else if constexpr (std::is_same_v<T, RED4ext::Quaternion>)
     {
         return "Quaternion";
     }
@@ -388,26 +402,6 @@ RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
         static_assert(false, "Type is currently unsupported.");
         return "";
     }
-}
-
-template<typename T>
-RED4EXT_INLINE RED4ext::Variant RED4ext::Variant::FromValue(const T& acSrc)
-{
-    return RED4ext::Variant{GetTypeName<T>(), std::addressof(acSrc)};
-}
-
-template<typename T>
-RED4EXT_INLINE std::optional<T> RED4ext::Variant::ToValue(const RED4ext::Variant& acSrc)
-{
-    const auto type = acSrc.GetType();
-    if (!type || type->GetName() != GetTypeName<T>())
-    {
-        return std::nullopt;
-    }
-
-    T value;
-    acSrc.Extract(std::addressof(value));
-    return value;
 }
 
 template<typename T>
