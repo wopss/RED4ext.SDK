@@ -367,31 +367,31 @@ RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
     {
         return "Double";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::CString>)
+    else if constexpr (std::is_same_v<T, CString>)
     {
         return "String";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::CName>)
+    else if constexpr (std::is_same_v<T, CName>)
     {
         return "CName";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::TweakDBID>)
+    else if constexpr (std::is_same_v<T, TweakDBID>)
     {
         return "TweakDBID";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::Vector2>)
+    else if constexpr (std::is_same_v<T, Vector2>)
     {
         return "Vector2";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::Vector3>)
+    else if constexpr (std::is_same_v<T, Vector3>)
     {
         return "Vector3";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::Vector4>)
+    else if constexpr (std::is_same_v<T, Vector4>)
     {
         return "Vector4";
     }
-    else if constexpr (std::is_same_v<T, RED4ext::Quaternion>)
+    else if constexpr (std::is_same_v<T, Quaternion>)
     {
         return "Quaternion";
     }
