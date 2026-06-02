@@ -1,5 +1,7 @@
-#include <RED4ext/NativeTypes-inl.hpp>
 #include <RED4ext/RED4ext.hpp>
+#ifdef RED4EXT_STATIC_LIB
+#include <RED4ext/NativeTypes-inl.hpp>
+#endif
 
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(const RED4ext::v1::PluginHandle aHandle, const RED4ext::v1::EMainReason aReason,
                                         const RED4ext::v1::Sdk* aSdk)

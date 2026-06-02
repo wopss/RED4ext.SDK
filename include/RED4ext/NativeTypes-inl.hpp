@@ -297,15 +297,15 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
 template<typename T>
 RED4EXT_INLINE bool RED4ext::Variant::Set(const T& acValue)
 {
-    const auto type = RED4ext::CRTTISystem::Get()->GetType(GetTypeName<T>());
-    return Fill(type, std::addressof(acValue));
+    const auto valueType = RED4ext::CRTTISystem::Get()->GetType(GetTypeName<T>());
+    return Fill(valueType, std::addressof(acValue));
 }
 
 template<typename T>
 RED4EXT_INLINE std::optional<T> RED4ext::Variant::Get() const
 {
-    const auto type = GetType();
-    if (!type || type->GetName() != GetTypeName<T>())
+    const auto valueType = GetType();
+    if (!valueType || valueType->GetName() != GetTypeName<T>())
     {
         return std::nullopt;
     }
