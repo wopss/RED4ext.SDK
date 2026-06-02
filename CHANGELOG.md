@@ -16,6 +16,7 @@ and this project adheres to
 - Add `TRenderPtr<>`, a smart pointer for types inheriting `IRenderObject` (#194).
 - Add `IRenderResource` (#194).
 - Add parallel jobs support to `JobQueue` (#204).
+- Add `Set`, `Get` and template constructor on `Variant` to support primitive types (#219).
 
 ### Changed
 
