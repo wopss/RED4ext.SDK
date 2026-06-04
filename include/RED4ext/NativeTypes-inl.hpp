@@ -405,6 +405,18 @@ RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
 }
 
 template<typename T>
+RED4ext::Variant RED4ext::ToVariant(const T& acValue)
+{
+    return {acValue};
+}
+
+template<typename T>
+std::optional<T> RED4ext::FromVariant(const Variant& acValue)
+{
+    return acValue.Get<T>();
+}
+
+template<typename T>
 RED4EXT_INLINE float* RED4ext::CurveBuffer<T>::GetPoints() noexcept
 {
     return reinterpret_cast<float*>(reinterpret_cast<uint8_t*>(this) + pointsOffset);

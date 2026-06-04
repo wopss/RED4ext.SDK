@@ -196,6 +196,12 @@ struct Variant
 };
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
+template<typename T>
+[[nodiscard]] Variant ToVariant(const T& acValue);
+
+template<typename T>
+[[nodiscard]] std::optional<T> FromVariant(const Variant& acValue);
+
 struct gamedataLocKeyWrapper
 {
     gamedataLocKeyWrapper() noexcept;

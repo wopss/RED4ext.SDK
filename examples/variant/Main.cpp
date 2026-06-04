@@ -17,6 +17,14 @@ RED4EXT_C_EXPORT bool RED4EXT_CALL Main(const RED4ext::v1::PluginHandle aHandle,
             .OnEnter = [](RED4ext::CGameApplication*) -> bool
             {
                 {
+                    const auto data = RED4ext::ToVariant<RED4ext::CString>("Nova");
+                    const auto number = RED4ext::FromVariant<RED4ext::CString>(data);
+
+                    assert(number.has_value() == true);
+                    assert(number.value() == "Nova");
+                }
+
+                {
                     const auto data = RED4ext::Variant(static_cast<int16_t>(32767));
                     const auto number = data.Get<int16_t>();
 
