@@ -1,7 +1,4 @@
 #include <RED4ext/RED4ext.hpp>
-#ifdef RED4EXT_STATIC_LIB
-#include <RED4ext/NativeTypes-inl.hpp>
-#endif
 
 RED4EXT_C_EXPORT bool RED4EXT_CALL Main(const RED4ext::v1::PluginHandle aHandle, const RED4ext::v1::EMainReason aReason,
                                         const RED4ext::v1::Sdk* aSdk)
@@ -18,10 +15,10 @@ RED4EXT_C_EXPORT bool RED4EXT_CALL Main(const RED4ext::v1::PluginHandle aHandle,
             {
                 {
                     const auto data = RED4ext::ToVariant<RED4ext::CString>("Nova");
-                    const auto number = RED4ext::FromVariant<RED4ext::CString>(data);
+                    const auto str = RED4ext::FromVariant<RED4ext::CString>(data);
 
-                    assert(number.has_value() == true);
-                    assert(number.value() == "Nova");
+                    assert(str.has_value() == true);
+                    assert(str.value() == "Nova");
                 }
 
                 {

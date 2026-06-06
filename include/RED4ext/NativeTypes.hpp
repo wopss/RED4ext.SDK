@@ -14,10 +14,15 @@
 #include <RED4ext/Hashing/CRC.hpp>
 #include <RED4ext/InstanceType.hpp>
 #include <RED4ext/NodeRef.hpp>
+#include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/ResourceReference.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/EInterpolationType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/ESegmentsLinkType.hpp>
+#include <RED4ext/Scripting/Natives/Quaternion.hpp>
+#include <RED4ext/Scripting/Natives/Vector2.hpp>
+#include <RED4ext/Scripting/Natives/Vector3.hpp>
+#include <RED4ext/Scripting/Natives/Vector4.hpp>
 
 namespace RED4ext
 {
@@ -157,7 +162,10 @@ struct Variant
     Variant(CName aTypeName);
     Variant(CName aTypeName, const void* aData);
     template<rtti::IsNotIType T>
-    Variant(const T& acValue);
+    Variant(const T& acValue)
+        : Variant(GetTypeName<T>(), std::addressof(acValue))
+    {
+    }
     Variant(const Variant& aOther);
     Variant(Variant&& aOther) noexcept;
     ~Variant();
@@ -177,15 +185,114 @@ struct Variant
     void Free();
 
     template<typename T>
-    bool Set(const T& acValue);
+    bool Set(const T& acValue)
+    {
+        const auto valueType = CRTTISystem::Get()->GetType(GetTypeName<T>());
+        return Fill(valueType, std::addressof(acValue));
+    }
 
     template<typename T>
-    [[nodiscard]] std::optional<T> Get() const;
+    [[nodiscard]] std::optional<T> Get() const
+    {
+        const auto valueType = GetType();
+        if (!valueType || valueType->GetName() != GetTypeName<T>())
+        {
+            return std::nullopt;
+        }
+
+        T value;
+        if (!Extract(std::addressof(value)))
+        {
+            return std::nullopt;
+        }
+        return value;
+    }
 
     static bool CanBeInlined(const rtti::IType* aType) noexcept;
 
     template<typename T>
-    static consteval CName GetTypeName();
+    static consteval CName GetTypeName()
+    {
+        if constexpr (std::is_same_v<T, bool>)
+        {
+            return "Bool";
+        }
+        else if constexpr (std::is_same_v<T, int8_t>)
+        {
+            return "Int8";
+        }
+        else if constexpr (std::is_same_v<T, int16_t>)
+        {
+            return "Int16";
+        }
+        else if constexpr (std::is_same_v<T, int32_t>)
+        {
+            return "Int32";
+        }
+        else if constexpr (std::is_same_v<T, int64_t>)
+        {
+            return "Int64";
+        }
+        else if constexpr (std::is_same_v<T, uint8_t>)
+        {
+            return "Uint8";
+        }
+        else if constexpr (std::is_same_v<T, uint16_t>)
+        {
+            return "Uint16";
+        }
+        else if constexpr (std::is_same_v<T, uint32_t>)
+        {
+            return "Uint32";
+        }
+        else if constexpr (std::is_same_v<T, uint64_t>)
+        {
+            return "Uint64";
+        }
+        else if constexpr (std::is_same_v<T, float>)
+        {
+            return "Float";
+        }
+        else if constexpr (std::is_same_v<T, double>)
+        {
+            return "Double";
+        }
+        else if constexpr (std::is_same_v<T, CString>)
+        {
+            return "String";
+        }
+        else if constexpr (std::is_same_v<T, CName>)
+        {
+            return "CName";
+        }
+        else if constexpr (std::is_same_v<T, TweakDBID>)
+        {
+            return "TweakDBID";
+        }
+        else if constexpr (std::is_same_v<T, Vector2>)
+        {
+            return "Vector2";
+        }
+        else if constexpr (std::is_same_v<T, Vector3>)
+        {
+            return "Vector3";
+        }
+        else if constexpr (std::is_same_v<T, Vector4>)
+        {
+            return "Vector4";
+        }
+        else if constexpr (std::is_same_v<T, Quaternion>)
+        {
+            return "Quaternion";
+        }
+        else
+        {
+            // TODO: support all game types and user types using RedLib solution:
+            // https://github.com/psiberx/cp2077-red-lib/blob/master/include/Red/TypeInfo/Resolving.hpp
+            static_assert(false, "Type is currently unsupported.");
+            return "";
+        }
+    }
 
     const rtti::IType* type{nullptr};
     union
@@ -197,10 +304,16 @@ struct Variant
 RED4EXT_ASSERT_SIZE(Variant, 0x18);
 
 template<typename T>
-[[nodiscard]] Variant ToVariant(const T& acValue);
+[[nodiscard]] Variant ToVariant(const T& acValue)
+{
+    return {acValue};
+}
 
 template<typename T>
-[[nodiscard]] std::optional<T> FromVariant(const Variant& acValue);
+[[nodiscard]] std::optional<T> FromVariant(const Variant& acValue)
+{
+    return acValue.Get<T>();
+}
 
 struct gamedataLocKeyWrapper
 {

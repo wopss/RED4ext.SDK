@@ -4,12 +4,6 @@
 #include <RED4ext/NativeTypes.hpp>
 #endif
 
-#include <RED4ext/RTTISystem.hpp>
-#include <RED4ext/Scripting/Natives/Quaternion.hpp>
-#include <RED4ext/Scripting/Natives/Vector2.hpp>
-#include <RED4ext/Scripting/Natives/Vector3.hpp>
-#include <RED4ext/Scripting/Natives/Vector4.hpp>
-
 RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(const std::string_view aName) noexcept
 {
     size_t len = aName.size();
@@ -144,12 +138,6 @@ RED4EXT_INLINE RED4ext::Variant::Variant(RED4ext::CName aTypeName)
 
 RED4EXT_INLINE RED4ext::Variant::Variant(RED4ext::CName aTypeName, const void* aData)
     : Variant(RED4ext::CRTTISystem::Get()->GetType(aTypeName), aData)
-{
-}
-
-template<RED4ext::rtti::IsNotIType T>
-RED4EXT_INLINE RED4ext::Variant::Variant(const T& acValue)
-    : Variant(GetTypeName<T>(), std::addressof(acValue))
 {
 }
 
@@ -294,129 +282,9 @@ RED4EXT_INLINE void RED4ext::Variant::Free()
     type = nullptr;
 }
 
-template<typename T>
-RED4EXT_INLINE bool RED4ext::Variant::Set(const T& acValue)
-{
-    const auto valueType = CRTTISystem::Get()->GetType(GetTypeName<T>());
-    return Fill(valueType, std::addressof(acValue));
-}
-
-template<typename T>
-RED4EXT_INLINE std::optional<T> RED4ext::Variant::Get() const
-{
-    const auto valueType = GetType();
-    if (!valueType || valueType->GetName() != GetTypeName<T>())
-    {
-        return std::nullopt;
-    }
-
-    T value;
-    if (!Extract(std::addressof(value)))
-    {
-        return std::nullopt;
-    }
-    return value;
-}
-
 RED4EXT_INLINE bool RED4ext::Variant::CanBeInlined(const RED4ext::rtti::IType* aType) noexcept
 {
     return aType->GetSize() <= InlineSize && aType->GetAlignment() <= InlineAlignment;
-}
-
-template<typename T>
-RED4EXT_INLINE consteval RED4ext::CName RED4ext::Variant::GetTypeName()
-{
-    if constexpr (std::is_same_v<T, bool>)
-    {
-        return "Bool";
-    }
-    else if constexpr (std::is_same_v<T, int8_t>)
-    {
-        return "Int8";
-    }
-    else if constexpr (std::is_same_v<T, int16_t>)
-    {
-        return "Int16";
-    }
-    else if constexpr (std::is_same_v<T, int32_t>)
-    {
-        return "Int32";
-    }
-    else if constexpr (std::is_same_v<T, int64_t>)
-    {
-        return "Int64";
-    }
-    else if constexpr (std::is_same_v<T, uint8_t>)
-    {
-        return "Uint8";
-    }
-    else if constexpr (std::is_same_v<T, uint16_t>)
-    {
-        return "Uint16";
-    }
-    else if constexpr (std::is_same_v<T, uint32_t>)
-    {
-        return "Uint32";
-    }
-    else if constexpr (std::is_same_v<T, uint64_t>)
-    {
-        return "Uint64";
-    }
-    else if constexpr (std::is_same_v<T, float>)
-    {
-        return "Float";
-    }
-    else if constexpr (std::is_same_v<T, double>)
-    {
-        return "Double";
-    }
-    else if constexpr (std::is_same_v<T, CString>)
-    {
-        return "String";
-    }
-    else if constexpr (std::is_same_v<T, CName>)
-    {
-        return "CName";
-    }
-    else if constexpr (std::is_same_v<T, TweakDBID>)
-    {
-        return "TweakDBID";
-    }
-    else if constexpr (std::is_same_v<T, Vector2>)
-    {
-        return "Vector2";
-    }
-    else if constexpr (std::is_same_v<T, Vector3>)
-    {
-        return "Vector3";
-    }
-    else if constexpr (std::is_same_v<T, Vector4>)
-    {
-        return "Vector4";
-    }
-    else if constexpr (std::is_same_v<T, Quaternion>)
-    {
-        return "Quaternion";
-    }
-    else
-    {
-        // TODO: support all game types and user types using RedLib solution:
-        // https://github.com/psiberx/cp2077-red-lib/blob/master/include/Red/TypeInfo/Resolving.hpp
-        static_assert(false, "Type is currently unsupported.");
-        return "";
-    }
-}
-
-template<typename T>
-RED4ext::Variant RED4ext::ToVariant(const T& acValue)
-{
-    return {acValue};
-}
-
-template<typename T>
-std::optional<T> RED4ext::FromVariant(const Variant& acValue)
-{
-    return acValue.Get<T>();
 }
 
 template<typename T>
