@@ -4,8 +4,6 @@
 #include <RED4ext/NativeTypes.hpp>
 #endif
 
-#include <RED4ext/RTTISystem.hpp>
-
 RED4EXT_INLINE RED4ext::TweakDBID::TweakDBID(const std::string_view aName) noexcept
 {
     size_t len = aName.size();
@@ -254,7 +252,7 @@ RED4EXT_INLINE bool RED4ext::Variant::Fill(const RED4ext::rtti::IType* aType, co
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::Variant::Extract(void* aBuffer)
+RED4EXT_INLINE bool RED4ext::Variant::Extract(void* aBuffer) const
 {
     if (IsEmpty())
         return false;
