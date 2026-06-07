@@ -161,8 +161,9 @@ struct Variant
     Variant(const rtti::IType* aType, const void* aData);
     Variant(CName aTypeName);
     Variant(CName aTypeName, const void* aData);
-    template<rtti::IsNotIType T>
-    Variant(const T& acValue)
+    template<typename T>
+    requires !std::derived_from<std::remove_pointer_t<std::decay_t<T>>, rtti::IType>
+             Variant(const T& acValue)
         : Variant(GetTypeName<T>(), std::addressof(acValue))
     {
     }

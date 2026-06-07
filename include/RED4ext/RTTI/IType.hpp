@@ -83,9 +83,6 @@ struct IType
     void* unk8;
 };
 RED4EXT_ASSERT_SIZE(IType, 0x10);
-
-template<typename T>
-concept IsNotIType = !std::derived_from<std::remove_pointer_t<std::decay_t<T>>, IType>;
 } // namespace rtti
 } // namespace RED4ext
 
