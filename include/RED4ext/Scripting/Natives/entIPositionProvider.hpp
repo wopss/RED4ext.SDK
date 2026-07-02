@@ -14,7 +14,7 @@ struct IPositionProvider : IScriptable
     static constexpr const char* ALIAS = "IPositionProvider";
 
     Vector3 worldOffset; // 40
-	uint8_t unk4C[0x50 - 0x4C]; // 4C
+    uint8_t unk4C[0x50 - 0x4C]; // 4C
 };
 RED4EXT_ASSERT_SIZE(IPositionProvider, 0x50);
 RED4EXT_ASSERT_OFFSET(IPositionProvider, worldOffset, 0x40);
