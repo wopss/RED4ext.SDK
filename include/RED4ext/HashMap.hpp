@@ -208,7 +208,7 @@ struct HashMap
         return nullptr;
     }
 
-    bool Contains(const K& aKey)
+    bool Contains(const K& aKey) const
     {
         return Get(aKey) != nullptr;
     }
