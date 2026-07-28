@@ -162,7 +162,7 @@ struct Variant
     Variant(CName aTypeName);
     Variant(CName aTypeName, const void* aData);
     template<typename T>
-    requires !std::derived_from<std::remove_pointer_t<std::decay_t<T>>, rtti::IType>
+    requires(!std::derived_from<std::remove_pointer_t<std::decay_t<T>>, rtti::IType>)
              Variant(const T& acValue)
         : Variant(GetTypeName<T>(), std::addressof(acValue))
     {
@@ -290,7 +290,7 @@ struct Variant
         {
             // TODO: support all game types and user types using RedLib solution:
             // https://github.com/psiberx/cp2077-red-lib/blob/master/include/Red/TypeInfo/Resolving.hpp
-            static_assert(false, "Type is currently unsupported.");
+            static_assert(!std::is_same_v<T, T>, "Type is currently unsupported.");
             return "";
         }
     }
