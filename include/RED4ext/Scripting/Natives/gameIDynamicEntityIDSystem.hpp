@@ -13,8 +13,8 @@ struct IDynamicEntityIDSystem : IGameSystem
     static constexpr const char* NAME = "gameIDynamicEntityIDSystem";
     static constexpr const char* ALIAS = NAME;
 
-    virtual void* GetNextTransientID(ent::EntityID& aOut) = 0;   // 1A8
-    virtual void* GetNextPersistableID(ent::EntityID& aOut) = 0; // 1B0
+    virtual ent::EntityID GetNextTransientID() = 0;              // 1A8
+    virtual ent::EntityID GetNextPersistableID() = 0;            // 1B0
     virtual void sub_1B8() = 0;                                  // 1B8
     virtual void sub_1C0() = 0;                                  // 1C0
     virtual void sub_1C8() = 0;                                  // 1C8
