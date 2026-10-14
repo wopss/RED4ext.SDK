@@ -126,10 +126,10 @@ struct IEntityStubSystem : IGameSystem
     static constexpr const char* NAME = "gameIEntityStubSystem";
     static constexpr const char* ALIAS = NAME;
 
-    virtual void* CreateStub(EntityStubTokenPtr& aToken, EntityStubCreateRequest& aRequest,
-                             EntityStubCallback&& aCallback) = 0; // 1B0
-    virtual void* RestoreStub(EntityStubTokenPtr& aToken, EntityStubRestoreRequest& aRequest,
-                              EntityStubCallback&& aCallback) = 0; // 1B8
+    virtual EntityStubTokenPtr CreateStub(EntityStubCreateRequest& aRequest,
+                                          EntityStubCallback&& aCallback) = 0; // 1B0
+    virtual EntityStubTokenPtr RestoreStub(EntityStubRestoreRequest& aRequest,
+                                           EntityStubCallback&& aCallback) = 0; // 1B8
     virtual void CancelStub(EntityStubTokenPtr& aToken) = 0;       // 1C0
     virtual void DeleteStub(UniquePtr<EntityStub>&& aStub) = 0;    // 1C8
     virtual EntityStub* FindStub(EntityID aEntityID) = 0;          // 1D0
