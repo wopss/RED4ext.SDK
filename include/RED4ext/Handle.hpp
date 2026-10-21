@@ -46,14 +46,14 @@ public:
     }
 
     template<typename U>
-        requires std::is_convertible_v<U*, T*>
+    requires std::is_convertible_v<U*, T*>
     Handle(const Handle<U>& aOther) noexcept
     {
         BaseType::CopyConstructFrom(aOther);
     }
 
     template<typename U>
-        requires std::is_convertible_v<U*, T*>
+    requires std::is_convertible_v<U*, T*>
     Handle(Handle<U>&& aOther) noexcept
     {
         BaseType::MoveConstructFrom(aOther);
