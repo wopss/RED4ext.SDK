@@ -70,6 +70,13 @@ public:
         }
     }
 
+    template<typename U>
+    requires std::is_convertible_v<T*, U*>
+    operator Handle<U>&() & noexcept
+    {
+        return *reinterpret_cast<Handle<U>*>(this);
+    }
+
     Handle& operator=(const Handle& aRhs) noexcept
     {
         Handle(aRhs).Swap(*this);
