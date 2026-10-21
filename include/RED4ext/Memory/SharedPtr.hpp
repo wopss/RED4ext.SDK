@@ -81,6 +81,9 @@ public:
     RefCnt* refCount;
 
 protected:
+    template<typename U>
+    friend class SharedPtrBase;
+
     constexpr SharedPtrBase() noexcept
         : instance(nullptr)
         , refCount(nullptr)
@@ -93,7 +96,8 @@ protected:
         std::swap(refCount, aOther.refCount);
     }
 
-    void CopyConstructFrom(const SharedPtrBase& aOther) noexcept
+    template<typename U>
+    void CopyConstructFrom(const SharedPtrBase<U>& aOther) noexcept
     {
         aOther.IncRef();
         instance = aOther.instance;
@@ -112,7 +116,8 @@ protected:
         return false;
     }
 
-    void MoveConstructFrom(SharedPtrBase& aOther) noexcept
+    template<typename U>
+    void MoveConstructFrom(SharedPtrBase<U>& aOther) noexcept
     {
         instance = aOther.instance;
         refCount = aOther.refCount;
