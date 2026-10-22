@@ -17,14 +17,14 @@ struct GlitchEffect : ink::IEffect
     static constexpr const char* NAME = "inkGlitchEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float intensity; // 50
-    uint8_t unk54[0x58 - 0x54]; // 54
-    float sizeX; // 58
-    float sizeY; // 5C
-    float offsetX; // 60
-    float offsetY; // 64
+    float intensity; // 60
+    uint8_t unk64[0x68 - 0x64]; // 64
+    float sizeX; // 68
+    float sizeY; // 6C
+    float offsetX; // 70
+    float offsetY; // 74
 };
-RED4EXT_ASSERT_SIZE(GlitchEffect, 0x68);
+RED4EXT_ASSERT_SIZE(GlitchEffect, 0x78);
 } // namespace ink
 using inkGlitchEffect = ink::GlitchEffect;
 } // namespace RED4ext

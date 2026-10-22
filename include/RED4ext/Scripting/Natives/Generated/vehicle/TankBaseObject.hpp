@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) TankBaseObject : vehicle::BaseObject
     static constexpr const char* NAME = "vehicleTankBaseObject";
     static constexpr const char* ALIAS = "TankObject";
 
-    uint8_t unkBA0[0xC00 - 0xBA0]; // BA0
+    uint8_t unkBC0[0xC20 - 0xBC0]; // BC0
 };
-RED4EXT_ASSERT_SIZE(TankBaseObject, 0xC00);
+RED4EXT_ASSERT_SIZE(TankBaseObject, 0xC20);
 } // namespace vehicle
 using vehicleTankBaseObject = vehicle::TankBaseObject;
 using TankObject = vehicle::TankBaseObject;

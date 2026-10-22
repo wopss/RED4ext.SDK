@@ -17,9 +17,9 @@ struct BlackboardPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameBlackboardPrereqState";
     static constexpr const char* ALIAS = "BlackboardPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(BlackboardPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(BlackboardPrereqState, 0x110);
 } // namespace game
 using gameBlackboardPrereqState = game::BlackboardPrereqState;
 using BlackboardPrereqState = game::BlackboardPrereqState;

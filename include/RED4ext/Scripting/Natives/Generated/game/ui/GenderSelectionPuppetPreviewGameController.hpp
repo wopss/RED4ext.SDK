@@ -17,9 +17,9 @@ struct GenderSelectionPuppetPreviewGameController : game::ui::PuppetPreviewGameC
     static constexpr const char* NAME = "gameuiGenderSelectionPuppetPreviewGameController";
     static constexpr const char* ALIAS = "inkGenderSelectionPuppetPreviewGameController";
 
-    uint8_t unk1B8[0x1C0 - 0x1B8]; // 1B8
+    uint8_t unk1E8[0x1F0 - 0x1E8]; // 1E8
 };
-RED4EXT_ASSERT_SIZE(GenderSelectionPuppetPreviewGameController, 0x1C0);
+RED4EXT_ASSERT_SIZE(GenderSelectionPuppetPreviewGameController, 0x1F0);
 } // namespace game::ui
 using gameuiGenderSelectionPuppetPreviewGameController = game::ui::GenderSelectionPuppetPreviewGameController;
 using inkGenderSelectionPuppetPreviewGameController = game::ui::GenderSelectionPuppetPreviewGameController;

@@ -21,19 +21,19 @@ struct __declspec(align(0x10)) VideoWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkVideoWidget";
     static constexpr const char* ALIAS = "inkVideo";
 
-    uint8_t unk200[0x238 - 0x200]; // 200
-    RaRef<Bink> videoResource; // 238
-    uint8_t unk240[0x260 - 0x240]; // 240
-    CName overriddenPlayerName; // 260
-    uint8_t unk268[0x270 - 0x268]; // 268
-    bool isParallaxEnabled; // 270
-    uint8_t unk271[0x272 - 0x271]; // 271
-    bool loop; // 272
-    uint8_t unk273[0x27A - 0x273]; // 273
-    bool prefetchVideo; // 27A
-    uint8_t unk27B[0x2B0 - 0x27B]; // 27B
+    uint8_t unk210[0x248 - 0x210]; // 210
+    RaRef<Bink> videoResource; // 248
+    uint8_t unk250[0x270 - 0x250]; // 250
+    CName overriddenPlayerName; // 270
+    uint8_t unk278[0x280 - 0x278]; // 278
+    bool isParallaxEnabled; // 280
+    uint8_t unk281[0x282 - 0x281]; // 281
+    bool loop; // 282
+    uint8_t unk283[0x28A - 0x283]; // 283
+    bool prefetchVideo; // 28A
+    uint8_t unk28B[0x2E0 - 0x28B]; // 28B
 };
-RED4EXT_ASSERT_SIZE(VideoWidget, 0x2B0);
+RED4EXT_ASSERT_SIZE(VideoWidget, 0x2E0);
 } // namespace ink
 using inkVideoWidget = ink::VideoWidget;
 using inkVideo = ink::VideoWidget;

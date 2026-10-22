@@ -17,9 +17,9 @@ struct InventoryPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameInventoryPrereqState";
     static constexpr const char* ALIAS = "InventoryPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(InventoryPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(InventoryPrereqState, 0x110);
 } // namespace game
 using gameInventoryPrereqState = game::InventoryPrereqState;
 using InventoryPrereqState = game::InventoryPrereqState;

@@ -17,9 +17,9 @@ struct IsVisualizerActivePrereqState : game::PrereqState
     static constexpr const char* NAME = "gameIsVisualizerActivePrereqState";
     static constexpr const char* ALIAS = "IsVisualizerActivePrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(IsVisualizerActivePrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(IsVisualizerActivePrereqState, 0x110);
 } // namespace game
 using gameIsVisualizerActivePrereqState = game::IsVisualizerActivePrereqState;
 using IsVisualizerActivePrereqState = game::IsVisualizerActivePrereqState;

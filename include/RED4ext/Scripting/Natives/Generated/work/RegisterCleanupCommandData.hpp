@@ -17,9 +17,9 @@ struct RegisterCleanupCommandData : work::IWorkspotCommandData
     static constexpr const char* NAME = "workRegisterCleanupCommandData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk08[0x30 - 0x8]; // 8
+    uint8_t unk08[0x50 - 0x8]; // 8
 };
-RED4EXT_ASSERT_SIZE(RegisterCleanupCommandData, 0x30);
+RED4EXT_ASSERT_SIZE(RegisterCleanupCommandData, 0x50);
 } // namespace work
 using workRegisterCleanupCommandData = work::RegisterCleanupCommandData;
 } // namespace RED4ext

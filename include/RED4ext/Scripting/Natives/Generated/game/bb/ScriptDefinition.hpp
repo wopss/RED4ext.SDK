@@ -17,9 +17,9 @@ struct ScriptDefinition : IScriptable
     static constexpr const char* NAME = "gamebbScriptDefinition";
     static constexpr const char* ALIAS = "BlackboardDefinition";
 
-    uint8_t unk40[0xA0 - 0x40]; // 40
+    uint8_t unk40[0xE0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(ScriptDefinition, 0xA0);
+RED4EXT_ASSERT_SIZE(ScriptDefinition, 0xE0);
 } // namespace game::bb
 using gamebbScriptDefinition = game::bb::ScriptDefinition;
 using BlackboardDefinition = game::bb::ScriptDefinition;

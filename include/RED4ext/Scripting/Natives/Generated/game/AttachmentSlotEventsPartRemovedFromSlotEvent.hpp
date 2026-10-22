@@ -18,10 +18,11 @@ struct AttachmentSlotEventsPartRemovedFromSlotEvent : red::Event
     static constexpr const char* NAME = "gameAttachmentSlotEventsPartRemovedFromSlotEvent";
     static constexpr const char* ALIAS = "PartRemovedFromSlotEvent";
 
-    ItemID itemID; // 40
+    uint8_t unk40[0x50 - 0x40]; // 40
     ItemID removedPartID; // 50
+    uint8_t unk60[0x68 - 0x60]; // 60
 };
-RED4EXT_ASSERT_SIZE(AttachmentSlotEventsPartRemovedFromSlotEvent, 0x60);
+RED4EXT_ASSERT_SIZE(AttachmentSlotEventsPartRemovedFromSlotEvent, 0x68);
 } // namespace game
 using gameAttachmentSlotEventsPartRemovedFromSlotEvent = game::AttachmentSlotEventsPartRemovedFromSlotEvent;
 using PartRemovedFromSlotEvent = game::AttachmentSlotEventsPartRemovedFromSlotEvent;

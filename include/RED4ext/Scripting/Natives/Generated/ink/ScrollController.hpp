@@ -41,9 +41,9 @@ struct ScrollController : ink::WidgetLogicController
     float scrollDelta; // 108
     Vector2 viewportSize; // 10C
     Vector2 contentSize; // 114
-    uint8_t unk11C[0x180 - 0x11C]; // 11C
+    uint8_t unk11C[0x1D0 - 0x11C]; // 11C
 };
-RED4EXT_ASSERT_SIZE(ScrollController, 0x180);
+RED4EXT_ASSERT_SIZE(ScrollController, 0x1D0);
 } // namespace ink
 using inkScrollController = ink::ScrollController;
 } // namespace RED4ext

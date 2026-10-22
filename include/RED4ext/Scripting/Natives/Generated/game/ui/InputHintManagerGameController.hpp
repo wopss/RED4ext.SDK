@@ -27,9 +27,9 @@ struct InputHintManagerGameController : game::ui::WidgetGameController
     ink::WidgetLibraryReference groupLibRef; // 1B8
     uint8_t unk1C8[0x1D8 - 0x1C8]; // 1C8
     CName hintContainerId; // 1D8
-    uint8_t unk1E0[0x1F8 - 0x1E0]; // 1E0
+    uint8_t unk1E0[0x208 - 0x1E0]; // 1E0
 };
-RED4EXT_ASSERT_SIZE(InputHintManagerGameController, 0x1F8);
+RED4EXT_ASSERT_SIZE(InputHintManagerGameController, 0x208);
 } // namespace game::ui
 using gameuiInputHintManagerGameController = game::ui::InputHintManagerGameController;
 using InputHintManagerGameController = game::ui::InputHintManagerGameController;

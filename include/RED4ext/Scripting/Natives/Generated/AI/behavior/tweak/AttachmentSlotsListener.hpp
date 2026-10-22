@@ -17,9 +17,9 @@ struct AttachmentSlotsListener : game::IAttachmentSlotsListener
     static constexpr const char* NAME = "AIbehaviortweakAttachmentSlotsListener";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x90 - 0x40]; // 40
+    uint8_t unk40[0xD0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(AttachmentSlotsListener, 0x90);
+RED4EXT_ASSERT_SIZE(AttachmentSlotsListener, 0xD0);
 } // namespace AI::behavior::tweak
 using AIbehaviortweakAttachmentSlotsListener = AI::behavior::tweak::AttachmentSlotsListener;
 } // namespace RED4ext

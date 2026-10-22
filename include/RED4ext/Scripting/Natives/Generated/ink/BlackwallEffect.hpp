@@ -17,12 +17,12 @@ struct BlackwallEffect : ink::GlitchEffect
     static constexpr const char* NAME = "inkBlackwallEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float scaleX; // 68
-    float scaleY; // 6C
-    float layerVisibility; // 70
-    uint8_t unk74[0x78 - 0x74]; // 74
+    float scaleX; // 78
+    float scaleY; // 7C
+    float layerVisibility; // 80
+    uint8_t unk84[0x88 - 0x84]; // 84
 };
-RED4EXT_ASSERT_SIZE(BlackwallEffect, 0x78);
+RED4EXT_ASSERT_SIZE(BlackwallEffect, 0x88);
 } // namespace ink
 using inkBlackwallEffect = ink::BlackwallEffect;
 } // namespace RED4ext

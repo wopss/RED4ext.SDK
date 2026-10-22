@@ -22,7 +22,7 @@ struct PlayAnimEvent : ink::anim::Event
     CName animName; // 48
     ink::anim::PlaybackOptions playbackOptions; // 50
 };
-RED4EXT_ASSERT_SIZE(PlayAnimEvent, 0x80);
+RED4EXT_ASSERT_SIZE(PlayAnimEvent, 0x88);
 } // namespace ink::anim
 using inkanimPlayAnimEvent = ink::anim::PlayAnimEvent;
 } // namespace RED4ext

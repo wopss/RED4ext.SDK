@@ -29,10 +29,11 @@ struct VehicleForbiddenAreaNotifier : world::ITriggerAreaNotifer
     DynArray<NodeRef> parkingSpots; // E0
     float innerAreaSpeedLimit; // F0
     float areaSpeedLimit; // F4
-    bool enableNullArea; // F8
-    bool dismount; // F9
-    bool enableSummoning; // FA
-    uint8_t unkFB[0x100 - 0xFB]; // FB
+    uint8_t unkF8[0xF9 - 0xF8]; // F8
+    bool enableNullArea; // F9
+    bool dismount; // FA
+    bool enableSummoning; // FB
+    uint8_t unkFC[0x100 - 0xFC]; // FC
 };
 RED4EXT_ASSERT_SIZE(VehicleForbiddenAreaNotifier, 0x100);
 } // namespace world

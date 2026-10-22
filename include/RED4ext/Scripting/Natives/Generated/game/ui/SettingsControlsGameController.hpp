@@ -18,7 +18,7 @@ struct SettingsControlsGameController : game::ui::MenuGameController
     static constexpr const char* ALIAS = "SettingsControlsGameController";
 
 };
-RED4EXT_ASSERT_SIZE(SettingsControlsGameController, 0xF0);
+RED4EXT_ASSERT_SIZE(SettingsControlsGameController, 0x100);
 } // namespace game::ui
 using gameuiSettingsControlsGameController = game::ui::SettingsControlsGameController;
 using SettingsControlsGameController = game::ui::SettingsControlsGameController;

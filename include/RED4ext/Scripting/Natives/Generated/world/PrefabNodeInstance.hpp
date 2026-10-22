@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) PrefabNodeInstance : world::SnappableNodeInstance
     static constexpr const char* NAME = "worldPrefabNodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0x1A0 - 0x90]; // 90
+    uint8_t unk90[0x1E0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(PrefabNodeInstance, 0x1A0);
+RED4EXT_ASSERT_SIZE(PrefabNodeInstance, 0x1E0);
 } // namespace world
 using worldPrefabNodeInstance = world::PrefabNodeInstance;
 } // namespace RED4ext

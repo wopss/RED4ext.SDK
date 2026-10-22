@@ -17,9 +17,9 @@ struct ScriptedAICommandParams : quest::MiscAICommandNodeParams
     static constexpr const char* NAME = "questScriptedAICommandParams";
     static constexpr const char* ALIAS = "ScriptedAICommandParams";
 
-    uint8_t unk40[0x58 - 0x40]; // 40
+    uint8_t unk40[0x78 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(ScriptedAICommandParams, 0x58);
+RED4EXT_ASSERT_SIZE(ScriptedAICommandParams, 0x78);
 } // namespace quest
 using questScriptedAICommandParams = quest::ScriptedAICommandParams;
 using ScriptedAICommandParams = quest::ScriptedAICommandParams;

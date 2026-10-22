@@ -17,8 +17,9 @@ struct InventoryPuppetPreviewGameController : game::ui::PuppetPreviewGameControl
     static constexpr const char* NAME = "gameuiInventoryPuppetPreviewGameController";
     static constexpr const char* ALIAS = "inkInventoryPuppetPreviewGameController";
 
+    uint8_t unk1E8[0x238 - 0x1E8]; // 1E8
 };
-RED4EXT_ASSERT_SIZE(InventoryPuppetPreviewGameController, 0x1B8);
+RED4EXT_ASSERT_SIZE(InventoryPuppetPreviewGameController, 0x238);
 } // namespace game::ui
 using gameuiInventoryPuppetPreviewGameController = game::ui::InventoryPuppetPreviewGameController;
 using inkInventoryPuppetPreviewGameController = game::ui::InventoryPuppetPreviewGameController;

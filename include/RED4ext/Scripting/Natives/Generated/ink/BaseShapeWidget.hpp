@@ -19,11 +19,11 @@ struct __declspec(align(0x10)) BaseShapeWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkBaseShapeWidget";
     static constexpr const char* ALIAS = "inkBaseShape";
 
-    uint8_t unk200[0x208 - 0x200]; // 200
-    DynArray<Vector2> vertexList; // 208
-    uint8_t unk218[0x230 - 0x218]; // 218
+    uint8_t unk210[0x218 - 0x210]; // 210
+    DynArray<Vector2> vertexList; // 218
+    uint8_t unk228[0x240 - 0x228]; // 228
 };
-RED4EXT_ASSERT_SIZE(BaseShapeWidget, 0x230);
+RED4EXT_ASSERT_SIZE(BaseShapeWidget, 0x240);
 } // namespace ink
 using inkBaseShapeWidget = ink::BaseShapeWidget;
 using inkBaseShape = ink::BaseShapeWidget;

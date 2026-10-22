@@ -17,9 +17,9 @@ struct InputKeyIconManager : ISerializable
     static constexpr const char* NAME = "inkInputKeyIconManager";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x1E8 - 0x30]; // 30
+    uint8_t unk30[0x200 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(InputKeyIconManager, 0x1E8);
+RED4EXT_ASSERT_SIZE(InputKeyIconManager, 0x200);
 } // namespace ink
 using inkInputKeyIconManager = ink::InputKeyIconManager;
 } // namespace RED4ext

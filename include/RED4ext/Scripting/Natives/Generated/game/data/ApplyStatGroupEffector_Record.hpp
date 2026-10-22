@@ -17,9 +17,9 @@ struct ApplyStatGroupEffector_Record : game::data::Effector_Record
     static constexpr const char* NAME = "gamedataApplyStatGroupEffector_Record";
     static constexpr const char* ALIAS = "ApplyStatGroupEffector_Record";
 
-    uint8_t unk88[0xB0 - 0x88]; // 88
+    uint8_t unk88[0xB8 - 0x88]; // 88
 };
-RED4EXT_ASSERT_SIZE(ApplyStatGroupEffector_Record, 0xB0);
+RED4EXT_ASSERT_SIZE(ApplyStatGroupEffector_Record, 0xB8);
 } // namespace game::data
 using gamedataApplyStatGroupEffector_Record = game::data::ApplyStatGroupEffector_Record;
 using ApplyStatGroupEffector_Record = game::data::ApplyStatGroupEffector_Record;

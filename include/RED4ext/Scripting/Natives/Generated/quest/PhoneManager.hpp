@@ -17,9 +17,9 @@ struct PhoneManager : quest::IPhoneManager
     static constexpr const char* NAME = "questPhoneManager";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x90 - 0x48]; // 48
+    uint8_t unk48[0x98 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(PhoneManager, 0x90);
+RED4EXT_ASSERT_SIZE(PhoneManager, 0x98);
 } // namespace quest
 using questPhoneManager = quest::PhoneManager;
 } // namespace RED4ext

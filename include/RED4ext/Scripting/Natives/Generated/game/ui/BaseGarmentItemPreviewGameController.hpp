@@ -18,7 +18,7 @@ struct BaseGarmentItemPreviewGameController : game::ui::InventoryPuppetPreviewGa
     static constexpr const char* ALIAS = "BaseGarmentItemPreviewGameController";
 
 };
-RED4EXT_ASSERT_SIZE(BaseGarmentItemPreviewGameController, 0x1B8);
+RED4EXT_ASSERT_SIZE(BaseGarmentItemPreviewGameController, 0x238);
 } // namespace game::ui
 using gameuiBaseGarmentItemPreviewGameController = game::ui::BaseGarmentItemPreviewGameController;
 using BaseGarmentItemPreviewGameController = game::ui::BaseGarmentItemPreviewGameController;

@@ -17,9 +17,9 @@ struct MenuItemListGameController : game::ui::SaveHandlingController
     static constexpr const char* NAME = "gameuiMenuItemListGameController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk160[0x180 - 0x160]; // 160
+    uint8_t unk208[0x228 - 0x208]; // 208
 };
-RED4EXT_ASSERT_SIZE(MenuItemListGameController, 0x180);
+RED4EXT_ASSERT_SIZE(MenuItemListGameController, 0x228);
 } // namespace game::ui
 using gameuiMenuItemListGameController = game::ui::MenuItemListGameController;
 } // namespace RED4ext

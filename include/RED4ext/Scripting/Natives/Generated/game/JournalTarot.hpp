@@ -24,8 +24,9 @@ struct JournalTarot : game::JournalEntry
     LocalizationString name; // 78
     LocalizationString description; // A0
     CName imagePart; // C8
+    uint8_t unkD0[0xD8 - 0xD0]; // D0
 };
-RED4EXT_ASSERT_SIZE(JournalTarot, 0xD0);
+RED4EXT_ASSERT_SIZE(JournalTarot, 0xD8);
 } // namespace game
 using gameJournalTarot = game::JournalTarot;
 using JournalTarot = game::JournalTarot;

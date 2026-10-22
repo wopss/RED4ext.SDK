@@ -33,8 +33,9 @@ struct PlaybackOptions
     bool applyCustomTimeDilation; // 2A
     uint8_t unk2B[0x2C - 0x2B]; // 2B
     float customTimeDilation; // 2C
+    uint8_t unk30[0x38 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(PlaybackOptions, 0x30);
+RED4EXT_ASSERT_SIZE(PlaybackOptions, 0x38);
 } // namespace ink::anim
 using inkanimPlaybackOptions = ink::anim::PlaybackOptions;
 using inkAnimOptions = ink::anim::PlaybackOptions;

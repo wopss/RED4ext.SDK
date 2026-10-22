@@ -18,7 +18,7 @@ struct __declspec(align(0x10)) HorizontalPanelWidget : ink::BasePanelWidget
     static constexpr const char* ALIAS = "inkHorizontalPanel";
 
 };
-RED4EXT_ASSERT_SIZE(HorizontalPanelWidget, 0x240);
+RED4EXT_ASSERT_SIZE(HorizontalPanelWidget, 0x250);
 } // namespace ink
 using inkHorizontalPanelWidget = ink::HorizontalPanelWidget;
 using inkHorizontalPanel = ink::HorizontalPanelWidget;

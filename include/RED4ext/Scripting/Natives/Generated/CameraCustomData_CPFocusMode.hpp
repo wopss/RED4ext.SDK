@@ -10,14 +10,14 @@
 
 namespace RED4ext
 {
-struct CameraCustomData_CPFocusMode : ICameraStorageCustomData
+struct __declspec(align(0x10)) CameraCustomData_CPFocusMode : ICameraStorageCustomData
 {
     static constexpr const char* NAME = "CameraCustomData_CPFocusMode";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0xC8 - 0x18]; // 18
+    uint8_t unk18[0xF0 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(CameraCustomData_CPFocusMode, 0xC8);
+RED4EXT_ASSERT_SIZE(CameraCustomData_CPFocusMode, 0xF0);
 } // namespace RED4ext
 
 // clang-format on

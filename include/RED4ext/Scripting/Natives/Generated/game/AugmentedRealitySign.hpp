@@ -17,9 +17,9 @@ struct AugmentedRealitySign : game::Object
     static constexpr const char* NAME = "gameAugmentedRealitySign";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk240[0x270 - 0x240]; // 240
+    uint8_t unk240[0x290 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(AugmentedRealitySign, 0x270);
+RED4EXT_ASSERT_SIZE(AugmentedRealitySign, 0x290);
 } // namespace game
 using gameAugmentedRealitySign = game::AugmentedRealitySign;
 } // namespace RED4ext

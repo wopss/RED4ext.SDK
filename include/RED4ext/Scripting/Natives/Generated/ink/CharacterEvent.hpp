@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-RED4EXT_ASSERT_SIZE(ink::CharacterEvent, 0x98);
+RED4EXT_ASSERT_SIZE(ink::CharacterEvent, 0xA0);
 using inkCharacterEvent = ink::CharacterEvent;
 } // namespace RED4ext
 
@@ -26,9 +26,9 @@ struct CharacterEvent : ink::InputEvent
     static constexpr const char* NAME = "inkCharacterEvent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0x98 - 0x90]; // 90
+    uint8_t unk90[0xA0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(CharacterEvent, 0x98);
+RED4EXT_ASSERT_SIZE(CharacterEvent, 0xA0);
 } // namespace ink
 using inkCharacterEvent = ink::CharacterEvent;
 } // namespace RED4ext

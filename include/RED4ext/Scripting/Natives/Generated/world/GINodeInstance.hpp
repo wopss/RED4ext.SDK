@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) GINodeInstance : world::INodeInstance
     static constexpr const char* NAME = "worldGINodeInstance";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk90[0xC0 - 0x90]; // 90
+    uint8_t unk90[0xD0 - 0x90]; // 90
 };
-RED4EXT_ASSERT_SIZE(GINodeInstance, 0xC0);
+RED4EXT_ASSERT_SIZE(GINodeInstance, 0xD0);
 } // namespace world
 using worldGINodeInstance = world::GINodeInstance;
 } // namespace RED4ext

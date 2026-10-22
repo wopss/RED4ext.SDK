@@ -18,10 +18,11 @@ struct VehicleDecalAttachmentData
     static constexpr const char* NAME = "vehicleVehicleDecalAttachmentData";
     static constexpr const char* ALIAS = "VehicleDecalAttachmentData";
 
-    CName componentToAttachTo; // 00
-    red::ResourceReferenceScriptToken decalReference; // 08
+    uint8_t unk00[0x10 - 0x0]; // 0
+    CName componentToAttachTo; // 10
+    red::ResourceReferenceScriptToken decalReference; // 18
 };
-RED4EXT_ASSERT_SIZE(VehicleDecalAttachmentData, 0x10);
+RED4EXT_ASSERT_SIZE(VehicleDecalAttachmentData, 0x20);
 } // namespace vehicle
 using vehicleVehicleDecalAttachmentData = vehicle::VehicleDecalAttachmentData;
 using VehicleDecalAttachmentData = vehicle::VehicleDecalAttachmentData;

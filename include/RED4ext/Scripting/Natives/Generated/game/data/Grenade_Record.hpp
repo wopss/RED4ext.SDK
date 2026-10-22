@@ -17,9 +17,9 @@ struct Grenade_Record : game::data::Gadget_Record
     static constexpr const char* NAME = "gamedataGrenade_Record";
     static constexpr const char* ALIAS = "Grenade_Record";
 
-    uint8_t unk5F8[0x830 - 0x5F8]; // 5F8
+    uint8_t unk608[0x840 - 0x608]; // 608
 };
-RED4EXT_ASSERT_SIZE(Grenade_Record, 0x830);
+RED4EXT_ASSERT_SIZE(Grenade_Record, 0x840);
 } // namespace game::data
 using gamedataGrenade_Record = game::data::Grenade_Record;
 using Grenade_Record = game::data::Grenade_Record;

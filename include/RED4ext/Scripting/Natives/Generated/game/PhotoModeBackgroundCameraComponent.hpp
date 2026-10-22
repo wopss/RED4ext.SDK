@@ -30,15 +30,15 @@ struct __declspec(align(0x10)) PhotoModeBackgroundCameraComponent : ent::BaseCam
     CName virtualCameraName; // 200
     Ref<world::EnvironmentAreaParameters> env; // 208
     WorldRenderAreaSettings params; // 220
-    uint8_t unk230[0x910 - 0x230]; // 230
-    float streamingDistance; // 910
-    Color backgroundColor; // 914
-    float depthCutDistance; // 918
-    RenderSceneLayer renderSceneLayer; // 91C
-    bool overrideBackgroundColor; // 91D
-    uint8_t unk91E[0x920 - 0x91E]; // 91E
+    uint8_t unk230[0x950 - 0x230]; // 230
+    float streamingDistance; // 950
+    Color backgroundColor; // 954
+    float depthCutDistance; // 958
+    RenderSceneLayer renderSceneLayer; // 95C
+    bool overrideBackgroundColor; // 95D
+    uint8_t unk95E[0x960 - 0x95E]; // 95E
 };
-RED4EXT_ASSERT_SIZE(PhotoModeBackgroundCameraComponent, 0x920);
+RED4EXT_ASSERT_SIZE(PhotoModeBackgroundCameraComponent, 0x960);
 } // namespace game
 using gamePhotoModeBackgroundCameraComponent = game::PhotoModeBackgroundCameraComponent;
 } // namespace RED4ext

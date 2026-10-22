@@ -18,12 +18,12 @@ struct __declspec(align(0x10)) FoliageDestructionNode : world::CollisionNode
     static constexpr const char* NAME = "worldFoliageDestructionNode";
     static constexpr const char* ALIAS = NAME;
 
-    DynArray<uint32_t> populationIndex; // 120
-    uint64_t foliageResourceHash; // 130
-    uint32_t dataVersion; // 138
-    uint8_t unk13C[0x140 - 0x13C]; // 13C
+    DynArray<uint32_t> populationIndex; // C0
+    uint64_t foliageResourceHash; // D0
+    uint32_t dataVersion; // D8
+    uint8_t unkDC[0xE0 - 0xDC]; // DC
 };
-RED4EXT_ASSERT_SIZE(FoliageDestructionNode, 0x140);
+RED4EXT_ASSERT_SIZE(FoliageDestructionNode, 0xE0);
 } // namespace world
 using worldFoliageDestructionNode = world::FoliageDestructionNode;
 } // namespace RED4ext

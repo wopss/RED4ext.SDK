@@ -17,9 +17,9 @@ struct StackScript : AI::behavior::ScriptBase
     static constexpr const char* NAME = "AIbehaviortaskStackScript";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x78 - 0x40]; // 40
+    uint8_t unk40[0xB8 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(StackScript, 0x78);
+RED4EXT_ASSERT_SIZE(StackScript, 0xB8);
 } // namespace AI::behavior::task
 using AIbehaviortaskStackScript = AI::behavior::task::StackScript;
 } // namespace RED4ext

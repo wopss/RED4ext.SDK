@@ -45,9 +45,9 @@ struct GarmentParameterComponentData
     uint8_t unkAC[0xB4 - 0xAC]; // AC
     uint32_t numIndices; // B4
     uint32_t numOffsets; // B8
-    uint8_t unkBC[0xC0 - 0xBC]; // BC
+    uint8_t unkBC[0xC8 - 0xBC]; // BC
 };
-RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0xC0);
+RED4EXT_ASSERT_SIZE(GarmentParameterComponentData, 0xC8);
 } // namespace ent
 using entGarmentParameterComponentData = ent::GarmentParameterComponentData;
 } // namespace RED4ext

@@ -18,10 +18,10 @@ struct CensorshipEffect : ink::GlitchEffect
     static constexpr const char* NAME = "inkCensorshipEffect";
     static constexpr const char* ALIAS = NAME;
 
-    CensorshipFlags censorshipFlags; // 68
-    uint8_t unk6C[0x70 - 0x6C]; // 6C
+    CensorshipFlags censorshipFlags; // 78
+    uint8_t unk7C[0x80 - 0x7C]; // 7C
 };
-RED4EXT_ASSERT_SIZE(CensorshipEffect, 0x70);
+RED4EXT_ASSERT_SIZE(CensorshipEffect, 0x80);
 } // namespace ink
 using inkCensorshipEffect = ink::CensorshipEffect;
 } // namespace RED4ext

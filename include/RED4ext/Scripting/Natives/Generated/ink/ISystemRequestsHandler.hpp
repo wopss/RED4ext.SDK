@@ -18,7 +18,6 @@
 #include <RED4ext/Scripting/Natives/Generated/ink/DeleteScreenshotResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/FavoriteLoadResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/GameScreenshotsRequestResult.hpp>
-#include <RED4ext/Scripting/Natives/Generated/ink/MarketingConsentPopupTypeResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/OnGogLoginStatusChangedResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/SaveMetadataRequestResult.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ink/SaveTransferRequestUpdate.hpp>
@@ -51,18 +50,19 @@ struct ISystemRequestsHandler : IScriptable
     ink::DeleteScreenshotResult DeleteSreenshotComplete; // 270
     ink::DeleteRequestResult SaveDeleted; // 2A8
     ink::SaveTransferRequestUpdate SaveTransferUpdate; // 2E0
-    ink::AdditionalContentPurchaseCallback AdditionalContentPurchaseResult; // 318
-    ink::AdditionalContentInstallRequestedCallback AdditionalContentInstallationRequestResult; // 350
-    ink::AdditionalContentInstalledCallback AdditionalContentInstallationResult; // 388
-    ink::AdditionalContentStatusUpdateCallback AdditionalContentStatusUpdateResult; // 3C0
-    ink::AdditionalContentDataReloadProgress AdditionalContentDataReloadProgressCallback; // 3F8
-    ink::ToggleBreachingCallback ToggleBreachingCallback; // 430
-    ink::UserIdResult UserIdResult; // 468
-    ink::UserIdResult UserChanged; // 4A0
-    ink::SystemServerRequesResult ServersSearchResult; // 4D8
-    ink::MarketingConsentPopupTypeResult MarketingConsentPopupTypeResult; // 510
+    uint8_t unk318[0x350 - 0x318]; // 318
+    ink::AdditionalContentPurchaseCallback AdditionalContentPurchaseResult; // 350
+    ink::AdditionalContentInstallRequestedCallback AdditionalContentInstallationRequestResult; // 388
+    ink::AdditionalContentInstalledCallback AdditionalContentInstallationResult; // 3C0
+    ink::AdditionalContentStatusUpdateCallback AdditionalContentStatusUpdateResult; // 3F8
+    ink::AdditionalContentDataReloadProgress AdditionalContentDataReloadProgressCallback; // 430
+    ink::ToggleBreachingCallback ToggleBreachingCallback; // 468
+    uint8_t unk4A0[0x4D8 - 0x4A0]; // 4A0
+    ink::UserIdResult UserIdResult; // 4D8
+    ink::UserIdResult UserChanged; // 510
+    ink::SystemServerRequesResult ServersSearchResult; // 548
 };
-RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x548);
+RED4EXT_ASSERT_SIZE(ISystemRequestsHandler, 0x580);
 } // namespace ink
 using inkISystemRequestsHandler = ink::ISystemRequestsHandler;
 } // namespace RED4ext

@@ -22,9 +22,9 @@ struct TelemetryDamageDealt
     game::TelemetryDamageSituation situation; // 00
     uint8_t unk04[0x8 - 0x4]; // 4
     game::TelemetryDamage damage; // 08
-    game::TelemetryEnemy enemy; // E0
+    game::TelemetryEnemy enemy; // 120
 };
-RED4EXT_ASSERT_SIZE(TelemetryDamageDealt, 0x128);
+RED4EXT_ASSERT_SIZE(TelemetryDamageDealt, 0x168);
 } // namespace game
 using gameTelemetryDamageDealt = game::TelemetryDamageDealt;
 using TelemetryDamageDealt = game::TelemetryDamageDealt;

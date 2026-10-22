@@ -17,9 +17,9 @@ struct MinimapSystem : game::IMinimapSystem
     static constexpr const char* NAME = "gameMinimapSystem";
     static constexpr const char* ALIAS = "MinimapSystem";
 
-    uint8_t unk48[0x2A8 - 0x48]; // 48
+    uint8_t unk48[0x310 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(MinimapSystem, 0x2A8);
+RED4EXT_ASSERT_SIZE(MinimapSystem, 0x310);
 } // namespace game
 using gameMinimapSystem = game::MinimapSystem;
 using MinimapSystem = game::MinimapSystem;

@@ -57,6 +57,15 @@ struct Widget : IScriptable
     bool isInteractive;                                           // 1FB
     bool affectsLayoutWhenHidden;                                 // 1FC
     uint8_t flags;                                                // 1FD
+    uint8_t unk1FE[0x210 - 0x1FE];                                // 1FE
 };
-RED4EXT_ASSERT_SIZE(Widget, 0x200);
+// Game 2.5 (3.0.88.46235): size 0x200 -> 0x210 (registration 0xFE884E). The constructor (2.31 0x4FCE74, 2.5
+// 0x1C3390) stores the same values up to 0x1FD in both builds: 0x1C356C `mov qword ptr [rbx+0x1F0], 0x3f800000`
+// (opacity 1.0, the four locks 0), 0x1C3577 `mov dword ptr [rbx+0x1F8], 1`, 0x1C3581 `mov word ptr [rbx+0x1FC],
+// 0x1300` (flags 0x13 at 0x1FD); 2.5 adds 0x1C358A `mov qword ptr [rbx+0x200], rsi`. Reflected offsets unchanged.
+RED4EXT_ASSERT_SIZE(Widget, 0x210);
+RED4EXT_ASSERT_OFFSET(Widget, tintColor, 0x1E0);
+RED4EXT_ASSERT_OFFSET(Widget, opacity, 0x1F0);
+RED4EXT_ASSERT_OFFSET(Widget, visible, 0x1F8);
+RED4EXT_ASSERT_OFFSET(Widget, flags, 0x1FD);
 } // namespace RED4ext::ink
