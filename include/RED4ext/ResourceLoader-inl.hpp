@@ -12,14 +12,18 @@ RED4EXT_INLINE RED4ext::ResourceRequest::ResourceRequest(ResourcePath aPath)
     , unk08(0)
     , unk10(false)
     , disablePreInitialization(false)
+    , unk12(false)
     , disableImports(false)
     , disablePostLoad(false)
-    , unk14(false)
     , unk15(false)
     , unk16(false)
+    , unk17(false)
+    , unk18(false)
+    , unk19(true)
+    , unk1A{}
     , archiveHandle(-1)
-    , unk1C(0)
-    , unk20(0)
+    , unk24(0)
+    , unk28(0)
 {
 }
 

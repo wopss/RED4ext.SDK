@@ -100,6 +100,7 @@ constexpr std::uint32_t CRTTISystem_Get = 0x4A610F64;
 
 #pragma region CStack
 constexpr std::uint32_t CStack_vtbl = 0x349A0EE1;
+constexpr std::uint32_t CStackFrame_dtor = 0x952E09D3;
 #pragma endregion
 
 #pragma region CString
@@ -151,7 +152,7 @@ constexpr std::uint32_t ISerializable_sub_30 = 0x6D63649;
 constexpr std::uint32_t ISerializable_sub_40 = 0x88B30FF9;
 constexpr std::uint32_t ISerializable_sub_78 = 0xA1D93993;
 constexpr std::uint32_t ISerializable_sub_A0 = 0xED221B32;
-constexpr std::uint32_t ISerializable_sub_C0 = 0x80201C35;
+constexpr std::uint32_t ISerializable_sub_C0 = 0xDBE91251;
 constexpr std::uint32_t ISerializable_Counter = 2630817091;
 #pragma endregion
 
@@ -187,6 +188,7 @@ constexpr std::uint32_t Memory_Vault_ReallocAligned = 0x56961AA9;
 constexpr std::uint32_t Memory_Vault_Free = 0x33421332;
 constexpr std::uint32_t Memory_Vault_Unk1 = 0x19EC1367;
 constexpr std::uint32_t Memory_PoolStorage_OOM = 0xD54F163A;
+constexpr std::uint32_t Memory_PoolScript_vtbl = 0x600407D7;
 #pragma endregion
 
 #pragma region OpcodeHandlers
@@ -231,7 +233,7 @@ constexpr std::uint32_t ResourceToken_dtor = 0x9A5F0A0D;
 constexpr std::uint32_t ResourceToken_Fetch = 0x8C0918CA;
 constexpr std::uint32_t ResourceToken_OnLoaded = 0xEB4B25AB;
 constexpr std::uint32_t ResourceToken_CancelUnk38 = 0xF6E20CE6;
-constexpr std::uint32_t ResourceToken_DestructUnk38 = 0x95831FEE;
+constexpr std::uint32_t ResourceToken_DestructUnk38 = 0xE4551DBE;
 #pragma endregion
 
 #pragma region TTypedClass
@@ -244,13 +246,13 @@ constexpr std::uint32_t TweakDB_CreateRecord = 0x3201127A;
 #pragma endregion
 
 #pragma region UpdateRegistrar
-constexpr std::uint32_t UpdateRegistrar_RegisterGroupUpdate = 0xFD914605;
-constexpr std::uint32_t UpdateRegistrar_RegisterBucketUpdate = 0x192F4EA2;
+constexpr std::uint32_t UpdateRegistrar_RegisterGroupUpdate = 0xFDDF4607;
+constexpr std::uint32_t UpdateRegistrar_RegisterBucketUpdate = 0x197D4EA4;
 #pragma endregion
 
 #pragma region DeferredDataBuffer
 constexpr std::uint32_t DeferredDataBuffer_LoadAsync = 4125893577;
-constexpr std::uint32_t DeferredDataBuffer_LoadRefAsync = 1459046115;
+constexpr std::uint32_t DeferredDataBuffer_LoadRefAsync = 3857663888;
 #pragma endregion
 
 #pragma region LaunchParameters

@@ -65,7 +65,12 @@ struct IRTTISystem
     virtual CString* GetStringConst(uint32_t aIndex) = 0;         // 128 - Used by StringConst opcode (0x10)
     virtual void SetStringTable(DynArray<CString>& aStrings) = 0; // 130 - Called by script loader
 
-    virtual ~IRTTISystem() = 0; // 138
+    virtual void sub_138() = 0; // 138 - Added in 2.5
+    virtual void sub_140() = 0; // 140 - Added in 2.5
+    virtual void sub_148() = 0; // 148 - Added in 2.5
+    virtual void sub_150() = 0; // 150 - Added in 2.5
+
+    virtual ~IRTTISystem() = 0; // 158
 };
 RED4EXT_ASSERT_SIZE(IRTTISystem, 0x8);
 
