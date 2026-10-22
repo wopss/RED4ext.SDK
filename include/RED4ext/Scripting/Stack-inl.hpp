@@ -81,6 +81,6 @@ RED4EXT_INLINE RED4ext::CStackFrame::CStackFrame(IScriptable* aContext, char* aC
 RED4EXT_INLINE RED4ext::CStackFrame::~CStackFrame()
 {
     using func_t = void (*)(CStackFrame*);
-    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CStackFrame_dtor);
-    func(this);
+    static UniversalRelocFunc<func_t> dtor(Detail::AddressHashes::CStackFrame_dtor);
+    dtor(this);
 }
