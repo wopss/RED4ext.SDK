@@ -10,6 +10,7 @@
 #include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/save/GameMetadata.hpp>
+#include <RED4ext/Scripting/Natives/Generated/save/ModioModSavedInfo.hpp>
 
 namespace RED4ext
 {
@@ -36,7 +37,7 @@ struct Metadata : save::GameMetadata
     bool isCheckpoint; // 3AD
     uint8_t unk3AE[0x3AF - 0x3AE]; // 3AE
     bool isModded; // 3AF
-    uint8_t unk3B0[0x3C0 - 0x3B0]; // 3B0
+    DynArray<save::ModioModSavedInfo> enabledModioInfo; // 3B0
     uint64_t initialLoadingScreenID; // 3C0
     bool isStoryMode; // 3C8
     bool isPointOfNoReturn; // 3C9

@@ -6,11 +6,14 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Handle.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
 
 namespace RED4ext
 {
+namespace game { struct ItemObject; }
+
 namespace game
 {
 struct AttachmentSlotEventsPartRemovedFromSlotEvent : red::Event
@@ -18,9 +21,9 @@ struct AttachmentSlotEventsPartRemovedFromSlotEvent : red::Event
     static constexpr const char* NAME = "gameAttachmentSlotEventsPartRemovedFromSlotEvent";
     static constexpr const char* ALIAS = "PartRemovedFromSlotEvent";
 
-    uint8_t unk40[0x50 - 0x40]; // 40
+    WeakHandle<game::ItemObject> item; // 40
     ItemID removedPartID; // 50
-    uint8_t unk60[0x68 - 0x60]; // 60
+    TweakDBID slotID; // 60
 };
 RED4EXT_ASSERT_SIZE(AttachmentSlotEventsPartRemovedFromSlotEvent, 0x68);
 } // namespace game

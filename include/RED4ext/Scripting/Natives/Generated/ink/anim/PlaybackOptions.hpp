@@ -33,7 +33,8 @@ struct PlaybackOptions
     bool applyCustomTimeDilation; // 2A
     uint8_t unk2B[0x2C - 0x2B]; // 2B
     float customTimeDilation; // 2C
-    uint8_t unk30[0x38 - 0x30]; // 30
+    bool pauseInPhotoMode; // 30
+    uint8_t unk31[0x38 - 0x31]; // 31
 };
 RED4EXT_ASSERT_SIZE(PlaybackOptions, 0x38);
 } // namespace ink::anim

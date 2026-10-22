@@ -15,6 +15,7 @@
 namespace RED4ext
 {
 struct CResource;
+namespace ink { struct CreditsResource; }
 
 namespace game::ui
 {
@@ -23,7 +24,12 @@ struct CreditsController : game::ui::WidgetGameController
     static constexpr const char* NAME = "gameuiCreditsController";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkE0[0x1A8 - 0xE0]; // E0
+    uint8_t unkE0[0x130 - 0xE0]; // E0
+    Ref<ink::CreditsResource> creditsResourceXBOX; // 130
+    Ref<ink::CreditsResource> creditsResourcePC; // 148
+    Ref<ink::CreditsResource> creditsResourceEmporium; // 160
+    Ref<ink::CreditsResource> creditsResourceMac; // 178
+    Ref<ink::CreditsResource> creditsResourcePS5; // 190
     ink::CompoundWidgetReference sectionsContainer; // 1A8
     ink::TextWidgetReference singleTextWidget; // 1C0
     ink::TextWidgetReference speakerNameTextWidget; // 1D8

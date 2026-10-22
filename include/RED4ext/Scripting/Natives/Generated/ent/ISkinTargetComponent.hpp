@@ -20,7 +20,9 @@ struct __declspec(align(0x10)) ISkinTargetComponent : ent::IVisualComponent
     static constexpr const char* NAME = "entISkinTargetComponent";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk140[0x188 - 0x140]; // 140
+    uint8_t unk140[0x180 - 0x140]; // 140
+    float boundingBoxLocalBoundsOverride; // 180
+    uint8_t unk184[0x188 - 0x184]; // 184
     Handle<ent::SkinningBinding> skinning; // 188
     uint8_t unk198[0x1D8 - 0x198]; // 198
     bool useSkinningLOD; // 1D8

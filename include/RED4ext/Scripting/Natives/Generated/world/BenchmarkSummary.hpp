@@ -28,7 +28,7 @@ struct BenchmarkSummary : IScriptable
     uint64_t systemMemory; // E8
     CString osName; // F0
     CString osVersion; // 110
-    uint8_t unk130[0x150 - 0x130]; // 130
+    CString macProductName; // 130
     CString presetName; // 150
     CName presetLocalizedName; // 170
     CName textureQualityPresetLocalizedName; // 178
@@ -78,7 +78,11 @@ struct BenchmarkSummary : IScriptable
     int32_t XeSSQuality; // 1F4
     float XeSSSharpness; // 1F8
     bool XeSSFrameGenEnabled; // 1FC
-    uint8_t unk1FD[0x209 - 0x1FD]; // 1FD
+    bool MFXEnabled; // 1FD
+    uint8_t unk1FE[0x200 - 0x1FE]; // 1FE
+    int32_t MFXQuality; // 200
+    float MFXSharpness; // 204
+    bool MFXFrameGenEnabled; // 208
     bool DRSEnabled; // 209
     uint8_t unk20A[0x20C - 0x20A]; // 20A
     uint32_t DRSTargetFPS; // 20C

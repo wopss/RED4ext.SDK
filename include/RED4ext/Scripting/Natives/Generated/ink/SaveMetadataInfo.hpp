@@ -43,7 +43,8 @@ struct SaveMetadataInfo : IScriptable
     uint8_t unkFA[0x100 - 0xFA]; // FA
     CString platform; // 100
     DynArray<CName> additionalContentIds; // 120
-    uint8_t unk130[0x158 - 0x130]; // 130
+    CString playthroughID; // 130
+    uint64_t fileSize; // 150
 };
 RED4EXT_ASSERT_SIZE(SaveMetadataInfo, 0x158);
 } // namespace ink

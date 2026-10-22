@@ -6,6 +6,7 @@
 
 #include <cstdint>
 #include <RED4ext/Common.hpp>
+#include <RED4ext/Scripting/Natives/Generated/EAstcQuality.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ETextureCompression.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ETextureRawFormat.hpp>
 #include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/eTextureGroup.hpp>
@@ -19,7 +20,7 @@ struct STextureGroupSetup
 
     ETextureCompression compression; // 00
     ETextureRawFormat rawFormat; // 04
-    uint8_t unk08[0x9 - 0x8]; // 8
+    EAstcQuality astcQuality; // 08
     GpuWrapApi::eTextureGroup group; // 09
     uint8_t platformMipBiasPC; // 0A
     uint8_t platformMipBiasConsole; // 0B

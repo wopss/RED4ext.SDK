@@ -29,7 +29,7 @@ struct VehicleForbiddenAreaNotifier : world::ITriggerAreaNotifer
     DynArray<NodeRef> parkingSpots; // E0
     float innerAreaSpeedLimit; // F0
     float areaSpeedLimit; // F4
-    uint8_t unkF8[0xF9 - 0xF8]; // F8
+    bool speedLimitAppliedWhenEntityIsPassenger; // F8
     bool enableNullArea; // F9
     bool dismount; // FA
     bool enableSummoning; // FB

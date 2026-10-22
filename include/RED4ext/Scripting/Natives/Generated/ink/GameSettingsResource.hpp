@@ -40,7 +40,9 @@ struct GameSettingsResource : CResource
     DynArray<RaRef<ink::TextureAtlas>> permanentTextureAtlasesStadia; // B8
     DynArray<RaRef<ink::TextureAtlas>> permanentTextureAtlasesStadiaDurango; // C8
     DynArray<RaRef<ink::TextureAtlas>> permanentTextureAtlasesStadiaOrbis; // D8
-    uint8_t unkE8[0x118 - 0xE8]; // E8
+    DynArray<RaRef<ink::TextureAtlas>> permanentTextureAtlasesSwitch; // E8
+    DynArray<RaRef<ink::TextureAtlas>> permanentTextureAtlasesSwitchTouch; // F8
+    uint8_t unk108[0x118 - 0x108]; // 108
     Ref<ink::LayersResource> layersResource; // 118
     Ref<ink::ShapeCollectionResource> defaultShapeCollectionResource; // 130
     uint8_t unk148[0x160 - 0x148]; // 148
@@ -67,7 +69,7 @@ struct GameSettingsResource : CResource
     RaRef<ink::TextureAtlas> orbisIconsAtlas; // 200
     RaRef<ink::TextureAtlas> prosperoIconsAtlas; // 208
     RaRef<ink::TextureAtlas> nintendoSwitchIconsAtlas; // 210
-    uint8_t unk218[0x220 - 0x218]; // 218
+    RaRef<ink::TextureAtlas> nintendoSwitchTouchIconsAtlas; // 218
     RaRef<ink::TextureAtlas> stadiaIconsAtlas; // 220
     RaRef<ink::TextureAtlas> stadiaDurangoIconsAtlas; // 228
     RaRef<ink::TextureAtlas> stadiaOrbisIconsAtlas; // 230

@@ -26,7 +26,8 @@ and this project adheres to
   `CBaseEngine`/`CGameEngine`, `CRTTISystem` vtable, `GpuApi::SDeviceData` and `ResourceRequest`.
 - Increase `DefaultFixedCallbackBufferSize` to 64, the game's `FixedSizeFunction` default capacity since 2.5.
 - `DeferredDataBuffer::LoadCopyAsync` passes the new loading flag added in 2.5.
-- Update the generated class layouts, and the hand-written `CMesh`, `ink::CharacterEvent`, `ink::ControllerProcessor`, `ink::Widget` and `vehicle::BaseObject`, to the game version 2.5 retail sizes and offsets.
+- Update the generated class layouts, and the hand-written `CMesh`, `ink::CharacterEvent`, `ink::ControllerProcessor`, `ink::Widget` and `vehicle::BaseObject`, to the game version 2.5 retail sizes and offsets, with the types of the properties added in 2.5.
+- `game::StatIDType` is one byte since 2.5.
 - Move `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
 - Make `DynArray`, `StaticArray`, `Span` fields private, use getter methods instead: `Data()`, `Size()`, etc.
 - Rename `Span::GetSize()` to `Span::Size()`

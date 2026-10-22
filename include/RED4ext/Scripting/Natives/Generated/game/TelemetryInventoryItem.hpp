@@ -21,7 +21,8 @@ struct TelemetryInventoryItem
 
     CString friendlyName; // 00
     CString localizedName; // 20
-    uint8_t unk40[0x80 - 0x40]; // 40
+    CString leftHandWeapon; // 40
+    CString rightHandWeapon; // 60
     ItemID itemID; // 80
     game::data::Quality quality; // 90
     game::data::ItemType itemType; // 94

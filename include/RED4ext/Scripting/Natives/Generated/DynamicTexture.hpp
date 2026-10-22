@@ -22,7 +22,9 @@ struct DynamicTexture : ITexture
     uint32_t width; // 40
     uint32_t height; // 44
     bool scaleToViewport; // 48
-    uint8_t unk49[0x58 - 0x49]; // 49
+    uint8_t unk49[0x4C - 0x49]; // 49
+    float viewportScale; // 4C
+    uint8_t unk50[0x58 - 0x50]; // 50
     DynamicTextureDataFormat dataFormat; // 58
     bool mipChain; // 59
     uint8_t samplesCount; // 5A

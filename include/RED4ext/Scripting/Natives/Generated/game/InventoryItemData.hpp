@@ -68,7 +68,8 @@ struct InventoryItemData
     bool IsAvailable; // 13D
     bool IsVendorItem; // 13E
     bool IsBroken; // 13F
-    uint8_t unk140[0x144 - 0x140]; // 140
+    bool CanDualWield; // 140
+    uint8_t unk141[0x144 - 0x141]; // 141
     int32_t SlotIndex; // 144
     uint32_t PositionInBackpack; // 148
     game::ItemIconGender IconGender; // 14C

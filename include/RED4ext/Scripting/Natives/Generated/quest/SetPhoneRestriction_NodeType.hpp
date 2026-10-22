@@ -19,7 +19,7 @@ struct SetPhoneRestriction_NodeType : quest::IPhoneManagerNodeType
     static constexpr const char* ALIAS = NAME;
 
     bool applyPhoneRestriction; // 38
-    uint8_t unk39[0x3A - 0x39]; // 39
+    bool blockSkipByLine; // 39
     bool forcedApply; // 3A
     uint8_t unk3B[0x40 - 0x3B]; // 3B
     CName forcedApplySource; // 40

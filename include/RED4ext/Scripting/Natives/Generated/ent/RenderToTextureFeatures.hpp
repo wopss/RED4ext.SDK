@@ -25,7 +25,9 @@ struct RenderToTextureFeatures
     bool localShadows; // 05
     ent::RenderToTextureFeaturesPlatform SSAO; // 06
     ent::RenderToTextureFeaturesPlatform reflections; // 07
-    uint8_t unk08[0xB - 0x8]; // 8
+    ent::RenderToTextureFeaturesPlatform motionBlur; // 08
+    ent::RenderToTextureFeaturesPlatform depthOfField; // 09
+    bool stereo; // 0A
 };
 RED4EXT_ASSERT_SIZE(RenderToTextureFeatures, 0xB);
 } // namespace ent

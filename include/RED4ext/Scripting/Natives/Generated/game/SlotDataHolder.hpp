@@ -9,6 +9,7 @@
 #include <RED4ext/Containers/DynArray.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/AmmoData.hpp>
+#include <RED4ext/Scripting/Natives/Generated/game/SlotWeaponData.hpp>
 
 namespace RED4ext
 {
@@ -20,7 +21,9 @@ struct SlotDataHolder : IScriptable
     static constexpr const char* ALIAS = "SlotDataHolder";
 
     DynArray<game::AmmoData> ammoData; // 40
-    uint8_t unk50[0xF0 - 0x50]; // 50
+    game::SlotWeaponData rightWeapon; // 50
+    game::SlotWeaponData leftWeapon; // 98
+    uint8_t unkE0[0xF0 - 0xE0]; // E0
 };
 RED4EXT_ASSERT_SIZE(SlotDataHolder, 0xF0);
 } // namespace game
