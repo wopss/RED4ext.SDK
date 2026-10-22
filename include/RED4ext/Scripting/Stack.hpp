@@ -114,6 +114,11 @@ RED4EXT_ASSERT_OFFSET(CScriptStack, type, 0x40);
 struct CStackFrame
 {
     CStackFrame(IScriptable* aContext, char* aCode, void* aUnk = nullptr);
+    ~CStackFrame();
+
+    // Root frames point to their own call map (unk98 -> unk68), so they can't be copied.
+    CStackFrame(const CStackFrame&) = delete;
+    CStackFrame& operator=(const CStackFrame&) = delete;
 
     char* code;            // 00
     CBaseFunction* func;   // 08 - For scripted functions
@@ -130,6 +135,11 @@ struct CStackFrame
     uint16_t paramFlags;   // 60
     uint8_t currentParam;  // 62
     bool useDirectData;    // 63 - If set the result param is not used, preventing an extra copy of the result
+    bool isRoot;           // 64 - Set when the frame has no parent
+    uint8_t unk65[3];      // 65
+    uint8_t unk68[0x30];   // 68 - HashMap (PoolScript), owned by the root frame
+    void* unk98;           // 98 - Points to unk68 of the root frame, inherited by child frames
+    uint8_t unkA0;         // A0
 
     void Step()
     {
@@ -141,7 +151,11 @@ struct CStackFrame
         return (paramFlags & (1 << currentParam)) != 0;
     }
 };
-RED4EXT_ASSERT_SIZE(CStackFrame, 0x68);
+RED4EXT_ASSERT_SIZE(CStackFrame, 0xA8);
+RED4EXT_ASSERT_OFFSET(CStackFrame, isRoot, 0x64);
+RED4EXT_ASSERT_OFFSET(CStackFrame, unk68, 0x68);
+RED4EXT_ASSERT_OFFSET(CStackFrame, unk98, 0x98);
+RED4EXT_ASSERT_OFFSET(CStackFrame, unkA0, 0xA0);
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

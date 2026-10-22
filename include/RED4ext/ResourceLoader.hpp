@@ -125,20 +125,25 @@ struct ResourceRequest
     uint64_t unk08;                // 08
     bool unk10;                    // 10
     bool disablePreInitialization; // 11
-    bool disableImports;           // 12
-    bool disablePostLoad;          // 13
-    bool unk14;                    // 14
+    bool unk12;                    // 12
+    bool disableImports;           // 13
+    bool disablePostLoad;          // 14
     bool unk15;                    // 15
     bool unk16;                    // 16
-    int32_t archiveHandle;         // 18
-    int32_t unk1C;                 // 1C
-    uint64_t unk20;                // 20
+    bool unk17;                    // 17
+    bool unk18;                    // 18
+    bool unk19;                    // 19 - Defaults to true
+    uint8_t unk1A[0x20 - 0x1A];    // 1A
+    int32_t archiveHandle;         // 20
+    int32_t unk24;                 // 24
+    uint64_t unk28;                // 28
 };
-RED4EXT_ASSERT_SIZE(ResourceRequest, 0x28);
+RED4EXT_ASSERT_SIZE(ResourceRequest, 0x30);
 RED4EXT_ASSERT_OFFSET(ResourceRequest, path, 0x0);
 RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePreInitialization, 0x11);
-RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePostLoad, 0x13);
-RED4EXT_ASSERT_OFFSET(ResourceRequest, archiveHandle, 0x18);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, disableImports, 0x13);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePostLoad, 0x14);
+RED4EXT_ASSERT_OFFSET(ResourceRequest, archiveHandle, 0x20);
 
 struct ResourceLoader
 {

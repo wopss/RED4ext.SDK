@@ -17,9 +17,15 @@ and this project adheres to
 - Add `IRenderResource` (#194).
 - Add parallel jobs support to `JobQueue` (#204).
 - Add template utilities on `Variant` to set/get primitive types (#219).
+- Add support for game version 2.5 (`RED4EXT_V1_RUNTIME_VERSION_2_50`).
+- Add `CStackFrame` destructor and the frame call map fields introduced in 2.5.
 
 ### Changed
 
+- Update layouts for game version 2.5: `CBaseFunction` and derived function types (+0x40), `CStackFrame` (0xA8),
+  `CBaseEngine`/`CGameEngine`, `CRTTISystem` vtable, `GpuApi::SDeviceData` and `ResourceRequest`.
+- Increase `DefaultFixedCallbackBufferSize` to 64, the game's `FixedSizeFunction` default capacity since 2.5.
+- `DeferredDataBuffer::LoadCopyAsync` passes the new loading flag added in 2.5.
 - Move `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
 - Make `DynArray`, `StaticArray`, `Span` fields private, use getter methods instead: `Data()`, `Size()`, etc.
 - Rename `Span::GetSize()` to `Span::Size()`
@@ -40,6 +46,8 @@ and this project adheres to
 - Fix `CClass::ToString` address hash (#216).
 - Fix `TTypedClass::Assign` to act as copy assignment instead of copy construction (#218).
 - Fix `RawBuffer` move construction and move assignment (#218).
+- Fix address hashes for 2.5: `UpdateRegistrar::RegisterUpdate`, `DeferredDataBuffer::LoadCopyAsync`,
+  `ISerializable::sub_C0` and `ResourceToken` I/O context destruction.
 
 ## [1.0.0] - 2026-03-09
 

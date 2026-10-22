@@ -9,7 +9,7 @@
 
 namespace RED4ext
 {
-constexpr size_t DefaultFixedCallbackBufferSize = 32;
+constexpr size_t DefaultFixedCallbackBufferSize = 64;
 constexpr size_t DefaultFlexCallbackBufferSize = 24;
 
 template<typename R, typename... Args>
