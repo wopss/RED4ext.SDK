@@ -19,7 +19,7 @@ struct StatsObjectID
 
     uint64_t entityHash; // 00
     game::StatIDType idType; // 08
-    uint8_t unk0C[0x10 - 0xC]; // C
+    uint8_t unk09[0x10 - 0x9]; // 9
 };
 RED4EXT_ASSERT_SIZE(StatsObjectID, 0x10);
 } // namespace game
