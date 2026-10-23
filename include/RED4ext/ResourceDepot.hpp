@@ -25,7 +25,7 @@ enum class ArchiveScope : uint32_t
     Content = 1, // archive\pc\content
     DLC = 2,     // archive\pc\dlc
     Patch = 3,   // archive\pc\patch
-    Mod = 4,     // archive\pc\mod + mods\*\archives
+    Mod = 6,     // archive\pc\mod + mods\*\archives (game 2.5: 6, was 4)
 };
 
 struct ArchiveGroup
