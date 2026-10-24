@@ -11,6 +11,7 @@ namespace game::ui {
 enum class OneTimeMessage : int32_t
 {
     XboxCompatibilityLimitation = 0,
+    EmporiumConsoleFeatures = 1,
 };
 } // namespace game::ui
 using gameuiOneTimeMessage = game::ui::OneTimeMessage;
