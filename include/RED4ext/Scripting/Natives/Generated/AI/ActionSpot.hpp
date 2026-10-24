@@ -32,9 +32,9 @@ struct ActionSpot : AI::SmartSpot
     uint8_t unk4A[0x4C - 0x4A]; // 4A
     float clippingSpaceOrientation; // 4C
     float clippingSpaceRange; // 50
-    uint8_t unk54[0xC8 - 0x54]; // 54
+    uint8_t unk54[0xE8 - 0x54]; // 54
 };
-RED4EXT_ASSERT_SIZE(ActionSpot, 0xC8);
+RED4EXT_ASSERT_SIZE(ActionSpot, 0xE8);
 } // namespace AI
 using AIActionSpot = AI::ActionSpot;
 } // namespace RED4ext

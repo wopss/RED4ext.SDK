@@ -21,7 +21,8 @@ struct RenderGameplayEffectsManagerSaveData : ISerializable
     game::CyberspacePixelsortEffectParams cyberspacePixelsortParams; // 30
     bool cyberspacePixelsortEnabled; // 78
     bool enforceScreenSpaceReflectionsUberQuality; // 79
-    uint8_t unk7A[0x80 - 0x7A]; // 7A
+    bool increaseLocalShadowmapUpdates; // 7A
+    uint8_t unk7B[0x80 - 0x7B]; // 7B
 };
 RED4EXT_ASSERT_SIZE(RenderGameplayEffectsManagerSaveData, 0x80);
 } // namespace game

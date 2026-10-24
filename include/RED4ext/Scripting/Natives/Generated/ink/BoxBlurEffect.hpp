@@ -18,13 +18,13 @@ struct BoxBlurEffect : ink::IEffect
     static constexpr const char* NAME = "inkBoxBlurEffect";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t samples; // 50
-    uint8_t unk51[0x54 - 0x51]; // 51
-    float intensity; // 54
-    ink::EBlurDimension blurDimension; // 58
-    uint8_t unk5C[0x60 - 0x5C]; // 5C
+    uint8_t samples; // 60
+    uint8_t unk61[0x64 - 0x61]; // 61
+    float intensity; // 64
+    ink::EBlurDimension blurDimension; // 68
+    uint8_t unk6C[0x70 - 0x6C]; // 6C
 };
-RED4EXT_ASSERT_SIZE(BoxBlurEffect, 0x60);
+RED4EXT_ASSERT_SIZE(BoxBlurEffect, 0x70);
 } // namespace ink
 using inkBoxBlurEffect = ink::BoxBlurEffect;
 } // namespace RED4ext

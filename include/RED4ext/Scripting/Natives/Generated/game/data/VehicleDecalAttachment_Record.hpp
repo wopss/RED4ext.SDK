@@ -17,9 +17,9 @@ struct VehicleDecalAttachment_Record : game::data::TweakDBRecord
     static constexpr const char* NAME = "gamedataVehicleDecalAttachment_Record";
     static constexpr const char* ALIAS = "VehicleDecalAttachment_Record";
 
-    uint8_t unk48[0x60 - 0x48]; // 48
+    uint8_t unk48[0x70 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(VehicleDecalAttachment_Record, 0x60);
+RED4EXT_ASSERT_SIZE(VehicleDecalAttachment_Record, 0x70);
 } // namespace game::data
 using gamedataVehicleDecalAttachment_Record = game::data::VehicleDecalAttachment_Record;
 using VehicleDecalAttachment_Record = game::data::VehicleDecalAttachment_Record;

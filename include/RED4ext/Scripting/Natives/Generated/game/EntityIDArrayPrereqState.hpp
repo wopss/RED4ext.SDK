@@ -17,9 +17,9 @@ struct EntityIDArrayPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameEntityIDArrayPrereqState";
     static constexpr const char* ALIAS = "EntityIDArrayPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(EntityIDArrayPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(EntityIDArrayPrereqState, 0x110);
 } // namespace game
 using gameEntityIDArrayPrereqState = game::EntityIDArrayPrereqState;
 using EntityIDArrayPrereqState = game::EntityIDArrayPrereqState;

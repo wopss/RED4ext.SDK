@@ -17,9 +17,9 @@ struct HasDialogVisualizerVisiblePrereqState : game::PrereqState
     static constexpr const char* NAME = "gameHasDialogVisualizerVisiblePrereqState";
     static constexpr const char* ALIAS = "HasDialogVisualizerVisiblePrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(HasDialogVisualizerVisiblePrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(HasDialogVisualizerVisiblePrereqState, 0x110);
 } // namespace game
 using gameHasDialogVisualizerVisiblePrereqState = game::HasDialogVisualizerVisiblePrereqState;
 using HasDialogVisualizerVisiblePrereqState = game::HasDialogVisualizerVisiblePrereqState;

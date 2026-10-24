@@ -21,6 +21,10 @@ enum class ActionType : int32_t
     TOGGLE_PRESSED = 8,
     TOGGLE_RELEASED = 9,
     REPEAT = 10,
+    PATTERN_ACTIVATED = 11,
+    PATTERN_DEACTIVATED = 12,
+    PATTERN_HOLD_PROGRESS = 13,
+    PATTERN_HOLD_PASSED = 14,
 };
 } // namespace game::input
 using gameinputActionType = game::input::ActionType;

@@ -15,9 +15,9 @@ struct __declspec(align(0x10)) CPhysicsDecorationResource : CMesh
     static constexpr const char* NAME = "CPhysicsDecorationResource";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk230[0x240 - 0x230]; // 230
+    uint8_t unk220[0x230 - 0x220]; // 220
 };
-RED4EXT_ASSERT_SIZE(CPhysicsDecorationResource, 0x240);
+RED4EXT_ASSERT_SIZE(CPhysicsDecorationResource, 0x230);
 } // namespace RED4ext
 
 // clang-format on

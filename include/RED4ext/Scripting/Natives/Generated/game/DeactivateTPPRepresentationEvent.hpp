@@ -17,9 +17,9 @@ struct DeactivateTPPRepresentationEvent : red::Event
     static constexpr const char* NAME = "gameDeactivateTPPRepresentationEvent";
     static constexpr const char* ALIAS = "DeactivateTPPRepresentationEvent";
 
-    uint8_t unk40[0x68 - 0x40]; // 40
+    uint8_t unk40[0x88 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(DeactivateTPPRepresentationEvent, 0x68);
+RED4EXT_ASSERT_SIZE(DeactivateTPPRepresentationEvent, 0x88);
 } // namespace game
 using gameDeactivateTPPRepresentationEvent = game::DeactivateTPPRepresentationEvent;
 using DeactivateTPPRepresentationEvent = game::DeactivateTPPRepresentationEvent;

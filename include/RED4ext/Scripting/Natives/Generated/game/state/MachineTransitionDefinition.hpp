@@ -19,9 +19,9 @@ struct MachineTransitionDefinition : graph::GraphConnectionDefinition
 
     uint8_t unk50[0x54 - 0x50]; // 50
     float priority; // 54
-    uint8_t unk58[0x78 - 0x58]; // 58
+    uint8_t unk58[0xA8 - 0x58]; // 58
 };
-RED4EXT_ASSERT_SIZE(MachineTransitionDefinition, 0x78);
+RED4EXT_ASSERT_SIZE(MachineTransitionDefinition, 0xA8);
 } // namespace game::state
 using gamestateMachineTransitionDefinition = game::state::MachineTransitionDefinition;
 } // namespace RED4ext

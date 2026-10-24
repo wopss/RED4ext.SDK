@@ -17,9 +17,9 @@ struct SystemNotificationToken : IScriptable
     static constexpr const char* NAME = "inkSystemNotificationToken";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0xF0 - 0x40]; // 40
+    uint8_t unk40[0x130 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(SystemNotificationToken, 0xF0);
+RED4EXT_ASSERT_SIZE(SystemNotificationToken, 0x130);
 } // namespace ink
 using inkSystemNotificationToken = ink::SystemNotificationToken;
 } // namespace RED4ext

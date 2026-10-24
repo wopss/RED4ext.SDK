@@ -8,7 +8,7 @@
 
 namespace RED4ext
 {
-RED4EXT_ASSERT_SIZE(ink::ControllerProcessor, 0x60);
+RED4EXT_ASSERT_SIZE(ink::ControllerProcessor, 0x90);
 using inkControllerProcessor = ink::ControllerProcessor;
 } // namespace RED4ext
 
@@ -26,9 +26,9 @@ struct ControllerProcessor : ISerializable
     static constexpr const char* NAME = "inkControllerProcessor";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk30[0x60 - 0x30]; // 30
+    uint8_t unk30[0x90 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(ControllerProcessor, 0x60);
+RED4EXT_ASSERT_SIZE(ControllerProcessor, 0x90);
 } // namespace ink
 using inkControllerProcessor = ink::ControllerProcessor;
 } // namespace RED4ext

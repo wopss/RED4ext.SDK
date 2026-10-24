@@ -22,7 +22,8 @@ struct CParticleDrawerMesh : IParticleDrawer
 
     DynArray<Ref<CMesh>> meshes; // 38
     EMeshParticleOrientationMode orientationMode; // 48
-    uint8_t unk4C[0x50 - 0x4C]; // 4C
+    bool useBatchedRender; // 4C
+    uint8_t unk4D[0x50 - 0x4D]; // 4D
 };
 RED4EXT_ASSERT_SIZE(CParticleDrawerMesh, 0x50);
 } // namespace RED4ext

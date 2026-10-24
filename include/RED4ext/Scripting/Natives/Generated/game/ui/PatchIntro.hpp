@@ -17,6 +17,8 @@ enum class PatchIntro : int32_t
     Patch2100 = 4,
     Patch2200 = 5,
     Patch2300 = 6,
+    Patch2400 = 7,
+    Patch2500 = 8,
 };
 } // namespace game::ui
 using gameuiPatchIntro = game::ui::PatchIntro;

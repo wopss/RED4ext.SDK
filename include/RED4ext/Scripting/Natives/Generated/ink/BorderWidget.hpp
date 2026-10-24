@@ -17,10 +17,10 @@ struct __declspec(align(0x10)) BorderWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkBorderWidget";
     static constexpr const char* ALIAS = "inkBorder";
 
-    float thickness; // 200
-    uint8_t unk204[0x210 - 0x204]; // 204
+    float thickness; // 210
+    uint8_t unk214[0x220 - 0x214]; // 214
 };
-RED4EXT_ASSERT_SIZE(BorderWidget, 0x210);
+RED4EXT_ASSERT_SIZE(BorderWidget, 0x220);
 } // namespace ink
 using inkBorderWidget = ink::BorderWidget;
 using inkBorder = ink::BorderWidget;

@@ -18,11 +18,11 @@ struct PuppetPreviewGameController : game::ui::PreviewGameController
     static constexpr const char* NAME = "gameuiPuppetPreviewGameController";
     static constexpr const char* ALIAS = "inkPuppetPreviewGameController";
 
-    uint8_t unk118[0x128 - 0x118]; // 118
-    game::ui::PuppetPreviewCameraController cameraController; // 128
-    uint8_t unk198[0x1B8 - 0x198]; // 198
+    uint8_t unk128[0x138 - 0x128]; // 128
+    game::ui::PuppetPreviewCameraController cameraController; // 138
+    uint8_t unk1C8[0x1E8 - 0x1C8]; // 1C8
 };
-RED4EXT_ASSERT_SIZE(PuppetPreviewGameController, 0x1B8);
+RED4EXT_ASSERT_SIZE(PuppetPreviewGameController, 0x1E8);
 } // namespace game::ui
 using gameuiPuppetPreviewGameController = game::ui::PuppetPreviewGameController;
 using inkPuppetPreviewGameController = game::ui::PuppetPreviewGameController;

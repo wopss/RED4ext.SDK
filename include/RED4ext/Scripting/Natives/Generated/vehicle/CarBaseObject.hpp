@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) CarBaseObject : vehicle::WheeledBaseObject
     static constexpr const char* NAME = "vehicleCarBaseObject";
     static constexpr const char* ALIAS = "CarObject";
 
-    uint8_t unkBF0[0xC40 - 0xBF0]; // BF0
+    uint8_t unkC10[0xC60 - 0xC10]; // C10
 };
-RED4EXT_ASSERT_SIZE(CarBaseObject, 0xC40);
+RED4EXT_ASSERT_SIZE(CarBaseObject, 0xC60);
 } // namespace vehicle
 using vehicleCarBaseObject = vehicle::CarBaseObject;
 using CarObject = vehicle::CarBaseObject;

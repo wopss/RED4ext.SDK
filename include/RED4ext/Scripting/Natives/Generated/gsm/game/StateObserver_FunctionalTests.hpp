@@ -17,9 +17,9 @@ struct StateObserver_FunctionalTests : gsm::IStateObserver
     static constexpr const char* NAME = "gsmgameStateObserver_FunctionalTests";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk08[0x30 - 0x8]; // 8
+    uint8_t unk08[0x50 - 0x8]; // 8
 };
-RED4EXT_ASSERT_SIZE(StateObserver_FunctionalTests, 0x30);
+RED4EXT_ASSERT_SIZE(StateObserver_FunctionalTests, 0x50);
 } // namespace gsm::game
 using gsmgameStateObserver_FunctionalTests = gsm::game::StateObserver_FunctionalTests;
 } // namespace RED4ext

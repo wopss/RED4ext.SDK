@@ -17,9 +17,9 @@ struct ItemsInInventoryListener : game::IInventoryListener
     static constexpr const char* NAME = "AIbehaviortweakItemsInInventoryListener";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk40[0x68 - 0x40]; // 40
+    uint8_t unk40[0x88 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(ItemsInInventoryListener, 0x68);
+RED4EXT_ASSERT_SIZE(ItemsInInventoryListener, 0x88);
 } // namespace AI::behavior::tweak
 using AIbehaviortweakItemsInInventoryListener = AI::behavior::tweak::ItemsInInventoryListener;
 } // namespace RED4ext

@@ -13,6 +13,7 @@ enum class PSMTimeDilation : int32_t
     Any = -1,
     Default = 0,
     Sandevistan = 1,
+    Photomode = 2,
 };
 } // namespace game
 using gamePSMTimeDilation = game::PSMTimeDilation;

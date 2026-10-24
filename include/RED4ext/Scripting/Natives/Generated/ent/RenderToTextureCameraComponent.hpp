@@ -9,6 +9,7 @@
 #include <RED4ext/CName.hpp>
 #include <RED4ext/NativeTypes.hpp>
 #include <RED4ext/Scripting/Natives/Generated/Color.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ECameraRenderingQuality.hpp>
 #include <RED4ext/Scripting/Natives/Generated/RenderSceneLayer.hpp>
 #include <RED4ext/Scripting/Natives/Generated/WorldRenderAreaSettings.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/BaseCameraComponent.hpp>
@@ -35,21 +36,28 @@ struct __declspec(align(0x10)) RenderToTextureCameraComponent : ent::BaseCameraC
     Ref<DynamicTexture> particlesDynamicTextureRes; // 240
     uint32_t resolutionWidth; // 258
     uint32_t resolutionHeight; // 25C
-    CName virtualCameraName; // 260
-    Ref<world::EnvironmentAreaParameters> env; // 268
-    WorldRenderAreaSettings params; // 280
-    ent::RenderToTextureMode renderingMode; // 290
-    uint8_t unk291[0x9E4 - 0x291]; // 291
-    float streamingDistance; // 9E4
-    float aspectRatio; // 9E8
-    Color backgroundColor; // 9EC
-    float depthCutDistance; // 9F0
-    RenderSceneLayer renderSceneLayer; // 9F4
-    bool overrideBackgroundColor; // 9F5
-    ent::RenderToTextureFeatures features; // 9F6
-    uint8_t unk9FE[0xA10 - 0x9FE]; // 9FE
+    uint8_t unk260[0x270 - 0x260]; // 260
+    CName virtualCameraName; // 270
+    Ref<world::EnvironmentAreaParameters> env; // 278
+    WorldRenderAreaSettings params; // 290
+    ent::RenderToTextureMode renderingMode; // 2A0
+    uint8_t unk2A1[0x2A4 - 0x2A1]; // 2A1
+    ECameraRenderingQuality renderingQuality; // 2A4
+    uint8_t unk2A8[0xA34 - 0x2A8]; // 2A8
+    float streamingDistance; // A34
+    float aspectRatio; // A38
+    Color backgroundColor; // A3C
+    float depthCutDistance; // A40
+    RenderSceneLayer renderSceneLayer; // A44
+    bool overrideBackgroundColor; // A45
+    uint8_t unkA46[0xA48 - 0xA46]; // A46
+    uint32_t renderFrequency; // A48
+    uint32_t renderPhase; // A4C
+    uint8_t unkA50[0xA51 - 0xA50]; // A50
+    ent::RenderToTextureFeatures features; // A51
+    uint8_t unkA5C[0xA70 - 0xA5C]; // A5C
 };
-RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0xA10);
+RED4EXT_ASSERT_SIZE(RenderToTextureCameraComponent, 0xA70);
 } // namespace ent
 using entRenderToTextureCameraComponent = ent::RenderToTextureCameraComponent;
 } // namespace RED4ext

@@ -17,9 +17,9 @@ struct NotPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameNotPrereqState";
     static constexpr const char* ALIAS = "NotPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(NotPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(NotPrereqState, 0x110);
 } // namespace game
 using gameNotPrereqState = game::NotPrereqState;
 using NotPrereqState = game::NotPrereqState;

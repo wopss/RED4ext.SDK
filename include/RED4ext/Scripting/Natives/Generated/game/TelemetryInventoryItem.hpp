@@ -21,16 +21,18 @@ struct TelemetryInventoryItem
 
     CString friendlyName; // 00
     CString localizedName; // 20
-    ItemID itemID; // 40
-    game::data::Quality quality; // 50
-    game::data::ItemType itemType; // 54
-    bool iconic; // 58
-    uint8_t unk59[0x5C - 0x59]; // 59
-    int32_t itemLevel; // 5C
-    bool isSilenced; // 60
-    uint8_t unk61[0x70 - 0x61]; // 61
+    CString leftHandWeapon; // 40
+    CString rightHandWeapon; // 60
+    ItemID itemID; // 80
+    game::data::Quality quality; // 90
+    game::data::ItemType itemType; // 94
+    bool iconic; // 98
+    uint8_t unk99[0x9C - 0x99]; // 99
+    int32_t itemLevel; // 9C
+    bool isSilenced; // A0
+    uint8_t unkA1[0xB0 - 0xA1]; // A1
 };
-RED4EXT_ASSERT_SIZE(TelemetryInventoryItem, 0x70);
+RED4EXT_ASSERT_SIZE(TelemetryInventoryItem, 0xB0);
 } // namespace game
 using gameTelemetryInventoryItem = game::TelemetryInventoryItem;
 using TelemetryInventoryItem = game::TelemetryInventoryItem;

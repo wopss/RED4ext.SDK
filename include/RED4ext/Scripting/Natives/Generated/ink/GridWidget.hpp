@@ -20,13 +20,13 @@ struct __declspec(align(0x10)) GridWidget : ink::CompoundWidget
     static constexpr const char* NAME = "inkGridWidget";
     static constexpr const char* ALIAS = "inkGrid";
 
-    ink::EOrientation orientation; // 230
-    uint8_t unk231[0x234 - 0x231]; // 231
-    ink::Margin childPadding; // 234
-    Vector2 childSizeStep; // 244
-    uint8_t unk24C[0x280 - 0x24C]; // 24C
+    ink::EOrientation orientation; // 240
+    uint8_t unk241[0x244 - 0x241]; // 241
+    ink::Margin childPadding; // 244
+    Vector2 childSizeStep; // 254
+    uint8_t unk25C[0x290 - 0x25C]; // 25C
 };
-RED4EXT_ASSERT_SIZE(GridWidget, 0x280);
+RED4EXT_ASSERT_SIZE(GridWidget, 0x290);
 } // namespace ink
 using inkGridWidget = ink::GridWidget;
 using inkGrid = ink::GridWidget;

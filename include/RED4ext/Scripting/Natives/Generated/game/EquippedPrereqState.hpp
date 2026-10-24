@@ -17,9 +17,9 @@ struct EquippedPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameEquippedPrereqState";
     static constexpr const char* ALIAS = "EquippedPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(EquippedPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(EquippedPrereqState, 0x110);
 } // namespace game
 using gameEquippedPrereqState = game::EquippedPrereqState;
 using EquippedPrereqState = game::EquippedPrereqState;

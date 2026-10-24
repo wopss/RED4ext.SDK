@@ -9,9 +9,9 @@ namespace RED4ext
 {
 enum class EInputCustomKey : int32_t
 {
-    ICK_Pad_DigitLeftRight = 273,
-    ICK_Pad_DigitUpDown = 274,
-    ICK_Count = 275,
+    ICK_Pad_DigitLeftRight = 341,
+    ICK_Pad_DigitUpDown = 342,
+    ICK_Count = 343,
 };
 } // namespace RED4ext
 

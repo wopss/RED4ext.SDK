@@ -14,6 +14,9 @@ enum class Platform : int32_t
     Console = 1,
     LastGenConsole = 2,
     CurrGenConsole = 3,
+    NintendoSwitch2 = 4,
+    XBoxSeriesS = 5,
+    SteamDeck = 6,
 };
 } // namespace quest
 using questPlatform = quest::Platform;

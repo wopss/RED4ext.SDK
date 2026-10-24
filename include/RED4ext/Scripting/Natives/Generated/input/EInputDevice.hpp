@@ -20,7 +20,8 @@ enum class EInputDevice : int32_t
     NINTENDO_SWITCH = 7,
     SCARLETT_GAMEPAD = 8,
     PROSPERO = 9,
-    EID_COUNT = 10,
+    NINTENDO_TOUCH = 10,
+    EID_COUNT = 11,
 };
 } // namespace input
 using inputEInputDevice = input::EInputDevice;

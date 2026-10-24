@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) SetupWorkspotActionEvent : sense::StimuliData
     static constexpr const char* NAME = "gameSetupWorkspotActionEvent";
     static constexpr const char* ALIAS = "SetupWorkspotActionEvent";
 
-    uint8_t unk40[0x260 - 0x40]; // 40
+    uint8_t unk40[0x2A0 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(SetupWorkspotActionEvent, 0x260);
+RED4EXT_ASSERT_SIZE(SetupWorkspotActionEvent, 0x2A0);
 } // namespace game
 using gameSetupWorkspotActionEvent = game::SetupWorkspotActionEvent;
 using SetupWorkspotActionEvent = game::SetupWorkspotActionEvent;

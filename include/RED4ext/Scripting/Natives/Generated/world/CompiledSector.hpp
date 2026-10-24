@@ -16,9 +16,9 @@ struct CompiledSector
     static constexpr const char* NAME = "worldCompiledSector";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x60 - 0x0]; // 0
+    uint8_t unk00[0x68 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(CompiledSector, 0x60);
+RED4EXT_ASSERT_SIZE(CompiledSector, 0x68);
 } // namespace world
 using worldCompiledSector = world::CompiledSector;
 } // namespace RED4ext

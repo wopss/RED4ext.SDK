@@ -18,6 +18,7 @@ enum class PSMUpperBodyStates : int32_t
     TemporaryUnequip = 4,
     ForceEmptyHands = 5,
     Aim = 6,
+    DualWield = 7,
 };
 } // namespace game
 using gamePSMUpperBodyStates = game::PSMUpperBodyStates;

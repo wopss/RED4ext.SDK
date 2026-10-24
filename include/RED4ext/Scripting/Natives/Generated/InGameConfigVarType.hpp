@@ -17,6 +17,7 @@ enum class InGameConfigVarType : int8_t
     FloatList = 5,
     StringList = 6,
     NameList = 7,
+    Button = 8,
 };
 using ConfigVarType = InGameConfigVarType;
 } // namespace RED4ext

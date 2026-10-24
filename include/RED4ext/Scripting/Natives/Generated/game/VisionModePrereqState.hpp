@@ -17,9 +17,9 @@ struct VisionModePrereqState : game::PrereqState
     static constexpr const char* NAME = "gameVisionModePrereqState";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unkC0[0xE0 - 0xC0]; // C0
+    uint8_t unk100[0x120 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(VisionModePrereqState, 0xE0);
+RED4EXT_ASSERT_SIZE(VisionModePrereqState, 0x120);
 } // namespace game
 using gameVisionModePrereqState = game::VisionModePrereqState;
 } // namespace RED4ext

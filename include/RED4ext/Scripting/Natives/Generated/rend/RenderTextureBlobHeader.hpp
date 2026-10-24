@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Containers/DynArray.hpp>
+#include <RED4ext/Scripting/Natives/Generated/GpuWrapApi/eTextureFormat.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/HistogramBias.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/RenderTextureBlobMipMapInfo.hpp>
 #include <RED4ext/Scripting/Natives/Generated/rend/RenderTextureBlobSizeInfo.hpp>
@@ -28,7 +29,8 @@ struct RenderTextureBlobHeader
     DynArray<rend::RenderTextureBlobMipMapInfo> mipMapInfo; // 20
     DynArray<rend::HistogramBias> histogramData; // 30
     uint32_t flags; // 40
-    uint8_t unk44[0x48 - 0x44]; // 44
+    GpuWrapApi::eTextureFormat formatOverride; // 44
+    uint8_t unk45[0x48 - 0x45]; // 45
 };
 RED4EXT_ASSERT_SIZE(RenderTextureBlobHeader, 0x48);
 } // namespace rend

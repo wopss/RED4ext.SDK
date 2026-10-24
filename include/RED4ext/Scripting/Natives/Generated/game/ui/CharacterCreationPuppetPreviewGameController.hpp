@@ -22,17 +22,17 @@ struct CharacterCreationPuppetPreviewGameController : game::ui::PuppetPreviewGam
     static constexpr const char* NAME = "gameuiCharacterCreationPuppetPreviewGameController";
     static constexpr const char* ALIAS = "inkCharacterCreationPuppetPreviewGameController";
 
-    CName maleSceneName; // 1B8
-    CName femaleSceneName; // 1C0
-    NodeRef maleCamera01Ref; // 1C8
-    NodeRef femaleCamera01Ref; // 1D0
-    ink::CompoundWidgetReference root; // 1D8
-    ink::ImageWidgetReference image; // 1F0
-    ink::WidgetLibraryReference animLib; // 208
-    CName animName; // 218
-    uint8_t unk220[0x240 - 0x220]; // 220
+    CName maleSceneName; // 1E8
+    CName femaleSceneName; // 1F0
+    NodeRef maleCamera01Ref; // 1F8
+    NodeRef femaleCamera01Ref; // 200
+    ink::CompoundWidgetReference root; // 208
+    ink::ImageWidgetReference image; // 220
+    ink::WidgetLibraryReference animLib; // 238
+    CName animName; // 248
+    uint8_t unk250[0x270 - 0x250]; // 250
 };
-RED4EXT_ASSERT_SIZE(CharacterCreationPuppetPreviewGameController, 0x240);
+RED4EXT_ASSERT_SIZE(CharacterCreationPuppetPreviewGameController, 0x270);
 } // namespace game::ui
 using gameuiCharacterCreationPuppetPreviewGameController = game::ui::CharacterCreationPuppetPreviewGameController;
 using inkCharacterCreationPuppetPreviewGameController = game::ui::CharacterCreationPuppetPreviewGameController;

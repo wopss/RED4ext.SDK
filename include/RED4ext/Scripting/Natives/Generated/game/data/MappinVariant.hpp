@@ -153,12 +153,14 @@ enum class MappinVariant : int32_t
     Zzz18_RacingVariant = 140,
     Zzz19_DelamainTaxiVariant = 141,
     Zzz20_DelamainTaxiDestinationVariant = 142,
-    CPO_PingDoorVariant = 143,
-    CPO_PingGoHereVariant = 144,
-    CPO_PingLootVariant = 145,
-    CPO_RemotePlayerVariant = 146,
-    Count = 147,
-    Invalid = 148,
+    Zzz21_ServicePointGlamdocVariant = 143,
+    Zzz22_CityTourLandmark = 144,
+    CPO_PingDoorVariant = 145,
+    CPO_PingGoHereVariant = 146,
+    CPO_PingLootVariant = 147,
+    CPO_RemotePlayerVariant = 148,
+    Count = 149,
+    Invalid = 150,
 };
 } // namespace game::data
 using gamedataMappinVariant = game::data::MappinVariant;

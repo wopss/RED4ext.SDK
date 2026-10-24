@@ -16,7 +16,7 @@ struct __declspec(align(0x10)) MergedMesh : CMesh
     static constexpr const char* ALIAS = NAME;
 
 };
-RED4EXT_ASSERT_SIZE(MergedMesh, 0x230);
+RED4EXT_ASSERT_SIZE(MergedMesh, 0x220);
 } // namespace RED4ext
 
 // clang-format on

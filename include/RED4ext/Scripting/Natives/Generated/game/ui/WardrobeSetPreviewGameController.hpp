@@ -17,9 +17,9 @@ struct WardrobeSetPreviewGameController : game::ui::BaseGarmentItemPreviewGameCo
     static constexpr const char* NAME = "gameuiWardrobeSetPreviewGameController";
     static constexpr const char* ALIAS = "WardrobeSetPreviewGameController";
 
-    uint8_t unk1B8[0x208 - 0x1B8]; // 1B8
+    uint8_t unk238[0x288 - 0x238]; // 238
 };
-RED4EXT_ASSERT_SIZE(WardrobeSetPreviewGameController, 0x208);
+RED4EXT_ASSERT_SIZE(WardrobeSetPreviewGameController, 0x288);
 } // namespace game::ui
 using gameuiWardrobeSetPreviewGameController = game::ui::WardrobeSetPreviewGameController;
 using WardrobeSetPreviewGameController = game::ui::WardrobeSetPreviewGameController;
