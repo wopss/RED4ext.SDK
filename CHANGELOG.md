@@ -24,6 +24,8 @@ and this project adheres to
 
 - Update layouts for game version 2.5: `CBaseFunction` and derived function types (+0x40), `CStackFrame` (0xA8),
   `CBaseEngine`/`CGameEngine`, `CRTTISystem` vtable, `GpuApi::SDeviceData` and `ResourceRequest`.
+- Update RTTI-generated structs and enums for game version 2.5.
+- Change `ArchiveScope::Mod` enum value according to game version 2.5.
 - Increase `DefaultFixedCallbackBufferSize` to 64, the game's `FixedSizeFunction` default capacity since 2.5.
 - `DeferredDataBuffer::LoadCopyAsync` passes the new loading flag added in 2.5.
 - Move `DynArray`, `StaticArray`, `Span`, and `SortedArray` into respective files in `RED4ext/Containers/`
