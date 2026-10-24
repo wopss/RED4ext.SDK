@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) BumpAgent : ISerializable
     static constexpr const char* NAME = "gameinfluenceBumpAgent";
     static constexpr const char* ALIAS = "BumpAgent";
 
-    uint8_t unk30[0x2D0 - 0x30]; // 30
+    uint8_t unk30[0x310 - 0x30]; // 30
 };
-RED4EXT_ASSERT_SIZE(BumpAgent, 0x2D0);
+RED4EXT_ASSERT_SIZE(BumpAgent, 0x310);
 } // namespace game::influence
 using gameinfluenceBumpAgent = game::influence::BumpAgent;
 using BumpAgent = game::influence::BumpAgent;

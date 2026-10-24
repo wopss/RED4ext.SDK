@@ -17,9 +17,9 @@ struct GOGRewardsSystem : game::IOnlineSystem
     static constexpr const char* NAME = "gameGOGRewardsSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk48[0x150 - 0x48]; // 48
+    uint8_t unk48[0x180 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GOGRewardsSystem, 0x150);
+RED4EXT_ASSERT_SIZE(GOGRewardsSystem, 0x180);
 } // namespace game
 using gameGOGRewardsSystem = game::GOGRewardsSystem;
 } // namespace RED4ext

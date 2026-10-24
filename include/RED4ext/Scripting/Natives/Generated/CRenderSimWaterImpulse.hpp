@@ -15,9 +15,7 @@ struct CRenderSimWaterImpulse : IDynamicTextureGenerator
     static constexpr const char* NAME = "CRenderSimWaterImpulse";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk38[0x50 - 0x38]; // 38
-    int32_t resolution; // 50
-    uint8_t unk54[0x64 - 0x54]; // 54
+    uint8_t unk38[0x64 - 0x38]; // 38
     float simulationSpeed; // 64
     uint8_t unk68[0xA8 - 0x68]; // 68
 };

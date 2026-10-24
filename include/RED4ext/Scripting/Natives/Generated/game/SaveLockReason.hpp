@@ -24,6 +24,9 @@ enum class SaveLockReason : int32_t
     NotEnoughSlots = 11,
     NotEnoughSpace = 12,
     PlayerOnMovingPlatform = 13,
+    SyncToMusicIsEnabledInAnyActiveScene = 14,
+    PhotoMode = 15,
+    GameServices = 16,
 };
 } // namespace game
 using gameSaveLockReason = game::SaveLockReason;

@@ -17,9 +17,9 @@ struct WasScannedPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameWasScannedPrereqState";
     static constexpr const char* ALIAS = "WasScannedPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(WasScannedPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(WasScannedPrereqState, 0x110);
 } // namespace game
 using gameWasScannedPrereqState = game::WasScannedPrereqState;
 using WasScannedPrereqState = game::WasScannedPrereqState;

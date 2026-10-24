@@ -24,13 +24,13 @@ struct TelemetryDamage
     TweakDBID attackRecord; // 04
     float damageAmount; // 0C
     game::TelemetryInventoryItem weapon; // 10
-    game::TelemetrySourceEntity sourceEntity; // 80
-    uint32_t hitCount; // A8
-    float distance; // AC
-    float time; // B0
-    uint8_t unkB4[0xD8 - 0xB4]; // B4
+    game::TelemetrySourceEntity sourceEntity; // C0
+    uint32_t hitCount; // E8
+    float distance; // EC
+    float time; // F0
+    uint8_t unkF4[0x118 - 0xF4]; // F4
 };
-RED4EXT_ASSERT_SIZE(TelemetryDamage, 0xD8);
+RED4EXT_ASSERT_SIZE(TelemetryDamage, 0x118);
 } // namespace game
 using gameTelemetryDamage = game::TelemetryDamage;
 using TelemetryDamage = game::TelemetryDamage;

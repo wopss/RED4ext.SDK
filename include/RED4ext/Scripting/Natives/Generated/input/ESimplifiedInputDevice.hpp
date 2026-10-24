@@ -12,6 +12,7 @@ enum class ESimplifiedInputDevice : int8_t
 {
     KBM = 0,
     PAD = 1,
+    TOUCH = 2,
 };
 } // namespace input
 using inputESimplifiedInputDevice = input::ESimplifiedInputDevice;

@@ -16,7 +16,8 @@ struct ControllerProcessor : ISerializable
     DynArray<void*> unk38;                           // 38
     uint64_t unk48;                                  // 48
     DynArray<Handle<IWidgetController>> controllers; // 50
+    uint8_t unk60[0x90 - 0x60];                      // 60
 };
-RED4EXT_ASSERT_SIZE(ControllerProcessor, 0x60);
+RED4EXT_ASSERT_SIZE(ControllerProcessor, 0x90);
 RED4EXT_ASSERT_OFFSET(ControllerProcessor, controllers, 0x50);
 } // namespace RED4ext::ink

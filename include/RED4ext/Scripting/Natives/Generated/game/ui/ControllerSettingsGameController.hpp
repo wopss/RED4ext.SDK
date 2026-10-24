@@ -19,11 +19,11 @@ struct ControllerSettingsGameController : game::ui::MenuGameController
     static constexpr const char* NAME = "gameuiControllerSettingsGameController";
     static constexpr const char* ALIAS = "ControllerSettingsGameController";
 
-    DynArray<ink::WidgetReference> defaultWidgets; // F0
-    DynArray<ink::WidgetReference> southpawWidgets; // 100
-    DynArray<ink::WidgetReference> legacyWidgets; // 110
+    DynArray<ink::WidgetReference> defaultWidgets; // 100
+    DynArray<ink::WidgetReference> southpawWidgets; // 110
+    DynArray<ink::WidgetReference> legacyWidgets; // 120
 };
-RED4EXT_ASSERT_SIZE(ControllerSettingsGameController, 0x120);
+RED4EXT_ASSERT_SIZE(ControllerSettingsGameController, 0x130);
 } // namespace game::ui
 using gameuiControllerSettingsGameController = game::ui::ControllerSettingsGameController;
 using ControllerSettingsGameController = game::ui::ControllerSettingsGameController;

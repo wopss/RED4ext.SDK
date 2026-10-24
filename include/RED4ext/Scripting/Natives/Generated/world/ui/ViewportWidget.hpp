@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) ViewportWidget : ink::CanvasWidget
     static constexpr const char* NAME = "worlduiViewportWidget";
     static constexpr const char* ALIAS = "ViewportWidget";
 
-    uint8_t unk230[0x240 - 0x230]; // 230
+    uint8_t unk240[0x250 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(ViewportWidget, 0x240);
+RED4EXT_ASSERT_SIZE(ViewportWidget, 0x250);
 } // namespace world::ui
 using worlduiViewportWidget = world::ui::ViewportWidget;
 using ViewportWidget = world::ui::ViewportWidget;

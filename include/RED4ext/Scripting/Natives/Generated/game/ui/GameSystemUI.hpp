@@ -17,9 +17,9 @@ struct GameSystemUI : game::ui::IGameSystemUI
     static constexpr const char* NAME = "gameuiGameSystemUI";
     static constexpr const char* ALIAS = "UISystem";
 
-    uint8_t unk48[0x160 - 0x48]; // 48
+    uint8_t unk48[0x168 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(GameSystemUI, 0x160);
+RED4EXT_ASSERT_SIZE(GameSystemUI, 0x168);
 } // namespace game::ui
 using gameuiGameSystemUI = game::ui::GameSystemUI;
 using UISystem = game::ui::GameSystemUI;

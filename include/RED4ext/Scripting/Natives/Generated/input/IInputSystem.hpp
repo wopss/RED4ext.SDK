@@ -16,9 +16,9 @@ struct IInputSystem
     static constexpr const char* NAME = "inputIInputSystem";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x158 - 0x0]; // 0
+    uint8_t unk00[0x1B0 - 0x0]; // 0
 };
-RED4EXT_ASSERT_SIZE(IInputSystem, 0x158);
+RED4EXT_ASSERT_SIZE(IInputSystem, 0x1B0);
 } // namespace input
 using inputIInputSystem = input::IInputSystem;
 } // namespace RED4ext

@@ -20,6 +20,7 @@ enum class ItemDisplayContext : int32_t
     Attachment = 7,
     Ripperdoc = 8,
     Crafting = 9,
+    ItemChooser = 10,
 };
 } // namespace game
 using gameItemDisplayContext = game::ItemDisplayContext;

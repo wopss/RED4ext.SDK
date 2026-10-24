@@ -15,9 +15,9 @@ struct VolFogCustomData : ICameraStorageCustomData
     static constexpr const char* NAME = "VolFogCustomData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk18[0x30 - 0x18]; // 18
+    uint8_t unk18[0x38 - 0x18]; // 18
 };
-RED4EXT_ASSERT_SIZE(VolFogCustomData, 0x30);
+RED4EXT_ASSERT_SIZE(VolFogCustomData, 0x38);
 } // namespace RED4ext
 
 // clang-format on

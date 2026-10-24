@@ -17,9 +17,9 @@ struct Character_Record : game::data::SpawnableObject_Record
     static constexpr const char* NAME = "gamedataCharacter_Record";
     static constexpr const char* ALIAS = "Character_Record";
 
-    uint8_t unkF8[0x470 - 0xF8]; // F8
+    uint8_t unkF8[0x480 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(Character_Record, 0x470);
+RED4EXT_ASSERT_SIZE(Character_Record, 0x480);
 } // namespace game::data
 using gamedataCharacter_Record = game::data::Character_Record;
 using Character_Record = game::data::Character_Record;

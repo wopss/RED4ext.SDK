@@ -17,14 +17,14 @@ struct LightSweepEffect : ink::IEffect
     static constexpr const char* NAME = "inkLightSweepEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float positionX; // 50
-    float positionY; // 54
-    float angle; // 58
-    float width; // 5C
-    float intensity; // 60
-    uint8_t unk64[0x68 - 0x64]; // 64
+    float positionX; // 60
+    float positionY; // 64
+    float angle; // 68
+    float width; // 6C
+    float intensity; // 70
+    uint8_t unk74[0x78 - 0x74]; // 74
 };
-RED4EXT_ASSERT_SIZE(LightSweepEffect, 0x68);
+RED4EXT_ASSERT_SIZE(LightSweepEffect, 0x78);
 } // namespace ink
 using inkLightSweepEffect = ink::LightSweepEffect;
 } // namespace RED4ext

@@ -22,7 +22,8 @@ struct OpenPhotoMode_NodeType : quest::IUIManagerNodeType
     bool forceFppMode; // 58
     bool alwaysAllowTPP; // 59
     bool lockExitUntilScreenshot; // 5A
-    uint8_t unk5B[0x60 - 0x5B]; // 5B
+    bool blockOutfitOption; // 5B
+    uint8_t unk5C[0x60 - 0x5C]; // 5C
 };
 RED4EXT_ASSERT_SIZE(OpenPhotoMode_NodeType, 0x60);
 } // namespace quest

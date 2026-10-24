@@ -68,10 +68,12 @@ struct InventoryItemData
     bool IsAvailable; // 13D
     bool IsVendorItem; // 13E
     bool IsBroken; // 13F
-    int32_t SlotIndex; // 140
-    uint32_t PositionInBackpack; // 144
-    game::ItemIconGender IconGender; // 148
-    uint8_t unk149[0x150 - 0x149]; // 149
+    bool CanDualWield; // 140
+    uint8_t unk141[0x144 - 0x141]; // 141
+    int32_t SlotIndex; // 144
+    uint32_t PositionInBackpack; // 148
+    game::ItemIconGender IconGender; // 14C
+    uint8_t unk14D[0x150 - 0x14D]; // 14D
     WeakHandle<game::ItemData> GameItemData; // 150
     bool HasPlayerSmartGunLink; // 160
     uint8_t unk161[0x164 - 0x161]; // 161

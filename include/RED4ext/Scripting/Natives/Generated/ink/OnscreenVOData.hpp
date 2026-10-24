@@ -17,11 +17,11 @@ struct OnscreenVOData
     static constexpr const char* NAME = "inkOnscreenVOData";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk00[0x28 - 0x0]; // 0
-    CRUID text; // 28
-    uint8_t unk30[0x38 - 0x30]; // 30
+    uint8_t unk00[0x48 - 0x0]; // 0
+    CRUID text; // 48
+    uint8_t unk50[0x58 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(OnscreenVOData, 0x38);
+RED4EXT_ASSERT_SIZE(OnscreenVOData, 0x58);
 } // namespace ink
 using inkOnscreenVOData = ink::OnscreenVOData;
 } // namespace RED4ext

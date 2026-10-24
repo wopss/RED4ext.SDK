@@ -17,9 +17,9 @@ struct ItemRecipe_Record : game::data::Item_Record
     static constexpr const char* NAME = "gamedataItemRecipe_Record";
     static constexpr const char* ALIAS = "ItemRecipe_Record";
 
-    uint8_t unk478[0x490 - 0x478]; // 478
+    uint8_t unk488[0x4A0 - 0x488]; // 488
 };
-RED4EXT_ASSERT_SIZE(ItemRecipe_Record, 0x490);
+RED4EXT_ASSERT_SIZE(ItemRecipe_Record, 0x4A0);
 } // namespace game::data
 using gamedataItemRecipe_Record = game::data::ItemRecipe_Record;
 using ItemRecipe_Record = game::data::ItemRecipe_Record;

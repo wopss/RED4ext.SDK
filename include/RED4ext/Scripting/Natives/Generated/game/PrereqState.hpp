@@ -17,9 +17,9 @@ struct PrereqState : IScriptable
     static constexpr const char* NAME = "gamePrereqState";
     static constexpr const char* ALIAS = "PrereqState";
 
-    uint8_t unk40[0xC0 - 0x40]; // 40
+    uint8_t unk40[0x100 - 0x40]; // 40
 };
-RED4EXT_ASSERT_SIZE(PrereqState, 0xC0);
+RED4EXT_ASSERT_SIZE(PrereqState, 0x100);
 } // namespace game
 using gamePrereqState = game::PrereqState;
 using PrereqState = game::PrereqState;

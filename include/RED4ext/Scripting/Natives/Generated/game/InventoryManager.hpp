@@ -17,9 +17,9 @@ struct InventoryManager : game::IInventoryManager
     static constexpr const char* NAME = "gameInventoryManager";
     static constexpr const char* ALIAS = "InventoryManager";
 
-    uint8_t unk48[0xC8 - 0x48]; // 48
+    uint8_t unk48[0xF0 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(InventoryManager, 0xC8);
+RED4EXT_ASSERT_SIZE(InventoryManager, 0xF0);
 } // namespace game
 using gameInventoryManager = game::InventoryManager;
 using InventoryManager = game::InventoryManager;

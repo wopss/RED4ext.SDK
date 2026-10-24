@@ -14,7 +14,8 @@ enum class VideoType : int8_t
     Tutorial_1024x576 = 1,
     Tutorial_1280x720 = 2,
     Tutorial_1360x768 = 3,
-    Unknown = 4,
+    Tutorial_1500x847 = 4,
+    Unknown = 5,
 };
 } // namespace game
 using gameVideoType = game::VideoType;

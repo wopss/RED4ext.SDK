@@ -17,9 +17,9 @@ struct ModdingSystem : game::IGameSystem
     static constexpr const char* NAME = "gameModdingSystem";
     static constexpr const char* ALIAS = "ModdingSystem";
 
-    uint8_t unk48[0x50 - 0x48]; // 48
+    uint8_t unk48[0x58 - 0x48]; // 48
 };
-RED4EXT_ASSERT_SIZE(ModdingSystem, 0x50);
+RED4EXT_ASSERT_SIZE(ModdingSystem, 0x58);
 } // namespace game
 using gameModdingSystem = game::ModdingSystem;
 using ModdingSystem = game::ModdingSystem;

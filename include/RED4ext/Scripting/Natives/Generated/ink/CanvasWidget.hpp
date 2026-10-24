@@ -18,7 +18,7 @@ struct __declspec(align(0x10)) CanvasWidget : ink::CompoundWidget
     static constexpr const char* ALIAS = "inkCanvas";
 
 };
-RED4EXT_ASSERT_SIZE(CanvasWidget, 0x230);
+RED4EXT_ASSERT_SIZE(CanvasWidget, 0x240);
 } // namespace ink
 using inkCanvasWidget = ink::CanvasWidget;
 using inkCanvas = ink::CanvasWidget;

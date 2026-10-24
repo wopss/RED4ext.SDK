@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) NavmeshDetector : ent::IPlacedComponent
     static constexpr const char* NAME = "gameNavmeshDetector";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk120[0x160 - 0x120]; // 120
+    uint8_t unk120[0x170 - 0x120]; // 120
 };
-RED4EXT_ASSERT_SIZE(NavmeshDetector, 0x160);
+RED4EXT_ASSERT_SIZE(NavmeshDetector, 0x170);
 } // namespace game
 using gameNavmeshDetector = game::NavmeshDetector;
 } // namespace RED4ext

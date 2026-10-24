@@ -21,10 +21,12 @@ struct __declspec(align(0x10)) ISkinTargetComponent : ent::IVisualComponent
     static constexpr const char* ALIAS = NAME;
 
     uint8_t unk140[0x180 - 0x140]; // 140
-    Handle<ent::SkinningBinding> skinning; // 180
-    uint8_t unk190[0x1D0 - 0x190]; // 190
-    bool useSkinningLOD; // 1D0
-    uint8_t unk1D1[0x1E0 - 0x1D1]; // 1D1
+    float boundingBoxLocalBoundsOverride; // 180
+    uint8_t unk184[0x188 - 0x184]; // 184
+    Handle<ent::SkinningBinding> skinning; // 188
+    uint8_t unk198[0x1D8 - 0x198]; // 198
+    bool useSkinningLOD; // 1D8
+    uint8_t unk1D9[0x1E0 - 0x1D9]; // 1D9
 };
 RED4EXT_ASSERT_SIZE(ISkinTargetComponent, 0x1E0);
 } // namespace ent

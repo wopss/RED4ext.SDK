@@ -21,10 +21,11 @@ struct SlotDataHolder : IScriptable
     static constexpr const char* ALIAS = "SlotDataHolder";
 
     DynArray<game::AmmoData> ammoData; // 40
-    game::SlotWeaponData weapon; // 50
-    uint8_t unk98[0xA8 - 0x98]; // 98
+    game::SlotWeaponData rightWeapon; // 50
+    game::SlotWeaponData leftWeapon; // 98
+    uint8_t unkE0[0xF0 - 0xE0]; // E0
 };
-RED4EXT_ASSERT_SIZE(SlotDataHolder, 0xA8);
+RED4EXT_ASSERT_SIZE(SlotDataHolder, 0xF0);
 } // namespace game
 using gameSlotDataHolder = game::SlotDataHolder;
 using SlotDataHolder = game::SlotDataHolder;

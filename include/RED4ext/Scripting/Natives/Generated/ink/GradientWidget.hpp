@@ -19,15 +19,15 @@ struct __declspec(align(0x10)) GradientWidget : ink::BaseShapeWidget
     static constexpr const char* NAME = "inkGradientWidget";
     static constexpr const char* ALIAS = "inkGradient";
 
-    ink::GradientMode gradientMode; // 230
-    uint8_t unk231[0x234 - 0x231]; // 231
-    float angle; // 234
-    uint8_t unk238[0x240 - 0x238]; // 238
-    HDRColor startColor; // 240
-    HDRColor endColor; // 250
-    uint8_t unk260[0x270 - 0x260]; // 260
+    ink::GradientMode gradientMode; // 240
+    uint8_t unk241[0x244 - 0x241]; // 241
+    float angle; // 244
+    uint8_t unk248[0x250 - 0x248]; // 248
+    HDRColor startColor; // 250
+    HDRColor endColor; // 260
+    uint8_t unk270[0x280 - 0x270]; // 270
 };
-RED4EXT_ASSERT_SIZE(GradientWidget, 0x270);
+RED4EXT_ASSERT_SIZE(GradientWidget, 0x280);
 } // namespace ink
 using inkGradientWidget = ink::GradientWidget;
 using inkGradient = ink::GradientWidget;

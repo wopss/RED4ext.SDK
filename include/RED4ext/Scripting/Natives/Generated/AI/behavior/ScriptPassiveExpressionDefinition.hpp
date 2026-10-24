@@ -21,9 +21,9 @@ struct ScriptPassiveExpressionDefinition : AI::behavior::PassiveExpressionDefini
     static constexpr const char* ALIAS = NAME;
 
     Handle<AI::behavior::expression::Script> script; // 40
-    uint8_t unk50[0x68 - 0x50]; // 50
+    uint8_t unk50[0x98 - 0x50]; // 50
 };
-RED4EXT_ASSERT_SIZE(ScriptPassiveExpressionDefinition, 0x68);
+RED4EXT_ASSERT_SIZE(ScriptPassiveExpressionDefinition, 0x98);
 } // namespace AI::behavior
 using AIbehaviorScriptPassiveExpressionDefinition = AI::behavior::ScriptPassiveExpressionDefinition;
 } // namespace RED4ext

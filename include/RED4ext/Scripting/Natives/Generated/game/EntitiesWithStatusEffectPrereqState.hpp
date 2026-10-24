@@ -17,9 +17,9 @@ struct EntitiesWithStatusEffectPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameEntitiesWithStatusEffectPrereqState";
     static constexpr const char* ALIAS = "EntitiesWithStatusEffectPrereqState";
 
-    uint8_t unkC0[0xF0 - 0xC0]; // C0
+    uint8_t unk100[0x130 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(EntitiesWithStatusEffectPrereqState, 0xF0);
+RED4EXT_ASSERT_SIZE(EntitiesWithStatusEffectPrereqState, 0x130);
 } // namespace game
 using gameEntitiesWithStatusEffectPrereqState = game::EntitiesWithStatusEffectPrereqState;
 using EntitiesWithStatusEffectPrereqState = game::EntitiesWithStatusEffectPrereqState;

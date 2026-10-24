@@ -17,9 +17,9 @@ struct RPGPrereqState : game::PrereqState
     static constexpr const char* NAME = "gameRPGPrereqState";
     static constexpr const char* ALIAS = "RPGPrereqState";
 
-    uint8_t unkC0[0xD0 - 0xC0]; // C0
+    uint8_t unk100[0x110 - 0x100]; // 100
 };
-RED4EXT_ASSERT_SIZE(RPGPrereqState, 0xD0);
+RED4EXT_ASSERT_SIZE(RPGPrereqState, 0x110);
 } // namespace game
 using gameRPGPrereqState = game::RPGPrereqState;
 using RPGPrereqState = game::RPGPrereqState;

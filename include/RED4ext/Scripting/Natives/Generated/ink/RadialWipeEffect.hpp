@@ -17,10 +17,10 @@ struct RadialWipeEffect : ink::IEffect
     static constexpr const char* NAME = "inkRadialWipeEffect";
     static constexpr const char* ALIAS = NAME;
 
-    float startAngle; // 50
-    float transition; // 54
+    float startAngle; // 60
+    float transition; // 64
 };
-RED4EXT_ASSERT_SIZE(RadialWipeEffect, 0x58);
+RED4EXT_ASSERT_SIZE(RadialWipeEffect, 0x68);
 } // namespace ink
 using inkRadialWipeEffect = ink::RadialWipeEffect;
 } // namespace RED4ext

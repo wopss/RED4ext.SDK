@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) BasePanelWidget : ink::CompoundWidget
     static constexpr const char* NAME = "inkBasePanelWidget";
     static constexpr const char* ALIAS = "inkBasePanel";
 
-    uint8_t unk230[0x240 - 0x230]; // 230
+    uint8_t unk240[0x250 - 0x240]; // 240
 };
-RED4EXT_ASSERT_SIZE(BasePanelWidget, 0x240);
+RED4EXT_ASSERT_SIZE(BasePanelWidget, 0x250);
 } // namespace ink
 using inkBasePanelWidget = ink::BasePanelWidget;
 using inkBasePanel = ink::BasePanelWidget;

@@ -18,15 +18,15 @@ struct StadiaControllersGameController : game::ui::MenuGameController
     static constexpr const char* NAME = "gameuiStadiaControllersGameController";
     static constexpr const char* ALIAS = "StadiaControllersGameController";
 
-    uint8_t unkF0[0xF8 - 0xF0]; // F0
-    ink::WidgetReference stadiaControllerPage; // F8
-    ink::WidgetReference nintendoControllerPage; // 110
-    ink::WidgetReference durangoControllerPage; // 128
-    ink::WidgetReference orbisControllerPage; // 140
-    ink::WidgetReference disclaimerText; // 158
-    uint8_t unk170[0x1A0 - 0x170]; // 170
+    uint8_t unk100[0x108 - 0x100]; // 100
+    ink::WidgetReference stadiaControllerPage; // 108
+    ink::WidgetReference nintendoControllerPage; // 120
+    ink::WidgetReference durangoControllerPage; // 138
+    ink::WidgetReference orbisControllerPage; // 150
+    ink::WidgetReference disclaimerText; // 168
+    uint8_t unk180[0x1B0 - 0x180]; // 180
 };
-RED4EXT_ASSERT_SIZE(StadiaControllersGameController, 0x1A0);
+RED4EXT_ASSERT_SIZE(StadiaControllersGameController, 0x1B0);
 } // namespace game::ui
 using gameuiStadiaControllersGameController = game::ui::StadiaControllersGameController;
 using StadiaControllersGameController = game::ui::StadiaControllersGameController;

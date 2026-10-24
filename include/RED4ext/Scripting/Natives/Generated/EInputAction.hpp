@@ -13,6 +13,11 @@ enum class EInputAction : int32_t
     IACT_Press = 1,
     IACT_Release = 2,
     IACT_Axis = 3,
+    IACT_Click = 4,
+    IACT_DoubleClick = 5,
+    IACT_PatternActivated = 6,
+    IACT_PatternDeactivated = 7,
+    IACT_PatternHoldPassed = 8,
 };
 } // namespace RED4ext
 

@@ -17,9 +17,9 @@ struct ServerPlayer : mp::Player
     static constexpr const char* NAME = "mpServerPlayer";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk88[0x90 - 0x88]; // 88
+    uint8_t unkF8[0x100 - 0xF8]; // F8
 };
-RED4EXT_ASSERT_SIZE(ServerPlayer, 0x90);
+RED4EXT_ASSERT_SIZE(ServerPlayer, 0x100);
 } // namespace mp
 using mpServerPlayer = mp::ServerPlayer;
 } // namespace RED4ext

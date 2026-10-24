@@ -25,6 +25,8 @@ enum class SimpleMessageType : int32_t
     TwintoneNegative = 12,
     Connection = 13,
     DelamainTaxi = 14,
+    Reaper = 15,
+    HandScan = 16,
 };
 } // namespace game
 using gameSimpleMessageType = game::SimpleMessageType;

@@ -23,9 +23,9 @@ struct InGameMenuGameController : game::ui::BaseMenuGameController
     uint8_t unk140[0x150 - 0x140]; // 140
     DynArray<game::ui::InGameMenuGameControllerItemSceneInfo> itemSceneInfos; // 150
     DynArray<game::ui::GarmentSwitchEffectController> garmentSwitchEffectControllers; // 160
-    uint8_t unk170[0x190 - 0x170]; // 170
+    uint8_t unk170[0x198 - 0x170]; // 170
 };
-RED4EXT_ASSERT_SIZE(InGameMenuGameController, 0x190);
+RED4EXT_ASSERT_SIZE(InGameMenuGameController, 0x198);
 } // namespace game::ui
 using gameuiInGameMenuGameController = game::ui::InGameMenuGameController;
 } // namespace RED4ext

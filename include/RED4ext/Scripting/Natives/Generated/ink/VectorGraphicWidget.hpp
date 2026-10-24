@@ -17,9 +17,9 @@ struct __declspec(align(0x10)) VectorGraphicWidget : ink::LeafWidget
     static constexpr const char* NAME = "inkVectorGraphicWidget";
     static constexpr const char* ALIAS = NAME;
 
-    uint8_t unk200[0x220 - 0x200]; // 200
+    uint8_t unk210[0x230 - 0x210]; // 210
 };
-RED4EXT_ASSERT_SIZE(VectorGraphicWidget, 0x220);
+RED4EXT_ASSERT_SIZE(VectorGraphicWidget, 0x230);
 } // namespace ink
 using inkVectorGraphicWidget = ink::VectorGraphicWidget;
 } // namespace RED4ext
