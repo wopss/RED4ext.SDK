@@ -45,6 +45,20 @@ public:
         BaseType::TryCopyConstructFromWeak(aOther);
     }
 
+    template<typename U>
+    requires std::is_convertible_v<U*, T*>
+    Handle(const Handle<U>& aOther) noexcept
+    {
+        BaseType::CopyConstructFrom(aOther);
+    }
+
+    template<typename U>
+    requires std::is_convertible_v<U*, T*>
+    Handle(Handle<U>&& aOther) noexcept
+    {
+        BaseType::MoveConstructFrom(aOther);
+    }
+
     ~Handle()
     {
         static_assert(std::is_base_of_v<ISerializable, T>,
@@ -57,16 +71,9 @@ public:
     }
 
     template<typename U>
-    operator const Handle<U>&() const noexcept
+    requires std::is_convertible_v<T*, U*>
+    operator Handle<U>&() & noexcept
     {
-        static_assert(std::is_base_of_v<U, T>, "Cannot conver handle because target type is incompatible.");
-        return *reinterpret_cast<const Handle<U>*>(this);
-    }
-
-    template<typename U>
-    operator Handle<U>&() noexcept
-    {
-        static_assert(std::is_base_of_v<U, T>, "Cannot conver handle because target type is incompatible.");
         return *reinterpret_cast<Handle<U>*>(this);
     }
 
