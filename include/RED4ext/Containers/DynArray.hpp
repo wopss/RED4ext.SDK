@@ -263,11 +263,10 @@ struct DynArray
         if (distance > 0)
         {
             // Assign over the moved-from elements of the gap, construct past the old end.
-            const SizeType live = (std::min)(insertSize, tailSize);
-            auto it = aFirst;
-            for (SizeType i = 0; i < live; ++i, ++it)
-                insertPos[i] = *it;
-            std::uninitialized_copy(it, aLast, insertPos + live);
+            const SizeType assignCount = (std::min)(insertSize, tailSize);
+            const auto copied =
+                std::ranges::copy_n(aFirst, static_cast<std::iter_difference_t<InputIt>>(assignCount), insertPos);
+            std::uninitialized_copy(copied.in, aLast, copied.out);
         }
         else
         {
@@ -306,9 +305,9 @@ struct DynArray
             ShiftEntries(first, last, tailSize);
 
         // Assign over the moved-from elements of the gap, construct past the old end.
-        const SizeType live = (std::min)(aCount, tailSize);
-        std::fill_n(first, live, aValue);
-        std::uninitialized_fill(first + live, last, aValue);
+        const SizeType assignCount = (std::min)(aCount, tailSize);
+        std::fill_n(first, assignCount, aValue);
+        std::uninitialized_fill(first + assignCount, last, aValue);
 
         m_size = newSize;
         return first;
@@ -607,9 +606,9 @@ private:
             // the rest onto the elements they replace.
             const auto end = aSrc + aCount;
             const auto shift = static_cast<SizeType>(aDst - aSrc);
-            const auto raw = (std::min)(shift, aCount);
-            std::uninitialized_move(end - raw, end, end - raw + shift);
-            std::move_backward(aSrc, end - raw, end - raw + shift);
+            const auto constructCount = (std::min)(shift, aCount);
+            std::uninitialized_move(end - constructCount, end, end - constructCount + shift);
+            std::move_backward(aSrc, end - constructCount, end - constructCount + shift);
         }
     }
 
