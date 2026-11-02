@@ -72,7 +72,7 @@ struct __declspec(align(0x10)) CompiledNodeInstanceSetupInfo
         return aBufferVersion >= 68 ? streamingPriority : v62.streamingPriority;
     }
 
-    inline void GetStreamingPriority(uint32_t aBufferVersion, uint8_t aPriority)
+    inline void SetStreamingPriority(uint32_t aBufferVersion, uint8_t aPriority)
     {
         if (aBufferVersion >= 68)
         {

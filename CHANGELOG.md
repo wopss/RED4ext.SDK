@@ -20,8 +20,8 @@ and this project adheres to
 - Add support for game version 2.5 (`RED4EXT_V1_RUNTIME_VERSION_2_50`).
 - Add `CStackFrame` destructor and the frame call map fields introduced in 2.5.
 - Add `BufferView`, `BufferIterator` and `TDataBuffer` for reading data buffers (#234).
-- Add `worldStreamingSector`, `worldCompiledSector`, `worldCompiledNodeInstanceSetupInfoBuffer`, `worldCollisionNode`,
-  `worldInstancedMeshNode` and `worldCooked*Node`s decoded overrides (#234).
+- Add decoded `worldStreamingSector`, `worldCompiledSector`, `worldCompiledNodeInstanceSetupInfoBuffer`,
+  `worldCollisionNode`, `worldInstancedMeshNode` and `worldCooked*Node`s (#234).
 
 ### Changed
 
