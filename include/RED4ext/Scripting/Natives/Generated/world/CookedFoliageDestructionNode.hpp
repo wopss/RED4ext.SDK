@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldCookedFoliageDestructionNode.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::CookedFoliageDestructionNode, 0x98);
+using worldCookedFoliageDestructionNode = world::CookedFoliageDestructionNode;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/CookedCollisionNode.hpp>
@@ -23,5 +32,6 @@ RED4EXT_ASSERT_SIZE(CookedFoliageDestructionNode, 0x98);
 } // namespace world
 using worldCookedFoliageDestructionNode = world::CookedFoliageDestructionNode;
 } // namespace RED4ext
+*/
 
 // clang-format on

@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldStreamingSector.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::StreamingSector, 0xE8);
+using worldStreamingSector = world::StreamingSector;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Containers/DynArray.hpp>
@@ -36,5 +45,6 @@ RED4EXT_ASSERT_SIZE(StreamingSector, 0xE8);
 } // namespace world
 using worldStreamingSector = world::StreamingSector;
 } // namespace RED4ext
+*/
 
 // clang-format on

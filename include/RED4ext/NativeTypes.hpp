@@ -17,6 +17,7 @@
 #include <RED4ext/RTTISystem.hpp>
 #include <RED4ext/RTTITypes.hpp>
 #include <RED4ext/ResourceReference.hpp>
+#include <RED4ext/Scripting/Natives/Generated/WorldTransform.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/EInterpolationType.hpp>
 #include <RED4ext/Scripting/Natives/Generated/curve/ESegmentsLinkType.hpp>
 #include <RED4ext/Scripting/Natives/Quaternion.hpp>
@@ -418,6 +419,17 @@ struct HashMapHash<T, std::enable_if_t<std::is_same_v<T, TweakDBID>>>
         return static_cast<uint32_t>(aKey);
     }
 };
+
+namespace rend
+{
+struct RenderProxyTransform
+{
+    WorldTransform transform; // 00
+    Vector3 scale;            // 20
+};
+RED4EXT_ASSERT_SIZE(RenderProxyTransform, 0x30);
+} // namespace rend
+using rendRenderProxyTransform = rend::RenderProxyTransform;
 } // namespace RED4ext
 
 #ifdef RED4EXT_HEADER_ONLY

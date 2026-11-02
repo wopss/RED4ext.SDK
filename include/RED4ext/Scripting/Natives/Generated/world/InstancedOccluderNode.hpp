@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldInstancedOccluderNode.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::InstancedOccluderNode, 0x80);
+using worldInstancedOccluderNode = world::InstancedOccluderNode;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -33,5 +42,6 @@ RED4EXT_ASSERT_SIZE(InstancedOccluderNode, 0x80);
 } // namespace world
 using worldInstancedOccluderNode = world::InstancedOccluderNode;
 } // namespace RED4ext
+*/
 
 // clang-format on

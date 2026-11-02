@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldCookedCollisionNode.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::CookedCollisionNode, 0x80);
+using worldCookedCollisionNode = world::CookedCollisionNode;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -25,5 +34,6 @@ RED4EXT_ASSERT_SIZE(CookedCollisionNode, 0x80);
 } // namespace world
 using worldCookedCollisionNode = world::CookedCollisionNode;
 } // namespace RED4ext
+*/
 
 // clang-format on

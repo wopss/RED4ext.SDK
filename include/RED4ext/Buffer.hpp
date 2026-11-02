@@ -56,6 +56,72 @@ struct DataBuffer
 };
 RED4EXT_ASSERT_SIZE(DataBuffer, 0x28);
 
+template<typename T>
+struct TDataBuffer : DataBuffer
+{
+    T& operator*()
+    {
+        return Front();
+    }
+
+    T& operator->()
+    {
+        return Front();
+    }
+
+    T& operator[](uint32_t aIndex)
+    {
+        return At(aIndex);
+    }
+
+    [[nodiscard]] T& At(uint32_t aIndex) const
+    {
+        return *(reinterpret_cast<T*>(buffer.data) + aIndex);
+    }
+
+    [[nodiscard]] uint32_t Size() const
+    {
+        return buffer.size / sizeof(T);
+    }
+
+    [[nodiscard]] bool IsEmpty() const
+    {
+        return buffer.size == 0;
+    }
+
+    [[nodiscard]] T* Begin() const
+    {
+        return reinterpret_cast<T*>(buffer.data);
+    }
+
+    [[nodiscard]] T* End() const
+    {
+        return reinterpret_cast<T*>(reinterpret_cast<uintptr_t>(buffer.data) + buffer.size);
+    }
+
+    [[nodiscard]] T& Front() const
+    {
+        return At(0);
+    }
+
+    [[nodiscard]] T& Back() const
+    {
+        return At(Size() - 1);
+    }
+
+#pragma region STL
+    [[nodiscard]] inline T* begin() const
+    {
+        return Begin();
+    }
+
+    [[nodiscard]] inline T* end() const
+    {
+        return End();
+    }
+#pragma endregion
+};
+
 struct SharedDataBuffer
 {
     int64_t unk00; // 00

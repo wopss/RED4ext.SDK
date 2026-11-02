@@ -36,6 +36,17 @@ struct __declspec(align(0x10)) Transform
         return {finalPosition, finalOrientation};
     }
 
+    inline Transform operator*=(const Transform& aOther)
+    {
+        if (this != &aOther)
+        {
+            orientation = (aOther.orientation * orientation).Normalized();
+            position = (aOther.orientation * position) + aOther.position;
+        }
+
+        return *this;
+    }
+
     inline Transform Inverse() const
     {
         const auto inverseOrientation = orientation.Conjugate();

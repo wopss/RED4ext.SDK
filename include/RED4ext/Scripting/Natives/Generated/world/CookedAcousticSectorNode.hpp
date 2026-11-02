@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldCookedAcousticSectorNode.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::CookedAcousticSectorNode, 0x60);
+using worldCookedAcousticSectorNode = world::CookedAcousticSectorNode;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/CookedNode.hpp>
@@ -23,5 +32,6 @@ RED4EXT_ASSERT_SIZE(CookedAcousticSectorNode, 0x60);
 } // namespace world
 using worldCookedAcousticSectorNode = world::CookedAcousticSectorNode;
 } // namespace RED4ext
+*/
 
 // clang-format on

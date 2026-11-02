@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldInstancedMeshNode.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::InstancedMeshNode, 0x98);
+using worldInstancedMeshNode = world::InstancedMeshNode;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/NativeTypes.hpp>
@@ -27,5 +36,6 @@ RED4EXT_ASSERT_SIZE(InstancedMeshNode, 0x98);
 } // namespace world
 using worldInstancedMeshNode = world::InstancedMeshNode;
 } // namespace RED4ext
+*/
 
 // clang-format on

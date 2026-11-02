@@ -4,6 +4,15 @@
 
 // This file is generated from the Game's Reflection data
 
+#include <RED4ext/Scripting/Natives/worldCookedStaticDecalNode.hpp>
+
+namespace RED4ext
+{
+RED4EXT_ASSERT_SIZE(world::CookedStaticDecalNode, 0x68);
+using worldCookedStaticDecalNode = world::CookedStaticDecalNode;
+} // namespace RED4ext
+
+/*
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/world/CookedNode.hpp>
@@ -23,5 +32,6 @@ RED4EXT_ASSERT_SIZE(CookedStaticDecalNode, 0x68);
 } // namespace world
 using worldCookedStaticDecalNode = world::CookedStaticDecalNode;
 } // namespace RED4ext
+*/
 
 // clang-format on
