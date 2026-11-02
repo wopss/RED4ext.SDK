@@ -135,6 +135,23 @@ struct __declspec(align(0x10)) CompiledNodeInstanceSetupInfo
         }
     }
 
+    inline StreamingDataGroup GetDataGroup(uint32_t aBufferVersion) const
+    {
+        return aBufferVersion >= 68 ? dataGroup : v62.dataGroup;
+    }
+
+    inline void SetDataGroup(uint32_t aBufferVersion, StreamingDataGroup aGroup)
+    {
+        if (aBufferVersion >= 68)
+        {
+            dataGroup = aGroup;
+        }
+        else
+        {
+            v62.dataGroup = aGroup;
+        }
+    }
+
     inline uint32_t GetFlags(uint32_t aBufferVersion) const
     {
         return static_cast<uint32_t>(aBufferVersion >= 68 ? flags : v62.flags);
@@ -197,7 +214,8 @@ struct __declspec(align(0x10)) CompiledNodeInstanceSetupInfo
             uint64_t flags : 20;             // 78
             uint64_t streamingPriority : 8;  // 78
             uint64_t todvisMask : 16;        // 78
-            uint64_t unk80;                  // 80
+            StreamingDataGroup dataGroup;    // 80
+            uint8_t unk81[0x90 - 0x81];      // 81
         } v62;
     };
 };

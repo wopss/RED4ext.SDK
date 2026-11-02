@@ -38,7 +38,7 @@ public:
 
     [[nodiscard]] constexpr reference operator*() const noexcept
     {
-        return *static_cast<T*>(m_ptr);
+        return *reinterpret_cast<T*>(m_ptr);
     }
 
     [[nodiscard]] constexpr pointer operator->() const noexcept
