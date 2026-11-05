@@ -53,6 +53,7 @@ and this project adheres to
 - Fix `RawBuffer` move construction and move assignment (#218).
 - Fix address hashes for 2.5: `UpdateRegistrar::RegisterUpdate`, `DeferredDataBuffer::LoadCopyAsync`,
   `ISerializable::sub_C0` and `ResourceToken` I/O context destruction.
+- Fix `CClass::sub_98` address hash and pass its missing `a5` argument (#235).
 
 ## [1.0.0] - 2026-03-09
 
