@@ -129,22 +129,22 @@ struct Span
 
     [[nodiscard]] constexpr ReverseIterator RBegin() noexcept
     {
-        return ReverseIterator(Begin());
+        return ReverseIterator(End());
     }
 
     [[nodiscard]] constexpr ConstReverseIterator RBegin() const noexcept
     {
-        return ConstReverseIterator(Begin());
+        return ConstReverseIterator(End());
     }
 
     [[nodiscard]] constexpr ReverseIterator REnd() noexcept
     {
-        return ReverseIterator(End());
+        return ReverseIterator(Begin());
     }
 
     [[nodiscard]] constexpr ConstReverseIterator REnd() const noexcept
     {
-        return ConstReverseIterator(End());
+        return ConstReverseIterator(Begin());
     }
 
     [[nodiscard]] constexpr bool IsEmpty() const

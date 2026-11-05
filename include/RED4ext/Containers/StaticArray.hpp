@@ -172,22 +172,22 @@ struct StaticArray
 
     [[nodiscard]] ReverseIterator RBegin() noexcept
     {
-        return ReverseIterator(Begin());
+        return ReverseIterator(End());
     }
 
     [[nodiscard]] ConstReverseIterator RBegin() const noexcept
     {
-        return ConstReverseIterator(Begin());
+        return ConstReverseIterator(End());
     }
 
     [[nodiscard]] ReverseIterator REnd() noexcept
     {
-        return ReverseIterator(End());
+        return ReverseIterator(Begin());
     }
 
     [[nodiscard]] ConstReverseIterator REnd() const noexcept
     {
-        return ConstReverseIterator(End());
+        return ConstReverseIterator(Begin());
     }
 
     [[nodiscard]] Reference Front()

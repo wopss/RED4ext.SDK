@@ -46,6 +46,9 @@ and this project adheres to
 
 ### Fixed
 
+- Fix `DynArray` to construct elements in raw memory during realloc, shift and
+  insert, instead of assigning into uninitialized slots (#233).
+- Fix swapped `RBegin`/`REnd` on `DynArray`, `Span` and `StaticArray` (#233).
 - Fix `CurveData` values alignment in the buffer (#216).
 - Fix `CurveData` buffer initialization (#217, #218).
 - Fix `CClass::ToString` address hash (#216).
