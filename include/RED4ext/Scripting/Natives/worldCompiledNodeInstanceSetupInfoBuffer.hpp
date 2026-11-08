@@ -181,6 +181,12 @@ struct __declspec(align(0x10)) CompiledNodeInstanceSetupInfo
         SetFlags(aBufferVersion, GetFlags(aBufferVersion) | mask);
     }
 
+    inline void ClearFlag(uint32_t aBufferVersion, NodeFlag aFlag)
+    {
+        const auto mask = static_cast<uint32_t>(aFlag);
+        SetFlags(aBufferVersion, GetFlags(aBufferVersion) & ~mask);
+    }
+
     Transform transform;               // 00
     Vector3 scale;                     // 20
     Vector3 secondaryRefPointPosition; // 2C
