@@ -30,7 +30,7 @@ struct ISerializable
     virtual CClass* GetNativeType() = 0;                                                // 00
     virtual CClass* GetType();                                                          // 08
     virtual Memory::IAllocator* GetAllocator();                                         // 10
-    virtual ~ISerializable() = default;                                                 // 18
+    virtual ~ISerializable();                                                           // 18
     virtual void sub_20();                                                              // 20
     virtual void PostLoad(const PostLoadParams& aParams);                               // 28
     virtual bool sub_30();                                                              // 30
