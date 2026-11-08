@@ -41,13 +41,13 @@ and this project adheres to
 - Move `ERTTIType` and `rtti::IType` into respective files in `RED4ext/rtti/` (#193).
 - Move render types (`IRenderProxy`, `IRenderResource`, etc.) into respective files in `RED4ext/Rendering/` (#194).
 - Rename `ResourceRequest::unk17` property to `updateCache` (#238).
-- Remove `ResourceRequest` constructor in favor of aggregate initialization (#238).
 - Update decoded functions of `gameITransactionSystem` (#238).
 
 ### Removed
 
 - Remove `ScriptInstance` alias, use `void*` instead (#193).
 - Remove implicit boolean conversion for `Span`, use `Span::IsEmpty()` instead.
+- Remove `ResourceRequest` constructor in favor of aggregate initialization (#238).
 
 ### Fixed
 
