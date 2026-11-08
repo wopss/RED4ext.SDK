@@ -223,6 +223,10 @@ constexpr std::uint32_t ResourceLoader_IssueLoadingRequest = 2365013187;
 constexpr std::uint32_t ResourceLoader_IssueLoadingRequestByPath = 1250309504;
 #pragma endregion
 
+#pragma region ResourceBank
+constexpr std::uint32_t ResourceBank_GetResource = 3341491448;
+#pragma endregion
+
 #pragma region ResourceReference
 constexpr std::uint32_t ResourceReference_Load = 0xEB0DA9;
 constexpr std::uint32_t ResourceReference_Fetch = 0xB69D158E;
