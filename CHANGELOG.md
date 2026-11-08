@@ -22,6 +22,7 @@ and this project adheres to
 - Add `BufferView`, `BufferIterator` and `TDataBuffer` for reading data buffers (#234).
 - Add decoded `worldStreamingSector`, `worldCompiledSector`, `worldCompiledNodeInstanceSetupInfoBuffer`,
   `worldCollisionNode`, `worldInstancedMeshNode` and `worldCooked*Node`s (#234).
+- Add `ResourceBank`, a TTL based resource cache (#238).
 
 ### Changed
 
@@ -38,6 +39,7 @@ and this project adheres to
 - Rename `CBaseRTTIType` to `rtti::IType` (#193).
 - Move `ERTTIType` and `rtti::IType` into respective files in `RED4ext/rtti/` (#193).
 - Move render types (`IRenderProxy`, `IRenderResource`, etc.) into respective files in `RED4ext/Rendering/` (#194).
+- Update `ISerializable` dtor for game version 2.5: object must be removed from global registry (#238).
 
 ### Removed
 
