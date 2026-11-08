@@ -364,8 +364,6 @@ FodyWeavers.xsd
 ### Custom ###
 .idea
 build
-premake/premake5.exe
-premake/projects
 
 # Some generated types are excluded by Git because of their names, it should not happen.
 !include/RED4ext/Scripting/Natives/Generated/**
