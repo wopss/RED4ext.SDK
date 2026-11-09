@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <memory>
+#include <type_traits>
 
 #include <Windows.h>
 
@@ -97,6 +98,7 @@ protected:
     }
 
     template<typename U>
+    requires std::is_convertible_v<U*, T*>
     void CopyConstructFrom(const SharedPtrBase<U>& aOther) noexcept
     {
         aOther.IncRef();
@@ -117,6 +119,7 @@ protected:
     }
 
     template<typename U>
+    requires std::is_convertible_v<U*, T*>
     void MoveConstructFrom(SharedPtrBase<U>& aOther) noexcept
     {
         instance = aOther.instance;
