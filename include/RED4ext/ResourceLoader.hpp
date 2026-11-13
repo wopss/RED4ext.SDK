@@ -10,9 +10,11 @@
 #include <RED4ext/JobQueue.hpp>
 #include <RED4ext/Memory/Allocators.hpp>
 #include <RED4ext/Memory/SharedPtr.hpp>
+#include <RED4ext/Memory/UniquePtr.hpp>
 #include <RED4ext/Relocation.hpp>
 #include <RED4ext/ResourcePath.hpp>
 #include <RED4ext/Scripting/Natives/Generated/CResource.hpp>
+#include <RED4ext/Scripting/Natives/Generated/EngineTime.hpp>
 
 namespace RED4ext
 {
@@ -119,24 +121,22 @@ RED4EXT_ASSERT_OFFSET(ResourceToken<>, error, 0x5C);
 
 struct ResourceRequest
 {
-    ResourceRequest(ResourcePath aPath = {});
-
-    ResourcePath path;             // 00
-    uint64_t unk08;                // 08
-    bool unk10;                    // 10
-    bool disablePreInitialization; // 11
-    bool unk12;                    // 12
-    bool disableImports;           // 13
-    bool disablePostLoad;          // 14
-    bool unk15;                    // 15
-    bool unk16;                    // 16
-    bool unk17;                    // 17
-    bool unk18;                    // 18
-    bool unk19;                    // 19 - Defaults to true
-    uint8_t unk1A[0x20 - 0x1A];    // 1A
-    int32_t archiveHandle;         // 20
-    int32_t unk24;                 // 24
-    uint64_t unk28;                // 28
+    ResourcePath path{};                  // 00
+    uint64_t unk08{0};                    // 08
+    bool unk10{false};                    // 10
+    bool disablePreInitialization{false}; // 11
+    bool unk12{false};                    // 12
+    bool disableImports{false};           // 13
+    bool disablePostLoad{false};          // 14
+    bool unk15{false};                    // 15
+    bool unk16{false};                    // 16
+    bool updateCache{false};              // 17 - Puts loaded resource into cache and updates expiration time
+    bool unk18{false};                    // 18
+    bool unk19{true};                     // 19
+    uint8_t unk1A[0x20 - 0x1A]{0};        // 1A
+    int32_t archiveHandle{-1};            // 20
+    int32_t unk24{0};                     // 24
+    uint64_t unk28{0};                    // 28
 };
 RED4EXT_ASSERT_SIZE(ResourceRequest, 0x30);
 RED4EXT_ASSERT_OFFSET(ResourceRequest, path, 0x0);
@@ -144,6 +144,56 @@ RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePreInitialization, 0x11);
 RED4EXT_ASSERT_OFFSET(ResourceRequest, disableImports, 0x13);
 RED4EXT_ASSERT_OFFSET(ResourceRequest, disablePostLoad, 0x14);
 RED4EXT_ASSERT_OFFSET(ResourceRequest, archiveHandle, 0x20);
+
+struct ResourceBankEntry
+{
+    WeakHandle<CResource> resourceWeak; // 00
+    EngineTime accessTime;              // 10
+};
+RED4EXT_ASSERT_SIZE(ResourceBankEntry, 0x18);
+RED4EXT_ASSERT_OFFSET(ResourceBankEntry, resourceWeak, 0x0);
+RED4EXT_ASSERT_OFFSET(ResourceBankEntry, accessTime, 0x10);
+
+struct ResourceCacheEntry
+{
+    Handle<CResource> resource; // 00
+    EngineTime expirationTime;  // 10
+};
+RED4EXT_ASSERT_SIZE(ResourceCacheEntry, 0x18);
+RED4EXT_ASSERT_OFFSET(ResourceCacheEntry, resource, 0x0);
+RED4EXT_ASSERT_OFFSET(ResourceCacheEntry, expirationTime, 0x10);
+
+struct ResourceBank
+{
+    template<typename T = CResource>
+    Handle<T> GetResource(ResourcePath aPath)
+    {
+        using GetResource_t = uintptr_t (*)(ResourceBank*, Handle<T>&, ResourcePath);
+        static UniversalRelocFunc<GetResource_t> func(Detail::AddressHashes::ResourceBank_GetResource);
+
+        Handle<T> resource;
+        func(this, resource, aPath);
+
+        return resource;
+    }
+
+    HashMap<ResourcePath, ResourceBankEntry> resourceMap; // 00
+    HashMap<ResourcePath, ResourcePath> resolvedPathMap;  // 30
+    DynArray<ResourceCacheEntry> resourceCache1;          // 60
+    DynArray<ResourceCacheEntry> resourceCache2;          // 70
+    uint8_t unk80[0x84 - 0x80];                           // 80
+    bool resourceCacheShutdown;                           // 84
+    SharedSpinLock resourceCacheLock;                     // 85
+    uint8_t unk86[0x90 - 0x86];                           // 86
+    void* resourceSwapList;                               // 90
+    SharedSpinLock resourceMapLock;                       // 98
+    SharedSpinLock resolvedPathMapLock;                   // 99
+    uint8_t unk9A;                                        // 9A
+    SharedSpinLock resourceSwapListLock;                  // 9B
+    uint8_t unk9C[0xA0 - 0x9C];                           // 86
+};
+RED4EXT_ASSERT_SIZE(ResourceBank, 0xA0);
+RED4EXT_ASSERT_OFFSET(ResourceBank, resourceMap, 0x0);
 
 struct ResourceLoader
 {
@@ -190,7 +240,7 @@ struct ResourceLoader
     HashMap<ResourcePath, WeakPtr<ResourceToken<>>> tokens; // 00
     DynArray<SharedPtr<ResourceToken<>>> failed;            // 30
     SharedSpinLock tokenLock;                               // 40
-    uintptr_t unk48;                                        // 48
+    UniquePtr<ResourceBank> bank;                           // 48
     uintptr_t unk50;                                        // 50
     uintptr_t unk58;                                        // 58
     uint8_t unk60;                                          // 60

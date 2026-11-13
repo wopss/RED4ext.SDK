@@ -15,6 +15,13 @@ RED4EXT_INLINE RED4ext::ISerializable::ISerializable()
     unk28 = InterlockedIncrement64(s_globalIDCounter.GetAddr());
 }
 
+RED4EXT_INLINE RED4ext::ISerializable::~ISerializable()
+{
+    using func_t = void (*)(ISerializable*, uint64_t);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::ISerializable_Unregister);
+    func(this, unk28);
+}
+
 RED4EXT_INLINE RED4ext::CClass* RED4ext::ISerializable::GetType()
 {
     return GetNativeType();

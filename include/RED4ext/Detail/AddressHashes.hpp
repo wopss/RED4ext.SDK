@@ -154,6 +154,7 @@ constexpr std::uint32_t ISerializable_sub_78 = 0xA1D93993;
 constexpr std::uint32_t ISerializable_sub_A0 = 0xED221B32;
 constexpr std::uint32_t ISerializable_sub_C0 = 0xDBE91251;
 constexpr std::uint32_t ISerializable_Counter = 2630817091;
+constexpr std::uint32_t ISerializable_Unregister = 1884624092;
 #pragma endregion
 
 #pragma region JobDispatcher
@@ -220,6 +221,10 @@ constexpr std::uint32_t ResourceLoader = 0x783C1034;
 constexpr std::uint32_t ResourceLoader_FindTokenFast = 0xC86F39B7;
 constexpr std::uint32_t ResourceLoader_IssueLoadingRequest = 2365013187;
 constexpr std::uint32_t ResourceLoader_IssueLoadingRequestByPath = 1250309504;
+#pragma endregion
+
+#pragma region ResourceBank
+constexpr std::uint32_t ResourceBank_GetResource = 3341491448;
 #pragma endregion
 
 #pragma region ResourceReference

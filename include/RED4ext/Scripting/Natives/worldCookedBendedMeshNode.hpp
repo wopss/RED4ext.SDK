@@ -24,8 +24,8 @@ struct CookedBendedMeshInnerNode
     uint16_t deformedBoxIndex;                   // 18
     shadows::ShadowCastingMode castShadows;      // 1A
     shadows::ShadowCastingMode castLocalShadows; // 1B
-    bool removeFromRainMap;                      // 1C
-    bool isBendedRoad;                           // 1D
+    bool isBendedRoad;                           // 1C
+    bool removeFromRainMap;                      // 1D
 };
 RED4EXT_ASSERT_SIZE(CookedBendedMeshInnerNode, 0x1E);
 #pragma pack(pop)

@@ -22,6 +22,8 @@ and this project adheres to
 - Add `BufferView`, `BufferIterator` and `TDataBuffer` for reading data buffers (#234).
 - Add decoded `worldStreamingSector`, `worldCompiledSector`, `worldCompiledNodeInstanceSetupInfoBuffer`,
   `worldCollisionNode`, `worldInstancedMeshNode` and `worldCooked*Node`s (#234).
+- Add `ResourceBank`, a TTL based resource cache (#238).
+- Add `ResourceLoader::bank` property for accessing the loader's `ResourceBank` (#238).
 
 ### Changed
 
@@ -38,11 +40,14 @@ and this project adheres to
 - Rename `CBaseRTTIType` to `rtti::IType` (#193).
 - Move `ERTTIType` and `rtti::IType` into respective files in `RED4ext/rtti/` (#193).
 - Move render types (`IRenderProxy`, `IRenderResource`, etc.) into respective files in `RED4ext/Rendering/` (#194).
+- Rename `ResourceRequest::unk17` property to `updateCache` (#238).
+- Update decoded functions of `gameITransactionSystem` (#238).
 
 ### Removed
 
 - Remove `ScriptInstance` alias, use `void*` instead (#193).
 - Remove implicit boolean conversion for `Span`, use `Span::IsEmpty()` instead.
+- Remove `ResourceRequest` constructor in favor of aggregate initialization (#238).
 
 ### Fixed
 
@@ -57,6 +62,7 @@ and this project adheres to
 - Fix address hashes for 2.5: `UpdateRegistrar::RegisterUpdate`, `DeferredDataBuffer::LoadCopyAsync`,
   `ISerializable::sub_C0` and `ResourceToken` I/O context destruction.
 - Fix `CClass::sub_98` address hash and pass its missing `a5` argument (#235).
+- Fix `ISerializable` destructor not removing the object from the global registry (#238).
 
 ## [1.0.0] - 2026-03-09
 
